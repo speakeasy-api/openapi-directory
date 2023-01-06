@@ -7,7 +7,7 @@ import (
 type UpdateLfTagXAmzTargetEnum string
 
 const (
-	UpdateLfTagXAmzTargetEnumAwsLakeFormationUpdateLfTag UpdateLfTagXAmzTargetEnum = "AWSLakeFormation.UpdateLFTag"
+	UpdateLFTagXAmzTargetEnumAwsLakeFormationUpdateLfTag UpdateLfTagXAmzTargetEnum = "AWSLakeFormation.UpdateLFTag"
 )
 
 type UpdateLfTagHeaders struct {
@@ -35,5 +35,5 @@ type UpdateLfTagResponse struct {
 	InvalidInputException           *interface{}
 	OperationTimeoutException       *interface{}
 	StatusCode                      int64
-	UpdateLfTagResponse             map[string]interface{}
+	UpdateLFTagResponse             map[string]interface{}
 }

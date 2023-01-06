@@ -1,5 +1,5 @@
 package shared
 
 type DeleteReplicationGroupResult struct {
-	ReplicationGroup *ReplicationGroup
+	ReplicationGroup *ReplicationGroup1
 }

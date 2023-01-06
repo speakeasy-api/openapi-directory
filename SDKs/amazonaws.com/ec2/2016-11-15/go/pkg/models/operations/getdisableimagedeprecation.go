@@ -3,13 +3,13 @@ package operations
 type GetDisableImageDeprecationActionEnum string
 
 const (
-	GetDisableImageDeprecationActionEnumDisableImageDeprecation GetDisableImageDeprecationActionEnum = "DisableImageDeprecation"
+	GETDisableImageDeprecationActionEnumDisableImageDeprecation GetDisableImageDeprecationActionEnum = "DisableImageDeprecation"
 )
 
 type GetDisableImageDeprecationVersionEnum string
 
 const (
-	GetDisableImageDeprecationVersionEnumTwoThousandAndSixteen1115 GetDisableImageDeprecationVersionEnum = "2016-11-15"
+	GETDisableImageDeprecationVersionEnumTwoThousandAndSixteen1115 GetDisableImageDeprecationVersionEnum = "2016-11-15"
 )
 
 type GetDisableImageDeprecationQueryParams struct {

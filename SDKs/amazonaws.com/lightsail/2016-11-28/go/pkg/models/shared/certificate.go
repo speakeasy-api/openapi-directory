@@ -14,7 +14,7 @@ type Certificate struct {
 	EligibleToRenew         *string                  `json:"eligibleToRenew,omitempty"`
 	InUseResourceCount      *int64                   `json:"inUseResourceCount,omitempty"`
 	IssuedAt                *time.Time               `json:"issuedAt,omitempty"`
-	IssuerCa                *string                  `json:"issuerCA,omitempty"`
+	IssuerCA                *string                  `json:"issuerCA,omitempty"`
 	KeyAlgorithm            *string                  `json:"keyAlgorithm,omitempty"`
 	Name                    *string                  `json:"name,omitempty"`
 	NotAfter                *time.Time               `json:"notAfter,omitempty"`

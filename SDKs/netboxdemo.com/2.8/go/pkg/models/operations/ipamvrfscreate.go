@@ -11,5 +11,5 @@ type IpamVrfsCreateRequest struct {
 type IpamVrfsCreateResponse struct {
 	ContentType string
 	StatusCode  int64
-	Vrf         *shared.Vrf
+	VRF         *shared.Vrf
 }

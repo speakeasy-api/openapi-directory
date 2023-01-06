@@ -3,17 +3,17 @@ package operations
 type PostCreateDomainActionEnum string
 
 const (
-	PostCreateDomainActionEnumCreateDomain PostCreateDomainActionEnum = "CreateDomain"
+	POSTCreateDomainActionEnumCreateDomain PostCreateDomainActionEnum = "CreateDomain"
 )
 
 type PostCreateDomainVersionEnum string
 
 const (
-	PostCreateDomainVersionEnumTwoThousandAndNine0415 PostCreateDomainVersionEnum = "2009-04-15"
+	POSTCreateDomainVersionEnumTwoThousandAndNine0415 PostCreateDomainVersionEnum = "2009-04-15"
 )
 
 type PostCreateDomainQueryParams struct {
-	AwsAccessKeyID   string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostCreateDomainActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Signature        string                      `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                      `queryParam:"style=form,explode=true,name=SignatureMethod"`

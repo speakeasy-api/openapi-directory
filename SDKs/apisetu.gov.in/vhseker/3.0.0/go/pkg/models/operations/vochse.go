@@ -5,7 +5,7 @@ import (
 )
 
 type VochseRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	Regno    string `json:"Regno"`
 	Year     string `json:"Year"`
@@ -85,7 +85,7 @@ type Vochse404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Vochse404ApplicationJSONErrorDescriptionEnumNoRecordFound               Vochse404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Vochse404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Vochse404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Vochse404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Vochse404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Vochse404ApplicationJSON struct {

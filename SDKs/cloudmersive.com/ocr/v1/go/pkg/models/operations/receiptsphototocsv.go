@@ -25,7 +25,7 @@ type ReceiptsPhotoToCsvRequest struct {
 type ReceiptsPhotoToCsvResponse struct {
 	Body                                       []byte
 	ContentType                                string
-	ReceiptsPhotoToCsv200ApplicationJSONObject map[string]interface{}
-	ReceiptsPhotoToCsv200TextJSONObject        map[string]interface{}
+	ReceiptsPhotoToCSV200ApplicationJSONObject map[string]interface{}
+	ReceiptsPhotoToCSV200TextJSONObject        map[string]interface{}
 	StatusCode                                 int64
 }

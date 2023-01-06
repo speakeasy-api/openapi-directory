@@ -54,8 +54,8 @@ type SmsRequest struct {
 }
 
 type SmsResponse struct {
-	Body                        []byte
 	ContentType                 string
 	Sms200ApplicationJSONObject *Sms200ApplicationJSON
+	Sms200TextPlainObject       *string
 	StatusCode                  int64
 }

@@ -1,0 +1,15 @@
+package shared
+
+type ErrorInvalidParameters struct {
+	Name   *string `json:"name,omitempty"`
+	Reason *string `json:"reason,omitempty"`
+}
+
+// Error
+// The error format is standardized to the 4xx/5xx range with a code and a human readable explanation.
+type Error struct {
+	Detail            string                  `json:"detail"`
+	Instance          string                  `json:"instance"`
+	InvalidParameters *ErrorInvalidParameters `json:"invalid_parameters,omitempty"`
+	Type              string                  `json:"type"`
+}

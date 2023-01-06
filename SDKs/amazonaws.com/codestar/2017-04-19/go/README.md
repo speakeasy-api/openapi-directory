@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.AssociateTeamMemberRequest{
         Headers: operations.AssociateTeamMemberHeaders{
-            XAmzAlgorithm: "sunt",
-            XAmzContentSha256: "asperiores",
-            XAmzCredential: "reprehenderit",
-            XAmzDate: "consectetur",
-            XAmzSecurityToken: "sequi",
-            XAmzSignature: "reprehenderit",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "architecto",
+            XAmzContentSha256: "et",
+            XAmzCredential: "eum",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "totam",
+            XAmzSignature: "odio",
+            XAmzSignedHeaders: "veritatis",
             XAmzTarget: "CodeStar_20170419.AssociateTeamMember",
         },
         Request: shared.AssociateTeamMemberRequest{
-            ClientRequestToken: "enim",
-            ProjectID: "sint",
-            ProjectRole: "qui",
-            RemoteAccessAllowed: true,
-            UserArn: "aliquid",
+            ClientRequestToken: "atque",
+            ProjectID: "explicabo",
+            ProjectRole: "consequatur",
+            RemoteAccessAllowed: false,
+            UserArn: "numquam",
         },
     }
     
-    res, err := s.Sdk.AssociateTeamMember(ctx, req)
+    res, err := s.AssociateTeamMember(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

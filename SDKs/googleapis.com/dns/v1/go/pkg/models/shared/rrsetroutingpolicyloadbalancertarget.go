@@ -3,16 +3,16 @@ package shared
 type RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum string
 
 const (
-	RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "undefined"
-	RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP       RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "tcp"
-	RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP       RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "udp"
+	RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "undefined"
+	RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP       RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "tcp"
+	RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP       RrSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "udp"
 )
 
 type RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum string
 
 const (
-	RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone          RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum = "none"
-	RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum = "regionalL4ilb"
+	RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone          RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum = "none"
+	RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb RrSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum = "regionalL4ilb"
 )
 
 type RrSetRoutingPolicyLoadBalancerTarget struct {

@@ -3,80 +3,80 @@ package shared
 type CvssAttackComplexityEnum string
 
 const (
-	CvssAttackComplexityEnumAttackComplexityUnspecified CvssAttackComplexityEnum = "ATTACK_COMPLEXITY_UNSPECIFIED"
-	CvssAttackComplexityEnumAttackComplexityLow         CvssAttackComplexityEnum = "ATTACK_COMPLEXITY_LOW"
-	CvssAttackComplexityEnumAttackComplexityHigh        CvssAttackComplexityEnum = "ATTACK_COMPLEXITY_HIGH"
+	CVSSAttackComplexityEnumAttackComplexityUnspecified CvssAttackComplexityEnum = "ATTACK_COMPLEXITY_UNSPECIFIED"
+	CVSSAttackComplexityEnumAttackComplexityLow         CvssAttackComplexityEnum = "ATTACK_COMPLEXITY_LOW"
+	CVSSAttackComplexityEnumAttackComplexityHigh        CvssAttackComplexityEnum = "ATTACK_COMPLEXITY_HIGH"
 )
 
 type CvssAttackVectorEnum string
 
 const (
-	CvssAttackVectorEnumAttackVectorUnspecified CvssAttackVectorEnum = "ATTACK_VECTOR_UNSPECIFIED"
-	CvssAttackVectorEnumAttackVectorNetwork     CvssAttackVectorEnum = "ATTACK_VECTOR_NETWORK"
-	CvssAttackVectorEnumAttackVectorAdjacent    CvssAttackVectorEnum = "ATTACK_VECTOR_ADJACENT"
-	CvssAttackVectorEnumAttackVectorLocal       CvssAttackVectorEnum = "ATTACK_VECTOR_LOCAL"
-	CvssAttackVectorEnumAttackVectorPhysical    CvssAttackVectorEnum = "ATTACK_VECTOR_PHYSICAL"
+	CVSSAttackVectorEnumAttackVectorUnspecified CvssAttackVectorEnum = "ATTACK_VECTOR_UNSPECIFIED"
+	CVSSAttackVectorEnumAttackVectorNetwork     CvssAttackVectorEnum = "ATTACK_VECTOR_NETWORK"
+	CVSSAttackVectorEnumAttackVectorAdjacent    CvssAttackVectorEnum = "ATTACK_VECTOR_ADJACENT"
+	CVSSAttackVectorEnumAttackVectorLocal       CvssAttackVectorEnum = "ATTACK_VECTOR_LOCAL"
+	CVSSAttackVectorEnumAttackVectorPhysical    CvssAttackVectorEnum = "ATTACK_VECTOR_PHYSICAL"
 )
 
 type CvssAuthenticationEnum string
 
 const (
-	CvssAuthenticationEnumAuthenticationUnspecified CvssAuthenticationEnum = "AUTHENTICATION_UNSPECIFIED"
-	CvssAuthenticationEnumAuthenticationMultiple    CvssAuthenticationEnum = "AUTHENTICATION_MULTIPLE"
-	CvssAuthenticationEnumAuthenticationSingle      CvssAuthenticationEnum = "AUTHENTICATION_SINGLE"
-	CvssAuthenticationEnumAuthenticationNone        CvssAuthenticationEnum = "AUTHENTICATION_NONE"
+	CVSSAuthenticationEnumAuthenticationUnspecified CvssAuthenticationEnum = "AUTHENTICATION_UNSPECIFIED"
+	CVSSAuthenticationEnumAuthenticationMultiple    CvssAuthenticationEnum = "AUTHENTICATION_MULTIPLE"
+	CVSSAuthenticationEnumAuthenticationSingle      CvssAuthenticationEnum = "AUTHENTICATION_SINGLE"
+	CVSSAuthenticationEnumAuthenticationNone        CvssAuthenticationEnum = "AUTHENTICATION_NONE"
 )
 
 type CvssAvailabilityImpactEnum string
 
 const (
-	CvssAvailabilityImpactEnumImpactUnspecified CvssAvailabilityImpactEnum = "IMPACT_UNSPECIFIED"
-	CvssAvailabilityImpactEnumImpactHigh        CvssAvailabilityImpactEnum = "IMPACT_HIGH"
-	CvssAvailabilityImpactEnumImpactLow         CvssAvailabilityImpactEnum = "IMPACT_LOW"
-	CvssAvailabilityImpactEnumImpactNone        CvssAvailabilityImpactEnum = "IMPACT_NONE"
+	CVSSAvailabilityImpactEnumImpactUnspecified CvssAvailabilityImpactEnum = "IMPACT_UNSPECIFIED"
+	CVSSAvailabilityImpactEnumImpactHigh        CvssAvailabilityImpactEnum = "IMPACT_HIGH"
+	CVSSAvailabilityImpactEnumImpactLow         CvssAvailabilityImpactEnum = "IMPACT_LOW"
+	CVSSAvailabilityImpactEnumImpactNone        CvssAvailabilityImpactEnum = "IMPACT_NONE"
 )
 
 type CvssConfidentialityImpactEnum string
 
 const (
-	CvssConfidentialityImpactEnumImpactUnspecified CvssConfidentialityImpactEnum = "IMPACT_UNSPECIFIED"
-	CvssConfidentialityImpactEnumImpactHigh        CvssConfidentialityImpactEnum = "IMPACT_HIGH"
-	CvssConfidentialityImpactEnumImpactLow         CvssConfidentialityImpactEnum = "IMPACT_LOW"
-	CvssConfidentialityImpactEnumImpactNone        CvssConfidentialityImpactEnum = "IMPACT_NONE"
+	CVSSConfidentialityImpactEnumImpactUnspecified CvssConfidentialityImpactEnum = "IMPACT_UNSPECIFIED"
+	CVSSConfidentialityImpactEnumImpactHigh        CvssConfidentialityImpactEnum = "IMPACT_HIGH"
+	CVSSConfidentialityImpactEnumImpactLow         CvssConfidentialityImpactEnum = "IMPACT_LOW"
+	CVSSConfidentialityImpactEnumImpactNone        CvssConfidentialityImpactEnum = "IMPACT_NONE"
 )
 
 type CvssIntegrityImpactEnum string
 
 const (
-	CvssIntegrityImpactEnumImpactUnspecified CvssIntegrityImpactEnum = "IMPACT_UNSPECIFIED"
-	CvssIntegrityImpactEnumImpactHigh        CvssIntegrityImpactEnum = "IMPACT_HIGH"
-	CvssIntegrityImpactEnumImpactLow         CvssIntegrityImpactEnum = "IMPACT_LOW"
-	CvssIntegrityImpactEnumImpactNone        CvssIntegrityImpactEnum = "IMPACT_NONE"
+	CVSSIntegrityImpactEnumImpactUnspecified CvssIntegrityImpactEnum = "IMPACT_UNSPECIFIED"
+	CVSSIntegrityImpactEnumImpactHigh        CvssIntegrityImpactEnum = "IMPACT_HIGH"
+	CVSSIntegrityImpactEnumImpactLow         CvssIntegrityImpactEnum = "IMPACT_LOW"
+	CVSSIntegrityImpactEnumImpactNone        CvssIntegrityImpactEnum = "IMPACT_NONE"
 )
 
 type CvssPrivilegesRequiredEnum string
 
 const (
-	CvssPrivilegesRequiredEnumPrivilegesRequiredUnspecified CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_UNSPECIFIED"
-	CvssPrivilegesRequiredEnumPrivilegesRequiredNone        CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_NONE"
-	CvssPrivilegesRequiredEnumPrivilegesRequiredLow         CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_LOW"
-	CvssPrivilegesRequiredEnumPrivilegesRequiredHigh        CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_HIGH"
+	CVSSPrivilegesRequiredEnumPrivilegesRequiredUnspecified CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_UNSPECIFIED"
+	CVSSPrivilegesRequiredEnumPrivilegesRequiredNone        CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_NONE"
+	CVSSPrivilegesRequiredEnumPrivilegesRequiredLow         CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_LOW"
+	CVSSPrivilegesRequiredEnumPrivilegesRequiredHigh        CvssPrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_HIGH"
 )
 
 type CvssScopeEnum string
 
 const (
-	CvssScopeEnumScopeUnspecified CvssScopeEnum = "SCOPE_UNSPECIFIED"
-	CvssScopeEnumScopeUnchanged   CvssScopeEnum = "SCOPE_UNCHANGED"
-	CvssScopeEnumScopeChanged     CvssScopeEnum = "SCOPE_CHANGED"
+	CVSSScopeEnumScopeUnspecified CvssScopeEnum = "SCOPE_UNSPECIFIED"
+	CVSSScopeEnumScopeUnchanged   CvssScopeEnum = "SCOPE_UNCHANGED"
+	CVSSScopeEnumScopeChanged     CvssScopeEnum = "SCOPE_CHANGED"
 )
 
 type CvssUserInteractionEnum string
 
 const (
-	CvssUserInteractionEnumUserInteractionUnspecified CvssUserInteractionEnum = "USER_INTERACTION_UNSPECIFIED"
-	CvssUserInteractionEnumUserInteractionNone        CvssUserInteractionEnum = "USER_INTERACTION_NONE"
-	CvssUserInteractionEnumUserInteractionRequired    CvssUserInteractionEnum = "USER_INTERACTION_REQUIRED"
+	CVSSUserInteractionEnumUserInteractionUnspecified CvssUserInteractionEnum = "USER_INTERACTION_UNSPECIFIED"
+	CVSSUserInteractionEnumUserInteractionNone        CvssUserInteractionEnum = "USER_INTERACTION_NONE"
+	CVSSUserInteractionEnumUserInteractionRequired    CvssUserInteractionEnum = "USER_INTERACTION_REQUIRED"
 )
 
 // Cvss

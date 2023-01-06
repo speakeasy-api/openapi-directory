@@ -11,7 +11,7 @@ type RepositoryAssociation struct {
 	AssociationID        *string                         `json:"AssociationId,omitempty"`
 	ConnectionArn        *string                         `json:"ConnectionArn,omitempty"`
 	CreatedTimeStamp     *time.Time                      `json:"CreatedTimeStamp,omitempty"`
-	KmsKeyDetails        *KmsKeyDetails                  `json:"KMSKeyDetails,omitempty"`
+	KMSKeyDetails        *KmsKeyDetails                  `json:"KMSKeyDetails,omitempty"`
 	LastUpdatedTimeStamp *time.Time                      `json:"LastUpdatedTimeStamp,omitempty"`
 	Name                 *string                         `json:"Name,omitempty"`
 	Owner                *string                         `json:"Owner,omitempty"`

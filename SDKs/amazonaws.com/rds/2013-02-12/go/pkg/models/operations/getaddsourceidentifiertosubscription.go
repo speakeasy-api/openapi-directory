@@ -3,13 +3,13 @@ package operations
 type GetAddSourceIdentifierToSubscriptionActionEnum string
 
 const (
-	GetAddSourceIdentifierToSubscriptionActionEnumAddSourceIdentifierToSubscription GetAddSourceIdentifierToSubscriptionActionEnum = "AddSourceIdentifierToSubscription"
+	GETAddSourceIdentifierToSubscriptionActionEnumAddSourceIdentifierToSubscription GetAddSourceIdentifierToSubscriptionActionEnum = "AddSourceIdentifierToSubscription"
 )
 
 type GetAddSourceIdentifierToSubscriptionVersionEnum string
 
 const (
-	GetAddSourceIdentifierToSubscriptionVersionEnumTwoThousandAndThirteen0212 GetAddSourceIdentifierToSubscriptionVersionEnum = "2013-02-12"
+	GETAddSourceIdentifierToSubscriptionVersionEnumTwoThousandAndThirteen0212 GetAddSourceIdentifierToSubscriptionVersionEnum = "2013-02-12"
 )
 
 type GetAddSourceIdentifierToSubscriptionQueryParams struct {

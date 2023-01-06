@@ -1,6 +1,6 @@
 package shared
 
 type ExportTasksMessage struct {
-	ExportTasks []ExportTask
+	ExportTasks []map[string]interface{}
 	Marker      *string
 }

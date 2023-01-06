@@ -3,13 +3,13 @@ package operations
 type PostPutMetricStreamActionEnum string
 
 const (
-	PostPutMetricStreamActionEnumPutMetricStream PostPutMetricStreamActionEnum = "PutMetricStream"
+	POSTPutMetricStreamActionEnumPutMetricStream PostPutMetricStreamActionEnum = "PutMetricStream"
 )
 
 type PostPutMetricStreamVersionEnum string
 
 const (
-	PostPutMetricStreamVersionEnumTwoThousandAndTen0801 PostPutMetricStreamVersionEnum = "2010-08-01"
+	POSTPutMetricStreamVersionEnumTwoThousandAndTen0801 PostPutMetricStreamVersionEnum = "2010-08-01"
 )
 
 type PostPutMetricStreamQueryParams struct {

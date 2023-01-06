@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.ListRealtimeContactAnalysisSegmentsRequest{
         QueryParams: operations.ListRealtimeContactAnalysisSegmentsQueryParams{
-            MaxResults: "veniam",
-            NextToken: "impedit",
+            MaxResults: "quos",
+            NextToken: "at",
         },
         Headers: operations.ListRealtimeContactAnalysisSegmentsHeaders{
-            XAmzAlgorithm: "ex",
-            XAmzContentSha256: "ipsum",
-            XAmzCredential: "cupiditate",
-            XAmzDate: "sunt",
-            XAmzSecurityToken: "incidunt",
-            XAmzSignature: "sed",
-            XAmzSignedHeaders: "repellendus",
+            XAmzAlgorithm: "iusto",
+            XAmzContentSha256: "et",
+            XAmzCredential: "praesentium",
+            XAmzDate: "consectetur",
+            XAmzSecurityToken: "aut",
+            XAmzSignature: "itaque",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.ListRealtimeContactAnalysisSegmentsRequestBody{
-            ContactID: "error",
-            InstanceID: "nostrum",
-            MaxResults: 3238009331685119075,
-            NextToken: "nihil",
+            ContactID: "voluptatem",
+            InstanceID: "quasi",
+            MaxResults: 2003396666103377113,
+            NextToken: "rem",
         },
     }
     
-    res, err := s.Sdk.ListRealtimeContactAnalysisSegments(ctx, req)
+    res, err := s.ListRealtimeContactAnalysisSegments(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,5 +1,5 @@
 package shared
 
 type DescribeImagesResult struct {
-	Images []Image
+	Images map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type PostDeleteMetricStreamActionEnum string
 
 const (
-	PostDeleteMetricStreamActionEnumDeleteMetricStream PostDeleteMetricStreamActionEnum = "DeleteMetricStream"
+	POSTDeleteMetricStreamActionEnumDeleteMetricStream PostDeleteMetricStreamActionEnum = "DeleteMetricStream"
 )
 
 type PostDeleteMetricStreamVersionEnum string
 
 const (
-	PostDeleteMetricStreamVersionEnumTwoThousandAndTen0801 PostDeleteMetricStreamVersionEnum = "2010-08-01"
+	POSTDeleteMetricStreamVersionEnumTwoThousandAndTen0801 PostDeleteMetricStreamVersionEnum = "2010-08-01"
 )
 
 type PostDeleteMetricStreamQueryParams struct {

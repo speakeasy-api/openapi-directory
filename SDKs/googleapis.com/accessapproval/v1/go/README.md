@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.AccessapprovalProjectsApprovalRequestsApproveSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AccessapprovalProjectsApprovalRequestsApprovePathParams{
-            Name: "quo",
+            Name: "ab",
         },
         QueryParams: operations.AccessapprovalProjectsApprovalRequestsApproveQueryParams{
             DollarXgafv: "2",
-            AccessToken: "et",
-            Alt: "proto",
-            Callback: "placeat",
-            Fields: "molestiae",
-            Key: "quo",
-            OauthToken: "et",
+            AccessToken: "rerum",
+            Alt: "json",
+            Callback: "doloremque",
+            Fields: "pariatur",
+            Key: "facilis",
+            OauthToken: "consequatur",
             PrettyPrint: false,
-            QuotaUser: "reiciendis",
-            UploadType: "corrupti",
-            UploadProtocol: "et",
+            QuotaUser: "aut",
+            UploadType: "illum",
+            UploadProtocol: "rerum",
         },
         Request: &shared.ApproveApprovalRequestMessage{
-            ExpireTime: "cupiditate",
+            ExpireTime: "nobis",
         },
     }
     

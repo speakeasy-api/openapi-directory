@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,42 +26,41 @@ func main() {
         Security: operations.ApigeeregistryProjectsLocationsApisCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ApigeeregistryProjectsLocationsApisCreatePathParams{
-            Parent: "possimus",
+            Parent: "sunt",
         },
         QueryParams: operations.ApigeeregistryProjectsLocationsApisCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "esse",
-            Alt: "proto",
-            APIID: "quae",
-            Callback: "eum",
-            Fields: "qui",
-            Key: "ad",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "qui",
-            UploadType: "qui",
-            UploadProtocol: "dolor",
+            AccessToken: "reprehenderit",
+            Alt: "media",
+            APIID: "enim",
+            Callback: "aut",
+            Fields: "et",
+            Key: "aut",
+            OauthToken: "reprehenderit",
+            PrettyPrint: true,
+            QuotaUser: "magnam",
+            UploadType: "praesentium",
+            UploadProtocol: "non",
         },
         Request: &shared.APIInput{
             Annotations: map[string]string{
-                "asperiores": "minima",
+                "eaque": "iste",
             },
-            Availability: "dolores",
-            Description: "vitae",
-            DisplayName: "et",
+            Availability: "rerum",
+            Description: "maiores",
+            DisplayName: "consequatur",
             Labels: map[string]string{
-                "quam": "quo",
-                "dignissimos": "quo",
+                "vero": "rem",
             },
-            Name: "sint",
-            RecommendedDeployment: "sit",
-            RecommendedVersion: "ducimus",
+            Name: "architecto",
+            RecommendedDeployment: "ut",
+            RecommendedVersion: "aut",
         },
     }
     

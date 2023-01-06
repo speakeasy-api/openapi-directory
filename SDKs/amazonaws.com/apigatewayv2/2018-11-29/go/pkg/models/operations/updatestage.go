@@ -22,18 +22,18 @@ type UpdateStageHeaders struct {
 // UpdateStageRequestBodyAccessLogSettings
 // Settings for logging access in a stage.
 type UpdateStageRequestBodyAccessLogSettings struct {
-	DestinationArn *string `json:"DestinationArn,omitempty"`
-	Format         *string `json:"Format,omitempty"`
+	DestinationArn map[string]interface{} `json:"DestinationArn,omitempty"`
+	Format         map[string]interface{} `json:"Format,omitempty"`
 }
 
 // UpdateStageRequestBodyDefaultRouteSettings
 // Represents a collection of route settings.
 type UpdateStageRequestBodyDefaultRouteSettings struct {
-	DataTraceEnabled       *bool                    `json:"DataTraceEnabled,omitempty"`
-	DetailedMetricsEnabled *bool                    `json:"DetailedMetricsEnabled,omitempty"`
-	LoggingLevel           *shared.LoggingLevelEnum `json:"LoggingLevel,omitempty"`
-	ThrottlingBurstLimit   *int64                   `json:"ThrottlingBurstLimit,omitempty"`
-	ThrottlingRateLimit    *float64                 `json:"ThrottlingRateLimit,omitempty"`
+	DataTraceEnabled       map[string]interface{} `json:"DataTraceEnabled,omitempty"`
+	DetailedMetricsEnabled map[string]interface{} `json:"DetailedMetricsEnabled,omitempty"`
+	LoggingLevel           map[string]interface{} `json:"LoggingLevel,omitempty"`
+	ThrottlingBurstLimit   map[string]interface{} `json:"ThrottlingBurstLimit,omitempty"`
+	ThrottlingRateLimit    map[string]interface{} `json:"ThrottlingRateLimit,omitempty"`
 }
 
 type UpdateStageRequestBody struct {

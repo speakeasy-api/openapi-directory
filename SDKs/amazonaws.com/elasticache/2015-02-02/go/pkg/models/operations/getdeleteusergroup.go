@@ -3,13 +3,13 @@ package operations
 type GetDeleteUserGroupActionEnum string
 
 const (
-	GetDeleteUserGroupActionEnumDeleteUserGroup GetDeleteUserGroupActionEnum = "DeleteUserGroup"
+	GETDeleteUserGroupActionEnumDeleteUserGroup GetDeleteUserGroupActionEnum = "DeleteUserGroup"
 )
 
 type GetDeleteUserGroupVersionEnum string
 
 const (
-	GetDeleteUserGroupVersionEnumTwoThousandAndFifteen0202 GetDeleteUserGroupVersionEnum = "2015-02-02"
+	GETDeleteUserGroupVersionEnumTwoThousandAndFifteen0202 GetDeleteUserGroupVersionEnum = "2015-02-02"
 )
 
 type GetDeleteUserGroupQueryParams struct {

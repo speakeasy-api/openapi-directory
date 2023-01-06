@@ -9,8 +9,6 @@ const (
 	ConfigModuleEnablementStateEnumDisabled                   ConfigModuleEnablementStateEnum = "DISABLED"
 )
 
-// Config
-// Configuration of a module.
 type Config struct {
 	ModuleEnablementState *ConfigModuleEnablementStateEnum `json:"moduleEnablementState,omitempty"`
 	Value                 map[string]interface{}           `json:"value,omitempty"`

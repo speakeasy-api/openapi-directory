@@ -1,5 +1,5 @@
 package shared
 
 type CreateImageResult struct {
-	ImageID *string
+	ImageID map[string]interface{}
 }

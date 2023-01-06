@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CreateClusterRequest{
         Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "ipsa",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "quis",
-            XAmzDate: "necessitatibus",
-            XAmzSecurityToken: "sint",
-            XAmzSignature: "enim",
-            XAmzSignedHeaders: "quia",
+            XAmzAlgorithm: "sint",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "in",
+            XAmzDate: "qui",
+            XAmzSecurityToken: "impedit",
+            XAmzSignature: "culpa",
+            XAmzSignedHeaders: "voluptatibus",
         },
         Request: operations.CreateClusterRequestBody{
-            ClientToken: "voluptatem",
-            ClusterName: "suscipit",
+            ClientToken: "consequuntur",
+            ClusterName: "sapiente",
         },
     }
     
-    res, err := s.Sdk.CreateCluster(ctx, req)
+    res, err := s.CreateCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

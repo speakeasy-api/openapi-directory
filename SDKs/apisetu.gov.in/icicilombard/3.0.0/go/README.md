@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.CripcSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                InsuredDob: "ut",
-                PolicyNo: "dolore",
+                InsuredDob: "sed",
+                PolicyNo: "consequatur",
             },
-            ConsentArtifact: "assumenda",
+            ConsentArtifact: "fuga",
             Format: "pdf",
-            TxnID: "velit",
+            TxnID: "aliquid",
         },
     }
     
-    res, err := s.Sdk.Cripc(ctx, req)
+    res, err := s.APIs.Cripc(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Cripc` - Insurance Policy - Car
 * `Cvipc` - Insurance Policy - Commercial Vehicle

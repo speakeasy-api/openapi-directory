@@ -8,5 +8,5 @@ type UpdateSubscriberRequest struct {
 	BudgetName    string       `json:"BudgetName"`
 	NewSubscriber Subscriber   `json:"NewSubscriber"`
 	Notification  Notification `json:"Notification"`
-	OldSubscriber Subscriber   `json:"OldSubscriber"`
+	OldSubscriber Subscriber1  `json:"OldSubscriber"`
 }

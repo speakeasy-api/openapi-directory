@@ -8,14 +8,14 @@ type ListDatabaseFirewallsPathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type ListDatabaseFirewallsRequest struct {
-	PathParams ListDatabaseFirewallsPathParams
-}
-
 type ListDatabaseFirewalls401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListDatabaseFirewallsRequest struct {
+	PathParams ListDatabaseFirewallsPathParams
 }
 
 type ListDatabaseFirewallsResponse struct {

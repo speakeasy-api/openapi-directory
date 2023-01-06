@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateCustomDomainRequest{
         Headers: operations.AssociateCustomDomainHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "eligendi",
-            XAmzCredential: "veniam",
-            XAmzDate: "dolorem",
-            XAmzSecurityToken: "similique",
-            XAmzSignature: "ad",
-            XAmzSignedHeaders: "ullam",
+            XAmzAlgorithm: "pariatur",
+            XAmzContentSha256: "id",
+            XAmzCredential: "voluptatem",
+            XAmzDate: "esse",
+            XAmzSecurityToken: "in",
+            XAmzSignature: "amet",
+            XAmzSignedHeaders: "consectetur",
             XAmzTarget: "AppRunner.AssociateCustomDomain",
         },
         Request: shared.AssociateCustomDomainRequest{
-            DomainName: "molestiae",
-            EnableWwwSubdomain: true,
+            DomainName: "nesciunt",
+            EnableWWWSubdomain: false,
             ServiceArn: "aut",
         },
     }
     
-    res, err := s.Sdk.AssociateCustomDomain(ctx, req)
+    res, err := s.AssociateCustomDomain(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

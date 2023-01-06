@@ -19,7 +19,7 @@ type GetCustomersAccountAnnouncementsAnnouncementIDRequest struct {
 
 type GetCustomersAccountAnnouncementsAnnouncementIDResponse struct {
 	ContentType                                                            string
-	GetCustomersAccountAnnouncementsAnnouncementID404ApplicationJSONObject *GetCustomersAccountAnnouncementsAnnouncementID404ApplicationJSON
 	StatusCode                                                             int64
+	GetCustomersAccountAnnouncementsAnnouncementID404ApplicationJSONObject *GetCustomersAccountAnnouncementsAnnouncementID404ApplicationJSON
 	OneannouncementsPostResponses201ContentApplication1jsonSchema          *shared.OneannouncementsPostResponses201ContentApplication1jsonSchema
 }

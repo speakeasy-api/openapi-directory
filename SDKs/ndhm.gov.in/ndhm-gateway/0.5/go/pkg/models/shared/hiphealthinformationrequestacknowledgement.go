@@ -7,7 +7,7 @@ import (
 type HipHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum string
 
 const (
-	HipHealthInformationRequestAcknowledgementHiRequestSessionStatusEnumAcknowledged HipHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum = "ACKNOWLEDGED"
+	HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnumAcknowledged HipHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum = "ACKNOWLEDGED"
 )
 
 type HipHealthInformationRequestAcknowledgementHiRequest struct {

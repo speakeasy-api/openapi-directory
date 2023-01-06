@@ -14,15 +14,15 @@ type UpdateCdnEndpointRequestBody struct {
 	TTL           *int64  `json:"ttl,omitempty"`
 }
 
-type UpdateCdnEndpointRequest struct {
-	PathParams UpdateCdnEndpointPathParams
-	Request    UpdateCdnEndpointRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateCdnEndpoint401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateCdnEndpointRequest struct {
+	PathParams UpdateCdnEndpointPathParams
+	Request    UpdateCdnEndpointRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateCdnEndpointResponse struct {

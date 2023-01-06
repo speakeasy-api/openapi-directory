@@ -1,7 +1,7 @@
 package shared
 
 type GetResourceLfTagsResponse struct {
-	LfTagOnDatabase []LfTagPair   `json:"LFTagOnDatabase,omitempty"`
-	LfTagsOnColumns []ColumnLfTag `json:"LFTagsOnColumns,omitempty"`
-	LfTagsOnTable   []LfTagPair   `json:"LFTagsOnTable,omitempty"`
+	LFTagOnDatabase []LfTagPair   `json:"LFTagOnDatabase,omitempty"`
+	LFTagsOnColumns []ColumnLfTag `json:"LFTagsOnColumns,omitempty"`
+	LFTagsOnTable   []LfTagPair   `json:"LFTagsOnTable,omitempty"`
 }

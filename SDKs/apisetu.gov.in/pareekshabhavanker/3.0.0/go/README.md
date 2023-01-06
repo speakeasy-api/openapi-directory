@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.SslcrSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.SslcrRequestBody{
             CertificateParameters: &operations.SslcrRequestBodyCertificateParameters{
-                Dob: "eaque",
-                FullName: "suscipit",
-                UID: "labore",
-                Regno: "voluptatum",
-                Year: "quisquam",
+                DOB: "quasi",
+                FullName: "ipsum",
+                UID: "incidunt",
+                Regno: "vitae",
+                Year: "animi",
             },
-            ConsentArtifact: "pariatur",
+            ConsentArtifact: "eos",
             Format: "pdf",
-            TxnID: "incidunt",
+            TxnID: "aperiam",
         },
     }
     
-    res, err := s.Sdk.Sslcr(ctx, req)
+    res, err := s.APIs.Sslcr(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -60,7 +59,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Sslcr` - Class X School Leaving Certificate
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.LabrpSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.LabrpRequestBody{
             CertificateParameters: &operations.LabrpRequestBodyCertificateParameters{
-                FullName: "repellendus",
-                Reportdate: "ducimus",
-                Uhid: "sunt",
+                FullName: "commodi",
+                Reportdate: "ut",
+                Uhid: "aut",
             },
-            ConsentArtifact: "rerum",
+            ConsentArtifact: "explicabo",
             Format: "pdf",
-            TxnID: "recusandae",
+            TxnID: "sed",
         },
     }
     
-    res, err := s.Sdk.Labrp(ctx, req)
+    res, err := s.APIs.Labrp(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Labrp` - Clinical Laboratory Report
 

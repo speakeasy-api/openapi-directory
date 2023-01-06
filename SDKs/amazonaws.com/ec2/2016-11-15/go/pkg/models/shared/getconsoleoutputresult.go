@@ -1,11 +1,7 @@
 package shared
 
-import (
-	"time"
-)
-
 type GetConsoleOutputResult struct {
-	InstanceID *string
-	Output     *string
-	Timestamp  *time.Time
+	InstanceID map[string]interface{}
+	Output     map[string]interface{}
+	Timestamp  map[string]interface{}
 }

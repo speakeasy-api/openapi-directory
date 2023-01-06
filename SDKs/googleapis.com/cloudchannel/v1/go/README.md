@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,48 +26,81 @@ func main() {
         Security: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams{
-            Parent: "consequuntur",
+            Parent: "ut",
         },
         QueryParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "officiis",
-            Alt: "proto",
-            Callback: "earum",
-            Fields: "eos",
-            Key: "dolor",
-            OauthToken: "ut",
-            PrettyPrint: false,
-            QuotaUser: "voluptas",
-            UploadType: "quam",
-            UploadProtocol: "commodi",
+            AccessToken: "deleniti",
+            Alt: "media",
+            Callback: "enim",
+            Fields: "qui",
+            Key: "explicabo",
+            OauthToken: "sunt",
+            PrettyPrint: true,
+            QuotaUser: "quod",
+            UploadType: "eum",
+            UploadProtocol: "recusandae",
         },
         Request: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "ullam",
+                            Value: "expedita",
                         },
                     },
                 },
                 ChannelPartnerGranularity: map[string]interface{}{
-                    "repudiandae": "velit",
+                    "eligendi": "est",
+                    "similique": "architecto",
+                },
+                ConditionalOverrides: []shared.GoogleCloudChannelV1ConditionalOverride{
+                    shared.GoogleCloudChannelV1ConditionalOverride{
+                        Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
+                            PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
+                                Percentage: &shared.GoogleTypeDecimal{
+                                    Value: "voluptatem",
+                                },
+                            },
+                        },
+                        RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                        RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
+                            SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
+                                SkuGroup: "reiciendis",
+                            },
+                        },
+                    },
+                    shared.GoogleCloudChannelV1ConditionalOverride{
+                        Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
+                            PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
+                                Percentage: &shared.GoogleTypeDecimal{
+                                    Value: "et",
+                                },
+                            },
+                        },
+                        RebillingBasis: "COST_AT_LIST",
+                        RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
+                            SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
+                                SkuGroup: "minima",
+                            },
+                        },
+                    },
                 },
                 EffectiveInvoiceMonth: &shared.GoogleTypeDate{
-                    Day: 240617944671383796,
-                    Month: 557797075981638777,
-                    Year: 5020896786988810779,
+                    Day: 8400191370363322538,
+                    Month: 1679234503331891236,
+                    Year: 922063643662310344,
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "ipsa",
+                    Entitlement: "qui",
                 },
-                RebillingBasis: "DIRECT_CUSTOMER_COST",
+                RebillingBasis: "COST_AT_LIST",
             },
         },
     }

@@ -19,6 +19,6 @@ type GetDomainDomainnameRequest struct {
 
 type GetDomainDomainnameResponse struct {
 	ContentType                                 string
-	GetDomainDomainname200ApplicationJSONObject *GetDomainDomainname200ApplicationJSON
 	StatusCode                                  int64
+	GetDomainDomainname200ApplicationJSONObject *GetDomainDomainname200ApplicationJSON
 }

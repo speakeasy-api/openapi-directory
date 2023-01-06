@@ -3,13 +3,13 @@ package operations
 type PostUntagRoleActionEnum string
 
 const (
-	PostUntagRoleActionEnumUntagRole PostUntagRoleActionEnum = "UntagRole"
+	POSTUntagRoleActionEnumUntagRole PostUntagRoleActionEnum = "UntagRole"
 )
 
 type PostUntagRoleVersionEnum string
 
 const (
-	PostUntagRoleVersionEnumTwoThousandAndTen0508 PostUntagRoleVersionEnum = "2010-05-08"
+	POSTUntagRoleVersionEnumTwoThousandAndTen0508 PostUntagRoleVersionEnum = "2010-05-08"
 )
 
 type PostUntagRoleQueryParams struct {

@@ -1,5 +1,5 @@
 package shared
 
 type ModifyReplicationGroupShardConfigurationResult struct {
-	ReplicationGroup *ReplicationGroup
+	ReplicationGroup *ReplicationGroup1
 }

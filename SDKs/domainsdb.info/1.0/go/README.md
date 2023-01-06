@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetDomainsTldZoneIDDownloadRequest{
         PathParams: operations.GetDomainsTldZoneIDDownloadPathParams{
-            ZoneID: "cupiditate",
+            ZoneID: "dolorem",
         },
         QueryParams: operations.GetDomainsTldZoneIDDownloadQueryParams{
-            APIKey: "reiciendis",
-            Date: "minus",
+            APIKey: "molestias",
+            Date: "dolor",
         },
     }
     

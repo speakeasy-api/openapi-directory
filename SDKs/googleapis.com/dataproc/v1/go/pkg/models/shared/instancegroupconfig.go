@@ -9,18 +9,6 @@ const (
 	InstanceGroupConfigPreemptibilityEnumSpot                      InstanceGroupConfigPreemptibilityEnum = "SPOT"
 )
 
-// InstanceGroupConfigInput
-// The config settings for Compute Engine resources in an instance group, such as a master or worker group.
-type InstanceGroupConfigInput struct {
-	Accelerators   []AcceleratorConfig                    `json:"accelerators,omitempty"`
-	DiskConfig     *DiskConfig                            `json:"diskConfig,omitempty"`
-	ImageURI       *string                                `json:"imageUri,omitempty"`
-	MachineTypeURI *string                                `json:"machineTypeUri,omitempty"`
-	MinCPUPlatform *string                                `json:"minCpuPlatform,omitempty"`
-	NumInstances   *int32                                 `json:"numInstances,omitempty"`
-	Preemptibility *InstanceGroupConfigPreemptibilityEnum `json:"preemptibility,omitempty"`
-}
-
 // InstanceGroupConfig
 // The config settings for Compute Engine resources in an instance group, such as a master or worker group.
 type InstanceGroupConfig struct {
@@ -35,4 +23,16 @@ type InstanceGroupConfig struct {
 	MinCPUPlatform     *string                                `json:"minCpuPlatform,omitempty"`
 	NumInstances       *int32                                 `json:"numInstances,omitempty"`
 	Preemptibility     *InstanceGroupConfigPreemptibilityEnum `json:"preemptibility,omitempty"`
+}
+
+// InstanceGroupConfigInput
+// The config settings for Compute Engine resources in an instance group, such as a master or worker group.
+type InstanceGroupConfigInput struct {
+	Accelerators   []AcceleratorConfig                    `json:"accelerators,omitempty"`
+	DiskConfig     *DiskConfig                            `json:"diskConfig,omitempty"`
+	ImageURI       *string                                `json:"imageUri,omitempty"`
+	MachineTypeURI *string                                `json:"machineTypeUri,omitempty"`
+	MinCPUPlatform *string                                `json:"minCpuPlatform,omitempty"`
+	NumInstances   *int32                                 `json:"numInstances,omitempty"`
+	Preemptibility *InstanceGroupConfigPreemptibilityEnum `json:"preemptibility,omitempty"`
 }

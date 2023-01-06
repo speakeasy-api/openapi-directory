@@ -7,7 +7,7 @@ import (
 // Distribution
 // The distribution's information.
 type Distribution struct {
-	Arn                           string
+	ARN                           string
 	ActiveTrustedSigners          ActiveTrustedSigners
 	DistributionConfig            DistributionConfig
 	DomainName                    string

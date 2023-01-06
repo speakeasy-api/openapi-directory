@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,33 +27,34 @@ func main() {
             Option1: &operations.FirebasehostingProjectsSitesCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.FirebasehostingProjectsSitesCreatePathParams{
-            Parent: "ipsam",
+            Parent: "similique",
         },
         QueryParams: operations.FirebasehostingProjectsSitesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "et",
-            Alt: "json",
-            Callback: "est",
-            Fields: "dolor",
-            Key: "placeat",
-            OauthToken: "a",
+            DollarXgafv: "2",
+            AccessToken: "adipisci",
+            Alt: "proto",
+            Callback: "commodi",
+            Fields: "quae",
+            Key: "et",
+            OauthToken: "doloribus",
             PrettyPrint: true,
-            QuotaUser: "aut",
-            SiteID: "facere",
-            UploadType: "ut",
-            UploadProtocol: "doloremque",
+            QuotaUser: "nam",
+            SiteID: "sint",
+            UploadType: "repudiandae",
+            UploadProtocol: "voluptatem",
         },
         Request: &shared.SiteInput{
-            AppID: "perferendis",
+            AppID: "voluptas",
             Labels: map[string]string{
-                "dolor": "reiciendis",
+                "eos": "qui",
+                "odit": "qui",
             },
         },
     }

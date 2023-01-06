@@ -4,6 +4,6 @@ package shared
 //
 //	Request of DeleteBudget
 type DeleteBudgetRequest struct {
-	AccountID  string `json:"AccountId"`
-	BudgetName string `json:"BudgetName"`
+	AccountID  map[string]interface{} `json:"AccountId"`
+	BudgetName string                 `json:"BudgetName"`
 }

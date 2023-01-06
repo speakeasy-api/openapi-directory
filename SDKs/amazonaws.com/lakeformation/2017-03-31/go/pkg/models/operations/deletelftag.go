@@ -7,7 +7,7 @@ import (
 type DeleteLfTagXAmzTargetEnum string
 
 const (
-	DeleteLfTagXAmzTargetEnumAwsLakeFormationDeleteLfTag DeleteLfTagXAmzTargetEnum = "AWSLakeFormation.DeleteLFTag"
+	DeleteLFTagXAmzTargetEnumAwsLakeFormationDeleteLfTag DeleteLfTagXAmzTargetEnum = "AWSLakeFormation.DeleteLFTag"
 )
 
 type DeleteLfTagHeaders struct {
@@ -29,7 +29,7 @@ type DeleteLfTagRequest struct {
 type DeleteLfTagResponse struct {
 	AccessDeniedException     *interface{}
 	ContentType               string
-	DeleteLfTagResponse       map[string]interface{}
+	DeleteLFTagResponse       map[string]interface{}
 	EntityNotFoundException   *interface{}
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}

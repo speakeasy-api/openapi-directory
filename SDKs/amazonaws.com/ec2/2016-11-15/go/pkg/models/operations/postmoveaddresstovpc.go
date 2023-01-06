@@ -3,13 +3,13 @@ package operations
 type PostMoveAddressToVpcActionEnum string
 
 const (
-	PostMoveAddressToVpcActionEnumMoveAddressToVpc PostMoveAddressToVpcActionEnum = "MoveAddressToVpc"
+	POSTMoveAddressToVpcActionEnumMoveAddressToVpc PostMoveAddressToVpcActionEnum = "MoveAddressToVpc"
 )
 
 type PostMoveAddressToVpcVersionEnum string
 
 const (
-	PostMoveAddressToVpcVersionEnumTwoThousandAndSixteen1115 PostMoveAddressToVpcVersionEnum = "2016-11-15"
+	POSTMoveAddressToVpcVersionEnumTwoThousandAndSixteen1115 PostMoveAddressToVpcVersionEnum = "2016-11-15"
 )
 
 type PostMoveAddressToVpcQueryParams struct {

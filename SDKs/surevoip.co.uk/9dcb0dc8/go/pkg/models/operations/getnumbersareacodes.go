@@ -7,6 +7,6 @@ type GetNumbersAreacodes200ApplicationJSON struct {
 
 type GetNumbersAreacodesResponse struct {
 	ContentType                                 string
-	GetNumbersAreacodes200ApplicationJSONObject *GetNumbersAreacodes200ApplicationJSON
 	StatusCode                                  int64
+	GetNumbersAreacodes200ApplicationJSONObject *GetNumbersAreacodes200ApplicationJSON
 }

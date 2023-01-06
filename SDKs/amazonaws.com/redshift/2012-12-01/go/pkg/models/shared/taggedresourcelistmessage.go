@@ -3,6 +3,6 @@ package shared
 // TaggedResourceListMessage
 // <p/>
 type TaggedResourceListMessage struct {
-	Marker          *string
-	TaggedResources []TaggedResource
+	Marker          map[string]interface{}
+	TaggedResources []map[string]interface{}
 }

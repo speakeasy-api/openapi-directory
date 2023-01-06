@@ -39,8 +39,8 @@ type CreateAuthorUsingPostRequest struct {
 type CreateAuthorUsingPostResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	CreateAuthorUsingPost200ApplicationJSONObject *CreateAuthorUsingPost200ApplicationJSON
-	CreateAuthorUsingPost400ApplicationJSONObject *CreateAuthorUsingPost400ApplicationJSON
-	CreateAuthorUsingPost401ApplicationJSONObject *CreateAuthorUsingPost401ApplicationJSON
-	CreateAuthorUsingPost500ApplicationJSONObject *CreateAuthorUsingPost500ApplicationJSON
+	CreateAuthorUsingPOST200ApplicationJSONObject *CreateAuthorUsingPost200ApplicationJSON
+	CreateAuthorUsingPOST400ApplicationJSONObject *CreateAuthorUsingPost400ApplicationJSON
+	CreateAuthorUsingPOST401ApplicationJSONObject *CreateAuthorUsingPost401ApplicationJSON
+	CreateAuthorUsingPOST500ApplicationJSONObject *CreateAuthorUsingPost500ApplicationJSON
 }

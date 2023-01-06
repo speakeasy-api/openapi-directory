@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,10 +25,10 @@ func main() {
             shared.Security{
                 APIKeyHeaderAuth: shared.SchemeAPIKeyHeaderAuth{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 APIKeyQueryAuth: shared.SchemeAPIKeyQueryAuth{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 APIKey: shared.SchemeAPIKey{
                     APIKey: "YOUR_API_KEY_HERE",
                 },
@@ -41,54 +40,53 @@ func main() {
     
     req := operations.GetAuditCaseRequest{
         QueryParams: operations.GetAuditCaseQueryParams{
-            APIKey: "doloremque",
+            APIKey: "at",
             AuditCaseID: []string{
-                "maiores",
-            },
-            AuditID: []int32{
-                6260203721741419285,
-                626693492911080547,
-            },
-            CandidateID: []string{
-                "non",
-            },
-            CommitteeDesignation: "molestias",
-            CommitteeID: []string{
-                "quo",
-            },
-            CommitteeType: []string{
-                "at",
-                "veritatis",
-                "sequi",
-            },
-            Cycle: []int32{
-                5964140265861919200,
-                4915141299098414606,
-                4810246019628772601,
-            },
-            MaxElectionCycle: 6561479165173553535,
-            MinElectionCycle: 4212189814162458386,
-            Page: 309870905088988184,
-            PerPage: 3369996514632458230,
-            PrimaryCategoryID: "incidunt",
-            Q: []string{
-                "nostrum",
-                "esse",
+                "numquam",
+                "est",
                 "dolores",
             },
+            AuditID: []int32{
+                1859198245871584525,
+                5576063394388699331,
+            },
+            CandidateID: []string{
+                "dolorem",
+                "eum",
+            },
+            CommitteeDesignation: "et",
+            CommitteeID: []string{
+                "expedita",
+                "sit",
+                "quis",
+            },
+            CommitteeType: []string{
+                "adipisci",
+                "praesentium",
+            },
+            Cycle: []int32{
+                8913143418439467679,
+            },
+            MaxElectionCycle: 7219505888825369219,
+            MinElectionCycle: 864282357668987080,
+            Page: 7478980865905211729,
+            PerPage: 1204717232080532149,
+            PrimaryCategoryID: "incidunt",
+            Q: []string{
+                "placeat",
+                "culpa",
+            },
             Qq: []string{
-                "et",
-                "id",
+                "quae",
             },
             Sort: []string{
-                "magni",
-                "minima",
-                "doloremque",
+                "qui",
+                "iusto",
             },
             SortHideNull: false,
-            SortNullOnly: true,
+            SortNullOnly: false,
             SortNullsLast: true,
-            SubCategoryID: "itaque",
+            SubCategoryID: "labore",
         },
     }
     

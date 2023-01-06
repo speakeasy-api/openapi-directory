@@ -3,13 +3,13 @@ package operations
 type PostComposeEnvironmentsActionEnum string
 
 const (
-	PostComposeEnvironmentsActionEnumComposeEnvironments PostComposeEnvironmentsActionEnum = "ComposeEnvironments"
+	POSTComposeEnvironmentsActionEnumComposeEnvironments PostComposeEnvironmentsActionEnum = "ComposeEnvironments"
 )
 
 type PostComposeEnvironmentsVersionEnum string
 
 const (
-	PostComposeEnvironmentsVersionEnumTwoThousandAndTen1201 PostComposeEnvironmentsVersionEnum = "2010-12-01"
+	POSTComposeEnvironmentsVersionEnumTwoThousandAndTen1201 PostComposeEnvironmentsVersionEnum = "2010-12-01"
 )
 
 type PostComposeEnvironmentsQueryParams struct {

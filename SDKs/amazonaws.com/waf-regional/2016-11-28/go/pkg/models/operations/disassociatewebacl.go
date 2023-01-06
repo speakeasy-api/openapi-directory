@@ -7,7 +7,7 @@ import (
 type DisassociateWebAclxAmzTargetEnum string
 
 const (
-	DisassociateWebAclxAmzTargetEnumAwswafRegional20161128DisassociateWebACL DisassociateWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.DisassociateWebACL"
+	DisassociateWebACLXAmzTargetEnumAwswafRegional20161128DisassociateWebACL DisassociateWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.DisassociateWebACL"
 )
 
 type DisassociateWebACLHeaders struct {
@@ -30,8 +30,8 @@ type DisassociateWebACLResponse struct {
 	ContentType                  string
 	DisassociateWebACLResponse   map[string]interface{}
 	StatusCode                   int64
-	WafInternalErrorException    *interface{}
-	WafInvalidAccountException   *interface{}
-	WafInvalidParameterException *interface{}
-	WafNonexistentItemException  *interface{}
+	WAFInternalErrorException    *interface{}
+	WAFInvalidAccountException   *interface{}
+	WAFInvalidParameterException *interface{}
+	WAFNonexistentItemException  *interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type GetListTagsForResourceActionEnum string
 
 const (
-	GetListTagsForResourceActionEnumListTagsForResource GetListTagsForResourceActionEnum = "ListTagsForResource"
+	GETListTagsForResourceActionEnumListTagsForResource GetListTagsForResourceActionEnum = "ListTagsForResource"
 )
 
 type GetListTagsForResourceVersionEnum string
 
 const (
-	GetListTagsForResourceVersionEnumTwoThousandAndThirteen0110 GetListTagsForResourceVersionEnum = "2013-01-10"
+	GETListTagsForResourceVersionEnumTwoThousandAndThirteen0110 GetListTagsForResourceVersionEnum = "2013-01-10"
 )
 
 type GetListTagsForResourceQueryParams struct {

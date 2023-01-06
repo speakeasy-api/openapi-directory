@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,29 +29,29 @@ func main() {
             },
         },
         Headers: operations.CreateAssetHeaders{
-            XeroTenantID: "perferendis",
+            XeroTenantID: "incidunt",
         },
         Request: shared.Asset{
-            AccountingBookValue: 7.100000,
-            AssetID: "veritatis",
-            AssetName: "ducimus",
-            AssetNumber: "voluptas",
-            AssetStatus: "Disposed",
-            AssetTypeID: "fugit",
-            BookDepreciationDetail: "sit",
-            BookDepreciationSetting: "omnis",
+            AccountingBookValue: 75.199997,
+            AssetID: "velit",
+            AssetName: "asperiores",
+            AssetNumber: "temporibus",
+            AssetStatus: "Draft",
+            AssetTypeID: "est",
+            BookDepreciationDetail: "quis",
+            BookDepreciationSetting: "aut",
             CanRollback: false,
-            DisposalDate: "1998-07-13",
-            DisposalPrice: 80.199997,
-            IsDeleteEnabledForDate: true,
-            PurchaseDate: "2016-05-04",
-            PurchasePrice: 81.099998,
-            SerialNumber: "assumenda",
-            WarrantyExpiryDate: "minima",
+            DisposalDate: "2001-06-02",
+            DisposalPrice: 60.200001,
+            IsDeleteEnabledForDate: false,
+            PurchaseDate: "1977-03-16",
+            PurchasePrice: 76.199997,
+            SerialNumber: "ullam",
+            WarrantyExpiryDate: "cupiditate",
         },
     }
     
-    res, err := s.Sdk.CreateAsset(ctx, req)
+    res, err := s.Asset.CreateAsset(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -66,7 +65,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Asset
 
 * `CreateAsset` - adds a fixed asset
 * `CreateAssetType` - adds a fixed asset type

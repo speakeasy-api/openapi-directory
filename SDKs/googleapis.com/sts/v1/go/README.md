@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,20 +25,20 @@ func main() {
     req := operations.StsIntrospectRequest{
         QueryParams: operations.StsIntrospectQueryParams{
             DollarXgafv: "2",
-            AccessToken: "odit",
+            AccessToken: "non",
             Alt: "json",
-            Callback: "et",
-            Fields: "eaque",
-            Key: "possimus",
-            OauthToken: "sit",
-            PrettyPrint: false,
-            QuotaUser: "odio",
-            UploadType: "reiciendis",
-            UploadProtocol: "aliquid",
+            Callback: "nihil",
+            Fields: "non",
+            Key: "necessitatibus",
+            OauthToken: "nemo",
+            PrettyPrint: true,
+            QuotaUser: "harum",
+            UploadType: "aut",
+            UploadProtocol: "aperiam",
         },
         Request: &shared.GoogleIdentityStsV1IntrospectTokenRequest{
-            Token: "non",
-            TokenTypeHint: "voluptas",
+            Token: "dignissimos",
+            TokenTypeHint: "expedita",
         },
     }
     
@@ -60,7 +59,8 @@ func main() {
 ### v1
 
 * `StsIntrospect` - Gets information about a Google OAuth 2.0 access token issued by the Google Cloud [Security Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
-* `StsToken` - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within an identity pool, or it applies a Credential Access Boundary to a Google access token. Note that workforce pools do not support Credential Access Boundary at the moment. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
+* `StsOauthtoken` - Exchanges a credential that represents the resource owner's authorization for a Google-generated [OAuth 2.0 access token] (https://www.rfc-editor.org/rfc/rfc6749#section-5) or [refreshes an accesstoken] (https://www.rfc-editor.org/rfc/rfc6749#section-6) following [the OAuth 2.0 authorization framework] (https://tools.ietf.org/html/rfc8693) The credential can be one of the following: - An authorization code issued by the workforce identity federation authorization endpoint - A [refresh token](https://www.rfc-editor.org/rfc/rfc6749#section-10.4) issued by this endpoint This endpoint is only meant to be called by the Google Cloud CLI. Also note that this API only accepts the authorization code issued for workforce pools.
+* `StsToken` - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within an identity pool, or it applies a Credential Access Boundary to a Google access token. Note that workforce pools do not support Credential Access Boundaries. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
 
 <!-- End SDK Available Operations -->
 

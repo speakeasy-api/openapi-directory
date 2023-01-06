@@ -1,0 +1,14 @@
+package shared
+
+// AwsEc2NetworkInterfaceDetails1
+// Details about the network interface
+type AwsEc2NetworkInterfaceDetails1 struct {
+	Attachment         *AwsEc2NetworkInterfaceAttachment              `json:"Attachment,omitempty"`
+	IPV6Addresses      map[string]interface{}                         `json:"IpV6Addresses,omitempty"`
+	NetworkInterfaceID *string                                        `json:"NetworkInterfaceId,omitempty"`
+	PrivateIPAddresses []AwsEc2NetworkInterfacePrivateIPAddressDetail `json:"PrivateIpAddresses,omitempty"`
+	PublicDNSName      *string                                        `json:"PublicDnsName,omitempty"`
+	PublicIP           *string                                        `json:"PublicIp,omitempty"`
+	SecurityGroups     []AwsEc2NetworkInterfaceSecurityGroup          `json:"SecurityGroups,omitempty"`
+	SourceDestCheck    *bool                                          `json:"SourceDestCheck,omitempty"`
+}

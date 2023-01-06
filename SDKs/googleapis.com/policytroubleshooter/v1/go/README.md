@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.PolicytroubleshooterIamTroubleshootSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.PolicytroubleshooterIamTroubleshootQueryParams{
             DollarXgafv: "2",
-            AccessToken: "sed",
-            Alt: "proto",
-            Callback: "facilis",
-            Fields: "id",
-            Key: "adipisci",
-            OauthToken: "tempore",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "mollitia",
-            UploadProtocol: "iusto",
+            AccessToken: "tempora",
+            Alt: "media",
+            Callback: "excepturi",
+            Fields: "quos",
+            Key: "quidem",
+            OauthToken: "iure",
+            PrettyPrint: true,
+            QuotaUser: "a",
+            UploadType: "temporibus",
+            UploadProtocol: "aperiam",
         },
         Request: &shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest{
             AccessTuple: &shared.GoogleCloudPolicytroubleshooterV1AccessTuple{
-                FullResourceName: "vero",
-                Permission: "corporis",
-                Principal: "enim",
+                FullResourceName: "quis",
+                Permission: "sequi",
+                Principal: "rerum",
             },
         },
     }

@@ -3,13 +3,13 @@ package operations
 type PostSimulatePrincipalPolicyActionEnum string
 
 const (
-	PostSimulatePrincipalPolicyActionEnumSimulatePrincipalPolicy PostSimulatePrincipalPolicyActionEnum = "SimulatePrincipalPolicy"
+	POSTSimulatePrincipalPolicyActionEnumSimulatePrincipalPolicy PostSimulatePrincipalPolicyActionEnum = "SimulatePrincipalPolicy"
 )
 
 type PostSimulatePrincipalPolicyVersionEnum string
 
 const (
-	PostSimulatePrincipalPolicyVersionEnumTwoThousandAndTen0508 PostSimulatePrincipalPolicyVersionEnum = "2010-05-08"
+	POSTSimulatePrincipalPolicyVersionEnumTwoThousandAndTen0508 PostSimulatePrincipalPolicyVersionEnum = "2010-05-08"
 )
 
 type PostSimulatePrincipalPolicyQueryParams struct {

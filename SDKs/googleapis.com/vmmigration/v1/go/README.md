@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams{
-            Group: "quas",
+            Group: "culpa",
         },
         QueryParams: operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams{
             DollarXgafv: "1",
-            AccessToken: "maiores",
+            AccessToken: "tempora",
             Alt: "proto",
-            Callback: "rerum",
-            Fields: "non",
-            Key: "laboriosam",
-            OauthToken: "labore",
+            Callback: "mollitia",
+            Fields: "consequatur",
+            Key: "excepturi",
+            OauthToken: "itaque",
             PrettyPrint: true,
-            QuotaUser: "beatae",
-            UploadType: "hic",
-            UploadProtocol: "et",
+            QuotaUser: "exercitationem",
+            UploadType: "ipsam",
+            UploadProtocol: "soluta",
         },
         Request: &shared.AddGroupMigrationRequest{
-            MigratingVM: "qui",
+            MigratingVM: "rerum",
         },
     }
     

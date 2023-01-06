@@ -1,6 +1,6 @@
 package shared
 
 type DescribeInternetGatewaysResult struct {
-	InternetGateways []InternetGateway
-	NextToken        *string
+	InternetGateways map[string]interface{}
+	NextToken        map[string]interface{}
 }

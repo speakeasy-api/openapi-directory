@@ -1,5 +1,5 @@
 package shared
 
 type ModifyEbsDefaultKmsKeyIDResult struct {
-	KmsKeyID *string
+	KmsKeyID map[string]interface{}
 }

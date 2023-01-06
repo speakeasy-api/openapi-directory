@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.EgcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.EgcerRequestBody{
             CertificateParameters: &operations.EgcerRequestBodyCertificateParameters{
-                FullName: "officiis",
-                RefNo: "quis",
-                TokenNo: "ut",
-                UID: "et",
+                FullName: "ipsa",
+                RefNo: "est",
+                TokenNo: "autem",
+                UID: "magni",
             },
-            ConsentArtifact: "sit",
+            ConsentArtifact: "recusandae",
             Format: "pdf",
-            TxnID: "eos",
+            TxnID: "dolorem",
         },
     }
     
-    res, err := s.Sdk.Egcer(ctx, req)
+    res, err := s.APIs.Egcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Egcer` - Economically Backward In General Caste Certificate
 * `Ewcer` - Economically Weaker Section Certificate

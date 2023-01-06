@@ -17,5 +17,5 @@ type GetSrsRatingsRequest struct {
 type GetSrsRatingsResponse struct {
 	ContentType    string
 	StatusCode     int64
-	TeamSrsRatings []shared.TeamSrsRating
+	TeamSRSRatings []shared.TeamSrsRating
 }

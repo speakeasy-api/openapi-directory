@@ -1,6 +1,6 @@
 package shared
 
 type DescribeLocalGatewayRouteTableVpcAssociationsResult struct {
-	LocalGatewayRouteTableVpcAssociations []LocalGatewayRouteTableVpcAssociation
-	NextToken                             *string
+	LocalGatewayRouteTableVpcAssociations map[string]interface{}
+	NextToken                             map[string]interface{}
 }

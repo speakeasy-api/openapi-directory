@@ -3,13 +3,13 @@ package operations
 type PostSendRawEmailActionEnum string
 
 const (
-	PostSendRawEmailActionEnumSendRawEmail PostSendRawEmailActionEnum = "SendRawEmail"
+	POSTSendRawEmailActionEnumSendRawEmail PostSendRawEmailActionEnum = "SendRawEmail"
 )
 
 type PostSendRawEmailVersionEnum string
 
 const (
-	PostSendRawEmailVersionEnumTwoThousandAndTen1201 PostSendRawEmailVersionEnum = "2010-12-01"
+	POSTSendRawEmailVersionEnumTwoThousandAndTen1201 PostSendRawEmailVersionEnum = "2010-12-01"
 )
 
 type PostSendRawEmailQueryParams struct {

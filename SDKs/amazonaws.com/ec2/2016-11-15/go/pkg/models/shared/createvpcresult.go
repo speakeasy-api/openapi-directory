@@ -1,5 +1,5 @@
 package shared
 
 type CreateVpcResult struct {
-	Vpc *Vpc
+	Vpc map[string]interface{}
 }

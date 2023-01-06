@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,16 +34,16 @@ func main() {
     
     req := operations.GetNameConceptTypeSpecificConceptJSONRequest{
         PathParams: operations.GetNameConceptTypeSpecificConceptJSONPathParams{
-            ConceptType: "nytd_geo",
-            SpecificConcept: "nam",
+            ConceptType: "nytd_org",
+            SpecificConcept: "harum",
         },
         QueryParams: operations.GetNameConceptTypeSpecificConceptJSONQueryParams{
-            Fields: "all",
-            Query: "voluptatem",
+            Fields: "taxonomy",
+            Query: "aliquid",
         },
     }
     
-    res, err := s.Sdk.GetNameConceptTypeSpecificConceptJSON(ctx, req)
+    res, err := s.GetNameConceptTypeSpecificConceptJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

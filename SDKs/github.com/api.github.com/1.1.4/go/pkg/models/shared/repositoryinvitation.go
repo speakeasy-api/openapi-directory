@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// RepositoryInvitationSimpleUser
+// Simple User
 type RepositoryInvitationSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

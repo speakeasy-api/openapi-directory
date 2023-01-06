@@ -3,7 +3,7 @@ package operations
 type GetDefineRankExpressionActionEnum string
 
 const (
-	GetDefineRankExpressionActionEnumDefineRankExpression GetDefineRankExpressionActionEnum = "DefineRankExpression"
+	GETDefineRankExpressionActionEnumDefineRankExpression GetDefineRankExpressionActionEnum = "DefineRankExpression"
 )
 
 // GetDefineRankExpressionRankExpression
@@ -16,7 +16,7 @@ type GetDefineRankExpressionRankExpression struct {
 type GetDefineRankExpressionVersionEnum string
 
 const (
-	GetDefineRankExpressionVersionEnumTwoThousandAndEleven0201 GetDefineRankExpressionVersionEnum = "2011-02-01"
+	GETDefineRankExpressionVersionEnumTwoThousandAndEleven0201 GetDefineRankExpressionVersionEnum = "2011-02-01"
 )
 
 type GetDefineRankExpressionQueryParams struct {

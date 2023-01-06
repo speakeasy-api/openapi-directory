@@ -30,10 +30,10 @@ type DeleteByteMatchSetResponse struct {
 	ContentType                 string
 	DeleteByteMatchSetResponse  *shared.DeleteByteMatchSetResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonEmptyEntityException  *interface{}
-	WafNonexistentItemException *interface{}
-	WafReferencedItemException  *interface{}
-	WafStaleDataException       *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonEmptyEntityException  *interface{}
+	WAFNonexistentItemException *interface{}
+	WAFReferencedItemException  *interface{}
+	WAFStaleDataException       *interface{}
 }

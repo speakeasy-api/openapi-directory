@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,28 +34,36 @@ func main() {
     
     req := operations.AssociateNodeRequest{
         Headers: operations.AssociateNodeHeaders{
-            XAmzAlgorithm: "labore",
-            XAmzContentSha256: "maxime",
-            XAmzCredential: "eaque",
-            XAmzDate: "sed",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "modi",
+            XAmzAlgorithm: "perspiciatis",
+            XAmzContentSha256: "suscipit",
+            XAmzCredential: "inventore",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "soluta",
+            XAmzSignature: "ut",
+            XAmzSignedHeaders: "ullam",
             XAmzTarget: "OpsWorksCM_V2016_11_01.AssociateNode",
         },
         Request: shared.AssociateNodeRequest{
             EngineAttributes: []shared.EngineAttribute{
                 shared.EngineAttribute{
-                    Name: "doloribus",
-                    Value: "quibusdam",
+                    Name: "est",
+                    Value: "neque",
+                },
+                shared.EngineAttribute{
+                    Name: "dolor",
+                    Value: "nobis",
+                },
+                shared.EngineAttribute{
+                    Name: "ipsam",
+                    Value: "sed",
                 },
             },
-            NodeName: "pariatur",
-            ServerName: "sint",
+            NodeName: "nihil",
+            ServerName: "harum",
         },
     }
     
-    res, err := s.Sdk.AssociateNode(ctx, req)
+    res, err := s.AssociateNode(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

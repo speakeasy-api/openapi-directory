@@ -1,5 +1,5 @@
 package shared
 
 type DisableTransitGatewayRouteTablePropagationResult struct {
-	Propagation *TransitGatewayPropagation
+	Propagation map[string]interface{}
 }

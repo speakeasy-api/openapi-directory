@@ -1,5 +1,5 @@
 package shared
 
 type ModifySecurityGroupRulesResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

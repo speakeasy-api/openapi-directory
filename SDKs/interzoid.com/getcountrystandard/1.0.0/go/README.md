@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetcountrystandardRequest{
         QueryParams: operations.GetcountrystandardQueryParams{
-            Country: "ut",
-            License: "magnam",
+            Country: "veritatis",
+            License: "occaecati",
         },
     }
     
-    res, err := s.Sdk.Getcountrystandard(ctx, req)
+    res, err := s.CountryNameStandardization.Getcountrystandard(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country Name Standardization
 
 * `Getcountrystandard` - Gets country name standard
 

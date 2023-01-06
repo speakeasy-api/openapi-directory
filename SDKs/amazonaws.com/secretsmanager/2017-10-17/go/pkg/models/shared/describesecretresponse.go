@@ -5,7 +5,7 @@ import (
 )
 
 type DescribeSecretResponse struct {
-	Arn                *string                 `json:"ARN,omitempty"`
+	ARN                *string                 `json:"ARN,omitempty"`
 	CreatedDate        *time.Time              `json:"CreatedDate,omitempty"`
 	DeletedDate        *time.Time              `json:"DeletedDate,omitempty"`
 	Description        *string                 `json:"Description,omitempty"`
@@ -18,7 +18,7 @@ type DescribeSecretResponse struct {
 	PrimaryRegion      *string                 `json:"PrimaryRegion,omitempty"`
 	ReplicationStatus  []ReplicationStatusType `json:"ReplicationStatus,omitempty"`
 	RotationEnabled    *bool                   `json:"RotationEnabled,omitempty"`
-	RotationLambdaArn  *string                 `json:"RotationLambdaARN,omitempty"`
+	RotationLambdaARN  *string                 `json:"RotationLambdaARN,omitempty"`
 	RotationRules      *RotationRulesType      `json:"RotationRules,omitempty"`
 	Tags               []Tag                   `json:"Tags,omitempty"`
 	VersionIdsToStages map[string][]string     `json:"VersionIdsToStages,omitempty"`

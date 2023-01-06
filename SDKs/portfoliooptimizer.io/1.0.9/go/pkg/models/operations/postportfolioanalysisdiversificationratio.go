@@ -24,6 +24,6 @@ type PostPortfolioAnalysisDiversificationRatioRequest struct {
 
 type PostPortfolioAnalysisDiversificationRatioResponse struct {
 	ContentType                                                       string
-	PostPortfolioAnalysisDiversificationRatio200ApplicationJSONObject *PostPortfolioAnalysisDiversificationRatio200ApplicationJSON
 	StatusCode                                                        int64
+	PostPortfolioAnalysisDiversificationRatio200ApplicationJSONObject *PostPortfolioAnalysisDiversificationRatio200ApplicationJSON
 }

@@ -3,13 +3,13 @@ package operations
 type GetDeleteNatGatewayActionEnum string
 
 const (
-	GetDeleteNatGatewayActionEnumDeleteNatGateway GetDeleteNatGatewayActionEnum = "DeleteNatGateway"
+	GETDeleteNatGatewayActionEnumDeleteNatGateway GetDeleteNatGatewayActionEnum = "DeleteNatGateway"
 )
 
 type GetDeleteNatGatewayVersionEnum string
 
 const (
-	GetDeleteNatGatewayVersionEnumTwoThousandAndSixteen1115 GetDeleteNatGatewayVersionEnum = "2016-11-15"
+	GETDeleteNatGatewayVersionEnumTwoThousandAndSixteen1115 GetDeleteNatGatewayVersionEnum = "2016-11-15"
 )
 
 type GetDeleteNatGatewayQueryParams struct {

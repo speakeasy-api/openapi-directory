@@ -3,13 +3,13 @@ package operations
 type GetDescribeNotificationConfigurationsActionEnum string
 
 const (
-	GetDescribeNotificationConfigurationsActionEnumDescribeNotificationConfigurations GetDescribeNotificationConfigurationsActionEnum = "DescribeNotificationConfigurations"
+	GETDescribeNotificationConfigurationsActionEnumDescribeNotificationConfigurations GetDescribeNotificationConfigurationsActionEnum = "DescribeNotificationConfigurations"
 )
 
 type GetDescribeNotificationConfigurationsVersionEnum string
 
 const (
-	GetDescribeNotificationConfigurationsVersionEnumTwoThousandAndEleven0101 GetDescribeNotificationConfigurationsVersionEnum = "2011-01-01"
+	GETDescribeNotificationConfigurationsVersionEnumTwoThousandAndEleven0101 GetDescribeNotificationConfigurationsVersionEnum = "2011-01-01"
 )
 
 type GetDescribeNotificationConfigurationsQueryParams struct {

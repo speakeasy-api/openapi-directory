@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,16 +24,16 @@ func main() {
     
     req := operations.GetVaccineStatusRequest{
         Headers: operations.GetVaccineStatusHeaders{
-            Accept: "aut",
-            Authorization: "sit",
-            ContentType: "aut",
+            Accept: "quasi",
+            Authorization: "minus",
+            ContentType: "dolorem",
         },
         Request: shared.VaccineStatusRequest{
-            Documento: "exercitationem",
+            Documento: "accusamus",
         },
     }
     
-    res, err := s.Sdk.GetVaccineStatus(ctx, req)
+    res, err := s.ParaguayAPI.GetVaccineStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Paraguay-api
 
 * `GetVaccineStatus` - return vaccine status from Paraguay
 

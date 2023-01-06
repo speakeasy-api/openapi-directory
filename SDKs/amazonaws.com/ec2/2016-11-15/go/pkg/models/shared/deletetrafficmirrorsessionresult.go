@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTrafficMirrorSessionResult struct {
-	TrafficMirrorSessionID *string
+	TrafficMirrorSessionID map[string]interface{}
 }

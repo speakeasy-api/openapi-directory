@@ -20,6 +20,6 @@ type GetV1VerificationResultRequest struct {
 
 type GetV1VerificationResultResponse struct {
 	ContentType                                     string
-	GetV1VerificationResult200ApplicationJSONString *string
 	StatusCode                                      int64
+	GetV1VerificationResult200ApplicationJSONString *string
 }

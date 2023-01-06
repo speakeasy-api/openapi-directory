@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.GetContentJSONRequest{
         QueryParams: operations.GetContentJSONQueryParams{
-            URL: "quas",
+            URL: "in",
         },
     }
     
-    res, err := s.Sdk.GetContentJSON(ctx, req)
+    res, err := s.GetContentJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

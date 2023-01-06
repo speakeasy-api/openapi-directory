@@ -16,12 +16,12 @@ type CreateInternationalPaymentsHeaders struct {
 
 type CreateInternationalPaymentsRequests struct {
 	ApplicationJosePlusJwe []byte                        `request:"mediaType=application/jose+jwe"`
-	ObWriteInternational3  *shared.ObWriteInternational3 `request:"mediaType=application/json"`
-	ObWriteInternational4  *shared.ObWriteInternational3 `request:"mediaType=application/json"`
+	OBWriteInternational3  *shared.ObWriteInternational3 `request:"mediaType=application/json"`
+	OBWriteInternational4  *shared.ObWriteInternational3 `request:"mediaType=application/json"`
 }
 
 type CreateInternationalPaymentsSecurity struct {
-	PsuoAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateInternationalPaymentsRequest struct {
@@ -34,7 +34,7 @@ type CreateInternationalPaymentsResponse struct {
 	Body                          []byte
 	ContentType                   string
 	Headers                       map[string][]string
-	ObErrorResponse1              *shared.ObErrorResponse1
-	ObWriteInternationalResponse5 *shared.ObWriteInternationalResponse5
+	OBErrorResponse1              *shared.ObErrorResponse1
+	OBWriteInternationalResponse5 *shared.ObWriteInternationalResponse5
 	StatusCode                    int64
 }

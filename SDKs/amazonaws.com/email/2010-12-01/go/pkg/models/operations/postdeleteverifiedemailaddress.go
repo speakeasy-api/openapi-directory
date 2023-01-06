@@ -3,13 +3,13 @@ package operations
 type PostDeleteVerifiedEmailAddressActionEnum string
 
 const (
-	PostDeleteVerifiedEmailAddressActionEnumDeleteVerifiedEmailAddress PostDeleteVerifiedEmailAddressActionEnum = "DeleteVerifiedEmailAddress"
+	POSTDeleteVerifiedEmailAddressActionEnumDeleteVerifiedEmailAddress PostDeleteVerifiedEmailAddressActionEnum = "DeleteVerifiedEmailAddress"
 )
 
 type PostDeleteVerifiedEmailAddressVersionEnum string
 
 const (
-	PostDeleteVerifiedEmailAddressVersionEnumTwoThousandAndTen1201 PostDeleteVerifiedEmailAddressVersionEnum = "2010-12-01"
+	POSTDeleteVerifiedEmailAddressVersionEnumTwoThousandAndTen1201 PostDeleteVerifiedEmailAddressVersionEnum = "2010-12-01"
 )
 
 type PostDeleteVerifiedEmailAddressQueryParams struct {

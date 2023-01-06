@@ -5,10 +5,10 @@ import (
 )
 
 type LabrpRequestBodyCertificateParameters struct {
-	Dob        string `json:"DOB"`
+	DOB        string `json:"DOB"`
 	FullName   string `json:"FullName"`
-	Gender     string `json:"GENDER"`
-	MobileNoRq string `json:"MobileNoRQ"`
+	GENDER     string `json:"GENDER"`
+	MobileNoRQ string `json:"MobileNoRQ"`
 }
 
 type LabrpRequestBodyFormatEnum string
@@ -84,7 +84,7 @@ type Labrp404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Labrp404ApplicationJSONErrorDescriptionEnumNoRecordFound               Labrp404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Labrp404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Labrp404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Labrp404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Labrp404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Labrp404ApplicationJSON struct {

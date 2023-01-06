@@ -82,7 +82,7 @@ type Palcs404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Palcs404ApplicationJSONErrorDescriptionEnumNoRecordFound               Palcs404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Palcs404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Palcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Palcs404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Palcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Palcs404ApplicationJSON struct {

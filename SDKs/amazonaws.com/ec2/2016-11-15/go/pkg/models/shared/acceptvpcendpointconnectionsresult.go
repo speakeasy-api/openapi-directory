@@ -1,5 +1,5 @@
 package shared
 
 type AcceptVpcEndpointConnectionsResult struct {
-	Unsuccessful []UnsuccessfulItem
+	Unsuccessful map[string]interface{}
 }

@@ -3,9 +3,9 @@ package operations
 type GetUsersUserMobileApplicationOsEnum string
 
 const (
-	GetUsersUserMobileApplicationOsEnumAndroid GetUsersUserMobileApplicationOsEnum = "Android"
-	GetUsersUserMobileApplicationOsEnumIos     GetUsersUserMobileApplicationOsEnum = "IOS"
-	GetUsersUserMobileApplicationOsEnumOther   GetUsersUserMobileApplicationOsEnum = "OTHER"
+	GetUsersUserMobileApplicationOSEnumAndroid GetUsersUserMobileApplicationOsEnum = "Android"
+	GetUsersUserMobileApplicationOSEnumIos     GetUsersUserMobileApplicationOsEnum = "IOS"
+	GetUsersUserMobileApplicationOSEnumOther   GetUsersUserMobileApplicationOsEnum = "OTHER"
 )
 
 type GetUsersUserMobileApplicationDeviceNameEnum string
@@ -26,11 +26,11 @@ const (
 )
 
 type GetUsersUserMobileApplication struct {
-	Os                  *GetUsersUserMobileApplicationOsEnum         `json:"OS,omitempty"`
+	OS                  *GetUsersUserMobileApplicationOsEnum         `json:"OS,omitempty"`
 	BusinessUserID      *int64                                       `json:"businessUserId,omitempty"`
 	ClientID            *string                                      `json:"clientID,omitempty"`
 	DeviceName          *GetUsersUserMobileApplicationDeviceNameEnum `json:"deviceName,omitempty"`
-	DeviceOsVersion     *string                                      `json:"deviceOSVersion,omitempty"`
+	DeviceOSVersion     *string                                      `json:"deviceOSVersion,omitempty"`
 	MobileApplicationID *int64                                       `json:"mobileApplicationId,omitempty"`
 	Status              *GetUsersUserMobileApplicationStatusEnum     `json:"status,omitempty"`
 }

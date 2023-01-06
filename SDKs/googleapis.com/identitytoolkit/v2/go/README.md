@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,34 +26,34 @@ func main() {
         Security: operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "deserunt",
-            Alt: "json",
-            Callback: "autem",
-            Fields: "et",
-            Key: "architecto",
-            OauthToken: "ducimus",
+            DollarXgafv: "2",
+            AccessToken: "aut",
+            Alt: "proto",
+            Callback: "ea",
+            Fields: "incidunt",
+            Key: "sapiente",
+            OauthToken: "et",
             PrettyPrint: true,
             QuotaUser: "quis",
-            UploadType: "provident",
-            UploadProtocol: "qui",
+            UploadType: "qui",
+            UploadProtocol: "vitae",
         },
         Request: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest{
-            DisplayName: "sequi",
-            IDToken: "porro",
+            DisplayName: "aut",
+            IDToken: "et",
             PhoneVerificationInfo: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo{
-                AndroidVerificationProof: "est",
-                Code: "et",
-                PhoneNumber: "sint",
-                SessionInfo: "aperiam",
+                AndroidVerificationProof: "et",
+                Code: "quas",
+                PhoneNumber: "vero",
+                SessionInfo: "quod",
             },
-            TenantID: "officiis",
+            TenantID: "reiciendis",
         },
     }
     

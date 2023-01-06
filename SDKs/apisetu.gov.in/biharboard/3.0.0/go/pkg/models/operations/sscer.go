@@ -5,10 +5,10 @@ import (
 )
 
 type SscerRequestBodyCertificateParameters struct {
-	Dob       string `json:"DOB"`
+	DOB       string `json:"DOB"`
 	FullName  string `json:"FullName"`
-	Rroll     string `json:"RROLL"`
-	RrollCode string `json:"RROLL_CODE"`
+	RROLL     string `json:"RROLL"`
+	RROLLCODE string `json:"RROLL_CODE"`
 	Year      string `json:"year"`
 }
 
@@ -85,7 +85,7 @@ type Sscer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Sscer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Sscer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Sscer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Sscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Sscer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Sscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Sscer404ApplicationJSON struct {

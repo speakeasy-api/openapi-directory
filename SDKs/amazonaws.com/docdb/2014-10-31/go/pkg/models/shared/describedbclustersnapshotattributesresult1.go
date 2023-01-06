@@ -1,0 +1,5 @@
+package shared
+
+type DescribeDbClusterSnapshotAttributesResult1 struct {
+	DBClusterSnapshotAttributesResult *DbClusterSnapshotAttributesResult1
+}

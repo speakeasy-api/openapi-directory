@@ -3,13 +3,13 @@ package operations
 type GetGetIdentityMailFromDomainAttributesActionEnum string
 
 const (
-	GetGetIdentityMailFromDomainAttributesActionEnumGetIdentityMailFromDomainAttributes GetGetIdentityMailFromDomainAttributesActionEnum = "GetIdentityMailFromDomainAttributes"
+	GETGETIdentityMailFromDomainAttributesActionEnumGetIdentityMailFromDomainAttributes GetGetIdentityMailFromDomainAttributesActionEnum = "GetIdentityMailFromDomainAttributes"
 )
 
 type GetGetIdentityMailFromDomainAttributesVersionEnum string
 
 const (
-	GetGetIdentityMailFromDomainAttributesVersionEnumTwoThousandAndTen1201 GetGetIdentityMailFromDomainAttributesVersionEnum = "2010-12-01"
+	GETGETIdentityMailFromDomainAttributesVersionEnumTwoThousandAndTen1201 GetGetIdentityMailFromDomainAttributesVersionEnum = "2010-12-01"
 )
 
 type GetGetIdentityMailFromDomainAttributesQueryParams struct {

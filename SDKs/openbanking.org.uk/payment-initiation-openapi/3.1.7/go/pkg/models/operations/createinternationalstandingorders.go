@@ -16,12 +16,12 @@ type CreateInternationalStandingOrdersHeaders struct {
 
 type CreateInternationalStandingOrdersRequests struct {
 	ApplicationJosePlusJwe             []byte                                     `request:"mediaType=application/jose+jwe"`
-	ObWriteInternationalStandingOrder4 *shared.ObWriteInternationalStandingOrder4 `request:"mediaType=application/json"`
-	ObWriteInternationalStandingOrder5 *shared.ObWriteInternationalStandingOrder4 `request:"mediaType=application/json"`
+	OBWriteInternationalStandingOrder4 *shared.ObWriteInternationalStandingOrder4 `request:"mediaType=application/json"`
+	OBWriteInternationalStandingOrder5 *shared.ObWriteInternationalStandingOrder4 `request:"mediaType=application/json"`
 }
 
 type CreateInternationalStandingOrdersSecurity struct {
-	PsuoAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateInternationalStandingOrdersRequest struct {
@@ -34,7 +34,7 @@ type CreateInternationalStandingOrdersResponse struct {
 	Body                                       []byte
 	ContentType                                string
 	Headers                                    map[string][]string
-	ObErrorResponse1                           *shared.ObErrorResponse1
-	ObWriteInternationalStandingOrderResponse7 *shared.ObWriteInternationalStandingOrderResponse7
+	OBErrorResponse1                           *shared.ObErrorResponse1
+	OBWriteInternationalStandingOrderResponse7 *shared.ObWriteInternationalStandingOrderResponse7
 	StatusCode                                 int64
 }

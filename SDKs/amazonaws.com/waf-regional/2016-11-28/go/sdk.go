@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -141,7 +142,7 @@ func (s *SDK) AssociateWebACL(ctx context.Context, request operations.AssociateW
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -151,7 +152,7 @@ func (s *SDK) AssociateWebACL(ctx context.Context, request operations.AssociateW
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -161,7 +162,7 @@ func (s *SDK) AssociateWebACL(ctx context.Context, request operations.AssociateW
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -171,7 +172,7 @@ func (s *SDK) AssociateWebACL(ctx context.Context, request operations.AssociateW
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -181,7 +182,7 @@ func (s *SDK) AssociateWebACL(ctx context.Context, request operations.AssociateW
 				return nil, err
 			}
 
-			res.WafUnavailableEntityException = out
+			res.WAFUnavailableEntityException = out
 		}
 	}
 
@@ -243,7 +244,7 @@ func (s *SDK) CreateByteMatchSet(ctx context.Context, request operations.CreateB
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -253,7 +254,7 @@ func (s *SDK) CreateByteMatchSet(ctx context.Context, request operations.CreateB
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -263,7 +264,7 @@ func (s *SDK) CreateByteMatchSet(ctx context.Context, request operations.CreateB
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -273,7 +274,7 @@ func (s *SDK) CreateByteMatchSet(ctx context.Context, request operations.CreateB
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -283,7 +284,7 @@ func (s *SDK) CreateByteMatchSet(ctx context.Context, request operations.CreateB
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -293,7 +294,7 @@ func (s *SDK) CreateByteMatchSet(ctx context.Context, request operations.CreateB
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -355,7 +356,7 @@ func (s *SDK) CreateGeoMatchSet(ctx context.Context, request operations.CreateGe
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -365,7 +366,7 @@ func (s *SDK) CreateGeoMatchSet(ctx context.Context, request operations.CreateGe
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -375,7 +376,7 @@ func (s *SDK) CreateGeoMatchSet(ctx context.Context, request operations.CreateGe
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -385,7 +386,7 @@ func (s *SDK) CreateGeoMatchSet(ctx context.Context, request operations.CreateGe
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -395,7 +396,7 @@ func (s *SDK) CreateGeoMatchSet(ctx context.Context, request operations.CreateGe
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -405,7 +406,7 @@ func (s *SDK) CreateGeoMatchSet(ctx context.Context, request operations.CreateGe
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -467,7 +468,7 @@ func (s *SDK) CreateIPSet(ctx context.Context, request operations.CreateIPSetReq
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -477,7 +478,7 @@ func (s *SDK) CreateIPSet(ctx context.Context, request operations.CreateIPSetReq
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -487,7 +488,7 @@ func (s *SDK) CreateIPSet(ctx context.Context, request operations.CreateIPSetReq
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -497,7 +498,7 @@ func (s *SDK) CreateIPSet(ctx context.Context, request operations.CreateIPSetReq
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -507,7 +508,7 @@ func (s *SDK) CreateIPSet(ctx context.Context, request operations.CreateIPSetReq
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -517,7 +518,7 @@ func (s *SDK) CreateIPSet(ctx context.Context, request operations.CreateIPSetReq
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -579,7 +580,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -589,7 +590,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -599,7 +600,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -609,7 +610,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -619,7 +620,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -629,7 +630,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -639,7 +640,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -649,7 +650,7 @@ func (s *SDK) CreateRateBasedRule(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	}
 
@@ -711,7 +712,7 @@ func (s *SDK) CreateRegexMatchSet(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -721,7 +722,7 @@ func (s *SDK) CreateRegexMatchSet(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -731,7 +732,7 @@ func (s *SDK) CreateRegexMatchSet(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -741,7 +742,7 @@ func (s *SDK) CreateRegexMatchSet(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -803,7 +804,7 @@ func (s *SDK) CreateRegexPatternSet(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -813,7 +814,7 @@ func (s *SDK) CreateRegexPatternSet(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -823,7 +824,7 @@ func (s *SDK) CreateRegexPatternSet(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -833,7 +834,7 @@ func (s *SDK) CreateRegexPatternSet(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -895,7 +896,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -905,7 +906,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -915,7 +916,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -925,7 +926,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -935,7 +936,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -945,7 +946,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -955,7 +956,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -965,7 +966,7 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	}
 
@@ -1027,7 +1028,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1037,7 +1038,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1047,7 +1048,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1057,7 +1058,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1067,7 +1068,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1077,7 +1078,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1087,7 +1088,7 @@ func (s *SDK) CreateRuleGroup(ctx context.Context, request operations.CreateRule
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	}
 
@@ -1149,7 +1150,7 @@ func (s *SDK) CreateSizeConstraintSet(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1159,7 +1160,7 @@ func (s *SDK) CreateSizeConstraintSet(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1169,7 +1170,7 @@ func (s *SDK) CreateSizeConstraintSet(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1179,7 +1180,7 @@ func (s *SDK) CreateSizeConstraintSet(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1189,7 +1190,7 @@ func (s *SDK) CreateSizeConstraintSet(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1199,7 +1200,7 @@ func (s *SDK) CreateSizeConstraintSet(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -1261,7 +1262,7 @@ func (s *SDK) CreateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1271,7 +1272,7 @@ func (s *SDK) CreateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1281,7 +1282,7 @@ func (s *SDK) CreateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1291,7 +1292,7 @@ func (s *SDK) CreateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1301,7 +1302,7 @@ func (s *SDK) CreateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1311,7 +1312,7 @@ func (s *SDK) CreateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -1373,7 +1374,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1383,7 +1384,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1393,7 +1394,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1403,7 +1404,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1413,7 +1414,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1423,7 +1424,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1433,7 +1434,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -1443,7 +1444,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -1453,7 +1454,7 @@ func (s *SDK) CreateWebACL(ctx context.Context, request operations.CreateWebACLR
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	}
 
@@ -1515,7 +1516,7 @@ func (s *SDK) CreateWebACLMigrationStack(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1525,7 +1526,7 @@ func (s *SDK) CreateWebACLMigrationStack(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1535,7 +1536,7 @@ func (s *SDK) CreateWebACLMigrationStack(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1545,7 +1546,7 @@ func (s *SDK) CreateWebACLMigrationStack(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1555,7 +1556,7 @@ func (s *SDK) CreateWebACLMigrationStack(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafEntityMigrationException = out
+			res.WAFEntityMigrationException = out
 		}
 	}
 
@@ -1617,7 +1618,7 @@ func (s *SDK) CreateXSSMatchSet(ctx context.Context, request operations.CreateXS
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1627,7 +1628,7 @@ func (s *SDK) CreateXSSMatchSet(ctx context.Context, request operations.CreateXS
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1637,7 +1638,7 @@ func (s *SDK) CreateXSSMatchSet(ctx context.Context, request operations.CreateXS
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1647,7 +1648,7 @@ func (s *SDK) CreateXSSMatchSet(ctx context.Context, request operations.CreateXS
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1657,7 +1658,7 @@ func (s *SDK) CreateXSSMatchSet(ctx context.Context, request operations.CreateXS
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1667,7 +1668,7 @@ func (s *SDK) CreateXSSMatchSet(ctx context.Context, request operations.CreateXS
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -1729,7 +1730,7 @@ func (s *SDK) DeleteByteMatchSet(ctx context.Context, request operations.DeleteB
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1739,7 +1740,7 @@ func (s *SDK) DeleteByteMatchSet(ctx context.Context, request operations.DeleteB
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1749,7 +1750,7 @@ func (s *SDK) DeleteByteMatchSet(ctx context.Context, request operations.DeleteB
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1759,7 +1760,7 @@ func (s *SDK) DeleteByteMatchSet(ctx context.Context, request operations.DeleteB
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1769,7 +1770,7 @@ func (s *SDK) DeleteByteMatchSet(ctx context.Context, request operations.DeleteB
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1779,7 +1780,7 @@ func (s *SDK) DeleteByteMatchSet(ctx context.Context, request operations.DeleteB
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -1841,7 +1842,7 @@ func (s *SDK) DeleteGeoMatchSet(ctx context.Context, request operations.DeleteGe
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1851,7 +1852,7 @@ func (s *SDK) DeleteGeoMatchSet(ctx context.Context, request operations.DeleteGe
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1861,7 +1862,7 @@ func (s *SDK) DeleteGeoMatchSet(ctx context.Context, request operations.DeleteGe
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1871,7 +1872,7 @@ func (s *SDK) DeleteGeoMatchSet(ctx context.Context, request operations.DeleteGe
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1881,7 +1882,7 @@ func (s *SDK) DeleteGeoMatchSet(ctx context.Context, request operations.DeleteGe
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1891,7 +1892,7 @@ func (s *SDK) DeleteGeoMatchSet(ctx context.Context, request operations.DeleteGe
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -1953,7 +1954,7 @@ func (s *SDK) DeleteIPSet(ctx context.Context, request operations.DeleteIPSetReq
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1963,7 +1964,7 @@ func (s *SDK) DeleteIPSet(ctx context.Context, request operations.DeleteIPSetReq
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1973,7 +1974,7 @@ func (s *SDK) DeleteIPSet(ctx context.Context, request operations.DeleteIPSetReq
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1983,7 +1984,7 @@ func (s *SDK) DeleteIPSet(ctx context.Context, request operations.DeleteIPSetReq
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1993,7 +1994,7 @@ func (s *SDK) DeleteIPSet(ctx context.Context, request operations.DeleteIPSetReq
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2003,7 +2004,7 @@ func (s *SDK) DeleteIPSet(ctx context.Context, request operations.DeleteIPSetReq
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -2065,7 +2066,7 @@ func (s *SDK) DeleteLoggingConfiguration(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2075,7 +2076,7 @@ func (s *SDK) DeleteLoggingConfiguration(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2085,7 +2086,7 @@ func (s *SDK) DeleteLoggingConfiguration(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	}
 
@@ -2147,7 +2148,7 @@ func (s *SDK) DeletePermissionPolicy(ctx context.Context, request operations.Del
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2157,7 +2158,7 @@ func (s *SDK) DeletePermissionPolicy(ctx context.Context, request operations.Del
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2167,7 +2168,7 @@ func (s *SDK) DeletePermissionPolicy(ctx context.Context, request operations.Del
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -2229,7 +2230,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2239,7 +2240,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2249,7 +2250,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2259,7 +2260,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2269,7 +2270,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2279,7 +2280,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -2289,7 +2290,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2299,7 +2300,7 @@ func (s *SDK) DeleteRateBasedRule(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -2361,7 +2362,7 @@ func (s *SDK) DeleteRegexMatchSet(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2371,7 +2372,7 @@ func (s *SDK) DeleteRegexMatchSet(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2381,7 +2382,7 @@ func (s *SDK) DeleteRegexMatchSet(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2391,7 +2392,7 @@ func (s *SDK) DeleteRegexMatchSet(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2401,7 +2402,7 @@ func (s *SDK) DeleteRegexMatchSet(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2411,7 +2412,7 @@ func (s *SDK) DeleteRegexMatchSet(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -2473,7 +2474,7 @@ func (s *SDK) DeleteRegexPatternSet(ctx context.Context, request operations.Dele
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2483,7 +2484,7 @@ func (s *SDK) DeleteRegexPatternSet(ctx context.Context, request operations.Dele
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2493,7 +2494,7 @@ func (s *SDK) DeleteRegexPatternSet(ctx context.Context, request operations.Dele
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2503,7 +2504,7 @@ func (s *SDK) DeleteRegexPatternSet(ctx context.Context, request operations.Dele
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2513,7 +2514,7 @@ func (s *SDK) DeleteRegexPatternSet(ctx context.Context, request operations.Dele
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2523,7 +2524,7 @@ func (s *SDK) DeleteRegexPatternSet(ctx context.Context, request operations.Dele
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -2585,7 +2586,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2595,7 +2596,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2605,7 +2606,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2615,7 +2616,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2625,7 +2626,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2635,7 +2636,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -2645,7 +2646,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2655,7 +2656,7 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -2717,7 +2718,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2727,7 +2728,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2737,7 +2738,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2747,7 +2748,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2757,7 +2758,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2767,7 +2768,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -2777,7 +2778,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2787,7 +2788,7 @@ func (s *SDK) DeleteRuleGroup(ctx context.Context, request operations.DeleteRule
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -2849,7 +2850,7 @@ func (s *SDK) DeleteSizeConstraintSet(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2859,7 +2860,7 @@ func (s *SDK) DeleteSizeConstraintSet(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2869,7 +2870,7 @@ func (s *SDK) DeleteSizeConstraintSet(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2879,7 +2880,7 @@ func (s *SDK) DeleteSizeConstraintSet(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2889,7 +2890,7 @@ func (s *SDK) DeleteSizeConstraintSet(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2899,7 +2900,7 @@ func (s *SDK) DeleteSizeConstraintSet(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -2961,7 +2962,7 @@ func (s *SDK) DeleteSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -2971,7 +2972,7 @@ func (s *SDK) DeleteSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2981,7 +2982,7 @@ func (s *SDK) DeleteSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2991,7 +2992,7 @@ func (s *SDK) DeleteSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3001,7 +3002,7 @@ func (s *SDK) DeleteSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3011,7 +3012,7 @@ func (s *SDK) DeleteSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -3073,7 +3074,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3083,7 +3084,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3093,7 +3094,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -3103,7 +3104,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3113,7 +3114,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3123,7 +3124,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -3133,7 +3134,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -3143,7 +3144,7 @@ func (s *SDK) DeleteWebACL(ctx context.Context, request operations.DeleteWebACLR
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -3205,7 +3206,7 @@ func (s *SDK) DeleteXSSMatchSet(ctx context.Context, request operations.DeleteXS
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3215,7 +3216,7 @@ func (s *SDK) DeleteXSSMatchSet(ctx context.Context, request operations.DeleteXS
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3225,7 +3226,7 @@ func (s *SDK) DeleteXSSMatchSet(ctx context.Context, request operations.DeleteXS
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -3235,7 +3236,7 @@ func (s *SDK) DeleteXSSMatchSet(ctx context.Context, request operations.DeleteXS
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3245,7 +3246,7 @@ func (s *SDK) DeleteXSSMatchSet(ctx context.Context, request operations.DeleteXS
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3255,7 +3256,7 @@ func (s *SDK) DeleteXSSMatchSet(ctx context.Context, request operations.DeleteXS
 				return nil, err
 			}
 
-			res.WafNonEmptyEntityException = out
+			res.WAFNonEmptyEntityException = out
 		}
 	}
 
@@ -3317,7 +3318,7 @@ func (s *SDK) DisassociateWebACL(ctx context.Context, request operations.Disasso
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3327,7 +3328,7 @@ func (s *SDK) DisassociateWebACL(ctx context.Context, request operations.Disasso
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3337,7 +3338,7 @@ func (s *SDK) DisassociateWebACL(ctx context.Context, request operations.Disasso
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -3347,7 +3348,7 @@ func (s *SDK) DisassociateWebACL(ctx context.Context, request operations.Disasso
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -3409,7 +3410,7 @@ func (s *SDK) GetByteMatchSet(ctx context.Context, request operations.GetByteMat
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3419,7 +3420,7 @@ func (s *SDK) GetByteMatchSet(ctx context.Context, request operations.GetByteMat
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3429,7 +3430,7 @@ func (s *SDK) GetByteMatchSet(ctx context.Context, request operations.GetByteMat
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -3491,7 +3492,7 @@ func (s *SDK) GetChangeToken(ctx context.Context, request operations.GetChangeTo
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	}
 
@@ -3553,7 +3554,7 @@ func (s *SDK) GetChangeTokenStatus(ctx context.Context, request operations.GetCh
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3563,7 +3564,7 @@ func (s *SDK) GetChangeTokenStatus(ctx context.Context, request operations.GetCh
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	}
 
@@ -3625,7 +3626,7 @@ func (s *SDK) GetGeoMatchSet(ctx context.Context, request operations.GetGeoMatch
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3635,7 +3636,7 @@ func (s *SDK) GetGeoMatchSet(ctx context.Context, request operations.GetGeoMatch
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3645,7 +3646,7 @@ func (s *SDK) GetGeoMatchSet(ctx context.Context, request operations.GetGeoMatch
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -3707,7 +3708,7 @@ func (s *SDK) GetIPSet(ctx context.Context, request operations.GetIPSetRequest) 
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3717,7 +3718,7 @@ func (s *SDK) GetIPSet(ctx context.Context, request operations.GetIPSetRequest) 
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3727,7 +3728,7 @@ func (s *SDK) GetIPSet(ctx context.Context, request operations.GetIPSetRequest) 
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -3789,7 +3790,7 @@ func (s *SDK) GetLoggingConfiguration(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3799,7 +3800,7 @@ func (s *SDK) GetLoggingConfiguration(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -3861,7 +3862,7 @@ func (s *SDK) GetPermissionPolicy(ctx context.Context, request operations.GetPer
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3871,7 +3872,7 @@ func (s *SDK) GetPermissionPolicy(ctx context.Context, request operations.GetPer
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -3933,7 +3934,7 @@ func (s *SDK) GetRateBasedRule(ctx context.Context, request operations.GetRateBa
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3943,7 +3944,7 @@ func (s *SDK) GetRateBasedRule(ctx context.Context, request operations.GetRateBa
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3953,7 +3954,7 @@ func (s *SDK) GetRateBasedRule(ctx context.Context, request operations.GetRateBa
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4015,7 +4016,7 @@ func (s *SDK) GetRateBasedRuleManagedKeys(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4025,7 +4026,7 @@ func (s *SDK) GetRateBasedRuleManagedKeys(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4035,7 +4036,7 @@ func (s *SDK) GetRateBasedRuleManagedKeys(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -4045,7 +4046,7 @@ func (s *SDK) GetRateBasedRuleManagedKeys(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	}
 
@@ -4107,7 +4108,7 @@ func (s *SDK) GetRegexMatchSet(ctx context.Context, request operations.GetRegexM
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4117,7 +4118,7 @@ func (s *SDK) GetRegexMatchSet(ctx context.Context, request operations.GetRegexM
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4127,7 +4128,7 @@ func (s *SDK) GetRegexMatchSet(ctx context.Context, request operations.GetRegexM
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4189,7 +4190,7 @@ func (s *SDK) GetRegexPatternSet(ctx context.Context, request operations.GetRege
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4199,7 +4200,7 @@ func (s *SDK) GetRegexPatternSet(ctx context.Context, request operations.GetRege
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4209,7 +4210,7 @@ func (s *SDK) GetRegexPatternSet(ctx context.Context, request operations.GetRege
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4271,7 +4272,7 @@ func (s *SDK) GetRule(ctx context.Context, request operations.GetRuleRequest) (*
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4281,7 +4282,7 @@ func (s *SDK) GetRule(ctx context.Context, request operations.GetRuleRequest) (*
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4291,7 +4292,7 @@ func (s *SDK) GetRule(ctx context.Context, request operations.GetRuleRequest) (*
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4353,7 +4354,7 @@ func (s *SDK) GetRuleGroup(ctx context.Context, request operations.GetRuleGroupR
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4363,7 +4364,7 @@ func (s *SDK) GetRuleGroup(ctx context.Context, request operations.GetRuleGroupR
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4425,7 +4426,7 @@ func (s *SDK) GetSampledRequests(ctx context.Context, request operations.GetSamp
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4435,7 +4436,7 @@ func (s *SDK) GetSampledRequests(ctx context.Context, request operations.GetSamp
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	}
 
@@ -4497,7 +4498,7 @@ func (s *SDK) GetSizeConstraintSet(ctx context.Context, request operations.GetSi
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4507,7 +4508,7 @@ func (s *SDK) GetSizeConstraintSet(ctx context.Context, request operations.GetSi
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4517,7 +4518,7 @@ func (s *SDK) GetSizeConstraintSet(ctx context.Context, request operations.GetSi
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4579,7 +4580,7 @@ func (s *SDK) GetSQLInjectionMatchSet(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4589,7 +4590,7 @@ func (s *SDK) GetSQLInjectionMatchSet(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4599,7 +4600,7 @@ func (s *SDK) GetSQLInjectionMatchSet(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4661,7 +4662,7 @@ func (s *SDK) GetWebACL(ctx context.Context, request operations.GetWebACLRequest
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4671,7 +4672,7 @@ func (s *SDK) GetWebACL(ctx context.Context, request operations.GetWebACLRequest
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4681,7 +4682,7 @@ func (s *SDK) GetWebACL(ctx context.Context, request operations.GetWebACLRequest
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4743,7 +4744,7 @@ func (s *SDK) GetWebACLForResource(ctx context.Context, request operations.GetWe
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4753,7 +4754,7 @@ func (s *SDK) GetWebACLForResource(ctx context.Context, request operations.GetWe
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4763,7 +4764,7 @@ func (s *SDK) GetWebACLForResource(ctx context.Context, request operations.GetWe
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -4773,7 +4774,7 @@ func (s *SDK) GetWebACLForResource(ctx context.Context, request operations.GetWe
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -4783,7 +4784,7 @@ func (s *SDK) GetWebACLForResource(ctx context.Context, request operations.GetWe
 				return nil, err
 			}
 
-			res.WafUnavailableEntityException = out
+			res.WAFUnavailableEntityException = out
 		}
 	}
 
@@ -4845,7 +4846,7 @@ func (s *SDK) GetXSSMatchSet(ctx context.Context, request operations.GetXSSMatch
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4855,7 +4856,7 @@ func (s *SDK) GetXSSMatchSet(ctx context.Context, request operations.GetXSSMatch
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4865,7 +4866,7 @@ func (s *SDK) GetXSSMatchSet(ctx context.Context, request operations.GetXSSMatch
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	}
 
@@ -4927,7 +4928,7 @@ func (s *SDK) ListActivatedRulesInRuleGroup(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4937,7 +4938,7 @@ func (s *SDK) ListActivatedRulesInRuleGroup(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -4947,7 +4948,7 @@ func (s *SDK) ListActivatedRulesInRuleGroup(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	}
 
@@ -5009,7 +5010,7 @@ func (s *SDK) ListByteMatchSets(ctx context.Context, request operations.ListByte
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5019,7 +5020,7 @@ func (s *SDK) ListByteMatchSets(ctx context.Context, request operations.ListByte
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5081,7 +5082,7 @@ func (s *SDK) ListGeoMatchSets(ctx context.Context, request operations.ListGeoMa
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5091,7 +5092,7 @@ func (s *SDK) ListGeoMatchSets(ctx context.Context, request operations.ListGeoMa
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5153,7 +5154,7 @@ func (s *SDK) ListIPSets(ctx context.Context, request operations.ListIPSetsReque
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5163,7 +5164,7 @@ func (s *SDK) ListIPSets(ctx context.Context, request operations.ListIPSetsReque
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5225,7 +5226,7 @@ func (s *SDK) ListLoggingConfigurations(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5235,7 +5236,7 @@ func (s *SDK) ListLoggingConfigurations(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -5245,7 +5246,7 @@ func (s *SDK) ListLoggingConfigurations(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	}
 
@@ -5307,7 +5308,7 @@ func (s *SDK) ListRateBasedRules(ctx context.Context, request operations.ListRat
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5317,7 +5318,7 @@ func (s *SDK) ListRateBasedRules(ctx context.Context, request operations.ListRat
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5379,7 +5380,7 @@ func (s *SDK) ListRegexMatchSets(ctx context.Context, request operations.ListReg
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5389,7 +5390,7 @@ func (s *SDK) ListRegexMatchSets(ctx context.Context, request operations.ListReg
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5451,7 +5452,7 @@ func (s *SDK) ListRegexPatternSets(ctx context.Context, request operations.ListR
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5461,7 +5462,7 @@ func (s *SDK) ListRegexPatternSets(ctx context.Context, request operations.ListR
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5523,7 +5524,7 @@ func (s *SDK) ListResourcesForWebACL(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5533,7 +5534,7 @@ func (s *SDK) ListResourcesForWebACL(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -5543,7 +5544,7 @@ func (s *SDK) ListResourcesForWebACL(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -5553,7 +5554,7 @@ func (s *SDK) ListResourcesForWebACL(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	}
 
@@ -5615,7 +5616,7 @@ func (s *SDK) ListRuleGroups(ctx context.Context, request operations.ListRuleGro
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	}
 
@@ -5677,7 +5678,7 @@ func (s *SDK) ListRules(ctx context.Context, request operations.ListRulesRequest
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5687,7 +5688,7 @@ func (s *SDK) ListRules(ctx context.Context, request operations.ListRulesRequest
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5749,7 +5750,7 @@ func (s *SDK) ListSizeConstraintSets(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5759,7 +5760,7 @@ func (s *SDK) ListSizeConstraintSets(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5821,7 +5822,7 @@ func (s *SDK) ListSQLInjectionMatchSets(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5831,7 +5832,7 @@ func (s *SDK) ListSQLInjectionMatchSets(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -5893,7 +5894,7 @@ func (s *SDK) ListSubscribedRuleGroups(ctx context.Context, request operations.L
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5903,7 +5904,7 @@ func (s *SDK) ListSubscribedRuleGroups(ctx context.Context, request operations.L
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	}
 
@@ -5965,7 +5966,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -5975,7 +5976,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -5985,7 +5986,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -5995,7 +5996,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -6005,7 +6006,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -6015,7 +6016,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -6067,7 +6068,7 @@ func (s *SDK) ListWebAcLs(ctx context.Context, request operations.ListWebAcLsReq
 				return nil, err
 			}
 
-			res.ListWebAcLsResponse = out
+			res.ListWebACLsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -6077,7 +6078,7 @@ func (s *SDK) ListWebAcLs(ctx context.Context, request operations.ListWebAcLsReq
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6087,7 +6088,7 @@ func (s *SDK) ListWebAcLs(ctx context.Context, request operations.ListWebAcLsReq
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -6149,7 +6150,7 @@ func (s *SDK) ListXSSMatchSets(ctx context.Context, request operations.ListXSSMa
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6159,7 +6160,7 @@ func (s *SDK) ListXSSMatchSets(ctx context.Context, request operations.ListXSSMa
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -6221,7 +6222,7 @@ func (s *SDK) PutLoggingConfiguration(ctx context.Context, request operations.Pu
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6231,7 +6232,7 @@ func (s *SDK) PutLoggingConfiguration(ctx context.Context, request operations.Pu
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6241,7 +6242,7 @@ func (s *SDK) PutLoggingConfiguration(ctx context.Context, request operations.Pu
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6251,7 +6252,7 @@ func (s *SDK) PutLoggingConfiguration(ctx context.Context, request operations.Pu
 				return nil, err
 			}
 
-			res.WafServiceLinkedRoleErrorException = out
+			res.WAFServiceLinkedRoleErrorException = out
 		}
 	}
 
@@ -6313,7 +6314,7 @@ func (s *SDK) PutPermissionPolicy(ctx context.Context, request operations.PutPer
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6323,7 +6324,7 @@ func (s *SDK) PutPermissionPolicy(ctx context.Context, request operations.PutPer
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6333,7 +6334,7 @@ func (s *SDK) PutPermissionPolicy(ctx context.Context, request operations.PutPer
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6343,7 +6344,7 @@ func (s *SDK) PutPermissionPolicy(ctx context.Context, request operations.PutPer
 				return nil, err
 			}
 
-			res.WafInvalidPermissionPolicyException = out
+			res.WAFInvalidPermissionPolicyException = out
 		}
 	}
 
@@ -6405,7 +6406,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6415,7 +6416,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6425,7 +6426,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6435,7 +6436,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -6445,7 +6446,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -6455,7 +6456,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -6465,7 +6466,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -6527,7 +6528,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6537,7 +6538,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6547,7 +6548,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6557,7 +6558,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.WafBadRequestException = out
+			res.WAFBadRequestException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -6567,7 +6568,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.WafTagOperationException = out
+			res.WAFTagOperationException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -6577,7 +6578,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.WafTagOperationInternalErrorException = out
+			res.WAFTagOperationInternalErrorException = out
 		}
 	}
 
@@ -6639,7 +6640,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6649,7 +6650,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6659,7 +6660,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6669,7 +6670,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -6679,7 +6680,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -6689,7 +6690,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -6699,7 +6700,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -6709,7 +6710,7 @@ func (s *SDK) UpdateByteMatchSet(ctx context.Context, request operations.UpdateB
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -6771,7 +6772,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6781,7 +6782,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6791,7 +6792,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6801,7 +6802,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -6811,7 +6812,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -6821,7 +6822,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -6831,7 +6832,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -6841,7 +6842,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -6851,7 +6852,7 @@ func (s *SDK) UpdateGeoMatchSet(ctx context.Context, request operations.UpdateGe
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -6913,7 +6914,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -6923,7 +6924,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -6933,7 +6934,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -6943,7 +6944,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -6953,7 +6954,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -6963,7 +6964,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -6973,7 +6974,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -6983,7 +6984,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -6993,7 +6994,7 @@ func (s *SDK) UpdateIPSet(ctx context.Context, request operations.UpdateIPSetReq
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -7055,7 +7056,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7065,7 +7066,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7075,7 +7076,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7085,7 +7086,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7095,7 +7096,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7105,7 +7106,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7115,7 +7116,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -7125,7 +7126,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -7135,7 +7136,7 @@ func (s *SDK) UpdateRateBasedRule(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -7197,7 +7198,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7207,7 +7208,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7217,7 +7218,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafDisallowedNameException = out
+			res.WAFDisallowedNameException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7227,7 +7228,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7237,7 +7238,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7247,7 +7248,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7257,7 +7258,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -7267,7 +7268,7 @@ func (s *SDK) UpdateRegexMatchSet(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	}
 
@@ -7329,7 +7330,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7339,7 +7340,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7349,7 +7350,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7359,7 +7360,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7369,7 +7370,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7379,7 +7380,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7389,7 +7390,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -7399,7 +7400,7 @@ func (s *SDK) UpdateRegexPatternSet(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.WafInvalidRegexPatternException = out
+			res.WAFInvalidRegexPatternException = out
 		}
 	}
 
@@ -7461,7 +7462,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7471,7 +7472,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7481,7 +7482,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7491,7 +7492,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7501,7 +7502,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7511,7 +7512,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7521,7 +7522,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -7531,7 +7532,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -7541,7 +7542,7 @@ func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleReque
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -7603,7 +7604,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7613,7 +7614,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7623,7 +7624,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7633,7 +7634,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7643,7 +7644,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7653,7 +7654,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7663,7 +7664,7 @@ func (s *SDK) UpdateRuleGroup(ctx context.Context, request operations.UpdateRule
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	}
 
@@ -7725,7 +7726,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7735,7 +7736,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7745,7 +7746,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7755,7 +7756,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7765,7 +7766,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7775,7 +7776,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7785,7 +7786,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -7795,7 +7796,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -7805,7 +7806,7 @@ func (s *SDK) UpdateSizeConstraintSet(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -7867,7 +7868,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -7877,7 +7878,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -7887,7 +7888,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -7897,7 +7898,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -7907,7 +7908,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -7917,7 +7918,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -7927,7 +7928,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -7937,7 +7938,7 @@ func (s *SDK) UpdateSQLInjectionMatchSet(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 
@@ -7999,7 +8000,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -8009,7 +8010,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -8019,7 +8020,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -8029,7 +8030,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -8039,7 +8040,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -8049,7 +8050,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -8059,7 +8060,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -8069,7 +8070,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafReferencedItemException = out
+			res.WAFReferencedItemException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -8079,7 +8080,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -8089,7 +8090,7 @@ func (s *SDK) UpdateWebACL(ctx context.Context, request operations.UpdateWebACLR
 				return nil, err
 			}
 
-			res.WafSubscriptionNotFoundException = out
+			res.WAFSubscriptionNotFoundException = out
 		}
 	}
 
@@ -8151,7 +8152,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafInternalErrorException = out
+			res.WAFInternalErrorException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -8161,7 +8162,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafInvalidAccountException = out
+			res.WAFInvalidAccountException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -8171,7 +8172,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafInvalidOperationException = out
+			res.WAFInvalidOperationException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -8181,7 +8182,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafInvalidParameterException = out
+			res.WAFInvalidParameterException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -8191,7 +8192,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafNonexistentContainerException = out
+			res.WAFNonexistentContainerException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -8201,7 +8202,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafNonexistentItemException = out
+			res.WAFNonexistentItemException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -8211,7 +8212,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafStaleDataException = out
+			res.WAFStaleDataException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -8221,7 +8222,7 @@ func (s *SDK) UpdateXSSMatchSet(ctx context.Context, request operations.UpdateXS
 				return nil, err
 			}
 
-			res.WafLimitsExceededException = out
+			res.WAFLimitsExceededException = out
 		}
 	}
 

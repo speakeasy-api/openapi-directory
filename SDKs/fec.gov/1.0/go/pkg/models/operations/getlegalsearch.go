@@ -308,6 +308,6 @@ type GetLegalSearchRequest struct {
 
 type GetLegalSearchResponse struct {
 	ContentType                                string
-	GetLegalSearchDefaultApplicationJSONObject *GetLegalSearchDefaultApplicationJSON
 	StatusCode                                 int64
+	GetLegalSearchDefaultApplicationJSONObject *GetLegalSearchDefaultApplicationJSON
 }

@@ -1,0 +1,30 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type DocumentsPartialUpdatePathParams struct {
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+}
+
+type DocumentsPartialUpdateQueryParams struct {
+	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	Patient *int64  `queryParam:"style=form,explode=true,name=patient"`
+	Since   *string `queryParam:"style=form,explode=true,name=since"`
+}
+
+type DocumentsPartialUpdateSecurity struct {
+	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+}
+
+type DocumentsPartialUpdateRequest struct {
+	PathParams  DocumentsPartialUpdatePathParams
+	QueryParams DocumentsPartialUpdateQueryParams
+	Security    DocumentsPartialUpdateSecurity
+}
+
+type DocumentsPartialUpdateResponse struct {
+	ContentType string
+	StatusCode  int64
+}

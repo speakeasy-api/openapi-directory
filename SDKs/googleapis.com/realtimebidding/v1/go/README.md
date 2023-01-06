@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,31 +26,31 @@ func main() {
         Security: operations.RealtimebiddingBiddersCreativesWatchSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.RealtimebiddingBiddersCreativesWatchPathParams{
-            Parent: "veritatis",
+            Parent: "iste",
         },
         QueryParams: operations.RealtimebiddingBiddersCreativesWatchQueryParams{
             DollarXgafv: "2",
-            AccessToken: "non",
+            AccessToken: "occaecati",
             Alt: "proto",
-            Callback: "saepe",
-            Fields: "necessitatibus",
-            Key: "harum",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "voluptate",
-            UploadType: "natus",
-            UploadProtocol: "cum",
+            Callback: "quam",
+            Fields: "ut",
+            Key: "eum",
+            OauthToken: "consectetur",
+            PrettyPrint: false,
+            QuotaUser: "dignissimos",
+            UploadType: "molestias",
+            UploadProtocol: "quis",
         },
         Request: map[string]interface{}{
-            "quae": "iste",
-            "reiciendis": "asperiores",
-            "esse": "explicabo",
+            "minima": "minima",
+            "quidem": "eum",
+            "enim": "expedita",
         },
     }
     

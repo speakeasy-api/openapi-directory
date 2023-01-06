@@ -2,6 +2,6 @@ package shared
 
 type AddLfTagsToResourceRequest struct {
 	CatalogID *string     `json:"CatalogId,omitempty"`
-	LfTags    []LfTagPair `json:"LFTags"`
+	LFTags    []LfTagPair `json:"LFTags"`
 	Resource  Resource    `json:"Resource"`
 }

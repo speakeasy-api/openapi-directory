@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.IlpmtSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.IlpmtRequestBody{
             CertificateParameters: &operations.IlpmtRequestBodyCertificateParameters{
-                FullName: "dicta",
-                UID: "impedit",
-                EIlpAppID: "illum",
-                EIlpContactNumber: "quibusdam",
+                FullName: "in",
+                UID: "veritatis",
+                EILPAppID: "sed",
+                EILPContactNumber: "praesentium",
             },
-            ConsentArtifact: "cum",
+            ConsentArtifact: "dolorum",
             Format: "pdf",
-            TxnID: "repellendus",
+            TxnID: "iure",
         },
     }
     
-    res, err := s.Sdk.Ilpmt(ctx, req)
+    res, err := s.APIs.Ilpmt(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Ilpmt` - Inner Line Permit
 

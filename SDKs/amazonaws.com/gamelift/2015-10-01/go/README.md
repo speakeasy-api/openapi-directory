@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,26 @@ func main() {
     
     req := operations.AcceptMatchRequest{
         Headers: operations.AcceptMatchHeaders{
-            XAmzAlgorithm: "nam",
-            XAmzContentSha256: "molestiae",
-            XAmzCredential: "deserunt",
-            XAmzDate: "voluptates",
-            XAmzSecurityToken: "possimus",
+            XAmzAlgorithm: "odit",
+            XAmzContentSha256: "dolorem",
+            XAmzCredential: "voluptate",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "inventore",
             XAmzSignature: "et",
-            XAmzSignedHeaders: "deserunt",
+            XAmzSignedHeaders: "enim",
             XAmzTarget: "GameLift.AcceptMatch",
         },
         Request: shared.AcceptMatchInput{
             AcceptanceType: "ACCEPT",
             PlayerIds: []string{
-                "tempore",
-                "rem",
+                "quia",
+                "quasi",
             },
-            TicketID: "cum",
+            TicketID: "inventore",
         },
     }
     
-    res, err := s.Sdk.AcceptMatch(ctx, req)
+    res, err := s.AcceptMatch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

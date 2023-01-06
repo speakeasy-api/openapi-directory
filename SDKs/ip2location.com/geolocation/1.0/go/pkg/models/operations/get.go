@@ -91,6 +91,6 @@ type GetRequest struct {
 
 type GetResponse struct {
 	ContentType                 string
-	Get200ApplicationJSONString *string
 	StatusCode                  int64
+	Get200ApplicationJSONString *string
 }

@@ -32,6 +32,6 @@ type OndRouteRequest struct {
 
 type OndRouteResponse struct {
 	ContentType                      string
-	OndRoute200ApplicationJSONString *string
+	ONDRoute200ApplicationJSONString *string
 	StatusCode                       int64
 }

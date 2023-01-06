@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,12 +29,12 @@ func main() {
             },
         },
         Request: shared.VeteranStatusRequest{
-            BirthDate: "aliquid",
-            FirstName: "inventore",
-            Gender: "M",
-            LastName: "quas",
-            MiddleName: "architecto",
-            Ssn: "eos",
+            BirthDate: "minus",
+            FirstName: "ut",
+            Gender: "F",
+            LastName: "facilis",
+            MiddleName: "qui",
+            Ssn: "magni",
         },
     }
     

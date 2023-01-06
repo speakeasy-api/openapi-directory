@@ -42,5 +42,5 @@ type AddRestrictionsV1Response struct {
 	ContentType                                          string
 	StatusCode                                           int64
 	AddRestrictionsV1200ApplicationPdfBinaryString       []byte
-	AddRestrictionsV14XxApplicationProblemPlusJSONObject *AddRestrictionsV14XxApplicationProblemPlusJSON
+	AddRestrictionsV14XXApplicationProblemPlusJSONObject *AddRestrictionsV14XxApplicationProblemPlusJSON
 }

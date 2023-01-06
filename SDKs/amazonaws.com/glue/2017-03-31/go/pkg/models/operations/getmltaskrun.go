@@ -7,7 +7,7 @@ import (
 type GetMlTaskRunXAmzTargetEnum string
 
 const (
-	GetMlTaskRunXAmzTargetEnumAwsGlueGetMlTaskRun GetMlTaskRunXAmzTargetEnum = "AWSGlue.GetMLTaskRun"
+	GetMLTaskRunXAmzTargetEnumAwsGlueGetMlTaskRun GetMlTaskRunXAmzTargetEnum = "AWSGlue.GetMLTaskRun"
 )
 
 type GetMlTaskRunHeaders struct {
@@ -29,7 +29,7 @@ type GetMlTaskRunRequest struct {
 type GetMlTaskRunResponse struct {
 	ContentType               string
 	EntityNotFoundException   *interface{}
-	GetMlTaskRunResponse      *shared.GetMlTaskRunResponse
+	GetMLTaskRunResponse      *shared.GetMlTaskRunResponse
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}
 	OperationTimeoutException *interface{}

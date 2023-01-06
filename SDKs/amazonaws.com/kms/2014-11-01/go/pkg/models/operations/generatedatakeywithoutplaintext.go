@@ -33,8 +33,8 @@ type GenerateDataKeyWithoutPlaintextResponse struct {
 	GenerateDataKeyWithoutPlaintextResponse *shared.GenerateDataKeyWithoutPlaintextResponse
 	InvalidGrantTokenException              *interface{}
 	InvalidKeyUsageException                *interface{}
-	KmsInternalException                    *interface{}
-	KmsInvalidStateException                *interface{}
+	KMSInternalException                    *interface{}
+	KMSInvalidStateException                *interface{}
 	KeyUnavailableException                 *interface{}
 	NotFoundException                       *interface{}
 	StatusCode                              int64

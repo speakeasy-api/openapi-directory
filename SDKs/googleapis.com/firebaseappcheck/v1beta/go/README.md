@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,31 +27,30 @@ func main() {
             Option1: &operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams{
-            Parent: "eaque",
+            Parent: "id",
         },
         QueryParams: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "ut",
-            Alt: "proto",
-            Callback: "impedit",
-            Fields: "quia",
-            Key: "quia",
+            DollarXgafv: "1",
+            AccessToken: "distinctio",
+            Alt: "media",
+            Callback: "quia",
+            Fields: "saepe",
+            Key: "quis",
             Names: []string{
-                "nihil",
-                "beatae",
+                "iste",
             },
-            OauthToken: "corporis",
+            OauthToken: "iste",
             PrettyPrint: true,
-            QuotaUser: "officia",
-            UploadType: "ipsum",
-            UploadProtocol: "provident",
+            QuotaUser: "blanditiis",
+            UploadType: "ex",
+            UploadProtocol: "ea",
         },
     }
     

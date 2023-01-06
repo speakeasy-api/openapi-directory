@@ -39,7 +39,7 @@ type GetIntrospectionSchemaRequest struct {
 type GetIntrospectionSchemaResponse struct {
 	ContentType                    string
 	GetIntrospectionSchemaResponse *shared.GetIntrospectionSchemaResponse
-	GraphQlSchemaException         *interface{}
+	GraphQLSchemaException         *interface{}
 	InternalFailureException       *interface{}
 	NotFoundException              *interface{}
 	StatusCode                     int64

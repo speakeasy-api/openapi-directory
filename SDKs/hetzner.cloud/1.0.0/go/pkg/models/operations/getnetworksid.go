@@ -53,6 +53,6 @@ type GetNetworksIDRequest struct {
 
 type GetNetworksIDResponse struct {
 	ContentType                           string
-	GetNetworksID200ApplicationJSONObject *GetNetworksID200ApplicationJSON
 	StatusCode                            int64
+	GetNetworksID200ApplicationJSONObject *GetNetworksID200ApplicationJSON
 }

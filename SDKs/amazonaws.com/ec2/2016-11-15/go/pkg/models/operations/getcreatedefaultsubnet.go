@@ -3,13 +3,13 @@ package operations
 type GetCreateDefaultSubnetActionEnum string
 
 const (
-	GetCreateDefaultSubnetActionEnumCreateDefaultSubnet GetCreateDefaultSubnetActionEnum = "CreateDefaultSubnet"
+	GETCreateDefaultSubnetActionEnumCreateDefaultSubnet GetCreateDefaultSubnetActionEnum = "CreateDefaultSubnet"
 )
 
 type GetCreateDefaultSubnetVersionEnum string
 
 const (
-	GetCreateDefaultSubnetVersionEnumTwoThousandAndSixteen1115 GetCreateDefaultSubnetVersionEnum = "2016-11-15"
+	GETCreateDefaultSubnetVersionEnumTwoThousandAndSixteen1115 GetCreateDefaultSubnetVersionEnum = "2016-11-15"
 )
 
 type GetCreateDefaultSubnetQueryParams struct {

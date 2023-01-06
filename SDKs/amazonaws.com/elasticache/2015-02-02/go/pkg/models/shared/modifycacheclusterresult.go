@@ -1,5 +1,5 @@
 package shared
 
 type ModifyCacheClusterResult struct {
-	CacheCluster *CacheCluster
+	CacheCluster *CacheCluster2
 }

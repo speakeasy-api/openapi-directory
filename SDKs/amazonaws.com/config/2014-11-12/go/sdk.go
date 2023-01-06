@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -5623,7 +5624,7 @@ func (s *SDK) PutDeliveryChannel(ctx context.Context, request operations.PutDeli
 				return nil, err
 			}
 
-			res.InvalidSnsTopicArnException = out
+			res.InvalidSNSTopicARNException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {

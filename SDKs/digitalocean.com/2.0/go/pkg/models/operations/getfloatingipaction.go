@@ -9,14 +9,14 @@ type GetFloatingIPActionPathParams struct {
 	FloatingIP string `pathParam:"style=simple,explode=false,name=floating_ip"`
 }
 
-type GetFloatingIPActionRequest struct {
-	PathParams GetFloatingIPActionPathParams
-}
-
 type GetFloatingIPAction401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetFloatingIPActionRequest struct {
+	PathParams GetFloatingIPActionPathParams
 }
 
 type GetFloatingIPActionResponse struct {

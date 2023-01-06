@@ -1,5 +1,5 @@
 package shared
 
 type DescribeAvailabilityZonesResult struct {
-	AvailabilityZones []AvailabilityZone
+	AvailabilityZones map[string]interface{}
 }

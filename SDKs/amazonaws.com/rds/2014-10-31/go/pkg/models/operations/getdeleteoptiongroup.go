@@ -3,13 +3,13 @@ package operations
 type GetDeleteOptionGroupActionEnum string
 
 const (
-	GetDeleteOptionGroupActionEnumDeleteOptionGroup GetDeleteOptionGroupActionEnum = "DeleteOptionGroup"
+	GETDeleteOptionGroupActionEnumDeleteOptionGroup GetDeleteOptionGroupActionEnum = "DeleteOptionGroup"
 )
 
 type GetDeleteOptionGroupVersionEnum string
 
 const (
-	GetDeleteOptionGroupVersionEnumTwoThousandAndFourteen1031 GetDeleteOptionGroupVersionEnum = "2014-10-31"
+	GETDeleteOptionGroupVersionEnumTwoThousandAndFourteen1031 GetDeleteOptionGroupVersionEnum = "2014-10-31"
 )
 
 type GetDeleteOptionGroupQueryParams struct {

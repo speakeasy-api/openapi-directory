@@ -3,13 +3,13 @@ package operations
 type PostDeleteVpcActionEnum string
 
 const (
-	PostDeleteVpcActionEnumDeleteVpc PostDeleteVpcActionEnum = "DeleteVpc"
+	POSTDeleteVpcActionEnumDeleteVpc PostDeleteVpcActionEnum = "DeleteVpc"
 )
 
 type PostDeleteVpcVersionEnum string
 
 const (
-	PostDeleteVpcVersionEnumTwoThousandAndSixteen1115 PostDeleteVpcVersionEnum = "2016-11-15"
+	POSTDeleteVpcVersionEnumTwoThousandAndSixteen1115 PostDeleteVpcVersionEnum = "2016-11-15"
 )
 
 type PostDeleteVpcQueryParams struct {

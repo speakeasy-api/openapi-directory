@@ -3,13 +3,13 @@ package operations
 type PostUpdateServiceAccessPoliciesActionEnum string
 
 const (
-	PostUpdateServiceAccessPoliciesActionEnumUpdateServiceAccessPolicies PostUpdateServiceAccessPoliciesActionEnum = "UpdateServiceAccessPolicies"
+	POSTUpdateServiceAccessPoliciesActionEnumUpdateServiceAccessPolicies PostUpdateServiceAccessPoliciesActionEnum = "UpdateServiceAccessPolicies"
 )
 
 type PostUpdateServiceAccessPoliciesVersionEnum string
 
 const (
-	PostUpdateServiceAccessPoliciesVersionEnumTwoThousandAndEleven0201 PostUpdateServiceAccessPoliciesVersionEnum = "2011-02-01"
+	POSTUpdateServiceAccessPoliciesVersionEnumTwoThousandAndEleven0201 PostUpdateServiceAccessPoliciesVersionEnum = "2011-02-01"
 )
 
 type PostUpdateServiceAccessPoliciesQueryParams struct {

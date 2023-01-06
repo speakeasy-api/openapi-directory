@@ -10,8 +10,8 @@ var PostV05UsersAuthOnConfirmServerList = []string{
 
 type PostV05UsersAuthOnConfirmHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
-	XHiuID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIUID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
 }
 
 type PostV05UsersAuthOnConfirmRequests struct {

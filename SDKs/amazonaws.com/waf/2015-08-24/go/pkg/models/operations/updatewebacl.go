@@ -7,7 +7,7 @@ import (
 type UpdateWebAclxAmzTargetEnum string
 
 const (
-	UpdateWebAclxAmzTargetEnumAwswaf20150824UpdateWebACL UpdateWebAclxAmzTargetEnum = "AWSWAF_20150824.UpdateWebACL"
+	UpdateWebACLXAmzTargetEnumAwswaf20150824UpdateWebACL UpdateWebAclxAmzTargetEnum = "AWSWAF_20150824.UpdateWebACL"
 )
 
 type UpdateWebACLHeaders struct {
@@ -30,14 +30,14 @@ type UpdateWebACLResponse struct {
 	ContentType                      string
 	StatusCode                       int64
 	UpdateWebACLResponse             *shared.UpdateWebACLResponse
-	WafInternalErrorException        *interface{}
-	WafInvalidAccountException       *interface{}
-	WafInvalidOperationException     *interface{}
-	WafInvalidParameterException     *interface{}
-	WafLimitsExceededException       *interface{}
-	WafNonexistentContainerException *interface{}
-	WafNonexistentItemException      *interface{}
-	WafReferencedItemException       *interface{}
-	WafStaleDataException            *interface{}
-	WafSubscriptionNotFoundException *interface{}
+	WAFInternalErrorException        *interface{}
+	WAFInvalidAccountException       *interface{}
+	WAFInvalidOperationException     *interface{}
+	WAFInvalidParameterException     *interface{}
+	WAFLimitsExceededException       *interface{}
+	WAFNonexistentContainerException *interface{}
+	WAFNonexistentItemException      *interface{}
+	WAFReferencedItemException       *interface{}
+	WAFStaleDataException            *interface{}
+	WAFSubscriptionNotFoundException *interface{}
 }

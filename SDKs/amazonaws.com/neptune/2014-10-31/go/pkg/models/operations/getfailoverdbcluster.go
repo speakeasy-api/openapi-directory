@@ -3,19 +3,19 @@ package operations
 type GetFailoverDbClusterActionEnum string
 
 const (
-	GetFailoverDbClusterActionEnumFailoverDbCluster GetFailoverDbClusterActionEnum = "FailoverDBCluster"
+	GETFailoverDBClusterActionEnumFailoverDbCluster GetFailoverDbClusterActionEnum = "FailoverDBCluster"
 )
 
 type GetFailoverDbClusterVersionEnum string
 
 const (
-	GetFailoverDbClusterVersionEnumTwoThousandAndFourteen1031 GetFailoverDbClusterVersionEnum = "2014-10-31"
+	GETFailoverDBClusterVersionEnumTwoThousandAndFourteen1031 GetFailoverDbClusterVersionEnum = "2014-10-31"
 )
 
 type GetFailoverDbClusterQueryParams struct {
 	Action                     GetFailoverDbClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterIdentifier        *string                         `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
-	TargetDbInstanceIdentifier *string                         `queryParam:"style=form,explode=true,name=TargetDBInstanceIdentifier"`
+	DBClusterIdentifier        *string                         `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
+	TargetDBInstanceIdentifier *string                         `queryParam:"style=form,explode=true,name=TargetDBInstanceIdentifier"`
 	Version                    GetFailoverDbClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

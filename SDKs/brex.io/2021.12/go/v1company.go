@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -179,7 +179,7 @@ func (s *V1Company) CompanyDeepsearchIsin(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.CompanyDeepsearchIsin200ApplicationJSONAnies = out
+			res.CompanyDeepsearchISIN200ApplicationJSONAnies = out
 		}
 	default:
 		switch {
@@ -189,7 +189,7 @@ func (s *V1Company) CompanyDeepsearchIsin(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.CompanyDeepsearchIsinDefaultApplicationJSONAny = out
+			res.CompanyDeepsearchISINDefaultApplicationJSONAny = out
 		}
 	}
 
@@ -232,7 +232,7 @@ func (s *V1Company) CompanyDeepsearchLei(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.CompanyDeepsearchLei200ApplicationJSONAny = out
+			res.CompanyDeepsearchLEI200ApplicationJSONAny = out
 		}
 	default:
 		switch {
@@ -242,7 +242,7 @@ func (s *V1Company) CompanyDeepsearchLei(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.CompanyDeepsearchLeiDefaultApplicationJSONAny = out
+			res.CompanyDeepsearchLEIDefaultApplicationJSONAny = out
 		}
 	}
 

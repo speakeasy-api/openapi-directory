@@ -26,7 +26,7 @@ type GetMediaRequestBodyStartSelector struct {
 
 type GetMediaRequestBody struct {
 	StartSelector GetMediaRequestBodyStartSelector `json:"StartSelector"`
-	StreamArn     *string                          `json:"StreamARN,omitempty"`
+	StreamARN     *string                          `json:"StreamARN,omitempty"`
 	StreamName    *string                          `json:"StreamName,omitempty"`
 }
 

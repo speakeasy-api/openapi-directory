@@ -3,13 +3,13 @@ package operations
 type PostFailoverGlobalClusterActionEnum string
 
 const (
-	PostFailoverGlobalClusterActionEnumFailoverGlobalCluster PostFailoverGlobalClusterActionEnum = "FailoverGlobalCluster"
+	POSTFailoverGlobalClusterActionEnumFailoverGlobalCluster PostFailoverGlobalClusterActionEnum = "FailoverGlobalCluster"
 )
 
 type PostFailoverGlobalClusterVersionEnum string
 
 const (
-	PostFailoverGlobalClusterVersionEnumTwoThousandAndFourteen1031 PostFailoverGlobalClusterVersionEnum = "2014-10-31"
+	POSTFailoverGlobalClusterVersionEnumTwoThousandAndFourteen1031 PostFailoverGlobalClusterVersionEnum = "2014-10-31"
 )
 
 type PostFailoverGlobalClusterQueryParams struct {

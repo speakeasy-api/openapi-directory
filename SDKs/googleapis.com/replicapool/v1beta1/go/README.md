@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,29 +27,31 @@ func main() {
             Option1: &operations.ReplicapoolPoolsDeleteSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.ReplicapoolPoolsDeletePathParams{
-            PoolName: "molestiae",
-            ProjectName: "occaecati",
-            Zone: "molestiae",
+            PoolName: "in",
+            ProjectName: "in",
+            Zone: "vel",
         },
         QueryParams: operations.ReplicapoolPoolsDeleteQueryParams{
             Alt: "json",
-            Fields: "dolorum",
-            Key: "numquam",
-            OauthToken: "facilis",
-            PrettyPrint: false,
-            QuotaUser: "aliquid",
-            UserIP: "nesciunt",
+            Fields: "quaerat",
+            Key: "dolor",
+            OauthToken: "eos",
+            PrettyPrint: true,
+            QuotaUser: "recusandae",
+            UserIP: "est",
         },
         Request: &shared.PoolsDeleteRequest{
             AbandonInstances: []string{
-                "at",
+                "esse",
+                "deserunt",
+                "non",
             },
         },
     }

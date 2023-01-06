@@ -21,7 +21,7 @@ type App struct {
 	Description                string                    `json:"description"`
 	EnableAutoBranchCreation   *bool                     `json:"enableAutoBranchCreation,omitempty"`
 	EnableBasicAuth            bool                      `json:"enableBasicAuth"`
-	EnableBranchAutoBuild      bool                      `json:"enableBranchAutoBuild"`
+	EnableBranchAutoBuild      map[string]interface{}    `json:"enableBranchAutoBuild"`
 	EnableBranchAutoDeletion   *bool                     `json:"enableBranchAutoDeletion,omitempty"`
 	EnvironmentVariables       map[string]string         `json:"environmentVariables"`
 	IamServiceRoleArn          *string                   `json:"iamServiceRoleArn,omitempty"`

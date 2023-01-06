@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,97 +26,89 @@ func main() {
         Security: operations.DatafusionProjectsLocationsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DatafusionProjectsLocationsInstancesCreatePathParams{
-            Parent: "velit",
+            Parent: "ducimus",
         },
         QueryParams: operations.DatafusionProjectsLocationsInstancesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "nostrum",
+            AccessToken: "expedita",
             Alt: "media",
-            Callback: "veritatis",
-            Fields: "quis",
-            InstanceID: "quidem",
-            Key: "ratione",
-            OauthToken: "sed",
+            Callback: "enim",
+            Fields: "explicabo",
+            InstanceID: "cupiditate",
+            Key: "deleniti",
+            OauthToken: "consequatur",
             PrettyPrint: false,
-            QuotaUser: "enim",
-            UploadType: "natus",
-            UploadProtocol: "repudiandae",
+            QuotaUser: "animi",
+            UploadType: "ducimus",
+            UploadProtocol: "sapiente",
         },
         Request: &shared.InstanceInput{
             Accelerators: []shared.Accelerator{
                 shared.Accelerator{
-                    AcceleratorType: "CCAI_INSIGHTS",
-                    State: "STATE_UNSPECIFIED",
-                },
-                shared.Accelerator{
-                    AcceleratorType: "CCAI_INSIGHTS",
-                    State: "ENABLED",
+                    AcceleratorType: "HEALTHCARE",
+                    State: "UNKNOWN",
                 },
             },
             AvailableVersion: []shared.Version{
                 shared.Version{
                     AvailableFeatures: []string{
-                        "sed",
+                        "ipsam",
+                    },
+                    DefaultVersion: false,
+                    Type: "TYPE_GENERAL_AVAILABILITY",
+                    VersionNumber: "velit",
+                },
+                shared.Version{
+                    AvailableFeatures: []string{
+                        "ullam",
                     },
                     DefaultVersion: true,
-                    Type: "TYPE_UNSPECIFIED",
+                    Type: "TYPE_PREVIEW",
                     VersionNumber: "est",
                 },
                 shared.Version{
                     AvailableFeatures: []string{
-                        "dolores",
-                        "officia",
+                        "asperiores",
                     },
                     DefaultVersion: false,
                     Type: "TYPE_PREVIEW",
-                    VersionNumber: "aut",
-                },
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "iure",
-                        "voluptatem",
-                        "modi",
-                    },
-                    DefaultVersion: false,
-                    Type: "TYPE_UNSPECIFIED",
-                    VersionNumber: "totam",
+                    VersionNumber: "et",
                 },
             },
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "ea",
+                KeyReference: "perspiciatis",
             },
-            DataprocServiceAccount: "nisi",
-            Description: "dicta",
-            DisplayName: "provident",
+            DataprocServiceAccount: "voluptate",
+            Description: "non",
+            DisplayName: "voluptas",
             EnableRbac: false,
             EnableStackdriverLogging: false,
             EnableStackdriverMonitoring: false,
             EventPublishConfig: &shared.EventPublishConfig{
-                Enabled: true,
-                Topic: "mollitia",
+                Enabled: false,
+                Topic: "doloribus",
             },
             Labels: map[string]string{
-                "perferendis": "voluptatem",
-                "et": "asperiores",
-                "reprehenderit": "sequi",
+                "qui": "soluta",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "at",
-                Network: "ea",
+                IPAllocation: "similique",
+                Network: "omnis",
             },
             Options: map[string]string{
-                "facere": "veritatis",
+                "quisquam": "enim",
+                "incidunt": "consequatur",
             },
             PrivateInstance: true,
-            Type: "TYPE_UNSPECIFIED",
-            Version: "nostrum",
-            Zone: "minus",
+            Type: "ENTERPRISE",
+            Version: "suscipit",
+            Zone: "rerum",
         },
     }
     

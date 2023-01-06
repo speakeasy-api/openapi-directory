@@ -16,7 +16,7 @@ type Getweatherzipcode200ApplicationJSON struct {
 	VisibilityMiles  *string `json:"VisibilityMiles,omitempty"`
 	Weather          *string `json:"Weather,omitempty"`
 	WindDir          *string `json:"WindDir,omitempty"`
-	WindMph          *string `json:"WindMPH,omitempty"`
+	WindMPH          *string `json:"WindMPH,omitempty"`
 }
 
 type GetweatherzipcodeRequest struct {

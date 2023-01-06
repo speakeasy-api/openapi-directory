@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.GetAddClientIDToOpenIDConnectProviderRequest{
         QueryParams: operations.GetAddClientIDToOpenIDConnectProviderQueryParams{
             Action: "AddClientIDToOpenIDConnectProvider",
-            ClientID: "rem",
-            OpenIDConnectProviderArn: "provident",
+            ClientID: "dolorem",
+            OpenIDConnectProviderArn: "in",
             Version: "2010-05-08",
         },
         Headers: operations.GetAddClientIDToOpenIDConnectProviderHeaders{
-            XAmzAlgorithm: "quas",
-            XAmzContentSha256: "dolorum",
-            XAmzCredential: "dolores",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "sit",
-            XAmzSignature: "fugiat",
-            XAmzSignedHeaders: "doloribus",
+            XAmzAlgorithm: "quos",
+            XAmzContentSha256: "id",
+            XAmzCredential: "repellat",
+            XAmzDate: "repellendus",
+            XAmzSecurityToken: "numquam",
+            XAmzSignature: "aspernatur",
+            XAmzSignedHeaders: "ad",
         },
     }
     
-    res, err := s.Sdk.GetAddClientIDToOpenIDConnectProvider(ctx, req)
+    res, err := s.GetAddClientIDToOpenIDConnectProvider(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

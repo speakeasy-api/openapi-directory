@@ -8,13 +8,13 @@ type GetListDeadLetterSourceQueuesPathParams struct {
 type GetListDeadLetterSourceQueuesActionEnum string
 
 const (
-	GetListDeadLetterSourceQueuesActionEnumListDeadLetterSourceQueues GetListDeadLetterSourceQueuesActionEnum = "ListDeadLetterSourceQueues"
+	GETListDeadLetterSourceQueuesActionEnumListDeadLetterSourceQueues GetListDeadLetterSourceQueuesActionEnum = "ListDeadLetterSourceQueues"
 )
 
 type GetListDeadLetterSourceQueuesVersionEnum string
 
 const (
-	GetListDeadLetterSourceQueuesVersionEnumTwoThousandAndTwelve1105 GetListDeadLetterSourceQueuesVersionEnum = "2012-11-05"
+	GETListDeadLetterSourceQueuesVersionEnumTwoThousandAndTwelve1105 GetListDeadLetterSourceQueuesVersionEnum = "2012-11-05"
 )
 
 type GetListDeadLetterSourceQueuesQueryParams struct {

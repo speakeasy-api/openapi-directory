@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,12 +27,12 @@ func main() {
             OutputFormat: "xml",
         },
         QueryParams: operations.GetV1CategoryListOutputFormatQueryParams{
-            APIKey: "necessitatibus",
-            Type: "user",
+            APIKey: "non",
+            Type: "tech",
         },
     }
     
-    res, err := s.Sdk.GetV1CategoryListOutputFormat(ctx, req)
+    res, err := s.GetV1CategoryListOutputFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,8 +49,8 @@ func main() {
 ### SDK SDK
 
 * `GetV1CategoryListOutputFormat` - Return the law categories for a given category type.
-* `GetV1IDOutputFormat` - Fetch the details of a specific law given the law's ID.
 * `GetV1PocsOutputFormat` - Get the points of contact for a given jurisdiction.
+* `GetV1IDOutputFormat` - Fetch the details of a specific law given the law's ID.
 * `TransportationIncentivesLaws` - Return a full list of laws and incentives that match your query.
 
 <!-- End SDK Available Operations -->

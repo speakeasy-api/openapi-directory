@@ -1,5 +1,5 @@
 package shared
 
 type InitiateDeviceClaimResponse struct {
-	State *string `json:"State,omitempty"`
+	State map[string]interface{} `json:"State,omitempty"`
 }

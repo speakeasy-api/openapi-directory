@@ -12,7 +12,7 @@ type DescribeBotAliasResponse struct {
 	BotAliasStatus            *BotAliasStatusEnum               `json:"botAliasStatus,omitempty"`
 	BotID                     *string                           `json:"botId,omitempty"`
 	BotVersion                *string                           `json:"botVersion,omitempty"`
-	ConversationLogSettings   *ConversationLogSettings          `json:"conversationLogSettings,omitempty"`
+	ConversationLogSettings   *ConversationLogSettings1         `json:"conversationLogSettings,omitempty"`
 	CreationDateTime          *time.Time                        `json:"creationDateTime,omitempty"`
 	Description               *string                           `json:"description,omitempty"`
 	LastUpdatedDateTime       *time.Time                        `json:"lastUpdatedDateTime,omitempty"`

@@ -3,13 +3,13 @@ package operations
 type GetApplyEnvironmentManagedActionActionEnum string
 
 const (
-	GetApplyEnvironmentManagedActionActionEnumApplyEnvironmentManagedAction GetApplyEnvironmentManagedActionActionEnum = "ApplyEnvironmentManagedAction"
+	GETApplyEnvironmentManagedActionActionEnumApplyEnvironmentManagedAction GetApplyEnvironmentManagedActionActionEnum = "ApplyEnvironmentManagedAction"
 )
 
 type GetApplyEnvironmentManagedActionVersionEnum string
 
 const (
-	GetApplyEnvironmentManagedActionVersionEnumTwoThousandAndTen1201 GetApplyEnvironmentManagedActionVersionEnum = "2010-12-01"
+	GETApplyEnvironmentManagedActionVersionEnumTwoThousandAndTen1201 GetApplyEnvironmentManagedActionVersionEnum = "2010-12-01"
 )
 
 type GetApplyEnvironmentManagedActionQueryParams struct {

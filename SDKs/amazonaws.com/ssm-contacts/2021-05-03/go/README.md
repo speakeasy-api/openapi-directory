@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,26 @@ func main() {
     
     req := operations.AcceptPageRequest{
         Headers: operations.AcceptPageHeaders{
-            XAmzAlgorithm: "at",
-            XAmzContentSha256: "repellat",
-            XAmzCredential: "placeat",
-            XAmzDate: "accusantium",
-            XAmzSecurityToken: "sunt",
-            XAmzSignature: "at",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "in",
+            XAmzContentSha256: "et",
+            XAmzCredential: "est",
+            XAmzDate: "eos",
+            XAmzSecurityToken: "quas",
+            XAmzSignature: "commodi",
+            XAmzSignedHeaders: "eum",
             XAmzTarget: "SSMContacts.AcceptPage",
         },
         Request: shared.AcceptPageRequest{
-            AcceptCode: "consequatur",
+            AcceptCode: "aut",
             AcceptCodeValidation: "IGNORE",
-            AcceptType: "READ",
-            ContactChannelID: "quia",
-            Note: "eaque",
-            PageID: "et",
+            AcceptType: "DELIVERED",
+            ContactChannelID: "in",
+            Note: "est",
+            PageID: "aperiam",
         },
     }
     
-    res, err := s.Sdk.AcceptPage(ctx, req)
+    res, err := s.AcceptPage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

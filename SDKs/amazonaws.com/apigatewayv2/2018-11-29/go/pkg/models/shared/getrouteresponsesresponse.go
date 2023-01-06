@@ -1,6 +1,6 @@
 package shared
 
 type GetRouteResponsesResponse struct {
-	Items     []RouteResponse `json:"Items,omitempty"`
-	NextToken *string         `json:"NextToken,omitempty"`
+	Items     map[string]interface{} `json:"Items,omitempty"`
+	NextToken map[string]interface{} `json:"NextToken,omitempty"`
 }

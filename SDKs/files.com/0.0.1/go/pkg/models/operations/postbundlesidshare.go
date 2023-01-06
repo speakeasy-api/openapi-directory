@@ -7,7 +7,7 @@ type PostBundlesIDSharePathParams struct {
 type PostBundlesIDShareRequestBody struct {
 	Note       *string                  `multipartForm:"name=note"`
 	Recipients []map[string]interface{} `multipartForm:"name=recipients,json"`
-	To         []string                 `multipartForm:"name=to"`
+	To         []string                 `multipartForm:"name=to,json"`
 }
 
 type PostBundlesIDShareRequest struct {

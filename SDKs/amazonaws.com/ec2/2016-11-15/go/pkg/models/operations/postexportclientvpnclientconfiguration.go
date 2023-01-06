@@ -3,13 +3,13 @@ package operations
 type PostExportClientVpnClientConfigurationActionEnum string
 
 const (
-	PostExportClientVpnClientConfigurationActionEnumExportClientVpnClientConfiguration PostExportClientVpnClientConfigurationActionEnum = "ExportClientVpnClientConfiguration"
+	POSTExportClientVpnClientConfigurationActionEnumExportClientVpnClientConfiguration PostExportClientVpnClientConfigurationActionEnum = "ExportClientVpnClientConfiguration"
 )
 
 type PostExportClientVpnClientConfigurationVersionEnum string
 
 const (
-	PostExportClientVpnClientConfigurationVersionEnumTwoThousandAndSixteen1115 PostExportClientVpnClientConfigurationVersionEnum = "2016-11-15"
+	POSTExportClientVpnClientConfigurationVersionEnumTwoThousandAndSixteen1115 PostExportClientVpnClientConfigurationVersionEnum = "2016-11-15"
 )
 
 type PostExportClientVpnClientConfigurationQueryParams struct {

@@ -27,7 +27,7 @@ type GetAssociationForServiceQuotaTemplateRequest struct {
 }
 
 type GetAssociationForServiceQuotaTemplateResponse struct {
-	AwsServiceAccessNotEnabledException           *interface{}
+	AWSServiceAccessNotEnabledException           *interface{}
 	AccessDeniedException                         *interface{}
 	ContentType                                   string
 	DependencyAccessDeniedException               *interface{}

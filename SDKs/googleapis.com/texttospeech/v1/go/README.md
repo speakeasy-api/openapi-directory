@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,63 +22,44 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.TexttospeechTextSynthesizeRequest{
-        Security: operations.TexttospeechTextSynthesizeSecurity{
+    req := operations.TexttospeechOperationsCancelRequest{
+        Security: operations.TexttospeechOperationsCancelSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        QueryParams: operations.TexttospeechTextSynthesizeQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "quam",
-            Alt: "json",
-            Callback: "mollitia",
-            Fields: "qui",
-            Key: "perspiciatis",
-            OauthToken: "debitis",
-            PrettyPrint: true,
-            QuotaUser: "hic",
-            UploadType: "voluptatem",
-            UploadProtocol: "voluptas",
+        PathParams: operations.TexttospeechOperationsCancelPathParams{
+            Name: "esse",
         },
-        Request: &shared.SynthesizeSpeechRequest{
-            AudioConfig: &shared.AudioConfig{
-                AudioEncoding: "OGG_OPUS",
-                EffectsProfileID: []string{
-                    "quis",
-                    "molestias",
-                    "labore",
-                },
-                Pitch: 74.199997,
-                SampleRateHertz: 762565853273289943,
-                SpeakingRate: 85.199997,
-                VolumeGainDb: 59.200001,
-            },
-            Input: &shared.SynthesisInput{
-                Ssml: "adipisci",
-                Text: "aspernatur",
-            },
-            Voice: &shared.VoiceSelectionParams{
-                CustomVoice: &shared.CustomVoiceParams{
-                    Model: "quis",
-                    ReportedUsage: "REPORTED_USAGE_UNSPECIFIED",
-                },
-                LanguageCode: "modi",
-                Name: "consequuntur",
-                SsmlGender: "SSML_VOICE_GENDER_UNSPECIFIED",
-            },
+        QueryParams: operations.TexttospeechOperationsCancelQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "dolor",
+            Alt: "media",
+            Callback: "praesentium",
+            Fields: "ducimus",
+            Key: "ea",
+            OauthToken: "ad",
+            PrettyPrint: true,
+            QuotaUser: "temporibus",
+            UploadType: "quo",
+            UploadProtocol: "consequatur",
+        },
+        Request: map[string]interface{}{
+            "aut": "qui",
+            "sapiente": "in",
+            "ea": "aut",
         },
     }
     
-    res, err := s.Text.TexttospeechTextSynthesize(ctx, req)
+    res, err := s.Operations.TexttospeechOperationsCancel(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.SynthesizeSpeechResponse != nil {
+    if res.Empty != nil {
         // handle response
     }
 ```
@@ -87,6 +67,16 @@ func main() {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
+### operations
+
+* `TexttospeechOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* `TexttospeechOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* `TexttospeechOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+
+### projects
+
+* `TexttospeechProjectsLocationsVoicesSynthesizeLongAudio` - Synthesizes long form text asynchronously.
 
 ### text
 

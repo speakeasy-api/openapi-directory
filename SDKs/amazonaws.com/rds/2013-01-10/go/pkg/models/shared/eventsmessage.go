@@ -1,6 +1,6 @@
 package shared
 
 type EventsMessage struct {
-	Events []Event
+	Events []map[string]interface{}
 	Marker *string
 }

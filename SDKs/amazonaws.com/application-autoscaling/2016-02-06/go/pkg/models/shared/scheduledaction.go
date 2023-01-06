@@ -13,7 +13,7 @@ type ScheduledAction struct {
 	ScalableDimension    *ScalableDimensionEnum `json:"ScalableDimension,omitempty"`
 	ScalableTargetAction *ScalableTargetAction  `json:"ScalableTargetAction,omitempty"`
 	Schedule             string                 `json:"Schedule"`
-	ScheduledActionArn   string                 `json:"ScheduledActionARN"`
+	ScheduledActionARN   string                 `json:"ScheduledActionARN"`
 	ScheduledActionName  string                 `json:"ScheduledActionName"`
 	ServiceNamespace     ServiceNamespaceEnum   `json:"ServiceNamespace"`
 	StartTime            *time.Time             `json:"StartTime,omitempty"`

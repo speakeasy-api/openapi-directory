@@ -1,5 +1,7 @@
 package shared
 
+// CommitSimpleUser
+// Simple User
 type CommitSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -22,6 +24,8 @@ type CommitSimpleUser struct {
 	URL               string  `json:"url"`
 }
 
+// CommitCommitGitUser
+// Metaproperties for Git author/committer information.
 type CommitCommitGitUser struct {
 	Date  *string `json:"date,omitempty"`
 	Email *string `json:"email,omitempty"`

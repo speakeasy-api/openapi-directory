@@ -1,6 +1,6 @@
 package shared
 
 type DescribeNetworkAclsResult struct {
-	NetworkAcls []NetworkACL
-	NextToken   *string
+	NetworkAcls map[string]interface{}
+	NextToken   map[string]interface{}
 }

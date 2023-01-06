@@ -39,8 +39,8 @@ type CreateGroupIfNotExistsForUsingPostRequest struct {
 type CreateGroupIfNotExistsForUsingPostResponse struct {
 	ContentType                                                string
 	StatusCode                                                 int64
-	CreateGroupIfNotExistsForUsingPost200ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost200ApplicationJSON
-	CreateGroupIfNotExistsForUsingPost400ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost400ApplicationJSON
-	CreateGroupIfNotExistsForUsingPost401ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost401ApplicationJSON
-	CreateGroupIfNotExistsForUsingPost500ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost500ApplicationJSON
+	CreateGroupIfNotExistsForUsingPOST200ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost200ApplicationJSON
+	CreateGroupIfNotExistsForUsingPOST400ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost400ApplicationJSON
+	CreateGroupIfNotExistsForUsingPOST401ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost401ApplicationJSON
+	CreateGroupIfNotExistsForUsingPOST500ApplicationJSONObject *CreateGroupIfNotExistsForUsingPost500ApplicationJSON
 }

@@ -1,6 +1,6 @@
 package shared
 
 type CreateTrafficMirrorFilterResult struct {
-	ClientToken         *string
-	TrafficMirrorFilter *TrafficMirrorFilter
+	ClientToken         map[string]interface{}
+	TrafficMirrorFilter map[string]interface{}
 }

@@ -51,6 +51,6 @@ type GetSSHKeysRequest struct {
 
 type GetSSHKeysResponse struct {
 	ContentType                        string
-	GetSSHKeys200ApplicationJSONObject *GetSSHKeys200ApplicationJSON
 	StatusCode                         int64
+	GetSSHKeys200ApplicationJSONObject *GetSSHKeys200ApplicationJSON
 }

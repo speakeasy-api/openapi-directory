@@ -10,7 +10,7 @@ type PostV05HealthInformationRequestHeaders struct {
 
 type PostV05HealthInformationRequestRequests struct {
 	ApplicationXML []byte            `request:"mediaType=application/xml"`
-	HiRequest      *shared.HiRequest `request:"mediaType=application/json"`
+	HIRequest      *shared.HiRequest `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationRequestRequest struct {

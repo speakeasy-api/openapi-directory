@@ -5,12 +5,12 @@ import (
 )
 
 type HsmgrRequestBodyCertificateParameters struct {
-	Cuid     string `json:"CUID"`
-	Dob      string `json:"DOB"`
+	CUID     string `json:"CUID"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Idxn     string `json:"IDXN"`
+	IDXN     string `json:"IDXN"`
 	UID      string `json:"UID"`
-	Yoe      string `json:"YOE"`
+	YOE      string `json:"YOE"`
 }
 
 type HsmgrRequestBodyFormatEnum string
@@ -86,7 +86,7 @@ type Hsmgr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Hsmgr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Hsmgr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Hsmgr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Hsmgr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Hsmgr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Hsmgr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Hsmgr404ApplicationJSON struct {

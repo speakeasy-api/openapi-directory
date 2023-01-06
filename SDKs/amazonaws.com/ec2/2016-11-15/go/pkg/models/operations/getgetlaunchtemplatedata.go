@@ -3,13 +3,13 @@ package operations
 type GetGetLaunchTemplateDataActionEnum string
 
 const (
-	GetGetLaunchTemplateDataActionEnumGetLaunchTemplateData GetGetLaunchTemplateDataActionEnum = "GetLaunchTemplateData"
+	GETGETLaunchTemplateDataActionEnumGetLaunchTemplateData GetGetLaunchTemplateDataActionEnum = "GetLaunchTemplateData"
 )
 
 type GetGetLaunchTemplateDataVersionEnum string
 
 const (
-	GetGetLaunchTemplateDataVersionEnumTwoThousandAndSixteen1115 GetGetLaunchTemplateDataVersionEnum = "2016-11-15"
+	GETGETLaunchTemplateDataVersionEnumTwoThousandAndSixteen1115 GetGetLaunchTemplateDataVersionEnum = "2016-11-15"
 )
 
 type GetGetLaunchTemplateDataQueryParams struct {

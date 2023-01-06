@@ -3,13 +3,13 @@ package operations
 type GetGenerateCredentialReportActionEnum string
 
 const (
-	GetGenerateCredentialReportActionEnumGenerateCredentialReport GetGenerateCredentialReportActionEnum = "GenerateCredentialReport"
+	GETGenerateCredentialReportActionEnumGenerateCredentialReport GetGenerateCredentialReportActionEnum = "GenerateCredentialReport"
 )
 
 type GetGenerateCredentialReportVersionEnum string
 
 const (
-	GetGenerateCredentialReportVersionEnumTwoThousandAndTen0508 GetGenerateCredentialReportVersionEnum = "2010-05-08"
+	GETGenerateCredentialReportVersionEnumTwoThousandAndTen0508 GetGenerateCredentialReportVersionEnum = "2010-05-08"
 )
 
 type GetGenerateCredentialReportQueryParams struct {

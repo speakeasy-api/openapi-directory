@@ -10,10 +10,6 @@ type GetDropletLoad15MetricsQueryParams struct {
 	Start  string `queryParam:"style=form,explode=true,name=start"`
 }
 
-type GetDropletLoad15MetricsRequest struct {
-	QueryParams GetDropletLoad15MetricsQueryParams
-}
-
 type GetDropletLoad15Metrics200ApplicationJSONDataResult struct {
 	Metric map[string]string `json:"metric"`
 	Values [][]interface{}   `json:"values"`
@@ -46,6 +42,10 @@ type GetDropletLoad15Metrics401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDropletLoad15MetricsRequest struct {
+	QueryParams GetDropletLoad15MetricsQueryParams
 }
 
 type GetDropletLoad15MetricsResponse struct {

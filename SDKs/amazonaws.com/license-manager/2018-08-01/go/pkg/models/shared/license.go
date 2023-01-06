@@ -13,7 +13,7 @@ type License struct {
 	LicenseMetadata          []Metadata                `json:"LicenseMetadata,omitempty"`
 	LicenseName              *string                   `json:"LicenseName,omitempty"`
 	ProductName              *string                   `json:"ProductName,omitempty"`
-	ProductSku               *string                   `json:"ProductSKU,omitempty"`
+	ProductSKU               *string                   `json:"ProductSKU,omitempty"`
 	Status                   *LicenseStatusEnum        `json:"Status,omitempty"`
 	Validity                 *DatetimeRange            `json:"Validity,omitempty"`
 	Version                  *string                   `json:"Version,omitempty"`

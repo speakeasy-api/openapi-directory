@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,7 +26,7 @@ func main() {
         Security: operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -37,157 +36,162 @@ func main() {
         },
         QueryParams: operations.CloudfunctionsProjectsLocationsFunctionsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "adipisci",
-            Alt: "media",
-            Callback: "perspiciatis",
-            Fields: "porro",
+            AccessToken: "dicta",
+            Alt: "json",
+            Callback: "eveniet",
+            Fields: "corrupti",
             FunctionID: "ut",
-            Key: "hic",
-            OauthToken: "enim",
+            Key: "itaque",
+            OauthToken: "fugiat",
             PrettyPrint: false,
-            QuotaUser: "non",
-            UploadType: "optio",
-            UploadProtocol: "vel",
+            QuotaUser: "quod",
+            UploadType: "sint",
+            UploadProtocol: "pariatur",
         },
         Request: &shared.FunctionInput{
             BuildConfig: &shared.BuildConfigInput{
-                BuildpackStack: "quae",
-                DockerRegistry: "CONTAINER_REGISTRY",
-                DockerRepository: "ut",
-                EntryPoint: "consequatur",
+                BuildpackStack: "aut",
+                DockerRegistry: "DOCKER_REGISTRY_UNSPECIFIED",
+                DockerRepository: "eum",
+                EntryPoint: "repellat",
                 EnvironmentVariables: map[string]string{
-                    "quibusdam": "dolorem",
-                    "eius": "pariatur",
-                    "consequuntur": "provident",
+                    "facilis": "ipsam",
                 },
-                Runtime: "necessitatibus",
+                Runtime: "odio",
                 Source: &shared.Source{
                     RepoSource: &shared.RepoSource{
-                        BranchName: "cum",
-                        CommitSha: "laborum",
-                        Dir: "et",
+                        BranchName: "sit",
+                        CommitSha: "voluptas",
+                        Dir: "aut",
                         InvertRegex: true,
-                        ProjectID: "magnam",
-                        RepoName: "molestiae",
-                        TagName: "nisi",
+                        ProjectID: "non",
+                        RepoName: "quia",
+                        TagName: "accusantium",
                     },
                     StorageSource: &shared.StorageSource{
-                        Bucket: "vel",
-                        Generation: "aut",
-                        Object: "suscipit",
+                        Bucket: "placeat",
+                        Generation: "magni",
+                        Object: "et",
                     },
                 },
                 SourceProvenance: &shared.SourceProvenance{
                     ResolvedRepoSource: &shared.RepoSource{
-                        BranchName: "eum",
-                        CommitSha: "officiis",
-                        Dir: "maiores",
+                        BranchName: "est",
+                        CommitSha: "dolorum",
+                        Dir: "ab",
                         InvertRegex: true,
-                        ProjectID: "non",
-                        RepoName: "quia",
-                        TagName: "facere",
+                        ProjectID: "quaerat",
+                        RepoName: "sit",
+                        TagName: "eum",
                     },
                     ResolvedStorageSource: &shared.StorageSource{
-                        Bucket: "dolor",
-                        Generation: "molestiae",
-                        Object: "culpa",
+                        Bucket: "consequuntur",
+                        Generation: "est",
+                        Object: "perspiciatis",
                     },
                 },
-                WorkerPool: "minus",
+                WorkerPool: "repellendus",
             },
-            Description: "eum",
+            Description: "delectus",
             Environment: "GEN_2",
             EventTrigger: &shared.EventTriggerInput{
-                Channel: "aliquid",
+                Channel: "quae",
                 EventFilters: []shared.EventFilter{
                     shared.EventFilter{
-                        Attribute: "qui",
-                        Operator: "ut",
-                        Value: "est",
+                        Attribute: "voluptatibus",
+                        Operator: "facere",
+                        Value: "omnis",
+                    },
+                    shared.EventFilter{
+                        Attribute: "nobis",
+                        Operator: "nulla",
+                        Value: "nesciunt",
                     },
                 },
-                EventType: "at",
-                PubsubTopic: "enim",
+                EventType: "quia",
+                PubsubTopic: "dolores",
                 RetryPolicy: "RETRY_POLICY_RETRY",
-                ServiceAccountEmail: "est",
-                TriggerRegion: "optio",
+                ServiceAccountEmail: "sit",
+                TriggerRegion: "excepturi",
             },
             Labels: map[string]string{
-                "excepturi": "cum",
+                "delectus": "suscipit",
+                "et": "consectetur",
             },
-            Name: "asperiores",
+            Name: "et",
             ServiceConfig: &shared.ServiceConfigInput{
                 AllTrafficOnLatestRevision: true,
-                AvailableMemory: "est",
+                AvailableCPU: "distinctio",
+                AvailableMemory: "ex",
                 EnvironmentVariables: map[string]string{
-                    "et": "magni",
+                    "repellendus": "harum",
+                    "officiis": "molestiae",
                 },
-                IngressSettings: "ALLOW_INTERNAL_ONLY",
-                MaxInstanceCount: 2340771973895773848,
-                MinInstanceCount: 8557564578179471857,
+                IngressSettings: "ALLOW_INTERNAL_AND_GCLB",
+                MaxInstanceCount: 8526738631223038308,
+                MaxInstanceRequestConcurrency: 8593344483447830691,
+                MinInstanceCount: 6830313465676496395,
                 SecretEnvironmentVariables: []shared.SecretEnvVar{
                     shared.SecretEnvVar{
-                        Key: "consectetur",
-                        ProjectID: "ut",
-                        Secret: "voluptatem",
-                        Version: "omnis",
+                        Key: "vero",
+                        ProjectID: "nisi",
+                        Secret: "omnis",
+                        Version: "ducimus",
+                    },
+                    shared.SecretEnvVar{
+                        Key: "nulla",
+                        ProjectID: "non",
+                        Secret: "et",
+                        Version: "dolore",
                     },
                 },
                 SecretVolumes: []shared.SecretVolume{
                     shared.SecretVolume{
-                        MountPath: "atque",
+                        MountPath: "non",
+                        ProjectID: "quo",
+                        Secret: "quisquam",
+                        Versions: []shared.SecretVersion{
+                            shared.SecretVersion{
+                                Path: "aspernatur",
+                                Version: "quae",
+                            },
+                            shared.SecretVersion{
+                                Path: "voluptatem",
+                                Version: "recusandae",
+                            },
+                        },
+                    },
+                    shared.SecretVolume{
+                        MountPath: "nostrum",
+                        ProjectID: "maxime",
+                        Secret: "et",
+                        Versions: []shared.SecretVersion{
+                            shared.SecretVersion{
+                                Path: "assumenda",
+                                Version: "repudiandae",
+                            },
+                        },
+                    },
+                    shared.SecretVolume{
+                        MountPath: "similique",
                         ProjectID: "consequatur",
-                        Secret: "at",
+                        Secret: "est",
                         Versions: []shared.SecretVersion{
                             shared.SecretVersion{
-                                Path: "impedit",
-                                Version: "nesciunt",
+                                Path: "consequatur",
+                                Version: "nulla",
                             },
                             shared.SecretVersion{
-                                Path: "exercitationem",
-                                Version: "in",
-                            },
-                            shared.SecretVersion{
-                                Path: "animi",
-                                Version: "enim",
-                            },
-                        },
-                    },
-                    shared.SecretVolume{
-                        MountPath: "sed",
-                        ProjectID: "sint",
-                        Secret: "quae",
-                        Versions: []shared.SecretVersion{
-                            shared.SecretVersion{
-                                Path: "nesciunt",
-                                Version: "fuga",
-                            },
-                            shared.SecretVersion{
-                                Path: "animi",
-                                Version: "pariatur",
-                            },
-                        },
-                    },
-                    shared.SecretVolume{
-                        MountPath: "dolorum",
-                        ProjectID: "tempora",
-                        Secret: "doloribus",
-                        Versions: []shared.SecretVersion{
-                            shared.SecretVersion{
-                                Path: "dolor",
-                                Version: "ab",
-                            },
-                            shared.SecretVersion{
-                                Path: "cum",
-                                Version: "et",
+                                Path: "fugiat",
+                                Version: "eligendi",
                             },
                         },
                     },
                 },
-                SecurityLevel: "SECURE_ALWAYS",
-                ServiceAccountEmail: "minus",
-                TimeoutSeconds: 726249106625132825,
-                VpcConnector: "quod",
+                SecurityLevel: "SECURITY_LEVEL_UNSPECIFIED",
+                ServiceAccountEmail: "rerum",
+                TimeoutSeconds: 7486404432023299614,
+                VpcConnector: "voluptatem",
                 VpcConnectorEgressSettings: "PRIVATE_RANGES_ONLY",
             },
         },

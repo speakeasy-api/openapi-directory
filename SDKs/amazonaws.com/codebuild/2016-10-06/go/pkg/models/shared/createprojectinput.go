@@ -10,7 +10,7 @@ type CreateProjectInput struct {
 	EncryptionKey           *string                     `json:"encryptionKey,omitempty"`
 	Environment             ProjectEnvironment          `json:"environment"`
 	FileSystemLocations     []ProjectFileSystemLocation `json:"fileSystemLocations,omitempty"`
-	LogsConfig              *LogsConfig                 `json:"logsConfig,omitempty"`
+	LogsConfig              *LogsConfig1                `json:"logsConfig,omitempty"`
 	Name                    string                      `json:"name"`
 	QueuedTimeoutInMinutes  *int64                      `json:"queuedTimeoutInMinutes,omitempty"`
 	SecondaryArtifacts      []ProjectArtifacts          `json:"secondaryArtifacts,omitempty"`

@@ -3,13 +3,13 @@ package operations
 type GetGetIdentityNotificationAttributesActionEnum string
 
 const (
-	GetGetIdentityNotificationAttributesActionEnumGetIdentityNotificationAttributes GetGetIdentityNotificationAttributesActionEnum = "GetIdentityNotificationAttributes"
+	GETGETIdentityNotificationAttributesActionEnumGetIdentityNotificationAttributes GetGetIdentityNotificationAttributesActionEnum = "GetIdentityNotificationAttributes"
 )
 
 type GetGetIdentityNotificationAttributesVersionEnum string
 
 const (
-	GetGetIdentityNotificationAttributesVersionEnumTwoThousandAndTen1201 GetGetIdentityNotificationAttributesVersionEnum = "2010-12-01"
+	GETGETIdentityNotificationAttributesVersionEnumTwoThousandAndTen1201 GetGetIdentityNotificationAttributesVersionEnum = "2010-12-01"
 )
 
 type GetGetIdentityNotificationAttributesQueryParams struct {

@@ -31,6 +31,6 @@ type CancelJobResponse struct {
 	ContentType               string
 	InvalidJobStateException  *interface{}
 	InvalidResourceException  *interface{}
-	KmsRequestFailedException *interface{}
+	KMSRequestFailedException *interface{}
 	StatusCode                int64
 }

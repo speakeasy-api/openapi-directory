@@ -8,13 +8,13 @@ type GetDeleteMessagePathParams struct {
 type GetDeleteMessageActionEnum string
 
 const (
-	GetDeleteMessageActionEnumDeleteMessage GetDeleteMessageActionEnum = "DeleteMessage"
+	GETDeleteMessageActionEnumDeleteMessage GetDeleteMessageActionEnum = "DeleteMessage"
 )
 
 type GetDeleteMessageVersionEnum string
 
 const (
-	GetDeleteMessageVersionEnumTwoThousandAndTwelve1105 GetDeleteMessageVersionEnum = "2012-11-05"
+	GETDeleteMessageVersionEnumTwoThousandAndTwelve1105 GetDeleteMessageVersionEnum = "2012-11-05"
 )
 
 type GetDeleteMessageQueryParams struct {

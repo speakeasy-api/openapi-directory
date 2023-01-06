@@ -1,5 +1,15 @@
 package operations
 
+type PostAdminRequestsRemoveByMetadataRequestBodyXMLEquality struct {
+	EqualToXML string `json:"equalToXml"`
+}
+
+type PostAdminRequestsRemoveByMetadataRequestBodyXPathMatch struct {
+	MatchesXpath string                 `json:"matchesXpath"`
+	Namespaces   map[string]interface{} `json:"namespaces,omitempty"`
+	ValuePattern map[string]interface{} `json:"valuePattern,omitempty"`
+}
+
 type PostAdminRequestsRemoveByMetadataRequestBodyStringEquals struct {
 	CaseInsensitive *bool `json:"caseInsensitive,omitempty"`
 	EqualTo         bool  `json:"equalTo"`
@@ -25,16 +35,6 @@ type PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch struct {
 	IgnoreArrayOrder    *bool  `json:"ignoreArrayOrder,omitempty"`
 	IgnoreExtraElements *bool  `json:"ignoreExtraElements,omitempty"`
 	MatchesJSONPath     string `json:"matchesJsonPath"`
-}
-
-type PostAdminRequestsRemoveByMetadataRequestBodyXMLEquality struct {
-	EqualToXML string `json:"equalToXml"`
-}
-
-type PostAdminRequestsRemoveByMetadataRequestBodyXPathMatch struct {
-	MatchesXpath string                 `json:"matchesXpath"`
-	Namespaces   map[string]interface{} `json:"namespaces,omitempty"`
-	ValuePattern map[string]interface{} `json:"valuePattern,omitempty"`
 }
 
 type PostAdminRequestsRemoveByMetadataRequest struct {

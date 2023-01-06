@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,28 @@ func main() {
     
     req := operations.BatchUpdateClusterRequest{
         Headers: operations.BatchUpdateClusterHeaders{
-            XAmzAlgorithm: "ad",
-            XAmzContentSha256: "incidunt",
-            XAmzCredential: "dolor",
-            XAmzDate: "suscipit",
-            XAmzSecurityToken: "officiis",
-            XAmzSignature: "cum",
-            XAmzSignedHeaders: "totam",
+            XAmzAlgorithm: "consequatur",
+            XAmzContentSha256: "vero",
+            XAmzCredential: "quae",
+            XAmzDate: "fuga",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "neque",
+            XAmzSignedHeaders: "necessitatibus",
             XAmzTarget: "AmazonMemoryDB.BatchUpdateCluster",
         },
         Request: shared.BatchUpdateClusterRequest{
             ClusterNames: []string{
-                "quos",
+                "sit",
+                "est",
+                "a",
             },
             ServiceUpdate: &shared.ServiceUpdateRequest{
-                ServiceUpdateNameToApply: "beatae",
+                ServiceUpdateNameToApply: "in",
             },
         },
     }
     
-    res, err := s.Sdk.BatchUpdateCluster(ctx, req)
+    res, err := s.BatchUpdateCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

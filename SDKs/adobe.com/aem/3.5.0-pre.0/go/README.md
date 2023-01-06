@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,14 +33,7 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.DeleteAgentRequest{
-        PathParams: operations.DeleteAgentPathParams{
-            Name: "eveniet",
-            Runmode: "modi",
-        },
-    }
-    
-    res, err := s.Sdk.DeleteAgent(ctx, req)
+    res, err := s.Console.GetAemProductInfo(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -55,55 +47,70 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### console
+
+* `GetAemProductInfo`
+* `GetConfigMgr`
+* `PostBundle`
+* `PostJmxRepository`
+* `PostSamlConfiguration`
+
+### cq
+
+* `GetLoginPage`
+* `PostCqActions`
+
+### crx
+
+* `GetCrxdeStatus`
+* `GetInstallStatus`
+* `GetPackageManagerServlet`
+* `PostPackageService`
+* `PostPackageServiceJSON`
+* `PostPackageUpdate`
+* `PostSetPassword`
+
+### custom
+
+* `GetAemHealthCheck`
+* `PostConfigAemHealthCheckServlet`
+* `PostConfigAemPasswordReset`
+
+### granite
+
+* `SslSetup`
+
+### sling
 
 * `DeleteAgent`
 * `DeleteNode`
-* `GetAemHealthCheck`
-* `GetAemProductInfo`
 * `GetAgent`
 * `GetAgents`
 * `GetAuthorizableKeystore`
-* `GetConfigMgr`
-* `GetCrxdeStatus`
-* `GetInstallStatus`
 * `GetKeystore`
-* `GetLoginPage`
 * `GetNode`
 * `GetPackage`
 * `GetPackageFilter`
-* `GetPackageManagerServlet`
 * `GetQuery`
 * `GetTruststore`
 * `GetTruststoreInfo`
 * `PostAgent`
 * `PostAuthorizableKeystore`
 * `PostAuthorizables`
-* `PostBundle`
 * `PostConfigAdobeGraniteSamlAuthenticationHandler`
-* `PostConfigAemHealthCheckServlet`
-* `PostConfigAemPasswordReset`
 * `PostConfigApacheFelixJettyBasedHTTPService`
 * `PostConfigApacheHTTPComponentsProxyConfiguration`
 * `PostConfigApacheSlingDavExServlet`
 * `PostConfigApacheSlingGetServlet`
 * `PostConfigApacheSlingReferrerFilter`
 * `PostConfigProperty`
-* `PostCqActions`
-* `PostJmxRepository`
 * `PostNode`
 * `PostNodeRw`
-* `PostPackageService`
-* `PostPackageServiceJSON`
-* `PostPackageUpdate`
 * `PostPath`
 * `PostQuery`
-* `PostSamlConfiguration`
-* `PostSetPassword`
 * `PostTreeActivation`
 * `PostTruststore`
 * `PostTruststorePkcs12`
-* `SslSetup`
 
 <!-- End SDK Available Operations -->
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.DeleteAccountAccessConsentsConsentIDSecurity{
             ClientCredentialsToken: shared.SchemeClientCredentialsToken{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         PathParams: operations.DeleteAccountAccessConsentsConsentIDPathParams{
-            ConsentID: "at",
+            ConsentID: "numquam",
         },
         Headers: operations.DeleteAccountAccessConsentsConsentIDHeaders{
-            SandboxID: "voluptate",
-            XCustomerUserAgent: "molestiae",
-            XFapiAuthDate: "mollitia",
-            XFapiCustomerIPAddress: "consequatur",
-            XFapiInteractionID: "harum",
+            SandboxID: "doloremque",
+            XCustomerUserAgent: "natus",
+            XFapiAuthDate: "ea",
+            XFapiCustomerIPAddress: "reprehenderit",
+            XFapiInteractionID: "blanditiis",
         },
     }
     
-    res, err := s.Sdk.DeleteAccountAccessConsentsConsentID(ctx, req)
+    res, err := s.AccountAccess.DeleteAccountAccessConsentsConsentID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,29 +57,56 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AccountAccess
 
 * `DeleteAccountAccessConsentsConsentID` - Delete Account Access Consents
-* `DeleteSandboxSandboxID` - Delete Sandbox
 * `GetAccountAccessConsentsConsentID` - Get Account Access Consents
+* `PostAccountAccessConsents` - Create Account Access Consents
+
+### Accounts
+
 * `GetAccounts` - Get Accounts
 * `GetAccountsAccountID` - Get Accounts
+
+### Balances
+
 * `GetAccountsAccountIDBalances` - Get Balances
+
+### Beneficiaries
+
 * `GetAccountsAccountIDBeneficiaries` - Get Beneficiaries
+
+### Parties
+
 * `GetAccountsAccountIDParties` - Get Parties
 * `GetAccountsAccountIDParty` - Get Party
+* `GetParty` - Get Party
+
+### Sandbox
+
+* `DeleteSandboxSandboxID` - Delete Sandbox
+* `GetSandboxSandboxID` - Export Sandbox
+* `PostSandbox` - Create Sandbox
+* `PutSandbox` - Import Sandbox
+
+### ScheduledPayments
+
 * `GetAccountsAccountIDScheduledPayments` - Get Scheduled Payments
+
+### StandingOrders
+
 * `GetAccountsAccountIDStandingOrders` - Get Standing Orders
+
+### Statements
+
 * `GetAccountsAccountIDStatements` - Get Statements
 * `GetAccountsAccountIDStatementsStatementID` - Get Statements
 * `GetAccountsAccountIDStatementsStatementIDFile` - Get Statements
+
+### Transactions
+
 * `GetAccountsAccountIDStatementsStatementIDTransactions` - Get Transactions
 * `GetAccountsAccountIDTransactions` - Get Transactions
-* `GetParty` - Get Party
-* `GetSandboxSandboxID` - Export Sandbox
-* `PostAccountAccessConsents` - Create Account Access Consents
-* `PostSandbox` - Create Sandbox
-* `PutSandbox` - Import Sandbox
 
 <!-- End SDK Available Operations -->
 

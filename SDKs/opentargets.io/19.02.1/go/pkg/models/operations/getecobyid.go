@@ -1,7 +1,7 @@
 package operations
 
 type GetEcObyIDPathParams struct {
-	EcoID string `pathParam:"style=simple,explode=false,name=ECO_ID"`
+	ECOID string `pathParam:"style=simple,explode=false,name=ECO_ID"`
 }
 
 type GetEcObyIDRequest struct {

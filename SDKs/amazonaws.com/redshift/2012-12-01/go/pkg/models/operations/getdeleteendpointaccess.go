@@ -3,13 +3,13 @@ package operations
 type GetDeleteEndpointAccessActionEnum string
 
 const (
-	GetDeleteEndpointAccessActionEnumDeleteEndpointAccess GetDeleteEndpointAccessActionEnum = "DeleteEndpointAccess"
+	GETDeleteEndpointAccessActionEnumDeleteEndpointAccess GetDeleteEndpointAccessActionEnum = "DeleteEndpointAccess"
 )
 
 type GetDeleteEndpointAccessVersionEnum string
 
 const (
-	GetDeleteEndpointAccessVersionEnumTwoThousandAndTwelve1201 GetDeleteEndpointAccessVersionEnum = "2012-12-01"
+	GETDeleteEndpointAccessVersionEnumTwoThousandAndTwelve1201 GetDeleteEndpointAccessVersionEnum = "2012-12-01"
 )
 
 type GetDeleteEndpointAccessQueryParams struct {

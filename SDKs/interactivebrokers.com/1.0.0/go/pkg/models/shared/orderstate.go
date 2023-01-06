@@ -15,7 +15,7 @@ type OrderState struct {
 	FilledQuantity    *float64            `json:"FilledQuantity,omitempty"`
 	ListingExchange   *string             `json:"ListingExchange,omitempty"`
 	OrderType         *float64            `json:"OrderType,omitempty"`
-	OutsideRth        *string             `json:"OutsideRTH,omitempty"`
+	OutsideRTH        *string             `json:"OutsideRTH,omitempty"`
 	Price             *float64            `json:"Price,omitempty"`
 	RemainingQuantity *float64            `json:"RemainingQuantity,omitempty"`
 	Side              *OrderStateSideEnum `json:"Side,omitempty"`

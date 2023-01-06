@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.CategoriesAllRequest{
         PathParams: operations.CategoriesAllPathParams{
-            EcosystemID: "rerum",
+            EcosystemID: "nisi",
         },
         QueryParams: operations.CategoriesAllQueryParams{
-            Cursor: "nobis",
-            Limit: 7495419760578899443,
+            Cursor: "nihil",
+            Limit: 7283220397995781483,
         },
     }
     

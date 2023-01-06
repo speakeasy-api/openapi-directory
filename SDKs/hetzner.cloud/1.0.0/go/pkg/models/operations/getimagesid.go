@@ -76,6 +76,6 @@ type GetImagesIDRequest struct {
 
 type GetImagesIDResponse struct {
 	ContentType                         string
-	GetImagesID200ApplicationJSONObject *GetImagesID200ApplicationJSON
 	StatusCode                          int64
+	GetImagesID200ApplicationJSONObject *GetImagesID200ApplicationJSON
 }

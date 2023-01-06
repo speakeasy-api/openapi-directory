@@ -3,13 +3,13 @@ package operations
 type PostAssociateIamInstanceProfileActionEnum string
 
 const (
-	PostAssociateIamInstanceProfileActionEnumAssociateIamInstanceProfile PostAssociateIamInstanceProfileActionEnum = "AssociateIamInstanceProfile"
+	POSTAssociateIamInstanceProfileActionEnumAssociateIamInstanceProfile PostAssociateIamInstanceProfileActionEnum = "AssociateIamInstanceProfile"
 )
 
 type PostAssociateIamInstanceProfileVersionEnum string
 
 const (
-	PostAssociateIamInstanceProfileVersionEnumTwoThousandAndSixteen1115 PostAssociateIamInstanceProfileVersionEnum = "2016-11-15"
+	POSTAssociateIamInstanceProfileVersionEnumTwoThousandAndSixteen1115 PostAssociateIamInstanceProfileVersionEnum = "2016-11-15"
 )
 
 type PostAssociateIamInstanceProfileQueryParams struct {

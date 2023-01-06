@@ -25,12 +25,13 @@ const (
 	LunStorageTypeEnumHdd                    LunStorageTypeEnum = "HDD"
 )
 
-// LunInput
+// Lun
 // A storage volume logical unit number (LUN).
-type LunInput struct {
+type Lun struct {
 	BootLun           *bool                     `json:"bootLun,omitempty"`
 	ID                *string                   `json:"id,omitempty"`
 	MultiprotocolType *LunMultiprotocolTypeEnum `json:"multiprotocolType,omitempty"`
+	Name              *string                   `json:"name,omitempty"`
 	Shareable         *bool                     `json:"shareable,omitempty"`
 	SizeGb            *string                   `json:"sizeGb,omitempty"`
 	State             *LunStateEnum             `json:"state,omitempty"`
@@ -39,13 +40,12 @@ type LunInput struct {
 	Wwid              *string                   `json:"wwid,omitempty"`
 }
 
-// Lun
+// LunInput
 // A storage volume logical unit number (LUN).
-type Lun struct {
+type LunInput struct {
 	BootLun           *bool                     `json:"bootLun,omitempty"`
 	ID                *string                   `json:"id,omitempty"`
 	MultiprotocolType *LunMultiprotocolTypeEnum `json:"multiprotocolType,omitempty"`
-	Name              *string                   `json:"name,omitempty"`
 	Shareable         *bool                     `json:"shareable,omitempty"`
 	SizeGb            *string                   `json:"sizeGb,omitempty"`
 	State             *LunStateEnum             `json:"state,omitempty"`

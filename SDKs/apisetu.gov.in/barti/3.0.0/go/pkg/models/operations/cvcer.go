@@ -5,8 +5,8 @@ import (
 )
 
 type CvcerRequestBodyCertificateParameters struct {
-	Dob  string `json:"DOB"`
-	VcNo string `json:"VCNo"`
+	DOB  string `json:"DOB"`
+	VCNo string `json:"VCNo"`
 }
 
 type CvcerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Cvcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cvcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cvcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cvcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cvcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cvcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cvcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cvcer404ApplicationJSON struct {

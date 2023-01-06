@@ -3,8 +3,8 @@ package shared
 type UnregisterMfaRequestMfaTypeEnum string
 
 const (
-	UnregisterMfaRequestMfaTypeEnumYubikey UnregisterMfaRequestMfaTypeEnum = "YUBIKEY"
-	UnregisterMfaRequestMfaTypeEnumTotp    UnregisterMfaRequestMfaTypeEnum = "TOTP"
+	UnregisterMFARequestMFATypeEnumYubikey UnregisterMfaRequestMfaTypeEnum = "YUBIKEY"
+	UnregisterMFARequestMFATypeEnumTotp    UnregisterMfaRequestMfaTypeEnum = "TOTP"
 )
 
 type UnregisterMfaRequest struct {

@@ -7,7 +7,7 @@ import (
 type DisassociateDrtLogBucketXAmzTargetEnum string
 
 const (
-	DisassociateDrtLogBucketXAmzTargetEnumAwsShield20160616DisassociateDrtLogBucket DisassociateDrtLogBucketXAmzTargetEnum = "AWSShield_20160616.DisassociateDRTLogBucket"
+	DisassociateDRTLogBucketXAmzTargetEnumAwsShield20160616DisassociateDrtLogBucket DisassociateDrtLogBucketXAmzTargetEnum = "AWSShield_20160616.DisassociateDRTLogBucket"
 )
 
 type DisassociateDrtLogBucketHeaders struct {
@@ -29,7 +29,7 @@ type DisassociateDrtLogBucketRequest struct {
 type DisassociateDrtLogBucketResponse struct {
 	AccessDeniedForDependencyException *interface{}
 	ContentType                        string
-	DisassociateDrtLogBucketResponse   map[string]interface{}
+	DisassociateDRTLogBucketResponse   map[string]interface{}
 	InternalErrorException             *interface{}
 	InvalidOperationException          *interface{}
 	NoAssociatedRoleException          *interface{}

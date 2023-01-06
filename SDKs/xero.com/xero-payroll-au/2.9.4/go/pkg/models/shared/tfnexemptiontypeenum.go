@@ -3,8 +3,8 @@ package shared
 type TfnExemptionTypeEnum string
 
 const (
-	TfnExemptionTypeEnumNotquoted TfnExemptionTypeEnum = "NOTQUOTED"
-	TfnExemptionTypeEnumPending   TfnExemptionTypeEnum = "PENDING"
-	TfnExemptionTypeEnumPensioner TfnExemptionTypeEnum = "PENSIONER"
-	TfnExemptionTypeEnumUnder18   TfnExemptionTypeEnum = "UNDER18"
+	TFNExemptionTypeEnumNotquoted TfnExemptionTypeEnum = "NOTQUOTED"
+	TFNExemptionTypeEnumPending   TfnExemptionTypeEnum = "PENDING"
+	TFNExemptionTypeEnumPensioner TfnExemptionTypeEnum = "PENSIONER"
+	TFNExemptionTypeEnumUnder18   TfnExemptionTypeEnum = "UNDER18"
 )

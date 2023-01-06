@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,19 +32,18 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.DeleteAccountsAccountOrdersCustomerOrderIDRequest{
-        PathParams: operations.DeleteAccountsAccountOrdersCustomerOrderIDPathParams{
-            CustomerOrderID: "fuga",
-            Account: "ut",
+    req := operations.GetAccountsRequest{
+        QueryParams: operations.GetAccountsQueryParams{
+            Account: "praesentium",
         },
     }
     
-    res, err := s.Sdk.DeleteAccountsAccountOrdersCustomerOrderID(ctx, req)
+    res, err := s.AccountAndPortfolio.GetAccounts(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSONObjects != nil {
+    if res.GetAccounts200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -54,24 +52,42 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account & Portfolio
 
-* `DeleteAccountsAccountOrdersCustomerOrderID` - Cancel Order
 * `GetAccounts` - Brokerage Accounts
-* `GetAccountsAccountOrders` - Open Orders
-* `GetAccountsAccountOrdersCustomerOrderID` - Return specific order info
 * `GetAccountsAccountPositions` - Account Positions
 * `GetAccountsAccountSummary` - Account Values Summary
-* `GetAccountsAccountTrades` - Returns trades in account
+
+### Financial Instrument Definitions
+
+* `GetSecdef` - Get security definition
+
+### Market Data
+
 * `GetMarketdataExchangeComponents` - Exchange Components
 * `GetMarketdataSnapshot` - Market Data Snapshot
-* `GetSecdef` - Get security definition
-* `PostAccountsAccountOrderImpact` - Return margin impact info
-* `PostAccountsAccountOrders` - Place Order
+
+### OAuth
+
 * `PostOauthAccessToken` - Obtain a access token
 * `PostOauthLiveSessionToken` - Obtain a live session token
 * `PostOauthRequestToken` - Obtain a request token
+
+### Order Margin Requirements
+
+* `PostAccountsAccountOrderImpact` - Return margin impact info
+
+### Orders
+
+* `DeleteAccountsAccountOrdersCustomerOrderID` - Cancel Order
+* `GetAccountsAccountOrders` - Open Orders
+* `GetAccountsAccountOrdersCustomerOrderID` - Return specific order info
+* `PostAccountsAccountOrders` - Place Order
 * `PutAccountsAccountOrdersCustomerOrderID` - Modify Order
+
+### Trades
+
+* `GetAccountsAccountTrades` - Returns trades in account
 
 <!-- End SDK Available Operations -->
 

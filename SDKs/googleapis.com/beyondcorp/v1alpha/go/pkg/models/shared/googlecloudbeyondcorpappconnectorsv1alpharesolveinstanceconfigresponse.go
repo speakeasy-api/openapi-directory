@@ -1,7 +1,0 @@
-package shared
-
-// GoogleCloudBeyondcorpAppconnectorsV1alphaResolveInstanceConfigResponse
-// Response message for BeyondCorp.ResolveInstanceConfig.
-type GoogleCloudBeyondcorpAppconnectorsV1alphaResolveInstanceConfigResponse struct {
-	InstanceConfig *GoogleCloudBeyondcorpAppconnectorsV1alphaAppConnectorInstanceConfig `json:"instanceConfig,omitempty"`
-}

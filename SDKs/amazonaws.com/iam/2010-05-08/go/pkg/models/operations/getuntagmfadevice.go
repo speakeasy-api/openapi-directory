@@ -3,13 +3,13 @@ package operations
 type GetUntagMfaDeviceActionEnum string
 
 const (
-	GetUntagMfaDeviceActionEnumUntagMfaDevice GetUntagMfaDeviceActionEnum = "UntagMFADevice"
+	GETUntagMFADeviceActionEnumUntagMfaDevice GetUntagMfaDeviceActionEnum = "UntagMFADevice"
 )
 
 type GetUntagMfaDeviceVersionEnum string
 
 const (
-	GetUntagMfaDeviceVersionEnumTwoThousandAndTen0508 GetUntagMfaDeviceVersionEnum = "2010-05-08"
+	GETUntagMFADeviceVersionEnumTwoThousandAndTen0508 GetUntagMfaDeviceVersionEnum = "2010-05-08"
 )
 
 type GetUntagMfaDeviceQueryParams struct {

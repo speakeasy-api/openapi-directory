@@ -5,7 +5,7 @@ import (
 )
 
 type LcsagRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Lcsag404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Lcsag404ApplicationJSONErrorDescriptionEnumNoRecordFound               Lcsag404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Lcsag404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Lcsag404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Lcsag404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Lcsag404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Lcsag404ApplicationJSON struct {

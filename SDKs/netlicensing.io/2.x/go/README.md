@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -32,19 +31,19 @@ func main() {
         },
         Request: operations.CreateLicenseRequestBody{
             Active: false,
-            Currency: "quos",
-            Hidden: false,
-            LicenseTemplateNumber: "nemo",
-            LicenseeNumber: "quod",
-            Name: "nulla",
-            Number: "enim",
-            Parentfeature: "iure",
-            Price: 39.099998,
-            Quantity: "sed",
-            StartDate: "1975-05-08T11:39:40Z",
-            TimeVolume: "molestias",
-            TimeVolumePeriod: "est",
-            UsedQuantity: "velit",
+            Currency: "dolorem",
+            Hidden: true,
+            LicenseTemplateNumber: "quasi",
+            LicenseeNumber: "enim",
+            Name: "quidem",
+            Number: "ut",
+            Parentfeature: "accusantium",
+            Price: 75.099998,
+            Quantity: "ullam",
+            StartDate: "2003-11-23T16:58:00Z",
+            TimeVolume: "id",
+            TimeVolumePeriod: "sit",
+            UsedQuantity: "aut",
         },
     }
     

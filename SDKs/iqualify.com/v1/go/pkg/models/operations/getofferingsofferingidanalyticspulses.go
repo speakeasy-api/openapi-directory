@@ -15,6 +15,6 @@ type GetOfferingsOfferingIDAnalyticsPulsesRequest struct {
 type GetOfferingsOfferingIDAnalyticsPulsesResponse struct {
 	ContentType                                                    string
 	Error                                                          *shared.Error
-	GetOfferingsOfferingIDAnalyticsPulses200ApplicationJSONStrings []string
 	StatusCode                                                     int64
+	GetOfferingsOfferingIDAnalyticsPulses200ApplicationJSONStrings []string
 }

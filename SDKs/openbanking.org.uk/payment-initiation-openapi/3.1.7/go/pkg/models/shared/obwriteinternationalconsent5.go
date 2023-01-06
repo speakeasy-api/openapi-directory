@@ -7,8 +7,8 @@ import (
 type ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteInternationalConsent5DataAuthorisation
@@ -55,9 +55,9 @@ type ObWriteInternationalConsent5DataInitiationDebtorAccount struct {
 type ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalConsent5DataInitiationExchangeRateInformation
@@ -80,8 +80,8 @@ type ObWriteInternationalConsent5DataInitiationInstructedAmount struct {
 type ObWriteInternationalConsent5DataInitiationInstructionPriorityEnum string
 
 const (
-	ObWriteInternationalConsent5DataInitiationInstructionPriorityEnumNormal ObWriteInternationalConsent5DataInitiationInstructionPriorityEnum = "Normal"
-	ObWriteInternationalConsent5DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalConsent5DataInitiationInstructionPriorityEnum = "Urgent"
+	OBWriteInternationalConsent5DataInitiationInstructionPriorityEnumNormal ObWriteInternationalConsent5DataInitiationInstructionPriorityEnum = "Normal"
+	OBWriteInternationalConsent5DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalConsent5DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
 // ObWriteInternationalConsent5DataInitiationRemittanceInformation
@@ -116,15 +116,15 @@ type ObWriteInternationalConsent5DataInitiation struct {
 type ObWriteInternationalConsent5DataReadRefundAccountEnum string
 
 const (
-	ObWriteInternationalConsent5DataReadRefundAccountEnumNo  ObWriteInternationalConsent5DataReadRefundAccountEnum = "No"
-	ObWriteInternationalConsent5DataReadRefundAccountEnumYes ObWriteInternationalConsent5DataReadRefundAccountEnum = "Yes"
+	OBWriteInternationalConsent5DataReadRefundAccountEnumNo  ObWriteInternationalConsent5DataReadRefundAccountEnum = "No"
+	OBWriteInternationalConsent5DataReadRefundAccountEnumYes ObWriteInternationalConsent5DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteInternationalConsent5Data struct {
 	Authorisation     *ObWriteInternationalConsent5DataAuthorisation         `json:"Authorisation,omitempty"`
 	Initiation        ObWriteInternationalConsent5DataInitiation             `json:"Initiation"`
 	ReadRefundAccount *ObWriteInternationalConsent5DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData    *ObscaSupportData1                                     `json:"SCASupportData,omitempty"`
+	SCASupportData    *ObscaSupportData1                                     `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteInternationalConsent5 struct {

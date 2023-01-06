@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.CompareStationRequest{
         PathParams: operations.CompareStationPathParams{
-            StationName: "aperiam",
+            StationName: "amet",
         },
     }
     
-    res, err := s.OdWeather.CompareStation(ctx, req)
+    res, err := s.ODWeather.CompareStation(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,0 +1,13 @@
+package shared
+
+// DocumentBlockList
+// A object with a data property that contains an array of up to limit document blocks. Each entry in the array is a separate document block object. If no more document block are available, the resulting array will be empty.
+type DocumentBlockList struct {
+	CurrentPage *int64          `json:"current_page,omitempty"`
+	Data        []DocumentBlock `json:"data,omitempty"`
+	LastPage    *int64          `json:"last_page,omitempty"`
+	NextPageURL *string         `json:"next_page_url,omitempty"`
+	PerPage     *int64          `json:"per_page,omitempty"`
+	PrevPageURL *string         `json:"prev_page_url,omitempty"`
+	Total       *int64          `json:"total,omitempty"`
+}

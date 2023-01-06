@@ -1,6 +1,6 @@
 package shared
 
 type UpdateConnectivityInfoResponse struct {
-	Message *string `json:"Message,omitempty"`
-	Version *string `json:"Version,omitempty"`
+	Message map[string]interface{} `json:"Message,omitempty"`
+	Version *string                `json:"Version,omitempty"`
 }

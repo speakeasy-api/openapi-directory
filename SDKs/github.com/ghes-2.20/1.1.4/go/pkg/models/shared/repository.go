@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// RepositoryLicenseSimple
+// License Simple
 type RepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -13,6 +15,8 @@ type RepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// RepositorySimpleUser
+// Simple User
 type RepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

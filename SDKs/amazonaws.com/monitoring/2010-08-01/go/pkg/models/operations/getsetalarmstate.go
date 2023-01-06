@@ -3,21 +3,21 @@ package operations
 type GetSetAlarmStateActionEnum string
 
 const (
-	GetSetAlarmStateActionEnumSetAlarmState GetSetAlarmStateActionEnum = "SetAlarmState"
+	GETSetAlarmStateActionEnumSetAlarmState GetSetAlarmStateActionEnum = "SetAlarmState"
 )
 
 type GetSetAlarmStateStateValueEnum string
 
 const (
-	GetSetAlarmStateStateValueEnumOk               GetSetAlarmStateStateValueEnum = "OK"
-	GetSetAlarmStateStateValueEnumAlarm            GetSetAlarmStateStateValueEnum = "ALARM"
-	GetSetAlarmStateStateValueEnumInsufficientData GetSetAlarmStateStateValueEnum = "INSUFFICIENT_DATA"
+	GETSetAlarmStateStateValueEnumOk               GetSetAlarmStateStateValueEnum = "OK"
+	GETSetAlarmStateStateValueEnumAlarm            GetSetAlarmStateStateValueEnum = "ALARM"
+	GETSetAlarmStateStateValueEnumInsufficientData GetSetAlarmStateStateValueEnum = "INSUFFICIENT_DATA"
 )
 
 type GetSetAlarmStateVersionEnum string
 
 const (
-	GetSetAlarmStateVersionEnumTwoThousandAndTen0801 GetSetAlarmStateVersionEnum = "2010-08-01"
+	GETSetAlarmStateVersionEnumTwoThousandAndTen0801 GetSetAlarmStateVersionEnum = "2010-08-01"
 )
 
 type GetSetAlarmStateQueryParams struct {

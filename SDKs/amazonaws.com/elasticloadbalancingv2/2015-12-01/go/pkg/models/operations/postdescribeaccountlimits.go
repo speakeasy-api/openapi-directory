@@ -3,13 +3,13 @@ package operations
 type PostDescribeAccountLimitsActionEnum string
 
 const (
-	PostDescribeAccountLimitsActionEnumDescribeAccountLimits PostDescribeAccountLimitsActionEnum = "DescribeAccountLimits"
+	POSTDescribeAccountLimitsActionEnumDescribeAccountLimits PostDescribeAccountLimitsActionEnum = "DescribeAccountLimits"
 )
 
 type PostDescribeAccountLimitsVersionEnum string
 
 const (
-	PostDescribeAccountLimitsVersionEnumTwoThousandAndFifteen1201 PostDescribeAccountLimitsVersionEnum = "2015-12-01"
+	POSTDescribeAccountLimitsVersionEnumTwoThousandAndFifteen1201 PostDescribeAccountLimitsVersionEnum = "2015-12-01"
 )
 
 type PostDescribeAccountLimitsQueryParams struct {

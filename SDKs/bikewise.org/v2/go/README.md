@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,14 +24,14 @@ func main() {
     
     req := operations.GetVersionIncidentsFormatRequest{
         QueryParams: operations.GetVersionIncidentsFormatQueryParams{
-            IncidentType: "infrastructure_issue",
-            OccurredAfter: 8775666359924392270,
-            OccurredBefore: 8077922702701209983,
-            Page: 5026824263257991558,
-            PerPage: 8163829356358160355,
-            Proximity: "qui",
-            ProximitySquare: 5878921559425082991,
-            Query: "aut",
+            IncidentType: "unconfirmed",
+            OccurredAfter: 4045234609290511383,
+            OccurredBefore: 186546979226087645,
+            Page: 1040998313997192612,
+            PerPage: 1679804363087602601,
+            Proximity: "quisquam",
+            ProximitySquare: 2963879143025637891,
+            Query: "necessitatibus",
         },
     }
     

@@ -3,13 +3,13 @@ package operations
 type PostDeleteApplicationActionEnum string
 
 const (
-	PostDeleteApplicationActionEnumDeleteApplication PostDeleteApplicationActionEnum = "DeleteApplication"
+	POSTDeleteApplicationActionEnumDeleteApplication PostDeleteApplicationActionEnum = "DeleteApplication"
 )
 
 type PostDeleteApplicationVersionEnum string
 
 const (
-	PostDeleteApplicationVersionEnumTwoThousandAndTen1201 PostDeleteApplicationVersionEnum = "2010-12-01"
+	POSTDeleteApplicationVersionEnumTwoThousandAndTen1201 PostDeleteApplicationVersionEnum = "2010-12-01"
 )
 
 type PostDeleteApplicationQueryParams struct {

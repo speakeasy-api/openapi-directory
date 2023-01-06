@@ -3,13 +3,13 @@ package operations
 type PostUpdateApplicationActionEnum string
 
 const (
-	PostUpdateApplicationActionEnumUpdateApplication PostUpdateApplicationActionEnum = "UpdateApplication"
+	POSTUpdateApplicationActionEnumUpdateApplication PostUpdateApplicationActionEnum = "UpdateApplication"
 )
 
 type PostUpdateApplicationVersionEnum string
 
 const (
-	PostUpdateApplicationVersionEnumTwoThousandAndTen1201 PostUpdateApplicationVersionEnum = "2010-12-01"
+	POSTUpdateApplicationVersionEnumTwoThousandAndTen1201 PostUpdateApplicationVersionEnum = "2010-12-01"
 )
 
 type PostUpdateApplicationQueryParams struct {

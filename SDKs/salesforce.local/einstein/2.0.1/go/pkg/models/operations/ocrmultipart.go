@@ -28,6 +28,6 @@ type OcrMultipartRequest struct {
 
 type OcrMultipartResponse struct {
 	ContentType        string
-	OcrPredictResponse *shared.OcrPredictResponse
+	OCRPredictResponse *shared.OcrPredictResponse
 	StatusCode         int64
 }

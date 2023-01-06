@@ -3,13 +3,13 @@ package operations
 type PostAllocateAddressActionEnum string
 
 const (
-	PostAllocateAddressActionEnumAllocateAddress PostAllocateAddressActionEnum = "AllocateAddress"
+	POSTAllocateAddressActionEnumAllocateAddress PostAllocateAddressActionEnum = "AllocateAddress"
 )
 
 type PostAllocateAddressVersionEnum string
 
 const (
-	PostAllocateAddressVersionEnumTwoThousandAndSixteen1115 PostAllocateAddressVersionEnum = "2016-11-15"
+	POSTAllocateAddressVersionEnumTwoThousandAndSixteen1115 PostAllocateAddressVersionEnum = "2016-11-15"
 )
 
 type PostAllocateAddressQueryParams struct {

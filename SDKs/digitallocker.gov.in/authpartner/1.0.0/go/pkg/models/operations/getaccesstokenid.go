@@ -6,7 +6,7 @@ import (
 
 type GetaccesstokenIDRequestBody struct {
 	GetAccessTokenUsingAuthorizationCode *shared.AccessToken  `json:"Get access token using authorization code,omitempty"`
-	GetAccessTokenUsingDeviceCodeAndOtp  *interface{}         `json:"Get access token using device code and OTP,omitempty"`
+	GetAccessTokenUsingDeviceCodeAndOTP  *interface{}         `json:"Get access token using device code and OTP,omitempty"`
 	GetAccessTokenUsingRefreshToken      *shared.RefreshToken `json:"Get access token using refresh token,omitempty"`
 }
 

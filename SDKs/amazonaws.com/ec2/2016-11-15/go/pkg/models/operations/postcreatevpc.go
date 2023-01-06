@@ -3,13 +3,13 @@ package operations
 type PostCreateVpcActionEnum string
 
 const (
-	PostCreateVpcActionEnumCreateVpc PostCreateVpcActionEnum = "CreateVpc"
+	POSTCreateVpcActionEnumCreateVpc PostCreateVpcActionEnum = "CreateVpc"
 )
 
 type PostCreateVpcVersionEnum string
 
 const (
-	PostCreateVpcVersionEnumTwoThousandAndSixteen1115 PostCreateVpcVersionEnum = "2016-11-15"
+	POSTCreateVpcVersionEnumTwoThousandAndSixteen1115 PostCreateVpcVersionEnum = "2016-11-15"
 )
 
 type PostCreateVpcQueryParams struct {

@@ -28,13 +28,7 @@ type GetServicesQueryParams struct {
 }
 
 type GetServices200ApplicationJSON struct {
-	Count           *int64           `json:"count,omitempty"`
-	CountCurrent    *int64           `json:"count_current,omitempty"`
-	IsLimited       *bool            `json:"is_limited,omitempty"`
-	NextURL         *string          `json:"next_url,omitempty"`
-	QueryDurationMs *int64           `json:"query_duration_ms,omitempty"`
-	Results         []shared.Service `json:"results,omitempty"`
-	URL             *string          `json:"url,omitempty"`
+	Results []shared.Service `json:"results,omitempty"`
 }
 
 type GetServicesRequest struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.DgmstSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.DgmstRequestBody{
             CertificateParameters: &operations.DgmstRequestBodyCertificateParameters{
-                FullName: "odit",
-                Rroll: "dolor",
-                Sem: "et",
+                FullName: "sit",
+                RROLL: "quos",
+                SEM: "quam",
             },
-            ConsentArtifact: "sapiente",
+            ConsentArtifact: "quam",
             Format: "pdf",
-            TxnID: "dolor",
+            TxnID: "omnis",
         },
     }
     
-    res, err := s.Sdk.Dgmst(ctx, req)
+    res, err := s.APIs.Dgmst(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Dgmst` - Degree/ Diploma Marksheet
 

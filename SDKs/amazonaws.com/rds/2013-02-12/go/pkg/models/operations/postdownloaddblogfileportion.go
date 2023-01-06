@@ -3,13 +3,13 @@ package operations
 type PostDownloadDbLogFilePortionActionEnum string
 
 const (
-	PostDownloadDbLogFilePortionActionEnumDownloadDbLogFilePortion PostDownloadDbLogFilePortionActionEnum = "DownloadDBLogFilePortion"
+	POSTDownloadDBLogFilePortionActionEnumDownloadDbLogFilePortion PostDownloadDbLogFilePortionActionEnum = "DownloadDBLogFilePortion"
 )
 
 type PostDownloadDbLogFilePortionVersionEnum string
 
 const (
-	PostDownloadDbLogFilePortionVersionEnumTwoThousandAndThirteen0212 PostDownloadDbLogFilePortionVersionEnum = "2013-02-12"
+	POSTDownloadDBLogFilePortionVersionEnumTwoThousandAndThirteen0212 PostDownloadDbLogFilePortionVersionEnum = "2013-02-12"
 )
 
 type PostDownloadDbLogFilePortionQueryParams struct {

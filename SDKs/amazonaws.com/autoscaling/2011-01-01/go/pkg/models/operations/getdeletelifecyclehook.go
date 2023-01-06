@@ -3,13 +3,13 @@ package operations
 type GetDeleteLifecycleHookActionEnum string
 
 const (
-	GetDeleteLifecycleHookActionEnumDeleteLifecycleHook GetDeleteLifecycleHookActionEnum = "DeleteLifecycleHook"
+	GETDeleteLifecycleHookActionEnumDeleteLifecycleHook GetDeleteLifecycleHookActionEnum = "DeleteLifecycleHook"
 )
 
 type GetDeleteLifecycleHookVersionEnum string
 
 const (
-	GetDeleteLifecycleHookVersionEnumTwoThousandAndEleven0101 GetDeleteLifecycleHookVersionEnum = "2011-01-01"
+	GETDeleteLifecycleHookVersionEnumTwoThousandAndEleven0101 GetDeleteLifecycleHookVersionEnum = "2011-01-01"
 )
 
 type GetDeleteLifecycleHookQueryParams struct {

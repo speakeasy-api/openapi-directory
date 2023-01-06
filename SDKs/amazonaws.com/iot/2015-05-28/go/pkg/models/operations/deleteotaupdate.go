@@ -6,7 +6,7 @@ type DeleteOtaUpdatePathParams struct {
 
 type DeleteOtaUpdateQueryParams struct {
 	DeleteStream      *bool `queryParam:"style=form,explode=true,name=deleteStream"`
-	ForceDeleteAwsJob *bool `queryParam:"style=form,explode=true,name=forceDeleteAWSJob"`
+	ForceDeleteAWSJob *bool `queryParam:"style=form,explode=true,name=forceDeleteAWSJob"`
 }
 
 type DeleteOtaUpdateHeaders struct {
@@ -27,7 +27,7 @@ type DeleteOtaUpdateRequest struct {
 
 type DeleteOtaUpdateResponse struct {
 	ContentType                 string
-	DeleteOtaUpdateResponse     map[string]interface{}
+	DeleteOTAUpdateResponse     map[string]interface{}
 	InternalFailureException    *interface{}
 	InvalidRequestException     *interface{}
 	ResourceNotFoundException   *interface{}

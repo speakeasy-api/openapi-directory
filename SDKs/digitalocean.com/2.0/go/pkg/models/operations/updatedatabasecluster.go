@@ -12,15 +12,15 @@ type UpdateDatabaseClusterRequestBody struct {
 	Region string `json:"region"`
 }
 
-type UpdateDatabaseClusterRequest struct {
-	PathParams UpdateDatabaseClusterPathParams
-	Request    UpdateDatabaseClusterRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateDatabaseCluster401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateDatabaseClusterRequest struct {
+	PathParams UpdateDatabaseClusterPathParams
+	Request    UpdateDatabaseClusterRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateDatabaseClusterResponse struct {

@@ -11,8 +11,8 @@ type CreateCustomFieldQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateCustomFieldRequestBodyInput struct {
-	Data *shared.CustomFieldRequestInput `json:"data,omitempty"`
+type CreateCustomFieldRequestBody struct {
+	Data *shared.CustomFieldRequest `json:"data,omitempty"`
 }
 
 type CreateCustomField201ApplicationJSON struct {
@@ -21,7 +21,7 @@ type CreateCustomField201ApplicationJSON struct {
 
 type CreateCustomFieldRequest struct {
 	QueryParams CreateCustomFieldQueryParams
-	Request     *CreateCustomFieldRequestBodyInput `request:"mediaType=application/json"`
+	Request     *CreateCustomFieldRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateCustomFieldResponse struct {

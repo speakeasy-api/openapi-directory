@@ -1,14 +1,12 @@
 package operations
 
-type GetSearchVersionNumberAdditionalDataExtExtEnum string
-
-const (
-	GetSearchVersionNumberAdditionalDataExtExtEnumJSON GetSearchVersionNumberAdditionalDataExtExtEnum = "json"
+import (
+	"openapi/pkg/models/shared"
 )
 
 type GetSearchVersionNumberAdditionalDataExtPathParams struct {
-	Ext           GetSearchVersionNumberAdditionalDataExtExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	VersionNumber int64                                          `pathParam:"style=simple,explode=false,name=versionNumber"`
+	Ext           shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=ext"`
+	VersionNumber int64                    `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberAdditionalDataExtQueryParams struct {

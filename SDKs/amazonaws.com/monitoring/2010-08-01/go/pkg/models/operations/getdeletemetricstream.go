@@ -3,13 +3,13 @@ package operations
 type GetDeleteMetricStreamActionEnum string
 
 const (
-	GetDeleteMetricStreamActionEnumDeleteMetricStream GetDeleteMetricStreamActionEnum = "DeleteMetricStream"
+	GETDeleteMetricStreamActionEnumDeleteMetricStream GetDeleteMetricStreamActionEnum = "DeleteMetricStream"
 )
 
 type GetDeleteMetricStreamVersionEnum string
 
 const (
-	GetDeleteMetricStreamVersionEnumTwoThousandAndTen0801 GetDeleteMetricStreamVersionEnum = "2010-08-01"
+	GETDeleteMetricStreamVersionEnumTwoThousandAndTen0801 GetDeleteMetricStreamVersionEnum = "2010-08-01"
 )
 
 type GetDeleteMetricStreamQueryParams struct {

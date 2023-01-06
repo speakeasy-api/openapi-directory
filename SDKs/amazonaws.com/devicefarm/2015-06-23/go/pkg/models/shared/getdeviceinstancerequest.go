@@ -1,5 +1,5 @@
 package shared
 
 type GetDeviceInstanceRequest struct {
-	Arn string `json:"arn"`
+	Arn map[string]interface{} `json:"arn"`
 }

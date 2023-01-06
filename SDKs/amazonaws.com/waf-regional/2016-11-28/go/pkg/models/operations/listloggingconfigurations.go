@@ -30,7 +30,7 @@ type ListLoggingConfigurationsResponse struct {
 	ContentType                       string
 	ListLoggingConfigurationsResponse *shared.ListLoggingConfigurationsResponse
 	StatusCode                        int64
-	WafInternalErrorException         *interface{}
-	WafInvalidParameterException      *interface{}
-	WafNonexistentItemException       *interface{}
+	WAFInternalErrorException         *interface{}
+	WAFInvalidParameterException      *interface{}
+	WAFNonexistentItemException       *interface{}
 }

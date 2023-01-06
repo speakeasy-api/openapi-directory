@@ -1,6 +1,6 @@
 package shared
 
 type ExportClientVpnClientCertificateRevocationListResult struct {
-	CertificateRevocationList *string
-	Status                    *ClientCertificateRevocationListStatus
+	CertificateRevocationList map[string]interface{}
+	Status                    map[string]interface{}
 }

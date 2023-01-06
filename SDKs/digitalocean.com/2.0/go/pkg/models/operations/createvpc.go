@@ -5,14 +5,8 @@ import (
 )
 
 type CreateVpcRequestBody struct {
-	Description *string `json:"description,omitempty"`
-	IPRange     *string `json:"ip_range,omitempty"`
-	Name        string  `json:"name"`
-	Region      string  `json:"region"`
-}
-
-type CreateVpcRequest struct {
-	Request CreateVpcRequestBody `request:"mediaType=application/json"`
+	IPRange *string `json:"ip_range,omitempty"`
+	Region  string  `json:"region"`
 }
 
 type CreateVpc201ApplicationJSON struct {
@@ -23,6 +17,10 @@ type CreateVpc401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateVpcRequest struct {
+	Request CreateVpcRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateVpcResponse struct {

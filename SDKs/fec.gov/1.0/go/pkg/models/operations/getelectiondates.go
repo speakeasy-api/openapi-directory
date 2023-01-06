@@ -48,6 +48,6 @@ type GetElectionDatesRequest struct {
 
 type GetElectionDatesResponse struct {
 	ContentType                                  string
-	GetElectionDatesDefaultApplicationJSONObject *GetElectionDatesDefaultApplicationJSON
 	StatusCode                                   int64
+	GetElectionDatesDefaultApplicationJSONObject *GetElectionDatesDefaultApplicationJSON
 }

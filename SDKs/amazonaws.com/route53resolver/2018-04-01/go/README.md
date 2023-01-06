@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,32 +34,32 @@ func main() {
     
     req := operations.AssociateFirewallRuleGroupRequest{
         Headers: operations.AssociateFirewallRuleGroupHeaders{
-            XAmzAlgorithm: "aliquam",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "laboriosam",
-            XAmzDate: "totam",
-            XAmzSecurityToken: "atque",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "quibusdam",
+            XAmzAlgorithm: "molestiae",
+            XAmzContentSha256: "soluta",
+            XAmzCredential: "qui",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "omnis",
+            XAmzSignedHeaders: "et",
             XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
         },
         Request: shared.AssociateFirewallRuleGroupRequest{
-            CreatorRequestID: "placeat",
-            FirewallRuleGroupID: "ut",
-            MutationProtection: "ENABLED",
-            Name: "et",
-            Priority: 7289028574483297393,
+            CreatorRequestID: "ab",
+            FirewallRuleGroupID: "dolorem",
+            MutationProtection: "DISABLED",
+            Name: "dolorum",
+            Priority: 6858010906439498044,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "optio",
-                    Value: "autem",
+                    Key: "ea",
+                    Value: "ut",
                 },
             },
-            VpcID: "laudantium",
+            VpcID: "tempore",
         },
     }
     
-    res, err := s.Sdk.AssociateFirewallRuleGroup(ctx, req)
+    res, err := s.AssociateFirewallRuleGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,0 +1,10 @@
+package shared
+
+type DocumentVatRateSummary struct {
+	VatName               *string  `json:"vat_name,omitempty"`
+	VatPercentage         *float32 `json:"vat_percentage,omitempty"`
+	VatRateGrossAmount    *float32 `json:"vat_rate_gross_amount,omitempty"`
+	VatRateNetAmount      *float32 `json:"vat_rate_net_amount,omitempty"`
+	VatRateVatAmount      *float32 `json:"vat_rate_vat_amount,omitempty"`
+	VatRateVatAmountLocal *float32 `json:"vat_rate_vat_amount_local,omitempty"`
+}

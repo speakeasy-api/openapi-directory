@@ -16,5 +16,5 @@ type IpamVrfsPartialUpdateRequest struct {
 type IpamVrfsPartialUpdateResponse struct {
 	ContentType string
 	StatusCode  int64
-	Vrf         *shared.Vrf
+	VRF         *shared.Vrf
 }

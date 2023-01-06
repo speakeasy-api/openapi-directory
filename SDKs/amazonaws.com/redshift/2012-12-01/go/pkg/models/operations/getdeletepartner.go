@@ -3,13 +3,13 @@ package operations
 type GetDeletePartnerActionEnum string
 
 const (
-	GetDeletePartnerActionEnumDeletePartner GetDeletePartnerActionEnum = "DeletePartner"
+	GETDeletePartnerActionEnumDeletePartner GetDeletePartnerActionEnum = "DeletePartner"
 )
 
 type GetDeletePartnerVersionEnum string
 
 const (
-	GetDeletePartnerVersionEnumTwoThousandAndTwelve1201 GetDeletePartnerVersionEnum = "2012-12-01"
+	GETDeletePartnerVersionEnumTwoThousandAndTwelve1201 GetDeletePartnerVersionEnum = "2012-12-01"
 )
 
 type GetDeletePartnerQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,31 @@ func main() {
     
     req := operations.BatchExecuteStatementRequest{
         Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "iusto",
-            XAmzContentSha256: "dolores",
-            XAmzCredential: "nobis",
-            XAmzDate: "itaque",
-            XAmzSecurityToken: "nobis",
-            XAmzSignature: "sequi",
-            XAmzSignedHeaders: "esse",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "omnis",
+            XAmzCredential: "iusto",
+            XAmzDate: "adipisci",
+            XAmzSecurityToken: "aut",
+            XAmzSignature: "porro",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "RedshiftData.BatchExecuteStatement",
         },
         Request: shared.BatchExecuteStatementInput{
-            ClusterIdentifier: "sint",
-            Database: "et",
-            DbUser: "sequi",
-            SecretArn: "perferendis",
+            ClusterIdentifier: "qui",
+            Database: "officia",
+            DbUser: "quia",
+            SecretArn: "laborum",
             Sqls: []string{
+                "corporis",
                 "ut",
-                "soluta",
-                "voluptatem",
+                "qui",
             },
-            StatementName: "adipisci",
+            StatementName: "aut",
             WithEvent: false,
         },
     }
     
-    res, err := s.Sdk.BatchExecuteStatement(ctx, req)
+    res, err := s.BatchExecuteStatement(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

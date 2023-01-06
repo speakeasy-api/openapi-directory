@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,31 +27,31 @@ func main() {
             Option1: &operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayPathParams{
-            Parent: "repudiandae",
+            Parent: "accusamus",
         },
         QueryParams: operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "autem",
+            DollarXgafv: "1",
+            AccessToken: "ea",
             Alt: "media",
-            Callback: "nobis",
-            Fields: "eaque",
-            Key: "aut",
-            OauthToken: "nam",
+            Callback: "et",
+            Fields: "ullam",
+            Key: "molestiae",
+            OauthToken: "atque",
             PrettyPrint: false,
-            QuotaUser: "explicabo",
-            UploadType: "tempora",
-            UploadProtocol: "non",
+            QuotaUser: "dolorem",
+            UploadType: "qui",
+            UploadProtocol: "qui",
         },
         Request: &shared.BindDeviceToGatewayRequest{
-            DeviceID: "cumque",
-            GatewayID: "ad",
+            DeviceID: "nulla",
+            GatewayID: "modi",
         },
     }
     

@@ -65,7 +65,7 @@ type BookingMybookings200ApplicationJSONDataItemSummaries struct {
 	Passbooks                    *string                                                                         `json:"passbooks,omitempty"`
 	Price                        *float64                                                                        `json:"price,omitempty"`
 	PriceFormatted               *string                                                                         `json:"priceFormatted,omitempty"`
-	PriceUsd                     *float64                                                                        `json:"priceUSD,omitempty"`
+	PriceUSD                     *float64                                                                        `json:"priceUSD,omitempty"`
 	ProductCode                  *string                                                                         `json:"productCode,omitempty"`
 	ProductPulledDown            *bool                                                                           `json:"productPulledDown,omitempty"`
 	ProductTitle                 *string                                                                         `json:"productTitle,omitempty"`
@@ -100,26 +100,14 @@ type BookingMybookings200ApplicationJSONData struct {
 	SortOrder           *int64                                                 `json:"sortOrder,omitempty"`
 	TotalPrice          *float64                                               `json:"totalPrice,omitempty"`
 	TotalPriceFormatted *string                                                `json:"totalPriceFormatted,omitempty"`
-	TotalPriceUsd       *float64                                               `json:"totalPriceUSD,omitempty"`
+	TotalPriceUSD       *float64                                               `json:"totalPriceUSD,omitempty"`
 	UserID              *string                                                `json:"userId,omitempty"`
 	VoucherKey          *string                                                `json:"voucherKey,omitempty"`
 	VoucherURL          *string                                                `json:"voucherURL,omitempty"`
 }
 
 type BookingMybookings200ApplicationJSON struct {
-	Data             *BookingMybookings200ApplicationJSONData `json:"data,omitempty"`
-	DateStamp        *string                                  `json:"dateStamp,omitempty"`
-	ErrorCodes       []string                                 `json:"errorCodes,omitempty"`
-	ErrorMessage     []interface{}                            `json:"errorMessage,omitempty"`
-	ErrorMessageText *string                                  `json:"errorMessageText,omitempty"`
-	ErrorName        *string                                  `json:"errorName,omitempty"`
-	ErrorReference   *string                                  `json:"errorReference,omitempty"`
-	ErrorType        *string                                  `json:"errorType,omitempty"`
-	ExtraInfo        map[string]interface{}                   `json:"extraInfo,omitempty"`
-	ExtraObject      map[string]interface{}                   `json:"extraObject,omitempty"`
-	Success          *bool                                    `json:"success,omitempty"`
-	TotalCount       *int64                                   `json:"totalCount,omitempty"`
-	Vmid             *string                                  `json:"vmid,omitempty"`
+	Data *BookingMybookings200ApplicationJSONData `json:"data,omitempty"`
 }
 
 type BookingMybookingsRequest struct {

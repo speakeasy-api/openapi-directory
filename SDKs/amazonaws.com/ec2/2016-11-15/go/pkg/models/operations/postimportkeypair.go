@@ -3,13 +3,13 @@ package operations
 type PostImportKeyPairActionEnum string
 
 const (
-	PostImportKeyPairActionEnumImportKeyPair PostImportKeyPairActionEnum = "ImportKeyPair"
+	POSTImportKeyPairActionEnumImportKeyPair PostImportKeyPairActionEnum = "ImportKeyPair"
 )
 
 type PostImportKeyPairVersionEnum string
 
 const (
-	PostImportKeyPairVersionEnumTwoThousandAndSixteen1115 PostImportKeyPairVersionEnum = "2016-11-15"
+	POSTImportKeyPairVersionEnumTwoThousandAndSixteen1115 PostImportKeyPairVersionEnum = "2016-11-15"
 )
 
 type PostImportKeyPairQueryParams struct {

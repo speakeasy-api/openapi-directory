@@ -7,7 +7,7 @@ import (
 type UpdateVpceConfigurationXAmzTargetEnum string
 
 const (
-	UpdateVpceConfigurationXAmzTargetEnumDeviceFarm20150623UpdateVpceConfiguration UpdateVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.UpdateVPCEConfiguration"
+	UpdateVPCEConfigurationXAmzTargetEnumDeviceFarm20150623UpdateVpceConfiguration UpdateVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.UpdateVPCEConfiguration"
 )
 
 type UpdateVpceConfigurationHeaders struct {
@@ -33,5 +33,5 @@ type UpdateVpceConfigurationResponse struct {
 	NotFoundException             *interface{}
 	ServiceAccountException       *interface{}
 	StatusCode                    int64
-	UpdateVpceConfigurationResult *shared.UpdateVpceConfigurationResult
+	UpdateVPCEConfigurationResult *shared.UpdateVpceConfigurationResult
 }

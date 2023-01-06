@@ -3,13 +3,13 @@ package operations
 type PostDisableAlarmActionsActionEnum string
 
 const (
-	PostDisableAlarmActionsActionEnumDisableAlarmActions PostDisableAlarmActionsActionEnum = "DisableAlarmActions"
+	POSTDisableAlarmActionsActionEnumDisableAlarmActions PostDisableAlarmActionsActionEnum = "DisableAlarmActions"
 )
 
 type PostDisableAlarmActionsVersionEnum string
 
 const (
-	PostDisableAlarmActionsVersionEnumTwoThousandAndTen0801 PostDisableAlarmActionsVersionEnum = "2010-08-01"
+	POSTDisableAlarmActionsVersionEnumTwoThousandAndTen0801 PostDisableAlarmActionsVersionEnum = "2010-08-01"
 )
 
 type PostDisableAlarmActionsQueryParams struct {

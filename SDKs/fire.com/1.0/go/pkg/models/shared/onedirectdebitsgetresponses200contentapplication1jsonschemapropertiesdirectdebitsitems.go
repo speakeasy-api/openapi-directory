@@ -54,7 +54,7 @@ type OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirect
 	DateCreated            *time.Time                                                                                                        `json:"dateCreated,omitempty"`
 	DirectDebitReference   *string                                                                                                           `json:"directDebitReference,omitempty"`
 	DirectDebitUUID        *string                                                                                                           `json:"directDebitUuid,omitempty"`
-	IsDdic                 *bool                                                                                                             `json:"isDDIC,omitempty"`
+	IsDDIC                 *bool                                                                                                             `json:"isDDIC,omitempty"`
 	LastUpdated            *time.Time                                                                                                        `json:"lastUpdated,omitempty"`
 	MandateUUID            *string                                                                                                           `json:"mandateUUid,omitempty"`
 	OriginatorAlias        *string                                                                                                           `json:"originatorAlias,omitempty"`

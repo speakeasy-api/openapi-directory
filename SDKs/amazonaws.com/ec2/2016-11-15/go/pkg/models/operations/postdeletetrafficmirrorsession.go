@@ -3,13 +3,13 @@ package operations
 type PostDeleteTrafficMirrorSessionActionEnum string
 
 const (
-	PostDeleteTrafficMirrorSessionActionEnumDeleteTrafficMirrorSession PostDeleteTrafficMirrorSessionActionEnum = "DeleteTrafficMirrorSession"
+	POSTDeleteTrafficMirrorSessionActionEnumDeleteTrafficMirrorSession PostDeleteTrafficMirrorSessionActionEnum = "DeleteTrafficMirrorSession"
 )
 
 type PostDeleteTrafficMirrorSessionVersionEnum string
 
 const (
-	PostDeleteTrafficMirrorSessionVersionEnumTwoThousandAndSixteen1115 PostDeleteTrafficMirrorSessionVersionEnum = "2016-11-15"
+	POSTDeleteTrafficMirrorSessionVersionEnumTwoThousandAndSixteen1115 PostDeleteTrafficMirrorSessionVersionEnum = "2016-11-15"
 )
 
 type PostDeleteTrafficMirrorSessionQueryParams struct {

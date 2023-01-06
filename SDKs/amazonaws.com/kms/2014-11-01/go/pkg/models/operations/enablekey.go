@@ -30,8 +30,8 @@ type EnableKeyResponse struct {
 	ContentType                string
 	DependencyTimeoutException *interface{}
 	InvalidArnException        *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	LimitExceededException     *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64

@@ -30,6 +30,6 @@ type ListGeoMatchSetsResponse struct {
 	ContentType                string
 	ListGeoMatchSetsResponse   *shared.ListGeoMatchSetsResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

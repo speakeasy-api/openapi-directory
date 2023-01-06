@@ -3,13 +3,13 @@ package operations
 type PostDeleteEnvironmentConfigurationActionEnum string
 
 const (
-	PostDeleteEnvironmentConfigurationActionEnumDeleteEnvironmentConfiguration PostDeleteEnvironmentConfigurationActionEnum = "DeleteEnvironmentConfiguration"
+	POSTDeleteEnvironmentConfigurationActionEnumDeleteEnvironmentConfiguration PostDeleteEnvironmentConfigurationActionEnum = "DeleteEnvironmentConfiguration"
 )
 
 type PostDeleteEnvironmentConfigurationVersionEnum string
 
 const (
-	PostDeleteEnvironmentConfigurationVersionEnumTwoThousandAndTen1201 PostDeleteEnvironmentConfigurationVersionEnum = "2010-12-01"
+	POSTDeleteEnvironmentConfigurationVersionEnumTwoThousandAndTen1201 PostDeleteEnvironmentConfigurationVersionEnum = "2010-12-01"
 )
 
 type PostDeleteEnvironmentConfigurationQueryParams struct {

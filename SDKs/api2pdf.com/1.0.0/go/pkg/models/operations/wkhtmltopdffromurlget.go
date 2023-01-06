@@ -23,5 +23,5 @@ type WkhtmltopdfFromURLGetResponse struct {
 	APIResponseSuccess                                 *shared.APIResponseSuccess
 	ContentType                                        string
 	StatusCode                                         int64
-	WkhtmltopdfFromURLGet200ApplicationPdfBinaryString []byte
+	WkhtmltopdfFromURLGET200ApplicationPdfBinaryString []byte
 }

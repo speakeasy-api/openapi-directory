@@ -35,8 +35,8 @@ type DeletePadUsingPostRequest struct {
 type DeletePadUsingPostResponse struct {
 	ContentType                                string
 	StatusCode                                 int64
-	DeletePadUsingPost200ApplicationJSONObject *DeletePadUsingPost200ApplicationJSON
-	DeletePadUsingPost400ApplicationJSONObject *DeletePadUsingPost400ApplicationJSON
-	DeletePadUsingPost401ApplicationJSONObject *DeletePadUsingPost401ApplicationJSON
-	DeletePadUsingPost500ApplicationJSONObject *DeletePadUsingPost500ApplicationJSON
+	DeletePadUsingPOST200ApplicationJSONObject *DeletePadUsingPost200ApplicationJSON
+	DeletePadUsingPOST400ApplicationJSONObject *DeletePadUsingPost400ApplicationJSON
+	DeletePadUsingPOST401ApplicationJSONObject *DeletePadUsingPost401ApplicationJSON
+	DeletePadUsingPOST500ApplicationJSONObject *DeletePadUsingPost500ApplicationJSON
 }

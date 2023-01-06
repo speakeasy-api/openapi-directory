@@ -14,6 +14,6 @@ type PostPortfolioAnalysisVolatilityRequest struct {
 
 type PostPortfolioAnalysisVolatilityResponse struct {
 	ContentType                                             string
-	PostPortfolioAnalysisVolatility200ApplicationJSONObject *PostPortfolioAnalysisVolatility200ApplicationJSON
 	StatusCode                                              int64
+	PostPortfolioAnalysisVolatility200ApplicationJSONObject *PostPortfolioAnalysisVolatility200ApplicationJSON
 }

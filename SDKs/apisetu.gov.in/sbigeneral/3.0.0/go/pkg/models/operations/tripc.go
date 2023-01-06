@@ -82,7 +82,7 @@ type Tripc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Tripc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Tripc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Tripc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Tripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Tripc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Tripc404ApplicationJSON struct {

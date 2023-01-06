@@ -1,5 +1,5 @@
 package shared
 
 type MeterUsageResult struct {
-	MeteringRecordID *string `json:"MeteringRecordId,omitempty"`
+	MeteringRecordID map[string]interface{} `json:"MeteringRecordId,omitempty"`
 }

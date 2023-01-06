@@ -1,0 +1,32 @@
+package shared
+
+type CacheFillRegionsDestinationRegionEnum string
+
+const (
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionUnspecified  CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_UNSPECIFIED"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionAsiaPacific  CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_ASIA_PACIFIC"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionEurope       CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_EUROPE"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionNorthAmerica CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_NORTH_AMERICA"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionOceania      CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_OCEANIA"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionSouthAmerica CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_SOUTH_AMERICA"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionChina        CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_CHINA"
+	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionOthers       CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_OTHERS"
+)
+
+type CacheFillRegionsSourceRegionEnum string
+
+const (
+	CacheFillRegionsSourceRegionEnumCacheFillSourceRegionUnspecified  CacheFillRegionsSourceRegionEnum = "CACHE_FILL_SOURCE_REGION_UNSPECIFIED"
+	CacheFillRegionsSourceRegionEnumCacheFillRegionAsiaPacific        CacheFillRegionsSourceRegionEnum = "CACHE_FILL_REGION_ASIA_PACIFIC"
+	CacheFillRegionsSourceRegionEnumCacheFillSourceRegionEurope       CacheFillRegionsSourceRegionEnum = "CACHE_FILL_SOURCE_REGION_EUROPE"
+	CacheFillRegionsSourceRegionEnumCacheFillSourceRegionNorthAmerica CacheFillRegionsSourceRegionEnum = "CACHE_FILL_SOURCE_REGION_NORTH_AMERICA"
+	CacheFillRegionsSourceRegionEnumCacheFillSourceRegionOceania      CacheFillRegionsSourceRegionEnum = "CACHE_FILL_SOURCE_REGION_OCEANIA"
+	CacheFillRegionsSourceRegionEnumCacheFillSourceRegionSouthAmerica CacheFillRegionsSourceRegionEnum = "CACHE_FILL_SOURCE_REGION_SOUTH_AMERICA"
+)
+
+// CacheFillRegions
+// Specifies the regions for Cache Fill.
+type CacheFillRegions struct {
+	DestinationRegion *CacheFillRegionsDestinationRegionEnum `json:"destinationRegion,omitempty"`
+	SourceRegion      *CacheFillRegionsSourceRegionEnum      `json:"sourceRegion,omitempty"`
+}

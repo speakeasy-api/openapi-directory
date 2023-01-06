@@ -5,7 +5,7 @@ import (
 )
 
 type OtcerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	UID      string `json:"UID"`
 }
@@ -83,7 +83,7 @@ type Otcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Otcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Otcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Otcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Otcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Otcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Otcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Otcer404ApplicationJSON struct {

@@ -9,14 +9,14 @@ type DeleteUserPathParams struct {
 	Username            string `pathParam:"style=simple,explode=false,name=username"`
 }
 
-type DeleteUserRequest struct {
-	PathParams DeleteUserPathParams
-}
-
 type DeleteUser401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteUserRequest struct {
+	PathParams DeleteUserPathParams
 }
 
 type DeleteUserResponse struct {

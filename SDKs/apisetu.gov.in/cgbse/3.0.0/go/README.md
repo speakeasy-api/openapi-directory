@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.HscerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.HscerRequestBody{
             CertificateParameters: &operations.HscerRequestBodyCertificateParameters{
-                FullName: "et",
-                Examtype: "magnam",
-                Rollno: "nulla",
-                Year: "explicabo",
+                FullName: "ipsa",
+                Examtype: "corrupti",
+                Rollno: "eveniet",
+                Year: "sequi",
             },
-            ConsentArtifact: "incidunt",
+            ConsentArtifact: "vitae",
             Format: "pdf",
-            TxnID: "a",
+            TxnID: "possimus",
         },
     }
     
-    res, err := s.Sdk.Hscer(ctx, req)
+    res, err := s.APIs.Hscer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Hscer` - Class XII Marksheet
 * `Sscer` - Class X Marksheet

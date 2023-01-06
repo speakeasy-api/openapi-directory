@@ -1,8 +1,0 @@
-package shared
-
-type NotebookInstanceLifecycleConfigSortOrderEnum string
-
-const (
-	NotebookInstanceLifecycleConfigSortOrderEnumAscending  NotebookInstanceLifecycleConfigSortOrderEnum = "Ascending"
-	NotebookInstanceLifecycleConfigSortOrderEnumDescending NotebookInstanceLifecycleConfigSortOrderEnum = "Descending"
-)

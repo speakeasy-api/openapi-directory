@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,28 +34,28 @@ func main() {
     
     req := operations.DescribeServicesRequest{
         QueryParams: operations.DescribeServicesQueryParams{
-            MaxResults: "et",
-            NextToken: "deleniti",
+            MaxResults: "non",
+            NextToken: "repudiandae",
         },
         Headers: operations.DescribeServicesHeaders{
-            XAmzAlgorithm: "ratione",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "quas",
-            XAmzDate: "quae",
-            XAmzSecurityToken: "incidunt",
-            XAmzSignature: "sapiente",
-            XAmzSignedHeaders: "dolore",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "pariatur",
+            XAmzCredential: "est",
+            XAmzDate: "commodi",
+            XAmzSecurityToken: "ipsa",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "quisquam",
             XAmzTarget: "AWSPriceListService.DescribeServices",
         },
         Request: shared.DescribeServicesRequest{
-            FormatVersion: "aut",
-            MaxResults: 1425085460978815393,
-            NextToken: "omnis",
-            ServiceCode: "amet",
+            FormatVersion: "quia",
+            MaxResults: 2982585429028804684,
+            NextToken: "laboriosam",
+            ServiceCode: "hic",
         },
     }
     
-    res, err := s.Sdk.DescribeServices(ctx, req)
+    res, err := s.DescribeServices(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

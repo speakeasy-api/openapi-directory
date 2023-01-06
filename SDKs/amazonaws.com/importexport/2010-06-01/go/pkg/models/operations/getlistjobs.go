@@ -3,24 +3,24 @@ package operations
 type GetListJobsActionEnum string
 
 const (
-	GetListJobsActionEnumListJobs GetListJobsActionEnum = "ListJobs"
+	GETListJobsActionEnumListJobs GetListJobsActionEnum = "ListJobs"
 )
 
 type GetListJobsOperationEnum string
 
 const (
-	GetListJobsOperationEnumListJobs GetListJobsOperationEnum = "ListJobs"
+	GETListJobsOperationEnumListJobs GetListJobsOperationEnum = "ListJobs"
 )
 
 type GetListJobsVersionEnum string
 
 const (
-	GetListJobsVersionEnumTwoThousandAndTen0601 GetListJobsVersionEnum = "2010-06-01"
+	GETListJobsVersionEnumTwoThousandAndTen0601 GetListJobsVersionEnum = "2010-06-01"
 )
 
 type GetListJobsQueryParams struct {
 	APIVersion       *string                  `queryParam:"style=form,explode=true,name=APIVersion"`
-	AwsAccessKeyID   string                   `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                   `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetListJobsActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Marker           *string                  `queryParam:"style=form,explode=true,name=Marker"`
 	MaxJobs          *int64                   `queryParam:"style=form,explode=true,name=MaxJobs"`

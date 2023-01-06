@@ -3,13 +3,13 @@ package operations
 type PostUntagSamlProviderActionEnum string
 
 const (
-	PostUntagSamlProviderActionEnumUntagSamlProvider PostUntagSamlProviderActionEnum = "UntagSAMLProvider"
+	POSTUntagSAMLProviderActionEnumUntagSamlProvider PostUntagSamlProviderActionEnum = "UntagSAMLProvider"
 )
 
 type PostUntagSamlProviderVersionEnum string
 
 const (
-	PostUntagSamlProviderVersionEnumTwoThousandAndTen0508 PostUntagSamlProviderVersionEnum = "2010-05-08"
+	POSTUntagSAMLProviderVersionEnumTwoThousandAndTen0508 PostUntagSamlProviderVersionEnum = "2010-05-08"
 )
 
 type PostUntagSamlProviderQueryParams struct {

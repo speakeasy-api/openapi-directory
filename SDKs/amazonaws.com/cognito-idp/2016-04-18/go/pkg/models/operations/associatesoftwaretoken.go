@@ -34,6 +34,6 @@ type AssociateSoftwareTokenResponse struct {
 	InvalidParameterException         *interface{}
 	NotAuthorizedException            *interface{}
 	ResourceNotFoundException         *interface{}
-	SoftwareTokenMfaNotFoundException *interface{}
+	SoftwareTokenMFANotFoundException *interface{}
 	StatusCode                        int64
 }

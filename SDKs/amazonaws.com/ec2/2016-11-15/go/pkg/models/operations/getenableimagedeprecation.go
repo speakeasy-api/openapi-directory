@@ -7,13 +7,13 @@ import (
 type GetEnableImageDeprecationActionEnum string
 
 const (
-	GetEnableImageDeprecationActionEnumEnableImageDeprecation GetEnableImageDeprecationActionEnum = "EnableImageDeprecation"
+	GETEnableImageDeprecationActionEnumEnableImageDeprecation GetEnableImageDeprecationActionEnum = "EnableImageDeprecation"
 )
 
 type GetEnableImageDeprecationVersionEnum string
 
 const (
-	GetEnableImageDeprecationVersionEnumTwoThousandAndSixteen1115 GetEnableImageDeprecationVersionEnum = "2016-11-15"
+	GETEnableImageDeprecationVersionEnumTwoThousandAndSixteen1115 GetEnableImageDeprecationVersionEnum = "2016-11-15"
 )
 
 type GetEnableImageDeprecationQueryParams struct {

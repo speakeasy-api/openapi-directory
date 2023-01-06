@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,18 +24,18 @@ func main() {
     
     req := operations.GetVaccineStatusRequest{
         Headers: operations.GetVaccineStatusHeaders{
-            Accept: "adipisci",
-            Authorization: "aut",
-            ContentType: "cumque",
-            CowinAPIKey: "ipsa",
+            Accept: "inventore",
+            Authorization: "sed",
+            ContentType: "voluptas",
+            CowinAPIKey: "iure",
         },
         Request: shared.VaccineStatusRequest{
-            BeneficiaryID: "maiores",
-            Mobile: "dolor",
+            BeneficiaryID: "dolores",
+            Mobile: "enim",
         },
     }
     
-    res, err := s.Sdk.GetVaccineStatus(ctx, req)
+    res, err := s.IndiaAPI.GetVaccineStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,7 +49,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### india-api
 
 * `GetVaccineStatus` - return vaccine status from India
 

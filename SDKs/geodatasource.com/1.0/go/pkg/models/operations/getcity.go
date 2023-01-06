@@ -20,6 +20,6 @@ type GetCityRequest struct {
 
 type GetCityResponse struct {
 	ContentType                     string
-	GetCity200ApplicationJSONString *string
 	StatusCode                      int64
+	GetCity200ApplicationJSONString *string
 }

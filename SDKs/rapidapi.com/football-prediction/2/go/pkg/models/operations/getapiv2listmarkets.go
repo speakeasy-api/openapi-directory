@@ -23,7 +23,7 @@ type GetAPIV2ListMarketsRequest struct {
 
 type GetAPIV2ListMarketsResponse struct {
 	ContentType                                 string
+	StatusCode                                  int64
 	GetAPIV2ListMarkets200ApplicationJSONObject *GetAPIV2ListMarkets200ApplicationJSON
 	GetAPIV2ListMarkets404ApplicationJSONObject *GetAPIV2ListMarkets404ApplicationJSON
-	StatusCode                                  int64
 }

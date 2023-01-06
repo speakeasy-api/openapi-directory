@@ -3,13 +3,13 @@ package operations
 type PostGetIdentityVerificationAttributesActionEnum string
 
 const (
-	PostGetIdentityVerificationAttributesActionEnumGetIdentityVerificationAttributes PostGetIdentityVerificationAttributesActionEnum = "GetIdentityVerificationAttributes"
+	POSTGetIdentityVerificationAttributesActionEnumGetIdentityVerificationAttributes PostGetIdentityVerificationAttributesActionEnum = "GetIdentityVerificationAttributes"
 )
 
 type PostGetIdentityVerificationAttributesVersionEnum string
 
 const (
-	PostGetIdentityVerificationAttributesVersionEnumTwoThousandAndTen1201 PostGetIdentityVerificationAttributesVersionEnum = "2010-12-01"
+	POSTGetIdentityVerificationAttributesVersionEnumTwoThousandAndTen1201 PostGetIdentityVerificationAttributesVersionEnum = "2010-12-01"
 )
 
 type PostGetIdentityVerificationAttributesQueryParams struct {

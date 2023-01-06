@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,29 +34,32 @@ func main() {
     
     req := operations.AddCustomRoutingEndpointsRequest{
         Headers: operations.AddCustomRoutingEndpointsHeaders{
-            XAmzAlgorithm: "dignissimos",
-            XAmzContentSha256: "voluptates",
-            XAmzCredential: "officia",
-            XAmzDate: "dolore",
-            XAmzSecurityToken: "hic",
-            XAmzSignature: "recusandae",
-            XAmzSignedHeaders: "iste",
+            XAmzAlgorithm: "a",
+            XAmzContentSha256: "mollitia",
+            XAmzCredential: "dolorum",
+            XAmzDate: "at",
+            XAmzSecurityToken: "sunt",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "voluptate",
             XAmzTarget: "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints",
         },
         Request: shared.AddCustomRoutingEndpointsRequest{
             EndpointConfigurations: []shared.CustomRoutingEndpointConfiguration{
                 shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "alias",
+                    EndpointID: "labore",
                 },
                 shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "eum",
+                    EndpointID: "nihil",
+                },
+                shared.CustomRoutingEndpointConfiguration{
+                    EndpointID: "officia",
                 },
             },
-            EndpointGroupArn: "quia",
+            EndpointGroupArn: "quo",
         },
     }
     
-    res, err := s.Sdk.AddCustomRoutingEndpoints(ctx, req)
+    res, err := s.AddCustomRoutingEndpoints(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

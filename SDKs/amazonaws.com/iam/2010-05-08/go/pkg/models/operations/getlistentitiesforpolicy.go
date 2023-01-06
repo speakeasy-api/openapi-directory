@@ -3,30 +3,30 @@ package operations
 type GetListEntitiesForPolicyActionEnum string
 
 const (
-	GetListEntitiesForPolicyActionEnumListEntitiesForPolicy GetListEntitiesForPolicyActionEnum = "ListEntitiesForPolicy"
+	GETListEntitiesForPolicyActionEnumListEntitiesForPolicy GetListEntitiesForPolicyActionEnum = "ListEntitiesForPolicy"
 )
 
 type GetListEntitiesForPolicyEntityFilterEnum string
 
 const (
-	GetListEntitiesForPolicyEntityFilterEnumUser               GetListEntitiesForPolicyEntityFilterEnum = "User"
-	GetListEntitiesForPolicyEntityFilterEnumRole               GetListEntitiesForPolicyEntityFilterEnum = "Role"
-	GetListEntitiesForPolicyEntityFilterEnumGroup              GetListEntitiesForPolicyEntityFilterEnum = "Group"
-	GetListEntitiesForPolicyEntityFilterEnumLocalManagedPolicy GetListEntitiesForPolicyEntityFilterEnum = "LocalManagedPolicy"
-	GetListEntitiesForPolicyEntityFilterEnumAwsManagedPolicy   GetListEntitiesForPolicyEntityFilterEnum = "AWSManagedPolicy"
+	GETListEntitiesForPolicyEntityFilterEnumUser               GetListEntitiesForPolicyEntityFilterEnum = "User"
+	GETListEntitiesForPolicyEntityFilterEnumRole               GetListEntitiesForPolicyEntityFilterEnum = "Role"
+	GETListEntitiesForPolicyEntityFilterEnumGroup              GetListEntitiesForPolicyEntityFilterEnum = "Group"
+	GETListEntitiesForPolicyEntityFilterEnumLocalManagedPolicy GetListEntitiesForPolicyEntityFilterEnum = "LocalManagedPolicy"
+	GETListEntitiesForPolicyEntityFilterEnumAwsManagedPolicy   GetListEntitiesForPolicyEntityFilterEnum = "AWSManagedPolicy"
 )
 
 type GetListEntitiesForPolicyPolicyUsageFilterEnum string
 
 const (
-	GetListEntitiesForPolicyPolicyUsageFilterEnumPermissionsPolicy   GetListEntitiesForPolicyPolicyUsageFilterEnum = "PermissionsPolicy"
-	GetListEntitiesForPolicyPolicyUsageFilterEnumPermissionsBoundary GetListEntitiesForPolicyPolicyUsageFilterEnum = "PermissionsBoundary"
+	GETListEntitiesForPolicyPolicyUsageFilterEnumPermissionsPolicy   GetListEntitiesForPolicyPolicyUsageFilterEnum = "PermissionsPolicy"
+	GETListEntitiesForPolicyPolicyUsageFilterEnumPermissionsBoundary GetListEntitiesForPolicyPolicyUsageFilterEnum = "PermissionsBoundary"
 )
 
 type GetListEntitiesForPolicyVersionEnum string
 
 const (
-	GetListEntitiesForPolicyVersionEnumTwoThousandAndTen0508 GetListEntitiesForPolicyVersionEnum = "2010-05-08"
+	GETListEntitiesForPolicyVersionEnumTwoThousandAndTen0508 GetListEntitiesForPolicyVersionEnum = "2010-05-08"
 )
 
 type GetListEntitiesForPolicyQueryParams struct {

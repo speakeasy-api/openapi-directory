@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,24 +24,23 @@ func main() {
     
     req := operations.GetCmsV3DomainsGetPageRequest{
         Security: operations.GetCmsV3DomainsGetPageSecurity{
-            Hapikey: shared.SchemeHapikey{
+            PrivateAppsLegacy: &shared.SchemePrivateAppsLegacy{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         QueryParams: operations.GetCmsV3DomainsGetPageQueryParams{
-            After: "occaecati",
-            Archived: true,
-            CreatedAfter: "2012-05-15T07:26:21Z",
-            CreatedAt: "2001-08-25T00:39:02Z",
-            CreatedBefore: "2008-07-27T22:19:32Z",
-            Limit: 7094204514937110226,
+            After: "non",
+            Archived: false,
+            CreatedAfter: "2010-06-10T21:00:40Z",
+            CreatedAt: "2014-07-10T09:12:30Z",
+            CreatedBefore: "1985-06-27T20:21:36Z",
+            Limit: 8829946588659094811,
             Sort: []string{
-                "earum",
-                "quasi",
+                "voluptas",
             },
-            UpdatedAfter: "1996-05-07T03:19:59Z",
-            UpdatedAt: "1971-08-13T11:21:06Z",
-            UpdatedBefore: "1999-02-27T06:41:06Z",
+            UpdatedAfter: "2008-10-24T19:33:13Z",
+            UpdatedAt: "1970-05-27T13:21:49Z",
+            UpdatedBefore: "1990-01-26T13:39:56Z",
         },
     }
     

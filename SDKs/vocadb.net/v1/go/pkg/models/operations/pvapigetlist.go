@@ -7,25 +7,25 @@ import (
 type PvAPIGetListLangEnum string
 
 const (
-	PvAPIGetListLangEnumDefault  PvAPIGetListLangEnum = "Default"
-	PvAPIGetListLangEnumJapanese PvAPIGetListLangEnum = "Japanese"
-	PvAPIGetListLangEnumRomaji   PvAPIGetListLangEnum = "Romaji"
-	PvAPIGetListLangEnumEnglish  PvAPIGetListLangEnum = "English"
+	PVAPIGetListLangEnumDefault  PvAPIGetListLangEnum = "Default"
+	PVAPIGetListLangEnumJapanese PvAPIGetListLangEnum = "Japanese"
+	PVAPIGetListLangEnumRomaji   PvAPIGetListLangEnum = "Romaji"
+	PVAPIGetListLangEnumEnglish  PvAPIGetListLangEnum = "English"
 )
 
 type PvAPIGetListServiceEnum string
 
 const (
-	PvAPIGetListServiceEnumNicoNicoDouga PvAPIGetListServiceEnum = "NicoNicoDouga"
-	PvAPIGetListServiceEnumYoutube       PvAPIGetListServiceEnum = "Youtube"
-	PvAPIGetListServiceEnumSoundCloud    PvAPIGetListServiceEnum = "SoundCloud"
-	PvAPIGetListServiceEnumVimeo         PvAPIGetListServiceEnum = "Vimeo"
-	PvAPIGetListServiceEnumPiapro        PvAPIGetListServiceEnum = "Piapro"
-	PvAPIGetListServiceEnumBilibili      PvAPIGetListServiceEnum = "Bilibili"
-	PvAPIGetListServiceEnumFile          PvAPIGetListServiceEnum = "File"
-	PvAPIGetListServiceEnumLocalFile     PvAPIGetListServiceEnum = "LocalFile"
-	PvAPIGetListServiceEnumCreofuga      PvAPIGetListServiceEnum = "Creofuga"
-	PvAPIGetListServiceEnumBandcamp      PvAPIGetListServiceEnum = "Bandcamp"
+	PVAPIGetListServiceEnumNicoNicoDouga PvAPIGetListServiceEnum = "NicoNicoDouga"
+	PVAPIGetListServiceEnumYoutube       PvAPIGetListServiceEnum = "Youtube"
+	PVAPIGetListServiceEnumSoundCloud    PvAPIGetListServiceEnum = "SoundCloud"
+	PVAPIGetListServiceEnumVimeo         PvAPIGetListServiceEnum = "Vimeo"
+	PVAPIGetListServiceEnumPiapro        PvAPIGetListServiceEnum = "Piapro"
+	PVAPIGetListServiceEnumBilibili      PvAPIGetListServiceEnum = "Bilibili"
+	PVAPIGetListServiceEnumFile          PvAPIGetListServiceEnum = "File"
+	PVAPIGetListServiceEnumLocalFile     PvAPIGetListServiceEnum = "LocalFile"
+	PVAPIGetListServiceEnumCreofuga      PvAPIGetListServiceEnum = "Creofuga"
+	PVAPIGetListServiceEnumBandcamp      PvAPIGetListServiceEnum = "Bandcamp"
 )
 
 type PvAPIGetListQueryParams struct {
@@ -44,6 +44,6 @@ type PvAPIGetListRequest struct {
 type PvAPIGetListResponse struct {
 	Body                               []byte
 	ContentType                        string
-	PartialFindResultPvForSongContract *shared.PartialFindResultPvForSongContract
+	PartialFindResultPVForSongContract *shared.PartialFindResultPvForSongContract
 	StatusCode                         int64
 }

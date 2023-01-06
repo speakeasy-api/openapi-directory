@@ -18,10 +18,10 @@ type UpdateFlowHeaders struct {
 //
 //	Contains information about the configuration of the source connector used in the flow.
 type UpdateFlowRequestBodySourceFlowConfig struct {
-	ConnectorProfileName      *string                           `json:"connectorProfileName,omitempty"`
-	ConnectorType             *shared.ConnectorTypeEnum         `json:"connectorType,omitempty"`
-	IncrementalPullConfig     *shared.IncrementalPullConfig     `json:"incrementalPullConfig,omitempty"`
-	SourceConnectorProperties *shared.SourceConnectorProperties `json:"sourceConnectorProperties,omitempty"`
+	ConnectorProfileName      *string                            `json:"connectorProfileName,omitempty"`
+	ConnectorType             *shared.ConnectorTypeEnum          `json:"connectorType,omitempty"`
+	IncrementalPullConfig     *shared.IncrementalPullConfig      `json:"incrementalPullConfig,omitempty"`
+	SourceConnectorProperties *shared.SourceConnectorProperties1 `json:"sourceConnectorProperties,omitempty"`
 }
 
 // UpdateFlowRequestBodyTriggerConfig

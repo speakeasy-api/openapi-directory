@@ -8,14 +8,14 @@ type DeleteVolumePathParams struct {
 	VolumeID string `pathParam:"style=simple,explode=false,name=volume_id"`
 }
 
-type DeleteVolumeRequest struct {
-	PathParams DeleteVolumePathParams
-}
-
 type DeleteVolume401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteVolumeRequest struct {
+	PathParams DeleteVolumePathParams
 }
 
 type DeleteVolumeResponse struct {

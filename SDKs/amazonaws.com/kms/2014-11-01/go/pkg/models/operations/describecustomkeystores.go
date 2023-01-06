@@ -31,6 +31,6 @@ type DescribeCustomKeyStoresResponse struct {
 	CustomKeyStoreNotFoundException *interface{}
 	DescribeCustomKeyStoresResponse *shared.DescribeCustomKeyStoresResponse
 	InvalidMarkerException          *interface{}
-	KmsInternalException            *interface{}
+	KMSInternalException            *interface{}
 	StatusCode                      int64
 }

@@ -3,13 +3,13 @@ package operations
 type PostAssociateTrunkInterfaceActionEnum string
 
 const (
-	PostAssociateTrunkInterfaceActionEnumAssociateTrunkInterface PostAssociateTrunkInterfaceActionEnum = "AssociateTrunkInterface"
+	POSTAssociateTrunkInterfaceActionEnumAssociateTrunkInterface PostAssociateTrunkInterfaceActionEnum = "AssociateTrunkInterface"
 )
 
 type PostAssociateTrunkInterfaceVersionEnum string
 
 const (
-	PostAssociateTrunkInterfaceVersionEnumTwoThousandAndSixteen1115 PostAssociateTrunkInterfaceVersionEnum = "2016-11-15"
+	POSTAssociateTrunkInterfaceVersionEnumTwoThousandAndSixteen1115 PostAssociateTrunkInterfaceVersionEnum = "2016-11-15"
 )
 
 type PostAssociateTrunkInterfaceQueryParams struct {

@@ -11,11 +11,10 @@ type UserResponsePhoto struct {
 	Image60x60     *string `json:"image_60x60,omitempty"`
 }
 
+// UserResponse
+// A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
 type UserResponse struct {
-	Email        *string            `json:"email,omitempty"`
-	Gid          *string            `json:"gid,omitempty"`
-	Name         *string            `json:"name,omitempty"`
-	Photo        *UserResponsePhoto `json:"photo,omitempty"`
-	ResourceType *string            `json:"resource_type,omitempty"`
-	Workspaces   []WorkspaceCompact `json:"workspaces,omitempty"`
+	Email      *string            `json:"email,omitempty"`
+	Photo      *UserResponsePhoto `json:"photo,omitempty"`
+	Workspaces []WorkspaceCompact `json:"workspaces,omitempty"`
 }

@@ -36,8 +36,8 @@ type ListKeyPoliciesResponse struct {
 	ContentType                string
 	DependencyTimeoutException *interface{}
 	InvalidArnException        *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	ListKeyPoliciesResponse    *shared.ListKeyPoliciesResponse
 	NotFoundException          *interface{}
 	StatusCode                 int64

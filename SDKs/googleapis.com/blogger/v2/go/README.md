@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,7 +26,7 @@ func main() {
         Security: operations.BloggerBlogsGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -37,16 +36,16 @@ func main() {
         },
         QueryParams: operations.BloggerBlogsGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "quod",
-            Alt: "media",
-            Callback: "at",
-            Fields: "ut",
-            Key: "numquam",
-            OauthToken: "dolores",
+            AccessToken: "nihil",
+            Alt: "json",
+            Callback: "esse",
+            Fields: "eum",
+            Key: "pariatur",
+            OauthToken: "sed",
             PrettyPrint: true,
-            QuotaUser: "distinctio",
-            UploadType: "incidunt",
-            UploadProtocol: "ut",
+            QuotaUser: "perferendis",
+            UploadType: "aperiam",
+            UploadProtocol: "dolorem",
         },
     }
     

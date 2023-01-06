@@ -7,7 +7,7 @@ import (
 type GetUpdateScalingParametersActionEnum string
 
 const (
-	GetUpdateScalingParametersActionEnumUpdateScalingParameters GetUpdateScalingParametersActionEnum = "UpdateScalingParameters"
+	GETUpdateScalingParametersActionEnumUpdateScalingParameters GetUpdateScalingParametersActionEnum = "UpdateScalingParameters"
 )
 
 // GetUpdateScalingParametersScalingParameters
@@ -21,7 +21,7 @@ type GetUpdateScalingParametersScalingParameters struct {
 type GetUpdateScalingParametersVersionEnum string
 
 const (
-	GetUpdateScalingParametersVersionEnumTwoThousandAndThirteen0101 GetUpdateScalingParametersVersionEnum = "2013-01-01"
+	GETUpdateScalingParametersVersionEnumTwoThousandAndThirteen0101 GetUpdateScalingParametersVersionEnum = "2013-01-01"
 )
 
 type GetUpdateScalingParametersQueryParams struct {

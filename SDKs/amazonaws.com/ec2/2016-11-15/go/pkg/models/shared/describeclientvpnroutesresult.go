@@ -1,6 +1,6 @@
 package shared
 
 type DescribeClientVpnRoutesResult struct {
-	NextToken *string
-	Routes    []ClientVpnRoute
+	NextToken map[string]interface{}
+	Routes    map[string]interface{}
 }

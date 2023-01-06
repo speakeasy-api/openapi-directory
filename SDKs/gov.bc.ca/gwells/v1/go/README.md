@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,12 +34,12 @@ func main() {
     
     req := operations.AquiferCodesDemandListRequest{
         QueryParams: operations.AquiferCodesDemandListQueryParams{
-            Limit: 536948743829112639,
-            Offset: 8711658350578709690,
+            Limit: 1136478588472319679,
+            Offset: 5563643603414320113,
         },
     }
     
-    res, err := s.Sdk.AquiferCodesDemandList(ctx, req)
+    res, err := s.AquiferCodes.AquiferCodesDemandList(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -54,7 +53,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### aquifer-codes
 
 * `AquiferCodesDemandList` - return a list of aquifer demand codes
 * `AquiferCodesMaterialsList` - return a list of aquifer material codes
@@ -63,19 +62,43 @@ func main() {
 * `AquiferCodesSubtypesList` - return a list of aquifer subtype codes
 * `AquiferCodesVulnerabilityList` - return a list of aquifer vulnerability codes
 * `AquiferCodesWaterUseList` - return a list of water use codes
+
+### aquifers
+
 * `AquifersFilesList` - list files found for the aquifer identified in the uri
 * `AquifersList` - return a list of aquifers
 * `AquifersNamesList` - List all aquifers in a simplified format
 * `AquifersRead` - return details of aquifers
+
+### cities
+
 * `CitiesDrillersList` - returns a list of cities with a qualified, registered operator (driller or installer)
 * `CitiesInstallersList` - returns a list of cities with a qualified, registered operator (driller or installer)
+
+### config
+
 * `ConfigList` - serves general configuration
+
+### drillers
+
 * `DrillersFilesList` - list files found for the aquifer identified in the uri
 * `DrillersList` - Returns a list of all person records
 * `DrillersNamesList` - Search for a person in the Register
+
+### keycloak
+
 * `KeycloakList` - serves keycloak config
+
+### submissions
+
 * `SubmissionsOptionsList` - Options required for submitting activity report forms
+
+### surveys
+
 * `SurveysList` - returns a list of active surveys
+
+### wells
+
 * `WellsFilesList` - list files found for the well identified in the uri
 * `WellsList` - returns a list of wells
 * `WellsRead` - Return well detail.

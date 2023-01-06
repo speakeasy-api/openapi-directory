@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.GetAbortEnvironmentUpdateRequest{
         QueryParams: operations.GetAbortEnvironmentUpdateQueryParams{
             Action: "AbortEnvironmentUpdate",
-            EnvironmentID: "ad",
-            EnvironmentName: "ab",
+            EnvironmentID: "eos",
+            EnvironmentName: "et",
             Version: "2010-12-01",
         },
         Headers: operations.GetAbortEnvironmentUpdateHeaders{
-            XAmzAlgorithm: "delectus",
-            XAmzContentSha256: "recusandae",
-            XAmzCredential: "voluptate",
-            XAmzDate: "possimus",
-            XAmzSecurityToken: "autem",
-            XAmzSignature: "sed",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "aspernatur",
+            XAmzContentSha256: "praesentium",
+            XAmzCredential: "porro",
+            XAmzDate: "nihil",
+            XAmzSecurityToken: "adipisci",
+            XAmzSignature: "consequatur",
+            XAmzSignedHeaders: "illum",
         },
     }
     
-    res, err := s.Sdk.GetAbortEnvironmentUpdate(ctx, req)
+    res, err := s.GetAbortEnvironmentUpdate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

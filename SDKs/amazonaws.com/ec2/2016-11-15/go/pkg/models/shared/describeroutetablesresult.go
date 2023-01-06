@@ -3,6 +3,6 @@ package shared
 // DescribeRouteTablesResult
 // Contains the output of DescribeRouteTables.
 type DescribeRouteTablesResult struct {
-	NextToken   *string
-	RouteTables []RouteTable
+	NextToken   map[string]interface{}
+	RouteTables map[string]interface{}
 }

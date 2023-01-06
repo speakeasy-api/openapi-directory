@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelClusterRequest{
         Headers: operations.CancelClusterHeaders{
-            XAmzAlgorithm: "culpa",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "quae",
-            XAmzDate: "incidunt",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "nam",
-            XAmzSignedHeaders: "optio",
+            XAmzAlgorithm: "quia",
+            XAmzContentSha256: "iste",
+            XAmzCredential: "deleniti",
+            XAmzDate: "libero",
+            XAmzSecurityToken: "saepe",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "corporis",
             XAmzTarget: "AWSIESnowballJobManagementService.CancelCluster",
         },
         Request: shared.CancelClusterRequest{
-            ClusterID: "ratione",
+            ClusterID: "illum",
         },
     }
     
-    res, err := s.Sdk.CancelCluster(ctx, req)
+    res, err := s.CancelCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

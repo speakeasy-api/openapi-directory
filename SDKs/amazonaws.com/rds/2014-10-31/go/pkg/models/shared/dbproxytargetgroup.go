@@ -9,7 +9,7 @@ import (
 type DbProxyTargetGroup struct {
 	ConnectionPoolConfig *ConnectionPoolConfigurationInfo
 	CreatedDate          *time.Time
-	DbProxyName          *string
+	DBProxyName          *string
 	IsDefault            *bool
 	Status               *string
 	TargetGroupArn       *string

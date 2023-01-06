@@ -9,14 +9,14 @@ import (
 type DbSnapshot struct {
 	AllocatedStorage                 *int64
 	AvailabilityZone                 *string
-	DbInstanceIdentifier             *string
-	DbSnapshotArn                    *string
-	DbSnapshotIdentifier             *string
+	DBInstanceIdentifier             *string
+	DBSnapshotArn                    *string
+	DBSnapshotIdentifier             *string
 	DbiResourceID                    *string
 	Encrypted                        *bool
 	Engine                           *string
 	EngineVersion                    *string
-	IamDatabaseAuthenticationEnabled *bool
+	IAMDatabaseAuthenticationEnabled *bool
 	InstanceCreateTime               *time.Time
 	Iops                             *int64
 	KmsKeyID                         *string
@@ -26,14 +26,14 @@ type DbSnapshot struct {
 	OriginalSnapshotCreateTime       *time.Time
 	PercentProgress                  *int64
 	Port                             *int64
-	ProcessorFeatures                []ProcessorFeature
+	ProcessorFeatures                []map[string]interface{}
 	SnapshotCreateTime               *time.Time
 	SnapshotType                     *string
-	SourceDbSnapshotIdentifier       *string
+	SourceDBSnapshotIdentifier       *string
 	SourceRegion                     *string
 	Status                           *string
 	StorageType                      *string
-	TagList                          []Tag
+	TagList                          []map[string]interface{}
 	TdeCredentialArn                 *string
 	Timezone                         *string
 	VpcID                            *string

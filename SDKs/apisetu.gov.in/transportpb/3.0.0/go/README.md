@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.DrvlcSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.DrvlcRequestBody{
             CertificateParameters: &operations.DrvlcRequestBodyCertificateParameters{
-                Dob: "a",
-                FullName: "sit",
-                UID: "id",
-                Dlno: "commodi",
+                DOB: "libero",
+                FullName: "et",
+                UID: "possimus",
+                Dlno: "non",
             },
-            ConsentArtifact: "dolor",
-            Format: "pdf",
-            TxnID: "aliquam",
+            ConsentArtifact: "rerum",
+            Format: "xml",
+            TxnID: "quas",
         },
     }
     
-    res, err := s.Sdk.Drvlc(ctx, req)
+    res, err := s.APIs.Drvlc(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Drvlc` - Driving License
 * `Rvcer` - Registration of Vehicles

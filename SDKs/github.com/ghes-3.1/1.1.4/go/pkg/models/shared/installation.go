@@ -22,6 +22,8 @@ const (
 	InstallationRepositorySelectionEnumSelected InstallationRepositorySelectionEnum = "selected"
 )
 
+// InstallationSimpleUser
+// Simple User
 type InstallationSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

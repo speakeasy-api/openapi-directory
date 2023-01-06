@@ -12,7 +12,7 @@ type ConnectorProfileProperties struct {
 	InforNexus      *InforNexusConnectorProfileProperties `json:"InforNexus,omitempty"`
 	Marketo         *MarketoConnectorProfileProperties    `json:"Marketo,omitempty"`
 	Redshift        *RedshiftConnectorProfileProperties   `json:"Redshift,omitempty"`
-	SapoData        *SapoDataConnectorProfileProperties   `json:"SAPOData,omitempty"`
+	SAPOData        *SapoDataConnectorProfileProperties   `json:"SAPOData,omitempty"`
 	Salesforce      *SalesforceConnectorProfileProperties `json:"Salesforce,omitempty"`
 	ServiceNow      *ServiceNowConnectorProfileProperties `json:"ServiceNow,omitempty"`
 	Singular        map[string]interface{}                `json:"Singular,omitempty"`

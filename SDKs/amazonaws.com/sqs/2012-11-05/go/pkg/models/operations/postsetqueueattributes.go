@@ -3,13 +3,13 @@ package operations
 type PostSetQueueAttributesActionEnum string
 
 const (
-	PostSetQueueAttributesActionEnumSetQueueAttributes PostSetQueueAttributesActionEnum = "SetQueueAttributes"
+	POSTSetQueueAttributesActionEnumSetQueueAttributes PostSetQueueAttributesActionEnum = "SetQueueAttributes"
 )
 
 type PostSetQueueAttributesVersionEnum string
 
 const (
-	PostSetQueueAttributesVersionEnumTwoThousandAndTwelve1105 PostSetQueueAttributesVersionEnum = "2012-11-05"
+	POSTSetQueueAttributesVersionEnumTwoThousandAndTwelve1105 PostSetQueueAttributesVersionEnum = "2012-11-05"
 )
 
 type PostSetQueueAttributesQueryParams struct {

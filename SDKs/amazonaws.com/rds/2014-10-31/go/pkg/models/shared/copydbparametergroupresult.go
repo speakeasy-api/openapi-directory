@@ -1,5 +1,5 @@
 package shared
 
 type CopyDbParameterGroupResult struct {
-	DbParameterGroup *DbParameterGroup
+	DBParameterGroup *DbParameterGroup
 }

@@ -3,13 +3,13 @@ package operations
 type PostDeleteDbInstanceAutomatedBackupActionEnum string
 
 const (
-	PostDeleteDbInstanceAutomatedBackupActionEnumDeleteDbInstanceAutomatedBackup PostDeleteDbInstanceAutomatedBackupActionEnum = "DeleteDBInstanceAutomatedBackup"
+	POSTDeleteDBInstanceAutomatedBackupActionEnumDeleteDbInstanceAutomatedBackup PostDeleteDbInstanceAutomatedBackupActionEnum = "DeleteDBInstanceAutomatedBackup"
 )
 
 type PostDeleteDbInstanceAutomatedBackupVersionEnum string
 
 const (
-	PostDeleteDbInstanceAutomatedBackupVersionEnumTwoThousandAndFourteen1031 PostDeleteDbInstanceAutomatedBackupVersionEnum = "2014-10-31"
+	POSTDeleteDBInstanceAutomatedBackupVersionEnumTwoThousandAndFourteen1031 PostDeleteDbInstanceAutomatedBackupVersionEnum = "2014-10-31"
 )
 
 type PostDeleteDbInstanceAutomatedBackupQueryParams struct {

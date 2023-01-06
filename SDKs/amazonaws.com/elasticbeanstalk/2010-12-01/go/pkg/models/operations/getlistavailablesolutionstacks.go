@@ -3,13 +3,13 @@ package operations
 type GetListAvailableSolutionStacksActionEnum string
 
 const (
-	GetListAvailableSolutionStacksActionEnumListAvailableSolutionStacks GetListAvailableSolutionStacksActionEnum = "ListAvailableSolutionStacks"
+	GETListAvailableSolutionStacksActionEnumListAvailableSolutionStacks GetListAvailableSolutionStacksActionEnum = "ListAvailableSolutionStacks"
 )
 
 type GetListAvailableSolutionStacksVersionEnum string
 
 const (
-	GetListAvailableSolutionStacksVersionEnumTwoThousandAndTen1201 GetListAvailableSolutionStacksVersionEnum = "2010-12-01"
+	GETListAvailableSolutionStacksVersionEnumTwoThousandAndTen1201 GetListAvailableSolutionStacksVersionEnum = "2010-12-01"
 )
 
 type GetListAvailableSolutionStacksQueryParams struct {

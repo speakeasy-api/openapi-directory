@@ -3,13 +3,13 @@ package operations
 type PostModifyInstanceEventWindowActionEnum string
 
 const (
-	PostModifyInstanceEventWindowActionEnumModifyInstanceEventWindow PostModifyInstanceEventWindowActionEnum = "ModifyInstanceEventWindow"
+	POSTModifyInstanceEventWindowActionEnumModifyInstanceEventWindow PostModifyInstanceEventWindowActionEnum = "ModifyInstanceEventWindow"
 )
 
 type PostModifyInstanceEventWindowVersionEnum string
 
 const (
-	PostModifyInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceEventWindowVersionEnum = "2016-11-15"
+	POSTModifyInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceEventWindowVersionEnum = "2016-11-15"
 )
 
 type PostModifyInstanceEventWindowQueryParams struct {

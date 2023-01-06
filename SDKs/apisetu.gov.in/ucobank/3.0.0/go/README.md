@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.TdcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.TdcerRequestBody{
             CertificateParameters: &operations.TdcerRequestBodyCertificateParameters{
-                CustID: "quod",
-                Dob: "rem",
-                FinYr: "recusandae",
+                CustID: "nobis",
+                DOB: "possimus",
+                FinYr: "voluptate",
             },
-            ConsentArtifact: "consequuntur",
+            ConsentArtifact: "illum",
             Format: "pdf",
-            TxnID: "quo",
+            TxnID: "sunt",
         },
     }
     
-    res, err := s.Sdk.Tdcer(ctx, req)
+    res, err := s.APIs.Tdcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Tdcer` - TDS Certificate
 

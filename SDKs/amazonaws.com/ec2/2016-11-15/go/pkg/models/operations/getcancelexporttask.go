@@ -3,13 +3,13 @@ package operations
 type GetCancelExportTaskActionEnum string
 
 const (
-	GetCancelExportTaskActionEnumCancelExportTask GetCancelExportTaskActionEnum = "CancelExportTask"
+	GETCancelExportTaskActionEnumCancelExportTask GetCancelExportTaskActionEnum = "CancelExportTask"
 )
 
 type GetCancelExportTaskVersionEnum string
 
 const (
-	GetCancelExportTaskVersionEnumTwoThousandAndSixteen1115 GetCancelExportTaskVersionEnum = "2016-11-15"
+	GETCancelExportTaskVersionEnumTwoThousandAndSixteen1115 GetCancelExportTaskVersionEnum = "2016-11-15"
 )
 
 type GetCancelExportTaskQueryParams struct {

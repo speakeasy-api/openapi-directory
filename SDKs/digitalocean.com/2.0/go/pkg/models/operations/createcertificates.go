@@ -4,36 +4,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum string
-
-const (
-	CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnumCustom      CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum = "custom"
-	CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnumLetsEncrypt CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum = "lets_encrypt"
-)
-
 type CreateCertificatesRequestBodyLetSEncryptCertificateRequest struct {
-	DNSNames []string                                                            `json:"dns_names"`
-	Name     string                                                              `json:"name"`
-	Type     *CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum `json:"type,omitempty"`
+	DNSNames []string `json:"dns_names"`
 }
-
-type CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum string
-
-const (
-	CreateCertificatesRequestBodyCustomCertificateRequestTypeEnumCustom      CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum = "custom"
-	CreateCertificatesRequestBodyCustomCertificateRequestTypeEnumLetsEncrypt CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum = "lets_encrypt"
-)
 
 type CreateCertificatesRequestBodyCustomCertificateRequest struct {
-	CertificateChain *string                                                        `json:"certificate_chain,omitempty"`
-	LeafCertificate  string                                                         `json:"leaf_certificate"`
-	Name             string                                                         `json:"name"`
-	PrivateKey       string                                                         `json:"private_key"`
-	Type             *CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum `json:"type,omitempty"`
-}
-
-type CreateCertificatesRequest struct {
-	Request interface{} `request:"mediaType=application/json"`
+	CertificateChain *string `json:"certificate_chain,omitempty"`
+	LeafCertificate  string  `json:"leaf_certificate"`
+	PrivateKey       string  `json:"private_key"`
 }
 
 type CreateCertificates201ApplicationJSON struct {
@@ -44,6 +22,10 @@ type CreateCertificates401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateCertificatesRequest struct {
+	Request interface{} `request:"mediaType=application/json"`
 }
 
 type CreateCertificatesResponse struct {

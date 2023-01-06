@@ -3,18 +3,18 @@ package operations
 type GetDeleteDbInstanceAutomatedBackupActionEnum string
 
 const (
-	GetDeleteDbInstanceAutomatedBackupActionEnumDeleteDbInstanceAutomatedBackup GetDeleteDbInstanceAutomatedBackupActionEnum = "DeleteDBInstanceAutomatedBackup"
+	GETDeleteDBInstanceAutomatedBackupActionEnumDeleteDbInstanceAutomatedBackup GetDeleteDbInstanceAutomatedBackupActionEnum = "DeleteDBInstanceAutomatedBackup"
 )
 
 type GetDeleteDbInstanceAutomatedBackupVersionEnum string
 
 const (
-	GetDeleteDbInstanceAutomatedBackupVersionEnumTwoThousandAndFourteen1031 GetDeleteDbInstanceAutomatedBackupVersionEnum = "2014-10-31"
+	GETDeleteDBInstanceAutomatedBackupVersionEnumTwoThousandAndFourteen1031 GetDeleteDbInstanceAutomatedBackupVersionEnum = "2014-10-31"
 )
 
 type GetDeleteDbInstanceAutomatedBackupQueryParams struct {
 	Action                        GetDeleteDbInstanceAutomatedBackupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceAutomatedBackupsArn *string                                       `queryParam:"style=form,explode=true,name=DBInstanceAutomatedBackupsArn"`
+	DBInstanceAutomatedBackupsArn *string                                       `queryParam:"style=form,explode=true,name=DBInstanceAutomatedBackupsArn"`
 	DbiResourceID                 *string                                       `queryParam:"style=form,explode=true,name=DbiResourceId"`
 	Version                       GetDeleteDbInstanceAutomatedBackupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

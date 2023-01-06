@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,19 +32,25 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.CopyTemplateRequest{
-        QueryParams: operations.CopyTemplateQueryParams{
-            Name: "consequatur",
-            TemplateID: 9220811630772968327,
+    req := operations.MergeTemplateRequest{
+        QueryParams: operations.MergeTemplateQueryParams{
+            Format: "html",
+            Name: "odio",
+            Output: "url",
+            TemplateID: 1502483821567276313,
+        },
+        Request: shared.Data{
+            ID: 1029205606204646169,
+            Name: "iure",
         },
     }
     
-    res, err := s.Sdk.CopyTemplate(ctx, req)
+    res, err := s.Documents.MergeTemplate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CopyTemplate200ApplicationJSONObject != nil {
+    if res.MergeTemplate200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -54,19 +59,25 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Documents
+
+* `MergeTemplate` - Generate document
+* `MergeTemplates` - Generate document (multiple templates)
+
+### Templates
 
 * `CopyTemplate` - Copy template
 * `CreateTemplate` - Create template
 * `DeleteTemplate` - Delete template
-* `DeleteWorkspace` - Delete workspace
 * `GetEditorURL` - Open editor
 * `GetTemplate` - Get template
 * `GetTemplates` - Get templates
-* `GetWorkspace` - Get workspace
-* `MergeTemplate` - Generate document
-* `MergeTemplates` - Generate document (multiple templates)
 * `UpdateTemplate` - Update template
+
+### Workspaces
+
+* `DeleteWorkspace` - Delete workspace
+* `GetWorkspace` - Get workspace
 
 <!-- End SDK Available Operations -->
 

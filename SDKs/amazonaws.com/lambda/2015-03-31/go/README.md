@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,30 +34,30 @@ func main() {
     
     req := operations.AddLayerVersionPermissionRequest{
         PathParams: operations.AddLayerVersionPermissionPathParams{
-            LayerName: "dolores",
-            VersionNumber: 2235746578837364984,
+            LayerName: "quos",
+            VersionNumber: 2630384357033883160,
         },
         QueryParams: operations.AddLayerVersionPermissionQueryParams{
-            RevisionID: "neque",
+            RevisionID: "adipisci",
         },
         Headers: operations.AddLayerVersionPermissionHeaders{
-            XAmzAlgorithm: "eligendi",
-            XAmzContentSha256: "et",
-            XAmzCredential: "aut",
-            XAmzDate: "fugiat",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "sit",
-            XAmzSignedHeaders: "minus",
+            XAmzAlgorithm: "quo",
+            XAmzContentSha256: "laborum",
+            XAmzCredential: "ipsum",
+            XAmzDate: "delectus",
+            XAmzSecurityToken: "tenetur",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "quia",
         },
         Request: operations.AddLayerVersionPermissionRequestBody{
-            Action: "iste",
-            OrganizationID: "tempora",
-            Principal: "officia",
-            StatementID: "ducimus",
+            Action: "ut",
+            OrganizationID: "sed",
+            Principal: "qui",
+            StatementID: "nostrum",
         },
     }
     
-    res, err := s.Sdk.AddLayerVersionPermission(ctx, req)
+    res, err := s.AddLayerVersionPermission(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

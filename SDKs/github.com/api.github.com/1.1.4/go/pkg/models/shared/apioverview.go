@@ -1,8 +1,8 @@
 package shared
 
 type APIOverviewSSHKeyFingerprints struct {
-	Sha256Dsa *string `json:"SHA256_DSA,omitempty"`
-	Sha256Rsa *string `json:"SHA256_RSA,omitempty"`
+	Sha256DSA *string `json:"SHA256_DSA,omitempty"`
+	Sha256RSA *string `json:"SHA256_RSA,omitempty"`
 }
 
 // APIOverview

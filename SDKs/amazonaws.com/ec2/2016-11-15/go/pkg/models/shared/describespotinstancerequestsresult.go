@@ -3,6 +3,6 @@ package shared
 // DescribeSpotInstanceRequestsResult
 // Contains the output of DescribeSpotInstanceRequests.
 type DescribeSpotInstanceRequestsResult struct {
-	NextToken            *string
-	SpotInstanceRequests []SpotInstanceRequest
+	NextToken            map[string]interface{}
+	SpotInstanceRequests map[string]interface{}
 }

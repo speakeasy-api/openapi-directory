@@ -3,13 +3,13 @@ package operations
 type PostGetContextKeysForCustomPolicyActionEnum string
 
 const (
-	PostGetContextKeysForCustomPolicyActionEnumGetContextKeysForCustomPolicy PostGetContextKeysForCustomPolicyActionEnum = "GetContextKeysForCustomPolicy"
+	POSTGetContextKeysForCustomPolicyActionEnumGetContextKeysForCustomPolicy PostGetContextKeysForCustomPolicyActionEnum = "GetContextKeysForCustomPolicy"
 )
 
 type PostGetContextKeysForCustomPolicyVersionEnum string
 
 const (
-	PostGetContextKeysForCustomPolicyVersionEnumTwoThousandAndTen0508 PostGetContextKeysForCustomPolicyVersionEnum = "2010-05-08"
+	POSTGetContextKeysForCustomPolicyVersionEnumTwoThousandAndTen0508 PostGetContextKeysForCustomPolicyVersionEnum = "2010-05-08"
 )
 
 type PostGetContextKeysForCustomPolicyQueryParams struct {

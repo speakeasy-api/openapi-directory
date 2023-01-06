@@ -31,7 +31,7 @@ type StartStudioSsoConfigurationRepairResponse struct {
 	InternalServerErrorException              *interface{}
 	ResourceNotFoundException                 *interface{}
 	ServiceQuotaExceededException             *interface{}
-	StartStudioSsoConfigurationRepairResponse *shared.StartStudioSsoConfigurationRepairResponse
+	StartStudioSSOConfigurationRepairResponse *shared.StartStudioSsoConfigurationRepairResponse
 	StatusCode                                int64
 	ThrottlingException                       *interface{}
 	ValidationException                       *interface{}

@@ -7,7 +7,7 @@ import (
 type DeleteFhirDatastoreXAmzTargetEnum string
 
 const (
-	DeleteFhirDatastoreXAmzTargetEnumHealthLakeDeleteFhirDatastore DeleteFhirDatastoreXAmzTargetEnum = "HealthLake.DeleteFHIRDatastore"
+	DeleteFHIRDatastoreXAmzTargetEnumHealthLakeDeleteFhirDatastore DeleteFhirDatastoreXAmzTargetEnum = "HealthLake.DeleteFHIRDatastore"
 )
 
 type DeleteFhirDatastoreHeaders struct {
@@ -30,7 +30,7 @@ type DeleteFhirDatastoreResponse struct {
 	AccessDeniedException       *interface{}
 	ConflictException           *interface{}
 	ContentType                 string
-	DeleteFhirDatastoreResponse *shared.DeleteFhirDatastoreResponse
+	DeleteFHIRDatastoreResponse *shared.DeleteFhirDatastoreResponse
 	InternalServerException     *interface{}
 	ResourceNotFoundException   *interface{}
 	StatusCode                  int64

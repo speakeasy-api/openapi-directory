@@ -3,20 +3,20 @@ package operations
 type GetPurchaseReservedDbInstancesOfferingActionEnum string
 
 const (
-	GetPurchaseReservedDbInstancesOfferingActionEnumPurchaseReservedDbInstancesOffering GetPurchaseReservedDbInstancesOfferingActionEnum = "PurchaseReservedDBInstancesOffering"
+	GETPurchaseReservedDBInstancesOfferingActionEnumPurchaseReservedDbInstancesOffering GetPurchaseReservedDbInstancesOfferingActionEnum = "PurchaseReservedDBInstancesOffering"
 )
 
 type GetPurchaseReservedDbInstancesOfferingVersionEnum string
 
 const (
-	GetPurchaseReservedDbInstancesOfferingVersionEnumTwoThousandAndThirteen0212 GetPurchaseReservedDbInstancesOfferingVersionEnum = "2013-02-12"
+	GETPurchaseReservedDBInstancesOfferingVersionEnumTwoThousandAndThirteen0212 GetPurchaseReservedDbInstancesOfferingVersionEnum = "2013-02-12"
 )
 
 type GetPurchaseReservedDbInstancesOfferingQueryParams struct {
 	Action                        GetPurchaseReservedDbInstancesOfferingActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceCount               *int64                                            `queryParam:"style=form,explode=true,name=DBInstanceCount"`
-	ReservedDbInstanceID          *string                                           `queryParam:"style=form,explode=true,name=ReservedDBInstanceId"`
-	ReservedDbInstancesOfferingID string                                            `queryParam:"style=form,explode=true,name=ReservedDBInstancesOfferingId"`
+	DBInstanceCount               *int64                                            `queryParam:"style=form,explode=true,name=DBInstanceCount"`
+	ReservedDBInstanceID          *string                                           `queryParam:"style=form,explode=true,name=ReservedDBInstanceId"`
+	ReservedDBInstancesOfferingID string                                            `queryParam:"style=form,explode=true,name=ReservedDBInstancesOfferingId"`
 	Version                       GetPurchaseReservedDbInstancesOfferingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

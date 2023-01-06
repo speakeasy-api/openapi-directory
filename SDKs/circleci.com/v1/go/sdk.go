@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -284,128 +285,6 @@ func (s *SDK) GetProjectUsernameProject(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GetProjectUsernameProjectBuildNum - Full details for a single build. The response includes all of the fields from the build summary.
-// This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
-func (s *SDK) GetProjectUsernameProjectBuildNum(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumRequest) (*operations.GetProjectUsernameProjectBuildNumResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetProjectUsernameProjectBuildNumResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.BuildDetail
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.BuildDetail = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetProjectUsernameProjectBuildNumArtifacts - List the artifacts produced by a given build.
-func (s *SDK) GetProjectUsernameProjectBuildNumArtifacts(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumArtifactsRequest) (*operations.GetProjectUsernameProjectBuildNumArtifactsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/artifacts", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetProjectUsernameProjectBuildNumArtifactsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.Artifact
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Artifacts = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetProjectUsernameProjectBuildNumTests - Provides test metadata for a build
-// Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
-func (s *SDK) GetProjectUsernameProjectBuildNumTests(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumTestsRequest) (*operations.GetProjectUsernameProjectBuildNumTestsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/tests", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetProjectUsernameProjectBuildNumTestsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Tests
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Tests = out
-		}
-	}
-
-	return res, nil
-}
-
 // GetProjectUsernameProjectCheckoutKey - Lists checkout keys.
 func (s *SDK) GetProjectUsernameProjectCheckoutKey(ctx context.Context, request operations.GetProjectUsernameProjectCheckoutKeyRequest) (*operations.GetProjectUsernameProjectCheckoutKeyResponse, error) {
 	baseURL := s._serverURL
@@ -566,6 +445,128 @@ func (s *SDK) GetProjectUsernameProjectEnvvarName(ctx context.Context, request o
 	return res, nil
 }
 
+// GetProjectUsernameProjectBuildNum - Full details for a single build. The response includes all of the fields from the build summary.
+// This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
+func (s *SDK) GetProjectUsernameProjectBuildNum(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumRequest) (*operations.GetProjectUsernameProjectBuildNumResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetProjectUsernameProjectBuildNumResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BuildDetail
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BuildDetail = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetProjectUsernameProjectBuildNumArtifacts - List the artifacts produced by a given build.
+func (s *SDK) GetProjectUsernameProjectBuildNumArtifacts(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumArtifactsRequest) (*operations.GetProjectUsernameProjectBuildNumArtifactsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/artifacts", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetProjectUsernameProjectBuildNumArtifactsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Artifact
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Artifacts = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetProjectUsernameProjectBuildNumTests - Provides test metadata for a build
+// Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
+func (s *SDK) GetProjectUsernameProjectBuildNumTests(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumTestsRequest) (*operations.GetProjectUsernameProjectBuildNumTestsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/tests", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetProjectUsernameProjectBuildNumTestsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Tests
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Tests = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetProjects - List of all the projects you're following on CircleCI, with build information organized by branch.
 func (s *SDK) GetProjects(ctx context.Context) (*operations.GetProjectsResponse, error) {
 	baseURL := s._serverURL
@@ -689,86 +690,6 @@ func (s *SDK) PostProjectUsernameProject(ctx context.Context, request operations
 			}
 
 			res.BuildSummary = out
-		}
-	}
-
-	return res, nil
-}
-
-// PostProjectUsernameProjectBuildNumCancel - Cancels the build, returns a summary of the build.
-func (s *SDK) PostProjectUsernameProjectBuildNumCancel(ctx context.Context, request operations.PostProjectUsernameProjectBuildNumCancelRequest) (*operations.PostProjectUsernameProjectBuildNumCancelResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/cancel", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostProjectUsernameProjectBuildNumCancelResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Build
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Build = out
-		}
-	}
-
-	return res, nil
-}
-
-// PostProjectUsernameProjectBuildNumRetry - Retries the build, returns a summary of the new build.
-func (s *SDK) PostProjectUsernameProjectBuildNumRetry(ctx context.Context, request operations.PostProjectUsernameProjectBuildNumRetryRequest) (*operations.PostProjectUsernameProjectBuildNumRetryResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/retry", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostProjectUsernameProjectBuildNumRetryResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Build
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Build = out
 		}
 	}
 
@@ -953,6 +874,86 @@ func (s *SDK) PostProjectUsernameProjectTreeBranch(ctx context.Context, request 
 	case httpRes.StatusCode == 201:
 		res.Headers = httpRes.Header
 
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Build
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Build = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostProjectUsernameProjectBuildNumCancel - Cancels the build, returns a summary of the build.
+func (s *SDK) PostProjectUsernameProjectBuildNumCancel(ctx context.Context, request operations.PostProjectUsernameProjectBuildNumCancelRequest) (*operations.PostProjectUsernameProjectBuildNumCancelResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/cancel", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostProjectUsernameProjectBuildNumCancelResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Build
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Build = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostProjectUsernameProjectBuildNumRetry - Retries the build, returns a summary of the new build.
+func (s *SDK) PostProjectUsernameProjectBuildNumRetry(ctx context.Context, request operations.PostProjectUsernameProjectBuildNumRetryRequest) (*operations.PostProjectUsernameProjectBuildNumRetryResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/retry", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostProjectUsernameProjectBuildNumRetryResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.Build

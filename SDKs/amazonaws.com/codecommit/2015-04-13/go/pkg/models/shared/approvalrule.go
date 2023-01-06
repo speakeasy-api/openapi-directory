@@ -12,7 +12,7 @@ type ApprovalRule struct {
 	ApprovalRuleName           *string                     `json:"approvalRuleName,omitempty"`
 	CreationDate               *time.Time                  `json:"creationDate,omitempty"`
 	LastModifiedDate           *time.Time                  `json:"lastModifiedDate,omitempty"`
-	LastModifiedUser           *string                     `json:"lastModifiedUser,omitempty"`
+	LastModifiedUser           map[string]interface{}      `json:"lastModifiedUser,omitempty"`
 	OriginApprovalRuleTemplate *OriginApprovalRuleTemplate `json:"originApprovalRuleTemplate,omitempty"`
 	RuleContentSha256          *string                     `json:"ruleContentSha256,omitempty"`
 }

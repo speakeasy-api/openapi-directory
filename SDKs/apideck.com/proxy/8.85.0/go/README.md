@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,7 +25,7 @@ func main() {
             shared.Security{
                 APIKey: shared.SchemeAPIKey{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 ApplicationID: shared.SchemeApplicationID{
                     APIKey: "YOUR_API_KEY_HERE",
                 },
@@ -43,11 +42,11 @@ func main() {
             },
         },
         Headers: operations.DeleteProxyHeaders{
-            XApideckAppID: "ut",
-            XApideckConsumerID: "sint",
-            XApideckDownstreamAuthorization: "optio",
+            XApideckAppID: "doloribus",
+            XApideckConsumerID: "rem",
+            XApideckDownstreamAuthorization: "sit",
             XApideckDownstreamURL: "aut",
-            XApideckServiceID: "eos",
+            XApideckServiceID: "non",
         },
     }
     

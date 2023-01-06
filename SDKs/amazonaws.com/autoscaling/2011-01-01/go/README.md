@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,25 +35,25 @@ func main() {
     req := operations.GetAttachInstancesRequest{
         QueryParams: operations.GetAttachInstancesQueryParams{
             Action: "AttachInstances",
-            AutoScalingGroupName: "distinctio",
+            AutoScalingGroupName: "eum",
             InstanceIds: []string{
-                "nemo",
-                "aut",
+                "ut",
+                "similique",
             },
             Version: "2011-01-01",
         },
         Headers: operations.GetAttachInstancesHeaders{
-            XAmzAlgorithm: "in",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "velit",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "dignissimos",
-            XAmzSignedHeaders: "hic",
+            XAmzAlgorithm: "praesentium",
+            XAmzContentSha256: "ipsa",
+            XAmzCredential: "ipsa",
+            XAmzDate: "rerum",
+            XAmzSecurityToken: "iure",
+            XAmzSignature: "rem",
+            XAmzSignedHeaders: "dolore",
         },
     }
     
-    res, err := s.Sdk.GetAttachInstances(ctx, req)
+    res, err := s.GetAttachInstances(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

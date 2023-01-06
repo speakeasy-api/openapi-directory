@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,139 +26,127 @@ func main() {
         Security: operations.DataprocProjectsLocationsBatchesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DataprocProjectsLocationsBatchesCreatePathParams{
-            Parent: "facilis",
+            Parent: "nemo",
         },
         QueryParams: operations.DataprocProjectsLocationsBatchesCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "nam",
+            AccessToken: "voluptatem",
             Alt: "proto",
-            BatchID: "aut",
-            Callback: "enim",
-            Fields: "iusto",
-            Key: "cumque",
-            OauthToken: "doloribus",
-            PrettyPrint: false,
-            QuotaUser: "excepturi",
-            RequestID: "id",
-            UploadType: "quo",
-            UploadProtocol: "quia",
+            BatchID: "rem",
+            Callback: "eveniet",
+            Fields: "blanditiis",
+            Key: "consectetur",
+            OauthToken: "autem",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            RequestID: "mollitia",
+            UploadType: "commodi",
+            UploadProtocol: "quis",
         },
         Request: &shared.BatchInput{
             EnvironmentConfig: &shared.EnvironmentConfig{
                 ExecutionConfig: &shared.ExecutionConfig{
-                    IdleTTL: "quibusdam",
-                    KmsKey: "eum",
+                    IdleTTL: "dicta",
+                    KmsKey: "et",
                     NetworkTags: []string{
-                        "itaque",
+                        "quia",
+                        "a",
+                        "amet",
                     },
-                    NetworkURI: "impedit",
-                    ServiceAccount: "placeat",
-                    SubnetworkURI: "esse",
+                    NetworkURI: "mollitia",
+                    ServiceAccount: "consequatur",
+                    SubnetworkURI: "non",
                 },
                 PeripheralsConfig: &shared.PeripheralsConfig{
-                    MetastoreService: "sunt",
+                    MetastoreService: "id",
                     SparkHistoryServerConfig: &shared.SparkHistoryServerConfig{
-                        DataprocCluster: "sapiente",
+                        DataprocCluster: "consequatur",
                     },
                 },
             },
             Labels: map[string]string{
-                "perspiciatis": "laboriosam",
-                "fuga": "beatae",
-                "itaque": "amet",
+                "odit": "similique",
             },
             PysparkBatch: &shared.PySparkBatch{
                 ArchiveUris: []string{
-                    "nulla",
-                },
-                Args: []string{
-                    "dolores",
-                    "voluptatem",
-                    "deserunt",
-                },
-                FileUris: []string{
-                    "voluptatem",
                     "eum",
                 },
-                JarFileUris: []string{
-                    "qui",
-                    "harum",
-                    "autem",
+                Args: []string{
+                    "odit",
+                    "vitae",
                 },
-                MainPythonFileURI: "unde",
+                FileUris: []string{
+                    "est",
+                },
+                JarFileUris: []string{
+                    "ut",
+                },
+                MainPythonFileURI: "omnis",
                 PythonFileUris: []string{
-                    "quaerat",
+                    "tempora",
                 },
             },
             RuntimeConfig: &shared.RuntimeConfig{
-                ContainerImage: "qui",
+                ContainerImage: "aliquam",
                 Properties: map[string]string{
-                    "et": "magni",
-                    "et": "et",
-                    "saepe": "ratione",
+                    "odio": "minima",
                 },
-                Version: "voluptas",
+                Version: "maxime",
             },
             RuntimeInfo: &shared.RuntimeInfoInput{
                 ApproximateUsage: &shared.UsageMetrics{
-                    MilliDcuSeconds: "quaerat",
-                    ShuffleStorageGbSeconds: "architecto",
+                    MilliDcuSeconds: "eum",
+                    ShuffleStorageGbSeconds: "et",
                 },
             },
             SparkBatch: &shared.SparkBatch{
                 ArchiveUris: []string{
-                    "tempora",
-                    "officiis",
-                    "nulla",
+                    "totam",
+                    "dolorum",
+                    "repellat",
                 },
                 Args: []string{
-                    "odit",
-                    "provident",
-                    "illum",
+                    "velit",
+                    "qui",
                 },
                 FileUris: []string{
-                    "voluptate",
-                    "quo",
+                    "tenetur",
+                    "itaque",
                 },
                 JarFileUris: []string{
-                    "et",
-                    "quibusdam",
-                    "odio",
+                    "repudiandae",
+                    "illum",
                 },
-                MainClass: "non",
-                MainJarFileURI: "exercitationem",
+                MainClass: "est",
+                MainJarFileURI: "officia",
             },
             SparkRBatch: &shared.SparkRBatch{
                 ArchiveUris: []string{
-                    "est",
-                    "quo",
-                    "nobis",
+                    "qui",
+                    "cumque",
                 },
                 Args: []string{
-                    "non",
-                    "commodi",
+                    "ut",
                 },
                 FileUris: []string{
-                    "in",
+                    "laboriosam",
+                    "cumque",
                 },
-                MainRFileURI: "eos",
+                MainRFileURI: "quo",
             },
             SparkSQLBatch: &shared.SparkSQLBatch{
                 JarFileUris: []string{
-                    "vel",
-                    "est",
+                    "animi",
                 },
-                QueryFileURI: "id",
+                QueryFileURI: "repellendus",
                 QueryVariables: map[string]string{
-                    "et": "possimus",
-                    "vitae": "vel",
-                    "est": "minus",
+                    "animi": "autem",
                 },
             },
         },

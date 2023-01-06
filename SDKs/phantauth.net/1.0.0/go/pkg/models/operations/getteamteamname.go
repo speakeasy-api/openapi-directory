@@ -20,6 +20,6 @@ type GetTeamTeamnameRequest struct {
 
 type GetTeamTeamnameResponse struct {
 	ContentType                             string
-	GetTeamTeamname200ApplicationJSONObject *GetTeamTeamname200ApplicationJSON
 	StatusCode                              int64
+	GetTeamTeamname200ApplicationJSONObject *GetTeamTeamname200ApplicationJSON
 }

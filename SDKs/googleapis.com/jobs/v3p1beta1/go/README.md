@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,47 +27,44 @@ func main() {
             Option1: &operations.JobsProjectsClientEventsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.JobsProjectsClientEventsCreatePathParams{
-            Parent: "expedita",
+            Parent: "voluptatem",
         },
         QueryParams: operations.JobsProjectsClientEventsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "doloremque",
-            Alt: "media",
-            Callback: "in",
-            Fields: "dignissimos",
-            Key: "temporibus",
-            OauthToken: "ipsa",
-            PrettyPrint: false,
-            QuotaUser: "impedit",
-            UploadType: "molestiae",
-            UploadProtocol: "dolor",
+            AccessToken: "quo",
+            Alt: "proto",
+            Callback: "eum",
+            Fields: "veniam",
+            Key: "hic",
+            OauthToken: "id",
+            PrettyPrint: true,
+            QuotaUser: "exercitationem",
+            UploadType: "architecto",
+            UploadProtocol: "suscipit",
         },
         Request: &shared.CreateClientEventRequest{
             ClientEvent: &shared.ClientEvent{
-                CreateTime: "tempore",
-                EventID: "voluptatem",
+                CreateTime: "dolores",
+                EventID: "dolores",
                 ExtraInfo: map[string]string{
-                    "non": "qui",
-                    "nemo": "explicabo",
-                    "consectetur": "distinctio",
+                    "non": "facilis",
                 },
                 JobEvent: &shared.JobEvent{
                     Jobs: []string{
-                        "quae",
-                        "earum",
-                        "voluptatem",
+                        "accusantium",
+                        "nihil",
                     },
-                    Type: "IMPRESSION",
+                    Type: "VIEW",
                 },
-                ParentEventID: "sunt",
-                RequestID: "ratione",
+                ParentEventID: "velit",
+                RequestID: "libero",
             },
         },
     }

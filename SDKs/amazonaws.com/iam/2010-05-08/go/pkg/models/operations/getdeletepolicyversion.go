@@ -3,13 +3,13 @@ package operations
 type GetDeletePolicyVersionActionEnum string
 
 const (
-	GetDeletePolicyVersionActionEnumDeletePolicyVersion GetDeletePolicyVersionActionEnum = "DeletePolicyVersion"
+	GETDeletePolicyVersionActionEnumDeletePolicyVersion GetDeletePolicyVersionActionEnum = "DeletePolicyVersion"
 )
 
 type GetDeletePolicyVersionVersionEnum string
 
 const (
-	GetDeletePolicyVersionVersionEnumTwoThousandAndTen0508 GetDeletePolicyVersionVersionEnum = "2010-05-08"
+	GETDeletePolicyVersionVersionEnumTwoThousandAndTen0508 GetDeletePolicyVersionVersionEnum = "2010-05-08"
 )
 
 type GetDeletePolicyVersionQueryParams struct {

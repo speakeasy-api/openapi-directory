@@ -3,13 +3,13 @@ package operations
 type PostAddTagsToResourceActionEnum string
 
 const (
-	PostAddTagsToResourceActionEnumAddTagsToResource PostAddTagsToResourceActionEnum = "AddTagsToResource"
+	POSTAddTagsToResourceActionEnumAddTagsToResource PostAddTagsToResourceActionEnum = "AddTagsToResource"
 )
 
 type PostAddTagsToResourceVersionEnum string
 
 const (
-	PostAddTagsToResourceVersionEnumTwoThousandAndThirteen0110 PostAddTagsToResourceVersionEnum = "2013-01-10"
+	POSTAddTagsToResourceVersionEnumTwoThousandAndThirteen0110 PostAddTagsToResourceVersionEnum = "2013-01-10"
 )
 
 type PostAddTagsToResourceQueryParams struct {

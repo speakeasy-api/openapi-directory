@@ -5,7 +5,7 @@ import (
 )
 
 type DgmstRequestBodyCertificateParameters struct {
-	Dob          string `json:"DOB"`
+	DOB          string `json:"DOB"`
 	EnrollmentNo string `json:"EnrollmentNo"`
 	FullName     string `json:"FullName"`
 	RollNo       string `json:"RollNo"`
@@ -86,7 +86,7 @@ type Dgmst404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Dgmst404ApplicationJSONErrorDescriptionEnumNoRecordFound               Dgmst404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Dgmst404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Dgmst404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Dgmst404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Dgmst404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Dgmst404ApplicationJSON struct {

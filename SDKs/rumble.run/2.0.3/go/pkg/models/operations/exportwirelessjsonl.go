@@ -21,5 +21,5 @@ type ExportWirelessJsonlRequest struct {
 type ExportWirelessJsonlResponse struct {
 	ContentType                                       string
 	StatusCode                                        int64
-	ExportWirelessJsonl200ApplicationJSONBinaryString []byte
+	ExportWirelessJSONL200ApplicationJSONBinaryString []byte
 }

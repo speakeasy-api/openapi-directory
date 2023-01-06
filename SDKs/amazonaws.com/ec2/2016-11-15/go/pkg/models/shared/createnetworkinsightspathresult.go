@@ -1,5 +1,5 @@
 package shared
 
 type CreateNetworkInsightsPathResult struct {
-	NetworkInsightsPath *NetworkInsightsPath
+	NetworkInsightsPath map[string]interface{}
 }

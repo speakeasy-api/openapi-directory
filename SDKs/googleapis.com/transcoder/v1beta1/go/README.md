@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,833 +26,525 @@ func main() {
         Security: operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.TranscoderProjectsLocationsJobTemplatesCreatePathParams{
-            Parent: "perferendis",
+            Parent: "quae",
         },
         QueryParams: operations.TranscoderProjectsLocationsJobTemplatesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "sint",
-            Alt: "media",
-            Callback: "est",
-            Fields: "ad",
-            JobTemplateID: "quis",
-            Key: "ipsa",
-            OauthToken: "pariatur",
-            PrettyPrint: false,
-            QuotaUser: "non",
-            UploadType: "quia",
-            UploadProtocol: "non",
+            AccessToken: "eaque",
+            Alt: "proto",
+            Callback: "ut",
+            Fields: "velit",
+            JobTemplateID: "facilis",
+            Key: "dolore",
+            OauthToken: "incidunt",
+            PrettyPrint: true,
+            QuotaUser: "aliquam",
+            UploadType: "voluptatem",
+            UploadProtocol: "et",
         },
         Request: &shared.JobTemplate{
             Config: &shared.JobConfig{
                 AdBreaks: []shared.AdBreak{
                     shared.AdBreak{
-                        StartTimeOffset: "quas",
+                        StartTimeOffset: "sit",
                     },
                     shared.AdBreak{
-                        StartTimeOffset: "labore",
+                        StartTimeOffset: "ducimus",
                     },
                     shared.AdBreak{
-                        StartTimeOffset: "nulla",
+                        StartTimeOffset: "dolorum",
                     },
                 },
                 EditList: []shared.EditAtom{
                     shared.EditAtom{
-                        EndTimeOffset: "autem",
+                        EndTimeOffset: "eveniet",
                         Inputs: []string{
-                            "rem",
+                            "est",
                         },
-                        Key: "ut",
-                        StartTimeOffset: "in",
+                        Key: "deleniti",
+                        StartTimeOffset: "maxime",
                     },
                     shared.EditAtom{
-                        EndTimeOffset: "iure",
+                        EndTimeOffset: "et",
                         Inputs: []string{
-                            "aliquam",
-                            "necessitatibus",
+                            "sit",
+                            "voluptatem",
+                            "assumenda",
                         },
-                        Key: "architecto",
-                        StartTimeOffset: "repellendus",
+                        Key: "quae",
+                        StartTimeOffset: "repudiandae",
                     },
                     shared.EditAtom{
-                        EndTimeOffset: "laudantium",
+                        EndTimeOffset: "nemo",
                         Inputs: []string{
+                            "facere",
+                            "est",
                             "voluptas",
-                            "eum",
                         },
-                        Key: "deserunt",
-                        StartTimeOffset: "et",
+                        Key: "temporibus",
+                        StartTimeOffset: "est",
                     },
                 },
                 ElementaryStreams: []shared.ElementaryStream{
                     shared.ElementaryStream{
                         AudioStream: &shared.AudioStream{
-                            BitrateBps: 4097474899540328250,
-                            ChannelCount: 2543231146263007955,
+                            BitrateBps: 7892387258292766169,
+                            ChannelCount: 4928825157438766623,
                             ChannelLayout: []string{
-                                "cumque",
-                                "harum",
+                                "minus",
+                                "sapiente",
                             },
-                            Codec: "sequi",
+                            Codec: "minima",
                             Mapping: []shared.AudioAtom{
                                 shared.AudioAtom{
                                     Channels: []shared.AudioChannel{
                                         shared.AudioChannel{
                                             Inputs: []shared.AudioChannelInput{
                                                 shared.AudioChannelInput{
-                                                    Channel: 7797162079634821085,
-                                                    GainDb: 27.200001,
-                                                    Key: "sunt",
-                                                    Track: 3365752909053860324,
+                                                    Channel: 4313756401076350220,
+                                                    GainDb: 15.100000,
+                                                    Key: "non",
+                                                    Track: 6353423268616230319,
                                                 },
                                                 shared.AudioChannelInput{
-                                                    Channel: 2518647374994685705,
-                                                    GainDb: 66.199997,
-                                                    Key: "qui",
-                                                    Track: 4323586530958414898,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 340400890369386520,
-                                                    GainDb: 58.200001,
-                                                    Key: "nihil",
-                                                    Track: 304033318772208543,
+                                                    Channel: 3959002623939650165,
+                                                    GainDb: 66.099998,
+                                                    Key: "voluptatibus",
+                                                    Track: 5740019852834968400,
                                                 },
                                                 shared.AudioChannelInput{
-                                                    Channel: 3224842635320094065,
-                                                    GainDb: 31.200001,
-                                                    Key: "provident",
-                                                    Track: 1212164163157738645,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 8856497738629359737,
-                                                    GainDb: 18.200001,
-                                                    Key: "aut",
-                                                    Track: 3310331092033621059,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 6152792843170689862,
-                                                    GainDb: 48.099998,
-                                                    Key: "saepe",
-                                                    Track: 412640562849164214,
+                                                    Channel: 5448810721365016153,
+                                                    GainDb: 72.199997,
+                                                    Key: "asperiores",
+                                                    Track: 9107460095602116729,
                                                 },
                                             },
                                         },
                                     },
-                                    Key: "unde",
-                                },
-                                shared.AudioAtom{
-                                    Channels: []shared.AudioChannel{
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 7806191432418906498,
-                                                    GainDb: 23.100000,
-                                                    Key: "eum",
-                                                    Track: 122103816252635459,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 2170726881679182695,
-                                                    GainDb: 10.200000,
-                                                    Key: "repellendus",
-                                                    Track: 6482989379889661701,
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Key: "quia",
-                                },
-                                shared.AudioAtom{
-                                    Channels: []shared.AudioChannel{
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 1650361670742805926,
-                                                    GainDb: 12.200000,
-                                                    Key: "iste",
-                                                    Track: 8526777569553152952,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 6300043633116788809,
-                                                    GainDb: 82.099998,
-                                                    Key: "hic",
-                                                    Track: 1680912952135509319,
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Key: "saepe",
+                                    Key: "optio",
                                 },
                             },
-                            SampleRateHertz: 9124019767510034173,
+                            SampleRateHertz: 5956688560010022686,
                         },
-                        Key: "placeat",
+                        Key: "impedit",
                         TextStream: &shared.TextStream{
-                            Codec: "quos",
-                            LanguageCode: "repellat",
+                            Codec: "voluptate",
+                            LanguageCode: "ipsa",
                             Mapping: []shared.TextAtom{
                                 shared.TextAtom{
                                     Inputs: []shared.TextInput{
                                         shared.TextInput{
-                                            Key: "iusto",
-                                            Track: 7875554111815946629,
+                                            Key: "et",
+                                            Track: 5562609354344168685,
                                         },
                                         shared.TextInput{
-                                            Key: "amet",
-                                            Track: 4657902838894521576,
+                                            Key: "magnam",
+                                            Track: 9192747703363731317,
                                         },
                                     },
-                                    Key: "earum",
-                                },
-                                shared.TextAtom{
-                                    Inputs: []shared.TextInput{
-                                        shared.TextInput{
-                                            Key: "nobis",
-                                            Track: 734580936732778662,
-                                        },
-                                        shared.TextInput{
-                                            Key: "laboriosam",
-                                            Track: 4838287299199827112,
-                                        },
-                                        shared.TextInput{
-                                            Key: "iure",
-                                            Track: 5777237168019658678,
-                                        },
-                                    },
-                                    Key: "laudantium",
+                                    Key: "dolore",
                                 },
                             },
                         },
                         VideoStream: &shared.VideoStream{
-                            AllowOpenGop: true,
-                            AqStrength: 55.099998,
-                            BFrameCount: 3900125423141726672,
+                            AllowOpenGop: false,
+                            AqStrength: 20.200001,
+                            BFrameCount: 1722220632356978098,
                             BPyramid: false,
-                            BitrateBps: 8036740486091507589,
-                            Codec: "quas",
-                            CrfLevel: 5777567653806318439,
+                            BitrateBps: 4442786016472286075,
+                            Codec: "ex",
+                            CrfLevel: 9199761038741226452,
                             EnableTwoPass: true,
-                            EntropyCoder: "hic",
-                            FrameRate: 24.200001,
-                            GopDuration: "est",
-                            GopFrameCount: 941870249046490234,
-                            HeightPixels: 5831655784923279160,
-                            PixelFormat: "id",
-                            Preset: "in",
-                            Profile: "et",
-                            RateControlMode: "ex",
-                            Tune: "et",
-                            VbvFullnessBits: 7637632028900458075,
-                            VbvSizeBits: 2037966448394326988,
-                            WidthPixels: 2646894192705066093,
+                            EntropyCoder: "fugit",
+                            FrameRate: 46.099998,
+                            GopDuration: "illo",
+                            GopFrameCount: 3313769357544573020,
+                            HeightPixels: 5160053904489746873,
+                            PixelFormat: "omnis",
+                            Preset: "aliquid",
+                            Profile: "explicabo",
+                            RateControlMode: "expedita",
+                            Tune: "qui",
+                            VbvFullnessBits: 3781182383728721210,
+                            VbvSizeBits: 430879334147687438,
+                            WidthPixels: 3386124376084607150,
                         },
                     },
                     shared.ElementaryStream{
                         AudioStream: &shared.AudioStream{
-                            BitrateBps: 2175462628246346410,
-                            ChannelCount: 297477433783458039,
+                            BitrateBps: 1234076922096689798,
+                            ChannelCount: 806179455366969511,
                             ChannelLayout: []string{
-                                "praesentium",
-                                "rerum",
+                                "tenetur",
                             },
-                            Codec: "quia",
+                            Codec: "aut",
                             Mapping: []shared.AudioAtom{
                                 shared.AudioAtom{
                                     Channels: []shared.AudioChannel{
                                         shared.AudioChannel{
                                             Inputs: []shared.AudioChannelInput{
                                                 shared.AudioChannelInput{
-                                                    Channel: 3481608700231365311,
-                                                    GainDb: 65.199997,
-                                                    Key: "laudantium",
-                                                    Track: 5299764554971715191,
+                                                    Channel: 7805282159836544841,
+                                                    GainDb: 89.099998,
+                                                    Key: "molestiae",
+                                                    Track: 572385247974334102,
                                                 },
                                                 shared.AudioChannelInput{
-                                                    Channel: 8523338627242323133,
-                                                    GainDb: 98.099998,
-                                                    Key: "repellat",
-                                                    Track: 2785505916417397130,
+                                                    Channel: 4914845864823683241,
+                                                    GainDb: 13.100000,
+                                                    Key: "consectetur",
+                                                    Track: 4825215851222778878,
+                                                },
+                                                shared.AudioChannelInput{
+                                                    Channel: 3845500908243528378,
+                                                    GainDb: 6.100000,
+                                                    Key: "tenetur",
+                                                    Track: 9038933547375485310,
+                                                },
+                                            },
+                                        },
+                                        shared.AudioChannel{
+                                            Inputs: []shared.AudioChannelInput{
+                                                shared.AudioChannelInput{
+                                                    Channel: 6019729602776422342,
+                                                    GainDb: 77.099998,
+                                                    Key: "dolores",
+                                                    Track: 591491258049963274,
+                                                },
+                                                shared.AudioChannelInput{
+                                                    Channel: 7329992349694394953,
+                                                    GainDb: 65.199997,
+                                                    Key: "ut",
+                                                    Track: 3610878386178929521,
+                                                },
+                                                shared.AudioChannelInput{
+                                                    Channel: 8654862888664855551,
+                                                    GainDb: 84.099998,
+                                                    Key: "ut",
+                                                    Track: 4172736352731369844,
                                                 },
                                             },
                                         },
                                     },
-                                    Key: "pariatur",
+                                    Key: "sunt",
                                 },
                                 shared.AudioAtom{
                                     Channels: []shared.AudioChannel{
                                         shared.AudioChannel{
                                             Inputs: []shared.AudioChannelInput{
                                                 shared.AudioChannelInput{
-                                                    Channel: 6200029714616902191,
-                                                    GainDb: 57.099998,
-                                                    Key: "consequatur",
-                                                    Track: 1764864795090790714,
+                                                    Channel: 6016978435916918073,
+                                                    GainDb: 81.099998,
+                                                    Key: "alias",
+                                                    Track: 5492708654813237205,
                                                 },
                                             },
                                         },
                                     },
-                                    Key: "mollitia",
+                                    Key: "inventore",
                                 },
                             },
-                            SampleRateHertz: 6858152412747553100,
+                            SampleRateHertz: 9063254557910688044,
                         },
-                        Key: "consequuntur",
+                        Key: "deserunt",
                         TextStream: &shared.TextStream{
-                            Codec: "dignissimos",
-                            LanguageCode: "omnis",
+                            Codec: "voluptate",
+                            LanguageCode: "dignissimos",
                             Mapping: []shared.TextAtom{
                                 shared.TextAtom{
                                     Inputs: []shared.TextInput{
                                         shared.TextInput{
-                                            Key: "omnis",
-                                            Track: 7249554502572293192,
+                                            Key: "non",
+                                            Track: 2673143206932721844,
                                         },
                                         shared.TextInput{
-                                            Key: "ea",
-                                            Track: 6474862364296085590,
+                                            Key: "dolor",
+                                            Track: 1958901036747797373,
                                         },
                                         shared.TextInput{
                                             Key: "et",
-                                            Track: 5421532260449508624,
+                                            Track: 8797264640394436763,
                                         },
                                     },
-                                    Key: "expedita",
+                                    Key: "a",
                                 },
                                 shared.TextAtom{
                                     Inputs: []shared.TextInput{
                                         shared.TextInput{
-                                            Key: "qui",
-                                            Track: 2812557837829817962,
+                                            Key: "cum",
+                                            Track: 2429776691979963759,
                                         },
                                     },
-                                    Key: "harum",
+                                    Key: "veritatis",
                                 },
                             },
                         },
                         VideoStream: &shared.VideoStream{
                             AllowOpenGop: false,
-                            AqStrength: 51.200001,
-                            BFrameCount: 6499465947427648284,
+                            AqStrength: 96.199997,
+                            BFrameCount: 8892572688713881526,
                             BPyramid: false,
-                            BitrateBps: 4394072065903903708,
-                            Codec: "pariatur",
-                            CrfLevel: 198383923240278535,
-                            EnableTwoPass: true,
-                            EntropyCoder: "excepturi",
-                            FrameRate: 54.200001,
-                            GopDuration: "est",
-                            GopFrameCount: 507147130148723389,
-                            HeightPixels: 1847499867871698081,
-                            PixelFormat: "molestiae",
-                            Preset: "aliquid",
-                            Profile: "cumque",
-                            RateControlMode: "eligendi",
-                            Tune: "illo",
-                            VbvFullnessBits: 3285786611908745006,
-                            VbvSizeBits: 5837674451494487231,
-                            WidthPixels: 7376835818306654268,
-                        },
-                    },
-                    shared.ElementaryStream{
-                        AudioStream: &shared.AudioStream{
-                            BitrateBps: 5254835311527650551,
-                            ChannelCount: 618638227593423934,
-                            ChannelLayout: []string{
-                                "natus",
-                            },
-                            Codec: "assumenda",
-                            Mapping: []shared.AudioAtom{
-                                shared.AudioAtom{
-                                    Channels: []shared.AudioChannel{
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 1550102887627660750,
-                                                    GainDb: 13.200000,
-                                                    Key: "amet",
-                                                    Track: 8761158326617169446,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 3806089722923086097,
-                                                    GainDb: 71.099998,
-                                                    Key: "dolor",
-                                                    Track: 3620715346454308914,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 5606586913743797701,
-                                                    GainDb: 19.200001,
-                                                    Key: "molestiae",
-                                                    Track: 5026461116049516107,
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Key: "voluptatem",
-                                },
-                                shared.AudioAtom{
-                                    Channels: []shared.AudioChannel{
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 1931007679928274872,
-                                                    GainDb: 8.100000,
-                                                    Key: "illo",
-                                                    Track: 6038489852382000601,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 6805489043616075585,
-                                                    GainDb: 89.199997,
-                                                    Key: "amet",
-                                                    Track: 1983712868909254538,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 7090623359054561999,
-                                                    GainDb: 78.099998,
-                                                    Key: "officiis",
-                                                    Track: 2258006334085005644,
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Key: "dolor",
-                                },
-                                shared.AudioAtom{
-                                    Channels: []shared.AudioChannel{
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 6811690145861192755,
-                                                    GainDb: 19.100000,
-                                                    Key: "consequuntur",
-                                                    Track: 5547248890629175117,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 275041606603644325,
-                                                    GainDb: 39.200001,
-                                                    Key: "et",
-                                                    Track: 722196487128629634,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 2686624694400012392,
-                                                    GainDb: 80.199997,
-                                                    Key: "tenetur",
-                                                    Track: 5996663048779118563,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 5517435185706000267,
-                                                    GainDb: 26.200001,
-                                                    Key: "dolore",
-                                                    Track: 3086299933177726295,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 98151164713937414,
-                                                    GainDb: 25.100000,
-                                                    Key: "autem",
-                                                    Track: 2264837974883159354,
-                                                },
-                                            },
-                                        },
-                                        shared.AudioChannel{
-                                            Inputs: []shared.AudioChannelInput{
-                                                shared.AudioChannelInput{
-                                                    Channel: 7182033262120173632,
-                                                    GainDb: 52.200001,
-                                                    Key: "possimus",
-                                                    Track: 8069343543629173355,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 7159620221507870079,
-                                                    GainDb: 85.199997,
-                                                    Key: "placeat",
-                                                    Track: 9148794556669938938,
-                                                },
-                                                shared.AudioChannelInput{
-                                                    Channel: 3204737655344859384,
-                                                    GainDb: 32.200001,
-                                                    Key: "quia",
-                                                    Track: 488350748518843299,
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Key: "vel",
-                                },
-                            },
-                            SampleRateHertz: 600866781365294959,
-                        },
-                        Key: "itaque",
-                        TextStream: &shared.TextStream{
-                            Codec: "tempora",
-                            LanguageCode: "numquam",
-                            Mapping: []shared.TextAtom{
-                                shared.TextAtom{
-                                    Inputs: []shared.TextInput{
-                                        shared.TextInput{
-                                            Key: "aut",
-                                            Track: 8286716488241228726,
-                                        },
-                                        shared.TextInput{
-                                            Key: "quisquam",
-                                            Track: 8975963734279439324,
-                                        },
-                                        shared.TextInput{
-                                            Key: "rerum",
-                                            Track: 5577562018468263370,
-                                        },
-                                    },
-                                    Key: "enim",
-                                },
-                                shared.TextAtom{
-                                    Inputs: []shared.TextInput{
-                                        shared.TextInput{
-                                            Key: "molestiae",
-                                            Track: 3505220159369062803,
-                                        },
-                                        shared.TextInput{
-                                            Key: "aliquam",
-                                            Track: 5455730926175899108,
-                                        },
-                                        shared.TextInput{
-                                            Key: "dolorem",
-                                            Track: 5480272859319810661,
-                                        },
-                                    },
-                                    Key: "nulla",
-                                },
-                                shared.TextAtom{
-                                    Inputs: []shared.TextInput{
-                                        shared.TextInput{
-                                            Key: "nobis",
-                                            Track: 1233937811060765209,
-                                        },
-                                        shared.TextInput{
-                                            Key: "sint",
-                                            Track: 4174710133125823427,
-                                        },
-                                    },
-                                    Key: "voluptatibus",
-                                },
-                            },
-                        },
-                        VideoStream: &shared.VideoStream{
-                            AllowOpenGop: false,
-                            AqStrength: 85.099998,
-                            BFrameCount: 6145397149466860317,
-                            BPyramid: false,
-                            BitrateBps: 6122616281963670833,
-                            Codec: "ut",
-                            CrfLevel: 2426426714684721221,
-                            EnableTwoPass: true,
-                            EntropyCoder: "voluptas",
-                            FrameRate: 67.199997,
-                            GopDuration: "error",
-                            GopFrameCount: 5195343144057218875,
-                            HeightPixels: 1057414490650540317,
-                            PixelFormat: "ipsam",
-                            Preset: "eos",
-                            Profile: "laudantium",
-                            RateControlMode: "et",
-                            Tune: "rerum",
-                            VbvFullnessBits: 8483298005992723997,
-                            VbvSizeBits: 4339071695621077707,
-                            WidthPixels: 7906472585012995797,
+                            BitrateBps: 1374667840476457335,
+                            Codec: "in",
+                            CrfLevel: 418061747445956712,
+                            EnableTwoPass: false,
+                            EntropyCoder: "repellendus",
+                            FrameRate: 63.200001,
+                            GopDuration: "fugiat",
+                            GopFrameCount: 8136830451770754479,
+                            HeightPixels: 7898539401592013660,
+                            PixelFormat: "mollitia",
+                            Preset: "rem",
+                            Profile: "autem",
+                            RateControlMode: "dolores",
+                            Tune: "repudiandae",
+                            VbvFullnessBits: 7455454767062301808,
+                            VbvSizeBits: 2084313200967611061,
+                            WidthPixels: 2512776911906309957,
                         },
                     },
                 },
                 Inputs: []shared.Input{
                     shared.Input{
-                        Key: "magnam",
+                        Key: "quia",
                         PreprocessingConfig: &shared.PreprocessingConfig{
                             Audio: &shared.Audio{
-                                HighBoost: true,
+                                HighBoost: false,
                                 LowBoost: true,
-                                Lufs: 56.200001,
+                                Lufs: 43.099998,
                             },
                             Color: &shared.Color{
-                                Brightness: 15.200000,
-                                Contrast: 77.199997,
-                                Saturation: 60.099998,
+                                Brightness: 18.100000,
+                                Contrast: 30.100000,
+                                Saturation: 86.099998,
                             },
                             Crop: &shared.Crop{
-                                BottomPixels: 8504567749389466249,
-                                LeftPixels: 3772564835262679942,
-                                RightPixels: 4069001523908780280,
-                                TopPixels: 6909159414537404227,
+                                BottomPixels: 3988699699842894132,
+                                LeftPixels: 160122400360030937,
+                                RightPixels: 9007512225931333985,
+                                TopPixels: 6577674744873327579,
                             },
                             Deblock: &shared.Deblock{
-                                Enabled: true,
-                                Strength: 15.100000,
+                                Enabled: false,
+                                Strength: 21.200001,
                             },
                             Denoise: &shared.Denoise{
-                                Strength: 70.199997,
-                                Tune: "nam",
+                                Strength: 13.200000,
+                                Tune: "molestias",
                             },
                             Pad: &shared.Pad{
-                                BottomPixels: 4592332579569590678,
-                                LeftPixels: 4961514989839935883,
-                                RightPixels: 7386164499012083945,
-                                TopPixels: 3662637623739135558,
+                                BottomPixels: 6328326111464383711,
+                                LeftPixels: 8583516643777276969,
+                                RightPixels: 6660816827128006526,
+                                TopPixels: 1824160055187410414,
                             },
                         },
-                        URI: "incidunt",
+                        URI: "et",
                     },
                 },
                 Manifests: []shared.Manifest{
                     shared.Manifest{
-                        FileName: "aspernatur",
+                        FileName: "eos",
                         MuxStreams: []string{
-                            "vel",
-                            "neque",
-                        },
-                        Type: "HLS",
-                    },
-                    shared.Manifest{
-                        FileName: "excepturi",
-                        MuxStreams: []string{
-                            "veniam",
-                            "laboriosam",
+                            "ullam",
                         },
                         Type: "MANIFEST_TYPE_UNSPECIFIED",
                     },
                 },
                 MuxStreams: []shared.MuxStream{
                     shared.MuxStream{
-                        Container: "dolores",
+                        Container: "aut",
                         ElementaryStreams: []string{
-                            "minima",
-                            "optio",
-                            "quasi",
+                            "voluptatem",
+                            "qui",
+                            "molestiae",
                         },
                         Encryption: &shared.Encryption{
                             Aes128: &shared.Aes128Encryption{
-                                KeyURI: "quis",
+                                KeyURI: "unde",
                             },
-                            Iv: "consectetur",
-                            Key: "reiciendis",
+                            Iv: "ut",
+                            Key: "est",
                             MpegCenc: &shared.MpegCommonEncryption{
-                                KeyID: "et",
-                                Scheme: "voluptatem",
+                                KeyID: "dolor",
+                                Scheme: "quisquam",
                             },
                             SampleAes: &shared.SampleAesEncryption{
-                                KeyURI: "fugiat",
+                                KeyURI: "officia",
                             },
                         },
-                        FileName: "blanditiis",
-                        Key: "nostrum",
+                        FileName: "sunt",
+                        Key: "corrupti",
                         SegmentSettings: &shared.SegmentSettings{
-                            IndividualSegments: true,
-                            SegmentDuration: "placeat",
+                            IndividualSegments: false,
+                            SegmentDuration: "modi",
                         },
                     },
                     shared.MuxStream{
-                        Container: "nesciunt",
+                        Container: "vel",
                         ElementaryStreams: []string{
-                            "deserunt",
-                            "culpa",
+                            "tempora",
                         },
                         Encryption: &shared.Encryption{
                             Aes128: &shared.Aes128Encryption{
-                                KeyURI: "enim",
+                                KeyURI: "rerum",
                             },
-                            Iv: "non",
-                            Key: "qui",
+                            Iv: "ab",
+                            Key: "alias",
                             MpegCenc: &shared.MpegCommonEncryption{
-                                KeyID: "deserunt",
-                                Scheme: "id",
+                                KeyID: "inventore",
+                                Scheme: "natus",
                             },
                             SampleAes: &shared.SampleAesEncryption{
-                                KeyURI: "sint",
+                                KeyURI: "repudiandae",
                             },
                         },
-                        FileName: "commodi",
-                        Key: "voluptatibus",
+                        FileName: "eius",
+                        Key: "cupiditate",
                         SegmentSettings: &shared.SegmentSettings{
                             IndividualSegments: true,
-                            SegmentDuration: "tempore",
+                            SegmentDuration: "et",
                         },
                     },
                 },
                 Output: &shared.Output{
-                    URI: "illum",
+                    URI: "officia",
                 },
                 Overlays: []shared.Overlay{
                     shared.Overlay{
                         Animations: []shared.Animation{
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "voluptas",
+                                    StartTimeOffset: "officia",
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "ut",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "libero",
-                                    Xy: &shared.NormalizedCoordinate{
-                                        X: 18.200001,
-                                        Y: 62.099998,
-                                    },
-                                },
-                                AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "sapiente",
-                                    Xy: &shared.NormalizedCoordinate{
-                                        X: 48.099998,
-                                        Y: 87.199997,
-                                    },
-                                },
-                            },
-                            shared.Animation{
-                                AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "eos",
-                                },
-                                AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "totam",
+                                    EndTimeOffset: "quia",
                                     FadeType: "FADE_TYPE_UNSPECIFIED",
-                                    StartTimeOffset: "sunt",
+                                    StartTimeOffset: "officia",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 82.199997,
-                                        Y: 83.199997,
+                                        X: 99.099998,
+                                        Y: 9.100000,
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "officiis",
+                                    StartTimeOffset: "repellendus",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 66.099998,
-                                        Y: 8.200000,
+                                        X: 83.199997,
+                                        Y: 0.100000,
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "architecto",
-                                },
-                                AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "excepturi",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "voluptas",
-                                    Xy: &shared.NormalizedCoordinate{
-                                        X: 45.200001,
-                                        Y: 22.200001,
-                                    },
-                                },
-                                AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "impedit",
-                                    Xy: &shared.NormalizedCoordinate{
-                                        X: 85.199997,
-                                        Y: 77.199997,
-                                    },
-                                },
-                            },
-                        },
-                        Image: &shared.Image{
-                            Alpha: 68.199997,
-                            Resolution: &shared.NormalizedCoordinate{
-                                X: 37.099998,
-                                Y: 95.199997,
-                            },
-                            URI: "aliquid",
-                        },
-                    },
-                    shared.Overlay{
-                        Animations: []shared.Animation{
-                            shared.Animation{
-                                AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "eum",
-                                },
-                                AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "quo",
-                                    FadeType: "FADE_TYPE_UNSPECIFIED",
                                     StartTimeOffset: "et",
-                                    Xy: &shared.NormalizedCoordinate{
-                                        X: 90.099998,
-                                        Y: 13.100000,
-                                    },
-                                },
-                                AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "totam",
-                                    Xy: &shared.NormalizedCoordinate{
-                                        X: 53.200001,
-                                        Y: 74.199997,
-                                    },
-                                },
-                            },
-                            shared.Animation{
-                                AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "architecto",
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "ea",
+                                    EndTimeOffset: "porro",
                                     FadeType: "FADE_IN",
-                                    StartTimeOffset: "officiis",
+                                    StartTimeOffset: "architecto",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 76.099998,
-                                        Y: 20.100000,
+                                        X: 28.200001,
+                                        Y: 25.100000,
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "atque",
+                                    StartTimeOffset: "qui",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 85.099998,
-                                        Y: 37.200001,
+                                        X: 23.200001,
+                                        Y: 69.199997,
                                     },
                                 },
                             },
                         },
                         Image: &shared.Image{
-                            Alpha: 63.099998,
+                            Alpha: 96.199997,
                             Resolution: &shared.NormalizedCoordinate{
-                                X: 8.100000,
-                                Y: 61.099998,
+                                X: 78.099998,
+                                Y: 64.099998,
                             },
-                            URI: "quas",
+                            URI: "mollitia",
                         },
                     },
                     shared.Overlay{
                         Animations: []shared.Animation{
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "facilis",
+                                    StartTimeOffset: "aut",
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "praesentium",
+                                    EndTimeOffset: "laboriosam",
                                     FadeType: "FADE_OUT",
-                                    StartTimeOffset: "nam",
+                                    StartTimeOffset: "laudantium",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 60.200001,
-                                        Y: 92.199997,
+                                        X: 98.199997,
+                                        Y: 93.199997,
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "officiis",
+                                    StartTimeOffset: "odio",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 46.099998,
-                                        Y: 88.199997,
+                                        X: 6.100000,
+                                        Y: 55.099998,
+                                    },
+                                },
+                            },
+                            shared.Animation{
+                                AnimationEnd: &shared.AnimationEnd{
+                                    StartTimeOffset: "rerum",
+                                },
+                                AnimationFade: &shared.AnimationFade{
+                                    EndTimeOffset: "qui",
+                                    FadeType: "FADE_OUT",
+                                    StartTimeOffset: "tempore",
+                                    Xy: &shared.NormalizedCoordinate{
+                                        X: 31.200001,
+                                        Y: 94.199997,
+                                    },
+                                },
+                                AnimationStatic: &shared.AnimationStatic{
+                                    StartTimeOffset: "fugit",
+                                    Xy: &shared.NormalizedCoordinate{
+                                        X: 6.100000,
+                                        Y: 52.099998,
+                                    },
+                                },
+                            },
+                        },
+                        Image: &shared.Image{
+                            Alpha: 37.200001,
+                            Resolution: &shared.NormalizedCoordinate{
+                                X: 22.200001,
+                                Y: 27.100000,
+                            },
+                            URI: "fuga",
+                        },
+                    },
+                    shared.Overlay{
+                        Animations: []shared.Animation{
+                            shared.Animation{
+                                AnimationEnd: &shared.AnimationEnd{
+                                    StartTimeOffset: "dolorem",
+                                },
+                                AnimationFade: &shared.AnimationFade{
+                                    EndTimeOffset: "earum",
+                                    FadeType: "FADE_IN",
+                                    StartTimeOffset: "doloremque",
+                                    Xy: &shared.NormalizedCoordinate{
+                                        X: 34.200001,
+                                        Y: 40.200001,
+                                    },
+                                },
+                                AnimationStatic: &shared.AnimationStatic{
+                                    StartTimeOffset: "illum",
+                                    Xy: &shared.NormalizedCoordinate{
+                                        X: 26.100000,
+                                        Y: 92.199997,
                                     },
                                 },
                             },
@@ -862,100 +553,74 @@ func main() {
                                     StartTimeOffset: "labore",
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "omnis",
+                                    EndTimeOffset: "assumenda",
                                     FadeType: "FADE_IN",
-                                    StartTimeOffset: "voluptates",
+                                    StartTimeOffset: "rem",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 92.099998,
-                                        Y: 62.200001,
+                                        X: 17.200001,
+                                        Y: 58.099998,
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "voluptas",
+                                    StartTimeOffset: "tempore",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 75.099998,
-                                        Y: 5.200000,
+                                        X: 63.200001,
+                                        Y: 86.099998,
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "ea",
+                                    StartTimeOffset: "ut",
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "necessitatibus",
+                                    EndTimeOffset: "modi",
                                     FadeType: "FADE_TYPE_UNSPECIFIED",
-                                    StartTimeOffset: "autem",
+                                    StartTimeOffset: "labore",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 71.199997,
-                                        Y: 31.200001,
+                                        X: 6.100000,
+                                        Y: 85.199997,
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "unde",
+                                    StartTimeOffset: "aut",
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 7.200000,
-                                        Y: 41.099998,
+                                        X: 36.200001,
+                                        Y: 81.099998,
                                     },
                                 },
                             },
                         },
                         Image: &shared.Image{
-                            Alpha: 28.200001,
+                            Alpha: 82.099998,
                             Resolution: &shared.NormalizedCoordinate{
-                                X: 89.099998,
-                                Y: 84.199997,
+                                X: 7.200000,
+                                Y: 28.200001,
                             },
-                            URI: "consequuntur",
+                            URI: "beatae",
                         },
                     },
                 },
                 PubsubDestination: &shared.PubsubDestination{
-                    Topic: "harum",
+                    Topic: "et",
                 },
                 SpriteSheets: []shared.SpriteSheet{
                     shared.SpriteSheet{
-                        ColumnCount: 7367980966566239874,
-                        EndTimeOffset: "et",
-                        FilePrefix: "aut",
-                        Format: "dolor",
-                        Interval: "animi",
-                        Quality: 3852654797285311642,
-                        RowCount: 3710639359179144155,
-                        SpriteHeightPixels: 2350620641611697633,
-                        SpriteWidthPixels: 7465609672034484250,
-                        StartTimeOffset: "velit",
-                        TotalCount: 4744398683267899403,
-                    },
-                    shared.SpriteSheet{
-                        ColumnCount: 4693265585069024929,
-                        EndTimeOffset: "neque",
-                        FilePrefix: "qui",
-                        Format: "est",
-                        Interval: "et",
-                        Quality: 8527444148889935096,
-                        RowCount: 3737846910194129806,
-                        SpriteHeightPixels: 8015391903902252113,
-                        SpriteWidthPixels: 5197845468398624637,
-                        StartTimeOffset: "deleniti",
-                        TotalCount: 5244653917212637213,
-                    },
-                    shared.SpriteSheet{
-                        ColumnCount: 5991508761271416567,
-                        EndTimeOffset: "sed",
-                        FilePrefix: "occaecati",
-                        Format: "qui",
-                        Interval: "aut",
-                        Quality: 7223508839305653133,
-                        RowCount: 3708959879963337829,
-                        SpriteHeightPixels: 970393771523591801,
-                        SpriteWidthPixels: 6174198661297947669,
-                        StartTimeOffset: "itaque",
-                        TotalCount: 5478790927234200121,
+                        ColumnCount: 190996656928083572,
+                        EndTimeOffset: "harum",
+                        FilePrefix: "consequuntur",
+                        Format: "rem",
+                        Interval: "non",
+                        Quality: 5317373245973704888,
+                        RowCount: 416626402465924371,
+                        SpriteHeightPixels: 8692255531287115509,
+                        SpriteWidthPixels: 6411686759597149106,
+                        StartTimeOffset: "sit",
+                        TotalCount: 6053404769933823593,
                     },
                 },
             },
-            Name: "nobis",
+            Name: "explicabo",
         },
     }
     

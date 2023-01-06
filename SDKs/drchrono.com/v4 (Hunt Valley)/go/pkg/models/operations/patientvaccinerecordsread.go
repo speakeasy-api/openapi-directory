@@ -1,0 +1,32 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type PatientVaccineRecordsReadPathParams struct {
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+}
+
+type PatientVaccineRecordsReadQueryParams struct {
+	CvxCode *string `queryParam:"style=form,explode=true,name=cvx_code"`
+	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	Patient *int64  `queryParam:"style=form,explode=true,name=patient"`
+	Since   *string `queryParam:"style=form,explode=true,name=since"`
+}
+
+type PatientVaccineRecordsReadSecurity struct {
+	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+}
+
+type PatientVaccineRecordsReadRequest struct {
+	PathParams  PatientVaccineRecordsReadPathParams
+	QueryParams PatientVaccineRecordsReadQueryParams
+	Security    PatientVaccineRecordsReadSecurity
+}
+
+type PatientVaccineRecordsReadResponse struct {
+	ContentType          string
+	PatientVaccineRecord *shared.PatientVaccineRecord
+	StatusCode           int64
+}

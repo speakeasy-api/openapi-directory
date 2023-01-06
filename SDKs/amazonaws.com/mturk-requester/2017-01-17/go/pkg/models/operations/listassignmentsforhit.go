@@ -12,7 +12,7 @@ type ListAssignmentsForHitQueryParams struct {
 type ListAssignmentsForHitxAmzTargetEnum string
 
 const (
-	ListAssignmentsForHitxAmzTargetEnumMTurkRequesterServiceV20170117ListAssignmentsForHit ListAssignmentsForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.ListAssignmentsForHIT"
+	ListAssignmentsForHITXAmzTargetEnumMTurkRequesterServiceV20170117ListAssignmentsForHit ListAssignmentsForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.ListAssignmentsForHIT"
 )
 
 type ListAssignmentsForHitHeaders struct {
@@ -34,7 +34,7 @@ type ListAssignmentsForHitRequest struct {
 
 type ListAssignmentsForHitResponse struct {
 	ContentType                   string
-	ListAssignmentsForHitResponse *shared.ListAssignmentsForHitResponse
+	ListAssignmentsForHITResponse *shared.ListAssignmentsForHitResponse
 	RequestError                  *interface{}
 	ServiceFault                  *interface{}
 	StatusCode                    int64

@@ -22,6 +22,7 @@ type AppPkgIDGetRequest struct {
 }
 
 type AppPkgIDGetResponse struct {
+	AppD           *string
 	Body           []byte
 	ContentType    string
 	ProblemDetails *shared.ProblemDetails

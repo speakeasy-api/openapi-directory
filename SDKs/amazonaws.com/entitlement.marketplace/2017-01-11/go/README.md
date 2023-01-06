@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,30 +34,31 @@ func main() {
     
     req := operations.GetEntitlementsRequest{
         Headers: operations.GetEntitlementsHeaders{
-            XAmzAlgorithm: "harum",
-            XAmzContentSha256: "enim",
-            XAmzCredential: "est",
-            XAmzDate: "recusandae",
-            XAmzSecurityToken: "neque",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "non",
+            XAmzContentSha256: "nam",
+            XAmzCredential: "beatae",
+            XAmzDate: "quae",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "magni",
+            XAmzSignedHeaders: "minus",
             XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
         },
         Request: shared.GetEntitlementsRequest{
             Filter: map[string][]string{
-                "aliquam": []string{
-                    "iure",
-                    "hic",
-                    "maxime",
+                "neque": []string{
+                    "quia",
+                },
+                "repudiandae": []string{
+                    "autem",
                 },
             },
-            MaxResults: 9121163751201800243,
-            NextToken: "repudiandae",
-            ProductCode: "et",
+            MaxResults: 2350280920086746644,
+            NextToken: "enim",
+            ProductCode: "ut",
         },
     }
     
-    res, err := s.Sdk.GetEntitlements(ctx, req)
+    res, err := s.GetEntitlements(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

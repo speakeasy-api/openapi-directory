@@ -8,14 +8,14 @@ type ListDatabaseClustersQueryParams struct {
 	TagName *string `queryParam:"style=form,explode=true,name=tag_name"`
 }
 
-type ListDatabaseClustersRequest struct {
-	QueryParams ListDatabaseClustersQueryParams
-}
-
 type ListDatabaseClusters401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListDatabaseClustersRequest struct {
+	QueryParams ListDatabaseClustersQueryParams
 }
 
 type ListDatabaseClustersResponse struct {

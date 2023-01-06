@@ -10,5 +10,5 @@ type StreamingDistributionConfig struct {
 	Logging         *StreamingLoggingConfig
 	PriceClass      *PriceClassEnum
 	S3Origin        S3Origin
-	TrustedSigners  TrustedSigners
+	TrustedSigners  TrustedSigners1
 }

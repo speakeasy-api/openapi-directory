@@ -3,28 +3,28 @@ package operations
 type GetListPoliciesActionEnum string
 
 const (
-	GetListPoliciesActionEnumListPolicies GetListPoliciesActionEnum = "ListPolicies"
+	GETListPoliciesActionEnumListPolicies GetListPoliciesActionEnum = "ListPolicies"
 )
 
 type GetListPoliciesPolicyUsageFilterEnum string
 
 const (
-	GetListPoliciesPolicyUsageFilterEnumPermissionsPolicy   GetListPoliciesPolicyUsageFilterEnum = "PermissionsPolicy"
-	GetListPoliciesPolicyUsageFilterEnumPermissionsBoundary GetListPoliciesPolicyUsageFilterEnum = "PermissionsBoundary"
+	GETListPoliciesPolicyUsageFilterEnumPermissionsPolicy   GetListPoliciesPolicyUsageFilterEnum = "PermissionsPolicy"
+	GETListPoliciesPolicyUsageFilterEnumPermissionsBoundary GetListPoliciesPolicyUsageFilterEnum = "PermissionsBoundary"
 )
 
 type GetListPoliciesScopeEnum string
 
 const (
-	GetListPoliciesScopeEnumAll   GetListPoliciesScopeEnum = "All"
-	GetListPoliciesScopeEnumAws   GetListPoliciesScopeEnum = "AWS"
-	GetListPoliciesScopeEnumLocal GetListPoliciesScopeEnum = "Local"
+	GETListPoliciesScopeEnumAll   GetListPoliciesScopeEnum = "All"
+	GETListPoliciesScopeEnumAws   GetListPoliciesScopeEnum = "AWS"
+	GETListPoliciesScopeEnumLocal GetListPoliciesScopeEnum = "Local"
 )
 
 type GetListPoliciesVersionEnum string
 
 const (
-	GetListPoliciesVersionEnumTwoThousandAndTen0508 GetListPoliciesVersionEnum = "2010-05-08"
+	GETListPoliciesVersionEnumTwoThousandAndTen0508 GetListPoliciesVersionEnum = "2010-05-08"
 )
 
 type GetListPoliciesQueryParams struct {

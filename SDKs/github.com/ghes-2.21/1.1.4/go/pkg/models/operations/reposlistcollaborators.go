@@ -9,18 +9,10 @@ type ReposListCollaboratorsPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type ReposListCollaboratorsAffiliationEnum string
-
-const (
-	ReposListCollaboratorsAffiliationEnumOutside ReposListCollaboratorsAffiliationEnum = "outside"
-	ReposListCollaboratorsAffiliationEnumDirect  ReposListCollaboratorsAffiliationEnum = "direct"
-	ReposListCollaboratorsAffiliationEnumAll     ReposListCollaboratorsAffiliationEnum = "all"
-)
-
 type ReposListCollaboratorsQueryParams struct {
-	Affiliation *ReposListCollaboratorsAffiliationEnum `queryParam:"style=form,explode=true,name=affiliation"`
-	Page        *int64                                 `queryParam:"style=form,explode=true,name=page"`
-	PerPage     *int64                                 `queryParam:"style=form,explode=true,name=per_page"`
+	Affiliation *shared.RepoEnum `queryParam:"style=form,explode=true,name=affiliation"`
+	Page        *int64           `queryParam:"style=form,explode=true,name=page"`
+	PerPage     *int64           `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type ReposListCollaboratorsRequest struct {

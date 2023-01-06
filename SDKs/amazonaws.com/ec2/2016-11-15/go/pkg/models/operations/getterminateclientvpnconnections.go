@@ -3,13 +3,13 @@ package operations
 type GetTerminateClientVpnConnectionsActionEnum string
 
 const (
-	GetTerminateClientVpnConnectionsActionEnumTerminateClientVpnConnections GetTerminateClientVpnConnectionsActionEnum = "TerminateClientVpnConnections"
+	GETTerminateClientVpnConnectionsActionEnumTerminateClientVpnConnections GetTerminateClientVpnConnectionsActionEnum = "TerminateClientVpnConnections"
 )
 
 type GetTerminateClientVpnConnectionsVersionEnum string
 
 const (
-	GetTerminateClientVpnConnectionsVersionEnumTwoThousandAndSixteen1115 GetTerminateClientVpnConnectionsVersionEnum = "2016-11-15"
+	GETTerminateClientVpnConnectionsVersionEnumTwoThousandAndSixteen1115 GetTerminateClientVpnConnectionsVersionEnum = "2016-11-15"
 )
 
 type GetTerminateClientVpnConnectionsQueryParams struct {

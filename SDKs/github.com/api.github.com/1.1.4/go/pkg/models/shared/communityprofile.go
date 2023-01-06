@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// CommunityProfileFilesCodeOfConductSimple
+// Code of Conduct Simple
 type CommunityProfileFilesCodeOfConductSimple struct {
 	HTMLURL string `json:"html_url"`
 	Key     string `json:"key"`
@@ -16,6 +18,8 @@ type CommunityProfileFilesCommunityHealthFile struct {
 	URL     string `json:"url"`
 }
 
+// CommunityProfileFilesLicenseSimple
+// License Simple
 type CommunityProfileFilesLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`

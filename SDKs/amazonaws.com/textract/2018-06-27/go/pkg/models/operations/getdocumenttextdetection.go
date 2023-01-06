@@ -32,7 +32,7 @@ type GetDocumentTextDetectionResponse struct {
 	GetDocumentTextDetectionResponse       *shared.GetDocumentTextDetectionResponse
 	InternalServerError                    *interface{}
 	InvalidJobIDException                  *interface{}
-	InvalidKmsKeyException                 *interface{}
+	InvalidKMSKeyException                 *interface{}
 	InvalidParameterException              *interface{}
 	InvalidS3ObjectException               *interface{}
 	ProvisionedThroughputExceededException *interface{}

@@ -10,13 +10,13 @@ type DbInstance struct {
 	AvailabilityZone                      *string
 	BackupRetentionPeriod                 *int64
 	CharacterSetName                      *string
-	DbInstanceClass                       *string
-	DbInstanceIdentifier                  *string
-	DbInstanceStatus                      *string
-	DbName                                *string
-	DbParameterGroups                     []DbParameterGroupStatus
-	DbSecurityGroups                      []DbSecurityGroupMembership
-	DbSubnetGroup                         *DbSubnetGroup
+	DBInstanceClass                       *string
+	DBInstanceIdentifier                  *string
+	DBInstanceStatus                      *string
+	DBName                                *string
+	DBParameterGroups                     []map[string]interface{}
+	DBSecurityGroups                      []map[string]interface{}
+	DBSubnetGroup                         *DbSubnetGroup
 	Endpoint                              *Endpoint
 	Engine                                *string
 	EngineVersion                         *string
@@ -25,17 +25,17 @@ type DbInstance struct {
 	LatestRestorableTime                  *time.Time
 	LicenseModel                          *string
 	MasterUsername                        *string
-	MultiAz                               *bool
-	OptionGroupMemberships                []OptionGroupMembership
+	MultiAZ                               *bool
+	OptionGroupMemberships                []map[string]interface{}
 	PendingModifiedValues                 *PendingModifiedValues
 	PreferredBackupWindow                 *string
 	PreferredMaintenanceWindow            *string
 	PubliclyAccessible                    *bool
-	ReadReplicaDbInstanceIdentifiers      []string
-	ReadReplicaSourceDbInstanceIdentifier *string
+	ReadReplicaDBInstanceIdentifiers      []map[string]interface{}
+	ReadReplicaSourceDBInstanceIdentifier *string
 	SecondaryAvailabilityZone             *string
-	StatusInfos                           []DbInstanceStatusInfo
+	StatusInfos                           []map[string]interface{}
 	StorageType                           *string
 	TdeCredentialArn                      *string
-	VpcSecurityGroups                     []VpcSecurityGroupMembership
+	VpcSecurityGroups                     []map[string]interface{}
 }

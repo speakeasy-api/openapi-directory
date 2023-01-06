@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTransitGatewaysResult struct {
-	NextToken       *string
-	TransitGateways []TransitGateway
+	NextToken       map[string]interface{}
+	TransitGateways map[string]interface{}
 }

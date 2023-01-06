@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.PvcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.PvcerRequestBody{
             CertificateParameters: &operations.PvcerRequestBodyCertificateParameters{
-                EnrolNo: "est",
-                FullName: "alias",
-                Year: "non",
+                ENROLNO: "repudiandae",
+                FullName: "amet",
+                YEAR: "impedit",
             },
-            ConsentArtifact: "facilis",
+            ConsentArtifact: "ducimus",
             Format: "pdf",
-            TxnID: "officiis",
+            TxnID: "et",
         },
     }
     
-    res, err := s.Sdk.Pvcer(ctx, req)
+    res, err := s.APIs.Pvcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Pvcer` - Provisional Certificate
 

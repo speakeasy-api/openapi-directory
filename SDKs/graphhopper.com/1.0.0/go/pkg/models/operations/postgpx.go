@@ -15,7 +15,7 @@ type PostGpxRequest struct {
 
 type PostGpxResponse struct {
 	ContentType   string
-	GhError       *shared.GhError
+	GHError       *shared.GhError
 	Headers       map[string][]string
 	RouteResponse *shared.RouteResponse
 	StatusCode    int64

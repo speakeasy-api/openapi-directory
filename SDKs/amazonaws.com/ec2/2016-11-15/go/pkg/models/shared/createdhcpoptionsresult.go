@@ -1,5 +1,5 @@
 package shared
 
 type CreateDhcpOptionsResult struct {
-	DhcpOptions *DhcpOptions
+	DhcpOptions map[string]interface{}
 }

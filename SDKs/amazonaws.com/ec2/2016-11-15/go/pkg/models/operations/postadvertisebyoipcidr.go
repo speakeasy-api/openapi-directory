@@ -3,13 +3,13 @@ package operations
 type PostAdvertiseByoipCidrActionEnum string
 
 const (
-	PostAdvertiseByoipCidrActionEnumAdvertiseByoipCidr PostAdvertiseByoipCidrActionEnum = "AdvertiseByoipCidr"
+	POSTAdvertiseByoipCidrActionEnumAdvertiseByoipCidr PostAdvertiseByoipCidrActionEnum = "AdvertiseByoipCidr"
 )
 
 type PostAdvertiseByoipCidrVersionEnum string
 
 const (
-	PostAdvertiseByoipCidrVersionEnumTwoThousandAndSixteen1115 PostAdvertiseByoipCidrVersionEnum = "2016-11-15"
+	POSTAdvertiseByoipCidrVersionEnumTwoThousandAndSixteen1115 PostAdvertiseByoipCidrVersionEnum = "2016-11-15"
 )
 
 type PostAdvertiseByoipCidrQueryParams struct {

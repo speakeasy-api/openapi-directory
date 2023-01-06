@@ -1,5 +1,5 @@
 package shared
 
 type SetUICustomizationResponse struct {
-	UICustomization UICustomizationType `json:"UICustomization"`
+	UICustomization UICustomizationType1 `json:"UICustomization"`
 }

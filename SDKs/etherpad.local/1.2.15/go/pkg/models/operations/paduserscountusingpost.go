@@ -39,8 +39,8 @@ type PadUsersCountUsingPostRequest struct {
 type PadUsersCountUsingPostResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	PadUsersCountUsingPost200ApplicationJSONObject *PadUsersCountUsingPost200ApplicationJSON
-	PadUsersCountUsingPost400ApplicationJSONObject *PadUsersCountUsingPost400ApplicationJSON
-	PadUsersCountUsingPost401ApplicationJSONObject *PadUsersCountUsingPost401ApplicationJSON
-	PadUsersCountUsingPost500ApplicationJSONObject *PadUsersCountUsingPost500ApplicationJSON
+	PadUsersCountUsingPOST200ApplicationJSONObject *PadUsersCountUsingPost200ApplicationJSON
+	PadUsersCountUsingPOST400ApplicationJSONObject *PadUsersCountUsingPost400ApplicationJSON
+	PadUsersCountUsingPOST401ApplicationJSONObject *PadUsersCountUsingPost401ApplicationJSON
+	PadUsersCountUsingPOST500ApplicationJSONObject *PadUsersCountUsingPost500ApplicationJSON
 }

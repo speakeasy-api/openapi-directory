@@ -3,13 +3,13 @@ package operations
 type GetDisassociateAddressActionEnum string
 
 const (
-	GetDisassociateAddressActionEnumDisassociateAddress GetDisassociateAddressActionEnum = "DisassociateAddress"
+	GETDisassociateAddressActionEnumDisassociateAddress GetDisassociateAddressActionEnum = "DisassociateAddress"
 )
 
 type GetDisassociateAddressVersionEnum string
 
 const (
-	GetDisassociateAddressVersionEnumTwoThousandAndSixteen1115 GetDisassociateAddressVersionEnum = "2016-11-15"
+	GETDisassociateAddressVersionEnumTwoThousandAndSixteen1115 GetDisassociateAddressVersionEnum = "2016-11-15"
 )
 
 type GetDisassociateAddressQueryParams struct {

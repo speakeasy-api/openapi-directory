@@ -19,7 +19,7 @@ type PutAccountsAccountOrdersCustomerOrderIDRequestBody struct {
 	Mifid2ExecutionTrader *string  `json:"Mifid2ExecutionTrader,omitempty"`
 	OrderType             *float64 `json:"Order Type,omitempty"`
 	OrigCustomerOrderID   *string  `json:"OrigCustomerOrderId,omitempty"`
-	OutsideRth            *float64 `json:"Outside RTH,omitempty"`
+	OutsideRTH            *float64 `json:"Outside RTH,omitempty"`
 	Price                 *float64 `json:"Price,omitempty"`
 	Quantity              *float64 `json:"Quantity,omitempty"`
 	Side                  *float64 `json:"Side,omitempty"`
@@ -44,6 +44,6 @@ type PutAccountsAccountOrdersCustomerOrderIDRequest struct {
 
 type PutAccountsAccountOrdersCustomerOrderIDResponse struct {
 	ContentType                                                      string
-	PutAccountsAccountOrdersCustomerOrderID200ApplicationJSONObjects []PutAccountsAccountOrdersCustomerOrderID200ApplicationJSON
 	StatusCode                                                       int64
+	PutAccountsAccountOrdersCustomerOrderID200ApplicationJSONObjects []PutAccountsAccountOrdersCustomerOrderID200ApplicationJSON
 }

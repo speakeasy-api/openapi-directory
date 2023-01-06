@@ -3,13 +3,13 @@ package operations
 type PostDescribeDbSnapshotsActionEnum string
 
 const (
-	PostDescribeDbSnapshotsActionEnumDescribeDbSnapshots PostDescribeDbSnapshotsActionEnum = "DescribeDBSnapshots"
+	POSTDescribeDBSnapshotsActionEnumDescribeDbSnapshots PostDescribeDbSnapshotsActionEnum = "DescribeDBSnapshots"
 )
 
 type PostDescribeDbSnapshotsVersionEnum string
 
 const (
-	PostDescribeDbSnapshotsVersionEnumTwoThousandAndFourteen0901 PostDescribeDbSnapshotsVersionEnum = "2014-09-01"
+	POSTDescribeDBSnapshotsVersionEnumTwoThousandAndFourteen0901 PostDescribeDbSnapshotsVersionEnum = "2014-09-01"
 )
 
 type PostDescribeDbSnapshotsQueryParams struct {

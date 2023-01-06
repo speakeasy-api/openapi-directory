@@ -36,8 +36,8 @@ type SetHTMLUsingPostRequest struct {
 type SetHTMLUsingPostResponse struct {
 	ContentType                              string
 	StatusCode                               int64
-	SetHTMLUsingPost200ApplicationJSONObject *SetHTMLUsingPost200ApplicationJSON
-	SetHTMLUsingPost400ApplicationJSONObject *SetHTMLUsingPost400ApplicationJSON
-	SetHTMLUsingPost401ApplicationJSONObject *SetHTMLUsingPost401ApplicationJSON
-	SetHTMLUsingPost500ApplicationJSONObject *SetHTMLUsingPost500ApplicationJSON
+	SetHTMLUsingPOST200ApplicationJSONObject *SetHTMLUsingPost200ApplicationJSON
+	SetHTMLUsingPOST400ApplicationJSONObject *SetHTMLUsingPost400ApplicationJSON
+	SetHTMLUsingPOST401ApplicationJSONObject *SetHTMLUsingPost401ApplicationJSON
+	SetHTMLUsingPOST500ApplicationJSONObject *SetHTMLUsingPost500ApplicationJSON
 }

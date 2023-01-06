@@ -1,0 +1,10 @@
+package shared
+
+type Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0Enum string
+
+const (
+	Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0EnumUnspecified Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0Enum = "UNSPECIFIED"
+	Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0EnumBuild       Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0Enum = "BUILD"
+	Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0EnumDeploy      Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0Enum = "DEPLOY"
+	Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0EnumRun         Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0Enum = "RUN"
+)

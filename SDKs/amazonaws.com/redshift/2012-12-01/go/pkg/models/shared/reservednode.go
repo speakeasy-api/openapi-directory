@@ -13,7 +13,7 @@ type ReservedNode struct {
 	NodeCount                *int64
 	NodeType                 *string
 	OfferingType             *string
-	RecurringCharges         []RecurringCharge
+	RecurringCharges         []map[string]interface{}
 	ReservedNodeID           *string
 	ReservedNodeOfferingID   *string
 	ReservedNodeOfferingType *ReservedNodeOfferingTypeEnum

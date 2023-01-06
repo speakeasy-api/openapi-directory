@@ -1,5 +1,12 @@
 package shared
 
+// ExportContextBakExportOptions
+// Options for exporting BAK files (SQL Server-only)
+type ExportContextBakExportOptions struct {
+	StripeCount *int32 `json:"stripeCount,omitempty"`
+	Striped     *bool  `json:"striped,omitempty"`
+}
+
 // ExportContextCsvExportOptions
 // Options for exporting data as CSV. `MySQL` and `PostgreSQL` instances only.
 type ExportContextCsvExportOptions struct {
@@ -36,6 +43,7 @@ type ExportContextSQLExportOptions struct {
 // ExportContext
 // Database instance export context.
 type ExportContext struct {
+	BakExportOptions *ExportContextBakExportOptions `json:"bakExportOptions,omitempty"`
 	CsvExportOptions *ExportContextCsvExportOptions `json:"csvExportOptions,omitempty"`
 	Databases        []string                       `json:"databases,omitempty"`
 	FileType         *ExportContextFileTypeEnum     `json:"fileType,omitempty"`

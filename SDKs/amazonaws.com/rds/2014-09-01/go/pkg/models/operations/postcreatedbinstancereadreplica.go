@@ -3,13 +3,13 @@ package operations
 type PostCreateDbInstanceReadReplicaActionEnum string
 
 const (
-	PostCreateDbInstanceReadReplicaActionEnumCreateDbInstanceReadReplica PostCreateDbInstanceReadReplicaActionEnum = "CreateDBInstanceReadReplica"
+	POSTCreateDBInstanceReadReplicaActionEnumCreateDbInstanceReadReplica PostCreateDbInstanceReadReplicaActionEnum = "CreateDBInstanceReadReplica"
 )
 
 type PostCreateDbInstanceReadReplicaVersionEnum string
 
 const (
-	PostCreateDbInstanceReadReplicaVersionEnumTwoThousandAndFourteen0901 PostCreateDbInstanceReadReplicaVersionEnum = "2014-09-01"
+	POSTCreateDBInstanceReadReplicaVersionEnumTwoThousandAndFourteen0901 PostCreateDbInstanceReadReplicaVersionEnum = "2014-09-01"
 )
 
 type PostCreateDbInstanceReadReplicaQueryParams struct {

@@ -1,5 +1,5 @@
 package shared
 
 type EnableVpcClassicLinkDNSSupportResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

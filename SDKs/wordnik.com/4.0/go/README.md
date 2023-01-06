@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,10 +34,10 @@ func main() {
     
     req := operations.AuthenticateRequest{
         PathParams: operations.AuthenticatePathParams{
-            Username: "quaerat",
+            Username: "error",
         },
         QueryParams: operations.AuthenticateQueryParams{
-            Password: "nihil",
+            Password: "minus",
         },
     }
     

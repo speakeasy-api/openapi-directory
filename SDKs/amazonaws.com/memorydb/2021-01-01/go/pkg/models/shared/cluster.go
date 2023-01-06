@@ -4,7 +4,7 @@ package shared
 // Contains all of the attributes of a specific cluster.
 type Cluster struct {
 	ACLName                 *string                   `json:"ACLName,omitempty"`
-	Arn                     *string                   `json:"ARN,omitempty"`
+	ARN                     *string                   `json:"ARN,omitempty"`
 	AutoMinorVersionUpgrade *bool                     `json:"AutoMinorVersionUpgrade,omitempty"`
 	AvailabilityMode        *AzStatusEnum             `json:"AvailabilityMode,omitempty"`
 	ClusterEndpoint         *Endpoint                 `json:"ClusterEndpoint,omitempty"`

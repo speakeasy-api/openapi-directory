@@ -8,15 +8,15 @@ type AddFirewallTagsPathParams struct {
 	FirewallID string `pathParam:"style=simple,explode=false,name=firewall_id"`
 }
 
-type AddFirewallTagsRequest struct {
-	PathParams AddFirewallTagsPathParams
-	Request    *interface{} `request:"mediaType=application/json"`
-}
-
 type AddFirewallTags401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type AddFirewallTagsRequest struct {
+	PathParams AddFirewallTagsPathParams
+	Request    *interface{} `request:"mediaType=application/json"`
 }
 
 type AddFirewallTagsResponse struct {

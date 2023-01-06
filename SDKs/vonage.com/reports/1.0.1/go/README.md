@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,24 +29,24 @@ func main() {
             },
         },
         PathParams: operations.GetCallLogsPathParams{
-            AccountID: "error",
+            AccountID: "consequatur",
         },
         QueryParams: operations.GetCallLogsQueryParams{
-            DestinationUser: "voluptas",
-            Direction: "Inbound",
-            EndGte: "vel",
-            EndLte: "in",
-            From: "quia",
-            Page: 6.200000,
-            PageSize: 63.200001,
-            SourceUser: "quasi",
-            StartGte: "dolorum",
-            StartLte: "voluptatem",
-            To: "enim",
+            DestinationUser: "placeat",
+            Direction: "Outbound",
+            EndGte: "excepturi",
+            EndLte: "sint",
+            From: "rerum",
+            Page: 16.100000,
+            PageSize: 21.100000,
+            SourceUser: "sunt",
+            StartGte: "quis",
+            StartLte: "enim",
+            To: "minus",
         },
     }
     
-    res, err := s.Sdk.GetCallLogs(ctx, req)
+    res, err := s.GetCallLogs(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

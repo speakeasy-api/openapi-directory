@@ -11,7 +11,7 @@ type DeleteSignalingChannelHeaders struct {
 }
 
 type DeleteSignalingChannelRequestBody struct {
-	ChannelArn     string  `json:"ChannelARN"`
+	ChannelARN     string  `json:"ChannelARN"`
 	CurrentVersion *string `json:"CurrentVersion,omitempty"`
 }
 

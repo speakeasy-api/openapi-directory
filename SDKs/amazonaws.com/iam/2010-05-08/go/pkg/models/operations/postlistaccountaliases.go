@@ -3,13 +3,13 @@ package operations
 type PostListAccountAliasesActionEnum string
 
 const (
-	PostListAccountAliasesActionEnumListAccountAliases PostListAccountAliasesActionEnum = "ListAccountAliases"
+	POSTListAccountAliasesActionEnumListAccountAliases PostListAccountAliasesActionEnum = "ListAccountAliases"
 )
 
 type PostListAccountAliasesVersionEnum string
 
 const (
-	PostListAccountAliasesVersionEnumTwoThousandAndTen0508 PostListAccountAliasesVersionEnum = "2010-05-08"
+	POSTListAccountAliasesVersionEnumTwoThousandAndTen0508 PostListAccountAliasesVersionEnum = "2010-05-08"
 )
 
 type PostListAccountAliasesQueryParams struct {

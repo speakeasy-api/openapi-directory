@@ -3,13 +3,13 @@ package operations
 type GetStopActivityStreamActionEnum string
 
 const (
-	GetStopActivityStreamActionEnumStopActivityStream GetStopActivityStreamActionEnum = "StopActivityStream"
+	GETStopActivityStreamActionEnumStopActivityStream GetStopActivityStreamActionEnum = "StopActivityStream"
 )
 
 type GetStopActivityStreamVersionEnum string
 
 const (
-	GetStopActivityStreamVersionEnumTwoThousandAndFourteen1031 GetStopActivityStreamVersionEnum = "2014-10-31"
+	GETStopActivityStreamVersionEnumTwoThousandAndFourteen1031 GetStopActivityStreamVersionEnum = "2014-10-31"
 )
 
 type GetStopActivityStreamQueryParams struct {

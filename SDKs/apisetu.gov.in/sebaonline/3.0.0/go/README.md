@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.SscerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.SscerRequestBody{
             CertificateParameters: &operations.SscerRequestBodyCertificateParameters{
-                Cent: "eos",
-                MName: "error",
-                Name: "minus",
-                Rroll: "animi",
-                Year: "laudantium",
+                Cent: "excepturi",
+                MName: "dolore",
+                Name: "animi",
+                RROLL: "odio",
+                YEAR: "officia",
             },
             ConsentArtifact: "odio",
             Format: "pdf",
-            TxnID: "vel",
+            TxnID: "sunt",
         },
     }
     
-    res, err := s.Sdk.Sscer(ctx, req)
+    res, err := s.APIs.Sscer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -60,7 +59,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Sscer` - Class X Marksheet
 

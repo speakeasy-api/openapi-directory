@@ -15,8 +15,8 @@ type GetMlModelOutput struct {
 	InputDataLocationS3         *string               `json:"InputDataLocationS3,omitempty"`
 	LastUpdatedAt               *time.Time            `json:"LastUpdatedAt,omitempty"`
 	LogURI                      *string               `json:"LogUri,omitempty"`
-	MlModelID                   *string               `json:"MLModelId,omitempty"`
-	MlModelType                 *MlModelTypeEnum      `json:"MLModelType,omitempty"`
+	MLModelID                   *string               `json:"MLModelId,omitempty"`
+	MLModelType                 *MlModelTypeEnum      `json:"MLModelType,omitempty"`
 	Message                     *string               `json:"Message,omitempty"`
 	Name                        *string               `json:"Name,omitempty"`
 	Recipe                      *string               `json:"Recipe,omitempty"`

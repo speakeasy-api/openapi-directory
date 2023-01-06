@@ -3,13 +3,13 @@ package operations
 type PostReplaceNetworkACLEntryActionEnum string
 
 const (
-	PostReplaceNetworkACLEntryActionEnumReplaceNetworkACLEntry PostReplaceNetworkACLEntryActionEnum = "ReplaceNetworkAclEntry"
+	POSTReplaceNetworkACLEntryActionEnumReplaceNetworkACLEntry PostReplaceNetworkACLEntryActionEnum = "ReplaceNetworkAclEntry"
 )
 
 type PostReplaceNetworkACLEntryVersionEnum string
 
 const (
-	PostReplaceNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 PostReplaceNetworkACLEntryVersionEnum = "2016-11-15"
+	POSTReplaceNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 PostReplaceNetworkACLEntryVersionEnum = "2016-11-15"
 )
 
 type PostReplaceNetworkACLEntryQueryParams struct {

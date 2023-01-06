@@ -3,13 +3,13 @@ package operations
 type PostChangeMessageVisibilityBatchActionEnum string
 
 const (
-	PostChangeMessageVisibilityBatchActionEnumChangeMessageVisibilityBatch PostChangeMessageVisibilityBatchActionEnum = "ChangeMessageVisibilityBatch"
+	POSTChangeMessageVisibilityBatchActionEnumChangeMessageVisibilityBatch PostChangeMessageVisibilityBatchActionEnum = "ChangeMessageVisibilityBatch"
 )
 
 type PostChangeMessageVisibilityBatchVersionEnum string
 
 const (
-	PostChangeMessageVisibilityBatchVersionEnumTwoThousandAndTwelve1105 PostChangeMessageVisibilityBatchVersionEnum = "2012-11-05"
+	POSTChangeMessageVisibilityBatchVersionEnumTwoThousandAndTwelve1105 PostChangeMessageVisibilityBatchVersionEnum = "2012-11-05"
 )
 
 type PostChangeMessageVisibilityBatchQueryParams struct {

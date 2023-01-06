@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,145 +26,156 @@ func main() {
         Security: operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "nam",
+            Parent: "quisquam",
         },
         QueryParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "cumque",
-            Alt: "json",
-            Callback: "repellendus",
-            ConnectionProfileID: "cumque",
-            Fields: "iste",
-            Key: "asperiores",
-            OauthToken: "ut",
+            DollarXgafv: "1",
+            AccessToken: "et",
+            Alt: "media",
+            Callback: "pariatur",
+            ConnectionProfileID: "magnam",
+            Fields: "at",
+            Key: "quia",
+            OauthToken: "cupiditate",
             PrettyPrint: true,
-            QuotaUser: "tenetur",
-            RequestID: "impedit",
-            UploadType: "aut",
-            UploadProtocol: "sit",
+            QuotaUser: "sint",
+            RequestID: "minus",
+            UploadType: "fugiat",
+            UploadProtocol: "quae",
         },
         Request: &shared.ConnectionProfileInput{
             Alloydb: &shared.AlloyDbConnectionProfileInput{
-                ClusterID: "ullam",
+                ClusterID: "rerum",
                 Settings: &shared.AlloyDbSettingsInput{
                     InitialUser: &shared.UserPasswordInput{
-                        Password: "voluptas",
-                        User: "mollitia",
+                        Password: "voluptatem",
+                        User: "quo",
                     },
                     Labels: map[string]string{
-                        "voluptatem": "libero",
-                        "et": "velit",
-                        "rerum": "totam",
+                        "voluptatibus": "atque",
+                        "impedit": "quo",
+                        "totam": "beatae",
                     },
                     PrimaryInstanceSettings: &shared.PrimaryInstanceSettingsInput{
                         DatabaseFlags: map[string]string{
-                            "libero": "est",
+                            "nihil": "earum",
+                            "in": "molestias",
+                            "delectus": "qui",
                         },
-                        ID: "eum",
+                        ID: "omnis",
                         Labels: map[string]string{
-                            "quo": "enim",
-                            "enim": "reprehenderit",
+                            "ut": "maxime",
                         },
                         MachineConfig: &shared.MachineConfig{
-                            CPUCount: 3452497793287034363,
+                            CPUCount: 7798248647133471774,
                         },
                     },
-                    VpcNetwork: "deleniti",
+                    VpcNetwork: "ut",
                 },
             },
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
-                    AutoStorageIncrease: false,
+                    ActivationPolicy: "ALWAYS",
+                    AutoStorageIncrease: true,
                     AvailabilityType: "ZONAL",
-                    CmekKeyName: "quo",
-                    Collation: "ad",
-                    DataDiskSizeGb: "ad",
+                    CmekKeyName: "sint",
+                    Collation: "assumenda",
+                    DataDiskSizeGb: "facere",
                     DataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
                     DatabaseFlags: map[string]string{
-                        "maiores": "soluta",
+                        "quo": "eum",
+                        "et": "natus",
+                        "aspernatur": "dolor",
                     },
-                    DatabaseVersion: "POSTGRES_14",
+                    DatabaseVersion: "MYSQL_8_0",
                     IPConfig: &shared.SQLIPConfig{
                         AuthorizedNetworks: []shared.SQLACLEntry{
                             shared.SQLACLEntry{
-                                ExpireTime: "officiis",
-                                Label: "veritatis",
-                                TTL: "fugit",
-                                Value: "id",
+                                ExpireTime: "quo",
+                                Label: "ipsum",
+                                TTL: "suscipit",
+                                Value: "cumque",
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "rerum",
-                                Label: "alias",
-                                TTL: "enim",
-                                Value: "cupiditate",
+                                ExpireTime: "nisi",
+                                Label: "aspernatur",
+                                TTL: "animi",
+                                Value: "dolorum",
                             },
                         },
-                        EnableIpv4: true,
-                        PrivateNetwork: "et",
+                        EnableIpv4: false,
+                        PrivateNetwork: "voluptas",
                         RequireSsl: false,
                     },
-                    RootPassword: "inventore",
-                    SecondaryZone: "voluptas",
-                    SourceID: "cumque",
-                    StorageAutoResizeLimit: "velit",
-                    Tier: "voluptatem",
+                    RootPassword: "ad",
+                    SecondaryZone: "ut",
+                    SourceID: "ut",
+                    StorageAutoResizeLimit: "nobis",
+                    Tier: "ut",
                     UserLabels: map[string]string{
-                        "cum": "ratione",
-                        "ab": "eius",
-                        "et": "consequatur",
+                        "praesentium": "amet",
+                        "est": "et",
                     },
-                    Zone: "quasi",
+                    Zone: "et",
                 },
             },
-            DisplayName: "placeat",
+            DisplayName: "quasi",
             Error: &shared.Status{
-                Code: 4808249340027072444,
+                Code: 8148871817430478862,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "quia": "possimus",
-                        "sit": "nostrum",
+                        "vel": "sed",
+                        "qui": "et",
+                    },
+                    map[string]interface{}{
+                        "quasi": "pariatur",
+                        "eius": "soluta",
+                        "rerum": "ex",
+                    },
+                    map[string]interface{}{
+                        "ratione": "amet",
+                        "ipsam": "autem",
+                        "est": "aut",
                     },
                 },
-                Message: "nesciunt",
+                Message: "ipsam",
             },
             Labels: map[string]string{
-                "quae": "modi",
-                "incidunt": "ad",
+                "temporibus": "eum",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "animi",
-                Host: "iusto",
-                Password: "laudantium",
-                Port: 5783816651593308386,
+                CloudSQLID: "qui",
+                Host: "quidem",
+                Password: "eos",
+                Port: 1905824125619466350,
+                Ssl: &shared.SslConfigInput{
+                    CaCertificate: "aliquam",
+                    ClientCertificate: "fugit",
+                    ClientKey: "consequatur",
+                },
+                Username: "excepturi",
+            },
+            Name: "est",
+            Postgresql: &shared.PostgreSQLConnectionProfileInput{
+                CloudSQLID: "dolores",
+                Host: "eum",
+                Password: "sit",
+                Port: 6636801957865916271,
                 Ssl: &shared.SslConfigInput{
                     CaCertificate: "ea",
-                    ClientCertificate: "facilis",
-                    ClientKey: "vitae",
+                    ClientCertificate: "fugit",
+                    ClientKey: "ad",
                 },
-                Username: "consequatur",
+                Username: "sapiente",
             },
-            Name: "atque",
-            Postgresql: &shared.PostgreSQLConnectionProfileInput{
-                CloudSQLID: "pariatur",
-                Host: "beatae",
-                Password: "et",
-                Port: 6051945376604600617,
-                Ssl: &shared.SslConfigInput{
-                    CaCertificate: "occaecati",
-                    ClientCertificate: "quo",
-                    ClientKey: "totam",
-                },
-                Username: "in",
-            },
-            Provider: "AURORA",
-            State: "DELETED",
+            Provider: "RDS",
+            State: "CREATING",
         },
     }
     

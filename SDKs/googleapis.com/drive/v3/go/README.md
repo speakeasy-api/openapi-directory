@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,20 +27,20 @@ func main() {
             Option1: &operations.DriveAboutGetSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.DriveAboutGetQueryParams{
             Alt: "json",
-            Fields: "dolores",
-            Key: "sed",
-            OauthToken: "possimus",
+            Fields: "sit",
+            Key: "voluptas",
+            OauthToken: "est",
             PrettyPrint: true,
-            QuotaUser: "voluptas",
-            UserIP: "rerum",
+            QuotaUser: "dolorum",
+            UserIP: "exercitationem",
         },
     }
     

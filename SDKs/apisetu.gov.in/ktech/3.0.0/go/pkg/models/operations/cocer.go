@@ -84,7 +84,7 @@ type Cocer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cocer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cocer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cocer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cocer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cocer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cocer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cocer404ApplicationJSON struct {

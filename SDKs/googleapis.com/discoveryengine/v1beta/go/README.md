@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,38 +26,36 @@ func main() {
         Security: operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams{
-            Parent: "dolor",
+            Parent: "dolores",
         },
         QueryParams: operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "mollitia",
-            Alt: "proto",
-            Callback: "architecto",
-            DocumentID: "aperiam",
-            Fields: "tempora",
-            Key: "culpa",
-            OauthToken: "et",
+            AccessToken: "libero",
+            Alt: "json",
+            Callback: "optio",
+            DocumentID: "voluptas",
+            Fields: "iste",
+            Key: "commodi",
+            OauthToken: "natus",
             PrettyPrint: false,
-            QuotaUser: "laudantium",
-            UploadType: "commodi",
-            UploadProtocol: "error",
+            QuotaUser: "enim",
+            UploadType: "quod",
+            UploadProtocol: "suscipit",
         },
         Request: &shared.GoogleCloudDiscoveryengineV1betaDocument{
-            ID: "magnam",
-            JSONData: "qui",
-            Name: "hic",
-            ParentDocumentID: "quaerat",
-            SchemaID: "quia",
+            ID: "error",
+            JSONData: "sit",
+            Name: "debitis",
+            ParentDocumentID: "cum",
+            SchemaID: "commodi",
             StructData: map[string]interface{}{
-                "in": "vero",
-                "eligendi": "qui",
-                "rerum": "aspernatur",
+                "aliquam": "et",
             },
         },
     }

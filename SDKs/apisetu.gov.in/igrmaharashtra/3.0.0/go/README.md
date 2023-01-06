@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.LlcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.LlcerRequestBody{
             CertificateParameters: &operations.LlcerRequestBodyCertificateParameters{
-                Udf1: "excepturi",
-                Udf2: "aut",
-                Udf3: "et",
+                Udf1: "qui",
+                Udf2: "voluptatum",
+                Udf3: "aut",
             },
-            ConsentArtifact: "omnis",
+            ConsentArtifact: "distinctio",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "tenetur",
         },
     }
     
-    res, err := s.Sdk.Llcer(ctx, req)
+    res, err := s.APIs.Llcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Llcer` - Leave and License Certificate
 

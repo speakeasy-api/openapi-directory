@@ -26,6 +26,6 @@ type PostCoursesRootContentIDPermissionsUserEmailRequest struct {
 type PostCoursesRootContentIDPermissionsUserEmailResponse struct {
 	ContentType                                                          string
 	Error                                                                *shared.Error
-	PostCoursesRootContentIDPermissionsUserEmail201ApplicationJSONObject *PostCoursesRootContentIDPermissionsUserEmail201ApplicationJSON
 	StatusCode                                                           int64
+	PostCoursesRootContentIDPermissionsUserEmail201ApplicationJSONObject *PostCoursesRootContentIDPermissionsUserEmail201ApplicationJSON
 }

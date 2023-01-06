@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,32 @@ func main() {
         Security: operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.EventarcProjectsLocationsChannelConnectionsCreatePathParams{
-            Parent: "et",
+            Parent: "minus",
         },
         QueryParams: operations.EventarcProjectsLocationsChannelConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "aut",
+            DollarXgafv: "2",
+            AccessToken: "qui",
             Alt: "media",
-            Callback: "nostrum",
-            ChannelConnectionID: "nihil",
-            Fields: "vel",
-            Key: "provident",
-            OauthToken: "numquam",
-            PrettyPrint: false,
-            QuotaUser: "qui",
-            UploadType: "itaque",
-            UploadProtocol: "culpa",
+            Callback: "dolorem",
+            ChannelConnectionID: "laudantium",
+            Fields: "asperiores",
+            Key: "aut",
+            OauthToken: "sit",
+            PrettyPrint: true,
+            QuotaUser: "aut",
+            UploadType: "eaque",
+            UploadProtocol: "est",
         },
         Request: &shared.ChannelConnectionInput{
-            ActivationToken: "nesciunt",
-            Channel: "eaque",
-            Name: "adipisci",
+            ActivationToken: "nisi",
+            Channel: "qui",
+            Name: "eius",
         },
     }
     

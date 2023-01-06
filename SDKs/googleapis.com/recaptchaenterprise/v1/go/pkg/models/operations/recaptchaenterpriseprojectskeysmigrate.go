@@ -30,7 +30,7 @@ type RecaptchaenterpriseProjectsKeysMigrateSecurity struct {
 type RecaptchaenterpriseProjectsKeysMigrateRequest struct {
 	PathParams  RecaptchaenterpriseProjectsKeysMigratePathParams
 	QueryParams RecaptchaenterpriseProjectsKeysMigrateQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest `request:"mediaType=application/json"`
 	Security    RecaptchaenterpriseProjectsKeysMigrateSecurity
 }
 

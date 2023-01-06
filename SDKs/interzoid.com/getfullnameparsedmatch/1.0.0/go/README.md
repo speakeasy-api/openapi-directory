@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.GetfullnameparsedmatchRequest{
         QueryParams: operations.GetfullnameparsedmatchQueryParams{
-            Firstname: "in",
-            Lastname: "laboriosam",
-            License: "suscipit",
+            Firstname: "inventore",
+            Lastname: "harum",
+            License: "rerum",
         },
     }
     
-    res, err := s.Sdk.Getfullnameparsedmatch(ctx, req)
+    res, err := s.FullNameParsedSimilarityKey.Getfullnameparsedmatch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,7 +44,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Full Name Parsed Similarity Key
 
 * `Getfullnameparsedmatch` - Gets a similarity key for matching purposes for parsed full name data
 

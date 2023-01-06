@@ -1,5 +1,5 @@
 package shared
 
 type ModifyVolumeResult struct {
-	VolumeModification *VolumeModification
+	VolumeModification map[string]interface{}
 }

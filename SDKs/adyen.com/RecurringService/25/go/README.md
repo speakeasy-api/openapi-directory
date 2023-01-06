@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,10 +29,10 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "rerum",
+        Request: "quis",
     }
     
-    res, err := s.Sdk.PostDisable(ctx, req)
+    res, err := s.General.PostDisable(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,7 +46,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `PostDisable` - Disables stored payment details.
 * `PostListRecurringDetails` - Retrieves stored payment details for a shopper.

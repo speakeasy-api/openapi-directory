@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.AssociateDeviceWithPlacementRequest{
         PathParams: operations.AssociateDeviceWithPlacementPathParams{
-            DeviceTemplateName: "fugit",
-            PlacementName: "dolore",
-            ProjectName: "voluptatem",
+            DeviceTemplateName: "consectetur",
+            PlacementName: "ducimus",
+            ProjectName: "consequatur",
         },
         Headers: operations.AssociateDeviceWithPlacementHeaders{
-            XAmzAlgorithm: "recusandae",
-            XAmzContentSha256: "impedit",
-            XAmzCredential: "odio",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "tempora",
-            XAmzSignature: "atque",
-            XAmzSignedHeaders: "repellendus",
+            XAmzAlgorithm: "non",
+            XAmzContentSha256: "vel",
+            XAmzCredential: "at",
+            XAmzDate: "cumque",
+            XAmzSecurityToken: "occaecati",
+            XAmzSignature: "iusto",
+            XAmzSignedHeaders: "possimus",
         },
         Request: operations.AssociateDeviceWithPlacementRequestBody{
-            DeviceID: "ut",
+            DeviceID: "deserunt",
         },
     }
     
-    res, err := s.Sdk.AssociateDeviceWithPlacement(ctx, req)
+    res, err := s.AssociateDeviceWithPlacement(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

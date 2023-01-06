@@ -5,9 +5,9 @@ import (
 )
 
 type MrcerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Rroll    string `json:"RROLL"`
+	RROLL    string `json:"RROLL"`
 	Year     string `json:"year"`
 }
 
@@ -84,7 +84,7 @@ type Mrcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Mrcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Mrcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Mrcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Mrcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Mrcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Mrcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Mrcer404ApplicationJSON struct {

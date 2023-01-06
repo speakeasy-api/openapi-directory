@@ -30,8 +30,8 @@ type PutPermissionPolicyResponse struct {
 	ContentType                         string
 	PutPermissionPolicyResponse         map[string]interface{}
 	StatusCode                          int64
-	WafInternalErrorException           *interface{}
-	WafInvalidPermissionPolicyException *interface{}
-	WafNonexistentItemException         *interface{}
-	WafStaleDataException               *interface{}
+	WAFInternalErrorException           *interface{}
+	WAFInvalidPermissionPolicyException *interface{}
+	WAFNonexistentItemException         *interface{}
+	WAFStaleDataException               *interface{}
 }

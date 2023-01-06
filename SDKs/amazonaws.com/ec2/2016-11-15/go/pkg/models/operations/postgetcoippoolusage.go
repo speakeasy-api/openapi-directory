@@ -3,13 +3,13 @@ package operations
 type PostGetCoipPoolUsageActionEnum string
 
 const (
-	PostGetCoipPoolUsageActionEnumGetCoipPoolUsage PostGetCoipPoolUsageActionEnum = "GetCoipPoolUsage"
+	POSTGetCoipPoolUsageActionEnumGetCoipPoolUsage PostGetCoipPoolUsageActionEnum = "GetCoipPoolUsage"
 )
 
 type PostGetCoipPoolUsageVersionEnum string
 
 const (
-	PostGetCoipPoolUsageVersionEnumTwoThousandAndSixteen1115 PostGetCoipPoolUsageVersionEnum = "2016-11-15"
+	POSTGetCoipPoolUsageVersionEnumTwoThousandAndSixteen1115 PostGetCoipPoolUsageVersionEnum = "2016-11-15"
 )
 
 type PostGetCoipPoolUsageQueryParams struct {

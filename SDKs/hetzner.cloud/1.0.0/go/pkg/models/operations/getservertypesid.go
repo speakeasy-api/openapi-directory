@@ -61,6 +61,6 @@ type GetServerTypesIDRequest struct {
 
 type GetServerTypesIDResponse struct {
 	ContentType                              string
-	GetServerTypesID200ApplicationJSONObject *GetServerTypesID200ApplicationJSON
 	StatusCode                               int64
+	GetServerTypesID200ApplicationJSONObject *GetServerTypesID200ApplicationJSON
 }

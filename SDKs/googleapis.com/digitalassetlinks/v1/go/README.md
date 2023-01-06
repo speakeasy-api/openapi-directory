@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,91 +25,116 @@ func main() {
     req := operations.DigitalassetlinksAssetlinksBulkCheckRequest{
         QueryParams: operations.DigitalassetlinksAssetlinksBulkCheckQueryParams{
             DollarXgafv: "1",
-            AccessToken: "nesciunt",
-            Alt: "proto",
-            Callback: "et",
-            Fields: "qui",
-            Key: "voluptatem",
-            OauthToken: "aliquam",
+            AccessToken: "distinctio",
+            Alt: "json",
+            Callback: "qui",
+            Fields: "quidem",
+            Key: "quo",
+            OauthToken: "aut",
             PrettyPrint: true,
-            QuotaUser: "voluptatem",
-            UploadType: "quidem",
-            UploadProtocol: "enim",
+            QuotaUser: "aliquam",
+            UploadType: "voluptas",
+            UploadProtocol: "et",
         },
         Request: &shared.BulkCheckRequest{
-            AllowGoogleInternalDataSources: false,
-            DefaultRelation: "enim",
+            AllowGoogleInternalDataSources: true,
+            DefaultRelation: "accusantium",
             DefaultSource: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "porro",
+                        Sha256Fingerprint: "officiis",
                     },
-                    PackageName: "voluptatem",
+                    PackageName: "possimus",
                 },
                 Web: &shared.WebAsset{
-                    Site: "et",
+                    Site: "velit",
                 },
             },
             DefaultTarget: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "consequatur",
+                        Sha256Fingerprint: "dolorem",
                     },
-                    PackageName: "totam",
+                    PackageName: "qui",
                 },
                 Web: &shared.WebAsset{
-                    Site: "eius",
+                    Site: "ut",
                 },
             },
             SkipCacheLookup: false,
             Statements: []shared.StatementTemplate{
                 shared.StatementTemplate{
-                    Relation: "pariatur",
+                    Relation: "optio",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "ipsam",
+                                Sha256Fingerprint: "totam",
                             },
-                            PackageName: "voluptatibus",
+                            PackageName: "consequuntur",
                         },
                         Web: &shared.WebAsset{
-                            Site: "nesciunt",
+                            Site: "aut",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "quo",
+                                Sha256Fingerprint: "temporibus",
                             },
-                            PackageName: "rerum",
+                            PackageName: "quod",
                         },
                         Web: &shared.WebAsset{
-                            Site: "eos",
+                            Site: "nemo",
                         },
                     },
                 },
                 shared.StatementTemplate{
-                    Relation: "distinctio",
+                    Relation: "qui",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "nisi",
+                                Sha256Fingerprint: "non",
                             },
-                            PackageName: "dolorum",
+                            PackageName: "modi",
                         },
                         Web: &shared.WebAsset{
-                            Site: "velit",
+                            Site: "iusto",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "dolor",
+                                Sha256Fingerprint: "qui",
                             },
-                            PackageName: "molestiae",
+                            PackageName: "laborum",
                         },
                         Web: &shared.WebAsset{
-                            Site: "consequatur",
+                            Site: "atque",
+                        },
+                    },
+                },
+                shared.StatementTemplate{
+                    Relation: "illo",
+                    Source: &shared.Asset{
+                        AndroidApp: &shared.AndroidAppAsset{
+                            Certificate: &shared.CertificateInfo{
+                                Sha256Fingerprint: "fuga",
+                            },
+                            PackageName: "dolores",
+                        },
+                        Web: &shared.WebAsset{
+                            Site: "accusantium",
+                        },
+                    },
+                    Target: &shared.Asset{
+                        AndroidApp: &shared.AndroidAppAsset{
+                            Certificate: &shared.CertificateInfo{
+                                Sha256Fingerprint: "deserunt",
+                            },
+                            PackageName: "cupiditate",
+                        },
+                        Web: &shared.WebAsset{
+                            Site: "a",
                         },
                     },
                 },

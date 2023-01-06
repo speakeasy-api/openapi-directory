@@ -195,9 +195,9 @@ type EmployeeLocalTax struct {
 	Exemptions   *float64 `json:"exemptions,omitempty"`
 	Exemptions2  *float64 `json:"exemptions2,omitempty"`
 	FilingStatus *string  `json:"filingStatus,omitempty"`
-	ResidentPsd  *string  `json:"residentPSD,omitempty"`
+	ResidentPSD  *string  `json:"residentPSD,omitempty"`
 	TaxCode      *string  `json:"taxCode,omitempty"`
-	WorkPsd      *string  `json:"workPSD,omitempty"`
+	WorkPSD      *string  `json:"workPSD,omitempty"`
 }
 
 // EmployeeMainDirectDeposit
@@ -355,7 +355,7 @@ type Employee struct {
 	AdditionalRate          []EmployeeAdditionalRate          `json:"additionalRate,omitempty"`
 	BenefitSetup            *EmployeeBenefitSetup             `json:"benefitSetup,omitempty"`
 	BirthDate               *string                           `json:"birthDate,omitempty"`
-	CompanyFein             *string                           `json:"companyFEIN,omitempty"`
+	CompanyFEIN             *string                           `json:"companyFEIN,omitempty"`
 	CompanyName             *string                           `json:"companyName,omitempty"`
 	Currency                *string                           `json:"currency,omitempty"`
 	CustomBooleanFields     []EmployeeCustomBooleanFields     `json:"customBooleanFields,omitempty"`

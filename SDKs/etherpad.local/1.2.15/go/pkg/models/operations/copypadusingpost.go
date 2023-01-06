@@ -37,8 +37,8 @@ type CopyPadUsingPostRequest struct {
 type CopyPadUsingPostResponse struct {
 	ContentType                              string
 	StatusCode                               int64
-	CopyPadUsingPost200ApplicationJSONObject *CopyPadUsingPost200ApplicationJSON
-	CopyPadUsingPost400ApplicationJSONObject *CopyPadUsingPost400ApplicationJSON
-	CopyPadUsingPost401ApplicationJSONObject *CopyPadUsingPost401ApplicationJSON
-	CopyPadUsingPost500ApplicationJSONObject *CopyPadUsingPost500ApplicationJSON
+	CopyPadUsingPOST200ApplicationJSONObject *CopyPadUsingPost200ApplicationJSON
+	CopyPadUsingPOST400ApplicationJSONObject *CopyPadUsingPost400ApplicationJSON
+	CopyPadUsingPOST401ApplicationJSONObject *CopyPadUsingPost401ApplicationJSON
+	CopyPadUsingPOST500ApplicationJSONObject *CopyPadUsingPost500ApplicationJSON
 }

@@ -31,8 +31,8 @@ type CreateAliasResponse struct {
 	ContentType                string
 	DependencyTimeoutException *interface{}
 	InvalidAliasNameException  *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	LimitExceededException     *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64

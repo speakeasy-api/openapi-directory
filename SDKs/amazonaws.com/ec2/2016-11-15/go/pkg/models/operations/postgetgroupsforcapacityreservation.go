@@ -3,13 +3,13 @@ package operations
 type PostGetGroupsForCapacityReservationActionEnum string
 
 const (
-	PostGetGroupsForCapacityReservationActionEnumGetGroupsForCapacityReservation PostGetGroupsForCapacityReservationActionEnum = "GetGroupsForCapacityReservation"
+	POSTGetGroupsForCapacityReservationActionEnumGetGroupsForCapacityReservation PostGetGroupsForCapacityReservationActionEnum = "GetGroupsForCapacityReservation"
 )
 
 type PostGetGroupsForCapacityReservationVersionEnum string
 
 const (
-	PostGetGroupsForCapacityReservationVersionEnumTwoThousandAndSixteen1115 PostGetGroupsForCapacityReservationVersionEnum = "2016-11-15"
+	POSTGetGroupsForCapacityReservationVersionEnumTwoThousandAndSixteen1115 PostGetGroupsForCapacityReservationVersionEnum = "2016-11-15"
 )
 
 type PostGetGroupsForCapacityReservationQueryParams struct {

@@ -70,7 +70,7 @@ type GetAPIV2PerformanceStatsRequest struct {
 
 type GetAPIV2PerformanceStatsResponse struct {
 	ContentType                                      string
+	StatusCode                                       int64
 	GetAPIV2PerformanceStats200ApplicationJSONObject *GetAPIV2PerformanceStats200ApplicationJSON
 	GetAPIV2PerformanceStats404ApplicationJSONObject *GetAPIV2PerformanceStats404ApplicationJSON
-	StatusCode                                       int64
 }

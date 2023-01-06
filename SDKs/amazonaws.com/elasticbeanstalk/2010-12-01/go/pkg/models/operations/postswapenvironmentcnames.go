@@ -3,13 +3,13 @@ package operations
 type PostSwapEnvironmentCnamEsActionEnum string
 
 const (
-	PostSwapEnvironmentCnamEsActionEnumSwapEnvironmentCnamEs PostSwapEnvironmentCnamEsActionEnum = "SwapEnvironmentCNAMEs"
+	POSTSwapEnvironmentCNAMEsActionEnumSwapEnvironmentCnamEs PostSwapEnvironmentCnamEsActionEnum = "SwapEnvironmentCNAMEs"
 )
 
 type PostSwapEnvironmentCnamEsVersionEnum string
 
 const (
-	PostSwapEnvironmentCnamEsVersionEnumTwoThousandAndTen1201 PostSwapEnvironmentCnamEsVersionEnum = "2010-12-01"
+	POSTSwapEnvironmentCNAMEsVersionEnumTwoThousandAndTen1201 PostSwapEnvironmentCnamEsVersionEnum = "2010-12-01"
 )
 
 type PostSwapEnvironmentCnamEsQueryParams struct {

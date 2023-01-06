@@ -6,5 +6,5 @@ type ClusterParameterGroup struct {
 	Description          *string
 	ParameterGroupFamily *string
 	ParameterGroupName   *string
-	Tags                 []Tag
+	Tags                 []TagList
 }

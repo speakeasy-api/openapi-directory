@@ -1,5 +1,5 @@
 package shared
 
 type DescribeKeyPairsResult struct {
-	KeyPairs []KeyPairInfo
+	KeyPairs map[string]interface{}
 }

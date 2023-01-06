@@ -29,15 +29,15 @@ type CreateEventSubscriptionRequest struct {
 type CreateEventSubscriptionResponse struct {
 	ContentType                     string
 	CreateEventSubscriptionResponse *shared.CreateEventSubscriptionResponse
-	KmsAccessDeniedFault            *interface{}
-	KmsDisabledFault                *interface{}
-	KmsInvalidStateFault            *interface{}
-	KmsNotFoundFault                *interface{}
-	KmsThrottlingFault              *interface{}
+	KMSAccessDeniedFault            *interface{}
+	KMSDisabledFault                *interface{}
+	KMSInvalidStateFault            *interface{}
+	KMSNotFoundFault                *interface{}
+	KMSThrottlingFault              *interface{}
 	ResourceAlreadyExistsFault      *interface{}
 	ResourceNotFoundFault           *interface{}
 	ResourceQuotaExceededFault      *interface{}
-	SnsInvalidTopicFault            *interface{}
-	SnsNoAuthorizationFault         *interface{}
+	SNSInvalidTopicFault            *interface{}
+	SNSNoAuthorizationFault         *interface{}
 	StatusCode                      int64
 }

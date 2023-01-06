@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,29 +34,29 @@ func main() {
     
     req := operations.CreateHTTPNamespaceRequest{
         Headers: operations.CreateHTTPNamespaceHeaders{
-            XAmzAlgorithm: "inventore",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "minus",
-            XAmzDate: "dicta",
-            XAmzSecurityToken: "inventore",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "nesciunt",
+            XAmzAlgorithm: "nihil",
+            XAmzContentSha256: "perferendis",
+            XAmzCredential: "odit",
+            XAmzDate: "autem",
+            XAmzSecurityToken: "dolore",
+            XAmzSignature: "aliquam",
+            XAmzSignedHeaders: "soluta",
             XAmzTarget: "Route53AutoNaming_v20170314.CreateHttpNamespace",
         },
         Request: shared.CreateHTTPNamespaceRequest{
-            CreatorRequestID: "eos",
-            Description: "minima",
-            Name: "sunt",
+            CreatorRequestID: "vel",
+            Description: "aut",
+            Name: "accusamus",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "eaque",
-                    Value: "voluptatem",
+                    Key: "quisquam",
+                    Value: "nihil",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateHTTPNamespace(ctx, req)
+    res, err := s.CreateHTTPNamespace(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

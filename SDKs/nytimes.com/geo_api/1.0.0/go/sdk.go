@@ -1,13 +1,10 @@
 package sdk
 
 import (
-	"context"
-	"fmt"
 	"net/http"
-	"openapi/internal/utils"
-	"openapi/pkg/models/operations"
+
 	"openapi/pkg/models/shared"
-	"strings"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -21,6 +18,8 @@ type HTTPClient interface {
 
 // SDK Documentation: http://developer.nytimes.com/
 type SDK struct {
+	Events *Events
+
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
 	_security       *shared.Security
@@ -81,48 +80,14 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.Events = NewEvents(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	return sdk
-}
-
-// GetQueryJSON - Geographic API
-// Geographic API
-func (s *SDK) GetQueryJSON(ctx context.Context, request operations.GetQueryJSONRequest) (*operations.GetQueryJSONResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/query.json"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetQueryJSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.GetQueryJSON200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GetQueryJSON200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
 }

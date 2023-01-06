@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,28 +34,32 @@ func main() {
     
     req := operations.ActivatePipelineRequest{
         Headers: operations.ActivatePipelineHeaders{
-            XAmzAlgorithm: "eius",
-            XAmzContentSha256: "modi",
-            XAmzCredential: "adipisci",
-            XAmzDate: "suscipit",
-            XAmzSecurityToken: "tempora",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "quae",
+            XAmzAlgorithm: "aliquam",
+            XAmzContentSha256: "rem",
+            XAmzCredential: "et",
+            XAmzDate: "ipsa",
+            XAmzSecurityToken: "error",
+            XAmzSignature: "odit",
+            XAmzSignedHeaders: "repudiandae",
             XAmzTarget: "DataPipeline.ActivatePipeline",
         },
         Request: shared.ActivatePipelineInput{
             ParameterValues: []shared.ParameterValue{
                 shared.ParameterValue{
-                    ID: "voluptatibus",
-                    StringValue: "doloremque",
+                    ID: "at",
+                    StringValue: "consequuntur",
+                },
+                shared.ParameterValue{
+                    ID: "libero",
+                    StringValue: "aperiam",
                 },
             },
-            PipelineID: "neque",
-            StartTimestamp: "2019-02-07T19:26:49Z",
+            PipelineID: "voluptatem",
+            StartTimestamp: "1982-08-15T23:02:59Z",
         },
     }
     
-    res, err := s.Sdk.ActivatePipeline(ctx, req)
+    res, err := s.ActivatePipeline(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

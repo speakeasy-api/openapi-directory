@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type PaymentInitiationServicePis struct {
@@ -94,14 +94,14 @@ func (s *PaymentInitiationServicePis) CancelPayment(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -113,14 +113,14 @@ func (s *PaymentInitiationServicePis) CancelPayment(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -132,14 +132,14 @@ func (s *PaymentInitiationServicePis) CancelPayment(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -151,14 +151,14 @@ func (s *PaymentInitiationServicePis) CancelPayment(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -170,14 +170,14 @@ func (s *PaymentInitiationServicePis) CancelPayment(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error405NgPisCanc = out
+			res.Error405NGPISCANC = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405PisCanc
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405PisCanc = out
+			res.Error405PISCANC = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -195,14 +195,14 @@ func (s *PaymentInitiationServicePis) CancelPayment(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -270,14 +270,14 @@ func (s *PaymentInitiationServicePis) GetPaymentCancellationScaStatus(ctx contex
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -289,14 +289,14 @@ func (s *PaymentInitiationServicePis) GetPaymentCancellationScaStatus(ctx contex
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -308,14 +308,14 @@ func (s *PaymentInitiationServicePis) GetPaymentCancellationScaStatus(ctx contex
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -327,14 +327,14 @@ func (s *PaymentInitiationServicePis) GetPaymentCancellationScaStatus(ctx contex
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -346,14 +346,14 @@ func (s *PaymentInitiationServicePis) GetPaymentCancellationScaStatus(ctx contex
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -371,14 +371,14 @@ func (s *PaymentInitiationServicePis) GetPaymentCancellationScaStatus(ctx contex
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -460,14 +460,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInformation(ctx context.Context,
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -479,14 +479,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInformation(ctx context.Context,
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -498,14 +498,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInformation(ctx context.Context,
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -517,14 +517,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInformation(ctx context.Context,
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -536,14 +536,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInformation(ctx context.Context,
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -561,14 +561,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInformation(ctx context.Context,
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -638,14 +638,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationAuthorisation(ctx cont
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -657,14 +657,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationAuthorisation(ctx cont
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -676,14 +676,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationAuthorisation(ctx cont
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -695,14 +695,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationAuthorisation(ctx cont
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -714,14 +714,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationAuthorisation(ctx cont
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -739,14 +739,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationAuthorisation(ctx cont
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -814,14 +814,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationCancellationAuthorisat
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -833,14 +833,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationCancellationAuthorisat
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -852,14 +852,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationCancellationAuthorisat
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -871,14 +871,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationCancellationAuthorisat
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -890,14 +890,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationCancellationAuthorisat
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -915,14 +915,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationCancellationAuthorisat
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -990,14 +990,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationScaStatus(ctx context.
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1009,14 +1009,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationScaStatus(ctx context.
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1028,14 +1028,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationScaStatus(ctx context.
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1047,14 +1047,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationScaStatus(ctx context.
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1066,14 +1066,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationScaStatus(ctx context.
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1091,14 +1091,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationScaStatus(ctx context.
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1174,14 +1174,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationStatus(ctx context.Con
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1193,14 +1193,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationStatus(ctx context.Con
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1212,14 +1212,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationStatus(ctx context.Con
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1231,14 +1231,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationStatus(ctx context.Con
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1250,14 +1250,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationStatus(ctx context.Con
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1275,14 +1275,14 @@ func (s *PaymentInitiationServicePis) GetPaymentInitiationStatus(ctx context.Con
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1408,14 +1408,14 @@ func (s *PaymentInitiationServicePis) InitiatePayment(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1427,14 +1427,14 @@ func (s *PaymentInitiationServicePis) InitiatePayment(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1446,14 +1446,14 @@ func (s *PaymentInitiationServicePis) InitiatePayment(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1465,14 +1465,14 @@ func (s *PaymentInitiationServicePis) InitiatePayment(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1484,14 +1484,14 @@ func (s *PaymentInitiationServicePis) InitiatePayment(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1509,14 +1509,14 @@ func (s *PaymentInitiationServicePis) InitiatePayment(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1623,14 +1623,14 @@ func (s *PaymentInitiationServicePis) StartPaymentAuthorisation(ctx context.Cont
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1642,14 +1642,14 @@ func (s *PaymentInitiationServicePis) StartPaymentAuthorisation(ctx context.Cont
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1661,14 +1661,14 @@ func (s *PaymentInitiationServicePis) StartPaymentAuthorisation(ctx context.Cont
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1680,14 +1680,14 @@ func (s *PaymentInitiationServicePis) StartPaymentAuthorisation(ctx context.Cont
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1699,14 +1699,14 @@ func (s *PaymentInitiationServicePis) StartPaymentAuthorisation(ctx context.Cont
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1724,14 +1724,14 @@ func (s *PaymentInitiationServicePis) StartPaymentAuthorisation(ctx context.Cont
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1837,14 +1837,14 @@ func (s *PaymentInitiationServicePis) StartPaymentInitiationCancellationAuthoris
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1856,14 +1856,14 @@ func (s *PaymentInitiationServicePis) StartPaymentInitiationCancellationAuthoris
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1875,14 +1875,14 @@ func (s *PaymentInitiationServicePis) StartPaymentInitiationCancellationAuthoris
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1894,14 +1894,14 @@ func (s *PaymentInitiationServicePis) StartPaymentInitiationCancellationAuthoris
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1913,14 +1913,14 @@ func (s *PaymentInitiationServicePis) StartPaymentInitiationCancellationAuthoris
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1938,14 +1938,14 @@ func (s *PaymentInitiationServicePis) StartPaymentInitiationCancellationAuthoris
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -2057,14 +2057,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentCancellationPsuData(ctx conte
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -2076,14 +2076,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentCancellationPsuData(ctx conte
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -2095,14 +2095,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentCancellationPsuData(ctx conte
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -2114,14 +2114,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentCancellationPsuData(ctx conte
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -2133,14 +2133,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentCancellationPsuData(ctx conte
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -2158,14 +2158,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentCancellationPsuData(ctx conte
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -2277,14 +2277,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentPsuData(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error400NgPis = out
+			res.Error400NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Pis = out
+			res.Error400PIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -2296,14 +2296,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentPsuData(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error401NgPis = out
+			res.Error401NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Pis = out
+			res.Error401PIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -2315,14 +2315,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentPsuData(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error403NgPis = out
+			res.Error403NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Pis = out
+			res.Error403PIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -2334,14 +2334,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentPsuData(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error404NgPis = out
+			res.Error404NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Pis = out
+			res.Error404PIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -2353,14 +2353,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentPsuData(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error405NgPis = out
+			res.Error405NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Pis = out
+			res.Error405PIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -2378,14 +2378,14 @@ func (s *PaymentInitiationServicePis) UpdatePaymentPsuData(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error409NgPis = out
+			res.Error409NGPIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Pis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Pis = out
+			res.Error409PIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header

@@ -7,7 +7,7 @@ import (
 type ExportEbsVolumeRecommendationsXAmzTargetEnum string
 
 const (
-	ExportEbsVolumeRecommendationsXAmzTargetEnumComputeOptimizerServiceExportEbsVolumeRecommendations ExportEbsVolumeRecommendationsXAmzTargetEnum = "ComputeOptimizerService.ExportEBSVolumeRecommendations"
+	ExportEBSVolumeRecommendationsXAmzTargetEnumComputeOptimizerServiceExportEbsVolumeRecommendations ExportEbsVolumeRecommendationsXAmzTargetEnum = "ComputeOptimizerService.ExportEBSVolumeRecommendations"
 )
 
 type ExportEbsVolumeRecommendationsHeaders struct {
@@ -29,7 +29,7 @@ type ExportEbsVolumeRecommendationsRequest struct {
 type ExportEbsVolumeRecommendationsResponse struct {
 	AccessDeniedException                  *interface{}
 	ContentType                            string
-	ExportEbsVolumeRecommendationsResponse *shared.ExportEbsVolumeRecommendationsResponse
+	ExportEBSVolumeRecommendationsResponse *shared.ExportEbsVolumeRecommendationsResponse
 	InternalServerException                *interface{}
 	InvalidParameterValueException         *interface{}
 	LimitExceededException                 *interface{}

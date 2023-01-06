@@ -3,13 +3,13 @@ package operations
 type PostCreateConfigurationTemplateActionEnum string
 
 const (
-	PostCreateConfigurationTemplateActionEnumCreateConfigurationTemplate PostCreateConfigurationTemplateActionEnum = "CreateConfigurationTemplate"
+	POSTCreateConfigurationTemplateActionEnumCreateConfigurationTemplate PostCreateConfigurationTemplateActionEnum = "CreateConfigurationTemplate"
 )
 
 type PostCreateConfigurationTemplateVersionEnum string
 
 const (
-	PostCreateConfigurationTemplateVersionEnumTwoThousandAndTen1201 PostCreateConfigurationTemplateVersionEnum = "2010-12-01"
+	POSTCreateConfigurationTemplateVersionEnumTwoThousandAndTen1201 PostCreateConfigurationTemplateVersionEnum = "2010-12-01"
 )
 
 type PostCreateConfigurationTemplateQueryParams struct {

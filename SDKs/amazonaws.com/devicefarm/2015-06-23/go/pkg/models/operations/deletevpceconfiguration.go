@@ -7,7 +7,7 @@ import (
 type DeleteVpceConfigurationXAmzTargetEnum string
 
 const (
-	DeleteVpceConfigurationXAmzTargetEnumDeviceFarm20150623DeleteVpceConfiguration DeleteVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.DeleteVPCEConfiguration"
+	DeleteVPCEConfigurationXAmzTargetEnumDeviceFarm20150623DeleteVpceConfiguration DeleteVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.DeleteVPCEConfiguration"
 )
 
 type DeleteVpceConfigurationHeaders struct {
@@ -29,7 +29,7 @@ type DeleteVpceConfigurationRequest struct {
 type DeleteVpceConfigurationResponse struct {
 	ArgumentException             *interface{}
 	ContentType                   string
-	DeleteVpceConfigurationResult map[string]interface{}
+	DeleteVPCEConfigurationResult map[string]interface{}
 	InvalidOperationException     *interface{}
 	NotFoundException             *interface{}
 	ServiceAccountException       *interface{}

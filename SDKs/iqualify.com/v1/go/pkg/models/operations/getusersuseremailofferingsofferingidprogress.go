@@ -24,6 +24,6 @@ type GetUsersUserEmailOfferingsOfferingIDProgressRequest struct {
 type GetUsersUserEmailOfferingsOfferingIDProgressResponse struct {
 	ContentType                                                          string
 	Error                                                                *shared.Error
-	GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSONObject *GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSON
 	StatusCode                                                           int64
+	GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSONObject *GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSON
 }

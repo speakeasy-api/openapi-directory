@@ -3,13 +3,13 @@ package operations
 type GetListSamlProvidersActionEnum string
 
 const (
-	GetListSamlProvidersActionEnumListSamlProviders GetListSamlProvidersActionEnum = "ListSAMLProviders"
+	GETListSAMLProvidersActionEnumListSamlProviders GetListSamlProvidersActionEnum = "ListSAMLProviders"
 )
 
 type GetListSamlProvidersVersionEnum string
 
 const (
-	GetListSamlProvidersVersionEnumTwoThousandAndTen0508 GetListSamlProvidersVersionEnum = "2010-05-08"
+	GETListSAMLProvidersVersionEnumTwoThousandAndTen0508 GetListSamlProvidersVersionEnum = "2010-05-08"
 )
 
 type GetListSamlProvidersQueryParams struct {

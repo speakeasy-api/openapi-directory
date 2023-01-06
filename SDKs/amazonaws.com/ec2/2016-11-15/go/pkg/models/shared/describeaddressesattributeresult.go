@@ -1,6 +1,6 @@
 package shared
 
 type DescribeAddressesAttributeResult struct {
-	Addresses []AddressAttribute
-	NextToken *string
+	Addresses map[string]interface{}
+	NextToken map[string]interface{}
 }

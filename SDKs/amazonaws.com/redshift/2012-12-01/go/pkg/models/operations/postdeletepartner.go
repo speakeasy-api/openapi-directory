@@ -3,13 +3,13 @@ package operations
 type PostDeletePartnerActionEnum string
 
 const (
-	PostDeletePartnerActionEnumDeletePartner PostDeletePartnerActionEnum = "DeletePartner"
+	POSTDeletePartnerActionEnumDeletePartner PostDeletePartnerActionEnum = "DeletePartner"
 )
 
 type PostDeletePartnerVersionEnum string
 
 const (
-	PostDeletePartnerVersionEnumTwoThousandAndTwelve1201 PostDeletePartnerVersionEnum = "2012-12-01"
+	POSTDeletePartnerVersionEnumTwoThousandAndTwelve1201 PostDeletePartnerVersionEnum = "2012-12-01"
 )
 
 type PostDeletePartnerQueryParams struct {

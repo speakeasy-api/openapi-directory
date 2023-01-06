@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelChangeSetRequest{
         QueryParams: operations.CancelChangeSetQueryParams{
-            Catalog: "voluptas",
-            ChangeSetID: "atque",
+            Catalog: "ad",
+            ChangeSetID: "voluptatem",
         },
         Headers: operations.CancelChangeSetHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "nobis",
-            XAmzCredential: "ipsum",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "id",
+            XAmzAlgorithm: "accusantium",
+            XAmzContentSha256: "et",
+            XAmzCredential: "sunt",
+            XAmzDate: "ratione",
+            XAmzSecurityToken: "quidem",
+            XAmzSignature: "exercitationem",
+            XAmzSignedHeaders: "iure",
         },
     }
     
-    res, err := s.Sdk.CancelChangeSet(ctx, req)
+    res, err := s.CancelChangeSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

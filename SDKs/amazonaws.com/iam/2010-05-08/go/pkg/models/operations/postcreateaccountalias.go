@@ -3,13 +3,13 @@ package operations
 type PostCreateAccountAliasActionEnum string
 
 const (
-	PostCreateAccountAliasActionEnumCreateAccountAlias PostCreateAccountAliasActionEnum = "CreateAccountAlias"
+	POSTCreateAccountAliasActionEnumCreateAccountAlias PostCreateAccountAliasActionEnum = "CreateAccountAlias"
 )
 
 type PostCreateAccountAliasVersionEnum string
 
 const (
-	PostCreateAccountAliasVersionEnumTwoThousandAndTen0508 PostCreateAccountAliasVersionEnum = "2010-05-08"
+	POSTCreateAccountAliasVersionEnumTwoThousandAndTen0508 PostCreateAccountAliasVersionEnum = "2010-05-08"
 )
 
 type PostCreateAccountAliasQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,21 +24,21 @@ func main() {
     
     req := operations.ActivityEntryAPIGetListRequest{
         QueryParams: operations.ActivityEntryAPIGetListQueryParams{
-            Before: "1974-10-09T12:56:00Z",
-            EditEvent: "Deleted",
-            EntryFields: "MainPicture",
-            EntryType: "Artist",
-            Fields: "ArchivedVersion",
-            GetTotalCount: true,
-            Lang: "English",
-            MaxResults: 7887163202762339639,
-            Since: "1991-06-24T06:56:42Z",
-            SortRule: "CreateDate",
-            UserID: 8916108228658178676,
+            Before: "2000-04-24T20:32:49Z",
+            EditEvent: "Restored",
+            EntryFields: "PVs",
+            EntryType: "User",
+            Fields: "Entry",
+            GetTotalCount: false,
+            Lang: "Japanese",
+            MaxResults: 4241079167890233799,
+            Since: "2017-11-27T18:48:48Z",
+            SortRule: "CreateDateDescending",
+            UserID: 1067385579007318616,
         },
     }
     
-    res, err := s.Sdk.ActivityEntryAPIGetList(ctx, req)
+    res, err := s.ActivityEntryAPI.ActivityEntryAPIGetList(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -53,9 +52,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ActivityEntryApi
 
 * `ActivityEntryAPIGetList` - Gets a list of recent activity entries.
+
+### AlbumApi
+
 * `AlbumAPIDelete` - Deletes an album.
 * `AlbumAPIDeleteComment` - Deletes a comment.
 * `AlbumAPIDeleteReview`
@@ -69,26 +71,45 @@ func main() {
 * `AlbumAPIGetTracks` - Gets tracks for an album.
 * `AlbumAPIGetTracksFields`
 * `AlbumAPIGetUserCollections`
+
+### ArtistApi
+
 * `ArtistAPIDelete` - Deletes an artist.
 * `ArtistAPIDeleteComment` - Deletes a comment.
 * `ArtistAPIGetComments` - Gets a list of comments for an artist.
 * `ArtistAPIGetList` - Find artists.
 * `ArtistAPIGetNames` - Gets a list of artist names. Ideal for autocomplete boxes.
 * `ArtistAPIGetOne` - Gets an artist by Id.
+
+### CommentApi
+
 * `CommentAPIDeleteComment` - Deletes a comment.
 * `CommentAPIGetComments` - Gets a list of comments for an entry.
+
+### DiscussionApi
+
 * `DiscussionAPIDeleteComment`
 * `DiscussionAPIDeleteTopic`
 * `DiscussionAPIGetFolders`
 * `DiscussionAPIGetTopic`
 * `DiscussionAPIGetTopics`
 * `DiscussionAPIGetTopicsForFolder`
+
+### EntryApi
+
 * `EntryAPIGetList` - Find entries.
 * `EntryAPIGetNames` - Gets a list of entry names. Ideal for autocomplete boxes.
+
+### EntryTypesApi
+
 * `EntryTypesAPIGetMappedTag`
-* `GetAPIUsersCurrentAlbumCollectionStatusesAlbumID`
-* `GetAPIUsersCurrentFollowedArtistsArtistID`
+
+### PVApi
+
 * `PvAPIGetList` - Gets a list of PVs for songs.
+
+### ReleaseEventApi
+
 * `ReleaseEventAPIDelete` - Deletes an event.
 * `ReleaseEventAPIGetAlbums` - Gets a list of albums for a specific event.
 * `ReleaseEventAPIGetList` - Gets a page of events.
@@ -98,10 +119,19 @@ func main() {
 * `ReleaseEventAPIGetOne`
 * `ReleaseEventAPIGetPublishedSongs` - Gets a list of songs for a specific event.
 * `ReleaseEventAPIPostReport` - Creates a new report.
+
+### ReleaseEventSeriesApi
+
 * `ReleaseEventSeriesAPIDelete` - Deletes an event series.
 * `ReleaseEventSeriesAPIGetList` - Gets a page of event series.
 * `ReleaseEventSeriesAPIGetOne` - Gets single event series by ID.
+
+### ResourcesApi
+
 * `ResourcesAPIGetList` - Gets a number of resource sets for a specific culture.
+
+### SongApi
+
 * `SongAPIDelete` - Deletes a song.
 * `SongAPIDeleteComment` - Deletes a comment.
 * `SongAPIGetByID` - Gets a song by Id.
@@ -116,12 +146,18 @@ func main() {
 * `SongAPIGetRelated` - Gets related songs.
 * `SongAPIGetTopSongs` - Gets top rated songs.
 * `SongAPIPostRating` - Add or update rating for a specific song, for the currently logged in user.
+
+### SongListApi
+
 * `SongListAPIDelete` - Deletes a song list.
 * `SongListAPIDeleteComment` - Deletes a comment.
 * `SongListAPIGetComments` - Gets a list of comments for a song list.
 * `SongListAPIGetFeaturedListNames` - Gets a list of featuedd list names. Ideal for autocomplete boxes.
 * `SongListAPIGetFeaturedLists` - Gets a list of featured song lists.
 * `SongListAPIGetSongs` - Gets a list of songs in a song list.
+
+### TagApi
+
 * `TagAPIDelete` - Deletes a tag.
 * `TagAPIDeleteComment` - Deletes a comment.
             Normal users can delete their own comments, moderators can delete all comments.
@@ -140,6 +176,9 @@ func main() {
 * `TagAPIGetTopTags` - Gets the most common tags in a category.
 * `TagAPIPostNewTag` - Creates a new tag.
 * `TagAPIPostReport` - Creates a new report.
+
+### UserApi
+
 * `UserAPIDeleteFollowedTag`
 * `UserAPIDeleteMessages` - Deletes a list of user messages.
 * `UserAPIDeleteProfileComment` - Deletes a comment.
@@ -164,6 +203,11 @@ func main() {
 * `UserAPIPostRefreshEntryEdit` - Refresh entry edit status, indicating that the current user is still editing that entry.
 * `UserAPIPostReport`
 * `UserAPIPostSetting` - Updates user setting.
+* `GetAPIUsersCurrentAlbumCollectionStatusesAlbumID`
+* `GetAPIUsersCurrentFollowedArtistsArtistID`
+
+### VenueApi
+
 * `VenueAPIDelete` - Deletes a venue.
 * `VenueAPIGetList` - Gets a page of event venue.
 * `VenueAPIPostReport` - Creates a new report.

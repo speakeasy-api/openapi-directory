@@ -31,7 +31,7 @@ type CreateReplicationTaskResponse struct {
 	ContentType                   string
 	CreateReplicationTaskResponse *shared.CreateReplicationTaskResponse
 	InvalidResourceStateFault     *interface{}
-	KmsKeyNotAccessibleFault      *interface{}
+	KMSKeyNotAccessibleFault      *interface{}
 	ResourceAlreadyExistsFault    *interface{}
 	ResourceNotFoundFault         *interface{}
 	ResourceQuotaExceededFault    *interface{}

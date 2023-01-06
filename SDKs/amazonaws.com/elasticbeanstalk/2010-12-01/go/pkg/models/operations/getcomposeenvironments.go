@@ -3,13 +3,13 @@ package operations
 type GetComposeEnvironmentsActionEnum string
 
 const (
-	GetComposeEnvironmentsActionEnumComposeEnvironments GetComposeEnvironmentsActionEnum = "ComposeEnvironments"
+	GETComposeEnvironmentsActionEnumComposeEnvironments GetComposeEnvironmentsActionEnum = "ComposeEnvironments"
 )
 
 type GetComposeEnvironmentsVersionEnum string
 
 const (
-	GetComposeEnvironmentsVersionEnumTwoThousandAndTen1201 GetComposeEnvironmentsVersionEnum = "2010-12-01"
+	GETComposeEnvironmentsVersionEnumTwoThousandAndTen1201 GetComposeEnvironmentsVersionEnum = "2010-12-01"
 )
 
 type GetComposeEnvironmentsQueryParams struct {

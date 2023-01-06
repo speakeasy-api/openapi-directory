@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,122 +26,65 @@ func main() {
         Security: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams{
-            Parent: "sunt",
+            Parent: "saepe",
         },
         QueryParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "odit",
-            Alt: "proto",
-            AuthorizationPolicyID: "et",
-            Callback: "vel",
-            Fields: "quae",
-            Key: "aspernatur",
-            OauthToken: "error",
-            PrettyPrint: false,
-            QuotaUser: "a",
-            UploadType: "omnis",
-            UploadProtocol: "nostrum",
+            DollarXgafv: "2",
+            AccessToken: "et",
+            Alt: "media",
+            AuthorizationPolicyID: "quas",
+            Callback: "doloribus",
+            Fields: "qui",
+            Key: "aliquam",
+            OauthToken: "sequi",
+            PrettyPrint: true,
+            QuotaUser: "officia",
+            UploadType: "sint",
+            UploadProtocol: "et",
         },
         Request: &shared.AuthorizationPolicyInput{
-            Action: "DENY",
-            Description: "et",
+            Action: "ACTION_UNSPECIFIED",
+            Description: "commodi",
             Labels: map[string]string{
-                "aut": "animi",
-                "dolores": "placeat",
-                "occaecati": "doloribus",
+                "temporibus": "aut",
+                "beatae": "aut",
             },
-            Name: "adipisci",
+            Name: "tempora",
             Rules: []shared.Rule{
                 shared.Rule{
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "accusantium",
-                                "assumenda",
+                                "architecto",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "amet",
-                                RegexMatch: "culpa",
+                                HeaderName: "omnis",
+                                RegexMatch: "est",
                             },
                             Methods: []string{
-                                "est",
+                                "beatae",
+                                "laboriosam",
                             },
                             Ports: []int64{
-                                3094887997718014353,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "rem",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "et",
-                                RegexMatch: "accusantium",
-                            },
-                            Methods: []string{
-                                "reprehenderit",
-                                "neque",
-                            },
-                            Ports: []int64{
-                                2947460363222143838,
-                                8830944403013891383,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "dolorum",
-                                "et",
-                                "atque",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "iure",
-                                RegexMatch: "repudiandae",
-                            },
-                            Methods: []string{
-                                "quae",
-                                "eum",
-                            },
-                            Ports: []int64{
-                                5668318127090690829,
+                                7415710680596502931,
                             },
                         },
                     },
                     Sources: []shared.Source{
                         shared.Source{
                             IPBlocks: []string{
-                                "vitae",
-                                "repudiandae",
-                                "facilis",
+                                "ipsum",
+                                "asperiores",
+                                "deleniti",
                             },
                             Principals: []string{
-                                "aut",
-                                "quibusdam",
-                                "delectus",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "enim",
-                            },
-                            Principals: []string{
-                                "voluptates",
-                                "nam",
-                                "aut",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "omnis",
-                                "possimus",
-                            },
-                            Principals: []string{
-                                "quasi",
+                                "cupiditate",
                             },
                         },
                     },
@@ -151,78 +93,83 @@ func main() {
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "praesentium",
-                                "quas",
-                                "consequatur",
+                                "dolore",
+                                "eos",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "nulla",
+                                HeaderName: "autem",
                                 RegexMatch: "ut",
                             },
                             Methods: []string{
-                                "voluptatem",
-                                "ad",
+                                "odio",
+                                "quia",
+                                "voluptas",
                             },
                             Ports: []int64{
-                                1055283062987230859,
-                                6260300121941604790,
+                                6128040509177040184,
+                                4551968008281478867,
                             },
                         },
                         shared.Destination{
                             Hosts: []string{
-                                "architecto",
-                                "est",
-                                "et",
+                                "nulla",
+                                "quia",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "aliquam",
-                                RegexMatch: "praesentium",
+                                HeaderName: "enim",
+                                RegexMatch: "cum",
                             },
                             Methods: []string{
-                                "maxime",
-                                "ut",
+                                "veniam",
+                                "ipsum",
+                                "harum",
                             },
                             Ports: []int64{
-                                2764710142788548971,
+                                4371946014492395686,
+                                1464290273605482076,
                             },
                         },
                         shared.Destination{
                             Hosts: []string{
-                                "ipsa",
+                                "dolorem",
+                                "sunt",
+                                "molestiae",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "rem",
-                                RegexMatch: "inventore",
+                                HeaderName: "nam",
+                                RegexMatch: "eius",
                             },
                             Methods: []string{
-                                "incidunt",
+                                "ex",
                             },
                             Ports: []int64{
-                                1236303082765211796,
-                                1514040532654582993,
-                                5574152755078767765,
+                                7744083498162407862,
+                                3478255059356988526,
+                                8028515407834417809,
                             },
                         },
                     },
                     Sources: []shared.Source{
                         shared.Source{
                             IPBlocks: []string{
-                                "aut",
-                                "unde",
+                                "maxime",
+                                "quod",
                             },
                             Principals: []string{
-                                "velit",
-                                "voluptas",
-                                "magnam",
+                                "occaecati",
+                                "nisi",
                             },
                         },
                         shared.Source{
                             IPBlocks: []string{
-                                "et",
+                                "iste",
+                                "ducimus",
+                                "ipsam",
                             },
                             Principals: []string{
-                                "aperiam",
-                                "iste",
+                                "voluptas",
+                                "animi",
+                                "quos",
                             },
                         },
                     },
@@ -231,31 +178,92 @@ func main() {
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "sint",
+                                "labore",
+                                "voluptatem",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "ratione",
-                                RegexMatch: "vero",
+                                HeaderName: "id",
+                                RegexMatch: "labore",
                             },
                             Methods: []string{
-                                "odit",
+                                "iste",
+                                "quia",
+                                "fugiat",
                             },
                             Ports: []int64{
-                                3477566635643771654,
+                                559646147369155099,
+                                3006668431082548483,
+                            },
+                        },
+                        shared.Destination{
+                            Hosts: []string{
+                                "esse",
+                                "ex",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "magnam",
+                                RegexMatch: "aliquam",
+                            },
+                            Methods: []string{
+                                "vitae",
+                                "suscipit",
+                            },
+                            Ports: []int64{
+                                2484632256685155095,
+                                7341035035727093925,
+                            },
+                        },
+                        shared.Destination{
+                            Hosts: []string{
+                                "doloremque",
+                                "accusamus",
+                                "quo",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "veritatis",
+                                RegexMatch: "mollitia",
+                            },
+                            Methods: []string{
+                                "harum",
+                                "dolor",
+                            },
+                            Ports: []int64{
+                                1265033285511156307,
+                                6666991780916946900,
                             },
                         },
                     },
                     Sources: []shared.Source{
                         shared.Source{
                             IPBlocks: []string{
-                                "eveniet",
-                                "nam",
-                                "minima",
+                                "quod",
+                                "delectus",
+                                "eius",
+                            },
+                            Principals: []string{
+                                "maiores",
+                                "fuga",
+                            },
+                        },
+                        shared.Source{
+                            IPBlocks: []string{
+                                "in",
+                                "quae",
+                                "ipsum",
                             },
                             Principals: []string{
                                 "et",
-                                "perferendis",
-                                "ipsa",
+                                "ipsum",
+                            },
+                        },
+                        shared.Source{
+                            IPBlocks: []string{
+                                "autem",
+                                "laboriosam",
+                            },
+                            Principals: []string{
+                                "incidunt",
+                                "distinctio",
                             },
                         },
                     },

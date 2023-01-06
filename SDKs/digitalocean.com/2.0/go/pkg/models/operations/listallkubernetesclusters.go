@@ -10,10 +10,6 @@ type ListAllKubernetesClustersQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
-type ListAllKubernetesClustersRequest struct {
-	QueryParams ListAllKubernetesClustersQueryParams
-}
-
 type ListAllKubernetesClusters200ApplicationJSONKubernetesClustersMaintenancePolicyDayEnum string
 
 const (
@@ -27,6 +23,8 @@ const (
 	ListAllKubernetesClusters200ApplicationJSONKubernetesClustersMaintenancePolicyDayEnumSunday    ListAllKubernetesClusters200ApplicationJSONKubernetesClustersMaintenancePolicyDayEnum = "sunday"
 )
 
+// ListAllKubernetesClusters200ApplicationJSONKubernetesClustersMaintenancePolicy
+// An object specifying the maintenance window policy for the Kubernetes cluster.
 type ListAllKubernetesClusters200ApplicationJSONKubernetesClustersMaintenancePolicy struct {
 	Day       *ListAllKubernetesClusters200ApplicationJSONKubernetesClustersMaintenancePolicyDayEnum `json:"day,omitempty"`
 	Duration  *string                                                                                `json:"duration,omitempty"`
@@ -42,6 +40,8 @@ const (
 	ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodesStatusStateEnumDeleting     ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodesStatusStateEnum = "deleting"
 )
 
+// ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodesStatus
+// An object containing a `state` attribute whose value is set to a string indicating the current status of the node.
 type ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodesStatus struct {
 	State *ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodesStatusStateEnum `json:"state,omitempty"`
 }
@@ -78,7 +78,6 @@ type ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePools stru
 	MinNodes  *int64                                                                         `json:"min_nodes,omitempty"`
 	Name      string                                                                         `json:"name"`
 	Nodes     []ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodes  `json:"nodes,omitempty"`
-	Size      string                                                                         `json:"size"`
 	Tags      []string                                                                       `json:"tags,omitempty"`
 	Taints    []ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsTaints `json:"taints,omitempty"`
 }
@@ -95,6 +94,8 @@ const (
 	ListAllKubernetesClusters200ApplicationJSONKubernetesClustersStatusStateEnumDeleting     ListAllKubernetesClusters200ApplicationJSONKubernetesClustersStatusStateEnum = "deleting"
 )
 
+// ListAllKubernetesClusters200ApplicationJSONKubernetesClustersStatus
+// An object containing a `state` attribute whose value is set to a string indicating the current status of the cluster.
 type ListAllKubernetesClusters200ApplicationJSONKubernetesClustersStatus struct {
 	Message *string                                                                       `json:"message,omitempty"`
 	State   *ListAllKubernetesClusters200ApplicationJSONKubernetesClustersStatusStateEnum `json:"state,omitempty"`
@@ -121,34 +122,18 @@ type ListAllKubernetesClusters200ApplicationJSONKubernetesClusters struct {
 	VpcUUID           *string                                                                         `json:"vpc_uuid,omitempty"`
 }
 
-type ListAllKubernetesClusters200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
-}
-
-type ListAllKubernetesClusters200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
-}
-
-type ListAllKubernetesClusters200ApplicationJSONLinks struct {
-	Pages *interface{} `json:"pages,omitempty"`
-}
-
-type ListAllKubernetesClusters200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListAllKubernetesClusters200ApplicationJSON struct {
 	KubernetesClusters []ListAllKubernetesClusters200ApplicationJSONKubernetesClusters `json:"kubernetes_clusters,omitempty"`
-	Links              *ListAllKubernetesClusters200ApplicationJSONLinks               `json:"links,omitempty"`
-	Meta               ListAllKubernetesClusters200ApplicationJSONMeta                 `json:"meta"`
 }
 
 type ListAllKubernetesClusters401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListAllKubernetesClustersRequest struct {
+	QueryParams ListAllKubernetesClustersQueryParams
 }
 
 type ListAllKubernetesClustersResponse struct {

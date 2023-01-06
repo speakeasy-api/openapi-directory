@@ -1,5 +1,5 @@
 package shared
 
 type CreateHitTypeResponse struct {
-	HitTypeID *string `json:"HITTypeId,omitempty"`
+	HITTypeID *string `json:"HITTypeId,omitempty"`
 }

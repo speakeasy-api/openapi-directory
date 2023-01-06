@@ -4,12 +4,12 @@ package shared
 // Describes an update for a destination in Amazon Redshift.
 type RedshiftDestinationUpdate struct {
 	CloudWatchLoggingOptions *CloudWatchLoggingOptions `json:"CloudWatchLoggingOptions,omitempty"`
-	ClusterJdbcurl           *string                   `json:"ClusterJDBCURL,omitempty"`
+	ClusterJDBCURL           *string                   `json:"ClusterJDBCURL,omitempty"`
 	CopyCommand              *CopyCommand              `json:"CopyCommand,omitempty"`
 	Password                 *string                   `json:"Password,omitempty"`
 	ProcessingConfiguration  *ProcessingConfiguration  `json:"ProcessingConfiguration,omitempty"`
-	RetryOptions             *RedshiftRetryOptions     `json:"RetryOptions,omitempty"`
-	RoleArn                  *string                   `json:"RoleARN,omitempty"`
+	RetryOptions             *RedshiftRetryOptions1    `json:"RetryOptions,omitempty"`
+	RoleARN                  *string                   `json:"RoleARN,omitempty"`
 	S3BackupMode             *RedshiftS3BackupModeEnum `json:"S3BackupMode,omitempty"`
 	S3BackupUpdate           *S3DestinationUpdate      `json:"S3BackupUpdate,omitempty"`
 	S3Update                 *S3DestinationUpdate      `json:"S3Update,omitempty"`

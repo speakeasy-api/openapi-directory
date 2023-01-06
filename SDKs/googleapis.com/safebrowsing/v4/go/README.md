@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,22 +24,22 @@ func main() {
     
     req := operations.SafebrowsingEncodedFullHashesGetRequest{
         PathParams: operations.SafebrowsingEncodedFullHashesGetPathParams{
-            EncodedRequest: "ut",
+            EncodedRequest: "tenetur",
         },
         QueryParams: operations.SafebrowsingEncodedFullHashesGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "id",
-            Alt: "proto",
-            Callback: "ipsum",
-            ClientID: "est",
-            ClientVersion: "molestiae",
-            Fields: "ad",
-            Key: "quis",
-            OauthToken: "voluptates",
+            AccessToken: "perferendis",
+            Alt: "json",
+            Callback: "et",
+            ClientID: "perferendis",
+            ClientVersion: "voluptates",
+            Fields: "ut",
+            Key: "aperiam",
+            OauthToken: "minima",
             PrettyPrint: false,
-            QuotaUser: "expedita",
-            UploadType: "ut",
-            UploadProtocol: "beatae",
+            QuotaUser: "quam",
+            UploadType: "consequatur",
+            UploadProtocol: "pariatur",
         },
     }
     

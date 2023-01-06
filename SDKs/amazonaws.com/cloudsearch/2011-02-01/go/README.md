@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,21 +35,21 @@ func main() {
     req := operations.GetCreateDomainRequest{
         QueryParams: operations.GetCreateDomainQueryParams{
             Action: "CreateDomain",
-            DomainName: "omnis",
+            DomainName: "totam",
             Version: "2011-02-01",
         },
         Headers: operations.GetCreateDomainHeaders{
-            XAmzAlgorithm: "animi",
-            XAmzContentSha256: "cum",
-            XAmzCredential: "occaecati",
-            XAmzDate: "ea",
-            XAmzSecurityToken: "architecto",
-            XAmzSignature: "esse",
-            XAmzSignedHeaders: "explicabo",
+            XAmzAlgorithm: "voluptatibus",
+            XAmzContentSha256: "sint",
+            XAmzCredential: "aut",
+            XAmzDate: "fugiat",
+            XAmzSecurityToken: "adipisci",
+            XAmzSignature: "sunt",
+            XAmzSignedHeaders: "asperiores",
         },
     }
     
-    res, err := s.Sdk.GetCreateDomain(ctx, req)
+    res, err := s.GetCreateDomain(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

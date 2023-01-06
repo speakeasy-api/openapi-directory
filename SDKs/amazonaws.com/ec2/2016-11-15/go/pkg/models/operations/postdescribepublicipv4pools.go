@@ -3,13 +3,13 @@ package operations
 type PostDescribePublicIpv4PoolsActionEnum string
 
 const (
-	PostDescribePublicIpv4PoolsActionEnumDescribePublicIpv4Pools PostDescribePublicIpv4PoolsActionEnum = "DescribePublicIpv4Pools"
+	POSTDescribePublicIpv4PoolsActionEnumDescribePublicIpv4Pools PostDescribePublicIpv4PoolsActionEnum = "DescribePublicIpv4Pools"
 )
 
 type PostDescribePublicIpv4PoolsVersionEnum string
 
 const (
-	PostDescribePublicIpv4PoolsVersionEnumTwoThousandAndSixteen1115 PostDescribePublicIpv4PoolsVersionEnum = "2016-11-15"
+	POSTDescribePublicIpv4PoolsVersionEnumTwoThousandAndSixteen1115 PostDescribePublicIpv4PoolsVersionEnum = "2016-11-15"
 )
 
 type PostDescribePublicIpv4PoolsQueryParams struct {

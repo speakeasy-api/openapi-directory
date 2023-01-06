@@ -7,7 +7,7 @@ import (
 type DescribePhiDetectionJobXAmzTargetEnum string
 
 const (
-	DescribePhiDetectionJobXAmzTargetEnumComprehendMedical20181030DescribePhiDetectionJob DescribePhiDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.DescribePHIDetectionJob"
+	DescribePHIDetectionJobXAmzTargetEnumComprehendMedical20181030DescribePhiDetectionJob DescribePhiDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.DescribePHIDetectionJob"
 )
 
 type DescribePhiDetectionJobHeaders struct {
@@ -28,7 +28,7 @@ type DescribePhiDetectionJobRequest struct {
 
 type DescribePhiDetectionJobResponse struct {
 	ContentType                     string
-	DescribePhiDetectionJobResponse *shared.DescribePhiDetectionJobResponse
+	DescribePHIDetectionJobResponse *shared.DescribePhiDetectionJobResponse
 	InternalServerException         *interface{}
 	InvalidRequestException         *interface{}
 	ResourceNotFoundException       *interface{}

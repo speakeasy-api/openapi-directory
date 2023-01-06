@@ -3,13 +3,13 @@ package operations
 type PostModifyDbSubnetGroupActionEnum string
 
 const (
-	PostModifyDbSubnetGroupActionEnumModifyDbSubnetGroup PostModifyDbSubnetGroupActionEnum = "ModifyDBSubnetGroup"
+	POSTModifyDBSubnetGroupActionEnumModifyDbSubnetGroup PostModifyDbSubnetGroupActionEnum = "ModifyDBSubnetGroup"
 )
 
 type PostModifyDbSubnetGroupVersionEnum string
 
 const (
-	PostModifyDbSubnetGroupVersionEnumTwoThousandAndFourteen1031 PostModifyDbSubnetGroupVersionEnum = "2014-10-31"
+	POSTModifyDBSubnetGroupVersionEnumTwoThousandAndFourteen1031 PostModifyDbSubnetGroupVersionEnum = "2014-10-31"
 )
 
 type PostModifyDbSubnetGroupQueryParams struct {

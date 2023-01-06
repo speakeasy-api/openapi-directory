@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,15 +24,15 @@ func main() {
     
     req := operations.FacetsRequest{
         QueryParams: operations.FacetsQueryParams{
-            Count: 4235475187788933053,
-            EndDate: "2001-05-23",
-            FacetFilters: "et",
-            SearchTerms: "omnis",
-            SortKeys: "score,,desc",
+            Count: 5416590452329985500,
+            EndDate: "2013-07-03",
+            FacetFilters: "sunt",
+            SearchTerms: "et",
+            SortKeys: "spatial_area,,asc",
             Source: "ADE",
-            Spatial: "cupiditate",
-            StartDate: "2021-07-14",
-            StartIndex: 985406917587383961,
+            Spatial: "blanditiis",
+            StartDate: "1973-03-20",
+            StartIndex: 1131641809401352413,
         },
     }
     

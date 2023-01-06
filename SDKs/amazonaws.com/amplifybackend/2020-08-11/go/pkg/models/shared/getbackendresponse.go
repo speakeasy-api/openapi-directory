@@ -1,10 +1,10 @@
 package shared
 
 type GetBackendResponse struct {
-	AmplifyMetaConfig      *string  `json:"AmplifyMetaConfig,omitempty"`
-	AppID                  *string  `json:"AppId,omitempty"`
-	AppName                *string  `json:"AppName,omitempty"`
-	BackendEnvironmentList []string `json:"BackendEnvironmentList,omitempty"`
-	BackendEnvironmentName *string  `json:"BackendEnvironmentName,omitempty"`
-	Error                  *string  `json:"Error,omitempty"`
+	AmplifyMetaConfig      map[string]interface{} `json:"AmplifyMetaConfig,omitempty"`
+	AppID                  map[string]interface{} `json:"AppId,omitempty"`
+	AppName                map[string]interface{} `json:"AppName,omitempty"`
+	BackendEnvironmentList map[string]interface{} `json:"BackendEnvironmentList,omitempty"`
+	BackendEnvironmentName map[string]interface{} `json:"BackendEnvironmentName,omitempty"`
+	Error                  map[string]interface{} `json:"Error,omitempty"`
 }

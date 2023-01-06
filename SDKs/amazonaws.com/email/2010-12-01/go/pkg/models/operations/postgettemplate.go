@@ -3,13 +3,13 @@ package operations
 type PostGetTemplateActionEnum string
 
 const (
-	PostGetTemplateActionEnumGetTemplate PostGetTemplateActionEnum = "GetTemplate"
+	POSTGetTemplateActionEnumGetTemplate PostGetTemplateActionEnum = "GetTemplate"
 )
 
 type PostGetTemplateVersionEnum string
 
 const (
-	PostGetTemplateVersionEnumTwoThousandAndTen1201 PostGetTemplateVersionEnum = "2010-12-01"
+	POSTGetTemplateVersionEnumTwoThousandAndTen1201 PostGetTemplateVersionEnum = "2010-12-01"
 )
 
 type PostGetTemplateQueryParams struct {

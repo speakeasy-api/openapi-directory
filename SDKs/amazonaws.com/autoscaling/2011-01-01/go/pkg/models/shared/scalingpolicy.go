@@ -12,7 +12,7 @@ type ScalingPolicy struct {
 	MetricAggregationType          *string
 	MinAdjustmentMagnitude         *int64
 	MinAdjustmentStep              *int64
-	PolicyArn                      *string
+	PolicyARN                      *string
 	PolicyName                     *string
 	PolicyType                     *string
 	PredictiveScalingConfiguration *PredictiveScalingConfiguration

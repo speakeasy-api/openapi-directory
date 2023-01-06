@@ -7,7 +7,7 @@ import (
 // CacheCluster
 // Contains all of the attributes of a specific cluster.
 type CacheCluster struct {
-	Arn                                *string
+	ARN                                *string
 	AtRestEncryptionEnabled            *bool
 	AuthTokenEnabled                   *bool
 	AuthTokenLastModifiedDate          *time.Time
@@ -16,15 +16,15 @@ type CacheCluster struct {
 	CacheClusterID                     *string
 	CacheClusterStatus                 *string
 	CacheNodeType                      *string
-	CacheNodes                         []CacheNode
+	CacheNodes                         []CacheNodeList
 	CacheParameterGroup                *CacheParameterGroupStatus
-	CacheSecurityGroups                []CacheSecurityGroupMembership
+	CacheSecurityGroups                []map[string]interface{}
 	CacheSubnetGroupName               *string
 	ClientDownloadLandingPage          *string
 	ConfigurationEndpoint              *Endpoint
 	Engine                             *string
 	EngineVersion                      *string
-	LogDeliveryConfigurations          []LogDeliveryConfiguration
+	LogDeliveryConfigurations          []map[string]interface{}
 	NotificationConfiguration          *NotificationConfiguration
 	NumCacheNodes                      *int64
 	PendingModifiedValues              *PendingModifiedValues

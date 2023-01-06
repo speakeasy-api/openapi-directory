@@ -11,7 +11,7 @@ const (
 	ErrorValueTypeEnumRef                  ErrorValueTypeEnum = "REF"
 	ErrorValueTypeEnumName                 ErrorValueTypeEnum = "NAME"
 	ErrorValueTypeEnumNum                  ErrorValueTypeEnum = "NUM"
-	ErrorValueTypeEnumNa                   ErrorValueTypeEnum = "N_A"
+	ErrorValueTypeEnumNA                   ErrorValueTypeEnum = "N_A"
 	ErrorValueTypeEnumLoading              ErrorValueTypeEnum = "LOADING"
 )
 

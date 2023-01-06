@@ -8,13 +8,13 @@ type GetSetQueueAttributesPathParams struct {
 type GetSetQueueAttributesActionEnum string
 
 const (
-	GetSetQueueAttributesActionEnumSetQueueAttributes GetSetQueueAttributesActionEnum = "SetQueueAttributes"
+	GETSetQueueAttributesActionEnumSetQueueAttributes GetSetQueueAttributesActionEnum = "SetQueueAttributes"
 )
 
 type GetSetQueueAttributesVersionEnum string
 
 const (
-	GetSetQueueAttributesVersionEnumTwoThousandAndTwelve1105 GetSetQueueAttributesVersionEnum = "2012-11-05"
+	GETSetQueueAttributesVersionEnumTwoThousandAndTwelve1105 GetSetQueueAttributesVersionEnum = "2012-11-05"
 )
 
 type GetSetQueueAttributesQueryParams struct {

@@ -1,0 +1,12 @@
+package shared
+
+type DocumentItem struct {
+	GrossAmount   *float32 `json:"gross_amount,omitempty"`
+	Name          *string  `json:"name,omitempty"`
+	NetAmount     *float32 `json:"net_amount,omitempty"`
+	NetUnitAmount *float32 `json:"net_unit_amount,omitempty"`
+	ProductID     *int64   `json:"product_id,omitempty"`
+	Quantity      *float32 `json:"quantity,omitempty"`
+	Vat           *VatEnum `json:"vat,omitempty"`
+	VatAmount     *float32 `json:"vat_amount,omitempty"`
+}

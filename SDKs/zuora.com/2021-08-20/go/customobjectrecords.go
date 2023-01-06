@@ -1,0 +1,573 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"io"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+)
+
+type CustomObjectRecords struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewCustomObjectRecords(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *CustomObjectRecords {
+	return &CustomObjectRecords{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// DeleteCustomObjectRecordByID - Delete a custom object record
+// Deletes a custom object record of the given type and ID.
+//
+// Note that 200 response will be returned under either of the following conditions:
+// * The record is identified and successfully deleted
+// * The record could not be found
+//
+// Note that the record is deleted immediately and, therefore, will not be retained upon successful deletion.
+func (s *CustomObjectRecords) DeleteCustomObjectRecordByID(ctx context.Context, request operations.DeleteCustomObjectRecordByIDRequest) (*operations.DeleteCustomObjectRecordByIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteCustomObjectRecordByIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.DeleteCustomObjectRecordByID200ApplicationJSONURIString = &out
+		}
+	}
+
+	return res, nil
+}
+
+// GetAllRecordsForCustomObjectType - List records for a custom object
+// Lists all object records of the given type. You can also use the `q` query parameter to filter the output records.
+//
+// ## Limitations
+//
+// This call has the following limitations:
+// * When a record is created, there will be a delay before it is available for search. For example, if you create 5 records and perform a query that these 5 records satisfy the query conditions, there will be a delay between when the 5 records are created, and when all the 5 records can be returned in the query result.
+func (s *CustomObjectRecords) GetAllRecordsForCustomObjectType(ctx context.Context, request operations.GetAllRecordsForCustomObjectTypeRequest) (*operations.GetAllRecordsForCustomObjectTypeResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetAllRecordsForCustomObjectTypeResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.QueryCustomObjectRecordsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.QueryCustomObjectRecordsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetCustomObjectRecordByID - Retrieve a custom object record
+// Retrieves a record of a given type by ID.
+func (s *CustomObjectRecords) GetCustomObjectRecordByID(ctx context.Context, request operations.GetCustomObjectRecordByIDRequest) (*operations.GetCustomObjectRecordByIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCustomObjectRecordByIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordWithAllFields = out
+		}
+	case httpRes.StatusCode == 404:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CommonErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CommonErrorResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostCustomObjectRecords - Create custom object records
+// Creates custom object records with the given type.
+//
+// Upon creating records of a custom object type, the 200 response contains a list of records that have been successfully processed and stored.
+//
+// ## Limitations
+//
+// This call has the following limitations:
+//   - The maximum number of records that you can create by one call is 1,000.
+//   - The storage of empty strings in records is not supported.
+//   - Null values must be formatted as the following example:
+//     ```
+//     {
+//     "records": [
+//     {
+//     "fieldName__c": null
+//     }
+//     ]
+//     }
+//     ```
+func (s *CustomObjectRecords) PostCustomObjectRecords(ctx context.Context, request operations.PostCustomObjectRecordsRequest) (*operations.PostCustomObjectRecordsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostCustomObjectRecordsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.PostCustomObjectRecordsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostCustomObjectRecordsResponse = out
+		}
+	case httpRes.StatusCode == 400:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CustomObjectRecordsErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordsErrorResponse = out
+		}
+	case httpRes.StatusCode == 401:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.ErrorResponse401Record
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponse401Record = out
+		}
+	case httpRes.StatusCode == 500:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CustomObjectRecordsThrottledResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordsThrottledResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostCustomObjectRecordsBatchUpdateOrDelete - Update or delete custom object records
+// Makes a batch update or delete of custom object records.
+// ## Limitations
+//
+// This call has the following limitations:
+//   - The maximum number of records that you can update by one call is 1,000.
+//   - The maximum number of records that you can delete by one call is 1,000.
+//   - The storage of empty strings in records is not supported.
+//   - Null values must be formatted as the following example:
+//     ```
+//     {
+//     "action": {
+//     "type": "update",
+//     "records": {
+//     "64edb2a5-2796-4e95-9559-846f8636a01b": {
+//     "fieldName__c": null
+//     }
+//     }
+//     }
+//     }
+//     ```
+func (s *CustomObjectRecords) PostCustomObjectRecordsBatchUpdateOrDelete(ctx context.Context, request operations.PostCustomObjectRecordsBatchUpdateOrDeleteRequest) (*operations.PostCustomObjectRecordsBatchUpdateOrDeleteResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/batch/default/{object}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostCustomObjectRecordsBatchUpdateOrDeleteResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CustomObjectRecordsBatchUpdatePartialSuccessResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordsBatchUpdatePartialSuccessResponse = out
+		}
+	case httpRes.StatusCode == 400:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CustomObjectRecordsErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordsErrorResponse = out
+		}
+	case httpRes.StatusCode == 401:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.ErrorResponse401Record
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponse401Record = out
+		}
+	case httpRes.StatusCode == 500:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CustomObjectRecordsThrottledResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordsThrottledResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutCustomObjectRecord - Update a custom object record
+// Updates a record of the given type and ID.
+//
+// ## Limitations
+//
+//   - The storage of empty strings in records is not supported.
+//   - Null values must be formatted as the following example:
+//     ```
+//     {
+//     "records": [
+//     {
+//     "fieldName__c": null
+//     }
+//     ]
+//     }
+//     ```
+func (s *CustomObjectRecords) PutCustomObjectRecord(ctx context.Context, request operations.PutCustomObjectRecordRequest) (*operations.PutCustomObjectRecordResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutCustomObjectRecordResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordWithAllFields = out
+		}
+	case httpRes.StatusCode == 404:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CommonErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CommonErrorResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PatchPartialUpdateCustomObjectRecord - Partially update a custom object record
+// Updates one or many fields of a custom object record. Patch update uses JSON Merge Patch as specified in [RFC 7386](https://tools.ietf.org/html/rfc7386).
+//
+// ## Limitations
+//
+//   - The storage of empty strings in records is not supported.
+//   - Null values must be formatted as the following example:
+//     ```
+//     {
+//     "records": [
+//     {
+//     "fieldName__c": null
+//     }
+//     ]
+//     }
+//     ```
+func (s *CustomObjectRecords) PatchPartialUpdateCustomObjectRecord(ctx context.Context, request operations.PatchPartialUpdateCustomObjectRecordRequest) (*operations.PatchPartialUpdateCustomObjectRecordResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PatchPartialUpdateCustomObjectRecordResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CustomObjectRecordWithAllFields = out
+		}
+	case httpRes.StatusCode == 404:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
+			var out *shared.CommonErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CommonErrorResponse = out
+		}
+	}
+
+	return res, nil
+}

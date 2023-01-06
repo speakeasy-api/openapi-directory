@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,48 +26,48 @@ func main() {
         Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "dolorem",
+            AppsID: "modi",
         },
         QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "molestiae",
-            Alt: "media",
-            Callback: "voluptatum",
-            Fields: "quos",
-            Key: "laboriosam",
-            OauthToken: "incidunt",
+            DollarXgafv: "1",
+            AccessToken: "dolorum",
+            Alt: "json",
+            Callback: "consequatur",
+            Fields: "minima",
+            Key: "illo",
+            OauthToken: "ad",
             PrettyPrint: true,
-            QuotaUser: "explicabo",
-            UploadType: "fuga",
-            UploadProtocol: "dignissimos",
+            QuotaUser: "non",
+            UploadType: "in",
+            UploadProtocol: "aut",
         },
         Request: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "perferendis",
-                PublicCertificate: "fuga",
+                PrivateKey: "enim",
+                PublicCertificate: "et",
             },
-            DisplayName: "voluptatum",
-            DomainMappingsCount: 2502447430483721171,
+            DisplayName: "provident",
+            DomainMappingsCount: 8982298211630841711,
             DomainNames: []string{
-                "quibusdam",
+                "aperiam",
             },
-            ExpireTime: "explicabo",
-            ID: "vel",
+            ExpireTime: "necessitatibus",
+            ID: "commodi",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "earum",
-                Status: "FAILED_RETRYING_NOT_VISIBLE",
+                LastRenewalTime: "voluptatum",
+                Status: "FAILED_PERMANENTLY_NOT_VISIBLE",
             },
-            Name: "voluptatem",
+            Name: "nemo",
             VisibleDomainMappings: []string{
-                "vitae",
-                "harum",
-                "ab",
+                "quo",
+                "minima",
+                "voluptatem",
             },
         },
     }

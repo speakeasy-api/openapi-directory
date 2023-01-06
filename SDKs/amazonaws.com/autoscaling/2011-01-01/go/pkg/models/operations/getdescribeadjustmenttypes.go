@@ -3,13 +3,13 @@ package operations
 type GetDescribeAdjustmentTypesActionEnum string
 
 const (
-	GetDescribeAdjustmentTypesActionEnumDescribeAdjustmentTypes GetDescribeAdjustmentTypesActionEnum = "DescribeAdjustmentTypes"
+	GETDescribeAdjustmentTypesActionEnumDescribeAdjustmentTypes GetDescribeAdjustmentTypesActionEnum = "DescribeAdjustmentTypes"
 )
 
 type GetDescribeAdjustmentTypesVersionEnum string
 
 const (
-	GetDescribeAdjustmentTypesVersionEnumTwoThousandAndEleven0101 GetDescribeAdjustmentTypesVersionEnum = "2011-01-01"
+	GETDescribeAdjustmentTypesVersionEnumTwoThousandAndEleven0101 GetDescribeAdjustmentTypesVersionEnum = "2011-01-01"
 )
 
 type GetDescribeAdjustmentTypesQueryParams struct {

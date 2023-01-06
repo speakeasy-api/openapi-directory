@@ -8,6 +8,6 @@ type UpdateClusterRequest struct {
 	Notification                 *Notification                 `json:"Notification,omitempty"`
 	OnDeviceServiceConfiguration *OnDeviceServiceConfiguration `json:"OnDeviceServiceConfiguration,omitempty"`
 	Resources                    *JobResource                  `json:"Resources,omitempty"`
-	RoleArn                      *string                       `json:"RoleARN,omitempty"`
+	RoleARN                      *string                       `json:"RoleARN,omitempty"`
 	ShippingOption               *ShippingOptionEnum           `json:"ShippingOption,omitempty"`
 }

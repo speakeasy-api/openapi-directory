@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,29 +24,29 @@ func main() {
     
     req := operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest{
         PathParams: operations.AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams{
-            Parent: "ut",
+            Parent: "dignissimos",
         },
         QueryParams: operations.AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "doloribus",
+            AccessToken: "officia",
             Alt: "proto",
-            Callback: "excepturi",
-            Fields: "repellendus",
-            Key: "nihil",
-            OauthToken: "quasi",
+            Callback: "temporibus",
+            Fields: "ullam",
+            Key: "quos",
+            OauthToken: "illo",
             PrettyPrint: false,
-            QuotaUser: "ut",
-            UploadType: "dolorem",
-            UploadProtocol: "quis",
+            QuotaUser: "et",
+            UploadType: "et",
+            UploadProtocol: "vel",
         },
         Request: &shared.ConfigurationInput{
-            CompanyName: "aut",
-            ConfigurationName: "qui",
-            ContactEmail: "laborum",
-            ContactPhone: "quod",
-            CustomMessage: "eius",
-            DpcExtras: "officia",
-            DpcResourcePath: "inventore",
+            CompanyName: "vero",
+            ConfigurationName: "omnis",
+            ContactEmail: "ut",
+            ContactPhone: "earum",
+            CustomMessage: "sint",
+            DpcExtras: "est",
+            DpcResourcePath: "deleniti",
             IsDefault: true,
         },
     }

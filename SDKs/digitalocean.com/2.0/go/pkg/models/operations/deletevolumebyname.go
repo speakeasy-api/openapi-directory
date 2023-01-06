@@ -9,14 +9,14 @@ type DeleteVolumeByNameQueryParams struct {
 	Region *shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `queryParam:"style=form,explode=true,name=region"`
 }
 
-type DeleteVolumeByNameRequest struct {
-	QueryParams DeleteVolumeByNameQueryParams
-}
-
 type DeleteVolumeByName401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteVolumeByNameRequest struct {
+	QueryParams DeleteVolumeByNameQueryParams
 }
 
 type DeleteVolumeByNameResponse struct {

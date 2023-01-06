@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,33 +27,33 @@ func main() {
             Option1: &operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams{
-            Parent: "velit",
+            Parent: "quasi",
         },
         QueryParams: operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "odit",
-            Alt: "json",
-            Callback: "debitis",
-            DatabaseID: "totam",
-            Fields: "recusandae",
-            Key: "quia",
-            OauthToken: "id",
-            PrettyPrint: false,
-            QuotaUser: "amet",
-            UploadType: "sint",
-            UploadProtocol: "qui",
-            ValidateOnly: false,
+            AccessToken: "ut",
+            Alt: "proto",
+            Callback: "labore",
+            DatabaseID: "saepe",
+            Fields: "culpa",
+            Key: "sunt",
+            OauthToken: "dolor",
+            PrettyPrint: true,
+            QuotaUser: "nihil",
+            UploadType: "quam",
+            UploadProtocol: "exercitationem",
+            ValidateOnly: true,
         },
         Request: &shared.DatabaseInstanceInput{
-            Name: "porro",
-            Type: "USER_DATABASE",
+            Name: "nesciunt",
+            Type: "DEFAULT_DATABASE",
         },
     }
     

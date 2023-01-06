@@ -3,13 +3,13 @@ package operations
 type PostRebootDbInstanceActionEnum string
 
 const (
-	PostRebootDbInstanceActionEnumRebootDbInstance PostRebootDbInstanceActionEnum = "RebootDBInstance"
+	POSTRebootDBInstanceActionEnumRebootDbInstance PostRebootDbInstanceActionEnum = "RebootDBInstance"
 )
 
 type PostRebootDbInstanceVersionEnum string
 
 const (
-	PostRebootDbInstanceVersionEnumTwoThousandAndFourteen0901 PostRebootDbInstanceVersionEnum = "2014-09-01"
+	POSTRebootDBInstanceVersionEnumTwoThousandAndFourteen0901 PostRebootDbInstanceVersionEnum = "2014-09-01"
 )
 
 type PostRebootDbInstanceQueryParams struct {

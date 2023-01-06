@@ -3,13 +3,13 @@ package operations
 type GetCreateAccountAliasActionEnum string
 
 const (
-	GetCreateAccountAliasActionEnumCreateAccountAlias GetCreateAccountAliasActionEnum = "CreateAccountAlias"
+	GETCreateAccountAliasActionEnumCreateAccountAlias GetCreateAccountAliasActionEnum = "CreateAccountAlias"
 )
 
 type GetCreateAccountAliasVersionEnum string
 
 const (
-	GetCreateAccountAliasVersionEnumTwoThousandAndTen0508 GetCreateAccountAliasVersionEnum = "2010-05-08"
+	GETCreateAccountAliasVersionEnumTwoThousandAndTen0508 GetCreateAccountAliasVersionEnum = "2010-05-08"
 )
 
 type GetCreateAccountAliasQueryParams struct {

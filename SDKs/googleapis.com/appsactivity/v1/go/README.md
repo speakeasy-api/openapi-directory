@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.AppsactivityActivitiesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.AppsactivityActivitiesListQueryParams{
             Alt: "json",
-            DriveAncestorID: "nihil",
-            DriveFileID: "incidunt",
-            Fields: "dolore",
-            GroupingStrategy: "driveUi",
-            Key: "labore",
-            OauthToken: "dolorum",
-            PageSize: 5236289225202148670,
-            PageToken: "quos",
+            DriveAncestorID: "eligendi",
+            DriveFileID: "voluptatem",
+            Fields: "eaque",
+            GroupingStrategy: "none",
+            Key: "expedita",
+            OauthToken: "quaerat",
+            PageSize: 4107792366515620763,
+            PageToken: "doloremque",
             PrettyPrint: true,
-            QuotaUser: "aut",
-            Source: "voluptatum",
-            UserID: "et",
-            UserIP: "quae",
+            QuotaUser: "et",
+            Source: "beatae",
+            UserID: "occaecati",
+            UserIP: "autem",
         },
     }
     

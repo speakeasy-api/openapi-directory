@@ -3,13 +3,13 @@ package operations
 type PostDeleteSamlProviderActionEnum string
 
 const (
-	PostDeleteSamlProviderActionEnumDeleteSamlProvider PostDeleteSamlProviderActionEnum = "DeleteSAMLProvider"
+	POSTDeleteSAMLProviderActionEnumDeleteSamlProvider PostDeleteSamlProviderActionEnum = "DeleteSAMLProvider"
 )
 
 type PostDeleteSamlProviderVersionEnum string
 
 const (
-	PostDeleteSamlProviderVersionEnumTwoThousandAndTen0508 PostDeleteSamlProviderVersionEnum = "2010-05-08"
+	POSTDeleteSAMLProviderVersionEnumTwoThousandAndTen0508 PostDeleteSamlProviderVersionEnum = "2010-05-08"
 )
 
 type PostDeleteSamlProviderQueryParams struct {

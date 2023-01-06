@@ -6,7 +6,7 @@ import (
 
 type TdcerRequestBodyCertificateParameters struct {
 	CustID string `json:"CustID"`
-	Dob    string `json:"DOB"`
+	DOB    string `json:"DOB"`
 	FinYr  string `json:"finYr"`
 }
 
@@ -83,7 +83,7 @@ type Tdcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Tdcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Tdcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Tdcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Tdcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Tdcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tdcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Tdcer404ApplicationJSON struct {

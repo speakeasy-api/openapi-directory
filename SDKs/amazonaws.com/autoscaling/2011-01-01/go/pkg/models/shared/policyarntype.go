@@ -4,5 +4,5 @@ package shared
 // Contains the output of PutScalingPolicy.
 type PolicyArnType struct {
 	Alarms    []Alarm
-	PolicyArn *string
+	PolicyARN *string
 }

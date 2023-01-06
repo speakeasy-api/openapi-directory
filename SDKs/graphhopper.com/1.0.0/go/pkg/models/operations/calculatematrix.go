@@ -10,7 +10,7 @@ type CalculateMatrixRequest struct {
 
 type CalculateMatrixResponse struct {
 	ContentType string
-	GhError     *shared.GhError
+	GHError     *shared.GhError
 	Headers     map[string][]string
 	JobID       *shared.JobID
 	StatusCode  int64

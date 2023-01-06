@@ -35,8 +35,8 @@ type GetAttributePoolUsingGetRequest struct {
 type GetAttributePoolUsingGetResponse struct {
 	ContentType                                      string
 	StatusCode                                       int64
-	GetAttributePoolUsingGet200ApplicationJSONObject *GetAttributePoolUsingGet200ApplicationJSON
-	GetAttributePoolUsingGet400ApplicationJSONObject *GetAttributePoolUsingGet400ApplicationJSON
-	GetAttributePoolUsingGet401ApplicationJSONObject *GetAttributePoolUsingGet401ApplicationJSON
-	GetAttributePoolUsingGet500ApplicationJSONObject *GetAttributePoolUsingGet500ApplicationJSON
+	GETAttributePoolUsingGET200ApplicationJSONObject *GetAttributePoolUsingGet200ApplicationJSON
+	GETAttributePoolUsingGET400ApplicationJSONObject *GetAttributePoolUsingGet400ApplicationJSON
+	GETAttributePoolUsingGET401ApplicationJSONObject *GetAttributePoolUsingGet401ApplicationJSON
+	GETAttributePoolUsingGET500ApplicationJSONObject *GetAttributePoolUsingGet500ApplicationJSON
 }

@@ -7,7 +7,7 @@ import (
 // ProvisionedProductAttribute
 // Information about a provisioned product.
 type ProvisionedProductAttribute struct {
-	Arn                                *string                       `json:"Arn,omitempty"`
+	Arn                                map[string]interface{}        `json:"Arn,omitempty"`
 	CreatedTime                        *time.Time                    `json:"CreatedTime,omitempty"`
 	ID                                 *string                       `json:"Id,omitempty"`
 	IdempotencyToken                   *string                       `json:"IdempotencyToken,omitempty"`

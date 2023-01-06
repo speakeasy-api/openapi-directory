@@ -9,10 +9,6 @@ type GetConnectionPoolPathParams struct {
 	PoolName            string `pathParam:"style=simple,explode=false,name=pool_name"`
 }
 
-type GetConnectionPoolRequest struct {
-	PathParams GetConnectionPoolPathParams
-}
-
 type GetConnectionPool200ApplicationJSON struct {
 	Pool shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1poolsGetResponses200ContentApplication1jsonSchemaPropertiesPoolsItems `json:"pool"`
 }
@@ -21,6 +17,10 @@ type GetConnectionPool401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetConnectionPoolRequest struct {
+	PathParams GetConnectionPoolPathParams
 }
 
 type GetConnectionPoolResponse struct {

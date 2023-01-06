@@ -3,13 +3,13 @@ package operations
 type PostCreateDbInstanceActionEnum string
 
 const (
-	PostCreateDbInstanceActionEnumCreateDbInstance PostCreateDbInstanceActionEnum = "CreateDBInstance"
+	POSTCreateDBInstanceActionEnumCreateDbInstance PostCreateDbInstanceActionEnum = "CreateDBInstance"
 )
 
 type PostCreateDbInstanceVersionEnum string
 
 const (
-	PostCreateDbInstanceVersionEnumTwoThousandAndFourteen0901 PostCreateDbInstanceVersionEnum = "2014-09-01"
+	POSTCreateDBInstanceVersionEnumTwoThousandAndFourteen0901 PostCreateDbInstanceVersionEnum = "2014-09-01"
 )
 
 type PostCreateDbInstanceQueryParams struct {

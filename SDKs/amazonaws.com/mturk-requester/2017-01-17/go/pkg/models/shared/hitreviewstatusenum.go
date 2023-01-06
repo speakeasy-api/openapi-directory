@@ -3,8 +3,8 @@ package shared
 type HitReviewStatusEnum string
 
 const (
-	HitReviewStatusEnumNotReviewed           HitReviewStatusEnum = "NotReviewed"
-	HitReviewStatusEnumMarkedForReview       HitReviewStatusEnum = "MarkedForReview"
-	HitReviewStatusEnumReviewedAppropriate   HitReviewStatusEnum = "ReviewedAppropriate"
-	HitReviewStatusEnumReviewedInappropriate HitReviewStatusEnum = "ReviewedInappropriate"
+	HITReviewStatusEnumNotReviewed           HitReviewStatusEnum = "NotReviewed"
+	HITReviewStatusEnumMarkedForReview       HitReviewStatusEnum = "MarkedForReview"
+	HITReviewStatusEnumReviewedAppropriate   HitReviewStatusEnum = "ReviewedAppropriate"
+	HITReviewStatusEnumReviewedInappropriate HitReviewStatusEnum = "ReviewedInappropriate"
 )

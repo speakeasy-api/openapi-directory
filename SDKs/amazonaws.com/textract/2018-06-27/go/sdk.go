@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -647,7 +648,7 @@ func (s *SDK) GetDocumentAnalysis(ctx context.Context, request operations.GetDoc
 				return nil, err
 			}
 
-			res.InvalidKmsKeyException = out
+			res.InvalidKMSKeyException = out
 		}
 	}
 
@@ -779,7 +780,7 @@ func (s *SDK) GetDocumentTextDetection(ctx context.Context, request operations.G
 				return nil, err
 			}
 
-			res.InvalidKmsKeyException = out
+			res.InvalidKMSKeyException = out
 		}
 	}
 
@@ -861,7 +862,7 @@ func (s *SDK) StartDocumentAnalysis(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.InvalidKmsKeyException = out
+			res.InvalidKMSKeyException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1033,7 +1034,7 @@ func (s *SDK) StartDocumentTextDetection(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.InvalidKmsKeyException = out
+			res.InvalidKMSKeyException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {

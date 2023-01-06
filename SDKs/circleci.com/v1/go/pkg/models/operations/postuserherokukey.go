@@ -6,6 +6,6 @@ type PostUserHerokuKey403ApplicationJSON struct {
 
 type PostUserHerokuKeyResponse struct {
 	ContentType                               string
-	PostUserHerokuKey403ApplicationJSONObject *PostUserHerokuKey403ApplicationJSON
 	StatusCode                                int64
+	PostUserHerokuKey403ApplicationJSONObject *PostUserHerokuKey403ApplicationJSON
 }

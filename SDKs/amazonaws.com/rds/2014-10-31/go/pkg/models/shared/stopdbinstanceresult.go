@@ -1,5 +1,5 @@
 package shared
 
 type StopDbInstanceResult struct {
-	DbInstance *DbInstance
+	DBInstance *DbInstance
 }

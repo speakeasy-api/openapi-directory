@@ -5,9 +5,9 @@ import (
 )
 
 type EgipcRequestBodyCertificateParameters struct {
-	Inscode string `json:"INSCODE"`
-	Polno   string `json:"POLNO"`
-	Startdt string `json:"STARTDT"`
+	INSCODE string `json:"INSCODE"`
+	POLNO   string `json:"POLNO"`
+	STARTDT string `json:"STARTDT"`
 }
 
 type EgipcRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Egipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Egipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Egipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Egipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Egipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Egipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Egipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Egipc404ApplicationJSON struct {

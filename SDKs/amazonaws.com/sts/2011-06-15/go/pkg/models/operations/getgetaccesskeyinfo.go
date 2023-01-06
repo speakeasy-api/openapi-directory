@@ -3,13 +3,13 @@ package operations
 type GetGetAccessKeyInfoActionEnum string
 
 const (
-	GetGetAccessKeyInfoActionEnumGetAccessKeyInfo GetGetAccessKeyInfoActionEnum = "GetAccessKeyInfo"
+	GETGETAccessKeyInfoActionEnumGetAccessKeyInfo GetGetAccessKeyInfoActionEnum = "GetAccessKeyInfo"
 )
 
 type GetGetAccessKeyInfoVersionEnum string
 
 const (
-	GetGetAccessKeyInfoVersionEnumTwoThousandAndEleven0615 GetGetAccessKeyInfoVersionEnum = "2011-06-15"
+	GETGETAccessKeyInfoVersionEnumTwoThousandAndEleven0615 GetGetAccessKeyInfoVersionEnum = "2011-06-15"
 )
 
 type GetGetAccessKeyInfoQueryParams struct {

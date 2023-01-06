@@ -29,6 +29,6 @@ type GetQueryJSONRequest struct {
 
 type GetQueryJSONResponse struct {
 	ContentType                          string
-	GetQueryJSON200ApplicationJSONObject *GetQueryJSON200ApplicationJSON
 	StatusCode                           int64
+	GetQueryJSON200ApplicationJSONObject *GetQueryJSON200ApplicationJSON
 }

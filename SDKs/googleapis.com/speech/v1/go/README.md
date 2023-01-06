@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.SpeechOperationsGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.SpeechOperationsGetPathParams{
-            Name: "saepe",
+            Name: "dolores",
         },
         QueryParams: operations.SpeechOperationsGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "autem",
-            Alt: "media",
-            Callback: "ratione",
-            Fields: "dicta",
-            Key: "et",
-            OauthToken: "molestias",
+            AccessToken: "et",
+            Alt: "json",
+            Callback: "sapiente",
+            Fields: "itaque",
+            Key: "sint",
+            OauthToken: "voluptas",
             PrettyPrint: false,
-            QuotaUser: "facilis",
-            UploadType: "ex",
-            UploadProtocol: "nesciunt",
+            QuotaUser: "est",
+            UploadType: "ut",
+            UploadProtocol: "vero",
         },
     }
     

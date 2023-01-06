@@ -4,5 +4,5 @@ package shared
 //
 //	Identifies a Kinesis data stream as the streaming source. You provide the stream's Amazon Resource Name (ARN).
 type KinesisStreamsInput struct {
-	ResourceArn string `json:"ResourceARN"`
+	ResourceARN string `json:"ResourceARN"`
 }

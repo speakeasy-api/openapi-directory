@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVolumeStatusResult struct {
-	NextToken      *string
-	VolumeStatuses []VolumeStatusItem
+	NextToken      map[string]interface{}
+	VolumeStatuses map[string]interface{}
 }

@@ -1,0 +1,8 @@
+package shared
+
+// EnduserAcceptanceDetails
+// Represents end-user details.
+type EnduserAcceptanceDetails struct {
+	IPAddress string `json:"ip_address" form:"name=ip_address" multipartForm:"name=ip_address"`
+	UserAgent string `json:"user_agent" form:"name=user_agent" multipartForm:"name=user_agent"`
+}

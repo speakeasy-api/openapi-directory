@@ -1,0 +1,11 @@
+package shared
+
+type Responsivity struct {
+	Invited     *int64   `json:"invited,omitempty"`
+	Month       *string  `json:"month,omitempty"`
+	NotEntered  *int64   `json:"notEntered,omitempty"`
+	OnlyEntered *int64   `json:"onlyEntered,omitempty"`
+	Score       *float32 `json:"score,omitempty"`
+	Week        *string  `json:"week,omitempty"`
+	Worked      *int64   `json:"worked,omitempty"`
+}

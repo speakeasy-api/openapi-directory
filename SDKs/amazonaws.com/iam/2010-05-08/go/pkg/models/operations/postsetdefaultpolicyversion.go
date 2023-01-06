@@ -3,13 +3,13 @@ package operations
 type PostSetDefaultPolicyVersionActionEnum string
 
 const (
-	PostSetDefaultPolicyVersionActionEnumSetDefaultPolicyVersion PostSetDefaultPolicyVersionActionEnum = "SetDefaultPolicyVersion"
+	POSTSetDefaultPolicyVersionActionEnumSetDefaultPolicyVersion PostSetDefaultPolicyVersionActionEnum = "SetDefaultPolicyVersion"
 )
 
 type PostSetDefaultPolicyVersionVersionEnum string
 
 const (
-	PostSetDefaultPolicyVersionVersionEnumTwoThousandAndTen0508 PostSetDefaultPolicyVersionVersionEnum = "2010-05-08"
+	POSTSetDefaultPolicyVersionVersionEnumTwoThousandAndTen0508 PostSetDefaultPolicyVersionVersionEnum = "2010-05-08"
 )
 
 type PostSetDefaultPolicyVersionQueryParams struct {

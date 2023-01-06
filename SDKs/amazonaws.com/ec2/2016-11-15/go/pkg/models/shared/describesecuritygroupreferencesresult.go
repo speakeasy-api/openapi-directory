@@ -1,5 +1,5 @@
 package shared
 
 type DescribeSecurityGroupReferencesResult struct {
-	SecurityGroupReferenceSet []SecurityGroupReference
+	SecurityGroupReferenceSet map[string]interface{}
 }

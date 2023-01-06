@@ -4,5 +4,5 @@ package shared
 // Represents the output of <a>DescribePendingMaintenanceActions</a>.
 type PendingMaintenanceActionsMessage struct {
 	Marker                    *string
-	PendingMaintenanceActions []ResourcePendingMaintenanceActions
+	PendingMaintenanceActions []map[string]interface{}
 }

@@ -1,7 +1,7 @@
 package shared
 
 type DbParameterGroup struct {
-	DbParameterGroupFamily *string
-	DbParameterGroupName   *string
+	DBParameterGroupFamily *string
+	DBParameterGroupName   *string
 	Description            *string
 }

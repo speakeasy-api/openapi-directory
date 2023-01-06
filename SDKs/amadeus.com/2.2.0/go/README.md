@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,24 +24,24 @@ func main() {
     
     req := operations.GetFlightOffersRequest{
         QueryParams: operations.GetFlightOffersQueryParams{
-            Adults: 3462733497206508461,
-            Children: 5902760509050140210,
-            CurrencyCode: "quam",
-            DepartureDate: "1996-04-18",
-            DestinationLocationCode: "cumque",
-            ExcludedAirlineCodes: "soluta",
-            IncludedAirlineCodes: "sunt",
-            Infants: 2408550365227740434,
-            Max: 5521202747878656476,
-            MaxPrice: 5596430475431407243,
-            NonStop: true,
-            OriginLocationCode: "qui",
-            ReturnDate: "1990-06-29",
+            Adults: 4814861198247358488,
+            Children: 4975249678507640420,
+            CurrencyCode: "expedita",
+            DepartureDate: "1989-07-08",
+            DestinationLocationCode: "qui",
+            ExcludedAirlineCodes: "modi",
+            IncludedAirlineCodes: "nihil",
+            Infants: 1011676084465510524,
+            Max: 8764227983217623240,
+            MaxPrice: 4745905187492708501,
+            NonStop: false,
+            OriginLocationCode: "sit",
+            ReturnDate: "2001-11-10",
             TravelClass: "BUSINESS",
         },
     }
     
-    res, err := s.Sdk.GetFlightOffers(ctx, req)
+    res, err := s.Shopping.GetFlightOffers(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Shopping
 
 * `GetFlightOffers` - Return list of Flight Offers based on searching criteria.
 * `SearchFlightOffers` - Return list of Flight Offers based on posted searching criteria.

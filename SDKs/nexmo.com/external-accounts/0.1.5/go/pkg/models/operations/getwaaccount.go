@@ -22,5 +22,5 @@ type GetWaAccountResponse struct {
 	FourHundredAndOneResponse *shared.FourHundredAndOneResponse
 	ContentType               string
 	StatusCode                int64
-	WaAccountResponse         *shared.WaAccountResponse
+	WAAccountResponse         *shared.WaAccountResponse
 }

@@ -21,7 +21,7 @@ type GetIntersectionsWithinOutputFormatQueryParams struct {
 	MaxDegree  *int64 `queryParam:"style=form,explode=true,name=maxDegree"`
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	MinDegree  *int64 `queryParam:"style=form,explode=true,name=minDegree"`
-	OutputSrs  *int64 `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS  *int64 `queryParam:"style=form,explode=true,name=outputSRS"`
 }
 
 type GetIntersectionsWithinOutputFormatRequest struct {

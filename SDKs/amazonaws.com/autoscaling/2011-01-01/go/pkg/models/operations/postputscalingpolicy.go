@@ -3,13 +3,13 @@ package operations
 type PostPutScalingPolicyActionEnum string
 
 const (
-	PostPutScalingPolicyActionEnumPutScalingPolicy PostPutScalingPolicyActionEnum = "PutScalingPolicy"
+	POSTPutScalingPolicyActionEnumPutScalingPolicy PostPutScalingPolicyActionEnum = "PutScalingPolicy"
 )
 
 type PostPutScalingPolicyVersionEnum string
 
 const (
-	PostPutScalingPolicyVersionEnumTwoThousandAndEleven0101 PostPutScalingPolicyVersionEnum = "2011-01-01"
+	POSTPutScalingPolicyVersionEnumTwoThousandAndEleven0101 PostPutScalingPolicyVersionEnum = "2011-01-01"
 )
 
 type PostPutScalingPolicyQueryParams struct {

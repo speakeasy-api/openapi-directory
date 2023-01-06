@@ -29,8 +29,7 @@ type GetAccountsAccountIDBalancesRequest struct {
 
 type GetAccountsAccountIDBalancesResponse struct {
 	ContentType      string
-	Headers          map[string][]string
-	ObErrorResponse1 *shared.ObErrorResponse1
-	ObReadBalance1   *shared.ObReadBalance1
+	OBErrorResponse1 *shared.ObErrorResponse1
+	OBReadBalance1   *shared.ObReadBalance1
 	StatusCode       int64
 }

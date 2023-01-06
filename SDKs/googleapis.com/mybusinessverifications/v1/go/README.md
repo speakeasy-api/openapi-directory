@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,43 +24,46 @@ func main() {
     
     req := operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest{
         PathParams: operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams{
-            Location: "enim",
+            Location: "nulla",
         },
         QueryParams: operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams{
             DollarXgafv: "2",
-            AccessToken: "voluptatibus",
+            AccessToken: "impedit",
             Alt: "media",
-            Callback: "corrupti",
-            Fields: "dignissimos",
-            Key: "incidunt",
-            OauthToken: "neque",
+            Callback: "labore",
+            Fields: "veniam",
+            Key: "et",
+            OauthToken: "aspernatur",
             PrettyPrint: false,
-            QuotaUser: "et",
-            UploadType: "earum",
-            UploadProtocol: "tempora",
+            QuotaUser: "magnam",
+            UploadType: "voluptates",
+            UploadProtocol: "esse",
         },
         Request: &shared.FetchVerificationOptionsRequest{
             Context: &shared.ServiceBusinessContext{
                 Address: &shared.PostalAddress{
                     AddressLines: []string{
-                        "ab",
-                        "quod",
+                        "qui",
+                        "animi",
+                        "adipisci",
                     },
-                    AdministrativeArea: "nemo",
-                    LanguageCode: "nisi",
-                    Locality: "est",
-                    Organization: "iste",
-                    PostalCode: "quia",
+                    AdministrativeArea: "odit",
+                    LanguageCode: "quaerat",
+                    Locality: "cupiditate",
+                    Organization: "eum",
+                    PostalCode: "est",
                     Recipients: []string{
-                        "ipsam",
+                        "recusandae",
+                        "eius",
+                        "incidunt",
                     },
-                    RegionCode: "qui",
-                    Revision: 5011812006485200487,
-                    SortingCode: "esse",
-                    Sublocality: "molestiae",
+                    RegionCode: "et",
+                    Revision: 7628768951656894618,
+                    SortingCode: "fugiat",
+                    Sublocality: "iusto",
                 },
             },
-            LanguageCode: "soluta",
+            LanguageCode: "repellendus",
         },
     }
     

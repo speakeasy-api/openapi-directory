@@ -3,13 +3,13 @@ package operations
 type PostModifyTransitGatewayVpcAttachmentActionEnum string
 
 const (
-	PostModifyTransitGatewayVpcAttachmentActionEnumModifyTransitGatewayVpcAttachment PostModifyTransitGatewayVpcAttachmentActionEnum = "ModifyTransitGatewayVpcAttachment"
+	POSTModifyTransitGatewayVpcAttachmentActionEnumModifyTransitGatewayVpcAttachment PostModifyTransitGatewayVpcAttachmentActionEnum = "ModifyTransitGatewayVpcAttachment"
 )
 
 type PostModifyTransitGatewayVpcAttachmentVersionEnum string
 
 const (
-	PostModifyTransitGatewayVpcAttachmentVersionEnumTwoThousandAndSixteen1115 PostModifyTransitGatewayVpcAttachmentVersionEnum = "2016-11-15"
+	POSTModifyTransitGatewayVpcAttachmentVersionEnumTwoThousandAndSixteen1115 PostModifyTransitGatewayVpcAttachmentVersionEnum = "2016-11-15"
 )
 
 type PostModifyTransitGatewayVpcAttachmentQueryParams struct {

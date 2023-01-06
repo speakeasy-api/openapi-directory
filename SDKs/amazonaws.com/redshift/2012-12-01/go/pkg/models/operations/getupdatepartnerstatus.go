@@ -3,22 +3,22 @@ package operations
 type GetUpdatePartnerStatusActionEnum string
 
 const (
-	GetUpdatePartnerStatusActionEnumUpdatePartnerStatus GetUpdatePartnerStatusActionEnum = "UpdatePartnerStatus"
+	GETUpdatePartnerStatusActionEnumUpdatePartnerStatus GetUpdatePartnerStatusActionEnum = "UpdatePartnerStatus"
 )
 
 type GetUpdatePartnerStatusStatusEnum string
 
 const (
-	GetUpdatePartnerStatusStatusEnumActive            GetUpdatePartnerStatusStatusEnum = "Active"
-	GetUpdatePartnerStatusStatusEnumInactive          GetUpdatePartnerStatusStatusEnum = "Inactive"
-	GetUpdatePartnerStatusStatusEnumRuntimeFailure    GetUpdatePartnerStatusStatusEnum = "RuntimeFailure"
-	GetUpdatePartnerStatusStatusEnumConnectionFailure GetUpdatePartnerStatusStatusEnum = "ConnectionFailure"
+	GETUpdatePartnerStatusStatusEnumActive            GetUpdatePartnerStatusStatusEnum = "Active"
+	GETUpdatePartnerStatusStatusEnumInactive          GetUpdatePartnerStatusStatusEnum = "Inactive"
+	GETUpdatePartnerStatusStatusEnumRuntimeFailure    GetUpdatePartnerStatusStatusEnum = "RuntimeFailure"
+	GETUpdatePartnerStatusStatusEnumConnectionFailure GetUpdatePartnerStatusStatusEnum = "ConnectionFailure"
 )
 
 type GetUpdatePartnerStatusVersionEnum string
 
 const (
-	GetUpdatePartnerStatusVersionEnumTwoThousandAndTwelve1201 GetUpdatePartnerStatusVersionEnum = "2012-12-01"
+	GETUpdatePartnerStatusVersionEnumTwoThousandAndTwelve1201 GetUpdatePartnerStatusVersionEnum = "2012-12-01"
 )
 
 type GetUpdatePartnerStatusQueryParams struct {

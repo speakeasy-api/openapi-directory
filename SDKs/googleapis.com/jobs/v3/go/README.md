@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,47 +27,43 @@ func main() {
             Option1: &operations.JobsProjectsClientEventsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.JobsProjectsClientEventsCreatePathParams{
-            Parent: "sunt",
+            Parent: "commodi",
         },
         QueryParams: operations.JobsProjectsClientEventsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "sit",
-            Alt: "json",
-            Callback: "iste",
-            Fields: "dignissimos",
-            Key: "id",
-            OauthToken: "qui",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "ut",
-            UploadProtocol: "ratione",
+            AccessToken: "et",
+            Alt: "proto",
+            Callback: "eaque",
+            Fields: "dolores",
+            Key: "voluptatem",
+            OauthToken: "sed",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            UploadType: "enim",
+            UploadProtocol: "sunt",
         },
         Request: &shared.CreateClientEventRequest{
             ClientEvent: &shared.ClientEvent{
-                CreateTime: "temporibus",
-                EventID: "rerum",
+                CreateTime: "vero",
+                EventID: "nisi",
                 ExtraInfo: map[string]string{
-                    "perspiciatis": "provident",
-                    "rerum": "sit",
-                    "magnam": "sit",
+                    "qui": "consequatur",
                 },
                 JobEvent: &shared.JobEvent{
                     Jobs: []string{
-                        "quaerat",
-                        "hic",
-                        "eum",
+                        "veritatis",
                     },
-                    Type: "APPLICATION_QUICK_SUBMISSION",
+                    Type: "APPLICATION_REDIRECT",
                 },
-                ParentEventID: "nostrum",
-                RequestID: "quod",
+                ParentEventID: "fugiat",
+                RequestID: "dolor",
             },
         },
     }

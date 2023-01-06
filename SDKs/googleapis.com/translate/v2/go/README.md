@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,30 +27,30 @@ func main() {
             Option1: &operations.LanguageDetectionsDetectSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.LanguageDetectionsDetectQueryParams{
             DollarXgafv: "1",
-            AccessToken: "tenetur",
+            AccessToken: "vitae",
             Alt: "media",
-            BearerToken: "non",
-            Callback: "odit",
-            Fields: "error",
-            Key: "doloremque",
-            OauthToken: "sint",
-            Pp: true,
+            BearerToken: "qui",
+            Callback: "in",
+            Fields: "et",
+            Key: "tenetur",
+            OauthToken: "et",
+            Pp: false,
             PrettyPrint: true,
-            QuotaUser: "neque",
-            UploadType: "debitis",
-            UploadProtocol: "suscipit",
+            QuotaUser: "iste",
+            UploadType: "earum",
+            UploadProtocol: "distinctio",
         },
         Request: &shared.DetectLanguageRequest{
             Q: []string{
-                "excepturi",
+                "in",
             },
         },
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.AdexchangebuyerAccountsGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AdexchangebuyerAccountsGetPathParams{
-            ID: 7262558848052294337,
+            ID: 7940976349555499763,
         },
         QueryParams: operations.AdexchangebuyerAccountsGetQueryParams{
             Alt: "json",
-            Fields: "illo",
-            Key: "quisquam",
-            OauthToken: "assumenda",
-            PrettyPrint: false,
-            QuotaUser: "sed",
-            UserIP: "harum",
+            Fields: "est",
+            Key: "saepe",
+            OauthToken: "eius",
+            PrettyPrint: true,
+            QuotaUser: "sint",
+            UserIP: "dolor",
         },
     }
     

@@ -10,24 +10,10 @@ type GetLogsPathParams struct {
 	DeploymentID  string `pathParam:"style=simple,explode=false,name=deployment_id"`
 }
 
-type GetLogsTypeEnum string
-
-const (
-	GetLogsTypeEnumUnspecified GetLogsTypeEnum = "UNSPECIFIED"
-	GetLogsTypeEnumBuild       GetLogsTypeEnum = "BUILD"
-	GetLogsTypeEnumDeploy      GetLogsTypeEnum = "DEPLOY"
-	GetLogsTypeEnumRun         GetLogsTypeEnum = "RUN"
-)
-
 type GetLogsQueryParams struct {
-	Follow               *bool           `queryParam:"style=form,explode=true,name=follow"`
-	PodConnectionTimeout *string         `queryParam:"style=form,explode=true,name=pod_connection_timeout"`
-	Type                 GetLogsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetLogsRequest struct {
-	PathParams  GetLogsPathParams
-	QueryParams GetLogsQueryParams
+	Follow               *bool                                                                   `queryParam:"style=form,explode=true,name=follow"`
+	PodConnectionTimeout *string                                                                 `queryParam:"style=form,explode=true,name=pod_connection_timeout"`
+	Type                 shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetParameters0Enum `queryParam:"style=form,explode=true,name=type"`
 }
 
 type GetLogs200ApplicationJSON struct {
@@ -39,6 +25,11 @@ type GetLogs401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetLogsRequest struct {
+	PathParams  GetLogsPathParams
+	QueryParams GetLogsQueryParams
 }
 
 type GetLogsResponse struct {

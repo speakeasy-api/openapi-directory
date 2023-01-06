@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,29 +34,27 @@ func main() {
     
     req := operations.CreateSavingsPlanRequest{
         Headers: operations.CreateSavingsPlanHeaders{
-            XAmzAlgorithm: "sunt",
-            XAmzContentSha256: "et",
-            XAmzCredential: "ea",
-            XAmzDate: "deserunt",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "eos",
-            XAmzSignedHeaders: "minus",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "ea",
+            XAmzCredential: "quia",
+            XAmzDate: "sed",
+            XAmzSecurityToken: "dolorem",
+            XAmzSignature: "accusamus",
+            XAmzSignedHeaders: "ut",
         },
         Request: operations.CreateSavingsPlanRequestBody{
-            ClientToken: "consectetur",
-            Commitment: "rerum",
-            PurchaseTime: "2009-12-05T00:36:26Z",
-            SavingsPlanOfferingID: "omnis",
+            ClientToken: "perspiciatis",
+            Commitment: "molestias",
+            PurchaseTime: "2005-11-24T14:42:24Z",
+            SavingsPlanOfferingID: "hic",
             Tags: map[string]string{
-                "architecto": "omnis",
-                "porro": "ut",
-                "eius": "perferendis",
+                "rerum": "voluptates",
             },
-            UpfrontPaymentAmount: "beatae",
+            UpfrontPaymentAmount: "iste",
         },
     }
     
-    res, err := s.Sdk.CreateSavingsPlan(ctx, req)
+    res, err := s.CreateSavingsPlan(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

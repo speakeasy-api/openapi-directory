@@ -1,6 +1,6 @@
 package shared
 
 type DescribeLocalGatewaysResult struct {
-	LocalGateways []LocalGateway
-	NextToken     *string
+	LocalGateways map[string]interface{}
+	NextToken     map[string]interface{}
 }

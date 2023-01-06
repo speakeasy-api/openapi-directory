@@ -9,7 +9,7 @@ type SetEurekaInfoRequest struct {
 }
 
 type SetEurekaInfoResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                     string
+	SetEurekaInfo200TextPlainObject *string
+	StatusCode                      int64
 }

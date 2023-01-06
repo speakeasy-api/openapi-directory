@@ -82,7 +82,7 @@ type Delcs404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Delcs404ApplicationJSONErrorDescriptionEnumNoRecordFound               Delcs404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Delcs404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Delcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Delcs404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Delcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Delcs404ApplicationJSON struct {

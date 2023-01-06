@@ -82,7 +82,7 @@ type Ritin404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Ritin404ApplicationJSONErrorDescriptionEnumNoRecordFound               Ritin404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Ritin404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Ritin404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Ritin404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ritin404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Ritin404ApplicationJSON struct {

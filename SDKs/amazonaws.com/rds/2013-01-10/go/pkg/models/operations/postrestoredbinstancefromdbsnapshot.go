@@ -3,13 +3,13 @@ package operations
 type PostRestoreDbInstanceFromDbSnapshotActionEnum string
 
 const (
-	PostRestoreDbInstanceFromDbSnapshotActionEnumRestoreDbInstanceFromDbSnapshot PostRestoreDbInstanceFromDbSnapshotActionEnum = "RestoreDBInstanceFromDBSnapshot"
+	POSTRestoreDBInstanceFromDBSnapshotActionEnumRestoreDbInstanceFromDbSnapshot PostRestoreDbInstanceFromDbSnapshotActionEnum = "RestoreDBInstanceFromDBSnapshot"
 )
 
 type PostRestoreDbInstanceFromDbSnapshotVersionEnum string
 
 const (
-	PostRestoreDbInstanceFromDbSnapshotVersionEnumTwoThousandAndThirteen0110 PostRestoreDbInstanceFromDbSnapshotVersionEnum = "2013-01-10"
+	POSTRestoreDBInstanceFromDBSnapshotVersionEnumTwoThousandAndThirteen0110 PostRestoreDbInstanceFromDbSnapshotVersionEnum = "2013-01-10"
 )
 
 type PostRestoreDbInstanceFromDbSnapshotQueryParams struct {

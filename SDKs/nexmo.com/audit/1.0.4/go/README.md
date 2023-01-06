@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -31,11 +30,11 @@ func main() {
             },
         },
         PathParams: operations.GetEventPathParams{
-            ID: "enim",
+            ID: "doloribus",
         },
     }
     
-    res, err := s.Sdk.GetEvent(ctx, req)
+    res, err := s.GetEvent(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

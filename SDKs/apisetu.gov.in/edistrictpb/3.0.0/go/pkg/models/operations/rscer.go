@@ -5,8 +5,8 @@ import (
 )
 
 type RscerRequestBodyCertificateParameters struct {
-	Dob        string `json:"DOB"`
-	DsnNo      string `json:"DSNNo"`
+	DOB        string `json:"DOB"`
+	DSNNo      string `json:"DSNNo"`
 	FatherName string `json:"FatherName"`
 	FullName   string `json:"FullName"`
 	UID        string `json:"UID"`
@@ -85,7 +85,7 @@ type Rscer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Rscer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Rscer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Rscer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Rscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Rscer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Rscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Rscer404ApplicationJSON struct {

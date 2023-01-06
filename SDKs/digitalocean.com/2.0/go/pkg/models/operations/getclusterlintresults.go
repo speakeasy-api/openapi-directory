@@ -13,11 +13,8 @@ type GetClusterlintResultsQueryParams struct {
 	RunID *string `queryParam:"style=form,explode=true,name=run_id"`
 }
 
-type GetClusterlintResultsRequest struct {
-	PathParams  GetClusterlintResultsPathParams
-	QueryParams GetClusterlintResultsQueryParams
-}
-
+// GetClusterlintResults200ApplicationJSONDiagnosticsObject
+// Metadata about the Kubernetes API object the diagnostic is reported on.
 type GetClusterlintResults200ApplicationJSONDiagnosticsObject struct {
 	Kind      *string `json:"kind,omitempty"`
 	Name      *string `json:"name,omitempty"`
@@ -42,6 +39,11 @@ type GetClusterlintResults401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetClusterlintResultsRequest struct {
+	PathParams  GetClusterlintResultsPathParams
+	QueryParams GetClusterlintResultsQueryParams
 }
 
 type GetClusterlintResultsResponse struct {

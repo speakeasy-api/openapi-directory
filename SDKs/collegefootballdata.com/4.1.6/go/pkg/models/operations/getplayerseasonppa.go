@@ -20,6 +20,6 @@ type GetPlayerSeasonPpaRequest struct {
 
 type GetPlayerSeasonPpaResponse struct {
 	ContentType      string
-	PlayerSeasonPpas []shared.PlayerSeasonPpa
+	PlayerSeasonPPAS []shared.PlayerSeasonPpa
 	StatusCode       int64
 }

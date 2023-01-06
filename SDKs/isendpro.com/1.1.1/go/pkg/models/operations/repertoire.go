@@ -11,6 +11,6 @@ type RepertoireRequest struct {
 type RepertoireResponse struct {
 	ContentType            string
 	Erreur                 *shared.Erreur
-	RepertoirEmodifreponse *shared.RepertoirEmodifreponse
+	REPERTOIREmodifreponse *shared.RepertoirEmodifreponse
 	StatusCode             int64
 }

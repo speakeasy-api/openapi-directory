@@ -3,13 +3,13 @@ package operations
 type PostExportTransitGatewayRoutesActionEnum string
 
 const (
-	PostExportTransitGatewayRoutesActionEnumExportTransitGatewayRoutes PostExportTransitGatewayRoutesActionEnum = "ExportTransitGatewayRoutes"
+	POSTExportTransitGatewayRoutesActionEnumExportTransitGatewayRoutes PostExportTransitGatewayRoutesActionEnum = "ExportTransitGatewayRoutes"
 )
 
 type PostExportTransitGatewayRoutesVersionEnum string
 
 const (
-	PostExportTransitGatewayRoutesVersionEnumTwoThousandAndSixteen1115 PostExportTransitGatewayRoutesVersionEnum = "2016-11-15"
+	POSTExportTransitGatewayRoutesVersionEnumTwoThousandAndSixteen1115 PostExportTransitGatewayRoutesVersionEnum = "2016-11-15"
 )
 
 type PostExportTransitGatewayRoutesQueryParams struct {

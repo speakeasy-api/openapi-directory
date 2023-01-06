@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,30 +34,30 @@ func main() {
     
     req := operations.BatchGetAggregateResourceConfigRequest{
         Headers: operations.BatchGetAggregateResourceConfigHeaders{
-            XAmzAlgorithm: "consequatur",
-            XAmzContentSha256: "sed",
-            XAmzCredential: "quo",
-            XAmzDate: "animi",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "labore",
-            XAmzSignedHeaders: "est",
+            XAmzAlgorithm: "repellat",
+            XAmzContentSha256: "non",
+            XAmzCredential: "facilis",
+            XAmzDate: "id",
+            XAmzSecurityToken: "reprehenderit",
+            XAmzSignature: "sit",
+            XAmzSignedHeaders: "at",
             XAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
         },
         Request: shared.BatchGetAggregateResourceConfigRequest{
-            ConfigurationAggregatorName: "et",
+            ConfigurationAggregatorName: "doloribus",
             ResourceIdentifiers: []shared.AggregateResourceIdentifier{
                 shared.AggregateResourceIdentifier{
-                    ResourceID: "quo",
-                    ResourceName: "omnis",
-                    ResourceType: "AWS::RDS::DBSubnetGroup",
-                    SourceAccountID: "quod",
-                    SourceRegion: "et",
+                    ResourceID: "eius",
+                    ResourceName: "dolorum",
+                    ResourceType: "AWS::NetworkFirewall::RuleGroup",
+                    SourceAccountID: "enim",
+                    SourceRegion: "sunt",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.BatchGetAggregateResourceConfig(ctx, req)
+    res, err := s.BatchGetAggregateResourceConfig(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

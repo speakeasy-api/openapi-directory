@@ -3,19 +3,19 @@ package operations
 type GetModifyCurrentDbClusterCapacityActionEnum string
 
 const (
-	GetModifyCurrentDbClusterCapacityActionEnumModifyCurrentDbClusterCapacity GetModifyCurrentDbClusterCapacityActionEnum = "ModifyCurrentDBClusterCapacity"
+	GETModifyCurrentDBClusterCapacityActionEnumModifyCurrentDbClusterCapacity GetModifyCurrentDbClusterCapacityActionEnum = "ModifyCurrentDBClusterCapacity"
 )
 
 type GetModifyCurrentDbClusterCapacityVersionEnum string
 
 const (
-	GetModifyCurrentDbClusterCapacityVersionEnumTwoThousandAndFourteen1031 GetModifyCurrentDbClusterCapacityVersionEnum = "2014-10-31"
+	GETModifyCurrentDBClusterCapacityVersionEnumTwoThousandAndFourteen1031 GetModifyCurrentDbClusterCapacityVersionEnum = "2014-10-31"
 )
 
 type GetModifyCurrentDbClusterCapacityQueryParams struct {
 	Action               GetModifyCurrentDbClusterCapacityActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Capacity             *int64                                       `queryParam:"style=form,explode=true,name=Capacity"`
-	DbClusterIdentifier  string                                       `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
+	DBClusterIdentifier  string                                       `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	SecondsBeforeTimeout *int64                                       `queryParam:"style=form,explode=true,name=SecondsBeforeTimeout"`
 	TimeoutAction        *string                                      `queryParam:"style=form,explode=true,name=TimeoutAction"`
 	Version              GetModifyCurrentDbClusterCapacityVersionEnum `queryParam:"style=form,explode=true,name=Version"`

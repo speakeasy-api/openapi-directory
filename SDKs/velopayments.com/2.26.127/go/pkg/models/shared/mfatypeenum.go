@@ -3,7 +3,7 @@ package shared
 type MfaTypeEnum string
 
 const (
-	MfaTypeEnumSms     MfaTypeEnum = "SMS"
-	MfaTypeEnumYubikey MfaTypeEnum = "YUBIKEY"
-	MfaTypeEnumTotp    MfaTypeEnum = "TOTP"
+	MFATypeEnumSms     MfaTypeEnum = "SMS"
+	MFATypeEnumYubikey MfaTypeEnum = "YUBIKEY"
+	MFATypeEnumTotp    MfaTypeEnum = "TOTP"
 )

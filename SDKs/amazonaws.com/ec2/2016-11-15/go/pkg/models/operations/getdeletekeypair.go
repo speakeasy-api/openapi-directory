@@ -3,13 +3,13 @@ package operations
 type GetDeleteKeyPairActionEnum string
 
 const (
-	GetDeleteKeyPairActionEnumDeleteKeyPair GetDeleteKeyPairActionEnum = "DeleteKeyPair"
+	GETDeleteKeyPairActionEnumDeleteKeyPair GetDeleteKeyPairActionEnum = "DeleteKeyPair"
 )
 
 type GetDeleteKeyPairVersionEnum string
 
 const (
-	GetDeleteKeyPairVersionEnumTwoThousandAndSixteen1115 GetDeleteKeyPairVersionEnum = "2016-11-15"
+	GETDeleteKeyPairVersionEnumTwoThousandAndSixteen1115 GetDeleteKeyPairVersionEnum = "2016-11-15"
 )
 
 type GetDeleteKeyPairQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeImportSnapshotTasksResult struct {
-	ImportSnapshotTasks []ImportSnapshotTask
-	NextToken           *string
+	ImportSnapshotTasks map[string]interface{}
+	NextToken           map[string]interface{}
 }

@@ -42,7 +42,7 @@ type SingleMonitor200ApplicationJSONMonitorOptions struct {
 	FollowRedirects *bool    `json:"followRedirects,omitempty"`
 	RequestDelay    *float64 `json:"requestDelay,omitempty"`
 	RequestTimeout  *float64 `json:"requestTimeout,omitempty"`
-	StrictSsl       *bool    `json:"strictSSL,omitempty"`
+	StrictSSL       *bool    `json:"strictSSL,omitempty"`
 }
 
 type SingleMonitor200ApplicationJSONMonitorSchedule struct {

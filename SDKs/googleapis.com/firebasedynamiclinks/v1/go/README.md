@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,77 +26,77 @@ func main() {
         Security: operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.FirebasedynamiclinksManagedShortLinksCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "ex",
+            AccessToken: "sed",
             Alt: "proto",
-            Callback: "ad",
-            Fields: "atque",
-            Key: "aut",
-            OauthToken: "laborum",
+            Callback: "adipisci",
+            Fields: "iste",
+            Key: "quod",
+            OauthToken: "aliquid",
             PrettyPrint: true,
-            QuotaUser: "ullam",
-            UploadType: "sit",
-            UploadProtocol: "dolores",
+            QuotaUser: "deleniti",
+            UploadType: "esse",
+            UploadProtocol: "autem",
         },
         Request: &shared.CreateManagedShortLinkRequest{
             DynamicLinkInfo: &shared.DynamicLinkInfo{
                 AnalyticsInfo: &shared.AnalyticsInfo{
                     GooglePlayAnalytics: &shared.GooglePlayAnalytics{
-                        Gclid: "amet",
-                        UtmCampaign: "cupiditate",
-                        UtmContent: "sit",
-                        UtmMedium: "est",
-                        UtmSource: "quasi",
-                        UtmTerm: "molestiae",
+                        Gclid: "adipisci",
+                        UtmCampaign: "aspernatur",
+                        UtmContent: "dolorem",
+                        UtmMedium: "sapiente",
+                        UtmSource: "at",
+                        UtmTerm: "et",
                     },
                     ItunesConnectAnalytics: &shared.ITunesConnectAnalytics{
-                        At: "recusandae",
-                        Ct: "rem",
-                        Mt: "eos",
-                        Pt: "ut",
+                        At: "dolor",
+                        Ct: "provident",
+                        Mt: "reprehenderit",
+                        Pt: "non",
                     },
                 },
                 AndroidInfo: &shared.AndroidInfo{
-                    AndroidFallbackLink: "est",
-                    AndroidLink: "aut",
-                    AndroidMinPackageVersionCode: "voluptatem",
-                    AndroidPackageName: "nulla",
+                    AndroidFallbackLink: "voluptatibus",
+                    AndroidLink: "quis",
+                    AndroidMinPackageVersionCode: "aut",
+                    AndroidPackageName: "voluptatum",
                 },
                 DesktopInfo: &shared.DesktopInfo{
-                    DesktopFallbackLink: "voluptatibus",
+                    DesktopFallbackLink: "ea",
                 },
-                DomainURIPrefix: "quibusdam",
-                DynamicLinkDomain: "quod",
+                DomainURIPrefix: "necessitatibus",
+                DynamicLinkDomain: "qui",
                 IosInfo: &shared.IosInfo{
-                    IosAppStoreID: "nihil",
-                    IosBundleID: "maxime",
-                    IosCustomScheme: "nobis",
-                    IosFallbackLink: "incidunt",
-                    IosIpadBundleID: "tenetur",
-                    IosIpadFallbackLink: "possimus",
-                    IosMinimumVersion: "occaecati",
+                    IosAppStoreID: "aut",
+                    IosBundleID: "rem",
+                    IosCustomScheme: "voluptatem",
+                    IosFallbackLink: "aliquid",
+                    IosIpadBundleID: "maxime",
+                    IosIpadFallbackLink: "aut",
+                    IosMinimumVersion: "quod",
                 },
-                Link: "sequi",
+                Link: "voluptatum",
                 NavigationInfo: &shared.NavigationInfo{
                     EnableForcedRedirect: true,
                 },
                 SocialMetaTagInfo: &shared.SocialMetaTagInfo{
-                    SocialDescription: "necessitatibus",
-                    SocialImageLink: "voluptatem",
-                    SocialTitle: "accusantium",
+                    SocialDescription: "aut",
+                    SocialImageLink: "totam",
+                    SocialTitle: "iusto",
                 },
             },
-            LongDynamicLink: "qui",
-            Name: "voluptas",
-            SdkVersion: "mollitia",
+            LongDynamicLink: "in",
+            Name: "est",
+            SdkVersion: "cum",
             Suffix: &shared.Suffix{
-                CustomSuffix: "aut",
+                CustomSuffix: "sed",
                 Option: "SHORT",
             },
         },

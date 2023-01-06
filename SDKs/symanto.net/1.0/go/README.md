@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,18 @@ func main() {
     
     req := operations.CommunicationRequest{
         QueryParams: operations.CommunicationQueryParams{
-            All: true,
+            All: false,
         },
         Request: []shared.Post{
             shared.Post{
-                ID: "ducimus",
-                Language: "provident",
-                Text: "illo",
-            },
-            shared.Post{
-                ID: "voluptate",
-                Language: "quas",
-                Text: "et",
+                ID: "architecto",
+                Language: "ad",
+                Text: "nisi",
             },
         },
     }
     
-    res, err := s.Sdk.Communication(ctx, req)
+    res, err := s.TextAnalysis.Communication(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -65,7 +59,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Text Analysis
 
 * `Communication` - Communication & Tonality
 * `EkmanEmotion` - Emotion Analysis

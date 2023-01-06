@@ -3,18 +3,18 @@ package operations
 type ListHistoricalGwsColorEnum string
 
 const (
-	ListHistoricalGwsColorEnumRed   ListHistoricalGwsColorEnum = "red"
-	ListHistoricalGwsColorEnumWhite ListHistoricalGwsColorEnum = "white"
-	ListHistoricalGwsColorEnumPink  ListHistoricalGwsColorEnum = "pink"
+	ListHistoricalGWSColorEnumRed   ListHistoricalGwsColorEnum = "red"
+	ListHistoricalGWSColorEnumWhite ListHistoricalGwsColorEnum = "white"
+	ListHistoricalGWSColorEnumPink  ListHistoricalGwsColorEnum = "pink"
 )
 
 type ListHistoricalGwsOrderingEnum string
 
 const (
-	ListHistoricalGwsOrderingEnumDate       ListHistoricalGwsOrderingEnum = "date"
-	ListHistoricalGwsOrderingEnumMinusDate  ListHistoricalGwsOrderingEnum = "-date"
-	ListHistoricalGwsOrderingEnumScore      ListHistoricalGwsOrderingEnum = "score"
-	ListHistoricalGwsOrderingEnumMinusScore ListHistoricalGwsOrderingEnum = "-score"
+	ListHistoricalGWSOrderingEnumDate       ListHistoricalGwsOrderingEnum = "date"
+	ListHistoricalGWSOrderingEnumMinusDate  ListHistoricalGwsOrderingEnum = "-date"
+	ListHistoricalGWSOrderingEnumScore      ListHistoricalGwsOrderingEnum = "score"
+	ListHistoricalGWSOrderingEnumMinusScore ListHistoricalGwsOrderingEnum = "-score"
 )
 
 type ListHistoricalGwsQueryParams struct {

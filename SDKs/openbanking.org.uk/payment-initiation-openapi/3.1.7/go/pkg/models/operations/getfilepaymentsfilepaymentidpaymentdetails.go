@@ -17,7 +17,7 @@ type GetFilePaymentsFilePaymentIDPaymentDetailsHeaders struct {
 }
 
 type GetFilePaymentsFilePaymentIDPaymentDetailsSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetFilePaymentsFilePaymentIDPaymentDetailsRequest struct {
@@ -30,7 +30,7 @@ type GetFilePaymentsFilePaymentIDPaymentDetailsResponse struct {
 	Body                           []byte
 	ContentType                    string
 	Headers                        map[string][]string
-	ObErrorResponse1               *shared.ObErrorResponse1
-	ObWritePaymentDetailsResponse1 *shared.ObWritePaymentDetailsResponse1
+	OBErrorResponse1               *shared.ObErrorResponse1
+	OBWritePaymentDetailsResponse1 *shared.ObWritePaymentDetailsResponse1
 	StatusCode                     int64
 }

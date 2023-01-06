@@ -1,5 +1,5 @@
 package shared
 
 type GetFieldLevelEncryptionConfigResult struct {
-	FieldLevelEncryptionConfig *FieldLevelEncryptionConfig
+	FieldLevelEncryptionConfig *FieldLevelEncryptionConfig1
 }

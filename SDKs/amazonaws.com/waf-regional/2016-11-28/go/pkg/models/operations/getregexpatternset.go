@@ -30,7 +30,7 @@ type GetRegexPatternSetResponse struct {
 	ContentType                 string
 	GetRegexPatternSetResponse  *shared.GetRegexPatternSetResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

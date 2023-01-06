@@ -3,13 +3,13 @@ package operations
 type PostDescribeReceiptRuleActionEnum string
 
 const (
-	PostDescribeReceiptRuleActionEnumDescribeReceiptRule PostDescribeReceiptRuleActionEnum = "DescribeReceiptRule"
+	POSTDescribeReceiptRuleActionEnumDescribeReceiptRule PostDescribeReceiptRuleActionEnum = "DescribeReceiptRule"
 )
 
 type PostDescribeReceiptRuleVersionEnum string
 
 const (
-	PostDescribeReceiptRuleVersionEnumTwoThousandAndTen1201 PostDescribeReceiptRuleVersionEnum = "2010-12-01"
+	POSTDescribeReceiptRuleVersionEnumTwoThousandAndTen1201 PostDescribeReceiptRuleVersionEnum = "2010-12-01"
 )
 
 type PostDescribeReceiptRuleQueryParams struct {

@@ -11,6 +11,6 @@ type SendSmsMultiRequest struct {
 type SendSmsMultiResponse struct {
 	ContentType string
 	Erreur      *shared.Erreur
-	SmsReponse  *shared.SmsReponse
+	SMSReponse  *shared.SmsReponse
 	StatusCode  int64
 }

@@ -3,13 +3,13 @@ package operations
 type PostDeleteSnapshotCopyGrantActionEnum string
 
 const (
-	PostDeleteSnapshotCopyGrantActionEnumDeleteSnapshotCopyGrant PostDeleteSnapshotCopyGrantActionEnum = "DeleteSnapshotCopyGrant"
+	POSTDeleteSnapshotCopyGrantActionEnumDeleteSnapshotCopyGrant PostDeleteSnapshotCopyGrantActionEnum = "DeleteSnapshotCopyGrant"
 )
 
 type PostDeleteSnapshotCopyGrantVersionEnum string
 
 const (
-	PostDeleteSnapshotCopyGrantVersionEnumTwoThousandAndTwelve1201 PostDeleteSnapshotCopyGrantVersionEnum = "2012-12-01"
+	POSTDeleteSnapshotCopyGrantVersionEnumTwoThousandAndTwelve1201 PostDeleteSnapshotCopyGrantVersionEnum = "2012-12-01"
 )
 
 type PostDeleteSnapshotCopyGrantQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,9 +34,9 @@ func main() {
     
     req := operations.CreateAdministrationRequest{
         PathParams: operations.CreateAdministrationPathParams{
-            LegalEntityID: 6289420334362467367,
+            LegalEntityID: 4840830895169634114,
         },
-        Request: "cum",
+        Request: "nam",
     }
     
     res, err := s.Administrations.CreateAdministration(ctx, req)

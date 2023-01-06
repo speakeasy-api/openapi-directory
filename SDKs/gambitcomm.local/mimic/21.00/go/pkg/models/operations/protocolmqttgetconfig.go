@@ -13,7 +13,7 @@ type ProtocolMqttGetConfigRequest struct {
 }
 
 type ProtocolMqttGetConfigResponse struct {
-	ConfigMqtt  *shared.ConfigMqtt
+	ConfigMQTT  *shared.ConfigMqtt
 	ContentType string
 	StatusCode  int64
 }

@@ -30,6 +30,6 @@ type ListByteMatchSetsResponse struct {
 	ContentType                string
 	ListByteMatchSetsResponse  *shared.ListByteMatchSetsResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

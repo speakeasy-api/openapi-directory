@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -119,7 +119,7 @@ func (s *VisionPrediction) OcrMultipart(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.OcrPredictResponse = out
+			res.OCRPredictResponse = out
 		}
 	}
 

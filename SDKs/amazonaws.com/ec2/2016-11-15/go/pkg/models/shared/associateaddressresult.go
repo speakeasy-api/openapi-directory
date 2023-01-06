@@ -1,5 +1,5 @@
 package shared
 
 type AssociateAddressResult struct {
-	AssociationID *string
+	AssociationID map[string]interface{}
 }

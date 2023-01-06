@@ -1,13 +1,9 @@
 package sdk
 
 import (
-	"context"
-	"fmt"
 	"net/http"
-	"openapi/internal/utils"
-	"openapi/pkg/models/operations"
-	"openapi/pkg/models/shared"
-	"strings"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -19,6 +15,8 @@ type HTTPClient interface {
 }
 
 type SDK struct {
+	ItemDraft *ItemDraft
+
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
 
@@ -69,56 +67,14 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.ItemDraft = NewItemDraft(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	return sdk
-}
-
-// CreateItemDraft - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
-func (s *SDK) CreateItemDraft(ctx context.Context, request operations.CreateItemDraftRequest) (*operations.CreateItemDraftResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/item_draft/"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateHeaders(ctx, req, request.Headers)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.CreateItemDraftResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 201:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ItemDraftResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ItemDraftResponse = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
 }

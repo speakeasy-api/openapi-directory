@@ -3,13 +3,13 @@ package operations
 type GetGetConsoleScreenshotActionEnum string
 
 const (
-	GetGetConsoleScreenshotActionEnumGetConsoleScreenshot GetGetConsoleScreenshotActionEnum = "GetConsoleScreenshot"
+	GETGETConsoleScreenshotActionEnumGetConsoleScreenshot GetGetConsoleScreenshotActionEnum = "GetConsoleScreenshot"
 )
 
 type GetGetConsoleScreenshotVersionEnum string
 
 const (
-	GetGetConsoleScreenshotVersionEnumTwoThousandAndSixteen1115 GetGetConsoleScreenshotVersionEnum = "2016-11-15"
+	GETGETConsoleScreenshotVersionEnumTwoThousandAndSixteen1115 GetGetConsoleScreenshotVersionEnum = "2016-11-15"
 )
 
 type GetGetConsoleScreenshotQueryParams struct {

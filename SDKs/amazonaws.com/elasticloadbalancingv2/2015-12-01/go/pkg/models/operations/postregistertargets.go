@@ -3,13 +3,13 @@ package operations
 type PostRegisterTargetsActionEnum string
 
 const (
-	PostRegisterTargetsActionEnumRegisterTargets PostRegisterTargetsActionEnum = "RegisterTargets"
+	POSTRegisterTargetsActionEnumRegisterTargets PostRegisterTargetsActionEnum = "RegisterTargets"
 )
 
 type PostRegisterTargetsVersionEnum string
 
 const (
-	PostRegisterTargetsVersionEnumTwoThousandAndFifteen1201 PostRegisterTargetsVersionEnum = "2015-12-01"
+	POSTRegisterTargetsVersionEnumTwoThousandAndFifteen1201 PostRegisterTargetsVersionEnum = "2015-12-01"
 )
 
 type PostRegisterTargetsQueryParams struct {

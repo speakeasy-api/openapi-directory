@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,18 +32,18 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.CancelreservationRequest{
-        Request: operations.CancelreservationRequestBody{
-            Reservation: "ipsam",
+    req := operations.DeleteChargeStationRequest{
+        PathParams: operations.DeleteChargeStationPathParams{
+            ID: "molestiae",
         },
     }
     
-    res, err := s.Sdk.Cancelreservation(ctx, req)
+    res, err := s.ChargeStations.DeleteChargeStation(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Cancelreservation201ApplicationJSONObject != nil {
+    if res.StatusCode == http.StatusOK {
         // handle response
     }
 ```
@@ -53,65 +52,101 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Charge Stations
 
-* `Cancelreservation` - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 * `DeleteChargeStation` - Use to delete a charge station
-* `DeleteConnector` - Delete a connector
-* `DeleteDriver` - Delete a driver
-* `DeleteLocation` - Delete a location
-* `DeleteToken` - Use to delete a token
-* `Deletechargingschedule` - Delete a smart charging schedule
 * `GetChargeStation` - Get a single charge station's data
 * `GetChargeStationConnectors` - List connectors for a chargestation
 * `GetChargeStations` - List all Chargestations
+* `PatchChargeStation` - Update a charge station's data
+* `PostChargeStations` - Create a new charge station
+
+### Commands
+
+* `Cancelreservation` - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 * `GetCommands` - Get Commands data
+* `GetVariables` - Get a charge station's config variables
+* `PatchChargeStationVariable` - Update config variables for a chargestation
+* `Remotestart` - Use to request a remote start command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* `Remotestop` - Use to request a remote stop command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* `Reserve` - Use to request a reserve command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* `Reset` - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* `Unlockconnector` - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+
+### Configurations
+
 * `GetConfiguration` - Get one Configuration data
 * `GetConfigurations` - Get Configurations data
+* `PostConfigurations` - Create connector with parameters
+
+### Connectors
+
+* `DeleteConnector` - Delete a connector
 * `GetConnector` - Get a connector
 * `GetConnectors` - List connectors
+* `PatchConnector` - Update a connector's data
+* `PostConnectors` - Create a new connector
+
+### Drivers
+
+* `DeleteDriver` - Delete a driver
 * `GetDriver` - Get a driver's data
 * `GetDrivers` - List all drivers
+* `PatchDriver` - Update a driver's data
+* `PostDrivers` - Create a new driver
+
+### Locations
+
+* `DeleteLocation` - Delete a location
 * `GetLocation` - Get a location's data
 * `GetLocations` - Get Locations data
+* `PatchLocation` - Update a location's data
+* `PostLocations` - Create a new location
+
+### Organizations
+
 * `GetOrganization` - Get one organization's data by id
 * `GetOrganizations` - Get an array of all Organizations
+* `PatchOrganization` - Update an organization's data
+
+### Realtime
+
 * `GetRealtime` - Use to request a Websockets handshake
+
+### Reservations
+
 * `GetReservation` - Get one reservation data
 * `GetReservations` - Get Reservations data
+* `Updatereservation` - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+
+### Smart Charging
+
+* `Deletechargingschedule` - Delete a smart charging schedule
+* `Setchargingschedule` - Set one of charging power or current of a specific chargestation connector
+
+### Tokens
+
+* `DeleteToken` - Use to delete a token
 * `GetToken` - Get a single token's data
 * `GetTokens` - List tokens
+* `PatchToken` - Update a token
+* `PostTokens` - Create a new token
+
+### Transactions
+
 * `GetTransaction` - Get a specific transaction
 * `GetTransactionCost` - Get a specific transaction's cost
 * `GetTransactions` - Get a list of transactions
-* `GetVariables` - Get a charge station's config variables
+
+### Vehicles
+
 * `GetVehicle` - Get a vehicle's data
 * `GetVehicleBattery` - Get a vehicle's battery
 * `GetVehicleCharge` - Get a vehicle's charge
 * `GetVehicleLocation` - Get a vehicle's location
 * `GetVehicleOdometer` - Get a vehicle's odometer
 * `GetVehicles` - List all vehicles
-* `PatchChargeStation` - Update a charge station's data
-* `PatchChargeStationVariable` - Update config variables for a chargestation
-* `PatchConnector` - Update a connector's data
-* `PatchDriver` - Update a driver's data
-* `PatchLocation` - Update a location's data
-* `PatchOrganization` - Update an organization's data
-* `PatchToken` - Update a token
 * `PostCharge` - Change charge
-* `PostChargeStations` - Create a new charge station
-* `PostConfigurations` - Create connector with parameters
-* `PostConnectors` - Create a new connector
-* `PostDrivers` - Create a new driver
-* `PostLocations` - Create a new location
-* `PostTokens` - Create a new token
-* `Remotestart` - Use to request a remote start command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `Remotestop` - Use to request a remote stop command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `Reserve` - Use to request a reserve command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `Reset` - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `Setchargingschedule` - Set one of charging power or current of a specific chargestation connector
-* `Unlockconnector` - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `Updatereservation` - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
 <!-- End SDK Available Operations -->
 

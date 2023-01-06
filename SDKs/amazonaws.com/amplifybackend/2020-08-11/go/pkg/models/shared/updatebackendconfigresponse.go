@@ -1,8 +1,8 @@
 package shared
 
 type UpdateBackendConfigResponse struct {
-	AppID               *string                `json:"AppId,omitempty"`
-	BackendManagerAppID *string                `json:"BackendManagerAppId,omitempty"`
-	Error               *string                `json:"Error,omitempty"`
-	LoginAuthConfig     *LoginAuthConfigReqObj `json:"LoginAuthConfig,omitempty"`
+	AppID               map[string]interface{} `json:"AppId,omitempty"`
+	BackendManagerAppID map[string]interface{} `json:"BackendManagerAppId,omitempty"`
+	Error               map[string]interface{} `json:"Error,omitempty"`
+	LoginAuthConfig     map[string]interface{} `json:"LoginAuthConfig,omitempty"`
 }

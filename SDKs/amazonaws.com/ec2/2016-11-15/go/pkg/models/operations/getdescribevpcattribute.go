@@ -3,20 +3,20 @@ package operations
 type GetDescribeVpcAttributeActionEnum string
 
 const (
-	GetDescribeVpcAttributeActionEnumDescribeVpcAttribute GetDescribeVpcAttributeActionEnum = "DescribeVpcAttribute"
+	GETDescribeVpcAttributeActionEnumDescribeVpcAttribute GetDescribeVpcAttributeActionEnum = "DescribeVpcAttribute"
 )
 
 type GetDescribeVpcAttributeAttributeEnum string
 
 const (
-	GetDescribeVpcAttributeAttributeEnumEnableDNSSupport   GetDescribeVpcAttributeAttributeEnum = "enableDnsSupport"
-	GetDescribeVpcAttributeAttributeEnumEnableDNSHostnames GetDescribeVpcAttributeAttributeEnum = "enableDnsHostnames"
+	GETDescribeVpcAttributeAttributeEnumEnableDNSSupport   GetDescribeVpcAttributeAttributeEnum = "enableDnsSupport"
+	GETDescribeVpcAttributeAttributeEnumEnableDNSHostnames GetDescribeVpcAttributeAttributeEnum = "enableDnsHostnames"
 )
 
 type GetDescribeVpcAttributeVersionEnum string
 
 const (
-	GetDescribeVpcAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeVpcAttributeVersionEnum = "2016-11-15"
+	GETDescribeVpcAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeVpcAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeVpcAttributeQueryParams struct {

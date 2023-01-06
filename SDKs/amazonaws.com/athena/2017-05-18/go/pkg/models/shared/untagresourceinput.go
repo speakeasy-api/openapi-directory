@@ -1,6 +1,6 @@
 package shared
 
 type UntagResourceInput struct {
-	ResourceArn string   `json:"ResourceARN"`
+	ResourceARN string   `json:"ResourceARN"`
 	TagKeys     []string `json:"TagKeys"`
 }

@@ -10,23 +10,10 @@ type ReactionsListForIssuePathParams struct {
 	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type ReactionsListForIssueContentEnum string
-
-const (
-	ReactionsListForIssueContentEnumPlus1    ReactionsListForIssueContentEnum = "+1"
-	ReactionsListForIssueContentEnumMinus1   ReactionsListForIssueContentEnum = "-1"
-	ReactionsListForIssueContentEnumLaugh    ReactionsListForIssueContentEnum = "laugh"
-	ReactionsListForIssueContentEnumConfused ReactionsListForIssueContentEnum = "confused"
-	ReactionsListForIssueContentEnumHeart    ReactionsListForIssueContentEnum = "heart"
-	ReactionsListForIssueContentEnumHooray   ReactionsListForIssueContentEnum = "hooray"
-	ReactionsListForIssueContentEnumRocket   ReactionsListForIssueContentEnum = "rocket"
-	ReactionsListForIssueContentEnumEyes     ReactionsListForIssueContentEnum = "eyes"
-)
-
 type ReactionsListForIssueQueryParams struct {
-	Content *ReactionsListForIssueContentEnum `queryParam:"style=form,explode=true,name=content"`
-	Page    *int64                            `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                            `queryParam:"style=form,explode=true,name=per_page"`
+	Content *shared.IssueNumberEnum `queryParam:"style=form,explode=true,name=content"`
+	Page    *int64                  `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64                  `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type ReactionsListForIssue415ApplicationJSON struct {

@@ -1,0 +1,12 @@
+package shared
+
+type DocumentLinks struct {
+	Admins           map[string]Href `json:"admins,omitempty"`
+	Download         *Href           `json:"download,omitempty"`
+	Editors          map[string]Href `json:"editors,omitempty"`
+	PreviewBox       *Href           `json:"preview-box,omitempty"`
+	PreviewPdf       *Href           `json:"preview-pdf,omitempty"`
+	PreviewPdfViewer *Href           `json:"preview-pdf-viewer,omitempty"`
+	Project          *Href           `json:"project,omitempty"`
+	Thumbnail        *Href           `json:"thumbnail,omitempty"`
+}

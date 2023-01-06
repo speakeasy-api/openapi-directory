@@ -3,13 +3,13 @@ package operations
 type PostModifyRuleActionEnum string
 
 const (
-	PostModifyRuleActionEnumModifyRule PostModifyRuleActionEnum = "ModifyRule"
+	POSTModifyRuleActionEnumModifyRule PostModifyRuleActionEnum = "ModifyRule"
 )
 
 type PostModifyRuleVersionEnum string
 
 const (
-	PostModifyRuleVersionEnumTwoThousandAndFifteen1201 PostModifyRuleVersionEnum = "2015-12-01"
+	POSTModifyRuleVersionEnumTwoThousandAndFifteen1201 PostModifyRuleVersionEnum = "2015-12-01"
 )
 
 type PostModifyRuleQueryParams struct {

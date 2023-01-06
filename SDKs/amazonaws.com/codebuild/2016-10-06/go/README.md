@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,24 @@ func main() {
     
     req := operations.BatchDeleteBuildsRequest{
         Headers: operations.BatchDeleteBuildsHeaders{
-            XAmzAlgorithm: "illum",
-            XAmzContentSha256: "eum",
-            XAmzCredential: "quo",
-            XAmzDate: "et",
-            XAmzSecurityToken: "non",
-            XAmzSignature: "omnis",
-            XAmzSignedHeaders: "tempora",
+            XAmzAlgorithm: "voluptates",
+            XAmzContentSha256: "quo",
+            XAmzCredential: "est",
+            XAmzDate: "vel",
+            XAmzSecurityToken: "optio",
+            XAmzSignature: "at",
+            XAmzSignedHeaders: "a",
             XAmzTarget: "CodeBuild_20161006.BatchDeleteBuilds",
         },
         Request: shared.BatchDeleteBuildsInput{
             Ids: []string{
-                "fugit",
-                "quam",
+                "praesentium",
+                "tempora",
             },
         },
     }
     
-    res, err := s.Sdk.BatchDeleteBuilds(ctx, req)
+    res, err := s.BatchDeleteBuilds(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

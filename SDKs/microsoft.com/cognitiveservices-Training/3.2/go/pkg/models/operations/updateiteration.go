@@ -1,0 +1,30 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type UpdateIterationPathParams struct {
+	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
+	ProjectID   string `pathParam:"style=simple,explode=false,name=projectId"`
+}
+
+type UpdateIterationRequestsInput struct {
+	ApplicationXML []byte                 `request:"mediaType=application/xml"`
+	Iteration      *shared.IterationInput `request:"mediaType=application/json"`
+	Iteration1     *shared.IterationInput `request:"mediaType=application/x-www-form-urlencoded"`
+	TextXML        []byte                 `request:"mediaType=text/xml"`
+}
+
+type UpdateIterationRequest struct {
+	PathParams UpdateIterationPathParams
+	Request    UpdateIterationRequestsInput
+}
+
+type UpdateIterationResponse struct {
+	Body              []byte
+	ContentType       string
+	CustomVisionError *shared.CustomVisionError
+	Iteration         *shared.Iteration
+	StatusCode        int64
+}

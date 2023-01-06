@@ -3,13 +3,13 @@ package operations
 type PostListOpenIDConnectProviderTagsActionEnum string
 
 const (
-	PostListOpenIDConnectProviderTagsActionEnumListOpenIDConnectProviderTags PostListOpenIDConnectProviderTagsActionEnum = "ListOpenIDConnectProviderTags"
+	POSTListOpenIDConnectProviderTagsActionEnumListOpenIDConnectProviderTags PostListOpenIDConnectProviderTagsActionEnum = "ListOpenIDConnectProviderTags"
 )
 
 type PostListOpenIDConnectProviderTagsVersionEnum string
 
 const (
-	PostListOpenIDConnectProviderTagsVersionEnumTwoThousandAndTen0508 PostListOpenIDConnectProviderTagsVersionEnum = "2010-05-08"
+	POSTListOpenIDConnectProviderTagsVersionEnumTwoThousandAndTen0508 PostListOpenIDConnectProviderTagsVersionEnum = "2010-05-08"
 )
 
 type PostListOpenIDConnectProviderTagsQueryParams struct {

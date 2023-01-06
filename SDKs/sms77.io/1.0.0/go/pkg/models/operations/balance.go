@@ -1,7 +1,7 @@
 package operations
 
 type BalanceResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	Balance200TextPlainFloatNumber *string
+	ContentType                    string
+	StatusCode                     int64
 }

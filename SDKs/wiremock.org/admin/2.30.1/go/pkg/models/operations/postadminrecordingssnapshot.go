@@ -1,16 +1,5 @@
 package operations
 
-type PostAdminRecordingsSnapshotRequestBodyCaptureHeaders struct {
-	CaseInsensitive *bool `json:"caseInsensitive,omitempty"`
-}
-
-// PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria
-// Criteria for extracting response bodies to a separate file instead of including it in the stub mapping
-type PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria struct {
-	BinarySizeThreshold *string `json:"binarySizeThreshold,omitempty"`
-	TextSizeThreshold   *string `json:"textSizeThreshold,omitempty"`
-}
-
 // PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials
 // Pre-emptive basic auth credentials to match against
 type PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials struct {
@@ -18,12 +7,13 @@ type PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials struct {
 	Username string `json:"username"`
 }
 
+// PostAdminRecordingsSnapshotRequestBodyFilters
+// Filter requests for which to create stub mapping
 type PostAdminRecordingsSnapshotRequestBodyFilters struct {
 	BasicAuthCredentials *PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials `json:"basicAuthCredentials,omitempty"`
 	BodyPatterns         []map[string]interface{}                                           `json:"bodyPatterns,omitempty"`
 	Cookies              map[string]interface{}                                             `json:"cookies,omitempty"`
 	Headers              map[string]interface{}                                             `json:"headers,omitempty"`
-	Ids                  []string                                                           `json:"ids,omitempty"`
 	Method               *string                                                            `json:"method,omitempty"`
 	QueryParameters      map[string]interface{}                                             `json:"queryParameters,omitempty"`
 	URL                  *string                                                            `json:"url,omitempty"`
@@ -33,14 +23,7 @@ type PostAdminRecordingsSnapshotRequestBodyFilters struct {
 }
 
 type PostAdminRecordingsSnapshotRequestBody struct {
-	CaptureHeaders        map[string]PostAdminRecordingsSnapshotRequestBodyCaptureHeaders `json:"captureHeaders,omitempty"`
-	ExtractBodyCriteria   *PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria      `json:"extractBodyCriteria,omitempty"`
-	Filters               *PostAdminRecordingsSnapshotRequestBodyFilters                  `json:"filters,omitempty"`
-	Persist               *bool                                                           `json:"persist,omitempty"`
-	RepeatsAsScenarios    *bool                                                           `json:"repeatsAsScenarios,omitempty"`
-	RequestBodyPattern    map[string]interface{}                                          `json:"requestBodyPattern,omitempty"`
-	TransformerParameters map[string]interface{}                                          `json:"transformerParameters,omitempty"`
-	Transformers          []string                                                        `json:"transformers,omitempty"`
+	Filters *PostAdminRecordingsSnapshotRequestBodyFilters `json:"filters,omitempty"`
 }
 
 // PostAdminRecordingsSnapshot200ApplicationJSONMappingsRequestBasicAuthCredentials
@@ -119,6 +102,6 @@ type PostAdminRecordingsSnapshotRequest struct {
 
 type PostAdminRecordingsSnapshotResponse struct {
 	ContentType                                         string
-	PostAdminRecordingsSnapshot200ApplicationJSONObject *PostAdminRecordingsSnapshot200ApplicationJSON
 	StatusCode                                          int64
+	PostAdminRecordingsSnapshot200ApplicationJSONObject *PostAdminRecordingsSnapshot200ApplicationJSON
 }

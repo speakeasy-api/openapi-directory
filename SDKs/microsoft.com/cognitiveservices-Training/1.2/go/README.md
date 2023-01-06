@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,32 +22,18 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.CreateImagesFromDataRequest{
-        PathParams: operations.CreateImagesFromDataPathParams{
-            ProjectID: "reiciendis",
-        },
-        QueryParams: operations.CreateImagesFromDataQueryParams{
-            TagIds: []string{
-                "suscipit",
-            },
-        },
-        Headers: operations.CreateImagesFromDataHeaders{
-            TrainingKey: "dolor",
-        },
-        Request: operations.CreateImagesFromDataRequestBody{
-            ImageData: operations.CreateImagesFromDataRequestBodyImageData{
-                Content: []byte("quia"),
-                ImageData: "rerum",
-            },
+    req := operations.GetAccountInfoRequest{
+        Headers: operations.GetAccountInfoHeaders{
+            TrainingKey: "consequuntur",
         },
     }
     
-    res, err := s.Sdk.CreateImagesFromData(ctx, req)
+    res, err := s.AccountAPI.GetAccountInfo(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ImageCreateSummary != nil {
+    if res.Account != nil {
         // handle response
     }
 ```
@@ -57,36 +42,51 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AccountApi
 
-* `CreateImagesFromData` - Add the provided images to the set of training images
-* `CreateProject` - Create a project
-* `CreateTag` - Create a tag for the project
-* `DeleteImageTags` - Remove a set of tags from a set of images
-* `DeleteImages` - Delete images from the set of training images
-* `DeleteIteration` - Delete a specific iteration of a project
-* `DeletePrediction` - Delete a set of predicted images and their associated prediction results
-* `DeleteProject` - Delete a specific project
-* `DeleteTag` - Delete a tag from the project
-* `ExportIteration` - Export a trained iteration
 * `GetAccountInfo` - Get basic information about your account
+
+### DomainsApi
+
 * `GetDomain` - Get information about a specific domain
 * `GetDomains` - Get a list of the available domains
+
+### ImageApi
+
+* `CreateImagesFromData` - Add the provided images to the set of training images
+* `DeleteImageTags` - Remove a set of tags from a set of images
+* `DeleteImages` - Delete images from the set of training images
+* `GetTaggedImages` - Get tagged images for a given project iteration
+* `GetUntaggedImages` - Get untagged images for a given project iteration
+
+### PredictionsApi
+
+* `DeletePrediction` - Delete a set of predicted images and their associated prediction results
+* `QuickTestImage` - Quick test an image
+* `QuickTestImageURL` - Quick test an image url
+
+### ProjectApi
+
+* `CreateProject` - Create a project
+* `DeleteIteration` - Delete a specific iteration of a project
+* `DeleteProject` - Delete a specific project
+* `ExportIteration` - Export a trained iteration
 * `GetExports` - Get the list of exports for a specific iteration
 * `GetIteration` - Get a specific iteration
 * `GetIterationPerformance` - Get detailed performance information about a trained iteration
 * `GetIterations` - Get iterations for the project
 * `GetProject` - Get a specific project
 * `GetProjects` - Get your projects
-* `GetTag` - Get information about a specific tag
-* `GetTaggedImages` - Get tagged images for a given project iteration
-* `GetTags` - Get the tags for a given project and iteration
-* `GetUntaggedImages` - Get untagged images for a given project iteration
-* `QuickTestImage` - Quick test an image
-* `QuickTestImageURL` - Quick test an image url
 * `TrainProject` - Queues project for training
 * `UpdateIteration` - Update a specific iteration
 * `UpdateProject` - Update a specific project
+
+### TagsApi
+
+* `CreateTag` - Create a tag for the project
+* `DeleteTag` - Delete a tag from the project
+* `GetTag` - Get information about a specific tag
+* `GetTags` - Get the tags for a given project and iteration
 * `UpdateTag` - Update a tag
 
 <!-- End SDK Available Operations -->

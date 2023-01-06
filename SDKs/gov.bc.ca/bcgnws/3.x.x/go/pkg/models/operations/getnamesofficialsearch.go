@@ -34,7 +34,7 @@ type GetNamesOfficialSearchQueryParams struct {
 	ItemsPerPage    *int64                                 `queryParam:"style=form,explode=true,name=itemsPerPage"`
 	Name            string                                 `queryParam:"style=form,explode=true,name=name"`
 	OutputFormat    GetNamesOfficialSearchOutputFormatEnum `queryParam:"style=form,explode=true,name=outputFormat"`
-	OutputSrs       *int64                                 `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS       *int64                                 `queryParam:"style=form,explode=true,name=outputSRS"`
 	OutputStyle     *GetNamesOfficialSearchOutputStyleEnum `queryParam:"style=form,explode=true,name=outputStyle"`
 	SortBy          *GetNamesOfficialSearchSortByEnum      `queryParam:"style=form,explode=true,name=sortBy"`
 	StartIndex      *int64                                 `queryParam:"style=form,explode=true,name=startIndex"`

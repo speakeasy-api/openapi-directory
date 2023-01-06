@@ -31,8 +31,8 @@ type ReplicateKeyResponse struct {
 	ContentType                      string
 	DisabledException                *interface{}
 	InvalidArnException              *interface{}
-	KmsInternalException             *interface{}
-	KmsInvalidStateException         *interface{}
+	KMSInternalException             *interface{}
+	KMSInvalidStateException         *interface{}
 	LimitExceededException           *interface{}
 	MalformedPolicyDocumentException *interface{}
 	NotFoundException                *interface{}

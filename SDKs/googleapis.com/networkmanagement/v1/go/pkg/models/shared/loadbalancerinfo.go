@@ -13,8 +13,8 @@ type LoadBalancerInfoLoadBalancerTypeEnum string
 
 const (
 	LoadBalancerInfoLoadBalancerTypeEnumLoadBalancerTypeUnspecified LoadBalancerInfoLoadBalancerTypeEnum = "LOAD_BALANCER_TYPE_UNSPECIFIED"
-	LoadBalancerInfoLoadBalancerTypeEnumInternalTcpudp              LoadBalancerInfoLoadBalancerTypeEnum = "INTERNAL_TCP_UDP"
-	LoadBalancerInfoLoadBalancerTypeEnumNetworkTcpudp               LoadBalancerInfoLoadBalancerTypeEnum = "NETWORK_TCP_UDP"
+	LoadBalancerInfoLoadBalancerTypeEnumInternalTCPUDP              LoadBalancerInfoLoadBalancerTypeEnum = "INTERNAL_TCP_UDP"
+	LoadBalancerInfoLoadBalancerTypeEnumNetworkTCPUDP               LoadBalancerInfoLoadBalancerTypeEnum = "NETWORK_TCP_UDP"
 	LoadBalancerInfoLoadBalancerTypeEnumHTTPProxy                   LoadBalancerInfoLoadBalancerTypeEnum = "HTTP_PROXY"
 	LoadBalancerInfoLoadBalancerTypeEnumTCPProxy                    LoadBalancerInfoLoadBalancerTypeEnum = "TCP_PROXY"
 	LoadBalancerInfoLoadBalancerTypeEnumSslProxy                    LoadBalancerInfoLoadBalancerTypeEnum = "SSL_PROXY"

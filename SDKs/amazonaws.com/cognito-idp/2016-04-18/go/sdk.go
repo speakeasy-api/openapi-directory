@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1718,7 +1719,7 @@ func (s *SDK) AdminInitiateAuth(ctx context.Context, request operations.AdminIni
 				return nil, err
 			}
 
-			res.MfaMethodNotFoundException = out
+			res.MFAMethodNotFoundException = out
 		}
 	case httpRes.StatusCode == 490:
 		switch {
@@ -2717,7 +2718,7 @@ func (s *SDK) AdminRespondToAuthChallenge(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.MfaMethodNotFoundException = out
+			res.MFAMethodNotFoundException = out
 		}
 	case httpRes.StatusCode == 493:
 		switch {
@@ -2787,7 +2788,7 @@ func (s *SDK) AdminRespondToAuthChallenge(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.SoftwareTokenMfaNotFoundException = out
+			res.SoftwareTokenMFANotFoundException = out
 		}
 	}
 
@@ -2839,7 +2840,7 @@ func (s *SDK) AdminSetUserMfaPreference(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.AdminSetUserMfaPreferenceResponse = out
+			res.AdminSetUserMFAPreferenceResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3783,7 +3784,7 @@ func (s *SDK) AssociateSoftwareToken(ctx context.Context, request operations.Ass
 				return nil, err
 			}
 
-			res.SoftwareTokenMfaNotFoundException = out
+			res.SoftwareTokenMFANotFoundException = out
 		}
 	}
 
@@ -7298,7 +7299,7 @@ func (s *SDK) GetCsvHeader(ctx context.Context, request operations.GetCsvHeaderR
 				return nil, err
 			}
 
-			res.GetCsvHeaderResponse = out
+			res.GetCSVHeaderResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -10066,7 +10067,7 @@ func (s *SDK) RespondToAuthChallenge(ctx context.Context, request operations.Res
 				return nil, err
 			}
 
-			res.MfaMethodNotFoundException = out
+			res.MFAMethodNotFoundException = out
 		}
 	case httpRes.StatusCode == 492:
 		switch {
@@ -10146,7 +10147,7 @@ func (s *SDK) RespondToAuthChallenge(ctx context.Context, request operations.Res
 				return nil, err
 			}
 
-			res.SoftwareTokenMfaNotFoundException = out
+			res.SoftwareTokenMFANotFoundException = out
 		}
 	}
 
@@ -10544,7 +10545,7 @@ func (s *SDK) SetUserMfaPreference(ctx context.Context, request operations.SetUs
 				return nil, err
 			}
 
-			res.SetUserMfaPreferenceResponse = out
+			res.SetUserMFAPreferenceResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -12838,7 +12839,7 @@ func (s *SDK) VerifySoftwareToken(ctx context.Context, request operations.Verify
 				return nil, err
 			}
 
-			res.EnableSoftwareTokenMfaException = out
+			res.EnableSoftwareTokenMFAException = out
 		}
 	case httpRes.StatusCode == 490:
 		switch {
@@ -12858,7 +12859,7 @@ func (s *SDK) VerifySoftwareToken(ctx context.Context, request operations.Verify
 				return nil, err
 			}
 
-			res.SoftwareTokenMfaNotFoundException = out
+			res.SoftwareTokenMFANotFoundException = out
 		}
 	case httpRes.StatusCode == 492:
 		switch {

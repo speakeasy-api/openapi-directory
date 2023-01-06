@@ -8,15 +8,6 @@ const (
 	ProjectStateEnumDeleteRequested  ProjectStateEnum = "DELETE_REQUESTED"
 )
 
-// ProjectInput
-// A project is a high-level Google Cloud entity. It is a container for ACLs, APIs, App Engine Apps, VMs, and other Google Cloud Platform resources.
-type ProjectInput struct {
-	DisplayName *string           `json:"displayName,omitempty"`
-	Labels      map[string]string `json:"labels,omitempty"`
-	Parent      *string           `json:"parent,omitempty"`
-	ProjectID   *string           `json:"projectId,omitempty"`
-}
-
 // Project
 // A project is a high-level Google Cloud entity. It is a container for ACLs, APIs, App Engine Apps, VMs, and other Google Cloud Platform resources.
 type Project struct {
@@ -30,4 +21,13 @@ type Project struct {
 	ProjectID   *string           `json:"projectId,omitempty"`
 	State       *ProjectStateEnum `json:"state,omitempty"`
 	UpdateTime  *string           `json:"updateTime,omitempty"`
+}
+
+// ProjectInput
+// A project is a high-level Google Cloud entity. It is a container for ACLs, APIs, App Engine Apps, VMs, and other Google Cloud Platform resources.
+type ProjectInput struct {
+	DisplayName *string           `json:"displayName,omitempty"`
+	Labels      map[string]string `json:"labels,omitempty"`
+	Parent      *string           `json:"parent,omitempty"`
+	ProjectID   *string           `json:"projectId,omitempty"`
 }

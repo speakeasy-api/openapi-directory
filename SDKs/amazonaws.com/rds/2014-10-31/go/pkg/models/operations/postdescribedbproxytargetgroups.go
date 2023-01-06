@@ -3,13 +3,13 @@ package operations
 type PostDescribeDbProxyTargetGroupsActionEnum string
 
 const (
-	PostDescribeDbProxyTargetGroupsActionEnumDescribeDbProxyTargetGroups PostDescribeDbProxyTargetGroupsActionEnum = "DescribeDBProxyTargetGroups"
+	POSTDescribeDBProxyTargetGroupsActionEnumDescribeDbProxyTargetGroups PostDescribeDbProxyTargetGroupsActionEnum = "DescribeDBProxyTargetGroups"
 )
 
 type PostDescribeDbProxyTargetGroupsVersionEnum string
 
 const (
-	PostDescribeDbProxyTargetGroupsVersionEnumTwoThousandAndFourteen1031 PostDescribeDbProxyTargetGroupsVersionEnum = "2014-10-31"
+	POSTDescribeDBProxyTargetGroupsVersionEnumTwoThousandAndFourteen1031 PostDescribeDbProxyTargetGroupsVersionEnum = "2014-10-31"
 )
 
 type PostDescribeDbProxyTargetGroupsQueryParams struct {

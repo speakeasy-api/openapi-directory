@@ -3,13 +3,13 @@ package operations
 type PostCancelReservedInstancesListingActionEnum string
 
 const (
-	PostCancelReservedInstancesListingActionEnumCancelReservedInstancesListing PostCancelReservedInstancesListingActionEnum = "CancelReservedInstancesListing"
+	POSTCancelReservedInstancesListingActionEnumCancelReservedInstancesListing PostCancelReservedInstancesListingActionEnum = "CancelReservedInstancesListing"
 )
 
 type PostCancelReservedInstancesListingVersionEnum string
 
 const (
-	PostCancelReservedInstancesListingVersionEnumTwoThousandAndSixteen1115 PostCancelReservedInstancesListingVersionEnum = "2016-11-15"
+	POSTCancelReservedInstancesListingVersionEnumTwoThousandAndSixteen1115 PostCancelReservedInstancesListingVersionEnum = "2016-11-15"
 )
 
 type PostCancelReservedInstancesListingQueryParams struct {

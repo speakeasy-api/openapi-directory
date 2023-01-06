@@ -1,5 +1,5 @@
 package shared
 
 type ModifyVpcEndpointServicePermissionsResult struct {
-	ReturnValue *bool
+	ReturnValue map[string]interface{}
 }

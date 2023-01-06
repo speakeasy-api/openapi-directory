@@ -71,9 +71,9 @@ type ObWriteDomesticStandingOrderResponse6DataInitiation struct {
 type ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum string
 
 const (
-	ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumAuthorised                   ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "Authorised"
-	ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
-	ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumRejected                     ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "Rejected"
+	OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumAuthorised                   ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "Authorised"
+	OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
+	OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumRejected                     ObWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
 // ObWriteDomesticStandingOrderResponse6DataMultiAuthorisation
@@ -104,10 +104,10 @@ type ObWriteDomesticStandingOrderResponse6DataRefund struct {
 type ObWriteDomesticStandingOrderResponse6DataStatusEnum string
 
 const (
-	ObWriteDomesticStandingOrderResponse6DataStatusEnumCancelled           ObWriteDomesticStandingOrderResponse6DataStatusEnum = "Cancelled"
-	ObWriteDomesticStandingOrderResponse6DataStatusEnumInitiationCompleted ObWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationCompleted"
-	ObWriteDomesticStandingOrderResponse6DataStatusEnumInitiationFailed    ObWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationFailed"
-	ObWriteDomesticStandingOrderResponse6DataStatusEnumInitiationPending   ObWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationPending"
+	OBWriteDomesticStandingOrderResponse6DataStatusEnumCancelled           ObWriteDomesticStandingOrderResponse6DataStatusEnum = "Cancelled"
+	OBWriteDomesticStandingOrderResponse6DataStatusEnumInitiationCompleted ObWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationCompleted"
+	OBWriteDomesticStandingOrderResponse6DataStatusEnumInitiationFailed    ObWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationFailed"
+	OBWriteDomesticStandingOrderResponse6DataStatusEnumInitiationPending   ObWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationPending"
 )
 
 type ObWriteDomesticStandingOrderResponse6Data struct {

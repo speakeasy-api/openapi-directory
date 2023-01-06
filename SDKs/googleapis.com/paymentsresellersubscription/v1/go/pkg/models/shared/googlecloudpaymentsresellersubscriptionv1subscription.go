@@ -20,20 +20,6 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnumStateSuspended          GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum = "STATE_SUSPENDED"
 )
 
-// GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput
-// A Subscription resource managed by 3P Partners.
-type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput struct {
-	CancellationDetails     *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails     `json:"cancellationDetails,omitempty"`
-	LineItems               []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput          `json:"lineItems,omitempty"`
-	Name                    *string                                                                       `json:"name,omitempty"`
-	PartnerUserToken        *string                                                                       `json:"partnerUserToken,omitempty"`
-	Products                []string                                                                      `json:"products,omitempty"`
-	PromotionSpecs          []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput     `json:"promotionSpecs,omitempty"`
-	Promotions              []string                                                                      `json:"promotions,omitempty"`
-	ServiceLocation         *GoogleCloudPaymentsResellerSubscriptionV1Location                            `json:"serviceLocation,omitempty"`
-	UpgradeDowngradeDetails *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails `json:"upgradeDowngradeDetails,omitempty"`
-}
-
 // GoogleCloudPaymentsResellerSubscriptionV1Subscription
 // A Subscription resource managed by 3P Partners.
 type GoogleCloudPaymentsResellerSubscriptionV1Subscription struct {
@@ -54,5 +40,19 @@ type GoogleCloudPaymentsResellerSubscriptionV1Subscription struct {
 	ServiceLocation         *GoogleCloudPaymentsResellerSubscriptionV1Location                            `json:"serviceLocation,omitempty"`
 	State                   *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum               `json:"state,omitempty"`
 	UpdateTime              *string                                                                       `json:"updateTime,omitempty"`
+	UpgradeDowngradeDetails *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails `json:"upgradeDowngradeDetails,omitempty"`
+}
+
+// GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput
+// A Subscription resource managed by 3P Partners.
+type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput struct {
+	CancellationDetails     *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails     `json:"cancellationDetails,omitempty"`
+	LineItems               []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput          `json:"lineItems,omitempty"`
+	Name                    *string                                                                       `json:"name,omitempty"`
+	PartnerUserToken        *string                                                                       `json:"partnerUserToken,omitempty"`
+	Products                []string                                                                      `json:"products,omitempty"`
+	PromotionSpecs          []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput     `json:"promotionSpecs,omitempty"`
+	Promotions              []string                                                                      `json:"promotions,omitempty"`
+	ServiceLocation         *GoogleCloudPaymentsResellerSubscriptionV1Location                            `json:"serviceLocation,omitempty"`
 	UpgradeDowngradeDetails *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails `json:"upgradeDowngradeDetails,omitempty"`
 }

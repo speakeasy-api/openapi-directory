@@ -5,7 +5,7 @@ import (
 )
 
 type ListTagsPathParams struct {
-	Arn string `pathParam:"style=simple,explode=false,name=ARN"`
+	ARN string `pathParam:"style=simple,explode=false,name=ARN"`
 }
 
 type ListTagsHeaders struct {

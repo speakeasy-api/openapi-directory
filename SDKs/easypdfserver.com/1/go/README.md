@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.PostMakePdfRequest{
         Request: operations.PostMakePdfRequestBody{
-            HTML: "dolores",
-            Key: "quis",
-            URL: "facere",
+            HTML: "quaerat",
+            Key: "quia",
+            URL: "aut",
         },
     }
     
-    res, err := s.Sdk.PostMakePdf(ctx, req)
+    res, err := s.PostMakePdf(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

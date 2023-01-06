@@ -3,13 +3,13 @@ package operations
 type GetDescribeStopwordOptionsActionEnum string
 
 const (
-	GetDescribeStopwordOptionsActionEnumDescribeStopwordOptions GetDescribeStopwordOptionsActionEnum = "DescribeStopwordOptions"
+	GETDescribeStopwordOptionsActionEnumDescribeStopwordOptions GetDescribeStopwordOptionsActionEnum = "DescribeStopwordOptions"
 )
 
 type GetDescribeStopwordOptionsVersionEnum string
 
 const (
-	GetDescribeStopwordOptionsVersionEnumTwoThousandAndEleven0201 GetDescribeStopwordOptionsVersionEnum = "2011-02-01"
+	GETDescribeStopwordOptionsVersionEnumTwoThousandAndEleven0201 GetDescribeStopwordOptionsVersionEnum = "2011-02-01"
 )
 
 type GetDescribeStopwordOptionsQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type GetCreateStorageLocationActionEnum string
 
 const (
-	GetCreateStorageLocationActionEnumCreateStorageLocation GetCreateStorageLocationActionEnum = "CreateStorageLocation"
+	GETCreateStorageLocationActionEnumCreateStorageLocation GetCreateStorageLocationActionEnum = "CreateStorageLocation"
 )
 
 type GetCreateStorageLocationVersionEnum string
 
 const (
-	GetCreateStorageLocationVersionEnumTwoThousandAndTen1201 GetCreateStorageLocationVersionEnum = "2010-12-01"
+	GETCreateStorageLocationVersionEnumTwoThousandAndTen1201 GetCreateStorageLocationVersionEnum = "2010-12-01"
 )
 
 type GetCreateStorageLocationQueryParams struct {

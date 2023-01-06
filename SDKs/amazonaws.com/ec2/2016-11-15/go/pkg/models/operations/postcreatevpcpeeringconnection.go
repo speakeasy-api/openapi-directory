@@ -3,13 +3,13 @@ package operations
 type PostCreateVpcPeeringConnectionActionEnum string
 
 const (
-	PostCreateVpcPeeringConnectionActionEnumCreateVpcPeeringConnection PostCreateVpcPeeringConnectionActionEnum = "CreateVpcPeeringConnection"
+	POSTCreateVpcPeeringConnectionActionEnumCreateVpcPeeringConnection PostCreateVpcPeeringConnectionActionEnum = "CreateVpcPeeringConnection"
 )
 
 type PostCreateVpcPeeringConnectionVersionEnum string
 
 const (
-	PostCreateVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 PostCreateVpcPeeringConnectionVersionEnum = "2016-11-15"
+	POSTCreateVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 PostCreateVpcPeeringConnectionVersionEnum = "2016-11-15"
 )
 
 type PostCreateVpcPeeringConnectionQueryParams struct {

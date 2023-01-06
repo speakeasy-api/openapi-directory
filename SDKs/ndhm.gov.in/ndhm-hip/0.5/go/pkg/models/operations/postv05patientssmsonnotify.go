@@ -6,12 +6,12 @@ import (
 
 type PostV05PatientsSmsOnNotifyHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
 }
 
 type PostV05PatientsSmsOnNotifyRequests struct {
 	ApplicationXML                []byte                                `request:"mediaType=application/xml"`
-	PatientSmsNotifcationResponse *shared.PatientSmsNotifcationResponse `request:"mediaType=application/json"`
+	PatientSMSNotifcationResponse *shared.PatientSmsNotifcationResponse `request:"mediaType=application/json"`
 }
 
 type PostV05PatientsSmsOnNotifyRequest struct {

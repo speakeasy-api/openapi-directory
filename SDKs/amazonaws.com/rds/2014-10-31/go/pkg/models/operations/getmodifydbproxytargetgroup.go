@@ -3,7 +3,7 @@ package operations
 type GetModifyDbProxyTargetGroupActionEnum string
 
 const (
-	GetModifyDbProxyTargetGroupActionEnumModifyDbProxyTargetGroup GetModifyDbProxyTargetGroupActionEnum = "ModifyDBProxyTargetGroup"
+	GETModifyDBProxyTargetGroupActionEnumModifyDbProxyTargetGroup GetModifyDbProxyTargetGroupActionEnum = "ModifyDBProxyTargetGroup"
 )
 
 // GetModifyDbProxyTargetGroupConnectionPoolConfig
@@ -19,13 +19,13 @@ type GetModifyDbProxyTargetGroupConnectionPoolConfig struct {
 type GetModifyDbProxyTargetGroupVersionEnum string
 
 const (
-	GetModifyDbProxyTargetGroupVersionEnumTwoThousandAndFourteen1031 GetModifyDbProxyTargetGroupVersionEnum = "2014-10-31"
+	GETModifyDBProxyTargetGroupVersionEnumTwoThousandAndFourteen1031 GetModifyDbProxyTargetGroupVersionEnum = "2014-10-31"
 )
 
 type GetModifyDbProxyTargetGroupQueryParams struct {
 	Action               GetModifyDbProxyTargetGroupActionEnum            `queryParam:"style=form,explode=true,name=Action"`
 	ConnectionPoolConfig *GetModifyDbProxyTargetGroupConnectionPoolConfig `queryParam:"style=form,explode=true,name=ConnectionPoolConfig"`
-	DbProxyName          string                                           `queryParam:"style=form,explode=true,name=DBProxyName"`
+	DBProxyName          string                                           `queryParam:"style=form,explode=true,name=DBProxyName"`
 	NewName              *string                                          `queryParam:"style=form,explode=true,name=NewName"`
 	TargetGroupName      string                                           `queryParam:"style=form,explode=true,name=TargetGroupName"`
 	Version              GetModifyDbProxyTargetGroupVersionEnum           `queryParam:"style=form,explode=true,name=Version"`

@@ -15,14 +15,6 @@ const (
 	IssuesListFilterEnumAll        IssuesListFilterEnum = "all"
 )
 
-type IssuesListSortEnum string
-
-const (
-	IssuesListSortEnumCreated  IssuesListSortEnum = "created"
-	IssuesListSortEnumUpdated  IssuesListSortEnum = "updated"
-	IssuesListSortEnumComments IssuesListSortEnum = "comments"
-)
-
 type IssuesListStateEnum string
 
 const (
@@ -42,7 +34,7 @@ type IssuesListQueryParams struct {
 	PerPage   *int64                `queryParam:"style=form,explode=true,name=per_page"`
 	Pulls     *bool                 `queryParam:"style=form,explode=true,name=pulls"`
 	Since     *string               `queryParam:"style=form,explode=true,name=since"`
-	Sort      *IssuesListSortEnum   `queryParam:"style=form,explode=true,name=sort"`
+	Sort      *shared.LabelsEnum    `queryParam:"style=form,explode=true,name=sort"`
 	State     *IssuesListStateEnum  `queryParam:"style=form,explode=true,name=state"`
 }
 

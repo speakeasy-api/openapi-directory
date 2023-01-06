@@ -3,13 +3,13 @@ package operations
 type PostCreateDhcpOptionsActionEnum string
 
 const (
-	PostCreateDhcpOptionsActionEnumCreateDhcpOptions PostCreateDhcpOptionsActionEnum = "CreateDhcpOptions"
+	POSTCreateDhcpOptionsActionEnumCreateDhcpOptions PostCreateDhcpOptionsActionEnum = "CreateDhcpOptions"
 )
 
 type PostCreateDhcpOptionsVersionEnum string
 
 const (
-	PostCreateDhcpOptionsVersionEnumTwoThousandAndSixteen1115 PostCreateDhcpOptionsVersionEnum = "2016-11-15"
+	POSTCreateDhcpOptionsVersionEnumTwoThousandAndSixteen1115 PostCreateDhcpOptionsVersionEnum = "2016-11-15"
 )
 
 type PostCreateDhcpOptionsQueryParams struct {

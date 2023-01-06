@@ -3,13 +3,13 @@ package operations
 type PostDeleteIndexFieldActionEnum string
 
 const (
-	PostDeleteIndexFieldActionEnumDeleteIndexField PostDeleteIndexFieldActionEnum = "DeleteIndexField"
+	POSTDeleteIndexFieldActionEnumDeleteIndexField PostDeleteIndexFieldActionEnum = "DeleteIndexField"
 )
 
 type PostDeleteIndexFieldVersionEnum string
 
 const (
-	PostDeleteIndexFieldVersionEnumTwoThousandAndThirteen0101 PostDeleteIndexFieldVersionEnum = "2013-01-01"
+	POSTDeleteIndexFieldVersionEnumTwoThousandAndThirteen0101 PostDeleteIndexFieldVersionEnum = "2013-01-01"
 )
 
 type PostDeleteIndexFieldQueryParams struct {

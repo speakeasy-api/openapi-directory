@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,31 +27,31 @@ func main() {
             Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.OsloginUsersGetLoginProfilePathParams{
-            Name: "qui",
+            Name: "quia",
         },
         QueryParams: operations.OsloginUsersGetLoginProfileQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "consequatur",
-            Alt: "proto",
-            Callback: "velit",
-            Fields: "dolor",
-            Key: "soluta",
-            OauthToken: "dolorum",
-            OperatingSystemType: "OPERATING_SYSTEM_TYPE_UNSPECIFIED",
-            PrettyPrint: false,
-            ProjectID: "molestiae",
-            QuotaUser: "rerum",
-            SystemID: "esse",
-            UploadType: "voluptas",
-            UploadProtocol: "eum",
-            View: "BASIC",
+            DollarXgafv: "2",
+            AccessToken: "fuga",
+            Alt: "json",
+            Callback: "voluptas",
+            Fields: "voluptatem",
+            Key: "consectetur",
+            OauthToken: "distinctio",
+            OperatingSystemType: "LINUX",
+            PrettyPrint: true,
+            ProjectID: "qui",
+            QuotaUser: "at",
+            SystemID: "expedita",
+            UploadType: "velit",
+            UploadProtocol: "illo",
+            View: "LOGIN_PROFILE_VIEW_UNSPECIFIED",
         },
     }
     

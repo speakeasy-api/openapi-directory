@@ -3,18 +3,18 @@ package operations
 type GetCheckDNSAvailabilityActionEnum string
 
 const (
-	GetCheckDNSAvailabilityActionEnumCheckDNSAvailability GetCheckDNSAvailabilityActionEnum = "CheckDNSAvailability"
+	GETCheckDNSAvailabilityActionEnumCheckDNSAvailability GetCheckDNSAvailabilityActionEnum = "CheckDNSAvailability"
 )
 
 type GetCheckDNSAvailabilityVersionEnum string
 
 const (
-	GetCheckDNSAvailabilityVersionEnumTwoThousandAndTen1201 GetCheckDNSAvailabilityVersionEnum = "2010-12-01"
+	GETCheckDNSAvailabilityVersionEnumTwoThousandAndTen1201 GetCheckDNSAvailabilityVersionEnum = "2010-12-01"
 )
 
 type GetCheckDNSAvailabilityQueryParams struct {
 	Action      GetCheckDNSAvailabilityActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	CnamePrefix string                             `queryParam:"style=form,explode=true,name=CNAMEPrefix"`
+	CNAMEPrefix string                             `queryParam:"style=form,explode=true,name=CNAMEPrefix"`
 	Version     GetCheckDNSAvailabilityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

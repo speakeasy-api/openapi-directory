@@ -18,7 +18,7 @@ type GetIntersectionsIntersectionIDOutputFormatPathParams struct {
 }
 
 type GetIntersectionsIntersectionIDOutputFormatQueryParams struct {
-	OutputSrs *int64 `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS *int64 `queryParam:"style=form,explode=true,name=outputSRS"`
 }
 
 type GetIntersectionsIntersectionIDOutputFormatRequest struct {

@@ -62,6 +62,6 @@ type GetSectionFormatRequest struct {
 
 type GetSectionFormatResponse struct {
 	ContentType                              string
-	GetSectionFormat200ApplicationJSONObject *GetSectionFormat200ApplicationJSON
 	StatusCode                               int64
+	GetSectionFormat200ApplicationJSONObject *GetSectionFormat200ApplicationJSON
 }

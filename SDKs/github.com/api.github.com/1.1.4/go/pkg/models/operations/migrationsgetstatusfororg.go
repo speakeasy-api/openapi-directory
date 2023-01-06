@@ -9,14 +9,8 @@ type MigrationsGetStatusForOrgPathParams struct {
 	Org         string `pathParam:"style=simple,explode=false,name=org"`
 }
 
-type MigrationsGetStatusForOrgExcludeEnum string
-
-const (
-	MigrationsGetStatusForOrgExcludeEnumRepositories MigrationsGetStatusForOrgExcludeEnum = "repositories"
-)
-
 type MigrationsGetStatusForOrgQueryParams struct {
-	Exclude []MigrationsGetStatusForOrgExcludeEnum `queryParam:"style=form,explode=true,name=exclude"`
+	Exclude []shared.MigrationIDEnum `queryParam:"style=form,explode=true,name=exclude"`
 }
 
 type MigrationsGetStatusForOrgRequest struct {

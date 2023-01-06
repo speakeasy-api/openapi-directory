@@ -5,8 +5,8 @@ import (
 )
 
 type RacerRequestBodyCertificateParameters struct {
-	Dob string `json:"DOB"`
-	Dsn string `json:"DSN"`
+	DOB string `json:"DOB"`
+	DSN string `json:"DSN"`
 }
 
 type RacerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Racer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Racer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Racer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Racer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Racer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Racer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Racer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Racer404ApplicationJSON struct {

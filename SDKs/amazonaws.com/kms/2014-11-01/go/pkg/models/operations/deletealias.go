@@ -29,8 +29,8 @@ type DeleteAliasRequest struct {
 type DeleteAliasResponse struct {
 	ContentType                string
 	DependencyTimeoutException *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64
 }

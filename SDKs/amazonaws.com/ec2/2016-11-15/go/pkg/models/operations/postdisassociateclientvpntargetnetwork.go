@@ -3,13 +3,13 @@ package operations
 type PostDisassociateClientVpnTargetNetworkActionEnum string
 
 const (
-	PostDisassociateClientVpnTargetNetworkActionEnumDisassociateClientVpnTargetNetwork PostDisassociateClientVpnTargetNetworkActionEnum = "DisassociateClientVpnTargetNetwork"
+	POSTDisassociateClientVpnTargetNetworkActionEnumDisassociateClientVpnTargetNetwork PostDisassociateClientVpnTargetNetworkActionEnum = "DisassociateClientVpnTargetNetwork"
 )
 
 type PostDisassociateClientVpnTargetNetworkVersionEnum string
 
 const (
-	PostDisassociateClientVpnTargetNetworkVersionEnumTwoThousandAndSixteen1115 PostDisassociateClientVpnTargetNetworkVersionEnum = "2016-11-15"
+	POSTDisassociateClientVpnTargetNetworkVersionEnumTwoThousandAndSixteen1115 PostDisassociateClientVpnTargetNetworkVersionEnum = "2016-11-15"
 )
 
 type PostDisassociateClientVpnTargetNetworkQueryParams struct {

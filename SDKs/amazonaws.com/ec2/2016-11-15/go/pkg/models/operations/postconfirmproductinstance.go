@@ -3,13 +3,13 @@ package operations
 type PostConfirmProductInstanceActionEnum string
 
 const (
-	PostConfirmProductInstanceActionEnumConfirmProductInstance PostConfirmProductInstanceActionEnum = "ConfirmProductInstance"
+	POSTConfirmProductInstanceActionEnumConfirmProductInstance PostConfirmProductInstanceActionEnum = "ConfirmProductInstance"
 )
 
 type PostConfirmProductInstanceVersionEnum string
 
 const (
-	PostConfirmProductInstanceVersionEnumTwoThousandAndSixteen1115 PostConfirmProductInstanceVersionEnum = "2016-11-15"
+	POSTConfirmProductInstanceVersionEnumTwoThousandAndSixteen1115 PostConfirmProductInstanceVersionEnum = "2016-11-15"
 )
 
 type PostConfirmProductInstanceQueryParams struct {

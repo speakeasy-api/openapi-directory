@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,66 +22,66 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.TexttospeechTextSynthesizeRequest{
-        Security: operations.TexttospeechTextSynthesizeSecurity{
+    req := operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest{
+        Security: operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        QueryParams: operations.TexttospeechTextSynthesizeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "delectus",
-            Alt: "media",
-            Callback: "libero",
-            Fields: "dignissimos",
-            Key: "qui",
-            OauthToken: "eos",
-            PrettyPrint: true,
-            QuotaUser: "vel",
-            UploadType: "similique",
-            UploadProtocol: "quidem",
+        PathParams: operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioPathParams{
+            Parent: "totam",
         },
-        Request: &shared.SynthesizeSpeechRequest{
+        QueryParams: operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioQueryParams{
+            DollarXgafv: "1",
+            AccessToken: "perspiciatis",
+            Alt: "json",
+            Callback: "molestias",
+            Fields: "dignissimos",
+            Key: "suscipit",
+            OauthToken: "expedita",
+            PrettyPrint: true,
+            QuotaUser: "hic",
+            UploadType: "quia",
+            UploadProtocol: "enim",
+        },
+        Request: &shared.SynthesizeLongAudioRequest{
             AudioConfig: &shared.AudioConfig{
-                AudioEncoding: "LINEAR16",
+                AudioEncoding: "AUDIO_ENCODING_UNSPECIFIED",
                 EffectsProfileID: []string{
-                    "aperiam",
-                    "rerum",
-                    "iure",
+                    "similique",
+                    "mollitia",
                 },
-                Pitch: 24.200001,
-                SampleRateHertz: 3491191600617226402,
-                SpeakingRate: 29.100000,
-                VolumeGainDb: 8.200000,
-            },
-            EnableTimePointing: []shared.SynthesizeSpeechRequestEnableTimePointingEnum{
-                "TIMEPOINT_TYPE_UNSPECIFIED",
+                Pitch: 97.199997,
+                SampleRateHertz: 3342512631869028279,
+                SpeakingRate: 23.100000,
+                VolumeGainDb: 2.100000,
             },
             Input: &shared.SynthesisInput{
-                Ssml: "vero",
-                Text: "sit",
+                Ssml: "temporibus",
+                Text: "optio",
             },
+            OutputGcsURI: "dignissimos",
             Voice: &shared.VoiceSelectionParams{
                 CustomVoice: &shared.CustomVoiceParams{
-                    Model: "aut",
-                    ReportedUsage: "OFFLINE",
+                    Model: "officiis",
+                    ReportedUsage: "REALTIME",
                 },
-                LanguageCode: "sit",
-                Name: "eaque",
-                SsmlGender: "SSML_VOICE_GENDER_UNSPECIFIED",
+                LanguageCode: "eos",
+                Name: "rerum",
+                SsmlGender: "NEUTRAL",
             },
         },
     }
     
-    res, err := s.Text.TexttospeechTextSynthesize(ctx, req)
+    res, err := s.Projects.TexttospeechProjectsLocationsVoicesSynthesizeLongAudio(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.SynthesizeSpeechResponse != nil {
+    if res.Operation != nil {
         // handle response
     }
 ```
@@ -90,6 +89,10 @@ func main() {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
+### projects
+
+* `TexttospeechProjectsLocationsVoicesSynthesizeLongAudio` - Synthesizes long form text asynchronously.
 
 ### text
 

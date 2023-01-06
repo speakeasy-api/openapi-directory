@@ -3,11 +3,11 @@ package shared
 type OsPolicyResourceComplianceStateEnum string
 
 const (
-	OsPolicyResourceComplianceStateEnumOsPolicyComplianceStateUnspecified OsPolicyResourceComplianceStateEnum = "OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED"
-	OsPolicyResourceComplianceStateEnumCompliant                          OsPolicyResourceComplianceStateEnum = "COMPLIANT"
-	OsPolicyResourceComplianceStateEnumNonCompliant                       OsPolicyResourceComplianceStateEnum = "NON_COMPLIANT"
-	OsPolicyResourceComplianceStateEnumUnknown                            OsPolicyResourceComplianceStateEnum = "UNKNOWN"
-	OsPolicyResourceComplianceStateEnumNoOsPoliciesApplicable             OsPolicyResourceComplianceStateEnum = "NO_OS_POLICIES_APPLICABLE"
+	OSPolicyResourceComplianceStateEnumOsPolicyComplianceStateUnspecified OsPolicyResourceComplianceStateEnum = "OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED"
+	OSPolicyResourceComplianceStateEnumCompliant                          OsPolicyResourceComplianceStateEnum = "COMPLIANT"
+	OSPolicyResourceComplianceStateEnumNonCompliant                       OsPolicyResourceComplianceStateEnum = "NON_COMPLIANT"
+	OSPolicyResourceComplianceStateEnumUnknown                            OsPolicyResourceComplianceStateEnum = "UNKNOWN"
+	OSPolicyResourceComplianceStateEnumNoOsPoliciesApplicable             OsPolicyResourceComplianceStateEnum = "NO_OS_POLICIES_APPLICABLE"
 )
 
 // OsPolicyResourceCompliance

@@ -10,19 +10,12 @@ type IssuesListCommentsForRepoPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type IssuesListCommentsForRepoDirectionEnum string
-
-const (
-	IssuesListCommentsForRepoDirectionEnumAsc  IssuesListCommentsForRepoDirectionEnum = "asc"
-	IssuesListCommentsForRepoDirectionEnumDesc IssuesListCommentsForRepoDirectionEnum = "desc"
-)
-
 type IssuesListCommentsForRepoQueryParams struct {
-	Direction *IssuesListCommentsForRepoDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                                  `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                                  `queryParam:"style=form,explode=true,name=per_page"`
-	Since     *time.Time                              `queryParam:"style=form,explode=true,name=since"`
-	Sort      *shared.SortEnum                        `queryParam:"style=form,explode=true,name=sort"`
+	Direction *shared.SortEnum1 `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	Since     *time.Time        `queryParam:"style=form,explode=true,name=since"`
+	Sort      *shared.SortEnum  `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type IssuesListCommentsForRepoRequest struct {

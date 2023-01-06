@@ -32,6 +32,6 @@ type PostProjectUsernameProjectSSHKeyRequest struct {
 
 type PostProjectUsernameProjectSSHKeyResponse struct {
 	ContentType                                                  string
-	PostProjectUsernameProjectSSHKeyDefaultApplicationJSONObject *PostProjectUsernameProjectSSHKeyDefaultApplicationJSON
 	StatusCode                                                   int64
+	PostProjectUsernameProjectSSHKeyDefaultApplicationJSONObject *PostProjectUsernameProjectSSHKeyDefaultApplicationJSON
 }

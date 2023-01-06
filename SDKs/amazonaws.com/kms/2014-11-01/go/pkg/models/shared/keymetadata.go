@@ -7,12 +7,12 @@ import (
 // KeyMetadata
 // <p>Contains metadata about a KMS key.</p> <p>This data type is used as a response element for the <a>CreateKey</a> and <a>DescribeKey</a> operations.</p>
 type KeyMetadata struct {
-	AwsAccountID                *string                       `json:"AWSAccountId,omitempty"`
+	AWSAccountID                *string                       `json:"AWSAccountId,omitempty"`
 	Arn                         *string                       `json:"Arn,omitempty"`
 	CloudHsmClusterID           *string                       `json:"CloudHsmClusterId,omitempty"`
 	CreationDate                *time.Time                    `json:"CreationDate,omitempty"`
 	CustomKeyStoreID            *string                       `json:"CustomKeyStoreId,omitempty"`
-	CustomerMasterKeySpec       *CustomerMasterKeySpecEnum    `json:"CustomerMasterKeySpec,omitempty"`
+	CustomerMasterKeySpec       map[string]interface{}        `json:"CustomerMasterKeySpec,omitempty"`
 	DeletionDate                *time.Time                    `json:"DeletionDate,omitempty"`
 	Description                 *string                       `json:"Description,omitempty"`
 	Enabled                     *bool                         `json:"Enabled,omitempty"`

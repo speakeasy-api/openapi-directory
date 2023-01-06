@@ -3,13 +3,13 @@ package operations
 type GetDescribeDefaultClusterParametersActionEnum string
 
 const (
-	GetDescribeDefaultClusterParametersActionEnumDescribeDefaultClusterParameters GetDescribeDefaultClusterParametersActionEnum = "DescribeDefaultClusterParameters"
+	GETDescribeDefaultClusterParametersActionEnumDescribeDefaultClusterParameters GetDescribeDefaultClusterParametersActionEnum = "DescribeDefaultClusterParameters"
 )
 
 type GetDescribeDefaultClusterParametersVersionEnum string
 
 const (
-	GetDescribeDefaultClusterParametersVersionEnumTwoThousandAndTwelve1201 GetDescribeDefaultClusterParametersVersionEnum = "2012-12-01"
+	GETDescribeDefaultClusterParametersVersionEnumTwoThousandAndTwelve1201 GetDescribeDefaultClusterParametersVersionEnum = "2012-12-01"
 )
 
 type GetDescribeDefaultClusterParametersQueryParams struct {

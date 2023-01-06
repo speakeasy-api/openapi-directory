@@ -3,13 +3,13 @@ package operations
 type PostResetNetworkInterfaceAttributeActionEnum string
 
 const (
-	PostResetNetworkInterfaceAttributeActionEnumResetNetworkInterfaceAttribute PostResetNetworkInterfaceAttributeActionEnum = "ResetNetworkInterfaceAttribute"
+	POSTResetNetworkInterfaceAttributeActionEnumResetNetworkInterfaceAttribute PostResetNetworkInterfaceAttributeActionEnum = "ResetNetworkInterfaceAttribute"
 )
 
 type PostResetNetworkInterfaceAttributeVersionEnum string
 
 const (
-	PostResetNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 PostResetNetworkInterfaceAttributeVersionEnum = "2016-11-15"
+	POSTResetNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 PostResetNetworkInterfaceAttributeVersionEnum = "2016-11-15"
 )
 
 type PostResetNetworkInterfaceAttributeQueryParams struct {

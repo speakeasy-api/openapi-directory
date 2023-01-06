@@ -1,6 +1,6 @@
 package shared
 
 type GlobalClustersMessage struct {
-	GlobalClusters []GlobalCluster
+	GlobalClusters []map[string]interface{}
 	Marker         *string
 }

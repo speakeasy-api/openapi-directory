@@ -3,13 +3,13 @@ package operations
 type GetGetEbsEncryptionByDefaultActionEnum string
 
 const (
-	GetGetEbsEncryptionByDefaultActionEnumGetEbsEncryptionByDefault GetGetEbsEncryptionByDefaultActionEnum = "GetEbsEncryptionByDefault"
+	GETGETEbsEncryptionByDefaultActionEnumGetEbsEncryptionByDefault GetGetEbsEncryptionByDefaultActionEnum = "GetEbsEncryptionByDefault"
 )
 
 type GetGetEbsEncryptionByDefaultVersionEnum string
 
 const (
-	GetGetEbsEncryptionByDefaultVersionEnumTwoThousandAndSixteen1115 GetGetEbsEncryptionByDefaultVersionEnum = "2016-11-15"
+	GETGETEbsEncryptionByDefaultVersionEnumTwoThousandAndSixteen1115 GetGetEbsEncryptionByDefaultVersionEnum = "2016-11-15"
 )
 
 type GetGetEbsEncryptionByDefaultQueryParams struct {

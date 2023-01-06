@@ -15,17 +15,6 @@ const (
 	CertificateMapEntryStateEnumPending                 CertificateMapEntryStateEnum = "PENDING"
 )
 
-// CertificateMapEntryInput
-// Defines a certificate map entry.
-type CertificateMapEntryInput struct {
-	Certificates []string                        `json:"certificates,omitempty"`
-	Description  *string                         `json:"description,omitempty"`
-	Hostname     *string                         `json:"hostname,omitempty"`
-	Labels       map[string]string               `json:"labels,omitempty"`
-	Matcher      *CertificateMapEntryMatcherEnum `json:"matcher,omitempty"`
-	Name         *string                         `json:"name,omitempty"`
-}
-
 // CertificateMapEntry
 // Defines a certificate map entry.
 type CertificateMapEntry struct {
@@ -38,4 +27,15 @@ type CertificateMapEntry struct {
 	Name         *string                         `json:"name,omitempty"`
 	State        *CertificateMapEntryStateEnum   `json:"state,omitempty"`
 	UpdateTime   *string                         `json:"updateTime,omitempty"`
+}
+
+// CertificateMapEntryInput
+// Defines a certificate map entry.
+type CertificateMapEntryInput struct {
+	Certificates []string                        `json:"certificates,omitempty"`
+	Description  *string                         `json:"description,omitempty"`
+	Hostname     *string                         `json:"hostname,omitempty"`
+	Labels       map[string]string               `json:"labels,omitempty"`
+	Matcher      *CertificateMapEntryMatcherEnum `json:"matcher,omitempty"`
+	Name         *string                         `json:"name,omitempty"`
 }

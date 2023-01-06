@@ -9,7 +9,7 @@ import (
 type MlTransform struct {
 	CreatedOn           *time.Time               `json:"CreatedOn,omitempty"`
 	Description         *string                  `json:"Description,omitempty"`
-	EvaluationMetrics   *EvaluationMetrics       `json:"EvaluationMetrics,omitempty"`
+	EvaluationMetrics   *EvaluationMetrics1      `json:"EvaluationMetrics,omitempty"`
 	GlueVersion         *string                  `json:"GlueVersion,omitempty"`
 	InputRecordTables   []GlueTable              `json:"InputRecordTables,omitempty"`
 	LabelCount          *int64                   `json:"LabelCount,omitempty"`

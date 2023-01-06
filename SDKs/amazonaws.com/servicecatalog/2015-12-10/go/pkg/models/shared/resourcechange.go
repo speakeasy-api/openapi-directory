@@ -3,7 +3,7 @@ package shared
 // ResourceChange
 // Information about a resource change that will occur when a plan is executed.
 type ResourceChange struct {
-	Action             *ChangeActionEnum       `json:"Action,omitempty"`
+	Action             map[string]interface{}  `json:"Action,omitempty"`
 	Details            []ResourceChangeDetail  `json:"Details,omitempty"`
 	LogicalResourceID  *string                 `json:"LogicalResourceId,omitempty"`
 	PhysicalResourceID *string                 `json:"PhysicalResourceId,omitempty"`

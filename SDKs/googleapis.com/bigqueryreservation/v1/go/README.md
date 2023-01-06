@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,51 +27,53 @@ func main() {
             Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "facilis",
+            Parent: "ullam",
         },
         QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "eligendi",
-            Alt: "json",
-            Callback: "non",
-            CapacityCommitmentID: "itaque",
+            AccessToken: "et",
+            Alt: "proto",
+            Callback: "amet",
+            CapacityCommitmentID: "nulla",
             EnforceSingleAdminProjectPerOrg: true,
-            Fields: "optio",
-            Key: "eligendi",
-            OauthToken: "in",
-            PrettyPrint: true,
-            QuotaUser: "repellendus",
-            UploadType: "amet",
-            UploadProtocol: "consequatur",
+            Fields: "voluptatum",
+            Key: "error",
+            OauthToken: "similique",
+            PrettyPrint: false,
+            QuotaUser: "est",
+            UploadType: "ullam",
+            UploadProtocol: "dolorum",
         },
         Request: &shared.CapacityCommitmentInput{
             FailureStatus: &shared.Status{
-                Code: 3656480505494023641,
+                Code: 7160520866229055577,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "pariatur": "qui",
-                        "aut": "est",
-                        "nulla": "similique",
+                        "aperiam": "eaque",
+                        "nihil": "sint",
                     },
                     map[string]interface{}{
-                        "ipsum": "porro",
-                        "repellendus": "sit",
-                        "necessitatibus": "sed",
+                        "consequatur": "sunt",
+                        "quam": "nesciunt",
+                        "esse": "quam",
+                    },
+                    map[string]interface{}{
+                        "autem": "atque",
                     },
                 },
-                Message: "aspernatur",
+                Message: "asperiores",
             },
             MultiRegionAuxiliary: false,
-            Plan: "ANNUAL",
+            Plan: "COMMITMENT_PLAN_UNSPECIFIED",
             RenewalPlan: "MONTHLY",
-            SlotCount: "quo",
+            SlotCount: "velit",
         },
     }
     

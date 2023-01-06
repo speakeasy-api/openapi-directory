@@ -3,6 +3,6 @@ package shared
 // DescribeEndpointsResponse
 // <p/>
 type DescribeEndpointsResponse struct {
-	Endpoints []Endpoint `json:"Endpoints,omitempty"`
-	Marker    *string    `json:"Marker,omitempty"`
+	Endpoints []Endpoint1 `json:"Endpoints,omitempty"`
+	Marker    *string     `json:"Marker,omitempty"`
 }

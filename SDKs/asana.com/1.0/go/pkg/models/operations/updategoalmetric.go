@@ -13,8 +13,8 @@ type UpdateGoalMetricQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type UpdateGoalMetricRequestBodyInput struct {
-	Data *shared.GoalMetricCurrentValueRequestInput `json:"data,omitempty"`
+type UpdateGoalMetricRequestBody struct {
+	Data *shared.GoalMetricCurrentValueRequest `json:"data,omitempty"`
 }
 
 type UpdateGoalMetric200ApplicationJSON struct {
@@ -24,7 +24,7 @@ type UpdateGoalMetric200ApplicationJSON struct {
 type UpdateGoalMetricRequest struct {
 	PathParams  UpdateGoalMetricPathParams
 	QueryParams UpdateGoalMetricQueryParams
-	Request     UpdateGoalMetricRequestBodyInput `request:"mediaType=application/json"`
+	Request     UpdateGoalMetricRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateGoalMetricResponse struct {

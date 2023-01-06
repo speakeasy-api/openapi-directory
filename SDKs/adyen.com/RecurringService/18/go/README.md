@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -24,10 +23,10 @@ func main() {
     s := sdk.New()
     
     req := operations.PostDisableRequest{
-        Request: "vel",
+        Request: "commodi",
     }
     
-    res, err := s.Sdk.PostDisable(ctx, req)
+    res, err := s.PostDisable(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

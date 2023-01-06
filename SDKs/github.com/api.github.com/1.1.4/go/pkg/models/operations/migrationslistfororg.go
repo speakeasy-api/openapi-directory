@@ -8,16 +8,10 @@ type MigrationsListForOrgPathParams struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
-type MigrationsListForOrgExcludeEnum string
-
-const (
-	MigrationsListForOrgExcludeEnumRepositories MigrationsListForOrgExcludeEnum = "repositories"
-)
-
 type MigrationsListForOrgQueryParams struct {
-	Exclude []MigrationsListForOrgExcludeEnum `queryParam:"style=form,explode=true,name=exclude"`
-	Page    *int64                            `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                            `queryParam:"style=form,explode=true,name=per_page"`
+	Exclude []shared.PageEnum `queryParam:"style=form,explode=true,name=exclude"`
+	Page    *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64            `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type MigrationsListForOrgRequest struct {

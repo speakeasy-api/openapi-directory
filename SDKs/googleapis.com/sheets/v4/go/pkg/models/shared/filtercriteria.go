@@ -1,7 +1,5 @@
 package shared
 
-// FilterCriteria
-// Criteria for showing/hiding rows in a filter or filter view.
 type FilterCriteria struct {
 	Condition                   *BooleanCondition `json:"condition,omitempty"`
 	HiddenValues                []string          `json:"hiddenValues,omitempty"`

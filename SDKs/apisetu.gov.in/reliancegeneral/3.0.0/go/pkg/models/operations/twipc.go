@@ -5,9 +5,9 @@ import (
 )
 
 type TwipcRequestBodyCertificateParameters struct {
-	Dob        string `json:"DOB"`
+	DOB        string `json:"DOB"`
 	FullName   string `json:"FullName"`
-	Gender     string `json:"GENDER"`
+	GENDER     string `json:"GENDER"`
 	PolicyNo   string `json:"PolicyNo"`
 	PolicyType string `json:"PolicyType"`
 }
@@ -85,7 +85,7 @@ type Twipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Twipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Twipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Twipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Twipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Twipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Twipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Twipc404ApplicationJSON struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,32 +27,30 @@ func main() {
             Option1: &operations.RuntimeconfigOperationsCancelSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.RuntimeconfigOperationsCancelPathParams{
-            Name: "est",
+            Name: "consectetur",
         },
         QueryParams: operations.RuntimeconfigOperationsCancelQueryParams{
             DollarXgafv: "1",
-            AccessToken: "neque",
-            Alt: "json",
-            Callback: "suscipit",
-            Fields: "alias",
-            Key: "id",
-            OauthToken: "porro",
-            PrettyPrint: false,
-            QuotaUser: "ullam",
-            UploadType: "omnis",
-            UploadProtocol: "libero",
+            AccessToken: "eaque",
+            Alt: "media",
+            Callback: "laudantium",
+            Fields: "qui",
+            Key: "alias",
+            OauthToken: "a",
+            PrettyPrint: true,
+            QuotaUser: "aut",
+            UploadType: "et",
+            UploadProtocol: "ut",
         },
         Request: map[string]interface{}{
-            "laboriosam": "deleniti",
-            "aperiam": "omnis",
-            "laborum": "quod",
+            "repellat": "vel",
         },
     }
     

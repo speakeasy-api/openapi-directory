@@ -1,7 +1,7 @@
 package shared
 
 type DescribeFleetInstancesResult struct {
-	ActiveInstances []ActiveInstance
-	FleetID         *string
-	NextToken       *string
+	ActiveInstances map[string]interface{}
+	FleetID         map[string]interface{}
+	NextToken       map[string]interface{}
 }

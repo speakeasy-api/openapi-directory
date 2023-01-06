@@ -7,7 +7,7 @@ import (
 type RemoveLfTagsFromResourceXAmzTargetEnum string
 
 const (
-	RemoveLfTagsFromResourceXAmzTargetEnumAwsLakeFormationRemoveLfTagsFromResource RemoveLfTagsFromResourceXAmzTargetEnum = "AWSLakeFormation.RemoveLFTagsFromResource"
+	RemoveLFTagsFromResourceXAmzTargetEnumAwsLakeFormationRemoveLfTagsFromResource RemoveLfTagsFromResourceXAmzTargetEnum = "AWSLakeFormation.RemoveLFTagsFromResource"
 )
 
 type RemoveLfTagsFromResourceHeaders struct {
@@ -35,6 +35,6 @@ type RemoveLfTagsFromResourceResponse struct {
 	InternalServiceException         *interface{}
 	InvalidInputException            *interface{}
 	OperationTimeoutException        *interface{}
-	RemoveLfTagsFromResourceResponse *shared.RemoveLfTagsFromResourceResponse
+	RemoveLFTagsFromResourceResponse *shared.RemoveLfTagsFromResourceResponse
 	StatusCode                       int64
 }

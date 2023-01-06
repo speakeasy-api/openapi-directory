@@ -3,13 +3,13 @@ package operations
 type PostSetIPAddressTypeActionEnum string
 
 const (
-	PostSetIPAddressTypeActionEnumSetIPAddressType PostSetIPAddressTypeActionEnum = "SetIpAddressType"
+	POSTSetIPAddressTypeActionEnumSetIPAddressType PostSetIPAddressTypeActionEnum = "SetIpAddressType"
 )
 
 type PostSetIPAddressTypeVersionEnum string
 
 const (
-	PostSetIPAddressTypeVersionEnumTwoThousandAndFifteen1201 PostSetIPAddressTypeVersionEnum = "2015-12-01"
+	POSTSetIPAddressTypeVersionEnumTwoThousandAndFifteen1201 PostSetIPAddressTypeVersionEnum = "2015-12-01"
 )
 
 type PostSetIPAddressTypeQueryParams struct {

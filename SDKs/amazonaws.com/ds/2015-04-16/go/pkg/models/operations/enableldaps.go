@@ -7,7 +7,7 @@ import (
 type EnableLdapsxAmzTargetEnum string
 
 const (
-	EnableLdapsxAmzTargetEnumDirectoryService20150416EnableLdaps EnableLdapsxAmzTargetEnum = "DirectoryService_20150416.EnableLDAPS"
+	EnableLDAPSXAmzTargetEnumDirectoryService20150416EnableLdaps EnableLdapsxAmzTargetEnum = "DirectoryService_20150416.EnableLDAPS"
 )
 
 type EnableLdapsHeaders struct {
@@ -31,8 +31,8 @@ type EnableLdapsResponse struct {
 	ContentType                     string
 	DirectoryDoesNotExistException  *interface{}
 	DirectoryUnavailableException   *interface{}
-	EnableLdapsResult               map[string]interface{}
-	InvalidLdapsStatusException     *interface{}
+	EnableLDAPSResult               map[string]interface{}
+	InvalidLDAPSStatusException     *interface{}
 	InvalidParameterException       *interface{}
 	NoAvailableCertificateException *interface{}
 	ServiceException                *interface{}

@@ -37,7 +37,7 @@ type CreateClusterResponse struct {
 	InvalidCredentialsException          *interface{}
 	InvalidParameterCombinationException *interface{}
 	InvalidParameterValueException       *interface{}
-	InvalidVpcNetworkStateFault          *interface{}
+	InvalidVPCNetworkStateFault          *interface{}
 	NodeQuotaForClusterExceededFault     *interface{}
 	NodeQuotaForCustomerExceededFault    *interface{}
 	ParameterGroupNotFoundFault          *interface{}

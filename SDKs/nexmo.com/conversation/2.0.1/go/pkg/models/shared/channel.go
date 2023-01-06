@@ -1,17 +1,17 @@
 package shared
 
 // ChannelFrom1
-// Connect to an App User
+// Connect to a Phone (PSTN) number
 type ChannelFrom1 struct {
-	Type string `json:"type"`
-	User string `json:"user"`
+	Number string `json:"number"`
+	Type   string `json:"type"`
 }
 
 // ChannelFrom2
-// Connect to a Phone (PSTN) number
+// Connect to a VBC extension
 type ChannelFrom2 struct {
-	Number string `json:"number"`
-	Type   string `json:"type"`
+	Extension string `json:"extension"`
+	Type      string `json:"type"`
 }
 
 // ChannelFrom3
@@ -44,15 +44,15 @@ type ChannelFrom4 struct {
 }
 
 // ChannelFrom5
-// Connect to a VBC extension
+// Connect to an App User
 type ChannelFrom5 struct {
-	Extension string `json:"extension"`
-	Type      string `json:"type"`
+	Type string `json:"type"`
+	User string `json:"user"`
 }
 
-// ChannelTo2
+// ChannelTo1
 // Connect to a Phone (PSTN) number
-type ChannelTo2 struct {
+type ChannelTo1 struct {
 	DtmfAnswer *string `json:"dtmfAnswer,omitempty"`
 	Number     string  `json:"number"`
 	Type       string  `json:"type"`

@@ -10,14 +10,10 @@ type AddUserToAccountRequestBody struct {
 	UserID string `json:"userId"`
 }
 
-type AddUserToAccount201ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// AddUserToAccount201ApplicationJSON
+// The object was created
 type AddUserToAccount201ApplicationJSON struct {
-	Message string                                 `json:"message"`
-	Meta    AddUserToAccount201ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 // AddUserToAccount400ApplicationJSONErrorsParameters
@@ -35,45 +31,28 @@ type AddUserToAccount400ApplicationJSONErrors struct {
 	Parameters *AddUserToAccount400ApplicationJSONErrorsParameters `json:"parameters,omitempty"`
 }
 
-type AddUserToAccount400ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// AddUserToAccount400ApplicationJSON
+// Specify the fields and/ or parameters that had errors
 type AddUserToAccount400ApplicationJSON struct {
-	Errors  AddUserToAccount400ApplicationJSONErrors `json:"errors"`
-	Message string                                   `json:"message"`
-	Meta    AddUserToAccount400ApplicationJSONMeta   `json:"meta"`
+	Errors AddUserToAccount400ApplicationJSONErrors `json:"errors"`
 }
 
-type AddUserToAccount401ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// AddUserToAccount401ApplicationJSON
+// The error message should specify what cause the error
 type AddUserToAccount401ApplicationJSON struct {
-	Message string                                 `json:"message"`
-	Meta    AddUserToAccount401ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type AddUserToAccount429ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// AddUserToAccount429ApplicationJSON
+// The error message should specify what cause the error
 type AddUserToAccount429ApplicationJSON struct {
-	Message string                                 `json:"message"`
-	Meta    AddUserToAccount429ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type AddUserToAccount500ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// AddUserToAccount500ApplicationJSON
+// The error message should specify what cause the error
 type AddUserToAccount500ApplicationJSON struct {
-	Message string                                 `json:"message"`
-	Meta    AddUserToAccount500ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 type AddUserToAccountRequest struct {

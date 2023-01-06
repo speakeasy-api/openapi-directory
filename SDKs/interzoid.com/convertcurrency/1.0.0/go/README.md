@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,14 +24,14 @@ func main() {
     
     req := operations.ConvertcurrencyRequest{
         QueryParams: operations.ConvertcurrencyQueryParams{
-            Amount: "rerum",
-            From: "atque",
-            License: "expedita",
-            To: "aut",
+            Amount: "corporis",
+            From: "consectetur",
+            License: "debitis",
+            To: "totam",
         },
     }
     
-    res, err := s.Sdk.Convertcurrency(ctx, req)
+    res, err := s.LiveCurrencyRateConversion.Convertcurrency(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,7 +45,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Live Currency Rate Conversion
 
 * `Convertcurrency` - Converts amount in one currency to that of another
 

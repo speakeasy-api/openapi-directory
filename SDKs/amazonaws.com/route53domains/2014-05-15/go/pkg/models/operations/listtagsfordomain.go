@@ -32,5 +32,5 @@ type ListTagsForDomainResponse struct {
 	ListTagsForDomainResponse *shared.ListTagsForDomainResponse
 	OperationLimitExceeded    *interface{}
 	StatusCode                int64
-	UnsupportedTld            *interface{}
+	UnsupportedTLD            *interface{}
 }

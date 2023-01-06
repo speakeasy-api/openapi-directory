@@ -24,8 +24,7 @@ type GetAccountsRequest struct {
 
 type GetAccountsResponse struct {
 	ContentType      string
-	Headers          map[string][]string
-	ObErrorResponse1 *shared.ObErrorResponse1
-	ObReadAccount5   *shared.ObReadAccount5
+	OBErrorResponse1 *shared.ObErrorResponse1
+	OBReadAccount5   *shared.ObReadAccount5
 	StatusCode       int64
 }

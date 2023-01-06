@@ -3,21 +3,21 @@ package operations
 type GetModifyAquaConfigurationActionEnum string
 
 const (
-	GetModifyAquaConfigurationActionEnumModifyAquaConfiguration GetModifyAquaConfigurationActionEnum = "ModifyAquaConfiguration"
+	GETModifyAquaConfigurationActionEnumModifyAquaConfiguration GetModifyAquaConfigurationActionEnum = "ModifyAquaConfiguration"
 )
 
 type GetModifyAquaConfigurationAquaConfigurationStatusEnum string
 
 const (
-	GetModifyAquaConfigurationAquaConfigurationStatusEnumEnabled  GetModifyAquaConfigurationAquaConfigurationStatusEnum = "enabled"
-	GetModifyAquaConfigurationAquaConfigurationStatusEnumDisabled GetModifyAquaConfigurationAquaConfigurationStatusEnum = "disabled"
-	GetModifyAquaConfigurationAquaConfigurationStatusEnumAuto     GetModifyAquaConfigurationAquaConfigurationStatusEnum = "auto"
+	GETModifyAquaConfigurationAquaConfigurationStatusEnumEnabled  GetModifyAquaConfigurationAquaConfigurationStatusEnum = "enabled"
+	GETModifyAquaConfigurationAquaConfigurationStatusEnumDisabled GetModifyAquaConfigurationAquaConfigurationStatusEnum = "disabled"
+	GETModifyAquaConfigurationAquaConfigurationStatusEnumAuto     GetModifyAquaConfigurationAquaConfigurationStatusEnum = "auto"
 )
 
 type GetModifyAquaConfigurationVersionEnum string
 
 const (
-	GetModifyAquaConfigurationVersionEnumTwoThousandAndTwelve1201 GetModifyAquaConfigurationVersionEnum = "2012-12-01"
+	GETModifyAquaConfigurationVersionEnumTwoThousandAndTwelve1201 GetModifyAquaConfigurationVersionEnum = "2012-12-01"
 )
 
 type GetModifyAquaConfigurationQueryParams struct {

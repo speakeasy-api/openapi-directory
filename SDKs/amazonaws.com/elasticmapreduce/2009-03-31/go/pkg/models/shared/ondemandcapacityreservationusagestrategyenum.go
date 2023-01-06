@@ -1,7 +1,0 @@
-package shared
-
-type OnDemandCapacityReservationUsageStrategyEnum string
-
-const (
-	OnDemandCapacityReservationUsageStrategyEnumUseCapacityReservationsFirst OnDemandCapacityReservationUsageStrategyEnum = "use-capacity-reservations-first"
-)

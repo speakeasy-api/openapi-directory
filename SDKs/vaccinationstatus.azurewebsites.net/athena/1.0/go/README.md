@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,18 +24,18 @@ func main() {
     
     req := operations.GetVaccineStatusRequest{
         Headers: operations.GetVaccineStatusHeaders{
-            Accept: "rerum",
-            Authorization: "iusto",
-            ContentType: "qui",
+            Accept: "vel",
+            Authorization: "eum",
+            ContentType: "sit",
         },
         Request: shared.VaccineStatusRequest{
-            DepartmentID: "ad",
-            PatientID: "accusantium",
-            Token: "impedit",
+            DepartmentID: "neque",
+            PatientID: "rerum",
+            Token: "veniam",
         },
     }
     
-    res, err := s.Sdk.GetVaccineStatus(ctx, req)
+    res, err := s.AthenaAPI.GetVaccineStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,7 +49,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### athena-api
 
 * `GetVaccineStatus` - return vaccine status from USA -- Athena Health API
 

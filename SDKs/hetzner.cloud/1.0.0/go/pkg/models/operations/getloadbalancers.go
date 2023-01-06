@@ -263,6 +263,6 @@ type GetLoadBalancersRequest struct {
 
 type GetLoadBalancersResponse struct {
 	ContentType                              string
-	GetLoadBalancers200ApplicationJSONObject *GetLoadBalancers200ApplicationJSON
 	StatusCode                               int64
+	GetLoadBalancers200ApplicationJSONObject *GetLoadBalancers200ApplicationJSON
 }

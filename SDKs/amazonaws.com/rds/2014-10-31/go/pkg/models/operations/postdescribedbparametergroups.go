@@ -3,13 +3,13 @@ package operations
 type PostDescribeDbParameterGroupsActionEnum string
 
 const (
-	PostDescribeDbParameterGroupsActionEnumDescribeDbParameterGroups PostDescribeDbParameterGroupsActionEnum = "DescribeDBParameterGroups"
+	POSTDescribeDBParameterGroupsActionEnumDescribeDbParameterGroups PostDescribeDbParameterGroupsActionEnum = "DescribeDBParameterGroups"
 )
 
 type PostDescribeDbParameterGroupsVersionEnum string
 
 const (
-	PostDescribeDbParameterGroupsVersionEnumTwoThousandAndFourteen1031 PostDescribeDbParameterGroupsVersionEnum = "2014-10-31"
+	POSTDescribeDBParameterGroupsVersionEnumTwoThousandAndFourteen1031 PostDescribeDbParameterGroupsVersionEnum = "2014-10-31"
 )
 
 type PostDescribeDbParameterGroupsQueryParams struct {

@@ -11,7 +11,7 @@ type RoleDetail struct {
 	AssumeRolePolicyDocument *string
 	AttachedManagedPolicies  []AttachedPolicy
 	CreateDate               *time.Time
-	InstanceProfileList      []InstanceProfile
+	InstanceProfileList      []InstanceProfile1
 	Path                     *string
 	PermissionsBoundary      *AttachedPermissionsBoundary
 	RoleID                   *string

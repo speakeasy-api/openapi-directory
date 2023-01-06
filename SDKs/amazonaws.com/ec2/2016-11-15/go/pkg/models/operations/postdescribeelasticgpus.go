@@ -3,13 +3,13 @@ package operations
 type PostDescribeElasticGpusActionEnum string
 
 const (
-	PostDescribeElasticGpusActionEnumDescribeElasticGpus PostDescribeElasticGpusActionEnum = "DescribeElasticGpus"
+	POSTDescribeElasticGpusActionEnumDescribeElasticGpus PostDescribeElasticGpusActionEnum = "DescribeElasticGpus"
 )
 
 type PostDescribeElasticGpusVersionEnum string
 
 const (
-	PostDescribeElasticGpusVersionEnumTwoThousandAndSixteen1115 PostDescribeElasticGpusVersionEnum = "2016-11-15"
+	POSTDescribeElasticGpusVersionEnumTwoThousandAndSixteen1115 PostDescribeElasticGpusVersionEnum = "2016-11-15"
 )
 
 type PostDescribeElasticGpusQueryParams struct {

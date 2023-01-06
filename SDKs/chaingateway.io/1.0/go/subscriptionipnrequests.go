@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -162,7 +162,7 @@ func (s *SubscriptionIpnRequests) ResendFailedIpn(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.ResendFailedIpn = out
+			res.ResendFailedIPN = out
 		}
 	}
 

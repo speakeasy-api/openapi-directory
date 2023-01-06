@@ -20,6 +20,6 @@ type ExportTask struct {
 	Status                 *string
 	TaskEndTime            *time.Time
 	TaskStartTime          *time.Time
-	TotalExtractedDataInGb *int64
+	TotalExtractedDataInGB *int64
 	WarningMessage         *string
 }

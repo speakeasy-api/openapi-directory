@@ -83,7 +83,7 @@ type Tetms404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Tetms404ApplicationJSONErrorDescriptionEnumNoRecordFound               Tetms404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Tetms404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Tetms404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Tetms404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tetms404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Tetms404ApplicationJSON struct {

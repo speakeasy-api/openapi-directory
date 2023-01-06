@@ -8,7 +8,7 @@ import (
 // Information about a build.
 type Build struct {
 	Arn                          *string                       `json:"arn,omitempty"`
-	Artifacts                    *BuildArtifacts               `json:"artifacts,omitempty"`
+	Artifacts                    *BuildArtifacts1              `json:"artifacts,omitempty"`
 	BuildBatchArn                *string                       `json:"buildBatchArn,omitempty"`
 	BuildComplete                *bool                         `json:"buildComplete,omitempty"`
 	BuildNumber                  *int64                        `json:"buildNumber,omitempty"`
@@ -30,7 +30,7 @@ type Build struct {
 	QueuedTimeoutInMinutes       *int64                        `json:"queuedTimeoutInMinutes,omitempty"`
 	ReportArns                   []string                      `json:"reportArns,omitempty"`
 	ResolvedSourceVersion        *string                       `json:"resolvedSourceVersion,omitempty"`
-	SecondaryArtifacts           []BuildArtifacts              `json:"secondaryArtifacts,omitempty"`
+	SecondaryArtifacts           []BuildArtifacts1             `json:"secondaryArtifacts,omitempty"`
 	SecondarySourceVersions      []ProjectSourceVersion        `json:"secondarySourceVersions,omitempty"`
 	SecondarySources             []ProjectSource               `json:"secondarySources,omitempty"`
 	ServiceRole                  *string                       `json:"serviceRole,omitempty"`

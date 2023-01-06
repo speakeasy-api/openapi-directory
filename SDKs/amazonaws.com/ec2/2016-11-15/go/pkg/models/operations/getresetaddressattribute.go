@@ -3,19 +3,19 @@ package operations
 type GetResetAddressAttributeActionEnum string
 
 const (
-	GetResetAddressAttributeActionEnumResetAddressAttribute GetResetAddressAttributeActionEnum = "ResetAddressAttribute"
+	GETResetAddressAttributeActionEnumResetAddressAttribute GetResetAddressAttributeActionEnum = "ResetAddressAttribute"
 )
 
 type GetResetAddressAttributeAttributeEnum string
 
 const (
-	GetResetAddressAttributeAttributeEnumDomainName GetResetAddressAttributeAttributeEnum = "domain-name"
+	GETResetAddressAttributeAttributeEnumDomainName GetResetAddressAttributeAttributeEnum = "domain-name"
 )
 
 type GetResetAddressAttributeVersionEnum string
 
 const (
-	GetResetAddressAttributeVersionEnumTwoThousandAndSixteen1115 GetResetAddressAttributeVersionEnum = "2016-11-15"
+	GETResetAddressAttributeVersionEnumTwoThousandAndSixteen1115 GetResetAddressAttributeVersionEnum = "2016-11-15"
 )
 
 type GetResetAddressAttributeQueryParams struct {

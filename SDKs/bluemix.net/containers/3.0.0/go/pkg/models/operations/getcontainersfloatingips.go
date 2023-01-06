@@ -16,6 +16,6 @@ type GetContainersFloatingIpsRequest struct {
 
 type GetContainersFloatingIpsResponse struct {
 	ContentType string
-	FloatingIps []interface{}
+	FloatingIPS []interface{}
 	StatusCode  int64
 }

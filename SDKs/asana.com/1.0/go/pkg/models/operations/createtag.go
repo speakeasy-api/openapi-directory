@@ -9,8 +9,8 @@ type CreateTagQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateTagRequestBodyInput struct {
-	Data *shared.TagRequestInput `json:"data,omitempty"`
+type CreateTagRequestBody struct {
+	Data *shared.TagRequest `json:"data,omitempty"`
 }
 
 type CreateTag201ApplicationJSON struct {
@@ -19,7 +19,7 @@ type CreateTag201ApplicationJSON struct {
 
 type CreateTagRequest struct {
 	QueryParams CreateTagQueryParams
-	Request     CreateTagRequestBodyInput `request:"mediaType=application/json"`
+	Request     CreateTagRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateTagResponse struct {

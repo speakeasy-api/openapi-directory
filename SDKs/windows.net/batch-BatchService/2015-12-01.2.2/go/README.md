@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,20 +24,20 @@ func main() {
     
     req := operations.ApplicationGetRequest{
         PathParams: operations.ApplicationGetPathParams{
-            ApplicationID: "velit",
+            ApplicationID: "veritatis",
         },
         QueryParams: operations.ApplicationGetQueryParams{
-            APIVersion: "qui",
-            Timeout: 512565698074373009,
+            APIVersion: "magnam",
+            Timeout: 4298916277474146673,
         },
         Headers: operations.ApplicationGetHeaders{
-            ClientRequestID: "est",
-            OcpDate: "mollitia",
-            ReturnClientRequestID: false,
+            ClientRequestID: "blanditiis",
+            OcpDate: "fuga",
+            ReturnClientRequestID: true,
         },
     }
     
-    res, err := s.Sdk.ApplicationGet(ctx, req)
+    res, err := s.Applications.ApplicationGet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -52,15 +51,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Applications
 
 * `ApplicationGet` - Gets information about the specified application.
 * `ApplicationList` - Lists all of the applications available in the specified account.
+
+### Certificates
+
 * `CertificateAdd` - Adds a certificate to the specified account.
 * `CertificateCancelDeletion` - Cancels a failed deletion of a certificate from the specified account.
 * `CertificateDelete` - Deletes a certificate from the specified account.
 * `CertificateGet` - Gets information about the specified certificate.
 * `CertificateList` - Lists all of the certificates that have been added to the specified account.
+
+### ComputeNodes
+
 * `ComputeNodeAddUser` - Adds a user account to the specified compute node.
 * `ComputeNodeDeleteUser` - Deletes a user account from the specified compute node.
 * `ComputeNodeDisableScheduling` - Disable task scheduling of the specified compute node.
@@ -71,6 +76,10 @@ func main() {
 * `ComputeNodeReboot` - Restarts the specified compute node.
 * `ComputeNodeReimage` - Reinstalls the operating system on the specified compute node.
 * `ComputeNodeUpdateUser` - Updates the password or expiration time of a user account on the specified compute node.
+* `PoolRemoveNodes` - Removes compute nodes from the specified pool.
+
+### Files
+
 * `FileDeleteFromComputeNode` - Deletes the specified task file from the compute node.
 * `FileDeleteFromTask` - Deletes the specified task file from the compute node where the task ran.
 * `FileGetFromComputeNode` - Gets the content of the specified task file.
@@ -79,6 +88,9 @@ func main() {
 * `FileGetNodeFilePropertiesFromTask` - Gets the properties of the specified task file.
 * `FileListFromComputeNode` - Lists all of the files in task directories on the specified compute node.
 * `FileListFromTask` - Lists the files in a task's directory on its compute node.
+
+### JobSchedules
+
 * `JobScheduleAdd` - Adds a job schedule to the specified account.
 * `JobScheduleDelete` - Deletes a job schedule from the specified account.
 * `JobScheduleDisable` - Disables a job schedule.
@@ -89,6 +101,9 @@ func main() {
 * `JobSchedulePatch` - Updates the properties of the specified job schedule.
 * `JobScheduleTerminate` - Terminates a job schedule.
 * `JobScheduleUpdate` - Updates the properties of the specified job schedule.
+
+### Jobs
+
 * `JobAdd` - Adds a job to the specified account.
 * `JobDelete` - Deletes a job.
 * `JobDisable` - Disables the specified job, preventing new tasks from running.
@@ -101,6 +116,9 @@ func main() {
 * `JobPatch` - Updates the properties of a job.
 * `JobTerminate` - Terminates the specified job, marking it as completed.
 * `JobUpdate` - Updates the properties of a job.
+
+### Pools
+
 * `PoolAdd` - Adds a pool to the specified account.
 * `PoolDelete` - Deletes a pool from the specified account.
 * `PoolDisableAutoScale` - Disables automatic scaling for a pool.
@@ -112,11 +130,13 @@ func main() {
 * `PoolList` - Lists all of the pools in the specified account.
 * `PoolListPoolUsageMetrics` - Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
 * `PoolPatch` - Updates the properties of a pool.
-* `PoolRemoveNodes` - Removes compute nodes from the specified pool.
 * `PoolResize` - Changes the number of compute nodes that are assigned to a pool.
 * `PoolStopResize` - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
 * `PoolUpdateProperties` - Updates the properties of a pool.
 * `PoolUpgradeOs` - Upgrades the operating system of the specified pool.
+
+### Tasks
+
 * `TaskAdd` - Adds a task to the specified job.
 * `TaskDelete` - Deletes a task from the specified job.
 * `TaskGet` - Gets information about the specified task.

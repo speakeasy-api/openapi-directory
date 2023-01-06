@@ -17,6 +17,7 @@ type GoogleCloudContactcenterinsightsV1IssueModel struct {
 	CreateTime      *string                                                      `json:"createTime,omitempty"`
 	DisplayName     *string                                                      `json:"displayName,omitempty"`
 	InputDataConfig *GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig `json:"inputDataConfig,omitempty"`
+	IssueCount      *string                                                      `json:"issueCount,omitempty"`
 	Name            *string                                                      `json:"name,omitempty"`
 	State           *GoogleCloudContactcenterinsightsV1IssueModelStateEnum       `json:"state,omitempty"`
 	TrainingStats   *GoogleCloudContactcenterinsightsV1IssueModelLabelStats      `json:"trainingStats,omitempty"`

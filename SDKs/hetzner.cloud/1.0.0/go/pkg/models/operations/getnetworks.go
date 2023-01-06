@@ -68,6 +68,6 @@ type GetNetworksRequest struct {
 
 type GetNetworksResponse struct {
 	ContentType                         string
-	GetNetworks200ApplicationJSONObject *GetNetworks200ApplicationJSON
 	StatusCode                          int64
+	GetNetworks200ApplicationJSONObject *GetNetworks200ApplicationJSON
 }

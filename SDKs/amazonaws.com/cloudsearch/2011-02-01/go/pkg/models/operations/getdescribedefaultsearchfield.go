@@ -3,13 +3,13 @@ package operations
 type GetDescribeDefaultSearchFieldActionEnum string
 
 const (
-	GetDescribeDefaultSearchFieldActionEnumDescribeDefaultSearchField GetDescribeDefaultSearchFieldActionEnum = "DescribeDefaultSearchField"
+	GETDescribeDefaultSearchFieldActionEnumDescribeDefaultSearchField GetDescribeDefaultSearchFieldActionEnum = "DescribeDefaultSearchField"
 )
 
 type GetDescribeDefaultSearchFieldVersionEnum string
 
 const (
-	GetDescribeDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 GetDescribeDefaultSearchFieldVersionEnum = "2011-02-01"
+	GETDescribeDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 GetDescribeDefaultSearchFieldVersionEnum = "2011-02-01"
 )
 
 type GetDescribeDefaultSearchFieldQueryParams struct {

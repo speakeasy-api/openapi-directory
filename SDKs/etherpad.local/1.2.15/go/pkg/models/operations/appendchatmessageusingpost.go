@@ -38,8 +38,8 @@ type AppendChatMessageUsingPostRequest struct {
 type AppendChatMessageUsingPostResponse struct {
 	ContentType                                        string
 	StatusCode                                         int64
-	AppendChatMessageUsingPost200ApplicationJSONObject *AppendChatMessageUsingPost200ApplicationJSON
-	AppendChatMessageUsingPost400ApplicationJSONObject *AppendChatMessageUsingPost400ApplicationJSON
-	AppendChatMessageUsingPost401ApplicationJSONObject *AppendChatMessageUsingPost401ApplicationJSON
-	AppendChatMessageUsingPost500ApplicationJSONObject *AppendChatMessageUsingPost500ApplicationJSON
+	AppendChatMessageUsingPOST200ApplicationJSONObject *AppendChatMessageUsingPost200ApplicationJSON
+	AppendChatMessageUsingPOST400ApplicationJSONObject *AppendChatMessageUsingPost400ApplicationJSON
+	AppendChatMessageUsingPOST401ApplicationJSONObject *AppendChatMessageUsingPost401ApplicationJSON
+	AppendChatMessageUsingPOST500ApplicationJSONObject *AppendChatMessageUsingPost500ApplicationJSON
 }

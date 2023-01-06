@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// PackageSimpleUser
+// Simple User
 type PackageSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -45,6 +47,8 @@ type PackageMinimalRepositoryLicense struct {
 	URL    *string `json:"url,omitempty"`
 }
 
+// PackageMinimalRepositorySimpleUser
+// Simple User
 type PackageMinimalRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -73,6 +77,8 @@ type PackageMinimalRepositoryPermissions struct {
 	Push  *bool `json:"push,omitempty"`
 }
 
+// PackageMinimalRepositoryRepositoryLicenseSimple
+// License Simple
 type PackageMinimalRepositoryRepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -82,6 +88,8 @@ type PackageMinimalRepositoryRepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// PackageMinimalRepositoryRepositorySimpleUser
+// Simple User
 type PackageMinimalRepositoryRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -222,6 +230,8 @@ type PackageMinimalRepositoryRepositoryTemplateRepository struct {
 	WatchersCount       *int64                                                           `json:"watchers_count,omitempty"`
 }
 
+// PackageMinimalRepositoryRepository
+// A git repository
 type PackageMinimalRepositoryRepository struct {
 	AllowMergeCommit    *bool                                                 `json:"allow_merge_commit,omitempty"`
 	AllowRebaseMerge    *bool                                                 `json:"allow_rebase_merge,omitempty"`
@@ -312,6 +322,8 @@ type PackageMinimalRepositoryRepository struct {
 	WatchersCount       int64                                                 `json:"watchers_count"`
 }
 
+// PackageMinimalRepository
+// Minimal Repository
 type PackageMinimalRepository struct {
 	ArchiveURL          string                               `json:"archive_url"`
 	Archived            *bool                                `json:"archived,omitempty"`

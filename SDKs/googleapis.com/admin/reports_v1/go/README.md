@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,37 +26,37 @@ func main() {
         Security: operations.ReportsActivitiesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ReportsActivitiesListPathParams{
-            ApplicationName: "calendar",
-            UserKey: "eum",
+            ApplicationName: "keep",
+            UserKey: "ut",
         },
         QueryParams: operations.ReportsActivitiesListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "id",
-            ActorIPAddress: "sed",
-            Alt: "media",
+            AccessToken: "doloribus",
+            ActorIPAddress: "illo",
+            Alt: "proto",
             Callback: "et",
-            CustomerID: "est",
-            EndTime: "voluptatibus",
-            EventName: "aliquam",
-            Fields: "architecto",
-            Filters: "nihil",
-            GroupIDFilter: "rerum",
-            Key: "inventore",
-            MaxResults: 2591322304424753360,
-            OauthToken: "aut",
-            OrgUnitID: "quia",
-            PageToken: "aliquam",
+            CustomerID: "asperiores",
+            EndTime: "officia",
+            EventName: "aut",
+            Fields: "fugiat",
+            Filters: "voluptatum",
+            GroupIDFilter: "odio",
+            Key: "qui",
+            MaxResults: 1773872765660661886,
+            OauthToken: "et",
+            OrgUnitID: "assumenda",
+            PageToken: "dolore",
             PrettyPrint: false,
-            QuotaUser: "dolorem",
-            StartTime: "est",
-            UploadType: "soluta",
-            UploadProtocol: "occaecati",
+            QuotaUser: "explicabo",
+            StartTime: "repudiandae",
+            UploadType: "sapiente",
+            UploadProtocol: "nesciunt",
         },
     }
     

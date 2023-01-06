@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,8 +29,8 @@ func main() {
             },
         },
         PathParams: operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams{
-            AppID: 7768000191674194381,
-            CardID: "placeat",
+            AppID: 2300325445861974853,
+            CardID: "ut",
         },
     }
     

@@ -10,6 +10,7 @@ type ImportContextBakImportOptionsEncryptionOptions struct {
 // Import parameters specific to SQL Server .BAK files
 type ImportContextBakImportOptions struct {
 	EncryptionOptions *ImportContextBakImportOptionsEncryptionOptions `json:"encryptionOptions,omitempty"`
+	Striped           *bool                                           `json:"striped,omitempty"`
 }
 
 // ImportContextCsvImportOptions

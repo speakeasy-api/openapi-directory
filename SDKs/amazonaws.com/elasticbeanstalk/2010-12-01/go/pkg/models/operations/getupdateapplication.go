@@ -3,13 +3,13 @@ package operations
 type GetUpdateApplicationActionEnum string
 
 const (
-	GetUpdateApplicationActionEnumUpdateApplication GetUpdateApplicationActionEnum = "UpdateApplication"
+	GETUpdateApplicationActionEnumUpdateApplication GetUpdateApplicationActionEnum = "UpdateApplication"
 )
 
 type GetUpdateApplicationVersionEnum string
 
 const (
-	GetUpdateApplicationVersionEnumTwoThousandAndTen1201 GetUpdateApplicationVersionEnum = "2010-12-01"
+	GETUpdateApplicationVersionEnumTwoThousandAndTen1201 GetUpdateApplicationVersionEnum = "2010-12-01"
 )
 
 type GetUpdateApplicationQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type PostStartDbClusterActionEnum string
 
 const (
-	PostStartDbClusterActionEnumStartDbCluster PostStartDbClusterActionEnum = "StartDBCluster"
+	POSTStartDBClusterActionEnumStartDbCluster PostStartDbClusterActionEnum = "StartDBCluster"
 )
 
 type PostStartDbClusterVersionEnum string
 
 const (
-	PostStartDbClusterVersionEnumTwoThousandAndFourteen1031 PostStartDbClusterVersionEnum = "2014-10-31"
+	POSTStartDBClusterVersionEnumTwoThousandAndFourteen1031 PostStartDbClusterVersionEnum = "2014-10-31"
 )
 
 type PostStartDbClusterQueryParams struct {

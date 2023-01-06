@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -31,11 +30,11 @@ func main() {
             },
         },
         PathParams: operations.DeleteFaxPathParams{
-            Sid: "error",
+            Sid: "debitis",
         },
     }
     
-    res, err := s.Sdk.DeleteFax(ctx, req)
+    res, err := s.DeleteFax(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

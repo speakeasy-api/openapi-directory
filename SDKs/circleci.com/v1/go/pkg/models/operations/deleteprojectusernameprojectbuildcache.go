@@ -15,6 +15,6 @@ type DeleteProjectUsernameProjectBuildCacheRequest struct {
 
 type DeleteProjectUsernameProjectBuildCacheResponse struct {
 	ContentType                                                    string
-	DeleteProjectUsernameProjectBuildCache200ApplicationJSONObject *DeleteProjectUsernameProjectBuildCache200ApplicationJSON
 	StatusCode                                                     int64
+	DeleteProjectUsernameProjectBuildCache200ApplicationJSONObject *DeleteProjectUsernameProjectBuildCache200ApplicationJSON
 }

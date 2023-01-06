@@ -6,7 +6,7 @@ import (
 
 type PostV05ConsentsOnFetchHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHiuID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
+	XHIUID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
 }
 
 type PostV05ConsentsOnFetchRequests struct {

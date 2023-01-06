@@ -3,7 +3,7 @@ package shared
 type IPMappingTypeEnum string
 
 const (
-	IPMappingTypeEnumSqlipAddressTypeUnspecified IPMappingTypeEnum = "SQL_IP_ADDRESS_TYPE_UNSPECIFIED"
+	IPMappingTypeEnumSQLIPAddressTypeUnspecified IPMappingTypeEnum = "SQL_IP_ADDRESS_TYPE_UNSPECIFIED"
 	IPMappingTypeEnumPrimary                     IPMappingTypeEnum = "PRIMARY"
 	IPMappingTypeEnumOutgoing                    IPMappingTypeEnum = "OUTGOING"
 	IPMappingTypeEnumPrivate                     IPMappingTypeEnum = "PRIVATE"

@@ -30,6 +30,6 @@ type ListRulesResponse struct {
 	ContentType                string
 	ListRulesResponse          *shared.ListRulesResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

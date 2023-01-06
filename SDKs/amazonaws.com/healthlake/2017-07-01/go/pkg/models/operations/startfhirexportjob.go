@@ -7,7 +7,7 @@ import (
 type StartFhirExportJobXAmzTargetEnum string
 
 const (
-	StartFhirExportJobXAmzTargetEnumHealthLakeStartFhirExportJob StartFhirExportJobXAmzTargetEnum = "HealthLake.StartFHIRExportJob"
+	StartFHIRExportJobXAmzTargetEnumHealthLakeStartFhirExportJob StartFhirExportJobXAmzTargetEnum = "HealthLake.StartFHIRExportJob"
 )
 
 type StartFhirExportJobHeaders struct {
@@ -31,7 +31,7 @@ type StartFhirExportJobResponse struct {
 	ContentType                string
 	InternalServerException    *interface{}
 	ResourceNotFoundException  *interface{}
-	StartFhirExportJobResponse *shared.StartFhirExportJobResponse
+	StartFHIRExportJobResponse *shared.StartFhirExportJobResponse
 	StatusCode                 int64
 	ThrottlingException        *interface{}
 	ValidationException        *interface{}

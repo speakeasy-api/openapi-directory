@@ -10,5 +10,5 @@ const (
 	RevocationReasonEnumSuperseded                     RevocationReasonEnum = "SUPERSEDED"
 	RevocationReasonEnumCessationOfOperation           RevocationReasonEnum = "CESSATION_OF_OPERATION"
 	RevocationReasonEnumPrivilegeWithdrawn             RevocationReasonEnum = "PRIVILEGE_WITHDRAWN"
-	RevocationReasonEnumAaCompromise                   RevocationReasonEnum = "A_A_COMPROMISE"
+	RevocationReasonEnumAACompromise                   RevocationReasonEnum = "A_A_COMPROMISE"
 )

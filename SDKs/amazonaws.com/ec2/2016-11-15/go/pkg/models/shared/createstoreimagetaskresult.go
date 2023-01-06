@@ -1,5 +1,5 @@
 package shared
 
 type CreateStoreImageTaskResult struct {
-	ObjectKey *string
+	ObjectKey map[string]interface{}
 }

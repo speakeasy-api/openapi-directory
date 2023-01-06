@@ -5,8 +5,8 @@ import (
 )
 
 type EscerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
-	Docid    string `json:"DOCID"`
+	DOB      string `json:"DOB"`
+	DOCID    string `json:"DOCID"`
 	FullName string `json:"FullName"`
 }
 
@@ -83,7 +83,7 @@ type Escer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Escer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Escer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Escer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Escer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Escer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Escer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Escer404ApplicationJSON struct {

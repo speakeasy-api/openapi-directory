@@ -12,7 +12,7 @@ type ListHiTsQueryParams struct {
 type ListHiTsXAmzTargetEnum string
 
 const (
-	ListHiTsXAmzTargetEnumMTurkRequesterServiceV20170117ListHiTs ListHiTsXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListHITs"
+	ListHITsXAmzTargetEnumMTurkRequesterServiceV20170117ListHiTs ListHiTsXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListHITs"
 )
 
 type ListHiTsHeaders struct {
@@ -34,7 +34,7 @@ type ListHiTsRequest struct {
 
 type ListHiTsResponse struct {
 	ContentType      string
-	ListHiTsResponse *shared.ListHiTsResponse
+	ListHITsResponse *shared.ListHiTsResponse
 	RequestError     *interface{}
 	ServiceFault     *interface{}
 	StatusCode       int64

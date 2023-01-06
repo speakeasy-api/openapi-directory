@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.DeleteConnectionRequest{
         PathParams: operations.DeleteConnectionPathParams{
-            ConnectionID: "vero",
+            ConnectionID: "explicabo",
         },
         Headers: operations.DeleteConnectionHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "cumque",
-            XAmzCredential: "ea",
-            XAmzDate: "non",
-            XAmzSecurityToken: "non",
-            XAmzSignature: "nam",
-            XAmzSignedHeaders: "beatae",
+            XAmzAlgorithm: "necessitatibus",
+            XAmzContentSha256: "veniam",
+            XAmzCredential: "qui",
+            XAmzDate: "in",
+            XAmzSecurityToken: "odit",
+            XAmzSignature: "molestias",
+            XAmzSignedHeaders: "corporis",
         },
     }
     
-    res, err := s.Sdk.DeleteConnection(ctx, req)
+    res, err := s.DeleteConnection(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

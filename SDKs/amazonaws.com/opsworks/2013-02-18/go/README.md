@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,24 @@ func main() {
     
     req := operations.AssignInstanceRequest{
         Headers: operations.AssignInstanceHeaders{
-            XAmzAlgorithm: "tempora",
-            XAmzContentSha256: "totam",
-            XAmzCredential: "dolorum",
-            XAmzDate: "blanditiis",
-            XAmzSecurityToken: "culpa",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "soluta",
+            XAmzAlgorithm: "dolore",
+            XAmzContentSha256: "quas",
+            XAmzCredential: "fugit",
+            XAmzDate: "cumque",
+            XAmzSecurityToken: "corporis",
+            XAmzSignature: "adipisci",
+            XAmzSignedHeaders: "aliquid",
             XAmzTarget: "OpsWorks_20130218.AssignInstance",
         },
         Request: shared.AssignInstanceRequest{
-            InstanceID: "sint",
+            InstanceID: "exercitationem",
             LayerIds: []string{
-                "beatae",
-                "quae",
-                "ut",
+                "et",
             },
         },
     }
     
-    res, err := s.Sdk.AssignInstance(ctx, req)
+    res, err := s.AssignInstance(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

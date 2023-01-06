@@ -1,6 +1,6 @@
 package shared
 
 type TagResourceInput struct {
-	ResourceArn string `json:"ResourceARN"`
+	ResourceARN string `json:"ResourceARN"`
 	Tags        []Tag  `json:"Tags"`
 }

@@ -1,0 +1,12 @@
+package shared
+
+// LogDeliveryConfigurationList
+// Returns the destination, format and type of the logs.
+type LogDeliveryConfigurationList struct {
+	DestinationDetails *DestinationDetails
+	DestinationType    *DestinationTypeEnum
+	LogFormat          *LogFormatEnum
+	LogType            *LogTypeEnum
+	Message            *string
+	Status             *LogDeliveryConfigurationStatusEnum
+}

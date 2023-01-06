@@ -3,13 +3,13 @@ package operations
 type PostDeleteAnalysisSchemeActionEnum string
 
 const (
-	PostDeleteAnalysisSchemeActionEnumDeleteAnalysisScheme PostDeleteAnalysisSchemeActionEnum = "DeleteAnalysisScheme"
+	POSTDeleteAnalysisSchemeActionEnumDeleteAnalysisScheme PostDeleteAnalysisSchemeActionEnum = "DeleteAnalysisScheme"
 )
 
 type PostDeleteAnalysisSchemeVersionEnum string
 
 const (
-	PostDeleteAnalysisSchemeVersionEnumTwoThousandAndThirteen0101 PostDeleteAnalysisSchemeVersionEnum = "2013-01-01"
+	POSTDeleteAnalysisSchemeVersionEnumTwoThousandAndThirteen0101 PostDeleteAnalysisSchemeVersionEnum = "2013-01-01"
 )
 
 type PostDeleteAnalysisSchemeQueryParams struct {

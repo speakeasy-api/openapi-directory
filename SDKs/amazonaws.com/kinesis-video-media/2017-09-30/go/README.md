@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.GetMediaRequest{
         Headers: operations.GetMediaHeaders{
-            XAmzAlgorithm: "laborum",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "eum",
-            XAmzDate: "magnam",
-            XAmzSecurityToken: "veniam",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "rerum",
+            XAmzAlgorithm: "eligendi",
+            XAmzContentSha256: "quo",
+            XAmzCredential: "et",
+            XAmzDate: "eligendi",
+            XAmzSecurityToken: "soluta",
+            XAmzSignature: "enim",
+            XAmzSignedHeaders: "commodi",
         },
         Request: operations.GetMediaRequestBody{
             StartSelector: operations.GetMediaRequestBodyStartSelector{
-                AfterFragmentNumber: "et",
-                ContinuationToken: "voluptatem",
-                StartSelectorType: "CONTINUATION_TOKEN",
-                StartTimestamp: "2007-03-18T04:01:04Z",
+                AfterFragmentNumber: "quia",
+                ContinuationToken: "vel",
+                StartSelectorType: "NOW",
+                StartTimestamp: "1972-05-21T01:46:38Z",
             },
-            StreamArn: "est",
-            StreamName: "natus",
+            StreamARN: "laudantium",
+            StreamName: "corporis",
         },
     }
     
-    res, err := s.Sdk.GetMedia(ctx, req)
+    res, err := s.GetMedia(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

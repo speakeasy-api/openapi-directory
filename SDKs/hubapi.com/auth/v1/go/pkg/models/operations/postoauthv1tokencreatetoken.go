@@ -12,5 +12,5 @@ type PostOauthV1TokenCreateTokenResponse struct {
 	Body            []byte
 	ContentType     string
 	StatusCode      int64
-	TokenResponseIf *shared.TokenResponseIf
+	TokenResponseIF *shared.TokenResponseIf
 }

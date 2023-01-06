@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,260 +34,254 @@ func main() {
     
     req := operations.BatchGetItemRequest{
         QueryParams: operations.BatchGetItemQueryParams{
-            RequestItems: "aut",
+            RequestItems: "iste",
         },
         Headers: operations.BatchGetItemHeaders{
-            XAmzAlgorithm: "voluptate",
-            XAmzContentSha256: "a",
-            XAmzCredential: "consequatur",
-            XAmzDate: "dolore",
-            XAmzSecurityToken: "assumenda",
-            XAmzSignature: "rerum",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "vitae",
+            XAmzContentSha256: "totam",
+            XAmzCredential: "dolores",
+            XAmzDate: "illum",
+            XAmzSecurityToken: "debitis",
+            XAmzSignature: "vel",
+            XAmzSignedHeaders: "odio",
             XAmzTarget: "DynamoDB_20111205.BatchGetItem",
         },
         Request: shared.BatchGetItemInput{
             RequestItems: map[string]shared.KeysAndAttributes{
-                "labore": shared.KeysAndAttributes{
+                "aspernatur": shared.KeysAndAttributes{
                     AttributesToGet: []string{
-                        "iure",
+                        "totam",
+                        "commodi",
+                        "quis",
                     },
                     ConsistentRead: false,
                     Keys: []shared.Key{
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "molestiae",
-                                Bs: []string{
-                                    "nostrum",
+                                B: "odit",
+                                BS: []string{
+                                    "voluptas",
+                                    "omnis",
                                     "aut",
                                 },
-                                N: "ut",
-                                Ns: []string{
-                                    "pariatur",
+                                N: "illo",
+                                NS: []string{
+                                    "officiis",
+                                    "autem",
+                                    "consectetur",
                                 },
-                                S: "enim",
-                                Ss: []string{
-                                    "aut",
-                                    "ea",
-                                    "magnam",
+                                S: "nobis",
+                                SS: []string{
+                                    "qui",
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "et",
-                                Bs: []string{
-                                    "pariatur",
-                                    "eum",
-                                    "quaerat",
+                                B: "recusandae",
+                                BS: []string{
+                                    "ipsum",
+                                    "eveniet",
                                 },
                                 N: "modi",
-                                Ns: []string{
-                                    "doloremque",
-                                    "nulla",
+                                NS: []string{
+                                    "inventore",
                                 },
-                                S: "et",
-                                Ss: []string{
-                                    "praesentium",
-                                    "labore",
-                                    "accusamus",
+                                S: "ut",
+                                SS: []string{
+                                    "aut",
+                                    "reprehenderit",
+                                    "tempore",
                                 },
                             },
                         },
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "aut",
-                                Bs: []string{
-                                    "impedit",
+                                B: "maiores",
+                                BS: []string{
+                                    "dolor",
+                                    "beatae",
+                                    "veritatis",
                                 },
-                                N: "aperiam",
-                                Ns: []string{
-                                    "dolorum",
-                                    "iusto",
+                                N: "in",
+                                NS: []string{
+                                    "omnis",
+                                    "ipsum",
+                                    "ex",
                                 },
-                                S: "quos",
-                                Ss: []string{
-                                    "adipisci",
+                                S: "dolores",
+                                SS: []string{
+                                    "vel",
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "quo",
-                                Bs: []string{
-                                    "ipsum",
-                                    "delectus",
-                                    "tenetur",
+                                B: "rerum",
+                                BS: []string{
+                                    "voluptas",
+                                    "quam",
                                 },
-                                N: "expedita",
-                                Ns: []string{
-                                    "ut",
-                                    "sed",
+                                N: "reprehenderit",
+                                NS: []string{
+                                    "qui",
                                 },
-                                S: "qui",
-                                Ss: []string{
+                                S: "unde",
+                                SS: []string{
                                     "autem",
+                                    "qui",
                                 },
                             },
                         },
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "fuga",
-                                Bs: []string{
-                                    "aliquid",
-                                    "molestias",
+                                B: "ut",
+                                BS: []string{
+                                    "ab",
+                                    "neque",
+                                    "ullam",
                                 },
-                                N: "nihil",
-                                Ns: []string{
-                                    "quae",
-                                    "et",
-                                    "quae",
+                                N: "et",
+                                NS: []string{
+                                    "esse",
+                                    "architecto",
+                                    "quam",
                                 },
-                                S: "natus",
-                                Ss: []string{
-                                    "corrupti",
-                                    "ipsum",
-                                    "asperiores",
+                                S: "velit",
+                                SS: []string{
+                                    "soluta",
+                                    "sunt",
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "eligendi",
-                                Bs: []string{
-                                    "sit",
+                                B: "voluptates",
+                                BS: []string{
+                                    "et",
+                                    "optio",
+                                    "qui",
                                 },
-                                N: "reiciendis",
-                                Ns: []string{
-                                    "sit",
-                                    "eaque",
+                                N: "earum",
+                                NS: []string{
+                                    "omnis",
                                 },
-                                S: "debitis",
-                                Ss: []string{
-                                    "sapiente",
-                                    "eum",
+                                S: "ut",
+                                SS: []string{
+                                    "dolor",
+                                    "commodi",
+                                    "error",
                                 },
                             },
                         },
                     },
                 },
-                "incidunt": shared.KeysAndAttributes{
+                "reprehenderit": shared.KeysAndAttributes{
                     AttributesToGet: []string{
-                        "neque",
-                        "quo",
-                        "omnis",
+                        "nostrum",
                     },
                     ConsistentRead: false,
                     Keys: []shared.Key{
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "cupiditate",
-                                Bs: []string{
-                                    "odit",
-                                    "hic",
+                                B: "sed",
+                                BS: []string{
+                                    "soluta",
+                                },
+                                N: "aut",
+                                NS: []string{
+                                    "consequuntur",
+                                    "laudantium",
+                                    "autem",
+                                },
+                                S: "ipsa",
+                                SS: []string{
+                                    "doloremque",
+                                    "perferendis",
+                                },
+                            },
+                            RangeKeyElement: &shared.AttributeValue{
+                                B: "atque",
+                                BS: []string{
+                                    "quisquam",
+                                },
+                                N: "explicabo",
+                                NS: []string{
+                                    "maxime",
+                                },
+                                S: "eum",
+                                SS: []string{
+                                    "et",
+                                    "rerum",
+                                },
+                            },
+                        },
+                        shared.Key{
+                            HashKeyElement: shared.AttributeValue{
+                                B: "reiciendis",
+                                BS: []string{
+                                    "cumque",
+                                    "minima",
+                                    "necessitatibus",
+                                },
+                                N: "est",
+                                NS: []string{
+                                    "eum",
+                                    "labore",
+                                    "et",
+                                },
+                                S: "impedit",
+                                SS: []string{
+                                    "expedita",
+                                    "vel",
+                                    "qui",
+                                },
+                            },
+                            RangeKeyElement: &shared.AttributeValue{
+                                B: "modi",
+                                BS: []string{
+                                    "tempora",
+                                },
+                                N: "deserunt",
+                                NS: []string{
+                                    "sunt",
+                                    "sit",
+                                    "autem",
+                                },
+                                S: "quis",
+                                SS: []string{
+                                    "vel",
+                                    "placeat",
+                                },
+                            },
+                        },
+                        shared.Key{
+                            HashKeyElement: shared.AttributeValue{
+                                B: "qui",
+                                BS: []string{
+                                    "quis",
+                                    "adipisci",
                                 },
                                 N: "porro",
-                                Ns: []string{
-                                    "minima",
-                                    "at",
-                                    "maiores",
-                                },
-                                S: "rem",
-                                Ss: []string{
-                                    "aliquid",
-                                    "iste",
-                                },
-                            },
-                            RangeKeyElement: &shared.AttributeValue{
-                                B: "at",
-                                Bs: []string{
-                                    "qui",
-                                    "ea",
-                                    "illo",
-                                },
-                                N: "voluptas",
-                                Ns: []string{
-                                    "debitis",
-                                    "in",
-                                    "at",
-                                },
-                                S: "vero",
-                                Ss: []string{
-                                    "nisi",
-                                    "qui",
-                                    "quasi",
-                                },
-                            },
-                        },
-                        shared.Key{
-                            HashKeyElement: shared.AttributeValue{
-                                B: "quis",
-                                Bs: []string{
-                                    "nesciunt",
-                                },
-                                N: "fugit",
-                                Ns: []string{
-                                    "consequuntur",
-                                    "dignissimos",
-                                    "magni",
-                                },
-                                S: "ipsum",
-                                Ss: []string{
-                                    "quia",
-                                    "sit",
-                                    "qui",
-                                },
-                            },
-                            RangeKeyElement: &shared.AttributeValue{
-                                B: "qui",
-                                Bs: []string{
-                                    "excepturi",
-                                    "sapiente",
-                                    "doloribus",
-                                },
-                                N: "accusantium",
-                                Ns: []string{
-                                    "rem",
-                                    "corporis",
-                                    "pariatur",
-                                },
-                                S: "maiores",
-                                Ss: []string{
-                                    "animi",
-                                    "minima",
-                                    "beatae",
-                                },
-                            },
-                        },
-                        shared.Key{
-                            HashKeyElement: shared.AttributeValue{
-                                B: "iste",
-                                Bs: []string{
-                                    "fuga",
-                                    "corporis",
-                                    "quo",
-                                },
-                                N: "laborum",
-                                Ns: []string{
-                                    "ad",
-                                },
-                                S: "voluptatem",
-                                Ss: []string{
+                                NS: []string{
                                     "et",
-                                    "sunt",
-                                    "ratione",
+                                    "accusamus",
+                                    "numquam",
+                                },
+                                S: "laborum",
+                                SS: []string{
+                                    "ut",
+                                    "laborum",
+                                    "fugit",
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "quidem",
-                                Bs: []string{
-                                    "iure",
-                                    "incidunt",
-                                    "iusto",
+                                B: "quis",
+                                BS: []string{
+                                    "soluta",
+                                    "aperiam",
                                 },
-                                N: "voluptatibus",
-                                Ns: []string{
-                                    "quia",
-                                    "tenetur",
+                                N: "consequuntur",
+                                NS: []string{
+                                    "mollitia",
                                 },
-                                S: "et",
-                                Ss: []string{
-                                    "accusamus",
-                                    "aliquam",
+                                S: "inventore",
+                                SS: []string{
+                                    "ipsa",
                                 },
                             },
                         },
@@ -298,7 +291,7 @@ func main() {
         },
     }
     
-    res, err := s.Sdk.BatchGetItem(ctx, req)
+    res, err := s.BatchGetItem(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

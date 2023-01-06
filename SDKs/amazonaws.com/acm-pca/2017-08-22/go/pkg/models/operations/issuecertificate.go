@@ -33,7 +33,7 @@ type IssueCertificateResponse struct {
 	InvalidStateException     *interface{}
 	IssueCertificateResponse  *shared.IssueCertificateResponse
 	LimitExceededException    *interface{}
-	MalformedCsrException     *interface{}
+	MalformedCSRException     *interface{}
 	ResourceNotFoundException *interface{}
 	StatusCode                int64
 }

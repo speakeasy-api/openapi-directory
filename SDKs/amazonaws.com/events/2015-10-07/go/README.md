@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.ActivateEventSourceRequest{
         Headers: operations.ActivateEventSourceHeaders{
-            XAmzAlgorithm: "laboriosam",
+            XAmzAlgorithm: "autem",
             XAmzContentSha256: "hic",
-            XAmzCredential: "porro",
-            XAmzDate: "atque",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "aperiam",
-            XAmzSignedHeaders: "beatae",
+            XAmzCredential: "voluptatem",
+            XAmzDate: "omnis",
+            XAmzSecurityToken: "libero",
+            XAmzSignature: "qui",
+            XAmzSignedHeaders: "omnis",
             XAmzTarget: "AWSEvents.ActivateEventSource",
         },
         Request: shared.ActivateEventSourceRequest{
-            Name: "sunt",
+            Name: "nostrum",
         },
     }
     
-    res, err := s.Sdk.ActivateEventSource(ctx, req)
+    res, err := s.ActivateEventSource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

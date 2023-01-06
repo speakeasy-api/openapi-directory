@@ -3,13 +3,13 @@ package operations
 type PostCreateEnvironmentActionEnum string
 
 const (
-	PostCreateEnvironmentActionEnumCreateEnvironment PostCreateEnvironmentActionEnum = "CreateEnvironment"
+	POSTCreateEnvironmentActionEnumCreateEnvironment PostCreateEnvironmentActionEnum = "CreateEnvironment"
 )
 
 type PostCreateEnvironmentVersionEnum string
 
 const (
-	PostCreateEnvironmentVersionEnumTwoThousandAndTen1201 PostCreateEnvironmentVersionEnum = "2010-12-01"
+	POSTCreateEnvironmentVersionEnumTwoThousandAndTen1201 PostCreateEnvironmentVersionEnum = "2010-12-01"
 )
 
 type PostCreateEnvironmentQueryParams struct {

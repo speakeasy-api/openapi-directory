@@ -3,18 +3,18 @@ package operations
 type GetStopDbInstanceAutomatedBackupsReplicationActionEnum string
 
 const (
-	GetStopDbInstanceAutomatedBackupsReplicationActionEnumStopDbInstanceAutomatedBackupsReplication GetStopDbInstanceAutomatedBackupsReplicationActionEnum = "StopDBInstanceAutomatedBackupsReplication"
+	GETStopDBInstanceAutomatedBackupsReplicationActionEnumStopDbInstanceAutomatedBackupsReplication GetStopDbInstanceAutomatedBackupsReplicationActionEnum = "StopDBInstanceAutomatedBackupsReplication"
 )
 
 type GetStopDbInstanceAutomatedBackupsReplicationVersionEnum string
 
 const (
-	GetStopDbInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 GetStopDbInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
+	GETStopDBInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 GetStopDbInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
 )
 
 type GetStopDbInstanceAutomatedBackupsReplicationQueryParams struct {
 	Action              GetStopDbInstanceAutomatedBackupsReplicationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SourceDbInstanceArn string                                                  `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
+	SourceDBInstanceArn string                                                  `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
 	Version             GetStopDbInstanceAutomatedBackupsReplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

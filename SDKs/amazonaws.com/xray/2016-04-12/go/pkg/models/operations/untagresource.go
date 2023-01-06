@@ -11,7 +11,7 @@ type UntagResourceHeaders struct {
 }
 
 type UntagResourceRequestBody struct {
-	ResourceArn string   `json:"ResourceARN"`
+	ResourceARN string   `json:"ResourceARN"`
 	TagKeys     []string `json:"TagKeys"`
 }
 

@@ -7,42 +7,42 @@ import (
 type AeAssessmentAeAssessmentAssessmentCodeEnum string
 
 const (
-	AeAssessmentAeAssessmentAssessmentCodeEnumExcluded             AeAssessmentAeAssessmentAssessmentCodeEnum = "Excluded"
-	AeAssessmentAeAssessmentAssessmentCodeEnumEligibleJobHolder    AeAssessmentAeAssessmentAssessmentCodeEnum = "EligibleJobHolder"
-	AeAssessmentAeAssessmentAssessmentCodeEnumNonEligibleJobHolder AeAssessmentAeAssessmentAssessmentCodeEnum = "NonEligibleJobHolder"
-	AeAssessmentAeAssessmentAssessmentCodeEnumEntitledWorker       AeAssessmentAeAssessmentAssessmentCodeEnum = "EntitledWorker"
+	AEAssessmentAEAssessmentAssessmentCodeEnumExcluded             AeAssessmentAeAssessmentAssessmentCodeEnum = "Excluded"
+	AEAssessmentAEAssessmentAssessmentCodeEnumEligibleJobHolder    AeAssessmentAeAssessmentAssessmentCodeEnum = "EligibleJobHolder"
+	AEAssessmentAEAssessmentAssessmentCodeEnumNonEligibleJobHolder AeAssessmentAeAssessmentAssessmentCodeEnum = "NonEligibleJobHolder"
+	AEAssessmentAEAssessmentAssessmentCodeEnumEntitledWorker       AeAssessmentAeAssessmentAssessmentCodeEnum = "EntitledWorker"
 )
 
 type AeAssessmentAeAssessmentAssessmentEventEnum string
 
 const (
-	AeAssessmentAeAssessmentAssessmentEventEnumNonEnrolmentEvent    AeAssessmentAeAssessmentAssessmentEventEnum = "NonEnrolmentEvent"
-	AeAssessmentAeAssessmentAssessmentEventEnumAutomaticEnrolment   AeAssessmentAeAssessmentAssessmentEventEnum = "AutomaticEnrolment"
-	AeAssessmentAeAssessmentAssessmentEventEnumOptIn                AeAssessmentAeAssessmentAssessmentEventEnum = "OptIn"
-	AeAssessmentAeAssessmentAssessmentEventEnumVoluntaryJoiner      AeAssessmentAeAssessmentAssessmentEventEnum = "VoluntaryJoiner"
-	AeAssessmentAeAssessmentAssessmentEventEnumContractualEnrolment AeAssessmentAeAssessmentAssessmentEventEnum = "ContractualEnrolment"
+	AEAssessmentAEAssessmentAssessmentEventEnumNonEnrolmentEvent    AeAssessmentAeAssessmentAssessmentEventEnum = "NonEnrolmentEvent"
+	AEAssessmentAEAssessmentAssessmentEventEnumAutomaticEnrolment   AeAssessmentAeAssessmentAssessmentEventEnum = "AutomaticEnrolment"
+	AEAssessmentAEAssessmentAssessmentEventEnumOptIn                AeAssessmentAeAssessmentAssessmentEventEnum = "OptIn"
+	AEAssessmentAEAssessmentAssessmentEventEnumVoluntaryJoiner      AeAssessmentAeAssessmentAssessmentEventEnum = "VoluntaryJoiner"
+	AEAssessmentAEAssessmentAssessmentEventEnumContractualEnrolment AeAssessmentAeAssessmentAssessmentEventEnum = "ContractualEnrolment"
 )
 
 type AeAssessmentAeAssessmentAssessmentOverrideEnum string
 
 const (
-	AeAssessmentAeAssessmentAssessmentOverrideEnumNone               AeAssessmentAeAssessmentAssessmentOverrideEnum = "None"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumOptOut             AeAssessmentAeAssessmentAssessmentOverrideEnum = "OptOut"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumOptIn              AeAssessmentAeAssessmentAssessmentOverrideEnum = "OptIn"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumVoluntaryJoiner    AeAssessmentAeAssessmentAssessmentOverrideEnum = "VoluntaryJoiner"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumContractualPension AeAssessmentAeAssessmentAssessmentOverrideEnum = "ContractualPension"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumCeasedMembership   AeAssessmentAeAssessmentAssessmentOverrideEnum = "CeasedMembership"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumLeaver             AeAssessmentAeAssessmentAssessmentOverrideEnum = "Leaver"
-	AeAssessmentAeAssessmentAssessmentOverrideEnumExcluded           AeAssessmentAeAssessmentAssessmentOverrideEnum = "Excluded"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumNone               AeAssessmentAeAssessmentAssessmentOverrideEnum = "None"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumOptOut             AeAssessmentAeAssessmentAssessmentOverrideEnum = "OptOut"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumOptIn              AeAssessmentAeAssessmentAssessmentOverrideEnum = "OptIn"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumVoluntaryJoiner    AeAssessmentAeAssessmentAssessmentOverrideEnum = "VoluntaryJoiner"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumContractualPension AeAssessmentAeAssessmentAssessmentOverrideEnum = "ContractualPension"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumCeasedMembership   AeAssessmentAeAssessmentAssessmentOverrideEnum = "CeasedMembership"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumLeaver             AeAssessmentAeAssessmentAssessmentOverrideEnum = "Leaver"
+	AEAssessmentAEAssessmentAssessmentOverrideEnumExcluded           AeAssessmentAeAssessmentAssessmentOverrideEnum = "Excluded"
 )
 
 type AeAssessmentAeAssessmentAssessmentResultEnum string
 
 const (
-	AeAssessmentAeAssessmentAssessmentResultEnumInconclusive AeAssessmentAeAssessmentAssessmentResultEnum = "Inconclusive"
-	AeAssessmentAeAssessmentAssessmentResultEnumNoChange     AeAssessmentAeAssessmentAssessmentResultEnum = "NoChange"
-	AeAssessmentAeAssessmentAssessmentResultEnumEnrol        AeAssessmentAeAssessmentAssessmentResultEnum = "Enrol"
-	AeAssessmentAeAssessmentAssessmentResultEnumExit         AeAssessmentAeAssessmentAssessmentResultEnum = "Exit"
+	AEAssessmentAEAssessmentAssessmentResultEnumInconclusive AeAssessmentAeAssessmentAssessmentResultEnum = "Inconclusive"
+	AEAssessmentAEAssessmentAssessmentResultEnumNoChange     AeAssessmentAeAssessmentAssessmentResultEnum = "NoChange"
+	AEAssessmentAEAssessmentAssessmentResultEnumEnrol        AeAssessmentAeAssessmentAssessmentResultEnum = "Enrol"
+	AEAssessmentAEAssessmentAssessmentResultEnumExit         AeAssessmentAeAssessmentAssessmentResultEnum = "Exit"
 )
 
 type AeAssessmentAeAssessment struct {
@@ -63,5 +63,5 @@ type AeAssessmentAeAssessment struct {
 }
 
 type AeAssessment struct {
-	AeAssessment *AeAssessmentAeAssessment `json:"AEAssessment,omitempty"`
+	AEAssessment *AeAssessmentAeAssessment `json:"AEAssessment,omitempty"`
 }

@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeDBEngineVersions</code> action.
 type DbEngineVersionMessage struct {
-	DbEngineVersions []DbEngineVersion
+	DBEngineVersions []map[string]interface{}
 	Marker           *string
 }

@@ -3,6 +3,6 @@ package shared
 // QueryStringCacheKeys
 // A complex type that contains information about the query string parameters that you want CloudFront to use for caching for a cache behavior.
 type QueryStringCacheKeys struct {
-	Items    []string
+	Items    map[string]interface{}
 	Quantity int64
 }

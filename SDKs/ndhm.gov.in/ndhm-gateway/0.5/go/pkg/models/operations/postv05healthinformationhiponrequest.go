@@ -6,12 +6,12 @@ import (
 
 type PostV05HealthInformationHipOnRequestHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XCmID         string `header:"style=simple,explode=false,name=X-CM-ID"`
+	XCMID         string `header:"style=simple,explode=false,name=X-CM-ID"`
 }
 
 type PostV05HealthInformationHipOnRequestRequests struct {
 	ApplicationXML                             []byte                                             `request:"mediaType=application/xml"`
-	HipHealthInformationRequestAcknowledgement *shared.HipHealthInformationRequestAcknowledgement `request:"mediaType=application/json"`
+	HIPHealthInformationRequestAcknowledgement *shared.HipHealthInformationRequestAcknowledgement `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationHipOnRequestRequest struct {

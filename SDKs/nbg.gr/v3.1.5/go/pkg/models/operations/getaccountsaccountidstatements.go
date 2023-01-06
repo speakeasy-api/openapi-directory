@@ -36,8 +36,7 @@ type GetAccountsAccountIDStatementsRequest struct {
 
 type GetAccountsAccountIDStatementsResponse struct {
 	ContentType      string
-	Headers          map[string][]string
-	ObErrorResponse1 *shared.ObErrorResponse1
-	ObReadStatement2 *shared.ObReadStatement2
+	OBErrorResponse1 *shared.ObErrorResponse1
+	OBReadStatement2 *shared.ObReadStatement2
 	StatusCode       int64
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,7 +32,7 @@ func main() {
 
     s := sdk.New(opts...)
     
-    res, err := s.Sdk.CasesGeneralStatsList(ctx)
+    res, err := s.Cases.CasesGeneralStatsList(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,10 +46,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cases
 
 * `CasesGeneralStatsList` - Get the general stats
 * `CasesSearch` - search a country
+
+### docs
+
 * `DocsList`
 
 <!-- End SDK Available Operations -->

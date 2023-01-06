@@ -15,7 +15,7 @@ type DescribeSlotResponse struct {
 	MultipleValuesSetting   *MultipleValuesSetting       `json:"multipleValuesSetting,omitempty"`
 	ObfuscationSetting      *ObfuscationSetting          `json:"obfuscationSetting,omitempty"`
 	SlotID                  *string                      `json:"slotId,omitempty"`
-	SlotName                *string                      `json:"slotName,omitempty"`
+	SlotName                map[string]interface{}       `json:"slotName,omitempty"`
 	SlotTypeID              *string                      `json:"slotTypeId,omitempty"`
 	ValueElicitationSetting *SlotValueElicitationSetting `json:"valueElicitationSetting,omitempty"`
 }

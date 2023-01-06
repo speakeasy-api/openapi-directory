@@ -7,8 +7,8 @@ import (
 // EndpointAuthorization
 // Describes an endpoint authorization for authorizing Redshift-managed VPC endpoint access to a cluster across Amazon Web Services accounts.
 type EndpointAuthorization struct {
-	AllowedAllVpCs    *bool
-	AllowedVpCs       []string
+	AllowedAllVPCs    *bool
+	AllowedVPCs       []map[string]interface{}
 	AuthorizeTime     *time.Time
 	ClusterIdentifier *string
 	ClusterStatus     *string

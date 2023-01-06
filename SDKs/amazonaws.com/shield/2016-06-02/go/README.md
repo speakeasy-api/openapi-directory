@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,26 @@ func main() {
     
     req := operations.AssociateDrtLogBucketRequest{
         Headers: operations.AssociateDrtLogBucketHeaders{
-            XAmzAlgorithm: "incidunt",
-            XAmzContentSha256: "ab",
-            XAmzCredential: "sequi",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "atque",
-            XAmzSignature: "necessitatibus",
-            XAmzSignedHeaders: "vero",
+            XAmzAlgorithm: "delectus",
+            XAmzContentSha256: "suscipit",
+            XAmzCredential: "architecto",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "ipsa",
+            XAmzSignature: "quos",
+            XAmzSignedHeaders: "voluptas",
             XAmzTarget: "AWSShield_20160616.AssociateDRTLogBucket",
         },
         Request: shared.AssociateDrtLogBucketRequest{
-            LogBucket: "alias",
+            LogBucket: "a",
         },
     }
     
-    res, err := s.Sdk.AssociateDrtLogBucket(ctx, req)
+    res, err := s.AssociateDrtLogBucket(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AssociateDrtLogBucketResponse != nil {
+    if res.AssociateDRTLogBucketResponse != nil {
         // handle response
     }
 ```

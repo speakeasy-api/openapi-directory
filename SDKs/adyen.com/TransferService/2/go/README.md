@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,29 +22,21 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.GetTransactionsRequest{
-        Security: operations.GetTransactionsSecurity{
+    req := operations.PostTransfersRequest{
+        Security: operations.PostTransfersSecurity{
             APIKeyAuth: shared.SchemeAPIKeyAuth{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        QueryParams: operations.GetTransactionsQueryParams{
-            AccountHolderID: "in",
-            BalanceAccountID: "autem",
-            BalancePlatform: "qui",
-            CreatedSince: "2022-08-17T17:10:17Z",
-            CreatedUntil: "2008-01-31T08:42:07Z",
-            Cursor: "neque",
-            Limit: 4255970180603226314,
-        },
+        Request: "illo",
     }
     
-    res, err := s.Sdk.GetTransactions(ctx, req)
+    res, err := s.General.PostTransfers(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.TransactionSearchResponse != nil {
+    if res.Transfer != nil {
         // handle response
     }
 ```
@@ -54,11 +45,14 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
+
+* `PostTransfers` - Transfer funds.
+
+### Transactions
 
 * `GetTransactions` - Get all transactions.
 * `GetTransactionsID` - Get a transaction.
-* `PostTransfers` - Transfer funds.
 
 <!-- End SDK Available Operations -->
 

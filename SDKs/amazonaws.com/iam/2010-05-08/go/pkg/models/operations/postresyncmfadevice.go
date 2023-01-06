@@ -3,13 +3,13 @@ package operations
 type PostResyncMfaDeviceActionEnum string
 
 const (
-	PostResyncMfaDeviceActionEnumResyncMfaDevice PostResyncMfaDeviceActionEnum = "ResyncMFADevice"
+	POSTResyncMFADeviceActionEnumResyncMfaDevice PostResyncMfaDeviceActionEnum = "ResyncMFADevice"
 )
 
 type PostResyncMfaDeviceVersionEnum string
 
 const (
-	PostResyncMfaDeviceVersionEnumTwoThousandAndTen0508 PostResyncMfaDeviceVersionEnum = "2010-05-08"
+	POSTResyncMFADeviceVersionEnumTwoThousandAndTen0508 PostResyncMfaDeviceVersionEnum = "2010-05-08"
 )
 
 type PostResyncMfaDeviceQueryParams struct {

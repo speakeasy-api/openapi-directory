@@ -1,6 +1,6 @@
 package shared
 
 type DeleteFleetsResult struct {
-	SuccessfulFleetDeletions   []DeleteFleetSuccessItem
-	UnsuccessfulFleetDeletions []DeleteFleetErrorItem
+	SuccessfulFleetDeletions   map[string]interface{}
+	UnsuccessfulFleetDeletions map[string]interface{}
 }

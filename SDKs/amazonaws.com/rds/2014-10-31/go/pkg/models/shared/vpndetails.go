@@ -6,7 +6,7 @@ type VpnDetails struct {
 	VpnGatewayIP          *string
 	VpnID                 *string
 	VpnName               *string
-	VpnPsk                *string
+	VpnPSK                *string
 	VpnState              *string
 	VpnTunnelOriginatorIP *string
 }

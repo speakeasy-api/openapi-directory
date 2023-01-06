@@ -3,13 +3,13 @@ package operations
 type PostCancelCapacityReservationActionEnum string
 
 const (
-	PostCancelCapacityReservationActionEnumCancelCapacityReservation PostCancelCapacityReservationActionEnum = "CancelCapacityReservation"
+	POSTCancelCapacityReservationActionEnumCancelCapacityReservation PostCancelCapacityReservationActionEnum = "CancelCapacityReservation"
 )
 
 type PostCancelCapacityReservationVersionEnum string
 
 const (
-	PostCancelCapacityReservationVersionEnumTwoThousandAndSixteen1115 PostCancelCapacityReservationVersionEnum = "2016-11-15"
+	POSTCancelCapacityReservationVersionEnumTwoThousandAndSixteen1115 PostCancelCapacityReservationVersionEnum = "2016-11-15"
 )
 
 type PostCancelCapacityReservationQueryParams struct {

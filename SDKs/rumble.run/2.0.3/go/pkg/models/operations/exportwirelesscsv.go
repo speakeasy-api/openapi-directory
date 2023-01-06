@@ -20,5 +20,5 @@ type ExportWirelessCsvRequest struct {
 type ExportWirelessCsvResponse struct {
 	ContentType                             string
 	StatusCode                              int64
-	ExportWirelessCsv200TextCsvBinaryString []byte
+	ExportWirelessCSV200TextCSVBinaryString []byte
 }

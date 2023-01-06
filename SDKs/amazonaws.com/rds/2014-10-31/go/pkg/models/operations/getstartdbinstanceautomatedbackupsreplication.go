@@ -3,13 +3,13 @@ package operations
 type GetStartDbInstanceAutomatedBackupsReplicationActionEnum string
 
 const (
-	GetStartDbInstanceAutomatedBackupsReplicationActionEnumStartDbInstanceAutomatedBackupsReplication GetStartDbInstanceAutomatedBackupsReplicationActionEnum = "StartDBInstanceAutomatedBackupsReplication"
+	GETStartDBInstanceAutomatedBackupsReplicationActionEnumStartDbInstanceAutomatedBackupsReplication GetStartDbInstanceAutomatedBackupsReplicationActionEnum = "StartDBInstanceAutomatedBackupsReplication"
 )
 
 type GetStartDbInstanceAutomatedBackupsReplicationVersionEnum string
 
 const (
-	GetStartDbInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 GetStartDbInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
+	GETStartDBInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 GetStartDbInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
 )
 
 type GetStartDbInstanceAutomatedBackupsReplicationQueryParams struct {
@@ -17,7 +17,7 @@ type GetStartDbInstanceAutomatedBackupsReplicationQueryParams struct {
 	BackupRetentionPeriod *int64                                                   `queryParam:"style=form,explode=true,name=BackupRetentionPeriod"`
 	KmsKeyID              *string                                                  `queryParam:"style=form,explode=true,name=KmsKeyId"`
 	PreSignedURL          *string                                                  `queryParam:"style=form,explode=true,name=PreSignedUrl"`
-	SourceDbInstanceArn   string                                                   `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
+	SourceDBInstanceArn   string                                                   `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
 	Version               GetStartDbInstanceAutomatedBackupsReplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeCarrierGatewaysResult struct {
-	CarrierGateways []CarrierGateway
-	NextToken       *string
+	CarrierGateways map[string]interface{}
+	NextToken       map[string]interface{}
 }

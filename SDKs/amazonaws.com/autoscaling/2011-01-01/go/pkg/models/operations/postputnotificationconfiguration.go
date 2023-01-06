@@ -3,13 +3,13 @@ package operations
 type PostPutNotificationConfigurationActionEnum string
 
 const (
-	PostPutNotificationConfigurationActionEnumPutNotificationConfiguration PostPutNotificationConfigurationActionEnum = "PutNotificationConfiguration"
+	POSTPutNotificationConfigurationActionEnumPutNotificationConfiguration PostPutNotificationConfigurationActionEnum = "PutNotificationConfiguration"
 )
 
 type PostPutNotificationConfigurationVersionEnum string
 
 const (
-	PostPutNotificationConfigurationVersionEnumTwoThousandAndEleven0101 PostPutNotificationConfigurationVersionEnum = "2011-01-01"
+	POSTPutNotificationConfigurationVersionEnumTwoThousandAndEleven0101 PostPutNotificationConfigurationVersionEnum = "2011-01-01"
 )
 
 type PostPutNotificationConfigurationQueryParams struct {

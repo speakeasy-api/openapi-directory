@@ -10,12 +10,12 @@ var PostV05ConsentsHipNotifyServerList = []string{
 
 type PostV05ConsentsHipNotifyHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
 }
 
 type PostV05ConsentsHipNotifyRequests struct {
 	ApplicationXML         []byte                         `request:"mediaType=application/xml"`
-	HipConsentNotification *shared.HipConsentNotification `request:"mediaType=application/json"`
+	HIPConsentNotification *shared.HipConsentNotification `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentsHipNotifyRequest struct {

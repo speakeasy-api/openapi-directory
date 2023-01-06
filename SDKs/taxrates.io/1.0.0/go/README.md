@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.TaxRatesByCountryCodeRequest{
         QueryParams: operations.TaxRatesByCountryCodeQueryParams{
-            CountryCode: "recusandae",
-            Date: "tenetur",
-            Domain: "et",
-            Filter: "eum",
-            ProductCodes: "quisquam",
-            Province: "sunt",
-            Zip: "rem",
+            CountryCode: "autem",
+            Date: "sed",
+            Domain: "corporis",
+            Filter: "sed",
+            ProductCodes: "numquam",
+            Province: "eveniet",
+            Zip: "quia",
         },
     }
     

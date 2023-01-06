@@ -25,11 +25,12 @@ const (
 	ComputeEngineTargetDefaultsLicenseTypeEnumComputeEngineLicenseTypeByol    ComputeEngineTargetDefaultsLicenseTypeEnum = "COMPUTE_ENGINE_LICENSE_TYPE_BYOL"
 )
 
-// ComputeEngineTargetDefaultsInput
+// ComputeEngineTargetDefaults
 // ComputeEngineTargetDefaults is a collection of details for creating a VM in a target Compute Engine project.
-type ComputeEngineTargetDefaultsInput struct {
+type ComputeEngineTargetDefaults struct {
 	AdditionalLicenses []string                                    `json:"additionalLicenses,omitempty"`
 	AppliedLicense     *AppliedLicense                             `json:"appliedLicense,omitempty"`
+	BootOption         *ComputeEngineTargetDefaultsBootOptionEnum  `json:"bootOption,omitempty"`
 	ComputeScheduling  *ComputeScheduling                          `json:"computeScheduling,omitempty"`
 	DiskType           *ComputeEngineTargetDefaultsDiskTypeEnum    `json:"diskType,omitempty"`
 	Hostname           *string                                     `json:"hostname,omitempty"`
@@ -47,12 +48,11 @@ type ComputeEngineTargetDefaultsInput struct {
 	Zone               *string                                     `json:"zone,omitempty"`
 }
 
-// ComputeEngineTargetDefaults
+// ComputeEngineTargetDefaultsInput
 // ComputeEngineTargetDefaults is a collection of details for creating a VM in a target Compute Engine project.
-type ComputeEngineTargetDefaults struct {
+type ComputeEngineTargetDefaultsInput struct {
 	AdditionalLicenses []string                                    `json:"additionalLicenses,omitempty"`
 	AppliedLicense     *AppliedLicense                             `json:"appliedLicense,omitempty"`
-	BootOption         *ComputeEngineTargetDefaultsBootOptionEnum  `json:"bootOption,omitempty"`
 	ComputeScheduling  *ComputeScheduling                          `json:"computeScheduling,omitempty"`
 	DiskType           *ComputeEngineTargetDefaultsDiskTypeEnum    `json:"diskType,omitempty"`
 	Hostname           *string                                     `json:"hostname,omitempty"`

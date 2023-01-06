@@ -3,13 +3,13 @@ package operations
 type GetApplySecurityGroupsToLoadBalancerActionEnum string
 
 const (
-	GetApplySecurityGroupsToLoadBalancerActionEnumApplySecurityGroupsToLoadBalancer GetApplySecurityGroupsToLoadBalancerActionEnum = "ApplySecurityGroupsToLoadBalancer"
+	GETApplySecurityGroupsToLoadBalancerActionEnumApplySecurityGroupsToLoadBalancer GetApplySecurityGroupsToLoadBalancerActionEnum = "ApplySecurityGroupsToLoadBalancer"
 )
 
 type GetApplySecurityGroupsToLoadBalancerVersionEnum string
 
 const (
-	GetApplySecurityGroupsToLoadBalancerVersionEnumTwoThousandAndTwelve0601 GetApplySecurityGroupsToLoadBalancerVersionEnum = "2012-06-01"
+	GETApplySecurityGroupsToLoadBalancerVersionEnumTwoThousandAndTwelve0601 GetApplySecurityGroupsToLoadBalancerVersionEnum = "2012-06-01"
 )
 
 type GetApplySecurityGroupsToLoadBalancerQueryParams struct {

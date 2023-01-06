@@ -37,6 +37,6 @@ type GetContentSourceSectionTimePeriodJSONRequest struct {
 
 type GetContentSourceSectionTimePeriodJSONResponse struct {
 	ContentType                                                   string
-	GetContentSourceSectionTimePeriodJSON200ApplicationJSONObject *GetContentSourceSectionTimePeriodJSON200ApplicationJSON
 	StatusCode                                                    int64
+	GetContentSourceSectionTimePeriodJSON200ApplicationJSONObject *GetContentSourceSectionTimePeriodJSON200ApplicationJSON
 }

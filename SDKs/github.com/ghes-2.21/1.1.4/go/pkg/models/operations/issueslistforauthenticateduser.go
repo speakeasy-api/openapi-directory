@@ -16,14 +16,6 @@ const (
 	IssuesListForAuthenticatedUserFilterEnumAll        IssuesListForAuthenticatedUserFilterEnum = "all"
 )
 
-type IssuesListForAuthenticatedUserSortEnum string
-
-const (
-	IssuesListForAuthenticatedUserSortEnumCreated  IssuesListForAuthenticatedUserSortEnum = "created"
-	IssuesListForAuthenticatedUserSortEnumUpdated  IssuesListForAuthenticatedUserSortEnum = "updated"
-	IssuesListForAuthenticatedUserSortEnumComments IssuesListForAuthenticatedUserSortEnum = "comments"
-)
-
 type IssuesListForAuthenticatedUserStateEnum string
 
 const (
@@ -39,7 +31,7 @@ type IssuesListForAuthenticatedUserQueryParams struct {
 	Page      *int64                                    `queryParam:"style=form,explode=true,name=page"`
 	PerPage   *int64                                    `queryParam:"style=form,explode=true,name=per_page"`
 	Since     *time.Time                                `queryParam:"style=form,explode=true,name=since"`
-	Sort      *IssuesListForAuthenticatedUserSortEnum   `queryParam:"style=form,explode=true,name=sort"`
+	Sort      *shared.LabelsEnum                        `queryParam:"style=form,explode=true,name=sort"`
 	State     *IssuesListForAuthenticatedUserStateEnum  `queryParam:"style=form,explode=true,name=state"`
 }
 

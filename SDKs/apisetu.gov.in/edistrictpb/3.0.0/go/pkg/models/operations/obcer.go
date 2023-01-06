@@ -5,8 +5,8 @@ import (
 )
 
 type ObcerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
-	DsnNo    string `json:"DSNNo"`
+	DOB      string `json:"DOB"`
+	DSNNo    string `json:"DSNNo"`
 	Father   string `json:"Father"`
 	FullName string `json:"FullName"`
 	UID      string `json:"UID"`
@@ -85,7 +85,7 @@ type Obcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Obcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Obcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Obcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Obcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Obcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Obcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Obcer404ApplicationJSON struct {

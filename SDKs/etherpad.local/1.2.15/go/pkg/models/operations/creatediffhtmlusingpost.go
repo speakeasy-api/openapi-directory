@@ -37,8 +37,8 @@ type CreateDiffHTMLUsingPostRequest struct {
 type CreateDiffHTMLUsingPostResponse struct {
 	ContentType                                     string
 	StatusCode                                      int64
-	CreateDiffHTMLUsingPost200ApplicationJSONObject *CreateDiffHTMLUsingPost200ApplicationJSON
-	CreateDiffHTMLUsingPost400ApplicationJSONObject *CreateDiffHTMLUsingPost400ApplicationJSON
-	CreateDiffHTMLUsingPost401ApplicationJSONObject *CreateDiffHTMLUsingPost401ApplicationJSON
-	CreateDiffHTMLUsingPost500ApplicationJSONObject *CreateDiffHTMLUsingPost500ApplicationJSON
+	CreateDiffHTMLUsingPOST200ApplicationJSONObject *CreateDiffHTMLUsingPost200ApplicationJSON
+	CreateDiffHTMLUsingPOST400ApplicationJSONObject *CreateDiffHTMLUsingPost400ApplicationJSON
+	CreateDiffHTMLUsingPOST401ApplicationJSONObject *CreateDiffHTMLUsingPost401ApplicationJSON
+	CreateDiffHTMLUsingPOST500ApplicationJSONObject *CreateDiffHTMLUsingPost500ApplicationJSON
 }

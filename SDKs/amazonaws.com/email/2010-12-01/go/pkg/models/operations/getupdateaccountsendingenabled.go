@@ -3,13 +3,13 @@ package operations
 type GetUpdateAccountSendingEnabledActionEnum string
 
 const (
-	GetUpdateAccountSendingEnabledActionEnumUpdateAccountSendingEnabled GetUpdateAccountSendingEnabledActionEnum = "UpdateAccountSendingEnabled"
+	GETUpdateAccountSendingEnabledActionEnumUpdateAccountSendingEnabled GetUpdateAccountSendingEnabledActionEnum = "UpdateAccountSendingEnabled"
 )
 
 type GetUpdateAccountSendingEnabledVersionEnum string
 
 const (
-	GetUpdateAccountSendingEnabledVersionEnumTwoThousandAndTen1201 GetUpdateAccountSendingEnabledVersionEnum = "2010-12-01"
+	GETUpdateAccountSendingEnabledVersionEnumTwoThousandAndTen1201 GetUpdateAccountSendingEnabledVersionEnum = "2010-12-01"
 )
 
 type GetUpdateAccountSendingEnabledQueryParams struct {

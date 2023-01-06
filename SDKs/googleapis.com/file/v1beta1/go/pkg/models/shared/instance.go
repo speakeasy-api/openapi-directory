@@ -35,20 +35,6 @@ const (
 	InstanceTierEnumEnterprise      InstanceTierEnum = "ENTERPRISE"
 )
 
-// InstanceInput
-// A Filestore instance.
-type InstanceInput struct {
-	CapacityGb        *string              `json:"capacityGb,omitempty"`
-	Description       *string              `json:"description,omitempty"`
-	Etag              *string              `json:"etag,omitempty"`
-	FileShares        []FileShareConfig    `json:"fileShares,omitempty"`
-	KmsKeyName        *string              `json:"kmsKeyName,omitempty"`
-	Labels            map[string]string    `json:"labels,omitempty"`
-	MultiShareEnabled *bool                `json:"multiShareEnabled,omitempty"`
-	Networks          []NetworkConfigInput `json:"networks,omitempty"`
-	Tier              *InstanceTierEnum    `json:"tier,omitempty"`
-}
-
 // Instance
 // A Filestore instance.
 type Instance struct {
@@ -70,4 +56,18 @@ type Instance struct {
 	StatusMessage      *string                         `json:"statusMessage,omitempty"`
 	SuspensionReasons  []InstanceSuspensionReasonsEnum `json:"suspensionReasons,omitempty"`
 	Tier               *InstanceTierEnum               `json:"tier,omitempty"`
+}
+
+// InstanceInput
+// A Filestore instance.
+type InstanceInput struct {
+	CapacityGb        *string              `json:"capacityGb,omitempty"`
+	Description       *string              `json:"description,omitempty"`
+	Etag              *string              `json:"etag,omitempty"`
+	FileShares        []FileShareConfig    `json:"fileShares,omitempty"`
+	KmsKeyName        *string              `json:"kmsKeyName,omitempty"`
+	Labels            map[string]string    `json:"labels,omitempty"`
+	MultiShareEnabled *bool                `json:"multiShareEnabled,omitempty"`
+	Networks          []NetworkConfigInput `json:"networks,omitempty"`
+	Tier              *InstanceTierEnum    `json:"tier,omitempty"`
 }

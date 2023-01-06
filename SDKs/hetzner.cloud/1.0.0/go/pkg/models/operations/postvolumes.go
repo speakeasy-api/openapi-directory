@@ -93,6 +93,6 @@ type PostVolumesRequest struct {
 
 type PostVolumesResponse struct {
 	ContentType                         string
-	PostVolumes201ApplicationJSONObject *PostVolumes201ApplicationJSON
 	StatusCode                          int64
+	PostVolumes201ApplicationJSONObject *PostVolumes201ApplicationJSON
 }

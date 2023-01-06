@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -111,7 +111,7 @@ func (s *MatrixAPI) CalculateMatrix(ctx context.Context, request operations.Calc
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	}
 
@@ -169,7 +169,7 @@ func (s *MatrixAPI) GetMatrix(ctx context.Context, request operations.GetMatrixR
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	}
 
@@ -222,7 +222,7 @@ func (s *MatrixAPI) GetMatrixSolution(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	}
 
@@ -299,7 +299,7 @@ func (s *MatrixAPI) PostMatrix(ctx context.Context, request operations.PostMatri
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	}
 

@@ -3,8 +3,8 @@ package shared
 type SnmpConfigSnmpVersionEnum string
 
 const (
-	SnmpConfigSnmpVersionEnumV2c SnmpConfigSnmpVersionEnum = "v2c"
-	SnmpConfigSnmpVersionEnumV3  SnmpConfigSnmpVersionEnum = "v3"
+	SNMPConfigSNMPVersionEnumV2c SnmpConfigSnmpVersionEnum = "v2c"
+	SNMPConfigSNMPVersionEnumV3  SnmpConfigSnmpVersionEnum = "v3"
 )
 
 type SnmpConfig struct {

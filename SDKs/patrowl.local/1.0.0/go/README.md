@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,7 +24,7 @@ func main() {
     
     req := operations.CleanScanPageRequest{
         PathParams: operations.CleanScanPagePathParams{
-            ScanID: 9178586472167993024,
+            ScanID: 8428131256813924473,
         },
     }
     

@@ -11,7 +11,7 @@ type ScheduleAPITriggeredCanvasesRequestBodyAudienceAnd struct {
 }
 
 type ScheduleAPITriggeredCanvasesRequestBodyAudience struct {
-	And []ScheduleAPITriggeredCanvasesRequestBodyAudienceAnd `json:"AND,omitempty"`
+	AND []ScheduleAPITriggeredCanvasesRequestBodyAudienceAnd `json:"AND,omitempty"`
 }
 
 type ScheduleAPITriggeredCanvasesRequestBodyRecipients struct {

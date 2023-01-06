@@ -17,12 +17,12 @@ type RegisterCertificateWithoutCaHeaders struct {
 type RegisterCertificateWithoutCaRequestBodyStatusEnum string
 
 const (
-	RegisterCertificateWithoutCaRequestBodyStatusEnumActive            RegisterCertificateWithoutCaRequestBodyStatusEnum = "ACTIVE"
-	RegisterCertificateWithoutCaRequestBodyStatusEnumInactive          RegisterCertificateWithoutCaRequestBodyStatusEnum = "INACTIVE"
-	RegisterCertificateWithoutCaRequestBodyStatusEnumRevoked           RegisterCertificateWithoutCaRequestBodyStatusEnum = "REVOKED"
-	RegisterCertificateWithoutCaRequestBodyStatusEnumPendingTransfer   RegisterCertificateWithoutCaRequestBodyStatusEnum = "PENDING_TRANSFER"
-	RegisterCertificateWithoutCaRequestBodyStatusEnumRegisterInactive  RegisterCertificateWithoutCaRequestBodyStatusEnum = "REGISTER_INACTIVE"
-	RegisterCertificateWithoutCaRequestBodyStatusEnumPendingActivation RegisterCertificateWithoutCaRequestBodyStatusEnum = "PENDING_ACTIVATION"
+	RegisterCertificateWithoutCARequestBodyStatusEnumActive            RegisterCertificateWithoutCaRequestBodyStatusEnum = "ACTIVE"
+	RegisterCertificateWithoutCARequestBodyStatusEnumInactive          RegisterCertificateWithoutCaRequestBodyStatusEnum = "INACTIVE"
+	RegisterCertificateWithoutCARequestBodyStatusEnumRevoked           RegisterCertificateWithoutCaRequestBodyStatusEnum = "REVOKED"
+	RegisterCertificateWithoutCARequestBodyStatusEnumPendingTransfer   RegisterCertificateWithoutCaRequestBodyStatusEnum = "PENDING_TRANSFER"
+	RegisterCertificateWithoutCARequestBodyStatusEnumRegisterInactive  RegisterCertificateWithoutCaRequestBodyStatusEnum = "REGISTER_INACTIVE"
+	RegisterCertificateWithoutCARequestBodyStatusEnumPendingActivation RegisterCertificateWithoutCaRequestBodyStatusEnum = "PENDING_ACTIVATION"
 )
 
 type RegisterCertificateWithoutCaRequestBody struct {
@@ -41,7 +41,7 @@ type RegisterCertificateWithoutCaResponse struct {
 	ContentType                          string
 	InternalFailureException             *interface{}
 	InvalidRequestException              *interface{}
-	RegisterCertificateWithoutCaResponse *shared.RegisterCertificateWithoutCaResponse
+	RegisterCertificateWithoutCAResponse *shared.RegisterCertificateWithoutCaResponse
 	ResourceAlreadyExistsException       *interface{}
 	ServiceUnavailableException          *interface{}
 	StatusCode                           int64

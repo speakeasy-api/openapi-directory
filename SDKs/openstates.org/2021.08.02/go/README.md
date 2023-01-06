@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,23 +24,22 @@ func main() {
     
     req := operations.BillDetailBillsJurisdictionSessionBillIDGetRequest{
         PathParams: operations.BillDetailBillsJurisdictionSessionBillIDGetPathParams{
-            BillID: "et",
-            Jurisdiction: "consectetur",
-            Session: "laborum",
+            BillID: "voluptate",
+            Jurisdiction: "velit",
+            Session: "dolorem",
         },
         QueryParams: operations.BillDetailBillsJurisdictionSessionBillIDGetQueryParams{
-            Apikey: "laudantium",
+            Apikey: "voluptas",
             Include: []shared.BillIncludeEnum{
                 "actions",
-                "sponsorships",
             },
         },
         Headers: operations.BillDetailBillsJurisdictionSessionBillIDGetHeaders{
-            XAPIKey: "ullam",
+            XAPIKey: "consequuntur",
         },
     }
     
-    res, err := s.Sdk.BillDetailBillsJurisdictionSessionBillIDGet(ctx, req)
+    res, err := s.Bills.BillDetailBillsJurisdictionSessionBillIDGet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -55,15 +53,24 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### bills
 
 * `BillDetailBillsJurisdictionSessionBillIDGet` - Bill Detail
 * `BillDetailByIDBillsOcdBillOpenstatesBillIDGet` - Bill Detail By Id
 * `BillsSearchBillsGet` - Bills Search
+
+### committees
+
 * `CommitteeDetailCommitteesCommitteeIDGet` - Committee Detail
 * `CommitteeListCommitteesGet` - Committee List
+
+### jurisdictions
+
 * `JurisdictionDetailJurisdictionsJurisdictionIDGet` - Jurisdiction Detail
 * `JurisdictionListJurisdictionsGet` - Jurisdiction List
+
+### people
+
 * `PeopleGeoPeopleGeoGet` - People Geo
 * `PeopleSearchPeopleGet` - People Search
 

@@ -3,13 +3,13 @@ package operations
 type PostCreateAccessKeyActionEnum string
 
 const (
-	PostCreateAccessKeyActionEnumCreateAccessKey PostCreateAccessKeyActionEnum = "CreateAccessKey"
+	POSTCreateAccessKeyActionEnumCreateAccessKey PostCreateAccessKeyActionEnum = "CreateAccessKey"
 )
 
 type PostCreateAccessKeyVersionEnum string
 
 const (
-	PostCreateAccessKeyVersionEnumTwoThousandAndTen0508 PostCreateAccessKeyVersionEnum = "2010-05-08"
+	POSTCreateAccessKeyVersionEnumTwoThousandAndTen0508 PostCreateAccessKeyVersionEnum = "2010-05-08"
 )
 
 type PostCreateAccessKeyQueryParams struct {

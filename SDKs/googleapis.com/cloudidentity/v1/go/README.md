@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,24 +24,24 @@ func main() {
     
     req := operations.CloudidentityCustomersUserinvitationsCancelRequest{
         PathParams: operations.CloudidentityCustomersUserinvitationsCancelPathParams{
-            Name: "qui",
+            Name: "vero",
         },
         QueryParams: operations.CloudidentityCustomersUserinvitationsCancelQueryParams{
             DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "json",
-            Callback: "alias",
-            Fields: "beatae",
-            Key: "eveniet",
-            OauthToken: "ab",
-            PrettyPrint: true,
-            QuotaUser: "deleniti",
-            UploadType: "adipisci",
-            UploadProtocol: "nam",
+            AccessToken: "sit",
+            Alt: "proto",
+            Callback: "qui",
+            Fields: "nulla",
+            Key: "hic",
+            OauthToken: "consequatur",
+            PrettyPrint: false,
+            QuotaUser: "dolorum",
+            UploadType: "voluptas",
+            UploadProtocol: "minus",
         },
         Request: map[string]interface{}{
-            "aut": "esse",
-            "animi": "hic",
+            "laborum": "voluptatem",
+            "est": "enim",
         },
     }
     

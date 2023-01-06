@@ -3,13 +3,13 @@ package operations
 type GetCreateClientVpnRouteActionEnum string
 
 const (
-	GetCreateClientVpnRouteActionEnumCreateClientVpnRoute GetCreateClientVpnRouteActionEnum = "CreateClientVpnRoute"
+	GETCreateClientVpnRouteActionEnumCreateClientVpnRoute GetCreateClientVpnRouteActionEnum = "CreateClientVpnRoute"
 )
 
 type GetCreateClientVpnRouteVersionEnum string
 
 const (
-	GetCreateClientVpnRouteVersionEnumTwoThousandAndSixteen1115 GetCreateClientVpnRouteVersionEnum = "2016-11-15"
+	GETCreateClientVpnRouteVersionEnumTwoThousandAndSixteen1115 GetCreateClientVpnRouteVersionEnum = "2016-11-15"
 )
 
 type GetCreateClientVpnRouteQueryParams struct {

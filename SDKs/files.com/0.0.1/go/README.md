@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,10 +24,10 @@ func main() {
     
     req := operations.GetActionNotificationExportResultsRequest{
         QueryParams: operations.GetActionNotificationExportResultsQueryParams{
-            ActionNotificationExportID: 763388924383789986,
-            Cursor: "molestiae",
-            PerPage: 8246720065789982806,
-            UserID: 252123505414078850,
+            ActionNotificationExportID: 3320498019983121158,
+            Cursor: "error",
+            PerPage: 3379169258196496349,
+            UserID: 1526989145207753327,
         },
     }
     

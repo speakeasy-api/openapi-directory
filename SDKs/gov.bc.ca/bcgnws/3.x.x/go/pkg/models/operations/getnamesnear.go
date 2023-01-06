@@ -33,7 +33,7 @@ type GetNamesNearQueryParams struct {
 	FeatureType     *string                      `queryParam:"style=form,explode=true,name=featureType"`
 	ItemsPerPage    *int64                       `queryParam:"style=form,explode=true,name=itemsPerPage"`
 	OutputFormat    GetNamesNearOutputFormatEnum `queryParam:"style=form,explode=true,name=outputFormat"`
-	OutputSrs       *int64                       `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS       *int64                       `queryParam:"style=form,explode=true,name=outputSRS"`
 	OutputStyle     *GetNamesNearOutputStyleEnum `queryParam:"style=form,explode=true,name=outputStyle"`
 	SortBy          *GetNamesNearSortByEnum      `queryParam:"style=form,explode=true,name=sortBy"`
 	StartIndex      *int64                       `queryParam:"style=form,explode=true,name=startIndex"`

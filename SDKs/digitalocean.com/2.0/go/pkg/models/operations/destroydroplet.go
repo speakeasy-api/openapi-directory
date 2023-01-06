@@ -8,14 +8,14 @@ type DestroyDropletPathParams struct {
 	DropletID int64 `pathParam:"style=simple,explode=false,name=droplet_id"`
 }
 
-type DestroyDropletRequest struct {
-	PathParams DestroyDropletPathParams
-}
-
 type DestroyDroplet401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DestroyDropletRequest struct {
+	PathParams DestroyDropletPathParams
 }
 
 type DestroyDropletResponse struct {

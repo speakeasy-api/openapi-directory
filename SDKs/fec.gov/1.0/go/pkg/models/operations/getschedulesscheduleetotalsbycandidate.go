@@ -23,6 +23,6 @@ type GetSchedulesScheduleETotalsByCandidateRequest struct {
 
 type GetSchedulesScheduleETotalsByCandidateResponse struct {
 	ContentType             string
-	IeTotalsByCandidatePage *shared.IeTotalsByCandidatePage
+	IETotalsByCandidatePage *shared.IeTotalsByCandidatePage
 	StatusCode              int64
 }

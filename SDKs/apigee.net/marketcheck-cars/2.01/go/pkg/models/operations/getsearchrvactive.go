@@ -54,6 +54,6 @@ type GetSearchRvActiveRequest struct {
 type GetSearchRvActiveResponse struct {
 	ContentType      string
 	Error            *shared.Error
-	RvSearchResponse *shared.RvSearchResponse
+	RVSearchResponse *shared.RvSearchResponse
 	StatusCode       int64
 }

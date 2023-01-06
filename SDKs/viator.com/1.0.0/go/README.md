@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,19 +34,23 @@ func main() {
     
     req := operations.BookingAvailabilityRequest{
         Headers: operations.BookingAvailabilityHeaders{
-            AcceptLanguage: "fugit",
+            AcceptLanguage: "nesciunt",
         },
         Request: &operations.BookingAvailabilityRequestBody{
             AgeBands: []BookingAvailabilityRequestBodyAgeBands{
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 2837564563700335116,
-                    Count: 7814107300403322708,
+                    BandID: 6695214688624416934,
+                    Count: 6568604966124562721,
+                },
+                operations.BookingAvailabilityRequestBodyAgeBands{
+                    BandID: 7265257187948120886,
+                    Count: 6050388318473623238,
                 },
             },
-            CurrencyCode: "laudantium",
-            Month: "voluptatem",
-            ProductCode: "voluptatem",
-            Year: "dolor",
+            CurrencyCode: "sit",
+            Month: "tempora",
+            ProductCode: "minus",
+            Year: "architecto",
         },
     }
     

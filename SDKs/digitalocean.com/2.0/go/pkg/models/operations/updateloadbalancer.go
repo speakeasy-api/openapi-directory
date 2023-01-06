@@ -2,111 +2,14 @@ package operations
 
 import (
 	"openapi/pkg/models/shared"
-	"time"
 )
 
 type UpdateLoadBalancerPathParams struct {
 	LbID string `pathParam:"style=simple,explode=false,name=lb_id"`
 }
 
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDAlgorithmEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDAlgorithmEnumRoundRobin       UpdateLoadBalancerRequestBodyAssignDropletsByIDAlgorithmEnum = "round_robin"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDAlgorithmEnumLeastConnections UpdateLoadBalancerRequestBodyAssignDropletsByIDAlgorithmEnum = "least_connections"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnumHTTP  UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnum = "http"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnumHTTPS UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnum = "https"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnumHttp2 UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnum = "http2"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnumTCP   UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnum = "tcp"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnumHTTP  UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnum = "http"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnumHTTPS UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnum = "https"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnumHttp2 UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnum = "http2"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnumTCP   UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnum = "tcp"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRules struct {
-	CertificateID  *string                                                                          `json:"certificate_id,omitempty"`
-	EntryPort      int64                                                                            `json:"entry_port"`
-	EntryProtocol  UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesEntryProtocolEnum  `json:"entry_protocol"`
-	TargetPort     int64                                                                            `json:"target_port"`
-	TargetProtocol UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRulesTargetProtocolEnum `json:"target_protocol"`
-	TLSPassthrough *bool                                                                            `json:"tls_passthrough,omitempty"`
-}
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnumHTTP  UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnum = "http"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnumHTTPS UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnum = "https"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnumTCP   UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnum = "tcp"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheck struct {
-	CheckIntervalSeconds   *int64                                                                  `json:"check_interval_seconds,omitempty"`
-	HealthyThreshold       *int64                                                                  `json:"healthy_threshold,omitempty"`
-	Path                   *string                                                                 `json:"path,omitempty"`
-	Port                   *int64                                                                  `json:"port,omitempty"`
-	Protocol               *UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheckProtocolEnum `json:"protocol,omitempty"`
-	ResponseTimeoutSeconds *int64                                                                  `json:"response_timeout_seconds,omitempty"`
-	UnhealthyThreshold     *int64                                                                  `json:"unhealthy_threshold,omitempty"`
-}
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnumLbSmall  UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnum = "lb-small"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnumLbMedium UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnum = "lb-medium"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnumLbLarge  UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnum = "lb-large"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnumNew     UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnum = "new"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnumActive  UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnum = "active"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnumErrored UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnum = "errored"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessionsTypeEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessionsTypeEnumCookies UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessionsTypeEnum = "cookies"
-	UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessionsTypeEnumNone    UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessionsTypeEnum = "none"
-)
-
-type UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessions struct {
-	CookieName       *string                                                                `json:"cookie_name,omitempty"`
-	CookieTTLSeconds *int64                                                                 `json:"cookie_ttl_seconds,omitempty"`
-	Type             *UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessionsTypeEnum `json:"type,omitempty"`
-}
-
 type UpdateLoadBalancerRequestBodyAssignDropletsByID struct {
-	Algorithm              *UpdateLoadBalancerRequestBodyAssignDropletsByIDAlgorithmEnum                                                                           `json:"algorithm,omitempty"`
-	CreatedAt              *time.Time                                                                                                                              `json:"created_at,omitempty"`
-	DropletIds             []int64                                                                                                                                 `json:"droplet_ids"`
-	EnableBackendKeepalive *bool                                                                                                                                   `json:"enable_backend_keepalive,omitempty"`
-	EnableProxyProtocol    *bool                                                                                                                                   `json:"enable_proxy_protocol,omitempty"`
-	ForwardingRules        []UpdateLoadBalancerRequestBodyAssignDropletsByIDForwardingRules                                                                        `json:"forwarding_rules"`
-	HealthCheck            *UpdateLoadBalancerRequestBodyAssignDropletsByIDHealthCheck                                                                             `json:"health_check,omitempty"`
-	ID                     *string                                                                                                                                 `json:"id,omitempty"`
-	IP                     *string                                                                                                                                 `json:"ip,omitempty"`
-	Name                   *string                                                                                                                                 `json:"name,omitempty"`
-	RedirectHTTPToHTTPS    *bool                                                                                                                                   `json:"redirect_http_to_https,omitempty"`
-	Region                 shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region"`
-	Size                   *UpdateLoadBalancerRequestBodyAssignDropletsByIDSizeEnum                                                                                `json:"size,omitempty"`
-	Status                 *UpdateLoadBalancerRequestBodyAssignDropletsByIDStatusEnum                                                                              `json:"status,omitempty"`
-	StickySessions         *UpdateLoadBalancerRequestBodyAssignDropletsByIDStickySessions                                                                          `json:"sticky_sessions,omitempty"`
-	VpcUUID                *string                                                                                                                                 `json:"vpc_uuid,omitempty"`
+	DropletIds []int64 `json:"droplet_ids,omitempty"`
 }
 
 type UpdateLoadBalancerRequestBodyAssignDropletsByTagAlgorithmEnum string
@@ -134,6 +37,8 @@ const (
 	UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesTargetProtocolEnumTCP   UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesTargetProtocolEnum = "tcp"
 )
 
+// UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules
+// An object specifying a forwarding rule for a load balancer.
 type UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules struct {
 	CertificateID  *string                                                                           `json:"certificate_id,omitempty"`
 	EntryPort      int64                                                                             `json:"entry_port"`
@@ -151,6 +56,8 @@ const (
 	UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheckProtocolEnumTCP   UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheckProtocolEnum = "tcp"
 )
 
+// UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheck
+// An object specifying health check settings for the load balancer.
 type UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheck struct {
 	CheckIntervalSeconds   *int64                                                                   `json:"check_interval_seconds,omitempty"`
 	HealthyThreshold       *int64                                                                   `json:"healthy_threshold,omitempty"`
@@ -169,14 +76,6 @@ const (
 	UpdateLoadBalancerRequestBodyAssignDropletsByTagSizeEnumLbLarge  UpdateLoadBalancerRequestBodyAssignDropletsByTagSizeEnum = "lb-large"
 )
 
-type UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum string
-
-const (
-	UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnumNew     UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum = "new"
-	UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnumActive  UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum = "active"
-	UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnumErrored UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum = "errored"
-)
-
 type UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEnum string
 
 const (
@@ -184,40 +83,36 @@ const (
 	UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEnumNone    UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEnum = "none"
 )
 
+// UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessions
+// An object specifying sticky sessions settings for the load balancer.
 type UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessions struct {
 	CookieName       *string                                                                 `json:"cookie_name,omitempty"`
 	CookieTTLSeconds *int64                                                                  `json:"cookie_ttl_seconds,omitempty"`
 	Type             *UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEnum `json:"type,omitempty"`
 }
 
-type UpdateLoadBalancerRequestBodyAssignDropletsByTag struct {
-	Algorithm              *UpdateLoadBalancerRequestBodyAssignDropletsByTagAlgorithmEnum                                                                          `json:"algorithm,omitempty"`
-	CreatedAt              *time.Time                                                                                                                              `json:"created_at,omitempty"`
-	EnableBackendKeepalive *bool                                                                                                                                   `json:"enable_backend_keepalive,omitempty"`
-	EnableProxyProtocol    *bool                                                                                                                                   `json:"enable_proxy_protocol,omitempty"`
-	ForwardingRules        []UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules                                                                       `json:"forwarding_rules"`
-	HealthCheck            *UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheck                                                                            `json:"health_check,omitempty"`
-	ID                     *string                                                                                                                                 `json:"id,omitempty"`
-	IP                     *string                                                                                                                                 `json:"ip,omitempty"`
-	Name                   *string                                                                                                                                 `json:"name,omitempty"`
-	RedirectHTTPToHTTPS    *bool                                                                                                                                   `json:"redirect_http_to_https,omitempty"`
-	Region                 shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region"`
-	Size                   *UpdateLoadBalancerRequestBodyAssignDropletsByTagSizeEnum                                                                               `json:"size,omitempty"`
-	Status                 *UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum                                                                             `json:"status,omitempty"`
-	StickySessions         *UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessions                                                                         `json:"sticky_sessions,omitempty"`
-	Tag                    string                                                                                                                                  `json:"tag"`
-	VpcUUID                *string                                                                                                                                 `json:"vpc_uuid,omitempty"`
-}
-
-type UpdateLoadBalancerRequest struct {
-	PathParams UpdateLoadBalancerPathParams
-	Request    interface{} `request:"mediaType=application/json"`
+type UpdateLoadBalancerRequestBodyAssignDropletsByTagInput struct {
+	Algorithm              *UpdateLoadBalancerRequestBodyAssignDropletsByTagAlgorithmEnum    `json:"algorithm,omitempty"`
+	EnableBackendKeepalive *bool                                                             `json:"enable_backend_keepalive,omitempty"`
+	EnableProxyProtocol    *bool                                                             `json:"enable_proxy_protocol,omitempty"`
+	ForwardingRules        []UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules `json:"forwarding_rules"`
+	HealthCheck            *UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheck      `json:"health_check,omitempty"`
+	Name                   *string                                                           `json:"name,omitempty"`
+	RedirectHTTPToHTTPS    *bool                                                             `json:"redirect_http_to_https,omitempty"`
+	Size                   *UpdateLoadBalancerRequestBodyAssignDropletsByTagSizeEnum         `json:"size,omitempty"`
+	StickySessions         *UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessions   `json:"sticky_sessions,omitempty"`
+	VpcUUID                *string                                                           `json:"vpc_uuid,omitempty"`
 }
 
 type UpdateLoadBalancer401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateLoadBalancerRequest struct {
+	PathParams UpdateLoadBalancerPathParams
+	Request    interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateLoadBalancerResponse struct {

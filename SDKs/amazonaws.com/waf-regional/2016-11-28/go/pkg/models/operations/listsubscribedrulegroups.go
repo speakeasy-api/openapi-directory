@@ -30,6 +30,6 @@ type ListSubscribedRuleGroupsResponse struct {
 	ContentType                      string
 	ListSubscribedRuleGroupsResponse *shared.ListSubscribedRuleGroupsResponse
 	StatusCode                       int64
-	WafInternalErrorException        *interface{}
-	WafNonexistentItemException      *interface{}
+	WAFInternalErrorException        *interface{}
+	WAFNonexistentItemException      *interface{}
 }

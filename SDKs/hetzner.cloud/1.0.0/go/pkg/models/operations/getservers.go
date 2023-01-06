@@ -326,7 +326,6 @@ type GetServersRequest struct {
 
 type GetServersResponse struct {
 	ContentType                        string
-	GetServers200ApplicationJSONObject *GetServers200ApplicationJSON
-	Headers                            map[string][]string
 	StatusCode                         int64
+	GetServers200ApplicationJSONObject *GetServers200ApplicationJSON
 }

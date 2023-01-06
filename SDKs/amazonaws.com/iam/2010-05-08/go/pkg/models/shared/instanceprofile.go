@@ -9,7 +9,7 @@ import (
 type InstanceProfile struct {
 	Arn                 string
 	CreateDate          time.Time
-	InstanceProfileID   string
+	InstanceProfileID   map[string]interface{}
 	InstanceProfileName string
 	Path                string
 	Roles               []Role

@@ -3,13 +3,13 @@ package operations
 type PostAttachInternetGatewayActionEnum string
 
 const (
-	PostAttachInternetGatewayActionEnumAttachInternetGateway PostAttachInternetGatewayActionEnum = "AttachInternetGateway"
+	POSTAttachInternetGatewayActionEnumAttachInternetGateway PostAttachInternetGatewayActionEnum = "AttachInternetGateway"
 )
 
 type PostAttachInternetGatewayVersionEnum string
 
 const (
-	PostAttachInternetGatewayVersionEnumTwoThousandAndSixteen1115 PostAttachInternetGatewayVersionEnum = "2016-11-15"
+	POSTAttachInternetGatewayVersionEnumTwoThousandAndSixteen1115 PostAttachInternetGatewayVersionEnum = "2016-11-15"
 )
 
 type PostAttachInternetGatewayQueryParams struct {

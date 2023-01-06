@@ -128,6 +128,6 @@ type PostServersIDActionsCreateImageRequest struct {
 
 type PostServersIDActionsCreateImageResponse struct {
 	ContentType                                             string
-	PostServersIDActionsCreateImage201ApplicationJSONObject *PostServersIDActionsCreateImage201ApplicationJSON
 	StatusCode                                              int64
+	PostServersIDActionsCreateImage201ApplicationJSONObject *PostServersIDActionsCreateImage201ApplicationJSON
 }

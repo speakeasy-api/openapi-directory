@@ -9,7 +9,7 @@ type PatchAttractionPathParams struct {
 }
 
 type PatchAttractionHeaders struct {
-	TmpsCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
+	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
 }
 
 type PatchAttractionRequest struct {

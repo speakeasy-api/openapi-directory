@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetcurrencyrateRequest{
         QueryParams: operations.GetcurrencyrateQueryParams{
-            License: "odio",
-            Symbol: "ut",
+            License: "vero",
+            Symbol: "delectus",
         },
     }
     
-    res, err := s.Sdk.Getcurrencyrate(ctx, req)
+    res, err := s.CurrencyRates.Getcurrencyrate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Currency Rates
 
 * `Getcurrencyrate` - Gets a foreign currency rate for one US Dollar
 

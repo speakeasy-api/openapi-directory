@@ -3,7 +3,7 @@ package shared
 // ExtendedS3DestinationConfiguration
 // Describes the configuration of a destination in Amazon S3.
 type ExtendedS3DestinationConfiguration struct {
-	BucketArn                         string                             `json:"BucketARN"`
+	BucketARN                         string                             `json:"BucketARN"`
 	BufferingHints                    *BufferingHints                    `json:"BufferingHints,omitempty"`
 	CloudWatchLoggingOptions          *CloudWatchLoggingOptions          `json:"CloudWatchLoggingOptions,omitempty"`
 	CompressionFormat                 *CompressionFormatEnum             `json:"CompressionFormat,omitempty"`
@@ -13,7 +13,7 @@ type ExtendedS3DestinationConfiguration struct {
 	ErrorOutputPrefix                 *string                            `json:"ErrorOutputPrefix,omitempty"`
 	Prefix                            *string                            `json:"Prefix,omitempty"`
 	ProcessingConfiguration           *ProcessingConfiguration           `json:"ProcessingConfiguration,omitempty"`
-	RoleArn                           string                             `json:"RoleARN"`
+	RoleARN                           string                             `json:"RoleARN"`
 	S3BackupConfiguration             *S3DestinationConfiguration        `json:"S3BackupConfiguration,omitempty"`
 	S3BackupMode                      *S3BackupModeEnum                  `json:"S3BackupMode,omitempty"`
 }

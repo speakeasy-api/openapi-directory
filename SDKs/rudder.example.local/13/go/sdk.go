@@ -2,8 +2,9 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -28,7 +29,7 @@ type SDK struct {
 	System         *System
 	Techniques     *Techniques
 	Branding       *Branding
-	Cve            *Cve
+	CVE            *Cve
 	ChangeRequests *ChangeRequests
 	CreateNode     *CreateNode
 	DataSources    *DataSources
@@ -203,7 +204,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Cve = NewCve(
+	sdk.CVE = NewCve(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

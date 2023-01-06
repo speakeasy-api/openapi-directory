@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,79 +34,81 @@ func main() {
     
     req := operations.CreateAppRequest{
         Headers: operations.CreateAppHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "delectus",
-            XAmzCredential: "rerum",
-            XAmzDate: "dolore",
-            XAmzSecurityToken: "repellat",
-            XAmzSignature: "velit",
-            XAmzSignedHeaders: "officia",
+            XAmzAlgorithm: "vero",
+            XAmzContentSha256: "voluptatem",
+            XAmzCredential: "ex",
+            XAmzDate: "magni",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "distinctio",
+            XAmzSignedHeaders: "cumque",
         },
         Request: operations.CreateAppRequestBody{
-            AccessToken: "modi",
+            AccessToken: "ea",
             AutoBranchCreationConfig: &operations.CreateAppRequestBodyAutoBranchCreationConfig{
-                BasicAuthCredentials: "sunt",
-                BuildSpec: "voluptas",
-                EnableAutoBuild: false,
+                BasicAuthCredentials: "non",
+                BuildSpec: "non",
+                EnableAutoBuild: true,
                 EnableBasicAuth: true,
-                EnablePerformanceMode: true,
+                EnablePerformanceMode: false,
                 EnablePullRequestPreview: false,
                 EnvironmentVariables: map[string]string{
-                    "autem": "corporis",
+                    "minus": "sit",
+                    "aut": "neque",
+                    "iusto": "quia",
                 },
-                Framework: "dicta",
-                PullRequestEnvironmentName: "rem",
+                Framework: "repudiandae",
+                PullRequestEnvironmentName: "debitis",
                 Stage: "BETA",
             },
             AutoBranchCreationPatterns: []string{
-                "nisi",
+                "enim",
+                "ut",
             },
-            BasicAuthCredentials: "recusandae",
-            BuildSpec: "qui",
-            CustomHeaders: "minus",
+            BasicAuthCredentials: "non",
+            BuildSpec: "nihil",
+            CustomHeaders: "laborum",
             CustomRules: []shared.CustomRule{
                 shared.CustomRule{
-                    Condition: "rerum",
-                    Source: "ut",
-                    Status: "rem",
-                    Target: "eos",
+                    Condition: "nihil",
+                    Source: "exercitationem",
+                    Status: "iste",
+                    Target: "perferendis",
                 },
                 shared.CustomRule{
-                    Condition: "et",
-                    Source: "reiciendis",
-                    Status: "aspernatur",
-                    Target: "praesentium",
+                    Condition: "id",
+                    Source: "autem",
+                    Status: "hic",
+                    Target: "voluptatem",
                 },
                 shared.CustomRule{
-                    Condition: "porro",
-                    Source: "nihil",
-                    Status: "adipisci",
-                    Target: "consequatur",
+                    Condition: "omnis",
+                    Source: "libero",
+                    Status: "qui",
+                    Target: "omnis",
                 },
             },
-            Description: "illum",
+            Description: "minus",
             EnableAutoBranchCreation: false,
-            EnableBasicAuth: true,
+            EnableBasicAuth: false,
             EnableBranchAutoBuild: true,
-            EnableBranchAutoDeletion: true,
+            EnableBranchAutoDeletion: false,
             EnvironmentVariables: map[string]string{
-                "est": "quo",
-                "vero": "alias",
-                "totam": "deserunt",
+                "dolorum": "laboriosam",
             },
-            IamServiceRoleArn: "eius",
-            Name: "repellat",
-            OauthToken: "beatae",
+            IamServiceRoleArn: "velit",
+            Name: "ea",
+            OauthToken: "tempore",
             Platform: "WEB",
-            Repository: "totam",
+            Repository: "aut",
             Tags: map[string]string{
-                "et": "magni",
-                "necessitatibus": "et",
+                "aliquid": "mollitia",
+                "non": "magni",
+                "recusandae": "illum",
             },
         },
     }
     
-    res, err := s.Sdk.CreateApp(ctx, req)
+    res, err := s.CreateApp(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -37,24 +37,6 @@ const (
 	ServiceTierEnumEnterprise      ServiceTierEnum = "ENTERPRISE"
 )
 
-// ServiceInput
-// A managed metastore service that serves metadata queries.
-type ServiceInput struct {
-	DatabaseType        *ServiceDatabaseTypeEnum   `json:"databaseType,omitempty"`
-	EncryptionConfig    *EncryptionConfig          `json:"encryptionConfig,omitempty"`
-	HiveMetastoreConfig *HiveMetastoreConfigInput  `json:"hiveMetastoreConfig,omitempty"`
-	Labels              map[string]string          `json:"labels,omitempty"`
-	MaintenanceWindow   *MaintenanceWindow         `json:"maintenanceWindow,omitempty"`
-	MetadataIntegration *MetadataIntegration       `json:"metadataIntegration,omitempty"`
-	Name                *string                    `json:"name,omitempty"`
-	Network             *string                    `json:"network,omitempty"`
-	NetworkConfig       *NetworkConfigInput        `json:"networkConfig,omitempty"`
-	Port                *int32                     `json:"port,omitempty"`
-	ReleaseChannel      *ServiceReleaseChannelEnum `json:"releaseChannel,omitempty"`
-	TelemetryConfig     *TelemetryConfig           `json:"telemetryConfig,omitempty"`
-	Tier                *ServiceTierEnum           `json:"tier,omitempty"`
-}
-
 // Service
 // A managed metastore service that serves metadata queries.
 type Service struct {
@@ -79,4 +61,22 @@ type Service struct {
 	Tier                       *ServiceTierEnum            `json:"tier,omitempty"`
 	UID                        *string                     `json:"uid,omitempty"`
 	UpdateTime                 *string                     `json:"updateTime,omitempty"`
+}
+
+// ServiceInput
+// A managed metastore service that serves metadata queries.
+type ServiceInput struct {
+	DatabaseType        *ServiceDatabaseTypeEnum   `json:"databaseType,omitempty"`
+	EncryptionConfig    *EncryptionConfig          `json:"encryptionConfig,omitempty"`
+	HiveMetastoreConfig *HiveMetastoreConfigInput  `json:"hiveMetastoreConfig,omitempty"`
+	Labels              map[string]string          `json:"labels,omitempty"`
+	MaintenanceWindow   *MaintenanceWindow         `json:"maintenanceWindow,omitempty"`
+	MetadataIntegration *MetadataIntegration       `json:"metadataIntegration,omitempty"`
+	Name                *string                    `json:"name,omitempty"`
+	Network             *string                    `json:"network,omitempty"`
+	NetworkConfig       *NetworkConfigInput        `json:"networkConfig,omitempty"`
+	Port                *int32                     `json:"port,omitempty"`
+	ReleaseChannel      *ServiceReleaseChannelEnum `json:"releaseChannel,omitempty"`
+	TelemetryConfig     *TelemetryConfig           `json:"telemetryConfig,omitempty"`
+	Tier                *ServiceTierEnum           `json:"tier,omitempty"`
 }

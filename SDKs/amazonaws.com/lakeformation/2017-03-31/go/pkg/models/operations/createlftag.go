@@ -7,7 +7,7 @@ import (
 type CreateLfTagXAmzTargetEnum string
 
 const (
-	CreateLfTagXAmzTargetEnumAwsLakeFormationCreateLfTag CreateLfTagXAmzTargetEnum = "AWSLakeFormation.CreateLFTag"
+	CreateLFTagXAmzTargetEnumAwsLakeFormationCreateLfTag CreateLfTagXAmzTargetEnum = "AWSLakeFormation.CreateLFTag"
 )
 
 type CreateLfTagHeaders struct {
@@ -29,7 +29,7 @@ type CreateLfTagRequest struct {
 type CreateLfTagResponse struct {
 	AccessDeniedException                *interface{}
 	ContentType                          string
-	CreateLfTagResponse                  map[string]interface{}
+	CreateLFTagResponse                  map[string]interface{}
 	EntityNotFoundException              *interface{}
 	InternalServiceException             *interface{}
 	InvalidInputException                *interface{}

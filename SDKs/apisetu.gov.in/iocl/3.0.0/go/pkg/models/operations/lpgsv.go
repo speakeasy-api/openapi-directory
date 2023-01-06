@@ -81,7 +81,7 @@ type Lpgsv404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Lpgsv404ApplicationJSONErrorDescriptionEnumNoRecordFound               Lpgsv404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Lpgsv404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Lpgsv404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Lpgsv404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Lpgsv404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Lpgsv404ApplicationJSON struct {

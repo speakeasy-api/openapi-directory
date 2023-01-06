@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,16 +29,15 @@ func main() {
             },
         },
         Request: shared.BehavioralEventHTTPCompletionRequest{
-            Email: "eius",
-            EventName: "sunt",
-            ObjectID: "architecto",
-            OccurredAt: "1999-06-08T08:49:57Z",
+            Email: "molestiae",
+            EventName: "assumenda",
+            ObjectID: "est",
+            OccurredAt: "2021-01-17T20:46:43Z",
             Properties: map[string]string{
-                "aut": "provident",
-                "a": "unde",
-                "fugit": "voluptas",
+                "nisi": "fugit",
+                "error": "exercitationem",
             },
-            Utk: "esse",
+            Utk: "voluptatem",
         },
     }
     

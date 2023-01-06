@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.PodocSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.PodocRequestBody{
             CertificateParameters: &operations.PodocRequestBodyCertificateParameters{
-                Dob: "unde",
-                FullName: "saepe",
-                PolDob: "beatae",
-                PolicyNo: "modi",
+                DOB: "quidem",
+                FullName: "corporis",
+                PolDOB: "voluptas",
+                PolicyNo: "quasi",
             },
-            ConsentArtifact: "similique",
+            ConsentArtifact: "nostrum",
             Format: "pdf",
-            TxnID: "id",
+            TxnID: "iusto",
         },
     }
     
-    res, err := s.Sdk.Podoc(ctx, req)
+    res, err := s.APIs.Podoc(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Podoc` - Policy Document
 

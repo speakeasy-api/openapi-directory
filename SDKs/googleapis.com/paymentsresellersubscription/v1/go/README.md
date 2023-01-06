@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,23 +24,23 @@ func main() {
     
     req := operations.PaymentsresellersubscriptionPartnersProductsListRequest{
         PathParams: operations.PaymentsresellersubscriptionPartnersProductsListPathParams{
-            Parent: "quidem",
+            Parent: "rerum",
         },
         QueryParams: operations.PaymentsresellersubscriptionPartnersProductsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "cum",
+            DollarXgafv: "2",
+            AccessToken: "totam",
             Alt: "media",
-            Callback: "culpa",
-            Fields: "earum",
-            Filter: "quidem",
-            Key: "rem",
-            OauthToken: "autem",
-            PageSize: 5947808151841881503,
-            PageToken: "et",
+            Callback: "repellendus",
+            Fields: "non",
+            Filter: "minus",
+            Key: "provident",
+            OauthToken: "temporibus",
+            PageSize: 4602029307121648680,
+            PageToken: "magni",
             PrettyPrint: true,
-            QuotaUser: "corporis",
-            UploadType: "omnis",
-            UploadProtocol: "veniam",
+            QuotaUser: "libero",
+            UploadType: "eos",
+            UploadProtocol: "rerum",
         },
     }
     
@@ -67,7 +66,7 @@ func main() {
 * `PaymentsresellersubscriptionPartnersSubscriptionsCancel` - Used by partners to cancel a subscription service either immediately or by the end of the current billing cycle for their customers. It should be called directly by the partner using service accounts.
 * `PaymentsresellersubscriptionPartnersSubscriptionsCreate` - Used by partners to create a subscription for their customers. The created subscription is associated with the end user inferred from the end user credentials. This API must be authorized by the end user using OAuth.
 * `PaymentsresellersubscriptionPartnersSubscriptionsEntitle` - Used by partners to entitle a previously provisioned subscription to the current end user. The end user identity is inferred from the authorized credential of the request. This API must be authorized by the end user using OAuth.
-* `PaymentsresellersubscriptionPartnersSubscriptionsExtend` - Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+* `PaymentsresellersubscriptionPartnersSubscriptionsExtend` - [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
 * `PaymentsresellersubscriptionPartnersSubscriptionsGet` - Used by partners to get a subscription by id. It should be called directly by the partner using service accounts.
 * `PaymentsresellersubscriptionPartnersSubscriptionsProvision` - Used by partners to provision a subscription for their customers. This creates a subscription without associating it with the end user account. EntitleSubscription must be called separately using OAuth in order for the end user account to be associated with the subscription. It should be called directly by the partner using service accounts.
 * `PaymentsresellersubscriptionPartnersSubscriptionsUndoCancel` - Used by partners to revoke the pending cancellation of a subscription, which is currently in `STATE_CANCEL_AT_END_OF_CYCLE` state. If the subscription is already cancelled, the request will fail. It should be called directly by the partner using service accounts.

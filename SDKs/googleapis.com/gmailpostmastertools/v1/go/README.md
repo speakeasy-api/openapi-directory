@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.GmailpostmastertoolsDomainsListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.GmailpostmastertoolsDomainsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "alias",
+            AccessToken: "saepe",
             Alt: "json",
-            Callback: "amet",
-            Fields: "non",
-            Key: "sint",
-            OauthToken: "est",
-            PageSize: 3170504167765740907,
-            PageToken: "dolorem",
+            Callback: "aut",
+            Fields: "occaecati",
+            Key: "voluptas",
+            OauthToken: "laudantium",
+            PageSize: 7905559474592929867,
+            PageToken: "voluptas",
             PrettyPrint: false,
-            QuotaUser: "iusto",
-            UploadType: "tempora",
-            UploadProtocol: "consequuntur",
+            QuotaUser: "nam",
+            UploadType: "vero",
+            UploadProtocol: "aut",
         },
     }
     

@@ -21,6 +21,6 @@ type GetTimestagsRequest struct {
 
 type GetTimestagsResponse struct {
 	ContentType                          string
-	GetTimestags200ApplicationJSONArrays [][]string
 	StatusCode                           int64
+	GetTimestags200ApplicationJSONArrays [][]string
 }

@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -3305,7 +3306,7 @@ func (s *SDK) DisableAwsOrganizationsAccess(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.DisableAwsOrganizationsAccessOutput = out
+			res.DisableAWSOrganizationsAccessOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3737,7 +3738,7 @@ func (s *SDK) EnableAwsOrganizationsAccess(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.EnableAwsOrganizationsAccessOutput = out
+			res.EnableAWSOrganizationsAccessOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3983,7 +3984,7 @@ func (s *SDK) GetAwsOrganizationsAccessStatus(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.GetAwsOrganizationsAccessStatusOutput = out
+			res.GetAWSOrganizationsAccessStatusOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

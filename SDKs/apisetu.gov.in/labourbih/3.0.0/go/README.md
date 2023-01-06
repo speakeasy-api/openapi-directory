@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.AlimwSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AlimwRequestBody{
             CertificateParameters: &operations.AlimwRequestBodyCertificateParameters{
-                RefNo: "commodi",
-                TokenNo: "qui",
+                RefNo: "nam",
+                TokenNo: "eaque",
             },
-            ConsentArtifact: "quisquam",
+            ConsentArtifact: "adipisci",
             Format: "pdf",
-            TxnID: "ducimus",
+            TxnID: "laborum",
         },
     }
     
-    res, err := s.Sdk.Alimw(ctx, req)
+    res, err := s.APIs.Alimw(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Alimw` - Application for License for Inter State Migrant Workmen
 * `Alsbl` - Application/ License for Boilers

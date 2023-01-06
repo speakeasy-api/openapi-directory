@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -560,7 +560,7 @@ func (s *DataSources) AddNsxvManagerDatasource(ctx context.Context, request oper
 				return nil, err
 			}
 
-			res.NsxvManagerDataSource = out
+			res.NSXVManagerDataSource = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -2128,7 +2128,7 @@ func (s *DataSources) GetAristaSwitchSnmpConfig(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -2218,7 +2218,7 @@ func (s *DataSources) GetBrocadeSwitchSnmpConfig(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -2353,7 +2353,7 @@ func (s *DataSources) GetCiscoSwitchSnmpConfig(ctx context.Context, request oper
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -2443,7 +2443,7 @@ func (s *DataSources) GetDellSwitchSnmpConfig(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 404:
@@ -2622,7 +2622,7 @@ func (s *DataSources) GetJuniperSwitchSnmpConfig(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -2667,7 +2667,7 @@ func (s *DataSources) GetNsxvControllerCluster(ctx context.Context, request oper
 				return nil, err
 			}
 
-			res.NsxControllerDataCollection = out
+			res.NSXControllerDataCollection = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -2712,7 +2712,7 @@ func (s *DataSources) GetNsxvManager(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.NsxvManagerDataSource = out
+			res.NSXVManagerDataSource = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -2847,7 +2847,7 @@ func (s *DataSources) GetUcsSnmpConfig(ctx context.Context, request operations.G
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -3534,7 +3534,7 @@ func (s *DataSources) UpdateAristaSwitchSnmpConfig(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -3658,7 +3658,7 @@ func (s *DataSources) UpdateBrocadeSwitchSnmpConfig(ctx context.Context, request
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -3844,7 +3844,7 @@ func (s *DataSources) UpdateCiscoSwitchSnmpConfig(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -3968,7 +3968,7 @@ func (s *DataSources) UpdateDellSwitchSnmpConfig(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -4216,7 +4216,7 @@ func (s *DataSources) UpdateJuniperSwitchSnmpConfig(ctx context.Context, request
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -4278,7 +4278,7 @@ func (s *DataSources) UpdateNsxvControllerCluster(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.NsxControllerDataCollection = out
+			res.NSXControllerDataCollection = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -4340,7 +4340,7 @@ func (s *DataSources) UpdateNsxvManager(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.NsxvManagerDataSource = out
+			res.NSXVManagerDataSource = out
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 403:
@@ -4516,7 +4516,7 @@ func (s *DataSources) UpdateUcsSnmpConfig(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.SnmpConfig = out
+			res.SNMPConfig = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {

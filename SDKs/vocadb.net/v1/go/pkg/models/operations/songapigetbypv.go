@@ -7,42 +7,42 @@ import (
 type SongAPIGetByPvFieldsEnum string
 
 const (
-	SongAPIGetByPvFieldsEnumNone            SongAPIGetByPvFieldsEnum = "None"
-	SongAPIGetByPvFieldsEnumAdditionalNames SongAPIGetByPvFieldsEnum = "AdditionalNames"
-	SongAPIGetByPvFieldsEnumAlbums          SongAPIGetByPvFieldsEnum = "Albums"
-	SongAPIGetByPvFieldsEnumArtists         SongAPIGetByPvFieldsEnum = "Artists"
-	SongAPIGetByPvFieldsEnumLyrics          SongAPIGetByPvFieldsEnum = "Lyrics"
-	SongAPIGetByPvFieldsEnumMainPicture     SongAPIGetByPvFieldsEnum = "MainPicture"
-	SongAPIGetByPvFieldsEnumNames           SongAPIGetByPvFieldsEnum = "Names"
-	SongAPIGetByPvFieldsEnumPVs             SongAPIGetByPvFieldsEnum = "PVs"
-	SongAPIGetByPvFieldsEnumReleaseEvent    SongAPIGetByPvFieldsEnum = "ReleaseEvent"
-	SongAPIGetByPvFieldsEnumTags            SongAPIGetByPvFieldsEnum = "Tags"
-	SongAPIGetByPvFieldsEnumThumbURL        SongAPIGetByPvFieldsEnum = "ThumbUrl"
-	SongAPIGetByPvFieldsEnumWebLinks        SongAPIGetByPvFieldsEnum = "WebLinks"
+	SongAPIGetByPVFieldsEnumNone            SongAPIGetByPvFieldsEnum = "None"
+	SongAPIGetByPVFieldsEnumAdditionalNames SongAPIGetByPvFieldsEnum = "AdditionalNames"
+	SongAPIGetByPVFieldsEnumAlbums          SongAPIGetByPvFieldsEnum = "Albums"
+	SongAPIGetByPVFieldsEnumArtists         SongAPIGetByPvFieldsEnum = "Artists"
+	SongAPIGetByPVFieldsEnumLyrics          SongAPIGetByPvFieldsEnum = "Lyrics"
+	SongAPIGetByPVFieldsEnumMainPicture     SongAPIGetByPvFieldsEnum = "MainPicture"
+	SongAPIGetByPVFieldsEnumNames           SongAPIGetByPvFieldsEnum = "Names"
+	SongAPIGetByPVFieldsEnumPVs             SongAPIGetByPvFieldsEnum = "PVs"
+	SongAPIGetByPVFieldsEnumReleaseEvent    SongAPIGetByPvFieldsEnum = "ReleaseEvent"
+	SongAPIGetByPVFieldsEnumTags            SongAPIGetByPvFieldsEnum = "Tags"
+	SongAPIGetByPVFieldsEnumThumbURL        SongAPIGetByPvFieldsEnum = "ThumbUrl"
+	SongAPIGetByPVFieldsEnumWebLinks        SongAPIGetByPvFieldsEnum = "WebLinks"
 )
 
 type SongAPIGetByPvLangEnum string
 
 const (
-	SongAPIGetByPvLangEnumDefault  SongAPIGetByPvLangEnum = "Default"
-	SongAPIGetByPvLangEnumJapanese SongAPIGetByPvLangEnum = "Japanese"
-	SongAPIGetByPvLangEnumRomaji   SongAPIGetByPvLangEnum = "Romaji"
-	SongAPIGetByPvLangEnumEnglish  SongAPIGetByPvLangEnum = "English"
+	SongAPIGetByPVLangEnumDefault  SongAPIGetByPvLangEnum = "Default"
+	SongAPIGetByPVLangEnumJapanese SongAPIGetByPvLangEnum = "Japanese"
+	SongAPIGetByPVLangEnumRomaji   SongAPIGetByPvLangEnum = "Romaji"
+	SongAPIGetByPVLangEnumEnglish  SongAPIGetByPvLangEnum = "English"
 )
 
 type SongAPIGetByPvPvServiceEnum string
 
 const (
-	SongAPIGetByPvPvServiceEnumNicoNicoDouga SongAPIGetByPvPvServiceEnum = "NicoNicoDouga"
-	SongAPIGetByPvPvServiceEnumYoutube       SongAPIGetByPvPvServiceEnum = "Youtube"
-	SongAPIGetByPvPvServiceEnumSoundCloud    SongAPIGetByPvPvServiceEnum = "SoundCloud"
-	SongAPIGetByPvPvServiceEnumVimeo         SongAPIGetByPvPvServiceEnum = "Vimeo"
-	SongAPIGetByPvPvServiceEnumPiapro        SongAPIGetByPvPvServiceEnum = "Piapro"
-	SongAPIGetByPvPvServiceEnumBilibili      SongAPIGetByPvPvServiceEnum = "Bilibili"
-	SongAPIGetByPvPvServiceEnumFile          SongAPIGetByPvPvServiceEnum = "File"
-	SongAPIGetByPvPvServiceEnumLocalFile     SongAPIGetByPvPvServiceEnum = "LocalFile"
-	SongAPIGetByPvPvServiceEnumCreofuga      SongAPIGetByPvPvServiceEnum = "Creofuga"
-	SongAPIGetByPvPvServiceEnumBandcamp      SongAPIGetByPvPvServiceEnum = "Bandcamp"
+	SongAPIGetByPVPVServiceEnumNicoNicoDouga SongAPIGetByPvPvServiceEnum = "NicoNicoDouga"
+	SongAPIGetByPVPVServiceEnumYoutube       SongAPIGetByPvPvServiceEnum = "Youtube"
+	SongAPIGetByPVPVServiceEnumSoundCloud    SongAPIGetByPvPvServiceEnum = "SoundCloud"
+	SongAPIGetByPVPVServiceEnumVimeo         SongAPIGetByPvPvServiceEnum = "Vimeo"
+	SongAPIGetByPVPVServiceEnumPiapro        SongAPIGetByPvPvServiceEnum = "Piapro"
+	SongAPIGetByPVPVServiceEnumBilibili      SongAPIGetByPvPvServiceEnum = "Bilibili"
+	SongAPIGetByPVPVServiceEnumFile          SongAPIGetByPvPvServiceEnum = "File"
+	SongAPIGetByPVPVServiceEnumLocalFile     SongAPIGetByPvPvServiceEnum = "LocalFile"
+	SongAPIGetByPVPVServiceEnumCreofuga      SongAPIGetByPvPvServiceEnum = "Creofuga"
+	SongAPIGetByPVPVServiceEnumBandcamp      SongAPIGetByPvPvServiceEnum = "Bandcamp"
 )
 
 type SongAPIGetByPvQueryParams struct {

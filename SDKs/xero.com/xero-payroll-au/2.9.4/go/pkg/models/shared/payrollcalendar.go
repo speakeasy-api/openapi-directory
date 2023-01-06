@@ -6,7 +6,7 @@ type PayrollCalendar struct {
 	PaymentDate       *string           `json:"PaymentDate,omitempty"`
 	PayrollCalendarID *string           `json:"PayrollCalendarID,omitempty"`
 	StartDate         *string           `json:"StartDate,omitempty"`
-	UpdatedDateUtc    *string           `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC    *string           `json:"UpdatedDateUTC,omitempty"`
 	ValidationErrors  []ValidationError `json:"ValidationErrors,omitempty"`
 }
 

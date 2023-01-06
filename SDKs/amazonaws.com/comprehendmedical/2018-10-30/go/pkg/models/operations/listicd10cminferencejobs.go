@@ -7,7 +7,7 @@ import (
 type ListIcd10CmInferenceJobsXAmzTargetEnum string
 
 const (
-	ListIcd10CmInferenceJobsXAmzTargetEnumComprehendMedical20181030ListIcd10CmInferenceJobs ListIcd10CmInferenceJobsXAmzTargetEnum = "ComprehendMedical_20181030.ListICD10CMInferenceJobs"
+	ListIcd10CMInferenceJobsXAmzTargetEnumComprehendMedical20181030ListIcd10CmInferenceJobs ListIcd10CmInferenceJobsXAmzTargetEnum = "ComprehendMedical_20181030.ListICD10CMInferenceJobs"
 )
 
 type ListIcd10CmInferenceJobsHeaders struct {
@@ -30,7 +30,7 @@ type ListIcd10CmInferenceJobsResponse struct {
 	ContentType                      string
 	InternalServerException          *interface{}
 	InvalidRequestException          *interface{}
-	ListIcd10CmInferenceJobsResponse *shared.ListIcd10CmInferenceJobsResponse
+	ListIcd10CMInferenceJobsResponse *shared.ListIcd10CmInferenceJobsResponse
 	StatusCode                       int64
 	TooManyRequestsException         *interface{}
 	ValidationException              *interface{}

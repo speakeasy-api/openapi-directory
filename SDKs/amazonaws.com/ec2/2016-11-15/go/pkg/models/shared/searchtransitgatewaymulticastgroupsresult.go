@@ -1,6 +1,6 @@
 package shared
 
 type SearchTransitGatewayMulticastGroupsResult struct {
-	MulticastGroups []TransitGatewayMulticastGroup
-	NextToken       *string
+	MulticastGroups map[string]interface{}
+	NextToken       map[string]interface{}
 }

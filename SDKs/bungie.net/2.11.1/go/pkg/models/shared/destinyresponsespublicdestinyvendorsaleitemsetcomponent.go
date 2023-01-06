@@ -1,5 +1,0 @@
-package shared
-
-type DestinyResponsesPublicDestinyVendorSaleItemSetComponent struct {
-	SaleItems map[string]DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent
-}

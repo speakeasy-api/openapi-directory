@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.ImporterExporterCodeVerificationAPIPathParams{
-            Iec: "et",
+            Iec: "voluptate",
         },
     }
     
-    res, err := s.Sdk.ImporterExporterCodeVerificationAPI(ctx, req)
+    res, err := s.APIs.ImporterExporterCodeVerificationAPI(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ImporterExporterCodeVerificationAPI` - Importer-Exporter Code (IEC) Verification API.
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -40,23 +39,23 @@ func main() {
             },
         },
         QueryParams: operations.MessagesAddQueryParams{
-            Raw: false,
+            Raw: true,
         },
         Headers: operations.MessagesAddHeaders{
-            XApideckAppID: "accusantium",
-            XApideckConsumerID: "eaque",
-            XApideckServiceID: "facilis",
+            XApideckAppID: "ut",
+            XApideckConsumerID: "voluptas",
+            XApideckServiceID: "atque",
         },
         Request: shared.MessageInput{
-            Body: "quidem",
-            From: "tempore",
-            MessagingServiceID: "dignissimos",
-            Reference: "nihil",
-            ScheduledAt: "1982-02-05T16:13:47Z",
-            Subject: "excepturi",
-            To: "ut",
-            Type: "mms",
-            WebhookURL: "dolorum",
+            Body: "et",
+            From: "nobis",
+            MessagingServiceID: "ipsum",
+            Reference: "dolor",
+            ScheduledAt: "2016-07-06T18:58:32Z",
+            Subject: "est",
+            To: "id",
+            Type: "sms",
+            WebhookURL: "fuga",
         },
     }
     

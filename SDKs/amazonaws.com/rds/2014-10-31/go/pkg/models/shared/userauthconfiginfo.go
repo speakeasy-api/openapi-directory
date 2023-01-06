@@ -5,7 +5,7 @@ package shared
 type UserAuthConfigInfo struct {
 	AuthScheme  *AuthSchemeEnum
 	Description *string
-	IamAuth     *IamAuthModeEnum
+	IAMAuth     *IamAuthModeEnum
 	SecretArn   *string
 	UserName    *string
 }

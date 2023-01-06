@@ -3,13 +3,13 @@ package operations
 type GetWithdrawByoipCidrActionEnum string
 
 const (
-	GetWithdrawByoipCidrActionEnumWithdrawByoipCidr GetWithdrawByoipCidrActionEnum = "WithdrawByoipCidr"
+	GETWithdrawByoipCidrActionEnumWithdrawByoipCidr GetWithdrawByoipCidrActionEnum = "WithdrawByoipCidr"
 )
 
 type GetWithdrawByoipCidrVersionEnum string
 
 const (
-	GetWithdrawByoipCidrVersionEnumTwoThousandAndSixteen1115 GetWithdrawByoipCidrVersionEnum = "2016-11-15"
+	GETWithdrawByoipCidrVersionEnumTwoThousandAndSixteen1115 GetWithdrawByoipCidrVersionEnum = "2016-11-15"
 )
 
 type GetWithdrawByoipCidrQueryParams struct {

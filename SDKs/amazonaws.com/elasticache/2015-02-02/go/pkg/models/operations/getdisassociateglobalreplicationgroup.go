@@ -3,13 +3,13 @@ package operations
 type GetDisassociateGlobalReplicationGroupActionEnum string
 
 const (
-	GetDisassociateGlobalReplicationGroupActionEnumDisassociateGlobalReplicationGroup GetDisassociateGlobalReplicationGroupActionEnum = "DisassociateGlobalReplicationGroup"
+	GETDisassociateGlobalReplicationGroupActionEnumDisassociateGlobalReplicationGroup GetDisassociateGlobalReplicationGroupActionEnum = "DisassociateGlobalReplicationGroup"
 )
 
 type GetDisassociateGlobalReplicationGroupVersionEnum string
 
 const (
-	GetDisassociateGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 GetDisassociateGlobalReplicationGroupVersionEnum = "2015-02-02"
+	GETDisassociateGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 GetDisassociateGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
 type GetDisassociateGlobalReplicationGroupQueryParams struct {

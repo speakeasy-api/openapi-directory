@@ -14,7 +14,7 @@ type CreateEndpointMessage struct {
 	EngineName                 string                           `json:"EngineName"`
 	ExternalTableDefinition    *string                          `json:"ExternalTableDefinition,omitempty"`
 	ExtraConnectionAttributes  *string                          `json:"ExtraConnectionAttributes,omitempty"`
-	IbmDb2Settings             *IbmDb2Settings                  `json:"IBMDb2Settings,omitempty"`
+	IBMDb2Settings             *IbmDb2Settings                  `json:"IBMDb2Settings,omitempty"`
 	KafkaSettings              *KafkaSettings                   `json:"KafkaSettings,omitempty"`
 	KinesisSettings            *KinesisSettings                 `json:"KinesisSettings,omitempty"`
 	KmsKeyID                   *string                          `json:"KmsKeyId,omitempty"`

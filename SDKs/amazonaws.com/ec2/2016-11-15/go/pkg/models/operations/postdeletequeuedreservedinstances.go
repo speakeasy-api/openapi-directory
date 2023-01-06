@@ -3,13 +3,13 @@ package operations
 type PostDeleteQueuedReservedInstancesActionEnum string
 
 const (
-	PostDeleteQueuedReservedInstancesActionEnumDeleteQueuedReservedInstances PostDeleteQueuedReservedInstancesActionEnum = "DeleteQueuedReservedInstances"
+	POSTDeleteQueuedReservedInstancesActionEnumDeleteQueuedReservedInstances PostDeleteQueuedReservedInstancesActionEnum = "DeleteQueuedReservedInstances"
 )
 
 type PostDeleteQueuedReservedInstancesVersionEnum string
 
 const (
-	PostDeleteQueuedReservedInstancesVersionEnumTwoThousandAndSixteen1115 PostDeleteQueuedReservedInstancesVersionEnum = "2016-11-15"
+	POSTDeleteQueuedReservedInstancesVersionEnumTwoThousandAndSixteen1115 PostDeleteQueuedReservedInstancesVersionEnum = "2016-11-15"
 )
 
 type PostDeleteQueuedReservedInstancesQueryParams struct {

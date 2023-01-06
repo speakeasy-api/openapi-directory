@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.AssuredworkloadsOrganizationsLocationsOperationsListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AssuredworkloadsOrganizationsLocationsOperationsListPathParams{
-            Name: "autem",
+            Name: "aut",
         },
         QueryParams: operations.AssuredworkloadsOrganizationsLocationsOperationsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "officia",
-            Alt: "media",
-            Callback: "aperiam",
-            Fields: "quasi",
-            Filter: "enim",
+            DollarXgafv: "2",
+            AccessToken: "quo",
+            Alt: "json",
+            Callback: "et",
+            Fields: "ut",
+            Filter: "laborum",
             Key: "incidunt",
-            OauthToken: "tenetur",
-            PageSize: 8458858280201702678,
-            PageToken: "repellat",
+            OauthToken: "rem",
+            PageSize: 4252662740806996599,
+            PageToken: "facilis",
             PrettyPrint: false,
-            QuotaUser: "totam",
-            UploadType: "quisquam",
-            UploadProtocol: "ad",
+            QuotaUser: "autem",
+            UploadType: "quae",
+            UploadProtocol: "temporibus",
         },
     }
     
@@ -73,6 +72,7 @@ func main() {
 * `AssuredworkloadsOrganizationsLocationsWorkloadsCreate` - Creates Assured Workload.
 * `AssuredworkloadsOrganizationsLocationsWorkloadsDelete` - Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.
 * `AssuredworkloadsOrganizationsLocationsWorkloadsList` - Lists Assured Workloads under a CRM Node.
+* `AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions` - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 * `AssuredworkloadsOrganizationsLocationsWorkloadsPatch` - Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 * `AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources` - Restrict the list of resources allowed in the Workload environment. The current list of allowed products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In addition to assuredworkloads.workload.update permission, the user should also have orgpolicy.policy.set permission on the folder resource to use this functionality.
 * `AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge` - Acknowledges an existing violation. By acknowledging a violation, users acknowledge the existence of a compliance violation in their workload and decide to ignore it due to a valid business justification. Acknowledgement is a permanent operation and it cannot be reverted.

@@ -3,13 +3,13 @@ package operations
 type GetDeleteLoadBalancerActionEnum string
 
 const (
-	GetDeleteLoadBalancerActionEnumDeleteLoadBalancer GetDeleteLoadBalancerActionEnum = "DeleteLoadBalancer"
+	GETDeleteLoadBalancerActionEnumDeleteLoadBalancer GetDeleteLoadBalancerActionEnum = "DeleteLoadBalancer"
 )
 
 type GetDeleteLoadBalancerVersionEnum string
 
 const (
-	GetDeleteLoadBalancerVersionEnumTwoThousandAndFifteen1201 GetDeleteLoadBalancerVersionEnum = "2015-12-01"
+	GETDeleteLoadBalancerVersionEnumTwoThousandAndFifteen1201 GetDeleteLoadBalancerVersionEnum = "2015-12-01"
 )
 
 type GetDeleteLoadBalancerQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,47 +34,42 @@ func main() {
     
     req := operations.CreateAccessPointRequest{
         Headers: operations.CreateAccessPointHeaders{
-            XAmzAlgorithm: "adipisci",
-            XAmzContentSha256: "exercitationem",
-            XAmzCredential: "deserunt",
-            XAmzDate: "ex",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "at",
-            XAmzSignedHeaders: "harum",
+            XAmzAlgorithm: "accusantium",
+            XAmzContentSha256: "atque",
+            XAmzCredential: "amet",
+            XAmzDate: "nisi",
+            XAmzSecurityToken: "quidem",
+            XAmzSignature: "est",
+            XAmzSignedHeaders: "quo",
         },
         Request: operations.CreateAccessPointRequestBody{
-            ClientToken: "magnam",
-            FileSystemID: "earum",
+            ClientToken: "vero",
+            FileSystemID: "alias",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
-                Gid: 6071879840269989152,
+                Gid: 4176709158896497836,
                 SecondaryGids: []int64{
-                    2377858688803942796,
-                    3164118301708844729,
+                    1958777829936408748,
                 },
-                UID: 2623329617577619714,
+                UID: 5294730593135495901,
             },
             RootDirectory: &operations.CreateAccessPointRequestBodyRootDirectory{
                 CreationInfo: &shared.CreationInfo{
-                    OwnerGid: 3382514557618281506,
-                    OwnerUID: 5226245147244245092,
-                    Permissions: "sint",
+                    OwnerGid: 7470170325123997143,
+                    OwnerUID: 5712992115651289762,
+                    Permissions: "totam",
                 },
-                Path: "non",
+                Path: "aut",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "in",
-                },
-                shared.Tag{
-                    Key: "dolore",
-                    Value: "quas",
+                    Key: "magni",
+                    Value: "necessitatibus",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateAccessPoint(ctx, req)
+    res, err := s.CreateAccessPoint(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

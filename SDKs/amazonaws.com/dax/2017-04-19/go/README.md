@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,46 +34,47 @@ func main() {
     
     req := operations.CreateClusterRequest{
         Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "incidunt",
-            XAmzContentSha256: "inventore",
-            XAmzCredential: "voluptatem",
-            XAmzDate: "voluptates",
-            XAmzSecurityToken: "quisquam",
-            XAmzSignature: "architecto",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "non",
+            XAmzContentSha256: "deleniti",
+            XAmzCredential: "totam",
+            XAmzDate: "nemo",
+            XAmzSecurityToken: "eligendi",
+            XAmzSignature: "quo",
+            XAmzSignedHeaders: "et",
             XAmzTarget: "AmazonDAXV3.CreateCluster",
         },
         Request: shared.CreateClusterRequest{
             AvailabilityZones: []string{
-                "ut",
-                "et",
+                "enim",
             },
             ClusterEndpointEncryptionType: "TLS",
-            ClusterName: "et",
-            Description: "ipsam",
-            IamRoleArn: "magni",
-            NodeType: "et",
-            NotificationTopicArn: "inventore",
-            ParameterGroupName: "impedit",
-            PreferredMaintenanceWindow: "molestiae",
-            ReplicationFactor: 8112620927975136660,
-            SseSpecification: &shared.SseSpecification{
+            ClusterName: "quia",
+            Description: "vel",
+            IamRoleArn: "placeat",
+            NodeType: "rem",
+            NotificationTopicArn: "laudantium",
+            ParameterGroupName: "corporis",
+            PreferredMaintenanceWindow: "qui",
+            ReplicationFactor: 3762724418158293461,
+            SSESpecification: &shared.SseSpecification{
                 Enabled: true,
             },
             SecurityGroupIds: []string{
-                "repellendus",
+                "minima",
+                "blanditiis",
+                "sit",
             },
-            SubnetGroupName: "molestias",
+            SubnetGroupName: "dolorem",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "quia",
-                    Value: "ipsa",
+                    Key: "fugiat",
+                    Value: "dolores",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateCluster(ctx, req)
+    res, err := s.CreateCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

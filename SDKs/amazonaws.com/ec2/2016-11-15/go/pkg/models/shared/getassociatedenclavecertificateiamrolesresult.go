@@ -1,5 +1,5 @@
 package shared
 
 type GetAssociatedEnclaveCertificateIamRolesResult struct {
-	AssociatedRoles []AssociatedRole
+	AssociatedRoles map[string]interface{}
 }

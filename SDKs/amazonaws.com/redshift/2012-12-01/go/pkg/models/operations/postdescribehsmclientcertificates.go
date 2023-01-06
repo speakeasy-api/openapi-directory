@@ -3,13 +3,13 @@ package operations
 type PostDescribeHsmClientCertificatesActionEnum string
 
 const (
-	PostDescribeHsmClientCertificatesActionEnumDescribeHsmClientCertificates PostDescribeHsmClientCertificatesActionEnum = "DescribeHsmClientCertificates"
+	POSTDescribeHsmClientCertificatesActionEnumDescribeHsmClientCertificates PostDescribeHsmClientCertificatesActionEnum = "DescribeHsmClientCertificates"
 )
 
 type PostDescribeHsmClientCertificatesVersionEnum string
 
 const (
-	PostDescribeHsmClientCertificatesVersionEnumTwoThousandAndTwelve1201 PostDescribeHsmClientCertificatesVersionEnum = "2012-12-01"
+	POSTDescribeHsmClientCertificatesVersionEnumTwoThousandAndTwelve1201 PostDescribeHsmClientCertificatesVersionEnum = "2012-12-01"
 )
 
 type PostDescribeHsmClientCertificatesQueryParams struct {

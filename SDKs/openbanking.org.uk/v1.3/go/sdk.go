@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -14,12 +15,12 @@ type HTTPClient interface {
 }
 
 type SDK struct {
-	Atm    *Atm
-	Bca    *Bca
+	ATM    *Atm
+	BCA    *Bca
 	Branch *Branch
-	Ccc    *Ccc
-	Pca    *Pca
-	Sme    *Sme
+	CCC    *Ccc
+	PCA    *Pca
+	SME    *Sme
 
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
@@ -71,7 +72,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.Atm = NewAtm(
+	sdk.ATM = NewAtm(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -80,7 +81,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Bca = NewBca(
+	sdk.BCA = NewBca(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -98,7 +99,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Ccc = NewCcc(
+	sdk.CCC = NewCcc(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -107,7 +108,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Pca = NewPca(
+	sdk.PCA = NewPca(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -116,7 +117,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Sme = NewSme(
+	sdk.SME = NewSme(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

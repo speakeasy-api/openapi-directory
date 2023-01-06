@@ -3,13 +3,13 @@ package operations
 type PostModifyVpcEndpointActionEnum string
 
 const (
-	PostModifyVpcEndpointActionEnumModifyVpcEndpoint PostModifyVpcEndpointActionEnum = "ModifyVpcEndpoint"
+	POSTModifyVpcEndpointActionEnumModifyVpcEndpoint PostModifyVpcEndpointActionEnum = "ModifyVpcEndpoint"
 )
 
 type PostModifyVpcEndpointVersionEnum string
 
 const (
-	PostModifyVpcEndpointVersionEnumTwoThousandAndSixteen1115 PostModifyVpcEndpointVersionEnum = "2016-11-15"
+	POSTModifyVpcEndpointVersionEnumTwoThousandAndSixteen1115 PostModifyVpcEndpointVersionEnum = "2016-11-15"
 )
 
 type PostModifyVpcEndpointQueryParams struct {

@@ -14,6 +14,8 @@ type WorkflowRunSimpleCommitCommitter struct {
 	Name  string `json:"name"`
 }
 
+// WorkflowRunSimpleCommit
+// Simple Commit
 type WorkflowRunSimpleCommit struct {
 	Author    WorkflowRunSimpleCommitAuthor    `json:"author"`
 	Committer WorkflowRunSimpleCommitCommitter `json:"committer"`

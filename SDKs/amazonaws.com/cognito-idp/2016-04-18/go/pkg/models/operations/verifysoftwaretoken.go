@@ -29,14 +29,14 @@ type VerifySoftwareTokenRequest struct {
 type VerifySoftwareTokenResponse struct {
 	CodeMismatchException                 *interface{}
 	ContentType                           string
-	EnableSoftwareTokenMfaException       *interface{}
+	EnableSoftwareTokenMFAException       *interface{}
 	InternalErrorException                *interface{}
 	InvalidParameterException             *interface{}
 	InvalidUserPoolConfigurationException *interface{}
 	NotAuthorizedException                *interface{}
 	PasswordResetRequiredException        *interface{}
 	ResourceNotFoundException             *interface{}
-	SoftwareTokenMfaNotFoundException     *interface{}
+	SoftwareTokenMFANotFoundException     *interface{}
 	StatusCode                            int64
 	TooManyRequestsException              *interface{}
 	UserNotConfirmedException             *interface{}

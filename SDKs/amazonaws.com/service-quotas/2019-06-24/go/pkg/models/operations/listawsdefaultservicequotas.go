@@ -12,7 +12,7 @@ type ListAwsDefaultServiceQuotasQueryParams struct {
 type ListAwsDefaultServiceQuotasXAmzTargetEnum string
 
 const (
-	ListAwsDefaultServiceQuotasXAmzTargetEnumServiceQuotasV20190624ListAwsDefaultServiceQuotas ListAwsDefaultServiceQuotasXAmzTargetEnum = "ServiceQuotasV20190624.ListAWSDefaultServiceQuotas"
+	ListAWSDefaultServiceQuotasXAmzTargetEnumServiceQuotasV20190624ListAwsDefaultServiceQuotas ListAwsDefaultServiceQuotasXAmzTargetEnum = "ServiceQuotasV20190624.ListAWSDefaultServiceQuotas"
 )
 
 type ListAwsDefaultServiceQuotasHeaders struct {
@@ -37,7 +37,7 @@ type ListAwsDefaultServiceQuotasResponse struct {
 	ContentType                         string
 	IllegalArgumentException            *interface{}
 	InvalidPaginationTokenException     *interface{}
-	ListAwsDefaultServiceQuotasResponse *shared.ListAwsDefaultServiceQuotasResponse
+	ListAWSDefaultServiceQuotasResponse *shared.ListAwsDefaultServiceQuotasResponse
 	NoSuchResourceException             *interface{}
 	ServiceException                    *interface{}
 	StatusCode                          int64

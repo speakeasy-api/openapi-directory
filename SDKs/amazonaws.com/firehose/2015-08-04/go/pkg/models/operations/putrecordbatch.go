@@ -29,7 +29,7 @@ type PutRecordBatchRequest struct {
 type PutRecordBatchResponse struct {
 	ContentType                 string
 	InvalidArgumentException    *interface{}
-	InvalidKmsResourceException *interface{}
+	InvalidKMSResourceException *interface{}
 	PutRecordBatchOutput        *shared.PutRecordBatchOutput
 	ResourceNotFoundException   *interface{}
 	ServiceUnavailableException *interface{}

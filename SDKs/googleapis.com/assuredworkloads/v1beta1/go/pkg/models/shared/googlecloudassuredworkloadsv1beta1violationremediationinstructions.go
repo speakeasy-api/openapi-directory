@@ -1,8 +1,0 @@
-package shared
-
-// GoogleCloudAssuredworkloadsV1beta1ViolationRemediationInstructions
-// Instructions to remediate violation
-type GoogleCloudAssuredworkloadsV1beta1ViolationRemediationInstructions struct {
-	ConsoleInstructions *GoogleCloudAssuredworkloadsV1beta1ViolationRemediationInstructionsConsole `json:"consoleInstructions,omitempty"`
-	GcloudInstructions  *GoogleCloudAssuredworkloadsV1beta1ViolationRemediationInstructionsGcloud  `json:"gcloudInstructions,omitempty"`
-}

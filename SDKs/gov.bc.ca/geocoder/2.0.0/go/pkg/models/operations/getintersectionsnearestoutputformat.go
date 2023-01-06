@@ -20,7 +20,7 @@ type GetIntersectionsNearestOutputFormatQueryParams struct {
 	MaxDegree   *int64 `queryParam:"style=form,explode=true,name=maxDegree"`
 	MaxDistance *int64 `queryParam:"style=form,explode=true,name=maxDistance"`
 	MinDegree   *int64 `queryParam:"style=form,explode=true,name=minDegree"`
-	OutputSrs   *int64 `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS   *int64 `queryParam:"style=form,explode=true,name=outputSRS"`
 	Point       string `queryParam:"style=form,explode=true,name=point"`
 }
 

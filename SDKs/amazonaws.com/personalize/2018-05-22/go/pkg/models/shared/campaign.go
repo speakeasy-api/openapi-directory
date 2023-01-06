@@ -13,7 +13,7 @@ type Campaign struct {
 	FailureReason        *string                `json:"failureReason,omitempty"`
 	LastUpdatedDateTime  *time.Time             `json:"lastUpdatedDateTime,omitempty"`
 	LatestCampaignUpdate *CampaignUpdateSummary `json:"latestCampaignUpdate,omitempty"`
-	MinProvisionedTps    *int64                 `json:"minProvisionedTPS,omitempty"`
+	MinProvisionedTPS    *int64                 `json:"minProvisionedTPS,omitempty"`
 	Name                 *string                `json:"name,omitempty"`
 	SolutionVersionArn   *string                `json:"solutionVersionArn,omitempty"`
 	Status               *string                `json:"status,omitempty"`

@@ -83,7 +83,7 @@ type Imcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Imcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Imcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Imcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Imcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Imcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Imcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Imcer404ApplicationJSON struct {

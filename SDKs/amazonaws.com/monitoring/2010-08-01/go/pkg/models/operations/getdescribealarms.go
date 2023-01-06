@@ -7,21 +7,21 @@ import (
 type GetDescribeAlarmsActionEnum string
 
 const (
-	GetDescribeAlarmsActionEnumDescribeAlarms GetDescribeAlarmsActionEnum = "DescribeAlarms"
+	GETDescribeAlarmsActionEnumDescribeAlarms GetDescribeAlarmsActionEnum = "DescribeAlarms"
 )
 
 type GetDescribeAlarmsStateValueEnum string
 
 const (
-	GetDescribeAlarmsStateValueEnumOk               GetDescribeAlarmsStateValueEnum = "OK"
-	GetDescribeAlarmsStateValueEnumAlarm            GetDescribeAlarmsStateValueEnum = "ALARM"
-	GetDescribeAlarmsStateValueEnumInsufficientData GetDescribeAlarmsStateValueEnum = "INSUFFICIENT_DATA"
+	GETDescribeAlarmsStateValueEnumOk               GetDescribeAlarmsStateValueEnum = "OK"
+	GETDescribeAlarmsStateValueEnumAlarm            GetDescribeAlarmsStateValueEnum = "ALARM"
+	GETDescribeAlarmsStateValueEnumInsufficientData GetDescribeAlarmsStateValueEnum = "INSUFFICIENT_DATA"
 )
 
 type GetDescribeAlarmsVersionEnum string
 
 const (
-	GetDescribeAlarmsVersionEnumTwoThousandAndTen0801 GetDescribeAlarmsVersionEnum = "2010-08-01"
+	GETDescribeAlarmsVersionEnumTwoThousandAndTen0801 GetDescribeAlarmsVersionEnum = "2010-08-01"
 )
 
 type GetDescribeAlarmsQueryParams struct {

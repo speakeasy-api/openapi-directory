@@ -3,13 +3,13 @@ package operations
 type PostModifyInstanceAttributeActionEnum string
 
 const (
-	PostModifyInstanceAttributeActionEnumModifyInstanceAttribute PostModifyInstanceAttributeActionEnum = "ModifyInstanceAttribute"
+	POSTModifyInstanceAttributeActionEnumModifyInstanceAttribute PostModifyInstanceAttributeActionEnum = "ModifyInstanceAttribute"
 )
 
 type PostModifyInstanceAttributeVersionEnum string
 
 const (
-	PostModifyInstanceAttributeVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceAttributeVersionEnum = "2016-11-15"
+	POSTModifyInstanceAttributeVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceAttributeVersionEnum = "2016-11-15"
 )
 
 type PostModifyInstanceAttributeQueryParams struct {

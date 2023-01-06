@@ -1,5 +1,5 @@
 package shared
 
 type DescribeNodegroupResponse struct {
-	Nodegroup *Nodegroup `json:"nodegroup,omitempty"`
+	Nodegroup *Nodegroup1 `json:"nodegroup,omitempty"`
 }

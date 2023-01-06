@@ -8,14 +8,14 @@ type ListReplicasPathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type ListReplicasRequest struct {
-	PathParams ListReplicasPathParams
-}
-
 type ListReplicas401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListReplicasRequest struct {
+	PathParams ListReplicasPathParams
 }
 
 type ListReplicasResponse struct {

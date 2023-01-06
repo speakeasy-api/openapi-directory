@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,24 +35,24 @@ func main() {
     req := operations.GetApplySecurityGroupsToLoadBalancerRequest{
         QueryParams: operations.GetApplySecurityGroupsToLoadBalancerQueryParams{
             Action: "ApplySecurityGroupsToLoadBalancer",
-            LoadBalancerName: "cumque",
+            LoadBalancerName: "culpa",
             SecurityGroups: []string{
-                "adipisci",
+                "voluptas",
             },
             Version: "2012-06-01",
         },
         Headers: operations.GetApplySecurityGroupsToLoadBalancerHeaders{
-            XAmzAlgorithm: "accusantium",
-            XAmzContentSha256: "exercitationem",
-            XAmzCredential: "doloremque",
-            XAmzDate: "et",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "suscipit",
-            XAmzSignedHeaders: "inventore",
+            XAmzAlgorithm: "veniam",
+            XAmzContentSha256: "architecto",
+            XAmzCredential: "molestias",
+            XAmzDate: "rerum",
+            XAmzSecurityToken: "quo",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "saepe",
         },
     }
     
-    res, err := s.Sdk.GetApplySecurityGroupsToLoadBalancer(ctx, req)
+    res, err := s.GetApplySecurityGroupsToLoadBalancer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

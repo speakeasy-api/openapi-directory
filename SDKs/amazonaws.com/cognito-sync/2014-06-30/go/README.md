@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.BulkPublishRequest{
         PathParams: operations.BulkPublishPathParams{
-            IdentityPoolID: "recusandae",
+            IdentityPoolID: "expedita",
         },
         Headers: operations.BulkPublishHeaders{
-            XAmzAlgorithm: "asperiores",
-            XAmzContentSha256: "quas",
-            XAmzCredential: "repellendus",
-            XAmzDate: "deleniti",
-            XAmzSecurityToken: "corporis",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "architecto",
+            XAmzAlgorithm: "itaque",
+            XAmzContentSha256: "qui",
+            XAmzCredential: "voluptatum",
+            XAmzDate: "eius",
+            XAmzSecurityToken: "modi",
+            XAmzSignature: "adipisci",
+            XAmzSignedHeaders: "suscipit",
         },
     }
     
-    res, err := s.Sdk.BulkPublish(ctx, req)
+    res, err := s.BulkPublish(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -13,11 +13,6 @@ type GetCredentialsQueryParams struct {
 	ExpirySeconds *int64 `queryParam:"style=form,explode=true,name=expiry_seconds"`
 }
 
-type GetCredentialsRequest struct {
-	PathParams  GetCredentialsPathParams
-	QueryParams GetCredentialsQueryParams
-}
-
 type GetCredentials200ApplicationJSON struct {
 	CertificateAuthorityData *string    `json:"certificate_authority_data,omitempty"`
 	ClientCertificateData    *string    `json:"client_certificate_data,omitempty"`
@@ -31,6 +26,11 @@ type GetCredentials401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetCredentialsRequest struct {
+	PathParams  GetCredentialsPathParams
+	QueryParams GetCredentialsQueryParams
 }
 
 type GetCredentialsResponse struct {

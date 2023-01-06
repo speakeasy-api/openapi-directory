@@ -3,13 +3,13 @@ package operations
 type GetResetServiceSpecificCredentialActionEnum string
 
 const (
-	GetResetServiceSpecificCredentialActionEnumResetServiceSpecificCredential GetResetServiceSpecificCredentialActionEnum = "ResetServiceSpecificCredential"
+	GETResetServiceSpecificCredentialActionEnumResetServiceSpecificCredential GetResetServiceSpecificCredentialActionEnum = "ResetServiceSpecificCredential"
 )
 
 type GetResetServiceSpecificCredentialVersionEnum string
 
 const (
-	GetResetServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GetResetServiceSpecificCredentialVersionEnum = "2010-05-08"
+	GETResetServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GetResetServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
 type GetResetServiceSpecificCredentialQueryParams struct {

@@ -1,11 +1,7 @@
 package shared
 
-import (
-	"time"
-)
-
 type GetPasswordDataResult struct {
-	InstanceID   *string
-	PasswordData *string
-	Timestamp    *time.Time
+	InstanceID   map[string]interface{}
+	PasswordData map[string]interface{}
+	Timestamp    map[string]interface{}
 }

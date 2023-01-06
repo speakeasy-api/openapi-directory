@@ -3,13 +3,13 @@ package operations
 type GetDeleteAlarmsActionEnum string
 
 const (
-	GetDeleteAlarmsActionEnumDeleteAlarms GetDeleteAlarmsActionEnum = "DeleteAlarms"
+	GETDeleteAlarmsActionEnumDeleteAlarms GetDeleteAlarmsActionEnum = "DeleteAlarms"
 )
 
 type GetDeleteAlarmsVersionEnum string
 
 const (
-	GetDeleteAlarmsVersionEnumTwoThousandAndTen0801 GetDeleteAlarmsVersionEnum = "2010-08-01"
+	GETDeleteAlarmsVersionEnumTwoThousandAndTen0801 GetDeleteAlarmsVersionEnum = "2010-08-01"
 )
 
 type GetDeleteAlarmsQueryParams struct {

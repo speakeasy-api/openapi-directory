@@ -1,6 +1,6 @@
 package shared
 
 type ListLfTagsResponse struct {
-	LfTags    []LfTagPair `json:"LFTags,omitempty"`
+	LFTags    []LfTagPair `json:"LFTags,omitempty"`
 	NextToken *string     `json:"NextToken,omitempty"`
 }

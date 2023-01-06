@@ -3,9 +3,9 @@ package shared
 type OsPolicyModeEnum string
 
 const (
-	OsPolicyModeEnumModeUnspecified OsPolicyModeEnum = "MODE_UNSPECIFIED"
-	OsPolicyModeEnumValidation      OsPolicyModeEnum = "VALIDATION"
-	OsPolicyModeEnumEnforcement     OsPolicyModeEnum = "ENFORCEMENT"
+	OSPolicyModeEnumModeUnspecified OsPolicyModeEnum = "MODE_UNSPECIFIED"
+	OSPolicyModeEnumValidation      OsPolicyModeEnum = "VALIDATION"
+	OSPolicyModeEnumEnforcement     OsPolicyModeEnum = "ENFORCEMENT"
 )
 
 // OsPolicy

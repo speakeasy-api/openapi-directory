@@ -3,7 +3,7 @@ package shared
 type RepertoirEcreaterequestRepertoireEditEnum string
 
 const (
-	RepertoirEcreaterequestRepertoireEditEnumCreate RepertoirEcreaterequestRepertoireEditEnum = "create"
+	REPERTOIREcreaterequestRepertoireEditEnumCreate RepertoirEcreaterequestRepertoireEditEnum = "create"
 )
 
 type RepertoirEcreaterequest struct {

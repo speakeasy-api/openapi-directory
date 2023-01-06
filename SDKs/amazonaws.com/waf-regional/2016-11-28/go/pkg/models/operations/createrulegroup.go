@@ -30,11 +30,11 @@ type CreateRuleGroupResponse struct {
 	ContentType                           string
 	CreateRuleGroupResponse               *shared.CreateRuleGroupResponse
 	StatusCode                            int64
-	WafBadRequestException                *interface{}
-	WafDisallowedNameException            *interface{}
-	WafInternalErrorException             *interface{}
-	WafLimitsExceededException            *interface{}
-	WafStaleDataException                 *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFBadRequestException                *interface{}
+	WAFDisallowedNameException            *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFLimitsExceededException            *interface{}
+	WAFStaleDataException                 *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

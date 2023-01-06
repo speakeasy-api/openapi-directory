@@ -1,23 +1,23 @@
 package operations
 
-type PostAssetsCovarianceMatrixRequestBody1Assets struct {
-	AssetReturns []float64 `json:"assetReturns"`
-}
-
 type PostAssetsCovarianceMatrixRequestBody1 struct {
-	Assets []PostAssetsCovarianceMatrixRequestBody1Assets `json:"assets"`
-}
-
-type PostAssetsCovarianceMatrixRequestBody2 struct {
 	Assets                  int64       `json:"assets"`
 	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`
 	AssetsVariances         []float64   `json:"assetsVariances"`
 }
 
-type PostAssetsCovarianceMatrixRequestBody3 struct {
+type PostAssetsCovarianceMatrixRequestBody2 struct {
 	Assets                  int64       `json:"assets"`
 	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`
 	AssetsVolatilities      []float64   `json:"assetsVolatilities"`
+}
+
+type PostAssetsCovarianceMatrixRequestBody3Assets struct {
+	AssetReturns []float64 `json:"assetReturns"`
+}
+
+type PostAssetsCovarianceMatrixRequestBody3 struct {
+	Assets []PostAssetsCovarianceMatrixRequestBody3Assets `json:"assets"`
 }
 
 type PostAssetsCovarianceMatrix200ApplicationJSON struct {
@@ -30,6 +30,6 @@ type PostAssetsCovarianceMatrixRequest struct {
 
 type PostAssetsCovarianceMatrixResponse struct {
 	ContentType                                        string
-	PostAssetsCovarianceMatrix200ApplicationJSONObject *PostAssetsCovarianceMatrix200ApplicationJSON
 	StatusCode                                         int64
+	PostAssetsCovarianceMatrix200ApplicationJSONObject *PostAssetsCovarianceMatrix200ApplicationJSON
 }

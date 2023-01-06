@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,35 +34,35 @@ func main() {
     
     req := operations.AddTagsToCertificateRequest{
         Headers: operations.AddTagsToCertificateHeaders{
-            XAmzAlgorithm: "ratione",
-            XAmzContentSha256: "quisquam",
-            XAmzCredential: "explicabo",
-            XAmzDate: "ea",
-            XAmzSecurityToken: "maxime",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "perferendis",
+            XAmzAlgorithm: "mollitia",
+            XAmzContentSha256: "inventore",
+            XAmzCredential: "delectus",
+            XAmzDate: "ipsa",
+            XAmzSecurityToken: "animi",
+            XAmzSignature: "animi",
+            XAmzSignedHeaders: "ut",
             XAmzTarget: "CertificateManager.AddTagsToCertificate",
         },
         Request: shared.AddTagsToCertificateRequest{
-            CertificateArn: "rerum",
+            CertificateArn: "fuga",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "quis",
-                    Value: "cumque",
+                    Key: "sed",
+                    Value: "et",
                 },
                 shared.Tag{
-                    Key: "minima",
-                    Value: "necessitatibus",
+                    Key: "consequuntur",
+                    Value: "non",
                 },
                 shared.Tag{
-                    Key: "est",
-                    Value: "quis",
+                    Key: "cupiditate",
+                    Value: "provident",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddTagsToCertificate(ctx, req)
+    res, err := s.AddTagsToCertificate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

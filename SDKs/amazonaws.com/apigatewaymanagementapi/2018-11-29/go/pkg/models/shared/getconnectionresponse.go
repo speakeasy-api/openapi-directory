@@ -1,11 +1,7 @@
 package shared
 
-import (
-	"time"
-)
-
 type GetConnectionResponse struct {
-	ConnectedAt  *time.Time `json:"ConnectedAt,omitempty"`
-	Identity     *Identity  `json:"Identity,omitempty"`
-	LastActiveAt *time.Time `json:"LastActiveAt,omitempty"`
+	ConnectedAt  map[string]interface{} `json:"ConnectedAt,omitempty"`
+	Identity     map[string]interface{} `json:"Identity,omitempty"`
+	LastActiveAt map[string]interface{} `json:"LastActiveAt,omitempty"`
 }

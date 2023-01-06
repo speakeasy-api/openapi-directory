@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -88,14 +88,14 @@ func (s *SigningBasketsServiceSbs) CreateSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -107,14 +107,14 @@ func (s *SigningBasketsServiceSbs) CreateSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -126,14 +126,14 @@ func (s *SigningBasketsServiceSbs) CreateSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -145,14 +145,14 @@ func (s *SigningBasketsServiceSbs) CreateSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -164,14 +164,14 @@ func (s *SigningBasketsServiceSbs) CreateSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -189,14 +189,14 @@ func (s *SigningBasketsServiceSbs) CreateSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -259,14 +259,14 @@ func (s *SigningBasketsServiceSbs) DeleteSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -278,14 +278,14 @@ func (s *SigningBasketsServiceSbs) DeleteSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -297,14 +297,14 @@ func (s *SigningBasketsServiceSbs) DeleteSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -316,14 +316,14 @@ func (s *SigningBasketsServiceSbs) DeleteSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -335,14 +335,14 @@ func (s *SigningBasketsServiceSbs) DeleteSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -360,14 +360,14 @@ func (s *SigningBasketsServiceSbs) DeleteSigningBasket(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -435,14 +435,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasket(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -454,14 +454,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasket(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -473,14 +473,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasket(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -492,14 +492,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasket(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -511,14 +511,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasket(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -536,14 +536,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasket(ctx context.Context, request
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -613,14 +613,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -632,14 +632,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -651,14 +651,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -670,14 +670,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -689,14 +689,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -714,14 +714,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -789,14 +789,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketScaStatus(ctx context.Context
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -808,14 +808,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketScaStatus(ctx context.Context
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -827,14 +827,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketScaStatus(ctx context.Context
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -846,14 +846,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketScaStatus(ctx context.Context
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -865,14 +865,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketScaStatus(ctx context.Context
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -890,14 +890,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketScaStatus(ctx context.Context
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -965,14 +965,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketStatus(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -984,14 +984,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketStatus(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1003,14 +1003,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketStatus(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1022,14 +1022,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketStatus(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1041,14 +1041,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketStatus(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1066,14 +1066,14 @@ func (s *SigningBasketsServiceSbs) GetSigningBasketStatus(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1180,14 +1180,14 @@ func (s *SigningBasketsServiceSbs) StartSigningBasketAuthorisation(ctx context.C
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1199,14 +1199,14 @@ func (s *SigningBasketsServiceSbs) StartSigningBasketAuthorisation(ctx context.C
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1218,14 +1218,14 @@ func (s *SigningBasketsServiceSbs) StartSigningBasketAuthorisation(ctx context.C
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1237,14 +1237,14 @@ func (s *SigningBasketsServiceSbs) StartSigningBasketAuthorisation(ctx context.C
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1256,14 +1256,14 @@ func (s *SigningBasketsServiceSbs) StartSigningBasketAuthorisation(ctx context.C
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1281,14 +1281,14 @@ func (s *SigningBasketsServiceSbs) StartSigningBasketAuthorisation(ctx context.C
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1400,14 +1400,14 @@ func (s *SigningBasketsServiceSbs) UpdateSigningBasketPsuData(ctx context.Contex
 				return nil, err
 			}
 
-			res.Error400NgSbs = out
+			res.Error400NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Sbs = out
+			res.Error400SBS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1419,14 +1419,14 @@ func (s *SigningBasketsServiceSbs) UpdateSigningBasketPsuData(ctx context.Contex
 				return nil, err
 			}
 
-			res.Error401NgSbs = out
+			res.Error401NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Sbs = out
+			res.Error401SBS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1438,14 +1438,14 @@ func (s *SigningBasketsServiceSbs) UpdateSigningBasketPsuData(ctx context.Contex
 				return nil, err
 			}
 
-			res.Error403NgSbs = out
+			res.Error403NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Sbs = out
+			res.Error403SBS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1457,14 +1457,14 @@ func (s *SigningBasketsServiceSbs) UpdateSigningBasketPsuData(ctx context.Contex
 				return nil, err
 			}
 
-			res.Error404NgSbs = out
+			res.Error404NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Sbs = out
+			res.Error404SBS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1476,14 +1476,14 @@ func (s *SigningBasketsServiceSbs) UpdateSigningBasketPsuData(ctx context.Contex
 				return nil, err
 			}
 
-			res.Error405NgSbs = out
+			res.Error405NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Sbs = out
+			res.Error405SBS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1501,14 +1501,14 @@ func (s *SigningBasketsServiceSbs) UpdateSigningBasketPsuData(ctx context.Contex
 				return nil, err
 			}
 
-			res.Error409NgSbs = out
+			res.Error409NGSBS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Sbs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Sbs = out
+			res.Error409SBS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header

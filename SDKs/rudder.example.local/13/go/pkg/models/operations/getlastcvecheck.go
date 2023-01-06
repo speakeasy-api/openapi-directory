@@ -7,18 +7,18 @@ import (
 type GetLastCveCheck200ApplicationJSONActionEnum string
 
 const (
-	GetLastCveCheck200ApplicationJSONActionEnumGetLastCveCheck GetLastCveCheck200ApplicationJSONActionEnum = "getLastCVECheck"
+	GetLastCVECheck200ApplicationJSONActionEnumGetLastCveCheck GetLastCveCheck200ApplicationJSONActionEnum = "getLastCVECheck"
 )
 
 type GetLastCveCheck200ApplicationJSONData struct {
-	CveChecks []shared.CveCheck `json:"CVEChecks"`
+	CVEChecks []shared.CveCheck `json:"CVEChecks"`
 }
 
 type GetLastCveCheck200ApplicationJSONResultEnum string
 
 const (
-	GetLastCveCheck200ApplicationJSONResultEnumSuccess GetLastCveCheck200ApplicationJSONResultEnum = "success"
-	GetLastCveCheck200ApplicationJSONResultEnumError   GetLastCveCheck200ApplicationJSONResultEnum = "error"
+	GetLastCVECheck200ApplicationJSONResultEnumSuccess GetLastCveCheck200ApplicationJSONResultEnum = "success"
+	GetLastCVECheck200ApplicationJSONResultEnumError   GetLastCveCheck200ApplicationJSONResultEnum = "error"
 )
 
 type GetLastCveCheck200ApplicationJSON struct {
@@ -30,5 +30,5 @@ type GetLastCveCheck200ApplicationJSON struct {
 type GetLastCveCheckResponse struct {
 	ContentType                             string
 	StatusCode                              int64
-	GetLastCveCheck200ApplicationJSONObject *GetLastCveCheck200ApplicationJSON
+	GetLastCVECheck200ApplicationJSONObject *GetLastCveCheck200ApplicationJSON
 }

@@ -3,13 +3,13 @@ package operations
 type GetRestoreAddressToClassicActionEnum string
 
 const (
-	GetRestoreAddressToClassicActionEnumRestoreAddressToClassic GetRestoreAddressToClassicActionEnum = "RestoreAddressToClassic"
+	GETRestoreAddressToClassicActionEnumRestoreAddressToClassic GetRestoreAddressToClassicActionEnum = "RestoreAddressToClassic"
 )
 
 type GetRestoreAddressToClassicVersionEnum string
 
 const (
-	GetRestoreAddressToClassicVersionEnumTwoThousandAndSixteen1115 GetRestoreAddressToClassicVersionEnum = "2016-11-15"
+	GETRestoreAddressToClassicVersionEnumTwoThousandAndSixteen1115 GetRestoreAddressToClassicVersionEnum = "2016-11-15"
 )
 
 type GetRestoreAddressToClassicQueryParams struct {

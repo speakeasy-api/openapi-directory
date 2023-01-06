@@ -3,10 +3,10 @@ package shared
 type OsPolicyResourceFileResourceStateEnum string
 
 const (
-	OsPolicyResourceFileResourceStateEnumDesiredStateUnspecified OsPolicyResourceFileResourceStateEnum = "DESIRED_STATE_UNSPECIFIED"
-	OsPolicyResourceFileResourceStateEnumPresent                 OsPolicyResourceFileResourceStateEnum = "PRESENT"
-	OsPolicyResourceFileResourceStateEnumAbsent                  OsPolicyResourceFileResourceStateEnum = "ABSENT"
-	OsPolicyResourceFileResourceStateEnumContentsMatch           OsPolicyResourceFileResourceStateEnum = "CONTENTS_MATCH"
+	OSPolicyResourceFileResourceStateEnumDesiredStateUnspecified OsPolicyResourceFileResourceStateEnum = "DESIRED_STATE_UNSPECIFIED"
+	OSPolicyResourceFileResourceStateEnumPresent                 OsPolicyResourceFileResourceStateEnum = "PRESENT"
+	OSPolicyResourceFileResourceStateEnumAbsent                  OsPolicyResourceFileResourceStateEnum = "ABSENT"
+	OSPolicyResourceFileResourceStateEnumContentsMatch           OsPolicyResourceFileResourceStateEnum = "CONTENTS_MATCH"
 )
 
 // OsPolicyResourceFileResource

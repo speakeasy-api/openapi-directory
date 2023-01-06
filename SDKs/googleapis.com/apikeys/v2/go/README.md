@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,25 +27,25 @@ func main() {
             Option1: &operations.ApikeysKeysLookupKeySecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.ApikeysKeysLookupKeyQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "labore",
-            Alt: "proto",
-            Callback: "doloribus",
-            Fields: "blanditiis",
-            Key: "labore",
-            KeyString: "pariatur",
-            OauthToken: "natus",
-            PrettyPrint: false,
-            QuotaUser: "praesentium",
-            UploadType: "minima",
-            UploadProtocol: "accusantium",
+            DollarXgafv: "2",
+            AccessToken: "praesentium",
+            Alt: "json",
+            Callback: "omnis",
+            Fields: "consequatur",
+            Key: "minima",
+            KeyString: "occaecati",
+            OauthToken: "est",
+            PrettyPrint: true,
+            QuotaUser: "tempore",
+            UploadType: "autem",
+            UploadProtocol: "sunt",
         },
     }
     

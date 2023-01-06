@@ -72,6 +72,6 @@ type GetListsBestSellersHistoryJSONRequest struct {
 
 type GetListsBestSellersHistoryJSONResponse struct {
 	ContentType                                            string
-	GetListsBestSellersHistoryJSON200ApplicationJSONObject *GetListsBestSellersHistoryJSON200ApplicationJSON
+	GETListsBestSellersHistoryJSON200ApplicationJSONObject *GetListsBestSellersHistoryJSON200ApplicationJSON
 	StatusCode                                             int64
 }

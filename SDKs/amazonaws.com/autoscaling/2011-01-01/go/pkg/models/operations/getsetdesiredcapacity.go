@@ -3,13 +3,13 @@ package operations
 type GetSetDesiredCapacityActionEnum string
 
 const (
-	GetSetDesiredCapacityActionEnumSetDesiredCapacity GetSetDesiredCapacityActionEnum = "SetDesiredCapacity"
+	GETSetDesiredCapacityActionEnumSetDesiredCapacity GetSetDesiredCapacityActionEnum = "SetDesiredCapacity"
 )
 
 type GetSetDesiredCapacityVersionEnum string
 
 const (
-	GetSetDesiredCapacityVersionEnumTwoThousandAndEleven0101 GetSetDesiredCapacityVersionEnum = "2011-01-01"
+	GETSetDesiredCapacityVersionEnumTwoThousandAndEleven0101 GetSetDesiredCapacityVersionEnum = "2011-01-01"
 )
 
 type GetSetDesiredCapacityQueryParams struct {

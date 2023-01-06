@@ -1,14 +1,13 @@
 package shared
 
-// IdentityServiceOidcConfig
+// IdentityServiceOidcConfigInput
 // Configuration for OIDC Auth flow.
-type IdentityServiceOidcConfig struct {
+type IdentityServiceOidcConfigInput struct {
 	CertificateAuthorityData *string `json:"certificateAuthorityData,omitempty"`
 	ClientID                 *string `json:"clientId,omitempty"`
 	ClientSecret             *string `json:"clientSecret,omitempty"`
 	DeployCloudConsoleProxy  *bool   `json:"deployCloudConsoleProxy,omitempty"`
 	EnableAccessToken        *bool   `json:"enableAccessToken,omitempty"`
-	EncryptedClientSecret    *string `json:"encryptedClientSecret,omitempty"`
 	ExtraParams              *string `json:"extraParams,omitempty"`
 	GroupPrefix              *string `json:"groupPrefix,omitempty"`
 	GroupsClaim              *string `json:"groupsClaim,omitempty"`
@@ -19,14 +18,15 @@ type IdentityServiceOidcConfig struct {
 	UserPrefix               *string `json:"userPrefix,omitempty"`
 }
 
-// IdentityServiceOidcConfigInput
+// IdentityServiceOidcConfig
 // Configuration for OIDC Auth flow.
-type IdentityServiceOidcConfigInput struct {
+type IdentityServiceOidcConfig struct {
 	CertificateAuthorityData *string `json:"certificateAuthorityData,omitempty"`
 	ClientID                 *string `json:"clientId,omitempty"`
 	ClientSecret             *string `json:"clientSecret,omitempty"`
 	DeployCloudConsoleProxy  *bool   `json:"deployCloudConsoleProxy,omitempty"`
 	EnableAccessToken        *bool   `json:"enableAccessToken,omitempty"`
+	EncryptedClientSecret    *string `json:"encryptedClientSecret,omitempty"`
 	ExtraParams              *string `json:"extraParams,omitempty"`
 	GroupPrefix              *string `json:"groupPrefix,omitempty"`
 	GroupsClaim              *string `json:"groupsClaim,omitempty"`

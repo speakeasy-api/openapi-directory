@@ -1,6 +1,6 @@
 package shared
 
 type DescribeCapacityReservationsResult struct {
-	CapacityReservations []CapacityReservation
-	NextToken            *string
+	CapacityReservations map[string]interface{}
+	NextToken            map[string]interface{}
 }

@@ -9,7 +9,7 @@ type CreateReplicationInstanceMessage struct {
 	DNSNameServers                   *string  `json:"DnsNameServers,omitempty"`
 	EngineVersion                    *string  `json:"EngineVersion,omitempty"`
 	KmsKeyID                         *string  `json:"KmsKeyId,omitempty"`
-	MultiAz                          *bool    `json:"MultiAZ,omitempty"`
+	MultiAZ                          *bool    `json:"MultiAZ,omitempty"`
 	PreferredMaintenanceWindow       *string  `json:"PreferredMaintenanceWindow,omitempty"`
 	PubliclyAccessible               *bool    `json:"PubliclyAccessible,omitempty"`
 	ReplicationInstanceClass         string   `json:"ReplicationInstanceClass"`

@@ -11,7 +11,7 @@ type DeleteGroupHeaders struct {
 }
 
 type DeleteGroupRequestBody struct {
-	GroupArn  *string `json:"GroupARN,omitempty"`
+	GroupARN  *string `json:"GroupARN,omitempty"`
 	GroupName *string `json:"GroupName,omitempty"`
 }
 

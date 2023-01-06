@@ -19,6 +19,6 @@ type GetAristaSwitchSnmpConfigRequest struct {
 
 type GetAristaSwitchSnmpConfigResponse struct {
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

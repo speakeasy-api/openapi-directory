@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.CvcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.CvcerRequestBody{
             CertificateParameters: &operations.CvcerRequestBodyCertificateParameters{
-                Dob: "non",
-                VcNo: "fuga",
+                DOB: "alias",
+                VCNo: "consequatur",
             },
-            ConsentArtifact: "maiores",
+            ConsentArtifact: "eum",
             Format: "pdf",
-            TxnID: "minima",
+            TxnID: "omnis",
         },
     }
     
-    res, err := s.Sdk.Cvcer(ctx, req)
+    res, err := s.APIs.Cvcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Cvcer` - Caste Validity Certificate
 

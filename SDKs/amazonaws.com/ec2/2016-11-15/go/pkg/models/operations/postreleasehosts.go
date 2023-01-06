@@ -3,13 +3,13 @@ package operations
 type PostReleaseHostsActionEnum string
 
 const (
-	PostReleaseHostsActionEnumReleaseHosts PostReleaseHostsActionEnum = "ReleaseHosts"
+	POSTReleaseHostsActionEnumReleaseHosts PostReleaseHostsActionEnum = "ReleaseHosts"
 )
 
 type PostReleaseHostsVersionEnum string
 
 const (
-	PostReleaseHostsVersionEnumTwoThousandAndSixteen1115 PostReleaseHostsVersionEnum = "2016-11-15"
+	POSTReleaseHostsVersionEnumTwoThousandAndSixteen1115 PostReleaseHostsVersionEnum = "2016-11-15"
 )
 
 type PostReleaseHostsQueryParams struct {

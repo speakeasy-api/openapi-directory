@@ -36,8 +36,8 @@ type RestoreRevisionUsingPostRequest struct {
 type RestoreRevisionUsingPostResponse struct {
 	ContentType                                      string
 	StatusCode                                       int64
-	RestoreRevisionUsingPost200ApplicationJSONObject *RestoreRevisionUsingPost200ApplicationJSON
-	RestoreRevisionUsingPost400ApplicationJSONObject *RestoreRevisionUsingPost400ApplicationJSON
-	RestoreRevisionUsingPost401ApplicationJSONObject *RestoreRevisionUsingPost401ApplicationJSON
-	RestoreRevisionUsingPost500ApplicationJSONObject *RestoreRevisionUsingPost500ApplicationJSON
+	RestoreRevisionUsingPOST200ApplicationJSONObject *RestoreRevisionUsingPost200ApplicationJSON
+	RestoreRevisionUsingPOST400ApplicationJSONObject *RestoreRevisionUsingPost400ApplicationJSON
+	RestoreRevisionUsingPOST401ApplicationJSONObject *RestoreRevisionUsingPost401ApplicationJSON
+	RestoreRevisionUsingPOST500ApplicationJSONObject *RestoreRevisionUsingPost500ApplicationJSON
 }

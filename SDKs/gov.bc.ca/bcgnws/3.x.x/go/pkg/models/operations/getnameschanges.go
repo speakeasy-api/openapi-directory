@@ -32,7 +32,7 @@ type GetNamesChangesQueryParams struct {
 	FromDate        int64                           `queryParam:"style=form,explode=true,name=fromDate"`
 	ItemsPerPage    *int64                          `queryParam:"style=form,explode=true,name=itemsPerPage"`
 	OutputFormat    GetNamesChangesOutputFormatEnum `queryParam:"style=form,explode=true,name=outputFormat"`
-	OutputSrs       *int64                          `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS       *int64                          `queryParam:"style=form,explode=true,name=outputSRS"`
 	OutputStyle     *GetNamesChangesOutputStyleEnum `queryParam:"style=form,explode=true,name=outputStyle"`
 	SortBy          *GetNamesChangesSortByEnum      `queryParam:"style=form,explode=true,name=sortBy"`
 	StartIndex      *int64                          `queryParam:"style=form,explode=true,name=startIndex"`

@@ -23,7 +23,7 @@ type GetTimeSeriesServiceStatisticsRequestBody struct {
 	EndTime                  time.Time `json:"EndTime"`
 	EntitySelectorExpression *string   `json:"EntitySelectorExpression,omitempty"`
 	ForecastStatistics       *bool     `json:"ForecastStatistics,omitempty"`
-	GroupArn                 *string   `json:"GroupARN,omitempty"`
+	GroupARN                 *string   `json:"GroupARN,omitempty"`
 	GroupName                *string   `json:"GroupName,omitempty"`
 	NextToken                *string   `json:"NextToken,omitempty"`
 	Period                   *int64    `json:"Period,omitempty"`

@@ -82,7 +82,7 @@ type Fslcs404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Fslcs404ApplicationJSONErrorDescriptionEnumNoRecordFound               Fslcs404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Fslcs404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Fslcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Fslcs404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Fslcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Fslcs404ApplicationJSON struct {

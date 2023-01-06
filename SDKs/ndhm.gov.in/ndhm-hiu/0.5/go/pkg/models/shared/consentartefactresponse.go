@@ -9,26 +9,14 @@ type ConsentArtefactResponseConsentConsentDetailCareContexts struct {
 	PatientReference     string `json:"patientReference"`
 }
 
-type ConsentArtefactResponseConsentConsentDetailConsentManager struct {
-	ID string `json:"id"`
-}
-
-type ConsentArtefactResponseConsentConsentDetailHip struct {
-	ID string `json:"id"`
-}
-
-type ConsentArtefactResponseConsentConsentDetailHiu struct {
-	ID string `json:"id"`
-}
-
 type ConsentArtefactResponseConsentConsentDetail struct {
 	CareContexts   []ConsentArtefactResponseConsentConsentDetailCareContexts `json:"careContexts"`
 	ConsentID      string                                                    `json:"consentId"`
-	ConsentManager ConsentArtefactResponseConsentConsentDetailConsentManager `json:"consentManager"`
+	ConsentManager map[string]interface{}                                    `json:"consentManager"`
 	CreatedAt      time.Time                                                 `json:"createdAt"`
 	HiTypes        []HiTypeEnumEnum                                          `json:"hiTypes"`
-	Hip            ConsentArtefactResponseConsentConsentDetailHip            `json:"hip"`
-	Hiu            ConsentArtefactResponseConsentConsentDetailHiu            `json:"hiu"`
+	Hip            map[string]interface{}                                    `json:"hip"`
+	Hiu            map[string]interface{}                                    `json:"hiu"`
 	Patient        ConsentManagerPatientID                                   `json:"patient"`
 	Permission     Permission                                                `json:"permission"`
 	Purpose        UsePurpose                                                `json:"purpose"`

@@ -9,7 +9,7 @@ type AccountUpdateNameRequestBody struct {
 }
 
 type AccountUpdateNameSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
+	JWT     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
 	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
 }
 

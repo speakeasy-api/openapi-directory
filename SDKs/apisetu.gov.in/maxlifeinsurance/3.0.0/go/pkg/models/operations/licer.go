@@ -5,9 +5,9 @@ import (
 )
 
 type LicerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Polid    string `json:"POLID"`
+	POLID    string `json:"POLID"`
 	UID      string `json:"UID"`
 }
 
@@ -84,7 +84,7 @@ type Licer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Licer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Licer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Licer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Licer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Licer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Licer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Licer404ApplicationJSON struct {

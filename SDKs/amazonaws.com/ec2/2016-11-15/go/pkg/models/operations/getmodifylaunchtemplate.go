@@ -3,13 +3,13 @@ package operations
 type GetModifyLaunchTemplateActionEnum string
 
 const (
-	GetModifyLaunchTemplateActionEnumModifyLaunchTemplate GetModifyLaunchTemplateActionEnum = "ModifyLaunchTemplate"
+	GETModifyLaunchTemplateActionEnumModifyLaunchTemplate GetModifyLaunchTemplateActionEnum = "ModifyLaunchTemplate"
 )
 
 type GetModifyLaunchTemplateVersionEnum string
 
 const (
-	GetModifyLaunchTemplateVersionEnumTwoThousandAndSixteen1115 GetModifyLaunchTemplateVersionEnum = "2016-11-15"
+	GETModifyLaunchTemplateVersionEnumTwoThousandAndSixteen1115 GetModifyLaunchTemplateVersionEnum = "2016-11-15"
 )
 
 type GetModifyLaunchTemplateQueryParams struct {

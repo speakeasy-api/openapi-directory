@@ -7,7 +7,7 @@ import (
 type UpdateAclxAmzTargetEnum string
 
 const (
-	UpdateAclxAmzTargetEnumAmazonMemoryDbUpdateACL UpdateAclxAmzTargetEnum = "AmazonMemoryDB.UpdateACL"
+	UpdateACLXAmzTargetEnumAmazonMemoryDbUpdateACL UpdateAclxAmzTargetEnum = "AmazonMemoryDB.UpdateACL"
 )
 
 type UpdateACLHeaders struct {

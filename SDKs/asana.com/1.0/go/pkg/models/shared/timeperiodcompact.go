@@ -12,10 +12,10 @@ const (
 	TimePeriodCompactPeriodEnumQ4 TimePeriodCompactPeriodEnum = "Q4"
 )
 
+// TimePeriodCompact
+// A generic Asana Resource, containing a globally unique identifier.
 type TimePeriodCompact struct {
-	EndOn        *string                      `json:"end_on,omitempty"`
-	Gid          *string                      `json:"gid,omitempty"`
-	Period       *TimePeriodCompactPeriodEnum `json:"period,omitempty"`
-	ResourceType *string                      `json:"resource_type,omitempty"`
-	StartOn      *string                      `json:"start_on,omitempty"`
+	EndOn   *string                      `json:"end_on,omitempty"`
+	Period  *TimePeriodCompactPeriodEnum `json:"period,omitempty"`
+	StartOn *string                      `json:"start_on,omitempty"`
 }

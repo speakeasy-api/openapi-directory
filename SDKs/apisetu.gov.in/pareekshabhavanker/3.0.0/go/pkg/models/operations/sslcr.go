@@ -5,7 +5,7 @@ import (
 )
 
 type SslcrRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	UID      string `json:"UID"`
 	Regno    string `json:"regno"`
@@ -85,7 +85,7 @@ type Sslcr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Sslcr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Sslcr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Sslcr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Sslcr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Sslcr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Sslcr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Sslcr404ApplicationJSON struct {

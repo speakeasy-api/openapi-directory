@@ -7,7 +7,7 @@ import (
 type CreateBgpPeerXAmzTargetEnum string
 
 const (
-	CreateBgpPeerXAmzTargetEnumOvertureServiceCreateBgpPeer CreateBgpPeerXAmzTargetEnum = "OvertureService.CreateBGPPeer"
+	CreateBGPPeerXAmzTargetEnumOvertureServiceCreateBgpPeer CreateBgpPeerXAmzTargetEnum = "OvertureService.CreateBGPPeer"
 )
 
 type CreateBgpPeerHeaders struct {
@@ -28,7 +28,7 @@ type CreateBgpPeerRequest struct {
 
 type CreateBgpPeerResponse struct {
 	ContentType                  string
-	CreateBgpPeerResponse        *shared.CreateBgpPeerResponse
+	CreateBGPPeerResponse        *shared.CreateBgpPeerResponse
 	DirectConnectClientException *interface{}
 	DirectConnectServerException *interface{}
 	StatusCode                   int64

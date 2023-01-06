@@ -3,13 +3,13 @@ package operations
 type PostDisassociateRouteTableActionEnum string
 
 const (
-	PostDisassociateRouteTableActionEnumDisassociateRouteTable PostDisassociateRouteTableActionEnum = "DisassociateRouteTable"
+	POSTDisassociateRouteTableActionEnumDisassociateRouteTable PostDisassociateRouteTableActionEnum = "DisassociateRouteTable"
 )
 
 type PostDisassociateRouteTableVersionEnum string
 
 const (
-	PostDisassociateRouteTableVersionEnumTwoThousandAndSixteen1115 PostDisassociateRouteTableVersionEnum = "2016-11-15"
+	POSTDisassociateRouteTableVersionEnumTwoThousandAndSixteen1115 PostDisassociateRouteTableVersionEnum = "2016-11-15"
 )
 
 type PostDisassociateRouteTableQueryParams struct {

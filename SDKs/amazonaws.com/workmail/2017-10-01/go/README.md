@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.AssociateDelegateToResourceRequest{
         Headers: operations.AssociateDelegateToResourceHeaders{
             XAmzAlgorithm: "velit",
-            XAmzContentSha256: "consequatur",
-            XAmzCredential: "reiciendis",
-            XAmzDate: "perspiciatis",
-            XAmzSecurityToken: "labore",
-            XAmzSignature: "earum",
-            XAmzSignedHeaders: "perferendis",
+            XAmzContentSha256: "explicabo",
+            XAmzCredential: "qui",
+            XAmzDate: "maiores",
+            XAmzSecurityToken: "debitis",
+            XAmzSignature: "molestiae",
+            XAmzSignedHeaders: "voluptas",
             XAmzTarget: "WorkMailService.AssociateDelegateToResource",
         },
         Request: shared.AssociateDelegateToResourceRequest{
-            EntityID: "adipisci",
-            OrganizationID: "quos",
-            ResourceID: "odit",
+            EntityID: "cupiditate",
+            OrganizationID: "in",
+            ResourceID: "molestiae",
         },
     }
     
-    res, err := s.Sdk.AssociateDelegateToResource(ctx, req)
+    res, err := s.AssociateDelegateToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

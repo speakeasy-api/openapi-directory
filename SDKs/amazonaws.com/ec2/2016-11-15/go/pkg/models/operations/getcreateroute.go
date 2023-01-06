@@ -3,13 +3,13 @@ package operations
 type GetCreateRouteActionEnum string
 
 const (
-	GetCreateRouteActionEnumCreateRoute GetCreateRouteActionEnum = "CreateRoute"
+	GETCreateRouteActionEnumCreateRoute GetCreateRouteActionEnum = "CreateRoute"
 )
 
 type GetCreateRouteVersionEnum string
 
 const (
-	GetCreateRouteVersionEnumTwoThousandAndSixteen1115 GetCreateRouteVersionEnum = "2016-11-15"
+	GETCreateRouteVersionEnumTwoThousandAndSixteen1115 GetCreateRouteVersionEnum = "2016-11-15"
 )
 
 type GetCreateRouteQueryParams struct {

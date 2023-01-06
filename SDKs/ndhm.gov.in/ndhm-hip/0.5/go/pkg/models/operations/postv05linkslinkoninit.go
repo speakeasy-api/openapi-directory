@@ -6,7 +6,7 @@ import (
 
 type PostV05LinksLinkOnInitHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XCmID         string `header:"style=simple,explode=false,name=X-CM-ID"`
+	XCMID         string `header:"style=simple,explode=false,name=X-CM-ID"`
 }
 
 type PostV05LinksLinkOnInitRequests struct {

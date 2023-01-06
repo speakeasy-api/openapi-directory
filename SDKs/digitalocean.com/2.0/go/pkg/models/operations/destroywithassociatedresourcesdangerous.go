@@ -12,15 +12,15 @@ type DestroyWithAssociatedResourcesDangerousHeaders struct {
 	XDangerous bool `header:"style=simple,explode=false,name=X-Dangerous"`
 }
 
-type DestroyWithAssociatedResourcesDangerousRequest struct {
-	PathParams DestroyWithAssociatedResourcesDangerousPathParams
-	Headers    DestroyWithAssociatedResourcesDangerousHeaders
-}
-
 type DestroyWithAssociatedResourcesDangerous401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DestroyWithAssociatedResourcesDangerousRequest struct {
+	PathParams DestroyWithAssociatedResourcesDangerousPathParams
+	Headers    DestroyWithAssociatedResourcesDangerousHeaders
 }
 
 type DestroyWithAssociatedResourcesDangerousResponse struct {

@@ -23,7 +23,7 @@ type GetClipRequestBodyClipFragmentSelector struct {
 
 type GetClipRequestBody struct {
 	ClipFragmentSelector GetClipRequestBodyClipFragmentSelector `json:"ClipFragmentSelector"`
-	StreamArn            *string                                `json:"StreamARN,omitempty"`
+	StreamARN            *string                                `json:"StreamARN,omitempty"`
 	StreamName           *string                                `json:"StreamName,omitempty"`
 }
 

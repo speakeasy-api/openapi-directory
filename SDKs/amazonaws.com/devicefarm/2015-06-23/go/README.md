@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,41 @@ func main() {
     
     req := operations.CreateDevicePoolRequest{
         Headers: operations.CreateDevicePoolHeaders{
-            XAmzAlgorithm: "ex",
-            XAmzContentSha256: "doloribus",
-            XAmzCredential: "qui",
-            XAmzDate: "eius",
-            XAmzSecurityToken: "dolorum",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "enim",
+            XAmzAlgorithm: "omnis",
+            XAmzContentSha256: "suscipit",
+            XAmzCredential: "magnam",
+            XAmzDate: "aspernatur",
+            XAmzSecurityToken: "corporis",
+            XAmzSignature: "accusamus",
+            XAmzSignedHeaders: "fugit",
             XAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
         },
         Request: shared.CreateDevicePoolRequest{
-            Description: "quos",
-            MaxDevices: 4962863351805660991,
-            Name: "iusto",
+            Description: "vel",
+            MaxDevices: 9180143155615916123,
+            Name: "quidem",
             ProjectArn: "et",
             Rules: []shared.Rule{
                 shared.Rule{
                     Attribute: "APPIUM_VERSION",
-                    Operator: "GREATER_THAN",
-                    Value: "itaque",
+                    Operator: "LESS_THAN_OR_EQUALS",
+                    Value: "consequatur",
+                },
+                shared.Rule{
+                    Attribute: "INSTANCE_LABELS",
+                    Operator: "LESS_THAN_OR_EQUALS",
+                    Value: "dolor",
+                },
+                shared.Rule{
+                    Attribute: "FORM_FACTOR",
+                    Operator: "GREATER_THAN_OR_EQUALS",
+                    Value: "in",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateDevicePool(ctx, req)
+    res, err := s.CreateDevicePool(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

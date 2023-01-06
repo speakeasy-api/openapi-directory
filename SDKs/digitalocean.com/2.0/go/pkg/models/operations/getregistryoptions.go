@@ -12,15 +12,8 @@ const (
 )
 
 type GetRegistryOptions200ApplicationJSONOptionsSubscriptionTiers struct {
-	AllowStorageOverage    *bool                                                                                `json:"allow_storage_overage,omitempty"`
-	EligibilityReasons     []GetRegistryOptions200ApplicationJSONOptionsSubscriptionTiersEligibilityReasonsEnum `json:"eligibility_reasons,omitempty"`
-	Eligible               *bool                                                                                `json:"eligible,omitempty"`
-	IncludedBandwidthBytes *int64                                                                               `json:"included_bandwidth_bytes,omitempty"`
-	IncludedRepositories   *int64                                                                               `json:"included_repositories,omitempty"`
-	IncludedStorageBytes   *int64                                                                               `json:"included_storage_bytes,omitempty"`
-	MonthlyPriceInCents    *int64                                                                               `json:"monthly_price_in_cents,omitempty"`
-	Name                   *string                                                                              `json:"name,omitempty"`
-	Slug                   *string                                                                              `json:"slug,omitempty"`
+	EligibilityReasons []GetRegistryOptions200ApplicationJSONOptionsSubscriptionTiersEligibilityReasonsEnum `json:"eligibility_reasons,omitempty"`
+	Eligible           *bool                                                                                `json:"eligible,omitempty"`
 }
 
 type GetRegistryOptions200ApplicationJSONOptions struct {

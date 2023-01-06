@@ -22,7 +22,7 @@ type PostAccountsAccountOrdersRequestBody struct {
 	Mifid2ExecutionTrader *string  `json:"Mifid2ExecutionTrader,omitempty"`
 	OrderType             *float64 `json:"Order Type,omitempty"`
 	OrderRestrictions     *float64 `json:"OrderRestrictions,omitempty"`
-	OutsideRth            *float64 `json:"Outside RTH,omitempty"`
+	OutsideRTH            *float64 `json:"Outside RTH,omitempty"`
 	Price                 *float64 `json:"Price,omitempty"`
 	Quantity              *float64 `json:"Quantity,omitempty"`
 	Side                  *float64 `json:"Side,omitempty"`

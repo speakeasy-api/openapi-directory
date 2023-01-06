@@ -31,8 +31,8 @@ type RevokeGrantResponse struct {
 	DependencyTimeoutException *interface{}
 	InvalidArnException        *interface{}
 	InvalidGrantIDException    *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64
 }

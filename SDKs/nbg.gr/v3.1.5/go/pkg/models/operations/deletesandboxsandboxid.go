@@ -21,6 +21,5 @@ type DeleteSandboxSandboxIDRequest struct {
 type DeleteSandboxSandboxIDResponse struct {
 	ContentType   string
 	ErrorResponse *shared.ErrorResponse
-	Headers       map[string][]string
 	StatusCode    int64
 }

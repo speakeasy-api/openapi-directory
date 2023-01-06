@@ -1,0 +1,8 @@
+package shared
+
+type OptimisationActionNameGeneralParametersEnum string
+
+const (
+	OptimisationActionNameGeneralParametersEnumReenable OptimisationActionNameGeneralParametersEnum = "reenable"
+	OptimisationActionNameGeneralParametersEnumDisable  OptimisationActionNameGeneralParametersEnum = "disable"
+)

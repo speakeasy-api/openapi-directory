@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,27 @@ func main() {
     
     req := operations.AddTagsRequest{
         Headers: operations.AddTagsHeaders{
-            XAmzAlgorithm: "dolorem",
-            XAmzContentSha256: "odit",
-            XAmzCredential: "maxime",
-            XAmzDate: "et",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "dolore",
-            XAmzSignedHeaders: "est",
+            XAmzAlgorithm: "cumque",
+            XAmzContentSha256: "occaecati",
+            XAmzCredential: "iusto",
+            XAmzDate: "possimus",
+            XAmzSecurityToken: "deserunt",
+            XAmzSignature: "maiores",
+            XAmzSignedHeaders: "error",
             XAmzTarget: "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags",
         },
         Request: shared.AddTagsRequest{
-            ResourceID: "eveniet",
+            ResourceID: "dolorem",
             TagsList: []shared.Tag{
                 shared.Tag{
-                    Key: "facilis",
-                    Value: "omnis",
-                },
-                shared.Tag{
-                    Key: "mollitia",
-                    Value: "velit",
+                    Key: "dolor",
+                    Value: "excepturi",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddTags(ctx, req)
+    res, err := s.AddTags(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

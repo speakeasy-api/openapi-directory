@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,41 +26,42 @@ func main() {
         Security: operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.OrgpolicyOrganizationsCustomConstraintsCreatePathParams{
-            Parent: "et",
+            Parent: "saepe",
         },
         QueryParams: operations.OrgpolicyOrganizationsCustomConstraintsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "ducimus",
-            Alt: "media",
-            Callback: "officia",
-            Fields: "corporis",
-            Key: "nobis",
-            OauthToken: "nam",
+            AccessToken: "quas",
+            Alt: "json",
+            Callback: "quasi",
+            Fields: "modi",
+            Key: "blanditiis",
+            OauthToken: "hic",
             PrettyPrint: true,
-            QuotaUser: "maxime",
-            UploadType: "nisi",
-            UploadProtocol: "maiores",
+            QuotaUser: "perferendis",
+            UploadType: "voluptatem",
+            UploadProtocol: "quia",
         },
         Request: &shared.GoogleCloudOrgpolicyV2CustomConstraintInput{
-            ActionType: "ACTION_TYPE_UNSPECIFIED",
-            Condition: "temporibus",
-            Description: "ea",
-            DisplayName: "excepturi",
+            ActionType: "ALLOW",
+            Condition: "ea",
+            Description: "velit",
+            DisplayName: "ratione",
             MethodTypes: []shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum{
+                "UPDATE",
+                "UPDATE",
                 "CREATE",
-                "DELETE",
-                "DELETE",
             },
-            Name: "quisquam",
+            Name: "veritatis",
             ResourceTypes: []string{
-                "et",
-                "id",
+                "ut",
+                "porro",
+                "voluptatem",
             },
         },
     }

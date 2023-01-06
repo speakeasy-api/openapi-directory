@@ -6,6 +6,6 @@ type GetAuthValidate200ApplicationJSON struct {
 
 type GetAuthValidateResponse struct {
 	ContentType                             string
-	GetAuthValidate200ApplicationJSONObject *GetAuthValidate200ApplicationJSON
 	StatusCode                              int64
+	GetAuthValidate200ApplicationJSONObject *GetAuthValidate200ApplicationJSON
 }

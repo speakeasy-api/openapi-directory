@@ -3,13 +3,13 @@ package operations
 type GetDeleteConfigurationTemplateActionEnum string
 
 const (
-	GetDeleteConfigurationTemplateActionEnumDeleteConfigurationTemplate GetDeleteConfigurationTemplateActionEnum = "DeleteConfigurationTemplate"
+	GETDeleteConfigurationTemplateActionEnumDeleteConfigurationTemplate GetDeleteConfigurationTemplateActionEnum = "DeleteConfigurationTemplate"
 )
 
 type GetDeleteConfigurationTemplateVersionEnum string
 
 const (
-	GetDeleteConfigurationTemplateVersionEnumTwoThousandAndTen1201 GetDeleteConfigurationTemplateVersionEnum = "2010-12-01"
+	GETDeleteConfigurationTemplateVersionEnumTwoThousandAndTen1201 GetDeleteConfigurationTemplateVersionEnum = "2010-12-01"
 )
 
 type GetDeleteConfigurationTemplateQueryParams struct {

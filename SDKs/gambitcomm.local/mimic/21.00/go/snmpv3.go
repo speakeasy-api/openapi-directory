@@ -1,0 +1,1138 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"io"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+)
+
+type SnmPv3 struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewSnmPv3(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *SnmPv3 {
+	return &SnmPv3{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// ProtocolSnmpv3AccessAdd - Adds a new access entry with the specified parameters.
+// Adds a new access entry with the specified parameters.
+func (s *SnmPv3) ProtocolSnmpv3AccessAdd(ctx context.Context, request operations.ProtocolSnmpv3AccessAddRequest) (*operations.ProtocolSnmpv3AccessAddResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/add/{groupName}/{prefix}/{securityModel}/{securityLevel}/{contextMatch}/{readView}/{writeView}/{notifyView}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3AccessAddResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3AccessAdd200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3AccessClear - Clears all access entries.
+// Clears all access entries.
+func (s *SnmPv3) ProtocolSnmpv3AccessClear(ctx context.Context, request operations.ProtocolSnmpv3AccessClearRequest) (*operations.ProtocolSnmpv3AccessClearResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/clear", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3AccessClearResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3AccessClear200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3AccessDel - Deletes the specified access entry.
+// Deletes the specified access entry.
+func (s *SnmPv3) ProtocolSnmpv3AccessDel(ctx context.Context, request operations.ProtocolSnmpv3AccessDelRequest) (*operations.ProtocolSnmpv3AccessDelResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/del/{accessName}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3AccessDelResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3AccessDel200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3AccessList - Returns the current acccess entries as an array of strings.
+// Returns the current acccess entries as an array of strings.
+func (s *SnmPv3) ProtocolSnmpv3AccessList(ctx context.Context, request operations.ProtocolSnmpv3AccessListRequest) (*operations.ProtocolSnmpv3AccessListResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/list", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3AccessListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3AccessList200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GetConfig - Returns the SNMPv3 configuration.
+// Returns the SNMPv3 configuration.
+func (s *SnmPv3) ProtocolSnmpv3GetConfig(ctx context.Context, request operations.ProtocolSnmpv3GetConfigRequest) (*operations.ProtocolSnmpv3GetConfigResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/config", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GetConfigResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ConfigSnmPv3
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConfigSNMPv3 = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GetContextEngineid - Retrieves the contextEngineID for the agent instance.
+// Retrieves the contextEngineID for the agent instance.
+func (s *SnmPv3) ProtocolSnmpv3GetContextEngineid(ctx context.Context, request operations.ProtocolSnmpv3GetContextEngineidRequest) (*operations.ProtocolSnmpv3GetContextEngineidResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/context_engineid", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GetContextEngineidResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3GetContextEngineid200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GetEngineboots - Retrieves the number of times the agent has been restarted.
+// Retrieves the number of times the agent has been restarted.
+func (s *SnmPv3) ProtocolSnmpv3GetEngineboots(ctx context.Context, request operations.ProtocolSnmpv3GetEnginebootsRequest) (*operations.ProtocolSnmpv3GetEnginebootsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineboots", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GetEnginebootsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *int32
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GetEngineid - For started agents, retrieves the current engineID in use by the snmpv3 module.
+// For stopped agents, this operation is meaningless. If not explicitly set by the user then the autogenerated engineID is returned. The format of the engineID is in the familiar hex format, eg. \x01 23 45 67 89...
+func (s *SnmPv3) ProtocolSnmpv3GetEngineid(ctx context.Context, request operations.ProtocolSnmpv3GetEngineidRequest) (*operations.ProtocolSnmpv3GetEngineidResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineid", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GetEngineidResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3GetEngineid200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GetEnginetime - Retrieves the time in seconds for which the agent has been running.
+// Retrieves the time in seconds for which the agent has been running.
+func (s *SnmPv3) ProtocolSnmpv3GetEnginetime(ctx context.Context, request operations.ProtocolSnmpv3GetEnginetimeRequest) (*operations.ProtocolSnmpv3GetEnginetimeResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/enginetime", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GetEnginetimeResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *int32
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3GetEnginetime200ApplicationJSONInt32Integer = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GroupAdd - Adds a new group entry with the specified parameters.
+// Adds a new group entry with the specified parameters.
+func (s *SnmPv3) ProtocolSnmpv3GroupAdd(ctx context.Context, request operations.ProtocolSnmpv3GroupAddRequest) (*operations.ProtocolSnmpv3GroupAddResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/add/{groupName}/{securityModel}/{securityName}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GroupAddResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3GroupAdd200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GroupClear - Clears all group entries.
+// Clears all group entries.
+func (s *SnmPv3) ProtocolSnmpv3GroupClear(ctx context.Context, request operations.ProtocolSnmpv3GroupClearRequest) (*operations.ProtocolSnmpv3GroupClearResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/clear", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GroupClearResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3GroupClear200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GroupDel - Deletes the specified group entry.
+// Deletes the specified group entry.
+func (s *SnmPv3) ProtocolSnmpv3GroupDel(ctx context.Context, request operations.ProtocolSnmpv3GroupDelRequest) (*operations.ProtocolSnmpv3GroupDelResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/del/{groupName}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GroupDelResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3GroupDel200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3GroupList - Returns the current group entries as an array of strings.
+// Returns the current group entries as an array of strings.
+func (s *SnmPv3) ProtocolSnmpv3GroupList(ctx context.Context, request operations.ProtocolSnmpv3GroupListRequest) (*operations.ProtocolSnmpv3GroupListResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/list", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3GroupListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3GroupList200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3SetConfig - Changes the SNMPv3 configuration.
+// Changes the SNMPv3 configuration.
+func (s *SnmPv3) ProtocolSnmpv3SetConfig(ctx context.Context, request operations.ProtocolSnmpv3SetConfigRequest) (*operations.ProtocolSnmpv3SetConfigResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/set/config/{parameter}/{value}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3SetConfigResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3SetConfig200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3UserAdd - Adds a new user entry with the specified parameters.
+// Adds a new user entry with the specified parameters.
+func (s *SnmPv3) ProtocolSnmpv3UserAdd(ctx context.Context, request operations.ProtocolSnmpv3UserAddRequest) (*operations.ProtocolSnmpv3UserAddResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/add/{userName}/{securityName}/{authProtocol}/{authKey}/{privProtocol}/{privKey}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3UserAddResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3UserAdd200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3UserClear - Clears all user entries.
+// Clears all user entries.
+func (s *SnmPv3) ProtocolSnmpv3UserClear(ctx context.Context, request operations.ProtocolSnmpv3UserClearRequest) (*operations.ProtocolSnmpv3UserClearResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/clear", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3UserClearResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3UserClear200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3UserDel - Deletes the specified user entry.
+// Deletes the specified user entry.
+func (s *SnmPv3) ProtocolSnmpv3UserDel(ctx context.Context, request operations.ProtocolSnmpv3UserDelRequest) (*operations.ProtocolSnmpv3UserDelResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/del/{userName}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3UserDelResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3UserDel200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3UserList - Returns the current user entries as a Tcl list.
+// Returns the current user entries as a Tcl list.
+func (s *SnmPv3) ProtocolSnmpv3UserList(ctx context.Context, request operations.ProtocolSnmpv3UserListRequest) (*operations.ProtocolSnmpv3UserListResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/list", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3UserListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3UserList200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3UsmSave - Saves current user settings in the currently loaded USM config file.
+// Saves current user settings in the currently loaded USM config file.
+func (s *SnmPv3) ProtocolSnmpv3UsmSave(ctx context.Context, request operations.ProtocolSnmpv3UsmSaveRequest) (*operations.ProtocolSnmpv3UsmSaveResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/save", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3UsmSaveResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3UsmSave200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3UsmSaveas - Saves current user settings in the specified USM config file.
+// Saves current user settings in the specified USM config file.
+func (s *SnmPv3) ProtocolSnmpv3UsmSaveas(ctx context.Context, request operations.ProtocolSnmpv3UsmSaveasRequest) (*operations.ProtocolSnmpv3UsmSaveasResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/saveas/{filename}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3UsmSaveasResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3UsmSaveas200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3VacmSave - Saves current group, access, view settings in the currently loaded VACM config file.
+// Saves current group, access, view settings in the currently loaded VACM config file.
+func (s *SnmPv3) ProtocolSnmpv3VacmSave(ctx context.Context, request operations.ProtocolSnmpv3VacmSaveRequest) (*operations.ProtocolSnmpv3VacmSaveResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/save", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3VacmSaveResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3VacmSave200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3VacmSaveas - Saves current group, access, view settings in the specified VACM config file.
+// Saves current group, access, view settings in the specified VACM config file.
+func (s *SnmPv3) ProtocolSnmpv3VacmSaveas(ctx context.Context, request operations.ProtocolSnmpv3VacmSaveasRequest) (*operations.ProtocolSnmpv3VacmSaveasResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/saveas/{filename}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3VacmSaveasResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3VacmSaveas200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3ViewAdd - Adds a new view entry with the specified parameters.
+// Adds a new view entry with the specified parameters.
+func (s *SnmPv3) ProtocolSnmpv3ViewAdd(ctx context.Context, request operations.ProtocolSnmpv3ViewAddRequest) (*operations.ProtocolSnmpv3ViewAddResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/add/{viewName}/{viewType}/{subtree}/{mask}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3ViewAddResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3ViewAdd200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3ViewClear - Clears all view entries.
+// Clears all view entries.
+func (s *SnmPv3) ProtocolSnmpv3ViewClear(ctx context.Context, request operations.ProtocolSnmpv3ViewClearRequest) (*operations.ProtocolSnmpv3ViewClearResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/clear", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3ViewClearResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3ViewClear200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3ViewDel - Deletes the specified view entry.
+// Deletes the specified view entry.
+func (s *SnmPv3) ProtocolSnmpv3ViewDel(ctx context.Context, request operations.ProtocolSnmpv3ViewDelRequest) (*operations.ProtocolSnmpv3ViewDelResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/del/{viewName}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3ViewDelResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ProtocolSnmpv3ViewDel200ApplicationJSONString = &out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// ProtocolSnmpv3ViewList - Returns the current view entries as an array of strings.
+// Returns the current view entries as an array of strings.
+func (s *SnmPv3) ProtocolSnmpv3ViewList(ctx context.Context, request operations.ProtocolSnmpv3ViewListRequest) (*operations.ProtocolSnmpv3ViewListResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/list", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProtocolSnmpv3ViewListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProtocolSnmpv3ViewList200ApplicationJSONStrings = out
+		}
+	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}

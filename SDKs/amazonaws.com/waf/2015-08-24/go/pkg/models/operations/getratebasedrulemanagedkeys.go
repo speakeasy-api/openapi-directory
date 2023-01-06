@@ -30,8 +30,8 @@ type GetRateBasedRuleManagedKeysResponse struct {
 	ContentType                         string
 	GetRateBasedRuleManagedKeysResponse *shared.GetRateBasedRuleManagedKeysResponse
 	StatusCode                          int64
-	WafInternalErrorException           *interface{}
-	WafInvalidAccountException          *interface{}
-	WafInvalidParameterException        *interface{}
-	WafNonexistentItemException         *interface{}
+	WAFInternalErrorException           *interface{}
+	WAFInvalidAccountException          *interface{}
+	WAFInvalidParameterException        *interface{}
+	WAFNonexistentItemException         *interface{}
 }

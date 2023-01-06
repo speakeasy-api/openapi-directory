@@ -7,7 +7,7 @@ import (
 type AdminSetUserMfaPreferenceXAmzTargetEnum string
 
 const (
-	AdminSetUserMfaPreferenceXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminSetUserMfaPreference AdminSetUserMfaPreferenceXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminSetUserMFAPreference"
+	AdminSetUserMFAPreferenceXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminSetUserMfaPreference AdminSetUserMfaPreferenceXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminSetUserMFAPreference"
 )
 
 type AdminSetUserMfaPreferenceHeaders struct {
@@ -27,7 +27,7 @@ type AdminSetUserMfaPreferenceRequest struct {
 }
 
 type AdminSetUserMfaPreferenceResponse struct {
-	AdminSetUserMfaPreferenceResponse map[string]interface{}
+	AdminSetUserMFAPreferenceResponse map[string]interface{}
 	ContentType                       string
 	InternalErrorException            *interface{}
 	InvalidParameterException         *interface{}

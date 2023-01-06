@@ -7,7 +7,7 @@ import (
 type GetMlTransformXAmzTargetEnum string
 
 const (
-	GetMlTransformXAmzTargetEnumAwsGlueGetMlTransform GetMlTransformXAmzTargetEnum = "AWSGlue.GetMLTransform"
+	GetMLTransformXAmzTargetEnumAwsGlueGetMlTransform GetMlTransformXAmzTargetEnum = "AWSGlue.GetMLTransform"
 )
 
 type GetMlTransformHeaders struct {
@@ -29,7 +29,7 @@ type GetMlTransformRequest struct {
 type GetMlTransformResponse struct {
 	ContentType               string
 	EntityNotFoundException   *interface{}
-	GetMlTransformResponse    *shared.GetMlTransformResponse
+	GetMLTransformResponse    *shared.GetMlTransformResponse
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}
 	OperationTimeoutException *interface{}

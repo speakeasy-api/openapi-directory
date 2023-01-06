@@ -3,13 +3,13 @@ package operations
 type PostSetInstanceProtectionActionEnum string
 
 const (
-	PostSetInstanceProtectionActionEnumSetInstanceProtection PostSetInstanceProtectionActionEnum = "SetInstanceProtection"
+	POSTSetInstanceProtectionActionEnumSetInstanceProtection PostSetInstanceProtectionActionEnum = "SetInstanceProtection"
 )
 
 type PostSetInstanceProtectionVersionEnum string
 
 const (
-	PostSetInstanceProtectionVersionEnumTwoThousandAndEleven0101 PostSetInstanceProtectionVersionEnum = "2011-01-01"
+	POSTSetInstanceProtectionVersionEnumTwoThousandAndEleven0101 PostSetInstanceProtectionVersionEnum = "2011-01-01"
 )
 
 type PostSetInstanceProtectionQueryParams struct {

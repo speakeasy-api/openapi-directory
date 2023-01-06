@@ -7,13 +7,13 @@ import (
 type GetGetPredictiveScalingForecastActionEnum string
 
 const (
-	GetGetPredictiveScalingForecastActionEnumGetPredictiveScalingForecast GetGetPredictiveScalingForecastActionEnum = "GetPredictiveScalingForecast"
+	GETGETPredictiveScalingForecastActionEnumGetPredictiveScalingForecast GetGetPredictiveScalingForecastActionEnum = "GetPredictiveScalingForecast"
 )
 
 type GetGetPredictiveScalingForecastVersionEnum string
 
 const (
-	GetGetPredictiveScalingForecastVersionEnumTwoThousandAndEleven0101 GetGetPredictiveScalingForecastVersionEnum = "2011-01-01"
+	GETGETPredictiveScalingForecastVersionEnumTwoThousandAndEleven0101 GetGetPredictiveScalingForecastVersionEnum = "2011-01-01"
 )
 
 type GetGetPredictiveScalingForecastQueryParams struct {

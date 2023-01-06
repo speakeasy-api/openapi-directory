@@ -5,9 +5,9 @@ import (
 )
 
 type DgcerRequestBodyCertificateParameters struct {
-	Degree   string `json:"DEGREE"`
+	DEGREE   string `json:"DEGREE"`
 	FullName string `json:"FullName"`
-	Rroll    string `json:"RROLL"`
+	RROLL    string `json:"RROLL"`
 }
 
 type DgcerRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Dgcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Dgcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Dgcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Dgcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Dgcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Dgcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Dgcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Dgcer404ApplicationJSON struct {

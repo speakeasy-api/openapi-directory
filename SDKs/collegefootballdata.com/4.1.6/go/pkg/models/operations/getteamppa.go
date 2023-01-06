@@ -18,5 +18,5 @@ type GetTeamPpaRequest struct {
 type GetTeamPpaResponse struct {
 	ContentType string
 	StatusCode  int64
-	TeamPpas    []shared.TeamPpa
+	TeamPPAS    []shared.TeamPpa
 }

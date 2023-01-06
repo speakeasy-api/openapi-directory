@@ -1,5 +1,5 @@
 package shared
 
 type CreateCarrierGatewayResult struct {
-	CarrierGateway *CarrierGateway
+	CarrierGateway map[string]interface{}
 }

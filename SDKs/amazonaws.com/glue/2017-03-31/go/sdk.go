@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1379,7 +1380,7 @@ func (s *SDK) CancelMlTaskRun(ctx context.Context, request operations.CancelMlTa
 				return nil, err
 			}
 
-			res.CancelMlTaskRunResponse = out
+			res.CancelMLTaskRunResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2307,7 +2308,7 @@ func (s *SDK) CreateMlTransform(ctx context.Context, request operations.CreateMl
 				return nil, err
 			}
 
-			res.CreateMlTransformResponse = out
+			res.CreateMLTransformResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -4367,7 +4368,7 @@ func (s *SDK) DeleteMlTransform(ctx context.Context, request operations.DeleteMl
 				return nil, err
 			}
 
-			res.DeleteMlTransformResponse = out
+			res.DeleteMLTransformResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -7689,7 +7690,7 @@ func (s *SDK) GetMlTaskRun(ctx context.Context, request operations.GetMlTaskRunR
 				return nil, err
 			}
 
-			res.GetMlTaskRunResponse = out
+			res.GetMLTaskRunResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -7783,7 +7784,7 @@ func (s *SDK) GetMlTaskRuns(ctx context.Context, request operations.GetMlTaskRun
 				return nil, err
 			}
 
-			res.GetMlTaskRunsResponse = out
+			res.GetMLTaskRunsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -7875,7 +7876,7 @@ func (s *SDK) GetMlTransform(ctx context.Context, request operations.GetMlTransf
 				return nil, err
 			}
 
-			res.GetMlTransformResponse = out
+			res.GetMLTransformResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -7969,7 +7970,7 @@ func (s *SDK) GetMlTransforms(ctx context.Context, request operations.GetMlTrans
 				return nil, err
 			}
 
-			res.GetMlTransformsResponse = out
+			res.GetMLTransformsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -11053,7 +11054,7 @@ func (s *SDK) ListMlTransforms(ctx context.Context, request operations.ListMlTra
 				return nil, err
 			}
 
-			res.ListMlTransformsResponse = out
+			res.ListMLTransformsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -13169,7 +13170,7 @@ func (s *SDK) StartMlEvaluationTaskRun(ctx context.Context, request operations.S
 				return nil, err
 			}
 
-			res.StartMlEvaluationTaskRunResponse = out
+			res.StartMLEvaluationTaskRunResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -13229,7 +13230,7 @@ func (s *SDK) StartMlEvaluationTaskRun(ctx context.Context, request operations.S
 				return nil, err
 			}
 
-			res.MlTransformNotReadyException = out
+			res.MLTransformNotReadyException = out
 		}
 	}
 
@@ -13281,7 +13282,7 @@ func (s *SDK) StartMlLabelingSetGenerationTaskRun(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.StartMlLabelingSetGenerationTaskRunResponse = out
+			res.StartMLLabelingSetGenerationTaskRunResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -15209,7 +15210,7 @@ func (s *SDK) UpdateMlTransform(ctx context.Context, request operations.UpdateMl
 				return nil, err
 			}
 
-			res.UpdateMlTransformResponse = out
+			res.UpdateMLTransformResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

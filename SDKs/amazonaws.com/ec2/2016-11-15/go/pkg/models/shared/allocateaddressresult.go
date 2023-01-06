@@ -1,12 +1,12 @@
 package shared
 
 type AllocateAddressResult struct {
-	AllocationID          *string
-	CarrierIP             *string
-	CustomerOwnedIP       *string
-	CustomerOwnedIpv4Pool *string
-	Domain                *DomainTypeEnum
-	NetworkBorderGroup    *string
-	PublicIP              *string
-	PublicIpv4Pool        *string
+	AllocationID          map[string]interface{}
+	CarrierIP             map[string]interface{}
+	CustomerOwnedIP       map[string]interface{}
+	CustomerOwnedIpv4Pool map[string]interface{}
+	Domain                map[string]interface{}
+	NetworkBorderGroup    map[string]interface{}
+	PublicIP              map[string]interface{}
+	PublicIpv4Pool        map[string]interface{}
 }

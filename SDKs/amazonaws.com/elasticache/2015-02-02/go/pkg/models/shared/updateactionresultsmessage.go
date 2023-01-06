@@ -1,6 +1,6 @@
 package shared
 
 type UpdateActionResultsMessage struct {
-	ProcessedUpdateActions   []ProcessedUpdateAction
-	UnprocessedUpdateActions []UnprocessedUpdateAction
+	ProcessedUpdateActions   []map[string]interface{}
+	UnprocessedUpdateActions []map[string]interface{}
 }

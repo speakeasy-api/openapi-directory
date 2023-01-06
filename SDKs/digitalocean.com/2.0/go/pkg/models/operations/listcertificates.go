@@ -10,10 +10,6 @@ type ListCertificatesQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
-type ListCertificatesRequest struct {
-	QueryParams ListCertificatesQueryParams
-}
-
 type ListCertificates200ApplicationJSONCertificatesStateEnum string
 
 const (
@@ -40,34 +36,18 @@ type ListCertificates200ApplicationJSONCertificates struct {
 	Type            *ListCertificates200ApplicationJSONCertificatesTypeEnum  `json:"type,omitempty"`
 }
 
-type ListCertificates200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
-}
-
-type ListCertificates200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
-}
-
-type ListCertificates200ApplicationJSONLinks struct {
-	Pages *interface{} `json:"pages,omitempty"`
-}
-
-type ListCertificates200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListCertificates200ApplicationJSON struct {
 	Certificates []ListCertificates200ApplicationJSONCertificates `json:"certificates,omitempty"`
-	Links        *ListCertificates200ApplicationJSONLinks         `json:"links,omitempty"`
-	Meta         ListCertificates200ApplicationJSONMeta           `json:"meta"`
 }
 
 type ListCertificates401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListCertificatesRequest struct {
+	QueryParams ListCertificatesQueryParams
 }
 
 type ListCertificatesResponse struct {

@@ -1,7 +1,7 @@
 package shared
 
 type ConfigProxy struct {
-	TCPNodelay      *int32  `json:"TCP_NODELAY,omitempty"`
+	TCPNODELAY      *int32  `json:"TCP_NODELAY,omitempty"`
 	ClientToServer  *string `json:"client_to_server,omitempty"`
 	DisconnectDelay *int32  `json:"disconnect_delay,omitempty"`
 	MaxConnects     *int32  `json:"max_connects,omitempty"`

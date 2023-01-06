@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -57,12 +57,13 @@ func (s *Balance) Balance(ctx context.Context) (*operations.BalanceResponse, err
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.Balance200TextPlainFloatNumber = &out
 		}
 	}
 

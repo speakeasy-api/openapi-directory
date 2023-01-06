@@ -1,5 +1,5 @@
 package shared
 
 type CreateInstanceExportTaskResult struct {
-	ExportTask *ExportTask
+	ExportTask map[string]interface{}
 }

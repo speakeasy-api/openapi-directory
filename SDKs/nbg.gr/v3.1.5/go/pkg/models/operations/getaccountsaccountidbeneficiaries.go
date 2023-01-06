@@ -29,8 +29,7 @@ type GetAccountsAccountIDBeneficiariesRequest struct {
 
 type GetAccountsAccountIDBeneficiariesResponse struct {
 	ContentType        string
-	Headers            map[string][]string
-	ObErrorResponse1   *shared.ObErrorResponse1
-	ObReadBeneficiary5 *shared.ObReadBeneficiary5
+	OBErrorResponse1   *shared.ObErrorResponse1
+	OBReadBeneficiary5 *shared.ObReadBeneficiary5
 	StatusCode         int64
 }

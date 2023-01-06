@@ -36,8 +36,8 @@ type CreatePadUsingPostRequest struct {
 type CreatePadUsingPostResponse struct {
 	ContentType                                string
 	StatusCode                                 int64
-	CreatePadUsingPost200ApplicationJSONObject *CreatePadUsingPost200ApplicationJSON
-	CreatePadUsingPost400ApplicationJSONObject *CreatePadUsingPost400ApplicationJSON
-	CreatePadUsingPost401ApplicationJSONObject *CreatePadUsingPost401ApplicationJSON
-	CreatePadUsingPost500ApplicationJSONObject *CreatePadUsingPost500ApplicationJSON
+	CreatePadUsingPOST200ApplicationJSONObject *CreatePadUsingPost200ApplicationJSON
+	CreatePadUsingPOST400ApplicationJSONObject *CreatePadUsingPost400ApplicationJSON
+	CreatePadUsingPOST401ApplicationJSONObject *CreatePadUsingPost401ApplicationJSON
+	CreatePadUsingPOST500ApplicationJSONObject *CreatePadUsingPost500ApplicationJSON
 }

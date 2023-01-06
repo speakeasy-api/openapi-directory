@@ -20,6 +20,6 @@ type GetFleetFleetnameRequest struct {
 
 type GetFleetFleetnameResponse struct {
 	ContentType                               string
-	GetFleetFleetname200ApplicationJSONObject *GetFleetFleetname200ApplicationJSON
 	StatusCode                                int64
+	GetFleetFleetname200ApplicationJSONObject *GetFleetFleetname200ApplicationJSON
 }

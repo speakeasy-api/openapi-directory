@@ -16,14 +16,8 @@ type GetPlaylistsQueryParams struct {
 	Start     *time.Time `queryParam:"style=form,explode=true,name=start"`
 }
 
-type GetPlaylists200ApplicationJSONLinks struct {
-	Self *shared.Link `json:"self,omitempty"`
-}
-
 type GetPlaylists200ApplicationJSON struct {
-	Links *GetPlaylists200ApplicationJSONLinks `json:"_links,omitempty"`
-	Meta  *shared.Pagination                   `json:"_meta,omitempty"`
-	Items []shared.Playlist                    `json:"items,omitempty"`
+	Items []shared.Playlist `json:"items,omitempty"`
 }
 
 type GetPlaylistsRequest struct {
@@ -33,6 +27,6 @@ type GetPlaylistsRequest struct {
 type GetPlaylistsResponse struct {
 	Body                                 []byte
 	ContentType                          string
-	GetPlaylists200ApplicationJSONObject *GetPlaylists200ApplicationJSON
 	StatusCode                           int64
+	GetPlaylists200ApplicationJSONObject *GetPlaylists200ApplicationJSON
 }

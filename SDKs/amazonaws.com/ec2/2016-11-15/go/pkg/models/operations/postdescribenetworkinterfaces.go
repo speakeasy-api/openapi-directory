@@ -3,13 +3,13 @@ package operations
 type PostDescribeNetworkInterfacesActionEnum string
 
 const (
-	PostDescribeNetworkInterfacesActionEnumDescribeNetworkInterfaces PostDescribeNetworkInterfacesActionEnum = "DescribeNetworkInterfaces"
+	POSTDescribeNetworkInterfacesActionEnumDescribeNetworkInterfaces PostDescribeNetworkInterfacesActionEnum = "DescribeNetworkInterfaces"
 )
 
 type PostDescribeNetworkInterfacesVersionEnum string
 
 const (
-	PostDescribeNetworkInterfacesVersionEnumTwoThousandAndSixteen1115 PostDescribeNetworkInterfacesVersionEnum = "2016-11-15"
+	POSTDescribeNetworkInterfacesVersionEnumTwoThousandAndSixteen1115 PostDescribeNetworkInterfacesVersionEnum = "2016-11-15"
 )
 
 type PostDescribeNetworkInterfacesQueryParams struct {

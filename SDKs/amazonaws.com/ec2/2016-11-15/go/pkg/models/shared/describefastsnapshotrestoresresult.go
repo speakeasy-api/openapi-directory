@@ -1,6 +1,6 @@
 package shared
 
 type DescribeFastSnapshotRestoresResult struct {
-	FastSnapshotRestores []DescribeFastSnapshotRestoreSuccessItem
-	NextToken            *string
+	FastSnapshotRestores map[string]interface{}
+	NextToken            map[string]interface{}
 }

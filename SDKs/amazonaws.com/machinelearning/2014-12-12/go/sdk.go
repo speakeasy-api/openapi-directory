@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -315,7 +316,7 @@ func (s *SDK) CreateDataSourceFromRds(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.CreateDataSourceFromRdsOutput = out
+			res.CreateDataSourceFromRDSOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -643,7 +644,7 @@ func (s *SDK) CreateMlModel(ctx context.Context, request operations.CreateMlMode
 				return nil, err
 			}
 
-			res.CreateMlModelOutput = out
+			res.CreateMLModelOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1053,7 +1054,7 @@ func (s *SDK) DeleteMlModel(ctx context.Context, request operations.DeleteMlMode
 				return nil, err
 			}
 
-			res.DeleteMlModelOutput = out
+			res.DeleteMLModelOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1533,7 +1534,7 @@ func (s *SDK) DescribeMlModels(ctx context.Context, request operations.DescribeM
 				return nil, err
 			}
 
-			res.DescribeMlModelsOutput = out
+			res.DescribeMLModelsOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1933,7 +1934,7 @@ func (s *SDK) GetMlModel(ctx context.Context, request operations.GetMlModelReque
 				return nil, err
 			}
 
-			res.GetMlModelOutput = out
+			res.GetMLModelOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2363,7 +2364,7 @@ func (s *SDK) UpdateMlModel(ctx context.Context, request operations.UpdateMlMode
 				return nil, err
 			}
 
-			res.UpdateMlModelOutput = out
+			res.UpdateMLModelOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

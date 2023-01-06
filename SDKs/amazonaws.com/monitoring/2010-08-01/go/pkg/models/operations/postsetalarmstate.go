@@ -3,13 +3,13 @@ package operations
 type PostSetAlarmStateActionEnum string
 
 const (
-	PostSetAlarmStateActionEnumSetAlarmState PostSetAlarmStateActionEnum = "SetAlarmState"
+	POSTSetAlarmStateActionEnumSetAlarmState PostSetAlarmStateActionEnum = "SetAlarmState"
 )
 
 type PostSetAlarmStateVersionEnum string
 
 const (
-	PostSetAlarmStateVersionEnumTwoThousandAndTen0801 PostSetAlarmStateVersionEnum = "2010-08-01"
+	POSTSetAlarmStateVersionEnumTwoThousandAndTen0801 PostSetAlarmStateVersionEnum = "2010-08-01"
 )
 
 type PostSetAlarmStateQueryParams struct {

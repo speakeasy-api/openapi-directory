@@ -3,13 +3,13 @@ package operations
 type GetModifyUserGroupActionEnum string
 
 const (
-	GetModifyUserGroupActionEnumModifyUserGroup GetModifyUserGroupActionEnum = "ModifyUserGroup"
+	GETModifyUserGroupActionEnumModifyUserGroup GetModifyUserGroupActionEnum = "ModifyUserGroup"
 )
 
 type GetModifyUserGroupVersionEnum string
 
 const (
-	GetModifyUserGroupVersionEnumTwoThousandAndFifteen0202 GetModifyUserGroupVersionEnum = "2015-02-02"
+	GETModifyUserGroupVersionEnumTwoThousandAndFifteen0202 GetModifyUserGroupVersionEnum = "2015-02-02"
 )
 
 type GetModifyUserGroupQueryParams struct {

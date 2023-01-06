@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,36 +24,36 @@ func main() {
     
     req := operations.CreateFundsConfirmationConsentsRequest{
         Security: operations.CreateFundsConfirmationConsentsSecurity{
-            TppoAuth2Security: shared.SchemeTppoAuth2Security{
+            TPPOAuth2Security: shared.SchemeTppoAuth2Security{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         Headers: operations.CreateFundsConfirmationConsentsHeaders{
-            Authorization: "quisquam",
-            XCustomerUserAgent: "dolores",
-            XFapiAuthDate: "sint",
-            XFapiCustomerIPAddress: "modi",
-            XFapiInteractionID: "distinctio",
+            Authorization: "voluptatem",
+            XCustomerUserAgent: "qui",
+            XFapiAuthDate: "veritatis",
+            XFapiCustomerIPAddress: "quo",
+            XFapiInteractionID: "error",
         },
         Request: shared.ObFundsConfirmationConsent1{
             Data: shared.ObFundsConfirmationConsent1Data{
                 DebtorAccount: shared.ObFundsConfirmationConsent1DataDebtorAccount{
-                    Identification: "voluptates",
-                    Name: "unde",
-                    SchemeName: "at",
-                    SecondaryIdentification: "magni",
+                    Identification: "et",
+                    Name: "consequuntur",
+                    SchemeName: "qui",
+                    SecondaryIdentification: "ab",
                 },
-                ExpirationDateTime: "2018-06-29T14:38:42Z",
+                ExpirationDateTime: "1993-11-30T12:01:29Z",
             },
         },
     }
     
-    res, err := s.Sdk.CreateFundsConfirmationConsents(ctx, req)
+    res, err := s.FundsConfirmations.CreateFundsConfirmationConsents(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ObFundsConfirmationConsentResponse1 != nil {
+    if res.OBFundsConfirmationConsentResponse1 != nil {
         // handle response
     }
 ```
@@ -63,7 +62,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Funds Confirmations
 
 * `CreateFundsConfirmationConsents` - Create Funds Confirmation Consent
 * `CreateFundsConfirmations` - Create Funds Confirmation

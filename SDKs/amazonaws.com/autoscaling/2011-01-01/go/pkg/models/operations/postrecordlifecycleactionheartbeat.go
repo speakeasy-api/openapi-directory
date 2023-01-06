@@ -3,13 +3,13 @@ package operations
 type PostRecordLifecycleActionHeartbeatActionEnum string
 
 const (
-	PostRecordLifecycleActionHeartbeatActionEnumRecordLifecycleActionHeartbeat PostRecordLifecycleActionHeartbeatActionEnum = "RecordLifecycleActionHeartbeat"
+	POSTRecordLifecycleActionHeartbeatActionEnumRecordLifecycleActionHeartbeat PostRecordLifecycleActionHeartbeatActionEnum = "RecordLifecycleActionHeartbeat"
 )
 
 type PostRecordLifecycleActionHeartbeatVersionEnum string
 
 const (
-	PostRecordLifecycleActionHeartbeatVersionEnumTwoThousandAndEleven0101 PostRecordLifecycleActionHeartbeatVersionEnum = "2011-01-01"
+	POSTRecordLifecycleActionHeartbeatVersionEnumTwoThousandAndEleven0101 PostRecordLifecycleActionHeartbeatVersionEnum = "2011-01-01"
 )
 
 type PostRecordLifecycleActionHeartbeatQueryParams struct {

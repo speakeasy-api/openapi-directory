@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,30 @@ func main() {
         Security: operations.IapProjectsBrandsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.IapProjectsBrandsCreatePathParams{
-            Parent: "laboriosam",
+            Parent: "qui",
         },
         QueryParams: operations.IapProjectsBrandsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "porro",
-            Alt: "json",
-            Callback: "et",
-            Fields: "sed",
-            Key: "ut",
-            OauthToken: "voluptatem",
+            AccessToken: "autem",
+            Alt: "proto",
+            Callback: "alias",
+            Fields: "quaerat",
+            Key: "qui",
+            OauthToken: "consequuntur",
             PrettyPrint: true,
-            QuotaUser: "molestias",
-            UploadType: "vel",
-            UploadProtocol: "dolorem",
+            QuotaUser: "magni",
+            UploadType: "et",
+            UploadProtocol: "et",
         },
         Request: &shared.BrandInput{
-            ApplicationTitle: "id",
-            SupportEmail: "iste",
+            ApplicationTitle: "saepe",
+            SupportEmail: "ratione",
         },
     }
     

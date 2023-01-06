@@ -7,7 +7,7 @@ import (
 type ListVpceConfigurationsXAmzTargetEnum string
 
 const (
-	ListVpceConfigurationsXAmzTargetEnumDeviceFarm20150623ListVpceConfigurations ListVpceConfigurationsXAmzTargetEnum = "DeviceFarm_20150623.ListVPCEConfigurations"
+	ListVPCEConfigurationsXAmzTargetEnumDeviceFarm20150623ListVpceConfigurations ListVpceConfigurationsXAmzTargetEnum = "DeviceFarm_20150623.ListVPCEConfigurations"
 )
 
 type ListVpceConfigurationsHeaders struct {
@@ -29,7 +29,7 @@ type ListVpceConfigurationsRequest struct {
 type ListVpceConfigurationsResponse struct {
 	ArgumentException            *interface{}
 	ContentType                  string
-	ListVpceConfigurationsResult *shared.ListVpceConfigurationsResult
+	ListVPCEConfigurationsResult *shared.ListVpceConfigurationsResult
 	ServiceAccountException      *interface{}
 	StatusCode                   int64
 }

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVpcEndpointConnectionsResult struct {
-	NextToken              *string
-	VpcEndpointConnections []VpcEndpointConnection
+	NextToken              map[string]interface{}
+	VpcEndpointConnections map[string]interface{}
 }

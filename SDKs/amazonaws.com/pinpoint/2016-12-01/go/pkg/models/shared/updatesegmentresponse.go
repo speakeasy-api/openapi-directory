@@ -1,5 +1,5 @@
 package shared
 
 type UpdateSegmentResponse struct {
-	SegmentResponse SegmentResponse `json:"SegmentResponse"`
+	SegmentResponse SegmentResponse1 `json:"SegmentResponse"`
 }

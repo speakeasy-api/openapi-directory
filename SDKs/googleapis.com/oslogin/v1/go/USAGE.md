@@ -1,0 +1,54 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.OsloginUsersGetLoginProfileRequest{
+        Security: operations.OsloginUsersGetLoginProfileSecurity{
+            Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
+                Oauth2: shared.SchemeOauth2{
+                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+                },
+                Oauth2c: shared.SchemeOauth2c{
+                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+                },
+            },
+        },
+        PathParams: operations.OsloginUsersGetLoginProfilePathParams{
+            Name: "quo",
+        },
+        QueryParams: operations.OsloginUsersGetLoginProfileQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "aut",
+            Alt: "json",
+            Callback: "qui",
+            Fields: "dolor",
+            Key: "ullam",
+            OauthToken: "quod",
+            PrettyPrint: false,
+            ProjectID: "velit",
+            QuotaUser: "aliquam",
+            SystemID: "cum",
+            UploadType: "quasi",
+            UploadProtocol: "et",
+        },
+    }
+    
+    res, err := s.Users.OsloginUsersGetLoginProfile(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.LoginProfile != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

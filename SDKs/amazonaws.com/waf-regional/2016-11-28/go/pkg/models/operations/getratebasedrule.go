@@ -30,7 +30,7 @@ type GetRateBasedRuleResponse struct {
 	ContentType                 string
 	GetRateBasedRuleResponse    *shared.GetRateBasedRuleResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

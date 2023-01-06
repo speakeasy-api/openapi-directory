@@ -31,7 +31,6 @@ type GetAccountsAccountIDStatementsStatementIDFileRequest struct {
 type GetAccountsAccountIDStatementsStatementIDFileResponse struct {
 	Body                                                                       []byte
 	ContentType                                                                string
-	GetAccountsAccountIDStatementsStatementIDFile200ApplicationPdfBinaryString []byte
-	Headers                                                                    map[string][]string
 	StatusCode                                                                 int64
+	GetAccountsAccountIDStatementsStatementIDFile200ApplicationPdfBinaryString []byte
 }

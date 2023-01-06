@@ -31,6 +31,6 @@ type DisconnectCustomKeyStoreResponse struct {
 	CustomKeyStoreInvalidStateException *interface{}
 	CustomKeyStoreNotFoundException     *interface{}
 	DisconnectCustomKeyStoreResponse    map[string]interface{}
-	KmsInternalException                *interface{}
+	KMSInternalException                *interface{}
 	StatusCode                          int64
 }

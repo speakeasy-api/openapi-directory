@@ -42,6 +42,6 @@ type GetReviewsResourceTypeJSONRequest struct {
 
 type GetReviewsResourceTypeJSONResponse struct {
 	ContentType                                        string
-	GetReviewsResourceTypeJSON200ApplicationJSONObject *GetReviewsResourceTypeJSON200ApplicationJSON
 	StatusCode                                         int64
+	GetReviewsResourceTypeJSON200ApplicationJSONObject *GetReviewsResourceTypeJSON200ApplicationJSON
 }

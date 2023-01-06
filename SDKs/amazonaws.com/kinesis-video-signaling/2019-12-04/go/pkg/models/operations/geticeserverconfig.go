@@ -21,7 +21,7 @@ const (
 )
 
 type GetIceServerConfigRequestBody struct {
-	ChannelArn string                                    `json:"ChannelARN"`
+	ChannelARN string                                    `json:"ChannelARN"`
 	ClientID   *string                                   `json:"ClientId,omitempty"`
 	Service    *GetIceServerConfigRequestBodyServiceEnum `json:"Service,omitempty"`
 	Username   *string                                   `json:"Username,omitempty"`

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,126 +34,118 @@ func main() {
     
     req := operations.AddLfTagsToResourceRequest{
         Headers: operations.AddLfTagsToResourceHeaders{
-            XAmzAlgorithm: "laudantium",
-            XAmzContentSha256: "fuga",
-            XAmzCredential: "doloribus",
-            XAmzDate: "quasi",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "laboriosam",
-            XAmzSignedHeaders: "debitis",
+            XAmzAlgorithm: "tempore",
+            XAmzContentSha256: "veniam",
+            XAmzCredential: "consequatur",
+            XAmzDate: "corporis",
+            XAmzSecurityToken: "est",
+            XAmzSignature: "iure",
+            XAmzSignedHeaders: "adipisci",
             XAmzTarget: "AWSLakeFormation.AddLFTagsToResource",
         },
         Request: shared.AddLfTagsToResourceRequest{
-            CatalogID: "minus",
-            LfTags: []shared.LfTagPair{
+            CatalogID: "temporibus",
+            LFTags: []shared.LfTagPair{
                 shared.LfTagPair{
-                    CatalogID: "magnam",
-                    TagKey: "similique",
+                    CatalogID: "non",
+                    TagKey: "nulla",
                     TagValues: []string{
-                        "voluptatem",
+                        "reprehenderit",
                     },
                 },
                 shared.LfTagPair{
-                    CatalogID: "officia",
-                    TagKey: "iure",
+                    CatalogID: "quos",
+                    TagKey: "saepe",
                     TagValues: []string{
-                        "consequatur",
-                        "aut",
-                    },
-                },
-                shared.LfTagPair{
-                    CatalogID: "nobis",
-                    TagKey: "vero",
-                    TagValues: []string{
-                        "enim",
-                        "sequi",
+                        "est",
+                        "ab",
                     },
                 },
             },
             Resource: shared.Resource{
                 Catalog: map[string]interface{}{
-                    "voluptas": "aliquid",
-                    "maiores": "velit",
-                    "modi": "voluptatem",
+                    "molestias": "voluptas",
+                    "animi": "nesciunt",
+                    "nihil": "aspernatur",
                 },
                 DataLocation: &shared.DataLocationResource{
-                    CatalogID: "optio",
-                    ResourceArn: "doloremque",
+                    CatalogID: "hic",
+                    ResourceArn: "vitae",
                 },
                 Database: &shared.DatabaseResource{
-                    CatalogID: "cum",
-                    Name: "necessitatibus",
+                    CatalogID: "libero",
+                    Name: "accusantium",
                 },
-                LfTag: &shared.LfTagKeyResource{
-                    CatalogID: "illum",
-                    TagKey: "enim",
+                LFTag: &shared.LfTagKeyResource{
+                    CatalogID: "facere",
+                    TagKey: "pariatur",
                     TagValues: []string{
-                        "ratione",
+                        "doloremque",
                     },
                 },
-                LfTagPolicy: &shared.LfTagPolicyResource{
-                    CatalogID: "quasi",
+                LFTagPolicy: &shared.LfTagPolicyResource{
+                    CatalogID: "architecto",
                     Expression: []shared.LfTag{
                         shared.LfTag{
-                            TagKey: "sapiente",
+                            TagKey: "est",
                             TagValues: []string{
-                                "omnis",
-                                "accusamus",
-                                "et",
+                                "aut",
+                                "voluptate",
                             },
                         },
                         shared.LfTag{
-                            TagKey: "accusamus",
+                            TagKey: "a",
                             TagValues: []string{
-                                "enim",
-                            },
-                        },
-                        shared.LfTag{
-                            TagKey: "in",
-                            TagValues: []string{
+                                "dolore",
+                                "assumenda",
                                 "rerum",
-                                "in",
-                                "perspiciatis",
+                            },
+                        },
+                        shared.LfTag{
+                            TagKey: "non",
+                            TagValues: []string{
+                                "nihil",
+                                "labore",
+                                "minima",
                             },
                         },
                     },
                     ResourceType: "DATABASE",
                 },
                 Table: &shared.TableResource{
-                    CatalogID: "asperiores",
-                    DatabaseName: "fugit",
-                    Name: "in",
+                    CatalogID: "ipsam",
+                    DatabaseName: "quia",
+                    Name: "molestiae",
                     TableWildcard: map[string]interface{}{
-                        "saepe": "veritatis",
+                        "nostrum": "aut",
+                        "ut": "neque",
                     },
                 },
                 TableWithColumns: &shared.TableWithColumnsResource{
-                    CatalogID: "nulla",
+                    CatalogID: "pariatur",
                     ColumnNames: []string{
-                        "ipsum",
-                        "aliquid",
-                        "iure",
+                        "sed",
+                        "aut",
                     },
                     ColumnWildcard: &shared.ColumnWildcard{
                         ExcludedColumnNames: []string{
-                            "maiores",
-                            "fugit",
-                            "qui",
+                            "magnam",
+                            "et",
                         },
                     },
-                    DatabaseName: "natus",
-                    Name: "molestiae",
+                    DatabaseName: "et",
+                    Name: "pariatur",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddLfTagsToResource(ctx, req)
+    res, err := s.AddLfTagsToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AddLfTagsToResourceResponse != nil {
+    if res.AddLFTagsToResourceResponse != nil {
         // handle response
     }
 ```

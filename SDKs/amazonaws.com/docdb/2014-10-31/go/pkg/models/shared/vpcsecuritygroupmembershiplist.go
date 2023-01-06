@@ -1,0 +1,8 @@
+package shared
+
+// VpcSecurityGroupMembershipList
+// Used as a response element for queries on virtual private cloud (VPC) security group membership.
+type VpcSecurityGroupMembershipList struct {
+	Status             *string
+	VpcSecurityGroupID *string
+}

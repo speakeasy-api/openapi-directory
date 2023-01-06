@@ -3,13 +3,13 @@ package operations
 type PostDescribeSnapshotAttributeActionEnum string
 
 const (
-	PostDescribeSnapshotAttributeActionEnumDescribeSnapshotAttribute PostDescribeSnapshotAttributeActionEnum = "DescribeSnapshotAttribute"
+	POSTDescribeSnapshotAttributeActionEnumDescribeSnapshotAttribute PostDescribeSnapshotAttributeActionEnum = "DescribeSnapshotAttribute"
 )
 
 type PostDescribeSnapshotAttributeVersionEnum string
 
 const (
-	PostDescribeSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 PostDescribeSnapshotAttributeVersionEnum = "2016-11-15"
+	POSTDescribeSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 PostDescribeSnapshotAttributeVersionEnum = "2016-11-15"
 )
 
 type PostDescribeSnapshotAttributeQueryParams struct {

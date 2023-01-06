@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,15 +24,15 @@ func main() {
     
     req := operations.BranchControllerGetBranchesRequest{
         PathParams: operations.BranchControllerGetBranchesPathParams{
-            ShortName: "repellendus",
+            ShortName: "ut",
         },
         QueryParams: operations.BranchControllerGetBranchesQueryParams{
-            Count: 6759572571242256861,
-            Offset: 3743037178764198971,
+            Count: 6819986047930640922,
+            Offset: 5235123056757608722,
         },
     }
     
-    res, err := s.Sdk.BranchControllerGetBranches(ctx, req)
+    res, err := s.BranchController.BranchControllerGetBranches(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,10 +46,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### BranchController
 
 * `BranchControllerGetBranches` - All branches defined for a company
 * `GetV2CustomerShortNameBranchBranchesBranchID` - Get a specific branch given its unique Object ID (OID)
+
+### LandlordController
+
 * `LandlordControllerCreateMaintenancePreference` - Post tenancy maintenance preferences:-
 * `LandlordControllerGetAccounts` - Get the accounting details for the landlord.
 * `LandlordControllerGetDocument` - Download a Document
@@ -65,8 +67,17 @@ func main() {
 * `LandlordControllerGetSummaryDetails` - Get the summary details for the landlord.
 * `LandlordControllerGetTenancy` - Get tenancy details.
 * `LandlordControllerGetTenancyAgreementReport` - Generate a Tenancy Agreement Copy (PDF)
+
+### PhotoController
+
 * `PhotoControllerGetPhotoDownload` - Downloads the photo of a property given the photo ID.
+
+### PropertyController
+
 * `PropertyControllerGetPropertiesPhotos` - A collection showing all the photos linked to a specific block, property or room
+
+### SessionController
+
 * `SessionControllerChangePassword` - Change the password of a customer given their existing and new password.
 * `SessionControllerCreateLandlordLogin` - Send a request to the in-tray to create a landlord login.
 * `SessionControllerGetSessionInfo` - Gets information about the currently logged on customer.

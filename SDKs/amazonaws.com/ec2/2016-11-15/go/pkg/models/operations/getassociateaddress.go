@@ -3,13 +3,13 @@ package operations
 type GetAssociateAddressActionEnum string
 
 const (
-	GetAssociateAddressActionEnumAssociateAddress GetAssociateAddressActionEnum = "AssociateAddress"
+	GETAssociateAddressActionEnumAssociateAddress GetAssociateAddressActionEnum = "AssociateAddress"
 )
 
 type GetAssociateAddressVersionEnum string
 
 const (
-	GetAssociateAddressVersionEnumTwoThousandAndSixteen1115 GetAssociateAddressVersionEnum = "2016-11-15"
+	GETAssociateAddressVersionEnumTwoThousandAndSixteen1115 GetAssociateAddressVersionEnum = "2016-11-15"
 )
 
 type GetAssociateAddressQueryParams struct {

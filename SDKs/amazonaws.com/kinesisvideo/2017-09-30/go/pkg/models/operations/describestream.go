@@ -15,7 +15,7 @@ type DescribeStreamHeaders struct {
 }
 
 type DescribeStreamRequestBody struct {
-	StreamArn  *string `json:"StreamARN,omitempty"`
+	StreamARN  *string `json:"StreamARN,omitempty"`
 	StreamName *string `json:"StreamName,omitempty"`
 }
 

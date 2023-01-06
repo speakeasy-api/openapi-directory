@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Projects struct {
@@ -29,7 +29,7 @@ func NewProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings - Get the ContainerThreatDetectionSettings resource.
+// SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
 func (s *Projects) SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(ctx context.Context, request operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest) (*operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request.PathParams)
@@ -120,7 +120,7 @@ func (s *Projects) SecuritycenterProjectsLocationsClustersUpdateContainerThreatD
 	return res, nil
 }
 
-// SecuritycenterProjectsWebSecurityScannerSettingsCalculate - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings.
+// SecuritycenterProjectsWebSecurityScannerSettingsCalculate - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
 func (s *Projects) SecuritycenterProjectsWebSecurityScannerSettingsCalculate(ctx context.Context, request operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest) (*operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:calculate", request.PathParams)

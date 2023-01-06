@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.CreateConversationRequest{
         Request: &operations.CreateConversationRequestBody{
-            DisplayName: "eum",
-            ImageURL: "aut",
-            Name: "consequatur",
+            DisplayName: "eius",
+            ImageURL: "ipsam",
+            Name: "totam",
             Properties: &shared.ConversationProperties{
-                TTL: 14.100000,
+                TTL: 85.199997,
             },
         },
     }

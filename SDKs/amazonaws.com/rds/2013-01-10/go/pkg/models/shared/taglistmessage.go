@@ -1,5 +1,5 @@
 package shared
 
 type TagListMessage struct {
-	TagList []Tag
+	TagList []map[string]interface{}
 }

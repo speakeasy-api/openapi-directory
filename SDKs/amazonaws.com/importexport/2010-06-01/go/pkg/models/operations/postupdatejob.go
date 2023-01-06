@@ -3,23 +3,23 @@ package operations
 type PostUpdateJobActionEnum string
 
 const (
-	PostUpdateJobActionEnumUpdateJob PostUpdateJobActionEnum = "UpdateJob"
+	POSTUpdateJobActionEnumUpdateJob PostUpdateJobActionEnum = "UpdateJob"
 )
 
 type PostUpdateJobOperationEnum string
 
 const (
-	PostUpdateJobOperationEnumUpdateJob PostUpdateJobOperationEnum = "UpdateJob"
+	POSTUpdateJobOperationEnumUpdateJob PostUpdateJobOperationEnum = "UpdateJob"
 )
 
 type PostUpdateJobVersionEnum string
 
 const (
-	PostUpdateJobVersionEnumTwoThousandAndTen0601 PostUpdateJobVersionEnum = "2010-06-01"
+	POSTUpdateJobVersionEnumTwoThousandAndTen0601 PostUpdateJobVersionEnum = "2010-06-01"
 )
 
 type PostUpdateJobQueryParams struct {
-	AwsAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostUpdateJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        PostUpdateJobOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`

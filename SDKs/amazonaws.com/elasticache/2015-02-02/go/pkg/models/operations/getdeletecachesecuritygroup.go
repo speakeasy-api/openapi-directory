@@ -3,13 +3,13 @@ package operations
 type GetDeleteCacheSecurityGroupActionEnum string
 
 const (
-	GetDeleteCacheSecurityGroupActionEnumDeleteCacheSecurityGroup GetDeleteCacheSecurityGroupActionEnum = "DeleteCacheSecurityGroup"
+	GETDeleteCacheSecurityGroupActionEnumDeleteCacheSecurityGroup GetDeleteCacheSecurityGroupActionEnum = "DeleteCacheSecurityGroup"
 )
 
 type GetDeleteCacheSecurityGroupVersionEnum string
 
 const (
-	GetDeleteCacheSecurityGroupVersionEnumTwoThousandAndFifteen0202 GetDeleteCacheSecurityGroupVersionEnum = "2015-02-02"
+	GETDeleteCacheSecurityGroupVersionEnumTwoThousandAndFifteen0202 GetDeleteCacheSecurityGroupVersionEnum = "2015-02-02"
 )
 
 type GetDeleteCacheSecurityGroupQueryParams struct {

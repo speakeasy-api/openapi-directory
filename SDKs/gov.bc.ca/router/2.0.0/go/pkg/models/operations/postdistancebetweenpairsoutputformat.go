@@ -37,7 +37,7 @@ type PostDistanceBetweenPairsOutputFormatQueryParams struct {
 	DistanceUnit     *PostDistanceBetweenPairsOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
 	FromPoints       string                                                `queryParam:"style=form,explode=true,name=fromPoints"`
 	MaxPairs         *int64                                                `queryParam:"style=form,explode=true,name=maxPairs"`
-	OutputSrs        *int64                                                `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS        *int64                                                `queryParam:"style=form,explode=true,name=outputSRS"`
 	RouteDescription *string                                               `queryParam:"style=form,explode=true,name=routeDescription"`
 	ToPoints         string                                                `queryParam:"style=form,explode=true,name=toPoints"`
 }

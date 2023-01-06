@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,20 +24,20 @@ func main() {
     
     req := operations.PolyAssetsGetRequest{
         PathParams: operations.PolyAssetsGetPathParams{
-            Name: "rerum",
+            Name: "quod",
         },
         QueryParams: operations.PolyAssetsGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "repudiandae",
+            DollarXgafv: "1",
+            AccessToken: "et",
             Alt: "media",
-            Callback: "nisi",
-            Fields: "sit",
-            Key: "aut",
-            OauthToken: "exercitationem",
-            PrettyPrint: true,
-            QuotaUser: "corporis",
-            UploadType: "odio",
-            UploadProtocol: "animi",
+            Callback: "iusto",
+            Fields: "porro",
+            Key: "eos",
+            OauthToken: "veritatis",
+            PrettyPrint: false,
+            QuotaUser: "possimus",
+            UploadType: "ut",
+            UploadProtocol: "vel",
         },
     }
     

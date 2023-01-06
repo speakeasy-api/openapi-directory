@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AcceptQualificationRequestRequest{
         Headers: operations.AcceptQualificationRequestHeaders{
-            XAmzAlgorithm: "non",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "eum",
-            XAmzDate: "corporis",
-            XAmzSecurityToken: "magni",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "occaecati",
+            XAmzAlgorithm: "necessitatibus",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "quod",
+            XAmzDate: "maxime",
+            XAmzSecurityToken: "minima",
+            XAmzSignature: "eligendi",
+            XAmzSignedHeaders: "dolorum",
             XAmzTarget: "MTurkRequesterServiceV20170117.AcceptQualificationRequest",
         },
         Request: shared.AcceptQualificationRequestRequest{
-            IntegerValue: 2383187586169418805,
-            QualificationRequestID: "qui",
+            IntegerValue: 6448156504048960045,
+            QualificationRequestID: "nostrum",
         },
     }
     
-    res, err := s.Sdk.AcceptQualificationRequest(ctx, req)
+    res, err := s.AcceptQualificationRequest(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -7,8 +7,8 @@ import (
 type ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteDomesticStandingOrderConsentResponse6DataAuthorisation
@@ -85,23 +85,23 @@ type ObWriteDomesticStandingOrderConsentResponse6DataInitiation struct {
 type ObWriteDomesticStandingOrderConsentResponse6DataPermissionEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsentResponse6DataPermissionEnumCreate ObWriteDomesticStandingOrderConsentResponse6DataPermissionEnum = "Create"
+	OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnumCreate ObWriteDomesticStandingOrderConsentResponse6DataPermissionEnum = "Create"
 )
 
 type ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnumNo  ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum = "No"
-	ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnumYes ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum = "Yes"
+	OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnumNo  ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum = "No"
+	OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnumYes ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsentResponse6DataStatusEnumAuthorised            ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Authorised"
-	ObWriteDomesticStandingOrderConsentResponse6DataStatusEnumAwaitingAuthorisation ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteDomesticStandingOrderConsentResponse6DataStatusEnumConsumed              ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Consumed"
-	ObWriteDomesticStandingOrderConsentResponse6DataStatusEnumRejected              ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Rejected"
+	OBWriteDomesticStandingOrderConsentResponse6DataStatusEnumAuthorised            ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Authorised"
+	OBWriteDomesticStandingOrderConsentResponse6DataStatusEnumAwaitingAuthorisation ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteDomesticStandingOrderConsentResponse6DataStatusEnumConsumed              ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Consumed"
+	OBWriteDomesticStandingOrderConsentResponse6DataStatusEnumRejected              ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Rejected"
 )
 
 type ObWriteDomesticStandingOrderConsentResponse6Data struct {
@@ -114,7 +114,7 @@ type ObWriteDomesticStandingOrderConsentResponse6Data struct {
 	Initiation           ObWriteDomesticStandingOrderConsentResponse6DataInitiation             `json:"Initiation"`
 	Permission           ObWriteDomesticStandingOrderConsentResponse6DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount    *ObWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData       *ObscaSupportData1                                                     `json:"SCASupportData,omitempty"`
+	SCASupportData       *ObscaSupportData1                                                     `json:"SCASupportData,omitempty"`
 	Status               ObWriteDomesticStandingOrderConsentResponse6DataStatusEnum             `json:"Status"`
 	StatusUpdateDateTime time.Time                                                              `json:"StatusUpdateDateTime"`
 }

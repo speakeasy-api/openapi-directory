@@ -8,14 +8,14 @@ import (
 // <p>Contains the details for an Amazon Neptune DB cluster snapshot</p> <p>This data type is used as a response element in the <a>DescribeDBClusterSnapshots</a> action.</p>
 type DbClusterSnapshot struct {
 	AllocatedStorage                 *int64
-	AvailabilityZones                []string
+	AvailabilityZones                []map[string]interface{}
 	ClusterCreateTime                *time.Time
-	DbClusterIdentifier              *string
-	DbClusterSnapshotArn             *string
-	DbClusterSnapshotIdentifier      *string
+	DBClusterIdentifier              *string
+	DBClusterSnapshotArn             *string
+	DBClusterSnapshotIdentifier      *string
 	Engine                           *string
 	EngineVersion                    *string
-	IamDatabaseAuthenticationEnabled *bool
+	IAMDatabaseAuthenticationEnabled *bool
 	KmsKeyID                         *string
 	LicenseModel                     *string
 	MasterUsername                   *string
@@ -23,7 +23,7 @@ type DbClusterSnapshot struct {
 	Port                             *int64
 	SnapshotCreateTime               *time.Time
 	SnapshotType                     *string
-	SourceDbClusterSnapshotArn       *string
+	SourceDBClusterSnapshotArn       *string
 	Status                           *string
 	StorageEncrypted                 *bool
 	VpcID                            *string

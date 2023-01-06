@@ -1,6 +1,6 @@
 package shared
 
 type DescribeAggregateIDFormatResult struct {
-	Statuses             []IDFormat
-	UseLongIdsAggregated *bool
+	Statuses             map[string]interface{}
+	UseLongIdsAggregated map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type PostDescribeAggregateIDFormatActionEnum string
 
 const (
-	PostDescribeAggregateIDFormatActionEnumDescribeAggregateIDFormat PostDescribeAggregateIDFormatActionEnum = "DescribeAggregateIdFormat"
+	POSTDescribeAggregateIDFormatActionEnumDescribeAggregateIDFormat PostDescribeAggregateIDFormatActionEnum = "DescribeAggregateIdFormat"
 )
 
 type PostDescribeAggregateIDFormatVersionEnum string
 
 const (
-	PostDescribeAggregateIDFormatVersionEnumTwoThousandAndSixteen1115 PostDescribeAggregateIDFormatVersionEnum = "2016-11-15"
+	POSTDescribeAggregateIDFormatVersionEnumTwoThousandAndSixteen1115 PostDescribeAggregateIDFormatVersionEnum = "2016-11-15"
 )
 
 type PostDescribeAggregateIDFormatQueryParams struct {

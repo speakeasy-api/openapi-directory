@@ -10,18 +10,18 @@ type UpdateCveRequestBody struct {
 type UpdateCve200ApplicationJSONActionEnum string
 
 const (
-	UpdateCve200ApplicationJSONActionEnumUpdateCve UpdateCve200ApplicationJSONActionEnum = "updateCVE"
+	UpdateCVE200ApplicationJSONActionEnumUpdateCve UpdateCve200ApplicationJSONActionEnum = "updateCVE"
 )
 
 type UpdateCve200ApplicationJSONData struct {
-	CvEs int64 `json:"CVEs"`
+	CVEs int64 `json:"CVEs"`
 }
 
 type UpdateCve200ApplicationJSONResultEnum string
 
 const (
-	UpdateCve200ApplicationJSONResultEnumSuccess UpdateCve200ApplicationJSONResultEnum = "success"
-	UpdateCve200ApplicationJSONResultEnumError   UpdateCve200ApplicationJSONResultEnum = "error"
+	UpdateCVE200ApplicationJSONResultEnumSuccess UpdateCve200ApplicationJSONResultEnum = "success"
+	UpdateCVE200ApplicationJSONResultEnumError   UpdateCve200ApplicationJSONResultEnum = "error"
 )
 
 type UpdateCve200ApplicationJSON struct {
@@ -37,5 +37,5 @@ type UpdateCveRequest struct {
 type UpdateCveResponse struct {
 	ContentType                       string
 	StatusCode                        int64
-	UpdateCve200ApplicationJSONObject *UpdateCve200ApplicationJSON
+	UpdateCVE200ApplicationJSONObject *UpdateCve200ApplicationJSON
 }

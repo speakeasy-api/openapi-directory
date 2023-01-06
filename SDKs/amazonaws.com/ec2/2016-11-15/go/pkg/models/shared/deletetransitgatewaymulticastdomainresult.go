@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTransitGatewayMulticastDomainResult struct {
-	TransitGatewayMulticastDomain *TransitGatewayMulticastDomain
+	TransitGatewayMulticastDomain map[string]interface{}
 }

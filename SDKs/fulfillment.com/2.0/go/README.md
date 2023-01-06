@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -24,7 +23,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostOauthAccessTokenRequest{
-        Request: "saepe",
+        Request: "nostrum",
     }
     
     res, err := s.Auth.PostOauthAccessToken(ctx, req)

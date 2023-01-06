@@ -33,7 +33,7 @@ type CreateReplicationInstanceResponse struct {
 	InsufficientResourceCapacityFault           *interface{}
 	InvalidResourceStateFault                   *interface{}
 	InvalidSubnet                               *interface{}
-	KmsKeyNotAccessibleFault                    *interface{}
+	KMSKeyNotAccessibleFault                    *interface{}
 	ReplicationSubnetGroupDoesNotCoverEnoughAZs *interface{}
 	ResourceAlreadyExistsFault                  *interface{}
 	ResourceNotFoundFault                       *interface{}

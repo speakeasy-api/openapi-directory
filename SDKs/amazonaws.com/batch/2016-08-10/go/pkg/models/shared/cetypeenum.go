@@ -3,6 +3,6 @@ package shared
 type CeTypeEnum string
 
 const (
-	CeTypeEnumManaged   CeTypeEnum = "MANAGED"
-	CeTypeEnumUnmanaged CeTypeEnum = "UNMANAGED"
+	CETypeEnumManaged   CeTypeEnum = "MANAGED"
+	CETypeEnumUnmanaged CeTypeEnum = "UNMANAGED"
 )

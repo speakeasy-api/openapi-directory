@@ -5,9 +5,9 @@ import (
 )
 
 type PhcerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	RegnNo   string `json:"REGN_NO"`
+	REGNNO   string `json:"REGN_NO"`
 	UID      string `json:"UID"`
 }
 
@@ -84,7 +84,7 @@ type Phcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Phcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Phcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Phcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Phcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Phcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Phcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Phcer404ApplicationJSON struct {

@@ -4,7 +4,7 @@ package shared
 // An action to be performed when the <code>condition</code> is TRUE.
 type Action struct {
 	ClearTimer      *ClearTimerAction      `json:"clearTimer,omitempty"`
-	DynamoDb        *DynamoDbAction        `json:"dynamoDB,omitempty"`
+	DynamoDB        *DynamoDbAction        `json:"dynamoDB,omitempty"`
 	DynamoDBv2      *DynamoDBv2Action      `json:"dynamoDBv2,omitempty"`
 	Firehose        *FirehoseAction        `json:"firehose,omitempty"`
 	IotEvents       *IotEventsAction       `json:"iotEvents,omitempty"`

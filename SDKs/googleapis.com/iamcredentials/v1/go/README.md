@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,37 +26,34 @@ func main() {
         Security: operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams{
-            Name: "culpa",
+            Name: "non",
         },
         QueryParams: operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "itaque",
-            Alt: "proto",
-            Callback: "eum",
-            Fields: "earum",
-            Key: "praesentium",
-            OauthToken: "id",
-            PrettyPrint: true,
-            QuotaUser: "incidunt",
-            UploadType: "temporibus",
-            UploadProtocol: "cupiditate",
+            DollarXgafv: "1",
+            AccessToken: "laboriosam",
+            Alt: "json",
+            Callback: "beatae",
+            Fields: "itaque",
+            Key: "amet",
+            OauthToken: "ex",
+            PrettyPrint: false,
+            QuotaUser: "sapiente",
+            UploadType: "dolores",
+            UploadProtocol: "voluptatem",
         },
         Request: &shared.GenerateAccessTokenRequest{
             Delegates: []string{
-                "possimus",
-                "alias",
-                "est",
+                "odit",
             },
-            Lifetime: "voluptates",
+            Lifetime: "voluptatem",
             Scope: []string{
-                "error",
-                "et",
+                "laboriosam",
             },
         },
     }

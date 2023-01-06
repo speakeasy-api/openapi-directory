@@ -15,6 +15,6 @@ type PostAuthPollRequest struct {
 
 type PostAuthPollResponse struct {
 	ContentType                          string
-	PostAuthPoll200ApplicationJSONObject *PostAuthPoll200ApplicationJSON
 	StatusCode                           int64
+	PostAuthPoll200ApplicationJSONObject *PostAuthPoll200ApplicationJSON
 }

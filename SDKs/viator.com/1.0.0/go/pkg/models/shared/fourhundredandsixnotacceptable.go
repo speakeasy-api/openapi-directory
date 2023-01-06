@@ -3,7 +3,7 @@ package shared
 type FourHundredAndSixNotAcceptableCodeEnum string
 
 const (
-	FourHundredAndSixNotAcceptableCodeEnumInvalidHeaderValue FourHundredAndSixNotAcceptableCodeEnum = "INVALID_HEADER_VALUE"
+	FourHundredAndSixNOTACCEPTABLECodeEnumInvalidHeaderValue FourHundredAndSixNotAcceptableCodeEnum = "INVALID_HEADER_VALUE"
 )
 
 type FourHundredAndSixNotAcceptable struct {

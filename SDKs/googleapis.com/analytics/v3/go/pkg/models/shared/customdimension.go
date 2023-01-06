@@ -11,18 +11,6 @@ type CustomDimensionParentLink struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// CustomDimensionInput
-// JSON template for Analytics Custom Dimension.
-type CustomDimensionInput struct {
-	AccountID     *string                    `json:"accountId,omitempty"`
-	Active        *bool                      `json:"active,omitempty"`
-	ID            *string                    `json:"id,omitempty"`
-	Name          *string                    `json:"name,omitempty"`
-	ParentLink    *CustomDimensionParentLink `json:"parentLink,omitempty"`
-	Scope         *string                    `json:"scope,omitempty"`
-	WebPropertyID *string                    `json:"webPropertyId,omitempty"`
-}
-
 // CustomDimension
 // JSON template for Analytics Custom Dimension.
 type CustomDimension struct {
@@ -37,5 +25,17 @@ type CustomDimension struct {
 	Scope         *string                    `json:"scope,omitempty"`
 	SelfLink      *string                    `json:"selfLink,omitempty"`
 	Updated       *time.Time                 `json:"updated,omitempty"`
+	WebPropertyID *string                    `json:"webPropertyId,omitempty"`
+}
+
+// CustomDimensionInput
+// JSON template for Analytics Custom Dimension.
+type CustomDimensionInput struct {
+	AccountID     *string                    `json:"accountId,omitempty"`
+	Active        *bool                      `json:"active,omitempty"`
+	ID            *string                    `json:"id,omitempty"`
+	Name          *string                    `json:"name,omitempty"`
+	ParentLink    *CustomDimensionParentLink `json:"parentLink,omitempty"`
+	Scope         *string                    `json:"scope,omitempty"`
 	WebPropertyID *string                    `json:"webPropertyId,omitempty"`
 }

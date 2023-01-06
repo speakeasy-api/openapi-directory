@@ -3,13 +3,13 @@ package operations
 type PostDescribeLaunchTemplateVersionsActionEnum string
 
 const (
-	PostDescribeLaunchTemplateVersionsActionEnumDescribeLaunchTemplateVersions PostDescribeLaunchTemplateVersionsActionEnum = "DescribeLaunchTemplateVersions"
+	POSTDescribeLaunchTemplateVersionsActionEnumDescribeLaunchTemplateVersions PostDescribeLaunchTemplateVersionsActionEnum = "DescribeLaunchTemplateVersions"
 )
 
 type PostDescribeLaunchTemplateVersionsVersionEnum string
 
 const (
-	PostDescribeLaunchTemplateVersionsVersionEnumTwoThousandAndSixteen1115 PostDescribeLaunchTemplateVersionsVersionEnum = "2016-11-15"
+	POSTDescribeLaunchTemplateVersionsVersionEnumTwoThousandAndSixteen1115 PostDescribeLaunchTemplateVersionsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeLaunchTemplateVersionsQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeHostReservationsResult struct {
-	HostReservationSet []HostReservation
-	NextToken          *string
+	HostReservationSet map[string]interface{}
+	NextToken          map[string]interface{}
 }

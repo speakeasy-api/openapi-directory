@@ -8,7 +8,7 @@ type ComputeResource struct {
 	DesiredvCpus       *int64                       `json:"desiredvCpus,omitempty"`
 	Ec2Configuration   []Ec2Configuration           `json:"ec2Configuration,omitempty"`
 	Ec2KeyPair         *string                      `json:"ec2KeyPair,omitempty"`
-	ImageID            *string                      `json:"imageId,omitempty"`
+	ImageID            map[string]interface{}       `json:"imageId,omitempty"`
 	InstanceRole       *string                      `json:"instanceRole,omitempty"`
 	InstanceTypes      []string                     `json:"instanceTypes,omitempty"`
 	LaunchTemplate     *LaunchTemplateSpecification `json:"launchTemplate,omitempty"`

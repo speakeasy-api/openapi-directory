@@ -1,5 +1,5 @@
 package shared
 
 type ResetFpgaImageAttributeResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

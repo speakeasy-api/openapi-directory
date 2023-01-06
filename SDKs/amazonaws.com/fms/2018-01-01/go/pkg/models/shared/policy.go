@@ -3,7 +3,7 @@ package shared
 // Policy
 // An Firewall Manager policy.
 type Policy struct {
-	DeleteUnusedFmManagedResources *bool                     `json:"DeleteUnusedFMManagedResources,omitempty"`
+	DeleteUnusedFMManagedResources *bool                     `json:"DeleteUnusedFMManagedResources,omitempty"`
 	ExcludeMap                     map[string][]string       `json:"ExcludeMap,omitempty"`
 	ExcludeResourceTags            bool                      `json:"ExcludeResourceTags"`
 	IncludeMap                     map[string][]string       `json:"IncludeMap,omitempty"`

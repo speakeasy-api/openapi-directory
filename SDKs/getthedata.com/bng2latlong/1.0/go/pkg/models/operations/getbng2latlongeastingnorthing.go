@@ -27,6 +27,6 @@ type GetBng2latlongEastingNorthingRequest struct {
 
 type GetBng2latlongEastingNorthingResponse struct {
 	ContentType                                           string
-	GetBng2latlongEastingNorthing200ApplicationJSONObject *GetBng2latlongEastingNorthing200ApplicationJSON
 	StatusCode                                            int64
+	GetBng2latlongEastingNorthing200ApplicationJSONObject *GetBng2latlongEastingNorthing200ApplicationJSON
 }

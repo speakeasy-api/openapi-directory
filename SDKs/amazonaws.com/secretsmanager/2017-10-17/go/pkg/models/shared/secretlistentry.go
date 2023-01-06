@@ -7,7 +7,7 @@ import (
 // SecretListEntry
 // A structure that contains the details about a secret. It does not include the encrypted <code>SecretString</code> and <code>SecretBinary</code> values. To get those values, use the <a>GetSecretValue</a> operation.
 type SecretListEntry struct {
-	Arn                    *string             `json:"ARN,omitempty"`
+	ARN                    *string             `json:"ARN,omitempty"`
 	CreatedDate            *time.Time          `json:"CreatedDate,omitempty"`
 	DeletedDate            *time.Time          `json:"DeletedDate,omitempty"`
 	Description            *string             `json:"Description,omitempty"`
@@ -19,7 +19,7 @@ type SecretListEntry struct {
 	OwningService          *string             `json:"OwningService,omitempty"`
 	PrimaryRegion          *string             `json:"PrimaryRegion,omitempty"`
 	RotationEnabled        *bool               `json:"RotationEnabled,omitempty"`
-	RotationLambdaArn      *string             `json:"RotationLambdaARN,omitempty"`
+	RotationLambdaARN      *string             `json:"RotationLambdaARN,omitempty"`
 	RotationRules          *RotationRulesType  `json:"RotationRules,omitempty"`
 	SecretVersionsToStages map[string][]string `json:"SecretVersionsToStages,omitempty"`
 	Tags                   []Tag               `json:"Tags,omitempty"`

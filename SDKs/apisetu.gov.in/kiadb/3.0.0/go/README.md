@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.AlltrSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AlltrRequestBody{
             CertificateParameters: &operations.AlltrRequestBodyCertificateParameters{
-                Dob: "excepturi",
-                FullName: "qui",
-                RegNum: "aut",
-                UID: "quas",
+                DOB: "non",
+                FullName: "non",
+                RegNum: "quam",
+                UID: "est",
             },
-            ConsentArtifact: "odit",
+            ConsentArtifact: "optio",
             Format: "pdf",
-            TxnID: "qui",
+            TxnID: "nisi",
         },
     }
     
-    res, err := s.Sdk.Alltr(ctx, req)
+    res, err := s.APIs.Alltr(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Alltr` - Allotment Letter
 * `Bknoc` - NOC For Banks

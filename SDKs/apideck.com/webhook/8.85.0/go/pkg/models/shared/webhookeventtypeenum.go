@@ -91,4 +91,7 @@ const (
 	WebhookEventTypeEnumHrisCompanyCreated                WebhookEventTypeEnum = "hris.company.created"
 	WebhookEventTypeEnumHrisCompanyUpdated                WebhookEventTypeEnum = "hris.company.updated"
 	WebhookEventTypeEnumHrisCompanyDeleted                WebhookEventTypeEnum = "hris.company.deleted"
+	WebhookEventTypeEnumFileStorageFileCreated            WebhookEventTypeEnum = "file-storage.file.created"
+	WebhookEventTypeEnumFileStorageFileUpdated            WebhookEventTypeEnum = "file-storage.file.updated"
+	WebhookEventTypeEnumFileStorageFileDeleted            WebhookEventTypeEnum = "file-storage.file.deleted"
 )

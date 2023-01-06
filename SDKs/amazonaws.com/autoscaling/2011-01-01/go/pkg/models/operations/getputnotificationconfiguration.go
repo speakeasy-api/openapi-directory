@@ -3,20 +3,20 @@ package operations
 type GetPutNotificationConfigurationActionEnum string
 
 const (
-	GetPutNotificationConfigurationActionEnumPutNotificationConfiguration GetPutNotificationConfigurationActionEnum = "PutNotificationConfiguration"
+	GETPutNotificationConfigurationActionEnumPutNotificationConfiguration GetPutNotificationConfigurationActionEnum = "PutNotificationConfiguration"
 )
 
 type GetPutNotificationConfigurationVersionEnum string
 
 const (
-	GetPutNotificationConfigurationVersionEnumTwoThousandAndEleven0101 GetPutNotificationConfigurationVersionEnum = "2011-01-01"
+	GETPutNotificationConfigurationVersionEnumTwoThousandAndEleven0101 GetPutNotificationConfigurationVersionEnum = "2011-01-01"
 )
 
 type GetPutNotificationConfigurationQueryParams struct {
 	Action               GetPutNotificationConfigurationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoScalingGroupName string                                     `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	NotificationTypes    []string                                   `queryParam:"style=form,explode=true,name=NotificationTypes"`
-	TopicArn             string                                     `queryParam:"style=form,explode=true,name=TopicARN"`
+	TopicARN             string                                     `queryParam:"style=form,explode=true,name=TopicARN"`
 	Version              GetPutNotificationConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

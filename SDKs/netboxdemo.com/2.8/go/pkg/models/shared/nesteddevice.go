@@ -1,12 +1,12 @@
 package shared
 
-type NestedDeviceInput struct {
-	Name *string `json:"name,omitempty"`
-}
-
 type NestedDevice struct {
 	DisplayName *string `json:"display_name,omitempty"`
 	ID          *int64  `json:"id,omitempty"`
 	Name        *string `json:"name,omitempty"`
 	URL         *string `json:"url,omitempty"`
+}
+
+type NestedDeviceInput struct {
+	Name *string `json:"name,omitempty"`
 }

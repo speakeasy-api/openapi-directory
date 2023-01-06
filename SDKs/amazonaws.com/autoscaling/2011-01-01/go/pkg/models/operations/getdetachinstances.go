@@ -3,13 +3,13 @@ package operations
 type GetDetachInstancesActionEnum string
 
 const (
-	GetDetachInstancesActionEnumDetachInstances GetDetachInstancesActionEnum = "DetachInstances"
+	GETDetachInstancesActionEnumDetachInstances GetDetachInstancesActionEnum = "DetachInstances"
 )
 
 type GetDetachInstancesVersionEnum string
 
 const (
-	GetDetachInstancesVersionEnumTwoThousandAndEleven0101 GetDetachInstancesVersionEnum = "2011-01-01"
+	GETDetachInstancesVersionEnumTwoThousandAndEleven0101 GetDetachInstancesVersionEnum = "2011-01-01"
 )
 
 type GetDetachInstancesQueryParams struct {

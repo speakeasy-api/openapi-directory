@@ -11,7 +11,7 @@ type TagStreamHeaders struct {
 }
 
 type TagStreamRequestBody struct {
-	StreamArn  *string           `json:"StreamARN,omitempty"`
+	StreamARN  *string           `json:"StreamARN,omitempty"`
 	StreamName *string           `json:"StreamName,omitempty"`
 	Tags       map[string]string `json:"Tags"`
 }

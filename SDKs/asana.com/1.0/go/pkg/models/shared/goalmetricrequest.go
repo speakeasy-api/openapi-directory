@@ -8,6 +8,8 @@ const (
 	GoalMetricRequestUnitEnumPercentage GoalMetricRequestUnitEnum = "percentage"
 )
 
+// GoalMetricRequestInput
+// A generic Asana Resource, containing a globally unique identifier.
 type GoalMetricRequestInput struct {
 	CurrencyCode        *string                    `json:"currency_code,omitempty"`
 	CurrentDisplayValue *string                    `json:"current_display_value,omitempty"`

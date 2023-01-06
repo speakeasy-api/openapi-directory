@@ -16,9 +16,9 @@ type Beleg struct {
 	BelegCodes                     []string              `json:"Beleg-Codes,omitempty"`
 	BelegTypen                     []BelegBelegTypenEnum `json:"Beleg-Typen,omitempty"`
 	Belegdaten                     *SignierteBelegdaten  `json:"Belegdaten,omitempty"`
-	Jws                            *string               `json:"JWS,omitempty"`
-	Qr                             *string               `json:"QR,omitempty"`
-	QrLink                         *string               `json:"QR-Link,omitempty"`
+	JWS                            *string               `json:"JWS,omitempty"`
+	QR                             *string               `json:"QR,omitempty"`
+	QRLink                         *string               `json:"QR-Link,omitempty"`
 	RegistrierkasseUUID            *string               `json:"Registrierkasse-UUID,omitempty"`
 	SignaturerstellungseinheitUUID *string               `json:"Signaturerstellungseinheit-UUID,omitempty"`
 	Href                           *string               `json:"_href,omitempty"`

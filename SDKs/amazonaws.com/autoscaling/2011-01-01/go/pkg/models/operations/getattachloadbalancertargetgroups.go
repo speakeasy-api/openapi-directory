@@ -3,19 +3,19 @@ package operations
 type GetAttachLoadBalancerTargetGroupsActionEnum string
 
 const (
-	GetAttachLoadBalancerTargetGroupsActionEnumAttachLoadBalancerTargetGroups GetAttachLoadBalancerTargetGroupsActionEnum = "AttachLoadBalancerTargetGroups"
+	GETAttachLoadBalancerTargetGroupsActionEnumAttachLoadBalancerTargetGroups GetAttachLoadBalancerTargetGroupsActionEnum = "AttachLoadBalancerTargetGroups"
 )
 
 type GetAttachLoadBalancerTargetGroupsVersionEnum string
 
 const (
-	GetAttachLoadBalancerTargetGroupsVersionEnumTwoThousandAndEleven0101 GetAttachLoadBalancerTargetGroupsVersionEnum = "2011-01-01"
+	GETAttachLoadBalancerTargetGroupsVersionEnumTwoThousandAndEleven0101 GetAttachLoadBalancerTargetGroupsVersionEnum = "2011-01-01"
 )
 
 type GetAttachLoadBalancerTargetGroupsQueryParams struct {
 	Action               GetAttachLoadBalancerTargetGroupsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoScalingGroupName string                                       `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
-	TargetGroupArNs      []string                                     `queryParam:"style=form,explode=true,name=TargetGroupARNs"`
+	TargetGroupARNs      []string                                     `queryParam:"style=form,explode=true,name=TargetGroupARNs"`
 	Version              GetAttachLoadBalancerTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

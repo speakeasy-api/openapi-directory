@@ -13,7 +13,7 @@ type AwsRdsDbPendingModifiedValues struct {
 	Iops                         *int64                              `json:"Iops,omitempty"`
 	LicenseModel                 *string                             `json:"LicenseModel,omitempty"`
 	MasterUserPassword           *string                             `json:"MasterUserPassword,omitempty"`
-	MultiAz                      *bool                               `json:"MultiAZ,omitempty"`
+	MultiAZ                      *bool                               `json:"MultiAZ,omitempty"`
 	PendingCloudWatchLogsExports *AwsRdsPendingCloudWatchLogsExports `json:"PendingCloudWatchLogsExports,omitempty"`
 	Port                         *int64                              `json:"Port,omitempty"`
 	ProcessorFeatures            []AwsRdsDbProcessorFeature          `json:"ProcessorFeatures,omitempty"`

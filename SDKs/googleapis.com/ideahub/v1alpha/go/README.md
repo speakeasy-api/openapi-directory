@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,21 +25,21 @@ func main() {
     req := operations.IdeahubIdeasListRequest{
         QueryParams: operations.IdeahubIdeasListQueryParams{
             DollarXgafv: "1",
-            AccessToken: "autem",
-            Alt: "proto",
-            Callback: "atque",
-            Fields: "recusandae",
-            Filter: "aliquid",
-            Key: "non",
-            OauthToken: "ad",
-            OrderBy: "itaque",
-            PageSize: 1482325010943640930,
-            PageToken: "et",
-            Parent: "magni",
+            AccessToken: "provident",
+            Alt: "media",
+            Callback: "quibusdam",
+            Fields: "odio",
+            Filter: "non",
+            Key: "exercitationem",
+            OauthToken: "exercitationem",
+            OrderBy: "est",
+            PageSize: 8108418015301964494,
+            PageToken: "nobis",
+            Parent: "sit",
             PrettyPrint: false,
-            QuotaUser: "voluptatem",
-            UploadType: "inventore",
-            UploadProtocol: "nostrum",
+            QuotaUser: "commodi",
+            UploadType: "deserunt",
+            UploadProtocol: "in",
         },
     }
     

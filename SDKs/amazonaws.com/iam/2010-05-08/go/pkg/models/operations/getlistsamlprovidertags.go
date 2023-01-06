@@ -3,20 +3,20 @@ package operations
 type GetListSamlProviderTagsActionEnum string
 
 const (
-	GetListSamlProviderTagsActionEnumListSamlProviderTags GetListSamlProviderTagsActionEnum = "ListSAMLProviderTags"
+	GETListSAMLProviderTagsActionEnumListSamlProviderTags GetListSamlProviderTagsActionEnum = "ListSAMLProviderTags"
 )
 
 type GetListSamlProviderTagsVersionEnum string
 
 const (
-	GetListSamlProviderTagsVersionEnumTwoThousandAndTen0508 GetListSamlProviderTagsVersionEnum = "2010-05-08"
+	GETListSAMLProviderTagsVersionEnumTwoThousandAndTen0508 GetListSamlProviderTagsVersionEnum = "2010-05-08"
 )
 
 type GetListSamlProviderTagsQueryParams struct {
 	Action          GetListSamlProviderTagsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Marker          *string                            `queryParam:"style=form,explode=true,name=Marker"`
 	MaxItems        *int64                             `queryParam:"style=form,explode=true,name=MaxItems"`
-	SamlProviderArn string                             `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
+	SAMLProviderArn string                             `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
 	Version         GetListSamlProviderTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

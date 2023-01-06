@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,12 +34,12 @@ func main() {
     
     req := operations.CreateIdentityPoolRequest{
         Headers: operations.CreateIdentityPoolHeaders{
-            XAmzAlgorithm: "repudiandae",
-            XAmzContentSha256: "praesentium",
-            XAmzCredential: "tempora",
-            XAmzDate: "est",
-            XAmzSecurityToken: "aut",
-            XAmzSignature: "dignissimos",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "quo",
+            XAmzDate: "omnis",
+            XAmzSecurityToken: "reprehenderit",
+            XAmzSignature: "quod",
             XAmzSignedHeaders: "et",
             XAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
         },
@@ -49,40 +48,32 @@ func main() {
             AllowUnauthenticatedIdentities: false,
             CognitoIdentityProviders: []shared.CognitoIdentityProvider{
                 shared.CognitoIdentityProvider{
-                    ClientID: "magni",
-                    ProviderName: "expedita",
+                    ClientID: "cupiditate",
+                    ProviderName: "sunt",
                     ServerSideTokenCheck: false,
                 },
-                shared.CognitoIdentityProvider{
-                    ClientID: "dolor",
-                    ProviderName: "consequatur",
-                    ServerSideTokenCheck: true,
-                },
             },
-            DeveloperProviderName: "occaecati",
-            IdentityPoolName: "veniam",
+            DeveloperProviderName: "sed",
+            IdentityPoolName: "repellendus",
             IdentityPoolTags: map[string]string{
-                "sint": "laudantium",
-                "explicabo": "maiores",
-                "ducimus": "et",
+                "nostrum": "non",
             },
-            OpenIDConnectProviderArNs: []string{
-                "omnis",
-                "ut",
-                "libero",
+            OpenIDConnectProviderARNs: []string{
+                "ipsa",
             },
-            SamlProviderArNs: []string{
-                "qui",
-                "sit",
-                "quasi",
+            SamlProviderARNs: []string{
+                "sed",
+                "autem",
             },
             SupportedLoginProviders: map[string]string{
-                "voluptate": "ut",
+                "vitae": "vel",
+                "assumenda": "corrupti",
+                "ad": "eum",
             },
         },
     }
     
-    res, err := s.Sdk.CreateIdentityPool(ctx, req)
+    res, err := s.CreateIdentityPool(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

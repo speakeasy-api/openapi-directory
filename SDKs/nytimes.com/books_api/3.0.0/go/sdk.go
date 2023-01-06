@@ -1,11 +1,12 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -107,7 +108,7 @@ func (s *SDK) GetListsBestSellersHistoryJSON(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.GetListsBestSellersHistoryJSON200ApplicationJSONObject = out
+			res.GETListsBestSellersHistoryJSON200ApplicationJSONObject = out
 		}
 	}
 
@@ -149,7 +150,7 @@ func (s *SDK) GetListsDateListJSON(ctx context.Context, request operations.GetLi
 				return nil, err
 			}
 
-			res.GetListsDateListJSON200ApplicationJSONObject = out
+			res.GETListsDateListJSON200ApplicationJSONObject = out
 		}
 	}
 
@@ -191,7 +192,7 @@ func (s *SDK) GetListsFormat(ctx context.Context, request operations.GetListsFor
 				return nil, err
 			}
 
-			res.GetListsFormat200ApplicationJSONObject = out
+			res.GETListsFormat200ApplicationJSONObject = out
 		}
 	}
 
@@ -233,7 +234,7 @@ func (s *SDK) GetListsNamesFormat(ctx context.Context, request operations.GetLis
 				return nil, err
 			}
 
-			res.GetListsNamesFormat200ApplicationJSONObject = out
+			res.GETListsNamesFormat200ApplicationJSONObject = out
 		}
 	}
 
@@ -275,7 +276,7 @@ func (s *SDK) GetListsOverviewFormat(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.GetListsOverviewFormat200ApplicationJSONObject = out
+			res.GETListsOverviewFormat200ApplicationJSONObject = out
 		}
 	}
 
@@ -317,7 +318,7 @@ func (s *SDK) GetReviewsFormat(ctx context.Context, request operations.GetReview
 				return nil, err
 			}
 
-			res.GetReviewsFormat200ApplicationJSONObject = out
+			res.GETReviewsFormat200ApplicationJSONObject = out
 		}
 	}
 

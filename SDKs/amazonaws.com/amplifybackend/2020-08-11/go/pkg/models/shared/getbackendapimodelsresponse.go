@@ -1,6 +1,6 @@
 package shared
 
 type GetBackendAPIModelsResponse struct {
-	Models *string     `json:"Models,omitempty"`
-	Status *StatusEnum `json:"Status,omitempty"`
+	Models map[string]interface{} `json:"Models,omitempty"`
+	Status map[string]interface{} `json:"Status,omitempty"`
 }

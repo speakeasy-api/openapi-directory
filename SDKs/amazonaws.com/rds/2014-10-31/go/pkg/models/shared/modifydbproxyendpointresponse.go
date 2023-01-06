@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDbProxyEndpointResponse struct {
-	DbProxyEndpoint *DbProxyEndpoint
+	DBProxyEndpoint *DbProxyEndpoint
 }

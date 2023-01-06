@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,31 +26,33 @@ func main() {
         Security: operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams{
-            Name: "quisquam",
+            Name: "quis",
         },
         QueryParams: operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams{
             DollarXgafv: "2",
-            AccessToken: "ea",
-            Alt: "media",
-            Callback: "veniam",
-            Fields: "perspiciatis",
-            Key: "et",
-            OauthToken: "qui",
-            PrettyPrint: false,
-            QuotaUser: "officia",
-            UploadType: "iure",
-            UploadProtocol: "quis",
+            AccessToken: "id",
+            Alt: "json",
+            Callback: "exercitationem",
+            Fields: "ipsum",
+            Key: "consequatur",
+            OauthToken: "cumque",
+            PrettyPrint: true,
+            QuotaUser: "esse",
+            UploadType: "deserunt",
+            UploadProtocol: "et",
         },
         Request: &shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest{
-            Command: "tempora",
+            Command: "rerum",
             Params: map[string]interface{}{
-                "et": "quia",
+                "nulla": "quisquam",
+                "facere": "eum",
+                "atque": "quis",
             },
         },
     }

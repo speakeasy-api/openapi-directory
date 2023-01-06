@@ -3,13 +3,13 @@ package operations
 type PostDisassociateVpcCidrBlockActionEnum string
 
 const (
-	PostDisassociateVpcCidrBlockActionEnumDisassociateVpcCidrBlock PostDisassociateVpcCidrBlockActionEnum = "DisassociateVpcCidrBlock"
+	POSTDisassociateVpcCidrBlockActionEnumDisassociateVpcCidrBlock PostDisassociateVpcCidrBlockActionEnum = "DisassociateVpcCidrBlock"
 )
 
 type PostDisassociateVpcCidrBlockVersionEnum string
 
 const (
-	PostDisassociateVpcCidrBlockVersionEnumTwoThousandAndSixteen1115 PostDisassociateVpcCidrBlockVersionEnum = "2016-11-15"
+	POSTDisassociateVpcCidrBlockVersionEnumTwoThousandAndSixteen1115 PostDisassociateVpcCidrBlockVersionEnum = "2016-11-15"
 )
 
 type PostDisassociateVpcCidrBlockQueryParams struct {

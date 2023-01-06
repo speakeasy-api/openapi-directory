@@ -9,15 +9,15 @@ type RecycleKubernetesNodePoolPathParams struct {
 	NodePoolID string `pathParam:"style=simple,explode=false,name=node_pool_id"`
 }
 
-type RecycleKubernetesNodePoolRequest struct {
-	PathParams RecycleKubernetesNodePoolPathParams
-	Request    interface{} `request:"mediaType=application/json"`
-}
-
 type RecycleKubernetesNodePool401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type RecycleKubernetesNodePoolRequest struct {
+	PathParams RecycleKubernetesNodePoolPathParams
+	Request    interface{} `request:"mediaType=application/json"`
 }
 
 type RecycleKubernetesNodePoolResponse struct {

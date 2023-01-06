@@ -16,6 +16,6 @@ type GetResourcesTagsIDSyndicateFormatRequest struct {
 
 type GetResourcesTagsIDSyndicateFormatResponse struct {
 	ContentType                                               string
-	GetResourcesTagsIDSyndicateFormat200ApplicationJSONString *string
 	StatusCode                                                int64
+	GetResourcesTagsIDSyndicateFormat200ApplicationJSONString *string
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,46 +26,43 @@ func main() {
         Security: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams{
-            Parent: "dolorem",
+            Parent: "voluptatem",
         },
         QueryParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "sed",
+            AccessToken: "rem",
             Alt: "media",
-            Callback: "ea",
-            Fields: "ex",
-            HubID: "consequatur",
-            Key: "dolorum",
-            OauthToken: "debitis",
-            PrettyPrint: false,
-            QuotaUser: "eligendi",
-            RequestID: "laboriosam",
-            UploadType: "est",
-            UploadProtocol: "et",
+            Callback: "necessitatibus",
+            Fields: "in",
+            HubID: "qui",
+            Key: "soluta",
+            OauthToken: "placeat",
+            PrettyPrint: true,
+            QuotaUser: "aut",
+            RequestID: "vitae",
+            UploadType: "hic",
+            UploadProtocol: "cupiditate",
         },
         Request: &shared.HubInput{
-            Description: "molestias",
+            Description: "est",
             Labels: map[string]string{
                 "ut": "omnis",
-                "similique": "totam",
-                "ullam": "et",
+                "dolores": "iusto",
+                "ratione": "sed",
             },
-            Name: "dolorem",
+            Name: "libero",
             RoutingVpcs: []shared.RoutingVpcInput{
                 shared.RoutingVpcInput{
-                    URI: "sint",
+                    URI: "illo",
                 },
                 shared.RoutingVpcInput{
-                    URI: "dolore",
-                },
-                shared.RoutingVpcInput{
-                    URI: "maiores",
+                    URI: "sapiente",
                 },
             },
         },

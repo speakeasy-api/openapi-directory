@@ -9,18 +9,10 @@ type TeamsListMembersInOrgPathParams struct {
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
-type TeamsListMembersInOrgRoleEnum string
-
-const (
-	TeamsListMembersInOrgRoleEnumMember     TeamsListMembersInOrgRoleEnum = "member"
-	TeamsListMembersInOrgRoleEnumMaintainer TeamsListMembersInOrgRoleEnum = "maintainer"
-	TeamsListMembersInOrgRoleEnumAll        TeamsListMembersInOrgRoleEnum = "all"
-)
-
 type TeamsListMembersInOrgQueryParams struct {
-	Page    *int64                         `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                         `queryParam:"style=form,explode=true,name=per_page"`
-	Role    *TeamsListMembersInOrgRoleEnum `queryParam:"style=form,explode=true,name=role"`
+	Page    *int64               `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64               `queryParam:"style=form,explode=true,name=per_page"`
+	Role    *shared.TeamSlugEnum `queryParam:"style=form,explode=true,name=role"`
 }
 
 type TeamsListMembersInOrgRequest struct {

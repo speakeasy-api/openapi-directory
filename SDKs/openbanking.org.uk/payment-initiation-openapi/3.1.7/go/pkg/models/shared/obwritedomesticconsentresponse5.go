@@ -7,8 +7,8 @@ import (
 type ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteDomesticConsentResponse5DataAuthorisation
@@ -76,17 +76,17 @@ type ObWriteDomesticConsentResponse5DataInitiation struct {
 type ObWriteDomesticConsentResponse5DataReadRefundAccountEnum string
 
 const (
-	ObWriteDomesticConsentResponse5DataReadRefundAccountEnumNo  ObWriteDomesticConsentResponse5DataReadRefundAccountEnum = "No"
-	ObWriteDomesticConsentResponse5DataReadRefundAccountEnumYes ObWriteDomesticConsentResponse5DataReadRefundAccountEnum = "Yes"
+	OBWriteDomesticConsentResponse5DataReadRefundAccountEnumNo  ObWriteDomesticConsentResponse5DataReadRefundAccountEnum = "No"
+	OBWriteDomesticConsentResponse5DataReadRefundAccountEnumYes ObWriteDomesticConsentResponse5DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteDomesticConsentResponse5DataStatusEnum string
 
 const (
-	ObWriteDomesticConsentResponse5DataStatusEnumAuthorised            ObWriteDomesticConsentResponse5DataStatusEnum = "Authorised"
-	ObWriteDomesticConsentResponse5DataStatusEnumAwaitingAuthorisation ObWriteDomesticConsentResponse5DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteDomesticConsentResponse5DataStatusEnumConsumed              ObWriteDomesticConsentResponse5DataStatusEnum = "Consumed"
-	ObWriteDomesticConsentResponse5DataStatusEnumRejected              ObWriteDomesticConsentResponse5DataStatusEnum = "Rejected"
+	OBWriteDomesticConsentResponse5DataStatusEnumAuthorised            ObWriteDomesticConsentResponse5DataStatusEnum = "Authorised"
+	OBWriteDomesticConsentResponse5DataStatusEnumAwaitingAuthorisation ObWriteDomesticConsentResponse5DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteDomesticConsentResponse5DataStatusEnumConsumed              ObWriteDomesticConsentResponse5DataStatusEnum = "Consumed"
+	OBWriteDomesticConsentResponse5DataStatusEnumRejected              ObWriteDomesticConsentResponse5DataStatusEnum = "Rejected"
 )
 
 type ObWriteDomesticConsentResponse5Data struct {
@@ -100,7 +100,7 @@ type ObWriteDomesticConsentResponse5Data struct {
 	ExpectedSettlementDateTime *time.Time                                                `json:"ExpectedSettlementDateTime,omitempty"`
 	Initiation                 ObWriteDomesticConsentResponse5DataInitiation             `json:"Initiation"`
 	ReadRefundAccount          *ObWriteDomesticConsentResponse5DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData             *ObscaSupportData1                                        `json:"SCASupportData,omitempty"`
+	SCASupportData             *ObscaSupportData1                                        `json:"SCASupportData,omitempty"`
 	Status                     ObWriteDomesticConsentResponse5DataStatusEnum             `json:"Status"`
 	StatusUpdateDateTime       time.Time                                                 `json:"StatusUpdateDateTime"`
 }

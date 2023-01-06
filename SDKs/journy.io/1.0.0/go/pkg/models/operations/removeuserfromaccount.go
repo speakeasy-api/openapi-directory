@@ -10,14 +10,10 @@ type RemoveUserFromAccountRequestBody struct {
 	UserID string `json:"userId"`
 }
 
-type RemoveUserFromAccount201ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// RemoveUserFromAccount201ApplicationJSON
+// The object was created
 type RemoveUserFromAccount201ApplicationJSON struct {
-	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount201ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 // RemoveUserFromAccount400ApplicationJSONErrorsParameters
@@ -35,55 +31,34 @@ type RemoveUserFromAccount400ApplicationJSONErrors struct {
 	Parameters *RemoveUserFromAccount400ApplicationJSONErrorsParameters `json:"parameters,omitempty"`
 }
 
-type RemoveUserFromAccount400ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// RemoveUserFromAccount400ApplicationJSON
+// Specify the fields and/ or parameters that had errors
 type RemoveUserFromAccount400ApplicationJSON struct {
-	Errors  RemoveUserFromAccount400ApplicationJSONErrors `json:"errors"`
-	Message string                                        `json:"message"`
-	Meta    RemoveUserFromAccount400ApplicationJSONMeta   `json:"meta"`
+	Errors RemoveUserFromAccount400ApplicationJSONErrors `json:"errors"`
 }
 
-type RemoveUserFromAccount401ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// RemoveUserFromAccount401ApplicationJSON
+// The error message should specify what cause the error
 type RemoveUserFromAccount401ApplicationJSON struct {
-	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount401ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type RemoveUserFromAccount403ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// RemoveUserFromAccount403ApplicationJSON
+// The error message should specify what cause the error
 type RemoveUserFromAccount403ApplicationJSON struct {
-	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount403ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type RemoveUserFromAccount429ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// RemoveUserFromAccount429ApplicationJSON
+// The error message should specify what cause the error
 type RemoveUserFromAccount429ApplicationJSON struct {
-	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount429ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type RemoveUserFromAccount500ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// RemoveUserFromAccount500ApplicationJSON
+// The error message should specify what cause the error
 type RemoveUserFromAccount500ApplicationJSON struct {
-	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount500ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 type RemoveUserFromAccountRequest struct {

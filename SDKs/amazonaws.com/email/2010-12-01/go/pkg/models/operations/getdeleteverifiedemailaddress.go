@@ -3,13 +3,13 @@ package operations
 type GetDeleteVerifiedEmailAddressActionEnum string
 
 const (
-	GetDeleteVerifiedEmailAddressActionEnumDeleteVerifiedEmailAddress GetDeleteVerifiedEmailAddressActionEnum = "DeleteVerifiedEmailAddress"
+	GETDeleteVerifiedEmailAddressActionEnumDeleteVerifiedEmailAddress GetDeleteVerifiedEmailAddressActionEnum = "DeleteVerifiedEmailAddress"
 )
 
 type GetDeleteVerifiedEmailAddressVersionEnum string
 
 const (
-	GetDeleteVerifiedEmailAddressVersionEnumTwoThousandAndTen1201 GetDeleteVerifiedEmailAddressVersionEnum = "2010-12-01"
+	GETDeleteVerifiedEmailAddressVersionEnumTwoThousandAndTen1201 GetDeleteVerifiedEmailAddressVersionEnum = "2010-12-01"
 )
 
 type GetDeleteVerifiedEmailAddressQueryParams struct {

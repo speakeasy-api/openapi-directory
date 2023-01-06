@@ -1,6 +1,6 @@
 package shared
 
 type SelectResult struct {
-	Items     []Item
+	Items     []map[string]interface{}
 	NextToken *string
 }

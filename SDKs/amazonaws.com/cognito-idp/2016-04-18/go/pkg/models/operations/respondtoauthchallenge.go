@@ -38,12 +38,12 @@ type RespondToAuthChallengeResponse struct {
 	InvalidSmsRoleAccessPolicyException      *interface{}
 	InvalidSmsRoleTrustRelationshipException *interface{}
 	InvalidUserPoolConfigurationException    *interface{}
-	MfaMethodNotFoundException               *interface{}
+	MFAMethodNotFoundException               *interface{}
 	NotAuthorizedException                   *interface{}
 	PasswordResetRequiredException           *interface{}
 	ResourceNotFoundException                *interface{}
 	RespondToAuthChallengeResponse           *shared.RespondToAuthChallengeResponse
-	SoftwareTokenMfaNotFoundException        *interface{}
+	SoftwareTokenMFANotFoundException        *interface{}
 	StatusCode                               int64
 	TooManyRequestsException                 *interface{}
 	UnexpectedLambdaException                *interface{}

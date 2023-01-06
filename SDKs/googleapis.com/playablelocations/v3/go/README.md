@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,47 +24,47 @@ func main() {
     
     req := operations.PlayablelocationsLogImpressionsRequest{
         QueryParams: operations.PlayablelocationsLogImpressionsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "similique",
-            Alt: "proto",
-            Callback: "quos",
-            Fields: "modi",
-            Key: "qui",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "beatae",
-            UploadType: "magnam",
-            UploadProtocol: "corrupti",
+            DollarXgafv: "2",
+            AccessToken: "non",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "debitis",
+            Key: "velit",
+            OauthToken: "dolor",
+            PrettyPrint: false,
+            QuotaUser: "consequuntur",
+            UploadType: "quasi",
+            UploadProtocol: "harum",
         },
         Request: &shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest{
             ClientInfo: &shared.GoogleMapsUnityClientInfo{
-                APIClient: "deleniti",
-                ApplicationID: "aliquam",
-                ApplicationVersion: "sapiente",
-                DeviceModel: "vel",
-                LanguageCode: "voluptatibus",
-                OperatingSystem: "ea",
-                OperatingSystemBuild: "pariatur",
-                Platform: "LINUX",
+                APIClient: "et",
+                ApplicationID: "repellat",
+                ApplicationVersion: "perspiciatis",
+                DeviceModel: "aliquam",
+                LanguageCode: "pariatur",
+                OperatingSystem: "inventore",
+                OperatingSystemBuild: "nisi",
+                Platform: "IOS",
             },
             Impressions: []shared.GoogleMapsPlayablelocationsV3Impression{
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 6459860170856422486,
-                    ImpressionType: "INTERACTED",
-                    LocationName: "sequi",
+                    GameObjectType: 1606281224283722532,
+                    ImpressionType: "IMPRESSION_TYPE_UNSPECIFIED",
+                    LocationName: "qui",
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 952114635225685287,
-                    ImpressionType: "PRESENTED",
-                    LocationName: "et",
+                    GameObjectType: 6628722372745603133,
+                    ImpressionType: "INTERACTED",
+                    LocationName: "cum",
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 3381277656453164920,
-                    ImpressionType: "INTERACTED",
-                    LocationName: "et",
+                    GameObjectType: 2951276526110041873,
+                    ImpressionType: "IMPRESSION_TYPE_UNSPECIFIED",
+                    LocationName: "blanditiis",
                 },
             },
-            RequestID: "fugiat",
+            RequestID: "sapiente",
         },
     }
     

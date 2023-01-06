@@ -12,5 +12,5 @@ const (
 	LoadBalancerTLSCertificateRevocationReasonEnumCertificateHold      LoadBalancerTLSCertificateRevocationReasonEnum = "CERTIFICATE_HOLD"
 	LoadBalancerTLSCertificateRevocationReasonEnumRemoveFromCrl        LoadBalancerTLSCertificateRevocationReasonEnum = "REMOVE_FROM_CRL"
 	LoadBalancerTLSCertificateRevocationReasonEnumPrivilegeWithdrawn   LoadBalancerTLSCertificateRevocationReasonEnum = "PRIVILEGE_WITHDRAWN"
-	LoadBalancerTLSCertificateRevocationReasonEnumAaCompromise         LoadBalancerTLSCertificateRevocationReasonEnum = "A_A_COMPROMISE"
+	LoadBalancerTLSCertificateRevocationReasonEnumAACompromise         LoadBalancerTLSCertificateRevocationReasonEnum = "A_A_COMPROMISE"
 )

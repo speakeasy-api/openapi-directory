@@ -1,5 +1,5 @@
 package shared
 
 type CreateDbParameterGroupResult struct {
-	DbParameterGroup *DbParameterGroup
+	DBParameterGroup *DbParameterGroup
 }

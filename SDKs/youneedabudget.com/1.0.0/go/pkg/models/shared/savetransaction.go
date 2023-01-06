@@ -21,6 +21,7 @@ const (
 	SaveTransactionFlagColorEnumGreen  SaveTransactionFlagColorEnum = "green"
 	SaveTransactionFlagColorEnumBlue   SaveTransactionFlagColorEnum = "blue"
 	SaveTransactionFlagColorEnumPurple SaveTransactionFlagColorEnum = "purple"
+	SaveTransactionFlagColorEnumNull   SaveTransactionFlagColorEnum = "null"
 )
 
 type SaveTransaction struct {

@@ -5,9 +5,9 @@ import (
 )
 
 type PvcerRequestBodyCertificateParameters struct {
-	EnrolNo  string `json:"ENROL_NO"`
+	ENROLNO  string `json:"ENROL_NO"`
 	FullName string `json:"FullName"`
-	Year     string `json:"YEAR"`
+	YEAR     string `json:"YEAR"`
 }
 
 type PvcerRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Pvcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Pvcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Pvcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Pvcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Pvcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Pvcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pvcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Pvcer404ApplicationJSON struct {

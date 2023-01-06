@@ -2,8 +2,9 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -17,11 +18,11 @@ type HTTPClient interface {
 // SDK Documentation: https://github.com/openbankingproject-ch/obp-apis - Full Documentation of NextGen Access to Account Interoperability Framework
 // (General Introduction Paper, Operational Rules, Implementation Guidelines)
 type SDK struct {
-	AccountInformationServiceAis   *AccountInformationServiceAis
+	AccountInformationServiceAIS   *AccountInformationServiceAis
 	CommonServices                 *CommonServices
-	ConfirmationOfFundsServicePiis *ConfirmationOfFundsServicePiis
-	PaymentInitiationServicePis    *PaymentInitiationServicePis
-	SigningBasketsServiceSbs       *SigningBasketsServiceSbs
+	ConfirmationOfFundsServicePIIS *ConfirmationOfFundsServicePiis
+	PaymentInitiationServicePIS    *PaymentInitiationServicePis
+	SigningBasketsServiceSBS       *SigningBasketsServiceSbs
 
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
@@ -83,7 +84,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.AccountInformationServiceAis = NewAccountInformationServiceAis(
+	sdk.AccountInformationServiceAIS = NewAccountInformationServiceAis(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -101,7 +102,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.ConfirmationOfFundsServicePiis = NewConfirmationOfFundsServicePiis(
+	sdk.ConfirmationOfFundsServicePIIS = NewConfirmationOfFundsServicePiis(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -110,7 +111,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.PaymentInitiationServicePis = NewPaymentInitiationServicePis(
+	sdk.PaymentInitiationServicePIS = NewPaymentInitiationServicePis(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -119,7 +120,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.SigningBasketsServiceSbs = NewSigningBasketsServiceSbs(
+	sdk.SigningBasketsServiceSBS = NewSigningBasketsServiceSbs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

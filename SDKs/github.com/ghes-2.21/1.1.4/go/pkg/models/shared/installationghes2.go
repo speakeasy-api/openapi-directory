@@ -22,6 +22,8 @@ const (
 	InstallationGhes2RepositorySelectionEnumSelected InstallationGhes2RepositorySelectionEnum = "selected"
 )
 
+// InstallationGhes2SimpleUser
+// Simple User
 type InstallationGhes2SimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

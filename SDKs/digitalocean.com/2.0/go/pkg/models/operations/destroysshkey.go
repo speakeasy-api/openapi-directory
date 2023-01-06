@@ -8,14 +8,14 @@ type DestroySSHKeyPathParams struct {
 	SSHKeyIdentifier interface{} `pathParam:"style=simple,explode=false,name=ssh_key_identifier"`
 }
 
-type DestroySSHKeyRequest struct {
-	PathParams DestroySSHKeyPathParams
-}
-
 type DestroySSHKey401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DestroySSHKeyRequest struct {
+	PathParams DestroySSHKeyPathParams
 }
 
 type DestroySSHKeyResponse struct {

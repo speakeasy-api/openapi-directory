@@ -3,22 +3,22 @@ package operations
 type GetDescribeNetworkInterfaceAttributeActionEnum string
 
 const (
-	GetDescribeNetworkInterfaceAttributeActionEnumDescribeNetworkInterfaceAttribute GetDescribeNetworkInterfaceAttributeActionEnum = "DescribeNetworkInterfaceAttribute"
+	GETDescribeNetworkInterfaceAttributeActionEnumDescribeNetworkInterfaceAttribute GetDescribeNetworkInterfaceAttributeActionEnum = "DescribeNetworkInterfaceAttribute"
 )
 
 type GetDescribeNetworkInterfaceAttributeAttributeEnum string
 
 const (
-	GetDescribeNetworkInterfaceAttributeAttributeEnumDescription     GetDescribeNetworkInterfaceAttributeAttributeEnum = "description"
-	GetDescribeNetworkInterfaceAttributeAttributeEnumGroupSet        GetDescribeNetworkInterfaceAttributeAttributeEnum = "groupSet"
-	GetDescribeNetworkInterfaceAttributeAttributeEnumSourceDestCheck GetDescribeNetworkInterfaceAttributeAttributeEnum = "sourceDestCheck"
-	GetDescribeNetworkInterfaceAttributeAttributeEnumAttachment      GetDescribeNetworkInterfaceAttributeAttributeEnum = "attachment"
+	GETDescribeNetworkInterfaceAttributeAttributeEnumDescription     GetDescribeNetworkInterfaceAttributeAttributeEnum = "description"
+	GETDescribeNetworkInterfaceAttributeAttributeEnumGroupSet        GetDescribeNetworkInterfaceAttributeAttributeEnum = "groupSet"
+	GETDescribeNetworkInterfaceAttributeAttributeEnumSourceDestCheck GetDescribeNetworkInterfaceAttributeAttributeEnum = "sourceDestCheck"
+	GETDescribeNetworkInterfaceAttributeAttributeEnumAttachment      GetDescribeNetworkInterfaceAttributeAttributeEnum = "attachment"
 )
 
 type GetDescribeNetworkInterfaceAttributeVersionEnum string
 
 const (
-	GetDescribeNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeNetworkInterfaceAttributeVersionEnum = "2016-11-15"
+	GETDescribeNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeNetworkInterfaceAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeNetworkInterfaceAttributeQueryParams struct {

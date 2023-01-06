@@ -3,13 +3,13 @@ package operations
 type GetUpdateDefaultSearchFieldActionEnum string
 
 const (
-	GetUpdateDefaultSearchFieldActionEnumUpdateDefaultSearchField GetUpdateDefaultSearchFieldActionEnum = "UpdateDefaultSearchField"
+	GETUpdateDefaultSearchFieldActionEnumUpdateDefaultSearchField GetUpdateDefaultSearchFieldActionEnum = "UpdateDefaultSearchField"
 )
 
 type GetUpdateDefaultSearchFieldVersionEnum string
 
 const (
-	GetUpdateDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 GetUpdateDefaultSearchFieldVersionEnum = "2011-02-01"
+	GETUpdateDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 GetUpdateDefaultSearchFieldVersionEnum = "2011-02-01"
 )
 
 type GetUpdateDefaultSearchFieldQueryParams struct {

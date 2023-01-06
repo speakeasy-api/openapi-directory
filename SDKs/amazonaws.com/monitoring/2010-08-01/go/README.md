@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -37,23 +36,24 @@ func main() {
         QueryParams: operations.GetDeleteAlarmsQueryParams{
             Action: "DeleteAlarms",
             AlarmNames: []string{
-                "sed",
-                "praesentium",
+                "temporibus",
+                "nemo",
+                "ea",
             },
             Version: "2010-08-01",
         },
         Headers: operations.GetDeleteAlarmsHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "iure",
-            XAmzCredential: "rerum",
-            XAmzDate: "voluptates",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "adipisci",
-            XAmzSignedHeaders: "eum",
+            XAmzAlgorithm: "debitis",
+            XAmzContentSha256: "vitae",
+            XAmzCredential: "illo",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "aut",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "iusto",
         },
     }
     
-    res, err := s.Sdk.GetDeleteAlarms(ctx, req)
+    res, err := s.GetDeleteAlarms(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

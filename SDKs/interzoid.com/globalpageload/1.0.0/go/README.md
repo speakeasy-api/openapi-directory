@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.GlobalpageloadRequest{
         QueryParams: operations.GlobalpageloadQueryParams{
-            License: "nesciunt",
-            Origin: "repellendus",
-            URL: "aspernatur",
+            License: "possimus",
+            Origin: "non",
+            URL: "ut",
         },
     }
     
-    res, err := s.Sdk.Globalpageload(ctx, req)
+    res, err := s.PageLoadPerformanceTime.Globalpageload(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,7 +44,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Page Load Performance Time
 
 * `Globalpageload` - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
 

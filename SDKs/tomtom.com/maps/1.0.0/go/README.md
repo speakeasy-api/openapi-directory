@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,17 +32,17 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.GetMapVersionNumberCopyrightsCaptionFormatRequest{
-        PathParams: operations.GetMapVersionNumberCopyrightsCaptionFormatPathParams{
-            Format: "json",
-            VersionNumber: 3490182019411094151,
+    req := operations.GetMapVersionNumberCopyrightsFormatRequest{
+        PathParams: operations.GetMapVersionNumberCopyrightsFormatPathParams{
+            Format: "xml",
+            VersionNumber: 5692291641629560775,
         },
-        QueryParams: operations.GetMapVersionNumberCopyrightsCaptionFormatQueryParams{
-            Callback: "suscipit",
+        QueryParams: operations.GetMapVersionNumberCopyrightsFormatQueryParams{
+            Callback: "voluptatem",
         },
     }
     
-    res, err := s.Sdk.GetMapVersionNumberCopyrightsCaptionFormat(ctx, req)
+    res, err := s.Copyrights.GetMapVersionNumberCopyrightsFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,18 +56,27 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Copyrights
 
-* `GetMapVersionNumberCopyrightsCaptionFormat` - Captions
 * `GetMapVersionNumberCopyrightsFormat` - Copyrights whole world
+* `GetMapVersionNumberCopyrightsCaptionFormat` - Captions
 * `GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat` - Copyrights bounding box
 * `GetMapVersionNumberCopyrightsZoomXYFormat` - Copyrights tile
+
+### Raster
+
 * `GetMapVersionNumberStaticimage` - Static Image
 * `GetMapVersionNumberTileLayerStyleZoomXYFormat` - Tile
+
+### Vector
+
 * `GetMapVersionNumberTileLayerStyleZoomXYPbf` - Tile
-* `GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXML` - WMTS
+
+### WMS / WMTS
+
 * `GetCapabilities` - GetCapabilities
 * `GetMap` - GetMap
+* `GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXML` - WMTS
 
 <!-- End SDK Available Operations -->
 

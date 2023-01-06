@@ -16,5 +16,5 @@ type EndpointAccess struct {
 	ResourceOwner      *string
 	SubnetGroupName    *string
 	VpcEndpoint        *VpcEndpoint
-	VpcSecurityGroups  []VpcSecurityGroupMembership
+	VpcSecurityGroups  []map[string]interface{}
 }

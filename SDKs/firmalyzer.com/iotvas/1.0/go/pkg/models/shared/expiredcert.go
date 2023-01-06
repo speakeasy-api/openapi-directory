@@ -1,11 +1,16 @@
 package shared
 
+type ExpiredCertPublicKey struct {
+	Algorithm *string `json:"algorithm,omitempty"`
+	Bits      *int64  `json:"bits,omitempty"`
+}
+
 type ExpiredCert struct {
-	FileHash    *string    `json:"file_hash,omitempty"`
-	FileName    *string    `json:"file_name,omitempty"`
-	PublicKey   *PublicKey `json:"public_key,omitempty"`
-	SubjectName *string    `json:"subject_name,omitempty"`
-	ThumbPrint  *string    `json:"thumb_print,omitempty"`
-	ValidFrom   *string    `json:"valid_from,omitempty"`
-	ValidTo     *string    `json:"valid_to,omitempty"`
+	FileHash    *string               `json:"file_hash,omitempty"`
+	FileName    *string               `json:"file_name,omitempty"`
+	PublicKey   *ExpiredCertPublicKey `json:"public_key,omitempty"`
+	SubjectName *string               `json:"subject_name,omitempty"`
+	ThumbPrint  *string               `json:"thumb_print,omitempty"`
+	ValidFrom   *string               `json:"valid_from,omitempty"`
+	ValidTo     *string               `json:"valid_to,omitempty"`
 }

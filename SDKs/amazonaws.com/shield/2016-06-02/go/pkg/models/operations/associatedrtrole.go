@@ -7,7 +7,7 @@ import (
 type AssociateDrtRoleXAmzTargetEnum string
 
 const (
-	AssociateDrtRoleXAmzTargetEnumAwsShield20160616AssociateDrtRole AssociateDrtRoleXAmzTargetEnum = "AWSShield_20160616.AssociateDRTRole"
+	AssociateDRTRoleXAmzTargetEnumAwsShield20160616AssociateDrtRole AssociateDrtRoleXAmzTargetEnum = "AWSShield_20160616.AssociateDRTRole"
 )
 
 type AssociateDrtRoleHeaders struct {
@@ -28,7 +28,7 @@ type AssociateDrtRoleRequest struct {
 
 type AssociateDrtRoleResponse struct {
 	AccessDeniedForDependencyException *interface{}
-	AssociateDrtRoleResponse           map[string]interface{}
+	AssociateDRTRoleResponse           map[string]interface{}
 	ContentType                        string
 	InternalErrorException             *interface{}
 	InvalidOperationException          *interface{}

@@ -3,31 +3,31 @@ package operations
 type GetCreateJobActionEnum string
 
 const (
-	GetCreateJobActionEnumCreateJob GetCreateJobActionEnum = "CreateJob"
+	GETCreateJobActionEnumCreateJob GetCreateJobActionEnum = "CreateJob"
 )
 
 type GetCreateJobJobTypeEnum string
 
 const (
-	GetCreateJobJobTypeEnumImport GetCreateJobJobTypeEnum = "Import"
-	GetCreateJobJobTypeEnumExport GetCreateJobJobTypeEnum = "Export"
+	GETCreateJobJobTypeEnumImport GetCreateJobJobTypeEnum = "Import"
+	GETCreateJobJobTypeEnumExport GetCreateJobJobTypeEnum = "Export"
 )
 
 type GetCreateJobOperationEnum string
 
 const (
-	GetCreateJobOperationEnumCreateJob GetCreateJobOperationEnum = "CreateJob"
+	GETCreateJobOperationEnumCreateJob GetCreateJobOperationEnum = "CreateJob"
 )
 
 type GetCreateJobVersionEnum string
 
 const (
-	GetCreateJobVersionEnumTwoThousandAndTen0601 GetCreateJobVersionEnum = "2010-06-01"
+	GETCreateJobVersionEnumTwoThousandAndTen0601 GetCreateJobVersionEnum = "2010-06-01"
 )
 
 type GetCreateJobQueryParams struct {
 	APIVersion       *string                   `queryParam:"style=form,explode=true,name=APIVersion"`
-	AwsAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetCreateJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	JobType          GetCreateJobJobTypeEnum   `queryParam:"style=form,explode=true,name=JobType"`
 	Manifest         string                    `queryParam:"style=form,explode=true,name=Manifest"`

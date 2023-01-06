@@ -3,13 +3,13 @@ package operations
 type GetUntagOpenIDConnectProviderActionEnum string
 
 const (
-	GetUntagOpenIDConnectProviderActionEnumUntagOpenIDConnectProvider GetUntagOpenIDConnectProviderActionEnum = "UntagOpenIDConnectProvider"
+	GETUntagOpenIDConnectProviderActionEnumUntagOpenIDConnectProvider GetUntagOpenIDConnectProviderActionEnum = "UntagOpenIDConnectProvider"
 )
 
 type GetUntagOpenIDConnectProviderVersionEnum string
 
 const (
-	GetUntagOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 GetUntagOpenIDConnectProviderVersionEnum = "2010-05-08"
+	GETUntagOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 GetUntagOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
 type GetUntagOpenIDConnectProviderQueryParams struct {

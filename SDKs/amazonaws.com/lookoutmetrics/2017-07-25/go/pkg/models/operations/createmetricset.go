@@ -28,7 +28,7 @@ const (
 type CreateMetricSetRequestBodyMetricSource struct {
 	AppFlowConfig        *shared.AppFlowConfig        `json:"AppFlowConfig,omitempty"`
 	CloudWatchConfig     *shared.CloudWatchConfig     `json:"CloudWatchConfig,omitempty"`
-	RdsSourceConfig      *shared.RdsSourceConfig      `json:"RDSSourceConfig,omitempty"`
+	RDSSourceConfig      *shared.RdsSourceConfig      `json:"RDSSourceConfig,omitempty"`
 	RedshiftSourceConfig *shared.RedshiftSourceConfig `json:"RedshiftSourceConfig,omitempty"`
 	S3SourceConfig       *shared.S3SourceConfig       `json:"S3SourceConfig,omitempty"`
 }

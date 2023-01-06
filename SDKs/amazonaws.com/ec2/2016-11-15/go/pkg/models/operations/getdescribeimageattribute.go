@@ -3,26 +3,26 @@ package operations
 type GetDescribeImageAttributeActionEnum string
 
 const (
-	GetDescribeImageAttributeActionEnumDescribeImageAttribute GetDescribeImageAttributeActionEnum = "DescribeImageAttribute"
+	GETDescribeImageAttributeActionEnumDescribeImageAttribute GetDescribeImageAttributeActionEnum = "DescribeImageAttribute"
 )
 
 type GetDescribeImageAttributeAttributeEnum string
 
 const (
-	GetDescribeImageAttributeAttributeEnumDescription        GetDescribeImageAttributeAttributeEnum = "description"
-	GetDescribeImageAttributeAttributeEnumKernel             GetDescribeImageAttributeAttributeEnum = "kernel"
-	GetDescribeImageAttributeAttributeEnumRamdisk            GetDescribeImageAttributeAttributeEnum = "ramdisk"
-	GetDescribeImageAttributeAttributeEnumLaunchPermission   GetDescribeImageAttributeAttributeEnum = "launchPermission"
-	GetDescribeImageAttributeAttributeEnumProductCodes       GetDescribeImageAttributeAttributeEnum = "productCodes"
-	GetDescribeImageAttributeAttributeEnumBlockDeviceMapping GetDescribeImageAttributeAttributeEnum = "blockDeviceMapping"
-	GetDescribeImageAttributeAttributeEnumSriovNetSupport    GetDescribeImageAttributeAttributeEnum = "sriovNetSupport"
-	GetDescribeImageAttributeAttributeEnumBootMode           GetDescribeImageAttributeAttributeEnum = "bootMode"
+	GETDescribeImageAttributeAttributeEnumDescription        GetDescribeImageAttributeAttributeEnum = "description"
+	GETDescribeImageAttributeAttributeEnumKernel             GetDescribeImageAttributeAttributeEnum = "kernel"
+	GETDescribeImageAttributeAttributeEnumRamdisk            GetDescribeImageAttributeAttributeEnum = "ramdisk"
+	GETDescribeImageAttributeAttributeEnumLaunchPermission   GetDescribeImageAttributeAttributeEnum = "launchPermission"
+	GETDescribeImageAttributeAttributeEnumProductCodes       GetDescribeImageAttributeAttributeEnum = "productCodes"
+	GETDescribeImageAttributeAttributeEnumBlockDeviceMapping GetDescribeImageAttributeAttributeEnum = "blockDeviceMapping"
+	GETDescribeImageAttributeAttributeEnumSriovNetSupport    GetDescribeImageAttributeAttributeEnum = "sriovNetSupport"
+	GETDescribeImageAttributeAttributeEnumBootMode           GetDescribeImageAttributeAttributeEnum = "bootMode"
 )
 
 type GetDescribeImageAttributeVersionEnum string
 
 const (
-	GetDescribeImageAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeImageAttributeVersionEnum = "2016-11-15"
+	GETDescribeImageAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeImageAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeImageAttributeQueryParams struct {

@@ -33,6 +33,8 @@ type AppsCheckAuthorizationAuthorizationScopedInstallation struct {
 	SingleFilePaths        []string                                                                     `json:"single_file_paths,omitempty"`
 }
 
+// AppsCheckAuthorizationAuthorizationSimpleUser
+// Simple User
 type AppsCheckAuthorizationAuthorizationSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -55,6 +57,8 @@ type AppsCheckAuthorizationAuthorizationSimpleUser struct {
 	URL               string  `json:"url"`
 }
 
+// AppsCheckAuthorizationAuthorization
+// The authorization for an OAuth app, GitHub App, or a Personal Access Token.
 type AppsCheckAuthorizationAuthorization struct {
 	App            AppsCheckAuthorizationAuthorizationApp                 `json:"app"`
 	CreatedAt      time.Time                                              `json:"created_at"`

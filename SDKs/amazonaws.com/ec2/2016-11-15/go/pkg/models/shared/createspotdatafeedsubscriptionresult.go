@@ -3,5 +3,5 @@ package shared
 // CreateSpotDatafeedSubscriptionResult
 // Contains the output of CreateSpotDatafeedSubscription.
 type CreateSpotDatafeedSubscriptionResult struct {
-	SpotDatafeedSubscription *SpotDatafeedSubscription
+	SpotDatafeedSubscription map[string]interface{}
 }

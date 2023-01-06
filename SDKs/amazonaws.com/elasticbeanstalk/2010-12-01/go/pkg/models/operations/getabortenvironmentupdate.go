@@ -3,13 +3,13 @@ package operations
 type GetAbortEnvironmentUpdateActionEnum string
 
 const (
-	GetAbortEnvironmentUpdateActionEnumAbortEnvironmentUpdate GetAbortEnvironmentUpdateActionEnum = "AbortEnvironmentUpdate"
+	GETAbortEnvironmentUpdateActionEnumAbortEnvironmentUpdate GetAbortEnvironmentUpdateActionEnum = "AbortEnvironmentUpdate"
 )
 
 type GetAbortEnvironmentUpdateVersionEnum string
 
 const (
-	GetAbortEnvironmentUpdateVersionEnumTwoThousandAndTen1201 GetAbortEnvironmentUpdateVersionEnum = "2010-12-01"
+	GETAbortEnvironmentUpdateVersionEnumTwoThousandAndTen1201 GetAbortEnvironmentUpdateVersionEnum = "2010-12-01"
 )
 
 type GetAbortEnvironmentUpdateQueryParams struct {

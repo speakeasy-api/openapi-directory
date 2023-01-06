@@ -24,7 +24,7 @@ type GroupsCreateRequest struct {
 }
 
 type GroupsCreateResponse struct {
-	AdGroup     map[string]map[string]interface{}
+	ADGroup     map[string]map[string]interface{}
 	ContentType string
 	GraphError  *shared.GraphError
 	StatusCode  int64

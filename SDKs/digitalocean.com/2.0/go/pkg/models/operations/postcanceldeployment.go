@@ -9,14 +9,14 @@ type PostCancelDeploymentPathParams struct {
 	DeploymentID string `pathParam:"style=simple,explode=false,name=deployment_id"`
 }
 
-type PostCancelDeploymentRequest struct {
-	PathParams PostCancelDeploymentPathParams
-}
-
 type PostCancelDeployment401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type PostCancelDeploymentRequest struct {
+	PathParams PostCancelDeploymentPathParams
 }
 
 type PostCancelDeploymentResponse struct {

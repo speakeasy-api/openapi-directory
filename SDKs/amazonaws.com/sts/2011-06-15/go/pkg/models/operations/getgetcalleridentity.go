@@ -3,13 +3,13 @@ package operations
 type GetGetCallerIdentityActionEnum string
 
 const (
-	GetGetCallerIdentityActionEnumGetCallerIdentity GetGetCallerIdentityActionEnum = "GetCallerIdentity"
+	GETGETCallerIdentityActionEnumGetCallerIdentity GetGetCallerIdentityActionEnum = "GetCallerIdentity"
 )
 
 type GetGetCallerIdentityVersionEnum string
 
 const (
-	GetGetCallerIdentityVersionEnumTwoThousandAndEleven0615 GetGetCallerIdentityVersionEnum = "2011-06-15"
+	GETGETCallerIdentityVersionEnumTwoThousandAndEleven0615 GetGetCallerIdentityVersionEnum = "2011-06-15"
 )
 
 type GetGetCallerIdentityQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type InstallationMediaMessage struct {
-	InstallationMedia []InstallationMedia
+	InstallationMedia []map[string]interface{}
 	Marker            *string
 }

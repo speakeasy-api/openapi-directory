@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -106,14 +106,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -125,14 +125,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -144,14 +144,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -163,14 +163,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -182,14 +182,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -201,14 +201,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -223,14 +223,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -245,14 +245,14 @@ func (s *AccountInformationServiceAis) CreateConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -305,14 +305,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -324,14 +324,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -343,14 +343,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -362,14 +362,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -381,14 +381,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -400,14 +400,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -422,14 +422,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -444,14 +444,14 @@ func (s *AccountInformationServiceAis) DeleteConsent(ctx context.Context, reques
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -530,14 +530,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -549,14 +549,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -568,14 +568,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -587,14 +587,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -606,14 +606,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -625,14 +625,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -647,14 +647,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -669,14 +669,14 @@ func (s *AccountInformationServiceAis) GetAccountList(ctx context.Context, reque
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -744,14 +744,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -763,14 +763,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -782,14 +782,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -801,14 +801,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -820,14 +820,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -839,14 +839,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -861,14 +861,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -883,14 +883,14 @@ func (s *AccountInformationServiceAis) GetBalances(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -954,14 +954,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -973,14 +973,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -992,14 +992,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1011,14 +1011,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1030,14 +1030,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1049,14 +1049,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -1071,14 +1071,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1093,14 +1093,14 @@ func (s *AccountInformationServiceAis) GetConsentAuthorisation(ctx context.Conte
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -1164,14 +1164,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1183,14 +1183,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1202,14 +1202,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1221,14 +1221,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1240,14 +1240,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1259,14 +1259,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -1281,14 +1281,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1303,14 +1303,14 @@ func (s *AccountInformationServiceAis) GetConsentInformation(ctx context.Context
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -1372,14 +1372,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1391,14 +1391,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1410,14 +1410,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1429,14 +1429,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1448,14 +1448,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1467,14 +1467,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -1489,14 +1489,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1511,14 +1511,14 @@ func (s *AccountInformationServiceAis) GetConsentScaStatus(ctx context.Context, 
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -1580,14 +1580,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1599,14 +1599,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1618,14 +1618,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1637,14 +1637,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1656,14 +1656,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1675,14 +1675,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -1697,14 +1697,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1719,14 +1719,14 @@ func (s *AccountInformationServiceAis) GetConsentStatus(ctx context.Context, req
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -1792,14 +1792,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -1811,14 +1811,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -1830,14 +1830,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -1849,14 +1849,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -1868,14 +1868,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -1887,14 +1887,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -1909,14 +1909,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -1931,14 +1931,14 @@ func (s *AccountInformationServiceAis) GetTransactionDetails(ctx context.Context
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -2003,12 +2003,13 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 
 			res.Body = out
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.GetTransactionList200TextPlainOneOf = &out
 		}
 	case httpRes.StatusCode == 400:
 		res.Headers = httpRes.Header
@@ -2020,14 +2021,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -2039,14 +2040,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -2058,14 +2059,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -2077,14 +2078,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -2096,14 +2097,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -2115,14 +2116,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -2137,14 +2138,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -2159,14 +2160,14 @@ func (s *AccountInformationServiceAis) GetTransactionList(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -2241,14 +2242,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -2260,14 +2261,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -2279,14 +2280,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -2298,14 +2299,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -2317,14 +2318,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -2336,14 +2337,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -2358,14 +2359,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -2380,14 +2381,14 @@ func (s *AccountInformationServiceAis) ReadAccountDetails(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -2487,14 +2488,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -2506,14 +2507,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -2525,14 +2526,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -2544,14 +2545,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -2563,14 +2564,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -2582,14 +2583,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -2604,14 +2605,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -2626,14 +2627,14 @@ func (s *AccountInformationServiceAis) StartConsentAuthorisation(ctx context.Con
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -2739,14 +2740,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -2758,14 +2759,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error401NgAis = out
+			res.Error401NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Ais = out
+			res.Error401AIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -2777,14 +2778,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error403NgAis = out
+			res.Error403NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Ais = out
+			res.Error403AIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -2796,14 +2797,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error404NgAis = out
+			res.Error404NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Ais = out
+			res.Error404AIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -2815,14 +2816,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error405NgAis = out
+			res.Error405NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Ais = out
+			res.Error405AIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -2834,14 +2835,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error406NgAis = out
+			res.Error406NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error406Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error406Ais = out
+			res.Error406AIS = out
 		}
 	case httpRes.StatusCode == 408:
 		res.Headers = httpRes.Header
@@ -2856,14 +2857,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error409NgAis = out
+			res.Error409NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Ais = out
+			res.Error409AIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header
@@ -2878,14 +2879,14 @@ func (s *AccountInformationServiceAis) UpdateConsentsPsuData(ctx context.Context
 				return nil, err
 			}
 
-			res.Error429NgAis = out
+			res.Error429NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error429Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error429Ais = out
+			res.Error429AIS = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header

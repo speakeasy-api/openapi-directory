@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,7 +32,7 @@ func main() {
 
     s := sdk.New(opts...)
     
-    res, err := s.Sdk.CircuitsChoicesList(ctx)
+    res, err := s.Circuits.CircuitsChoicesList(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,7 +46,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### circuits
 
 * `CircuitsChoicesList`
 * `CircuitsChoicesRead`
@@ -76,6 +75,9 @@ func main() {
 * `CircuitsProvidersPartialUpdate`
 * `CircuitsProvidersRead`
 * `CircuitsProvidersUpdate`
+
+### dcim
+
 * `DcimChoicesList`
 * `DcimChoicesRead`
 * `DcimConnectedDeviceList` - This endpoint allows a user to determine what device (if any) is connected to a given peer device and peer
@@ -246,6 +248,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `DcimVirtualChassisPartialUpdate`
 * `DcimVirtualChassisRead`
 * `DcimVirtualChassisUpdate`
+
+### extras
+
 * `ExtrasChoicesList`
 * `ExtrasChoicesRead`
 * `ExtrasConfigContextsCreate`
@@ -289,6 +294,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `ExtrasTopologyMapsRead`
 * `ExtrasTopologyMapsRender`
 * `ExtrasTopologyMapsUpdate`
+
+### ipam
+
 * `IpamChoicesList`
 * `IpamChoicesRead`
 * `IpamAggregatesCreate`
@@ -353,6 +361,9 @@ however results will not be paginated.
 * `IpamVrfsPartialUpdate`
 * `IpamVrfsRead`
 * `IpamVrfsUpdate`
+
+### secrets
+
 * `SecretsChoicesList`
 * `SecretsChoicesRead`
 * `SecretsGenerateRsaKeyPairList` - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
@@ -387,6 +398,9 @@ key will be returned instead of a new one.
 * `SecretsSecretsPartialUpdate`
 * `SecretsSecretsRead`
 * `SecretsSecretsUpdate`
+
+### tenancy
+
 * `TenancyChoicesList`
 * `TenancyChoicesRead`
 * `TenancyTenantGroupsCreate`
@@ -401,6 +415,9 @@ key will be returned instead of a new one.
 * `TenancyTenantsPartialUpdate`
 * `TenancyTenantsRead`
 * `TenancyTenantsUpdate`
+
+### virtualization
+
 * `VirtualizationChoicesList`
 * `VirtualizationChoicesRead`
 * `VirtualizationClusterGroupsCreate`

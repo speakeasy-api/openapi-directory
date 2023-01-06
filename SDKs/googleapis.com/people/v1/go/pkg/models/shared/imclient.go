@@ -1,14 +1,5 @@
 package shared
 
-// ImClientInput
-// A person's instant messaging client.
-type ImClientInput struct {
-	Metadata *FieldMetadataInput `json:"metadata,omitempty"`
-	Protocol *string             `json:"protocol,omitempty"`
-	Type     *string             `json:"type,omitempty"`
-	Username *string             `json:"username,omitempty"`
-}
-
 // ImClient
 // A person's instant messaging client.
 type ImClient struct {
@@ -18,4 +9,13 @@ type ImClient struct {
 	Protocol          *string        `json:"protocol,omitempty"`
 	Type              *string        `json:"type,omitempty"`
 	Username          *string        `json:"username,omitempty"`
+}
+
+// ImClientInput
+// A person's instant messaging client.
+type ImClientInput struct {
+	Metadata *FieldMetadataInput `json:"metadata,omitempty"`
+	Protocol *string             `json:"protocol,omitempty"`
+	Type     *string             `json:"type,omitempty"`
+	Username *string             `json:"username,omitempty"`
 }

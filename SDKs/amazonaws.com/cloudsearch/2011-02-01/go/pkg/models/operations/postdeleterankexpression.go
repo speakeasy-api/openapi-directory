@@ -3,13 +3,13 @@ package operations
 type PostDeleteRankExpressionActionEnum string
 
 const (
-	PostDeleteRankExpressionActionEnumDeleteRankExpression PostDeleteRankExpressionActionEnum = "DeleteRankExpression"
+	POSTDeleteRankExpressionActionEnumDeleteRankExpression PostDeleteRankExpressionActionEnum = "DeleteRankExpression"
 )
 
 type PostDeleteRankExpressionVersionEnum string
 
 const (
-	PostDeleteRankExpressionVersionEnumTwoThousandAndEleven0201 PostDeleteRankExpressionVersionEnum = "2011-02-01"
+	POSTDeleteRankExpressionVersionEnumTwoThousandAndEleven0201 PostDeleteRankExpressionVersionEnum = "2011-02-01"
 )
 
 type PostDeleteRankExpressionQueryParams struct {

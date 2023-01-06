@@ -26,6 +26,6 @@ type PostPortfolioAnalysisContributionsReturnRequest struct {
 
 type PostPortfolioAnalysisContributionsReturnResponse struct {
 	ContentType                                                      string
-	PostPortfolioAnalysisContributionsReturn200ApplicationJSONObject *PostPortfolioAnalysisContributionsReturn200ApplicationJSON
 	StatusCode                                                       int64
+	PostPortfolioAnalysisContributionsReturn200ApplicationJSONObject *PostPortfolioAnalysisContributionsReturn200ApplicationJSON
 }

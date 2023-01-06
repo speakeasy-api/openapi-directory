@@ -11,6 +11,6 @@ type PostContainersFloatingIpsRequestRequest struct {
 
 type PostContainersFloatingIpsRequestResponse struct {
 	ContentType                                              string
-	PostContainersFloatingIpsRequest200ApplicationJSONString *string
 	StatusCode                                               int64
+	PostContainersFloatingIpsRequest200ApplicationJSONString *string
 }

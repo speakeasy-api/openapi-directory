@@ -4,5 +4,5 @@ package shared
 // <p/>
 type OptionGroupOptionsMessage struct {
 	Marker             *string
-	OptionGroupOptions []OptionGroupOption
+	OptionGroupOptions []map[string]interface{}
 }

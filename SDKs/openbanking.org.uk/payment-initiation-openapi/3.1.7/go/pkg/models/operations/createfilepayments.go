@@ -16,12 +16,12 @@ type CreateFilePaymentsHeaders struct {
 
 type CreateFilePaymentsRequests struct {
 	ApplicationJosePlusJwe []byte               `request:"mediaType=application/jose+jwe"`
-	ObWriteFile2           *shared.ObWriteFile2 `request:"mediaType=application/json"`
-	ObWriteFile3           *shared.ObWriteFile2 `request:"mediaType=application/json"`
+	OBWriteFile2           *shared.ObWriteFile2 `request:"mediaType=application/json"`
+	OBWriteFile3           *shared.ObWriteFile2 `request:"mediaType=application/json"`
 }
 
 type CreateFilePaymentsSecurity struct {
-	PsuoAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateFilePaymentsRequest struct {
@@ -34,7 +34,7 @@ type CreateFilePaymentsResponse struct {
 	Body                 []byte
 	ContentType          string
 	Headers              map[string][]string
-	ObErrorResponse1     *shared.ObErrorResponse1
-	ObWriteFileResponse3 *shared.ObWriteFileResponse3
+	OBErrorResponse1     *shared.ObErrorResponse1
+	OBWriteFileResponse3 *shared.ObWriteFileResponse3
 	StatusCode           int64
 }

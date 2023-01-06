@@ -7,7 +7,7 @@ import (
 // AutoScalingGroup
 // Describes an Auto Scaling group.
 type AutoScalingGroup struct {
-	AutoScalingGroupArn              *string
+	AutoScalingGroupARN              *string
 	AutoScalingGroupName             string
 	AvailabilityZones                []string
 	CapacityRebalance                *bool
@@ -29,13 +29,13 @@ type AutoScalingGroup struct {
 	NewInstancesProtectedFromScaleIn *bool
 	PlacementGroup                   *string
 	PredictedCapacity                *int64
-	ServiceLinkedRoleArn             *string
+	ServiceLinkedRoleARN             *string
 	Status                           *string
 	SuspendedProcesses               []SuspendedProcess
 	Tags                             []TagDescription
-	TargetGroupArNs                  []string
+	TargetGroupARNs                  []string
 	TerminationPolicies              []string
-	VpcZoneIdentifier                *string
+	VPCZoneIdentifier                *string
 	WarmPoolConfiguration            *WarmPoolConfiguration
 	WarmPoolSize                     *int64
 }

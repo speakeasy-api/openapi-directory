@@ -3,13 +3,13 @@ package operations
 type PostGetAccountSendingEnabledActionEnum string
 
 const (
-	PostGetAccountSendingEnabledActionEnumGetAccountSendingEnabled PostGetAccountSendingEnabledActionEnum = "GetAccountSendingEnabled"
+	POSTGetAccountSendingEnabledActionEnumGetAccountSendingEnabled PostGetAccountSendingEnabledActionEnum = "GetAccountSendingEnabled"
 )
 
 type PostGetAccountSendingEnabledVersionEnum string
 
 const (
-	PostGetAccountSendingEnabledVersionEnumTwoThousandAndTen1201 PostGetAccountSendingEnabledVersionEnum = "2010-12-01"
+	POSTGetAccountSendingEnabledVersionEnumTwoThousandAndTen1201 PostGetAccountSendingEnabledVersionEnum = "2010-12-01"
 )
 
 type PostGetAccountSendingEnabledQueryParams struct {

@@ -94,6 +94,6 @@ type GetSchedulesScheduleCSubIDRequest struct {
 
 type GetSchedulesScheduleCSubIDResponse struct {
 	ContentType                                            string
-	GetSchedulesScheduleCSubIDDefaultApplicationJSONObject *GetSchedulesScheduleCSubIDDefaultApplicationJSON
 	StatusCode                                             int64
+	GetSchedulesScheduleCSubIDDefaultApplicationJSONObject *GetSchedulesScheduleCSubIDDefaultApplicationJSON
 }

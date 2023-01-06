@@ -3,13 +3,13 @@ package operations
 type GetIndexDocumentsActionEnum string
 
 const (
-	GetIndexDocumentsActionEnumIndexDocuments GetIndexDocumentsActionEnum = "IndexDocuments"
+	GETIndexDocumentsActionEnumIndexDocuments GetIndexDocumentsActionEnum = "IndexDocuments"
 )
 
 type GetIndexDocumentsVersionEnum string
 
 const (
-	GetIndexDocumentsVersionEnumTwoThousandAndEleven0201 GetIndexDocumentsVersionEnum = "2011-02-01"
+	GETIndexDocumentsVersionEnumTwoThousandAndEleven0201 GetIndexDocumentsVersionEnum = "2011-02-01"
 )
 
 type GetIndexDocumentsQueryParams struct {

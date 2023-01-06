@@ -2,8 +2,8 @@ package shared
 
 type InterfaceDescriptor struct {
 	DstIPAddress  *string
-	DstMacAddress *string
+	DstMACAddress *string
 	InterfaceType InterfaceTypeEnum
-	SrcMacAddress *string
+	SrcMACAddress *string
 	TunnelInfo    *TunnelInfo
 }

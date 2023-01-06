@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// MigrationSimpleUser
+// Simple User
 type MigrationSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

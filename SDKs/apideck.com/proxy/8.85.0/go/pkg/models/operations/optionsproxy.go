@@ -32,7 +32,6 @@ type OptionsProxyRequest struct {
 
 type OptionsProxyResponse struct {
 	ContentType                           string
-	Headers                               map[string][]string
 	StatusCode                            int64
 	OptionsProxy200ApplicationJSONAny     *interface{}
 	OptionsProxy401ApplicationJSONObject  *OptionsProxy401ApplicationJSON

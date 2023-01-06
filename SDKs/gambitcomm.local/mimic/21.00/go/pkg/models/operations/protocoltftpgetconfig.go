@@ -13,7 +13,7 @@ type ProtocolTftpGetConfigRequest struct {
 }
 
 type ProtocolTftpGetConfigResponse struct {
-	ConfigTftp  *shared.ConfigTftp
+	ConfigTFTP  *shared.ConfigTftp
 	ContentType string
 	StatusCode  int64
 }

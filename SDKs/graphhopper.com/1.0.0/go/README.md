@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -37,44 +36,44 @@ func main() {
         Request: shared.ClusterRequest{
             Configuration: &shared.ClusterConfiguration{
                 Clustering: &shared.ClusterConfigurationClustering{
-                    MaxQuantity: 17.200001,
-                    MinQuantity: 37.200001,
-                    NumClusters: 98.199997,
+                    MaxQuantity: 13.200000,
+                    MinQuantity: 49.200001,
+                    NumClusters: 56.200001,
                 },
-                ResponseType: "hic",
+                ResponseType: "qui",
                 Routing: &shared.ClusterConfigurationRouting{
-                    CostPerMeter: 62.099998,
-                    CostPerSecond: 98.199997,
-                    Profile: "et",
+                    CostPerMeter: 44.099998,
+                    CostPerSecond: 58.099998,
+                    Profile: "minus",
                 },
             },
             Customers: []shared.ClusterCustomer{
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 44.099998,
-                        Lon: 79.199997,
-                        StreetHint: "nam",
+                        Lat: 61.099998,
+                        Lon: 6.100000,
+                        StreetHint: "dignissimos",
                     },
-                    ID: "vel",
-                    Quantity: 12.100000,
+                    ID: "et",
+                    Quantity: 78.099998,
                 },
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 74.099998,
-                        Lon: 96.199997,
-                        StreetHint: "quod",
+                        Lat: 94.099998,
+                        Lon: 9.100000,
+                        StreetHint: "omnis",
                     },
-                    ID: "consequatur",
-                    Quantity: 80.099998,
+                    ID: "delectus",
+                    Quantity: 46.200001,
                 },
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 63.200001,
-                        Lon: 47.200001,
-                        StreetHint: "sed",
+                        Lat: 5.100000,
+                        Lon: 23.100000,
+                        StreetHint: "beatae",
                     },
-                    ID: "dolores",
-                    Quantity: 32.200001,
+                    ID: "ex",
+                    Quantity: 95.099998,
                 },
             },
         },
@@ -127,8 +126,8 @@ func main() {
 
 ### Routing API
 
-* `GetRouteInfo` - Coverage information
 * `GetRoute` - GET Route Endpoint
+* `GetRouteInfo` - Coverage information
 * `PostRoute` - POST Route Endpoint
 
 <!-- End SDK Available Operations -->

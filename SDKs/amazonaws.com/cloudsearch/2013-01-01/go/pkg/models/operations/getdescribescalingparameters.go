@@ -3,13 +3,13 @@ package operations
 type GetDescribeScalingParametersActionEnum string
 
 const (
-	GetDescribeScalingParametersActionEnumDescribeScalingParameters GetDescribeScalingParametersActionEnum = "DescribeScalingParameters"
+	GETDescribeScalingParametersActionEnumDescribeScalingParameters GetDescribeScalingParametersActionEnum = "DescribeScalingParameters"
 )
 
 type GetDescribeScalingParametersVersionEnum string
 
 const (
-	GetDescribeScalingParametersVersionEnumTwoThousandAndThirteen0101 GetDescribeScalingParametersVersionEnum = "2013-01-01"
+	GETDescribeScalingParametersVersionEnumTwoThousandAndThirteen0101 GetDescribeScalingParametersVersionEnum = "2013-01-01"
 )
 
 type GetDescribeScalingParametersQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,7 +29,7 @@ func main() {
             },
         },
         QueryParams: operations.GetUUIDQueryParams{
-            Count: 2285084036942815123,
+            Count: 4664256724045849075,
         },
     }
     

@@ -3,9 +3,9 @@ package shared
 type PsuHTTPMethodEnum string
 
 const (
-	PsuHTTPMethodEnumGet    PsuHTTPMethodEnum = "GET"
-	PsuHTTPMethodEnumPost   PsuHTTPMethodEnum = "POST"
-	PsuHTTPMethodEnumPut    PsuHTTPMethodEnum = "PUT"
-	PsuHTTPMethodEnumPatch  PsuHTTPMethodEnum = "PATCH"
-	PsuHTTPMethodEnumDelete PsuHTTPMethodEnum = "DELETE"
+	PSUHTTPMethodEnumGet    PsuHTTPMethodEnum = "GET"
+	PSUHTTPMethodEnumPost   PsuHTTPMethodEnum = "POST"
+	PSUHTTPMethodEnumPut    PsuHTTPMethodEnum = "PUT"
+	PSUHTTPMethodEnumPatch  PsuHTTPMethodEnum = "PATCH"
+	PSUHTTPMethodEnumDelete PsuHTTPMethodEnum = "DELETE"
 )

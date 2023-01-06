@@ -3,13 +3,13 @@ package operations
 type PostReceiveMessageActionEnum string
 
 const (
-	PostReceiveMessageActionEnumReceiveMessage PostReceiveMessageActionEnum = "ReceiveMessage"
+	POSTReceiveMessageActionEnumReceiveMessage PostReceiveMessageActionEnum = "ReceiveMessage"
 )
 
 type PostReceiveMessageVersionEnum string
 
 const (
-	PostReceiveMessageVersionEnumTwoThousandAndTwelve1105 PostReceiveMessageVersionEnum = "2012-11-05"
+	POSTReceiveMessageVersionEnumTwoThousandAndTwelve1105 PostReceiveMessageVersionEnum = "2012-11-05"
 )
 
 type PostReceiveMessageQueryParams struct {

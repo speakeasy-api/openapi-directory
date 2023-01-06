@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,14 +35,14 @@ func main() {
     req := operations.GetSectionFormatRequest{
         PathParams: operations.GetSectionFormatPathParams{
             Format: "jsonp",
-            Section: "movies",
+            Section: "magazine",
         },
         QueryParams: operations.GetSectionFormatQueryParams{
-            Callback: "fugit",
+            Callback: "provident",
         },
     }
     
-    res, err := s.Sdk.GetSectionFormat(ctx, req)
+    res, err := s.Stories.GetSectionFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Stories
 
 * `GetSectionFormat` - Top Stories
 

@@ -1,0 +1,28 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type OfficesUpdatePathParams struct {
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+}
+
+type OfficesUpdateQueryParams struct {
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+}
+
+type OfficesUpdateSecurity struct {
+	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+}
+
+type OfficesUpdateRequest struct {
+	PathParams  OfficesUpdatePathParams
+	QueryParams OfficesUpdateQueryParams
+	Security    OfficesUpdateSecurity
+}
+
+type OfficesUpdateResponse struct {
+	ContentType string
+	StatusCode  int64
+}

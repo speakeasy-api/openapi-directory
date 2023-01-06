@@ -13,8 +13,8 @@ type GetListsDateListJSONPathParams struct {
 type GetListsDateListJSONSortOrderEnum string
 
 const (
-	GetListsDateListJSONSortOrderEnumAsc  GetListsDateListJSONSortOrderEnum = "ASC"
-	GetListsDateListJSONSortOrderEnumDesc GetListsDateListJSONSortOrderEnum = "DESC"
+	GETListsDateListJSONSortOrderEnumAsc  GetListsDateListJSONSortOrderEnum = "ASC"
+	GETListsDateListJSONSortOrderEnumDesc GetListsDateListJSONSortOrderEnum = "DESC"
 )
 
 type GetListsDateListJSONQueryParams struct {
@@ -90,6 +90,6 @@ type GetListsDateListJSONRequest struct {
 
 type GetListsDateListJSONResponse struct {
 	ContentType                                  string
-	GetListsDateListJSON200ApplicationJSONObject *GetListsDateListJSON200ApplicationJSON
+	GETListsDateListJSON200ApplicationJSONObject *GetListsDateListJSON200ApplicationJSON
 	StatusCode                                   int64
 }

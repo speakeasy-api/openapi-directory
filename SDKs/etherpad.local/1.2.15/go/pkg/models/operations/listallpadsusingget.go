@@ -31,8 +31,8 @@ type ListAllPadsUsingGet500ApplicationJSON struct {
 type ListAllPadsUsingGetResponse struct {
 	ContentType                                 string
 	StatusCode                                  int64
-	ListAllPadsUsingGet200ApplicationJSONObject *ListAllPadsUsingGet200ApplicationJSON
-	ListAllPadsUsingGet400ApplicationJSONObject *ListAllPadsUsingGet400ApplicationJSON
-	ListAllPadsUsingGet401ApplicationJSONObject *ListAllPadsUsingGet401ApplicationJSON
-	ListAllPadsUsingGet500ApplicationJSONObject *ListAllPadsUsingGet500ApplicationJSON
+	ListAllPadsUsingGET200ApplicationJSONObject *ListAllPadsUsingGet200ApplicationJSON
+	ListAllPadsUsingGET400ApplicationJSONObject *ListAllPadsUsingGet400ApplicationJSON
+	ListAllPadsUsingGET401ApplicationJSONObject *ListAllPadsUsingGet401ApplicationJSON
+	ListAllPadsUsingGET500ApplicationJSONObject *ListAllPadsUsingGet500ApplicationJSON
 }

@@ -1,13 +1,10 @@
 package sdk
 
 import (
-	"context"
-	"fmt"
 	"net/http"
-	"openapi/internal/utils"
-	"openapi/pkg/models/operations"
+
 	"openapi/pkg/models/shared"
-	"strings"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -19,6 +16,8 @@ type HTTPClient interface {
 }
 
 type SDK struct {
+	GlobalWineScore *GlobalWineScore
+
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
 	_security       *shared.Security
@@ -79,77 +78,14 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.GlobalWineScore = NewGlobalWineScore(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	return sdk
-}
-
-// GetGlobalwinescoresLatest - List all latest GWS
-// Returns the latest GWS available per wine/vintage.
-func (s *SDK) GetGlobalwinescoresLatest(ctx context.Context, request operations.GetGlobalwinescoresLatestRequest) (*operations.GetGlobalwinescoresLatestResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/globalwinescores/latest/"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateHeaders(ctx, req, request.Headers)
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetGlobalwinescoresLatestResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	}
-
-	return res, nil
-}
-
-// ListHistoricalGws - List all historical GWS
-// Returns all available GWS
-func (s *SDK) ListHistoricalGws(ctx context.Context, request operations.ListHistoricalGwsRequest) (*operations.ListHistoricalGwsResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/globalwinescores/"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateHeaders(ctx, req, request.Headers)
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.ListHistoricalGwsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	}
-
-	return res, nil
 }

@@ -46,8 +46,8 @@ type GetSessionInfoUsingPostRequest struct {
 type GetSessionInfoUsingPostResponse struct {
 	ContentType                                     string
 	StatusCode                                      int64
-	GetSessionInfoUsingPost200ApplicationJSONObject *GetSessionInfoUsingPost200ApplicationJSON
-	GetSessionInfoUsingPost400ApplicationJSONObject *GetSessionInfoUsingPost400ApplicationJSON
-	GetSessionInfoUsingPost401ApplicationJSONObject *GetSessionInfoUsingPost401ApplicationJSON
-	GetSessionInfoUsingPost500ApplicationJSONObject *GetSessionInfoUsingPost500ApplicationJSON
+	GetSessionInfoUsingPOST200ApplicationJSONObject *GetSessionInfoUsingPost200ApplicationJSON
+	GetSessionInfoUsingPOST400ApplicationJSONObject *GetSessionInfoUsingPost400ApplicationJSON
+	GetSessionInfoUsingPOST401ApplicationJSONObject *GetSessionInfoUsingPost401ApplicationJSON
+	GetSessionInfoUsingPOST500ApplicationJSONObject *GetSessionInfoUsingPost500ApplicationJSON
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,47 +26,49 @@ func main() {
         Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "in",
+            AppsID: "consequuntur",
         },
         QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "reprehenderit",
-            Alt: "proto",
-            Callback: "eos",
-            Fields: "ut",
-            Key: "laboriosam",
-            OauthToken: "corrupti",
+            DollarXgafv: "2",
+            AccessToken: "dicta",
+            Alt: "json",
+            Callback: "saepe",
+            Fields: "omnis",
+            Key: "quidem",
+            OauthToken: "reprehenderit",
             PrettyPrint: false,
-            QuotaUser: "est",
-            UploadType: "similique",
-            UploadProtocol: "aliquam",
+            QuotaUser: "consectetur",
+            UploadType: "fugit",
+            UploadProtocol: "illum",
         },
         Request: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "commodi",
-                PublicCertificate: "hic",
+                PrivateKey: "culpa",
+                PublicCertificate: "quae",
             },
-            DisplayName: "aliquid",
-            DomainMappingsCount: 6358108789263637602,
+            DisplayName: "error",
+            DomainMappingsCount: 156088073112754838,
             DomainNames: []string{
-                "voluptates",
+                "et",
+                "labore",
+                "consequatur",
             },
-            ExpireTime: "id",
-            ID: "non",
+            ExpireTime: "quia",
+            ID: "quisquam",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "ipsam",
-                Status: "OK",
+                LastRenewalTime: "adipisci",
+                Status: "FAILED_RETRYING_CAA_CHECKING",
             },
-            Name: "explicabo",
+            Name: "autem",
             VisibleDomainMappings: []string{
-                "sapiente",
-                "quia",
+                "incidunt",
+                "sint",
             },
         },
     }

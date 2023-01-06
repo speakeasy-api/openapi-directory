@@ -15,9 +15,9 @@ type ObWriteInternationalResponse5DataCharges struct {
 type ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnumActual     ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalResponse5DataExchangeRateInformationRateTypeEnumActual     ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalResponse5DataExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalResponse5DataExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalResponse5DataExchangeRateInformation
@@ -67,9 +67,9 @@ type ObWriteInternationalResponse5DataInitiationDebtorAccount struct {
 type ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalResponse5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalResponse5DataInitiationExchangeRateInformation
@@ -92,8 +92,8 @@ type ObWriteInternationalResponse5DataInitiationInstructedAmount struct {
 type ObWriteInternationalResponse5DataInitiationInstructionPriorityEnum string
 
 const (
-	ObWriteInternationalResponse5DataInitiationInstructionPriorityEnumNormal ObWriteInternationalResponse5DataInitiationInstructionPriorityEnum = "Normal"
-	ObWriteInternationalResponse5DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalResponse5DataInitiationInstructionPriorityEnum = "Urgent"
+	OBWriteInternationalResponse5DataInitiationInstructionPriorityEnumNormal ObWriteInternationalResponse5DataInitiationInstructionPriorityEnum = "Normal"
+	OBWriteInternationalResponse5DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalResponse5DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
 // ObWriteInternationalResponse5DataInitiationRemittanceInformation
@@ -128,9 +128,9 @@ type ObWriteInternationalResponse5DataInitiation struct {
 type ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum string
 
 const (
-	ObWriteInternationalResponse5DataMultiAuthorisationStatusEnumAuthorised                   ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum = "Authorised"
-	ObWriteInternationalResponse5DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
-	ObWriteInternationalResponse5DataMultiAuthorisationStatusEnumRejected                     ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum = "Rejected"
+	OBWriteInternationalResponse5DataMultiAuthorisationStatusEnumAuthorised                   ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum = "Authorised"
+	OBWriteInternationalResponse5DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
+	OBWriteInternationalResponse5DataMultiAuthorisationStatusEnumRejected                     ObWriteInternationalResponse5DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
 // ObWriteInternationalResponse5DataMultiAuthorisation
@@ -177,12 +177,12 @@ type ObWriteInternationalResponse5DataRefund struct {
 type ObWriteInternationalResponse5DataStatusEnum string
 
 const (
-	ObWriteInternationalResponse5DataStatusEnumAcceptedCreditSettlementCompleted ObWriteInternationalResponse5DataStatusEnum = "AcceptedCreditSettlementCompleted"
-	ObWriteInternationalResponse5DataStatusEnumAcceptedSettlementCompleted       ObWriteInternationalResponse5DataStatusEnum = "AcceptedSettlementCompleted"
-	ObWriteInternationalResponse5DataStatusEnumAcceptedSettlementInProcess       ObWriteInternationalResponse5DataStatusEnum = "AcceptedSettlementInProcess"
-	ObWriteInternationalResponse5DataStatusEnumAcceptedWithoutPosting            ObWriteInternationalResponse5DataStatusEnum = "AcceptedWithoutPosting"
-	ObWriteInternationalResponse5DataStatusEnumPending                           ObWriteInternationalResponse5DataStatusEnum = "Pending"
-	ObWriteInternationalResponse5DataStatusEnumRejected                          ObWriteInternationalResponse5DataStatusEnum = "Rejected"
+	OBWriteInternationalResponse5DataStatusEnumAcceptedCreditSettlementCompleted ObWriteInternationalResponse5DataStatusEnum = "AcceptedCreditSettlementCompleted"
+	OBWriteInternationalResponse5DataStatusEnumAcceptedSettlementCompleted       ObWriteInternationalResponse5DataStatusEnum = "AcceptedSettlementCompleted"
+	OBWriteInternationalResponse5DataStatusEnumAcceptedSettlementInProcess       ObWriteInternationalResponse5DataStatusEnum = "AcceptedSettlementInProcess"
+	OBWriteInternationalResponse5DataStatusEnumAcceptedWithoutPosting            ObWriteInternationalResponse5DataStatusEnum = "AcceptedWithoutPosting"
+	OBWriteInternationalResponse5DataStatusEnumPending                           ObWriteInternationalResponse5DataStatusEnum = "Pending"
+	OBWriteInternationalResponse5DataStatusEnumRejected                          ObWriteInternationalResponse5DataStatusEnum = "Rejected"
 )
 
 type ObWriteInternationalResponse5Data struct {

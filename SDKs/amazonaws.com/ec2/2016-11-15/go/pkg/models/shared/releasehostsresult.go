@@ -1,6 +1,6 @@
 package shared
 
 type ReleaseHostsResult struct {
-	Successful   []string
-	Unsuccessful []UnsuccessfulItem
+	Successful   map[string]interface{}
+	Unsuccessful map[string]interface{}
 }

@@ -81,7 +81,7 @@ type Ercer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Ercer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Ercer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Ercer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Ercer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Ercer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ercer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Ercer404ApplicationJSON struct {

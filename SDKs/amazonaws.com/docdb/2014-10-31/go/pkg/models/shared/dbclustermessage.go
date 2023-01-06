@@ -3,6 +3,6 @@ package shared
 // DbClusterMessage
 // Represents the output of <a>DescribeDBClusters</a>.
 type DbClusterMessage struct {
-	DbClusters []DbCluster
+	DBClusters []map[string]interface{}
 	Marker     *string
 }

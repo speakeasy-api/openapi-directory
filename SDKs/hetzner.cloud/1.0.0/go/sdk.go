@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -22,7 +23,7 @@ type SDK struct {
 	Firewalls           *Firewalls
 	FloatingIPActions   *FloatingIPActions
 	FloatingIPs         *FloatingIPs
-	IsOs                *IsOs
+	ISOs                *IsOs
 	ImageActions        *ImageActions
 	Images              *Images
 	LoadBalancerActions *LoadBalancerActions
@@ -162,7 +163,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.IsOs = NewIsOs(
+	sdk.ISOs = NewIsOs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

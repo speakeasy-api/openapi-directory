@@ -15,6 +15,6 @@ type DeleteSetupV1LocationsIDDeleteallimagesRequest struct {
 
 type DeleteSetupV1LocationsIDDeleteallimagesResponse struct {
 	ContentType                                                      string
-	DeleteSetupV1LocationsIDDeleteallimages200ApplicationJSONBoolean *bool
 	StatusCode                                                       int64
+	DeleteSetupV1LocationsIDDeleteallimages200ApplicationJSONBoolean *bool
 }

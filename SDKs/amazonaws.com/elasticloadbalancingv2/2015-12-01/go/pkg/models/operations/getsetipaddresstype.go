@@ -3,20 +3,20 @@ package operations
 type GetSetIPAddressTypeActionEnum string
 
 const (
-	GetSetIPAddressTypeActionEnumSetIPAddressType GetSetIPAddressTypeActionEnum = "SetIpAddressType"
+	GETSetIPAddressTypeActionEnumSetIPAddressType GetSetIPAddressTypeActionEnum = "SetIpAddressType"
 )
 
 type GetSetIPAddressTypeIPAddressTypeEnum string
 
 const (
-	GetSetIPAddressTypeIPAddressTypeEnumIpv4      GetSetIPAddressTypeIPAddressTypeEnum = "ipv4"
-	GetSetIPAddressTypeIPAddressTypeEnumDualstack GetSetIPAddressTypeIPAddressTypeEnum = "dualstack"
+	GETSetIPAddressTypeIPAddressTypeEnumIpv4      GetSetIPAddressTypeIPAddressTypeEnum = "ipv4"
+	GETSetIPAddressTypeIPAddressTypeEnumDualstack GetSetIPAddressTypeIPAddressTypeEnum = "dualstack"
 )
 
 type GetSetIPAddressTypeVersionEnum string
 
 const (
-	GetSetIPAddressTypeVersionEnumTwoThousandAndFifteen1201 GetSetIPAddressTypeVersionEnum = "2015-12-01"
+	GETSetIPAddressTypeVersionEnumTwoThousandAndFifteen1201 GetSetIPAddressTypeVersionEnum = "2015-12-01"
 )
 
 type GetSetIPAddressTypeQueryParams struct {

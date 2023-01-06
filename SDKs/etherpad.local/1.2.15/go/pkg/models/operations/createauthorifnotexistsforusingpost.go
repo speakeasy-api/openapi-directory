@@ -40,8 +40,8 @@ type CreateAuthorIfNotExistsForUsingPostRequest struct {
 type CreateAuthorIfNotExistsForUsingPostResponse struct {
 	ContentType                                                 string
 	StatusCode                                                  int64
-	CreateAuthorIfNotExistsForUsingPost200ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost200ApplicationJSON
-	CreateAuthorIfNotExistsForUsingPost400ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost400ApplicationJSON
-	CreateAuthorIfNotExistsForUsingPost401ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost401ApplicationJSON
-	CreateAuthorIfNotExistsForUsingPost500ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost500ApplicationJSON
+	CreateAuthorIfNotExistsForUsingPOST200ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost200ApplicationJSON
+	CreateAuthorIfNotExistsForUsingPOST400ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost400ApplicationJSON
+	CreateAuthorIfNotExistsForUsingPOST401ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost401ApplicationJSON
+	CreateAuthorIfNotExistsForUsingPOST500ApplicationJSONObject *CreateAuthorIfNotExistsForUsingPost500ApplicationJSON
 }

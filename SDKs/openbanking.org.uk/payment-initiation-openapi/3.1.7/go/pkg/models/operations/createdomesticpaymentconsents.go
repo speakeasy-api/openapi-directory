@@ -16,12 +16,12 @@ type CreateDomesticPaymentConsentsHeaders struct {
 
 type CreateDomesticPaymentConsentsRequests struct {
 	ApplicationJosePlusJwe  []byte                          `request:"mediaType=application/jose+jwe"`
-	ObWriteDomesticConsent4 *shared.ObWriteDomesticConsent4 `request:"mediaType=application/json"`
-	ObWriteDomesticConsent5 *shared.ObWriteDomesticConsent4 `request:"mediaType=application/json"`
+	OBWriteDomesticConsent4 *shared.ObWriteDomesticConsent4 `request:"mediaType=application/json"`
+	OBWriteDomesticConsent5 *shared.ObWriteDomesticConsent4 `request:"mediaType=application/json"`
 }
 
 type CreateDomesticPaymentConsentsSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateDomesticPaymentConsentsRequest struct {
@@ -34,7 +34,7 @@ type CreateDomesticPaymentConsentsResponse struct {
 	Body                            []byte
 	ContentType                     string
 	Headers                         map[string][]string
-	ObErrorResponse1                *shared.ObErrorResponse1
-	ObWriteDomesticConsentResponse5 *shared.ObWriteDomesticConsentResponse5
+	OBErrorResponse1                *shared.ObErrorResponse1
+	OBWriteDomesticConsentResponse5 *shared.ObWriteDomesticConsentResponse5
 	StatusCode                      int64
 }

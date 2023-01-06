@@ -3,13 +3,13 @@ package operations
 type PostDescribeIndexFieldsActionEnum string
 
 const (
-	PostDescribeIndexFieldsActionEnumDescribeIndexFields PostDescribeIndexFieldsActionEnum = "DescribeIndexFields"
+	POSTDescribeIndexFieldsActionEnumDescribeIndexFields PostDescribeIndexFieldsActionEnum = "DescribeIndexFields"
 )
 
 type PostDescribeIndexFieldsVersionEnum string
 
 const (
-	PostDescribeIndexFieldsVersionEnumTwoThousandAndEleven0201 PostDescribeIndexFieldsVersionEnum = "2011-02-01"
+	POSTDescribeIndexFieldsVersionEnumTwoThousandAndEleven0201 PostDescribeIndexFieldsVersionEnum = "2011-02-01"
 )
 
 type PostDescribeIndexFieldsQueryParams struct {

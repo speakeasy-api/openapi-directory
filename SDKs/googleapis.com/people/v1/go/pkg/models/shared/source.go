@@ -12,14 +12,6 @@ const (
 	SourceTypeEnumDomainContact         SourceTypeEnum = "DOMAIN_CONTACT"
 )
 
-// SourceInput
-// The source of a field.
-type SourceInput struct {
-	Etag *string         `json:"etag,omitempty"`
-	ID   *string         `json:"id,omitempty"`
-	Type *SourceTypeEnum `json:"type,omitempty"`
-}
-
 // Source
 // The source of a field.
 type Source struct {
@@ -28,4 +20,12 @@ type Source struct {
 	ProfileMetadata *ProfileMetadata `json:"profileMetadata,omitempty"`
 	Type            *SourceTypeEnum  `json:"type,omitempty"`
 	UpdateTime      *string          `json:"updateTime,omitempty"`
+}
+
+// SourceInput
+// The source of a field.
+type SourceInput struct {
+	Etag *string         `json:"etag,omitempty"`
+	ID   *string         `json:"id,omitempty"`
+	Type *SourceTypeEnum `json:"type,omitempty"`
 }

@@ -9,14 +9,14 @@ type DeleteOnlineMigrationPathParams struct {
 	MigrationID         string `pathParam:"style=simple,explode=false,name=migration_id"`
 }
 
-type DeleteOnlineMigrationRequest struct {
-	PathParams DeleteOnlineMigrationPathParams
-}
-
 type DeleteOnlineMigration401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteOnlineMigrationRequest struct {
+	PathParams DeleteOnlineMigrationPathParams
 }
 
 type DeleteOnlineMigrationResponse struct {

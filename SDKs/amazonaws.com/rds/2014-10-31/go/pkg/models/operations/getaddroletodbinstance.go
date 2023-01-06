@@ -3,18 +3,18 @@ package operations
 type GetAddRoleToDbInstanceActionEnum string
 
 const (
-	GetAddRoleToDbInstanceActionEnumAddRoleToDbInstance GetAddRoleToDbInstanceActionEnum = "AddRoleToDBInstance"
+	GETAddRoleToDBInstanceActionEnumAddRoleToDbInstance GetAddRoleToDbInstanceActionEnum = "AddRoleToDBInstance"
 )
 
 type GetAddRoleToDbInstanceVersionEnum string
 
 const (
-	GetAddRoleToDbInstanceVersionEnumTwoThousandAndFourteen1031 GetAddRoleToDbInstanceVersionEnum = "2014-10-31"
+	GETAddRoleToDBInstanceVersionEnumTwoThousandAndFourteen1031 GetAddRoleToDbInstanceVersionEnum = "2014-10-31"
 )
 
 type GetAddRoleToDbInstanceQueryParams struct {
 	Action               GetAddRoleToDbInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                            `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                            `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	FeatureName          string                            `queryParam:"style=form,explode=true,name=FeatureName"`
 	RoleArn              string                            `queryParam:"style=form,explode=true,name=RoleArn"`
 	Version              GetAddRoleToDbInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`

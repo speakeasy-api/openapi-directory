@@ -1,7 +1,7 @@
 package operations
 
 type GetObjectsWithReferenceCountUsingGetPathParams struct {
-	DateYyyymmdd   string `pathParam:"style=simple,explode=false,name=dateYYYYMMDD"`
+	DateYYYYMMDD   string `pathParam:"style=simple,explode=false,name=dateYYYYMMDD"`
 	SpeciesTypeKey int32  `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
 }
 

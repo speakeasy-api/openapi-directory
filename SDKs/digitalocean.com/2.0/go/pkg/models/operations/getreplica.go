@@ -9,12 +9,8 @@ type GetReplicaPathParams struct {
 	ReplicaName         string `pathParam:"style=simple,explode=false,name=replica_name"`
 }
 
-type GetReplicaRequest struct {
-	PathParams GetReplicaPathParams
-}
-
-type GetReplica200ApplicationJSON struct {
-	Replica *shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1replicasGetResponses200ContentApplication1jsonSchemaPropertiesReplicasItems `json:"replica,omitempty"`
+type GetReplica200ApplicationJSONOutput struct {
+	Replica *shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1replicasGetResponses200ContentApplication1jsonSchemaPropertiesReplicasItemsOutput1Output `json:"replica,omitempty"`
 }
 
 type GetReplica401ApplicationJSON struct {
@@ -23,11 +19,15 @@ type GetReplica401ApplicationJSON struct {
 	RequestID *string `json:"request_id,omitempty"`
 }
 
-type GetReplicaResponse struct {
+type GetReplicaRequest struct {
+	PathParams GetReplicaPathParams
+}
+
+type GetReplicaResponseOutput struct {
 	ContentType                                               string
 	Headers                                                   map[string][]string
 	StatusCode                                                int64
-	GetReplica200ApplicationJSONObject                        *GetReplica200ApplicationJSON
+	GetReplica200ApplicationJSONObject                        *GetReplica200ApplicationJSONOutput
 	GetReplica401ApplicationJSONObject                        *GetReplica401ApplicationJSON
 	Onev211ClicksGetResponses401ContentApplication1jsonSchema *shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema
 }

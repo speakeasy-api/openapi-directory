@@ -12,7 +12,7 @@ type ListMlTransformsQueryParams struct {
 type ListMlTransformsXAmzTargetEnum string
 
 const (
-	ListMlTransformsXAmzTargetEnumAwsGlueListMlTransforms ListMlTransformsXAmzTargetEnum = "AWSGlue.ListMLTransforms"
+	ListMLTransformsXAmzTargetEnumAwsGlueListMlTransforms ListMlTransformsXAmzTargetEnum = "AWSGlue.ListMLTransforms"
 )
 
 type ListMlTransformsHeaders struct {
@@ -37,7 +37,7 @@ type ListMlTransformsResponse struct {
 	EntityNotFoundException   *interface{}
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}
-	ListMlTransformsResponse  *shared.ListMlTransformsResponse
+	ListMLTransformsResponse  *shared.ListMlTransformsResponse
 	OperationTimeoutException *interface{}
 	StatusCode                int64
 }

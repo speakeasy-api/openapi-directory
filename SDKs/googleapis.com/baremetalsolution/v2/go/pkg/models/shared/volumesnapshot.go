@@ -8,13 +8,6 @@ const (
 	VolumeSnapshotTypeEnumScheduled               VolumeSnapshotTypeEnum = "SCHEDULED"
 )
 
-// VolumeSnapshotInput
-// A snapshot of a volume. Only boot volumes can have snapshots.
-type VolumeSnapshotInput struct {
-	Description *string `json:"description,omitempty"`
-	Name        *string `json:"name,omitempty"`
-}
-
 // VolumeSnapshot
 // A snapshot of a volume. Only boot volumes can have snapshots.
 type VolumeSnapshot struct {
@@ -24,4 +17,11 @@ type VolumeSnapshot struct {
 	Name          *string                 `json:"name,omitempty"`
 	StorageVolume *string                 `json:"storageVolume,omitempty"`
 	Type          *VolumeSnapshotTypeEnum `json:"type,omitempty"`
+}
+
+// VolumeSnapshotInput
+// A snapshot of a volume. Only boot volumes can have snapshots.
+type VolumeSnapshotInput struct {
+	Description *string `json:"description,omitempty"`
+	Name        *string `json:"name,omitempty"`
 }

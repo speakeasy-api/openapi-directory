@@ -3,10 +3,10 @@ package shared
 // DbSubnetGroup
 // Detailed information about a subnet group.
 type DbSubnetGroup struct {
-	DbSubnetGroupArn         *string
-	DbSubnetGroupDescription *string
-	DbSubnetGroupName        *string
+	DBSubnetGroupArn         *string
+	DBSubnetGroupDescription *string
+	DBSubnetGroupName        *string
 	SubnetGroupStatus        *string
-	Subnets                  []Subnet
+	Subnets                  []map[string]interface{}
 	VpcID                    *string
 }

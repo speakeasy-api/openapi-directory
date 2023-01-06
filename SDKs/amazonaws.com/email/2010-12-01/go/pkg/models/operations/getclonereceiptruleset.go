@@ -3,13 +3,13 @@ package operations
 type GetCloneReceiptRuleSetActionEnum string
 
 const (
-	GetCloneReceiptRuleSetActionEnumCloneReceiptRuleSet GetCloneReceiptRuleSetActionEnum = "CloneReceiptRuleSet"
+	GETCloneReceiptRuleSetActionEnumCloneReceiptRuleSet GetCloneReceiptRuleSetActionEnum = "CloneReceiptRuleSet"
 )
 
 type GetCloneReceiptRuleSetVersionEnum string
 
 const (
-	GetCloneReceiptRuleSetVersionEnumTwoThousandAndTen1201 GetCloneReceiptRuleSetVersionEnum = "2010-12-01"
+	GETCloneReceiptRuleSetVersionEnumTwoThousandAndTen1201 GetCloneReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
 type GetCloneReceiptRuleSetQueryParams struct {

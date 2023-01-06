@@ -3,13 +3,13 @@ package operations
 type PostRevokeEndpointAccessActionEnum string
 
 const (
-	PostRevokeEndpointAccessActionEnumRevokeEndpointAccess PostRevokeEndpointAccessActionEnum = "RevokeEndpointAccess"
+	POSTRevokeEndpointAccessActionEnumRevokeEndpointAccess PostRevokeEndpointAccessActionEnum = "RevokeEndpointAccess"
 )
 
 type PostRevokeEndpointAccessVersionEnum string
 
 const (
-	PostRevokeEndpointAccessVersionEnumTwoThousandAndTwelve1201 PostRevokeEndpointAccessVersionEnum = "2012-12-01"
+	POSTRevokeEndpointAccessVersionEnumTwoThousandAndTwelve1201 PostRevokeEndpointAccessVersionEnum = "2012-12-01"
 )
 
 type PostRevokeEndpointAccessQueryParams struct {

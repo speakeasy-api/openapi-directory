@@ -21,6 +21,6 @@ type UpdateDellSwitchSnmpConfigRequest struct {
 type UpdateDellSwitchSnmpConfigResponse struct {
 	APIError    *shared.APIError
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

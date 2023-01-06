@@ -22,7 +22,7 @@ type GetInsightSummariesHeaders struct {
 
 type GetInsightSummariesRequestBody struct {
 	EndTime    time.Time                 `json:"EndTime"`
-	GroupArn   *string                   `json:"GroupARN,omitempty"`
+	GroupARN   *string                   `json:"GroupARN,omitempty"`
 	GroupName  *string                   `json:"GroupName,omitempty"`
 	MaxResults *int64                    `json:"MaxResults,omitempty"`
 	NextToken  *string                   `json:"NextToken,omitempty"`

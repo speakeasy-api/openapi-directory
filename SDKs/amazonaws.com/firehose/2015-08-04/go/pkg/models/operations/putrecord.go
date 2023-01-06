@@ -29,7 +29,7 @@ type PutRecordRequest struct {
 type PutRecordResponse struct {
 	ContentType                 string
 	InvalidArgumentException    *interface{}
-	InvalidKmsResourceException *interface{}
+	InvalidKMSResourceException *interface{}
 	PutRecordOutput             *shared.PutRecordOutput
 	ResourceNotFoundException   *interface{}
 	ServiceUnavailableException *interface{}

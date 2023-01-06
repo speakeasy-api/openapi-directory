@@ -3,13 +3,13 @@ package operations
 type GetDescribeIDFormatActionEnum string
 
 const (
-	GetDescribeIDFormatActionEnumDescribeIDFormat GetDescribeIDFormatActionEnum = "DescribeIdFormat"
+	GETDescribeIDFormatActionEnumDescribeIDFormat GetDescribeIDFormatActionEnum = "DescribeIdFormat"
 )
 
 type GetDescribeIDFormatVersionEnum string
 
 const (
-	GetDescribeIDFormatVersionEnumTwoThousandAndSixteen1115 GetDescribeIDFormatVersionEnum = "2016-11-15"
+	GETDescribeIDFormatVersionEnumTwoThousandAndSixteen1115 GetDescribeIDFormatVersionEnum = "2016-11-15"
 )
 
 type GetDescribeIDFormatQueryParams struct {

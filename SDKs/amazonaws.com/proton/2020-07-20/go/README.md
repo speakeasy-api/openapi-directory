@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AcceptEnvironmentAccountConnectionRequest{
         Headers: operations.AcceptEnvironmentAccountConnectionHeaders{
-            XAmzAlgorithm: "numquam",
-            XAmzContentSha256: "quod",
-            XAmzCredential: "quisquam",
-            XAmzDate: "ex",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "atque",
+            XAmzCredential: "et",
+            XAmzDate: "aperiam",
+            XAmzSecurityToken: "beatae",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "sunt",
             XAmzTarget: "AwsProton20200720.AcceptEnvironmentAccountConnection",
         },
         Request: shared.AcceptEnvironmentAccountConnectionInput{
-            ID: "quam",
+            ID: "corrupti",
         },
     }
     
-    res, err := s.Sdk.AcceptEnvironmentAccountConnection(ctx, req)
+    res, err := s.AcceptEnvironmentAccountConnection(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

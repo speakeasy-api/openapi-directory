@@ -3,13 +3,13 @@ package operations
 type PostResetCacheParameterGroupActionEnum string
 
 const (
-	PostResetCacheParameterGroupActionEnumResetCacheParameterGroup PostResetCacheParameterGroupActionEnum = "ResetCacheParameterGroup"
+	POSTResetCacheParameterGroupActionEnumResetCacheParameterGroup PostResetCacheParameterGroupActionEnum = "ResetCacheParameterGroup"
 )
 
 type PostResetCacheParameterGroupVersionEnum string
 
 const (
-	PostResetCacheParameterGroupVersionEnumTwoThousandAndFifteen0202 PostResetCacheParameterGroupVersionEnum = "2015-02-02"
+	POSTResetCacheParameterGroupVersionEnumTwoThousandAndFifteen0202 PostResetCacheParameterGroupVersionEnum = "2015-02-02"
 )
 
 type PostResetCacheParameterGroupQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,28 +26,28 @@ func main() {
         Security: operations.DisplayvideoAdvertisersAssetsUploadSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DisplayvideoAdvertisersAssetsUploadPathParams{
-            AdvertiserID: "est",
+            AdvertiserID: "eveniet",
         },
         QueryParams: operations.DisplayvideoAdvertisersAssetsUploadQueryParams{
             DollarXgafv: "1",
-            AccessToken: "pariatur",
+            AccessToken: "in",
             Alt: "proto",
-            Callback: "cumque",
-            Fields: "enim",
-            Key: "quisquam",
-            OauthToken: "quo",
+            Callback: "sit",
+            Fields: "explicabo",
+            Key: "illo",
+            OauthToken: "et",
             PrettyPrint: false,
-            QuotaUser: "ipsam",
-            UploadType: "non",
-            UploadProtocol: "sed",
+            QuotaUser: "vel",
+            UploadType: "iste",
+            UploadProtocol: "occaecati",
         },
-        Request: []byte("reprehenderit"),
+        Request: []byte("voluptatem"),
     }
     
     res, err := s.Advertisers.DisplayvideoAdvertisersAssetsUpload(ctx, req)

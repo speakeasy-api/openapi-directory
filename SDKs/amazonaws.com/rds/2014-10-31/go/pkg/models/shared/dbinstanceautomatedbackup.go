@@ -10,15 +10,15 @@ type DbInstanceAutomatedBackup struct {
 	AllocatedStorage                       *int64
 	AvailabilityZone                       *string
 	BackupRetentionPeriod                  *int64
-	DbInstanceArn                          *string
-	DbInstanceAutomatedBackupsArn          *string
-	DbInstanceAutomatedBackupsReplications []DbInstanceAutomatedBackupsReplication
-	DbInstanceIdentifier                   *string
+	DBInstanceArn                          *string
+	DBInstanceAutomatedBackupsArn          *string
+	DBInstanceAutomatedBackupsReplications []map[string]interface{}
+	DBInstanceIdentifier                   *string
 	DbiResourceID                          *string
 	Encrypted                              *bool
 	Engine                                 *string
 	EngineVersion                          *string
-	IamDatabaseAuthenticationEnabled       *bool
+	IAMDatabaseAuthenticationEnabled       *bool
 	InstanceCreateTime                     *time.Time
 	Iops                                   *int64
 	KmsKeyID                               *string

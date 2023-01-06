@@ -5,8 +5,8 @@ import (
 )
 
 type IncerRequestBodyCertificateParameters struct {
-	Appno  string `json:"APPNO"`
-	Certno string `json:"CERTNO"`
+	APPNO  string `json:"APPNO"`
+	CERTNO string `json:"CERTNO"`
 }
 
 type IncerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Incer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Incer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Incer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Incer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Incer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Incer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Incer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Incer404ApplicationJSON struct {

@@ -3,13 +3,13 @@ package operations
 type PostCreateImageActionEnum string
 
 const (
-	PostCreateImageActionEnumCreateImage PostCreateImageActionEnum = "CreateImage"
+	POSTCreateImageActionEnumCreateImage PostCreateImageActionEnum = "CreateImage"
 )
 
 type PostCreateImageVersionEnum string
 
 const (
-	PostCreateImageVersionEnumTwoThousandAndSixteen1115 PostCreateImageVersionEnum = "2016-11-15"
+	POSTCreateImageVersionEnumTwoThousandAndSixteen1115 PostCreateImageVersionEnum = "2016-11-15"
 )
 
 type PostCreateImageQueryParams struct {

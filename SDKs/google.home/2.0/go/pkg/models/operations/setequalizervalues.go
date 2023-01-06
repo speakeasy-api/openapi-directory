@@ -9,7 +9,7 @@ type SetEqualizerValuesRequest struct {
 }
 
 type SetEqualizerValuesResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                          string
+	SetEqualizerValues200TextPlainObject *string
+	StatusCode                           int64
 }

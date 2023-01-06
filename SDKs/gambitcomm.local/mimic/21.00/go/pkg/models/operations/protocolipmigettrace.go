@@ -13,7 +13,7 @@ type ProtocolIpmiGetTraceRequest struct {
 }
 
 type ProtocolIpmiGetTraceResponse struct {
-	ConfigIpmi  *shared.ConfigIpmi
+	ConfigIPMI  *shared.ConfigIpmi
 	ContentType string
 	StatusCode  int64
 }

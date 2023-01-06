@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelJobRequest{
         Headers: operations.CancelJobHeaders{
-            XAmzAlgorithm: "qui",
-            XAmzContentSha256: "similique",
-            XAmzCredential: "odit",
-            XAmzDate: "dolorem",
-            XAmzSecurityToken: "voluptate",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "inventore",
+            XAmzAlgorithm: "est",
+            XAmzContentSha256: "veniam",
+            XAmzCredential: "qui",
+            XAmzDate: "doloribus",
+            XAmzSecurityToken: "ad",
+            XAmzSignature: "minus",
+            XAmzSignedHeaders: "sit",
         },
         Request: operations.CancelJobRequestBody{
-            JobID: "et",
-            Reason: "enim",
+            JobID: "est",
+            Reason: "voluptas",
         },
     }
     
-    res, err := s.Sdk.CancelJob(ctx, req)
+    res, err := s.CancelJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -3,13 +3,13 @@ package operations
 type PostBatchStopUpdateActionActionEnum string
 
 const (
-	PostBatchStopUpdateActionActionEnumBatchStopUpdateAction PostBatchStopUpdateActionActionEnum = "BatchStopUpdateAction"
+	POSTBatchStopUpdateActionActionEnumBatchStopUpdateAction PostBatchStopUpdateActionActionEnum = "BatchStopUpdateAction"
 )
 
 type PostBatchStopUpdateActionVersionEnum string
 
 const (
-	PostBatchStopUpdateActionVersionEnumTwoThousandAndFifteen0202 PostBatchStopUpdateActionVersionEnum = "2015-02-02"
+	POSTBatchStopUpdateActionVersionEnumTwoThousandAndFifteen0202 PostBatchStopUpdateActionVersionEnum = "2015-02-02"
 )
 
 type PostBatchStopUpdateActionQueryParams struct {

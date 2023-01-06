@@ -7,7 +7,7 @@ import (
 type ListLfTagsXAmzTargetEnum string
 
 const (
-	ListLfTagsXAmzTargetEnumAwsLakeFormationListLfTags ListLfTagsXAmzTargetEnum = "AWSLakeFormation.ListLFTags"
+	ListLFTagsXAmzTargetEnumAwsLakeFormationListLfTags ListLfTagsXAmzTargetEnum = "AWSLakeFormation.ListLFTags"
 )
 
 type ListLfTagsHeaders struct {
@@ -31,7 +31,7 @@ type ListLfTagsResponse struct {
 	EntityNotFoundException   *interface{}
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}
-	ListLfTagsResponse        *shared.ListLfTagsResponse
+	ListLFTagsResponse        *shared.ListLfTagsResponse
 	OperationTimeoutException *interface{}
 	StatusCode                int64
 }

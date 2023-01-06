@@ -83,7 +83,7 @@ type Labrp404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Labrp404ApplicationJSONErrorDescriptionEnumNoRecordFound               Labrp404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Labrp404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Labrp404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Labrp404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Labrp404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Labrp404ApplicationJSON struct {

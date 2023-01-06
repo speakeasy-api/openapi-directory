@@ -3,13 +3,13 @@ package operations
 type PostAddPermissionActionEnum string
 
 const (
-	PostAddPermissionActionEnumAddPermission PostAddPermissionActionEnum = "AddPermission"
+	POSTAddPermissionActionEnumAddPermission PostAddPermissionActionEnum = "AddPermission"
 )
 
 type PostAddPermissionVersionEnum string
 
 const (
-	PostAddPermissionVersionEnumTwoThousandAndTwelve1105 PostAddPermissionVersionEnum = "2012-11-05"
+	POSTAddPermissionVersionEnumTwoThousandAndTwelve1105 PostAddPermissionVersionEnum = "2012-11-05"
 )
 
 type PostAddPermissionQueryParams struct {

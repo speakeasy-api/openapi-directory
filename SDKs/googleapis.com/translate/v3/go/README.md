@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,58 +26,66 @@ func main() {
         Security: operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "nihil",
+            Parent: "esse",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "sequi",
-            Alt: "media",
-            Callback: "et",
-            Fields: "eveniet",
-            Key: "molestiae",
-            OauthToken: "velit",
-            PrettyPrint: false,
-            QuotaUser: "corrupti",
-            UploadType: "molestiae",
-            UploadProtocol: "molestias",
+            DollarXgafv: "1",
+            AccessToken: "vero",
+            Alt: "proto",
+            Callback: "neque",
+            Fields: "ducimus",
+            Key: "consectetur",
+            OauthToken: "et",
+            PrettyPrint: true,
+            QuotaUser: "esse",
+            UploadType: "incidunt",
+            UploadProtocol: "ex",
         },
         Request: &shared.BatchTranslateDocumentRequest{
             FormatConversions: map[string]string{
-                "saepe": "omnis",
-                "quos": "sunt",
-                "aut": "sit",
+                "rerum": "aut",
+                "fugit": "nesciunt",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "adipisci": shared.TranslateTextGlossaryConfig{
-                    Glossary: "repudiandae",
+                "omnis": shared.TranslateTextGlossaryConfig{
+                    Glossary: "doloribus",
                     IgnoreCase: false,
+                },
+                "rem": shared.TranslateTextGlossaryConfig{
+                    Glossary: "corporis",
+                    IgnoreCase: true,
+                },
+                "illum": shared.TranslateTextGlossaryConfig{
+                    Glossary: "magni",
+                    IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "totam",
+                        InputURI: "et",
                     },
                 },
             },
             Models: map[string]string{
-                "nesciunt": "fuga",
+                "quasi": "voluptates",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "dolor",
+                    OutputURIPrefix: "quo",
                 },
             },
-            SourceLanguageCode: "voluptatem",
+            SourceLanguageCode: "odit",
             TargetLanguageCodes: []string{
-                "vel",
-                "ut",
+                "aut",
+                "a",
+                "magni",
             },
         },
     }

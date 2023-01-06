@@ -31,6 +31,7 @@ type MetricThreshold struct {
 	Duration                *string                                   `json:"duration,omitempty"`
 	EvaluationMissingData   *MetricThresholdEvaluationMissingDataEnum `json:"evaluationMissingData,omitempty"`
 	Filter                  *string                                   `json:"filter,omitempty"`
+	ForecastOptions         *ForecastOptions                          `json:"forecastOptions,omitempty"`
 	ThresholdValue          *float64                                  `json:"thresholdValue,omitempty"`
 	Trigger                 *Trigger                                  `json:"trigger,omitempty"`
 }

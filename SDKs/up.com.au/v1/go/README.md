@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,7 +34,7 @@ func main() {
     
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            PageSize: 6871552707180014390,
+            PageSize: 9038996535892643596,
         },
     }
     
@@ -85,6 +84,7 @@ func main() {
 * `GetWebhooks` - List webhooks
 * `GetWebhooksID` - Retrieve webhook
 * `GetWebhooksWebhookIDLogs` - List webhook logs
+* `PostWebhooks` - Create webhook
 * `PostWebhooksWebhookIDPing` - Ping webhook
 
 <!-- End SDK Available Operations -->

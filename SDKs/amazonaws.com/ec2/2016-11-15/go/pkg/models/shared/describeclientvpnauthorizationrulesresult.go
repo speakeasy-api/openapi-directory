@@ -1,6 +1,6 @@
 package shared
 
 type DescribeClientVpnAuthorizationRulesResult struct {
-	AuthorizationRules []AuthorizationRule
-	NextToken          *string
+	AuthorizationRules map[string]interface{}
+	NextToken          map[string]interface{}
 }

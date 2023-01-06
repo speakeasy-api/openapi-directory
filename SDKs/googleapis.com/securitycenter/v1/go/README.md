@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,31 @@ func main() {
         Security: operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.SecuritycenterOrganizationsAssetsRunDiscoveryPathParams{
-            Parent: "quia",
+            Parent: "sed",
         },
         QueryParams: operations.SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams{
             DollarXgafv: "1",
-            AccessToken: "nihil",
-            Alt: "media",
-            Callback: "labore",
-            Fields: "error",
-            Key: "fuga",
-            OauthToken: "unde",
-            PrettyPrint: true,
-            QuotaUser: "est",
-            UploadType: "voluptas",
-            UploadProtocol: "maiores",
+            AccessToken: "dolore",
+            Alt: "json",
+            Callback: "consequatur",
+            Fields: "est",
+            Key: "asperiores",
+            OauthToken: "non",
+            PrettyPrint: false,
+            QuotaUser: "ab",
+            UploadType: "ut",
+            UploadProtocol: "aut",
         },
         Request: map[string]interface{}{
-            "consectetur": "enim",
-            "provident": "dolores",
+            "rerum": "repellat",
+            "sed": "at",
+            "mollitia": "voluptas",
         },
     }
     
@@ -82,7 +82,7 @@ func main() {
 
 * `SecuritycenterProjectsAssetsGroup` - Filters an organization's assets and groups them by their specified properties.
 * `SecuritycenterProjectsAssetsList` - Lists an organization's assets.
-* `SecuritycenterProjectsBigQueryExportsCreate` - Creates a big query export.
+* `SecuritycenterProjectsBigQueryExportsCreate` - Creates a BigQuery export.
 * `SecuritycenterProjectsBigQueryExportsList` - Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports under that level are also returned e.g. if requesting BigQuery exports under a folder, then all BigQuery exports immediately under the folder plus the ones created under the projects within the folder are returned.
 * `SecuritycenterProjectsFindingsBulkMute` - Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either an organization, folder or project. The findings matched by the filter will be muted after the LRO is done.
 * `SecuritycenterProjectsMuteConfigsCreate` - Creates a mute config.

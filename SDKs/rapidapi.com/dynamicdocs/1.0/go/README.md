@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,26 @@ func main() {
     
     req := operations.CompileRequest{
         PathParams: operations.CompilePathParams{
-            TemplateToken: "qui",
+            TemplateToken: "voluptas",
         },
         QueryParams: operations.CompileQueryParams{
-            DocFileName: "et",
-            DocURLExpiresIn: 25486664550251904,
+            DocFileName: "rem",
+            DocURLExpiresIn: 439997442412761121,
             LatexCompiler: "lualatex",
-            LatexRuns: 8784083526164144924,
-            MainFileName: "expedita",
+            LatexRuns: 4317348671253960062,
+            MainFileName: "iusto",
         },
         Headers: operations.CompileHeaders{
-            ContentType: "ipsa",
+            ContentType: "ut",
         },
         Request: map[string]interface{}{
-            "neque": "repellendus",
-            "et": "atque",
+            "accusantium": "quaerat",
+            "nobis": "enim",
+            "atque": "vero",
         },
     }
     
-    res, err := s.PdfGeneration.Compile(ctx, req)
+    res, err := s.PDFGeneration.Compile(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

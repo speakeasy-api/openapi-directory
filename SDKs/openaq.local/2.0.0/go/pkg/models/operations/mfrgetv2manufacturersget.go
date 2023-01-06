@@ -6,6 +6,6 @@ import (
 
 type MfrGetV2ManufacturersGetResponse struct {
 	ContentType  string
-	OpenAqResult *shared.OpenAqResult
+	OpenAQResult *shared.OpenAqResult
 	StatusCode   int64
 }

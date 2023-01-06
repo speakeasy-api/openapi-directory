@@ -29,8 +29,7 @@ type GetAccountsAccountIDPartiesRequest struct {
 
 type GetAccountsAccountIDPartiesResponse struct {
 	ContentType      string
-	Headers          map[string][]string
-	ObErrorResponse1 *shared.ObErrorResponse1
-	ObReadParty3     *shared.ObReadParty3
+	OBErrorResponse1 *shared.ObErrorResponse1
+	OBReadParty3     *shared.ObReadParty3
 	StatusCode       int64
 }

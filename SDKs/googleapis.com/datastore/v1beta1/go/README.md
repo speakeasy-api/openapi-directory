@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,47 +27,44 @@ func main() {
             Option1: &operations.DatastoreProjectsExportSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.DatastoreProjectsExportPathParams{
-            ProjectID: "dolor",
+            ProjectID: "eligendi",
         },
         QueryParams: operations.DatastoreProjectsExportQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "natus",
-            Alt: "json",
+            DollarXgafv: "2",
+            AccessToken: "omnis",
+            Alt: "proto",
             Callback: "error",
-            Fields: "ea",
-            Key: "possimus",
-            OauthToken: "ipsum",
-            PrettyPrint: true,
-            QuotaUser: "culpa",
-            UploadType: "fugit",
-            UploadProtocol: "eaque",
+            Fields: "minus",
+            Key: "facilis",
+            OauthToken: "eum",
+            PrettyPrint: false,
+            QuotaUser: "cumque",
+            UploadType: "aut",
+            UploadProtocol: "officiis",
         },
         Request: &shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest{
             EntityFilter: &shared.GoogleDatastoreAdminV1beta1EntityFilter{
                 Kinds: []string{
-                    "in",
-                    "voluptas",
-                    "suscipit",
+                    "omnis",
+                    "est",
                 },
                 NamespaceIds: []string{
-                    "qui",
-                    "eaque",
-                    "hic",
+                    "et",
                 },
             },
             Labels: map[string]string{
-                "voluptatem": "inventore",
-                "molestias": "quisquam",
-                "et": "in",
+                "rerum": "quo",
+                "repellendus": "saepe",
+                "omnis": "qui",
             },
-            OutputURLPrefix: "eveniet",
+            OutputURLPrefix: "eaque",
         },
     }
     

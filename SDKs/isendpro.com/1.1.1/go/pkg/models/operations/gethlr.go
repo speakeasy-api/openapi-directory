@@ -11,6 +11,6 @@ type GetHlrRequest struct {
 type GetHlrResponse struct {
 	ContentType string
 	Erreur      *shared.Erreur
-	HlrReponse  *shared.HlrReponse
+	HLRReponse  *shared.HlrReponse
 	StatusCode  int64
 }

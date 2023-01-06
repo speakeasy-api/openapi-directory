@@ -20,5 +20,5 @@ type ExportAssetsCiscoCsvRequest struct {
 type ExportAssetsCiscoCsvResponse struct {
 	ContentType                                string
 	StatusCode                                 int64
-	ExportAssetsCiscoCsv200TextCsvBinaryString []byte
+	ExportAssetsCiscoCSV200TextCSVBinaryString []byte
 }

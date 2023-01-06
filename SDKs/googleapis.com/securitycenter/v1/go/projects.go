@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Projects struct {
@@ -120,7 +120,7 @@ func (s *Projects) SecuritycenterProjectsAssetsList(ctx context.Context, request
 	return res, nil
 }
 
-// SecuritycenterProjectsBigQueryExportsCreate - Creates a big query export.
+// SecuritycenterProjectsBigQueryExportsCreate - Creates a BigQuery export.
 func (s *Projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsCreateRequest) (*operations.SecuritycenterProjectsBigQueryExportsCreateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request.PathParams)

@@ -11,7 +11,7 @@ type SourceConnectorProperties struct {
 	InforNexus      *InforNexusSourceProperties      `json:"InforNexus,omitempty"`
 	Marketo         *MarketoSourceProperties         `json:"Marketo,omitempty"`
 	S3              *S3SourceProperties              `json:"S3,omitempty"`
-	SapoData        *SapoDataSourceProperties        `json:"SAPOData,omitempty"`
+	SAPOData        *SapoDataSourceProperties        `json:"SAPOData,omitempty"`
 	Salesforce      *SalesforceSourceProperties      `json:"Salesforce,omitempty"`
 	ServiceNow      *ServiceNowSourceProperties      `json:"ServiceNow,omitempty"`
 	Singular        *SingularSourceProperties        `json:"Singular,omitempty"`

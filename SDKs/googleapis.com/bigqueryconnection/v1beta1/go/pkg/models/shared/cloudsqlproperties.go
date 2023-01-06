@@ -8,15 +8,6 @@ const (
 	CloudSQLPropertiesTypeEnumMysql                   CloudSQLPropertiesTypeEnum = "MYSQL"
 )
 
-// CloudSQLPropertiesInput
-// Connection properties specific to the Cloud SQL.
-type CloudSQLPropertiesInput struct {
-	Credential *CloudSQLCredential         `json:"credential,omitempty"`
-	Database   *string                     `json:"database,omitempty"`
-	InstanceID *string                     `json:"instanceId,omitempty"`
-	Type       *CloudSQLPropertiesTypeEnum `json:"type,omitempty"`
-}
-
 // CloudSQLProperties
 // Connection properties specific to the Cloud SQL.
 type CloudSQLProperties struct {
@@ -25,4 +16,13 @@ type CloudSQLProperties struct {
 	InstanceID       *string                     `json:"instanceId,omitempty"`
 	ServiceAccountID *string                     `json:"serviceAccountId,omitempty"`
 	Type             *CloudSQLPropertiesTypeEnum `json:"type,omitempty"`
+}
+
+// CloudSQLPropertiesInput
+// Connection properties specific to the Cloud SQL.
+type CloudSQLPropertiesInput struct {
+	Credential *CloudSQLCredential         `json:"credential,omitempty"`
+	Database   *string                     `json:"database,omitempty"`
+	InstanceID *string                     `json:"instanceId,omitempty"`
+	Type       *CloudSQLPropertiesTypeEnum `json:"type,omitempty"`
 }

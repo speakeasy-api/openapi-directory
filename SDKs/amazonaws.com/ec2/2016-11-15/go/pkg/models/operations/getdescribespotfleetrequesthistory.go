@@ -7,22 +7,22 @@ import (
 type GetDescribeSpotFleetRequestHistoryActionEnum string
 
 const (
-	GetDescribeSpotFleetRequestHistoryActionEnumDescribeSpotFleetRequestHistory GetDescribeSpotFleetRequestHistoryActionEnum = "DescribeSpotFleetRequestHistory"
+	GETDescribeSpotFleetRequestHistoryActionEnumDescribeSpotFleetRequestHistory GetDescribeSpotFleetRequestHistoryActionEnum = "DescribeSpotFleetRequestHistory"
 )
 
 type GetDescribeSpotFleetRequestHistoryEventTypeEnum string
 
 const (
-	GetDescribeSpotFleetRequestHistoryEventTypeEnumInstanceChange     GetDescribeSpotFleetRequestHistoryEventTypeEnum = "instanceChange"
-	GetDescribeSpotFleetRequestHistoryEventTypeEnumFleetRequestChange GetDescribeSpotFleetRequestHistoryEventTypeEnum = "fleetRequestChange"
-	GetDescribeSpotFleetRequestHistoryEventTypeEnumError              GetDescribeSpotFleetRequestHistoryEventTypeEnum = "error"
-	GetDescribeSpotFleetRequestHistoryEventTypeEnumInformation        GetDescribeSpotFleetRequestHistoryEventTypeEnum = "information"
+	GETDescribeSpotFleetRequestHistoryEventTypeEnumInstanceChange     GetDescribeSpotFleetRequestHistoryEventTypeEnum = "instanceChange"
+	GETDescribeSpotFleetRequestHistoryEventTypeEnumFleetRequestChange GetDescribeSpotFleetRequestHistoryEventTypeEnum = "fleetRequestChange"
+	GETDescribeSpotFleetRequestHistoryEventTypeEnumError              GetDescribeSpotFleetRequestHistoryEventTypeEnum = "error"
+	GETDescribeSpotFleetRequestHistoryEventTypeEnumInformation        GetDescribeSpotFleetRequestHistoryEventTypeEnum = "information"
 )
 
 type GetDescribeSpotFleetRequestHistoryVersionEnum string
 
 const (
-	GetDescribeSpotFleetRequestHistoryVersionEnumTwoThousandAndSixteen1115 GetDescribeSpotFleetRequestHistoryVersionEnum = "2016-11-15"
+	GETDescribeSpotFleetRequestHistoryVersionEnumTwoThousandAndSixteen1115 GetDescribeSpotFleetRequestHistoryVersionEnum = "2016-11-15"
 )
 
 type GetDescribeSpotFleetRequestHistoryQueryParams struct {

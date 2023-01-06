@@ -1,5 +1,5 @@
 package shared
 
 type ModifyInstanceCapacityReservationAttributesResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

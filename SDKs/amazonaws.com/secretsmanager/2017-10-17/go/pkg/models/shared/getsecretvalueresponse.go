@@ -5,7 +5,7 @@ import (
 )
 
 type GetSecretValueResponse struct {
-	Arn           *string    `json:"ARN,omitempty"`
+	ARN           *string    `json:"ARN,omitempty"`
 	CreatedDate   *time.Time `json:"CreatedDate,omitempty"`
 	Name          *string    `json:"Name,omitempty"`
 	SecretBinary  *string    `json:"SecretBinary,omitempty"`

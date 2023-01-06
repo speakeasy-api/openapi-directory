@@ -9,14 +9,6 @@ const (
 	ChannelStateEnumInactive         ChannelStateEnum = "INACTIVE"
 )
 
-// ChannelInput
-// A representation of the Channel resource. A Channel is a resource on which event providers publish their events. The published events are delivered through the transport associated with the channel. Note that a channel is associated with exactly one event provider.
-type ChannelInput struct {
-	CryptoKeyName *string `json:"cryptoKeyName,omitempty"`
-	Name          *string `json:"name,omitempty"`
-	Provider      *string `json:"provider,omitempty"`
-}
-
 // Channel
 // A representation of the Channel resource. A Channel is a resource on which event providers publish their events. The published events are delivered through the transport associated with the channel. Note that a channel is associated with exactly one event provider.
 type Channel struct {
@@ -29,4 +21,12 @@ type Channel struct {
 	State           *ChannelStateEnum `json:"state,omitempty"`
 	UID             *string           `json:"uid,omitempty"`
 	UpdateTime      *string           `json:"updateTime,omitempty"`
+}
+
+// ChannelInput
+// A representation of the Channel resource. A Channel is a resource on which event providers publish their events. The published events are delivered through the transport associated with the channel. Note that a channel is associated with exactly one event provider.
+type ChannelInput struct {
+	CryptoKeyName *string `json:"cryptoKeyName,omitempty"`
+	Name          *string `json:"name,omitempty"`
+	Provider      *string `json:"provider,omitempty"`
 }

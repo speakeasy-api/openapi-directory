@@ -3,13 +3,13 @@ package operations
 type GetAssociateSubnetCidrBlockActionEnum string
 
 const (
-	GetAssociateSubnetCidrBlockActionEnumAssociateSubnetCidrBlock GetAssociateSubnetCidrBlockActionEnum = "AssociateSubnetCidrBlock"
+	GETAssociateSubnetCidrBlockActionEnumAssociateSubnetCidrBlock GetAssociateSubnetCidrBlockActionEnum = "AssociateSubnetCidrBlock"
 )
 
 type GetAssociateSubnetCidrBlockVersionEnum string
 
 const (
-	GetAssociateSubnetCidrBlockVersionEnumTwoThousandAndSixteen1115 GetAssociateSubnetCidrBlockVersionEnum = "2016-11-15"
+	GETAssociateSubnetCidrBlockVersionEnumTwoThousandAndSixteen1115 GetAssociateSubnetCidrBlockVersionEnum = "2016-11-15"
 )
 
 type GetAssociateSubnetCidrBlockQueryParams struct {

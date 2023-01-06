@@ -1,0 +1,48 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    opts := []sdk.SDKOption{
+        sdk.WithSecurity(
+            shared.Security{
+                BasicScheme: shared.SchemeBasicScheme{
+                    Password: "YOUR_PASSWORD_HERE",
+                    Username: "YOUR_USERNAME_HERE",
+                },
+            }
+        ),
+    }
+
+    s := sdk.New(opts...)
+    
+    req := operations.OptCapProgramInPriceRequest{
+        Headers: operations.OptCapProgramInPriceHeaders{
+            Authorization: "perspiciatis",
+            WMCONSUMERCHANNELTYPE: "sequi",
+            WMQOSCORRELATIONID: "ut",
+            WMSECACCESSTOKEN: "id",
+            WMSVCNAME: "voluptas",
+        },
+        Request: operations.OptCapProgramInPriceRequestBody{
+            SubsidyEnrolled: false,
+            SubsidyPreference: true,
+        },
+    }
+    
+    res, err := s.Prices.OptCapProgramInPrice(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.OptCapProgramInPrice200ApplicationJSONObject != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

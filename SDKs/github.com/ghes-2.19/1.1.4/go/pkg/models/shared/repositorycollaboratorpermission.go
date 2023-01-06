@@ -1,5 +1,7 @@
 package shared
 
+// RepositoryCollaboratorPermissionSimpleUser
+// Simple User
 type RepositoryCollaboratorPermissionSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

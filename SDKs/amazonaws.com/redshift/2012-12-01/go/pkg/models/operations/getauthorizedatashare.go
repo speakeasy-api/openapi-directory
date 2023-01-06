@@ -3,13 +3,13 @@ package operations
 type GetAuthorizeDataShareActionEnum string
 
 const (
-	GetAuthorizeDataShareActionEnumAuthorizeDataShare GetAuthorizeDataShareActionEnum = "AuthorizeDataShare"
+	GETAuthorizeDataShareActionEnumAuthorizeDataShare GetAuthorizeDataShareActionEnum = "AuthorizeDataShare"
 )
 
 type GetAuthorizeDataShareVersionEnum string
 
 const (
-	GetAuthorizeDataShareVersionEnumTwoThousandAndTwelve1201 GetAuthorizeDataShareVersionEnum = "2012-12-01"
+	GETAuthorizeDataShareVersionEnumTwoThousandAndTwelve1201 GetAuthorizeDataShareVersionEnum = "2012-12-01"
 )
 
 type GetAuthorizeDataShareQueryParams struct {

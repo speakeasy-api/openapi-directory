@@ -3,13 +3,13 @@ package operations
 type PostEnableVgwRoutePropagationActionEnum string
 
 const (
-	PostEnableVgwRoutePropagationActionEnumEnableVgwRoutePropagation PostEnableVgwRoutePropagationActionEnum = "EnableVgwRoutePropagation"
+	POSTEnableVgwRoutePropagationActionEnumEnableVgwRoutePropagation PostEnableVgwRoutePropagationActionEnum = "EnableVgwRoutePropagation"
 )
 
 type PostEnableVgwRoutePropagationVersionEnum string
 
 const (
-	PostEnableVgwRoutePropagationVersionEnumTwoThousandAndSixteen1115 PostEnableVgwRoutePropagationVersionEnum = "2016-11-15"
+	POSTEnableVgwRoutePropagationVersionEnumTwoThousandAndSixteen1115 PostEnableVgwRoutePropagationVersionEnum = "2016-11-15"
 )
 
 type PostEnableVgwRoutePropagationQueryParams struct {

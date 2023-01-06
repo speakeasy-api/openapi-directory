@@ -24,6 +24,6 @@ type PostAssetsCorrelationMatrixValidationRequest struct {
 
 type PostAssetsCorrelationMatrixValidationResponse struct {
 	ContentType                                                   string
-	PostAssetsCorrelationMatrixValidation200ApplicationJSONObject *PostAssetsCorrelationMatrixValidation200ApplicationJSON
 	StatusCode                                                    int64
+	PostAssetsCorrelationMatrixValidation200ApplicationJSONObject *PostAssetsCorrelationMatrixValidation200ApplicationJSON
 }

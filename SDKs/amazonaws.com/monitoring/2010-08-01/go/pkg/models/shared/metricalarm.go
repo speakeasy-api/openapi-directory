@@ -23,7 +23,7 @@ type MetricAlarm struct {
 	MetricName                         *string
 	Metrics                            []MetricDataQuery
 	Namespace                          *string
-	OkActions                          []string
+	OKActions                          []string
 	Period                             *int64
 	StateReason                        *string
 	StateReasonData                    *string

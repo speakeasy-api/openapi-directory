@@ -3,13 +3,13 @@ package operations
 type GetGetContextKeysForPrincipalPolicyActionEnum string
 
 const (
-	GetGetContextKeysForPrincipalPolicyActionEnumGetContextKeysForPrincipalPolicy GetGetContextKeysForPrincipalPolicyActionEnum = "GetContextKeysForPrincipalPolicy"
+	GETGETContextKeysForPrincipalPolicyActionEnumGetContextKeysForPrincipalPolicy GetGetContextKeysForPrincipalPolicyActionEnum = "GetContextKeysForPrincipalPolicy"
 )
 
 type GetGetContextKeysForPrincipalPolicyVersionEnum string
 
 const (
-	GetGetContextKeysForPrincipalPolicyVersionEnumTwoThousandAndTen0508 GetGetContextKeysForPrincipalPolicyVersionEnum = "2010-05-08"
+	GETGETContextKeysForPrincipalPolicyVersionEnumTwoThousandAndTen0508 GetGetContextKeysForPrincipalPolicyVersionEnum = "2010-05-08"
 )
 
 type GetGetContextKeysForPrincipalPolicyQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type PostDeleteSubnetCidrReservationActionEnum string
 
 const (
-	PostDeleteSubnetCidrReservationActionEnumDeleteSubnetCidrReservation PostDeleteSubnetCidrReservationActionEnum = "DeleteSubnetCidrReservation"
+	POSTDeleteSubnetCidrReservationActionEnumDeleteSubnetCidrReservation PostDeleteSubnetCidrReservationActionEnum = "DeleteSubnetCidrReservation"
 )
 
 type PostDeleteSubnetCidrReservationVersionEnum string
 
 const (
-	PostDeleteSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 PostDeleteSubnetCidrReservationVersionEnum = "2016-11-15"
+	POSTDeleteSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 PostDeleteSubnetCidrReservationVersionEnum = "2016-11-15"
 )
 
 type PostDeleteSubnetCidrReservationQueryParams struct {

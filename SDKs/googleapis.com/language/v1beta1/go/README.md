@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,31 +27,31 @@ func main() {
             Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.LanguageDocumentsAnalyzeEntitiesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "sed",
+            DollarXgafv: "1",
+            AccessToken: "non",
             Alt: "json",
-            Callback: "eum",
-            Fields: "sit",
-            Key: "et",
-            OauthToken: "animi",
-            PrettyPrint: true,
-            QuotaUser: "atque",
-            UploadType: "ut",
-            UploadProtocol: "consequuntur",
+            Callback: "quasi",
+            Fields: "est",
+            Key: "rerum",
+            OauthToken: "expedita",
+            PrettyPrint: false,
+            QuotaUser: "distinctio",
+            UploadType: "veritatis",
+            UploadProtocol: "quia",
         },
         Request: &shared.AnalyzeEntitiesRequest{
             Document: &shared.Document{
-                Content: "vel",
-                GcsContentURI: "consequuntur",
-                Language: "ut",
-                Type: "TYPE_UNSPECIFIED",
+                Content: "aut",
+                GcsContentURI: "sunt",
+                Language: "et",
+                Type: "PLAIN_TEXT",
             },
             EncodingType: "NONE",
         },

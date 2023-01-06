@@ -12,7 +12,7 @@ type ListHiTsForQualificationTypeQueryParams struct {
 type ListHiTsForQualificationTypeXAmzTargetEnum string
 
 const (
-	ListHiTsForQualificationTypeXAmzTargetEnumMTurkRequesterServiceV20170117ListHiTsForQualificationType ListHiTsForQualificationTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListHITsForQualificationType"
+	ListHITsForQualificationTypeXAmzTargetEnumMTurkRequesterServiceV20170117ListHiTsForQualificationType ListHiTsForQualificationTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListHITsForQualificationType"
 )
 
 type ListHiTsForQualificationTypeHeaders struct {
@@ -34,7 +34,7 @@ type ListHiTsForQualificationTypeRequest struct {
 
 type ListHiTsForQualificationTypeResponse struct {
 	ContentType                          string
-	ListHiTsForQualificationTypeResponse *shared.ListHiTsForQualificationTypeResponse
+	ListHITsForQualificationTypeResponse *shared.ListHiTsForQualificationTypeResponse
 	RequestError                         *interface{}
 	ServiceFault                         *interface{}
 	StatusCode                           int64

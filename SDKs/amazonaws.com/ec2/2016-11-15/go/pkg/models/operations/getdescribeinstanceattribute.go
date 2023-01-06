@@ -3,33 +3,33 @@ package operations
 type GetDescribeInstanceAttributeActionEnum string
 
 const (
-	GetDescribeInstanceAttributeActionEnumDescribeInstanceAttribute GetDescribeInstanceAttributeActionEnum = "DescribeInstanceAttribute"
+	GETDescribeInstanceAttributeActionEnumDescribeInstanceAttribute GetDescribeInstanceAttributeActionEnum = "DescribeInstanceAttribute"
 )
 
 type GetDescribeInstanceAttributeAttributeEnum string
 
 const (
-	GetDescribeInstanceAttributeAttributeEnumInstanceType                      GetDescribeInstanceAttributeAttributeEnum = "instanceType"
-	GetDescribeInstanceAttributeAttributeEnumKernel                            GetDescribeInstanceAttributeAttributeEnum = "kernel"
-	GetDescribeInstanceAttributeAttributeEnumRamdisk                           GetDescribeInstanceAttributeAttributeEnum = "ramdisk"
-	GetDescribeInstanceAttributeAttributeEnumUserData                          GetDescribeInstanceAttributeAttributeEnum = "userData"
-	GetDescribeInstanceAttributeAttributeEnumDisableAPITermination             GetDescribeInstanceAttributeAttributeEnum = "disableApiTermination"
-	GetDescribeInstanceAttributeAttributeEnumInstanceInitiatedShutdownBehavior GetDescribeInstanceAttributeAttributeEnum = "instanceInitiatedShutdownBehavior"
-	GetDescribeInstanceAttributeAttributeEnumRootDeviceName                    GetDescribeInstanceAttributeAttributeEnum = "rootDeviceName"
-	GetDescribeInstanceAttributeAttributeEnumBlockDeviceMapping                GetDescribeInstanceAttributeAttributeEnum = "blockDeviceMapping"
-	GetDescribeInstanceAttributeAttributeEnumProductCodes                      GetDescribeInstanceAttributeAttributeEnum = "productCodes"
-	GetDescribeInstanceAttributeAttributeEnumSourceDestCheck                   GetDescribeInstanceAttributeAttributeEnum = "sourceDestCheck"
-	GetDescribeInstanceAttributeAttributeEnumGroupSet                          GetDescribeInstanceAttributeAttributeEnum = "groupSet"
-	GetDescribeInstanceAttributeAttributeEnumEbsOptimized                      GetDescribeInstanceAttributeAttributeEnum = "ebsOptimized"
-	GetDescribeInstanceAttributeAttributeEnumSriovNetSupport                   GetDescribeInstanceAttributeAttributeEnum = "sriovNetSupport"
-	GetDescribeInstanceAttributeAttributeEnumEnaSupport                        GetDescribeInstanceAttributeAttributeEnum = "enaSupport"
-	GetDescribeInstanceAttributeAttributeEnumEnclaveOptions                    GetDescribeInstanceAttributeAttributeEnum = "enclaveOptions"
+	GETDescribeInstanceAttributeAttributeEnumInstanceType                      GetDescribeInstanceAttributeAttributeEnum = "instanceType"
+	GETDescribeInstanceAttributeAttributeEnumKernel                            GetDescribeInstanceAttributeAttributeEnum = "kernel"
+	GETDescribeInstanceAttributeAttributeEnumRamdisk                           GetDescribeInstanceAttributeAttributeEnum = "ramdisk"
+	GETDescribeInstanceAttributeAttributeEnumUserData                          GetDescribeInstanceAttributeAttributeEnum = "userData"
+	GETDescribeInstanceAttributeAttributeEnumDisableAPITermination             GetDescribeInstanceAttributeAttributeEnum = "disableApiTermination"
+	GETDescribeInstanceAttributeAttributeEnumInstanceInitiatedShutdownBehavior GetDescribeInstanceAttributeAttributeEnum = "instanceInitiatedShutdownBehavior"
+	GETDescribeInstanceAttributeAttributeEnumRootDeviceName                    GetDescribeInstanceAttributeAttributeEnum = "rootDeviceName"
+	GETDescribeInstanceAttributeAttributeEnumBlockDeviceMapping                GetDescribeInstanceAttributeAttributeEnum = "blockDeviceMapping"
+	GETDescribeInstanceAttributeAttributeEnumProductCodes                      GetDescribeInstanceAttributeAttributeEnum = "productCodes"
+	GETDescribeInstanceAttributeAttributeEnumSourceDestCheck                   GetDescribeInstanceAttributeAttributeEnum = "sourceDestCheck"
+	GETDescribeInstanceAttributeAttributeEnumGroupSet                          GetDescribeInstanceAttributeAttributeEnum = "groupSet"
+	GETDescribeInstanceAttributeAttributeEnumEbsOptimized                      GetDescribeInstanceAttributeAttributeEnum = "ebsOptimized"
+	GETDescribeInstanceAttributeAttributeEnumSriovNetSupport                   GetDescribeInstanceAttributeAttributeEnum = "sriovNetSupport"
+	GETDescribeInstanceAttributeAttributeEnumEnaSupport                        GetDescribeInstanceAttributeAttributeEnum = "enaSupport"
+	GETDescribeInstanceAttributeAttributeEnumEnclaveOptions                    GetDescribeInstanceAttributeAttributeEnum = "enclaveOptions"
 )
 
 type GetDescribeInstanceAttributeVersionEnum string
 
 const (
-	GetDescribeInstanceAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeInstanceAttributeVersionEnum = "2016-11-15"
+	GETDescribeInstanceAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeInstanceAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeInstanceAttributeQueryParams struct {

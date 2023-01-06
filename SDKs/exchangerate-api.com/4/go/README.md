@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetLatestBaseCurrencyRequest{
         PathParams: operations.GetLatestBaseCurrencyPathParams{
-            BaseCurrency: "earum",
+            BaseCurrency: "consequuntur",
         },
     }
     
-    res, err := s.Sdk.GetLatestBaseCurrency(ctx, req)
+    res, err := s.GetLatestBaseCurrency(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

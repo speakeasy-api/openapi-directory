@@ -7,7 +7,7 @@ import (
 type GetCsvHeaderXAmzTargetEnum string
 
 const (
-	GetCsvHeaderXAmzTargetEnumAwsCognitoIdentityProviderServiceGetCsvHeader GetCsvHeaderXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetCSVHeader"
+	GetCSVHeaderXAmzTargetEnumAwsCognitoIdentityProviderServiceGetCsvHeader GetCsvHeaderXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetCSVHeader"
 )
 
 type GetCsvHeaderHeaders struct {
@@ -28,7 +28,7 @@ type GetCsvHeaderRequest struct {
 
 type GetCsvHeaderResponse struct {
 	ContentType               string
-	GetCsvHeaderResponse      *shared.GetCsvHeaderResponse
+	GetCSVHeaderResponse      *shared.GetCsvHeaderResponse
 	InternalErrorException    *interface{}
 	InvalidParameterException *interface{}
 	NotAuthorizedException    *interface{}

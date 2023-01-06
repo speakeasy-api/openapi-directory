@@ -7,13 +7,13 @@ import (
 type GetDescribeConfigurationSetActionEnum string
 
 const (
-	GetDescribeConfigurationSetActionEnumDescribeConfigurationSet GetDescribeConfigurationSetActionEnum = "DescribeConfigurationSet"
+	GETDescribeConfigurationSetActionEnumDescribeConfigurationSet GetDescribeConfigurationSetActionEnum = "DescribeConfigurationSet"
 )
 
 type GetDescribeConfigurationSetVersionEnum string
 
 const (
-	GetDescribeConfigurationSetVersionEnumTwoThousandAndTen1201 GetDescribeConfigurationSetVersionEnum = "2010-12-01"
+	GETDescribeConfigurationSetVersionEnumTwoThousandAndTen1201 GetDescribeConfigurationSetVersionEnum = "2010-12-01"
 )
 
 type GetDescribeConfigurationSetQueryParams struct {

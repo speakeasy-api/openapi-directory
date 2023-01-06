@@ -4,5 +4,5 @@ package shared
 // A list of your queues.
 type ListQueuesResult struct {
 	NextToken *string
-	QueueUrls []string
+	QueueUrls []map[string]interface{}
 }

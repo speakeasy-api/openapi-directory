@@ -1,5 +1,5 @@
 package shared
 
 type DescribePlacementGroupsResult struct {
-	PlacementGroups []PlacementGroup
+	PlacementGroups map[string]interface{}
 }

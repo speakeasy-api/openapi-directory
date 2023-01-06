@@ -1,5 +1,5 @@
 package shared
 
 type UpdateSecurityGroupRuleDescriptionsIngressResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

@@ -39,8 +39,8 @@ type ListPadsOfAuthorUsingGetRequest struct {
 type ListPadsOfAuthorUsingGetResponse struct {
 	ContentType                                      string
 	StatusCode                                       int64
-	ListPadsOfAuthorUsingGet200ApplicationJSONObject *ListPadsOfAuthorUsingGet200ApplicationJSON
-	ListPadsOfAuthorUsingGet400ApplicationJSONObject *ListPadsOfAuthorUsingGet400ApplicationJSON
-	ListPadsOfAuthorUsingGet401ApplicationJSONObject *ListPadsOfAuthorUsingGet401ApplicationJSON
-	ListPadsOfAuthorUsingGet500ApplicationJSONObject *ListPadsOfAuthorUsingGet500ApplicationJSON
+	ListPadsOfAuthorUsingGET200ApplicationJSONObject *ListPadsOfAuthorUsingGet200ApplicationJSON
+	ListPadsOfAuthorUsingGET400ApplicationJSONObject *ListPadsOfAuthorUsingGet400ApplicationJSON
+	ListPadsOfAuthorUsingGET401ApplicationJSONObject *ListPadsOfAuthorUsingGet401ApplicationJSON
+	ListPadsOfAuthorUsingGET500ApplicationJSONObject *ListPadsOfAuthorUsingGet500ApplicationJSON
 }

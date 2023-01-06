@@ -31,7 +31,7 @@ type CreateEndpointResponse struct {
 	ContentType                string
 	CreateEndpointResponse     *shared.CreateEndpointResponse
 	InvalidResourceStateFault  *interface{}
-	KmsKeyNotAccessibleFault   *interface{}
+	KMSKeyNotAccessibleFault   *interface{}
 	ResourceAlreadyExistsFault *interface{}
 	ResourceNotFoundFault      *interface{}
 	ResourceQuotaExceededFault *interface{}

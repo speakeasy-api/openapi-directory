@@ -30,7 +30,7 @@ type TagResourceResponse struct {
 	ACLNotFoundFault               *interface{}
 	ClusterNotFoundFault           *interface{}
 	ContentType                    string
-	InvalidArnFault                *interface{}
+	InvalidARNFault                *interface{}
 	InvalidClusterStateFault       *interface{}
 	ParameterGroupNotFoundFault    *interface{}
 	ServiceLinkedRoleNotFoundFault *interface{}

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVolumesModificationsResult struct {
-	NextToken            *string
-	VolumesModifications []VolumeModification
+	NextToken            map[string]interface{}
+	VolumesModifications map[string]interface{}
 }

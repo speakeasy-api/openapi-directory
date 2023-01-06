@@ -3,13 +3,13 @@ package operations
 type GetFailoverGlobalReplicationGroupActionEnum string
 
 const (
-	GetFailoverGlobalReplicationGroupActionEnumFailoverGlobalReplicationGroup GetFailoverGlobalReplicationGroupActionEnum = "FailoverGlobalReplicationGroup"
+	GETFailoverGlobalReplicationGroupActionEnumFailoverGlobalReplicationGroup GetFailoverGlobalReplicationGroupActionEnum = "FailoverGlobalReplicationGroup"
 )
 
 type GetFailoverGlobalReplicationGroupVersionEnum string
 
 const (
-	GetFailoverGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 GetFailoverGlobalReplicationGroupVersionEnum = "2015-02-02"
+	GETFailoverGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 GetFailoverGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
 type GetFailoverGlobalReplicationGroupQueryParams struct {

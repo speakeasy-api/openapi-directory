@@ -7,7 +7,7 @@ import (
 type UpdateHitReviewStatusXAmzTargetEnum string
 
 const (
-	UpdateHitReviewStatusXAmzTargetEnumMTurkRequesterServiceV20170117UpdateHitReviewStatus UpdateHitReviewStatusXAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateHITReviewStatus"
+	UpdateHITReviewStatusXAmzTargetEnumMTurkRequesterServiceV20170117UpdateHitReviewStatus UpdateHitReviewStatusXAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateHITReviewStatus"
 )
 
 type UpdateHitReviewStatusHeaders struct {
@@ -31,5 +31,5 @@ type UpdateHitReviewStatusResponse struct {
 	RequestError                  *interface{}
 	ServiceFault                  *interface{}
 	StatusCode                    int64
-	UpdateHitReviewStatusResponse map[string]interface{}
+	UpdateHITReviewStatusResponse map[string]interface{}
 }

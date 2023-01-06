@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.AlsfcSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AlsfcRequestBody{
             CertificateParameters: &operations.AlsfcRequestBodyCertificateParameters{
-                UID: "sit",
-                Lino: "voluptas",
+                UID: "suscipit",
+                Lino: "aut",
             },
-            ConsentArtifact: "velit",
+            ConsentArtifact: "in",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "quibusdam",
         },
     }
     
-    res, err := s.Sdk.Alsfc(ctx, req)
+    res, err := s.APIs.Alsfc(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Alsfc` - Application/ License for Factory
 * `Clcer` - Registration Certificate for Contract Labour License

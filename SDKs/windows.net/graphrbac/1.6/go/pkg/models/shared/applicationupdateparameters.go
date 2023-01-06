@@ -1,7 +1,7 @@
 package shared
 
 // ApplicationUpdateParameters
-// Request parameters for updating a new application.
+// Active Directive Application common properties shared among GET, POST and PATCH
 type ApplicationUpdateParameters struct {
 	AllowGuestsSignIn          *bool                               `json:"allowGuestsSignIn,omitempty"`
 	AllowPassthroughUsers      *bool                               `json:"allowPassthroughUsers,omitempty"`
@@ -9,11 +9,9 @@ type ApplicationUpdateParameters struct {
 	AppPermissions             []string                            `json:"appPermissions,omitempty"`
 	AppRoles                   []AppRole                           `json:"appRoles,omitempty"`
 	AvailableToOtherTenants    *bool                               `json:"availableToOtherTenants,omitempty"`
-	DisplayName                *string                             `json:"displayName,omitempty"`
 	ErrorURL                   *string                             `json:"errorUrl,omitempty"`
 	GroupMembershipClaims      *GroupMembershipClaimsEnum          `json:"groupMembershipClaims,omitempty"`
 	Homepage                   *string                             `json:"homepage,omitempty"`
-	IdentifierUris             []string                            `json:"identifierUris,omitempty"`
 	InformationalUrls          *InformationalURL                   `json:"informationalUrls,omitempty"`
 	IsDeviceOnlyAuthSupported  *bool                               `json:"isDeviceOnlyAuthSupported,omitempty"`
 	KeyCredentials             []map[string]map[string]interface{} `json:"keyCredentials,omitempty"`

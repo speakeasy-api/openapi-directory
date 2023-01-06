@@ -8,16 +8,8 @@ type ContactsCreatePathParams struct {
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
-type ContactsCreateMergeStrategyEnum string
-
-const (
-	ContactsCreateMergeStrategyEnumAppend ContactsCreateMergeStrategyEnum = "append"
-	ContactsCreateMergeStrategyEnumCore   ContactsCreateMergeStrategyEnum = "core"
-	ContactsCreateMergeStrategyEnumRemove ContactsCreateMergeStrategyEnum = "remove"
-)
-
 type ContactsCreateQueryParams struct {
-	MergeStrategy *ContactsCreateMergeStrategyEnum `queryParam:"style=form,explode=true,name=mergeStrategy"`
+	MergeStrategy *shared.AccountIDEnum `queryParam:"style=form,explode=true,name=mergeStrategy"`
 }
 
 type ContactsCreateRequests struct {

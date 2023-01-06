@@ -5,9 +5,9 @@ import (
 )
 
 type PodocRequestBodyCertificateParameters struct {
-	Inscode string `json:"INSCODE"`
-	Polno   string `json:"POLNO"`
-	Startdt string `json:"STARTDT"`
+	INSCODE string `json:"INSCODE"`
+	POLNO   string `json:"POLNO"`
+	STARTDT string `json:"STARTDT"`
 }
 
 type PodocRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Podoc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Podoc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Podoc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Podoc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Podoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Podoc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Podoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Podoc404ApplicationJSON struct {

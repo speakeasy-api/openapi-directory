@@ -3,13 +3,13 @@ package operations
 type GetRestoreTableFromClusterSnapshotActionEnum string
 
 const (
-	GetRestoreTableFromClusterSnapshotActionEnumRestoreTableFromClusterSnapshot GetRestoreTableFromClusterSnapshotActionEnum = "RestoreTableFromClusterSnapshot"
+	GETRestoreTableFromClusterSnapshotActionEnumRestoreTableFromClusterSnapshot GetRestoreTableFromClusterSnapshotActionEnum = "RestoreTableFromClusterSnapshot"
 )
 
 type GetRestoreTableFromClusterSnapshotVersionEnum string
 
 const (
-	GetRestoreTableFromClusterSnapshotVersionEnumTwoThousandAndTwelve1201 GetRestoreTableFromClusterSnapshotVersionEnum = "2012-12-01"
+	GETRestoreTableFromClusterSnapshotVersionEnumTwoThousandAndTwelve1201 GetRestoreTableFromClusterSnapshotVersionEnum = "2012-12-01"
 )
 
 type GetRestoreTableFromClusterSnapshotQueryParams struct {

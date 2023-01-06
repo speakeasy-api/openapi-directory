@@ -3,13 +3,13 @@ package operations
 type GetResumeClusterActionEnum string
 
 const (
-	GetResumeClusterActionEnumResumeCluster GetResumeClusterActionEnum = "ResumeCluster"
+	GETResumeClusterActionEnumResumeCluster GetResumeClusterActionEnum = "ResumeCluster"
 )
 
 type GetResumeClusterVersionEnum string
 
 const (
-	GetResumeClusterVersionEnumTwoThousandAndTwelve1201 GetResumeClusterVersionEnum = "2012-12-01"
+	GETResumeClusterVersionEnumTwoThousandAndTwelve1201 GetResumeClusterVersionEnum = "2012-12-01"
 )
 
 type GetResumeClusterQueryParams struct {

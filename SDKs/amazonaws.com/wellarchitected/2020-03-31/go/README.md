@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,26 @@ func main() {
     
     req := operations.AssociateLensesRequest{
         PathParams: operations.AssociateLensesPathParams{
-            WorkloadID: "sapiente",
+            WorkloadID: "cupiditate",
         },
         Headers: operations.AssociateLensesHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "perferendis",
-            XAmzCredential: "maiores",
+            XAmzAlgorithm: "minus",
+            XAmzContentSha256: "in",
+            XAmzCredential: "debitis",
             XAmzDate: "est",
-            XAmzSecurityToken: "atque",
-            XAmzSignature: "sint",
-            XAmzSignedHeaders: "vero",
+            XAmzSecurityToken: "animi",
+            XAmzSignature: "distinctio",
+            XAmzSignedHeaders: "hic",
         },
         Request: operations.AssociateLensesRequestBody{
             LensAliases: []string{
-                "rem",
+                "qui",
+                "rerum",
             },
         },
     }
     
-    res, err := s.Sdk.AssociateLenses(ctx, req)
+    res, err := s.AssociateLenses(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

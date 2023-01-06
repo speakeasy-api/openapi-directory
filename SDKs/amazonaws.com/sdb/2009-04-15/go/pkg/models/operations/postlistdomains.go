@@ -3,17 +3,17 @@ package operations
 type PostListDomainsActionEnum string
 
 const (
-	PostListDomainsActionEnumListDomains PostListDomainsActionEnum = "ListDomains"
+	POSTListDomainsActionEnumListDomains PostListDomainsActionEnum = "ListDomains"
 )
 
 type PostListDomainsVersionEnum string
 
 const (
-	PostListDomainsVersionEnumTwoThousandAndNine0415 PostListDomainsVersionEnum = "2009-04-15"
+	POSTListDomainsVersionEnumTwoThousandAndNine0415 PostListDomainsVersionEnum = "2009-04-15"
 )
 
 type PostListDomainsQueryParams struct {
-	AwsAccessKeyID     string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID     string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action             PostListDomainsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	MaxNumberOfDomains *string                    `queryParam:"style=form,explode=true,name=MaxNumberOfDomains"`
 	NextToken          *string                    `queryParam:"style=form,explode=true,name=NextToken"`

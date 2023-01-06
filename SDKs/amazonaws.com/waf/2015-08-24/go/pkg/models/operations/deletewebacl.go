@@ -7,7 +7,7 @@ import (
 type DeleteWebAclxAmzTargetEnum string
 
 const (
-	DeleteWebAclxAmzTargetEnumAwswaf20150824DeleteWebACL DeleteWebAclxAmzTargetEnum = "AWSWAF_20150824.DeleteWebACL"
+	DeleteWebACLXAmzTargetEnumAwswaf20150824DeleteWebACL DeleteWebAclxAmzTargetEnum = "AWSWAF_20150824.DeleteWebACL"
 )
 
 type DeleteWebACLHeaders struct {
@@ -30,12 +30,12 @@ type DeleteWebACLResponse struct {
 	ContentType                           string
 	DeleteWebACLResponse                  *shared.DeleteWebACLResponse
 	StatusCode                            int64
-	WafInternalErrorException             *interface{}
-	WafInvalidAccountException            *interface{}
-	WafNonEmptyEntityException            *interface{}
-	WafNonexistentItemException           *interface{}
-	WafReferencedItemException            *interface{}
-	WafStaleDataException                 *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidAccountException            *interface{}
+	WAFNonEmptyEntityException            *interface{}
+	WAFNonexistentItemException           *interface{}
+	WAFReferencedItemException            *interface{}
+	WAFStaleDataException                 *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

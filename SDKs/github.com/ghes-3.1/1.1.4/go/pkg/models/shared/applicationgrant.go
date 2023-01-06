@@ -10,6 +10,8 @@ type ApplicationGrantApp struct {
 	URL      string `json:"url"`
 }
 
+// ApplicationGrantSimpleUser
+// Simple User
 type ApplicationGrantSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

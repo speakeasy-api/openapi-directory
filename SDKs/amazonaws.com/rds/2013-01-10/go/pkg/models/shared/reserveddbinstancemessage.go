@@ -2,5 +2,5 @@ package shared
 
 type ReservedDbInstanceMessage struct {
 	Marker              *string
-	ReservedDbInstances []ReservedDbInstance
+	ReservedDBInstances []map[string]interface{}
 }

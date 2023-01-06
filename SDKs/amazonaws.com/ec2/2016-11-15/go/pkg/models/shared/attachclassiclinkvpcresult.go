@@ -1,5 +1,5 @@
 package shared
 
 type AttachClassicLinkVpcResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

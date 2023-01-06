@@ -5,10 +5,10 @@ import (
 )
 
 type SocerRequestBodyCertificateParameters struct {
-	ApplNo   string `json:"APPL_NO"`
-	Dob      string `json:"DOB"`
+	APPLNO   string `json:"APPL_NO"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Session  string `json:"SESSION"`
+	SESSION  string `json:"SESSION"`
 }
 
 type SocerRequestBodyFormatEnum string
@@ -84,7 +84,7 @@ type Socer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Socer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Socer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Socer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Socer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Socer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Socer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Socer404ApplicationJSON struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,173 +26,130 @@ func main() {
         Security: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams{
-            Parent: "ea",
+            Parent: "cumque",
         },
         QueryParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "atque",
-            Alt: "json",
-            Callback: "praesentium",
-            Fields: "consequatur",
-            Key: "cupiditate",
-            OauthToken: "deserunt",
-            PrettyPrint: true,
-            QuotaUser: "rem",
-            UploadType: "vel",
-            UploadProtocol: "temporibus",
+            DollarXgafv: "1",
+            AccessToken: "ut",
+            Alt: "proto",
+            Callback: "voluptatum",
+            Fields: "temporibus",
+            Key: "voluptas",
+            OauthToken: "accusantium",
+            PrettyPrint: false,
+            QuotaUser: "aut",
+            UploadType: "rerum",
+            UploadProtocol: "quasi",
         },
         Request: &shared.AccessLevel{
             Basic: &shared.BasicLevel{
-                CombiningFunction: "AND",
+                CombiningFunction: "OR",
                 Conditions: []shared.Condition{
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
+                                "NONE",
+                                "BASIC",
                                 "BASIC",
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
                                 "UNENCRYPTED",
-                                "ENCRYPTION_UNSUPPORTED",
-                                "ENCRYPTION_UNSUPPORTED",
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "nisi",
+                                    MinimumVersion: "sed",
                                     OsType: "DESKTOP_MAC",
-                                    RequireVerifiedChromeOs: true,
+                                    RequireVerifiedChromeOs: false,
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "deleniti",
-                                    OsType: "DESKTOP_LINUX",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: "commodi",
+                                    OsType: "OS_UNSPECIFIED",
+                                    RequireVerifiedChromeOs: true,
                                 },
                             },
                             RequireAdminApproval: false,
                             RequireCorpOwned: false,
-                            RequireScreenlock: false,
+                            RequireScreenlock: true,
                         },
                         IPSubnetworks: []string{
-                            "itaque",
-                            "nihil",
-                            "cum",
+                            "et",
+                            "doloremque",
                         },
                         Members: []string{
-                            "excepturi",
+                            "doloremque",
+                            "deserunt",
                         },
                         Negate: false,
                         Regions: []string{
-                            "et",
-                            "accusamus",
-                            "tempore",
+                            "nostrum",
                         },
                         RequiredAccessLevels: []string{
-                            "et",
-                            "omnis",
+                            "praesentium",
                         },
                     },
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "BASIC",
-                                "COMPLETE",
-                                "BASIC",
+                                "NONE",
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "ENCRYPTION_UNSUPPORTED",
+                                "ENCRYPTED",
+                                "ENCRYPTION_UNSPECIFIED",
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "architecto",
-                                    OsType: "DESKTOP_LINUX",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                            },
-                            RequireAdminApproval: true,
-                            RequireCorpOwned: false,
-                            RequireScreenlock: false,
-                        },
-                        IPSubnetworks: []string{
-                            "architecto",
-                        },
-                        Members: []string{
-                            "autem",
-                        },
-                        Negate: true,
-                        Regions: []string{
-                            "aut",
-                            "dignissimos",
-                        },
-                        RequiredAccessLevels: []string{
-                            "quo",
-                        },
-                    },
-                    shared.Condition{
-                        DevicePolicy: &shared.DevicePolicy{
-                            AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "MANAGEMENT_UNSPECIFIED",
-                            },
-                            AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "UNENCRYPTED",
-                            },
-                            OsConstraints: []shared.OsConstraint{
-                                shared.OsConstraint{
-                                    MinimumVersion: "voluptas",
-                                    OsType: "IOS",
+                                    MinimumVersion: "facere",
+                                    OsType: "ANDROID",
                                     RequireVerifiedChromeOs: false,
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "praesentium",
-                                    OsType: "DESKTOP_MAC",
+                                    MinimumVersion: "facilis",
+                                    OsType: "ANDROID",
                                     RequireVerifiedChromeOs: false,
                                 },
-                                shared.OsConstraint{
-                                    MinimumVersion: "et",
-                                    OsType: "DESKTOP_MAC",
-                                    RequireVerifiedChromeOs: true,
-                                },
                             },
-                            RequireAdminApproval: true,
+                            RequireAdminApproval: false,
                             RequireCorpOwned: true,
-                            RequireScreenlock: false,
+                            RequireScreenlock: true,
                         },
                         IPSubnetworks: []string{
-                            "aut",
-                            "sunt",
-                            "harum",
+                            "nihil",
+                            "ut",
+                            "nostrum",
                         },
                         Members: []string{
-                            "nihil",
+                            "et",
+                            "maxime",
+                            "quae",
                         },
                         Negate: true,
                         Regions: []string{
-                            "sunt",
-                            "sapiente",
+                            "eum",
+                            "placeat",
                         },
                         RequiredAccessLevels: []string{
-                            "saepe",
-                            "ad",
-                            "cum",
+                            "magnam",
                         },
                     },
                 },
             },
             Custom: &shared.CustomLevel{
                 Expr: &shared.Expr{
-                    Description: "corrupti",
-                    Expression: "et",
-                    Location: "omnis",
-                    Title: "tenetur",
+                    Description: "quas",
+                    Expression: "nemo",
+                    Location: "voluptatum",
+                    Title: "quibusdam",
                 },
             },
-            Description: "qui",
-            Name: "nisi",
-            Title: "consequatur",
+            Description: "eos",
+            Name: "quae",
+            Title: "sit",
         },
     }
     

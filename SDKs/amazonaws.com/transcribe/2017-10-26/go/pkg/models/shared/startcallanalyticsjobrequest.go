@@ -5,7 +5,7 @@ type StartCallAnalyticsJobRequest struct {
 	ChannelDefinitions       []ChannelDefinition       `json:"ChannelDefinitions,omitempty"`
 	DataAccessRoleArn        string                    `json:"DataAccessRoleArn"`
 	Media                    Media                     `json:"Media"`
-	OutputEncryptionKmsKeyID *string                   `json:"OutputEncryptionKMSKeyId,omitempty"`
+	OutputEncryptionKMSKeyID map[string]interface{}    `json:"OutputEncryptionKMSKeyId,omitempty"`
 	OutputLocation           *string                   `json:"OutputLocation,omitempty"`
 	Settings                 *CallAnalyticsJobSettings `json:"Settings,omitempty"`
 }

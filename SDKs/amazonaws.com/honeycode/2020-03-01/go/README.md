@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,51 @@ func main() {
     
     req := operations.BatchCreateTableRowsRequest{
         PathParams: operations.BatchCreateTableRowsPathParams{
-            TableID: "nobis",
-            WorkbookID: "iste",
+            TableID: "et",
+            WorkbookID: "non",
         },
         Headers: operations.BatchCreateTableRowsHeaders{
-            XAmzAlgorithm: "pariatur",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "impedit",
-            XAmzDate: "rerum",
-            XAmzSecurityToken: "reiciendis",
-            XAmzSignature: "in",
-            XAmzSignedHeaders: "assumenda",
+            XAmzAlgorithm: "omnis",
+            XAmzContentSha256: "tempora",
+            XAmzCredential: "aliquid",
+            XAmzDate: "molestiae",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "quam",
+            XAmzSignedHeaders: "cum",
         },
         Request: operations.BatchCreateTableRowsRequestBody{
-            ClientRequestToken: "modi",
+            ClientRequestToken: "a",
             RowsToCreate: []shared.CreateRowData{
                 shared.CreateRowData{
-                    BatchItemID: "vel",
+                    BatchItemID: "delectus",
                     CellsToCreate: map[string]shared.CellInput{
-                        "beatae": shared.CellInput{
-                            Fact: "consectetur",
+                        "ipsum": shared.CellInput{
+                            Fact: "et",
+                        },
+                        "quis": shared.CellInput{
+                            Fact: "et",
+                        },
+                        "cupiditate": shared.CellInput{
+                            Fact: "sed",
+                        },
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "praesentium",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "aut": shared.CellInput{
+                            Fact: "architecto",
+                        },
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "omnis",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "sunt": shared.CellInput{
+                            Fact: "modi",
+                        },
+                        "nisi": shared.CellInput{
+                            Fact: "dolores",
                         },
                     },
                 },
@@ -62,7 +86,7 @@ func main() {
         },
     }
     
-    res, err := s.Sdk.BatchCreateTableRows(ctx, req)
+    res, err := s.BatchCreateTableRows(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -27,7 +27,7 @@ type PutServiceQuotaIncreaseRequestIntoTemplateRequest struct {
 }
 
 type PutServiceQuotaIncreaseRequestIntoTemplateResponse struct {
-	AwsServiceAccessNotEnabledException                *interface{}
+	AWSServiceAccessNotEnabledException                *interface{}
 	AccessDeniedException                              *interface{}
 	ContentType                                        string
 	DependencyAccessDeniedException                    *interface{}

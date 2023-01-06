@@ -35,8 +35,8 @@ type GetAttributePoolUsingPostRequest struct {
 type GetAttributePoolUsingPostResponse struct {
 	ContentType                                       string
 	StatusCode                                        int64
-	GetAttributePoolUsingPost200ApplicationJSONObject *GetAttributePoolUsingPost200ApplicationJSON
-	GetAttributePoolUsingPost400ApplicationJSONObject *GetAttributePoolUsingPost400ApplicationJSON
-	GetAttributePoolUsingPost401ApplicationJSONObject *GetAttributePoolUsingPost401ApplicationJSON
-	GetAttributePoolUsingPost500ApplicationJSONObject *GetAttributePoolUsingPost500ApplicationJSON
+	GetAttributePoolUsingPOST200ApplicationJSONObject *GetAttributePoolUsingPost200ApplicationJSON
+	GetAttributePoolUsingPOST400ApplicationJSONObject *GetAttributePoolUsingPost400ApplicationJSON
+	GetAttributePoolUsingPOST401ApplicationJSONObject *GetAttributePoolUsingPost401ApplicationJSON
+	GetAttributePoolUsingPOST500ApplicationJSONObject *GetAttributePoolUsingPost500ApplicationJSON
 }

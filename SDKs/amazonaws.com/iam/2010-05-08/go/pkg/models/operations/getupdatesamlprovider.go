@@ -3,19 +3,19 @@ package operations
 type GetUpdateSamlProviderActionEnum string
 
 const (
-	GetUpdateSamlProviderActionEnumUpdateSamlProvider GetUpdateSamlProviderActionEnum = "UpdateSAMLProvider"
+	GETUpdateSAMLProviderActionEnumUpdateSamlProvider GetUpdateSamlProviderActionEnum = "UpdateSAMLProvider"
 )
 
 type GetUpdateSamlProviderVersionEnum string
 
 const (
-	GetUpdateSamlProviderVersionEnumTwoThousandAndTen0508 GetUpdateSamlProviderVersionEnum = "2010-05-08"
+	GETUpdateSAMLProviderVersionEnumTwoThousandAndTen0508 GetUpdateSamlProviderVersionEnum = "2010-05-08"
 )
 
 type GetUpdateSamlProviderQueryParams struct {
 	Action               GetUpdateSamlProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SamlMetadataDocument string                           `queryParam:"style=form,explode=true,name=SAMLMetadataDocument"`
-	SamlProviderArn      string                           `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
+	SAMLMetadataDocument string                           `queryParam:"style=form,explode=true,name=SAMLMetadataDocument"`
+	SAMLProviderArn      string                           `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
 	Version              GetUpdateSamlProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

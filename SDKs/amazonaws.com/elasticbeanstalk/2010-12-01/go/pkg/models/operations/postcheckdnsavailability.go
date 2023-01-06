@@ -3,13 +3,13 @@ package operations
 type PostCheckDNSAvailabilityActionEnum string
 
 const (
-	PostCheckDNSAvailabilityActionEnumCheckDNSAvailability PostCheckDNSAvailabilityActionEnum = "CheckDNSAvailability"
+	POSTCheckDNSAvailabilityActionEnumCheckDNSAvailability PostCheckDNSAvailabilityActionEnum = "CheckDNSAvailability"
 )
 
 type PostCheckDNSAvailabilityVersionEnum string
 
 const (
-	PostCheckDNSAvailabilityVersionEnumTwoThousandAndTen1201 PostCheckDNSAvailabilityVersionEnum = "2010-12-01"
+	POSTCheckDNSAvailabilityVersionEnumTwoThousandAndTen1201 PostCheckDNSAvailabilityVersionEnum = "2010-12-01"
 )
 
 type PostCheckDNSAvailabilityQueryParams struct {

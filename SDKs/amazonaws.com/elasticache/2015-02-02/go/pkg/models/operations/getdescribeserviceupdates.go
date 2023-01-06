@@ -7,13 +7,13 @@ import (
 type GetDescribeServiceUpdatesActionEnum string
 
 const (
-	GetDescribeServiceUpdatesActionEnumDescribeServiceUpdates GetDescribeServiceUpdatesActionEnum = "DescribeServiceUpdates"
+	GETDescribeServiceUpdatesActionEnumDescribeServiceUpdates GetDescribeServiceUpdatesActionEnum = "DescribeServiceUpdates"
 )
 
 type GetDescribeServiceUpdatesVersionEnum string
 
 const (
-	GetDescribeServiceUpdatesVersionEnumTwoThousandAndFifteen0202 GetDescribeServiceUpdatesVersionEnum = "2015-02-02"
+	GETDescribeServiceUpdatesVersionEnumTwoThousandAndFifteen0202 GetDescribeServiceUpdatesVersionEnum = "2015-02-02"
 )
 
 type GetDescribeServiceUpdatesQueryParams struct {

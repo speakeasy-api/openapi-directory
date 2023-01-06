@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AcceptPortfolioShareRequest{
         Headers: operations.AcceptPortfolioShareHeaders{
-            XAmzAlgorithm: "facilis",
-            XAmzContentSha256: "rerum",
-            XAmzCredential: "commodi",
-            XAmzDate: "non",
-            XAmzSecurityToken: "rerum",
-            XAmzSignature: "at",
-            XAmzSignedHeaders: "debitis",
+            XAmzAlgorithm: "officiis",
+            XAmzContentSha256: "veniam",
+            XAmzCredential: "ducimus",
+            XAmzDate: "eius",
+            XAmzSecurityToken: "nobis",
+            XAmzSignature: "aliquam",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "AWS242ServiceCatalogService.AcceptPortfolioShare",
         },
         Request: shared.AcceptPortfolioShareInput{
-            AcceptLanguage: "dolorum",
-            PortfolioID: "saepe",
-            PortfolioShareType: "AWS_SERVICECATALOG",
+            AcceptLanguage: "recusandae",
+            PortfolioID: "consequatur",
+            PortfolioShareType: "IMPORTED",
         },
     }
     
-    res, err := s.Sdk.AcceptPortfolioShare(ctx, req)
+    res, err := s.AcceptPortfolioShare(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

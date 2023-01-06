@@ -58,7 +58,7 @@ type CreateSimulationJobRequestBody struct {
 	MaxJobDurationInSeconds int64                                              `json:"maxJobDurationInSeconds"`
 	OutputLocation          *CreateSimulationJobRequestBodyOutputLocation      `json:"outputLocation,omitempty"`
 	RobotApplications       []shared.RobotApplicationConfig                    `json:"robotApplications,omitempty"`
-	SimulationApplications  []shared.SimulationApplicationConfig               `json:"simulationApplications,omitempty"`
+	SimulationApplications  []shared.SimulationApplicationConfig1              `json:"simulationApplications,omitempty"`
 	Tags                    map[string]string                                  `json:"tags,omitempty"`
 	VpcConfig               *CreateSimulationJobRequestBodyVpcConfig           `json:"vpcConfig,omitempty"`
 }

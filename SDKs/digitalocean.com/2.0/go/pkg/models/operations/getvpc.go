@@ -8,18 +8,18 @@ type GetVpcPathParams struct {
 	VpcID string `pathParam:"style=simple,explode=false,name=vpc_id"`
 }
 
-type GetVpcRequest struct {
-	PathParams GetVpcPathParams
-}
-
 type GetVpc200ApplicationJSON struct {
-	Vpc *shared.Onev21vpcsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesVpcsItems `json:"vpc,omitempty"`
+	Vpc *shared.Onev21vpcsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesVpcsItems1 `json:"vpc,omitempty"`
 }
 
 type GetVpc401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetVpcRequest struct {
+	PathParams GetVpcPathParams
 }
 
 type GetVpcResponse struct {

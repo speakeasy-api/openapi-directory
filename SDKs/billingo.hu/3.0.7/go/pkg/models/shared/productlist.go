@@ -1,0 +1,13 @@
+package shared
+
+// ProductList
+// A object with a data property that contains an array of up to limit products. Each entry in the array is a separate product object. If no more products are available, the resulting array will be empty.
+type ProductList struct {
+	CurrentPage *int64    `json:"current_page,omitempty"`
+	Data        []Product `json:"data,omitempty"`
+	LastPage    *int64    `json:"last_page,omitempty"`
+	NextPageURL *string   `json:"next_page_url,omitempty"`
+	PerPage     *int64    `json:"per_page,omitempty"`
+	PrevPageURL *string   `json:"prev_page_url,omitempty"`
+	Total       *int64    `json:"total,omitempty"`
+}

@@ -3,13 +3,13 @@ package operations
 type PostModifyHostsActionEnum string
 
 const (
-	PostModifyHostsActionEnumModifyHosts PostModifyHostsActionEnum = "ModifyHosts"
+	POSTModifyHostsActionEnumModifyHosts PostModifyHostsActionEnum = "ModifyHosts"
 )
 
 type PostModifyHostsVersionEnum string
 
 const (
-	PostModifyHostsVersionEnumTwoThousandAndSixteen1115 PostModifyHostsVersionEnum = "2016-11-15"
+	POSTModifyHostsVersionEnumTwoThousandAndSixteen1115 PostModifyHostsVersionEnum = "2016-11-15"
 )
 
 type PostModifyHostsQueryParams struct {

@@ -46,8 +46,8 @@ type GetAuthorNameUsingGetRequest struct {
 type GetAuthorNameUsingGetResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	GetAuthorNameUsingGet200ApplicationJSONObject *GetAuthorNameUsingGet200ApplicationJSON
-	GetAuthorNameUsingGet400ApplicationJSONObject *GetAuthorNameUsingGet400ApplicationJSON
-	GetAuthorNameUsingGet401ApplicationJSONObject *GetAuthorNameUsingGet401ApplicationJSON
-	GetAuthorNameUsingGet500ApplicationJSONObject *GetAuthorNameUsingGet500ApplicationJSON
+	GETAuthorNameUsingGET200ApplicationJSONObject *GetAuthorNameUsingGet200ApplicationJSON
+	GETAuthorNameUsingGET400ApplicationJSONObject *GetAuthorNameUsingGet400ApplicationJSON
+	GETAuthorNameUsingGET401ApplicationJSONObject *GetAuthorNameUsingGet401ApplicationJSON
+	GETAuthorNameUsingGET500ApplicationJSONObject *GetAuthorNameUsingGet500ApplicationJSON
 }

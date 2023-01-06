@@ -3,13 +3,13 @@ package operations
 type PostGetIdentityDkimAttributesActionEnum string
 
 const (
-	PostGetIdentityDkimAttributesActionEnumGetIdentityDkimAttributes PostGetIdentityDkimAttributesActionEnum = "GetIdentityDkimAttributes"
+	POSTGetIdentityDkimAttributesActionEnumGetIdentityDkimAttributes PostGetIdentityDkimAttributesActionEnum = "GetIdentityDkimAttributes"
 )
 
 type PostGetIdentityDkimAttributesVersionEnum string
 
 const (
-	PostGetIdentityDkimAttributesVersionEnumTwoThousandAndTen1201 PostGetIdentityDkimAttributesVersionEnum = "2010-12-01"
+	POSTGetIdentityDkimAttributesVersionEnumTwoThousandAndTen1201 PostGetIdentityDkimAttributesVersionEnum = "2010-12-01"
 )
 
 type PostGetIdentityDkimAttributesQueryParams struct {

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -193,7 +193,7 @@ func (s *CommunicationCost) GetCommunicationCostsTotalsByCandidate(ctx context.C
 				return nil, err
 			}
 
-			res.CcTotalsByCandidatePage = out
+			res.CCTotalsByCandidatePage = out
 		}
 	}
 

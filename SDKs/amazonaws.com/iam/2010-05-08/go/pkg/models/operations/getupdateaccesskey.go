@@ -3,20 +3,20 @@ package operations
 type GetUpdateAccessKeyActionEnum string
 
 const (
-	GetUpdateAccessKeyActionEnumUpdateAccessKey GetUpdateAccessKeyActionEnum = "UpdateAccessKey"
+	GETUpdateAccessKeyActionEnumUpdateAccessKey GetUpdateAccessKeyActionEnum = "UpdateAccessKey"
 )
 
 type GetUpdateAccessKeyStatusEnum string
 
 const (
-	GetUpdateAccessKeyStatusEnumActive   GetUpdateAccessKeyStatusEnum = "Active"
-	GetUpdateAccessKeyStatusEnumInactive GetUpdateAccessKeyStatusEnum = "Inactive"
+	GETUpdateAccessKeyStatusEnumActive   GetUpdateAccessKeyStatusEnum = "Active"
+	GETUpdateAccessKeyStatusEnumInactive GetUpdateAccessKeyStatusEnum = "Inactive"
 )
 
 type GetUpdateAccessKeyVersionEnum string
 
 const (
-	GetUpdateAccessKeyVersionEnumTwoThousandAndTen0508 GetUpdateAccessKeyVersionEnum = "2010-05-08"
+	GETUpdateAccessKeyVersionEnumTwoThousandAndTen0508 GetUpdateAccessKeyVersionEnum = "2010-05-08"
 )
 
 type GetUpdateAccessKeyQueryParams struct {

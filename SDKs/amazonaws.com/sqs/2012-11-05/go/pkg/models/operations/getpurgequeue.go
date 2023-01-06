@@ -8,13 +8,13 @@ type GetPurgeQueuePathParams struct {
 type GetPurgeQueueActionEnum string
 
 const (
-	GetPurgeQueueActionEnumPurgeQueue GetPurgeQueueActionEnum = "PurgeQueue"
+	GETPurgeQueueActionEnumPurgeQueue GetPurgeQueueActionEnum = "PurgeQueue"
 )
 
 type GetPurgeQueueVersionEnum string
 
 const (
-	GetPurgeQueueVersionEnumTwoThousandAndTwelve1105 GetPurgeQueueVersionEnum = "2012-11-05"
+	GETPurgeQueueVersionEnumTwoThousandAndTwelve1105 GetPurgeQueueVersionEnum = "2012-11-05"
 )
 
 type GetPurgeQueueQueryParams struct {

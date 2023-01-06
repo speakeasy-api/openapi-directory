@@ -3,13 +3,13 @@ package operations
 type PostAddRoleToDbInstanceActionEnum string
 
 const (
-	PostAddRoleToDbInstanceActionEnumAddRoleToDbInstance PostAddRoleToDbInstanceActionEnum = "AddRoleToDBInstance"
+	POSTAddRoleToDBInstanceActionEnumAddRoleToDbInstance PostAddRoleToDbInstanceActionEnum = "AddRoleToDBInstance"
 )
 
 type PostAddRoleToDbInstanceVersionEnum string
 
 const (
-	PostAddRoleToDbInstanceVersionEnumTwoThousandAndFourteen1031 PostAddRoleToDbInstanceVersionEnum = "2014-10-31"
+	POSTAddRoleToDBInstanceVersionEnumTwoThousandAndFourteen1031 PostAddRoleToDbInstanceVersionEnum = "2014-10-31"
 )
 
 type PostAddRoleToDbInstanceQueryParams struct {

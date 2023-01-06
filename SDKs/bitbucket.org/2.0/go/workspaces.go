@@ -1,0 +1,1184 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type Workspaces struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Workspaces {
+	return &Workspaces{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// DeleteWorkspacesWorkspaceHooksUID - Deletes the specified webhook subscription from the given workspace.
+func (s *Workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceHooksUIDRequest) (*operations.DeleteWorkspacesWorkspaceHooksUIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteWorkspacesWorkspaceHooksUIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetUserPermissionsWorkspaces - Returns an object for each workspace the caller is a member of, and
+// their effective role - the highest level of privilege the caller has.
+// If a user is a member of multiple groups with distinct roles, only the
+// highest level is returned.
+//
+// Permissions can be:
+//
+// * `owner`
+// * `collaborator`
+// * `member`
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/user/permissions/workspaces
+//
+//	{
+//	  "pagelen": 10,
+//	  "page": 1,
+//	  "size": 1,
+//	  "values": [
+//	    {
+//	      "type": "workspace_membership",
+//	      "permission": "owner",
+//	      "last_accessed": "2019-03-07T12:35:02.900024+00:00",
+//	      "added_on": "2018-10-11T17:42:02.961424+00:00",
+//	      "user": {
+//	        "type": "user",
+//	        "uuid": "{470c176d-3574-44ea-bb41-89e8638bcca4}",
+//	        "nickname": "evzijst",
+//	        "display_name": "Erik van Zijst",
+//	      },
+//	      "workspace": {
+//	        "type": "workspace",
+//	        "uuid": "{a15fb181-db1f-48f7-b41f-e1eff06929d6}",
+//	        "slug": "bbworkspace1",
+//	        "name": "Atlassian Bitbucket",
+//	      }
+//	    }
+//	  ]
+//	}
+//
+// ```
+//
+// Results may be further [filtered or sorted](../../../meta/filtering) by
+// workspace or permission by adding the following query string parameters:
+//
+// * `q=workspace.slug="bbworkspace1"` or `q=permission="owner"`
+// * `sort=workspace.slug`
+//
+// Note that the query parameter values need to be URL escaped so that `=`
+// would become `%3D`.
+func (s *Workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request operations.GetUserPermissionsWorkspacesRequest) (*operations.GetUserPermissionsWorkspacesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/user/permissions/workspaces"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUserPermissionsWorkspacesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedWorkspaceMemberships
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedWorkspaceMemberships = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspaces - Returns a list of workspaces accessible by the authenticated user.
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/workspaces
+//
+//	{
+//	  "pagelen": 10,
+//	  "page": 1,
+//	  "size": 1,
+//	  "values": [
+//	    {
+//	        "uuid": "{a15fb181-db1f-48f7-b41f-e1eff06929d6}",
+//	        "links": {
+//	            "owners": {
+//	                "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1/members?q=permission%3D%22owner%22"
+//	            },
+//	            "self": {
+//	                "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1"
+//	            },
+//	            "repositories": {
+//	                "href": "https://api.bitbucket.org/2.0/repositories/bbworkspace1"
+//	            },
+//	            "snippets": {
+//	                "href": "https://api.bitbucket.org/2.0/snippets/bbworkspace1"
+//	            },
+//	            "html": {
+//	                "href": "https://bitbucket.org/bbworkspace1/"
+//	            },
+//	            "avatar": {
+//	                "href": "https://bitbucket.org/workspaces/bbworkspace1/avatar/?ts=1543465801"
+//	            },
+//	            "members": {
+//	                "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1/members"
+//	            },
+//	            "projects": {
+//	                "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1/projects"
+//	            }
+//	        },
+//	        "created_on": "2018-11-14T19:15:05.058566+00:00",
+//	        "type": "workspace",
+//	        "slug": "bbworkspace1",
+//	        "is_private": true,
+//	        "name": "Atlassian Bitbucket"
+//	    }
+//	  ]
+//	}
+//
+// ```
+//
+// Results may be further [filtered or sorted](../meta/filtering) by
+// workspace or permission by adding the following query string parameters:
+//
+// * `q=slug="bbworkspace1"` or `q=is_private=true`
+// * `sort=created_on`
+//
+// Note that the query parameter values need to be URL escaped so that `=`
+// would become `%3D`.
+func (s *Workspaces) GetWorkspaces(ctx context.Context, request operations.GetWorkspacesRequest) (*operations.GetWorkspacesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/workspaces"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedWorkspaces
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedWorkspaces = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspace - Returns the requested workspace.
+func (s *Workspaces) GetWorkspacesWorkspace(ctx context.Context, request operations.GetWorkspacesWorkspaceRequest) (*operations.GetWorkspacesWorkspaceResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Workspace = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceHooks - Returns a paginated list of webhooks installed on this workspace.
+func (s *Workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksRequest) (*operations.GetWorkspacesWorkspaceHooksResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceHooksResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedWebhookSubscriptions
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedWebhookSubscriptions = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceHooksUID - Returns the webhook with the specified id installed on the given
+// workspace.
+func (s *Workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksUIDRequest) (*operations.GetWorkspacesWorkspaceHooksUIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceHooksUIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebhookSubscription = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceMembers - Returns all members of the requested workspace.
+func (s *Workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersRequest) (*operations.GetWorkspacesWorkspaceMembersResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceMembersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedWorkspaceMemberships
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedWorkspaceMemberships = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceMembersMember - Returns the workspace membership, which includes
+// a `User` object for the member and a `Workspace` object
+// for the requested workspace.
+func (s *Workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersMemberRequest) (*operations.GetWorkspacesWorkspaceMembersMemberResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members/{member}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceMembersMemberResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WorkspaceMembership = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspacePermissions - Returns the list of members in a workspace
+// and their permission levels.
+// Permission can be:
+// * `owner`
+// * `collaborator`
+// * `member`
+//
+// Example:
+//
+// ```
+// $ curl -X https://api.bitbucket.org/2.0/workspaces/bbworkspace1/permissions
+//
+//	{
+//	    "pagelen": 10,
+//	    "values": [
+//	        {
+//	            "permission": "owner",
+//	            "type": "workspace_membership",
+//	            "user": {
+//	                "type": "user",
+//	                "uuid": "{470c176d-3574-44ea-bb41-89e8638bcca4}",
+//	                "display_name": "Erik van Zijst",
+//	            },
+//	            "workspace": {
+//	                "type": "workspace",
+//	                "uuid": "{a15fb181-db1f-48f7-b41f-e1eff06929d6}",
+//	                "slug": "bbworkspace1",
+//	                "name": "Atlassian Bitbucket",
+//	            }
+//	        },
+//	        {
+//	            "permission": "member",
+//	            "type": "workspace_membership",
+//	            "user": {
+//	                "type": "user",
+//	                "nickname": "seanaty",
+//	                "display_name": "Sean Conaty",
+//	                "uuid": "{504c3b62-8120-4f0c-a7bc-87800b9d6f70}"
+//	            },
+//	            "workspace": {
+//	                "type": "workspace",
+//	                "uuid": "{a15fb181-db1f-48f7-b41f-e1eff06929d6}",
+//	                "slug": "bbworkspace1",
+//	                "name": "Atlassian Bitbucket",
+//	            }
+//	        }
+//	    ],
+//	    "page": 1,
+//	    "size": 2
+//	}
+//
+// ```
+//
+// Results may be further [filtered](../../../meta/filtering) by
+// permission by adding the following query string parameters:
+//
+// * `q=permission="owner"`
+func (s *Workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRequest) (*operations.GetWorkspacesWorkspacePermissionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspacePermissionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedWorkspaceMemberships
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedWorkspaceMemberships = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspacePermissionsRepositories - Returns an object for each repository permission for all of a
+// workspace's repositories.
+//
+// Permissions returned are effective permissions: the highest level of
+// permission the user has. This does not distinguish between direct and
+// indirect (group) privileges.
+//
+// Only users with admin permission for the team may access this resource.
+//
+// Permissions can be:
+//
+// * `admin`
+// * `write`
+// * `read`
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/workspaces/atlassian_tutorial/permissions/repositories
+//
+//	{
+//	  "pagelen": 10,
+//	  "values": [
+//	    {
+//	      "type": "repository_permission",
+//	      "user": {
+//	        "type": "user",
+//	        "display_name": "Erik van Zijst",
+//	        "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}"
+//	      },
+//	      "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	      },
+//	      "permission": "admin"
+//	    },
+//	    {
+//	      "type": "repository_permission",
+//	      "user": {
+//	        "type": "user",
+//	        "display_name": "Sean Conaty",
+//	        "uuid": "{504c3b62-8120-4f0c-a7bc-87800b9d6f70}"
+//	      },
+//	      "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	      },
+//	      "permission": "write"
+//	    },
+//	    {
+//	      "type": "repository_permission",
+//	      "user": {
+//	        "type": "user",
+//	        "display_name": "Jeff Zeng",
+//	        "uuid": "{47f92a9a-c3a3-4d0b-bc4e-782a969c5c72}"
+//	      },
+//	      "repository": {
+//	        "type": "repository",
+//	        "name": "whee",
+//	        "full_name": "atlassian_tutorial/whee",
+//	        "uuid": "{30ba25e9-51ff-4555-8dd0-fc7ee2fa0895}"
+//	      },
+//	      "permission": "admin"
+//	    }
+//	  ],
+//	  "page": 1,
+//	  "size": 3
+//	}
+//
+// ```
+//
+// Results may be further [filtered or sorted](../../../../meta/filtering)
+// by repository, user, or permission by adding the following query string
+// parameters:
+//
+// * `q=repository.name="geordi"` or `q=permission>"read"`
+// * `sort=user.display_name`
+//
+// Note that the query parameter values need to be URL escaped so that `=`
+// would become `%3D`.
+func (s *Workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedRepositoryPermissions
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedRepositoryPermissions = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug - Returns an object for the repository permission of each user in the
+// requested repository.
+//
+// Permissions returned are effective permissions: the highest level of
+// permission the user has. This does not distinguish between direct and
+// indirect (group) privileges.
+//
+// Only users with admin permission for the repository may access this resource.
+//
+// Permissions can be:
+//
+// * `admin`
+// * `write`
+// * `read`
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/workspaces/atlassian_tutorial/permissions/repositories/geordi
+//
+//	{
+//	  "pagelen": 10,
+//	  "values": [
+//	    {
+//	      "type": "repository_permission",
+//	      "user": {
+//	        "type": "user",
+//	        "display_name": "Erik van Zijst",
+//	        "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}"
+//	      },
+//	      "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	      },
+//	      "permission": "admin"
+//	    },
+//	    {
+//	      "type": "repository_permission",
+//	      "user": {
+//	        "type": "user",
+//	        "display_name": "Sean Conaty",
+//	        "uuid": "{504c3b62-8120-4f0c-a7bc-87800b9d6f70}"
+//	      },
+//	      "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	      },
+//	      "permission": "write"
+//	    }
+//	  ],
+//	  "page": 1,
+//	  "size": 2
+//	}
+//
+// ```
+//
+// Results may be further [filtered or sorted](../../../../meta/filtering)
+// by user, or permission by adding the following query string parameters:
+//
+// * `q=permission>"read"`
+// * `sort=user.display_name`
+//
+// Note that the query parameter values need to be URL escaped so that `=`
+// would become `%3D`.
+func (s *Workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedRepositoryPermissions
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedRepositoryPermissions = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceProjects - Returns the list of projects in this workspace.
+func (s *Workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsRequest) (*operations.GetWorkspacesWorkspaceProjectsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedProjects
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedProjects = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceProjectsProjectKey - Returns the requested project.
+func (s *Workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Project = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostWorkspacesWorkspaceHooks - Creates a new webhook on the specified workspace.
+//
+// Workspace webhooks are fired for events from all repositories contained
+// by that workspace.
+//
+// Note that only owners can install webhooks on workspaces.
+func (s *Workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request operations.PostWorkspacesWorkspaceHooksRequest) (*operations.PostWorkspacesWorkspaceHooksResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostWorkspacesWorkspaceHooksResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 201:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebhookSubscription = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutWorkspacesWorkspaceHooksUID - Updates the specified webhook subscription.
+//
+// The following properties can be mutated:
+//
+// * `description`
+// * `url`
+// * `active`
+// * `events`
+func (s *Workspaces) PutWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.PutWorkspacesWorkspaceHooksUIDRequest) (*operations.PutWorkspacesWorkspaceHooksUIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutWorkspacesWorkspaceHooksUIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebhookSubscription = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}

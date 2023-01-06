@@ -1,5 +1,5 @@
 package shared
 
 type DisassociateTransitGatewayRouteTableResult struct {
-	Association *TransitGatewayAssociation
+	Association map[string]interface{}
 }

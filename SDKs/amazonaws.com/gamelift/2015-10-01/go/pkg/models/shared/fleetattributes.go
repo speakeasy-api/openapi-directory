@@ -18,7 +18,7 @@ type FleetAttributes struct {
 	InstanceRoleArn                *string                      `json:"InstanceRoleArn,omitempty"`
 	InstanceType                   *Ec2InstanceTypeEnum         `json:"InstanceType,omitempty"`
 	LogPaths                       []string                     `json:"LogPaths,omitempty"`
-	MetricGroups                   []string                     `json:"MetricGroups,omitempty"`
+	MetricGroups                   map[string]interface{}       `json:"MetricGroups,omitempty"`
 	Name                           *string                      `json:"Name,omitempty"`
 	NewGameSessionProtectionPolicy *ProtectionPolicyEnum        `json:"NewGameSessionProtectionPolicy,omitempty"`
 	OperatingSystem                *OperatingSystemEnum         `json:"OperatingSystem,omitempty"`

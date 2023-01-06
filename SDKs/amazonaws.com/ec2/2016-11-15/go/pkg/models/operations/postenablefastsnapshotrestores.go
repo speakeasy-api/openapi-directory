@@ -3,13 +3,13 @@ package operations
 type PostEnableFastSnapshotRestoresActionEnum string
 
 const (
-	PostEnableFastSnapshotRestoresActionEnumEnableFastSnapshotRestores PostEnableFastSnapshotRestoresActionEnum = "EnableFastSnapshotRestores"
+	POSTEnableFastSnapshotRestoresActionEnumEnableFastSnapshotRestores PostEnableFastSnapshotRestoresActionEnum = "EnableFastSnapshotRestores"
 )
 
 type PostEnableFastSnapshotRestoresVersionEnum string
 
 const (
-	PostEnableFastSnapshotRestoresVersionEnumTwoThousandAndSixteen1115 PostEnableFastSnapshotRestoresVersionEnum = "2016-11-15"
+	POSTEnableFastSnapshotRestoresVersionEnumTwoThousandAndSixteen1115 PostEnableFastSnapshotRestoresVersionEnum = "2016-11-15"
 )
 
 type PostEnableFastSnapshotRestoresQueryParams struct {

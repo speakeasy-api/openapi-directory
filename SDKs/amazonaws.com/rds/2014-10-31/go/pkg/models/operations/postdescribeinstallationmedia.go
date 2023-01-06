@@ -3,13 +3,13 @@ package operations
 type PostDescribeInstallationMediaActionEnum string
 
 const (
-	PostDescribeInstallationMediaActionEnumDescribeInstallationMedia PostDescribeInstallationMediaActionEnum = "DescribeInstallationMedia"
+	POSTDescribeInstallationMediaActionEnumDescribeInstallationMedia PostDescribeInstallationMediaActionEnum = "DescribeInstallationMedia"
 )
 
 type PostDescribeInstallationMediaVersionEnum string
 
 const (
-	PostDescribeInstallationMediaVersionEnumTwoThousandAndFourteen1031 PostDescribeInstallationMediaVersionEnum = "2014-10-31"
+	POSTDescribeInstallationMediaVersionEnumTwoThousandAndFourteen1031 PostDescribeInstallationMediaVersionEnum = "2014-10-31"
 )
 
 type PostDescribeInstallationMediaQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type GetDeleteServiceLinkedRoleActionEnum string
 
 const (
-	GetDeleteServiceLinkedRoleActionEnumDeleteServiceLinkedRole GetDeleteServiceLinkedRoleActionEnum = "DeleteServiceLinkedRole"
+	GETDeleteServiceLinkedRoleActionEnumDeleteServiceLinkedRole GetDeleteServiceLinkedRoleActionEnum = "DeleteServiceLinkedRole"
 )
 
 type GetDeleteServiceLinkedRoleVersionEnum string
 
 const (
-	GetDeleteServiceLinkedRoleVersionEnumTwoThousandAndTen0508 GetDeleteServiceLinkedRoleVersionEnum = "2010-05-08"
+	GETDeleteServiceLinkedRoleVersionEnumTwoThousandAndTen0508 GetDeleteServiceLinkedRoleVersionEnum = "2010-05-08"
 )
 
 type GetDeleteServiceLinkedRoleQueryParams struct {

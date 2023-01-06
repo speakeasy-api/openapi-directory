@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.CheckDomainRequest{
         PathParams: operations.CheckDomainPathParams{
-            Domain: "at",
+            Domain: "itaque",
         },
     }
     
-    res, err := s.Sdk.CheckDomain(ctx, req)
+    res, err := s.CheckDomain(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

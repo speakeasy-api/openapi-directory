@@ -19,6 +19,6 @@ type GetV1ValidationSingleRequest struct {
 
 type GetV1ValidationSingleResponse struct {
 	ContentType                                   string
-	GetV1ValidationSingle200ApplicationJSONString *string
 	StatusCode                                    int64
+	GetV1ValidationSingle200ApplicationJSONString *string
 }

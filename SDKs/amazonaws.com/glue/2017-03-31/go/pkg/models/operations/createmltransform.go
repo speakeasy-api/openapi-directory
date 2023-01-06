@@ -7,7 +7,7 @@ import (
 type CreateMlTransformXAmzTargetEnum string
 
 const (
-	CreateMlTransformXAmzTargetEnumAwsGlueCreateMlTransform CreateMlTransformXAmzTargetEnum = "AWSGlue.CreateMLTransform"
+	CreateMLTransformXAmzTargetEnumAwsGlueCreateMlTransform CreateMlTransformXAmzTargetEnum = "AWSGlue.CreateMLTransform"
 )
 
 type CreateMlTransformHeaders struct {
@@ -30,7 +30,7 @@ type CreateMlTransformResponse struct {
 	AccessDeniedException                *interface{}
 	AlreadyExistsException               *interface{}
 	ContentType                          string
-	CreateMlTransformResponse            *shared.CreateMlTransformResponse
+	CreateMLTransformResponse            *shared.CreateMlTransformResponse
 	IdempotentParameterMismatchException *interface{}
 	InternalServiceException             *interface{}
 	InvalidInputException                *interface{}

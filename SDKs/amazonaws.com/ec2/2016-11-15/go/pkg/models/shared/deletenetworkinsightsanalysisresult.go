@@ -1,5 +1,5 @@
 package shared
 
 type DeleteNetworkInsightsAnalysisResult struct {
-	NetworkInsightsAnalysisID *string
+	NetworkInsightsAnalysisID map[string]interface{}
 }

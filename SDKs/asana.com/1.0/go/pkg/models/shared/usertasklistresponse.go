@@ -1,25 +1,21 @@
 package shared
 
 // UserTaskListResponseOwner
-// The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.
+// A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
 type UserTaskListResponseOwner struct {
-	Gid          *string `json:"gid,omitempty"`
-	Name         *string `json:"name,omitempty"`
-	ResourceType *string `json:"resource_type,omitempty"`
+	Name *string `json:"name,omitempty"`
 }
 
 // UserTaskListResponseWorkspace
-// The workspace in which the user task list is located.
+// A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
 type UserTaskListResponseWorkspace struct {
-	Gid          *string `json:"gid,omitempty"`
-	Name         *string `json:"name,omitempty"`
-	ResourceType *string `json:"resource_type,omitempty"`
+	Name *string `json:"name,omitempty"`
 }
 
+// UserTaskListResponse
+// A user task list represents the tasks assigned to a particular user. It provides API access to a user’s “My Tasks” view in Asana.
 type UserTaskListResponse struct {
-	Gid          *string                        `json:"gid,omitempty"`
-	Name         *string                        `json:"name,omitempty"`
-	Owner        *UserTaskListResponseOwner     `json:"owner,omitempty"`
-	ResourceType *string                        `json:"resource_type,omitempty"`
-	Workspace    *UserTaskListResponseWorkspace `json:"workspace,omitempty"`
+	Name      *string                        `json:"name,omitempty"`
+	Owner     *UserTaskListResponseOwner     `json:"owner,omitempty"`
+	Workspace *UserTaskListResponseWorkspace `json:"workspace,omitempty"`
 }

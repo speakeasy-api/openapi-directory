@@ -3,13 +3,13 @@ package operations
 type PostDeleteFleetsActionEnum string
 
 const (
-	PostDeleteFleetsActionEnumDeleteFleets PostDeleteFleetsActionEnum = "DeleteFleets"
+	POSTDeleteFleetsActionEnumDeleteFleets PostDeleteFleetsActionEnum = "DeleteFleets"
 )
 
 type PostDeleteFleetsVersionEnum string
 
 const (
-	PostDeleteFleetsVersionEnumTwoThousandAndSixteen1115 PostDeleteFleetsVersionEnum = "2016-11-15"
+	POSTDeleteFleetsVersionEnumTwoThousandAndSixteen1115 PostDeleteFleetsVersionEnum = "2016-11-15"
 )
 
 type PostDeleteFleetsQueryParams struct {

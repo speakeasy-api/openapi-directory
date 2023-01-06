@@ -62,7 +62,7 @@ func (s *TestMethods) GetBeGreeting(ctx context.Context, request operations.GetB
 				return nil, err
 			}
 
-			res.GetBeGreeting200ApplicationJSONAny = out
+			res.GetBEGreeting200ApplicationJSONAny = out
 		}
 	case httpRes.StatusCode == 403:
 		switch {
@@ -72,7 +72,7 @@ func (s *TestMethods) GetBeGreeting(ctx context.Context, request operations.GetB
 				return nil, err
 			}
 
-			res.GetBeGreeting403ApplicationJSONAny = out
+			res.GetBEGreeting403ApplicationJSONAny = out
 		}
 	case httpRes.StatusCode == 429:
 		switch {
@@ -82,7 +82,7 @@ func (s *TestMethods) GetBeGreeting(ctx context.Context, request operations.GetB
 				return nil, err
 			}
 
-			res.GetBeGreeting429ApplicationJSONAny = out
+			res.GetBEGreeting429ApplicationJSONAny = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -92,7 +92,7 @@ func (s *TestMethods) GetBeGreeting(ctx context.Context, request operations.GetB
 				return nil, err
 			}
 
-			res.GetBeGreeting500ApplicationJSONAny = out
+			res.GetBEGreeting500ApplicationJSONAny = out
 		}
 	}
 

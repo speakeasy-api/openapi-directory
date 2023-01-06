@@ -11,7 +11,7 @@ type UntagStreamHeaders struct {
 }
 
 type UntagStreamRequestBody struct {
-	StreamArn  *string  `json:"StreamARN,omitempty"`
+	StreamARN  *string  `json:"StreamARN,omitempty"`
 	StreamName *string  `json:"StreamName,omitempty"`
 	TagKeyList []string `json:"TagKeyList"`
 }

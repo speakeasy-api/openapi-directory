@@ -9,14 +9,14 @@ type DeleteKubernetesNodePoolPathParams struct {
 	NodePoolID string `pathParam:"style=simple,explode=false,name=node_pool_id"`
 }
 
-type DeleteKubernetesNodePoolRequest struct {
-	PathParams DeleteKubernetesNodePoolPathParams
-}
-
 type DeleteKubernetesNodePool401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteKubernetesNodePoolRequest struct {
+	PathParams DeleteKubernetesNodePoolPathParams
 }
 
 type DeleteKubernetesNodePoolResponse struct {

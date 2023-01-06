@@ -4,6 +4,6 @@ package shared
 // Describes the Amazon CloudWatch logging option.
 type CloudWatchLoggingOptionDescription struct {
 	CloudWatchLoggingOptionID *string `json:"CloudWatchLoggingOptionId,omitempty"`
-	LogStreamArn              string  `json:"LogStreamARN"`
-	RoleArn                   *string `json:"RoleARN,omitempty"`
+	LogStreamARN              string  `json:"LogStreamARN"`
+	RoleARN                   *string `json:"RoleARN,omitempty"`
 }

@@ -12,19 +12,19 @@ type CreateDeploymentRequestBody struct {
 	ForceBuild *bool `json:"force_build,omitempty"`
 }
 
-type CreateDeploymentRequest struct {
-	PathParams CreateDeploymentPathParams
-	Request    CreateDeploymentRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateDeployment200ApplicationJSON struct {
-	Deployment *shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItems `json:"deployment,omitempty"`
+	Deployment *shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItems1 `json:"deployment,omitempty"`
 }
 
 type CreateDeployment401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateDeploymentRequest struct {
+	PathParams CreateDeploymentPathParams
+	Request    CreateDeploymentRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateDeploymentResponse struct {

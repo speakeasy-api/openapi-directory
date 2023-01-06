@@ -10,19 +10,6 @@ const (
 	JobStateEnumFailed                     JobStateEnum = "FAILED"
 )
 
-// JobInput
-// Transcoding job resource.
-type JobInput struct {
-	Config                 *JobConfig        `json:"config,omitempty"`
-	Error                  *Status           `json:"error,omitempty"`
-	InputURI               *string           `json:"inputUri,omitempty"`
-	Labels                 map[string]string `json:"labels,omitempty"`
-	Name                   *string           `json:"name,omitempty"`
-	OutputURI              *string           `json:"outputUri,omitempty"`
-	TemplateID             *string           `json:"templateId,omitempty"`
-	TTLAfterCompletionDays *int32            `json:"ttlAfterCompletionDays,omitempty"`
-}
-
 // Job
 // Transcoding job resource.
 type Job struct {
@@ -36,6 +23,19 @@ type Job struct {
 	OutputURI              *string           `json:"outputUri,omitempty"`
 	StartTime              *string           `json:"startTime,omitempty"`
 	State                  *JobStateEnum     `json:"state,omitempty"`
+	TemplateID             *string           `json:"templateId,omitempty"`
+	TTLAfterCompletionDays *int32            `json:"ttlAfterCompletionDays,omitempty"`
+}
+
+// JobInput
+// Transcoding job resource.
+type JobInput struct {
+	Config                 *JobConfig        `json:"config,omitempty"`
+	Error                  *Status           `json:"error,omitempty"`
+	InputURI               *string           `json:"inputUri,omitempty"`
+	Labels                 map[string]string `json:"labels,omitempty"`
+	Name                   *string           `json:"name,omitempty"`
+	OutputURI              *string           `json:"outputUri,omitempty"`
 	TemplateID             *string           `json:"templateId,omitempty"`
 	TTLAfterCompletionDays *int32            `json:"ttlAfterCompletionDays,omitempty"`
 }

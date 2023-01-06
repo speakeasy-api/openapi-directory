@@ -11,7 +11,7 @@ type CreateClusterRequest struct {
 	ParameterGroupName            *string                            `json:"ParameterGroupName,omitempty"`
 	PreferredMaintenanceWindow    *string                            `json:"PreferredMaintenanceWindow,omitempty"`
 	ReplicationFactor             int64                              `json:"ReplicationFactor"`
-	SseSpecification              *SseSpecification                  `json:"SSESpecification,omitempty"`
+	SSESpecification              *SseSpecification                  `json:"SSESpecification,omitempty"`
 	SecurityGroupIds              []string                           `json:"SecurityGroupIds,omitempty"`
 	SubnetGroupName               *string                            `json:"SubnetGroupName,omitempty"`
 	Tags                          []Tag                              `json:"Tags,omitempty"`

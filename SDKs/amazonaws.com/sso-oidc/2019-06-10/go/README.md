@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,29 +34,30 @@ func main() {
     
     req := operations.CreateTokenRequest{
         Headers: operations.CreateTokenHeaders{
-            XAmzAlgorithm: "voluptates",
-            XAmzContentSha256: "non",
-            XAmzCredential: "nam",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "enim",
-            XAmzSignature: "assumenda",
-            XAmzSignedHeaders: "quo",
+            XAmzAlgorithm: "possimus",
+            XAmzContentSha256: "hic",
+            XAmzCredential: "quis",
+            XAmzDate: "sunt",
+            XAmzSecurityToken: "quo",
+            XAmzSignature: "eveniet",
+            XAmzSignedHeaders: "veniam",
         },
         Request: operations.CreateTokenRequestBody{
-            ClientID: "sint",
-            ClientSecret: "quis",
-            Code: "esse",
-            DeviceCode: "voluptate",
-            GrantType: "quibusdam",
-            RedirectURI: "vero",
-            RefreshToken: "ea",
+            ClientID: "reiciendis",
+            ClientSecret: "non",
+            Code: "dolor",
+            DeviceCode: "maiores",
+            GrantType: "itaque",
+            RedirectURI: "pariatur",
+            RefreshToken: "ad",
             Scope: []string{
-                "maxime",
+                "earum",
+                "ea",
             },
         },
     }
     
-    res, err := s.Sdk.CreateToken(ctx, req)
+    res, err := s.CreateToken(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

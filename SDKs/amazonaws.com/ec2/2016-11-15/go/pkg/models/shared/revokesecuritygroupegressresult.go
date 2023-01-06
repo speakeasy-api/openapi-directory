@@ -1,6 +1,6 @@
 package shared
 
 type RevokeSecurityGroupEgressResult struct {
-	Return               *bool
-	UnknownIPPermissions []IPPermission
+	Return               map[string]interface{}
+	UnknownIPPermissions map[string]interface{}
 }

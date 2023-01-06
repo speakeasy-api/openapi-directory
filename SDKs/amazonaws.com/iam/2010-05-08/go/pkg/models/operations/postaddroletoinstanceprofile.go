@@ -3,13 +3,13 @@ package operations
 type PostAddRoleToInstanceProfileActionEnum string
 
 const (
-	PostAddRoleToInstanceProfileActionEnumAddRoleToInstanceProfile PostAddRoleToInstanceProfileActionEnum = "AddRoleToInstanceProfile"
+	POSTAddRoleToInstanceProfileActionEnumAddRoleToInstanceProfile PostAddRoleToInstanceProfileActionEnum = "AddRoleToInstanceProfile"
 )
 
 type PostAddRoleToInstanceProfileVersionEnum string
 
 const (
-	PostAddRoleToInstanceProfileVersionEnumTwoThousandAndTen0508 PostAddRoleToInstanceProfileVersionEnum = "2010-05-08"
+	POSTAddRoleToInstanceProfileVersionEnumTwoThousandAndTen0508 PostAddRoleToInstanceProfileVersionEnum = "2010-05-08"
 )
 
 type PostAddRoleToInstanceProfileQueryParams struct {

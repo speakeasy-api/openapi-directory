@@ -1,0 +1,9 @@
+package shared
+
+type DocumentSettings struct {
+	MediatedService             *bool              `json:"mediated_service,omitempty"`
+	OnlinePayment               *OnlinePaymentEnum `json:"online_payment,omitempty"`
+	PlaceID                     *int64             `json:"place_id,omitempty"`
+	Round                       *RoundEnum         `json:"round,omitempty"`
+	WithoutFinancialFulfillment *bool              `json:"without_financial_fulfillment,omitempty"`
+}

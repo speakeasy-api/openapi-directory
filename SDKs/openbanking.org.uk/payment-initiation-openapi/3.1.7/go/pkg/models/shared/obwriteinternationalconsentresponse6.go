@@ -7,8 +7,8 @@ import (
 type ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteInternationalConsentResponse6DataAuthorisation
@@ -29,9 +29,9 @@ type ObWriteInternationalConsentResponse6DataCharges struct {
 type ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnumActual     ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnumActual     ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalConsentResponse6DataExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalConsentResponse6DataExchangeRateInformation
@@ -81,9 +81,9 @@ type ObWriteInternationalConsentResponse6DataInitiationDebtorAccount struct {
 type ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalConsentResponse6DataInitiationExchangeRateInformation
@@ -106,8 +106,8 @@ type ObWriteInternationalConsentResponse6DataInitiationInstructedAmount struct {
 type ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnum string
 
 const (
-	ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnumNormal ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnum = "Normal"
-	ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnum = "Urgent"
+	OBWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnumNormal ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnum = "Normal"
+	OBWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalConsentResponse6DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
 // ObWriteInternationalConsentResponse6DataInitiationRemittanceInformation
@@ -142,17 +142,17 @@ type ObWriteInternationalConsentResponse6DataInitiation struct {
 type ObWriteInternationalConsentResponse6DataReadRefundAccountEnum string
 
 const (
-	ObWriteInternationalConsentResponse6DataReadRefundAccountEnumNo  ObWriteInternationalConsentResponse6DataReadRefundAccountEnum = "No"
-	ObWriteInternationalConsentResponse6DataReadRefundAccountEnumYes ObWriteInternationalConsentResponse6DataReadRefundAccountEnum = "Yes"
+	OBWriteInternationalConsentResponse6DataReadRefundAccountEnumNo  ObWriteInternationalConsentResponse6DataReadRefundAccountEnum = "No"
+	OBWriteInternationalConsentResponse6DataReadRefundAccountEnumYes ObWriteInternationalConsentResponse6DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteInternationalConsentResponse6DataStatusEnum string
 
 const (
-	ObWriteInternationalConsentResponse6DataStatusEnumAuthorised            ObWriteInternationalConsentResponse6DataStatusEnum = "Authorised"
-	ObWriteInternationalConsentResponse6DataStatusEnumAwaitingAuthorisation ObWriteInternationalConsentResponse6DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteInternationalConsentResponse6DataStatusEnumConsumed              ObWriteInternationalConsentResponse6DataStatusEnum = "Consumed"
-	ObWriteInternationalConsentResponse6DataStatusEnumRejected              ObWriteInternationalConsentResponse6DataStatusEnum = "Rejected"
+	OBWriteInternationalConsentResponse6DataStatusEnumAuthorised            ObWriteInternationalConsentResponse6DataStatusEnum = "Authorised"
+	OBWriteInternationalConsentResponse6DataStatusEnumAwaitingAuthorisation ObWriteInternationalConsentResponse6DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteInternationalConsentResponse6DataStatusEnumConsumed              ObWriteInternationalConsentResponse6DataStatusEnum = "Consumed"
+	OBWriteInternationalConsentResponse6DataStatusEnumRejected              ObWriteInternationalConsentResponse6DataStatusEnum = "Rejected"
 )
 
 type ObWriteInternationalConsentResponse6Data struct {
@@ -167,7 +167,7 @@ type ObWriteInternationalConsentResponse6Data struct {
 	ExpectedSettlementDateTime *time.Time                                                       `json:"ExpectedSettlementDateTime,omitempty"`
 	Initiation                 ObWriteInternationalConsentResponse6DataInitiation               `json:"Initiation"`
 	ReadRefundAccount          *ObWriteInternationalConsentResponse6DataReadRefundAccountEnum   `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData             *ObscaSupportData1                                               `json:"SCASupportData,omitempty"`
+	SCASupportData             *ObscaSupportData1                                               `json:"SCASupportData,omitempty"`
 	Status                     ObWriteInternationalConsentResponse6DataStatusEnum               `json:"Status"`
 	StatusUpdateDateTime       time.Time                                                        `json:"StatusUpdateDateTime"`
 }

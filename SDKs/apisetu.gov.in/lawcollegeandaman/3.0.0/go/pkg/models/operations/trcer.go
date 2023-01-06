@@ -5,7 +5,7 @@ import (
 )
 
 type TrcerRequestBodyCertificateParameters struct {
-	AdmnNo   string `json:"ADMN_NO"`
+	ADMNNO   string `json:"ADMN_NO"`
 	FullName string `json:"FullName"`
 }
 
@@ -82,7 +82,7 @@ type Trcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Trcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Trcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Trcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Trcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Trcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Trcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Trcer404ApplicationJSON struct {

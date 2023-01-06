@@ -7,7 +7,7 @@ import (
 type CreateDataSourceFromRdsxAmzTargetEnum string
 
 const (
-	CreateDataSourceFromRdsxAmzTargetEnumAmazonMl20141212CreateDataSourceFromRds CreateDataSourceFromRdsxAmzTargetEnum = "AmazonML_20141212.CreateDataSourceFromRDS"
+	CreateDataSourceFromRDSXAmzTargetEnumAmazonMl20141212CreateDataSourceFromRds CreateDataSourceFromRdsxAmzTargetEnum = "AmazonML_20141212.CreateDataSourceFromRDS"
 )
 
 type CreateDataSourceFromRdsHeaders struct {
@@ -28,7 +28,7 @@ type CreateDataSourceFromRdsRequest struct {
 
 type CreateDataSourceFromRdsResponse struct {
 	ContentType                          string
-	CreateDataSourceFromRdsOutput        *shared.CreateDataSourceFromRdsOutput
+	CreateDataSourceFromRDSOutput        *shared.CreateDataSourceFromRdsOutput
 	IdempotentParameterMismatchException *interface{}
 	InternalServerException              *interface{}
 	InvalidInputException                *interface{}

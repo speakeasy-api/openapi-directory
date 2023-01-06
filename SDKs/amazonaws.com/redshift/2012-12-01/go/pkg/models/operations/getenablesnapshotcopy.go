@@ -3,13 +3,13 @@ package operations
 type GetEnableSnapshotCopyActionEnum string
 
 const (
-	GetEnableSnapshotCopyActionEnumEnableSnapshotCopy GetEnableSnapshotCopyActionEnum = "EnableSnapshotCopy"
+	GETEnableSnapshotCopyActionEnumEnableSnapshotCopy GetEnableSnapshotCopyActionEnum = "EnableSnapshotCopy"
 )
 
 type GetEnableSnapshotCopyVersionEnum string
 
 const (
-	GetEnableSnapshotCopyVersionEnumTwoThousandAndTwelve1201 GetEnableSnapshotCopyVersionEnum = "2012-12-01"
+	GETEnableSnapshotCopyVersionEnumTwoThousandAndTwelve1201 GetEnableSnapshotCopyVersionEnum = "2012-12-01"
 )
 
 type GetEnableSnapshotCopyQueryParams struct {

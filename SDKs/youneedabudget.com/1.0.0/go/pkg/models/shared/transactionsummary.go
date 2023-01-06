@@ -21,6 +21,7 @@ const (
 	TransactionSummaryFlagColorEnumGreen  TransactionSummaryFlagColorEnum = "green"
 	TransactionSummaryFlagColorEnumBlue   TransactionSummaryFlagColorEnum = "blue"
 	TransactionSummaryFlagColorEnumPurple TransactionSummaryFlagColorEnum = "purple"
+	TransactionSummaryFlagColorEnumNull   TransactionSummaryFlagColorEnum = "null"
 )
 
 type TransactionSummary struct {

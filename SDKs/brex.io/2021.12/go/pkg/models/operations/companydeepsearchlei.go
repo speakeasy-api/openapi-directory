@@ -23,8 +23,8 @@ type CompanyDeepsearchLeiRequest struct {
 }
 
 type CompanyDeepsearchLeiResponse struct {
-	CompanyDeepsearchLei200ApplicationJSONAny     *interface{}
-	CompanyDeepsearchLeiDefaultApplicationJSONAny *interface{}
+	CompanyDeepsearchLEI200ApplicationJSONAny     *interface{}
+	CompanyDeepsearchLEIDefaultApplicationJSONAny *interface{}
 	ContentType                                   string
 	StatusCode                                    int64
 }

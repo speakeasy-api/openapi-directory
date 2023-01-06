@@ -3,6 +3,6 @@ package shared
 type IamAuthModeEnum string
 
 const (
-	IamAuthModeEnumDisabled IamAuthModeEnum = "DISABLED"
-	IamAuthModeEnumRequired IamAuthModeEnum = "REQUIRED"
+	IAMAuthModeEnumDisabled IamAuthModeEnum = "DISABLED"
+	IAMAuthModeEnumRequired IamAuthModeEnum = "REQUIRED"
 )

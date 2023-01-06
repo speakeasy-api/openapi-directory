@@ -3,13 +3,13 @@ package operations
 type GetCreateQueueActionEnum string
 
 const (
-	GetCreateQueueActionEnumCreateQueue GetCreateQueueActionEnum = "CreateQueue"
+	GETCreateQueueActionEnumCreateQueue GetCreateQueueActionEnum = "CreateQueue"
 )
 
 type GetCreateQueueVersionEnum string
 
 const (
-	GetCreateQueueVersionEnumTwoThousandAndTwelve1105 GetCreateQueueVersionEnum = "2012-11-05"
+	GETCreateQueueVersionEnumTwoThousandAndTwelve1105 GetCreateQueueVersionEnum = "2012-11-05"
 )
 
 type GetCreateQueueQueryParams struct {

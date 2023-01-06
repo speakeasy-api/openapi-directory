@@ -1,11 +1,5 @@
 package shared
 
-// CertificateInput
-// A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
-type CertificateInput struct {
-	RawDer *string `json:"rawDer,omitempty"`
-}
-
 // Certificate
 // A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
 type Certificate struct {
@@ -18,4 +12,10 @@ type Certificate struct {
 	Sha256Fingerprint          *string  `json:"sha256Fingerprint,omitempty"`
 	Subject                    *string  `json:"subject,omitempty"`
 	SubjectAlternativeDNSNames []string `json:"subjectAlternativeDnsNames,omitempty"`
+}
+
+// CertificateInput
+// A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
+type CertificateInput struct {
+	RawDer *string `json:"rawDer,omitempty"`
 }

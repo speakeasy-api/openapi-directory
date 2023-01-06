@@ -3,13 +3,13 @@ package operations
 type GetDisableMetricsCollectionActionEnum string
 
 const (
-	GetDisableMetricsCollectionActionEnumDisableMetricsCollection GetDisableMetricsCollectionActionEnum = "DisableMetricsCollection"
+	GETDisableMetricsCollectionActionEnumDisableMetricsCollection GetDisableMetricsCollectionActionEnum = "DisableMetricsCollection"
 )
 
 type GetDisableMetricsCollectionVersionEnum string
 
 const (
-	GetDisableMetricsCollectionVersionEnumTwoThousandAndEleven0101 GetDisableMetricsCollectionVersionEnum = "2011-01-01"
+	GETDisableMetricsCollectionVersionEnumTwoThousandAndEleven0101 GetDisableMetricsCollectionVersionEnum = "2011-01-01"
 )
 
 type GetDisableMetricsCollectionQueryParams struct {

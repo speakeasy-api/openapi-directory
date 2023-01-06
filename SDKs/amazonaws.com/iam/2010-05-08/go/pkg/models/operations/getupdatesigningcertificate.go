@@ -3,20 +3,20 @@ package operations
 type GetUpdateSigningCertificateActionEnum string
 
 const (
-	GetUpdateSigningCertificateActionEnumUpdateSigningCertificate GetUpdateSigningCertificateActionEnum = "UpdateSigningCertificate"
+	GETUpdateSigningCertificateActionEnumUpdateSigningCertificate GetUpdateSigningCertificateActionEnum = "UpdateSigningCertificate"
 )
 
 type GetUpdateSigningCertificateStatusEnum string
 
 const (
-	GetUpdateSigningCertificateStatusEnumActive   GetUpdateSigningCertificateStatusEnum = "Active"
-	GetUpdateSigningCertificateStatusEnumInactive GetUpdateSigningCertificateStatusEnum = "Inactive"
+	GETUpdateSigningCertificateStatusEnumActive   GetUpdateSigningCertificateStatusEnum = "Active"
+	GETUpdateSigningCertificateStatusEnumInactive GetUpdateSigningCertificateStatusEnum = "Inactive"
 )
 
 type GetUpdateSigningCertificateVersionEnum string
 
 const (
-	GetUpdateSigningCertificateVersionEnumTwoThousandAndTen0508 GetUpdateSigningCertificateVersionEnum = "2010-05-08"
+	GETUpdateSigningCertificateVersionEnumTwoThousandAndTen0508 GetUpdateSigningCertificateVersionEnum = "2010-05-08"
 )
 
 type GetUpdateSigningCertificateQueryParams struct {

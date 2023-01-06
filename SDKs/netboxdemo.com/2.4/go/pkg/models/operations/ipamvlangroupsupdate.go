@@ -16,5 +16,5 @@ type IpamVlanGroupsUpdateRequest struct {
 type IpamVlanGroupsUpdateResponse struct {
 	ContentType string
 	StatusCode  int64
-	VlanGroup   *shared.VlanGroup
+	VLANGroup   *shared.VlanGroup
 }

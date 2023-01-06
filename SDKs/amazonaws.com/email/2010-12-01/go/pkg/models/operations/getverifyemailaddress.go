@@ -3,13 +3,13 @@ package operations
 type GetVerifyEmailAddressActionEnum string
 
 const (
-	GetVerifyEmailAddressActionEnumVerifyEmailAddress GetVerifyEmailAddressActionEnum = "VerifyEmailAddress"
+	GETVerifyEmailAddressActionEnumVerifyEmailAddress GetVerifyEmailAddressActionEnum = "VerifyEmailAddress"
 )
 
 type GetVerifyEmailAddressVersionEnum string
 
 const (
-	GetVerifyEmailAddressVersionEnumTwoThousandAndTen1201 GetVerifyEmailAddressVersionEnum = "2010-12-01"
+	GETVerifyEmailAddressVersionEnumTwoThousandAndTen1201 GetVerifyEmailAddressVersionEnum = "2010-12-01"
 )
 
 type GetVerifyEmailAddressQueryParams struct {

@@ -1,5 +1,5 @@
 package shared
 
 type DeleteVpcEndpointServiceConfigurationsResult struct {
-	Unsuccessful []UnsuccessfulItem
+	Unsuccessful map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type PostListAllowedNodeTypeModificationsActionEnum string
 
 const (
-	PostListAllowedNodeTypeModificationsActionEnumListAllowedNodeTypeModifications PostListAllowedNodeTypeModificationsActionEnum = "ListAllowedNodeTypeModifications"
+	POSTListAllowedNodeTypeModificationsActionEnumListAllowedNodeTypeModifications PostListAllowedNodeTypeModificationsActionEnum = "ListAllowedNodeTypeModifications"
 )
 
 type PostListAllowedNodeTypeModificationsVersionEnum string
 
 const (
-	PostListAllowedNodeTypeModificationsVersionEnumTwoThousandAndFifteen0202 PostListAllowedNodeTypeModificationsVersionEnum = "2015-02-02"
+	POSTListAllowedNodeTypeModificationsVersionEnumTwoThousandAndFifteen0202 PostListAllowedNodeTypeModificationsVersionEnum = "2015-02-02"
 )
 
 type PostListAllowedNodeTypeModificationsQueryParams struct {

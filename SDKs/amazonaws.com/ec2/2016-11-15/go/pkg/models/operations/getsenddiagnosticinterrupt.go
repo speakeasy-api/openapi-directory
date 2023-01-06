@@ -3,13 +3,13 @@ package operations
 type GetSendDiagnosticInterruptActionEnum string
 
 const (
-	GetSendDiagnosticInterruptActionEnumSendDiagnosticInterrupt GetSendDiagnosticInterruptActionEnum = "SendDiagnosticInterrupt"
+	GETSendDiagnosticInterruptActionEnumSendDiagnosticInterrupt GetSendDiagnosticInterruptActionEnum = "SendDiagnosticInterrupt"
 )
 
 type GetSendDiagnosticInterruptVersionEnum string
 
 const (
-	GetSendDiagnosticInterruptVersionEnumTwoThousandAndSixteen1115 GetSendDiagnosticInterruptVersionEnum = "2016-11-15"
+	GETSendDiagnosticInterruptVersionEnumTwoThousandAndSixteen1115 GetSendDiagnosticInterruptVersionEnum = "2016-11-15"
 )
 
 type GetSendDiagnosticInterruptQueryParams struct {

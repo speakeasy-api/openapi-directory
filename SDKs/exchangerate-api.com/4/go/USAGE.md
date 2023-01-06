@@ -1,0 +1,29 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.GetLatestBaseCurrencyRequest{
+        PathParams: operations.GetLatestBaseCurrencyPathParams{
+            BaseCurrency: "consequuntur",
+        },
+    }
+    
+    res, err := s.GetLatestBaseCurrency(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.GetLatestBaseCurrency200ApplicationJSONObject != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

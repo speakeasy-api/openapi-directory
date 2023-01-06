@@ -1,6 +1,6 @@
 package shared
 
 type DescribeHostsResult struct {
-	Hosts     []Host
-	NextToken *string
+	Hosts     map[string]interface{}
+	NextToken map[string]interface{}
 }

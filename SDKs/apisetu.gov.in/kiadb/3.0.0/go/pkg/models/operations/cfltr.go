@@ -5,7 +5,7 @@ import (
 )
 
 type CfltrRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Cfltr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cfltr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cfltr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cfltr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cfltr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cfltr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cfltr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cfltr404ApplicationJSON struct {

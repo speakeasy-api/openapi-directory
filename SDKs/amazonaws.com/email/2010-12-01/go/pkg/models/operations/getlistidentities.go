@@ -3,20 +3,20 @@ package operations
 type GetListIdentitiesActionEnum string
 
 const (
-	GetListIdentitiesActionEnumListIdentities GetListIdentitiesActionEnum = "ListIdentities"
+	GETListIdentitiesActionEnumListIdentities GetListIdentitiesActionEnum = "ListIdentities"
 )
 
 type GetListIdentitiesIdentityTypeEnum string
 
 const (
-	GetListIdentitiesIdentityTypeEnumEmailAddress GetListIdentitiesIdentityTypeEnum = "EmailAddress"
-	GetListIdentitiesIdentityTypeEnumDomain       GetListIdentitiesIdentityTypeEnum = "Domain"
+	GETListIdentitiesIdentityTypeEnumEmailAddress GetListIdentitiesIdentityTypeEnum = "EmailAddress"
+	GETListIdentitiesIdentityTypeEnumDomain       GetListIdentitiesIdentityTypeEnum = "Domain"
 )
 
 type GetListIdentitiesVersionEnum string
 
 const (
-	GetListIdentitiesVersionEnumTwoThousandAndTen1201 GetListIdentitiesVersionEnum = "2010-12-01"
+	GETListIdentitiesVersionEnumTwoThousandAndTen1201 GetListIdentitiesVersionEnum = "2010-12-01"
 )
 
 type GetListIdentitiesQueryParams struct {

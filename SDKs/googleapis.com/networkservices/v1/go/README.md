@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,66 +26,55 @@ func main() {
         Security: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams{
-            Parent: "voluptatem",
+            Parent: "beatae",
         },
         QueryParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "impedit",
+            AccessToken: "vel",
             Alt: "json",
-            Callback: "modi",
-            EndpointPolicyID: "error",
-            Fields: "voluptate",
-            Key: "est",
-            OauthToken: "inventore",
-            PrettyPrint: false,
-            QuotaUser: "voluptatibus",
-            UploadType: "ut",
-            UploadProtocol: "consequuntur",
+            Callback: "possimus",
+            EndpointPolicyID: "sed",
+            Fields: "debitis",
+            Key: "veritatis",
+            OauthToken: "et",
+            PrettyPrint: true,
+            QuotaUser: "voluptas",
+            UploadType: "quis",
+            UploadProtocol: "sequi",
         },
         Request: &shared.EndpointPolicyInput{
-            AuthorizationPolicy: "similique",
-            ClientTLSPolicy: "praesentium",
-            Description: "assumenda",
+            AuthorizationPolicy: "voluptatem",
+            ClientTLSPolicy: "et",
+            Description: "aut",
             EndpointMatcher: &shared.EndpointMatcher{
                 MetadataLabelMatcher: &shared.EndpointMatcherMetadataLabelMatcher{
-                    MetadataLabelMatchCriteria: "MATCH_ANY",
+                    MetadataLabelMatchCriteria: "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED",
                     MetadataLabels: []shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "repellat",
-                            LabelValue: "ut",
-                        },
-                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "maiores",
-                            LabelValue: "odit",
-                        },
-                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "alias",
-                            LabelValue: "voluptatum",
+                            LabelName: "quo",
+                            LabelValue: "ullam",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "voluptas": "ducimus",
-                "modi": "ducimus",
-                "voluptatem": "laborum",
+                "dolores": "nihil",
+                "omnis": "rerum",
             },
-            Name: "omnis",
-            ServerTLSPolicy: "tempore",
+            Name: "id",
+            ServerTLSPolicy: "odio",
             TrafficPortSelector: &shared.TrafficPortSelector{
                 Ports: []string{
-                    "qui",
-                    "ut",
-                    "odio",
+                    "consectetur",
                 },
             },
-            Type: "GRPC_SERVER",
+            Type: "ENDPOINT_POLICY_TYPE_UNSPECIFIED",
         },
     }
     

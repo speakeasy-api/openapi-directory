@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.CncerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.CncerRequestBody{
             CertificateParameters: &operations.CncerRequestBodyCertificateParameters{
-                DocumentNumber: "veniam",
+                DocumentNumber: "rerum",
             },
-            ConsentArtifact: "eligendi",
+            ConsentArtifact: "iure",
             Format: "xml",
-            TxnID: "facere",
+            TxnID: "nam",
         },
     }
     
-    res, err := s.Sdk.Cncer(ctx, req)
+    res, err := s.APIs.Cncer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Cncer` - Conversion Certificate
 * `Mutan` - Mutation Report/ePattadar Passbook

@@ -1,5 +1,5 @@
 package shared
 
 type ModifyVpcTenancyResult struct {
-	ReturnValue *bool
+	ReturnValue map[string]interface{}
 }

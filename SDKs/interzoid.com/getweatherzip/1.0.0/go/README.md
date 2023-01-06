@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetweatherzipcodeRequest{
         QueryParams: operations.GetweatherzipcodeQueryParams{
-            License: "minus",
-            Zip: "ex",
+            License: "molestiae",
+            Zip: "quisquam",
         },
     }
     
-    res, err := s.Sdk.Getweatherzipcode(ctx, req)
+    res, err := s.WeatherByZipCode.Getweatherzipcode(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Weather by Zip Code
 
 * `Getweatherzipcode` - Gets current weather information for a US zip code
 

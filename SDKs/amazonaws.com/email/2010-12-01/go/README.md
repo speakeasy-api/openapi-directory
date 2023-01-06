@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.GetCloneReceiptRuleSetRequest{
         QueryParams: operations.GetCloneReceiptRuleSetQueryParams{
             Action: "CloneReceiptRuleSet",
-            OriginalRuleSetName: "mollitia",
-            RuleSetName: "sequi",
+            OriginalRuleSetName: "et",
+            RuleSetName: "vero",
             Version: "2010-12-01",
         },
         Headers: operations.GetCloneReceiptRuleSetHeaders{
-            XAmzAlgorithm: "atque",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "voluptatem",
-            XAmzDate: "ea",
-            XAmzSecurityToken: "in",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "ex",
+            XAmzContentSha256: "magni",
+            XAmzCredential: "vero",
+            XAmzDate: "distinctio",
+            XAmzSecurityToken: "cumque",
+            XAmzSignature: "ea",
+            XAmzSignedHeaders: "non",
         },
     }
     
-    res, err := s.Sdk.GetCloneReceiptRuleSet(ctx, req)
+    res, err := s.GetCloneReceiptRuleSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -72,7 +71,6 @@ func main() {
 * `GetCreateConfigurationSetTrackingOptions` - <p>Creates an association between a configuration set and a custom domain for open and click event tracking. </p> <p>By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You can configure a subdomain of your own to handle these events. For information about using custom domains, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Amazon SES Developer Guide</a>.</p>
 * `GetCreateCustomVerificationEmailTemplate` - <p>Creates a new custom verification email template.</p> <p>For more information about custom verification email templates, see <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.</p> <p>You can execute this operation no more than once per second.</p>
 * `GetCreateReceiptRuleSet` - <p>Creates an empty receipt rule set.</p> <p>For information about setting up receipt rule sets, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rule-set.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
-* `GetCreateTemplate` - <p>Creates an email template. Email templates enable you to send personalized email to one or more destinations in a single API operation. For more information, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 * `GetDeleteConfigurationSet` - <p>Deletes a configuration set. Configuration sets enable you to publish email sending events. For information about using configuration sets, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 * `GetDeleteConfigurationSetEventDestination` - <p>Deletes a configuration set event destination. Configuration set event destinations are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 * `GetDeleteConfigurationSetTrackingOptions` - <p>Deletes an association between a configuration set and a custom domain for open and click event tracking.</p> <p>By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You can configure a subdomain of your own to handle these events. For information about using custom domains, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Amazon SES Developer Guide</a>.</p> <note> <p>Deleting this kind of association will result in emails sent using the specified configuration set to capture open and click events using the standard, Amazon SES-operated domains.</p> </note>

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,35 +26,35 @@ func main() {
         Security: operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivatePathParams{
-            Name: "architecto",
+            Name: "illo",
         },
         QueryParams: operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "iure",
-            Alt: "media",
-            Callback: "aut",
-            Fields: "est",
-            Key: "corrupti",
-            OauthToken: "eaque",
-            PrettyPrint: false,
-            QuotaUser: "et",
-            UploadType: "repellendus",
-            UploadProtocol: "aut",
+            AccessToken: "quas",
+            Alt: "proto",
+            Callback: "ea",
+            Fields: "ut",
+            Key: "suscipit",
+            OauthToken: "eos",
+            PrettyPrint: true,
+            QuotaUser: "aut",
+            UploadType: "esse",
+            UploadProtocol: "minima",
         },
         Request: &shared.ActivateCertificateAuthorityRequest{
-            PemCaCertificate: "in",
-            RequestID: "rerum",
+            PemCaCertificate: "alias",
+            RequestID: "laborum",
             SubordinateConfig: &shared.SubordinateConfig{
-                CertificateAuthority: "distinctio",
+                CertificateAuthority: "aut",
                 PemIssuerChain: &shared.SubordinateConfigChain{
                     PemCertificates: []string{
-                        "maxime",
+                        "eum",
                     },
                 },
             },

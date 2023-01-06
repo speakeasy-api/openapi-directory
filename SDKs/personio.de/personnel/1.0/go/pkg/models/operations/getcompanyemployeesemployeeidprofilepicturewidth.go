@@ -11,6 +11,6 @@ type GetCompanyEmployeesEmployeeIDProfilePictureWidthRequest struct {
 
 type GetCompanyEmployeesEmployeeIDProfilePictureWidthResponse struct {
 	ContentType                                                             string
-	GetCompanyEmployeesEmployeeIDProfilePictureWidth200ImagePngBinaryString []byte
 	StatusCode                                                              int64
+	GetCompanyEmployeesEmployeeIDProfilePictureWidth200ImagePngBinaryString []byte
 }

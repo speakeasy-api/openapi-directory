@@ -29,7 +29,7 @@ type CreateCanaryRequestBodyCode struct {
 type CreateCanaryRequestBodyRunConfig struct {
 	ActiveTracing        *bool             `json:"ActiveTracing,omitempty"`
 	EnvironmentVariables map[string]string `json:"EnvironmentVariables,omitempty"`
-	MemoryInMb           *int64            `json:"MemoryInMB,omitempty"`
+	MemoryInMB           *int64            `json:"MemoryInMB,omitempty"`
 	TimeoutInSeconds     *int64            `json:"TimeoutInSeconds,omitempty"`
 }
 

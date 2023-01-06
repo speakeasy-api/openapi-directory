@@ -3,24 +3,24 @@ package operations
 type GetCancelJobActionEnum string
 
 const (
-	GetCancelJobActionEnumCancelJob GetCancelJobActionEnum = "CancelJob"
+	GETCancelJobActionEnumCancelJob GetCancelJobActionEnum = "CancelJob"
 )
 
 type GetCancelJobOperationEnum string
 
 const (
-	GetCancelJobOperationEnumCancelJob GetCancelJobOperationEnum = "CancelJob"
+	GETCancelJobOperationEnumCancelJob GetCancelJobOperationEnum = "CancelJob"
 )
 
 type GetCancelJobVersionEnum string
 
 const (
-	GetCancelJobVersionEnumTwoThousandAndTen0601 GetCancelJobVersionEnum = "2010-06-01"
+	GETCancelJobVersionEnumTwoThousandAndTen0601 GetCancelJobVersionEnum = "2010-06-01"
 )
 
 type GetCancelJobQueryParams struct {
 	APIVersion       *string                   `queryParam:"style=form,explode=true,name=APIVersion"`
-	AwsAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetCancelJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	JobID            string                    `queryParam:"style=form,explode=true,name=JobId"`
 	Operation        GetCancelJobOperationEnum `queryParam:"style=form,explode=true,name=Operation"`

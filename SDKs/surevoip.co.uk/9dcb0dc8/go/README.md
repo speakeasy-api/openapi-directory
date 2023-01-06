@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,12 +35,12 @@ func main() {
     
     req := operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest{
         PathParams: operations.DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams{
-            Account: 8709764731653600972,
-            AnnouncementID: "libero",
+            Account: 4071281006781786767,
+            AnnouncementID: "autem",
         },
     }
     
-    res, err := s.Sdk.DeleteCustomersAccountAnnouncementsAnnouncementID(ctx, req)
+    res, err := s.Announcements.DeleteCustomersAccountAnnouncementsAnnouncementID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -55,38 +54,92 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### announcements
 
 * `DeleteCustomersAccountAnnouncementsAnnouncementID` - Delete an announcement audio file
-* `Get` - List global resources
 * `GetAnnouncements` - List global announcements
-* `GetAreacodes` - List areacodes
-* `GetBilling` - List global billing detail
-* `GetCalls` - Validate a phone number by calling it once
-* `GetCharges` - List charges
-* `GetContacts` - List contacts
-* `GetCustomers` - List all customers or find your own account
 * `GetCustomersAccountAnnouncements` - List of announcement audio files
 * `GetCustomersAccountAnnouncementsAnnouncementID` - Represents an announcement audio file
-* `GetFaxes` - List global ongoing faxes
-* `GetHosted` - List Hosted VoIP domains
-* `GetIPAddress` - Return the IP address from where your API request originated
-* `GetMobile` - List mobile accounts
-* `GetNumbers` - List available SureVoIP Ofcom number allocations for purchase
+* `PostAnnouncements` - Add a new announcement audio file
+
+### areacodes
+
+* `GetAreacodes` - List areacodes
 * `GetNumbersAreacodes` - Search available numbers by areacode
+
+### billing
+
+* `GetBilling` - List global billing detail
+
+### calls
+
+* `GetCalls` - Validate a phone number by calling it once
+* `PostCalls` - Create phone calls with or without announcements and scheduled hangups
+
+### charges
+
+* `GetCharges` - List charges
+* `PostCharges` - Create charges for invoices
+
+### contacts
+
+* `GetContacts` - List contacts
+
+### customers
+
+* `GetCustomer` - Represents a customer
+* `GetCustomers` - List all customers or find your own account
+
+### echo
+
+* `PostSupportEcho` - Return your POSTed data for testing
+
+### faxes
+
+* `GetFaxes` - List global ongoing faxes
+
+### global
+
+* `Get` - List global resources
+
+### hosted
+
+* `GetHosted` - List Hosted VoIP domains
+
+### mobile
+
+* `GetMobile` - List mobile accounts
+
+### numbers
+
+* `GetNumbers` - List available SureVoIP Ofcom number allocations for purchase
+
+### partners
+
 * `GetPartners` - List SureVoIP Partner accounts
+
+### porting
+
 * `GetPorting` - List ported numbers
-* `GetServiceStatus` - List all Service Status messages
+
+### sip
+
 * `GetSip` - List all SIP accounts
+
+### sms
+
 * `GetSms` - List SMS
+
+### support
+
+* `GetIPAddress` - Return the IP address from where your API request originated
+* `GetServiceStatus` - List all Service Status messages
 * `GetSupportIPAddress` - Return the IP address from where your API request originated
 * `GetSupportServiceStatus` - List all Service Status messages
+
+### topups
+
 * `GetTopups` - List all account credit topups
-* `PostAnnouncements` - Add a new announcement audio file
-* `PostCalls` - Create phone calls with or without announcements and scheduled hangups
-* `PostCharges` - Create charges for invoices
-* `PostSupportEcho` - Return your POSTed data for testing
-* `GetCustomer` - Represents a customer
 
 <!-- End SDK Available Operations -->
 

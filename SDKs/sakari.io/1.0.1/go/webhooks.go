@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Webhooks struct {
@@ -116,6 +116,38 @@ func (s *Webhooks) WebhooksSubscribe(ctx context.Context, request operations.Web
 
 			res.WebhookResponse = out
 		}
+	}
+
+	return res, nil
+}
+
+// WebhooksUnsubscribe - Unsubscribe to message events
+// Delete subscription for receiving notifications
+func (s *Webhooks) WebhooksUnsubscribe(ctx context.Context, request operations.WebhooksUnsubscribeRequest) (*operations.WebhooksUnsubscribeResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/webhooks/{url}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.WebhooksUnsubscribeResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
 	}
 
 	return res, nil

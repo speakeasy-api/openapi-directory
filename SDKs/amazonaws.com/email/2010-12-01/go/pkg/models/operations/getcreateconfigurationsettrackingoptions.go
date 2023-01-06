@@ -3,7 +3,7 @@ package operations
 type GetCreateConfigurationSetTrackingOptionsActionEnum string
 
 const (
-	GetCreateConfigurationSetTrackingOptionsActionEnumCreateConfigurationSetTrackingOptions GetCreateConfigurationSetTrackingOptionsActionEnum = "CreateConfigurationSetTrackingOptions"
+	GETCreateConfigurationSetTrackingOptionsActionEnumCreateConfigurationSetTrackingOptions GetCreateConfigurationSetTrackingOptionsActionEnum = "CreateConfigurationSetTrackingOptions"
 )
 
 // GetCreateConfigurationSetTrackingOptionsTrackingOptions
@@ -15,7 +15,7 @@ type GetCreateConfigurationSetTrackingOptionsTrackingOptions struct {
 type GetCreateConfigurationSetTrackingOptionsVersionEnum string
 
 const (
-	GetCreateConfigurationSetTrackingOptionsVersionEnumTwoThousandAndTen1201 GetCreateConfigurationSetTrackingOptionsVersionEnum = "2010-12-01"
+	GETCreateConfigurationSetTrackingOptionsVersionEnumTwoThousandAndTen1201 GetCreateConfigurationSetTrackingOptionsVersionEnum = "2010-12-01"
 )
 
 type GetCreateConfigurationSetTrackingOptionsQueryParams struct {

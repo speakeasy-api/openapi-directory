@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,26 @@ func main() {
     
     req := operations.GetGlobalwinescoresLatestRequest{
         QueryParams: operations.GetGlobalwinescoresLatestQueryParams{
-            Color: "pink",
+            Color: "white",
             IsPrimeurs: true,
-            Limit: 8694339800263980817,
-            Lwin: "maxime",
-            Lwin11: "perspiciatis",
-            Offset: 2259968901493884117,
-            Ordering: "-score",
-            Vintage: "sed",
+            Limit: 7334213246184120361,
+            Lwin: "et",
+            Lwin11: "velit",
+            Offset: 3969817798470589381,
+            Ordering: "-date",
+            Vintage: "qui",
             WineID: []int64{
-                5220847749626346733,
+                6148227408144759182,
+                1381002035011521327,
+                4963720307500657837,
             },
         },
         Headers: operations.GetGlobalwinescoresLatestHeaders{
-            Authorization: "praesentium",
+            Authorization: "beatae",
         },
     }
     
-    res, err := s.Sdk.GetGlobalwinescoresLatest(ctx, req)
+    res, err := s.GlobalWineScore.GetGlobalwinescoresLatest(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -66,7 +67,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### GlobalWineScore
 
 * `GetGlobalwinescoresLatest` - List all latest GWS
 * `ListHistoricalGws` - List all historical GWS

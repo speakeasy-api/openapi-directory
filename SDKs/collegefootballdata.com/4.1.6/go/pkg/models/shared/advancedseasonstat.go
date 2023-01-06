@@ -23,7 +23,7 @@ type AdvancedSeasonStatDefensePassingPlays struct {
 	Ppa           *float64 `json:"ppa,omitempty"`
 	Rate          *float64 `json:"rate,omitempty"`
 	SuccessRate   *float64 `json:"successRate,omitempty"`
-	TotalPpa      *float64 `json:"totalPPA,omitempty"`
+	TotalPPA      *float64 `json:"totalPPA,omitempty"`
 }
 
 type AdvancedSeasonStatDefenseRushingPlays struct {
@@ -31,7 +31,7 @@ type AdvancedSeasonStatDefenseRushingPlays struct {
 	Ppa           *float64 `json:"ppa,omitempty"`
 	Rate          *float64 `json:"rate,omitempty"`
 	SuccessRate   *float64 `json:"successRate,omitempty"`
-	TotalPpa      *float64 `json:"totalPPA,omitempty"`
+	TotalPPA      *float64 `json:"totalPPA,omitempty"`
 }
 
 type AdvancedSeasonStatDefenseStandardDowns struct {
@@ -62,7 +62,7 @@ type AdvancedSeasonStatDefense struct {
 	StandardDowns         *AdvancedSeasonStatDefenseStandardDowns `json:"standardDowns,omitempty"`
 	StuffRate             *float64                                `json:"stuffRate,omitempty"`
 	SuccessRate           *float64                                `json:"successRate,omitempty"`
-	TotalPpa              *float64                                `json:"totalPPA,omitempty"`
+	TotalPPA              *float64                                `json:"totalPPA,omitempty"`
 }
 
 type AdvancedSeasonStatOffenseFieldPosition struct {
@@ -88,7 +88,7 @@ type AdvancedSeasonStatOffensePassingPlays struct {
 	Ppa           *float64 `json:"ppa,omitempty"`
 	Rate          *float64 `json:"rate,omitempty"`
 	SuccessRate   *float64 `json:"successRate,omitempty"`
-	TotalPpa      *float64 `json:"totalPPA,omitempty"`
+	TotalPPA      *float64 `json:"totalPPA,omitempty"`
 }
 
 type AdvancedSeasonStatOffenseRushingPlays struct {
@@ -96,7 +96,7 @@ type AdvancedSeasonStatOffenseRushingPlays struct {
 	Ppa           *float64 `json:"ppa,omitempty"`
 	Rate          *float64 `json:"rate,omitempty"`
 	SuccessRate   *float64 `json:"successRate,omitempty"`
-	TotalPpa      *float64 `json:"totalPPA,omitempty"`
+	TotalPPA      *float64 `json:"totalPPA,omitempty"`
 }
 
 type AdvancedSeasonStatOffenseStandardDowns struct {
@@ -127,7 +127,7 @@ type AdvancedSeasonStatOffense struct {
 	StandardDowns         *AdvancedSeasonStatOffenseStandardDowns `json:"standardDowns,omitempty"`
 	StuffRate             *float64                                `json:"stuffRate,omitempty"`
 	SuccessRate           *float64                                `json:"successRate,omitempty"`
-	TotalPpa              *float64                                `json:"totalPPA,omitempty"`
+	TotalPPA              *float64                                `json:"totalPPA,omitempty"`
 }
 
 type AdvancedSeasonStat struct {

@@ -13,6 +13,6 @@ type GetAdminScenarios200ApplicationJSON struct {
 
 type GetAdminScenariosResponse struct {
 	ContentType                               string
-	GetAdminScenarios200ApplicationJSONObject *GetAdminScenarios200ApplicationJSON
 	StatusCode                                int64
+	GetAdminScenarios200ApplicationJSONObject *GetAdminScenarios200ApplicationJSON
 }

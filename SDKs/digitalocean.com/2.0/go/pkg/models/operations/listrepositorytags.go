@@ -14,39 +14,31 @@ type ListRepositoryTagsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
-type ListRepositoryTagsRequest struct {
-	PathParams  ListRepositoryTagsPathParams
-	QueryParams ListRepositoryTagsQueryParams
-}
-
 type ListRepositoryTags200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
+	Prev *string `json:"prev,omitempty"`
 }
 
 type ListRepositoryTags200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
+	Last *string `json:"last,omitempty"`
 }
 
 type ListRepositoryTags200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
-type ListRepositoryTags200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListRepositoryTags200ApplicationJSON struct {
-	Links *ListRepositoryTags200ApplicationJSONLinks                                                                                                             `json:"links,omitempty"`
-	Meta  ListRepositoryTags200ApplicationJSONMeta                                                                                                               `json:"meta"`
-	Tags  []shared.Onev21registry1Percent7BregistryNamePercent7DGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesRepositoriesItemsPropertiesLatestTag `json:"tags,omitempty"`
+	Links *ListRepositoryTags200ApplicationJSONLinks `json:"links,omitempty"`
 }
 
 type ListRepositoryTags401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListRepositoryTagsRequest struct {
+	PathParams  ListRepositoryTagsPathParams
+	QueryParams ListRepositoryTagsQueryParams
 }
 
 type ListRepositoryTagsResponse struct {

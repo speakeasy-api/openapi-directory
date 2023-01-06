@@ -3,13 +3,13 @@ package operations
 type PostAssumeRoleWithWebIdentityActionEnum string
 
 const (
-	PostAssumeRoleWithWebIdentityActionEnumAssumeRoleWithWebIdentity PostAssumeRoleWithWebIdentityActionEnum = "AssumeRoleWithWebIdentity"
+	POSTAssumeRoleWithWebIdentityActionEnumAssumeRoleWithWebIdentity PostAssumeRoleWithWebIdentityActionEnum = "AssumeRoleWithWebIdentity"
 )
 
 type PostAssumeRoleWithWebIdentityVersionEnum string
 
 const (
-	PostAssumeRoleWithWebIdentityVersionEnumTwoThousandAndEleven0615 PostAssumeRoleWithWebIdentityVersionEnum = "2011-06-15"
+	POSTAssumeRoleWithWebIdentityVersionEnumTwoThousandAndEleven0615 PostAssumeRoleWithWebIdentityVersionEnum = "2011-06-15"
 )
 
 type PostAssumeRoleWithWebIdentityQueryParams struct {

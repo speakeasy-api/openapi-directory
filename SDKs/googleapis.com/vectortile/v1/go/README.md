@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,41 +24,41 @@ func main() {
     
     req := operations.VectortileTerraintilesGetRequest{
         PathParams: operations.VectortileTerraintilesGetPathParams{
-            Name: "ut",
+            Name: "eum",
         },
         QueryParams: operations.VectortileTerraintilesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "non",
+            AccessToken: "dicta",
             Alt: "media",
-            AltitudePrecisionCentimeters: 4899281184932557888,
-            Callback: "suscipit",
-            ClientInfoAPIClient: "sed",
-            ClientInfoApplicationID: "rerum",
-            ClientInfoApplicationVersion: "sapiente",
-            ClientInfoDeviceModel: "explicabo",
-            ClientInfoOperatingSystem: "velit",
-            ClientInfoPlatform: "IOS",
-            ClientInfoUserID: "et",
+            AltitudePrecisionCentimeters: 5039781528859720320,
+            Callback: "quia",
+            ClientInfoAPIClient: "enim",
+            ClientInfoApplicationID: "sequi",
+            ClientInfoApplicationVersion: "accusamus",
+            ClientInfoDeviceModel: "dolores",
+            ClientInfoOperatingSystem: "eius",
+            ClientInfoPlatform: "WINDOWS",
+            ClientInfoUserID: "possimus",
             EnableModeledVolumes: true,
             EnablePoliticalFeatures: true,
             EnablePrivateRoads: false,
             EnableUnclippedBuildings: true,
-            Fields: "sit",
-            Key: "dignissimos",
-            LanguageCode: "debitis",
-            MaxElevationResolutionCells: 8877279036952564902,
-            MinElevationResolutionCells: 4651328896432160141,
-            OauthToken: "et",
-            PrettyPrint: false,
-            QuotaUser: "sequi",
-            RegionCode: "accusamus",
+            Fields: "delectus",
+            Key: "quo",
+            LanguageCode: "magni",
+            MaxElevationResolutionCells: 8939274956743009490,
+            MinElevationResolutionCells: 6543241831060686800,
+            OauthToken: "omnis",
+            PrettyPrint: true,
+            QuotaUser: "quam",
+            RegionCode: "error",
             TerrainFormats: []VectortileTerraintilesGetTerrainFormatsEnum{
                 "TERRAIN_FORMAT_UNKNOWN",
-                "SECOND_DERIVATIVE",
                 "TERRAIN_FORMAT_UNKNOWN",
+                "FIRST_DERIVATIVE",
             },
-            UploadType: "totam",
-            UploadProtocol: "blanditiis",
+            UploadType: "voluptas",
+            UploadProtocol: "quia",
         },
     }
     

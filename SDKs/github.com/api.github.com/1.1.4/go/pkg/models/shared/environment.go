@@ -11,22 +11,22 @@ type EnvironmentProtectionRules1 struct {
 	WaitTimer *int64 `json:"wait_timer,omitempty"`
 }
 
-type EnvironmentProtectionRules2Reviewers struct {
+type EnvironmentProtectionRules2 struct {
+	ID     int64  `json:"id"`
+	NodeID string `json:"node_id"`
+	Type   string `json:"type"`
+}
+
+type EnvironmentProtectionRules3Reviewers struct {
 	Reviewer *interface{}                `json:"reviewer,omitempty"`
 	Type     *DeploymentReviewerTypeEnum `json:"type,omitempty"`
 }
 
-type EnvironmentProtectionRules2 struct {
+type EnvironmentProtectionRules3 struct {
 	ID        int64                                  `json:"id"`
 	NodeID    string                                 `json:"node_id"`
-	Reviewers []EnvironmentProtectionRules2Reviewers `json:"reviewers,omitempty"`
+	Reviewers []EnvironmentProtectionRules3Reviewers `json:"reviewers,omitempty"`
 	Type      string                                 `json:"type"`
-}
-
-type EnvironmentProtectionRules3 struct {
-	ID     int64  `json:"id"`
-	NodeID string `json:"node_id"`
-	Type   string `json:"type"`
 }
 
 // Environment

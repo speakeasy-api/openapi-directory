@@ -19,7 +19,15 @@ type GetCmsV3DomainsGetPageQueryParams struct {
 }
 
 type GetCmsV3DomainsGetPageSecurity struct {
-	Hapikey shared.SchemeHapikey `security:"scheme,type=apiKey,subtype=query"`
+	PrivateAppsLegacy  *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
+	Oauth2             *shared.SchemeOauth2            `security:"scheme,type=oauth2"`
+	PrivateApps        *shared.SchemePrivateApps       `security:"scheme,type=apiKey,subtype=header"`
+	Hapikey            *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
+	PrivateApps1       *shared.SchemePrivateApps       `security:"scheme,type=apiKey,subtype=header"`
+	Oauth3             *shared.SchemeOauth2            `security:"scheme,type=oauth2"`
+	PrivateAppsLegacy1 *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
+	Oauth2Legacy       *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
+	Oauth2Legacy1      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
 }
 
 type GetCmsV3DomainsGetPageRequest struct {

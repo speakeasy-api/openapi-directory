@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,35 +27,35 @@ func main() {
             Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.LanguageDocumentsAnalyzeEntitiesQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "eum",
-            Alt: "json",
-            Callback: "omnis",
-            Fields: "aliquam",
-            Key: "sint",
-            OauthToken: "et",
+            DollarXgafv: "2",
+            AccessToken: "dignissimos",
+            Alt: "proto",
+            Callback: "veniam",
+            Fields: "voluptatum",
+            Key: "pariatur",
+            OauthToken: "dolores",
             PrettyPrint: true,
-            QuotaUser: "excepturi",
-            UploadType: "veniam",
-            UploadProtocol: "et",
+            QuotaUser: "velit",
+            UploadType: "voluptatem",
+            UploadProtocol: "dolorum",
         },
         Request: &shared.AnalyzeEntitiesRequest{
             Document: &shared.Document{
-                BoilerplateHandling: "SKIP_BOILERPLATE",
-                Content: "quo",
-                GcsContentURI: "ducimus",
-                Language: "fugiat",
-                ReferenceWebURI: "iste",
-                Type: "TYPE_UNSPECIFIED",
+                BoilerplateHandling: "BOILERPLATE_HANDLING_UNSPECIFIED",
+                Content: "nihil",
+                GcsContentURI: "facilis",
+                Language: "alias",
+                ReferenceWebURI: "voluptatibus",
+                Type: "PLAIN_TEXT",
             },
-            EncodingType: "UTF32",
+            EncodingType: "UTF8",
         },
     }
     

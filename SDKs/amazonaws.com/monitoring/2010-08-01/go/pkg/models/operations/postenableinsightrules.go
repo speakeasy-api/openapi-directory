@@ -3,13 +3,13 @@ package operations
 type PostEnableInsightRulesActionEnum string
 
 const (
-	PostEnableInsightRulesActionEnumEnableInsightRules PostEnableInsightRulesActionEnum = "EnableInsightRules"
+	POSTEnableInsightRulesActionEnumEnableInsightRules PostEnableInsightRulesActionEnum = "EnableInsightRules"
 )
 
 type PostEnableInsightRulesVersionEnum string
 
 const (
-	PostEnableInsightRulesVersionEnumTwoThousandAndTen0801 PostEnableInsightRulesVersionEnum = "2010-08-01"
+	POSTEnableInsightRulesVersionEnumTwoThousandAndTen0801 PostEnableInsightRulesVersionEnum = "2010-08-01"
 )
 
 type PostEnableInsightRulesQueryParams struct {

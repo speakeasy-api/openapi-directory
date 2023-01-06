@@ -1,7 +1,7 @@
 package shared
 
 type DescribeVolumeAttributeResult struct {
-	AutoEnableIo *AttributeBooleanValue
-	ProductCodes []ProductCode
-	VolumeID     *string
+	AutoEnableIO map[string]interface{}
+	ProductCodes map[string]interface{}
+	VolumeID     map[string]interface{}
 }

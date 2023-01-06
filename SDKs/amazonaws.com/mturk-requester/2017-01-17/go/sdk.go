@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -347,7 +348,7 @@ func (s *SDK) CreateAdditionalAssignmentsForHit(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.CreateAdditionalAssignmentsForHitResponse = out
+			res.CreateAdditionalAssignmentsForHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -419,7 +420,7 @@ func (s *SDK) CreateHit(ctx context.Context, request operations.CreateHitRequest
 				return nil, err
 			}
 
-			res.CreateHitResponse = out
+			res.CreateHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -491,7 +492,7 @@ func (s *SDK) CreateHitType(ctx context.Context, request operations.CreateHitTyp
 				return nil, err
 			}
 
-			res.CreateHitTypeResponse = out
+			res.CreateHITTypeResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -563,7 +564,7 @@ func (s *SDK) CreateHitWithHitType(ctx context.Context, request operations.Creat
 				return nil, err
 			}
 
-			res.CreateHitWithHitTypeResponse = out
+			res.CreateHITWithHITTypeResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -779,7 +780,7 @@ func (s *SDK) DeleteHit(ctx context.Context, request operations.DeleteHitRequest
 				return nil, err
 			}
 
-			res.DeleteHitResponse = out
+			res.DeleteHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1283,7 +1284,7 @@ func (s *SDK) GetHit(ctx context.Context, request operations.GetHitRequest) (*op
 				return nil, err
 			}
 
-			res.GetHitResponse = out
+			res.GetHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1501,7 +1502,7 @@ func (s *SDK) ListAssignmentsForHit(ctx context.Context, request operations.List
 				return nil, err
 			}
 
-			res.ListAssignmentsForHitResponse = out
+			res.ListAssignmentsForHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1649,7 +1650,7 @@ func (s *SDK) ListHiTs(ctx context.Context, request operations.ListHiTsRequest) 
 				return nil, err
 			}
 
-			res.ListHiTsResponse = out
+			res.ListHITsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1723,7 +1724,7 @@ func (s *SDK) ListHiTsForQualificationType(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.ListHiTsForQualificationTypeResponse = out
+			res.ListHITsForQualificationTypeResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1945,7 +1946,7 @@ func (s *SDK) ListReviewPolicyResultsForHit(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.ListReviewPolicyResultsForHitResponse = out
+			res.ListReviewPolicyResultsForHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2019,7 +2020,7 @@ func (s *SDK) ListReviewableHiTs(ctx context.Context, request operations.ListRev
 				return nil, err
 			}
 
-			res.ListReviewableHiTsResponse = out
+			res.ListReviewableHITsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2599,7 +2600,7 @@ func (s *SDK) UpdateExpirationForHit(ctx context.Context, request operations.Upd
 				return nil, err
 			}
 
-			res.UpdateExpirationForHitResponse = out
+			res.UpdateExpirationForHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2671,7 +2672,7 @@ func (s *SDK) UpdateHitReviewStatus(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.UpdateHitReviewStatusResponse = out
+			res.UpdateHITReviewStatusResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2743,7 +2744,7 @@ func (s *SDK) UpdateHitTypeOfHit(ctx context.Context, request operations.UpdateH
 				return nil, err
 			}
 
-			res.UpdateHitTypeOfHitResponse = out
+			res.UpdateHITTypeOfHITResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

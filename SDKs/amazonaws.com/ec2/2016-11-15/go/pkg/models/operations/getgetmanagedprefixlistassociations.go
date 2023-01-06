@@ -3,13 +3,13 @@ package operations
 type GetGetManagedPrefixListAssociationsActionEnum string
 
 const (
-	GetGetManagedPrefixListAssociationsActionEnumGetManagedPrefixListAssociations GetGetManagedPrefixListAssociationsActionEnum = "GetManagedPrefixListAssociations"
+	GETGETManagedPrefixListAssociationsActionEnumGetManagedPrefixListAssociations GetGetManagedPrefixListAssociationsActionEnum = "GetManagedPrefixListAssociations"
 )
 
 type GetGetManagedPrefixListAssociationsVersionEnum string
 
 const (
-	GetGetManagedPrefixListAssociationsVersionEnumTwoThousandAndSixteen1115 GetGetManagedPrefixListAssociationsVersionEnum = "2016-11-15"
+	GETGETManagedPrefixListAssociationsVersionEnumTwoThousandAndSixteen1115 GetGetManagedPrefixListAssociationsVersionEnum = "2016-11-15"
 )
 
 type GetGetManagedPrefixListAssociationsQueryParams struct {

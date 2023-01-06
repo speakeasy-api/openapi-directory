@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.WorkflowsProjectsLocationsListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.WorkflowsProjectsLocationsListPathParams{
-            Name: "consequuntur",
+            Name: "unde",
         },
         QueryParams: operations.WorkflowsProjectsLocationsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "possimus",
+            AccessToken: "corrupti",
             Alt: "proto",
-            Callback: "magnam",
-            Fields: "numquam",
-            Filter: "id",
-            Key: "quisquam",
-            OauthToken: "sed",
-            PageSize: 5861057593339212160,
-            PageToken: "error",
+            Callback: "nihil",
+            Fields: "laborum",
+            Filter: "quam",
+            Key: "veritatis",
+            OauthToken: "dignissimos",
+            PageSize: 1393963312073455910,
+            PageToken: "a",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "aliquam",
-            UploadProtocol: "doloremque",
+            QuotaUser: "consequatur",
+            UploadType: "laborum",
+            UploadProtocol: "et",
         },
     }
     

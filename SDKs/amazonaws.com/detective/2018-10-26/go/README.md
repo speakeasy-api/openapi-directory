@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.AcceptInvitationRequest{
         Headers: operations.AcceptInvitationHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "repellat",
-            XAmzCredential: "non",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "reprehenderit",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "molestias",
+            XAmzContentSha256: "asperiores",
+            XAmzCredential: "suscipit",
+            XAmzDate: "nam",
+            XAmzSecurityToken: "ducimus",
+            XAmzSignature: "ullam",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.AcceptInvitationRequestBody{
-            GraphArn: "at",
+            GraphArn: "eveniet",
         },
     }
     
-    res, err := s.Sdk.AcceptInvitation(ctx, req)
+    res, err := s.AcceptInvitation(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

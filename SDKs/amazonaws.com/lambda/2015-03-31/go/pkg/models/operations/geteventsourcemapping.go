@@ -25,7 +25,7 @@ type GetEventSourceMappingRequest struct {
 
 type GetEventSourceMappingResponse struct {
 	ContentType                     string
-	EventSourceMappingConfiguration *shared.EventSourceMappingConfiguration
+	EventSourceMappingConfiguration *shared.EventSourceMappingConfiguration1
 	InvalidParameterValueException  *interface{}
 	ResourceNotFoundException       *interface{}
 	ServiceException                *interface{}

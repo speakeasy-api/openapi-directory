@@ -12,15 +12,15 @@ type GetKubeconfigQueryParams struct {
 	ExpirySeconds *int64 `queryParam:"style=form,explode=true,name=expiry_seconds"`
 }
 
-type GetKubeconfigRequest struct {
-	PathParams  GetKubeconfigPathParams
-	QueryParams GetKubeconfigQueryParams
-}
-
 type GetKubeconfig401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetKubeconfigRequest struct {
+	PathParams  GetKubeconfigPathParams
+	QueryParams GetKubeconfigQueryParams
 }
 
 type GetKubeconfigResponse struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,62 +34,56 @@ func main() {
     
     req := operations.SendCommandRequest{
         Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "optio",
-            XAmzCredential: "iste",
-            XAmzDate: "nisi",
-            XAmzSecurityToken: "repudiandae",
-            XAmzSignature: "amet",
-            XAmzSignedHeaders: "impedit",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "at",
+            XAmzCredential: "saepe",
+            XAmzDate: "id",
+            XAmzSecurityToken: "consequatur",
+            XAmzSignature: "quis",
+            XAmzSignedHeaders: "voluptas",
             XAmzTarget: "QLDBSession.SendCommand",
         },
         Request: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "et": "perspiciatis",
-                "quasi": "eos",
+                "similique": "neque",
+                "deserunt": "ab",
             },
             CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "nesciunt",
-                TransactionID: "neque",
+                CommitDigest: "earum",
+                TransactionID: "omnis",
             },
             EndSession: map[string]interface{}{
-                "et": "magni",
+                "aliquid": "quia",
             },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "ad",
-                        IonText: "sapiente",
+                        IonBinary: "similique",
+                        IonText: "repudiandae",
                     },
                     shared.ValueHolder{
-                        IonBinary: "at",
-                        IonText: "fuga",
-                    },
-                    shared.ValueHolder{
-                        IonBinary: "dicta",
-                        IonText: "optio",
+                        IonBinary: "non",
+                        IonText: "harum",
                     },
                 },
-                Statement: "aut",
-                TransactionID: "eum",
+                Statement: "ipsa",
+                TransactionID: "rerum",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "error",
-                TransactionID: "non",
+                NextPageToken: "nisi",
+                TransactionID: "maiores",
             },
-            SessionToken: "corrupti",
+            SessionToken: "non",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "nam",
+                LedgerName: "autem",
             },
             StartTransaction: map[string]interface{}{
-                "adipisci": "enim",
-                "laborum": "rerum",
-                "iure": "sequi",
+                "quam": "amet",
             },
         },
     }
     
-    res, err := s.Sdk.SendCommand(ctx, req)
+    res, err := s.SendCommand(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

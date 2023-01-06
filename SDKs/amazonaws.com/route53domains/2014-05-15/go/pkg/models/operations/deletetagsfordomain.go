@@ -32,5 +32,5 @@ type DeleteTagsForDomainResponse struct {
 	InvalidInput                *interface{}
 	OperationLimitExceeded      *interface{}
 	StatusCode                  int64
-	UnsupportedTld              *interface{}
+	UnsupportedTLD              *interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type GetDescribeClusterVersionsActionEnum string
 
 const (
-	GetDescribeClusterVersionsActionEnumDescribeClusterVersions GetDescribeClusterVersionsActionEnum = "DescribeClusterVersions"
+	GETDescribeClusterVersionsActionEnumDescribeClusterVersions GetDescribeClusterVersionsActionEnum = "DescribeClusterVersions"
 )
 
 type GetDescribeClusterVersionsVersionEnum string
 
 const (
-	GetDescribeClusterVersionsVersionEnumTwoThousandAndTwelve1201 GetDescribeClusterVersionsVersionEnum = "2012-12-01"
+	GETDescribeClusterVersionsVersionEnumTwoThousandAndTwelve1201 GetDescribeClusterVersionsVersionEnum = "2012-12-01"
 )
 
 type GetDescribeClusterVersionsQueryParams struct {

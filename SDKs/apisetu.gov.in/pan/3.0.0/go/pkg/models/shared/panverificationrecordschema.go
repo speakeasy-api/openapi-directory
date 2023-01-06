@@ -6,7 +6,7 @@ type PanVerificationRecordSchemaCertificateDataPanVerificationRecord struct {
 }
 
 type PanVerificationRecordSchemaCertificateData struct {
-	PanVerificationRecord *PanVerificationRecordSchemaCertificateDataPanVerificationRecord
+	PANVerificationRecord *PanVerificationRecordSchemaCertificateDataPanVerificationRecord
 }
 
 type PanVerificationRecordSchemaIssuedByOrganizationAddress struct {

@@ -3,13 +3,13 @@ package operations
 type GetEnableVpcClassicLinkDNSSupportActionEnum string
 
 const (
-	GetEnableVpcClassicLinkDNSSupportActionEnumEnableVpcClassicLinkDNSSupport GetEnableVpcClassicLinkDNSSupportActionEnum = "EnableVpcClassicLinkDnsSupport"
+	GETEnableVpcClassicLinkDNSSupportActionEnumEnableVpcClassicLinkDNSSupport GetEnableVpcClassicLinkDNSSupportActionEnum = "EnableVpcClassicLinkDnsSupport"
 )
 
 type GetEnableVpcClassicLinkDNSSupportVersionEnum string
 
 const (
-	GetEnableVpcClassicLinkDNSSupportVersionEnumTwoThousandAndSixteen1115 GetEnableVpcClassicLinkDNSSupportVersionEnum = "2016-11-15"
+	GETEnableVpcClassicLinkDNSSupportVersionEnumTwoThousandAndSixteen1115 GetEnableVpcClassicLinkDNSSupportVersionEnum = "2016-11-15"
 )
 
 type GetEnableVpcClassicLinkDNSSupportQueryParams struct {

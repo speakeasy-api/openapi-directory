@@ -7,13 +7,13 @@ import (
 type GetGetInsightRuleReportActionEnum string
 
 const (
-	GetGetInsightRuleReportActionEnumGetInsightRuleReport GetGetInsightRuleReportActionEnum = "GetInsightRuleReport"
+	GETGETInsightRuleReportActionEnumGetInsightRuleReport GetGetInsightRuleReportActionEnum = "GetInsightRuleReport"
 )
 
 type GetGetInsightRuleReportVersionEnum string
 
 const (
-	GetGetInsightRuleReportVersionEnumTwoThousandAndTen0801 GetGetInsightRuleReportVersionEnum = "2010-08-01"
+	GETGETInsightRuleReportVersionEnumTwoThousandAndTen0801 GetGetInsightRuleReportVersionEnum = "2010-08-01"
 )
 
 type GetGetInsightRuleReportQueryParams struct {

@@ -14,7 +14,7 @@ type ComprehendMedicalAsyncJobProperties struct {
 	JobID             *string           `json:"JobId,omitempty"`
 	JobName           *string           `json:"JobName,omitempty"`
 	JobStatus         *JobStatusEnum    `json:"JobStatus,omitempty"`
-	KmsKey            *string           `json:"KMSKey,omitempty"`
+	KMSKey            *string           `json:"KMSKey,omitempty"`
 	LanguageCode      *LanguageCodeEnum `json:"LanguageCode,omitempty"`
 	ManifestFilePath  *string           `json:"ManifestFilePath,omitempty"`
 	Message           *string           `json:"Message,omitempty"`

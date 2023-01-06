@@ -8,14 +8,14 @@ type DeleteProjectPathParams struct {
 	ProjectID string `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
-type DeleteProjectRequest struct {
-	PathParams DeleteProjectPathParams
-}
-
 type DeleteProject401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteProjectRequest struct {
+	PathParams DeleteProjectPathParams
 }
 
 type DeleteProjectResponse struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,12 +29,12 @@ func main() {
             },
         },
         PathParams: operations.UserCtrlGetUserByIDPathParams{
-            AccountID: "quam",
-            UserID: 35.099998,
+            AccountID: "delectus",
+            UserID: 6.200000,
         },
     }
     
-    res, err := s.Sdk.UserCtrlGetUserByID(ctx, req)
+    res, err := s.UserCtrlGetUserByID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

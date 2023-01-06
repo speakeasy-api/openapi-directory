@@ -9,10 +9,6 @@ type GetDatabasePathParams struct {
 	DatabaseName        string `pathParam:"style=simple,explode=false,name=database_name"`
 }
 
-type GetDatabaseRequest struct {
-	PathParams GetDatabasePathParams
-}
-
 type GetDatabase200ApplicationJSON struct {
 	Db shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1dbsGetResponses200ContentApplication1jsonSchemaPropertiesDbsItems `json:"db"`
 }
@@ -21,6 +17,10 @@ type GetDatabase401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDatabaseRequest struct {
+	PathParams GetDatabasePathParams
 }
 
 type GetDatabaseResponse struct {

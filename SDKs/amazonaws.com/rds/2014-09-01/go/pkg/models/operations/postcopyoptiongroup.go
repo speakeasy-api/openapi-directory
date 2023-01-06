@@ -3,13 +3,13 @@ package operations
 type PostCopyOptionGroupActionEnum string
 
 const (
-	PostCopyOptionGroupActionEnumCopyOptionGroup PostCopyOptionGroupActionEnum = "CopyOptionGroup"
+	POSTCopyOptionGroupActionEnumCopyOptionGroup PostCopyOptionGroupActionEnum = "CopyOptionGroup"
 )
 
 type PostCopyOptionGroupVersionEnum string
 
 const (
-	PostCopyOptionGroupVersionEnumTwoThousandAndFourteen0901 PostCopyOptionGroupVersionEnum = "2014-09-01"
+	POSTCopyOptionGroupVersionEnumTwoThousandAndFourteen0901 PostCopyOptionGroupVersionEnum = "2014-09-01"
 )
 
 type PostCopyOptionGroupQueryParams struct {

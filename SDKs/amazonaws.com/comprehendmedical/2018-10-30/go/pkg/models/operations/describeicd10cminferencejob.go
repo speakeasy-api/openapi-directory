@@ -7,7 +7,7 @@ import (
 type DescribeIcd10CmInferenceJobXAmzTargetEnum string
 
 const (
-	DescribeIcd10CmInferenceJobXAmzTargetEnumComprehendMedical20181030DescribeIcd10CmInferenceJob DescribeIcd10CmInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.DescribeICD10CMInferenceJob"
+	DescribeIcd10CMInferenceJobXAmzTargetEnumComprehendMedical20181030DescribeIcd10CmInferenceJob DescribeIcd10CmInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.DescribeICD10CMInferenceJob"
 )
 
 type DescribeIcd10CmInferenceJobHeaders struct {
@@ -28,7 +28,7 @@ type DescribeIcd10CmInferenceJobRequest struct {
 
 type DescribeIcd10CmInferenceJobResponse struct {
 	ContentType                         string
-	DescribeIcd10CmInferenceJobResponse *shared.DescribeIcd10CmInferenceJobResponse
+	DescribeIcd10CMInferenceJobResponse *shared.DescribeIcd10CmInferenceJobResponse
 	InternalServerException             *interface{}
 	InvalidRequestException             *interface{}
 	ResourceNotFoundException           *interface{}

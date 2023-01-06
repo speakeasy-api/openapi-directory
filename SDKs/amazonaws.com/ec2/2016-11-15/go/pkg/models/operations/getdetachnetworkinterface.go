@@ -3,13 +3,13 @@ package operations
 type GetDetachNetworkInterfaceActionEnum string
 
 const (
-	GetDetachNetworkInterfaceActionEnumDetachNetworkInterface GetDetachNetworkInterfaceActionEnum = "DetachNetworkInterface"
+	GETDetachNetworkInterfaceActionEnumDetachNetworkInterface GetDetachNetworkInterfaceActionEnum = "DetachNetworkInterface"
 )
 
 type GetDetachNetworkInterfaceVersionEnum string
 
 const (
-	GetDetachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 GetDetachNetworkInterfaceVersionEnum = "2016-11-15"
+	GETDetachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 GetDetachNetworkInterfaceVersionEnum = "2016-11-15"
 )
 
 type GetDetachNetworkInterfaceQueryParams struct {

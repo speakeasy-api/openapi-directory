@@ -3,7 +3,7 @@ package shared
 // ApnsMessage
 // Specifies the settings for a one-time message that's sent directly to an endpoint through the APNs (Apple Push Notification service) channel.
 type ApnsMessage struct {
-	ApnsPushType                  *string             `json:"APNSPushType,omitempty"`
+	APNSPushType                  *string             `json:"APNSPushType,omitempty"`
 	Action                        *ActionEnum         `json:"Action,omitempty"`
 	Badge                         *int64              `json:"Badge,omitempty"`
 	Body                          *string             `json:"Body,omitempty"`

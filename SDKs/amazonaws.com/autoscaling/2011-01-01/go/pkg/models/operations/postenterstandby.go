@@ -3,13 +3,13 @@ package operations
 type PostEnterStandbyActionEnum string
 
 const (
-	PostEnterStandbyActionEnumEnterStandby PostEnterStandbyActionEnum = "EnterStandby"
+	POSTEnterStandbyActionEnumEnterStandby PostEnterStandbyActionEnum = "EnterStandby"
 )
 
 type PostEnterStandbyVersionEnum string
 
 const (
-	PostEnterStandbyVersionEnumTwoThousandAndEleven0101 PostEnterStandbyVersionEnum = "2011-01-01"
+	POSTEnterStandbyVersionEnumTwoThousandAndEleven0101 PostEnterStandbyVersionEnum = "2011-01-01"
 )
 
 type PostEnterStandbyQueryParams struct {

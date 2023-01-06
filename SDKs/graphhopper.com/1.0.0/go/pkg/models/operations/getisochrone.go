@@ -27,7 +27,7 @@ type GetIsochroneRequest struct {
 
 type GetIsochroneResponse struct {
 	ContentType       string
-	GhError           *shared.GhError
+	GHError           *shared.GhError
 	IsochroneResponse *shared.IsochroneResponse
 	StatusCode        int64
 }

@@ -3,13 +3,13 @@ package operations
 type GetDeleteTransitGatewayMulticastDomainActionEnum string
 
 const (
-	GetDeleteTransitGatewayMulticastDomainActionEnumDeleteTransitGatewayMulticastDomain GetDeleteTransitGatewayMulticastDomainActionEnum = "DeleteTransitGatewayMulticastDomain"
+	GETDeleteTransitGatewayMulticastDomainActionEnumDeleteTransitGatewayMulticastDomain GetDeleteTransitGatewayMulticastDomainActionEnum = "DeleteTransitGatewayMulticastDomain"
 )
 
 type GetDeleteTransitGatewayMulticastDomainVersionEnum string
 
 const (
-	GetDeleteTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 GetDeleteTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
+	GETDeleteTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 GetDeleteTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
 )
 
 type GetDeleteTransitGatewayMulticastDomainQueryParams struct {

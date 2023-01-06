@@ -26,7 +26,7 @@ const (
 	LanguageCodeEnumGdGb LanguageCodeEnum = "gd-GB"
 	LanguageCodeEnumHeIl LanguageCodeEnum = "he-IL"
 	LanguageCodeEnumHiIn LanguageCodeEnum = "hi-IN"
-	LanguageCodeEnumIdid LanguageCodeEnum = "id-ID"
+	LanguageCodeEnumIDID LanguageCodeEnum = "id-ID"
 	LanguageCodeEnumItIt LanguageCodeEnum = "it-IT"
 	LanguageCodeEnumJaJp LanguageCodeEnum = "ja-JP"
 	LanguageCodeEnumKoKr LanguageCodeEnum = "ko-KR"

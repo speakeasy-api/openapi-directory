@@ -23,7 +23,7 @@ type StorageGetFilePreviewQueryParams struct {
 }
 
 type StorageGetFilePreviewSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
+	JWT     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
 	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
 	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
 }

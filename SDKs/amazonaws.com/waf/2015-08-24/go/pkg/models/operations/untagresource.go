@@ -30,10 +30,10 @@ type UntagResourceResponse struct {
 	ContentType                           string
 	StatusCode                            int64
 	UntagResourceResponse                 map[string]interface{}
-	WafBadRequestException                *interface{}
-	WafInternalErrorException             *interface{}
-	WafInvalidParameterException          *interface{}
-	WafNonexistentItemException           *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFBadRequestException                *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidParameterException          *interface{}
+	WAFNonexistentItemException           *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

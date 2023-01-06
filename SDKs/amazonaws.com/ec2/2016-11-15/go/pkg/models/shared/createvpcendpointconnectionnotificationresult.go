@@ -1,6 +1,6 @@
 package shared
 
 type CreateVpcEndpointConnectionNotificationResult struct {
-	ClientToken            *string
-	ConnectionNotification *ConnectionNotification
+	ClientToken            map[string]interface{}
+	ConnectionNotification map[string]interface{}
 }

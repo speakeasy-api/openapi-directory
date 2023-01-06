@@ -6,5 +6,5 @@ type FieldLevelEncryptionProfileConfig struct {
 	CallerReference    string
 	Comment            *string
 	EncryptionEntities EncryptionEntities
-	Name               string
+	Name               map[string]interface{}
 }

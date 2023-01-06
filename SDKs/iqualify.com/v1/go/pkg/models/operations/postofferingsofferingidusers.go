@@ -17,6 +17,6 @@ type PostOfferingsOfferingIDUsersResponse struct {
 	ContentType                                           string
 	Error                                                 *shared.Error
 	OfferingUserAddResponses                              []shared.OfferingUserAddResponse
-	PostOfferingsOfferingIDUsers207ApplicationJSONOneoves []interface{}
 	StatusCode                                            int64
+	PostOfferingsOfferingIDUsers207ApplicationJSONOneoves []interface{}
 }

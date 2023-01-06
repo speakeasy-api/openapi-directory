@@ -6,7 +6,7 @@ type ModifyEndpointMessage struct {
 	CertificateArn             *string                           `json:"CertificateArn,omitempty"`
 	DatabaseName               *string                           `json:"DatabaseName,omitempty"`
 	DmsTransferSettings        *DmsTransferSettings              `json:"DmsTransferSettings,omitempty"`
-	DocDbSettings              *DocDbSettings                    `json:"DocDbSettings,omitempty"`
+	DocDbSettings              *DocDbSettings1                   `json:"DocDbSettings,omitempty"`
 	DynamoDbSettings           *DynamoDbSettings                 `json:"DynamoDbSettings,omitempty"`
 	ElasticsearchSettings      *ElasticsearchSettings            `json:"ElasticsearchSettings,omitempty"`
 	EndpointArn                string                            `json:"EndpointArn"`
@@ -16,7 +16,7 @@ type ModifyEndpointMessage struct {
 	ExactSettings              *bool                             `json:"ExactSettings,omitempty"`
 	ExternalTableDefinition    *string                           `json:"ExternalTableDefinition,omitempty"`
 	ExtraConnectionAttributes  *string                           `json:"ExtraConnectionAttributes,omitempty"`
-	IbmDb2Settings             *IbmDb2Settings                   `json:"IBMDb2Settings,omitempty"`
+	IBMDb2Settings             *IbmDb2Settings                   `json:"IBMDb2Settings,omitempty"`
 	KafkaSettings              *KafkaSettings                    `json:"KafkaSettings,omitempty"`
 	KinesisSettings            *KinesisSettings                  `json:"KinesisSettings,omitempty"`
 	MicrosoftSQLServerSettings *MicrosoftSQLServerSettings       `json:"MicrosoftSQLServerSettings,omitempty"`

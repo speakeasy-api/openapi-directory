@@ -32,7 +32,7 @@ type GetOccupantsWithinOutputFormatQueryParams struct {
 	Brief              *bool                                                 `queryParam:"style=form,explode=true,name=brief"`
 	LocationDescriptor *GetOccupantsWithinOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	MaxResults         *int64                                                `queryParam:"style=form,explode=true,name=maxResults"`
-	OutputSrs          *int64                                                `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS          *int64                                                `queryParam:"style=form,explode=true,name=outputSRS"`
 	SetBack            *int64                                                `queryParam:"style=form,explode=true,name=setBack"`
 	Tags               *string                                               `queryParam:"style=form,explode=true,name=tags"`
 }

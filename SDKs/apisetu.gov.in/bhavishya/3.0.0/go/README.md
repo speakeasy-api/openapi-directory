@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.PecerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.PecerRequestBody{
             CertificateParameters: &operations.PecerRequestBodyCertificateParameters{
-                Dob: "quos",
-                FullName: "vel",
-                Gender: "maxime",
-                Pan: "rerum",
-                Ppo: "quisquam",
+                DOB: "sed",
+                FullName: "cumque",
+                GENDER: "architecto",
+                PAN: "accusantium",
+                PPO: "non",
             },
-            ConsentArtifact: "molestiae",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "qui",
+            TxnID: "voluptas",
         },
     }
     
-    res, err := s.Sdk.Pecer(ctx, req)
+    res, err := s.APIs.Pecer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -60,7 +59,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Pecer` - Pension Certificate
 

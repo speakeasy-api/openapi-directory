@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.GetIceServerConfigRequest{
         Headers: operations.GetIceServerConfigHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "ea",
-            XAmzCredential: "voluptas",
-            XAmzDate: "velit",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "in",
-            XAmzSignedHeaders: "quibusdam",
+            XAmzAlgorithm: "qui",
+            XAmzContentSha256: "adipisci",
+            XAmzCredential: "qui",
+            XAmzDate: "iste",
+            XAmzSecurityToken: "minima",
+            XAmzSignature: "blanditiis",
+            XAmzSignedHeaders: "sit",
         },
         Request: operations.GetIceServerConfigRequestBody{
-            ChannelArn: "nihil",
-            ClientID: "sint",
+            ChannelARN: "dolorem",
+            ClientID: "earum",
             Service: "TURN",
-            Username: "porro",
+            Username: "dolores",
         },
     }
     
-    res, err := s.Sdk.GetIceServerConfig(ctx, req)
+    res, err := s.GetIceServerConfig(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,5 +1,5 @@
 package shared
 
 type DeregisterTransitGatewayMulticastGroupMembersResult struct {
-	DeregisteredMulticastGroupMembers *TransitGatewayMulticastDeregisteredGroupMembers
+	DeregisteredMulticastGroupMembers map[string]interface{}
 }

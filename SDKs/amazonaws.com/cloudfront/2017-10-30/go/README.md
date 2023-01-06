@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,18 +34,18 @@ func main() {
     
     req := operations.CreateCloudFrontOriginAccessIdentity20171030Request{
         Headers: operations.CreateCloudFrontOriginAccessIdentity20171030Headers{
-            XAmzAlgorithm: "eveniet",
-            XAmzContentSha256: "id",
-            XAmzCredential: "placeat",
-            XAmzDate: "error",
-            XAmzSecurityToken: "odio",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "ea",
+            XAmzAlgorithm: "quo",
+            XAmzContentSha256: "delectus",
+            XAmzCredential: "et",
+            XAmzDate: "ipsum",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "quis",
+            XAmzSignedHeaders: "et",
         },
-        Request: []byte("ad"),
+        Request: []byte("cupiditate"),
     }
     
-    res, err := s.Sdk.CreateCloudFrontOriginAccessIdentity20171030(ctx, req)
+    res, err := s.CreateCloudFrontOriginAccessIdentity20171030(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

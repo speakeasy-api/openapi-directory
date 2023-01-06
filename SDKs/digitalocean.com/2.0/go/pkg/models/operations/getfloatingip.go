@@ -8,10 +8,6 @@ type GetFloatingIPPathParams struct {
 	FloatingIP string `pathParam:"style=simple,explode=false,name=floating_ip"`
 }
 
-type GetFloatingIPRequest struct {
-	PathParams GetFloatingIPPathParams
-}
-
 type GetFloatingIP200ApplicationJSON struct {
 	FloatingIP *shared.Onev21floatingIpsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesFloatingIpsItems `json:"floating_ip,omitempty"`
 }
@@ -20,6 +16,10 @@ type GetFloatingIP401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetFloatingIPRequest struct {
+	PathParams GetFloatingIPPathParams
 }
 
 type GetFloatingIPResponse struct {

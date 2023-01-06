@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeDBParameterGroups</code> action.
 type DbParameterGroupsMessage struct {
-	DbParameterGroups []DbParameterGroup
+	DBParameterGroups []map[string]interface{}
 	Marker            *string
 }

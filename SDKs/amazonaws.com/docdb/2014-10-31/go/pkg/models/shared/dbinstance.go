@@ -10,13 +10,13 @@ type DbInstance struct {
 	AutoMinorVersionUpgrade      *bool
 	AvailabilityZone             *string
 	BackupRetentionPeriod        *int64
-	CaCertificateIdentifier      *string
-	DbClusterIdentifier          *string
-	DbInstanceArn                *string
-	DbInstanceClass              *string
-	DbInstanceIdentifier         *string
-	DbInstanceStatus             *string
-	DbSubnetGroup                *DbSubnetGroup
+	CACertificateIdentifier      *string
+	DBClusterIdentifier          *string
+	DBInstanceArn                *string
+	DBInstanceClass              *string
+	DBInstanceIdentifier         *string
+	DBInstanceStatus             *string
+	DBSubnetGroup                *DbSubnetGroup
 	DbiResourceID                *string
 	EnabledCloudwatchLogsExports []string
 	Endpoint                     *Endpoint
@@ -30,7 +30,7 @@ type DbInstance struct {
 	PreferredMaintenanceWindow   *string
 	PromotionTier                *int64
 	PubliclyAccessible           *bool
-	StatusInfos                  []DbInstanceStatusInfo
+	StatusInfos                  []map[string]interface{}
 	StorageEncrypted             *bool
-	VpcSecurityGroups            []VpcSecurityGroupMembership
+	VpcSecurityGroups            []map[string]interface{}
 }

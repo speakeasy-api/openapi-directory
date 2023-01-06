@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,30 @@ func main() {
         Security: operations.IapGetIamPolicySecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.IapGetIamPolicyPathParams{
-            Resource: "hic",
+            Resource: "voluptas",
         },
         QueryParams: operations.IapGetIamPolicyQueryParams{
             DollarXgafv: "1",
-            AccessToken: "sunt",
+            AccessToken: "architecto",
             Alt: "proto",
-            Callback: "culpa",
-            Fields: "aliquid",
-            Key: "totam",
-            OauthToken: "animi",
-            PrettyPrint: true,
-            QuotaUser: "quidem",
-            UploadType: "ea",
-            UploadProtocol: "autem",
+            Callback: "tempora",
+            Fields: "officiis",
+            Key: "nulla",
+            OauthToken: "sed",
+            PrettyPrint: false,
+            QuotaUser: "provident",
+            UploadType: "illum",
+            UploadProtocol: "in",
         },
         Request: &shared.GetIamPolicyRequest{
             Options: &shared.GetPolicyOptions{
-                RequestedPolicyVersion: 5195659224910899151,
+                RequestedPolicyVersion: 8585898852305933883,
             },
         },
     }

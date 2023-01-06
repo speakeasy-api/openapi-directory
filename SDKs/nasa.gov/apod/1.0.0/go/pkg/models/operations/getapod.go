@@ -20,6 +20,6 @@ type GetApodRequest struct {
 
 type GetApodResponse struct {
 	ContentType                    string
-	GetApod200ApplicationJSONAnies []interface{}
 	StatusCode                     int64
+	GetApod200ApplicationJSONAnies []interface{}
 }

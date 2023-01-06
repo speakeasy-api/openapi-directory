@@ -1,5 +1,5 @@
 package shared
 
 type DetachClassicLinkVpcResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

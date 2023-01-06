@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -548,7 +549,7 @@ func (s *SDK) CreateEventSourceMapping(ctx context.Context, request operations.C
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration
+			var out *shared.EventSourceMappingConfiguration1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -937,7 +938,7 @@ func (s *SDK) DeleteEventSourceMapping(ctx context.Context, request operations.D
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration
+			var out *shared.EventSourceMappingConfiguration1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -1729,7 +1730,7 @@ func (s *SDK) GetEventSourceMapping(ctx context.Context, request operations.GetE
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration
+			var out *shared.EventSourceMappingConfiguration1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -2770,7 +2771,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.EniLimitReachedException = out
+			res.ENILimitReachedException = out
 		}
 	case httpRes.StatusCode == 490:
 		switch {
@@ -2780,7 +2781,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.EfsMountConnectivityException = out
+			res.EFSMountConnectivityException = out
 		}
 	case httpRes.StatusCode == 491:
 		switch {
@@ -2790,7 +2791,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.EfsMountFailureException = out
+			res.EFSMountFailureException = out
 		}
 	case httpRes.StatusCode == 492:
 		switch {
@@ -2800,7 +2801,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.EfsMountTimeoutException = out
+			res.EFSMountTimeoutException = out
 		}
 	case httpRes.StatusCode == 493:
 		switch {
@@ -2810,7 +2811,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.EfsioException = out
+			res.EFSIOException = out
 		}
 	case httpRes.StatusCode == 494:
 		switch {
@@ -2870,7 +2871,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.KmsDisabledException = out
+			res.KMSDisabledException = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -2880,7 +2881,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 501:
 		switch {
@@ -2890,7 +2891,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.KmsAccessDeniedException = out
+			res.KMSAccessDeniedException = out
 		}
 	case httpRes.StatusCode == 502:
 		switch {
@@ -2900,7 +2901,7 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 				return nil, err
 			}
 
-			res.KmsNotFoundException = out
+			res.KMSNotFoundException = out
 		}
 	case httpRes.StatusCode == 503:
 		switch {
@@ -5139,7 +5140,7 @@ func (s *SDK) UpdateEventSourceMapping(ctx context.Context, request operations.U
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration
+			var out *shared.EventSourceMappingConfiguration1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -5251,7 +5252,7 @@ func (s *SDK) UpdateFunctionCode(ctx context.Context, request operations.UpdateF
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.FunctionConfiguration
+			var out *shared.FunctionConfiguration2
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

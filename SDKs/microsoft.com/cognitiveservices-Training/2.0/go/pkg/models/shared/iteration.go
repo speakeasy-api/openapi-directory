@@ -4,13 +4,6 @@ import (
 	"time"
 )
 
-// IterationInput
-// Iteration model to be sent over JSON
-type IterationInput struct {
-	IsDefault *bool   `json:"isDefault,omitempty" form:"name=isDefault"`
-	Name      *string `json:"name,omitempty" form:"name=name"`
-}
-
 // Iteration
 // Iteration model to be sent over JSON
 type Iteration struct {
@@ -24,4 +17,11 @@ type Iteration struct {
 	ProjectID    *string    `json:"projectId,omitempty"`
 	Status       *string    `json:"status,omitempty"`
 	TrainedAt    *time.Time `json:"trainedAt,omitempty"`
+}
+
+// IterationInput
+// Iteration model to be sent over JSON
+type IterationInput struct {
+	IsDefault *bool   `json:"isDefault,omitempty" form:"name=isDefault"`
+	Name      *string `json:"name,omitempty" form:"name=name"`
 }

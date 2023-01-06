@@ -24,5 +24,5 @@ type ReversePagesV1Response struct {
 	ContentType                                       string
 	StatusCode                                        int64
 	ReversePagesV1200ApplicationPdfBinaryString       []byte
-	ReversePagesV14XxApplicationProblemPlusJSONObject *ReversePagesV14XxApplicationProblemPlusJSON
+	ReversePagesV14XXApplicationProblemPlusJSONObject *ReversePagesV14XxApplicationProblemPlusJSON
 }

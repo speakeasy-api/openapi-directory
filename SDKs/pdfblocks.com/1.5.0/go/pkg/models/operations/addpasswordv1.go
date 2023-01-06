@@ -33,5 +33,5 @@ type AddPasswordV1Response struct {
 	ContentType                                      string
 	StatusCode                                       int64
 	AddPasswordV1200ApplicationPdfBinaryString       []byte
-	AddPasswordV14XxApplicationProblemPlusJSONObject *AddPasswordV14XxApplicationProblemPlusJSON
+	AddPasswordV14XXApplicationProblemPlusJSONObject *AddPasswordV14XxApplicationProblemPlusJSON
 }

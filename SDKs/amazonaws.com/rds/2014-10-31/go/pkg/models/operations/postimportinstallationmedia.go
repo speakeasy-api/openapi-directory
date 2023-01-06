@@ -3,13 +3,13 @@ package operations
 type PostImportInstallationMediaActionEnum string
 
 const (
-	PostImportInstallationMediaActionEnumImportInstallationMedia PostImportInstallationMediaActionEnum = "ImportInstallationMedia"
+	POSTImportInstallationMediaActionEnumImportInstallationMedia PostImportInstallationMediaActionEnum = "ImportInstallationMedia"
 )
 
 type PostImportInstallationMediaVersionEnum string
 
 const (
-	PostImportInstallationMediaVersionEnumTwoThousandAndFourteen1031 PostImportInstallationMediaVersionEnum = "2014-10-31"
+	POSTImportInstallationMediaVersionEnumTwoThousandAndFourteen1031 PostImportInstallationMediaVersionEnum = "2014-10-31"
 )
 
 type PostImportInstallationMediaQueryParams struct {

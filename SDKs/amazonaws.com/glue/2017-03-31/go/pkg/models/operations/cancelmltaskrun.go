@@ -7,7 +7,7 @@ import (
 type CancelMlTaskRunXAmzTargetEnum string
 
 const (
-	CancelMlTaskRunXAmzTargetEnumAwsGlueCancelMlTaskRun CancelMlTaskRunXAmzTargetEnum = "AWSGlue.CancelMLTaskRun"
+	CancelMLTaskRunXAmzTargetEnumAwsGlueCancelMlTaskRun CancelMlTaskRunXAmzTargetEnum = "AWSGlue.CancelMLTaskRun"
 )
 
 type CancelMlTaskRunHeaders struct {
@@ -27,7 +27,7 @@ type CancelMlTaskRunRequest struct {
 }
 
 type CancelMlTaskRunResponse struct {
-	CancelMlTaskRunResponse   *shared.CancelMlTaskRunResponse
+	CancelMLTaskRunResponse   *shared.CancelMlTaskRunResponse
 	ContentType               string
 	EntityNotFoundException   *interface{}
 	InternalServiceException  *interface{}

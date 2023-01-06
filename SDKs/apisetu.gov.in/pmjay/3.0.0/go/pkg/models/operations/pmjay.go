@@ -5,7 +5,7 @@ import (
 )
 
 type PmjayRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	Udf1     string `json:"UDF1"`
 	Udf2     string `json:"UDF2"`
@@ -84,7 +84,7 @@ type Pmjay404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Pmjay404ApplicationJSONErrorDescriptionEnumNoRecordFound               Pmjay404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Pmjay404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Pmjay404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Pmjay404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pmjay404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Pmjay404ApplicationJSON struct {

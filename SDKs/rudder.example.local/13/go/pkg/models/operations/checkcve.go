@@ -7,7 +7,7 @@ import (
 type CheckCve200ApplicationJSONActionEnum string
 
 const (
-	CheckCve200ApplicationJSONActionEnumCheckCve CheckCve200ApplicationJSONActionEnum = "checkCVE"
+	CheckCVE200ApplicationJSONActionEnumCheckCve CheckCve200ApplicationJSONActionEnum = "checkCVE"
 )
 
 type CheckCve200ApplicationJSONData struct {
@@ -17,8 +17,8 @@ type CheckCve200ApplicationJSONData struct {
 type CheckCve200ApplicationJSONResultEnum string
 
 const (
-	CheckCve200ApplicationJSONResultEnumSuccess CheckCve200ApplicationJSONResultEnum = "success"
-	CheckCve200ApplicationJSONResultEnumError   CheckCve200ApplicationJSONResultEnum = "error"
+	CheckCVE200ApplicationJSONResultEnumSuccess CheckCve200ApplicationJSONResultEnum = "success"
+	CheckCVE200ApplicationJSONResultEnumError   CheckCve200ApplicationJSONResultEnum = "error"
 )
 
 type CheckCve200ApplicationJSON struct {
@@ -30,5 +30,5 @@ type CheckCve200ApplicationJSON struct {
 type CheckCveResponse struct {
 	ContentType                      string
 	StatusCode                       int64
-	CheckCve200ApplicationJSONObject *CheckCve200ApplicationJSON
+	CheckCVE200ApplicationJSONObject *CheckCve200ApplicationJSON
 }

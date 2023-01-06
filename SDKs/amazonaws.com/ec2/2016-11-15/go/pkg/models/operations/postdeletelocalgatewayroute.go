@@ -3,13 +3,13 @@ package operations
 type PostDeleteLocalGatewayRouteActionEnum string
 
 const (
-	PostDeleteLocalGatewayRouteActionEnumDeleteLocalGatewayRoute PostDeleteLocalGatewayRouteActionEnum = "DeleteLocalGatewayRoute"
+	POSTDeleteLocalGatewayRouteActionEnumDeleteLocalGatewayRoute PostDeleteLocalGatewayRouteActionEnum = "DeleteLocalGatewayRoute"
 )
 
 type PostDeleteLocalGatewayRouteVersionEnum string
 
 const (
-	PostDeleteLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 PostDeleteLocalGatewayRouteVersionEnum = "2016-11-15"
+	POSTDeleteLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 PostDeleteLocalGatewayRouteVersionEnum = "2016-11-15"
 )
 
 type PostDeleteLocalGatewayRouteQueryParams struct {

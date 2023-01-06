@@ -15,6 +15,6 @@ type GetResourcesMediaIDContentRequest struct {
 
 type GetResourcesMediaIDContentResponse struct {
 	ContentType                                        string
-	GetResourcesMediaIDContent200ApplicationJSONString *string
 	StatusCode                                         int64
+	GetResourcesMediaIDContent200ApplicationJSONString *string
 }

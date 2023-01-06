@@ -1,5 +1,7 @@
 package shared
 
+// ContributorActivitySimpleUser
+// Simple User
 type ContributorActivitySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

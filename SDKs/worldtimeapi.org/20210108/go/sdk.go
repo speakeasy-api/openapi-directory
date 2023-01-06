@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -122,6 +123,58 @@ func (s *SDK) GetIP(ctx context.Context) (*operations.GetIPResponse, error) {
 	return res, nil
 }
 
+// GetIPTxt - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+func (s *SDK) GetIPTxt(ctx context.Context) (*operations.GetIPTxtResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ip.txt"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetIPTxtResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.DateTimeTextResponse = &out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ErrorTextResponse = &out
+		}
+	}
+
+	return res, nil
+}
+
 // GetIPIpv4 - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 func (s *SDK) GetIPIpv4(ctx context.Context, request operations.GetIPIpv4Request) (*operations.GetIPIpv4Response, error) {
 	baseURL := s._serverURL
@@ -224,58 +277,6 @@ func (s *SDK) GetIPIpv4Txt(ctx context.Context, request operations.GetIPIpv4TxtR
 	return res, nil
 }
 
-// GetIPTxt - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-func (s *SDK) GetIPTxt(ctx context.Context) (*operations.GetIPTxtResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/ip.txt"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetIPTxtResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.DateTimeTextResponse = &out
-		}
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.ErrorTextResponse = &out
-		}
-	}
-
-	return res, nil
-}
-
 // GetTimezone - a listing of all timezones.
 func (s *SDK) GetTimezone(ctx context.Context) (*operations.GetTimezoneResponse, error) {
 	baseURL := s._serverURL
@@ -310,6 +311,47 @@ func (s *SDK) GetTimezone(ctx context.Context) (*operations.GetTimezoneResponse,
 			}
 
 			res.ListJSONResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetTimezoneTxt - a listing of all timezones.
+func (s *SDK) GetTimezoneTxt(ctx context.Context) (*operations.GetTimezoneTxtResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/timezone.txt"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTimezoneTxtResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ListTextResponse = &out
 		}
 	}
 
@@ -366,6 +408,58 @@ func (s *SDK) GetTimezoneArea(ctx context.Context, request operations.GetTimezon
 	return res, nil
 }
 
+// GetTimezoneAreaTxt - a listing of all timezones available for that area.
+func (s *SDK) GetTimezoneAreaTxt(ctx context.Context, request operations.GetTimezoneAreaTxtRequest) (*operations.GetTimezoneAreaTxtResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}.txt", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTimezoneAreaTxtResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ListTextResponse = &out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ErrorTextResponse = &out
+		}
+	}
+
+	return res, nil
+}
+
 // GetTimezoneAreaLocation - request the current time for a timezone.
 func (s *SDK) GetTimezoneAreaLocation(ctx context.Context, request operations.GetTimezoneAreaLocationRequest) (*operations.GetTimezoneAreaLocationResponse, error) {
 	baseURL := s._serverURL
@@ -410,6 +504,58 @@ func (s *SDK) GetTimezoneAreaLocation(ctx context.Context, request operations.Ge
 			}
 
 			res.ErrorJSONResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetTimezoneAreaLocationTxt - request the current time for a timezone.
+func (s *SDK) GetTimezoneAreaLocationTxt(ctx context.Context, request operations.GetTimezoneAreaLocationTxtRequest) (*operations.GetTimezoneAreaLocationTxtResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}.txt", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTimezoneAreaLocationTxtResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.DateTimeTextResponse = &out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `text/plain`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			out := string(data)
+			res.ErrorTextResponse = &out
 		}
 	}
 
@@ -512,151 +658,6 @@ func (s *SDK) GetTimezoneAreaLocationRegionTxt(ctx context.Context, request oper
 
 			out := string(data)
 			res.ErrorTextResponse = &out
-		}
-	}
-
-	return res, nil
-}
-
-// GetTimezoneAreaLocationTxt - request the current time for a timezone.
-func (s *SDK) GetTimezoneAreaLocationTxt(ctx context.Context, request operations.GetTimezoneAreaLocationTxtRequest) (*operations.GetTimezoneAreaLocationTxtResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}.txt", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTimezoneAreaLocationTxtResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.DateTimeTextResponse = &out
-		}
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.ErrorTextResponse = &out
-		}
-	}
-
-	return res, nil
-}
-
-// GetTimezoneAreaTxt - a listing of all timezones available for that area.
-func (s *SDK) GetTimezoneAreaTxt(ctx context.Context, request operations.GetTimezoneAreaTxtRequest) (*operations.GetTimezoneAreaTxtResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}.txt", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTimezoneAreaTxtResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.ListTextResponse = &out
-		}
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.ErrorTextResponse = &out
-		}
-	}
-
-	return res, nil
-}
-
-// GetTimezoneTxt - a listing of all timezones.
-func (s *SDK) GetTimezoneTxt(ctx context.Context) (*operations.GetTimezoneTxtResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/timezone.txt"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTimezoneTxtResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			out := string(data)
-			res.ListTextResponse = &out
 		}
 	}
 

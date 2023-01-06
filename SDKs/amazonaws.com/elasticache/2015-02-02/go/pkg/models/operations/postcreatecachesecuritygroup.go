@@ -3,13 +3,13 @@ package operations
 type PostCreateCacheSecurityGroupActionEnum string
 
 const (
-	PostCreateCacheSecurityGroupActionEnumCreateCacheSecurityGroup PostCreateCacheSecurityGroupActionEnum = "CreateCacheSecurityGroup"
+	POSTCreateCacheSecurityGroupActionEnumCreateCacheSecurityGroup PostCreateCacheSecurityGroupActionEnum = "CreateCacheSecurityGroup"
 )
 
 type PostCreateCacheSecurityGroupVersionEnum string
 
 const (
-	PostCreateCacheSecurityGroupVersionEnumTwoThousandAndFifteen0202 PostCreateCacheSecurityGroupVersionEnum = "2015-02-02"
+	POSTCreateCacheSecurityGroupVersionEnumTwoThousandAndFifteen0202 PostCreateCacheSecurityGroupVersionEnum = "2015-02-02"
 )
 
 type PostCreateCacheSecurityGroupQueryParams struct {

@@ -7,21 +7,21 @@ import (
 type GetDescribeFleetHistoryActionEnum string
 
 const (
-	GetDescribeFleetHistoryActionEnumDescribeFleetHistory GetDescribeFleetHistoryActionEnum = "DescribeFleetHistory"
+	GETDescribeFleetHistoryActionEnumDescribeFleetHistory GetDescribeFleetHistoryActionEnum = "DescribeFleetHistory"
 )
 
 type GetDescribeFleetHistoryEventTypeEnum string
 
 const (
-	GetDescribeFleetHistoryEventTypeEnumInstanceChange GetDescribeFleetHistoryEventTypeEnum = "instance-change"
-	GetDescribeFleetHistoryEventTypeEnumFleetChange    GetDescribeFleetHistoryEventTypeEnum = "fleet-change"
-	GetDescribeFleetHistoryEventTypeEnumServiceError   GetDescribeFleetHistoryEventTypeEnum = "service-error"
+	GETDescribeFleetHistoryEventTypeEnumInstanceChange GetDescribeFleetHistoryEventTypeEnum = "instance-change"
+	GETDescribeFleetHistoryEventTypeEnumFleetChange    GetDescribeFleetHistoryEventTypeEnum = "fleet-change"
+	GETDescribeFleetHistoryEventTypeEnumServiceError   GetDescribeFleetHistoryEventTypeEnum = "service-error"
 )
 
 type GetDescribeFleetHistoryVersionEnum string
 
 const (
-	GetDescribeFleetHistoryVersionEnumTwoThousandAndSixteen1115 GetDescribeFleetHistoryVersionEnum = "2016-11-15"
+	GETDescribeFleetHistoryVersionEnumTwoThousandAndSixteen1115 GetDescribeFleetHistoryVersionEnum = "2016-11-15"
 )
 
 type GetDescribeFleetHistoryQueryParams struct {

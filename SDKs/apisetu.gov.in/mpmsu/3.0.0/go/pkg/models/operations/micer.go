@@ -5,10 +5,10 @@ import (
 )
 
 type MicerRequestBodyCertificateParameters struct {
-	Appno       string `json:"APPNO"`
+	APPNO       string `json:"APPNO"`
 	DateOfBirth string `json:"Date_Of_Birth"`
-	Enrolno     string `json:"ENROLNO"`
-	Rollno      string `json:"ROLLNO"`
+	ENROLNO     string `json:"ENROLNO"`
+	ROLLNO      string `json:"ROLLNO"`
 }
 
 type MicerRequestBodyFormatEnum string
@@ -84,7 +84,7 @@ type Micer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Micer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Micer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Micer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Micer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Micer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Micer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Micer404ApplicationJSON struct {

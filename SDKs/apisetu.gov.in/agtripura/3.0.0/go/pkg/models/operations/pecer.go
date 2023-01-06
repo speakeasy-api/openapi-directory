@@ -5,8 +5,8 @@ import (
 )
 
 type PecerRequestBodyCertificateParameters struct {
-	AcNo string `json:"AC_NO"`
-	Dob  string `json:"DOB"`
+	ACNO string `json:"AC_NO"`
+	DOB  string `json:"DOB"`
 }
 
 type PecerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Pecer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Pecer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Pecer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Pecer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Pecer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Pecer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pecer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Pecer404ApplicationJSON struct {

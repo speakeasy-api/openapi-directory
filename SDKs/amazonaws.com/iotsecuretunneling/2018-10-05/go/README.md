@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.CloseTunnelRequest{
         Headers: operations.CloseTunnelHeaders{
-            XAmzAlgorithm: "laboriosam",
-            XAmzContentSha256: "voluptate",
-            XAmzCredential: "aut",
-            XAmzDate: "sit",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "excepturi",
-            XAmzSignedHeaders: "quia",
+            XAmzAlgorithm: "quaerat",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "et",
+            XAmzDate: "vel",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "ipsam",
+            XAmzSignedHeaders: "magni",
             XAmzTarget: "IoTSecuredTunneling.CloseTunnel",
         },
         Request: shared.CloseTunnelRequest{
-            Delete: false,
-            TunnelID: "voluptas",
+            Delete: true,
+            TunnelID: "impedit",
         },
     }
     
-    res, err := s.Sdk.CloseTunnel(ctx, req)
+    res, err := s.CloseTunnel(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

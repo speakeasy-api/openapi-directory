@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,14 +24,14 @@ func main() {
     
     req := operations.GetAPICardRequest{
         QueryParams: operations.GetAPICardQueryParams{
-            Type: "voluptatum",
+            Type: "vel",
         },
         Headers: operations.GetAPICardHeaders{
-            XAPIKey: "quo",
+            XAPIKey: "quas",
         },
     }
     
-    res, err := s.Sdk.GetAPICard(ctx, req)
+    res, err := s.Card.GetAPICard(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,21 +45,36 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Card
 
 * `GetAPICard` - Get Card
 * `GetAPICardTypes` - Get available card types
+
+### Misc
+
 * `GetAPIMiscCultures`
 * `GetAPIMiscRandomAddress`
+
+### Name
+
 * `GetAPIName` - Get name
 * `GetAPINameSuggestions` - Get business name suggestions
+
+### Phone
+
 * `GetAPIPhoneCountries` - Get available countries
 * `GetAPIPhoneGenerate` - Get bulk telephone numbers for a country
 * `GetAPIPhoneValidate` - Validate a phone number
+
+### SocialNumber
+
 * `GetAPISocialNumber` - Generate a social security number
+* `PostAPISocialNumber` - Validate VAT/identity numbers
+
+### Text
+
 * `GetAPITextLoremIpsum` - Generate lorem ipsum
 * `GetAPITextPassword` - Generate password
-* `PostAPISocialNumber` - Validate VAT/identity numbers
 * `PostAPITextHumanize` - Humanize text
 * `PostAPITextTransform` - Transform text
 

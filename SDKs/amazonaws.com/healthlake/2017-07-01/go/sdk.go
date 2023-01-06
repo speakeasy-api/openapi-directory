@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -131,7 +132,7 @@ func (s *SDK) CreateFhirDatastore(ctx context.Context, request operations.Create
 				return nil, err
 			}
 
-			res.CreateFhirDatastoreResponse = out
+			res.CreateFHIRDatastoreResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -223,7 +224,7 @@ func (s *SDK) DeleteFhirDatastore(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.DeleteFhirDatastoreResponse = out
+			res.DeleteFHIRDatastoreResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -335,7 +336,7 @@ func (s *SDK) DescribeFhirDatastore(ctx context.Context, request operations.Desc
 				return nil, err
 			}
 
-			res.DescribeFhirDatastoreResponse = out
+			res.DescribeFHIRDatastoreResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -427,7 +428,7 @@ func (s *SDK) DescribeFhirExportJob(ctx context.Context, request operations.Desc
 				return nil, err
 			}
 
-			res.DescribeFhirExportJobResponse = out
+			res.DescribeFHIRExportJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -519,7 +520,7 @@ func (s *SDK) DescribeFhirImportJob(ctx context.Context, request operations.Desc
 				return nil, err
 			}
 
-			res.DescribeFhirImportJobResponse = out
+			res.DescribeFHIRImportJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -613,7 +614,7 @@ func (s *SDK) ListFhirDatastores(ctx context.Context, request operations.ListFhi
 				return nil, err
 			}
 
-			res.ListFhirDatastoresResponse = out
+			res.ListFHIRDatastoresResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -697,7 +698,7 @@ func (s *SDK) ListFhirExportJobs(ctx context.Context, request operations.ListFhi
 				return nil, err
 			}
 
-			res.ListFhirExportJobsResponse = out
+			res.ListFHIRExportJobsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -801,7 +802,7 @@ func (s *SDK) ListFhirImportJobs(ctx context.Context, request operations.ListFhi
 				return nil, err
 			}
 
-			res.ListFhirImportJobsResponse = out
+			res.ListFHIRImportJobsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -975,7 +976,7 @@ func (s *SDK) StartFhirExportJob(ctx context.Context, request operations.StartFh
 				return nil, err
 			}
 
-			res.StartFhirExportJobResponse = out
+			res.StartFHIRExportJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1077,7 +1078,7 @@ func (s *SDK) StartFhirImportJob(ctx context.Context, request operations.StartFh
 				return nil, err
 			}
 
-			res.StartFhirImportJobResponse = out
+			res.StartFHIRImportJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

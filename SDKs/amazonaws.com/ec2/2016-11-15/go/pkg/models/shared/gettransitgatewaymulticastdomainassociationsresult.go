@@ -1,6 +1,6 @@
 package shared
 
 type GetTransitGatewayMulticastDomainAssociationsResult struct {
-	MulticastDomainAssociations []TransitGatewayMulticastDomainAssociation
-	NextToken                   *string
+	MulticastDomainAssociations map[string]interface{}
+	NextToken                   map[string]interface{}
 }

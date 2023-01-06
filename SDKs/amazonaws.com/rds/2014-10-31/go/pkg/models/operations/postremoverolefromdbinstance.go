@@ -3,13 +3,13 @@ package operations
 type PostRemoveRoleFromDbInstanceActionEnum string
 
 const (
-	PostRemoveRoleFromDbInstanceActionEnumRemoveRoleFromDbInstance PostRemoveRoleFromDbInstanceActionEnum = "RemoveRoleFromDBInstance"
+	POSTRemoveRoleFromDBInstanceActionEnumRemoveRoleFromDbInstance PostRemoveRoleFromDbInstanceActionEnum = "RemoveRoleFromDBInstance"
 )
 
 type PostRemoveRoleFromDbInstanceVersionEnum string
 
 const (
-	PostRemoveRoleFromDbInstanceVersionEnumTwoThousandAndFourteen1031 PostRemoveRoleFromDbInstanceVersionEnum = "2014-10-31"
+	POSTRemoveRoleFromDBInstanceVersionEnumTwoThousandAndFourteen1031 PostRemoveRoleFromDbInstanceVersionEnum = "2014-10-31"
 )
 
 type PostRemoveRoleFromDbInstanceQueryParams struct {

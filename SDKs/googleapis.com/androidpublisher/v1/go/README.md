@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.AndroidpublisherPurchasesCancelSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AndroidpublisherPurchasesCancelPathParams{
-            PackageName: "a",
-            SubscriptionID: "sint",
-            Token: "velit",
+            PackageName: "eligendi",
+            SubscriptionID: "quia",
+            Token: "minima",
         },
         QueryParams: operations.AndroidpublisherPurchasesCancelQueryParams{
             Alt: "json",
-            Fields: "incidunt",
-            Key: "reiciendis",
-            OauthToken: "velit",
-            PrettyPrint: true,
-            QuotaUser: "in",
-            UserIP: "quas",
+            Fields: "corrupti",
+            Key: "ipsa",
+            OauthToken: "sint",
+            PrettyPrint: false,
+            QuotaUser: "ab",
+            UserIP: "porro",
         },
     }
     

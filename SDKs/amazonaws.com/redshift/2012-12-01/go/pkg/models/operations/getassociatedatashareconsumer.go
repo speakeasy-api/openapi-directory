@@ -3,13 +3,13 @@ package operations
 type GetAssociateDataShareConsumerActionEnum string
 
 const (
-	GetAssociateDataShareConsumerActionEnumAssociateDataShareConsumer GetAssociateDataShareConsumerActionEnum = "AssociateDataShareConsumer"
+	GETAssociateDataShareConsumerActionEnumAssociateDataShareConsumer GetAssociateDataShareConsumerActionEnum = "AssociateDataShareConsumer"
 )
 
 type GetAssociateDataShareConsumerVersionEnum string
 
 const (
-	GetAssociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 GetAssociateDataShareConsumerVersionEnum = "2012-12-01"
+	GETAssociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 GetAssociateDataShareConsumerVersionEnum = "2012-12-01"
 )
 
 type GetAssociateDataShareConsumerQueryParams struct {

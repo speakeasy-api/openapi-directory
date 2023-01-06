@@ -1,5 +1,5 @@
 package shared
 
 type RestoreDbInstanceToPointInTimeResult struct {
-	DbInstance *DbInstance
+	DBInstance *DbInstance
 }

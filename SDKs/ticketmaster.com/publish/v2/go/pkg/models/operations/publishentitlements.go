@@ -5,7 +5,7 @@ import (
 )
 
 type PublishEntitlementsHeaders struct {
-	TmpsCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
+	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
 }
 
 type PublishEntitlementsRequest struct {

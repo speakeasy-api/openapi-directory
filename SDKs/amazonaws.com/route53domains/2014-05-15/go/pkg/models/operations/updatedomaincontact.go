@@ -32,7 +32,7 @@ type UpdateDomainContactResponse struct {
 	InvalidInput                *interface{}
 	OperationLimitExceeded      *interface{}
 	StatusCode                  int64
-	TldRulesViolation           *interface{}
-	UnsupportedTld              *interface{}
+	TLDRulesViolation           *interface{}
+	UnsupportedTLD              *interface{}
 	UpdateDomainContactResponse *shared.UpdateDomainContactResponse
 }

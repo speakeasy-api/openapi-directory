@@ -7,9 +7,9 @@ import (
 // ApplicationDetail
 // Describes the application, including the application Amazon Resource Name (ARN), status, latest version, and input and output configurations.
 type ApplicationDetail struct {
-	ApplicationArn                                 string                                          `json:"ApplicationARN"`
+	ApplicationARN                                 string                                          `json:"ApplicationARN"`
 	ApplicationConfigurationDescription            *ApplicationConfigurationDescription            `json:"ApplicationConfigurationDescription,omitempty"`
-	ApplicationDescription                         *string                                         `json:"ApplicationDescription,omitempty"`
+	ApplicationDescription                         map[string]interface{}                          `json:"ApplicationDescription,omitempty"`
 	ApplicationMaintenanceConfigurationDescription *ApplicationMaintenanceConfigurationDescription `json:"ApplicationMaintenanceConfigurationDescription,omitempty"`
 	ApplicationMode                                *ApplicationModeEnum                            `json:"ApplicationMode,omitempty"`
 	ApplicationName                                string                                          `json:"ApplicationName"`

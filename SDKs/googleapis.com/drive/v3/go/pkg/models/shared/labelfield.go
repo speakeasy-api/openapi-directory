@@ -4,8 +4,6 @@ import (
 	"time"
 )
 
-// LabelField
-// Representation of a label field.
 type LabelField struct {
 	DateString []time.Time `json:"dateString,omitempty"`
 	ID         *string     `json:"id,omitempty"`

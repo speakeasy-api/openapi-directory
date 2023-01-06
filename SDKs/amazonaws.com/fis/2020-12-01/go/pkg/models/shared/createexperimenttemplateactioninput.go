@@ -1,9 +1,7 @@
 package shared
 
-// CreateExperimentTemplateActionInput
-// Specifies an action for an experiment template.
 type CreateExperimentTemplateActionInput struct {
-	ActionID    string            `json:"actionId"`
+	ActionID    *string           `json:"actionId,omitempty"`
 	Description *string           `json:"description,omitempty"`
 	Parameters  map[string]string `json:"parameters,omitempty"`
 	StartAfter  []string          `json:"startAfter,omitempty"`

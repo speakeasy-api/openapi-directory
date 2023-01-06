@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.GetCriticsResourceTypeJSONRequest{
         PathParams: operations.GetCriticsResourceTypeJSONPathParams{
-            ResourceType: "dolor",
+            ResourceType: "placeat",
         },
     }
     
-    res, err := s.Sdk.GetCriticsResourceTypeJSON(ctx, req)
+    res, err := s.GetCriticsResourceTypeJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,8 +55,8 @@ func main() {
 ### SDK SDK
 
 * `GetCriticsResourceTypeJSON`
-* `GetReviewsResourceTypeJSON`
 * `GetReviewsSearchJSON`
+* `GetReviewsResourceTypeJSON`
 
 <!-- End SDK Available Operations -->
 

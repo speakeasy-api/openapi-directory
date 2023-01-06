@@ -7,7 +7,7 @@ import (
 type GetAwsDefaultServiceQuotaXAmzTargetEnum string
 
 const (
-	GetAwsDefaultServiceQuotaXAmzTargetEnumServiceQuotasV20190624GetAwsDefaultServiceQuota GetAwsDefaultServiceQuotaXAmzTargetEnum = "ServiceQuotasV20190624.GetAWSDefaultServiceQuota"
+	GetAWSDefaultServiceQuotaXAmzTargetEnumServiceQuotasV20190624GetAwsDefaultServiceQuota GetAwsDefaultServiceQuotaXAmzTargetEnum = "ServiceQuotasV20190624.GetAWSDefaultServiceQuota"
 )
 
 type GetAwsDefaultServiceQuotaHeaders struct {
@@ -29,7 +29,7 @@ type GetAwsDefaultServiceQuotaRequest struct {
 type GetAwsDefaultServiceQuotaResponse struct {
 	AccessDeniedException             *interface{}
 	ContentType                       string
-	GetAwsDefaultServiceQuotaResponse *shared.GetAwsDefaultServiceQuotaResponse
+	GetAWSDefaultServiceQuotaResponse *shared.GetAwsDefaultServiceQuotaResponse
 	IllegalArgumentException          *interface{}
 	NoSuchResourceException           *interface{}
 	ServiceException                  *interface{}

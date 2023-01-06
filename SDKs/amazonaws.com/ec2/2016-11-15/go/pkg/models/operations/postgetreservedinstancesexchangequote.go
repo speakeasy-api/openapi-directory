@@ -3,13 +3,13 @@ package operations
 type PostGetReservedInstancesExchangeQuoteActionEnum string
 
 const (
-	PostGetReservedInstancesExchangeQuoteActionEnumGetReservedInstancesExchangeQuote PostGetReservedInstancesExchangeQuoteActionEnum = "GetReservedInstancesExchangeQuote"
+	POSTGetReservedInstancesExchangeQuoteActionEnumGetReservedInstancesExchangeQuote PostGetReservedInstancesExchangeQuoteActionEnum = "GetReservedInstancesExchangeQuote"
 )
 
 type PostGetReservedInstancesExchangeQuoteVersionEnum string
 
 const (
-	PostGetReservedInstancesExchangeQuoteVersionEnumTwoThousandAndSixteen1115 PostGetReservedInstancesExchangeQuoteVersionEnum = "2016-11-15"
+	POSTGetReservedInstancesExchangeQuoteVersionEnumTwoThousandAndSixteen1115 PostGetReservedInstancesExchangeQuoteVersionEnum = "2016-11-15"
 )
 
 type PostGetReservedInstancesExchangeQuoteQueryParams struct {

@@ -40,6 +40,6 @@ type RouteRequest struct {
 	RoundTripDistance               *int32                      `json:"round_trip.distance,omitempty"`
 	RoundTripSeed                   *int64                      `json:"round_trip.seed,omitempty"`
 	SnapPreventions                 []string                    `json:"snap_preventions,omitempty"`
-	Vehicle                         *VehicleProfileIDEnum       `json:"vehicle,omitempty"`
+	Vehicle                         map[string]interface{}      `json:"vehicle,omitempty"`
 	Weighting                       *string                     `json:"weighting,omitempty"`
 }

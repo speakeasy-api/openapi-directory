@@ -8,6 +8,16 @@ const (
 	GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnumTeam                    GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum = "TEAM"
 )
 
+// GoogleCloudChannelV1CloudIdentityInfoInput
+// Cloud Identity information for the Cloud Channel Customer.
+type GoogleCloudChannelV1CloudIdentityInfoInput struct {
+	AlternateEmail *string                                                `json:"alternateEmail,omitempty"`
+	CustomerType   *GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum `json:"customerType,omitempty"`
+	EduData        *GoogleCloudChannelV1EduData                           `json:"eduData,omitempty"`
+	LanguageCode   *string                                                `json:"languageCode,omitempty"`
+	PhoneNumber    *string                                                `json:"phoneNumber,omitempty"`
+}
+
 // GoogleCloudChannelV1CloudIdentityInfo
 // Cloud Identity information for the Cloud Channel Customer.
 type GoogleCloudChannelV1CloudIdentityInfo struct {
@@ -19,14 +29,4 @@ type GoogleCloudChannelV1CloudIdentityInfo struct {
 	LanguageCode     *string                                                `json:"languageCode,omitempty"`
 	PhoneNumber      *string                                                `json:"phoneNumber,omitempty"`
 	PrimaryDomain    *string                                                `json:"primaryDomain,omitempty"`
-}
-
-// GoogleCloudChannelV1CloudIdentityInfoInput
-// Cloud Identity information for the Cloud Channel Customer.
-type GoogleCloudChannelV1CloudIdentityInfoInput struct {
-	AlternateEmail *string                                                `json:"alternateEmail,omitempty"`
-	CustomerType   *GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum `json:"customerType,omitempty"`
-	EduData        *GoogleCloudChannelV1EduData                           `json:"eduData,omitempty"`
-	LanguageCode   *string                                                `json:"languageCode,omitempty"`
-	PhoneNumber    *string                                                `json:"phoneNumber,omitempty"`
 }

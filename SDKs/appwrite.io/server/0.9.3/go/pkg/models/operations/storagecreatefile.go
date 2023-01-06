@@ -6,12 +6,12 @@ import (
 
 type StorageCreateFileRequestBody struct {
 	File  string   `multipartForm:"name=file"`
-	Read  []string `multipartForm:"name=read"`
-	Write []string `multipartForm:"name=write"`
+	Read  []string `multipartForm:"name=read,json"`
+	Write []string `multipartForm:"name=write,json"`
 }
 
 type StorageCreateFileSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
+	JWT     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
 	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
 	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
 }

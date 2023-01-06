@@ -5,10 +5,10 @@ import (
 )
 
 type PancrRequestBodyCertificateParameters struct {
-	Dob         string `json:"DOB"`
+	DOB         string `json:"DOB"`
 	FullName    string `json:"FullName"`
-	Gender      string `json:"GENDER"`
-	PanFullName string `json:"PANFullName"`
+	GENDER      string `json:"GENDER"`
+	PANFullName string `json:"PANFullName"`
 	UID         string `json:"UID"`
 	Panno       string `json:"panno"`
 }
@@ -87,7 +87,7 @@ type Pancr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Pancr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Pancr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Pancr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Pancr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Pancr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pancr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Pancr404ApplicationJSON struct {

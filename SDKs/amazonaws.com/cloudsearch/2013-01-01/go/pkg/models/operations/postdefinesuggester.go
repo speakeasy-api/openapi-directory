@@ -3,13 +3,13 @@ package operations
 type PostDefineSuggesterActionEnum string
 
 const (
-	PostDefineSuggesterActionEnumDefineSuggester PostDefineSuggesterActionEnum = "DefineSuggester"
+	POSTDefineSuggesterActionEnumDefineSuggester PostDefineSuggesterActionEnum = "DefineSuggester"
 )
 
 type PostDefineSuggesterVersionEnum string
 
 const (
-	PostDefineSuggesterVersionEnumTwoThousandAndThirteen0101 PostDefineSuggesterVersionEnum = "2013-01-01"
+	POSTDefineSuggesterVersionEnumTwoThousandAndThirteen0101 PostDefineSuggesterVersionEnum = "2013-01-01"
 )
 
 type PostDefineSuggesterQueryParams struct {

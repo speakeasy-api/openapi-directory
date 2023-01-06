@@ -26,10 +26,6 @@ type GetDropletBandwidthMetricsQueryParams struct {
 	Start     string                                  `queryParam:"style=form,explode=true,name=start"`
 }
 
-type GetDropletBandwidthMetricsRequest struct {
-	QueryParams GetDropletBandwidthMetricsQueryParams
-}
-
 type GetDropletBandwidthMetrics200ApplicationJSONDataResult struct {
 	Metric map[string]string `json:"metric"`
 	Values [][]interface{}   `json:"values"`
@@ -62,6 +58,10 @@ type GetDropletBandwidthMetrics401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDropletBandwidthMetricsRequest struct {
+	QueryParams GetDropletBandwidthMetricsQueryParams
 }
 
 type GetDropletBandwidthMetricsResponse struct {

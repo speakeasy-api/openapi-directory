@@ -5,9 +5,9 @@ type CreateHitRequest struct {
 	AssignmentReviewPolicy      *ReviewPolicy              `json:"AssignmentReviewPolicy,omitempty"`
 	AutoApprovalDelayInSeconds  *int64                     `json:"AutoApprovalDelayInSeconds,omitempty"`
 	Description                 string                     `json:"Description"`
-	HitLayoutID                 *string                    `json:"HITLayoutId,omitempty"`
-	HitLayoutParameters         []HitLayoutParameter       `json:"HITLayoutParameters,omitempty"`
-	HitReviewPolicy             *ReviewPolicy              `json:"HITReviewPolicy,omitempty"`
+	HITLayoutID                 *string                    `json:"HITLayoutId,omitempty"`
+	HITLayoutParameters         []HitLayoutParameter       `json:"HITLayoutParameters,omitempty"`
+	HITReviewPolicy             *ReviewPolicy              `json:"HITReviewPolicy,omitempty"`
 	Keywords                    *string                    `json:"Keywords,omitempty"`
 	LifetimeInSeconds           int64                      `json:"LifetimeInSeconds"`
 	MaxAssignments              *int64                     `json:"MaxAssignments,omitempty"`

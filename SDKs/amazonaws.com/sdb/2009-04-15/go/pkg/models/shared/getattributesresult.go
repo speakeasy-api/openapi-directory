@@ -1,5 +1,5 @@
 package shared
 
 type GetAttributesResult struct {
-	Attributes []Attribute
+	Attributes []map[string]interface{}
 }

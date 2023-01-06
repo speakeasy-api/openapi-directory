@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.CreateArtifactRuleRequest{
         PathParams: operations.CreateArtifactRulePathParams{
-            ArtifactID: "laudantium",
+            ArtifactID: "at",
         },
         Request: shared.Rule{
             Config: "nostrum",
-            Type: "COMPATIBILITY",
+            Type: "VALIDITY",
         },
     }
     

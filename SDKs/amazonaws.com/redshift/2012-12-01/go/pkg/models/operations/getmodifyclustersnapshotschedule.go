@@ -3,13 +3,13 @@ package operations
 type GetModifyClusterSnapshotScheduleActionEnum string
 
 const (
-	GetModifyClusterSnapshotScheduleActionEnumModifyClusterSnapshotSchedule GetModifyClusterSnapshotScheduleActionEnum = "ModifyClusterSnapshotSchedule"
+	GETModifyClusterSnapshotScheduleActionEnumModifyClusterSnapshotSchedule GetModifyClusterSnapshotScheduleActionEnum = "ModifyClusterSnapshotSchedule"
 )
 
 type GetModifyClusterSnapshotScheduleVersionEnum string
 
 const (
-	GetModifyClusterSnapshotScheduleVersionEnumTwoThousandAndTwelve1201 GetModifyClusterSnapshotScheduleVersionEnum = "2012-12-01"
+	GETModifyClusterSnapshotScheduleVersionEnumTwoThousandAndTwelve1201 GetModifyClusterSnapshotScheduleVersionEnum = "2012-12-01"
 )
 
 type GetModifyClusterSnapshotScheduleQueryParams struct {

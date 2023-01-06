@@ -3,13 +3,13 @@ package operations
 type PostEnableMfaDeviceActionEnum string
 
 const (
-	PostEnableMfaDeviceActionEnumEnableMfaDevice PostEnableMfaDeviceActionEnum = "EnableMFADevice"
+	POSTEnableMFADeviceActionEnumEnableMfaDevice PostEnableMfaDeviceActionEnum = "EnableMFADevice"
 )
 
 type PostEnableMfaDeviceVersionEnum string
 
 const (
-	PostEnableMfaDeviceVersionEnumTwoThousandAndTen0508 PostEnableMfaDeviceVersionEnum = "2010-05-08"
+	POSTEnableMFADeviceVersionEnumTwoThousandAndTen0508 PostEnableMfaDeviceVersionEnum = "2010-05-08"
 )
 
 type PostEnableMfaDeviceQueryParams struct {

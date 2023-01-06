@@ -12,7 +12,7 @@ type UserPoolClientType struct {
 	AllowedOAuthFlowsUserPoolClient *bool                               `json:"AllowedOAuthFlowsUserPoolClient,omitempty"`
 	AllowedOAuthScopes              []string                            `json:"AllowedOAuthScopes,omitempty"`
 	AnalyticsConfiguration          *AnalyticsConfigurationType         `json:"AnalyticsConfiguration,omitempty"`
-	CallbackUrLs                    []string                            `json:"CallbackURLs,omitempty"`
+	CallbackURLs                    []string                            `json:"CallbackURLs,omitempty"`
 	ClientID                        *string                             `json:"ClientId,omitempty"`
 	ClientName                      *string                             `json:"ClientName,omitempty"`
 	ClientSecret                    *string                             `json:"ClientSecret,omitempty"`
@@ -22,7 +22,7 @@ type UserPoolClientType struct {
 	ExplicitAuthFlows               []ExplicitAuthFlowsTypeEnum         `json:"ExplicitAuthFlows,omitempty"`
 	IDTokenValidity                 *int64                              `json:"IdTokenValidity,omitempty"`
 	LastModifiedDate                *time.Time                          `json:"LastModifiedDate,omitempty"`
-	LogoutUrLs                      []string                            `json:"LogoutURLs,omitempty"`
+	LogoutURLs                      []string                            `json:"LogoutURLs,omitempty"`
 	PreventUserExistenceErrors      *PreventUserExistenceErrorTypesEnum `json:"PreventUserExistenceErrors,omitempty"`
 	ReadAttributes                  []string                            `json:"ReadAttributes,omitempty"`
 	RefreshTokenValidity            *int64                              `json:"RefreshTokenValidity,omitempty"`

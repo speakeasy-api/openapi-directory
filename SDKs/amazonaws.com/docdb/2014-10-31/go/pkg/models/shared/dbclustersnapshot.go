@@ -7,11 +7,11 @@ import (
 // DbClusterSnapshot
 // Detailed information about a cluster snapshot.
 type DbClusterSnapshot struct {
-	AvailabilityZones           []string
+	AvailabilityZones           []map[string]interface{}
 	ClusterCreateTime           *time.Time
-	DbClusterIdentifier         *string
-	DbClusterSnapshotArn        *string
-	DbClusterSnapshotIdentifier *string
+	DBClusterIdentifier         *string
+	DBClusterSnapshotArn        *string
+	DBClusterSnapshotIdentifier *string
 	Engine                      *string
 	EngineVersion               *string
 	KmsKeyID                    *string
@@ -20,7 +20,7 @@ type DbClusterSnapshot struct {
 	Port                        *int64
 	SnapshotCreateTime          *time.Time
 	SnapshotType                *string
-	SourceDbClusterSnapshotArn  *string
+	SourceDBClusterSnapshotArn  *string
 	Status                      *string
 	StorageEncrypted            *bool
 	VpcID                       *string

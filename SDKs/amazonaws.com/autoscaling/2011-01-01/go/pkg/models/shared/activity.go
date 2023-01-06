@@ -8,7 +8,7 @@ import (
 // Describes scaling activity, which is a long-running process that represents a change to your Auto Scaling group, such as changing its size or replacing an instance.
 type Activity struct {
 	ActivityID            string
-	AutoScalingGroupArn   *string
+	AutoScalingGroupARN   *string
 	AutoScalingGroupName  string
 	AutoScalingGroupState *string
 	Cause                 string

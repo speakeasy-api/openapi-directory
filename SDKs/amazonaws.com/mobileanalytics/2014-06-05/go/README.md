@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,82 +34,42 @@ func main() {
     
     req := operations.PutEventsRequest{
         Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "maiores",
-            XAmzContentSha256: "nobis",
-            XAmzCredential: "quos",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "quis",
-            XAmzSignedHeaders: "aut",
-            XAmzClientContext: "est",
-            XAmzClientContextEncoding: "ipsa",
+            XAmzAlgorithm: "aliquid",
+            XAmzContentSha256: "repellendus",
+            XAmzCredential: "sint",
+            XAmzDate: "ratione",
+            XAmzSecurityToken: "sed",
+            XAmzSignature: "placeat",
+            XAmzSignedHeaders: "ut",
+            XAmzClientContext: "ipsam",
+            XAmzClientContextEncoding: "aut",
         },
         Request: operations.PutEventsRequestBody{
             Events: []shared.Event{
                 shared.Event{
                     Attributes: map[string]string{
-                        "sequi": "vitae",
-                        "quos": "possimus",
+                        "modi": "dolore",
                     },
-                    EventType: "ullam",
+                    EventType: "quia",
                     Metrics: map[string]float64{
-                        "alias": 86.199997,
-                        "porro": 40.200001,
+                        "in": 9.200000,
+                        "quis": 28.100000,
+                        "deserunt": 55.200001,
                     },
                     Session: &shared.Session{
-                        Duration: 1221100993313834821,
-                        ID: "repellat",
-                        StartTimestamp: "quaerat",
-                        StopTimestamp: "velit",
+                        Duration: 8919715189446388193,
+                        ID: "libero",
+                        StartTimestamp: "voluptates",
+                        StopTimestamp: "amet",
                     },
-                    Timestamp: "magni",
-                    Version: "delectus",
-                },
-                shared.Event{
-                    Attributes: map[string]string{
-                        "quisquam": "ea",
-                        "nihil": "laudantium",
-                    },
-                    EventType: "magni",
-                    Metrics: map[string]float64{
-                        "eaque": 39.099998,
-                        "magnam": 4.100000,
-                    },
-                    Session: &shared.Session{
-                        Duration: 1486108174757703253,
-                        ID: "cumque",
-                        StartTimestamp: "ut",
-                        StopTimestamp: "consequatur",
-                    },
-                    Timestamp: "sequi",
-                    Version: "omnis",
-                },
-                shared.Event{
-                    Attributes: map[string]string{
-                        "labore": "sapiente",
-                        "accusamus": "velit",
-                        "amet": "deserunt",
-                    },
-                    EventType: "sunt",
-                    Metrics: map[string]float64{
-                        "quis": 32.200001,
-                        "rerum": 78.199997,
-                        "deserunt": 80.099998,
-                    },
-                    Session: &shared.Session{
-                        Duration: 6067427611927340037,
-                        ID: "ad",
-                        StartTimestamp: "ut",
-                        StopTimestamp: "alias",
-                    },
-                    Timestamp: "qui",
-                    Version: "in",
+                    Timestamp: "sint",
+                    Version: "nostrum",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.PutEvents(ctx, req)
+    res, err := s.PutEvents(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

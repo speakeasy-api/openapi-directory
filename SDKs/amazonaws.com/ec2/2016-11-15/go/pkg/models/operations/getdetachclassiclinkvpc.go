@@ -3,13 +3,13 @@ package operations
 type GetDetachClassicLinkVpcActionEnum string
 
 const (
-	GetDetachClassicLinkVpcActionEnumDetachClassicLinkVpc GetDetachClassicLinkVpcActionEnum = "DetachClassicLinkVpc"
+	GETDetachClassicLinkVpcActionEnumDetachClassicLinkVpc GetDetachClassicLinkVpcActionEnum = "DetachClassicLinkVpc"
 )
 
 type GetDetachClassicLinkVpcVersionEnum string
 
 const (
-	GetDetachClassicLinkVpcVersionEnumTwoThousandAndSixteen1115 GetDetachClassicLinkVpcVersionEnum = "2016-11-15"
+	GETDetachClassicLinkVpcVersionEnumTwoThousandAndSixteen1115 GetDetachClassicLinkVpcVersionEnum = "2016-11-15"
 )
 
 type GetDetachClassicLinkVpcQueryParams struct {

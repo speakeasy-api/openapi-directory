@@ -1,27 +1,27 @@
 package shared
 
 type LocationRuleConditions11 struct {
-	FromLocation *Location `json:"from_location,omitempty"`
-}
-
-type LocationRuleConditions12 struct {
 	FromLocationID *string `json:"from_location_id,omitempty"`
 }
 
-type LocationRuleConditions13 struct {
+type LocationRuleConditions12 struct {
 	FromLocationURL *string `json:"from_location_url,omitempty"`
 }
 
-type LocationRuleConditions21 struct {
-	ToLocation *Location `json:"to_location,omitempty"`
+type LocationRuleConditions13 struct {
+	FromLocation *Location `json:"from_location,omitempty"`
 }
 
-type LocationRuleConditions22 struct {
+type LocationRuleConditions21 struct {
 	ToLocationID *string `json:"to_location_id,omitempty"`
 }
 
-type LocationRuleConditions23 struct {
+type LocationRuleConditions22 struct {
 	ToLocationURL *string `json:"to_location_url,omitempty"`
+}
+
+type LocationRuleConditions23 struct {
+	ToLocation *Location `json:"to_location,omitempty"`
 }
 
 type LocationRule struct {

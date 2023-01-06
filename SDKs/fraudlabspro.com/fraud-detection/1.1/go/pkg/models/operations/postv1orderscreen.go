@@ -49,6 +49,6 @@ type PostV1OrderScreenRequest struct {
 
 type PostV1OrderScreenResponse struct {
 	ContentType                               string
-	PostV1OrderScreen200ApplicationJSONString *string
 	StatusCode                                int64
+	PostV1OrderScreen200ApplicationJSONString *string
 }

@@ -3,13 +3,13 @@ package operations
 type PostUpdateEnvironmentActionEnum string
 
 const (
-	PostUpdateEnvironmentActionEnumUpdateEnvironment PostUpdateEnvironmentActionEnum = "UpdateEnvironment"
+	POSTUpdateEnvironmentActionEnumUpdateEnvironment PostUpdateEnvironmentActionEnum = "UpdateEnvironment"
 )
 
 type PostUpdateEnvironmentVersionEnum string
 
 const (
-	PostUpdateEnvironmentVersionEnumTwoThousandAndTen1201 PostUpdateEnvironmentVersionEnum = "2010-12-01"
+	POSTUpdateEnvironmentVersionEnumTwoThousandAndTen1201 PostUpdateEnvironmentVersionEnum = "2010-12-01"
 )
 
 type PostUpdateEnvironmentQueryParams struct {

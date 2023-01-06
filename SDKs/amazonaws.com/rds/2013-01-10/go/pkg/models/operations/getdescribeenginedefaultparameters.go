@@ -3,18 +3,18 @@ package operations
 type GetDescribeEngineDefaultParametersActionEnum string
 
 const (
-	GetDescribeEngineDefaultParametersActionEnumDescribeEngineDefaultParameters GetDescribeEngineDefaultParametersActionEnum = "DescribeEngineDefaultParameters"
+	GETDescribeEngineDefaultParametersActionEnumDescribeEngineDefaultParameters GetDescribeEngineDefaultParametersActionEnum = "DescribeEngineDefaultParameters"
 )
 
 type GetDescribeEngineDefaultParametersVersionEnum string
 
 const (
-	GetDescribeEngineDefaultParametersVersionEnumTwoThousandAndThirteen0110 GetDescribeEngineDefaultParametersVersionEnum = "2013-01-10"
+	GETDescribeEngineDefaultParametersVersionEnumTwoThousandAndThirteen0110 GetDescribeEngineDefaultParametersVersionEnum = "2013-01-10"
 )
 
 type GetDescribeEngineDefaultParametersQueryParams struct {
 	Action                 GetDescribeEngineDefaultParametersActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbParameterGroupFamily string                                        `queryParam:"style=form,explode=true,name=DBParameterGroupFamily"`
+	DBParameterGroupFamily string                                        `queryParam:"style=form,explode=true,name=DBParameterGroupFamily"`
 	Marker                 *string                                       `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords             *int64                                        `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version                GetDescribeEngineDefaultParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`

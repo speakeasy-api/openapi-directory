@@ -1,0 +1,78 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type CountryMatchSimilarityKey struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewCountryMatchSimilarityKey(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *CountryMatchSimilarityKey {
+	return &CountryMatchSimilarityKey{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// Getcountrymatch - Gets a similarity key for matching purposes for country name data
+// Gets a similarity key to use for matching purposes for country name data
+func (s *CountryMatchSimilarityKey) Getcountrymatch(ctx context.Context, request operations.GetcountrymatchRequest) (*operations.GetcountrymatchResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/getcountrymatch"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetcountrymatchResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.Getcountrymatch200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Getcountrymatch200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}

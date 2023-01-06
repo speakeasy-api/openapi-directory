@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,24 @@ func main() {
     
     req := operations.CreateWorkspaceRequest{
         Headers: operations.CreateWorkspaceHeaders{
-            XAmzAlgorithm: "dolores",
-            XAmzContentSha256: "suscipit",
-            XAmzCredential: "impedit",
-            XAmzDate: "non",
-            XAmzSecurityToken: "magnam",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "possimus",
+            XAmzAlgorithm: "commodi",
+            XAmzContentSha256: "blanditiis",
+            XAmzCredential: "facere",
+            XAmzDate: "in",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "odit",
+            XAmzSignedHeaders: "est",
         },
         Request: operations.CreateWorkspaceRequestBody{
-            Alias: "illo",
-            ClientToken: "qui",
+            Alias: "id",
+            ClientToken: "ipsum",
             Tags: map[string]string{
-                "ipsam": "ducimus",
-                "enim": "blanditiis",
+                "perspiciatis": "et",
             },
         },
     }
     
-    res, err := s.Sdk.CreateWorkspace(ctx, req)
+    res, err := s.CreateWorkspace(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

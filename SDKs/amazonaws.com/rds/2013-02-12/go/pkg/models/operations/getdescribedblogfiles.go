@@ -3,18 +3,18 @@ package operations
 type GetDescribeDbLogFilesActionEnum string
 
 const (
-	GetDescribeDbLogFilesActionEnumDescribeDbLogFiles GetDescribeDbLogFilesActionEnum = "DescribeDBLogFiles"
+	GETDescribeDBLogFilesActionEnumDescribeDbLogFiles GetDescribeDbLogFilesActionEnum = "DescribeDBLogFiles"
 )
 
 type GetDescribeDbLogFilesVersionEnum string
 
 const (
-	GetDescribeDbLogFilesVersionEnumTwoThousandAndThirteen0212 GetDescribeDbLogFilesVersionEnum = "2013-02-12"
+	GETDescribeDBLogFilesVersionEnumTwoThousandAndThirteen0212 GetDescribeDbLogFilesVersionEnum = "2013-02-12"
 )
 
 type GetDescribeDbLogFilesQueryParams struct {
 	Action               GetDescribeDbLogFilesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	FileLastWritten      *int64                           `queryParam:"style=form,explode=true,name=FileLastWritten"`
 	FileSize             *int64                           `queryParam:"style=form,explode=true,name=FileSize"`
 	FilenameContains     *string                          `queryParam:"style=form,explode=true,name=FilenameContains"`

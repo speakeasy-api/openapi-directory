@@ -3,13 +3,13 @@ package operations
 type PostDescribeRouteTablesActionEnum string
 
 const (
-	PostDescribeRouteTablesActionEnumDescribeRouteTables PostDescribeRouteTablesActionEnum = "DescribeRouteTables"
+	POSTDescribeRouteTablesActionEnumDescribeRouteTables PostDescribeRouteTablesActionEnum = "DescribeRouteTables"
 )
 
 type PostDescribeRouteTablesVersionEnum string
 
 const (
-	PostDescribeRouteTablesVersionEnumTwoThousandAndSixteen1115 PostDescribeRouteTablesVersionEnum = "2016-11-15"
+	POSTDescribeRouteTablesVersionEnumTwoThousandAndSixteen1115 PostDescribeRouteTablesVersionEnum = "2016-11-15"
 )
 
 type PostDescribeRouteTablesQueryParams struct {

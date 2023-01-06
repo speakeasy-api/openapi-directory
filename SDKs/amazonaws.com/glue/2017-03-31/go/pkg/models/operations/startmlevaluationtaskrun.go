@@ -7,7 +7,7 @@ import (
 type StartMlEvaluationTaskRunXAmzTargetEnum string
 
 const (
-	StartMlEvaluationTaskRunXAmzTargetEnumAwsGlueStartMlEvaluationTaskRun StartMlEvaluationTaskRunXAmzTargetEnum = "AWSGlue.StartMLEvaluationTaskRun"
+	StartMLEvaluationTaskRunXAmzTargetEnumAwsGlueStartMlEvaluationTaskRun StartMlEvaluationTaskRunXAmzTargetEnum = "AWSGlue.StartMLEvaluationTaskRun"
 )
 
 type StartMlEvaluationTaskRunHeaders struct {
@@ -32,8 +32,8 @@ type StartMlEvaluationTaskRunResponse struct {
 	EntityNotFoundException          *interface{}
 	InternalServiceException         *interface{}
 	InvalidInputException            *interface{}
-	MlTransformNotReadyException     *interface{}
+	MLTransformNotReadyException     *interface{}
 	OperationTimeoutException        *interface{}
-	StartMlEvaluationTaskRunResponse *shared.StartMlEvaluationTaskRunResponse
+	StartMLEvaluationTaskRunResponse *shared.StartMlEvaluationTaskRunResponse
 	StatusCode                       int64
 }

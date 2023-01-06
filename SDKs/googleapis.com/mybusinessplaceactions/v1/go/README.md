@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,26 +24,26 @@ func main() {
     
     req := operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest{
         PathParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams{
-            Parent: "illum",
+            Parent: "architecto",
         },
         QueryParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "enim",
-            Alt: "proto",
-            Callback: "distinctio",
-            Fields: "adipisci",
-            Key: "sequi",
-            OauthToken: "et",
+            AccessToken: "non",
+            Alt: "media",
+            Callback: "consequatur",
+            Fields: "eligendi",
+            Key: "vitae",
+            OauthToken: "pariatur",
             PrettyPrint: true,
-            QuotaUser: "vero",
-            UploadType: "architecto",
-            UploadProtocol: "vitae",
+            QuotaUser: "eius",
+            UploadType: "laborum",
+            UploadProtocol: "temporibus",
         },
         Request: &shared.PlaceActionLinkInput{
             IsPreferred: false,
-            Name: "atque",
-            PlaceActionType: "FOOD_DELIVERY",
-            URI: "quis",
+            Name: "laborum",
+            PlaceActionType: "PLACE_ACTION_TYPE_UNSPECIFIED",
+            URI: "fugit",
         },
     }
     

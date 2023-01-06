@@ -8,7 +8,7 @@ import (
 type GetDescribeUpdateActionsActionEnum string
 
 const (
-	GetDescribeUpdateActionsActionEnumDescribeUpdateActions GetDescribeUpdateActionsActionEnum = "DescribeUpdateActions"
+	GETDescribeUpdateActionsActionEnumDescribeUpdateActions GetDescribeUpdateActionsActionEnum = "DescribeUpdateActions"
 )
 
 // GetDescribeUpdateActionsServiceUpdateTimeRange
@@ -21,7 +21,7 @@ type GetDescribeUpdateActionsServiceUpdateTimeRange struct {
 type GetDescribeUpdateActionsVersionEnum string
 
 const (
-	GetDescribeUpdateActionsVersionEnumTwoThousandAndFifteen0202 GetDescribeUpdateActionsVersionEnum = "2015-02-02"
+	GETDescribeUpdateActionsVersionEnumTwoThousandAndFifteen0202 GetDescribeUpdateActionsVersionEnum = "2015-02-02"
 )
 
 type GetDescribeUpdateActionsQueryParams struct {

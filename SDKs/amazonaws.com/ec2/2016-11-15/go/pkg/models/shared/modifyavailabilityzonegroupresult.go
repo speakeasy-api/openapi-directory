@@ -1,5 +1,5 @@
 package shared
 
 type ModifyAvailabilityZoneGroupResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

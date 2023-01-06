@@ -1,13 +1,5 @@
 package shared
 
-// ChannelInput
-// A single channel. Channels are custom groups of related websites and apps.
-type ChannelInput struct {
-	AdvertiserID *string `json:"advertiserId,omitempty"`
-	DisplayName  *string `json:"displayName,omitempty"`
-	PartnerID    *string `json:"partnerId,omitempty"`
-}
-
 // Channel
 // A single channel. Channels are custom groups of related websites and apps.
 type Channel struct {
@@ -18,4 +10,12 @@ type Channel struct {
 	NegativelyTargetedLineItemCount *string `json:"negativelyTargetedLineItemCount,omitempty"`
 	PartnerID                       *string `json:"partnerId,omitempty"`
 	PositivelyTargetedLineItemCount *string `json:"positivelyTargetedLineItemCount,omitempty"`
+}
+
+// ChannelInput
+// A single channel. Channels are custom groups of related websites and apps.
+type ChannelInput struct {
+	AdvertiserID *string `json:"advertiserId,omitempty"`
+	DisplayName  *string `json:"displayName,omitempty"`
+	PartnerID    *string `json:"partnerId,omitempty"`
 }

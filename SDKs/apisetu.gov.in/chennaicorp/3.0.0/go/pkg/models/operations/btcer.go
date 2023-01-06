@@ -5,8 +5,8 @@ import (
 )
 
 type BtcerRequestBodyCertificateParameters struct {
-	Dateofbirth string `json:"DATEOFBIRTH"`
-	Regno       string `json:"REGNO"`
+	DATEOFBIRTH string `json:"DATEOFBIRTH"`
+	REGNO       string `json:"REGNO"`
 }
 
 type BtcerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Btcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Btcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Btcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Btcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Btcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Btcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Btcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Btcer404ApplicationJSON struct {

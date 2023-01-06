@@ -1,7 +1,7 @@
 package shared
 
 type DescribeElasticGpusResult struct {
-	ElasticGpuSet []ElasticGpus
-	MaxResults    *int64
-	NextToken     *string
+	ElasticGpuSet map[string]interface{}
+	MaxResults    map[string]interface{}
+	NextToken     map[string]interface{}
 }

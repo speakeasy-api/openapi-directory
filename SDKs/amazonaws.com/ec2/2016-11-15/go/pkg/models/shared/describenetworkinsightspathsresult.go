@@ -1,6 +1,6 @@
 package shared
 
 type DescribeNetworkInsightsPathsResult struct {
-	NetworkInsightsPaths []NetworkInsightsPath
-	NextToken            *string
+	NetworkInsightsPaths map[string]interface{}
+	NextToken            map[string]interface{}
 }

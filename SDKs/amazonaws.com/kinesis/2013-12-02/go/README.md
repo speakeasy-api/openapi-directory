@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.AddTagsToStreamRequest{
         Headers: operations.AddTagsToStreamHeaders{
-            XAmzAlgorithm: "temporibus",
-            XAmzContentSha256: "alias",
-            XAmzCredential: "error",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "quia",
-            XAmzSignature: "enim",
-            XAmzSignedHeaders: "aut",
+            XAmzAlgorithm: "ipsa",
+            XAmzContentSha256: "error",
+            XAmzCredential: "odit",
+            XAmzDate: "repudiandae",
+            XAmzSecurityToken: "pariatur",
+            XAmzSignature: "est",
+            XAmzSignedHeaders: "at",
             XAmzTarget: "Kinesis_20131202.AddTagsToStream",
         },
         Request: shared.AddTagsToStreamInput{
-            StreamName: "ratione",
+            StreamName: "libero",
             Tags: map[string]string{
-                "eius": "quisquam",
-                "sequi": "quia",
+                "voluptatem": "sunt",
+                "animi": "quaerat",
             },
         },
     }
     
-    res, err := s.Sdk.AddTagsToStream(ctx, req)
+    res, err := s.AddTagsToStream(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -9,7 +9,7 @@ type ScanfordevicesRequest struct {
 }
 
 type ScanfordevicesResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                      string
+	Scanfordevices200TextPlainObject *string
+	StatusCode                       int64
 }

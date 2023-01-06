@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,12 +34,12 @@ func main() {
     
     req := operations.DeleteProjectUsernameProjectBuildCacheRequest{
         PathParams: operations.DeleteProjectUsernameProjectBuildCachePathParams{
-            Project: "molestiae",
-            Username: "officia",
+            Project: "sit",
+            Username: "minima",
         },
     }
     
-    res, err := s.Sdk.DeleteProjectUsernameProjectBuildCache(ctx, req)
+    res, err := s.DeleteProjectUsernameProjectBuildCache(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -66,14 +65,6 @@ func main() {
 
 * `GetProjectUsernameProject` - Build summary for each of the last 30 builds for a single git repo.
 
-* `GetProjectUsernameProjectBuildNum` - Full details for a single build. The response includes all of the fields from the build summary.
-This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
-
-* `GetProjectUsernameProjectBuildNumArtifacts` - List the artifacts produced by a given build.
-
-* `GetProjectUsernameProjectBuildNumTests` - Provides test metadata for a build
-Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
-
 * `GetProjectUsernameProjectCheckoutKey` - Lists checkout keys.
 
 * `GetProjectUsernameProjectCheckoutKeyFingerprint` - Get a checkout key.
@@ -82,15 +73,19 @@ Note: [Learn how to set up your builds to collect test metadata](https://circlec
 
 * `GetProjectUsernameProjectEnvvarName` - Gets the hidden value of environment variable :name
 
+* `GetProjectUsernameProjectBuildNum` - Full details for a single build. The response includes all of the fields from the build summary.
+This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
+
+* `GetProjectUsernameProjectBuildNumArtifacts` - List the artifacts produced by a given build.
+
+* `GetProjectUsernameProjectBuildNumTests` - Provides test metadata for a build
+Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
+
 * `GetProjects` - List of all the projects you're following on CircleCI, with build information organized by branch.
 
 * `GetRecentBuilds` - Build summary for each of the last 30 recent builds, ordered by build_num.
 
 * `PostProjectUsernameProject` - Triggers a new build, returns a summary of the build.
-
-* `PostProjectUsernameProjectBuildNumCancel` - Cancels the build, returns a summary of the build.
-
-* `PostProjectUsernameProjectBuildNumRetry` - Retries the build, returns a summary of the new build.
 
 * `PostProjectUsernameProjectCheckoutKey` - Creates a new checkout key.
 Only usable with a user API token.
@@ -103,6 +98,10 @@ Only usable with a user API token.
 Optional build parameters can be set using an experimental API.
 
 Note: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)
+
+* `PostProjectUsernameProjectBuildNumCancel` - Cancels the build, returns a summary of the build.
+
+* `PostProjectUsernameProjectBuildNumRetry` - Retries the build, returns a summary of the new build.
 
 * `PostUserHerokuKey` - Adds your Heroku API key to CircleCI, takes apikey as form param name.
 

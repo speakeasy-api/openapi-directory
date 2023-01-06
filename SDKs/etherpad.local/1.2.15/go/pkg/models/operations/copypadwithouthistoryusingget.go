@@ -37,8 +37,8 @@ type CopyPadWithoutHistoryUsingGetRequest struct {
 type CopyPadWithoutHistoryUsingGetResponse struct {
 	ContentType                                           string
 	StatusCode                                            int64
-	CopyPadWithoutHistoryUsingGet200ApplicationJSONObject *CopyPadWithoutHistoryUsingGet200ApplicationJSON
-	CopyPadWithoutHistoryUsingGet400ApplicationJSONObject *CopyPadWithoutHistoryUsingGet400ApplicationJSON
-	CopyPadWithoutHistoryUsingGet401ApplicationJSONObject *CopyPadWithoutHistoryUsingGet401ApplicationJSON
-	CopyPadWithoutHistoryUsingGet500ApplicationJSONObject *CopyPadWithoutHistoryUsingGet500ApplicationJSON
+	CopyPadWithoutHistoryUsingGET200ApplicationJSONObject *CopyPadWithoutHistoryUsingGet200ApplicationJSON
+	CopyPadWithoutHistoryUsingGET400ApplicationJSONObject *CopyPadWithoutHistoryUsingGet400ApplicationJSON
+	CopyPadWithoutHistoryUsingGET401ApplicationJSONObject *CopyPadWithoutHistoryUsingGet401ApplicationJSON
+	CopyPadWithoutHistoryUsingGET500ApplicationJSONObject *CopyPadWithoutHistoryUsingGet500ApplicationJSON
 }

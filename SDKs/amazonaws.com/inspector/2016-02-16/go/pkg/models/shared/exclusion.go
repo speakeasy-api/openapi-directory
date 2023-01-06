@@ -1,12 +1,10 @@
 package shared
 
-// Exclusion
-// Contains information about what was excluded from an assessment run.
 type Exclusion struct {
-	Arn            string      `json:"arn"`
+	Arn            *string     `json:"arn,omitempty"`
 	Attributes     []Attribute `json:"attributes,omitempty"`
-	Description    string      `json:"description"`
-	Recommendation string      `json:"recommendation"`
-	Scopes         []Scope     `json:"scopes"`
-	Title          string      `json:"title"`
+	Description    *string     `json:"description,omitempty"`
+	Recommendation *string     `json:"recommendation,omitempty"`
+	Scopes         []Scope     `json:"scopes,omitempty"`
+	Title          *string     `json:"title,omitempty"`
 }

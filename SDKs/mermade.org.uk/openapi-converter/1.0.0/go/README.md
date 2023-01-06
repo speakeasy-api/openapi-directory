@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,8 +24,8 @@ func main() {
     
     req := operations.ConvertRequest{
         Request: &operations.ConvertRequestBody{
-            Filename: "adipisci",
-            Source: "voluptatum",
+            Filename: "laboriosam",
+            Source: "ab",
             Validate: "on",
         },
     }

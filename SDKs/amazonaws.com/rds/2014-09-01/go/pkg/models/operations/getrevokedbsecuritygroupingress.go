@@ -3,19 +3,19 @@ package operations
 type GetRevokeDbSecurityGroupIngressActionEnum string
 
 const (
-	GetRevokeDbSecurityGroupIngressActionEnumRevokeDbSecurityGroupIngress GetRevokeDbSecurityGroupIngressActionEnum = "RevokeDBSecurityGroupIngress"
+	GETRevokeDBSecurityGroupIngressActionEnumRevokeDbSecurityGroupIngress GetRevokeDbSecurityGroupIngressActionEnum = "RevokeDBSecurityGroupIngress"
 )
 
 type GetRevokeDbSecurityGroupIngressVersionEnum string
 
 const (
-	GetRevokeDbSecurityGroupIngressVersionEnumTwoThousandAndFourteen0901 GetRevokeDbSecurityGroupIngressVersionEnum = "2014-09-01"
+	GETRevokeDBSecurityGroupIngressVersionEnumTwoThousandAndFourteen0901 GetRevokeDbSecurityGroupIngressVersionEnum = "2014-09-01"
 )
 
 type GetRevokeDbSecurityGroupIngressQueryParams struct {
 	Action                  GetRevokeDbSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Cidrip                  *string                                    `queryParam:"style=form,explode=true,name=CIDRIP"`
-	DbSecurityGroupName     string                                     `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
+	CIDRIP                  *string                                    `queryParam:"style=form,explode=true,name=CIDRIP"`
+	DBSecurityGroupName     string                                     `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
 	Ec2SecurityGroupID      *string                                    `queryParam:"style=form,explode=true,name=EC2SecurityGroupId"`
 	Ec2SecurityGroupName    *string                                    `queryParam:"style=form,explode=true,name=EC2SecurityGroupName"`
 	Ec2SecurityGroupOwnerID *string                                    `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`

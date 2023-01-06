@@ -22,9 +22,9 @@ type GetDataSourceOutput struct {
 	Message           *string           `json:"Message,omitempty"`
 	Name              *string           `json:"Name,omitempty"`
 	NumberOfFiles     *int64            `json:"NumberOfFiles,omitempty"`
-	RdsMetadata       *RdsMetadata      `json:"RDSMetadata,omitempty"`
+	RDSMetadata       *RdsMetadata      `json:"RDSMetadata,omitempty"`
 	RedshiftMetadata  *RedshiftMetadata `json:"RedshiftMetadata,omitempty"`
-	RoleArn           *string           `json:"RoleARN,omitempty"`
+	RoleARN           *string           `json:"RoleARN,omitempty"`
 	StartedAt         *time.Time        `json:"StartedAt,omitempty"`
 	Status            *EntityStatusEnum `json:"Status,omitempty"`
 }

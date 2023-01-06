@@ -3,23 +3,23 @@ package operations
 type PostCancelJobActionEnum string
 
 const (
-	PostCancelJobActionEnumCancelJob PostCancelJobActionEnum = "CancelJob"
+	POSTCancelJobActionEnumCancelJob PostCancelJobActionEnum = "CancelJob"
 )
 
 type PostCancelJobOperationEnum string
 
 const (
-	PostCancelJobOperationEnumCancelJob PostCancelJobOperationEnum = "CancelJob"
+	POSTCancelJobOperationEnumCancelJob PostCancelJobOperationEnum = "CancelJob"
 )
 
 type PostCancelJobVersionEnum string
 
 const (
-	PostCancelJobVersionEnumTwoThousandAndTen0601 PostCancelJobVersionEnum = "2010-06-01"
+	POSTCancelJobVersionEnumTwoThousandAndTen0601 PostCancelJobVersionEnum = "2010-06-01"
 )
 
 type PostCancelJobQueryParams struct {
-	AwsAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostCancelJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        PostCancelJobOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`

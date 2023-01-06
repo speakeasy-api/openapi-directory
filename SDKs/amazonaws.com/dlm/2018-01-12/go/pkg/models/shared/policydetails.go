@@ -9,6 +9,6 @@ type PolicyDetails struct {
 	PolicyType        *PolicyTypeValuesEnum        `json:"PolicyType,omitempty"`
 	ResourceLocations []ResourceLocationValuesEnum `json:"ResourceLocations,omitempty"`
 	ResourceTypes     []ResourceTypeValuesEnum     `json:"ResourceTypes,omitempty"`
-	Schedules         []Schedule                   `json:"Schedules,omitempty"`
+	Schedules         []Schedule2                  `json:"Schedules,omitempty"`
 	TargetTags        []Tag                        `json:"TargetTags,omitempty"`
 }

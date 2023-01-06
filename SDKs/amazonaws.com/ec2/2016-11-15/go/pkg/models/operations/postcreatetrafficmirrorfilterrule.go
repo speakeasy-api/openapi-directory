@@ -3,13 +3,13 @@ package operations
 type PostCreateTrafficMirrorFilterRuleActionEnum string
 
 const (
-	PostCreateTrafficMirrorFilterRuleActionEnumCreateTrafficMirrorFilterRule PostCreateTrafficMirrorFilterRuleActionEnum = "CreateTrafficMirrorFilterRule"
+	POSTCreateTrafficMirrorFilterRuleActionEnumCreateTrafficMirrorFilterRule PostCreateTrafficMirrorFilterRuleActionEnum = "CreateTrafficMirrorFilterRule"
 )
 
 type PostCreateTrafficMirrorFilterRuleVersionEnum string
 
 const (
-	PostCreateTrafficMirrorFilterRuleVersionEnumTwoThousandAndSixteen1115 PostCreateTrafficMirrorFilterRuleVersionEnum = "2016-11-15"
+	POSTCreateTrafficMirrorFilterRuleVersionEnumTwoThousandAndSixteen1115 PostCreateTrafficMirrorFilterRuleVersionEnum = "2016-11-15"
 )
 
 type PostCreateTrafficMirrorFilterRuleQueryParams struct {

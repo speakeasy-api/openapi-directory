@@ -29,6 +29,6 @@ type PostV1OrderFeedbackRequest struct {
 
 type PostV1OrderFeedbackResponse struct {
 	ContentType                                 string
-	PostV1OrderFeedback200ApplicationJSONString *string
 	StatusCode                                  int64
+	PostV1OrderFeedback200ApplicationJSONString *string
 }

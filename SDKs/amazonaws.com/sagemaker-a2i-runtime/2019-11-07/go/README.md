@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.DeleteHumanLoopRequest{
         PathParams: operations.DeleteHumanLoopPathParams{
-            HumanLoopName: "corrupti",
+            HumanLoopName: "id",
         },
         Headers: operations.DeleteHumanLoopHeaders{
-            XAmzAlgorithm: "perspiciatis",
-            XAmzContentSha256: "accusamus",
-            XAmzCredential: "iusto",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "illo",
-            XAmzSignature: "molestiae",
-            XAmzSignedHeaders: "quo",
+            XAmzAlgorithm: "suscipit",
+            XAmzContentSha256: "dicta",
+            XAmzCredential: "laboriosam",
+            XAmzDate: "facere",
+            XAmzSecurityToken: "architecto",
+            XAmzSignature: "voluptatem",
+            XAmzSignedHeaders: "quia",
         },
     }
     
-    res, err := s.Sdk.DeleteHumanLoop(ctx, req)
+    res, err := s.DeleteHumanLoop(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

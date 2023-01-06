@@ -1,4 +1,4 @@
-# WealthOS Go SDK
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,12 +29,12 @@ func main() {
             },
         },
         PathParams: operations.UpdateBankAccountPathParams{
-            BankAccountID: "sit",
+            BankAccountID: "magnam",
         },
         Headers: operations.UpdateBankAccountHeaders{
-            XAPIKey: "voluptas",
+            XAPIKey: "quia",
         },
-        Request: "culpa",
+        Request: "consequuntur",
     }
     
     res, err := s.BankAccounts.UpdateBankAccount(ctx, req)

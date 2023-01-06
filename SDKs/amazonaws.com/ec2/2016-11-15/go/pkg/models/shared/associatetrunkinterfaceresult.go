@@ -1,6 +1,6 @@
 package shared
 
 type AssociateTrunkInterfaceResult struct {
-	ClientToken          *string
-	InterfaceAssociation *TrunkInterfaceAssociation
+	ClientToken          map[string]interface{}
+	InterfaceAssociation map[string]interface{}
 }

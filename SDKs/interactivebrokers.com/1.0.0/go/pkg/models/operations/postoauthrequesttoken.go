@@ -19,6 +19,6 @@ type PostOauthRequestTokenRequest struct {
 
 type PostOauthRequestTokenResponse struct {
 	ContentType                                   string
-	PostOauthRequestToken200ApplicationJSONObject *PostOauthRequestToken200ApplicationJSON
 	StatusCode                                    int64
+	PostOauthRequestToken200ApplicationJSONObject *PostOauthRequestToken200ApplicationJSON
 }

@@ -3,20 +3,20 @@ package operations
 type GetDescribeSnapshotAttributeActionEnum string
 
 const (
-	GetDescribeSnapshotAttributeActionEnumDescribeSnapshotAttribute GetDescribeSnapshotAttributeActionEnum = "DescribeSnapshotAttribute"
+	GETDescribeSnapshotAttributeActionEnumDescribeSnapshotAttribute GetDescribeSnapshotAttributeActionEnum = "DescribeSnapshotAttribute"
 )
 
 type GetDescribeSnapshotAttributeAttributeEnum string
 
 const (
-	GetDescribeSnapshotAttributeAttributeEnumProductCodes           GetDescribeSnapshotAttributeAttributeEnum = "productCodes"
-	GetDescribeSnapshotAttributeAttributeEnumCreateVolumePermission GetDescribeSnapshotAttributeAttributeEnum = "createVolumePermission"
+	GETDescribeSnapshotAttributeAttributeEnumProductCodes           GetDescribeSnapshotAttributeAttributeEnum = "productCodes"
+	GETDescribeSnapshotAttributeAttributeEnumCreateVolumePermission GetDescribeSnapshotAttributeAttributeEnum = "createVolumePermission"
 )
 
 type GetDescribeSnapshotAttributeVersionEnum string
 
 const (
-	GetDescribeSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeSnapshotAttributeVersionEnum = "2016-11-15"
+	GETDescribeSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeSnapshotAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeSnapshotAttributeQueryParams struct {

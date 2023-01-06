@@ -7,8 +7,8 @@ import (
 type PatientSmsNotifcationResponseStatusEnum string
 
 const (
-	PatientSmsNotifcationResponseStatusEnumAcknowledged PatientSmsNotifcationResponseStatusEnum = "ACKNOWLEDGED"
-	PatientSmsNotifcationResponseStatusEnumErrored      PatientSmsNotifcationResponseStatusEnum = "ERRORED"
+	PatientSMSNotifcationResponseStatusEnumAcknowledged PatientSmsNotifcationResponseStatusEnum = "ACKNOWLEDGED"
+	PatientSMSNotifcationResponseStatusEnumErrored      PatientSmsNotifcationResponseStatusEnum = "ERRORED"
 )
 
 type PatientSmsNotifcationResponse struct {

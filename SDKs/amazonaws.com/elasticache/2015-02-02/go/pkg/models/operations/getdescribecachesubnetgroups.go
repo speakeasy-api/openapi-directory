@@ -3,13 +3,13 @@ package operations
 type GetDescribeCacheSubnetGroupsActionEnum string
 
 const (
-	GetDescribeCacheSubnetGroupsActionEnumDescribeCacheSubnetGroups GetDescribeCacheSubnetGroupsActionEnum = "DescribeCacheSubnetGroups"
+	GETDescribeCacheSubnetGroupsActionEnumDescribeCacheSubnetGroups GetDescribeCacheSubnetGroupsActionEnum = "DescribeCacheSubnetGroups"
 )
 
 type GetDescribeCacheSubnetGroupsVersionEnum string
 
 const (
-	GetDescribeCacheSubnetGroupsVersionEnumTwoThousandAndFifteen0202 GetDescribeCacheSubnetGroupsVersionEnum = "2015-02-02"
+	GETDescribeCacheSubnetGroupsVersionEnumTwoThousandAndFifteen0202 GetDescribeCacheSubnetGroupsVersionEnum = "2015-02-02"
 )
 
 type GetDescribeCacheSubnetGroupsQueryParams struct {

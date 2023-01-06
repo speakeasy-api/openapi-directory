@@ -3,13 +3,13 @@ package operations
 type PostSetSubnetsActionEnum string
 
 const (
-	PostSetSubnetsActionEnumSetSubnets PostSetSubnetsActionEnum = "SetSubnets"
+	POSTSetSubnetsActionEnumSetSubnets PostSetSubnetsActionEnum = "SetSubnets"
 )
 
 type PostSetSubnetsVersionEnum string
 
 const (
-	PostSetSubnetsVersionEnumTwoThousandAndFifteen1201 PostSetSubnetsVersionEnum = "2015-12-01"
+	POSTSetSubnetsVersionEnumTwoThousandAndFifteen1201 PostSetSubnetsVersionEnum = "2015-12-01"
 )
 
 type PostSetSubnetsQueryParams struct {

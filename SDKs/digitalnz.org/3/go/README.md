@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -38,40 +37,42 @@ func main() {
             Format: "xml",
         },
         QueryParams: operations.GetRecordsFormatQueryParams{
-            AndCategory: "Archives",
-            AndCentury: "dignissimos",
-            AndCollection: "nesciunt",
-            AndContentPartner: "commodi",
-            AndCreator: "dolor",
-            AndDate: "natus",
-            AndDcType: "est",
-            AndDecade: "praesentium",
-            AndFormat: "quam",
+            AndCategory: "Newspapers",
+            AndCentury: "nulla",
+            AndCollection: "error",
+            AndContentPartner: "autem",
+            AndCreator: "est",
+            AndDate: "qui",
+            AndDcType: "eum",
+            AndDecade: "ut",
+            AndFormat: "veniam",
             AndHasLargeThumbnailURL: "Y",
-            AndHasLatLng: true,
+            AndHasLatLng: false,
             AndIsCommercialUse: false,
-            AndOrFilterField: "in",
-            AndPlacename: "laboriosam",
-            AndPrimaryCollection: "molestiae",
-            AndSubject: "error",
-            AndTitle: "recusandae",
+            AndOrFilterField: "omnis",
+            AndPlacename: "officia",
+            AndPrimaryCollection: "expedita",
+            AndSubject: "eligendi",
+            AndTitle: "accusamus",
             AndUsage: "Share",
-            AndYear: "accusantium",
-            APIKey: "qui",
+            AndYear: "consequuntur",
+            APIKey: "reiciendis",
             Direction: "desc",
             ExcludeFiltersFromFacets: false,
-            Facets: []GetRecordsFormatFacetsEnum{
+            Facets: []shared.FieldsEnum2{
+                "copyright",
                 "year",
+                "creator",
             },
-            FacetsPage: 6145129450379232766,
-            FacetsPerPage: 3615018601672790208,
-            Fields: "nesciunt",
-            GeoBbox: "quia",
-            Page: 2021619814846964830,
-            PerPage: 5952694347717306601,
+            FacetsPage: 4519067991908913368,
+            FacetsPerPage: 7436533455547273823,
+            Fields: "consequuntur",
+            GeoBbox: "sit",
+            Page: 4533488582174557333,
+            PerPage: 6894329672744535763,
             Sort: "syndication_date",
-            Text: "eum",
-            WithoutFilterField: "debitis",
+            Text: "nam",
+            WithoutFilterField: "dolores",
         },
     }
     

@@ -1,0 +1,74 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    opts := []sdk.SDKOption{
+        sdk.WithSecurity(
+            shared.Security{
+                APIKey: shared.SchemeAPIKey{
+                    APIKey: "YOUR_API_KEY_HERE",
+                },
+            }
+        ),
+    }
+
+    s := sdk.New(opts...)
+    
+    req := operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest{
+        PathParams: operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams{
+            ContentType: "json",
+            Origin: "architecto",
+            VersionNumber: 3109224644026671343,
+        },
+        QueryParams: operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams{
+            AccelerationEfficiency: 83.099998,
+            ArriveAt: "eos",
+            AuxiliaryPowerInLitersPerHour: 14.200000,
+            Avoid: "molestias",
+            Callback: "iusto",
+            ConstantSpeedConsumptionInLitersPerHundredkm: "amet",
+            ConstantSpeedConsumptionInkWhPerHundredkm: "et",
+            CurrentFuelInLiters: 38.200001,
+            DecelerationEfficiency: 41.099998,
+            DepartAt: "ad",
+            DownhillEfficiency: 52.200001,
+            EnergyBudgetInkWh: 82.099998,
+            FuelBudgetInLiters: 41.200001,
+            FuelEnergyDensityInMJoulesPerLiter: 58.099998,
+            Hilliness: "normal",
+            Report: "effectiveSettings",
+            RouteType: "eco",
+            TimeBudgetInSec: 84.099998,
+            Traffic: true,
+            TravelMode: "motorcycle",
+            UphillEfficiency: 85.099998,
+            VehicleAxleWeight: 6257482572452617891,
+            VehicleCommercial: true,
+            VehicleEngineType: "electric",
+            VehicleHeight: 74.099998,
+            VehicleLength: 84.099998,
+            VehicleLoadType: "sunt",
+            VehicleMaxSpeed: 8279762398787749343,
+            VehicleWeight: 8039547287523212804,
+            VehicleWidth: 43.200001,
+            Windingness: "low",
+        },
+    }
+    
+    res, err := s.Routing.GetRoutingVersionNumberCalculateReachableRangeOriginContentType(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

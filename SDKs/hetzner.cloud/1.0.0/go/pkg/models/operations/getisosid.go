@@ -29,6 +29,6 @@ type GetIsosIDRequest struct {
 
 type GetIsosIDResponse struct {
 	ContentType                       string
-	GetIsosID200ApplicationJSONObject *GetIsosID200ApplicationJSON
 	StatusCode                        int64
+	GetIsosID200ApplicationJSONObject *GetIsosID200ApplicationJSON
 }

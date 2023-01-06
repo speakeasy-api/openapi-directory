@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.GetBenefitsDocumentUploadDownloadPathParams{
-            ID: "consequatur",
+            ID: "tempora",
         },
     }
     
-    res, err := s.VbaDocuments.GetBenefitsDocumentUploadDownload(ctx, req)
+    res, err := s.VBADocuments.GetBenefitsDocumentUploadDownload(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

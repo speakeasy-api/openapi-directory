@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.DescribeGroupRequest{
         Headers: operations.DescribeGroupHeaders{
-            XAmzAlgorithm: "saepe",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "praesentium",
-            XAmzDate: "minus",
-            XAmzSecurityToken: "accusantium",
-            XAmzSignature: "reiciendis",
-            XAmzSignedHeaders: "consectetur",
+            XAmzAlgorithm: "velit",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "mollitia",
+            XAmzDate: "ad",
+            XAmzSecurityToken: "error",
+            XAmzSignature: "enim",
+            XAmzSignedHeaders: "necessitatibus",
             XAmzTarget: "AWSIdentityStore.DescribeGroup",
         },
         Request: shared.DescribeGroupRequest{
-            GroupID: "non",
-            IdentityStoreID: "temporibus",
+            GroupID: "nam",
+            IdentityStoreID: "in",
         },
     }
     
-    res, err := s.Sdk.DescribeGroup(ctx, req)
+    res, err := s.DescribeGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

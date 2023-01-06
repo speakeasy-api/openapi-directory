@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// DeploymentStatusSimpleUser
+// Simple User
 type DeploymentStatusSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

@@ -3,13 +3,13 @@ package operations
 type PostCreateDbSubnetGroupActionEnum string
 
 const (
-	PostCreateDbSubnetGroupActionEnumCreateDbSubnetGroup PostCreateDbSubnetGroupActionEnum = "CreateDBSubnetGroup"
+	POSTCreateDBSubnetGroupActionEnumCreateDbSubnetGroup PostCreateDbSubnetGroupActionEnum = "CreateDBSubnetGroup"
 )
 
 type PostCreateDbSubnetGroupVersionEnum string
 
 const (
-	PostCreateDbSubnetGroupVersionEnumTwoThousandAndThirteen0909 PostCreateDbSubnetGroupVersionEnum = "2013-09-09"
+	POSTCreateDBSubnetGroupVersionEnumTwoThousandAndThirteen0909 PostCreateDbSubnetGroupVersionEnum = "2013-09-09"
 )
 
 type PostCreateDbSubnetGroupQueryParams struct {

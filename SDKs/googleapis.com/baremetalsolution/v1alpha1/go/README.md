@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,186 +26,199 @@ func main() {
         Security: operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams{
-            Location: "omnis",
-            Project: "molestiae",
+            Location: "autem",
+            Project: "quam",
         },
         QueryParams: operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "rerum",
-            Alt: "proto",
-            Callback: "minima",
-            Fields: "dignissimos",
-            Key: "quas",
-            OauthToken: "ut",
+            DollarXgafv: "2",
+            AccessToken: "sunt",
+            Alt: "json",
+            Callback: "sed",
+            Fields: "omnis",
+            Key: "ut",
+            OauthToken: "voluptatem",
             PrettyPrint: true,
-            QuotaUser: "omnis",
-            UploadType: "laboriosam",
-            UploadProtocol: "quaerat",
+            QuotaUser: "quaerat",
+            UploadType: "ut",
+            UploadProtocol: "sed",
         },
         Request: &shared.SubmitProvisioningConfigRequest{
-            Email: "at",
+            Email: "reprehenderit",
             ProvisioningConfig: &shared.ProvisioningConfig{
                 Instances: []shared.InstanceConfig{
                     shared.InstanceConfig{
                         ClientNetwork: &shared.NetworkAddress{
-                            Address: "voluptas",
-                            ExistingNetworkID: "doloremque",
-                            NetworkID: "sint",
+                            Address: "incidunt",
+                            ExistingNetworkID: "hic",
+                            NetworkID: "et",
                         },
                         Hyperthreading: true,
-                        ID: "incidunt",
-                        InstanceType: "ad",
-                        Location: "explicabo",
-                        OsImage: "sunt",
+                        ID: "provident",
+                        InstanceType: "aut",
+                        Location: "voluptas",
+                        OsImage: "dolor",
                         PrivateNetwork: &shared.NetworkAddress{
-                            Address: "qui",
-                            ExistingNetworkID: "at",
-                            NetworkID: "expedita",
+                            Address: "tenetur",
+                            ExistingNetworkID: "blanditiis",
+                            NetworkID: "cum",
                         },
-                        UserNote: "rerum",
-                    },
-                    shared.InstanceConfig{
-                        ClientNetwork: &shared.NetworkAddress{
-                            Address: "iste",
-                            ExistingNetworkID: "modi",
-                            NetworkID: "error",
-                        },
-                        Hyperthreading: true,
-                        ID: "ut",
-                        InstanceType: "temporibus",
-                        Location: "sint",
-                        OsImage: "harum",
-                        PrivateNetwork: &shared.NetworkAddress{
-                            Address: "minima",
-                            ExistingNetworkID: "quia",
-                            NetworkID: "quisquam",
-                        },
-                        UserNote: "minus",
-                    },
-                    shared.InstanceConfig{
-                        ClientNetwork: &shared.NetworkAddress{
-                            Address: "provident",
-                            ExistingNetworkID: "aut",
-                            NetworkID: "illo",
-                        },
-                        Hyperthreading: false,
-                        ID: "aspernatur",
-                        InstanceType: "illo",
-                        Location: "ut",
-                        OsImage: "et",
-                        PrivateNetwork: &shared.NetworkAddress{
-                            Address: "non",
-                            ExistingNetworkID: "aliquam",
-                            NetworkID: "ipsa",
-                        },
-                        UserNote: "expedita",
+                        UserNote: "illum",
                     },
                 },
                 Networks: []shared.NetworkConfig{
                     shared.NetworkConfig{
-                        Bandwidth: "BW_5_GBPS",
-                        Cidr: "temporibus",
-                        ID: "quidem",
-                        Location: "rerum",
-                        ServiceCidr: "HIGH_28",
-                        Type: "CLIENT",
-                        UserNote: "voluptatem",
-                        VlanAttachments: []shared.VlanAttachment{
-                            shared.VlanAttachment{
-                                ID: "asperiores",
-                                PairingKey: "sit",
-                            },
-                            shared.VlanAttachment{
-                                ID: "dolorum",
-                                PairingKey: "animi",
-                            },
-                            shared.VlanAttachment{
-                                ID: "aperiam",
-                                PairingKey: "omnis",
-                            },
-                        },
-                    },
-                    shared.NetworkConfig{
-                        Bandwidth: "BW_2_GBPS",
-                        Cidr: "consectetur",
-                        ID: "repudiandae",
-                        Location: "quasi",
-                        ServiceCidr: "SERVICE_CIDR_UNSPECIFIED",
-                        Type: "PRIVATE",
-                        UserNote: "necessitatibus",
-                        VlanAttachments: []shared.VlanAttachment{
-                            shared.VlanAttachment{
-                                ID: "sit",
-                                PairingKey: "expedita",
-                            },
-                            shared.VlanAttachment{
-                                ID: "sunt",
-                                PairingKey: "ut",
-                            },
-                        },
-                    },
-                    shared.NetworkConfig{
                         Bandwidth: "BW_1_GBPS",
-                        Cidr: "sapiente",
-                        ID: "culpa",
-                        Location: "sed",
-                        ServiceCidr: "HIGH_28",
-                        Type: "PRIVATE",
-                        UserNote: "rerum",
+                        Cidr: "quia",
+                        ID: "est",
+                        Location: "enim",
+                        ServiceCidr: "SERVICE_CIDR_UNSPECIFIED",
+                        Type: "TYPE_UNSPECIFIED",
+                        UserNote: "velit",
                         VlanAttachments: []shared.VlanAttachment{
                             shared.VlanAttachment{
-                                ID: "quis",
-                                PairingKey: "aliquam",
+                                ID: "est",
+                                PairingKey: "ipsam",
                             },
                             shared.VlanAttachment{
-                                ID: "quam",
-                                PairingKey: "officiis",
-                            },
-                            shared.VlanAttachment{
-                                ID: "sequi",
-                                PairingKey: "magni",
+                                ID: "ut",
+                                PairingKey: "quod",
                             },
                         },
                     },
                 },
-                TicketID: "et",
+                TicketID: "dolor",
                 Volumes: []shared.VolumeConfig{
                     shared.VolumeConfig{
-                        ID: "ducimus",
-                        Location: "distinctio",
+                        ID: "voluptates",
+                        Location: "cupiditate",
                         LunRanges: []shared.LunRange{
                             shared.LunRange{
-                                Quantity: 740268334717324780,
-                                SizeGb: 7481213423248665986,
+                                Quantity: 1064548070932088692,
+                                SizeGb: 5046743337199082681,
+                            },
+                            shared.LunRange{
+                                Quantity: 920984617889488428,
+                                SizeGb: 1899631958773007453,
+                            },
+                            shared.LunRange{
+                                Quantity: 1982896037752148993,
+                                SizeGb: 1163460210123834606,
                             },
                         },
                         MachineIds: []string{
-                            "et",
+                            "cum",
+                        },
+                        NfsExports: []shared.NfsExport{
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "odit",
+                                MachineID: "quos",
+                                NetworkID: "tempore",
+                                NoRootSquash: true,
+                                Permissions: "READ_WRITE",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "consequuntur",
+                                MachineID: "praesentium",
+                                NetworkID: "est",
+                                NoRootSquash: true,
+                                Permissions: "READ_ONLY",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: true,
+                                Cidr: "et",
+                                MachineID: "dolor",
+                                NetworkID: "vero",
+                                NoRootSquash: false,
+                                Permissions: "READ_ONLY",
+                            },
+                        },
+                        Protocol: "PROTOCOL_NFS",
+                        SizeGb: 6959316382840154727,
+                        SnapshotsEnabled: true,
+                        Type: "DISK",
+                        UserNote: "doloribus",
+                    },
+                    shared.VolumeConfig{
+                        ID: "in",
+                        Location: "et",
+                        LunRanges: []shared.LunRange{
+                            shared.LunRange{
+                                Quantity: 2734397367293067162,
+                                SizeGb: 8286295675980987265,
+                            },
+                            shared.LunRange{
+                                Quantity: 8905867906250618115,
+                                SizeGb: 3491575351482382980,
+                            },
+                            shared.LunRange{
+                                Quantity: 7727273337241565830,
+                                SizeGb: 8825811285398786472,
+                            },
+                        },
+                        MachineIds: []string{
                             "rerum",
-                            "accusamus",
                         },
                         NfsExports: []shared.NfsExport{
                             shared.NfsExport{
                                 AllowDev: true,
-                                AllowSuid: false,
-                                Cidr: "ut",
-                                MachineID: "placeat",
-                                NetworkID: "consectetur",
-                                NoRootSquash: true,
+                                AllowSuid: true,
+                                Cidr: "consequatur",
+                                MachineID: "commodi",
+                                NetworkID: "aspernatur",
+                                NoRootSquash: false,
                                 Permissions: "PERMISSIONS_UNSPECIFIED",
                             },
                         },
                         Protocol: "PROTOCOL_NFS",
-                        SizeGb: 2389271512943804651,
+                        SizeGb: 8063688569461522182,
+                        SnapshotsEnabled: true,
+                        Type: "DISK",
+                        UserNote: "voluptatum",
+                    },
+                    shared.VolumeConfig{
+                        ID: "quas",
+                        Location: "voluptatem",
+                        LunRanges: []shared.LunRange{
+                            shared.LunRange{
+                                Quantity: 2781848901938685670,
+                                SizeGb: 7473878719530729647,
+                            },
+                            shared.LunRange{
+                                Quantity: 5786982471228804135,
+                                SizeGb: 1535012604873118548,
+                            },
+                        },
+                        MachineIds: []string{
+                            "sapiente",
+                            "alias",
+                        },
+                        NfsExports: []shared.NfsExport{
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: true,
+                                Cidr: "voluptatem",
+                                MachineID: "repellendus",
+                                NetworkID: "eos",
+                                NoRootSquash: true,
+                                Permissions: "READ_WRITE",
+                            },
+                        },
+                        Protocol: "PROTOCOL_UNSPECIFIED",
+                        SizeGb: 2130058147858464100,
                         SnapshotsEnabled: true,
                         Type: "FLASH",
-                        UserNote: "exercitationem",
+                        UserNote: "porro",
                     },
                 },
             },

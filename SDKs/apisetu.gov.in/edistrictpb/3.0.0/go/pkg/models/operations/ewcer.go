@@ -5,8 +5,8 @@ import (
 )
 
 type EwcerRequestBodyCertificateParameters struct {
-	Dob string `json:"DOB"`
-	Dsn string `json:"DSN"`
+	DOB string `json:"DOB"`
+	DSN string `json:"DSN"`
 }
 
 type EwcerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Ewcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Ewcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Ewcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Ewcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Ewcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Ewcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ewcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Ewcer404ApplicationJSON struct {

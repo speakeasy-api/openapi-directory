@@ -4,5 +4,5 @@ package shared
 // <p/>
 type ReservedNodesMessage struct {
 	Marker        *string
-	ReservedNodes []ReservedNode
+	ReservedNodes []map[string]interface{}
 }

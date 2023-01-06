@@ -3,13 +3,13 @@ package operations
 type PostPromoteReadReplicaDbClusterActionEnum string
 
 const (
-	PostPromoteReadReplicaDbClusterActionEnumPromoteReadReplicaDbCluster PostPromoteReadReplicaDbClusterActionEnum = "PromoteReadReplicaDBCluster"
+	POSTPromoteReadReplicaDBClusterActionEnumPromoteReadReplicaDbCluster PostPromoteReadReplicaDbClusterActionEnum = "PromoteReadReplicaDBCluster"
 )
 
 type PostPromoteReadReplicaDbClusterVersionEnum string
 
 const (
-	PostPromoteReadReplicaDbClusterVersionEnumTwoThousandAndFourteen1031 PostPromoteReadReplicaDbClusterVersionEnum = "2014-10-31"
+	POSTPromoteReadReplicaDBClusterVersionEnumTwoThousandAndFourteen1031 PostPromoteReadReplicaDbClusterVersionEnum = "2014-10-31"
 )
 
 type PostPromoteReadReplicaDbClusterQueryParams struct {

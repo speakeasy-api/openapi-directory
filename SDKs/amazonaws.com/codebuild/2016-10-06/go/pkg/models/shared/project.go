@@ -7,7 +7,7 @@ import (
 // Project
 // Information about a build project.
 type Project struct {
-	Arn                     *string                     `json:"arn,omitempty"`
+	Arn                     map[string]interface{}      `json:"arn,omitempty"`
 	Artifacts               *ProjectArtifacts           `json:"artifacts,omitempty"`
 	Badge                   *ProjectBadge               `json:"badge,omitempty"`
 	BuildBatchConfig        *ProjectBuildBatchConfig    `json:"buildBatchConfig,omitempty"`
@@ -19,7 +19,7 @@ type Project struct {
 	Environment             *ProjectEnvironment         `json:"environment,omitempty"`
 	FileSystemLocations     []ProjectFileSystemLocation `json:"fileSystemLocations,omitempty"`
 	LastModified            *time.Time                  `json:"lastModified,omitempty"`
-	LogsConfig              *LogsConfig                 `json:"logsConfig,omitempty"`
+	LogsConfig              *LogsConfig1                `json:"logsConfig,omitempty"`
 	Name                    *string                     `json:"name,omitempty"`
 	ProjectVisibility       *ProjectVisibilityTypeEnum  `json:"projectVisibility,omitempty"`
 	PublicProjectAlias      *string                     `json:"publicProjectAlias,omitempty"`

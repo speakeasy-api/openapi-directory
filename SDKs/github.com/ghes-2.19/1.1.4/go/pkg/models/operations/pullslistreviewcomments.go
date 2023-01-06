@@ -11,19 +11,12 @@ type PullsListReviewCommentsPathParams struct {
 	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type PullsListReviewCommentsDirectionEnum string
-
-const (
-	PullsListReviewCommentsDirectionEnumAsc  PullsListReviewCommentsDirectionEnum = "asc"
-	PullsListReviewCommentsDirectionEnumDesc PullsListReviewCommentsDirectionEnum = "desc"
-)
-
 type PullsListReviewCommentsQueryParams struct {
-	Direction *PullsListReviewCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                                `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                                `queryParam:"style=form,explode=true,name=per_page"`
-	Since     *time.Time                            `queryParam:"style=form,explode=true,name=since"`
-	Sort      *shared.SortEnum                      `queryParam:"style=form,explode=true,name=sort"`
+	Direction *shared.SortEnum1 `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	Since     *time.Time        `queryParam:"style=form,explode=true,name=since"`
+	Sort      *shared.SortEnum  `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type PullsListReviewCommentsRequest struct {

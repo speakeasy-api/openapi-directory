@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,36 +34,32 @@ func main() {
     
     req := operations.CreateDatasetRequest{
         Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "atque",
-            XAmzContentSha256: "vel",
-            XAmzCredential: "itaque",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "unde",
-            XAmzSignedHeaders: "aut",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "aut",
+            XAmzCredential: "minima",
+            XAmzDate: "at",
+            XAmzSecurityToken: "maiores",
+            XAmzSignature: "rem",
+            XAmzSignedHeaders: "aperiam",
             XAmzTarget: "AWSLookoutEquipmentFrontendService.CreateDataset",
         },
         Request: shared.CreateDatasetRequest{
-            ClientToken: "maiores",
-            DatasetName: "repellendus",
+            ClientToken: "iste",
+            DatasetName: "at",
             DatasetSchema: shared.DatasetSchema{
-                InlineDataSchema: "ducimus",
+                InlineDataSchema: "accusantium",
             },
-            ServerSideKmsKeyID: "repudiandae",
+            ServerSideKmsKeyID: "qui",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "et",
-                    Value: "rem",
-                },
-                shared.Tag{
-                    Key: "quas",
-                    Value: "animi",
+                    Key: "illo",
+                    Value: "voluptas",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateDataset(ctx, req)
+    res, err := s.CreateDataset(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

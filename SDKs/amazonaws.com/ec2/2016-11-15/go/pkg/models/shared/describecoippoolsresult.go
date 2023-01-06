@@ -1,6 +1,6 @@
 package shared
 
 type DescribeCoipPoolsResult struct {
-	CoipPools []CoipPool
-	NextToken *string
+	CoipPools map[string]interface{}
+	NextToken map[string]interface{}
 }

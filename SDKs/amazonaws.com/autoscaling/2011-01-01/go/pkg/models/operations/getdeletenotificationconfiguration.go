@@ -3,19 +3,19 @@ package operations
 type GetDeleteNotificationConfigurationActionEnum string
 
 const (
-	GetDeleteNotificationConfigurationActionEnumDeleteNotificationConfiguration GetDeleteNotificationConfigurationActionEnum = "DeleteNotificationConfiguration"
+	GETDeleteNotificationConfigurationActionEnumDeleteNotificationConfiguration GetDeleteNotificationConfigurationActionEnum = "DeleteNotificationConfiguration"
 )
 
 type GetDeleteNotificationConfigurationVersionEnum string
 
 const (
-	GetDeleteNotificationConfigurationVersionEnumTwoThousandAndEleven0101 GetDeleteNotificationConfigurationVersionEnum = "2011-01-01"
+	GETDeleteNotificationConfigurationVersionEnumTwoThousandAndEleven0101 GetDeleteNotificationConfigurationVersionEnum = "2011-01-01"
 )
 
 type GetDeleteNotificationConfigurationQueryParams struct {
 	Action               GetDeleteNotificationConfigurationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoScalingGroupName string                                        `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
-	TopicArn             string                                        `queryParam:"style=form,explode=true,name=TopicARN"`
+	TopicARN             string                                        `queryParam:"style=form,explode=true,name=TopicARN"`
 	Version              GetDeleteNotificationConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

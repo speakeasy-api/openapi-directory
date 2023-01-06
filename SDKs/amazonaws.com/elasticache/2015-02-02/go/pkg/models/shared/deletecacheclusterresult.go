@@ -1,5 +1,5 @@
 package shared
 
 type DeleteCacheClusterResult struct {
-	CacheCluster *CacheCluster
+	CacheCluster *CacheCluster1
 }

@@ -82,7 +82,7 @@ type Lvcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Lvcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Lvcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Lvcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Lvcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Lvcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Lvcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Lvcer404ApplicationJSON struct {

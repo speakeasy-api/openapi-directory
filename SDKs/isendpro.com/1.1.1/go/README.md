@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.AddShortlinkRequest{
         Request: shared.ShortlinkRequest{
-            Keyid: "sunt",
-            Shortlink: "est",
+            Keyid: "et",
+            Shortlink: "error",
         },
     }
     
-    res, err := s.Sdk.AddShortlink(ctx, req)
+    res, err := s.AddShortlink.AddShortlink(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,22 +43,55 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### add shortlink
 
 * `AddShortlink` - add a shortlink
-* `Comptage` - Compter le nombre de caractère 
-* `DelListeNoire` - Ajoute un numero en liste noire
+
+### add subaccount
+
+* `SubaccountAdd` - Ajoute un sous compte
+
+### campagne
+
 * `GetCampagne` - Retourne les SMS envoyés sur une période donnée
+
+### comptage
+
+* `Comptage` - Compter le nombre de caractère 
+
+### credit
+
 * `GetCredit` - Interrogation credit
-* `GetHlr` - Vérifier la validité d'un numéro
+
+### delListeNoire
+
+* `DelListeNoire` - Ajoute un numero en liste noire
+
+### edit subaccount
+
+* `SubaccountEdit` - Edit a subaccount
+
+### getListeNoire
+
 * `GetListeNoire` - Retourne le liste noire
+
+### hlr
+
+* `GetHlr` - Vérifier la validité d'un numéro
+
+### repertoire
+
 * `Repertoire` - Gestion repertoire (modification)
 * `RepertoireCrea` - Gestion repertoire (creation)
+
+### setListeNoire
+
+* `SetListeNoire` - Ajoute un numero en liste noire
+
+### sms
+
 * `SendSms` - Envoyer un sms
 * `SendSmsMulti` - Envoyer des SMS
-* `SetListeNoire` - Ajoute un numero en liste noire
-* `SubaccountAdd` - Ajoute un sous compte
-* `SubaccountEdit` - Edit a subaccount
 
 <!-- End SDK Available Operations -->
 

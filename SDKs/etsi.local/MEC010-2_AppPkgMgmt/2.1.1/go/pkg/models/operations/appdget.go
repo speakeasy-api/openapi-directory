@@ -22,6 +22,7 @@ type AppDgetRequest struct {
 }
 
 type AppDgetResponse struct {
+	AppD           *string
 	Body           []byte
 	ContentType    string
 	ProblemDetails *shared.ProblemDetails

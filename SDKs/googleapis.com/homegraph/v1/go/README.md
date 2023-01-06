@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,27 +26,27 @@ func main() {
         Security: operations.HomegraphAgentUsersDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.HomegraphAgentUsersDeletePathParams{
-            AgentUserID: "quas",
+            AgentUserID: "aut",
         },
         QueryParams: operations.HomegraphAgentUsersDeleteQueryParams{
             DollarXgafv: "2",
-            AccessToken: "excepturi",
-            Alt: "proto",
-            Callback: "enim",
-            Fields: "aut",
-            Key: "numquam",
-            OauthToken: "aliquam",
+            AccessToken: "harum",
+            Alt: "media",
+            Callback: "et",
+            Fields: "ut",
+            Key: "facilis",
+            OauthToken: "molestiae",
             PrettyPrint: false,
-            QuotaUser: "sint",
-            RequestID: "odio",
-            UploadType: "consequatur",
-            UploadProtocol: "veritatis",
+            QuotaUser: "porro",
+            RequestID: "aut",
+            UploadType: "enim",
+            UploadProtocol: "iusto",
         },
     }
     

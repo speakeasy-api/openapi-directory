@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.CreateAPIRequest{
         QueryParams: operations.CreateAPIQueryParams{
-            Workspace: "aut",
+            Workspace: "eligendi",
         },
         Request: &operations.CreateAPIRequestBody{
             API: &operations.CreateAPIRequestBodyAPI{
-                Description: "aut",
-                Name: "magnam",
-                Summary: "eligendi",
+                Description: "consequatur",
+                Name: "quaerat",
+                Summary: "et",
             },
         },
     }

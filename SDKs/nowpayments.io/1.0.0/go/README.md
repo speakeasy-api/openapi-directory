@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.ThreeGetEstimatedPriceRequest{
         QueryParams: operations.ThreeGetEstimatedPriceQueryParams{
-            Amount: "officiis",
-            CurrencyFrom: "aliquid",
-            CurrencyTo: "hic",
+            Amount: "voluptates",
+            CurrencyFrom: "vero",
+            CurrencyTo: "voluptas",
         },
     }
     
-    res, err := s.Sdk.ThreeGetEstimatedPrice(ctx, req)
+    res, err := s.ThreeGetEstimatedPrice(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

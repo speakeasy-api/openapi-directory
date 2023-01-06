@@ -3,6 +3,6 @@ package shared
 // ContentTypeProfiles
 // Field-level encryption content type-profile.
 type ContentTypeProfiles struct {
-	Items    []ContentTypeProfile
+	Items    []map[string]interface{}
 	Quantity int64
 }

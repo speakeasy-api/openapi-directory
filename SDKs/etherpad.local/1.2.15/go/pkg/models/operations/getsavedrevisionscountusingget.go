@@ -35,8 +35,8 @@ type GetSavedRevisionsCountUsingGetRequest struct {
 type GetSavedRevisionsCountUsingGetResponse struct {
 	ContentType                                            string
 	StatusCode                                             int64
-	GetSavedRevisionsCountUsingGet200ApplicationJSONObject *GetSavedRevisionsCountUsingGet200ApplicationJSON
-	GetSavedRevisionsCountUsingGet400ApplicationJSONObject *GetSavedRevisionsCountUsingGet400ApplicationJSON
-	GetSavedRevisionsCountUsingGet401ApplicationJSONObject *GetSavedRevisionsCountUsingGet401ApplicationJSON
-	GetSavedRevisionsCountUsingGet500ApplicationJSONObject *GetSavedRevisionsCountUsingGet500ApplicationJSON
+	GETSavedRevisionsCountUsingGET200ApplicationJSONObject *GetSavedRevisionsCountUsingGet200ApplicationJSON
+	GETSavedRevisionsCountUsingGET400ApplicationJSONObject *GetSavedRevisionsCountUsingGet400ApplicationJSON
+	GETSavedRevisionsCountUsingGET401ApplicationJSONObject *GetSavedRevisionsCountUsingGet401ApplicationJSON
+	GETSavedRevisionsCountUsingGET500ApplicationJSONObject *GetSavedRevisionsCountUsingGet500ApplicationJSON
 }

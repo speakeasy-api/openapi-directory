@@ -7,13 +7,13 @@ import (
 type GetDescribeEnvironmentHealthActionEnum string
 
 const (
-	GetDescribeEnvironmentHealthActionEnumDescribeEnvironmentHealth GetDescribeEnvironmentHealthActionEnum = "DescribeEnvironmentHealth"
+	GETDescribeEnvironmentHealthActionEnumDescribeEnvironmentHealth GetDescribeEnvironmentHealthActionEnum = "DescribeEnvironmentHealth"
 )
 
 type GetDescribeEnvironmentHealthVersionEnum string
 
 const (
-	GetDescribeEnvironmentHealthVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentHealthVersionEnum = "2010-12-01"
+	GETDescribeEnvironmentHealthVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentHealthVersionEnum = "2010-12-01"
 )
 
 type GetDescribeEnvironmentHealthQueryParams struct {

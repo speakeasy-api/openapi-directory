@@ -3,18 +3,18 @@ package operations
 type GetPromoteReadReplicaDbClusterActionEnum string
 
 const (
-	GetPromoteReadReplicaDbClusterActionEnumPromoteReadReplicaDbCluster GetPromoteReadReplicaDbClusterActionEnum = "PromoteReadReplicaDBCluster"
+	GETPromoteReadReplicaDBClusterActionEnumPromoteReadReplicaDbCluster GetPromoteReadReplicaDbClusterActionEnum = "PromoteReadReplicaDBCluster"
 )
 
 type GetPromoteReadReplicaDbClusterVersionEnum string
 
 const (
-	GetPromoteReadReplicaDbClusterVersionEnumTwoThousandAndFourteen1031 GetPromoteReadReplicaDbClusterVersionEnum = "2014-10-31"
+	GETPromoteReadReplicaDBClusterVersionEnumTwoThousandAndFourteen1031 GetPromoteReadReplicaDbClusterVersionEnum = "2014-10-31"
 )
 
 type GetPromoteReadReplicaDbClusterQueryParams struct {
 	Action              GetPromoteReadReplicaDbClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterIdentifier string                                    `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
+	DBClusterIdentifier string                                    `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	Version             GetPromoteReadReplicaDbClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

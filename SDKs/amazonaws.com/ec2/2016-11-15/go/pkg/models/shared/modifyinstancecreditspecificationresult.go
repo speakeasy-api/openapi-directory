@@ -1,6 +1,6 @@
 package shared
 
 type ModifyInstanceCreditSpecificationResult struct {
-	SuccessfulInstanceCreditSpecifications   []SuccessfulInstanceCreditSpecificationItem
-	UnsuccessfulInstanceCreditSpecifications []UnsuccessfulInstanceCreditSpecificationItem
+	SuccessfulInstanceCreditSpecifications   map[string]interface{}
+	UnsuccessfulInstanceCreditSpecifications map[string]interface{}
 }

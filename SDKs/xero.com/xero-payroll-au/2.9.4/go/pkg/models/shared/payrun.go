@@ -14,7 +14,7 @@ type PayRun struct {
 	Reimbursement         *float64          `json:"Reimbursement,omitempty"`
 	Super                 *float64          `json:"Super,omitempty"`
 	Tax                   *float64          `json:"Tax,omitempty"`
-	UpdatedDateUtc        *string           `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC        *string           `json:"UpdatedDateUTC,omitempty"`
 	ValidationErrors      []ValidationError `json:"ValidationErrors,omitempty"`
 	Wages                 *float64          `json:"Wages,omitempty"`
 }

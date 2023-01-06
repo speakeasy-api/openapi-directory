@@ -3,13 +3,13 @@ package operations
 type PostModifyGlobalClusterActionEnum string
 
 const (
-	PostModifyGlobalClusterActionEnumModifyGlobalCluster PostModifyGlobalClusterActionEnum = "ModifyGlobalCluster"
+	POSTModifyGlobalClusterActionEnumModifyGlobalCluster PostModifyGlobalClusterActionEnum = "ModifyGlobalCluster"
 )
 
 type PostModifyGlobalClusterVersionEnum string
 
 const (
-	PostModifyGlobalClusterVersionEnumTwoThousandAndFourteen1031 PostModifyGlobalClusterVersionEnum = "2014-10-31"
+	POSTModifyGlobalClusterVersionEnumTwoThousandAndFourteen1031 PostModifyGlobalClusterVersionEnum = "2014-10-31"
 )
 
 type PostModifyGlobalClusterQueryParams struct {

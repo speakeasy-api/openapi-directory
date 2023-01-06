@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.AecmwSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AecmwRequestBody{
             CertificateParameters: &operations.AecmwRequestBodyCertificateParameters{
-                Udf1: "omnis",
+                Udf1: "est",
             },
-            ConsentArtifact: "voluptas",
+            ConsentArtifact: "incidunt",
             Format: "pdf",
-            TxnID: "reprehenderit",
+            TxnID: "corrupti",
         },
     }
     
-    res, err := s.Sdk.Aecmw(ctx, req)
+    res, err := s.APIs.Aecmw(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Aecmw` - Application for Renewal of Contractor Migrant Workmen license
 * `Aemtw` - Application for Renewal of Motor Transport Worker Registration

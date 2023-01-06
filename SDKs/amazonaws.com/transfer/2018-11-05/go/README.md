@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,44 +34,40 @@ func main() {
     
     req := operations.CreateAccessRequest{
         Headers: operations.CreateAccessHeaders{
-            XAmzAlgorithm: "quod",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "dolorem",
-            XAmzDate: "molestias",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "consequatur",
-            XAmzSignedHeaders: "rem",
+            XAmzAlgorithm: "doloribus",
+            XAmzContentSha256: "architecto",
+            XAmzCredential: "est",
+            XAmzDate: "beatae",
+            XAmzSecurityToken: "odio",
+            XAmzSignature: "blanditiis",
+            XAmzSignedHeaders: "voluptatem",
             XAmzTarget: "TransferService.CreateAccess",
         },
         Request: shared.CreateAccessRequest{
-            ExternalID: "quaerat",
-            HomeDirectory: "quia",
+            ExternalID: "eum",
+            HomeDirectory: "at",
             HomeDirectoryMappings: []shared.HomeDirectoryMapEntry{
                 shared.HomeDirectoryMapEntry{
-                    Entry: "hic",
-                    Target: "sunt",
-                },
-                shared.HomeDirectoryMapEntry{
-                    Entry: "eos",
-                    Target: "odio",
+                    Entry: "dolore",
+                    Target: "voluptatem",
                 },
             },
             HomeDirectoryType: "PATH",
-            Policy: "reprehenderit",
+            Policy: "impedit",
             PosixProfile: &shared.PosixProfile{
-                Gid: 6659964822841469656,
+                Gid: 4594625245081249193,
                 SecondaryGids: []int64{
-                    7283126716863424883,
-                    3313831822642516207,
+                    7609203895733566797,
+                    5118155005328491642,
                 },
-                UID: 5414503095933566521,
+                UID: 6153116969609004781,
             },
-            Role: "quis",
-            ServerID: "et",
+            Role: "ut",
+            ServerID: "possimus",
         },
     }
     
-    res, err := s.Sdk.CreateAccess(ctx, req)
+    res, err := s.CreateAccess(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

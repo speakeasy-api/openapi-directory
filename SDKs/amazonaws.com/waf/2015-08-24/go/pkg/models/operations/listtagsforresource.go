@@ -30,10 +30,10 @@ type ListTagsForResourceResponse struct {
 	ContentType                           string
 	ListTagsForResourceResponse           *shared.ListTagsForResourceResponse
 	StatusCode                            int64
-	WafBadRequestException                *interface{}
-	WafInternalErrorException             *interface{}
-	WafInvalidParameterException          *interface{}
-	WafNonexistentItemException           *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFBadRequestException                *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidParameterException          *interface{}
+	WAFNonexistentItemException           *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

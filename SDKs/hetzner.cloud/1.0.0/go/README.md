@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,9 +24,9 @@ func main() {
     
     req := operations.GetActionsRequest{
         QueryParams: operations.GetActionsQueryParams{
-            ID: 3204866814910134817,
-            Sort: "finished",
-            Status: "running",
+            ID: 6442914223803503848,
+            Sort: "id:asc",
+            Status: "error",
         },
     }
     

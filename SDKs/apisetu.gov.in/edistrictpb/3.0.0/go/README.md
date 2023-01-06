@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.BtcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.BtcerRequestBody{
             CertificateParameters: &operations.BtcerRequestBodyCertificateParameters{
-                Dob: "ab",
-                RegistrationID: "earum",
+                DOB: "saepe",
+                RegistrationID: "minus",
             },
-            ConsentArtifact: "dolores",
+            ConsentArtifact: "inventore",
             Format: "pdf",
-            TxnID: "exercitationem",
+            TxnID: "dolor",
         },
     }
     
-    res, err := s.Sdk.Btcer(ctx, req)
+    res, err := s.APIs.Btcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Btcer` - Birth Certificate
 * `Dtcer` - Death Certificate

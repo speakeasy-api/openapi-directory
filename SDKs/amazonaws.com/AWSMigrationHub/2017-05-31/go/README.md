@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.AssociateCreatedArtifactRequest{
         Headers: operations.AssociateCreatedArtifactHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "consequatur",
-            XAmzCredential: "dolor",
-            XAmzDate: "commodi",
-            XAmzSecurityToken: "error",
-            XAmzSignature: "reprehenderit",
-            XAmzSignedHeaders: "consectetur",
+            XAmzAlgorithm: "vel",
+            XAmzContentSha256: "vel",
+            XAmzCredential: "placeat",
+            XAmzDate: "qui",
+            XAmzSecurityToken: "nisi",
+            XAmzSignature: "quis",
+            XAmzSignedHeaders: "adipisci",
             XAmzTarget: "AWSMigrationHub.AssociateCreatedArtifact",
         },
         Request: shared.AssociateCreatedArtifactRequest{
             CreatedArtifact: shared.CreatedArtifact{
-                Description: "ut",
-                Name: "laboriosam",
+                Description: "rerum",
+                Name: "et",
             },
             DryRun: true,
-            MigrationTaskName: "a",
-            ProgressUpdateStream: "soluta",
+            MigrationTaskName: "numquam",
+            ProgressUpdateStream: "laborum",
         },
     }
     
-    res, err := s.Sdk.AssociateCreatedArtifact(ctx, req)
+    res, err := s.AssociateCreatedArtifact(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

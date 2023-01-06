@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.SkmstSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.SkmstRequestBody{
             CertificateParameters: &operations.SkmstRequestBodyCertificateParameters{
-                Txt10thRollNo: "sapiente",
-                TxtCandidateAppSeq: "iure",
-                TxtExamDate: "assumenda",
+                Txt10thRollNo: "consequatur",
+                TxtCandidateAppSeq: "sequi",
+                TxtExamDate: "omnis",
             },
-            ConsentArtifact: "dolore",
+            ConsentArtifact: "quis",
             Format: "pdf",
-            TxnID: "ut",
+            TxnID: "sapiente",
         },
     }
     
-    res, err := s.Sdk.Skmst(ctx, req)
+    res, err := s.APIs.Skmst(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Skmst` - Skill Marksheet/ Score Card
 

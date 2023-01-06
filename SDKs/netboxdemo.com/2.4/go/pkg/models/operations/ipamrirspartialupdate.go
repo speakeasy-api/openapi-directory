@@ -15,6 +15,6 @@ type IpamRirsPartialUpdateRequest struct {
 
 type IpamRirsPartialUpdateResponse struct {
 	ContentType string
-	Rir         *shared.Rir
+	RIR         *shared.Rir
 	StatusCode  int64
 }

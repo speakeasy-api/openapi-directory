@@ -27,7 +27,7 @@ type UpdateAdmChannelRequestBodyAdmChannelRequest struct {
 }
 
 type UpdateAdmChannelRequestBody struct {
-	AdmChannelRequest UpdateAdmChannelRequestBodyAdmChannelRequest `json:"ADMChannelRequest"`
+	ADMChannelRequest UpdateAdmChannelRequestBodyAdmChannelRequest `json:"ADMChannelRequest"`
 }
 
 type UpdateAdmChannelRequest struct {

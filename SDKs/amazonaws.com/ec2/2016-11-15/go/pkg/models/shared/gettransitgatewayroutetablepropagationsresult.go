@@ -1,6 +1,6 @@
 package shared
 
 type GetTransitGatewayRouteTablePropagationsResult struct {
-	NextToken                            *string
-	TransitGatewayRouteTablePropagations []TransitGatewayRouteTablePropagation
+	NextToken                            map[string]interface{}
+	TransitGatewayRouteTablePropagations map[string]interface{}
 }

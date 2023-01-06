@@ -1,7 +1,7 @@
 package shared
 
 type GetPublicKeyResponse struct {
-	CustomerMasterKeySpec *CustomerMasterKeySpecEnum    `json:"CustomerMasterKeySpec,omitempty"`
+	CustomerMasterKeySpec map[string]interface{}        `json:"CustomerMasterKeySpec,omitempty"`
 	EncryptionAlgorithms  []EncryptionAlgorithmSpecEnum `json:"EncryptionAlgorithms,omitempty"`
 	KeyID                 *string                       `json:"KeyId,omitempty"`
 	KeySpec               *KeySpecEnum                  `json:"KeySpec,omitempty"`

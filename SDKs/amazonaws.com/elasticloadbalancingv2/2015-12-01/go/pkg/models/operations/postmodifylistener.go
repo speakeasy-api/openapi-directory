@@ -3,13 +3,13 @@ package operations
 type PostModifyListenerActionEnum string
 
 const (
-	PostModifyListenerActionEnumModifyListener PostModifyListenerActionEnum = "ModifyListener"
+	POSTModifyListenerActionEnumModifyListener PostModifyListenerActionEnum = "ModifyListener"
 )
 
 type PostModifyListenerVersionEnum string
 
 const (
-	PostModifyListenerVersionEnumTwoThousandAndFifteen1201 PostModifyListenerVersionEnum = "2015-12-01"
+	POSTModifyListenerVersionEnumTwoThousandAndFifteen1201 PostModifyListenerVersionEnum = "2015-12-01"
 )
 
 type PostModifyListenerQueryParams struct {

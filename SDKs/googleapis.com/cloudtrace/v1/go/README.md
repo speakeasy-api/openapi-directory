@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,103 +27,103 @@ func main() {
             Option1: &operations.CloudtraceProjectsPatchTracesSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.CloudtraceProjectsPatchTracesPathParams{
-            ProjectID: "aut",
+            ProjectID: "atque",
         },
         QueryParams: operations.CloudtraceProjectsPatchTracesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "est",
-            Alt: "media",
-            Callback: "qui",
-            Fields: "eius",
-            Key: "officia",
-            OauthToken: "similique",
-            PrettyPrint: false,
-            QuotaUser: "blanditiis",
-            UploadType: "itaque",
-            UploadProtocol: "velit",
+            DollarXgafv: "1",
+            AccessToken: "eos",
+            Alt: "proto",
+            Callback: "consectetur",
+            Fields: "aut",
+            Key: "voluptatem",
+            OauthToken: "corporis",
+            PrettyPrint: true,
+            QuotaUser: "est",
+            UploadType: "at",
+            UploadProtocol: "ut",
         },
         Request: &shared.Traces{
             Traces: []shared.Trace{
                 shared.Trace{
-                    ProjectID: "mollitia",
+                    ProjectID: "sit",
                     Spans: []shared.TraceSpan{
                         shared.TraceSpan{
-                            EndTime: "consectetur",
+                            EndTime: "impedit",
                             Kind: "SPAN_KIND_UNSPECIFIED",
                             Labels: map[string]string{
-                                "accusantium": "et",
-                                "blanditiis": "quia",
+                                "exercitationem": "dolores",
+                                "molestias": "et",
                             },
-                            Name: "hic",
-                            ParentSpanID: "nulla",
-                            SpanID: "quis",
-                            StartTime: "laboriosam",
+                            Name: "iure",
+                            ParentSpanID: "ea",
+                            SpanID: "tempora",
+                            StartTime: "cumque",
                         },
                         shared.TraceSpan{
-                            EndTime: "soluta",
+                            EndTime: "id",
                             Kind: "RPC_SERVER",
                             Labels: map[string]string{
-                                "omnis": "repellat",
-                                "ut": "sint",
-                                "velit": "quos",
+                                "eum": "libero",
+                                "earum": "aut",
+                                "nihil": "et",
                             },
-                            Name: "deleniti",
-                            ParentSpanID: "quasi",
-                            SpanID: "asperiores",
-                            StartTime: "voluptas",
-                        },
-                        shared.TraceSpan{
-                            EndTime: "ipsum",
-                            Kind: "RPC_CLIENT",
-                            Labels: map[string]string{
-                                "iusto": "et",
-                                "qui": "quibusdam",
-                                "vero": "sunt",
-                            },
-                            Name: "non",
-                            ParentSpanID: "quae",
-                            SpanID: "architecto",
-                            StartTime: "labore",
+                            Name: "odit",
+                            ParentSpanID: "omnis",
+                            SpanID: "repellendus",
+                            StartTime: "dicta",
                         },
                     },
-                    TraceID: "quo",
+                    TraceID: "quidem",
                 },
                 shared.Trace{
-                    ProjectID: "harum",
+                    ProjectID: "consequatur",
                     Spans: []shared.TraceSpan{
                         shared.TraceSpan{
-                            EndTime: "et",
+                            EndTime: "qui",
                             Kind: "SPAN_KIND_UNSPECIFIED",
                             Labels: map[string]string{
-                                "ut": "dignissimos",
-                                "omnis": "quae",
-                                "nisi": "sapiente",
+                                "earum": "sunt",
+                                "laborum": "quis",
                             },
-                            Name: "necessitatibus",
-                            ParentSpanID: "voluptatem",
-                            SpanID: "tempora",
-                            StartTime: "sed",
+                            Name: "blanditiis",
+                            ParentSpanID: "recusandae",
+                            SpanID: "placeat",
+                            StartTime: "dolorem",
                         },
                         shared.TraceSpan{
-                            EndTime: "non",
+                            EndTime: "corrupti",
                             Kind: "RPC_SERVER",
                             Labels: map[string]string{
-                                "in": "voluptas",
+                                "illum": "quod",
+                                "qui": "dicta",
+                                "eligendi": "eum",
                             },
-                            Name: "reiciendis",
-                            ParentSpanID: "reiciendis",
-                            SpanID: "sit",
-                            StartTime: "vel",
+                            Name: "voluptatem",
+                            ParentSpanID: "labore",
+                            SpanID: "a",
+                            StartTime: "laudantium",
+                        },
+                        shared.TraceSpan{
+                            EndTime: "porro",
+                            Kind: "RPC_SERVER",
+                            Labels: map[string]string{
+                                "labore": "aut",
+                                "a": "voluptatum",
+                            },
+                            Name: "repudiandae",
+                            ParentSpanID: "accusamus",
+                            SpanID: "est",
+                            StartTime: "officia",
                         },
                     },
-                    TraceID: "omnis",
+                    TraceID: "ipsum",
                 },
             },
         },

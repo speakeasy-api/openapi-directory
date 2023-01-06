@@ -3,13 +3,13 @@ package operations
 type PostRemoveTagsFromResourceActionEnum string
 
 const (
-	PostRemoveTagsFromResourceActionEnumRemoveTagsFromResource PostRemoveTagsFromResourceActionEnum = "RemoveTagsFromResource"
+	POSTRemoveTagsFromResourceActionEnumRemoveTagsFromResource PostRemoveTagsFromResourceActionEnum = "RemoveTagsFromResource"
 )
 
 type PostRemoveTagsFromResourceVersionEnum string
 
 const (
-	PostRemoveTagsFromResourceVersionEnumTwoThousandAndThirteen0212 PostRemoveTagsFromResourceVersionEnum = "2013-02-12"
+	POSTRemoveTagsFromResourceVersionEnumTwoThousandAndThirteen0212 PostRemoveTagsFromResourceVersionEnum = "2013-02-12"
 )
 
 type PostRemoveTagsFromResourceQueryParams struct {

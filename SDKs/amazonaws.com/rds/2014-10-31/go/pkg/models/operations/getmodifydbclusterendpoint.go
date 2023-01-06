@@ -3,18 +3,18 @@ package operations
 type GetModifyDbClusterEndpointActionEnum string
 
 const (
-	GetModifyDbClusterEndpointActionEnumModifyDbClusterEndpoint GetModifyDbClusterEndpointActionEnum = "ModifyDBClusterEndpoint"
+	GETModifyDBClusterEndpointActionEnumModifyDbClusterEndpoint GetModifyDbClusterEndpointActionEnum = "ModifyDBClusterEndpoint"
 )
 
 type GetModifyDbClusterEndpointVersionEnum string
 
 const (
-	GetModifyDbClusterEndpointVersionEnumTwoThousandAndFourteen1031 GetModifyDbClusterEndpointVersionEnum = "2014-10-31"
+	GETModifyDBClusterEndpointVersionEnumTwoThousandAndFourteen1031 GetModifyDbClusterEndpointVersionEnum = "2014-10-31"
 )
 
 type GetModifyDbClusterEndpointQueryParams struct {
 	Action                      GetModifyDbClusterEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterEndpointIdentifier string                                `queryParam:"style=form,explode=true,name=DBClusterEndpointIdentifier"`
+	DBClusterEndpointIdentifier string                                `queryParam:"style=form,explode=true,name=DBClusterEndpointIdentifier"`
 	EndpointType                *string                               `queryParam:"style=form,explode=true,name=EndpointType"`
 	ExcludedMembers             []string                              `queryParam:"style=form,explode=true,name=ExcludedMembers"`
 	StaticMembers               []string                              `queryParam:"style=form,explode=true,name=StaticMembers"`

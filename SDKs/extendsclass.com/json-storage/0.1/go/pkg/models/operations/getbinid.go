@@ -11,6 +11,6 @@ type GetBinIDRequest struct {
 type GetBinIDResponse struct {
 	ContentType                      string
 	Error                            *interface{}
-	GetBinID200ApplicationJSONObject map[string]interface{}
 	StatusCode                       int64
+	GetBinID200ApplicationJSONObject map[string]interface{}
 }

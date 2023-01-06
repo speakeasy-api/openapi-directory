@@ -6,13 +6,13 @@ type DefaultCacheBehavior struct {
 	AllowedMethods             *AllowedMethods
 	CachePolicyID              *string
 	Compress                   *bool
-	DefaultTTL                 *int64
+	DefaultTTL                 map[string]interface{}
 	FieldLevelEncryptionID     *string
-	ForwardedValues            *ForwardedValues
+	ForwardedValues            map[string]interface{}
 	FunctionAssociations       *FunctionAssociations
 	LambdaFunctionAssociations *LambdaFunctionAssociations
-	MaxTTL                     *int64
-	MinTTL                     *int64
+	MaxTTL                     map[string]interface{}
+	MinTTL                     map[string]interface{}
 	OriginRequestPolicyID      *string
 	RealtimeLogConfigArn       *string
 	SmoothStreaming            *bool

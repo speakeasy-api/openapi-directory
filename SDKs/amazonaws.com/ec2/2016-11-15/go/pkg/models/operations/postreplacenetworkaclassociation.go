@@ -3,13 +3,13 @@ package operations
 type PostReplaceNetworkACLAssociationActionEnum string
 
 const (
-	PostReplaceNetworkACLAssociationActionEnumReplaceNetworkACLAssociation PostReplaceNetworkACLAssociationActionEnum = "ReplaceNetworkAclAssociation"
+	POSTReplaceNetworkACLAssociationActionEnumReplaceNetworkACLAssociation PostReplaceNetworkACLAssociationActionEnum = "ReplaceNetworkAclAssociation"
 )
 
 type PostReplaceNetworkACLAssociationVersionEnum string
 
 const (
-	PostReplaceNetworkACLAssociationVersionEnumTwoThousandAndSixteen1115 PostReplaceNetworkACLAssociationVersionEnum = "2016-11-15"
+	POSTReplaceNetworkACLAssociationVersionEnumTwoThousandAndSixteen1115 PostReplaceNetworkACLAssociationVersionEnum = "2016-11-15"
 )
 
 type PostReplaceNetworkACLAssociationQueryParams struct {

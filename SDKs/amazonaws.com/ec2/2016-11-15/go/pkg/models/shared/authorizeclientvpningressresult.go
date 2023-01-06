@@ -1,5 +1,5 @@
 package shared
 
 type AuthorizeClientVpnIngressResult struct {
-	Status *ClientVpnAuthorizationRuleStatus
+	Status map[string]interface{}
 }

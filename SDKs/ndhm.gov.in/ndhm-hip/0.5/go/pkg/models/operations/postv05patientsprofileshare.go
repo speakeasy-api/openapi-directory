@@ -10,7 +10,7 @@ var PostV05PatientsProfileShareServerList = []string{
 
 type PostV05PatientsProfileShareHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
 }
 
 type PostV05PatientsProfileShareRequests struct {

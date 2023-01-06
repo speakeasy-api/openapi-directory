@@ -1,6 +1,6 @@
 package shared
 
 type DbClusterMessage struct {
-	DbClusters []DbCluster
+	DBClusters []map[string]interface{}
 	Marker     *string
 }

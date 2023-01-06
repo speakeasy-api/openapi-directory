@@ -8,6 +8,8 @@ type PageBuildError struct {
 	Message string `json:"message"`
 }
 
+// PageBuildSimpleUser
+// Simple User
 type PageBuildSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

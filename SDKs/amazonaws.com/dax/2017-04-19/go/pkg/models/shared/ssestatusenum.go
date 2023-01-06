@@ -3,8 +3,8 @@ package shared
 type SseStatusEnum string
 
 const (
-	SseStatusEnumEnabling  SseStatusEnum = "ENABLING"
-	SseStatusEnumEnabled   SseStatusEnum = "ENABLED"
-	SseStatusEnumDisabling SseStatusEnum = "DISABLING"
-	SseStatusEnumDisabled  SseStatusEnum = "DISABLED"
+	SSEStatusEnumEnabling  SseStatusEnum = "ENABLING"
+	SSEStatusEnumEnabled   SseStatusEnum = "ENABLED"
+	SSEStatusEnumDisabling SseStatusEnum = "DISABLING"
+	SSEStatusEnumDisabled  SseStatusEnum = "DISABLED"
 )

@@ -1,8 +1,0 @@
-package shared
-
-type LaunchTemplateInstanceMetadataEndpointStateEnum string
-
-const (
-	LaunchTemplateInstanceMetadataEndpointStateEnumDisabled LaunchTemplateInstanceMetadataEndpointStateEnum = "disabled"
-	LaunchTemplateInstanceMetadataEndpointStateEnumEnabled  LaunchTemplateInstanceMetadataEndpointStateEnum = "enabled"
-)

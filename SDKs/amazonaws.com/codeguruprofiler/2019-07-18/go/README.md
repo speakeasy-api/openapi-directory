@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,16 +34,16 @@ func main() {
     
     req := operations.AddNotificationChannelsRequest{
         PathParams: operations.AddNotificationChannelsPathParams{
-            ProfilingGroupName: "blanditiis",
+            ProfilingGroupName: "rem",
         },
         Headers: operations.AddNotificationChannelsHeaders{
-            XAmzAlgorithm: "placeat",
-            XAmzContentSha256: "odio",
-            XAmzCredential: "autem",
-            XAmzDate: "eligendi",
-            XAmzSecurityToken: "animi",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "enim",
+            XAmzCredential: "quia",
+            XAmzDate: "voluptas",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "numquam",
+            XAmzSignedHeaders: "et",
         },
         Request: operations.AddNotificationChannelsRequestBody{
             Channels: []shared.Channel{
@@ -53,23 +52,22 @@ func main() {
                         "AnomalyDetection",
                         "AnomalyDetection",
                     },
-                    ID: "voluptate",
-                    URI: "quaerat",
+                    ID: "quia",
+                    URI: "aliquid",
                 },
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
                         "AnomalyDetection",
                         "AnomalyDetection",
-                        "AnomalyDetection",
                     },
-                    ID: "nihil",
-                    URI: "magni",
+                    ID: "voluptate",
+                    URI: "est",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddNotificationChannels(ctx, req)
+    res, err := s.AddNotificationChannels(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

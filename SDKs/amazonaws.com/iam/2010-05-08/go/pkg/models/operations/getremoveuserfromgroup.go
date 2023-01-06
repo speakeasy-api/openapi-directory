@@ -3,13 +3,13 @@ package operations
 type GetRemoveUserFromGroupActionEnum string
 
 const (
-	GetRemoveUserFromGroupActionEnumRemoveUserFromGroup GetRemoveUserFromGroupActionEnum = "RemoveUserFromGroup"
+	GETRemoveUserFromGroupActionEnumRemoveUserFromGroup GetRemoveUserFromGroupActionEnum = "RemoveUserFromGroup"
 )
 
 type GetRemoveUserFromGroupVersionEnum string
 
 const (
-	GetRemoveUserFromGroupVersionEnumTwoThousandAndTen0508 GetRemoveUserFromGroupVersionEnum = "2010-05-08"
+	GETRemoveUserFromGroupVersionEnumTwoThousandAndTen0508 GetRemoveUserFromGroupVersionEnum = "2010-05-08"
 )
 
 type GetRemoveUserFromGroupQueryParams struct {

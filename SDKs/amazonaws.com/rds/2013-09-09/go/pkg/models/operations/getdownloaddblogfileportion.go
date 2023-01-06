@@ -3,18 +3,18 @@ package operations
 type GetDownloadDbLogFilePortionActionEnum string
 
 const (
-	GetDownloadDbLogFilePortionActionEnumDownloadDbLogFilePortion GetDownloadDbLogFilePortionActionEnum = "DownloadDBLogFilePortion"
+	GETDownloadDBLogFilePortionActionEnumDownloadDbLogFilePortion GetDownloadDbLogFilePortionActionEnum = "DownloadDBLogFilePortion"
 )
 
 type GetDownloadDbLogFilePortionVersionEnum string
 
 const (
-	GetDownloadDbLogFilePortionVersionEnumTwoThousandAndThirteen0909 GetDownloadDbLogFilePortionVersionEnum = "2013-09-09"
+	GETDownloadDBLogFilePortionVersionEnumTwoThousandAndThirteen0909 GetDownloadDbLogFilePortionVersionEnum = "2013-09-09"
 )
 
 type GetDownloadDbLogFilePortionQueryParams struct {
 	Action               GetDownloadDbLogFilePortionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                                 `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                                 `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	LogFileName          string                                 `queryParam:"style=form,explode=true,name=LogFileName"`
 	Marker               *string                                `queryParam:"style=form,explode=true,name=Marker"`
 	NumberOfLines        *int64                                 `queryParam:"style=form,explode=true,name=NumberOfLines"`

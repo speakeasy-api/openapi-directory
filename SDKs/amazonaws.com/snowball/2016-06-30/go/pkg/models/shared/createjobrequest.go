@@ -7,13 +7,13 @@ type CreateJobRequest struct {
 	DeviceConfiguration          *DeviceConfiguration          `json:"DeviceConfiguration,omitempty"`
 	ForwardingAddressID          *string                       `json:"ForwardingAddressId,omitempty"`
 	JobType                      *JobTypeEnum                  `json:"JobType,omitempty"`
-	KmsKeyArn                    *string                       `json:"KmsKeyARN,omitempty"`
+	KmsKeyARN                    *string                       `json:"KmsKeyARN,omitempty"`
 	LongTermPricingID            *string                       `json:"LongTermPricingId,omitempty"`
 	Notification                 *Notification                 `json:"Notification,omitempty"`
 	OnDeviceServiceConfiguration *OnDeviceServiceConfiguration `json:"OnDeviceServiceConfiguration,omitempty"`
 	RemoteManagement             *RemoteManagementEnum         `json:"RemoteManagement,omitempty"`
 	Resources                    *JobResource                  `json:"Resources,omitempty"`
-	RoleArn                      *string                       `json:"RoleARN,omitempty"`
+	RoleARN                      *string                       `json:"RoleARN,omitempty"`
 	ShippingOption               *ShippingOptionEnum           `json:"ShippingOption,omitempty"`
 	SnowballCapacityPreference   *SnowballCapacityEnum         `json:"SnowballCapacityPreference,omitempty"`
 	SnowballType                 *SnowballTypeEnum             `json:"SnowballType,omitempty"`

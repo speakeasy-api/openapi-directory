@@ -3,9 +3,9 @@ package shared
 type OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum string
 
 const (
-	OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnumAndroid OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum = "Android"
-	OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnumIos     OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum = "IOS"
-	OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnumOther   OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum = "OTHER"
+	OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOSEnumAndroid OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum = "Android"
+	OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOSEnumIos     OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum = "IOS"
+	OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOSEnumOther   OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum = "OTHER"
 )
 
 type OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationDeviceNameEnum string
@@ -26,11 +26,11 @@ const (
 )
 
 type OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplication struct {
-	Os                  *OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum         `json:"OS,omitempty"`
+	OS                  *OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum         `json:"OS,omitempty"`
 	BusinessUserID      *int64                                                                                    `json:"businessUserId,omitempty"`
 	ClientID            *string                                                                                   `json:"clientID,omitempty"`
 	DeviceName          *OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationDeviceNameEnum `json:"deviceName,omitempty"`
-	DeviceOsVersion     *string                                                                                   `json:"deviceOSVersion,omitempty"`
+	DeviceOSVersion     *string                                                                                   `json:"deviceOSVersion,omitempty"`
 	MobileApplicationID *int64                                                                                    `json:"mobileApplicationId,omitempty"`
 	Status              *OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationStatusEnum     `json:"status,omitempty"`
 }

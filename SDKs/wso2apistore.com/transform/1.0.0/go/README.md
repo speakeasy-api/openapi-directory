@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -24,10 +23,10 @@ func main() {
     s := sdk.New()
     
     req := operations.PostJsontoxmlRequest{
-        Request: "nesciunt",
+        Request: "natus",
     }
     
-    res, err := s.Sdk.PostJsontoxml(ctx, req)
+    res, err := s.PostJsontoxml(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

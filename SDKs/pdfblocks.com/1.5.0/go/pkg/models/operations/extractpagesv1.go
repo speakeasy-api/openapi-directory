@@ -26,5 +26,5 @@ type ExtractPagesV1Response struct {
 	ContentType                                       string
 	StatusCode                                        int64
 	ExtractPagesV1200ApplicationPdfBinaryString       []byte
-	ExtractPagesV14XxApplicationProblemPlusJSONObject *ExtractPagesV14XxApplicationProblemPlusJSON
+	ExtractPagesV14XXApplicationProblemPlusJSONObject *ExtractPagesV14XxApplicationProblemPlusJSON
 }

@@ -3,8 +3,8 @@ package operations
 type ContactsPostActionEnum string
 
 const (
-	ContactsPostActionEnumDel   ContactsPostActionEnum = "del"
-	ContactsPostActionEnumWrite ContactsPostActionEnum = "write"
+	ContactsPOSTActionEnumDel   ContactsPostActionEnum = "del"
+	ContactsPOSTActionEnumWrite ContactsPostActionEnum = "write"
 )
 
 type ContactsPostQueryParams struct {
@@ -21,8 +21,8 @@ type ContactsPostRequest struct {
 }
 
 type ContactsPostResponse struct {
-	ContactsPost200ApplicationJSONString *string
-	ContactsPost200TextPlainString       *string
+	ContactsPOST200ApplicationJSONString *string
+	ContactsPOST200TextPlainString       *string
 	ContentType                          string
 	StatusCode                           int64
 }

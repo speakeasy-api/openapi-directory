@@ -3,13 +3,13 @@ package operations
 type PostReorderReceiptRuleSetActionEnum string
 
 const (
-	PostReorderReceiptRuleSetActionEnumReorderReceiptRuleSet PostReorderReceiptRuleSetActionEnum = "ReorderReceiptRuleSet"
+	POSTReorderReceiptRuleSetActionEnumReorderReceiptRuleSet PostReorderReceiptRuleSetActionEnum = "ReorderReceiptRuleSet"
 )
 
 type PostReorderReceiptRuleSetVersionEnum string
 
 const (
-	PostReorderReceiptRuleSetVersionEnumTwoThousandAndTen1201 PostReorderReceiptRuleSetVersionEnum = "2010-12-01"
+	POSTReorderReceiptRuleSetVersionEnumTwoThousandAndTen1201 PostReorderReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
 type PostReorderReceiptRuleSetQueryParams struct {

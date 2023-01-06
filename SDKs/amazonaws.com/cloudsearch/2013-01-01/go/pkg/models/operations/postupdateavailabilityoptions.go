@@ -3,13 +3,13 @@ package operations
 type PostUpdateAvailabilityOptionsActionEnum string
 
 const (
-	PostUpdateAvailabilityOptionsActionEnumUpdateAvailabilityOptions PostUpdateAvailabilityOptionsActionEnum = "UpdateAvailabilityOptions"
+	POSTUpdateAvailabilityOptionsActionEnumUpdateAvailabilityOptions PostUpdateAvailabilityOptionsActionEnum = "UpdateAvailabilityOptions"
 )
 
 type PostUpdateAvailabilityOptionsVersionEnum string
 
 const (
-	PostUpdateAvailabilityOptionsVersionEnumTwoThousandAndThirteen0101 PostUpdateAvailabilityOptionsVersionEnum = "2013-01-01"
+	POSTUpdateAvailabilityOptionsVersionEnumTwoThousandAndThirteen0101 PostUpdateAvailabilityOptionsVersionEnum = "2013-01-01"
 )
 
 type PostUpdateAvailabilityOptionsQueryParams struct {

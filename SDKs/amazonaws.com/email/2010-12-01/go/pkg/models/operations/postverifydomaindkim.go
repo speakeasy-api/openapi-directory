@@ -3,13 +3,13 @@ package operations
 type PostVerifyDomainDkimActionEnum string
 
 const (
-	PostVerifyDomainDkimActionEnumVerifyDomainDkim PostVerifyDomainDkimActionEnum = "VerifyDomainDkim"
+	POSTVerifyDomainDkimActionEnumVerifyDomainDkim PostVerifyDomainDkimActionEnum = "VerifyDomainDkim"
 )
 
 type PostVerifyDomainDkimVersionEnum string
 
 const (
-	PostVerifyDomainDkimVersionEnumTwoThousandAndTen1201 PostVerifyDomainDkimVersionEnum = "2010-12-01"
+	POSTVerifyDomainDkimVersionEnumTwoThousandAndTen1201 PostVerifyDomainDkimVersionEnum = "2010-12-01"
 )
 
 type PostVerifyDomainDkimQueryParams struct {

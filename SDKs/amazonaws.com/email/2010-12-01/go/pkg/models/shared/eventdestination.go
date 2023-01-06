@@ -8,5 +8,5 @@ type EventDestination struct {
 	KinesisFirehoseDestination *KinesisFirehoseDestination
 	MatchingEventTypes         []EventTypeEnum
 	Name                       string
-	SnsDestination             *SnsDestination
+	SNSDestination             *SnsDestination
 }

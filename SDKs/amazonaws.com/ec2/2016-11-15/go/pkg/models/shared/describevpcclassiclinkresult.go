@@ -1,5 +1,5 @@
 package shared
 
 type DescribeVpcClassicLinkResult struct {
-	Vpcs []VpcClassicLink
+	Vpcs map[string]interface{}
 }

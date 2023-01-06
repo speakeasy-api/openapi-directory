@@ -3,13 +3,13 @@ package operations
 type GetDisassociateTrunkInterfaceActionEnum string
 
 const (
-	GetDisassociateTrunkInterfaceActionEnumDisassociateTrunkInterface GetDisassociateTrunkInterfaceActionEnum = "DisassociateTrunkInterface"
+	GETDisassociateTrunkInterfaceActionEnumDisassociateTrunkInterface GetDisassociateTrunkInterfaceActionEnum = "DisassociateTrunkInterface"
 )
 
 type GetDisassociateTrunkInterfaceVersionEnum string
 
 const (
-	GetDisassociateTrunkInterfaceVersionEnumTwoThousandAndSixteen1115 GetDisassociateTrunkInterfaceVersionEnum = "2016-11-15"
+	GETDisassociateTrunkInterfaceVersionEnumTwoThousandAndSixteen1115 GetDisassociateTrunkInterfaceVersionEnum = "2016-11-15"
 )
 
 type GetDisassociateTrunkInterfaceQueryParams struct {

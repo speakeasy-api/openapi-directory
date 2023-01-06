@@ -14,45 +14,31 @@ type ListVpcMembersQueryParams struct {
 	ResourceType *string `queryParam:"style=form,explode=true,name=resource_type"`
 }
 
-type ListVpcMembersRequest struct {
-	PathParams  ListVpcMembersPathParams
-	QueryParams ListVpcMembersQueryParams
-}
-
 type ListVpcMembers200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
+	Prev *string `json:"prev,omitempty"`
 }
 
 type ListVpcMembers200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
+	Next *string `json:"next,omitempty"`
 }
 
 type ListVpcMembers200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
-type ListVpcMembers200ApplicationJSONMembers struct {
-	CreatedAt *string `json:"created_at,omitempty"`
-	Name      *string `json:"name,omitempty"`
-	Urn       *string `json:"urn,omitempty"`
-}
-
-type ListVpcMembers200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListVpcMembers200ApplicationJSON struct {
-	Links   *ListVpcMembers200ApplicationJSONLinks    `json:"links,omitempty"`
-	Members []ListVpcMembers200ApplicationJSONMembers `json:"members,omitempty"`
-	Meta    ListVpcMembers200ApplicationJSONMeta      `json:"meta"`
+	Links *ListVpcMembers200ApplicationJSONLinks `json:"links,omitempty"`
 }
 
 type ListVpcMembers401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListVpcMembersRequest struct {
+	PathParams  ListVpcMembersPathParams
+	QueryParams ListVpcMembersQueryParams
 }
 
 type ListVpcMembersResponse struct {

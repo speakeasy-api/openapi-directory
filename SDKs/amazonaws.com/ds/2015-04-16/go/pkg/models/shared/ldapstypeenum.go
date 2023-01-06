@@ -3,5 +3,5 @@ package shared
 type LdapsTypeEnum string
 
 const (
-	LdapsTypeEnumClient LdapsTypeEnum = "Client"
+	LDAPSTypeEnumClient LdapsTypeEnum = "Client"
 )

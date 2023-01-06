@@ -3,13 +3,13 @@ package operations
 type PostCreateNetworkACLEntryActionEnum string
 
 const (
-	PostCreateNetworkACLEntryActionEnumCreateNetworkACLEntry PostCreateNetworkACLEntryActionEnum = "CreateNetworkAclEntry"
+	POSTCreateNetworkACLEntryActionEnumCreateNetworkACLEntry PostCreateNetworkACLEntryActionEnum = "CreateNetworkAclEntry"
 )
 
 type PostCreateNetworkACLEntryVersionEnum string
 
 const (
-	PostCreateNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 PostCreateNetworkACLEntryVersionEnum = "2016-11-15"
+	POSTCreateNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 PostCreateNetworkACLEntryVersionEnum = "2016-11-15"
 )
 
 type PostCreateNetworkACLEntryQueryParams struct {

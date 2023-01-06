@@ -14,6 +14,6 @@ type GetAdminRecordingsStatus200ApplicationJSON struct {
 
 type GetAdminRecordingsStatusResponse struct {
 	ContentType                                      string
-	GetAdminRecordingsStatus200ApplicationJSONObject *GetAdminRecordingsStatus200ApplicationJSON
 	StatusCode                                       int64
+	GetAdminRecordingsStatus200ApplicationJSONObject *GetAdminRecordingsStatus200ApplicationJSON
 }

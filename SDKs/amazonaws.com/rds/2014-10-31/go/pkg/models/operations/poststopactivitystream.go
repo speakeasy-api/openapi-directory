@@ -3,13 +3,13 @@ package operations
 type PostStopActivityStreamActionEnum string
 
 const (
-	PostStopActivityStreamActionEnumStopActivityStream PostStopActivityStreamActionEnum = "StopActivityStream"
+	POSTStopActivityStreamActionEnumStopActivityStream PostStopActivityStreamActionEnum = "StopActivityStream"
 )
 
 type PostStopActivityStreamVersionEnum string
 
 const (
-	PostStopActivityStreamVersionEnumTwoThousandAndFourteen1031 PostStopActivityStreamVersionEnum = "2014-10-31"
+	POSTStopActivityStreamVersionEnumTwoThousandAndFourteen1031 PostStopActivityStreamVersionEnum = "2014-10-31"
 )
 
 type PostStopActivityStreamQueryParams struct {

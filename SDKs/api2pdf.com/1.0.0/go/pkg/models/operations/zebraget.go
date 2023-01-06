@@ -24,5 +24,5 @@ type ZebraGetRequest struct {
 type ZebraGetResponse struct {
 	ContentType                     string
 	StatusCode                      int64
-	ZebraGet200ImagePngBinaryString []byte
+	ZebraGET200ImagePngBinaryString []byte
 }

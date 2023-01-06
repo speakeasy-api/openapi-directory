@@ -1,6 +1,6 @@
 package shared
 
 type DescribeMovingAddressesResult struct {
-	MovingAddressStatuses []MovingAddressStatus
-	NextToken             *string
+	MovingAddressStatuses map[string]interface{}
+	NextToken             map[string]interface{}
 }

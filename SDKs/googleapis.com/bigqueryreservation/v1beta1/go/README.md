@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,45 +27,44 @@ func main() {
             Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "iste",
+            Parent: "expedita",
         },
         QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "aspernatur",
-            Alt: "media",
-            Callback: "soluta",
-            CapacityCommitmentID: "voluptatem",
+            AccessToken: "aut",
+            Alt: "json",
+            Callback: "harum",
+            CapacityCommitmentID: "nemo",
             EnforceSingleAdminProjectPerOrg: false,
-            Fields: "minus",
-            Key: "nesciunt",
-            OauthToken: "qui",
-            PrettyPrint: false,
-            QuotaUser: "odio",
-            UploadType: "temporibus",
-            UploadProtocol: "harum",
+            Fields: "ut",
+            Key: "provident",
+            OauthToken: "voluptas",
+            PrettyPrint: true,
+            QuotaUser: "quos",
+            UploadType: "sapiente",
+            UploadProtocol: "beatae",
         },
         Request: &shared.CapacityCommitmentInput{
             FailureStatus: &shared.Status{
-                Code: 24672949858063015,
+                Code: 7168148920351584244,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "ea": "rerum",
-                        "blanditiis": "libero",
+                        "molestiae": "aut",
                     },
                 },
-                Message: "aspernatur",
+                Message: "qui",
             },
-            MultiRegionAuxiliary: true,
-            Plan: "COMMITMENT_PLAN_UNSPECIFIED",
-            RenewalPlan: "FLEX",
-            SlotCount: "consequatur",
+            MultiRegionAuxiliary: false,
+            Plan: "TRIAL",
+            RenewalPlan: "ANNUAL",
+            SlotCount: "nesciunt",
         },
     }
     

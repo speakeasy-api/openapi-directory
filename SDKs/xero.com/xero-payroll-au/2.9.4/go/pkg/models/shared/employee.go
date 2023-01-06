@@ -39,7 +39,7 @@ type Employee struct {
 	TerminationDate                 *string             `json:"TerminationDate,omitempty"`
 	Title                           *string             `json:"Title,omitempty"`
 	TwitterUserName                 *string             `json:"TwitterUserName,omitempty"`
-	UpdatedDateUtc                  *string             `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC                  *string             `json:"UpdatedDateUTC,omitempty"`
 	ValidationErrors                []ValidationError   `json:"ValidationErrors,omitempty"`
 }
 

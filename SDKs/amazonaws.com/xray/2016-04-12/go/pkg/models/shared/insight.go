@@ -10,7 +10,7 @@ type Insight struct {
 	Categories                              []InsightCategoryEnum    `json:"Categories,omitempty"`
 	ClientRequestImpactStatistics           *RequestImpactStatistics `json:"ClientRequestImpactStatistics,omitempty"`
 	EndTime                                 *time.Time               `json:"EndTime,omitempty"`
-	GroupArn                                *string                  `json:"GroupARN,omitempty"`
+	GroupARN                                *string                  `json:"GroupARN,omitempty"`
 	GroupName                               *string                  `json:"GroupName,omitempty"`
 	InsightID                               *string                  `json:"InsightId,omitempty"`
 	RootCauseServiceID                      *ServiceID               `json:"RootCauseServiceId,omitempty"`

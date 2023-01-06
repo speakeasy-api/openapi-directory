@@ -3,17 +3,17 @@ package operations
 type GetSelectActionEnum string
 
 const (
-	GetSelectActionEnumSelect GetSelectActionEnum = "Select"
+	GETSelectActionEnumSelect GetSelectActionEnum = "Select"
 )
 
 type GetSelectVersionEnum string
 
 const (
-	GetSelectVersionEnumTwoThousandAndNine0415 GetSelectVersionEnum = "2009-04-15"
+	GETSelectVersionEnumTwoThousandAndNine0415 GetSelectVersionEnum = "2009-04-15"
 )
 
 type GetSelectQueryParams struct {
-	AwsAccessKeyID   string               `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string               `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetSelectActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	ConsistentRead   *bool                `queryParam:"style=form,explode=true,name=ConsistentRead"`
 	NextToken        *string              `queryParam:"style=form,explode=true,name=NextToken"`

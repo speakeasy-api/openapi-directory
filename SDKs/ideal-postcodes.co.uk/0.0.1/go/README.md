@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,7 +25,7 @@ func main() {
             shared.Security{
                 APIKey: shared.SchemeAPIKey{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 UserToken: shared.SchemeUserToken{
                     APIKey: "YOUR_API_KEY_HERE",
                 },
@@ -40,18 +39,18 @@ func main() {
         Security: operations.AddressSearchSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             UserToken: shared.SchemeUserToken{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         QueryParams: operations.AddressSearchQueryParams{
-            Filter: "cupiditate",
-            Licensee: "deserunt",
-            Limit: 5906822993303235775,
-            Page: 509459186601495910,
-            PostcodeOutward: "accusamus",
-            Query: "in",
+            Filter: "amet",
+            Licensee: "eligendi",
+            Limit: 2863341056198605984,
+            Page: 5786436482557991478,
+            PostcodeOutward: "voluptatem",
+            Query: "fuga",
         },
     }
     

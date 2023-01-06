@@ -3,13 +3,13 @@ package operations
 type GetAcceptVpcPeeringConnectionActionEnum string
 
 const (
-	GetAcceptVpcPeeringConnectionActionEnumAcceptVpcPeeringConnection GetAcceptVpcPeeringConnectionActionEnum = "AcceptVpcPeeringConnection"
+	GETAcceptVpcPeeringConnectionActionEnumAcceptVpcPeeringConnection GetAcceptVpcPeeringConnectionActionEnum = "AcceptVpcPeeringConnection"
 )
 
 type GetAcceptVpcPeeringConnectionVersionEnum string
 
 const (
-	GetAcceptVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 GetAcceptVpcPeeringConnectionVersionEnum = "2016-11-15"
+	GETAcceptVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 GetAcceptVpcPeeringConnectionVersionEnum = "2016-11-15"
 )
 
 type GetAcceptVpcPeeringConnectionQueryParams struct {

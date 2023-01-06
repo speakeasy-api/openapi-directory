@@ -7,7 +7,7 @@ import (
 type StartIcd10CmInferenceJobXAmzTargetEnum string
 
 const (
-	StartIcd10CmInferenceJobXAmzTargetEnumComprehendMedical20181030StartIcd10CmInferenceJob StartIcd10CmInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.StartICD10CMInferenceJob"
+	StartIcd10CMInferenceJobXAmzTargetEnumComprehendMedical20181030StartIcd10CmInferenceJob StartIcd10CmInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.StartICD10CMInferenceJob"
 )
 
 type StartIcd10CmInferenceJobHeaders struct {
@@ -31,7 +31,7 @@ type StartIcd10CmInferenceJobResponse struct {
 	InternalServerException          *interface{}
 	InvalidRequestException          *interface{}
 	ResourceNotFoundException        *interface{}
-	StartIcd10CmInferenceJobResponse *shared.StartIcd10CmInferenceJobResponse
+	StartIcd10CMInferenceJobResponse *shared.StartIcd10CmInferenceJobResponse
 	StatusCode                       int64
 	TooManyRequestsException         *interface{}
 }

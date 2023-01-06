@@ -25,14 +25,13 @@ const (
 	VolumeConfigTypeEnumDisk            VolumeConfigTypeEnum = "DISK"
 )
 
-// VolumeConfig
+// VolumeConfigInput
 // Configuration parameters for a new volume.
-type VolumeConfig struct {
+type VolumeConfigInput struct {
 	GcpService       *string                          `json:"gcpService,omitempty"`
 	ID               *string                          `json:"id,omitempty"`
 	LunRanges        []LunRange                       `json:"lunRanges,omitempty"`
 	MachineIds       []string                         `json:"machineIds,omitempty"`
-	Name             *string                          `json:"name,omitempty"`
 	NfsExports       []NfsExport                      `json:"nfsExports,omitempty"`
 	PerformanceTier  *VolumeConfigPerformanceTierEnum `json:"performanceTier,omitempty"`
 	Protocol         *VolumeConfigProtocolEnum        `json:"protocol,omitempty"`
@@ -42,13 +41,14 @@ type VolumeConfig struct {
 	UserNote         *string                          `json:"userNote,omitempty"`
 }
 
-// VolumeConfigInput
+// VolumeConfig
 // Configuration parameters for a new volume.
-type VolumeConfigInput struct {
+type VolumeConfig struct {
 	GcpService       *string                          `json:"gcpService,omitempty"`
 	ID               *string                          `json:"id,omitempty"`
 	LunRanges        []LunRange                       `json:"lunRanges,omitempty"`
 	MachineIds       []string                         `json:"machineIds,omitempty"`
+	Name             *string                          `json:"name,omitempty"`
 	NfsExports       []NfsExport                      `json:"nfsExports,omitempty"`
 	PerformanceTier  *VolumeConfigPerformanceTierEnum `json:"performanceTier,omitempty"`
 	Protocol         *VolumeConfigProtocolEnum        `json:"protocol,omitempty"`

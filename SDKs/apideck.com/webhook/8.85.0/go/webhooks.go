@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -30,8 +30,8 @@ func NewWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// WebhooksAdd - Create webhook
-// Create webhook
+// WebhooksAdd - Create webhook subscription
+// Create a webhook subscription to receive events
 func (s *Webhooks) WebhooksAdd(ctx context.Context, request operations.WebhooksAddRequest) (*operations.WebhooksAddResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhook/webhooks"
@@ -143,8 +143,8 @@ func (s *Webhooks) WebhooksAdd(ctx context.Context, request operations.WebhooksA
 	return res, nil
 }
 
-// WebhooksAll - List webhooks
-// List webhooks
+// WebhooksAll - List webhook subscriptions
+// List all webhook subscriptions
 func (s *Webhooks) WebhooksAll(ctx context.Context, request operations.WebhooksAllRequest) (*operations.WebhooksAllResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhook/webhooks"
@@ -248,8 +248,8 @@ func (s *Webhooks) WebhooksAll(ctx context.Context, request operations.WebhooksA
 	return res, nil
 }
 
-// WebhooksDelete - Delete webhook
-// Delete webhook
+// WebhooksDelete - Delete webhook subscription
+// Delete a webhook subscription
 func (s *Webhooks) WebhooksDelete(ctx context.Context, request operations.WebhooksDeleteRequest) (*operations.WebhooksDeleteResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request.PathParams)
@@ -462,8 +462,8 @@ func (s *Webhooks) WebhooksExecute(ctx context.Context, request operations.Webho
 	return res, nil
 }
 
-// WebhooksOne - Get webhook
-// Get webhook
+// WebhooksOne - Get webhook subscription
+// Get the webhook subscription details
 func (s *Webhooks) WebhooksOne(ctx context.Context, request operations.WebhooksOneRequest) (*operations.WebhooksOneResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request.PathParams)
@@ -791,8 +791,8 @@ func (s *Webhooks) WebhooksShortExecute(ctx context.Context, request operations.
 	return res, nil
 }
 
-// WebhooksUpdate - Update webhook
-// Update webhook
+// WebhooksUpdate - Update webhook subscription
+// Update a webhook subscription
 func (s *Webhooks) WebhooksUpdate(ctx context.Context, request operations.WebhooksUpdateRequest) (*operations.WebhooksUpdateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request.PathParams)

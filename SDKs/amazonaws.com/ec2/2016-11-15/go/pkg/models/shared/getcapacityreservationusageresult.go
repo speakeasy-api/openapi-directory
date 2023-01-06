@@ -1,11 +1,11 @@
 package shared
 
 type GetCapacityReservationUsageResult struct {
-	AvailableInstanceCount *int64
-	CapacityReservationID  *string
-	InstanceType           *string
-	InstanceUsages         []InstanceUsage
-	NextToken              *string
-	State                  *CapacityReservationStateEnum
-	TotalInstanceCount     *int64
+	AvailableInstanceCount map[string]interface{}
+	CapacityReservationID  map[string]interface{}
+	InstanceType           map[string]interface{}
+	InstanceUsages         map[string]interface{}
+	NextToken              map[string]interface{}
+	State                  map[string]interface{}
+	TotalInstanceCount     map[string]interface{}
 }

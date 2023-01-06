@@ -1,0 +1,29 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type UpdateProjectPathParams struct {
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+}
+
+type UpdateProjectRequestsInput struct {
+	ApplicationXML []byte               `request:"mediaType=application/xml"`
+	Project        *shared.ProjectInput `request:"mediaType=application/json"`
+	Project1       *shared.ProjectInput `request:"mediaType=application/x-www-form-urlencoded"`
+	TextXML        []byte               `request:"mediaType=text/xml"`
+}
+
+type UpdateProjectRequest struct {
+	PathParams UpdateProjectPathParams
+	Request    UpdateProjectRequestsInput
+}
+
+type UpdateProjectResponse struct {
+	Body              []byte
+	ContentType       string
+	CustomVisionError *shared.CustomVisionError
+	Project           *shared.Project
+	StatusCode        int64
+}

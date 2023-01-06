@@ -1,5 +1,5 @@
 package shared
 
 type RegisterTransitGatewayMulticastGroupMembersResult struct {
-	RegisteredMulticastGroupMembers *TransitGatewayMulticastRegisteredGroupMembers
+	RegisteredMulticastGroupMembers map[string]interface{}
 }

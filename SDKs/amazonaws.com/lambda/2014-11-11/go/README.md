@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,28 @@ func main() {
     
     req := operations.AddEventSourceRequest{
         Headers: operations.AddEventSourceHeaders{
-            XAmzAlgorithm: "odit",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "voluptatibus",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "repellendus",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "eum",
+            XAmzContentSha256: "quaerat",
+            XAmzCredential: "modi",
+            XAmzDate: "officiis",
+            XAmzSecurityToken: "doloremque",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "et",
         },
         Request: operations.AddEventSourceRequestBody{
-            BatchSize: 4853637501029258723,
-            EventSource: "voluptatem",
-            FunctionName: "natus",
+            BatchSize: 2536117404804311014,
+            EventSource: "praesentium",
+            FunctionName: "labore",
             Parameters: map[string]string{
-                "incidunt": "voluptatem",
-                "omnis": "illum",
+                "aut": "alias",
+                "impedit": "aperiam",
+                "voluptatem": "dolorum",
             },
-            Role: "eligendi",
+            Role: "iusto",
         },
     }
     
-    res, err := s.Sdk.AddEventSource(ctx, req)
+    res, err := s.AddEventSource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

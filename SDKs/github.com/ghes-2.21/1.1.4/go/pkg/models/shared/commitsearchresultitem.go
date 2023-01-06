@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// CommitSearchResultItemSimpleUser
+// Simple User
 type CommitSearchResultItemSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -32,6 +34,8 @@ type CommitSearchResultItemCommitAuthor struct {
 	Name  string    `json:"name"`
 }
 
+// CommitSearchResultItemCommitGitUser
+// Metaproperties for Git author/committer information.
 type CommitSearchResultItemCommitGitUser struct {
 	Date  *string `json:"date,omitempty"`
 	Email *string `json:"email,omitempty"`
@@ -53,6 +57,8 @@ type CommitSearchResultItemCommit struct {
 	Verification *Verification                       `json:"verification,omitempty"`
 }
 
+// CommitSearchResultItemGitUser
+// Metaproperties for Git author/committer information.
 type CommitSearchResultItemGitUser struct {
 	Date  *string `json:"date,omitempty"`
 	Email *string `json:"email,omitempty"`

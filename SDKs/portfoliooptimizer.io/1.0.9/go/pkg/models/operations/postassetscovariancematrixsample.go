@@ -18,6 +18,6 @@ type PostAssetsCovarianceMatrixSampleRequest struct {
 
 type PostAssetsCovarianceMatrixSampleResponse struct {
 	ContentType                                              string
-	PostAssetsCovarianceMatrixSample200ApplicationJSONObject *PostAssetsCovarianceMatrixSample200ApplicationJSON
 	StatusCode                                               int64
+	PostAssetsCovarianceMatrixSample200ApplicationJSONObject *PostAssetsCovarianceMatrixSample200ApplicationJSON
 }

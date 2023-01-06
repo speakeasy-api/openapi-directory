@@ -1,0 +1,10 @@
+package shared
+
+type Male struct {
+	Average         *int64            `json:"average,omitempty"`
+	Multiplicity    *int64            `json:"multiplicity,omitempty"`
+	Percentile      *int64            `json:"percentile,omitempty"`
+	StatisticalInfo *StatisticalInfoM `json:"statistical_info,omitempty"`
+	Stdev           *int64            `json:"stdev,omitempty"`
+	Value           *int64            `json:"value,omitempty"`
+}

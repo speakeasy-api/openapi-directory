@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.RdcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.RdcerRequestBody{
             CertificateParameters: &operations.RdcerRequestBodyCertificateParameters{
-                FullName: "eveniet",
-                UID: "vel",
-                FinalDocRegNo: "quis",
+                FullName: "consectetur",
+                UID: "est",
+                FinalDocRegNo: "tempora",
             },
-            ConsentArtifact: "sint",
+            ConsentArtifact: "totam",
             Format: "pdf",
-            TxnID: "ut",
+            TxnID: "blanditiis",
         },
     }
     
-    res, err := s.Sdk.Rdcer(ctx, req)
+    res, err := s.APIs.Rdcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Rdcer` - Copy of Registered Deed
 * `Regrii` - ROR Register 2

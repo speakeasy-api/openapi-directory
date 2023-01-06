@@ -5,7 +5,7 @@ import (
 )
 
 type DescribeOrganizationResponse struct {
-	Arn               *string    `json:"ARN,omitempty"`
+	ARN               *string    `json:"ARN,omitempty"`
 	Alias             *string    `json:"Alias,omitempty"`
 	CompletedDate     *time.Time `json:"CompletedDate,omitempty"`
 	DefaultMailDomain *string    `json:"DefaultMailDomain,omitempty"`

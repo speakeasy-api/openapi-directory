@@ -3,13 +3,13 @@ package operations
 type PostResetInstanceAttributeActionEnum string
 
 const (
-	PostResetInstanceAttributeActionEnumResetInstanceAttribute PostResetInstanceAttributeActionEnum = "ResetInstanceAttribute"
+	POSTResetInstanceAttributeActionEnumResetInstanceAttribute PostResetInstanceAttributeActionEnum = "ResetInstanceAttribute"
 )
 
 type PostResetInstanceAttributeVersionEnum string
 
 const (
-	PostResetInstanceAttributeVersionEnumTwoThousandAndSixteen1115 PostResetInstanceAttributeVersionEnum = "2016-11-15"
+	POSTResetInstanceAttributeVersionEnumTwoThousandAndSixteen1115 PostResetInstanceAttributeVersionEnum = "2016-11-15"
 )
 
 type PostResetInstanceAttributeQueryParams struct {

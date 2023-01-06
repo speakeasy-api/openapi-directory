@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,28 +34,27 @@ func main() {
     
     req := operations.QueryForecastRequest{
         Headers: operations.QueryForecastHeaders{
-            XAmzAlgorithm: "maiores",
-            XAmzContentSha256: "repellendus",
-            XAmzCredential: "repellendus",
-            XAmzDate: "error",
-            XAmzSecurityToken: "ea",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "est",
+            XAmzAlgorithm: "praesentium",
+            XAmzContentSha256: "cum",
+            XAmzCredential: "sunt",
+            XAmzDate: "odit",
+            XAmzSecurityToken: "alias",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "nisi",
             XAmzTarget: "AmazonForecastRuntime.QueryForecast",
         },
         Request: shared.QueryForecastRequest{
-            EndDate: "aut",
+            EndDate: "dolore",
             Filters: map[string]string{
-                "nam": "molestias",
-                "et": "cumque",
+                "est": "et",
             },
-            ForecastArn: "aut",
-            NextToken: "deserunt",
-            StartDate: "voluptatem",
+            ForecastArn: "ea",
+            NextToken: "qui",
+            StartDate: "similique",
         },
     }
     
-    res, err := s.Sdk.QueryForecast(ctx, req)
+    res, err := s.QueryForecast(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

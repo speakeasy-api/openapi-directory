@@ -8,13 +8,6 @@ const (
 	FolderLifecycleStateEnumDeleteRequested           FolderLifecycleStateEnum = "DELETE_REQUESTED"
 )
 
-// FolderInput
-// A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
-type FolderInput struct {
-	DisplayName *string `json:"displayName,omitempty"`
-	Parent      *string `json:"parent,omitempty"`
-}
-
 // Folder
 // A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
 type Folder struct {
@@ -23,4 +16,11 @@ type Folder struct {
 	LifecycleState *FolderLifecycleStateEnum `json:"lifecycleState,omitempty"`
 	Name           *string                   `json:"name,omitempty"`
 	Parent         *string                   `json:"parent,omitempty"`
+}
+
+// FolderInput
+// A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
+type FolderInput struct {
+	DisplayName *string `json:"displayName,omitempty"`
+	Parent      *string `json:"parent,omitempty"`
 }

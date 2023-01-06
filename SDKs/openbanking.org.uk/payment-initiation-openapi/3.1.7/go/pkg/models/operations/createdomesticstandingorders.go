@@ -16,12 +16,12 @@ type CreateDomesticStandingOrdersHeaders struct {
 
 type CreateDomesticStandingOrdersRequests struct {
 	ApplicationJosePlusJwe        []byte                                `request:"mediaType=application/jose+jwe"`
-	ObWriteDomesticStandingOrder3 *shared.ObWriteDomesticStandingOrder3 `request:"mediaType=application/json"`
-	ObWriteDomesticStandingOrder4 *shared.ObWriteDomesticStandingOrder3 `request:"mediaType=application/json"`
+	OBWriteDomesticStandingOrder3 *shared.ObWriteDomesticStandingOrder3 `request:"mediaType=application/json"`
+	OBWriteDomesticStandingOrder4 *shared.ObWriteDomesticStandingOrder3 `request:"mediaType=application/json"`
 }
 
 type CreateDomesticStandingOrdersSecurity struct {
-	PsuoAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateDomesticStandingOrdersRequest struct {
@@ -34,7 +34,7 @@ type CreateDomesticStandingOrdersResponse struct {
 	Body                                  []byte
 	ContentType                           string
 	Headers                               map[string][]string
-	ObErrorResponse1                      *shared.ObErrorResponse1
-	ObWriteDomesticStandingOrderResponse6 *shared.ObWriteDomesticStandingOrderResponse6
+	OBErrorResponse1                      *shared.ObErrorResponse1
+	OBWriteDomesticStandingOrderResponse6 *shared.ObWriteDomesticStandingOrderResponse6
 	StatusCode                            int64
 }

@@ -4,5 +4,5 @@ package shared
 // Represents the request to set user settings.
 type SetUserSettingsRequest struct {
 	AccessToken string          `json:"AccessToken"`
-	MfaOptions  []MfaOptionType `json:"MFAOptions"`
+	MFAOptions  []MfaOptionType `json:"MFAOptions"`
 }

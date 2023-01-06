@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetstateabbreviationRequest{
         QueryParams: operations.GetstateabbreviationQueryParams{
-            License: "placeat",
-            State: "eum",
+            License: "tempora",
+            State: "qui",
         },
     }
     
-    res, err := s.Sdk.Getstateabbreviation(ctx, req)
+    res, err := s.StateDataStandardization.Getstateabbreviation(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### State Data Standardization
 
 * `Getstateabbreviation` - Gets a two-letter abbreviation for a state or province name data
 

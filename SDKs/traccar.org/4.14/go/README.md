@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,7 +35,7 @@ func main() {
     
     req := operations.DeleteAttributesComputedIDRequest{
         PathParams: operations.DeleteAttributesComputedIDPathParams{
-            ID: 8186267910158351880,
+            ID: 5251596414328825907,
         },
     }
     

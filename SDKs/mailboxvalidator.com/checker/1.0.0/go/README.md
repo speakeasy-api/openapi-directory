@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.GetV1EmailFreeRequest{
         QueryParams: operations.GetV1EmailFreeQueryParams{
-            Email: "voluptatibus",
-            Format: "xml",
-            Key: "esse",
+            Email: "fugiat",
+            Format: "json",
+            Key: "dolores",
         },
     }
     
-    res, err := s.Sdk.GetV1EmailFree(ctx, req)
+    res, err := s.GetV1EmailFree(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

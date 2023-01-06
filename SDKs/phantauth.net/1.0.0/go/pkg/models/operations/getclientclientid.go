@@ -32,6 +32,6 @@ type GetClientClientIDRequest struct {
 
 type GetClientClientIDResponse struct {
 	ContentType                               string
-	GetClientClientID200ApplicationJSONObject *GetClientClientID200ApplicationJSON
 	StatusCode                                int64
+	GetClientClientID200ApplicationJSONObject *GetClientClientID200ApplicationJSON
 }

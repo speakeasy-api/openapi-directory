@@ -9,12 +9,7 @@ type UpdateAppPathParams struct {
 }
 
 type UpdateAppRequestBody struct {
-	Spec shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItemsPropertiesSpec `json:"spec"`
-}
-
-type UpdateAppRequest struct {
-	PathParams UpdateAppPathParams
-	Request    UpdateAppRequestBody `request:"mediaType=application/json"`
+	Spec shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItemsPropertiesSpec3 `json:"spec"`
 }
 
 type UpdateApp401ApplicationJSON struct {
@@ -23,11 +18,16 @@ type UpdateApp401ApplicationJSON struct {
 	RequestID *string `json:"request_id,omitempty"`
 }
 
+type UpdateAppRequest struct {
+	PathParams UpdateAppPathParams
+	Request    UpdateAppRequestBody `request:"mediaType=application/json"`
+}
+
 type UpdateAppResponse struct {
 	ContentType                                               string
 	Headers                                                   map[string][]string
 	StatusCode                                                int64
 	UpdateApp401ApplicationJSONObject                         *UpdateApp401ApplicationJSON
 	Onev211ClicksGetResponses401ContentApplication1jsonSchema *shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema
-	Onev21appsPostResponses200ContentApplication1jsonSchema   *shared.Onev21appsPostResponses200ContentApplication1jsonSchema
+	Onev21appsPostResponses200ContentApplication1jsonSchema   *shared.Onev21appsPostResponses200ContentApplication1jsonSchema1
 }

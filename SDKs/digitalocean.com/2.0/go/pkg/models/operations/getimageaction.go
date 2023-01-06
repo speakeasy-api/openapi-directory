@@ -9,14 +9,14 @@ type GetImageActionPathParams struct {
 	ImageID  int64 `pathParam:"style=simple,explode=false,name=image_id"`
 }
 
-type GetImageActionRequest struct {
-	PathParams GetImageActionPathParams
-}
-
 type GetImageAction401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetImageActionRequest struct {
+	PathParams GetImageActionPathParams
 }
 
 type GetImageActionResponse struct {

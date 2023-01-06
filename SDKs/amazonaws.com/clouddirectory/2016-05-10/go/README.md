@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,57 +34,43 @@ func main() {
     
     req := operations.AddFacetToObjectRequest{
         Headers: operations.AddFacetToObjectHeaders{
-            XAmzAlgorithm: "ex",
-            XAmzContentSha256: "sint",
-            XAmzCredential: "eos",
-            XAmzDate: "quas",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "temporibus",
-            XAmzSignedHeaders: "voluptas",
-            XAmzDataPartition: "tempora",
+            XAmzAlgorithm: "ea",
+            XAmzContentSha256: "architecto",
+            XAmzCredential: "esse",
+            XAmzDate: "explicabo",
+            XAmzSecurityToken: "distinctio",
+            XAmzSignature: "dolore",
+            XAmzSignedHeaders: "non",
+            XAmzDataPartition: "accusantium",
         },
         Request: operations.AddFacetToObjectRequestBody{
             ObjectAttributeList: []shared.AttributeKeyAndValue{
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
-                        FacetName: "deleniti",
-                        Name: "eum",
-                        SchemaArn: "ut",
+                        FacetName: "consequatur",
+                        Name: "doloremque",
+                        SchemaArn: "animi",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "dolorum",
+                        BinaryValue: "exercitationem",
                         BooleanValue: true,
-                        DatetimeValue: "1976-08-08T06:16:46Z",
-                        NumberValue: "inventore",
-                        StringValue: "exercitationem",
-                    },
-                },
-                shared.AttributeKeyAndValue{
-                    Key: shared.AttributeKey{
-                        FacetName: "voluptas",
-                        Name: "neque",
-                        SchemaArn: "libero",
-                    },
-                    Value: shared.TypedAttributeValue{
-                        BinaryValue: "sit",
-                        BooleanValue: false,
-                        DatetimeValue: "2008-12-07T10:38:34Z",
-                        NumberValue: "est",
-                        StringValue: "cupiditate",
+                        DatetimeValue: "1989-04-07T20:39:58Z",
+                        NumberValue: "hic",
+                        StringValue: "veniam",
                     },
                 },
             },
             ObjectReference: operations.AddFacetToObjectRequestBodyObjectReference{
-                Selector: "culpa",
+                Selector: "et",
             },
             SchemaFacet: operations.AddFacetToObjectRequestBodySchemaFacet{
-                FacetName: "est",
-                SchemaArn: "veniam",
+                FacetName: "ut",
+                SchemaArn: "animi",
             },
         },
     }
     
-    res, err := s.Sdk.AddFacetToObject(ctx, req)
+    res, err := s.AddFacetToObject(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

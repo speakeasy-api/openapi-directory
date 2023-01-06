@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// IssueSimpleSimpleUser
+// Simple User
 type IssueSimpleSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -26,6 +28,8 @@ type IssueSimpleSimpleUser struct {
 	URL               string  `json:"url"`
 }
 
+// IssueSimpleMilestoneSimpleUser
+// Simple User
 type IssueSimpleMilestoneSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -55,6 +59,8 @@ const (
 	IssueSimpleMilestoneStateEnumClosed IssueSimpleMilestoneStateEnum = "closed"
 )
 
+// IssueSimpleMilestone
+// A collection of related issues and pull requests.
 type IssueSimpleMilestone struct {
 	ClosedAt     time.Time                      `json:"closed_at"`
 	ClosedIssues int64                          `json:"closed_issues"`

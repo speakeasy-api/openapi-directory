@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.DgcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.DgcerRequestBody{
             CertificateParameters: &operations.DgcerRequestBodyCertificateParameters{
-                Cname: "id",
-                Regno: "expedita",
-                Rroll: "fugit",
-                Year: "quia",
+                CNAME: "sapiente",
+                REGNO: "dolore",
+                RROLL: "eveniet",
+                YEAR: "aut",
             },
-            ConsentArtifact: "nisi",
+            ConsentArtifact: "velit",
             Format: "pdf",
-            TxnID: "facere",
+            TxnID: "amet",
         },
     }
     
-    res, err := s.Sdk.Dgcer(ctx, req)
+    res, err := s.APIs.Dgcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Dgcer` - Degree/ Diploma Certificate
 

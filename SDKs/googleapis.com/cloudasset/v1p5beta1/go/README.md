@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,33 +26,33 @@ func main() {
         Security: operations.CloudassetAssetsListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CloudassetAssetsListPathParams{
-            Parent: "qui",
+            Parent: "voluptates",
         },
         QueryParams: operations.CloudassetAssetsListQueryParams{
             DollarXgafv: "1",
-            AccessToken: "rerum",
-            Alt: "proto",
+            AccessToken: "vel",
+            Alt: "media",
             AssetTypes: []string{
-                "nesciunt",
+                "delectus",
             },
-            Callback: "cumque",
-            ContentType: "IAM_POLICY",
-            Fields: "quasi",
-            Key: "corrupti",
-            OauthToken: "sed",
-            PageSize: 6483753444866358335,
-            PageToken: "molestiae",
-            PrettyPrint: true,
-            QuotaUser: "provident",
-            ReadTime: "et",
-            UploadType: "autem",
-            UploadProtocol: "at",
+            Callback: "modi",
+            ContentType: "RESOURCE",
+            Fields: "aut",
+            Key: "necessitatibus",
+            OauthToken: "quia",
+            PageSize: 1250294203911879157,
+            PageToken: "molestias",
+            PrettyPrint: false,
+            QuotaUser: "ut",
+            ReadTime: "aliquid",
+            UploadType: "minus",
+            UploadProtocol: "dignissimos",
         },
     }
     

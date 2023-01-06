@@ -15,8 +15,8 @@ type MlModel struct {
 	FinishedAt                  *time.Time            `json:"FinishedAt,omitempty"`
 	InputDataLocationS3         *string               `json:"InputDataLocationS3,omitempty"`
 	LastUpdatedAt               *time.Time            `json:"LastUpdatedAt,omitempty"`
-	MlModelID                   *string               `json:"MLModelId,omitempty"`
-	MlModelType                 *MlModelTypeEnum      `json:"MLModelType,omitempty"`
+	MLModelID                   *string               `json:"MLModelId,omitempty"`
+	MLModelType                 *MlModelTypeEnum      `json:"MLModelType,omitempty"`
 	Message                     *string               `json:"Message,omitempty"`
 	Name                        *string               `json:"Name,omitempty"`
 	ScoreThreshold              *float32              `json:"ScoreThreshold,omitempty"`

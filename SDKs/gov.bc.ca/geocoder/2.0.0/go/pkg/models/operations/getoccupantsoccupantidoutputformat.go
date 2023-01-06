@@ -31,7 +31,7 @@ const (
 type GetOccupantsOccupantIDOutputFormatQueryParams struct {
 	Brief              *bool                                                     `queryParam:"style=form,explode=true,name=brief"`
 	LocationDescriptor *GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
-	OutputSrs          *int64                                                    `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS          *int64                                                    `queryParam:"style=form,explode=true,name=outputSRS"`
 	SetBack            *int64                                                    `queryParam:"style=form,explode=true,name=setBack"`
 }
 

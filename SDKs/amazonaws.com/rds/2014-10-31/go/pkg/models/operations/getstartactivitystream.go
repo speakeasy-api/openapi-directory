@@ -3,20 +3,20 @@ package operations
 type GetStartActivityStreamActionEnum string
 
 const (
-	GetStartActivityStreamActionEnumStartActivityStream GetStartActivityStreamActionEnum = "StartActivityStream"
+	GETStartActivityStreamActionEnumStartActivityStream GetStartActivityStreamActionEnum = "StartActivityStream"
 )
 
 type GetStartActivityStreamModeEnum string
 
 const (
-	GetStartActivityStreamModeEnumSync  GetStartActivityStreamModeEnum = "sync"
-	GetStartActivityStreamModeEnumAsync GetStartActivityStreamModeEnum = "async"
+	GETStartActivityStreamModeEnumSync  GetStartActivityStreamModeEnum = "sync"
+	GETStartActivityStreamModeEnumAsync GetStartActivityStreamModeEnum = "async"
 )
 
 type GetStartActivityStreamVersionEnum string
 
 const (
-	GetStartActivityStreamVersionEnumTwoThousandAndFourteen1031 GetStartActivityStreamVersionEnum = "2014-10-31"
+	GETStartActivityStreamVersionEnumTwoThousandAndFourteen1031 GetStartActivityStreamVersionEnum = "2014-10-31"
 )
 
 type GetStartActivityStreamQueryParams struct {

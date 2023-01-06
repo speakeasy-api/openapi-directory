@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListPathParams{
-            Parent: "odio",
+            Parent: "quod",
         },
         QueryParams: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "optio",
-            Alt: "media",
-            Callback: "quisquam",
-            Fields: "vitae",
-            Filter: "possimus",
-            Key: "accusantium",
-            OauthToken: "autem",
-            PageSize: 6952103479490399094,
-            PageToken: "modi",
+            DollarXgafv: "1",
+            AccessToken: "quibusdam",
+            Alt: "proto",
+            Callback: "itaque",
+            Fields: "quae",
+            Filter: "aliquid",
+            Key: "ut",
+            OauthToken: "magni",
+            PageSize: 8068335479617984914,
+            PageToken: "facilis",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "soluta",
-            UploadProtocol: "magnam",
+            QuotaUser: "dolorem",
+            UploadType: "quas",
+            UploadProtocol: "sed",
         },
     }
     
@@ -58,7 +57,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.ListInstanceOsPoliciesCompliancesResponse != nil {
+    if res.ListInstanceOSPoliciesCompliancesResponse != nil {
         // handle response
     }
 ```

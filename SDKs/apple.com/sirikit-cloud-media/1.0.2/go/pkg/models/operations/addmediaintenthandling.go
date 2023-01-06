@@ -20,6 +20,5 @@ type AddMediaIntentHandlingRequest struct {
 type AddMediaIntentHandlingResponse struct {
 	AddMediaIntentHandlingInvocationResponses []interface{}
 	ContentType                               string
-	Headers                                   map[string][]string
 	StatusCode                                int64
 }

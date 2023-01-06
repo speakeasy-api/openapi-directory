@@ -21,6 +21,6 @@ type PostPortfolioOptimizationEqualRiskContributionsRequest struct {
 
 type PostPortfolioOptimizationEqualRiskContributionsResponse struct {
 	ContentType                                                             string
-	PostPortfolioOptimizationEqualRiskContributions200ApplicationJSONObject *PostPortfolioOptimizationEqualRiskContributions200ApplicationJSON
 	StatusCode                                                              int64
+	PostPortfolioOptimizationEqualRiskContributions200ApplicationJSONObject *PostPortfolioOptimizationEqualRiskContributions200ApplicationJSON
 }

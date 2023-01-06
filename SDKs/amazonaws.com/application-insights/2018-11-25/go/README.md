@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,30 +34,30 @@ func main() {
     
     req := operations.CreateApplicationRequest{
         Headers: operations.CreateApplicationHeaders{
-            XAmzAlgorithm: "amet",
-            XAmzContentSha256: "blanditiis",
-            XAmzCredential: "unde",
-            XAmzDate: "nihil",
-            XAmzSecurityToken: "asperiores",
-            XAmzSignature: "quaerat",
-            XAmzSignedHeaders: "hic",
+            XAmzAlgorithm: "cupiditate",
+            XAmzContentSha256: "similique",
+            XAmzCredential: "omnis",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "maiores",
+            XAmzSignedHeaders: "est",
             XAmzTarget: "EC2WindowsBarleyService.CreateApplication",
         },
         Request: shared.CreateApplicationRequest{
-            CweMonitorEnabled: false,
-            OpsCenterEnabled: false,
-            OpsItemSnsTopicArn: "pariatur",
-            ResourceGroupName: "enim",
+            CWEMonitorEnabled: true,
+            OpsCenterEnabled: true,
+            OpsItemSNSTopicArn: "quo",
+            ResourceGroupName: "nihil",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "possimus",
-                    Value: "temporibus",
+                    Key: "et",
+                    Value: "vel",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateApplication(ctx, req)
+    res, err := s.CreateApplication(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

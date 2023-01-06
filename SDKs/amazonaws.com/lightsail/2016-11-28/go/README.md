@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AllocateStaticIPRequest{
         Headers: operations.AllocateStaticIPHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "nesciunt",
-            XAmzCredential: "tempore",
-            XAmzDate: "libero",
-            XAmzSecurityToken: "modi",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "quae",
+            XAmzContentSha256: "natus",
+            XAmzCredential: "et",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "ipsum",
+            XAmzSignature: "asperiores",
+            XAmzSignedHeaders: "eligendi",
             XAmzTarget: "Lightsail_20161128.AllocateStaticIp",
         },
         Request: shared.AllocateStaticIPRequest{
-            StaticIPName: "a",
+            StaticIPName: "sit",
         },
     }
     
-    res, err := s.Sdk.AllocateStaticIP(ctx, req)
+    res, err := s.AllocateStaticIP(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

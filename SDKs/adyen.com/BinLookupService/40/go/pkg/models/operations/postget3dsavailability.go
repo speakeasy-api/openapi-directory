@@ -18,5 +18,5 @@ type PostGet3dsAvailabilityResponse struct {
 	ContentType                 string
 	ServiceError                *interface{}
 	StatusCode                  int64
-	ThreeDsAvailabilityResponse *interface{}
+	ThreeDSAvailabilityResponse *interface{}
 }

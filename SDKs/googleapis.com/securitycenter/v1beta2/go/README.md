@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsPathParams{
-            Name: "repudiandae",
+            Name: "sunt",
         },
         QueryParams: operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "non",
+            DollarXgafv: "1",
+            AccessToken: "ut",
             Alt: "media",
-            Callback: "possimus",
-            Fields: "voluptatem",
-            Key: "asperiores",
-            OauthToken: "temporibus",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "molestias",
-            UploadProtocol: "eum",
+            Callback: "harum",
+            Fields: "aliquid",
+            Key: "est",
+            OauthToken: "ut",
+            PrettyPrint: false,
+            QuotaUser: "aperiam",
+            UploadType: "voluptates",
+            UploadProtocol: "similique",
         },
     }
     
@@ -66,9 +65,9 @@ func main() {
 
 ### projects
 
-* `SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings` - Get the ContainerThreatDetectionSettings resource.
+* `SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings` - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
 * `SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings` - Update the ContainerThreatDetectionSettings resource.
-* `SecuritycenterProjectsWebSecurityScannerSettingsCalculate` - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings.
+* `SecuritycenterProjectsWebSecurityScannerSettingsCalculate` - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
 
 <!-- End SDK Available Operations -->
 

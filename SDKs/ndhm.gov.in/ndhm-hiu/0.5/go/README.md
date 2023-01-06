@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,12 +22,12 @@ import (
 func main() {
     s := sdk.New()
     
-    res, err := s.Gateway.GetV05Certs(ctx)
+    res, err := s.Gateway.GetV05WellKnownOpenidConfiguration(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Certs != nil {
+    if res.OpenIDConfiguration != nil {
         // handle response
     }
 ```
@@ -39,8 +38,8 @@ func main() {
 
 ### Gateway
 
-* `GetV05Certs` - Get certs for JWT verification
 * `GetV05WellKnownOpenidConfiguration` - Get openid configuration
+* `GetV05Certs` - Get certs for JWT verification
 * `PostV05ConsentRequestsInit` - Create consent request
 * `PostV05ConsentRequestsStatus` - Get consent request status
 * `PostV05ConsentsFetch` - Get consent artefact

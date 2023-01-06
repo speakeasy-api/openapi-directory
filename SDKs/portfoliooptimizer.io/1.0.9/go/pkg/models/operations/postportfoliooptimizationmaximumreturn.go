@@ -27,6 +27,6 @@ type PostPortfolioOptimizationMaximumReturnRequest struct {
 
 type PostPortfolioOptimizationMaximumReturnResponse struct {
 	ContentType                                                    string
-	PostPortfolioOptimizationMaximumReturn200ApplicationJSONObject *PostPortfolioOptimizationMaximumReturn200ApplicationJSON
 	StatusCode                                                     int64
+	PostPortfolioOptimizationMaximumReturn200ApplicationJSONObject *PostPortfolioOptimizationMaximumReturn200ApplicationJSON
 }

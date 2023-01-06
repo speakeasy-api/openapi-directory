@@ -30,6 +30,6 @@ type GetChangeTokenStatusResponse struct {
 	ContentType                  string
 	GetChangeTokenStatusResponse *shared.GetChangeTokenStatusResponse
 	StatusCode                   int64
-	WafInternalErrorException    *interface{}
-	WafNonexistentItemException  *interface{}
+	WAFInternalErrorException    *interface{}
+	WAFNonexistentItemException  *interface{}
 }

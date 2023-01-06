@@ -1,5 +1,5 @@
 package shared
 
 type CreatePullRequestApprovalRuleOutput struct {
-	ApprovalRule ApprovalRule `json:"approvalRule"`
+	ApprovalRule ApprovalRule1 `json:"approvalRule"`
 }

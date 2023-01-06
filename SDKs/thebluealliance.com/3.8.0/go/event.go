@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Event struct {
@@ -620,7 +620,7 @@ func (s *Event) GetEventOpRs(ctx context.Context, request operations.GetEventOpR
 				return nil, err
 			}
 
-			res.EventOpRs = out
+			res.EventOPRs = out
 		}
 	case httpRes.StatusCode == 304:
 	case httpRes.StatusCode == 401:

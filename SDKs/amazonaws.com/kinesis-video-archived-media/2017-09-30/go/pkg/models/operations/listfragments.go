@@ -30,7 +30,7 @@ type ListFragmentsRequestBody struct {
 	FragmentSelector *ListFragmentsRequestBodyFragmentSelector `json:"FragmentSelector,omitempty"`
 	MaxResults       *int64                                    `json:"MaxResults,omitempty"`
 	NextToken        *string                                   `json:"NextToken,omitempty"`
-	StreamArn        *string                                   `json:"StreamARN,omitempty"`
+	StreamARN        *string                                   `json:"StreamARN,omitempty"`
 	StreamName       *string                                   `json:"StreamName,omitempty"`
 }
 

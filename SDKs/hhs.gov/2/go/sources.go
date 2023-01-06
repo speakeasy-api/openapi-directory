@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -28,6 +28,51 @@ func NewSources(defaultClient, securityClient HTTPClient, serverURL, language, s
 		_sdkVersion:     sdkVersion,
 		_genVersion:     genVersion,
 	}
+}
+
+// GetResourcesSourcesJSON - Get Sources
+// Source Listings
+func (s *Sources) GetResourcesSourcesJSON(ctx context.Context, request operations.GetResourcesSourcesJSONRequest) (*operations.GetResourcesSourcesJSONResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/resources/sources.json"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesSourcesJSONResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.SourceWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SourceWrappeds = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
 }
 
 // GetResourcesSourcesIDJSON - Get Source by ID
@@ -110,51 +155,6 @@ func (s *Sources) GetResourcesSourcesIDSyndicateFormat(ctx context.Context, requ
 			}
 
 			res.MediaItemWrappeds = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesSourcesJSON - Get Sources
-// Source Listings
-func (s *Sources) GetResourcesSourcesJSON(ctx context.Context, request operations.GetResourcesSourcesJSONRequest) (*operations.GetResourcesSourcesJSONResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/resources/sources.json"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesSourcesJSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.SourceWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.SourceWrappeds = out
 		}
 	case httpRes.StatusCode == 400:
 	case httpRes.StatusCode == 500:

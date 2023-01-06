@@ -6,7 +6,7 @@ type GetCustomers302ApplicationJSON struct {
 
 type GetCustomersResponse struct {
 	ContentType                          string
-	GetCustomers302ApplicationJSONObject *GetCustomers302ApplicationJSON
 	Headers                              map[string][]string
 	StatusCode                           int64
+	GetCustomers302ApplicationJSONObject *GetCustomers302ApplicationJSON
 }

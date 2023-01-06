@@ -81,6 +81,6 @@ type GetAdminMappingsRequest struct {
 
 type GetAdminMappingsResponse struct {
 	ContentType                              string
-	GetAdminMappings200ApplicationJSONObject *GetAdminMappings200ApplicationJSON
 	StatusCode                               int64
+	GetAdminMappings200ApplicationJSONObject *GetAdminMappings200ApplicationJSON
 }

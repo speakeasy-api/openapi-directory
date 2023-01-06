@@ -8,7 +8,7 @@ import (
 // DescribeLocationObjectStorageResponse
 type DescribeLocationObjectStorageResponse struct {
 	AccessKey      *string                          `json:"AccessKey,omitempty"`
-	AgentArns      []string                         `json:"AgentArns,omitempty"`
+	AgentArns      map[string]interface{}           `json:"AgentArns,omitempty"`
 	CreationTime   *time.Time                       `json:"CreationTime,omitempty"`
 	LocationArn    *string                          `json:"LocationArn,omitempty"`
 	LocationURI    *string                          `json:"LocationUri,omitempty"`

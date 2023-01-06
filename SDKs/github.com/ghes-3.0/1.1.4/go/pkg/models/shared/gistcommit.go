@@ -10,6 +10,8 @@ type GistCommitChangeStatus struct {
 	Total     *int64 `json:"total,omitempty"`
 }
 
+// GistCommitSimpleUser
+// Simple User
 type GistCommitSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

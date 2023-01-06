@@ -1,5 +1,5 @@
 package shared
 
 type DescribeAccountAttributesResult struct {
-	AccountAttributes []AccountAttribute
+	AccountAttributes map[string]interface{}
 }

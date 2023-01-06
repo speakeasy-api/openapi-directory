@@ -3,13 +3,13 @@ package operations
 type GetRevokeClientVpnIngressActionEnum string
 
 const (
-	GetRevokeClientVpnIngressActionEnumRevokeClientVpnIngress GetRevokeClientVpnIngressActionEnum = "RevokeClientVpnIngress"
+	GETRevokeClientVpnIngressActionEnumRevokeClientVpnIngress GetRevokeClientVpnIngressActionEnum = "RevokeClientVpnIngress"
 )
 
 type GetRevokeClientVpnIngressVersionEnum string
 
 const (
-	GetRevokeClientVpnIngressVersionEnumTwoThousandAndSixteen1115 GetRevokeClientVpnIngressVersionEnum = "2016-11-15"
+	GETRevokeClientVpnIngressVersionEnumTwoThousandAndSixteen1115 GetRevokeClientVpnIngressVersionEnum = "2016-11-15"
 )
 
 type GetRevokeClientVpnIngressQueryParams struct {

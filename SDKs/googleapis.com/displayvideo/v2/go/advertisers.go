@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1818,7 +1818,7 @@ func (s *Advertisers) DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingO
 // DisplayvideoAdvertisersLineItemsBulkUpdate - Updates multiple line items. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
 func (s *Advertisers) DisplayvideoAdvertisersLineItemsBulkUpdate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkUpdateRequest) (*operations.DisplayvideoAdvertisersLineItemsBulkUpdateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertisersId}/lineItems:bulkUpdate", request.PathParams)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkUpdate", request.PathParams)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
 	if err != nil {

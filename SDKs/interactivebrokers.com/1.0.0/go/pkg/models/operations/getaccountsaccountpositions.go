@@ -16,6 +16,6 @@ type GetAccountsAccountPositionsRequest struct {
 
 type GetAccountsAccountPositionsResponse struct {
 	ContentType                                          string
-	GetAccountsAccountPositions200ApplicationJSONObjects []GetAccountsAccountPositions200ApplicationJSON
 	StatusCode                                           int64
+	GetAccountsAccountPositions200ApplicationJSONObjects []GetAccountsAccountPositions200ApplicationJSON
 }

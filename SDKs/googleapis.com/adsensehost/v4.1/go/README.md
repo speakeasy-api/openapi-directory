@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.AdsensehostAccountsAdclientsGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AdsensehostAccountsAdclientsGetPathParams{
-            AccountID: "et",
-            AdClientID: "et",
+            AccountID: "ratione",
+            AdClientID: "ut",
         },
         QueryParams: operations.AdsensehostAccountsAdclientsGetQueryParams{
-            Alt: "json",
-            Fields: "vero",
-            Key: "omnis",
-            OauthToken: "ut",
-            PrettyPrint: true,
-            QuotaUser: "sint",
-            UserIP: "est",
+            Alt: "csv",
+            Fields: "qui",
+            Key: "ipsum",
+            OauthToken: "rem",
+            PrettyPrint: false,
+            QuotaUser: "aliquam",
+            UserIP: "omnis",
         },
     }
     

@@ -10,23 +10,10 @@ type ReactionsListForTeamDiscussionCommentLegacyPathParams struct {
 	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
-type ReactionsListForTeamDiscussionCommentLegacyContentEnum string
-
-const (
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumPlus1    ReactionsListForTeamDiscussionCommentLegacyContentEnum = "+1"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumMinus1   ReactionsListForTeamDiscussionCommentLegacyContentEnum = "-1"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumLaugh    ReactionsListForTeamDiscussionCommentLegacyContentEnum = "laugh"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumConfused ReactionsListForTeamDiscussionCommentLegacyContentEnum = "confused"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumHeart    ReactionsListForTeamDiscussionCommentLegacyContentEnum = "heart"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumHooray   ReactionsListForTeamDiscussionCommentLegacyContentEnum = "hooray"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumRocket   ReactionsListForTeamDiscussionCommentLegacyContentEnum = "rocket"
-	ReactionsListForTeamDiscussionCommentLegacyContentEnumEyes     ReactionsListForTeamDiscussionCommentLegacyContentEnum = "eyes"
-)
-
 type ReactionsListForTeamDiscussionCommentLegacyQueryParams struct {
-	Content *ReactionsListForTeamDiscussionCommentLegacyContentEnum `queryParam:"style=form,explode=true,name=content"`
-	Page    *int64                                                  `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                                                  `queryParam:"style=form,explode=true,name=per_page"`
+	Content *shared.CommentNumberEnum `queryParam:"style=form,explode=true,name=content"`
+	Page    *int64                    `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64                    `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type ReactionsListForTeamDiscussionCommentLegacyRequest struct {

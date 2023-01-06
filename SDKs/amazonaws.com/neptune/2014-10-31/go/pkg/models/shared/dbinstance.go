@@ -11,28 +11,28 @@ type DbInstance struct {
 	AutoMinorVersionUpgrade               *bool
 	AvailabilityZone                      *string
 	BackupRetentionPeriod                 *int64
-	CaCertificateIdentifier               *string
+	CACertificateIdentifier               *string
 	CharacterSetName                      *string
 	CopyTagsToSnapshot                    *bool
-	DbClusterIdentifier                   *string
-	DbInstanceArn                         *string
-	DbInstanceClass                       *string
-	DbInstanceIdentifier                  *string
-	DbInstanceStatus                      *string
-	DbName                                *string
-	DbParameterGroups                     []DbParameterGroupStatus
-	DbSecurityGroups                      []DbSecurityGroupMembership
-	DbSubnetGroup                         *DbSubnetGroup
+	DBClusterIdentifier                   *string
+	DBInstanceArn                         *string
+	DBInstanceClass                       *string
+	DBInstanceIdentifier                  *string
+	DBInstanceStatus                      *string
+	DBName                                *string
+	DBParameterGroups                     []map[string]interface{}
+	DBSecurityGroups                      []map[string]interface{}
+	DBSubnetGroup                         *DbSubnetGroup
 	DbInstancePort                        *int64
 	DbiResourceID                         *string
 	DeletionProtection                    *bool
-	DomainMemberships                     []DomainMembership
+	DomainMemberships                     []map[string]interface{}
 	EnabledCloudwatchLogsExports          []string
 	Endpoint                              *Endpoint
 	Engine                                *string
 	EngineVersion                         *string
 	EnhancedMonitoringResourceArn         *string
-	IamDatabaseAuthenticationEnabled      *bool
+	IAMDatabaseAuthenticationEnabled      *bool
 	InstanceCreateTime                    *time.Time
 	Iops                                  *int64
 	KmsKeyID                              *string
@@ -41,23 +41,23 @@ type DbInstance struct {
 	MasterUsername                        *string
 	MonitoringInterval                    *int64
 	MonitoringRoleArn                     *string
-	MultiAz                               *bool
-	OptionGroupMemberships                []OptionGroupMembership
+	MultiAZ                               *bool
+	OptionGroupMemberships                []map[string]interface{}
 	PendingModifiedValues                 *PendingModifiedValues
 	PerformanceInsightsEnabled            *bool
-	PerformanceInsightsKmsKeyID           *string
+	PerformanceInsightsKMSKeyID           *string
 	PreferredBackupWindow                 *string
 	PreferredMaintenanceWindow            *string
 	PromotionTier                         *int64
-	PubliclyAccessible                    *bool
-	ReadReplicaDbClusterIdentifiers       []string
-	ReadReplicaDbInstanceIdentifiers      []string
-	ReadReplicaSourceDbInstanceIdentifier *string
+	PubliclyAccessible                    map[string]interface{}
+	ReadReplicaDBClusterIdentifiers       []map[string]interface{}
+	ReadReplicaDBInstanceIdentifiers      []map[string]interface{}
+	ReadReplicaSourceDBInstanceIdentifier *string
 	SecondaryAvailabilityZone             *string
-	StatusInfos                           []DbInstanceStatusInfo
+	StatusInfos                           []map[string]interface{}
 	StorageEncrypted                      *bool
 	StorageType                           *string
 	TdeCredentialArn                      *string
 	Timezone                              *string
-	VpcSecurityGroups                     []VpcSecurityGroupMembership
+	VpcSecurityGroups                     []map[string]interface{}
 }

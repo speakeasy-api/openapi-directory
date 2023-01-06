@@ -1,5 +1,5 @@
 package shared
 
 type DescribeRegionsResult struct {
-	Regions []Region
+	Regions map[string]interface{}
 }

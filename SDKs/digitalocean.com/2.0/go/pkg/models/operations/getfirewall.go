@@ -8,14 +8,14 @@ type GetFirewallPathParams struct {
 	FirewallID string `pathParam:"style=simple,explode=false,name=firewall_id"`
 }
 
-type GetFirewallRequest struct {
-	PathParams GetFirewallPathParams
-}
-
 type GetFirewall401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetFirewallRequest struct {
+	PathParams GetFirewallPathParams
 }
 
 type GetFirewallResponse struct {

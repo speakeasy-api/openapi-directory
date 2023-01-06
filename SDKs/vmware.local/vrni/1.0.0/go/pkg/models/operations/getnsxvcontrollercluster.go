@@ -19,6 +19,6 @@ type GetNsxvControllerClusterRequest struct {
 
 type GetNsxvControllerClusterResponse struct {
 	ContentType                 string
-	NsxControllerDataCollection *shared.NsxControllerDataCollection
+	NSXControllerDataCollection *shared.NsxControllerDataCollection
 	StatusCode                  int64
 }

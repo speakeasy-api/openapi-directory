@@ -3,13 +3,13 @@ package operations
 type GetAttachNetworkInterfaceActionEnum string
 
 const (
-	GetAttachNetworkInterfaceActionEnumAttachNetworkInterface GetAttachNetworkInterfaceActionEnum = "AttachNetworkInterface"
+	GETAttachNetworkInterfaceActionEnumAttachNetworkInterface GetAttachNetworkInterfaceActionEnum = "AttachNetworkInterface"
 )
 
 type GetAttachNetworkInterfaceVersionEnum string
 
 const (
-	GetAttachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 GetAttachNetworkInterfaceVersionEnum = "2016-11-15"
+	GETAttachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 GetAttachNetworkInterfaceVersionEnum = "2016-11-15"
 )
 
 type GetAttachNetworkInterfaceQueryParams struct {

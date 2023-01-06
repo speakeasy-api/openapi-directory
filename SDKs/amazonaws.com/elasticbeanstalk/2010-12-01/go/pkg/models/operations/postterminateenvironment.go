@@ -3,13 +3,13 @@ package operations
 type PostTerminateEnvironmentActionEnum string
 
 const (
-	PostTerminateEnvironmentActionEnumTerminateEnvironment PostTerminateEnvironmentActionEnum = "TerminateEnvironment"
+	POSTTerminateEnvironmentActionEnumTerminateEnvironment PostTerminateEnvironmentActionEnum = "TerminateEnvironment"
 )
 
 type PostTerminateEnvironmentVersionEnum string
 
 const (
-	PostTerminateEnvironmentVersionEnumTwoThousandAndTen1201 PostTerminateEnvironmentVersionEnum = "2010-12-01"
+	POSTTerminateEnvironmentVersionEnumTwoThousandAndTen1201 PostTerminateEnvironmentVersionEnum = "2010-12-01"
 )
 
 type PostTerminateEnvironmentQueryParams struct {

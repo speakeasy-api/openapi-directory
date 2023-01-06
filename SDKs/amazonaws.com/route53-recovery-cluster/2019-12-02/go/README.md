@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.GetRoutingControlStateRequest{
         Headers: operations.GetRoutingControlStateHeaders{
-            XAmzAlgorithm: "asperiores",
-            XAmzContentSha256: "quasi",
-            XAmzCredential: "eius",
-            XAmzDate: "ea",
-            XAmzSecurityToken: "pariatur",
-            XAmzSignature: "eligendi",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "velit",
+            XAmzContentSha256: "et",
+            XAmzCredential: "ut",
+            XAmzDate: "eaque",
+            XAmzSecurityToken: "est",
+            XAmzSignature: "dolorem",
+            XAmzSignedHeaders: "nulla",
             XAmzTarget: "ToggleCustomerAPI.GetRoutingControlState",
         },
         Request: shared.GetRoutingControlStateRequest{
-            RoutingControlArn: "quia",
+            RoutingControlArn: "velit",
         },
     }
     
-    res, err := s.Sdk.GetRoutingControlState(ctx, req)
+    res, err := s.GetRoutingControlState(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

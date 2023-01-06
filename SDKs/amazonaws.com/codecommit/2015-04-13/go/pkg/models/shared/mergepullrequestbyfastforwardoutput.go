@@ -1,5 +1,5 @@
 package shared
 
 type MergePullRequestByFastForwardOutput struct {
-	PullRequest *PullRequest `json:"pullRequest,omitempty"`
+	PullRequest *PullRequest1 `json:"pullRequest,omitempty"`
 }

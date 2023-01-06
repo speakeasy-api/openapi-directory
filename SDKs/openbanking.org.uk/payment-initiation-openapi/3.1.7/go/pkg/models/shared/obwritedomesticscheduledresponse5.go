@@ -63,9 +63,9 @@ type ObWriteDomesticScheduledResponse5DataInitiation struct {
 type ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum string
 
 const (
-	ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumAuthorised                   ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "Authorised"
-	ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
-	ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumRejected                     ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "Rejected"
+	OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumAuthorised                   ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "Authorised"
+	OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
+	OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumRejected                     ObWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
 // ObWriteDomesticScheduledResponse5DataMultiAuthorisation
@@ -96,10 +96,10 @@ type ObWriteDomesticScheduledResponse5DataRefund struct {
 type ObWriteDomesticScheduledResponse5DataStatusEnum string
 
 const (
-	ObWriteDomesticScheduledResponse5DataStatusEnumCancelled           ObWriteDomesticScheduledResponse5DataStatusEnum = "Cancelled"
-	ObWriteDomesticScheduledResponse5DataStatusEnumInitiationCompleted ObWriteDomesticScheduledResponse5DataStatusEnum = "InitiationCompleted"
-	ObWriteDomesticScheduledResponse5DataStatusEnumInitiationFailed    ObWriteDomesticScheduledResponse5DataStatusEnum = "InitiationFailed"
-	ObWriteDomesticScheduledResponse5DataStatusEnumInitiationPending   ObWriteDomesticScheduledResponse5DataStatusEnum = "InitiationPending"
+	OBWriteDomesticScheduledResponse5DataStatusEnumCancelled           ObWriteDomesticScheduledResponse5DataStatusEnum = "Cancelled"
+	OBWriteDomesticScheduledResponse5DataStatusEnumInitiationCompleted ObWriteDomesticScheduledResponse5DataStatusEnum = "InitiationCompleted"
+	OBWriteDomesticScheduledResponse5DataStatusEnumInitiationFailed    ObWriteDomesticScheduledResponse5DataStatusEnum = "InitiationFailed"
+	OBWriteDomesticScheduledResponse5DataStatusEnumInitiationPending   ObWriteDomesticScheduledResponse5DataStatusEnum = "InitiationPending"
 )
 
 type ObWriteDomesticScheduledResponse5Data struct {

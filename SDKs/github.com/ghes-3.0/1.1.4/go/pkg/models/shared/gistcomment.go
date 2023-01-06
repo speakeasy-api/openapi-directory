@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// GistCommentSimpleUser
+// Simple User
 type GistCommentSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

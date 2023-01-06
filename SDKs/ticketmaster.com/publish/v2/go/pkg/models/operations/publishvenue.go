@@ -5,7 +5,7 @@ import (
 )
 
 type PublishVenueHeaders struct {
-	TmpsCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
+	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
 }
 
 type PublishVenueRequest struct {

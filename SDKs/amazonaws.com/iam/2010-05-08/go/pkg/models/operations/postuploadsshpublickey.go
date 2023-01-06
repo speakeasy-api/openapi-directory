@@ -3,13 +3,13 @@ package operations
 type PostUploadSSHPublicKeyActionEnum string
 
 const (
-	PostUploadSSHPublicKeyActionEnumUploadSSHPublicKey PostUploadSSHPublicKeyActionEnum = "UploadSSHPublicKey"
+	POSTUploadSSHPublicKeyActionEnumUploadSSHPublicKey PostUploadSSHPublicKeyActionEnum = "UploadSSHPublicKey"
 )
 
 type PostUploadSSHPublicKeyVersionEnum string
 
 const (
-	PostUploadSSHPublicKeyVersionEnumTwoThousandAndTen0508 PostUploadSSHPublicKeyVersionEnum = "2010-05-08"
+	POSTUploadSSHPublicKeyVersionEnumTwoThousandAndTen0508 PostUploadSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
 type PostUploadSSHPublicKeyQueryParams struct {

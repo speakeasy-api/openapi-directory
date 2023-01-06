@@ -67,6 +67,7 @@ type AssignedTargetingOption struct {
 	AppCategoryDetails                  *AppCategoryAssignedTargetingOptionDetails              `json:"appCategoryDetails,omitempty"`
 	AppDetails                          *AppAssignedTargetingOptionDetails                      `json:"appDetails,omitempty"`
 	AssignedTargetingOptionID           *string                                                 `json:"assignedTargetingOptionId,omitempty"`
+	AssignedTargetingOptionIDAlias      *string                                                 `json:"assignedTargetingOptionIdAlias,omitempty"`
 	AudienceGroupDetails                *AudienceGroupAssignedTargetingOptionDetails            `json:"audienceGroupDetails,omitempty"`
 	AudioContentTypeDetails             *AudioContentTypeAssignedTargetingOptionDetails         `json:"audioContentTypeDetails,omitempty"`
 	AuthorizedSellerStatusDetails       *AuthorizedSellerStatusAssignedTargetingOptionDetails   `json:"authorizedSellerStatusDetails,omitempty"`

@@ -8,15 +8,15 @@ type RemoveLoadBalancerForwardingRulesPathParams struct {
 	LbID string `pathParam:"style=simple,explode=false,name=lb_id"`
 }
 
-type RemoveLoadBalancerForwardingRulesRequest struct {
-	PathParams RemoveLoadBalancerForwardingRulesPathParams
-	Request    interface{} `request:"mediaType=application/json"`
-}
-
 type RemoveLoadBalancerForwardingRules401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type RemoveLoadBalancerForwardingRulesRequest struct {
+	PathParams RemoveLoadBalancerForwardingRulesPathParams
+	Request    interface{} `request:"mediaType=application/json"`
 }
 
 type RemoveLoadBalancerForwardingRulesResponse struct {

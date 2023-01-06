@@ -3,13 +3,13 @@ package operations
 type GetDeleteRoleActionEnum string
 
 const (
-	GetDeleteRoleActionEnumDeleteRole GetDeleteRoleActionEnum = "DeleteRole"
+	GETDeleteRoleActionEnumDeleteRole GetDeleteRoleActionEnum = "DeleteRole"
 )
 
 type GetDeleteRoleVersionEnum string
 
 const (
-	GetDeleteRoleVersionEnumTwoThousandAndTen0508 GetDeleteRoleVersionEnum = "2010-05-08"
+	GETDeleteRoleVersionEnumTwoThousandAndTen0508 GetDeleteRoleVersionEnum = "2010-05-08"
 )
 
 type GetDeleteRoleQueryParams struct {

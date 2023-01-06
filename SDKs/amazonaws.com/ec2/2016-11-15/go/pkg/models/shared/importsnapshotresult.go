@@ -1,8 +1,8 @@
 package shared
 
 type ImportSnapshotResult struct {
-	Description        *string
-	ImportTaskID       *string
-	SnapshotTaskDetail *SnapshotTaskDetail
-	Tags               []Tag
+	Description        map[string]interface{}
+	ImportTaskID       map[string]interface{}
+	SnapshotTaskDetail map[string]interface{}
+	Tags               map[string]interface{}
 }

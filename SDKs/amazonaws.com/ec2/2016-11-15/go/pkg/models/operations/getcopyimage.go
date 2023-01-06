@@ -3,13 +3,13 @@ package operations
 type GetCopyImageActionEnum string
 
 const (
-	GetCopyImageActionEnumCopyImage GetCopyImageActionEnum = "CopyImage"
+	GETCopyImageActionEnumCopyImage GetCopyImageActionEnum = "CopyImage"
 )
 
 type GetCopyImageVersionEnum string
 
 const (
-	GetCopyImageVersionEnumTwoThousandAndSixteen1115 GetCopyImageVersionEnum = "2016-11-15"
+	GETCopyImageVersionEnumTwoThousandAndSixteen1115 GetCopyImageVersionEnum = "2016-11-15"
 )
 
 type GetCopyImageQueryParams struct {

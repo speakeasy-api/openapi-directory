@@ -10,7 +10,7 @@ type PostV05ConsentsHipOnNotifyHeaders struct {
 
 type PostV05ConsentsHipOnNotifyRequests struct {
 	ApplicationXML                 []byte                                 `request:"mediaType=application/xml"`
-	HipConsentNotificationResponse *shared.HipConsentNotificationResponse `request:"mediaType=application/json"`
+	HIPConsentNotificationResponse *shared.HipConsentNotificationResponse `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentsHipOnNotifyRequest struct {

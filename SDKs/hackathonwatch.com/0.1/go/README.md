@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,7 +24,7 @@ func main() {
     
     req := operations.GetHackathonsIDFormatRequest{
         PathParams: operations.GetHackathonsIDFormatPathParams{
-            ID: 9173058623913194203,
+            ID: 3858245044161450291,
         },
     }
     

@@ -3,21 +3,21 @@ package operations
 type GetModifyUsageLimitActionEnum string
 
 const (
-	GetModifyUsageLimitActionEnumModifyUsageLimit GetModifyUsageLimitActionEnum = "ModifyUsageLimit"
+	GETModifyUsageLimitActionEnumModifyUsageLimit GetModifyUsageLimitActionEnum = "ModifyUsageLimit"
 )
 
 type GetModifyUsageLimitBreachActionEnum string
 
 const (
-	GetModifyUsageLimitBreachActionEnumLog        GetModifyUsageLimitBreachActionEnum = "log"
-	GetModifyUsageLimitBreachActionEnumEmitMetric GetModifyUsageLimitBreachActionEnum = "emit-metric"
-	GetModifyUsageLimitBreachActionEnumDisable    GetModifyUsageLimitBreachActionEnum = "disable"
+	GETModifyUsageLimitBreachActionEnumLog        GetModifyUsageLimitBreachActionEnum = "log"
+	GETModifyUsageLimitBreachActionEnumEmitMetric GetModifyUsageLimitBreachActionEnum = "emit-metric"
+	GETModifyUsageLimitBreachActionEnumDisable    GetModifyUsageLimitBreachActionEnum = "disable"
 )
 
 type GetModifyUsageLimitVersionEnum string
 
 const (
-	GetModifyUsageLimitVersionEnumTwoThousandAndTwelve1201 GetModifyUsageLimitVersionEnum = "2012-12-01"
+	GETModifyUsageLimitVersionEnumTwoThousandAndTwelve1201 GetModifyUsageLimitVersionEnum = "2012-12-01"
 )
 
 type GetModifyUsageLimitQueryParams struct {

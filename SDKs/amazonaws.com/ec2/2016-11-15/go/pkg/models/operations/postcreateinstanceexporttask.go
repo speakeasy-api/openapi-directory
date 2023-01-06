@@ -3,13 +3,13 @@ package operations
 type PostCreateInstanceExportTaskActionEnum string
 
 const (
-	PostCreateInstanceExportTaskActionEnumCreateInstanceExportTask PostCreateInstanceExportTaskActionEnum = "CreateInstanceExportTask"
+	POSTCreateInstanceExportTaskActionEnumCreateInstanceExportTask PostCreateInstanceExportTaskActionEnum = "CreateInstanceExportTask"
 )
 
 type PostCreateInstanceExportTaskVersionEnum string
 
 const (
-	PostCreateInstanceExportTaskVersionEnumTwoThousandAndSixteen1115 PostCreateInstanceExportTaskVersionEnum = "2016-11-15"
+	POSTCreateInstanceExportTaskVersionEnumTwoThousandAndSixteen1115 PostCreateInstanceExportTaskVersionEnum = "2016-11-15"
 )
 
 type PostCreateInstanceExportTaskQueryParams struct {

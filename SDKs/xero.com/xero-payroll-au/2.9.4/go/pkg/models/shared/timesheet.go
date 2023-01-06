@@ -1,16 +1,5 @@
 package shared
 
-type TimesheetInput struct {
-	EmployeeID       string               `json:"EmployeeID"`
-	EndDate          string               `json:"EndDate"`
-	Hours            *float64             `json:"Hours,omitempty"`
-	StartDate        string               `json:"StartDate"`
-	Status           *TimesheetStatusEnum `json:"Status,omitempty"`
-	TimesheetID      *string              `json:"TimesheetID,omitempty"`
-	TimesheetLines   []TimesheetLineInput `json:"TimesheetLines,omitempty"`
-	ValidationErrors []ValidationError    `json:"ValidationErrors,omitempty"`
-}
-
 type Timesheet struct {
 	EmployeeID       string               `json:"EmployeeID"`
 	EndDate          string               `json:"EndDate"`
@@ -19,6 +8,17 @@ type Timesheet struct {
 	Status           *TimesheetStatusEnum `json:"Status,omitempty"`
 	TimesheetID      *string              `json:"TimesheetID,omitempty"`
 	TimesheetLines   []TimesheetLine      `json:"TimesheetLines,omitempty"`
-	UpdatedDateUtc   *string              `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC   *string              `json:"UpdatedDateUTC,omitempty"`
+	ValidationErrors []ValidationError    `json:"ValidationErrors,omitempty"`
+}
+
+type TimesheetInput struct {
+	EmployeeID       string               `json:"EmployeeID"`
+	EndDate          string               `json:"EndDate"`
+	Hours            *float64             `json:"Hours,omitempty"`
+	StartDate        string               `json:"StartDate"`
+	Status           *TimesheetStatusEnum `json:"Status,omitempty"`
+	TimesheetID      *string              `json:"TimesheetID,omitempty"`
+	TimesheetLines   []TimesheetLineInput `json:"TimesheetLines,omitempty"`
 	ValidationErrors []ValidationError    `json:"ValidationErrors,omitempty"`
 }

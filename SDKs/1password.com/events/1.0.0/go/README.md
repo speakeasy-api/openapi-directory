@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,20 +22,21 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.GetAuthIntrospectRequest{
-        Security: operations.GetAuthIntrospectSecurity{
+    req := operations.GetItemUsagesRequest{
+        Security: operations.GetItemUsagesSecurity{
             Jwtsa: shared.SchemeJwtsa{
                 Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
+        Request: "sit",
     }
     
-    res, err := s.Sdk.GetAuthIntrospect(ctx, req)
+    res, err := s.APIV1.GetItemUsages(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Introspection != nil {
+    if res.GetItemUsages200ApplicationJSONAny != nil {
         // handle response
     }
 ```
@@ -45,11 +45,14 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### api-v1
 
-* `GetAuthIntrospect` - Performs introspection of the provided Bearer JWT token
 * `GetItemUsages` - Retrieves item usages
 * `GetSignInAttempts` - Retrieves sign-in attempts
+
+### auth
+
+* `GetAuthIntrospect` - Performs introspection of the provided Bearer JWT token
 
 <!-- End SDK Available Operations -->
 

@@ -13,7 +13,7 @@ type ProtocolNetflowGetConfigRequest struct {
 }
 
 type ProtocolNetflowGetConfigResponse struct {
-	ConfigNetflow *shared.ConfigNetflow
+	ConfigNETFLOW *shared.ConfigNetflow
 	ContentType   string
 	StatusCode    int64
 }

@@ -3,13 +3,13 @@ package operations
 type PostPromoteReadReplicaActionEnum string
 
 const (
-	PostPromoteReadReplicaActionEnumPromoteReadReplica PostPromoteReadReplicaActionEnum = "PromoteReadReplica"
+	POSTPromoteReadReplicaActionEnumPromoteReadReplica PostPromoteReadReplicaActionEnum = "PromoteReadReplica"
 )
 
 type PostPromoteReadReplicaVersionEnum string
 
 const (
-	PostPromoteReadReplicaVersionEnumTwoThousandAndThirteen0909 PostPromoteReadReplicaVersionEnum = "2013-09-09"
+	POSTPromoteReadReplicaVersionEnumTwoThousandAndThirteen0909 PostPromoteReadReplicaVersionEnum = "2013-09-09"
 )
 
 type PostPromoteReadReplicaQueryParams struct {

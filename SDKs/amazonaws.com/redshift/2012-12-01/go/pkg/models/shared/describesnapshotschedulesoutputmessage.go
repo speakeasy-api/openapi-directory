@@ -2,5 +2,5 @@ package shared
 
 type DescribeSnapshotSchedulesOutputMessage struct {
 	Marker            *string
-	SnapshotSchedules []SnapshotSchedule
+	SnapshotSchedules []map[string]interface{}
 }

@@ -7,24 +7,24 @@ import (
 type GetDescribeEventsActionEnum string
 
 const (
-	GetDescribeEventsActionEnumDescribeEvents GetDescribeEventsActionEnum = "DescribeEvents"
+	GETDescribeEventsActionEnumDescribeEvents GetDescribeEventsActionEnum = "DescribeEvents"
 )
 
 type GetDescribeEventsSeverityEnum string
 
 const (
-	GetDescribeEventsSeverityEnumTrace GetDescribeEventsSeverityEnum = "TRACE"
-	GetDescribeEventsSeverityEnumDebug GetDescribeEventsSeverityEnum = "DEBUG"
-	GetDescribeEventsSeverityEnumInfo  GetDescribeEventsSeverityEnum = "INFO"
-	GetDescribeEventsSeverityEnumWarn  GetDescribeEventsSeverityEnum = "WARN"
-	GetDescribeEventsSeverityEnumError GetDescribeEventsSeverityEnum = "ERROR"
-	GetDescribeEventsSeverityEnumFatal GetDescribeEventsSeverityEnum = "FATAL"
+	GETDescribeEventsSeverityEnumTrace GetDescribeEventsSeverityEnum = "TRACE"
+	GETDescribeEventsSeverityEnumDebug GetDescribeEventsSeverityEnum = "DEBUG"
+	GETDescribeEventsSeverityEnumInfo  GetDescribeEventsSeverityEnum = "INFO"
+	GETDescribeEventsSeverityEnumWarn  GetDescribeEventsSeverityEnum = "WARN"
+	GETDescribeEventsSeverityEnumError GetDescribeEventsSeverityEnum = "ERROR"
+	GETDescribeEventsSeverityEnumFatal GetDescribeEventsSeverityEnum = "FATAL"
 )
 
 type GetDescribeEventsVersionEnum string
 
 const (
-	GetDescribeEventsVersionEnumTwoThousandAndTen1201 GetDescribeEventsVersionEnum = "2010-12-01"
+	GETDescribeEventsVersionEnumTwoThousandAndTen1201 GetDescribeEventsVersionEnum = "2010-12-01"
 )
 
 type GetDescribeEventsQueryParams struct {

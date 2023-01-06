@@ -30,12 +30,12 @@ type UpdateRegexMatchSetResponse struct {
 	ContentType                      string
 	StatusCode                       int64
 	UpdateRegexMatchSetResponse      *shared.UpdateRegexMatchSetResponse
-	WafDisallowedNameException       *interface{}
-	WafInternalErrorException        *interface{}
-	WafInvalidAccountException       *interface{}
-	WafInvalidOperationException     *interface{}
-	WafLimitsExceededException       *interface{}
-	WafNonexistentContainerException *interface{}
-	WafNonexistentItemException      *interface{}
-	WafStaleDataException            *interface{}
+	WAFDisallowedNameException       *interface{}
+	WAFInternalErrorException        *interface{}
+	WAFInvalidAccountException       *interface{}
+	WAFInvalidOperationException     *interface{}
+	WAFLimitsExceededException       *interface{}
+	WAFNonexistentContainerException *interface{}
+	WAFNonexistentItemException      *interface{}
+	WAFStaleDataException            *interface{}
 }

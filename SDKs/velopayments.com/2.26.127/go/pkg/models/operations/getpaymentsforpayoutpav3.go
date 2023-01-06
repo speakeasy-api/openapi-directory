@@ -12,17 +12,17 @@ type GetPaymentsForPayoutPaV3PathParams struct {
 type GetPaymentsForPayoutPaV3StatusEnum string
 
 const (
-	GetPaymentsForPayoutPaV3StatusEnumAccepted             GetPaymentsForPayoutPaV3StatusEnum = "ACCEPTED"
-	GetPaymentsForPayoutPaV3StatusEnumAwaitingFunds        GetPaymentsForPayoutPaV3StatusEnum = "AWAITING_FUNDS"
-	GetPaymentsForPayoutPaV3StatusEnumFunded               GetPaymentsForPayoutPaV3StatusEnum = "FUNDED"
-	GetPaymentsForPayoutPaV3StatusEnumUnfunded             GetPaymentsForPayoutPaV3StatusEnum = "UNFUNDED"
-	GetPaymentsForPayoutPaV3StatusEnumBankPaymentRequested GetPaymentsForPayoutPaV3StatusEnum = "BANK_PAYMENT_REQUESTED"
-	GetPaymentsForPayoutPaV3StatusEnumRejected             GetPaymentsForPayoutPaV3StatusEnum = "REJECTED"
-	GetPaymentsForPayoutPaV3StatusEnumAcceptedByRails      GetPaymentsForPayoutPaV3StatusEnum = "ACCEPTED_BY_RAILS"
-	GetPaymentsForPayoutPaV3StatusEnumConfirmed            GetPaymentsForPayoutPaV3StatusEnum = "CONFIRMED"
-	GetPaymentsForPayoutPaV3StatusEnumFailed               GetPaymentsForPayoutPaV3StatusEnum = "FAILED"
-	GetPaymentsForPayoutPaV3StatusEnumReturned             GetPaymentsForPayoutPaV3StatusEnum = "RETURNED"
-	GetPaymentsForPayoutPaV3StatusEnumWithdrawn            GetPaymentsForPayoutPaV3StatusEnum = "WITHDRAWN"
+	GetPaymentsForPayoutPAV3StatusEnumAccepted             GetPaymentsForPayoutPaV3StatusEnum = "ACCEPTED"
+	GetPaymentsForPayoutPAV3StatusEnumAwaitingFunds        GetPaymentsForPayoutPaV3StatusEnum = "AWAITING_FUNDS"
+	GetPaymentsForPayoutPAV3StatusEnumFunded               GetPaymentsForPayoutPaV3StatusEnum = "FUNDED"
+	GetPaymentsForPayoutPAV3StatusEnumUnfunded             GetPaymentsForPayoutPaV3StatusEnum = "UNFUNDED"
+	GetPaymentsForPayoutPAV3StatusEnumBankPaymentRequested GetPaymentsForPayoutPaV3StatusEnum = "BANK_PAYMENT_REQUESTED"
+	GetPaymentsForPayoutPAV3StatusEnumRejected             GetPaymentsForPayoutPaV3StatusEnum = "REJECTED"
+	GetPaymentsForPayoutPAV3StatusEnumAcceptedByRails      GetPaymentsForPayoutPaV3StatusEnum = "ACCEPTED_BY_RAILS"
+	GetPaymentsForPayoutPAV3StatusEnumConfirmed            GetPaymentsForPayoutPaV3StatusEnum = "CONFIRMED"
+	GetPaymentsForPayoutPAV3StatusEnumFailed               GetPaymentsForPayoutPaV3StatusEnum = "FAILED"
+	GetPaymentsForPayoutPAV3StatusEnumReturned             GetPaymentsForPayoutPaV3StatusEnum = "RETURNED"
+	GetPaymentsForPayoutPAV3StatusEnumWithdrawn            GetPaymentsForPayoutPaV3StatusEnum = "WITHDRAWN"
 )
 
 type GetPaymentsForPayoutPaV3QueryParams struct {

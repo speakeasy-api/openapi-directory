@@ -1,5 +1,5 @@
 package shared
 
 type StopJobResult struct {
-	Job *Job `json:"job,omitempty"`
+	Job *Job1 `json:"job,omitempty"`
 }

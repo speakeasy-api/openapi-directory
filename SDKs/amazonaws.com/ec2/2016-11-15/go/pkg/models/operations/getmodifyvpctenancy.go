@@ -3,19 +3,19 @@ package operations
 type GetModifyVpcTenancyActionEnum string
 
 const (
-	GetModifyVpcTenancyActionEnumModifyVpcTenancy GetModifyVpcTenancyActionEnum = "ModifyVpcTenancy"
+	GETModifyVpcTenancyActionEnumModifyVpcTenancy GetModifyVpcTenancyActionEnum = "ModifyVpcTenancy"
 )
 
 type GetModifyVpcTenancyInstanceTenancyEnum string
 
 const (
-	GetModifyVpcTenancyInstanceTenancyEnumDefault GetModifyVpcTenancyInstanceTenancyEnum = "default"
+	GETModifyVpcTenancyInstanceTenancyEnumDefault GetModifyVpcTenancyInstanceTenancyEnum = "default"
 )
 
 type GetModifyVpcTenancyVersionEnum string
 
 const (
-	GetModifyVpcTenancyVersionEnumTwoThousandAndSixteen1115 GetModifyVpcTenancyVersionEnum = "2016-11-15"
+	GETModifyVpcTenancyVersionEnumTwoThousandAndSixteen1115 GetModifyVpcTenancyVersionEnum = "2016-11-15"
 )
 
 type GetModifyVpcTenancyQueryParams struct {

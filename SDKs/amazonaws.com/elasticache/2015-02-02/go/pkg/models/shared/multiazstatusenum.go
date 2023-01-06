@@ -3,6 +3,6 @@ package shared
 type MultiAzStatusEnum string
 
 const (
-	MultiAzStatusEnumEnabled  MultiAzStatusEnum = "enabled"
-	MultiAzStatusEnumDisabled MultiAzStatusEnum = "disabled"
+	MultiAZStatusEnumEnabled  MultiAzStatusEnum = "enabled"
+	MultiAZStatusEnumDisabled MultiAzStatusEnum = "disabled"
 )

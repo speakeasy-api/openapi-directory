@@ -14,7 +14,7 @@ type UpdateStreamRequestBody struct {
 	CurrentVersion string  `json:"CurrentVersion"`
 	DeviceName     *string `json:"DeviceName,omitempty"`
 	MediaType      *string `json:"MediaType,omitempty"`
-	StreamArn      *string `json:"StreamARN,omitempty"`
+	StreamARN      *string `json:"StreamARN,omitempty"`
 	StreamName     *string `json:"StreamName,omitempty"`
 }
 

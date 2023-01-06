@@ -23,6 +23,6 @@ type DelListeNoireRequest struct {
 type DelListeNoireResponse struct {
 	ContentType       string
 	Erreur            *shared.Erreur
-	ListenoireReponse *shared.ListenoireReponse
+	LISTENOIREReponse *shared.ListenoireReponse
 	StatusCode        int64
 }

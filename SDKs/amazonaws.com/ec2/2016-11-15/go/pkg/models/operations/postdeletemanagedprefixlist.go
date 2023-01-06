@@ -3,13 +3,13 @@ package operations
 type PostDeleteManagedPrefixListActionEnum string
 
 const (
-	PostDeleteManagedPrefixListActionEnumDeleteManagedPrefixList PostDeleteManagedPrefixListActionEnum = "DeleteManagedPrefixList"
+	POSTDeleteManagedPrefixListActionEnumDeleteManagedPrefixList PostDeleteManagedPrefixListActionEnum = "DeleteManagedPrefixList"
 )
 
 type PostDeleteManagedPrefixListVersionEnum string
 
 const (
-	PostDeleteManagedPrefixListVersionEnumTwoThousandAndSixteen1115 PostDeleteManagedPrefixListVersionEnum = "2016-11-15"
+	POSTDeleteManagedPrefixListVersionEnumTwoThousandAndSixteen1115 PostDeleteManagedPrefixListVersionEnum = "2016-11-15"
 )
 
 type PostDeleteManagedPrefixListQueryParams struct {

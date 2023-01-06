@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,64 +27,58 @@ func main() {
             Option1: &operations.FitnessUsersDataSourcesCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.FitnessUsersDataSourcesCreatePathParams{
-            UserID: "rerum",
+            UserID: "repudiandae",
         },
         QueryParams: operations.FitnessUsersDataSourcesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "proto",
-            Callback: "possimus",
-            Fields: "possimus",
-            Key: "voluptas",
-            OauthToken: "et",
-            PrettyPrint: false,
-            QuotaUser: "ducimus",
-            UploadType: "exercitationem",
-            UploadProtocol: "totam",
+            DollarXgafv: "2",
+            AccessToken: "omnis",
+            Alt: "json",
+            Callback: "quidem",
+            Fields: "et",
+            Key: "dignissimos",
+            OauthToken: "consequuntur",
+            PrettyPrint: true,
+            QuotaUser: "perferendis",
+            UploadType: "voluptas",
+            UploadProtocol: "architecto",
         },
         Request: &shared.DataSource{
             Application: &shared.Application{
-                DetailsURL: "atque",
-                Name: "ut",
-                PackageName: "mollitia",
-                Version: "impedit",
+                DetailsURL: "temporibus",
+                Name: "recusandae",
+                PackageName: "eius",
+                Version: "aliquam",
             },
             DataQualityStandard: []shared.DataSourceDataQualityStandardEnum{
-                "dataQualityBloodPressureEsh2002",
-                "dataQualityBloodPressureEsh2010",
+                "dataQualityBloodGlucoseIso151972013",
             },
-            DataStreamID: "molestias",
-            DataStreamName: "corrupti",
+            DataStreamID: "et",
+            DataStreamName: "ut",
             DataType: &shared.DataType{
                 Field: []shared.DataTypeField{
                     shared.DataTypeField{
                         Format: "string",
-                        Name: "vero",
+                        Name: "voluptas",
                         Optional: true,
                     },
-                    shared.DataTypeField{
-                        Format: "floatList",
-                        Name: "beatae",
-                        Optional: false,
-                    },
                 },
-                Name: "molestiae",
+                Name: "libero",
             },
             Device: &shared.Device{
-                Manufacturer: "deleniti",
-                Model: "suscipit",
+                Manufacturer: "qui",
+                Model: "optio",
                 Type: "phone",
-                UID: "et",
-                Version: "labore",
+                UID: "dicta",
+                Version: "et",
             },
-            Name: "et",
+            Name: "quis",
             Type: "raw",
         },
     }

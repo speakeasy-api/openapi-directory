@@ -3,13 +3,13 @@ package operations
 type GetAddPartnerActionEnum string
 
 const (
-	GetAddPartnerActionEnumAddPartner GetAddPartnerActionEnum = "AddPartner"
+	GETAddPartnerActionEnumAddPartner GetAddPartnerActionEnum = "AddPartner"
 )
 
 type GetAddPartnerVersionEnum string
 
 const (
-	GetAddPartnerVersionEnumTwoThousandAndTwelve1201 GetAddPartnerVersionEnum = "2012-12-01"
+	GETAddPartnerVersionEnumTwoThousandAndTwelve1201 GetAddPartnerVersionEnum = "2012-12-01"
 )
 
 type GetAddPartnerQueryParams struct {

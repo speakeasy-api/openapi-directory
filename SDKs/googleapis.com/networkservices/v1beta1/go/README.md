@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,63 +26,62 @@ func main() {
         Security: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams{
-            Parent: "sapiente",
+            Parent: "expedita",
         },
         QueryParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "dolorem",
-            Alt: "proto",
-            Callback: "consectetur",
-            EndpointPolicyID: "dicta",
-            Fields: "ut",
-            Key: "est",
-            OauthToken: "quisquam",
+            AccessToken: "explicabo",
+            Alt: "json",
+            Callback: "eaque",
+            EndpointPolicyID: "perferendis",
+            Fields: "et",
+            Key: "neque",
+            OauthToken: "ullam",
             PrettyPrint: true,
-            QuotaUser: "consequatur",
-            UploadType: "dolorem",
-            UploadProtocol: "sint",
+            QuotaUser: "aut",
+            UploadType: "a",
+            UploadProtocol: "aut",
         },
         Request: &shared.EndpointPolicyInput{
-            AuthorizationPolicy: "cupiditate",
-            ClientTLSPolicy: "aut",
-            Description: "maiores",
+            AuthorizationPolicy: "temporibus",
+            ClientTLSPolicy: "consequatur",
+            Description: "enim",
             EndpointMatcher: &shared.EndpointMatcher{
                 MetadataLabelMatcher: &shared.MetadataLabelMatcher{
-                    MetadataLabelMatchCriteria: "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED",
+                    MetadataLabelMatchCriteria: "MATCH_ANY",
                     MetadataLabels: []shared.MetadataLabels{
                         shared.MetadataLabels{
-                            LabelName: "rem",
-                            LabelValue: "nesciunt",
+                            LabelName: "reiciendis",
+                            LabelValue: "dolor",
                         },
                         shared.MetadataLabels{
-                            LabelName: "voluptatem",
-                            LabelValue: "veritatis",
-                        },
-                        shared.MetadataLabels{
-                            LabelName: "nihil",
-                            LabelValue: "quis",
+                            LabelName: "quod",
+                            LabelValue: "corporis",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "consectetur": "qui",
-                "non": "dolorem",
+                "necessitatibus": "quia",
+                "minus": "non",
+                "eligendi": "quisquam",
             },
-            Name: "repellendus",
-            ServerTLSPolicy: "sint",
+            Name: "ipsum",
+            ServerTLSPolicy: "eos",
             TrafficPortSelector: &shared.TrafficPortSelector{
                 Ports: []string{
                     "aut",
+                    "id",
+                    "sint",
                 },
             },
-            Type: "SIDECAR_PROXY",
+            Type: "ENDPOINT_POLICY_TYPE_UNSPECIFIED",
         },
     }
     

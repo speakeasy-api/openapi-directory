@@ -1,5 +1,5 @@
 package shared
 
 type DeleteFlowLogsResult struct {
-	Unsuccessful []UnsuccessfulItem
+	Unsuccessful map[string]interface{}
 }

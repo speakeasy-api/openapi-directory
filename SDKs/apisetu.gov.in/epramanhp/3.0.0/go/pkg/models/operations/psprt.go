@@ -82,7 +82,7 @@ type Psprt404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Psprt404ApplicationJSONErrorDescriptionEnumNoRecordFound               Psprt404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Psprt404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Psprt404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Psprt404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Psprt404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Psprt404ApplicationJSON struct {

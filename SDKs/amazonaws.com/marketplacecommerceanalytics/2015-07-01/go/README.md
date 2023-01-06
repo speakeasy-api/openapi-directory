@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,29 +34,31 @@ func main() {
     
     req := operations.GenerateDataSetRequest{
         Headers: operations.GenerateDataSetHeaders{
-            XAmzAlgorithm: "voluptatem",
-            XAmzContentSha256: "fuga",
-            XAmzCredential: "aperiam",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "eum",
-            XAmzSignature: "atque",
-            XAmzSignedHeaders: "recusandae",
+            XAmzAlgorithm: "incidunt",
+            XAmzContentSha256: "iusto",
+            XAmzCredential: "voluptatibus",
+            XAmzDate: "voluptates",
+            XAmzSecurityToken: "quia",
+            XAmzSignature: "tenetur",
+            XAmzSignedHeaders: "et",
             XAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
         },
         Request: shared.GenerateDataSetRequest{
             CustomerDefinedValues: map[string]string{
-                "iste": "atque",
+                "aliquam": "non",
+                "quia": "est",
+                "velit": "totam",
             },
-            DataSetPublicationDate: "2018-12-14T12:50:00Z",
-            DataSetType: "daily_business_fees",
-            DestinationS3BucketName: "voluptas",
-            DestinationS3Prefix: "sunt",
-            RoleNameArn: "ratione",
-            SnsTopicArn: "est",
+            DataSetPublicationDate: "1999-05-14T19:03:49Z",
+            DataSetType: "monthly_revenue_billing_and_revenue_data",
+            DestinationS3BucketName: "commodi",
+            DestinationS3Prefix: "fugiat",
+            RoleNameArn: "quis",
+            SnsTopicArn: "saepe",
         },
     }
     
-    res, err := s.Sdk.GenerateDataSet(ctx, req)
+    res, err := s.GenerateDataSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

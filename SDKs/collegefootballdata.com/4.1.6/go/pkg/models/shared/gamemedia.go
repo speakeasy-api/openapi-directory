@@ -6,7 +6,7 @@ type GameMedia struct {
 	HomeConference *string `json:"homeConference,omitempty"`
 	HomeTeam       *string `json:"homeTeam,omitempty"`
 	ID             *int64  `json:"id,omitempty"`
-	IsStartTimeTbd *bool   `json:"isStartTimeTBD,omitempty"`
+	IsStartTimeTBD *bool   `json:"isStartTimeTBD,omitempty"`
 	MediaType      *string `json:"mediaType,omitempty"`
 	Outlet         *string `json:"outlet,omitempty"`
 	Season         *int64  `json:"season,omitempty"`

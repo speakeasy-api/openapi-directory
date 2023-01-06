@@ -1,5 +1,5 @@
 package shared
 
 type DeleteDbProxyResponse struct {
-	DbProxy *DbProxy
+	DBProxy *DbProxy
 }

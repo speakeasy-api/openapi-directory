@@ -14,7 +14,7 @@ type EventSourceMappingConfiguration struct {
 	FunctionArn                    *string                     `json:"FunctionArn,omitempty"`
 	FunctionResponseTypes          []FunctionResponseTypeEnum  `json:"FunctionResponseTypes,omitempty"`
 	LastModified                   *time.Time                  `json:"LastModified,omitempty"`
-	LastProcessingResult           *string                     `json:"LastProcessingResult,omitempty"`
+	LastProcessingResult           map[string]interface{}      `json:"LastProcessingResult,omitempty"`
 	MaximumBatchingWindowInSeconds *int64                      `json:"MaximumBatchingWindowInSeconds,omitempty"`
 	MaximumRecordAgeInSeconds      *int64                      `json:"MaximumRecordAgeInSeconds,omitempty"`
 	MaximumRetryAttempts           *int64                      `json:"MaximumRetryAttempts,omitempty"`

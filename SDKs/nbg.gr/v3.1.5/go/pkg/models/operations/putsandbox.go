@@ -22,6 +22,5 @@ type PutSandboxRequest struct {
 type PutSandboxResponse struct {
 	ContentType   string
 	ErrorResponse *shared.ErrorResponse
-	Headers       map[string][]string
 	StatusCode    int64
 }

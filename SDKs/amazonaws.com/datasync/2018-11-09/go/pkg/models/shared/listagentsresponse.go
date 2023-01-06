@@ -3,6 +3,6 @@ package shared
 // ListAgentsResponse
 // ListAgentsResponse
 type ListAgentsResponse struct {
-	Agents    []AgentListEntry `json:"Agents,omitempty"`
-	NextToken *string          `json:"NextToken,omitempty"`
+	Agents    map[string]interface{} `json:"Agents,omitempty"`
+	NextToken *string                `json:"NextToken,omitempty"`
 }

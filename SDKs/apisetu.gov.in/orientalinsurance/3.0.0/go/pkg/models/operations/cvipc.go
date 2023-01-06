@@ -5,9 +5,9 @@ import (
 )
 
 type CvipcRequestBodyCertificateParameters struct {
-	Inscode string `json:"INSCODE"`
-	Polno   string `json:"POLNO"`
-	Startdt string `json:"STARTDT"`
+	INSCODE string `json:"INSCODE"`
+	POLNO   string `json:"POLNO"`
+	STARTDT string `json:"STARTDT"`
 }
 
 type CvipcRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Cvipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cvipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cvipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cvipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cvipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cvipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cvipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cvipc404ApplicationJSON struct {

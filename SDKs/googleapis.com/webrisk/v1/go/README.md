@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,27 @@ func main() {
         Security: operations.WebriskHashesSearchSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.WebriskHashesSearchQueryParams{
             DollarXgafv: "2",
-            AccessToken: "est",
-            Alt: "media",
-            Callback: "praesentium",
-            Fields: "sit",
-            HashPrefix: "error",
-            Key: "assumenda",
-            OauthToken: "veniam",
-            PrettyPrint: false,
-            QuotaUser: "neque",
+            AccessToken: "omnis",
+            Alt: "json",
+            Callback: "et",
+            Fields: "est",
+            HashPrefix: "dolores",
+            Key: "laboriosam",
+            OauthToken: "qui",
+            PrettyPrint: true,
+            QuotaUser: "et",
             ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
-                "SOCIAL_ENGINEERING",
-                "UNWANTED_SOFTWARE",
-                "THREAT_TYPE_UNSPECIFIED",
+                "SOCIAL_ENGINEERING_EXTENDED_COVERAGE",
             },
-            UploadType: "aliquid",
-            UploadProtocol: "voluptatem",
+            UploadType: "non",
+            UploadProtocol: "pariatur",
         },
     }
     

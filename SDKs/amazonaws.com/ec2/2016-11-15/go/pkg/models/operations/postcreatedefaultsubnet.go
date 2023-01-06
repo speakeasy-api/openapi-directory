@@ -3,13 +3,13 @@ package operations
 type PostCreateDefaultSubnetActionEnum string
 
 const (
-	PostCreateDefaultSubnetActionEnumCreateDefaultSubnet PostCreateDefaultSubnetActionEnum = "CreateDefaultSubnet"
+	POSTCreateDefaultSubnetActionEnumCreateDefaultSubnet PostCreateDefaultSubnetActionEnum = "CreateDefaultSubnet"
 )
 
 type PostCreateDefaultSubnetVersionEnum string
 
 const (
-	PostCreateDefaultSubnetVersionEnumTwoThousandAndSixteen1115 PostCreateDefaultSubnetVersionEnum = "2016-11-15"
+	POSTCreateDefaultSubnetVersionEnumTwoThousandAndSixteen1115 PostCreateDefaultSubnetVersionEnum = "2016-11-15"
 )
 
 type PostCreateDefaultSubnetQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,12 +34,12 @@ func main() {
     
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
-            Format: "XML",
-            Gameid: "nam",
+            Format: "JSON",
+            Gameid: "earum",
         },
     }
     
-    res, err := s.Sdk.PlayByPlay(ctx, req)
+    res, err := s.PlayByPlay(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

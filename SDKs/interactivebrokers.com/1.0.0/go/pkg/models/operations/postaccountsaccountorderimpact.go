@@ -39,6 +39,6 @@ type PostAccountsAccountOrderImpactRequest struct {
 
 type PostAccountsAccountOrderImpactResponse struct {
 	ContentType                                            string
-	PostAccountsAccountOrderImpact200ApplicationJSONObject *PostAccountsAccountOrderImpact200ApplicationJSON
 	StatusCode                                             int64
+	PostAccountsAccountOrderImpact200ApplicationJSONObject *PostAccountsAccountOrderImpact200ApplicationJSON
 }

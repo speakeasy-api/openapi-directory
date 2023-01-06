@@ -3,13 +3,13 @@ package operations
 type GetModifyGlobalClusterActionEnum string
 
 const (
-	GetModifyGlobalClusterActionEnumModifyGlobalCluster GetModifyGlobalClusterActionEnum = "ModifyGlobalCluster"
+	GETModifyGlobalClusterActionEnumModifyGlobalCluster GetModifyGlobalClusterActionEnum = "ModifyGlobalCluster"
 )
 
 type GetModifyGlobalClusterVersionEnum string
 
 const (
-	GetModifyGlobalClusterVersionEnumTwoThousandAndFourteen1031 GetModifyGlobalClusterVersionEnum = "2014-10-31"
+	GETModifyGlobalClusterVersionEnumTwoThousandAndFourteen1031 GetModifyGlobalClusterVersionEnum = "2014-10-31"
 )
 
 type GetModifyGlobalClusterQueryParams struct {

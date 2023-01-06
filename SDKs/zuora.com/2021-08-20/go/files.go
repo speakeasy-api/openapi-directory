@@ -1,0 +1,83 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
+)
+
+type Files struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Files {
+	return &Files{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// GetFiles - Retrieve a file
+// Retrieve files such as export results, invoices, and accounting period reports.
+//
+// The response content type depends on the type of file that you retrieve.
+// For example, if you retrieve an invoice PDF, the value of the `Content-Type`
+// header in the response is `application/pdf;charset=UTF-8`.
+//
+// Other content types include:
+//
+//   - `text/csv` for CSV files
+//   - `application/msword` for Microsoft Word files
+//   - `application/vnd.ms-excel` and `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+//     for Microsoft Excel files (*.xls* and *.xlsx* respectively)
+//   - `application/zip` and `application/x-gzip` for ZIP and Gzip files respectively
+//   - `text/html` for HTML files
+//   - `text/plain` for text files
+//
+// The response always contains character encoding information in the `Content-Type` header.
+// For example, `Content-Type: application/zip;charset=UTF-8`.
+//
+// **Note:** The maximum file size is 2,047 MB. If you have a data request that exceeds this limit, Zuora returns the following 403 response: `<security:max-object-size>2047MB</security:max-object-size>`. Submit a request at <a href="http://support.zuora.com/" target="_blank">Zuora Global Support</a> to determine if large file optimization is an option for you.
+func (s *Files) GetFiles(ctx context.Context, request operations.GetFilesRequest) (*operations.GetFilesResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/files/{file-id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetFilesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+	}
+
+	return res, nil
+}

@@ -26,5 +26,5 @@ type TopOndRequest struct {
 type TopOndResponse struct {
 	ContentType                    string
 	StatusCode                     int64
-	TopOnd200ApplicationJSONString *string
+	TopOND200ApplicationJSONString *string
 }

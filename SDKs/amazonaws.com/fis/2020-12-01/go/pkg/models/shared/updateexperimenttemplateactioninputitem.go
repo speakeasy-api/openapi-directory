@@ -1,7 +1,5 @@
 package shared
 
-// UpdateExperimentTemplateActionInputItem
-// Specifies an action for an experiment template.
 type UpdateExperimentTemplateActionInputItem struct {
 	ActionID    *string           `json:"actionId,omitempty"`
 	Description *string           `json:"description,omitempty"`

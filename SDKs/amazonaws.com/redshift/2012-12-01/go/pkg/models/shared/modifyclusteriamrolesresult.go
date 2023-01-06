@@ -1,5 +1,5 @@
 package shared
 
 type ModifyClusterIamRolesResult struct {
-	Cluster *Cluster
+	Cluster *Cluster2
 }

@@ -3,13 +3,13 @@ package operations
 type GetDisableSerialConsoleAccessActionEnum string
 
 const (
-	GetDisableSerialConsoleAccessActionEnumDisableSerialConsoleAccess GetDisableSerialConsoleAccessActionEnum = "DisableSerialConsoleAccess"
+	GETDisableSerialConsoleAccessActionEnumDisableSerialConsoleAccess GetDisableSerialConsoleAccessActionEnum = "DisableSerialConsoleAccess"
 )
 
 type GetDisableSerialConsoleAccessVersionEnum string
 
 const (
-	GetDisableSerialConsoleAccessVersionEnumTwoThousandAndSixteen1115 GetDisableSerialConsoleAccessVersionEnum = "2016-11-15"
+	GETDisableSerialConsoleAccessVersionEnumTwoThousandAndSixteen1115 GetDisableSerialConsoleAccessVersionEnum = "2016-11-15"
 )
 
 type GetDisableSerialConsoleAccessQueryParams struct {

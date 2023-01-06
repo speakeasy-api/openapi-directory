@@ -27,6 +27,6 @@ type PostPortfolioOptimizationMaximumDecorrelationRequest struct {
 
 type PostPortfolioOptimizationMaximumDecorrelationResponse struct {
 	ContentType                                                           string
-	PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSONObject *PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSON
 	StatusCode                                                            int64
+	PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSONObject *PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSON
 }

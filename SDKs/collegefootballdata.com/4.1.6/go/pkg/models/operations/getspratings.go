@@ -16,5 +16,5 @@ type GetSpRatingsRequest struct {
 type GetSpRatingsResponse struct {
 	ContentType   string
 	StatusCode    int64
-	TeamSpRatings []shared.TeamSpRating
+	TeamSPRatings []shared.TeamSpRating
 }

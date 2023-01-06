@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,18 +33,12 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.DeleteUserEpisodesEpisodeIDRequest{
-        PathParams: operations.DeleteUserEpisodesEpisodeIDPathParams{
-            EpisodeID: 3781520367367907548,
-        },
-    }
-    
-    res, err := s.Sdk.DeleteUserEpisodesEpisodeID(ctx, req)
+    res, err := s.Auth.GetAuthValidate(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.GetAuthValidate200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -54,49 +47,76 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### auth
 
-* `DeleteUserEpisodesEpisodeID` - Unmark an episode
-* `DeleteUserFollowsNetworksNetworkID` - Unfollow a network
-* `DeleteUserFollowsPeoplePersonID` - Unfollow a person
-* `DeleteUserFollowsShowsShowID` - Unfollow a show
-* `DeleteUserFollowsWebchannelsWebchannelID` - Unfollow a webchannel
-* `DeleteUserTagsTagID` - Delete a specific tag
-* `DeleteUserTagsTagIDShowsShowID` - Untag a show
-* `DeleteUserVotesEpisodesEpisodeID` - Remove an episode vote
-* `DeleteUserVotesShowsShowID` - Remove a show vote
 * `GetAuthValidate` - Validate your authentication credentials
-* `GetScrobbleShowsShowID` - List watched and acquired episodes for a show
-* `GetUserEpisodes` - List the marked episodes
-* `GetUserEpisodesEpisodeID` - Check if an episode is marked
-* `GetUserFollowsNetworks` - List the followed networks
-* `GetUserFollowsNetworksNetworkID` - Check if a network is followed
-* `GetUserFollowsPeople` - List the followed people
-* `GetUserFollowsPeoplePersonID` - Check if a person is followed
-* `GetUserFollowsShows` - List the followed shows
-* `GetUserFollowsShowsShowID` - Check if a show is followed
-* `GetUserFollowsWebchannels` - List the followed webchannels
-* `GetUserFollowsWebchannelsWebchannelID` - Check if a webchannel is followed
-* `GetUserTags` - List all tags
-* `GetUserTagsTagIDShows` - List all shows under this tag
-* `GetUserVotesEpisodes` - List the episodes voted for
-* `GetUserVotesEpisodesEpisodeID` - Check if an episode is voted for
-* `GetUserVotesShows` - List the shows voted for
-* `GetUserVotesShowsShowID` - Check if a show is voted for
-* `PatchUserTagsTagID` - Update a specific tag
 * `PostAuthPoll` - Poll whether an authentication request was confirmed
 * `PostAuthStart` - Start an authentication request
+
+### followed networks
+
+* `DeleteUserFollowsNetworksNetworkID` - Unfollow a network
+* `GetUserFollowsNetworks` - List the followed networks
+* `GetUserFollowsNetworksNetworkID` - Check if a network is followed
+* `PutUserFollowsNetworksNetworkID` - Follow a network
+
+### followed people
+
+* `DeleteUserFollowsPeoplePersonID` - Unfollow a person
+* `GetUserFollowsPeople` - List the followed people
+* `GetUserFollowsPeoplePersonID` - Check if a person is followed
+* `PutUserFollowsPeoplePersonID` - Follow a person
+
+### followed shows
+
+* `DeleteUserFollowsShowsShowID` - Unfollow a show
+* `GetUserFollowsShows` - List the followed shows
+* `GetUserFollowsShowsShowID` - Check if a show is followed
+* `PutUserFollowsShowsShowID` - Follow a show
+
+### followed webchannels
+
+* `DeleteUserFollowsWebchannelsWebchannelID` - Unfollow a webchannel
+* `GetUserFollowsWebchannels` - List the followed webchannels
+* `GetUserFollowsWebchannelsWebchannelID` - Check if a webchannel is followed
+* `PutUserFollowsWebchannelsWebchannelID` - Follow a webchannel
+
+### marked episodes
+
+* `DeleteUserEpisodesEpisodeID` - Unmark an episode
+* `GetUserEpisodes` - List the marked episodes
+* `GetUserEpisodesEpisodeID` - Check if an episode is marked
+* `PutUserEpisodesEpisodeID` - Mark an episode
+
+### scrobbling
+
+* `GetScrobbleShowsShowID` - List watched and acquired episodes for a show
 * `PostScrobbleEpisodes` - Mark episodes as acquired or watched based on their IDs
 * `PostScrobbleShows` - Mark episodes within a show as acquired or watched based on their attributes
-* `PostUserTags` - Create a new tag
 * `PutScrobbleEpisodesEpisodeID` - Mark an episode as acquired or watched based on its ID
-* `PutUserEpisodesEpisodeID` - Mark an episode
-* `PutUserFollowsNetworksNetworkID` - Follow a network
-* `PutUserFollowsPeoplePersonID` - Follow a person
-* `PutUserFollowsShowsShowID` - Follow a show
-* `PutUserFollowsWebchannelsWebchannelID` - Follow a webchannel
+
+### tagged shows
+
+* `DeleteUserTagsTagID` - Delete a specific tag
+* `DeleteUserTagsTagIDShowsShowID` - Untag a show
+* `GetUserTags` - List all tags
+* `GetUserTagsTagIDShows` - List all shows under this tag
+* `PatchUserTagsTagID` - Update a specific tag
+* `PostUserTags` - Create a new tag
 * `PutUserTagsTagIDShowsShowID` - Tag a show
+
+### voted episodes
+
+* `DeleteUserVotesEpisodesEpisodeID` - Remove an episode vote
+* `GetUserVotesEpisodes` - List the episodes voted for
+* `GetUserVotesEpisodesEpisodeID` - Check if an episode is voted for
 * `PutUserVotesEpisodesEpisodeID` - Vote for an episode
+
+### voted shows
+
+* `DeleteUserVotesShowsShowID` - Remove a show vote
+* `GetUserVotesShows` - List the shows voted for
+* `GetUserVotesShowsShowID` - Check if a show is voted for
 * `PutUserVotesShowsShowID` - Vote for a show
 
 <!-- End SDK Available Operations -->

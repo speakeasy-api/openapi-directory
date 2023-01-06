@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.AreGamesInProgressRequest{
         PathParams: operations.AreGamesInProgressPathParams{
-            Format: "XML",
+            Format: "JSON",
         },
     }
     
-    res, err := s.Sdk.AreGamesInProgress(ctx, req)
+    res, err := s.AreGamesInProgress(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

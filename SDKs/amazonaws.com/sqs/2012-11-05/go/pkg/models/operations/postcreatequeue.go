@@ -3,13 +3,13 @@ package operations
 type PostCreateQueueActionEnum string
 
 const (
-	PostCreateQueueActionEnumCreateQueue PostCreateQueueActionEnum = "CreateQueue"
+	POSTCreateQueueActionEnumCreateQueue PostCreateQueueActionEnum = "CreateQueue"
 )
 
 type PostCreateQueueVersionEnum string
 
 const (
-	PostCreateQueueVersionEnumTwoThousandAndTwelve1105 PostCreateQueueVersionEnum = "2012-11-05"
+	POSTCreateQueueVersionEnumTwoThousandAndTwelve1105 PostCreateQueueVersionEnum = "2012-11-05"
 )
 
 type PostCreateQueueQueryParams struct {

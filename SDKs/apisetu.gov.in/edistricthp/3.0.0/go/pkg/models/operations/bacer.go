@@ -81,7 +81,7 @@ type Bacer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Bacer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Bacer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Bacer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Bacer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Bacer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Bacer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Bacer404ApplicationJSON struct {

@@ -16,7 +16,7 @@ type GetEvaluationOutput struct {
 	InputDataLocationS3    *string             `json:"InputDataLocationS3,omitempty"`
 	LastUpdatedAt          *time.Time          `json:"LastUpdatedAt,omitempty"`
 	LogURI                 *string             `json:"LogUri,omitempty"`
-	MlModelID              *string             `json:"MLModelId,omitempty"`
+	MLModelID              *string             `json:"MLModelId,omitempty"`
 	Message                *string             `json:"Message,omitempty"`
 	Name                   *string             `json:"Name,omitempty"`
 	PerformanceMetrics     *PerformanceMetrics `json:"PerformanceMetrics,omitempty"`

@@ -3,13 +3,13 @@ package operations
 type GetDescribeApplicationVersionsActionEnum string
 
 const (
-	GetDescribeApplicationVersionsActionEnumDescribeApplicationVersions GetDescribeApplicationVersionsActionEnum = "DescribeApplicationVersions"
+	GETDescribeApplicationVersionsActionEnumDescribeApplicationVersions GetDescribeApplicationVersionsActionEnum = "DescribeApplicationVersions"
 )
 
 type GetDescribeApplicationVersionsVersionEnum string
 
 const (
-	GetDescribeApplicationVersionsVersionEnumTwoThousandAndTen1201 GetDescribeApplicationVersionsVersionEnum = "2010-12-01"
+	GETDescribeApplicationVersionsVersionEnumTwoThousandAndTen1201 GetDescribeApplicationVersionsVersionEnum = "2010-12-01"
 )
 
 type GetDescribeApplicationVersionsQueryParams struct {

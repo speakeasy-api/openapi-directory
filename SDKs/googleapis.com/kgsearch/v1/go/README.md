@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,34 +25,31 @@ func main() {
     req := operations.KgsearchEntitiesSearchRequest{
         QueryParams: operations.KgsearchEntitiesSearchQueryParams{
             DollarXgafv: "2",
-            AccessToken: "veritatis",
+            AccessToken: "possimus",
             Alt: "media",
-            Callback: "consequuntur",
-            Fields: "et",
+            Callback: "nihil",
+            Fields: "est",
             Ids: []string{
-                "non",
-                "velit",
-                "quis",
+                "sint",
             },
             Indent: true,
-            Key: "cumque",
+            Key: "cupiditate",
             Languages: []string{
-                "et",
-                "commodi",
-                "architecto",
+                "officia",
             },
-            Limit: 8648365507474237258,
-            OauthToken: "perspiciatis",
-            Prefix: true,
+            Limit: 6013747793344681092,
+            OauthToken: "nihil",
+            Prefix: false,
             PrettyPrint: false,
-            Query: "fugit",
-            QuotaUser: "aspernatur",
+            Query: "facere",
+            QuotaUser: "minima",
             Types: []string{
-                "veniam",
-                "eos",
+                "magnam",
+                "aliquid",
+                "in",
             },
-            UploadType: "et",
-            UploadProtocol: "nobis",
+            UploadType: "perspiciatis",
+            UploadProtocol: "vitae",
         },
     }
     

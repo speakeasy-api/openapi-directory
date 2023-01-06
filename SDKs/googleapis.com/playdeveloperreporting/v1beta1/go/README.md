@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,23 +24,23 @@ func main() {
     
     req := operations.PlaydeveloperreportingAnomaliesListRequest{
         PathParams: operations.PlaydeveloperreportingAnomaliesListPathParams{
-            Parent: "tempore",
+            Parent: "nesciunt",
         },
         QueryParams: operations.PlaydeveloperreportingAnomaliesListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "quisquam",
+            AccessToken: "eligendi",
             Alt: "media",
-            Callback: "aliquam",
-            Fields: "illo",
-            Filter: "voluptatem",
-            Key: "itaque",
-            OauthToken: "magnam",
-            PageSize: 8228784539784114503,
-            PageToken: "eum",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "quos",
-            UploadProtocol: "eius",
+            Callback: "autem",
+            Fields: "minima",
+            Filter: "veritatis",
+            Key: "reprehenderit",
+            OauthToken: "non",
+            PageSize: 8618473008943969169,
+            PageToken: "enim",
+            PrettyPrint: false,
+            QuotaUser: "autem",
+            UploadType: "commodi",
+            UploadProtocol: "praesentium",
         },
     }
     

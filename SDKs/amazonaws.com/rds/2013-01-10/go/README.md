@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.GetAddSourceIdentifierToSubscriptionRequest{
         QueryParams: operations.GetAddSourceIdentifierToSubscriptionQueryParams{
             Action: "AddSourceIdentifierToSubscription",
-            SourceIdentifier: "commodi",
-            SubscriptionName: "quidem",
+            SourceIdentifier: "explicabo",
+            SubscriptionName: "iure",
             Version: "2013-01-10",
         },
         Headers: operations.GetAddSourceIdentifierToSubscriptionHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "quasi",
-            XAmzCredential: "nostrum",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "iusto",
-            XAmzSignature: "esse",
-            XAmzSignedHeaders: "architecto",
+            XAmzAlgorithm: "ex",
+            XAmzContentSha256: "in",
+            XAmzCredential: "est",
+            XAmzDate: "omnis",
+            XAmzSecurityToken: "ipsam",
+            XAmzSignature: "omnis",
+            XAmzSignedHeaders: "quidem",
         },
     }
     
-    res, err := s.Sdk.GetAddSourceIdentifierToSubscription(ctx, req)
+    res, err := s.GetAddSourceIdentifierToSubscription(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -70,13 +69,10 @@ func main() {
 * `GetAddSourceIdentifierToSubscription`
 * `GetAuthorizeDbSecurityGroupIngress`
 * `GetCopyDbSnapshot`
-* `GetCreateDbInstance`
 * `GetCreateDbInstanceReadReplica`
 * `GetCreateDbParameterGroup`
 * `GetCreateDbSecurityGroup`
 * `GetCreateDbSnapshot`
-* `GetCreateDbSubnetGroup`
-* `GetCreateEventSubscription`
 * `GetCreateOptionGroup`
 * `GetDeleteDbInstance`
 * `GetDeleteDbParameterGroup`
@@ -95,16 +91,12 @@ func main() {
 * `GetDescribeEngineDefaultParameters`
 * `GetDescribeEventCategories`
 * `GetDescribeEventSubscriptions`
-* `GetDescribeEvents`
 * `GetDescribeOptionGroupOptions`
 * `GetDescribeOptionGroups`
 * `GetDescribeOrderableDbInstanceOptions`
 * `GetDescribeReservedDbInstances`
 * `GetDescribeReservedDbInstancesOfferings`
 * `GetListTagsForResource`
-* `GetModifyDbInstance`
-* `GetModifyDbSubnetGroup`
-* `GetModifyEventSubscription`
 * `GetPromoteReadReplica`
 * `GetPurchaseReservedDbInstancesOffering`
 * `GetRebootDbInstance`

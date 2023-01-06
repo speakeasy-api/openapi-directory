@@ -13,7 +13,7 @@ type ProtocolSnmptcpGetTraceRequest struct {
 }
 
 type ProtocolSnmptcpGetTraceResponse struct {
-	ConfigSnmptcp *shared.ConfigSnmptcp
+	ConfigSNMPTCP *shared.ConfigSnmptcp
 	ContentType   string
 	StatusCode    int64
 }

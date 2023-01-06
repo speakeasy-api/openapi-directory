@@ -3,13 +3,13 @@ package operations
 type PostModifyAquaConfigurationActionEnum string
 
 const (
-	PostModifyAquaConfigurationActionEnumModifyAquaConfiguration PostModifyAquaConfigurationActionEnum = "ModifyAquaConfiguration"
+	POSTModifyAquaConfigurationActionEnumModifyAquaConfiguration PostModifyAquaConfigurationActionEnum = "ModifyAquaConfiguration"
 )
 
 type PostModifyAquaConfigurationVersionEnum string
 
 const (
-	PostModifyAquaConfigurationVersionEnumTwoThousandAndTwelve1201 PostModifyAquaConfigurationVersionEnum = "2012-12-01"
+	POSTModifyAquaConfigurationVersionEnumTwoThousandAndTwelve1201 PostModifyAquaConfigurationVersionEnum = "2012-12-01"
 )
 
 type PostModifyAquaConfigurationQueryParams struct {

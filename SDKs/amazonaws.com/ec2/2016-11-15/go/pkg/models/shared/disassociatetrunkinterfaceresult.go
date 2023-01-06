@@ -1,6 +1,6 @@
 package shared
 
 type DisassociateTrunkInterfaceResult struct {
-	ClientToken *string
-	Return      *bool
+	ClientToken map[string]interface{}
+	Return      map[string]interface{}
 }

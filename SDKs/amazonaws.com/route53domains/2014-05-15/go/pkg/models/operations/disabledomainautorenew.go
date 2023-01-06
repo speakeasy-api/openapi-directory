@@ -31,5 +31,5 @@ type DisableDomainAutoRenewResponse struct {
 	DisableDomainAutoRenewResponse map[string]interface{}
 	InvalidInput                   *interface{}
 	StatusCode                     int64
-	UnsupportedTld                 *interface{}
+	UnsupportedTLD                 *interface{}
 }

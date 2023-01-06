@@ -1,5 +1,5 @@
 package shared
 
 type RestoreManagedPrefixListVersionResult struct {
-	PrefixList *ManagedPrefixList
+	PrefixList map[string]interface{}
 }

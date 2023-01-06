@@ -21,6 +21,6 @@ type GetContentJSONRequest struct {
 
 type GetContentJSONResponse struct {
 	ContentType                            string
-	GetContentJSON200ApplicationJSONObject *GetContentJSON200ApplicationJSON
 	StatusCode                             int64
+	GetContentJSON200ApplicationJSONObject *GetContentJSON200ApplicationJSON
 }

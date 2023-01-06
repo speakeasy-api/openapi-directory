@@ -1,6 +1,6 @@
 package shared
 
 type DescribeInstanceTypeOfferingsResult struct {
-	InstanceTypeOfferings []InstanceTypeOffering
-	NextToken             *string
+	InstanceTypeOfferings map[string]interface{}
+	NextToken             map[string]interface{}
 }

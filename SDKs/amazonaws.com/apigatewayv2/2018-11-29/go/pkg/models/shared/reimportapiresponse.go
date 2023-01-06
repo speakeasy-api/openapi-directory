@@ -1,24 +1,20 @@
 package shared
 
-import (
-	"time"
-)
-
 type ReimportAPIResponse struct {
-	APIEndpoint               *string           `json:"ApiEndpoint,omitempty"`
-	APIGatewayManaged         *bool             `json:"ApiGatewayManaged,omitempty"`
-	APIID                     *string           `json:"ApiId,omitempty"`
-	APIKeySelectionExpression *string           `json:"ApiKeySelectionExpression,omitempty"`
-	CorsConfiguration         *Cors             `json:"CorsConfiguration,omitempty"`
-	CreatedDate               *time.Time        `json:"CreatedDate,omitempty"`
-	Description               *string           `json:"Description,omitempty"`
-	DisableExecuteAPIEndpoint *bool             `json:"DisableExecuteApiEndpoint,omitempty"`
-	DisableSchemaValidation   *bool             `json:"DisableSchemaValidation,omitempty"`
-	ImportInfo                []string          `json:"ImportInfo,omitempty"`
-	Name                      *string           `json:"Name,omitempty"`
-	ProtocolType              *ProtocolTypeEnum `json:"ProtocolType,omitempty"`
-	RouteSelectionExpression  *string           `json:"RouteSelectionExpression,omitempty"`
-	Tags                      map[string]string `json:"Tags,omitempty"`
-	Version                   *string           `json:"Version,omitempty"`
-	Warnings                  []string          `json:"Warnings,omitempty"`
+	APIEndpoint               map[string]interface{} `json:"ApiEndpoint,omitempty"`
+	APIGatewayManaged         map[string]interface{} `json:"ApiGatewayManaged,omitempty"`
+	APIID                     map[string]interface{} `json:"ApiId,omitempty"`
+	APIKeySelectionExpression map[string]interface{} `json:"ApiKeySelectionExpression,omitempty"`
+	CorsConfiguration         map[string]interface{} `json:"CorsConfiguration,omitempty"`
+	CreatedDate               map[string]interface{} `json:"CreatedDate,omitempty"`
+	Description               map[string]interface{} `json:"Description,omitempty"`
+	DisableExecuteAPIEndpoint map[string]interface{} `json:"DisableExecuteApiEndpoint,omitempty"`
+	DisableSchemaValidation   map[string]interface{} `json:"DisableSchemaValidation,omitempty"`
+	ImportInfo                map[string]interface{} `json:"ImportInfo,omitempty"`
+	Name                      map[string]interface{} `json:"Name,omitempty"`
+	ProtocolType              map[string]interface{} `json:"ProtocolType,omitempty"`
+	RouteSelectionExpression  map[string]interface{} `json:"RouteSelectionExpression,omitempty"`
+	Tags                      map[string]string      `json:"Tags,omitempty"`
+	Version                   map[string]interface{} `json:"Version,omitempty"`
+	Warnings                  map[string]interface{} `json:"Warnings,omitempty"`
 }

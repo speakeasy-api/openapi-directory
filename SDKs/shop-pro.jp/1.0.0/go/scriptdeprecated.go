@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -27,37 +27,6 @@ func NewScriptDeprecated(defaultClient, securityClient HTTPClient, serverURL, la
 		_sdkVersion:     sdkVersion,
 		_genVersion:     genVersion,
 	}
-}
-
-// DeleteV1ScriptTagsScriptTagIDJSON - スクリプトタグの削除
-func (s *ScriptDeprecated) DeleteV1ScriptTagsScriptTagIDJSON(ctx context.Context, request operations.DeleteV1ScriptTagsScriptTagIDJSONRequest) (*operations.DeleteV1ScriptTagsScriptTagIDJSONResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DeleteV1ScriptTagsScriptTagIDJSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 204:
-	}
-
-	return res, nil
 }
 
 // CreateScriptTag - スクリプトタグの作成
@@ -102,6 +71,37 @@ func (s *ScriptDeprecated) CreateScriptTag(ctx context.Context, request operatio
 
 			res.CreateScriptTag200ApplicationJSONObject = out
 		}
+	}
+
+	return res, nil
+}
+
+// DeleteV1ScriptTagsScriptTagIDJSON - スクリプトタグの削除
+func (s *ScriptDeprecated) DeleteV1ScriptTagsScriptTagIDJSON(ctx context.Context, request operations.DeleteV1ScriptTagsScriptTagIDJSONRequest) (*operations.DeleteV1ScriptTagsScriptTagIDJSONResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteV1ScriptTagsScriptTagIDJSONResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
 	}
 
 	return res, nil

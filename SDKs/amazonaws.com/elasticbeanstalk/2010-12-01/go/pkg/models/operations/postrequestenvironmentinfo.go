@@ -3,13 +3,13 @@ package operations
 type PostRequestEnvironmentInfoActionEnum string
 
 const (
-	PostRequestEnvironmentInfoActionEnumRequestEnvironmentInfo PostRequestEnvironmentInfoActionEnum = "RequestEnvironmentInfo"
+	POSTRequestEnvironmentInfoActionEnumRequestEnvironmentInfo PostRequestEnvironmentInfoActionEnum = "RequestEnvironmentInfo"
 )
 
 type PostRequestEnvironmentInfoVersionEnum string
 
 const (
-	PostRequestEnvironmentInfoVersionEnumTwoThousandAndTen1201 PostRequestEnvironmentInfoVersionEnum = "2010-12-01"
+	POSTRequestEnvironmentInfoVersionEnumTwoThousandAndTen1201 PostRequestEnvironmentInfoVersionEnum = "2010-12-01"
 )
 
 type PostRequestEnvironmentInfoQueryParams struct {

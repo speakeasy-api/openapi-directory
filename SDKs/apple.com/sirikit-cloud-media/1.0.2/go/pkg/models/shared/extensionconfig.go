@@ -1,42 +1,17 @@
 package shared
 
-type ExtensionConfigIntentAddMediaOptEnum string
-
-const (
-	ExtensionConfigIntentAddMediaOptEnumResolveMediaDestination ExtensionConfigIntentAddMediaOptEnum = "resolveMediaDestination"
-	ExtensionConfigIntentAddMediaOptEnumConfirm                 ExtensionConfigIntentAddMediaOptEnum = "confirm"
-)
-
 type ExtensionConfigIntentAddMedia struct {
 	Hdr map[string]interface{}
-	Opt []ExtensionConfigIntentAddMediaOptEnum
 	URL *string
 }
-
-type ExtensionConfigIntentPlayMediaOptEnum string
-
-const (
-	ExtensionConfigIntentPlayMediaOptEnumResolvePlayShuffled          ExtensionConfigIntentPlayMediaOptEnum = "resolvePlayShuffled"
-	ExtensionConfigIntentPlayMediaOptEnumResolvePlaybackRepeatMode    ExtensionConfigIntentPlayMediaOptEnum = "resolvePlaybackRepeatMode"
-	ExtensionConfigIntentPlayMediaOptEnumResolvePlaybackQueueLocation ExtensionConfigIntentPlayMediaOptEnum = "resolvePlaybackQueueLocation"
-	ExtensionConfigIntentPlayMediaOptEnumResolveResumePlayback        ExtensionConfigIntentPlayMediaOptEnum = "resolveResumePlayback"
-)
 
 type ExtensionConfigIntentPlayMedia struct {
 	Hdr map[string]interface{}
-	Opt []ExtensionConfigIntentPlayMediaOptEnum
 	URL *string
 }
 
-type ExtensionConfigIntentUpdateMediaAffinityOptEnum string
-
-const (
-	ExtensionConfigIntentUpdateMediaAffinityOptEnumResolveAffinityType ExtensionConfigIntentUpdateMediaAffinityOptEnum = "resolveAffinityType"
-)
-
 type ExtensionConfigIntentUpdateMediaAffinity struct {
 	Hdr map[string]interface{}
-	Opt []ExtensionConfigIntentUpdateMediaAffinityOptEnum
 	URL *string
 }
 

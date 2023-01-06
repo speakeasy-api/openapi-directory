@@ -38,6 +38,6 @@ type GetRequest struct {
 type GetResponse struct {
 	Body                        []byte
 	ContentType                 string
-	Get200ApplicationJSONObject *Get200ApplicationJSON
 	StatusCode                  int64
+	Get200ApplicationJSONObject *Get200ApplicationJSON
 }

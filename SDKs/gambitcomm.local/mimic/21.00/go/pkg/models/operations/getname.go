@@ -1,7 +1,7 @@
 package operations
 
 type GetNamePathParams struct {
-	Oid      string `pathParam:"style=simple,explode=false,name=OID"`
+	OID      string `pathParam:"style=simple,explode=false,name=OID"`
 	AgentNum int32  `pathParam:"style=simple,explode=false,name=agentNum"`
 }
 

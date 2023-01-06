@@ -3,6 +3,6 @@ package shared
 // DbSubnetGroupMessage
 // Represents the output of <a>DescribeDBSubnetGroups</a>.
 type DbSubnetGroupMessage struct {
-	DbSubnetGroups []DbSubnetGroup
+	DBSubnetGroups []map[string]interface{}
 	Marker         *string
 }

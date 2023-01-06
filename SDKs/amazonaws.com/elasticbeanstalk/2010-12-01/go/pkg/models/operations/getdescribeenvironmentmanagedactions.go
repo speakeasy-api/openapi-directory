@@ -3,22 +3,22 @@ package operations
 type GetDescribeEnvironmentManagedActionsActionEnum string
 
 const (
-	GetDescribeEnvironmentManagedActionsActionEnumDescribeEnvironmentManagedActions GetDescribeEnvironmentManagedActionsActionEnum = "DescribeEnvironmentManagedActions"
+	GETDescribeEnvironmentManagedActionsActionEnumDescribeEnvironmentManagedActions GetDescribeEnvironmentManagedActionsActionEnum = "DescribeEnvironmentManagedActions"
 )
 
 type GetDescribeEnvironmentManagedActionsStatusEnum string
 
 const (
-	GetDescribeEnvironmentManagedActionsStatusEnumScheduled GetDescribeEnvironmentManagedActionsStatusEnum = "Scheduled"
-	GetDescribeEnvironmentManagedActionsStatusEnumPending   GetDescribeEnvironmentManagedActionsStatusEnum = "Pending"
-	GetDescribeEnvironmentManagedActionsStatusEnumRunning   GetDescribeEnvironmentManagedActionsStatusEnum = "Running"
-	GetDescribeEnvironmentManagedActionsStatusEnumUnknown   GetDescribeEnvironmentManagedActionsStatusEnum = "Unknown"
+	GETDescribeEnvironmentManagedActionsStatusEnumScheduled GetDescribeEnvironmentManagedActionsStatusEnum = "Scheduled"
+	GETDescribeEnvironmentManagedActionsStatusEnumPending   GetDescribeEnvironmentManagedActionsStatusEnum = "Pending"
+	GETDescribeEnvironmentManagedActionsStatusEnumRunning   GetDescribeEnvironmentManagedActionsStatusEnum = "Running"
+	GETDescribeEnvironmentManagedActionsStatusEnumUnknown   GetDescribeEnvironmentManagedActionsStatusEnum = "Unknown"
 )
 
 type GetDescribeEnvironmentManagedActionsVersionEnum string
 
 const (
-	GetDescribeEnvironmentManagedActionsVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentManagedActionsVersionEnum = "2010-12-01"
+	GETDescribeEnvironmentManagedActionsVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentManagedActionsVersionEnum = "2010-12-01"
 )
 
 type GetDescribeEnvironmentManagedActionsQueryParams struct {

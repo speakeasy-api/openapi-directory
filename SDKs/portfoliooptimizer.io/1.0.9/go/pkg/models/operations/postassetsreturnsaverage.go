@@ -22,6 +22,6 @@ type PostAssetsReturnsAverageRequest struct {
 
 type PostAssetsReturnsAverageResponse struct {
 	ContentType                                      string
-	PostAssetsReturnsAverage200ApplicationJSONObject *PostAssetsReturnsAverage200ApplicationJSON
 	StatusCode                                       int64
+	PostAssetsReturnsAverage200ApplicationJSONObject *PostAssetsReturnsAverage200ApplicationJSON
 }

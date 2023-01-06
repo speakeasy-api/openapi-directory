@@ -11,7 +11,7 @@ type ResourceShareInvitation struct {
 	ReceiverAccountID          *string                            `json:"receiverAccountId,omitempty"`
 	ReceiverArn                *string                            `json:"receiverArn,omitempty"`
 	ResourceShareArn           *string                            `json:"resourceShareArn,omitempty"`
-	ResourceShareAssociations  []ResourceShareAssociation         `json:"resourceShareAssociations,omitempty"`
+	ResourceShareAssociations  map[string]interface{}             `json:"resourceShareAssociations,omitempty"`
 	ResourceShareInvitationArn *string                            `json:"resourceShareInvitationArn,omitempty"`
 	ResourceShareName          *string                            `json:"resourceShareName,omitempty"`
 	SenderAccountID            *string                            `json:"senderAccountId,omitempty"`

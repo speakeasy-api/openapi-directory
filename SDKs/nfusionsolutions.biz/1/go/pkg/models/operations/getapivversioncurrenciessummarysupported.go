@@ -21,7 +21,7 @@ type GetAPIVVersionCurrenciesSummarySupportedRequest struct {
 type GetAPIVVersionCurrenciesSummarySupportedResponse struct {
 	Body                                                              []byte
 	ContentType                                                       string
-	GetAPIVVersionCurrenciesSummarySupported200ApplicationJSONStrings []string
 	ProblemDetails                                                    map[string]interface{}
 	StatusCode                                                        int64
+	GetAPIVVersionCurrenciesSummarySupported200ApplicationJSONStrings []string
 }

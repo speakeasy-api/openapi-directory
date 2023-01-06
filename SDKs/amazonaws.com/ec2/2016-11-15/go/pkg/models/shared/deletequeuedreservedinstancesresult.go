@@ -1,6 +1,6 @@
 package shared
 
 type DeleteQueuedReservedInstancesResult struct {
-	FailedQueuedPurchaseDeletions     []FailedQueuedPurchaseDeletion
-	SuccessfulQueuedPurchaseDeletions []SuccessfulQueuedPurchaseDeletion
+	FailedQueuedPurchaseDeletions     map[string]interface{}
+	SuccessfulQueuedPurchaseDeletions map[string]interface{}
 }

@@ -1,7 +1,7 @@
 package operations
 
 type KeyBindPathParams struct {
-	Pk string `pathParam:"style=simple,explode=false,name=PK"`
+	PK string `pathParam:"style=simple,explode=false,name=PK"`
 }
 
 type KeyBind200ApplicationJSON struct {

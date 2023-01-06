@@ -7,31 +7,31 @@ import (
 type EmployeeEmployeeAeAssessmentOverrideEnum string
 
 const (
-	EmployeeEmployeeAeAssessmentOverrideEnumNone               EmployeeEmployeeAeAssessmentOverrideEnum = "None"
-	EmployeeEmployeeAeAssessmentOverrideEnumOptOut             EmployeeEmployeeAeAssessmentOverrideEnum = "OptOut"
-	EmployeeEmployeeAeAssessmentOverrideEnumOptIn              EmployeeEmployeeAeAssessmentOverrideEnum = "OptIn"
-	EmployeeEmployeeAeAssessmentOverrideEnumVoluntaryJoiner    EmployeeEmployeeAeAssessmentOverrideEnum = "VoluntaryJoiner"
-	EmployeeEmployeeAeAssessmentOverrideEnumContractualPension EmployeeEmployeeAeAssessmentOverrideEnum = "ContractualPension"
-	EmployeeEmployeeAeAssessmentOverrideEnumCeasedMembership   EmployeeEmployeeAeAssessmentOverrideEnum = "CeasedMembership"
-	EmployeeEmployeeAeAssessmentOverrideEnumLeaver             EmployeeEmployeeAeAssessmentOverrideEnum = "Leaver"
-	EmployeeEmployeeAeAssessmentOverrideEnumExcluded           EmployeeEmployeeAeAssessmentOverrideEnum = "Excluded"
+	EmployeeEmployeeAEAssessmentOverrideEnumNone               EmployeeEmployeeAeAssessmentOverrideEnum = "None"
+	EmployeeEmployeeAEAssessmentOverrideEnumOptOut             EmployeeEmployeeAeAssessmentOverrideEnum = "OptOut"
+	EmployeeEmployeeAEAssessmentOverrideEnumOptIn              EmployeeEmployeeAeAssessmentOverrideEnum = "OptIn"
+	EmployeeEmployeeAEAssessmentOverrideEnumVoluntaryJoiner    EmployeeEmployeeAeAssessmentOverrideEnum = "VoluntaryJoiner"
+	EmployeeEmployeeAEAssessmentOverrideEnumContractualPension EmployeeEmployeeAeAssessmentOverrideEnum = "ContractualPension"
+	EmployeeEmployeeAEAssessmentOverrideEnumCeasedMembership   EmployeeEmployeeAeAssessmentOverrideEnum = "CeasedMembership"
+	EmployeeEmployeeAEAssessmentOverrideEnumLeaver             EmployeeEmployeeAeAssessmentOverrideEnum = "Leaver"
+	EmployeeEmployeeAEAssessmentOverrideEnumExcluded           EmployeeEmployeeAeAssessmentOverrideEnum = "Excluded"
 )
 
 type EmployeeEmployeeAeExclusionReasonCodeEnum string
 
 const (
-	EmployeeEmployeeAeExclusionReasonCodeEnumOtherNotKnown                  EmployeeEmployeeAeExclusionReasonCodeEnum = "OtherNotKnown"
-	EmployeeEmployeeAeExclusionReasonCodeEnumNotAWorker                     EmployeeEmployeeAeExclusionReasonCodeEnum = "NotAWorker"
-	EmployeeEmployeeAeExclusionReasonCodeEnumNotUkWorker                    EmployeeEmployeeAeExclusionReasonCodeEnum = "NotUKWorker"
-	EmployeeEmployeeAeExclusionReasonCodeEnumTemporaryUkWorker              EmployeeEmployeeAeExclusionReasonCodeEnum = "TemporaryUKWorker"
-	EmployeeEmployeeAeExclusionReasonCodeEnumOutsideAgeRange                EmployeeEmployeeAeExclusionReasonCodeEnum = "OutsideAgeRange"
-	EmployeeEmployeeAeExclusionReasonCodeEnumSingleEmployeeDirector         EmployeeEmployeeAeExclusionReasonCodeEnum = "SingleEmployeeDirector"
-	EmployeeEmployeeAeExclusionReasonCodeEnumCeasedMembershipWithin12Months EmployeeEmployeeAeExclusionReasonCodeEnum = "CeasedMembershipWithin12Months"
-	EmployeeEmployeeAeExclusionReasonCodeEnumCeasedMembershipBeyond12Months EmployeeEmployeeAeExclusionReasonCodeEnum = "CeasedMembershipBeyond12Months"
-	EmployeeEmployeeAeExclusionReasonCodeEnumWorkerWulsWithin12Month        EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerWULSWithin12Month"
-	EmployeeEmployeeAeExclusionReasonCodeEnumWorkerWulsBeyond12Month        EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerWULSBeyond12Month"
-	EmployeeEmployeeAeExclusionReasonCodeEnumWorkerInNoticePeriod           EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerInNoticePeriod"
-	EmployeeEmployeeAeExclusionReasonCodeEnumWorkerTaxProtection            EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerTaxProtection"
+	EmployeeEmployeeAEExclusionReasonCodeEnumOtherNotKnown                  EmployeeEmployeeAeExclusionReasonCodeEnum = "OtherNotKnown"
+	EmployeeEmployeeAEExclusionReasonCodeEnumNotAWorker                     EmployeeEmployeeAeExclusionReasonCodeEnum = "NotAWorker"
+	EmployeeEmployeeAEExclusionReasonCodeEnumNotUkWorker                    EmployeeEmployeeAeExclusionReasonCodeEnum = "NotUKWorker"
+	EmployeeEmployeeAEExclusionReasonCodeEnumTemporaryUkWorker              EmployeeEmployeeAeExclusionReasonCodeEnum = "TemporaryUKWorker"
+	EmployeeEmployeeAEExclusionReasonCodeEnumOutsideAgeRange                EmployeeEmployeeAeExclusionReasonCodeEnum = "OutsideAgeRange"
+	EmployeeEmployeeAEExclusionReasonCodeEnumSingleEmployeeDirector         EmployeeEmployeeAeExclusionReasonCodeEnum = "SingleEmployeeDirector"
+	EmployeeEmployeeAEExclusionReasonCodeEnumCeasedMembershipWithin12Months EmployeeEmployeeAeExclusionReasonCodeEnum = "CeasedMembershipWithin12Months"
+	EmployeeEmployeeAEExclusionReasonCodeEnumCeasedMembershipBeyond12Months EmployeeEmployeeAeExclusionReasonCodeEnum = "CeasedMembershipBeyond12Months"
+	EmployeeEmployeeAEExclusionReasonCodeEnumWorkerWulsWithin12Month        EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerWULSWithin12Month"
+	EmployeeEmployeeAEExclusionReasonCodeEnumWorkerWulsBeyond12Month        EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerWULSBeyond12Month"
+	EmployeeEmployeeAEExclusionReasonCodeEnumWorkerInNoticePeriod           EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerInNoticePeriod"
+	EmployeeEmployeeAEExclusionReasonCodeEnumWorkerTaxProtection            EmployeeEmployeeAeExclusionReasonCodeEnum = "WorkerTaxProtection"
 )
 
 // EmployeeEmployeeAddress
@@ -198,17 +198,17 @@ const (
 )
 
 type EmployeeEmployee struct {
-	AeAssessmentOverride        *EmployeeEmployeeAeAssessmentOverrideEnum  `json:"AEAssessmentOverride,omitempty"`
-	AeAssessmentOverrideDate    *time.Time                                 `json:"AEAssessmentOverrideDate,omitempty"`
-	AeExclusionReasonCode       *EmployeeEmployeeAeExclusionReasonCodeEnum `json:"AEExclusionReasonCode,omitempty"`
-	AePostponementDate          *time.Time                                 `json:"AEPostponementDate,omitempty"`
+	AEAssessmentOverride        *EmployeeEmployeeAeAssessmentOverrideEnum  `json:"AEAssessmentOverride,omitempty"`
+	AEAssessmentOverrideDate    *time.Time                                 `json:"AEAssessmentOverrideDate,omitempty"`
+	AEExclusionReasonCode       *EmployeeEmployeeAeExclusionReasonCodeEnum `json:"AEExclusionReasonCode,omitempty"`
+	AEPostponementDate          *time.Time                                 `json:"AEPostponementDate,omitempty"`
 	Address                     *EmployeeEmployeeAddress                   `json:"Address,omitempty"`
 	BankAccount                 *EmployeeEmployeeBankAccount               `json:"BankAccount,omitempty"`
 	Code                        *string                                    `json:"Code,omitempty"`
 	DateOfBirth                 *time.Time                                 `json:"DateOfBirth,omitempty"`
 	Deactivated                 *bool                                      `json:"Deactivated,omitempty"`
 	DirectorshipAppointmentDate *time.Time                                 `json:"DirectorshipAppointmentDate,omitempty"`
-	EeaCitizen                  *bool                                      `json:"EEACitizen,omitempty"`
+	EEACitizen                  *bool                                      `json:"EEACitizen,omitempty"`
 	Epm6                        *bool                                      `json:"EPM6,omitempty"`
 	EffectiveDate               *time.Time                                 `json:"EffectiveDate,omitempty"`
 	EmployeePartner             *EmployeeEmployeeEmployeePartner           `json:"EmployeePartner,omitempty"`

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.BatchGetNamedQueryRequest{
         Headers: operations.BatchGetNamedQueryHeaders{
-            XAmzAlgorithm: "ad",
-            XAmzContentSha256: "magni",
-            XAmzCredential: "voluptas",
-            XAmzDate: "odio",
-            XAmzSecurityToken: "aliquid",
-            XAmzSignature: "nostrum",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "maxime",
+            XAmzContentSha256: "libero",
+            XAmzCredential: "qui",
+            XAmzDate: "ea",
+            XAmzSecurityToken: "porro",
+            XAmzSignature: "labore",
+            XAmzSignedHeaders: "dolore",
             XAmzTarget: "AmazonAthena.BatchGetNamedQuery",
         },
         Request: shared.BatchGetNamedQueryInput{
             NamedQueryIds: []string{
-                "nostrum",
-                "illum",
-                "aut",
+                "et",
+                "omnis",
+                "ut",
             },
         },
     }
     
-    res, err := s.Sdk.BatchGetNamedQuery(ctx, req)
+    res, err := s.BatchGetNamedQuery(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

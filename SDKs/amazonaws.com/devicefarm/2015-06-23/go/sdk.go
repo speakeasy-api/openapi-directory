@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -857,7 +858,7 @@ func (s *SDK) CreateVpceConfiguration(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.CreateVpceConfigurationResult = out
+			res.CreateVPCEConfigurationResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1675,7 +1676,7 @@ func (s *SDK) DeleteVpceConfiguration(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.DeleteVpceConfigurationResult = out
+			res.DeleteVPCEConfigurationResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3323,7 +3324,7 @@ func (s *SDK) GetVpceConfiguration(ctx context.Context, request operations.GetVp
 				return nil, err
 			}
 
-			res.GetVpceConfigurationResult = out
+			res.GetVPCEConfigurationResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -5617,7 +5618,7 @@ func (s *SDK) ListVpceConfigurations(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.ListVpceConfigurationsResult = out
+			res.ListVPCEConfigurationsResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -7099,7 +7100,7 @@ func (s *SDK) UpdateVpceConfiguration(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.UpdateVpceConfigurationResult = out
+			res.UpdateVPCEConfigurationResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

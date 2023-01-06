@@ -7,7 +7,7 @@ import (
 type StopIcd10CmInferenceJobXAmzTargetEnum string
 
 const (
-	StopIcd10CmInferenceJobXAmzTargetEnumComprehendMedical20181030StopIcd10CmInferenceJob StopIcd10CmInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.StopICD10CMInferenceJob"
+	StopIcd10CMInferenceJobXAmzTargetEnumComprehendMedical20181030StopIcd10CmInferenceJob StopIcd10CmInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.StopICD10CMInferenceJob"
 )
 
 type StopIcd10CmInferenceJobHeaders struct {
@@ -32,5 +32,5 @@ type StopIcd10CmInferenceJobResponse struct {
 	InvalidRequestException         *interface{}
 	ResourceNotFoundException       *interface{}
 	StatusCode                      int64
-	StopIcd10CmInferenceJobResponse *shared.StopIcd10CmInferenceJobResponse
+	StopIcd10CMInferenceJobResponse *shared.StopIcd10CmInferenceJobResponse
 }

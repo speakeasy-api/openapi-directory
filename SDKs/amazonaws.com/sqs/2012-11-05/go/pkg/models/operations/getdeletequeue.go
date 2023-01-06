@@ -8,13 +8,13 @@ type GetDeleteQueuePathParams struct {
 type GetDeleteQueueActionEnum string
 
 const (
-	GetDeleteQueueActionEnumDeleteQueue GetDeleteQueueActionEnum = "DeleteQueue"
+	GETDeleteQueueActionEnumDeleteQueue GetDeleteQueueActionEnum = "DeleteQueue"
 )
 
 type GetDeleteQueueVersionEnum string
 
 const (
-	GetDeleteQueueVersionEnumTwoThousandAndTwelve1105 GetDeleteQueueVersionEnum = "2012-11-05"
+	GETDeleteQueueVersionEnumTwoThousandAndTwelve1105 GetDeleteQueueVersionEnum = "2012-11-05"
 )
 
 type GetDeleteQueueQueryParams struct {

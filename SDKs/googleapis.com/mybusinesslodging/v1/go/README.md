@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,21 +24,21 @@ func main() {
     
     req := operations.MybusinesslodgingLocationsGetLodgingRequest{
         PathParams: operations.MybusinesslodgingLocationsGetLodgingPathParams{
-            Name: "cupiditate",
+            Name: "et",
         },
         QueryParams: operations.MybusinesslodgingLocationsGetLodgingQueryParams{
             DollarXgafv: "2",
-            AccessToken: "iste",
+            AccessToken: "ex",
             Alt: "json",
-            Callback: "omnis",
-            Fields: "voluptas",
-            Key: "quia",
-            OauthToken: "aut",
-            PrettyPrint: true,
-            QuotaUser: "magnam",
-            ReadMask: "impedit",
-            UploadType: "ratione",
-            UploadProtocol: "aut",
+            Callback: "corporis",
+            Fields: "ea",
+            Key: "voluptate",
+            OauthToken: "dolor",
+            PrettyPrint: false,
+            QuotaUser: "non",
+            ReadMask: "nostrum",
+            UploadType: "laboriosam",
+            UploadProtocol: "exercitationem",
         },
     }
     

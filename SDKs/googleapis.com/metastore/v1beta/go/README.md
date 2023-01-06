@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,47 +26,50 @@ func main() {
         Security: operations.MetastoreProjectsLocationsFederationsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "incidunt",
+            Parent: "rerum",
         },
         QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "json",
-            Callback: "mollitia",
-            FederationID: "inventore",
-            Fields: "voluptatem",
-            Key: "dolorum",
-            OauthToken: "est",
+            AccessToken: "distinctio",
+            Alt: "media",
+            Callback: "dolorum",
+            FederationID: "velit",
+            Fields: "dolor",
+            Key: "molestiae",
+            OauthToken: "consequatur",
             PrettyPrint: true,
-            QuotaUser: "asperiores",
-            RequestID: "cum",
-            UploadType: "odit",
-            UploadProtocol: "commodi",
+            QuotaUser: "sit",
+            RequestID: "nesciunt",
+            UploadType: "esse",
+            UploadProtocol: "iste",
         },
         Request: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "amet": shared.BackendMetastore{
-                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
-                    Name: "quidem",
+                "ut": shared.BackendMetastore{
+                    MetastoreType: "BIGQUERY",
+                    Name: "mollitia",
                 },
-                "omnis": shared.BackendMetastore{
-                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
-                    Name: "vel",
+                "hic": shared.BackendMetastore{
+                    MetastoreType: "BIGQUERY",
+                    Name: "sed",
+                },
+                "quia": shared.BackendMetastore{
+                    MetastoreType: "DATAPROC_METASTORE",
+                    Name: "perspiciatis",
                 },
             },
             Labels: map[string]string{
-                "voluptatem": "dolorum",
-                "qui": "eos",
-                "consectetur": "debitis",
+                "qui": "sit",
+                "quia": "est",
             },
-            Name: "enim",
-            Version: "et",
+            Name: "et",
+            Version: "rerum",
         },
     }
     
@@ -91,6 +93,7 @@ func main() {
 * `MetastoreProjectsLocationsFederationsList` - Lists federations in a project and location.
 * `MetastoreProjectsLocationsList` - Lists information about the supported locations for this service.
 * `MetastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `MetastoreProjectsLocationsServicesAlterLocation` - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
 * `MetastoreProjectsLocationsServicesBackupsCreate` - Creates a new backup in a given project and location.
 * `MetastoreProjectsLocationsServicesBackupsDelete` - Deletes a single backup.
 * `MetastoreProjectsLocationsServicesBackupsList` - Lists backups in a service.
@@ -104,6 +107,8 @@ func main() {
 * `MetastoreProjectsLocationsServicesMetadataImportsGet` - Gets details of a single import.
 * `MetastoreProjectsLocationsServicesMetadataImportsList` - Lists imports in a service.
 * `MetastoreProjectsLocationsServicesMetadataImportsPatch` - Updates a single import. Only the description field of MetadataImport is supported to be updated.
+* `MetastoreProjectsLocationsServicesMoveTableToDatabase` - Move a table to another database.
+* `MetastoreProjectsLocationsServicesQueryMetadata` - Query DPMS metadata.
 * `MetastoreProjectsLocationsServicesRemoveIamPolicy` - Removes the attached IAM policies for a resource
 * `MetastoreProjectsLocationsServicesRestore` - Restores a service from a backup.
 

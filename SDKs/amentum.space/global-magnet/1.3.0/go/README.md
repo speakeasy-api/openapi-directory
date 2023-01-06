@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,19 +24,19 @@ func main() {
     
     req := operations.AppAPIWmmEndpointsWmmMagneticFieldRequest{
         QueryParams: operations.AppAPIWmmEndpointsWmmMagneticFieldQueryParams{
-            Altitude: 22.100000,
-            Latitude: 95.099998,
-            Longitude: 51.099998,
-            Year: 55.200001,
+            Altitude: 70.199997,
+            Latitude: 79.199997,
+            Longitude: 8.200000,
+            Year: 50.099998,
         },
     }
     
-    res, err := s.Sdk.AppAPIWmmEndpointsWmmMagneticField(ctx, req)
+    res, err := s.AppAPIWmmEndpointsWmmMagneticField(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AppAPIWmmEndpointsWmmMagneticField200ApplicationJSONObject != nil {
+    if res.AppAPIWMMEndpointsWMMMagneticField200ApplicationJSONObject != nil {
         // handle response
     }
 ```

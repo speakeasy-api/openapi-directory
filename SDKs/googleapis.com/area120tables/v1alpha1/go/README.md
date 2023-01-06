@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,27 +27,27 @@ func main() {
             Option1: &operations.Area120tablesTablesListSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.Area120tablesTablesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "fuga",
-            Alt: "proto",
-            Callback: "provident",
-            Fields: "velit",
-            Key: "illo",
-            OauthToken: "ut",
-            OrderBy: "sed",
-            PageSize: 2581808292385944413,
-            PageToken: "expedita",
-            PrettyPrint: false,
-            QuotaUser: "quae",
-            UploadType: "et",
-            UploadProtocol: "et",
+            DollarXgafv: "2",
+            AccessToken: "quidem",
+            Alt: "media",
+            Callback: "consequatur",
+            Fields: "nisi",
+            Key: "quasi",
+            OauthToken: "autem",
+            OrderBy: "corrupti",
+            PageSize: 8106997193166281027,
+            PageToken: "sunt",
+            PrettyPrint: true,
+            QuotaUser: "molestiae",
+            UploadType: "architecto",
+            UploadProtocol: "alias",
         },
     }
     

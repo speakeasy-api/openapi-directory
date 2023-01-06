@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.GetArticlesearchJSONRequest{
         QueryParams: operations.GetArticlesearchJSONQueryParams{
-            BeginDate: "sequi",
-            EndDate: "voluptate",
-            FacetField: "atque",
-            FacetFilter: false,
-            Fl: "labore",
-            Fq: "quia",
+            BeginDate: "qui",
+            EndDate: "vero",
+            FacetField: "hic",
+            FacetFilter: true,
+            Fl: "quos",
+            Fq: "dolor",
             Hl: true,
-            Page: 5713960080592200897,
-            Q: "dolor",
+            Page: 7419310398988903540,
+            Q: "labore",
             Sort: "oldest",
         },
     }
     
-    res, err := s.Sdk.GetArticlesearchJSON(ctx, req)
+    res, err := s.Stories.GetArticlesearchJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -62,7 +61,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Stories
 
 * `GetArticlesearchJSON` - Article Search
 

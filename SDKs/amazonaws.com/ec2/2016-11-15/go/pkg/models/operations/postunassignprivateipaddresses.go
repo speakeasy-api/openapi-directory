@@ -3,13 +3,13 @@ package operations
 type PostUnassignPrivateIPAddressesActionEnum string
 
 const (
-	PostUnassignPrivateIPAddressesActionEnumUnassignPrivateIPAddresses PostUnassignPrivateIPAddressesActionEnum = "UnassignPrivateIpAddresses"
+	POSTUnassignPrivateIPAddressesActionEnumUnassignPrivateIPAddresses PostUnassignPrivateIPAddressesActionEnum = "UnassignPrivateIpAddresses"
 )
 
 type PostUnassignPrivateIPAddressesVersionEnum string
 
 const (
-	PostUnassignPrivateIPAddressesVersionEnumTwoThousandAndSixteen1115 PostUnassignPrivateIPAddressesVersionEnum = "2016-11-15"
+	POSTUnassignPrivateIPAddressesVersionEnumTwoThousandAndSixteen1115 PostUnassignPrivateIPAddressesVersionEnum = "2016-11-15"
 )
 
 type PostUnassignPrivateIPAddressesQueryParams struct {

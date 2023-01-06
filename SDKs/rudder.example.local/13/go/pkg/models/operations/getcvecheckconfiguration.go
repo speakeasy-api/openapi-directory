@@ -3,7 +3,7 @@ package operations
 type GetCveCheckConfiguration200ApplicationJSONActionEnum string
 
 const (
-	GetCveCheckConfiguration200ApplicationJSONActionEnumGetCveCheckConfiguration GetCveCheckConfiguration200ApplicationJSONActionEnum = "getCVECheckConfiguration"
+	GetCVECheckConfiguration200ApplicationJSONActionEnumGetCveCheckConfiguration GetCveCheckConfiguration200ApplicationJSONActionEnum = "getCVECheckConfiguration"
 )
 
 type GetCveCheckConfiguration200ApplicationJSONData struct {
@@ -14,8 +14,8 @@ type GetCveCheckConfiguration200ApplicationJSONData struct {
 type GetCveCheckConfiguration200ApplicationJSONResultEnum string
 
 const (
-	GetCveCheckConfiguration200ApplicationJSONResultEnumSuccess GetCveCheckConfiguration200ApplicationJSONResultEnum = "success"
-	GetCveCheckConfiguration200ApplicationJSONResultEnumError   GetCveCheckConfiguration200ApplicationJSONResultEnum = "error"
+	GetCVECheckConfiguration200ApplicationJSONResultEnumSuccess GetCveCheckConfiguration200ApplicationJSONResultEnum = "success"
+	GetCVECheckConfiguration200ApplicationJSONResultEnumError   GetCveCheckConfiguration200ApplicationJSONResultEnum = "error"
 )
 
 type GetCveCheckConfiguration200ApplicationJSON struct {
@@ -27,5 +27,5 @@ type GetCveCheckConfiguration200ApplicationJSON struct {
 type GetCveCheckConfigurationResponse struct {
 	ContentType                                      string
 	StatusCode                                       int64
-	GetCveCheckConfiguration200ApplicationJSONObject *GetCveCheckConfiguration200ApplicationJSON
+	GetCVECheckConfiguration200ApplicationJSONObject *GetCveCheckConfiguration200ApplicationJSON
 }

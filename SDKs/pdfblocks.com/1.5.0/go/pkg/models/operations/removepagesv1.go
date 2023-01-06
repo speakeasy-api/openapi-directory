@@ -26,5 +26,5 @@ type RemovePagesV1Response struct {
 	ContentType                                      string
 	StatusCode                                       int64
 	RemovePagesV1200ApplicationPdfBinaryString       []byte
-	RemovePagesV14XxApplicationProblemPlusJSONObject *RemovePagesV14XxApplicationProblemPlusJSON
+	RemovePagesV14XXApplicationProblemPlusJSONObject *RemovePagesV14XxApplicationProblemPlusJSON
 }

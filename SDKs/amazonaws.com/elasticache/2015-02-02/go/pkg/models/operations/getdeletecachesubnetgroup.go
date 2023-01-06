@@ -3,13 +3,13 @@ package operations
 type GetDeleteCacheSubnetGroupActionEnum string
 
 const (
-	GetDeleteCacheSubnetGroupActionEnumDeleteCacheSubnetGroup GetDeleteCacheSubnetGroupActionEnum = "DeleteCacheSubnetGroup"
+	GETDeleteCacheSubnetGroupActionEnumDeleteCacheSubnetGroup GetDeleteCacheSubnetGroupActionEnum = "DeleteCacheSubnetGroup"
 )
 
 type GetDeleteCacheSubnetGroupVersionEnum string
 
 const (
-	GetDeleteCacheSubnetGroupVersionEnumTwoThousandAndFifteen0202 GetDeleteCacheSubnetGroupVersionEnum = "2015-02-02"
+	GETDeleteCacheSubnetGroupVersionEnumTwoThousandAndFifteen0202 GetDeleteCacheSubnetGroupVersionEnum = "2015-02-02"
 )
 
 type GetDeleteCacheSubnetGroupQueryParams struct {

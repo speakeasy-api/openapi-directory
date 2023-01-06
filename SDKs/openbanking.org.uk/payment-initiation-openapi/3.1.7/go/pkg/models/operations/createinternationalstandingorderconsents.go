@@ -16,12 +16,12 @@ type CreateInternationalStandingOrderConsentsHeaders struct {
 
 type CreateInternationalStandingOrderConsentsRequests struct {
 	ApplicationJosePlusJwe                    []byte                                            `request:"mediaType=application/jose+jwe"`
-	ObWriteInternationalStandingOrderConsent6 *shared.ObWriteInternationalStandingOrderConsent6 `request:"mediaType=application/json"`
-	ObWriteInternationalStandingOrderConsent7 *shared.ObWriteInternationalStandingOrderConsent6 `request:"mediaType=application/json"`
+	OBWriteInternationalStandingOrderConsent6 *shared.ObWriteInternationalStandingOrderConsent6 `request:"mediaType=application/json"`
+	OBWriteInternationalStandingOrderConsent7 *shared.ObWriteInternationalStandingOrderConsent6 `request:"mediaType=application/json"`
 }
 
 type CreateInternationalStandingOrderConsentsSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateInternationalStandingOrderConsentsRequest struct {
@@ -34,7 +34,7 @@ type CreateInternationalStandingOrderConsentsResponse struct {
 	Body                                              []byte
 	ContentType                                       string
 	Headers                                           map[string][]string
-	ObErrorResponse1                                  *shared.ObErrorResponse1
-	ObWriteInternationalStandingOrderConsentResponse7 *shared.ObWriteInternationalStandingOrderConsentResponse7
+	OBErrorResponse1                                  *shared.ObErrorResponse1
+	OBWriteInternationalStandingOrderConsentResponse7 *shared.ObWriteInternationalStandingOrderConsentResponse7
 	StatusCode                                        int64
 }

@@ -1,5 +1,5 @@
 package shared
 
 type DescribePartnersOutputMessage struct {
-	PartnerIntegrationInfoList []PartnerIntegrationInfo
+	PartnerIntegrationInfoList []map[string]interface{}
 }

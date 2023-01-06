@@ -32,7 +32,7 @@ type GetDocumentAnalysisResponse struct {
 	GetDocumentAnalysisResponse            *shared.GetDocumentAnalysisResponse
 	InternalServerError                    *interface{}
 	InvalidJobIDException                  *interface{}
-	InvalidKmsKeyException                 *interface{}
+	InvalidKMSKeyException                 *interface{}
 	InvalidParameterException              *interface{}
 	InvalidS3ObjectException               *interface{}
 	ProvisionedThroughputExceededException *interface{}

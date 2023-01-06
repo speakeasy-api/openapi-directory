@@ -3,13 +3,13 @@ package operations
 type PostDeleteServerCertificateActionEnum string
 
 const (
-	PostDeleteServerCertificateActionEnumDeleteServerCertificate PostDeleteServerCertificateActionEnum = "DeleteServerCertificate"
+	POSTDeleteServerCertificateActionEnumDeleteServerCertificate PostDeleteServerCertificateActionEnum = "DeleteServerCertificate"
 )
 
 type PostDeleteServerCertificateVersionEnum string
 
 const (
-	PostDeleteServerCertificateVersionEnumTwoThousandAndTen0508 PostDeleteServerCertificateVersionEnum = "2010-05-08"
+	POSTDeleteServerCertificateVersionEnumTwoThousandAndTen0508 PostDeleteServerCertificateVersionEnum = "2010-05-08"
 )
 
 type PostDeleteServerCertificateQueryParams struct {

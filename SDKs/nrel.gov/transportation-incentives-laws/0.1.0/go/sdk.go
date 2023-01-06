@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -113,48 +114,6 @@ func (s *SDK) GetV1CategoryListOutputFormat(ctx context.Context, request operati
 	return res, nil
 }
 
-// GetV1IDOutputFormat - Fetch the details of a specific law given the law's ID.
-func (s *SDK) GetV1IDOutputFormat(ctx context.Context, request operations.GetV1IDOutputFormatRequest) (*operations.GetV1IDOutputFormatResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{id}.{output_format}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetV1IDOutputFormatResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	}
-
-	return res, nil
-}
-
 // GetV1PocsOutputFormat - Get the points of contact for a given jurisdiction.
 func (s *SDK) GetV1PocsOutputFormat(ctx context.Context, request operations.GetV1PocsOutputFormatRequest) (*operations.GetV1PocsOutputFormatResponse, error) {
 	baseURL := s._serverURL
@@ -178,6 +137,48 @@ func (s *SDK) GetV1PocsOutputFormat(ctx context.Context, request operations.GetV
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetV1PocsOutputFormatResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetV1IDOutputFormat - Fetch the details of a specific law given the law's ID.
+func (s *SDK) GetV1IDOutputFormat(ctx context.Context, request operations.GetV1IDOutputFormatRequest) (*operations.GetV1IDOutputFormatResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{id}.{output_format}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetV1IDOutputFormatResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}

@@ -2,8 +2,9 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -20,8 +21,8 @@ type SDK struct {
 	Keys         *Keys
 	Licensees    *Licensees
 	Postcodes    *Postcodes
-	Udprn        *Udprn
-	Umprn        *Umprn
+	UDPRN        *Udprn
+	UMPRN        *Umprn
 
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
@@ -128,7 +129,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Udprn = NewUdprn(
+	sdk.UDPRN = NewUdprn(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -137,7 +138,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Umprn = NewUmprn(
+	sdk.UMPRN = NewUmprn(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

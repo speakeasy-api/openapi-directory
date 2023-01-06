@@ -9,10 +9,6 @@ type RunGarbageCollectionPathParams struct {
 	RegistryName string `pathParam:"style=simple,explode=false,name=registry_name"`
 }
 
-type RunGarbageCollectionRequest struct {
-	PathParams RunGarbageCollectionPathParams
-}
-
 type RunGarbageCollection201ApplicationJSONGarbageCollectionStatusEnum string
 
 const (
@@ -44,6 +40,10 @@ type RunGarbageCollection401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type RunGarbageCollectionRequest struct {
+	PathParams RunGarbageCollectionPathParams
 }
 
 type RunGarbageCollectionResponse struct {

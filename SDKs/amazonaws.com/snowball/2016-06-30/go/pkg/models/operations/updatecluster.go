@@ -32,7 +32,7 @@ type UpdateClusterResponse struct {
 	InvalidInputCombinationException *interface{}
 	InvalidJobStateException         *interface{}
 	InvalidResourceException         *interface{}
-	KmsRequestFailedException        *interface{}
+	KMSRequestFailedException        *interface{}
 	StatusCode                       int64
 	UpdateClusterResult              map[string]interface{}
 }

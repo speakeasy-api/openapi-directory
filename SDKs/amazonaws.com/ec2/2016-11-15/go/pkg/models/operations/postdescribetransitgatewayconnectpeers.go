@@ -3,13 +3,13 @@ package operations
 type PostDescribeTransitGatewayConnectPeersActionEnum string
 
 const (
-	PostDescribeTransitGatewayConnectPeersActionEnumDescribeTransitGatewayConnectPeers PostDescribeTransitGatewayConnectPeersActionEnum = "DescribeTransitGatewayConnectPeers"
+	POSTDescribeTransitGatewayConnectPeersActionEnumDescribeTransitGatewayConnectPeers PostDescribeTransitGatewayConnectPeersActionEnum = "DescribeTransitGatewayConnectPeers"
 )
 
 type PostDescribeTransitGatewayConnectPeersVersionEnum string
 
 const (
-	PostDescribeTransitGatewayConnectPeersVersionEnumTwoThousandAndSixteen1115 PostDescribeTransitGatewayConnectPeersVersionEnum = "2016-11-15"
+	POSTDescribeTransitGatewayConnectPeersVersionEnumTwoThousandAndSixteen1115 PostDescribeTransitGatewayConnectPeersVersionEnum = "2016-11-15"
 )
 
 type PostDescribeTransitGatewayConnectPeersQueryParams struct {

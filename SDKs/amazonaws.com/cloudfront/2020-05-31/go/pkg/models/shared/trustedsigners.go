@@ -4,6 +4,6 @@ package shared
 // A list of accounts whose public keys CloudFront can use to verify the signatures of signed URLs and signed cookies.
 type TrustedSigners struct {
 	Enabled  bool
-	Items    []string
+	Items    []map[string]interface{}
 	Quantity int64
 }

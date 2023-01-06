@@ -1,6 +1,6 @@
 package shared
 
 type GetManagedPrefixListEntriesResult struct {
-	Entries   []PrefixListEntry
-	NextToken *string
+	Entries   map[string]interface{}
+	NextToken map[string]interface{}
 }

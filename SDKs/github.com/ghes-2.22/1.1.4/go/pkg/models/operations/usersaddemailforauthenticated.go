@@ -4,7 +4,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersAddEmailForAuthenticatedRequestBody1 struct {
+type UsersAddEmailForAuthenticatedRequestBody3 struct {
 	Emails []string `json:"emails"`
 }
 

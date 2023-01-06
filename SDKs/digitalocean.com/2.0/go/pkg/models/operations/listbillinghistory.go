@@ -29,28 +29,8 @@ type ListBillingHistory200ApplicationJSONBillingHistory struct {
 	Type        *ListBillingHistory200ApplicationJSONBillingHistoryTypeEnum `json:"type,omitempty"`
 }
 
-type ListBillingHistory200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
-}
-
-type ListBillingHistory200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
-}
-
-type ListBillingHistory200ApplicationJSONLinks struct {
-	Pages *interface{} `json:"pages,omitempty"`
-}
-
-type ListBillingHistory200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListBillingHistory200ApplicationJSON struct {
 	BillingHistory []ListBillingHistory200ApplicationJSONBillingHistory `json:"billing_history"`
-	Links          *ListBillingHistory200ApplicationJSONLinks           `json:"links,omitempty"`
-	Meta           ListBillingHistory200ApplicationJSONMeta             `json:"meta"`
 }
 
 type ListBillingHistory401ApplicationJSON struct {

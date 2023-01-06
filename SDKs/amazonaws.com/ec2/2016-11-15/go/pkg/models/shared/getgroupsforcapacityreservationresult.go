@@ -1,6 +1,6 @@
 package shared
 
 type GetGroupsForCapacityReservationResult struct {
-	CapacityReservationGroups []CapacityReservationGroup
-	NextToken                 *string
+	CapacityReservationGroups map[string]interface{}
+	NextToken                 map[string]interface{}
 }

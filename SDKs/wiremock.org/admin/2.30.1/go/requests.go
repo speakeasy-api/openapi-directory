@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -124,38 +124,6 @@ func (s *Requests) GetAdminRequests(ctx context.Context, request operations.GetA
 	return res, nil
 }
 
-// GetAdminRequestsRequestID - Get request by ID
-func (s *Requests) GetAdminRequestsRequestID(ctx context.Context, request operations.GetAdminRequestsRequestIDRequest) (*operations.GetAdminRequestsRequestIDResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAdminRequestsRequestIDResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	case httpRes.StatusCode == 404:
-	}
-
-	return res, nil
-}
-
 // GetAdminRequestsUnmatched - Find unmatched requests
 // Get details of logged requests that weren't matched by any stub mapping
 func (s *Requests) GetAdminRequestsUnmatched(ctx context.Context) (*operations.GetAdminRequestsUnmatchedResponse, error) {
@@ -183,6 +151,38 @@ func (s *Requests) GetAdminRequestsUnmatched(ctx context.Context) (*operations.G
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+	}
+
+	return res, nil
+}
+
+// GetAdminRequestsRequestID - Get request by ID
+func (s *Requests) GetAdminRequestsRequestID(ctx context.Context, request operations.GetAdminRequestsRequestIDRequest) (*operations.GetAdminRequestsRequestIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetAdminRequestsRequestIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
 	}
 
 	return res, nil

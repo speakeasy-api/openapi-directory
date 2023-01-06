@@ -16,7 +16,7 @@ type BatchPrediction struct {
 	InputDataLocationS3         *string           `json:"InputDataLocationS3,omitempty"`
 	InvalidRecordCount          *int64            `json:"InvalidRecordCount,omitempty"`
 	LastUpdatedAt               *time.Time        `json:"LastUpdatedAt,omitempty"`
-	MlModelID                   *string           `json:"MLModelId,omitempty"`
+	MLModelID                   *string           `json:"MLModelId,omitempty"`
 	Message                     *string           `json:"Message,omitempty"`
 	Name                        *string           `json:"Name,omitempty"`
 	OutputURI                   *string           `json:"OutputUri,omitempty"`

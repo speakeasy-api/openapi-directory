@@ -3,13 +3,13 @@ package operations
 type PostDeleteListenerActionEnum string
 
 const (
-	PostDeleteListenerActionEnumDeleteListener PostDeleteListenerActionEnum = "DeleteListener"
+	POSTDeleteListenerActionEnumDeleteListener PostDeleteListenerActionEnum = "DeleteListener"
 )
 
 type PostDeleteListenerVersionEnum string
 
 const (
-	PostDeleteListenerVersionEnumTwoThousandAndFifteen1201 PostDeleteListenerVersionEnum = "2015-12-01"
+	POSTDeleteListenerVersionEnumTwoThousandAndFifteen1201 PostDeleteListenerVersionEnum = "2015-12-01"
 )
 
 type PostDeleteListenerQueryParams struct {

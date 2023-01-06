@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,13 +25,13 @@ func main() {
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
             Format: "xml",
-            IP: "id",
-            Key: "ut",
-            Package: "dolorum",
+            IP: "numquam",
+            Key: "doloribus",
+            Package: "assumenda",
         },
     }
     
-    res, err := s.Sdk.Get(ctx, req)
+    res, err := s.Get(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

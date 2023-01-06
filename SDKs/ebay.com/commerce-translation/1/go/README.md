@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,17 +29,18 @@ func main() {
             },
         },
         Request: shared.TranslateRequest{
-            From: "doloribus",
+            From: "accusantium",
             Text: []string{
-                "architecto",
-                "alias",
+                "quis",
+                "et",
+                "tempora",
             },
-            To: "velit",
-            TranslationContext: "sit",
+            To: "quaerat",
+            TranslationContext: "vel",
         },
     }
     
-    res, err := s.Sdk.Translate(ctx, req)
+    res, err := s.Language.Translate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -54,7 +54,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### language
 
 * `Translate` - Translates input text inot a given language.
 

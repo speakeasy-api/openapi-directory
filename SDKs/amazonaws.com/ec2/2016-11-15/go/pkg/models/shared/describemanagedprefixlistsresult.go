@@ -1,6 +1,6 @@
 package shared
 
 type DescribeManagedPrefixListsResult struct {
-	NextToken   *string
-	PrefixLists []ManagedPrefixList
+	NextToken   map[string]interface{}
+	PrefixLists map[string]interface{}
 }

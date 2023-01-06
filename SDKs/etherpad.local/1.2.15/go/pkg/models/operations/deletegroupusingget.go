@@ -35,8 +35,8 @@ type DeleteGroupUsingGetRequest struct {
 type DeleteGroupUsingGetResponse struct {
 	ContentType                                 string
 	StatusCode                                  int64
-	DeleteGroupUsingGet200ApplicationJSONObject *DeleteGroupUsingGet200ApplicationJSON
-	DeleteGroupUsingGet400ApplicationJSONObject *DeleteGroupUsingGet400ApplicationJSON
-	DeleteGroupUsingGet401ApplicationJSONObject *DeleteGroupUsingGet401ApplicationJSON
-	DeleteGroupUsingGet500ApplicationJSONObject *DeleteGroupUsingGet500ApplicationJSON
+	DeleteGroupUsingGET200ApplicationJSONObject *DeleteGroupUsingGet200ApplicationJSON
+	DeleteGroupUsingGET400ApplicationJSONObject *DeleteGroupUsingGet400ApplicationJSON
+	DeleteGroupUsingGET401ApplicationJSONObject *DeleteGroupUsingGet401ApplicationJSON
+	DeleteGroupUsingGET500ApplicationJSONObject *DeleteGroupUsingGet500ApplicationJSON
 }

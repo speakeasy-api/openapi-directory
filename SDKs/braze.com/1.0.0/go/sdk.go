@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -21,10 +22,10 @@ type SDK struct {
 	EmailListsAndAddresses *EmailListsAndAddresses
 	EmailTemplates         *EmailTemplates
 	Export                 *Export
-	Kpi                    *Kpi
+	KPI                    *Kpi
 	Messaging              *Messaging
 	NewsFeed               *NewsFeed
-	Sms                    *Sms
+	SMS                    *Sms
 	ScheduleMesages        *ScheduleMesages
 	Segment                *Segment
 	SessionAnalytics       *SessionAnalytics
@@ -144,7 +145,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Kpi = NewKpi(
+	sdk.KPI = NewKpi(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -171,7 +172,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Sms = NewSms(
+	sdk.SMS = NewSms(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

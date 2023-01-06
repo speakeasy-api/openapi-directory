@@ -8,6 +8,6 @@ type CreateLagRequest struct {
 	Location             string  `json:"location"`
 	NumberOfConnections  int64   `json:"numberOfConnections"`
 	ProviderName         *string `json:"providerName,omitempty"`
-	RequestMacSec        *bool   `json:"requestMACSec,omitempty"`
+	RequestMACSec        *bool   `json:"requestMACSec,omitempty"`
 	Tags                 []Tag   `json:"tags,omitempty"`
 }

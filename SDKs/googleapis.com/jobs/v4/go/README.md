@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,39 +27,39 @@ func main() {
             Option1: &operations.JobsProjectsTenantsClientEventsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.JobsProjectsTenantsClientEventsCreatePathParams{
-            Parent: "in",
+            Parent: "est",
         },
         QueryParams: operations.JobsProjectsTenantsClientEventsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "et",
-            Alt: "json",
-            Callback: "minus",
-            Fields: "delectus",
-            Key: "adipisci",
-            OauthToken: "id",
+            AccessToken: "eius",
+            Alt: "proto",
+            Callback: "non",
+            Fields: "et",
+            Key: "sit",
+            OauthToken: "qui",
             PrettyPrint: true,
-            QuotaUser: "ipsam",
-            UploadType: "similique",
-            UploadProtocol: "facere",
+            QuotaUser: "soluta",
+            UploadType: "voluptatum",
+            UploadProtocol: "non",
         },
         Request: &shared.ClientEvent{
-            CreateTime: "voluptatem",
-            EventID: "quo",
-            EventNotes: "omnis",
+            CreateTime: "delectus",
+            EventID: "accusamus",
+            EventNotes: "suscipit",
             JobEvent: &shared.JobEvent{
                 Jobs: []string{
-                    "id",
+                    "dolores",
                 },
-                Type: "VIEW_REDIRECT",
+                Type: "INTERVIEW_GRANTED",
             },
-            RequestID: "aut",
+            RequestID: "quibusdam",
         },
     }
     

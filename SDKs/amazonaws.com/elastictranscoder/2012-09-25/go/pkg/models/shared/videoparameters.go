@@ -8,7 +8,7 @@ type VideoParameters struct {
 	Codec              *string           `json:"Codec,omitempty"`
 	CodecOptions       map[string]string `json:"CodecOptions,omitempty"`
 	DisplayAspectRatio *string           `json:"DisplayAspectRatio,omitempty"`
-	FixedGop           *string           `json:"FixedGOP,omitempty"`
+	FixedGOP           *string           `json:"FixedGOP,omitempty"`
 	FrameRate          *string           `json:"FrameRate,omitempty"`
 	KeyframesMaxDist   *string           `json:"KeyframesMaxDist,omitempty"`
 	MaxFrameRate       *string           `json:"MaxFrameRate,omitempty"`

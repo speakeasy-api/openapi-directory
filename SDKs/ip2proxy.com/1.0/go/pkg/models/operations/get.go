@@ -20,6 +20,6 @@ type GetRequest struct {
 
 type GetResponse struct {
 	ContentType          string
-	Get200TextHTMLString *string
 	StatusCode           int64
+	Get200TextHTMLString *string
 }

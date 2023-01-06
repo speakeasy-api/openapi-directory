@@ -11,10 +11,10 @@ type PostMappingRequest struct {
 type PostMappingResponse struct {
 	BulkMappingJobResult         []interface{}
 	ContentType                  string
+	StatusCode                   int64
 	PostMapping400WildcardString *string
 	PostMapping401WildcardString *string
 	PostMapping406WildcardString *string
 	PostMapping413WildcardString *string
 	PostMapping500WildcardString *string
-	StatusCode                   int64
 }

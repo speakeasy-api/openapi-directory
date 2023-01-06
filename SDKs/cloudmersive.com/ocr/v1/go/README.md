@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,18 +29,18 @@ func main() {
             },
         },
         Headers: operations.ImageOcrImageLinesWithLocationHeaders{
-            Language: "deleniti",
-            Preprocessing: "qui",
+            Language: "ipsam",
+            Preprocessing: "labore",
         },
         Request: operations.ImageOcrImageLinesWithLocationRequestBody{
             ImageFile: operations.ImageOcrImageLinesWithLocationRequestBodyImageFile{
-                Content: []byte("et"),
-                ImageFile: "quia",
+                Content: []byte("sed"),
+                ImageFile: "qui",
             },
         },
     }
     
-    res, err := s.Sdk.ImageOcrImageLinesWithLocation(ctx, req)
+    res, err := s.ImageOcr.ImageOcrImageLinesWithLocation(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -55,7 +54,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ImageOcr
 
 * `ImageOcrImageLinesWithLocation` - Convert a scanned image into words with location
 * `ImageOcrImageWordsWithLocation` - Convert a scanned image into words with location
@@ -65,15 +64,24 @@ func main() {
 * `ImageOcrPhotoToText` - Convert a photo of a document into text
 * `ImageOcrPhotoWordsWithLocation` - Convert a photo of a document or receipt into words with location
 * `ImageOcrPost` - Convert a scanned image into text
+
+### PdfOcr
+
 * `PdfOcrPdfToLinesWithLocation` - Convert a PDF into text lines with location
 * `PdfOcrPdfToWordsWithLocation` - Convert a PDF into words with location
 * `PdfOcrPost` - Converts an uploaded PDF file into text via Optical Character Recognition.
+
+### Preprocessing
+
 * `PreprocessingBinarize` - Convert an image of text into a binarized (light and dark) view
 * `PreprocessingBinarizeAdvanced` - Convert an image of text into a binary (light and dark) view with ML
 * `PreprocessingGetPageAngle` - Get the angle of the page / document / receipt
 * `PreprocessingUnrotate` - Detect and unrotate a document image
 * `PreprocessingUnrotateAdvanced` - Detect and unrotate a document image (advanced)
 * `PreprocessingUnskew` - Detect and unskew a photo of a document
+
+### Receipts
+
 * `ReceiptsPhotoToCsv` - Convert a photo of a receipt into a CSV file containing structured information from the receipt
 
 <!-- End SDK Available Operations -->

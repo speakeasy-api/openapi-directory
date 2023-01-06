@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,17 +24,17 @@ func main() {
     
     req := operations.CreateAMapRequest{
         QueryParams: operations.CreateAMapQueryParams{
-            AppToken: "dolorum",
-            Constraint: "praesentium",
-            EntityID: "sunt",
-            Variable: "rerum",
+            AppToken: "voluptatibus",
+            Constraint: "aut",
+            EntityID: "officiis",
+            Variable: "assumenda",
         },
         Headers: operations.CreateAMapHeaders{
-            XAppToken: "assumenda",
+            XAppToken: "quam",
         },
     }
     
-    res, err := s.Sdk.CreateAMap(ctx, req)
+    res, err := s.CreateAMap(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

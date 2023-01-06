@@ -1,8 +1,8 @@
 package shared
 
 type SuperFundProduct struct {
-	Abn         *string `json:"ABN,omitempty"`
+	ABN         *string `json:"ABN,omitempty"`
 	ProductName *string `json:"ProductName,omitempty"`
-	Spin        *string `json:"SPIN,omitempty"`
-	Usi         *string `json:"USI,omitempty"`
+	SPIN        *string `json:"SPIN,omitempty"`
+	USI         *string `json:"USI,omitempty"`
 }

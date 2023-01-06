@@ -3,13 +3,13 @@ package operations
 type PostDeleteCustomerGatewayActionEnum string
 
 const (
-	PostDeleteCustomerGatewayActionEnumDeleteCustomerGateway PostDeleteCustomerGatewayActionEnum = "DeleteCustomerGateway"
+	POSTDeleteCustomerGatewayActionEnumDeleteCustomerGateway PostDeleteCustomerGatewayActionEnum = "DeleteCustomerGateway"
 )
 
 type PostDeleteCustomerGatewayVersionEnum string
 
 const (
-	PostDeleteCustomerGatewayVersionEnumTwoThousandAndSixteen1115 PostDeleteCustomerGatewayVersionEnum = "2016-11-15"
+	POSTDeleteCustomerGatewayVersionEnumTwoThousandAndSixteen1115 PostDeleteCustomerGatewayVersionEnum = "2016-11-15"
 )
 
 type PostDeleteCustomerGatewayQueryParams struct {

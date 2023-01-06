@@ -13,36 +13,36 @@ type DbInstance struct {
 	ActivityStreamMode                            *ActivityStreamModeEnum
 	ActivityStreamStatus                          *ActivityStreamStatusEnum
 	AllocatedStorage                              *int64
-	AssociatedRoles                               []DbInstanceRole
+	AssociatedRoles                               []map[string]interface{}
 	AutoMinorVersionUpgrade                       *bool
 	AutomaticRestartTime                          *time.Time
 	AvailabilityZone                              *string
 	AwsBackupRecoveryPointArn                     *string
 	BackupRetentionPeriod                         *int64
-	CaCertificateIdentifier                       *string
+	CACertificateIdentifier                       *string
 	CharacterSetName                              *string
 	CopyTagsToSnapshot                            *bool
 	CustomerOwnedIPEnabled                        *bool
-	DbClusterIdentifier                           *string
-	DbInstanceArn                                 *string
-	DbInstanceAutomatedBackupsReplications        []DbInstanceAutomatedBackupsReplication
-	DbInstanceClass                               *string
-	DbInstanceIdentifier                          *string
-	DbInstanceStatus                              *string
-	DbName                                        *string
-	DbParameterGroups                             []DbParameterGroupStatus
-	DbSecurityGroups                              []DbSecurityGroupMembership
-	DbSubnetGroup                                 *DbSubnetGroup
+	DBClusterIdentifier                           *string
+	DBInstanceArn                                 *string
+	DBInstanceAutomatedBackupsReplications        []map[string]interface{}
+	DBInstanceClass                               *string
+	DBInstanceIdentifier                          *string
+	DBInstanceStatus                              *string
+	DBName                                        *string
+	DBParameterGroups                             []map[string]interface{}
+	DBSecurityGroups                              []map[string]interface{}
+	DBSubnetGroup                                 *DbSubnetGroup
 	DbInstancePort                                *int64
 	DbiResourceID                                 *string
 	DeletionProtection                            *bool
-	DomainMemberships                             []DomainMembership
+	DomainMemberships                             []map[string]interface{}
 	EnabledCloudwatchLogsExports                  []string
 	Endpoint                                      *Endpoint
 	Engine                                        *string
 	EngineVersion                                 *string
 	EnhancedMonitoringResourceArn                 *string
-	IamDatabaseAuthenticationEnabled              *bool
+	IAMDatabaseAuthenticationEnabled              *bool
 	InstanceCreateTime                            *time.Time
 	Iops                                          *int64
 	KmsKeyID                                      *string
@@ -53,28 +53,28 @@ type DbInstance struct {
 	MaxAllocatedStorage                           *int64
 	MonitoringInterval                            *int64
 	MonitoringRoleArn                             *string
-	MultiAz                                       *bool
+	MultiAZ                                       *bool
 	NcharCharacterSetName                         *string
-	OptionGroupMemberships                        []OptionGroupMembership
+	OptionGroupMemberships                        []map[string]interface{}
 	PendingModifiedValues                         *PendingModifiedValues
 	PerformanceInsightsEnabled                    *bool
-	PerformanceInsightsKmsKeyID                   *string
+	PerformanceInsightsKMSKeyID                   *string
 	PerformanceInsightsRetentionPeriod            *int64
 	PreferredBackupWindow                         *string
 	PreferredMaintenanceWindow                    *string
-	ProcessorFeatures                             []ProcessorFeature
+	ProcessorFeatures                             []map[string]interface{}
 	PromotionTier                                 *int64
 	PubliclyAccessible                            *bool
-	ReadReplicaDbClusterIdentifiers               []string
-	ReadReplicaDbInstanceIdentifiers              []string
-	ReadReplicaSourceDbInstanceIdentifier         *string
+	ReadReplicaDBClusterIdentifiers               []map[string]interface{}
+	ReadReplicaDBInstanceIdentifiers              []map[string]interface{}
+	ReadReplicaSourceDBInstanceIdentifier         *string
 	ReplicaMode                                   *ReplicaModeEnum
 	SecondaryAvailabilityZone                     *string
-	StatusInfos                                   []DbInstanceStatusInfo
+	StatusInfos                                   []map[string]interface{}
 	StorageEncrypted                              *bool
 	StorageType                                   *string
-	TagList                                       []Tag
+	TagList                                       []map[string]interface{}
 	TdeCredentialArn                              *string
 	Timezone                                      *string
-	VpcSecurityGroups                             []VpcSecurityGroupMembership
+	VpcSecurityGroups                             []map[string]interface{}
 }

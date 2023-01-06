@@ -9,17 +9,10 @@ type TeamsListDiscussionCommentsPathParams struct {
 	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
-type TeamsListDiscussionCommentsDirectionEnum string
-
-const (
-	TeamsListDiscussionCommentsDirectionEnumAsc  TeamsListDiscussionCommentsDirectionEnum = "asc"
-	TeamsListDiscussionCommentsDirectionEnumDesc TeamsListDiscussionCommentsDirectionEnum = "desc"
-)
-
 type TeamsListDiscussionCommentsQueryParams struct {
-	Direction *TeamsListDiscussionCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                                    `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                                    `queryParam:"style=form,explode=true,name=per_page"`
+	Direction *shared.DiscussionNumberEnum `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64                       `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64                       `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type TeamsListDiscussionCommentsRequest struct {

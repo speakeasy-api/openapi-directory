@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,9 +24,9 @@ func main() {
     
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "assumenda",
-            RepositoryID: 7918731088610992086,
-            RunnerGroupID: 6900500405322802316,
+            Org: "iusto",
+            RepositoryID: 3192593213012958408,
+            RunnerGroupID: 6603543126000972647,
         },
     }
     

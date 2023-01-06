@@ -19,6 +19,6 @@ type GetJuniperSwitchSnmpConfigRequest struct {
 
 type GetJuniperSwitchSnmpConfigResponse struct {
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -14,7 +15,7 @@ type HTTPClient interface {
 }
 
 type SDK struct {
-	Tba      *Tba
+	TBA      *Tba
 	District *District
 	Event    *Event
 	List     *List
@@ -71,7 +72,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.Tba = NewTba(
+	sdk.TBA = NewTba(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

@@ -1,23 +1,5 @@
 package shared
 
-// JobInput
-// A Dataproc job resource.
-type JobInput struct {
-	HadoopJob   *HadoopJob         `json:"hadoopJob,omitempty"`
-	HiveJob     *HiveJob           `json:"hiveJob,omitempty"`
-	Labels      map[string]string  `json:"labels,omitempty"`
-	PigJob      *PigJob            `json:"pigJob,omitempty"`
-	Placement   *JobPlacementInput `json:"placement,omitempty"`
-	PrestoJob   *PrestoJob         `json:"prestoJob,omitempty"`
-	PysparkJob  *PySparkJob        `json:"pysparkJob,omitempty"`
-	Reference   *JobReference      `json:"reference,omitempty"`
-	Scheduling  *JobScheduling     `json:"scheduling,omitempty"`
-	SparkJob    *SparkJob          `json:"sparkJob,omitempty"`
-	SparkRJob   *SparkRJob         `json:"sparkRJob,omitempty"`
-	SparkSQLJob *SparkSQLJob       `json:"sparkSqlJob,omitempty"`
-	TrinoJob    *TrinoJob          `json:"trinoJob,omitempty"`
-}
-
 // Job
 // A Dataproc job resource.
 type Job struct {
@@ -41,4 +23,22 @@ type Job struct {
 	StatusHistory           []JobStatus       `json:"statusHistory,omitempty"`
 	TrinoJob                *TrinoJob         `json:"trinoJob,omitempty"`
 	YarnApplications        []YarnApplication `json:"yarnApplications,omitempty"`
+}
+
+// JobInput
+// A Dataproc job resource.
+type JobInput struct {
+	HadoopJob   *HadoopJob         `json:"hadoopJob,omitempty"`
+	HiveJob     *HiveJob           `json:"hiveJob,omitempty"`
+	Labels      map[string]string  `json:"labels,omitempty"`
+	PigJob      *PigJob            `json:"pigJob,omitempty"`
+	Placement   *JobPlacementInput `json:"placement,omitempty"`
+	PrestoJob   *PrestoJob         `json:"prestoJob,omitempty"`
+	PysparkJob  *PySparkJob        `json:"pysparkJob,omitempty"`
+	Reference   *JobReference      `json:"reference,omitempty"`
+	Scheduling  *JobScheduling     `json:"scheduling,omitempty"`
+	SparkJob    *SparkJob          `json:"sparkJob,omitempty"`
+	SparkRJob   *SparkRJob         `json:"sparkRJob,omitempty"`
+	SparkSQLJob *SparkSQLJob       `json:"sparkSqlJob,omitempty"`
+	TrinoJob    *TrinoJob          `json:"trinoJob,omitempty"`
 }

@@ -3,13 +3,13 @@ package operations
 type PostAttachLoadBalancerToSubnetsActionEnum string
 
 const (
-	PostAttachLoadBalancerToSubnetsActionEnumAttachLoadBalancerToSubnets PostAttachLoadBalancerToSubnetsActionEnum = "AttachLoadBalancerToSubnets"
+	POSTAttachLoadBalancerToSubnetsActionEnumAttachLoadBalancerToSubnets PostAttachLoadBalancerToSubnetsActionEnum = "AttachLoadBalancerToSubnets"
 )
 
 type PostAttachLoadBalancerToSubnetsVersionEnum string
 
 const (
-	PostAttachLoadBalancerToSubnetsVersionEnumTwoThousandAndTwelve0601 PostAttachLoadBalancerToSubnetsVersionEnum = "2012-06-01"
+	POSTAttachLoadBalancerToSubnetsVersionEnumTwoThousandAndTwelve0601 PostAttachLoadBalancerToSubnetsVersionEnum = "2012-06-01"
 )
 
 type PostAttachLoadBalancerToSubnetsQueryParams struct {

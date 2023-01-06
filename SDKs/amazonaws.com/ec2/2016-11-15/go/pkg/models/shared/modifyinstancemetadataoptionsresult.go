@@ -1,6 +1,6 @@
 package shared
 
 type ModifyInstanceMetadataOptionsResult struct {
-	InstanceID              *string
-	InstanceMetadataOptions *InstanceMetadataOptionsResponse
+	InstanceID              map[string]interface{}
+	InstanceMetadataOptions map[string]interface{}
 }

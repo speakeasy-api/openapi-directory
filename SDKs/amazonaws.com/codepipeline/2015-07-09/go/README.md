@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AcknowledgeJobRequest{
         Headers: operations.AcknowledgeJobHeaders{
-            XAmzAlgorithm: "vitae",
-            XAmzContentSha256: "excepturi",
-            XAmzCredential: "ut",
-            XAmzDate: "totam",
-            XAmzSecurityToken: "blanditiis",
-            XAmzSignature: "voluptatibus",
-            XAmzSignedHeaders: "sint",
+            XAmzAlgorithm: "nostrum",
+            XAmzContentSha256: "mollitia",
+            XAmzCredential: "aut",
+            XAmzDate: "recusandae",
+            XAmzSecurityToken: "asperiores",
+            XAmzSignature: "quas",
+            XAmzSignedHeaders: "repellendus",
             XAmzTarget: "CodePipeline_20150709.AcknowledgeJob",
         },
         Request: shared.AcknowledgeJobInput{
-            JobID: "fugiat",
-            Nonce: "adipisci",
+            JobID: "corporis",
+            Nonce: "voluptas",
         },
     }
     
-    res, err := s.Sdk.AcknowledgeJob(ctx, req)
+    res, err := s.AcknowledgeJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

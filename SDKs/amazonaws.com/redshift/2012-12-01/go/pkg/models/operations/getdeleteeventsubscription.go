@@ -3,13 +3,13 @@ package operations
 type GetDeleteEventSubscriptionActionEnum string
 
 const (
-	GetDeleteEventSubscriptionActionEnumDeleteEventSubscription GetDeleteEventSubscriptionActionEnum = "DeleteEventSubscription"
+	GETDeleteEventSubscriptionActionEnumDeleteEventSubscription GetDeleteEventSubscriptionActionEnum = "DeleteEventSubscription"
 )
 
 type GetDeleteEventSubscriptionVersionEnum string
 
 const (
-	GetDeleteEventSubscriptionVersionEnumTwoThousandAndTwelve1201 GetDeleteEventSubscriptionVersionEnum = "2012-12-01"
+	GETDeleteEventSubscriptionVersionEnumTwoThousandAndTwelve1201 GetDeleteEventSubscriptionVersionEnum = "2012-12-01"
 )
 
 type GetDeleteEventSubscriptionQueryParams struct {

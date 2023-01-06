@@ -3,13 +3,13 @@ package shared
 type FiveHundredInternalServerErrorCodeEnum string
 
 const (
-	FiveHundredInternalServerErrorCodeEnumInternalServerError FiveHundredInternalServerErrorCodeEnum = "INTERNAL_SERVER_ERROR"
+	FiveHundredINTERNALSERVERERRORCodeEnumInternalServerError FiveHundredInternalServerErrorCodeEnum = "INTERNAL_SERVER_ERROR"
 )
 
 type FiveHundredInternalServerErrorMessageEnum string
 
 const (
-	FiveHundredInternalServerErrorMessageEnumInternalServerError FiveHundredInternalServerErrorMessageEnum = "Internal server error"
+	FiveHundredINTERNALSERVERERRORMessageEnumInternalServerError FiveHundredInternalServerErrorMessageEnum = "Internal server error"
 )
 
 type FiveHundredInternalServerError struct {

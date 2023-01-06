@@ -6,6 +6,8 @@ type LicenseContentLinks struct {
 	Self string `json:"self"`
 }
 
+// LicenseContentLicenseSimple
+// License Simple
 type LicenseContentLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.DelcsSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.DelcsRequestBody{
             CertificateParameters: &operations.DelcsRequestBodyCertificateParameters{
-                ApplicationNo: "animi",
-                LicenseNo: "cum",
+                ApplicationNo: "illo",
+                LicenseNo: "optio",
             },
-            ConsentArtifact: "voluptate",
+            ConsentArtifact: "reprehenderit",
             Format: "pdf",
-            TxnID: "illum",
+            TxnID: "commodi",
         },
     }
     
-    res, err := s.Sdk.Delcs(ctx, req)
+    res, err := s.APIs.Delcs(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Delcs` - Dealer License
 * `Malcs` - Manufacturer License

@@ -1,11 +1,12 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -108,7 +109,7 @@ func (s *SDK) AppAPIWmmEndpointsWmmMagneticField(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.AppAPIWmmEndpointsWmmMagneticField200ApplicationJSONObject = out
+			res.AppAPIWMMEndpointsWMMMagneticField200ApplicationJSONObject = out
 		}
 	}
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,19 +24,19 @@ func main() {
     
     req := operations.Oauth2TokeninfoRequest{
         QueryParams: operations.Oauth2TokeninfoQueryParams{
-            AccessToken: "ducimus",
+            AccessToken: "ab",
             Alt: "json",
-            Fields: "delectus",
-            IDToken: "non",
-            Key: "voluptatem",
-            OauthToken: "dolorem",
+            Fields: "deleniti",
+            IDToken: "ratione",
+            Key: "ut",
+            OauthToken: "vitae",
             PrettyPrint: true,
-            QuotaUser: "quae",
-            UserIP: "quia",
+            QuotaUser: "totam",
+            UserIP: "omnis",
         },
     }
     
-    res, err := s.Sdk.Oauth2Tokeninfo(ctx, req)
+    res, err := s.Oauth2Tokeninfo(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

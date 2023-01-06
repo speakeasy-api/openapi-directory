@@ -3,13 +3,13 @@ package operations
 type PostStartInstanceRefreshActionEnum string
 
 const (
-	PostStartInstanceRefreshActionEnumStartInstanceRefresh PostStartInstanceRefreshActionEnum = "StartInstanceRefresh"
+	POSTStartInstanceRefreshActionEnumStartInstanceRefresh PostStartInstanceRefreshActionEnum = "StartInstanceRefresh"
 )
 
 type PostStartInstanceRefreshVersionEnum string
 
 const (
-	PostStartInstanceRefreshVersionEnumTwoThousandAndEleven0101 PostStartInstanceRefreshVersionEnum = "2011-01-01"
+	POSTStartInstanceRefreshVersionEnumTwoThousandAndEleven0101 PostStartInstanceRefreshVersionEnum = "2011-01-01"
 )
 
 type PostStartInstanceRefreshQueryParams struct {

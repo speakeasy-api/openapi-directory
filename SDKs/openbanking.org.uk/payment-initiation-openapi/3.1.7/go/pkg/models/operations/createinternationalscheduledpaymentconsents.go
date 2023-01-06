@@ -16,12 +16,12 @@ type CreateInternationalScheduledPaymentConsentsHeaders struct {
 
 type CreateInternationalScheduledPaymentConsentsRequests struct {
 	ApplicationJosePlusJwe                []byte                                        `request:"mediaType=application/jose+jwe"`
-	ObWriteInternationalScheduledConsent5 *shared.ObWriteInternationalScheduledConsent5 `request:"mediaType=application/json"`
-	ObWriteInternationalScheduledConsent6 *shared.ObWriteInternationalScheduledConsent5 `request:"mediaType=application/json"`
+	OBWriteInternationalScheduledConsent5 *shared.ObWriteInternationalScheduledConsent5 `request:"mediaType=application/json"`
+	OBWriteInternationalScheduledConsent6 *shared.ObWriteInternationalScheduledConsent5 `request:"mediaType=application/json"`
 }
 
 type CreateInternationalScheduledPaymentConsentsSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateInternationalScheduledPaymentConsentsRequest struct {
@@ -34,7 +34,7 @@ type CreateInternationalScheduledPaymentConsentsResponse struct {
 	Body                                          []byte
 	ContentType                                   string
 	Headers                                       map[string][]string
-	ObErrorResponse1                              *shared.ObErrorResponse1
-	ObWriteInternationalScheduledConsentResponse6 *shared.ObWriteInternationalScheduledConsentResponse6
+	OBErrorResponse1                              *shared.ObErrorResponse1
+	OBWriteInternationalScheduledConsentResponse6 *shared.ObWriteInternationalScheduledConsentResponse6
 	StatusCode                                    int64
 }

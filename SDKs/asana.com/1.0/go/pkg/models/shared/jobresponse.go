@@ -9,11 +9,11 @@ const (
 	JobResponseStatusEnumFailed     JobResponseStatusEnum = "failed"
 )
 
+// JobResponse
+// A *job* is an object representing a process that handles asynchronous work.
 type JobResponse struct {
-	Gid             *string                `json:"gid,omitempty"`
 	NewProject      *ProjectCompact        `json:"new_project,omitempty"`
 	NewTask         *TaskCompact           `json:"new_task,omitempty"`
 	ResourceSubtype *string                `json:"resource_subtype,omitempty"`
-	ResourceType    *string                `json:"resource_type,omitempty"`
 	Status          *JobResponseStatusEnum `json:"status,omitempty"`
 }

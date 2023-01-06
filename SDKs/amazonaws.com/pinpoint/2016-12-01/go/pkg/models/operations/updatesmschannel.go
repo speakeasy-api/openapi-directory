@@ -27,7 +27,7 @@ type UpdateSmsChannelRequestBodySmsChannelRequest struct {
 }
 
 type UpdateSmsChannelRequestBody struct {
-	SmsChannelRequest UpdateSmsChannelRequestBodySmsChannelRequest `json:"SMSChannelRequest"`
+	SMSChannelRequest UpdateSmsChannelRequestBodySmsChannelRequest `json:"SMSChannelRequest"`
 }
 
 type UpdateSmsChannelRequest struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetcompanymatchRequest{
         QueryParams: operations.GetcompanymatchQueryParams{
-            Company: "nihil",
-            License: "fugiat",
+            Company: "ipsum",
+            License: "non",
         },
     }
     
-    res, err := s.Sdk.Getcompanymatch(ctx, req)
+    res, err := s.CompanyNameSimilarityKey.Getcompanymatch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Company Name Similarity Key
 
 * `Getcompanymatch` - Gets a similarity key for matching purposes for company name data
 

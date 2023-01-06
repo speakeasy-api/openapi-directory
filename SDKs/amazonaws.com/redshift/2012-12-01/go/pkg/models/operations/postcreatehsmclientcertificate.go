@@ -3,13 +3,13 @@ package operations
 type PostCreateHsmClientCertificateActionEnum string
 
 const (
-	PostCreateHsmClientCertificateActionEnumCreateHsmClientCertificate PostCreateHsmClientCertificateActionEnum = "CreateHsmClientCertificate"
+	POSTCreateHsmClientCertificateActionEnumCreateHsmClientCertificate PostCreateHsmClientCertificateActionEnum = "CreateHsmClientCertificate"
 )
 
 type PostCreateHsmClientCertificateVersionEnum string
 
 const (
-	PostCreateHsmClientCertificateVersionEnumTwoThousandAndTwelve1201 PostCreateHsmClientCertificateVersionEnum = "2012-12-01"
+	POSTCreateHsmClientCertificateVersionEnumTwoThousandAndTwelve1201 PostCreateHsmClientCertificateVersionEnum = "2012-12-01"
 )
 
 type PostCreateHsmClientCertificateQueryParams struct {

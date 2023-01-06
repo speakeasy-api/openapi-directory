@@ -3,13 +3,13 @@ package operations
 type PostDescribeEnvironmentResourcesActionEnum string
 
 const (
-	PostDescribeEnvironmentResourcesActionEnumDescribeEnvironmentResources PostDescribeEnvironmentResourcesActionEnum = "DescribeEnvironmentResources"
+	POSTDescribeEnvironmentResourcesActionEnumDescribeEnvironmentResources PostDescribeEnvironmentResourcesActionEnum = "DescribeEnvironmentResources"
 )
 
 type PostDescribeEnvironmentResourcesVersionEnum string
 
 const (
-	PostDescribeEnvironmentResourcesVersionEnumTwoThousandAndTen1201 PostDescribeEnvironmentResourcesVersionEnum = "2010-12-01"
+	POSTDescribeEnvironmentResourcesVersionEnumTwoThousandAndTen1201 PostDescribeEnvironmentResourcesVersionEnum = "2010-12-01"
 )
 
 type PostDescribeEnvironmentResourcesQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type UpdateHitReviewStatusRequest struct {
-	HitID  string `json:"HITId"`
+	HITID  string `json:"HITId"`
 	Revert *bool  `json:"Revert,omitempty"`
 }

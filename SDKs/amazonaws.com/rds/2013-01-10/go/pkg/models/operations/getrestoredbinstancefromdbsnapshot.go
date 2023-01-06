@@ -3,28 +3,28 @@ package operations
 type GetRestoreDbInstanceFromDbSnapshotActionEnum string
 
 const (
-	GetRestoreDbInstanceFromDbSnapshotActionEnumRestoreDbInstanceFromDbSnapshot GetRestoreDbInstanceFromDbSnapshotActionEnum = "RestoreDBInstanceFromDBSnapshot"
+	GETRestoreDBInstanceFromDBSnapshotActionEnumRestoreDbInstanceFromDbSnapshot GetRestoreDbInstanceFromDbSnapshotActionEnum = "RestoreDBInstanceFromDBSnapshot"
 )
 
 type GetRestoreDbInstanceFromDbSnapshotVersionEnum string
 
 const (
-	GetRestoreDbInstanceFromDbSnapshotVersionEnumTwoThousandAndThirteen0110 GetRestoreDbInstanceFromDbSnapshotVersionEnum = "2013-01-10"
+	GETRestoreDBInstanceFromDBSnapshotVersionEnumTwoThousandAndThirteen0110 GetRestoreDbInstanceFromDbSnapshotVersionEnum = "2013-01-10"
 )
 
 type GetRestoreDbInstanceFromDbSnapshotQueryParams struct {
 	Action                  GetRestoreDbInstanceFromDbSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoMinorVersionUpgrade *bool                                         `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
 	AvailabilityZone        *string                                       `queryParam:"style=form,explode=true,name=AvailabilityZone"`
-	DbInstanceClass         *string                                       `queryParam:"style=form,explode=true,name=DBInstanceClass"`
-	DbInstanceIdentifier    string                                        `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
-	DbName                  *string                                       `queryParam:"style=form,explode=true,name=DBName"`
-	DbSnapshotIdentifier    string                                        `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
-	DbSubnetGroupName       *string                                       `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
+	DBInstanceClass         *string                                       `queryParam:"style=form,explode=true,name=DBInstanceClass"`
+	DBInstanceIdentifier    string                                        `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBName                  *string                                       `queryParam:"style=form,explode=true,name=DBName"`
+	DBSnapshotIdentifier    string                                        `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
+	DBSubnetGroupName       *string                                       `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
 	Engine                  *string                                       `queryParam:"style=form,explode=true,name=Engine"`
 	Iops                    *int64                                        `queryParam:"style=form,explode=true,name=Iops"`
 	LicenseModel            *string                                       `queryParam:"style=form,explode=true,name=LicenseModel"`
-	MultiAz                 *bool                                         `queryParam:"style=form,explode=true,name=MultiAZ"`
+	MultiAZ                 *bool                                         `queryParam:"style=form,explode=true,name=MultiAZ"`
 	OptionGroupName         *string                                       `queryParam:"style=form,explode=true,name=OptionGroupName"`
 	Port                    *int64                                        `queryParam:"style=form,explode=true,name=Port"`
 	PubliclyAccessible      *bool                                         `queryParam:"style=form,explode=true,name=PubliclyAccessible"`

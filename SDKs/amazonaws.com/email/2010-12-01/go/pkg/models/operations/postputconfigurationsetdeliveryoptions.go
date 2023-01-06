@@ -3,13 +3,13 @@ package operations
 type PostPutConfigurationSetDeliveryOptionsActionEnum string
 
 const (
-	PostPutConfigurationSetDeliveryOptionsActionEnumPutConfigurationSetDeliveryOptions PostPutConfigurationSetDeliveryOptionsActionEnum = "PutConfigurationSetDeliveryOptions"
+	POSTPutConfigurationSetDeliveryOptionsActionEnumPutConfigurationSetDeliveryOptions PostPutConfigurationSetDeliveryOptionsActionEnum = "PutConfigurationSetDeliveryOptions"
 )
 
 type PostPutConfigurationSetDeliveryOptionsVersionEnum string
 
 const (
-	PostPutConfigurationSetDeliveryOptionsVersionEnumTwoThousandAndTen1201 PostPutConfigurationSetDeliveryOptionsVersionEnum = "2010-12-01"
+	POSTPutConfigurationSetDeliveryOptionsVersionEnumTwoThousandAndTen1201 PostPutConfigurationSetDeliveryOptionsVersionEnum = "2010-12-01"
 )
 
 type PostPutConfigurationSetDeliveryOptionsQueryParams struct {

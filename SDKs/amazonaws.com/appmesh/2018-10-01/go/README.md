@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CreateMeshRequest{
         Headers: operations.CreateMeshHeaders{
-            XAmzAlgorithm: "quas",
-            XAmzContentSha256: "facere",
-            XAmzCredential: "eveniet",
-            XAmzDate: "dolores",
-            XAmzSecurityToken: "fuga",
-            XAmzSignature: "error",
-            XAmzSignedHeaders: "autem",
+            XAmzAlgorithm: "necessitatibus",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "minus",
+            XAmzDate: "sequi",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "quidem",
+            XAmzSignedHeaders: "iure",
         },
         Request: operations.CreateMeshRequestBody{
-            ClientToken: "eaque",
-            MeshName: "omnis",
+            ClientToken: "consequatur",
+            MeshName: "occaecati",
         },
     }
     
-    res, err := s.Sdk.CreateMesh(ctx, req)
+    res, err := s.CreateMesh(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

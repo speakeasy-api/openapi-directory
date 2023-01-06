@@ -4,7 +4,7 @@ package shared
 // A distribution list.
 type DistributionList struct {
 	IsTruncated bool
-	Items       []DistributionSummary
+	Items       []map[string]interface{}
 	Marker      string
 	MaxItems    int64
 	NextMarker  *string

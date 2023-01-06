@@ -26,8 +26,8 @@ type SignUpIDRequest struct {
 type SignUpIDResponse struct {
 	ContentType                      string
 	DemoAuthResponse                 *interface{}
-	SignUpID400ApplicationJSONOneOf  *interface{}
-	SignUpID401ApplicationJSONObject *SignUpID401ApplicationJSON
-	SignUpID500ApplicationJSONObject *SignUpID500ApplicationJSON
+	SIGNUPID400ApplicationJSONOneOf  *interface{}
+	SIGNUPID401ApplicationJSONObject *SignUpID401ApplicationJSON
+	SIGNUPID500ApplicationJSONObject *SignUpID500ApplicationJSON
 	StatusCode                       int64
 }

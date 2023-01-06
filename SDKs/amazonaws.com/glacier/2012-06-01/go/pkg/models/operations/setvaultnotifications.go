@@ -19,7 +19,7 @@ type SetVaultNotificationsHeaders struct {
 // Represents a vault's notification configuration.
 type SetVaultNotificationsRequestBodyVaultNotificationConfig struct {
 	Events   []string `json:"Events,omitempty"`
-	SnsTopic *string  `json:"SNSTopic,omitempty"`
+	SNSTopic *string  `json:"SNSTopic,omitempty"`
 }
 
 type SetVaultNotificationsRequestBody struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,7 +22,7 @@ import (
 func main() {
     s := sdk.New()
     
-    res, err := s.Sdk.DeleteAMediaItem(ctx)
+    res, err := s.DeleteAMediaItem(ctx)
     if err != nil {
         log.Fatal(err)
     }

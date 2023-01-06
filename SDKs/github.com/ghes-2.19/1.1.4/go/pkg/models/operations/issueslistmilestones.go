@@ -9,34 +9,12 @@ type IssuesListMilestonesPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type IssuesListMilestonesDirectionEnum string
-
-const (
-	IssuesListMilestonesDirectionEnumAsc  IssuesListMilestonesDirectionEnum = "asc"
-	IssuesListMilestonesDirectionEnumDesc IssuesListMilestonesDirectionEnum = "desc"
-)
-
-type IssuesListMilestonesSortEnum string
-
-const (
-	IssuesListMilestonesSortEnumDueOn        IssuesListMilestonesSortEnum = "due_on"
-	IssuesListMilestonesSortEnumCompleteness IssuesListMilestonesSortEnum = "completeness"
-)
-
-type IssuesListMilestonesStateEnum string
-
-const (
-	IssuesListMilestonesStateEnumOpen   IssuesListMilestonesStateEnum = "open"
-	IssuesListMilestonesStateEnumClosed IssuesListMilestonesStateEnum = "closed"
-	IssuesListMilestonesStateEnumAll    IssuesListMilestonesStateEnum = "all"
-)
-
 type IssuesListMilestonesQueryParams struct {
-	Direction *IssuesListMilestonesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                             `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                             `queryParam:"style=form,explode=true,name=per_page"`
-	Sort      *IssuesListMilestonesSortEnum      `queryParam:"style=form,explode=true,name=sort"`
-	State     *IssuesListMilestonesStateEnum     `queryParam:"style=form,explode=true,name=state"`
+	Direction *shared.RepoEnum4 `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	Sort      *shared.RepoEnum3 `queryParam:"style=form,explode=true,name=sort"`
+	State     *shared.RepoEnum2 `queryParam:"style=form,explode=true,name=state"`
 }
 
 type IssuesListMilestonesRequest struct {

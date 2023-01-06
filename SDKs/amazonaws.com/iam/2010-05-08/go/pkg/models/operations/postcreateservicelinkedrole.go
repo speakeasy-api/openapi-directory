@@ -3,13 +3,13 @@ package operations
 type PostCreateServiceLinkedRoleActionEnum string
 
 const (
-	PostCreateServiceLinkedRoleActionEnumCreateServiceLinkedRole PostCreateServiceLinkedRoleActionEnum = "CreateServiceLinkedRole"
+	POSTCreateServiceLinkedRoleActionEnumCreateServiceLinkedRole PostCreateServiceLinkedRoleActionEnum = "CreateServiceLinkedRole"
 )
 
 type PostCreateServiceLinkedRoleVersionEnum string
 
 const (
-	PostCreateServiceLinkedRoleVersionEnumTwoThousandAndTen0508 PostCreateServiceLinkedRoleVersionEnum = "2010-05-08"
+	POSTCreateServiceLinkedRoleVersionEnumTwoThousandAndTen0508 PostCreateServiceLinkedRoleVersionEnum = "2010-05-08"
 )
 
 type PostCreateServiceLinkedRoleQueryParams struct {

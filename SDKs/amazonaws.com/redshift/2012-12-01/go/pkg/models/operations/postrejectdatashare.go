@@ -3,13 +3,13 @@ package operations
 type PostRejectDataShareActionEnum string
 
 const (
-	PostRejectDataShareActionEnumRejectDataShare PostRejectDataShareActionEnum = "RejectDataShare"
+	POSTRejectDataShareActionEnumRejectDataShare PostRejectDataShareActionEnum = "RejectDataShare"
 )
 
 type PostRejectDataShareVersionEnum string
 
 const (
-	PostRejectDataShareVersionEnumTwoThousandAndTwelve1201 PostRejectDataShareVersionEnum = "2012-12-01"
+	POSTRejectDataShareVersionEnumTwoThousandAndTwelve1201 PostRejectDataShareVersionEnum = "2012-12-01"
 )
 
 type PostRejectDataShareQueryParams struct {

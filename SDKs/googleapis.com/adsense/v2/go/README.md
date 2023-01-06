@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,34 +26,34 @@ func main() {
         Security: operations.AdsenseAccountsAdclientsAdunitsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AdsenseAccountsAdclientsAdunitsCreatePathParams{
-            Parent: "itaque",
+            Parent: "tempore",
         },
         QueryParams: operations.AdsenseAccountsAdclientsAdunitsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "quis",
+            DollarXgafv: "1",
+            AccessToken: "nihil",
             Alt: "media",
-            Callback: "quis",
-            Fields: "qui",
-            Key: "molestias",
-            OauthToken: "dignissimos",
+            Callback: "excepturi",
+            Fields: "ut",
+            Key: "voluptate",
+            OauthToken: "dolorum",
             PrettyPrint: false,
-            QuotaUser: "officia",
-            UploadType: "sed",
-            UploadProtocol: "temporibus",
+            QuotaUser: "rerum",
+            UploadType: "qui",
+            UploadProtocol: "voluptatem",
         },
         Request: &shared.AdUnitInput{
             ContentAdsSettings: &shared.ContentAdsSettings{
-                Size: "ullam",
-                Type: "ARTICLE",
+                Size: "voluptatem",
+                Type: "LINK",
             },
-            DisplayName: "illo",
-            State: "ACTIVE",
+            DisplayName: "incidunt",
+            State: "STATE_UNSPECIFIED",
         },
     }
     

@@ -83,7 +83,7 @@ type Gicer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Gicer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Gicer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Gicer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Gicer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Gicer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Gicer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Gicer404ApplicationJSON struct {

@@ -3,19 +3,19 @@ package operations
 type GetCreateDbParameterGroupActionEnum string
 
 const (
-	GetCreateDbParameterGroupActionEnumCreateDbParameterGroup GetCreateDbParameterGroupActionEnum = "CreateDBParameterGroup"
+	GETCreateDBParameterGroupActionEnumCreateDbParameterGroup GetCreateDbParameterGroupActionEnum = "CreateDBParameterGroup"
 )
 
 type GetCreateDbParameterGroupVersionEnum string
 
 const (
-	GetCreateDbParameterGroupVersionEnumTwoThousandAndThirteen0110 GetCreateDbParameterGroupVersionEnum = "2013-01-10"
+	GETCreateDBParameterGroupVersionEnumTwoThousandAndThirteen0110 GetCreateDbParameterGroupVersionEnum = "2013-01-10"
 )
 
 type GetCreateDbParameterGroupQueryParams struct {
 	Action                 GetCreateDbParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbParameterGroupFamily string                               `queryParam:"style=form,explode=true,name=DBParameterGroupFamily"`
-	DbParameterGroupName   string                               `queryParam:"style=form,explode=true,name=DBParameterGroupName"`
+	DBParameterGroupFamily string                               `queryParam:"style=form,explode=true,name=DBParameterGroupFamily"`
+	DBParameterGroupName   string                               `queryParam:"style=form,explode=true,name=DBParameterGroupName"`
 	Description            string                               `queryParam:"style=form,explode=true,name=Description"`
 	Version                GetCreateDbParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

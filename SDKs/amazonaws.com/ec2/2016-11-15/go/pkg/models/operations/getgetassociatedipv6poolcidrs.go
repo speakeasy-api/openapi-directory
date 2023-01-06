@@ -3,13 +3,13 @@ package operations
 type GetGetAssociatedIpv6PoolCidrsActionEnum string
 
 const (
-	GetGetAssociatedIpv6PoolCidrsActionEnumGetAssociatedIpv6PoolCidrs GetGetAssociatedIpv6PoolCidrsActionEnum = "GetAssociatedIpv6PoolCidrs"
+	GETGETAssociatedIpv6PoolCidrsActionEnumGetAssociatedIpv6PoolCidrs GetGetAssociatedIpv6PoolCidrsActionEnum = "GetAssociatedIpv6PoolCidrs"
 )
 
 type GetGetAssociatedIpv6PoolCidrsVersionEnum string
 
 const (
-	GetGetAssociatedIpv6PoolCidrsVersionEnumTwoThousandAndSixteen1115 GetGetAssociatedIpv6PoolCidrsVersionEnum = "2016-11-15"
+	GETGETAssociatedIpv6PoolCidrsVersionEnumTwoThousandAndSixteen1115 GetGetAssociatedIpv6PoolCidrsVersionEnum = "2016-11-15"
 )
 
 type GetGetAssociatedIpv6PoolCidrsQueryParams struct {

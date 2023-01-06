@@ -3,13 +3,13 @@ package operations
 type GetRebootClusterActionEnum string
 
 const (
-	GetRebootClusterActionEnumRebootCluster GetRebootClusterActionEnum = "RebootCluster"
+	GETRebootClusterActionEnumRebootCluster GetRebootClusterActionEnum = "RebootCluster"
 )
 
 type GetRebootClusterVersionEnum string
 
 const (
-	GetRebootClusterVersionEnumTwoThousandAndTwelve1201 GetRebootClusterVersionEnum = "2012-12-01"
+	GETRebootClusterVersionEnumTwoThousandAndTwelve1201 GetRebootClusterVersionEnum = "2012-12-01"
 )
 
 type GetRebootClusterQueryParams struct {

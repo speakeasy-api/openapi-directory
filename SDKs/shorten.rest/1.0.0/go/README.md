@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,34 +29,38 @@ func main() {
             },
         },
         QueryParams: operations.CreateAliasQueryParams{
-            AliasName: "consequatur",
-            DomainName: "exercitationem",
+            AliasName: "ut",
+            DomainName: "quod",
         },
         Request: shared.CreateAliasModel{
             Destinations: []shared.DestinationModel{
                 shared.DestinationModel{
-                    Country: "velit",
-                    Os: "dolor",
+                    Country: "similique",
+                    Os: "veniam",
                     URL: "aut",
                 },
             },
             Metatags: []shared.MetaTagModel{
                 shared.MetaTagModel{
-                    Content: "repellat",
-                    Name: "omnis",
+                    Content: "voluptas",
+                    Name: "qui",
                 },
                 shared.MetaTagModel{
-                    Content: "quo",
-                    Name: "in",
+                    Content: "magnam",
+                    Name: "perspiciatis",
+                },
+                shared.MetaTagModel{
+                    Content: "eos",
+                    Name: "voluptatem",
                 },
             },
             Snippets: []shared.SnippetModel{
                 shared.SnippetModel{
-                    ID: "et",
+                    ID: "illum",
                     Parameters: map[string]string{
-                        "amet": "quo",
-                        "eligendi": "non",
-                        "quod": "doloribus",
+                        "sit": "voluptatem",
+                        "iusto": "animi",
+                        "corporis": "voluptatem",
                     },
                 },
             },

@@ -3,13 +3,13 @@ package operations
 type PostDeleteAccessKeyActionEnum string
 
 const (
-	PostDeleteAccessKeyActionEnumDeleteAccessKey PostDeleteAccessKeyActionEnum = "DeleteAccessKey"
+	POSTDeleteAccessKeyActionEnumDeleteAccessKey PostDeleteAccessKeyActionEnum = "DeleteAccessKey"
 )
 
 type PostDeleteAccessKeyVersionEnum string
 
 const (
-	PostDeleteAccessKeyVersionEnumTwoThousandAndTen0508 PostDeleteAccessKeyVersionEnum = "2010-05-08"
+	POSTDeleteAccessKeyVersionEnumTwoThousandAndTen0508 PostDeleteAccessKeyVersionEnum = "2010-05-08"
 )
 
 type PostDeleteAccessKeyQueryParams struct {

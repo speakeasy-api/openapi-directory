@@ -8,11 +8,6 @@ type AddDatabasePathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type AddDatabaseRequest struct {
-	PathParams AddDatabasePathParams
-	Request    shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1dbsGetResponses200ContentApplication1jsonSchemaPropertiesDbsItems `request:"mediaType=application/json"`
-}
-
 type AddDatabase201ApplicationJSON struct {
 	Db shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1dbsGetResponses200ContentApplication1jsonSchemaPropertiesDbsItems `json:"db"`
 }
@@ -21,6 +16,11 @@ type AddDatabase401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type AddDatabaseRequest struct {
+	PathParams AddDatabasePathParams
+	Request    shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1dbsGetResponses200ContentApplication1jsonSchemaPropertiesDbsItems `request:"mediaType=application/json"`
 }
 
 type AddDatabaseResponse struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,23 +25,23 @@ func main() {
     req := operations.FactchecktoolsClaimsSearchRequest{
         QueryParams: operations.FactchecktoolsClaimsSearchQueryParams{
             DollarXgafv: "1",
-            AccessToken: "esse",
+            AccessToken: "hic",
             Alt: "media",
-            Callback: "minima",
-            Fields: "optio",
-            Key: "rerum",
-            LanguageCode: "excepturi",
-            MaxAgeDays: 1785559331512169032,
-            OauthToken: "nesciunt",
-            Offset: 5635357500975081959,
-            PageSize: 1009413278852092536,
-            PageToken: "labore",
-            PrettyPrint: true,
-            Query: "explicabo",
-            QuotaUser: "quidem",
-            ReviewPublisherSiteFilter: "officiis",
-            UploadType: "ullam",
-            UploadProtocol: "ut",
+            Callback: "quis",
+            Fields: "laboriosam",
+            Key: "soluta",
+            LanguageCode: "molestiae",
+            MaxAgeDays: 7360715895130807254,
+            OauthToken: "omnis",
+            Offset: 833649597387853682,
+            PageSize: 7562745417443808981,
+            PageToken: "sint",
+            PrettyPrint: false,
+            Query: "quos",
+            QuotaUser: "deleniti",
+            ReviewPublisherSiteFilter: "quasi",
+            UploadType: "asperiores",
+            UploadProtocol: "voluptas",
         },
     }
     

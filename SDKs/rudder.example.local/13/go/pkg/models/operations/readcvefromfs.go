@@ -3,18 +3,18 @@ package operations
 type ReadCvEfromFs200ApplicationJSONActionEnum string
 
 const (
-	ReadCvEfromFs200ApplicationJSONActionEnumReadCvEfromFs ReadCvEfromFs200ApplicationJSONActionEnum = "readCVEfromFS"
+	ReadCVEfromFS200ApplicationJSONActionEnumReadCvEfromFs ReadCvEfromFs200ApplicationJSONActionEnum = "readCVEfromFS"
 )
 
 type ReadCvEfromFs200ApplicationJSONData struct {
-	CvEs int64 `json:"CVEs"`
+	CVEs int64 `json:"CVEs"`
 }
 
 type ReadCvEfromFs200ApplicationJSONResultEnum string
 
 const (
-	ReadCvEfromFs200ApplicationJSONResultEnumSuccess ReadCvEfromFs200ApplicationJSONResultEnum = "success"
-	ReadCvEfromFs200ApplicationJSONResultEnumError   ReadCvEfromFs200ApplicationJSONResultEnum = "error"
+	ReadCVEfromFS200ApplicationJSONResultEnumSuccess ReadCvEfromFs200ApplicationJSONResultEnum = "success"
+	ReadCVEfromFS200ApplicationJSONResultEnumError   ReadCvEfromFs200ApplicationJSONResultEnum = "error"
 )
 
 type ReadCvEfromFs200ApplicationJSON struct {
@@ -26,5 +26,5 @@ type ReadCvEfromFs200ApplicationJSON struct {
 type ReadCvEfromFsResponse struct {
 	ContentType                           string
 	StatusCode                            int64
-	ReadCvEfromFs200ApplicationJSONObject *ReadCvEfromFs200ApplicationJSON
+	ReadCVEfromFS200ApplicationJSONObject *ReadCvEfromFs200ApplicationJSON
 }

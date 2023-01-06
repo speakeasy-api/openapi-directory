@@ -21,8 +21,8 @@ type DisassociateIdentityProviderConfigHeaders struct {
 // DisassociateIdentityProviderConfigRequestBodyIdentityProviderConfig
 // An object representing an identity provider configuration.
 type DisassociateIdentityProviderConfigRequestBodyIdentityProviderConfig struct {
-	Name *string `json:"name,omitempty"`
-	Type *string `json:"type,omitempty"`
+	Name map[string]interface{} `json:"name,omitempty"`
+	Type *string                `json:"type,omitempty"`
 }
 
 type DisassociateIdentityProviderConfigRequestBody struct {

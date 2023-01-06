@@ -3,7 +3,7 @@ package shared
 // AwsKmsKeyDetails
 // Contains metadata about an KMS key.
 type AwsKmsKeyDetails struct {
-	AwsAccountID      *string  `json:"AWSAccountId,omitempty"`
+	AWSAccountID      *string  `json:"AWSAccountId,omitempty"`
 	CreationDate      *float64 `json:"CreationDate,omitempty"`
 	Description       *string  `json:"Description,omitempty"`
 	KeyID             *string  `json:"KeyId,omitempty"`

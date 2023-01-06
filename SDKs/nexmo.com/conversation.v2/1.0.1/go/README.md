@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.GetUsersRequest{
         QueryParams: operations.GetUsersQueryParams{
-            Cursor: "vero",
+            Cursor: "quis",
             Order: "asc",
-            PageSize: 8474321493487099614,
+            PageSize: 5926975940776996037,
         },
     }
     
-    res, err := s.Sdk.GetUsers(ctx, req)
+    res, err := s.GetUsers(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -43,7 +43,7 @@ type CaptionSnippet struct {
 	AudioTrackType *CaptionSnippetAudioTrackTypeEnum `json:"audioTrackType,omitempty"`
 	FailureReason  *CaptionSnippetFailureReasonEnum  `json:"failureReason,omitempty"`
 	IsAutoSynced   *bool                             `json:"isAutoSynced,omitempty"`
-	IsCc           *bool                             `json:"isCC,omitempty"`
+	IsCC           *bool                             `json:"isCC,omitempty"`
 	IsDraft        *bool                             `json:"isDraft,omitempty"`
 	IsEasyReader   *bool                             `json:"isEasyReader,omitempty"`
 	IsLarge        *bool                             `json:"isLarge,omitempty"`

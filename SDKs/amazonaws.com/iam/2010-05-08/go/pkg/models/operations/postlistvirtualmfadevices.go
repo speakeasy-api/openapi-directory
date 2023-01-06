@@ -3,13 +3,13 @@ package operations
 type PostListVirtualMfaDevicesActionEnum string
 
 const (
-	PostListVirtualMfaDevicesActionEnumListVirtualMfaDevices PostListVirtualMfaDevicesActionEnum = "ListVirtualMFADevices"
+	POSTListVirtualMFADevicesActionEnumListVirtualMfaDevices PostListVirtualMfaDevicesActionEnum = "ListVirtualMFADevices"
 )
 
 type PostListVirtualMfaDevicesVersionEnum string
 
 const (
-	PostListVirtualMfaDevicesVersionEnumTwoThousandAndTen0508 PostListVirtualMfaDevicesVersionEnum = "2010-05-08"
+	POSTListVirtualMFADevicesVersionEnumTwoThousandAndTen0508 PostListVirtualMfaDevicesVersionEnum = "2010-05-08"
 )
 
 type PostListVirtualMfaDevicesQueryParams struct {

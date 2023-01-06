@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,15 +35,15 @@ func main() {
     req := operations.GetSearchVersionNumberAdditionalDataExtRequest{
         PathParams: operations.GetSearchVersionNumberAdditionalDataExtPathParams{
             Ext: "json",
-            VersionNumber: 3763609783641361390,
+            VersionNumber: 2696926621411880175,
         },
         QueryParams: operations.GetSearchVersionNumberAdditionalDataExtQueryParams{
-            Geometries: "voluptas",
-            GeometriesZoom: 3744373318943545361,
+            Geometries: "est",
+            GeometriesZoom: 7177763960018707098,
         },
     }
     
-    res, err := s.Sdk.GetSearchVersionNumberAdditionalDataExt(ctx, req)
+    res, err := s.AdditionalData.GetSearchVersionNumberAdditionalDataExt(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,26 +57,38 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Additional Data
 
 * `GetSearchVersionNumberAdditionalDataExt` - Additional Data
+
+### Filters
+
+* `GetSearchVersionNumberGeometryFilterExt` - Geometry Filter
+* `GetSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
+* `PostSearchVersionNumberGeometryFilterExt` - Geometry Filter
+* `PostSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
+
+### Geocoding
+
+* `GetSearchVersionNumberGeocodeQueryExt` - Geocode
+* `GetSearchVersionNumberStructuredGeocodeExt` - Structured Geocode
+
+### Reverse Geocoding
+
+* `GetSearchVersionNumberReverseGeocodeCrossStreetPositionExt` - Cross Street lookup
+* `GetSearchVersionNumberReverseGeocodePositionExt` - Reverse Geocode
+
+### Search
+
 * `GetSearchVersionNumberCSCategoryExt` - Low Bandwith Category Search
 * `GetSearchVersionNumberCategorySearchQueryExt` - Category Search
-* `GetSearchVersionNumberGeocodeQueryExt` - Geocode
-* `GetSearchVersionNumberGeometryFilterExt` - Geometry Filter
 * `GetSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
 * `GetSearchVersionNumberNearbySearchExt` - Nearby Search
 * `GetSearchVersionNumberPoiSearchQueryExt` - Points of Interest Search
-* `GetSearchVersionNumberReverseGeocodeCrossStreetPositionExt` - Cross Street lookup
-* `GetSearchVersionNumberReverseGeocodePositionExt` - Reverse Geocode
-* `GetSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
 * `GetSearchVersionNumberRoutedSearchQueryPositionHeadingExt` - Routed Search
 * `GetSearchVersionNumberSQueryExt` - Low bandwith Search
 * `GetSearchVersionNumberSearchQueryExt` - Fuzzy Search
-* `GetSearchVersionNumberStructuredGeocodeExt` - Structured Geocode
-* `PostSearchVersionNumberGeometryFilterExt` - Geometry Filter
 * `PostSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
-* `PostSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
 * `PostSearchVersionNumberSearchAlongRouteQueryExt` - Along Route Search
 
 <!-- End SDK Available Operations -->

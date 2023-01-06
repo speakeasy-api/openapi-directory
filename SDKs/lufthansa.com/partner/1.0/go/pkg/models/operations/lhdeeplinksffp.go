@@ -35,6 +35,6 @@ type LhDeepLinksFfpRequest struct {
 
 type LhDeepLinksFfpResponse struct {
 	ContentType                            string
-	LhDeepLinksFfp200ApplicationJSONString *string
+	LHDeepLinksFFP200ApplicationJSONString *string
 	StatusCode                             int64
 }

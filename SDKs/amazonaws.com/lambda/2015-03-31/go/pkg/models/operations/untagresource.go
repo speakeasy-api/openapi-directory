@@ -1,7 +1,7 @@
 package operations
 
 type UntagResourcePathParams struct {
-	Arn string `pathParam:"style=simple,explode=false,name=ARN"`
+	ARN string `pathParam:"style=simple,explode=false,name=ARN"`
 }
 
 type UntagResourceQueryParams struct {

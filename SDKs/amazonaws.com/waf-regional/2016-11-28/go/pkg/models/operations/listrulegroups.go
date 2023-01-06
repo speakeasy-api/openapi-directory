@@ -30,5 +30,5 @@ type ListRuleGroupsResponse struct {
 	ContentType               string
 	ListRuleGroupsResponse    *shared.ListRuleGroupsResponse
 	StatusCode                int64
-	WafInternalErrorException *interface{}
+	WAFInternalErrorException *interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type GetDeleteFpgaImageActionEnum string
 
 const (
-	GetDeleteFpgaImageActionEnumDeleteFpgaImage GetDeleteFpgaImageActionEnum = "DeleteFpgaImage"
+	GETDeleteFpgaImageActionEnumDeleteFpgaImage GetDeleteFpgaImageActionEnum = "DeleteFpgaImage"
 )
 
 type GetDeleteFpgaImageVersionEnum string
 
 const (
-	GetDeleteFpgaImageVersionEnumTwoThousandAndSixteen1115 GetDeleteFpgaImageVersionEnum = "2016-11-15"
+	GETDeleteFpgaImageVersionEnumTwoThousandAndSixteen1115 GetDeleteFpgaImageVersionEnum = "2016-11-15"
 )
 
 type GetDeleteFpgaImageQueryParams struct {

@@ -5,5 +5,5 @@ package shared
 type ListVirtualMfaDevicesResponse struct {
 	IsTruncated       *bool
 	Marker            *string
-	VirtualMfaDevices []VirtualMfaDevice
+	VirtualMFADevices []VirtualMfaDevice
 }

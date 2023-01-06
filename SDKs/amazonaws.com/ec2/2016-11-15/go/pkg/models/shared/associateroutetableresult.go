@@ -1,6 +1,6 @@
 package shared
 
 type AssociateRouteTableResult struct {
-	AssociationID    *string
-	AssociationState *RouteTableAssociationState
+	AssociationID    map[string]interface{}
+	AssociationState map[string]interface{}
 }

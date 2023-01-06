@@ -199,9 +199,9 @@ type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum string
 
 const (
-	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnumFutureMultipleTerms GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum = "FutureMultipleTerms"
-	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnumPromotional         GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum = "Promotional"
-	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnumRegular             GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum = "Regular"
+	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnumFutureMultipleTerms GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum = "FutureMultipleTerms"
+	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnumPromotional         GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum = "Promotional"
+	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnumRegular             GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum = "Regular"
 )
 
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum string
@@ -235,7 +235,7 @@ const (
 // GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItem
 // Commercial Credit Card Item
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItem struct {
-	AprRate                             string                                                                                                                                           `json:"APRRate"`
+	APRRate                             string                                                                                                                                           `json:"APRRate"`
 	AbilityToSetIndividualLimits        *bool                                                                                                                                            `json:"AbilityToSetIndividualLimits,omitempty"`
 	AccessToOnlineDataReportingTool     bool                                                                                                                                             `json:"AccessToOnlineDataReportingTool"`
 	AllocationofRepayment               *string                                                                                                                                          `json:"AllocationofRepayment,omitempty"`
@@ -287,7 +287,7 @@ type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 // GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetails
 // Commercial Credit Card Group
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetails struct {
-	CcSubType                GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum            `json:"CCSubType"`
+	CCSubType                GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCcSubTypeEnum            `json:"CCSubType"`
 	CommercialCreditCardItem GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItem `json:"CommercialCreditCardItem"`
 }
 
@@ -399,15 +399,15 @@ type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum string
 
 const (
-	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnumUk GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "UK"
-	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnumEu GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "EU"
+	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumUk GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "UK"
+	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumEu GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "EU"
 )
 
 // GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrand
 // Brand
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrand struct {
 	TrademarkID      string                                                                                                           `json:"TrademarkID"`
-	TrademarkIpoCode GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
+	TrademarkIPOCode GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
 }
 
 // GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisationOrganisationName
@@ -419,8 +419,8 @@ type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 // GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisation
 // Parent organisation
 type GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisation struct {
-	Bic              *string                                                                                                                   `json:"BIC,omitempty"`
-	Lei              *string                                                                                                                   `json:"LEI,omitempty"`
+	BIC              *string                                                                                                                   `json:"BIC,omitempty"`
+	LEI              *string                                                                                                                   `json:"LEI,omitempty"`
 	OrganisationName GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisationOrganisationName `json:"OrganisationName"`
 }
 
@@ -510,7 +510,7 @@ type GetCommercialCreditCardsResponse struct {
 	FiveHundredAndThreeErrorObject                                                *GetCommercialCreditCards503ErrorObject
 	ContentType                                                                   string
 	ErrorObject                                                                   *GetCommercialCreditCardsErrorObject
-	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	Headers                                                                       map[string][]string
 	StatusCode                                                                    int64
+	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 }

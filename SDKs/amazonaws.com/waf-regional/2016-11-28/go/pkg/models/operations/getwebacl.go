@@ -7,7 +7,7 @@ import (
 type GetWebAclxAmzTargetEnum string
 
 const (
-	GetWebAclxAmzTargetEnumAwswafRegional20161128GetWebACL GetWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.GetWebACL"
+	GetWebACLXAmzTargetEnumAwswafRegional20161128GetWebACL GetWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.GetWebACL"
 )
 
 type GetWebACLHeaders struct {
@@ -30,7 +30,7 @@ type GetWebACLResponse struct {
 	ContentType                 string
 	GetWebACLResponse           *shared.GetWebACLResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

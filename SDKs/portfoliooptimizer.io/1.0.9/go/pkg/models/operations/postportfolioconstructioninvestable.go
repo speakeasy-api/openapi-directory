@@ -24,6 +24,6 @@ type PostPortfolioConstructionInvestableRequest struct {
 
 type PostPortfolioConstructionInvestableResponse struct {
 	ContentType                                                 string
-	PostPortfolioConstructionInvestable200ApplicationJSONObject *PostPortfolioConstructionInvestable200ApplicationJSON
 	StatusCode                                                  int64
+	PostPortfolioConstructionInvestable200ApplicationJSONObject *PostPortfolioConstructionInvestable200ApplicationJSON
 }

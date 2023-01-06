@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.AdcrdSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AdcrdRequestBody{
             CertificateParameters: &operations.AdcrdRequestBodyCertificateParameters{
-                ApplicationNo: "dolorum",
-                Dob: "illum",
-                ExamYear: "voluptatem",
-                FullName: "ut",
+                ApplicationNo: "perspiciatis",
+                DOB: "dolorem",
+                ExamYear: "magni",
+                FullName: "sequi",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "non",
             Format: "pdf",
-            TxnID: "sequi",
+            TxnID: "recusandae",
         },
     }
     
-    res, err := s.Sdk.Adcrd(ctx, req)
+    res, err := s.APIs.Adcrd(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Adcrd` - Admit Card
 

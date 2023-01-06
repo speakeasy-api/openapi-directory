@@ -1,5 +1,5 @@
 package shared
 
 type UpdateStreamingImageResponse struct {
-	StreamingImage *StreamingImage `json:"streamingImage,omitempty"`
+	StreamingImage map[string]interface{} `json:"streamingImage,omitempty"`
 }

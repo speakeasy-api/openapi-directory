@@ -3,13 +3,13 @@ package operations
 type PostDescribeNetworkInsightsPathsActionEnum string
 
 const (
-	PostDescribeNetworkInsightsPathsActionEnumDescribeNetworkInsightsPaths PostDescribeNetworkInsightsPathsActionEnum = "DescribeNetworkInsightsPaths"
+	POSTDescribeNetworkInsightsPathsActionEnumDescribeNetworkInsightsPaths PostDescribeNetworkInsightsPathsActionEnum = "DescribeNetworkInsightsPaths"
 )
 
 type PostDescribeNetworkInsightsPathsVersionEnum string
 
 const (
-	PostDescribeNetworkInsightsPathsVersionEnumTwoThousandAndSixteen1115 PostDescribeNetworkInsightsPathsVersionEnum = "2016-11-15"
+	POSTDescribeNetworkInsightsPathsVersionEnumTwoThousandAndSixteen1115 PostDescribeNetworkInsightsPathsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeNetworkInsightsPathsQueryParams struct {

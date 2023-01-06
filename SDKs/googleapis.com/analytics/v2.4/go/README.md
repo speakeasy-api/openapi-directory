@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,30 +27,30 @@ func main() {
             Option1: &operations.AnalyticsDataGetSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.AnalyticsDataGetQueryParams{
             Alt: "atom",
-            Dimensions: "odio",
-            EndDate: "expedita",
-            Fields: "velit",
-            Filters: "officiis",
-            Ids: "ullam",
-            Key: "quasi",
-            MaxResults: 5248010361916851888,
-            Metrics: "sunt",
-            OauthToken: "soluta",
+            Dimensions: "officiis",
+            EndDate: "laborum",
+            Fields: "et",
+            Filters: "quia",
+            Ids: "voluptatem",
+            Key: "vel",
+            MaxResults: 2195685693223152917,
+            Metrics: "incidunt",
+            OauthToken: "voluptas",
             PrettyPrint: true,
-            QuotaUser: "earum",
-            Segment: "illo",
-            Sort: "ducimus",
-            StartDate: "est",
-            StartIndex: 5819597126225842965,
-            UserIP: "non",
+            QuotaUser: "quam",
+            Segment: "harum",
+            Sort: "debitis",
+            StartDate: "et",
+            StartIndex: 6730165001314166952,
+            UserIP: "ut",
         },
     }
     

@@ -14,14 +14,10 @@ type LinkRequestBody struct {
 	Identification LinkRequestBodyIdentification `json:"identification"`
 }
 
-type Link201ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// Link201ApplicationJSON
+// The object was created
 type Link201ApplicationJSON struct {
-	Message string                     `json:"message"`
-	Meta    Link201ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 // Link400ApplicationJSONErrorsParameters
@@ -39,55 +35,34 @@ type Link400ApplicationJSONErrors struct {
 	Parameters *Link400ApplicationJSONErrorsParameters `json:"parameters,omitempty"`
 }
 
-type Link400ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// Link400ApplicationJSON
+// Specify the fields and/ or parameters that had errors
 type Link400ApplicationJSON struct {
-	Errors  Link400ApplicationJSONErrors `json:"errors"`
-	Message string                       `json:"message"`
-	Meta    Link400ApplicationJSONMeta   `json:"meta"`
+	Errors Link400ApplicationJSONErrors `json:"errors"`
 }
 
-type Link401ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// Link401ApplicationJSON
+// The error message should specify what cause the error
 type Link401ApplicationJSON struct {
-	Message string                     `json:"message"`
-	Meta    Link401ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type Link403ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// Link403ApplicationJSON
+// The error message should specify what cause the error
 type Link403ApplicationJSON struct {
-	Message string                     `json:"message"`
-	Meta    Link403ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type Link429ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// Link429ApplicationJSON
+// The error message should specify what cause the error
 type Link429ApplicationJSON struct {
-	Message string                     `json:"message"`
-	Meta    Link429ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type Link500ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// Link500ApplicationJSON
+// The error message should specify what cause the error
 type Link500ApplicationJSON struct {
-	Message string                     `json:"message"`
-	Meta    Link500ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 type LinkRequest struct {

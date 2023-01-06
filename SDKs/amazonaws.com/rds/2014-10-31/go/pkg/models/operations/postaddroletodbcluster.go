@@ -3,13 +3,13 @@ package operations
 type PostAddRoleToDbClusterActionEnum string
 
 const (
-	PostAddRoleToDbClusterActionEnumAddRoleToDbCluster PostAddRoleToDbClusterActionEnum = "AddRoleToDBCluster"
+	POSTAddRoleToDBClusterActionEnumAddRoleToDbCluster PostAddRoleToDbClusterActionEnum = "AddRoleToDBCluster"
 )
 
 type PostAddRoleToDbClusterVersionEnum string
 
 const (
-	PostAddRoleToDbClusterVersionEnumTwoThousandAndFourteen1031 PostAddRoleToDbClusterVersionEnum = "2014-10-31"
+	POSTAddRoleToDBClusterVersionEnumTwoThousandAndFourteen1031 PostAddRoleToDbClusterVersionEnum = "2014-10-31"
 )
 
 type PostAddRoleToDbClusterQueryParams struct {

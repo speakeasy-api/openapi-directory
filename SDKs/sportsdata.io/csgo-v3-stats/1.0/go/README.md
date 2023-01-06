@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.AreasCountriesRequest{
         PathParams: operations.AreasCountriesPathParams{
-            Format: "json",
+            Format: "xml",
         },
     }
     
-    res, err := s.Sdk.AreasCountries(ctx, req)
+    res, err := s.AreasCountries(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

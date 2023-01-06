@@ -28,8 +28,8 @@ const (
 // CreateAuthorizerRequestBodyJwtConfiguration
 // Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.
 type CreateAuthorizerRequestBodyJwtConfiguration struct {
-	Audience []string `json:"Audience,omitempty"`
-	Issuer   *string  `json:"Issuer,omitempty"`
+	Audience map[string]interface{} `json:"Audience,omitempty"`
+	Issuer   map[string]interface{} `json:"Issuer,omitempty"`
 }
 
 type CreateAuthorizerRequestBody struct {

@@ -15,6 +15,6 @@ type GetCourseMappingsOfferingIDRequest struct {
 type GetCourseMappingsOfferingIDResponse struct {
 	ContentType                                          string
 	Error                                                *shared.Error
-	GetCourseMappingsOfferingID200ApplicationJSONStrings []string
 	StatusCode                                           int64
+	GetCourseMappingsOfferingID200ApplicationJSONStrings []string
 }

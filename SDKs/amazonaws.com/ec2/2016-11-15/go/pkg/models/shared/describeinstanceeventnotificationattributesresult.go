@@ -1,5 +1,5 @@
 package shared
 
 type DescribeInstanceEventNotificationAttributesResult struct {
-	InstanceTagAttribute *InstanceTagNotificationAttribute
+	InstanceTagAttribute map[string]interface{}
 }

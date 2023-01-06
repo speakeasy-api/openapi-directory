@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.NbcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.NbcerRequestBody{
             CertificateParameters: &operations.NbcerRequestBodyCertificateParameters{
-                RefNo: "minus",
-                TokenNo: "quibusdam",
+                RefNo: "omnis",
+                TokenNo: "eos",
             },
-            ConsentArtifact: "distinctio",
+            ConsentArtifact: "dolore",
             Format: "pdf",
-            TxnID: "temporibus",
+            TxnID: "dolor",
         },
     }
     
-    res, err := s.Sdk.Nbcer(ctx, req)
+    res, err := s.APIs.Nbcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Nbcer` - NAC/Birth/Death Certificate
 

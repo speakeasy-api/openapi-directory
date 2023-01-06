@@ -27,7 +27,7 @@ type VerifyOtpIDResponse struct {
 	ContentType                         string
 	DemoAuthVerifyResponse              *interface{}
 	StatusCode                          int64
-	VerifyOtpID400ApplicationJSONOneOf  *interface{}
-	VerifyOtpID401ApplicationJSONObject *VerifyOtpID401ApplicationJSON
-	VerifyOtpID500ApplicationJSONObject *VerifyOtpID500ApplicationJSON
+	VerifyOTPID400ApplicationJSONOneOf  *interface{}
+	VerifyOTPID401ApplicationJSONObject *VerifyOtpID401ApplicationJSON
+	VerifyOTPID500ApplicationJSONObject *VerifyOtpID500ApplicationJSON
 }

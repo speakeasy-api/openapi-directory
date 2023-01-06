@@ -5,7 +5,7 @@ import (
 )
 
 type DpicrRequestBodyCertificateParameters struct {
-	CertNo   string `json:"CERT_NO"`
+	CERTNO   string `json:"CERT_NO"`
 	FullName string `json:"FullName"`
 }
 
@@ -82,7 +82,7 @@ type Dpicr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Dpicr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Dpicr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Dpicr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Dpicr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Dpicr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Dpicr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Dpicr404ApplicationJSON struct {

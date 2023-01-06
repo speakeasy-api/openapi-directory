@@ -1,5 +1,5 @@
 package shared
 
 type CreateRouteTableResult struct {
-	RouteTable *RouteTable
+	RouteTable map[string]interface{}
 }

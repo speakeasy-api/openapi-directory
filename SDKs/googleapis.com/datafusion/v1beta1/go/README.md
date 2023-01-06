@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,81 +26,86 @@ func main() {
         Security: operations.DatafusionProjectsLocationsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DatafusionProjectsLocationsInstancesCreatePathParams{
-            Parent: "qui",
+            Parent: "hic",
         },
         QueryParams: operations.DatafusionProjectsLocationsInstancesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "delectus",
-            Alt: "json",
-            Callback: "et",
-            Fields: "consequuntur",
-            InstanceID: "itaque",
-            Key: "architecto",
-            OauthToken: "magni",
-            PrettyPrint: false,
-            QuotaUser: "maiores",
-            UploadType: "ut",
-            UploadProtocol: "qui",
+            AccessToken: "numquam",
+            Alt: "proto",
+            Callback: "necessitatibus",
+            Fields: "culpa",
+            InstanceID: "cum",
+            Key: "fugiat",
+            OauthToken: "ut",
+            PrettyPrint: true,
+            QuotaUser: "sit",
+            UploadType: "sint",
+            UploadProtocol: "deleniti",
         },
         Request: &shared.InstanceInput{
             Accelerators: []shared.Accelerator{
                 shared.Accelerator{
-                    AcceleratorType: "HEALTHCARE",
+                    AcceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
                 },
                 shared.Accelerator{
-                    AcceleratorType: "CDC",
-                },
-                shared.Accelerator{
-                    AcceleratorType: "HEALTHCARE",
+                    AcceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
                 },
             },
             AvailableVersion: []shared.Version{
                 shared.Version{
                     AvailableFeatures: []string{
-                        "eum",
-                        "sapiente",
-                        "culpa",
+                        "similique",
+                    },
+                    DefaultVersion: false,
+                    Type: "TYPE_UNSPECIFIED",
+                    VersionNumber: "rerum",
+                },
+                shared.Version{
+                    AvailableFeatures: []string{
+                        "nobis",
+                        "molestias",
+                        "omnis",
                     },
                     DefaultVersion: false,
                     Type: "TYPE_PREVIEW",
-                    VersionNumber: "ex",
+                    VersionNumber: "nesciunt",
                 },
             },
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "dolor",
+                KeyReference: "omnis",
             },
-            DataprocServiceAccount: "ut",
-            Description: "saepe",
-            DisplayName: "nesciunt",
-            EnableRbac: true,
-            EnableStackdriverLogging: false,
-            EnableStackdriverMonitoring: true,
+            DataprocServiceAccount: "pariatur",
+            Description: "odio",
+            DisplayName: "occaecati",
+            EnableRbac: false,
+            EnableStackdriverLogging: true,
+            EnableStackdriverMonitoring: false,
             EventPublishConfig: &shared.EventPublishConfig{
-                Enabled: true,
-                Topic: "dignissimos",
+                Enabled: false,
+                Topic: "quaerat",
             },
             Labels: map[string]string{
-                "et": "repellendus",
-                "et": "nemo",
+                "recusandae": "incidunt",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "maxime",
-                Network: "iure",
+                IPAllocation: "eum",
+                Network: "esse",
             },
             Options: map[string]string{
-                "molestias": "pariatur",
-                "omnis": "eius",
+                "pariatur": "omnis",
+                "perspiciatis": "et",
+                "impedit": "rem",
             },
             PrivateInstance: false,
-            Type: "TYPE_UNSPECIFIED",
-            Version: "omnis",
-            Zone: "quia",
+            Type: "ENTERPRISE",
+            Version: "ut",
+            Zone: "et",
         },
     }
     

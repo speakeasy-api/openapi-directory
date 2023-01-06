@@ -6,9 +6,9 @@ import (
 
 type PrcptRequestBodyCertificateParameters struct {
 	FullName    string `json:"FullName"`
-	PiDob       string `json:"PI_DOB"`
-	PiFinYear   string `json:"PI_FIN_YEAR"`
-	PiPolicynbr string `json:"PI_POLICYNBR"`
+	PIDOB       string `json:"PI_DOB"`
+	PIFINYEAR   string `json:"PI_FIN_YEAR"`
+	PIPOLICYNBR string `json:"PI_POLICYNBR"`
 }
 
 type PrcptRequestBodyFormatEnum string
@@ -84,7 +84,7 @@ type Prcpt404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Prcpt404ApplicationJSONErrorDescriptionEnumNoRecordFound               Prcpt404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Prcpt404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Prcpt404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Prcpt404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Prcpt404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Prcpt404ApplicationJSON struct {

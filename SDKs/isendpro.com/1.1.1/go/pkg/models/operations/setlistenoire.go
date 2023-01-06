@@ -23,6 +23,6 @@ type SetListeNoireRequest struct {
 type SetListeNoireResponse struct {
 	ContentType       string
 	Erreur            *shared.Erreur
-	ListenoireReponse *shared.ListenoireReponse
+	LISTENOIREReponse *shared.ListenoireReponse
 	StatusCode        int64
 }

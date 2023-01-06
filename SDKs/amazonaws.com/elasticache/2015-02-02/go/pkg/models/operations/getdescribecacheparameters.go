@@ -3,13 +3,13 @@ package operations
 type GetDescribeCacheParametersActionEnum string
 
 const (
-	GetDescribeCacheParametersActionEnumDescribeCacheParameters GetDescribeCacheParametersActionEnum = "DescribeCacheParameters"
+	GETDescribeCacheParametersActionEnumDescribeCacheParameters GetDescribeCacheParametersActionEnum = "DescribeCacheParameters"
 )
 
 type GetDescribeCacheParametersVersionEnum string
 
 const (
-	GetDescribeCacheParametersVersionEnumTwoThousandAndFifteen0202 GetDescribeCacheParametersVersionEnum = "2015-02-02"
+	GETDescribeCacheParametersVersionEnumTwoThousandAndFifteen0202 GetDescribeCacheParametersVersionEnum = "2015-02-02"
 )
 
 type GetDescribeCacheParametersQueryParams struct {

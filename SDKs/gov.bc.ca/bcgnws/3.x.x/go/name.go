@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -169,39 +169,6 @@ func (s *Name) GetNamesInside(ctx context.Context, request operations.GetNamesIn
 	return res, nil
 }
 
-// GetNamesNameIDOutputFormat - Get a name by its nameId
-// Get information about the geographical name with the specified nameId.
-func (s *Name) GetNamesNameIDOutputFormat(ctx context.Context, request operations.GetNamesNameIDOutputFormatRequest) (*operations.GetNamesNameIDOutputFormatResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/names/{nameId}.{outputFormat}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetNamesNameIDOutputFormatResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	case httpRes.StatusCode == 404:
-	}
-
-	return res, nil
-}
-
 // GetNamesNear - Search near to a geographic point
 // Search for information about geographical names that correspond to features within a geographic area defined by a centre point and a radius.  Various options and filter parameters are available to refine the search.
 func (s *Name) GetNamesNear(ctx context.Context, request operations.GetNamesNearRequest) (*operations.GetNamesNearResponse, error) {
@@ -337,6 +304,39 @@ func (s *Name) GetNamesSearch(ctx context.Context, request operations.GetNamesSe
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode == 400:
+	}
+
+	return res, nil
+}
+
+// GetNamesNameIDOutputFormat - Get a name by its nameId
+// Get information about the geographical name with the specified nameId.
+func (s *Name) GetNamesNameIDOutputFormat(ctx context.Context, request operations.GetNamesNameIDOutputFormatRequest) (*operations.GetNamesNameIDOutputFormatResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/names/{nameId}.{outputFormat}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetNamesNameIDOutputFormatResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
 	}
 
 	return res, nil

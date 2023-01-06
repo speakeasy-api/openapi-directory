@@ -5,7 +5,7 @@ import (
 )
 
 type PsnocRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Psnoc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Psnoc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Psnoc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Psnoc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Psnoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Psnoc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Psnoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Psnoc404ApplicationJSON struct {

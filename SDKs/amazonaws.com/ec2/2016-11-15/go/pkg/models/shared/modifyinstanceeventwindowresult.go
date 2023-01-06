@@ -1,5 +1,5 @@
 package shared
 
 type ModifyInstanceEventWindowResult struct {
-	InstanceEventWindow *InstanceEventWindow
+	InstanceEventWindow map[string]interface{}
 }

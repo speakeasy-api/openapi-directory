@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,10 +33,10 @@ func main() {
     s := sdk.New(opts...)
     
     req := operations.PostAssetsCorrelationMatrixRequest{
-        Request: "accusamus",
+        Request: "voluptate",
     }
     
-    res, err := s.Sdk.PostAssetsCorrelationMatrix(ctx, req)
+    res, err := s.AssetsCorrelationMatrix.PostAssetsCorrelationMatrix(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -51,22 +50,40 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Assets Correlation Matrix
 
 * `PostAssetsCorrelationMatrix` - Correlation Matrix
 * `PostAssetsCorrelationMatrixNearest` - Nearest Correlation Matrix
 * `PostAssetsCorrelationMatrixShrinkage` - Correlation Matrix Shrinkage
 * `PostAssetsCorrelationMatrixValidation` - Correlation Matrix Validation
+
+### Assets Covariance Matrix
+
 * `PostAssetsCovarianceMatrix` - Covariance Matrix
 * `PostAssetsCovarianceMatrixSample` - Sample Covariance Matrix
 * `PostAssetsCovarianceMatrixValidation` - Covariance Matrix Validation
+
+### Assets Returns
+
 * `PostAssetsReturns` - Arithmetic Returns
 * `PostAssetsReturnsAverage` - Arithmetic Average Return
+
+### Assets Variance
+
 * `PostAssetsVariance` - Variance
 * `PostAssetsVarianceSample` - Sample variance
+
+### Assets Volatility
+
 * `PostAssetsVolatility` - Volatility
 * `PostAssetsVolatilitySample` - Sample volatility
+
+### Factors
+
 * `PostFactorsResidualization` - Residualization
+
+### Portfolio Analysis
+
 * `PostPortfolioAnalysisAlpha` - Alpha
 * `PostPortfolioAnalysisBeta` - Beta
 * `PostPortfolioAnalysisContributionsReturn` - Return Contributions
@@ -81,9 +98,15 @@ func main() {
 * `PostPortfolioAnalysisSharpeRatio` - Sharpe Ratio
 * `PostPortfolioAnalysisTrackingError` - Tracking Error
 * `PostPortfolioAnalysisVolatility` - Volatility
+
+### Portfolio Construction
+
 * `PostPortfolioConstructionInvestable` - Investable Portfolio
 * `PostPortfolioConstructionMimicking` - Mimicking Portfolio
 * `PostPortfolioConstructionRandom` - Random Portfolio
+
+### Portfolio Optimization
+
 * `PostPortfolioOptimizationEqualRiskContributions` - Equal Risk Contributions Portfolio
 * `PostPortfolioOptimizationEqualSharpeRatioContributions` - Equal Sharpe Ratio Contributions Portfolio
 * `PostPortfolioOptimizationEqualWeighted` - Equal Weighted Portfolio
@@ -97,6 +120,9 @@ func main() {
 * `PostPortfolioOptimizationMinimumCorrelation` - Minimum Correlation Portfolio
 * `PostPortfolioOptimizationMinimumVariance` - Minimum Variance Portfolio
 * `PostPortfolioOptimizationMostDiversified` - Most Diversified Portfolio
+
+### Portfolio Simulation
+
 * `PostPortfolioSimulationRebalancingDriftWeight` - Drift-weight Portfolio Rebalancing
 * `PostPortfolioSimulationRebalancingFixedWeight` - Fixed-weight Portfolio Rebalancing
 * `PostPortfolioSimulationRebalancingRandomWeight` - Random-weight Portfolio Rebalancing

@@ -35,7 +35,7 @@ type UpdateCustomKeyStoreResponse struct {
 	CustomKeyStoreInvalidStateException          *interface{}
 	CustomKeyStoreNameInUseException             *interface{}
 	CustomKeyStoreNotFoundException              *interface{}
-	KmsInternalException                         *interface{}
+	KMSInternalException                         *interface{}
 	StatusCode                                   int64
 	UpdateCustomKeyStoreResponse                 map[string]interface{}
 }

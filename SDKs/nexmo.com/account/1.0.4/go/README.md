@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,8 +24,8 @@ func main() {
     
     req := operations.GetAccountBalanceRequest{
         QueryParams: operations.GetAccountBalanceQueryParams{
-            APIKey: "est",
-            APISecret: "non",
+            APIKey: "reprehenderit",
+            APISecret: "eius",
         },
     }
     

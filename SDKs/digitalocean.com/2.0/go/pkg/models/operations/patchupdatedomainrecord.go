@@ -9,15 +9,15 @@ type PatchUpdateDomainRecordPathParams struct {
 	DomainRecordID int64  `pathParam:"style=simple,explode=false,name=domain_record_id"`
 }
 
-type PatchUpdateDomainRecordRequest struct {
-	PathParams PatchUpdateDomainRecordPathParams
-	Request    *shared.Onev21domains1Percent7BdomainNamePercent7D1recordsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDomainRecordsItems `request:"mediaType=application/json"`
-}
-
 type PatchUpdateDomainRecord401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type PatchUpdateDomainRecordRequest struct {
+	PathParams PatchUpdateDomainRecordPathParams
+	Request    *shared.Onev21domains1Percent7BdomainNamePercent7D1recordsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDomainRecordsItemsInput `request:"mediaType=application/json"`
 }
 
 type PatchUpdateDomainRecordResponse struct {

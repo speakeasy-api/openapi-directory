@@ -3,7 +3,7 @@ package shared
 // DomainDescriptionType
 // A container for information about a domain.
 type DomainDescriptionType struct {
-	AwsAccountID           *string                 `json:"AWSAccountId,omitempty"`
+	AWSAccountID           *string                 `json:"AWSAccountId,omitempty"`
 	CloudFrontDistribution *string                 `json:"CloudFrontDistribution,omitempty"`
 	CustomDomainConfig     *CustomDomainConfigType `json:"CustomDomainConfig,omitempty"`
 	Domain                 *string                 `json:"Domain,omitempty"`

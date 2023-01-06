@@ -3,13 +3,13 @@ package operations
 type GetDeactivateMfaDeviceActionEnum string
 
 const (
-	GetDeactivateMfaDeviceActionEnumDeactivateMfaDevice GetDeactivateMfaDeviceActionEnum = "DeactivateMFADevice"
+	GETDeactivateMFADeviceActionEnumDeactivateMfaDevice GetDeactivateMfaDeviceActionEnum = "DeactivateMFADevice"
 )
 
 type GetDeactivateMfaDeviceVersionEnum string
 
 const (
-	GetDeactivateMfaDeviceVersionEnumTwoThousandAndTen0508 GetDeactivateMfaDeviceVersionEnum = "2010-05-08"
+	GETDeactivateMFADeviceVersionEnumTwoThousandAndTen0508 GetDeactivateMfaDeviceVersionEnum = "2010-05-08"
 )
 
 type GetDeactivateMfaDeviceQueryParams struct {

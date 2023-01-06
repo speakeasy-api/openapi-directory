@@ -1,5 +1,5 @@
 package shared
 
 type ModifyTrafficMirrorSessionResult struct {
-	TrafficMirrorSession *TrafficMirrorSession
+	TrafficMirrorSession map[string]interface{}
 }

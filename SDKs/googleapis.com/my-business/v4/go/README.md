@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,52 +25,51 @@ func main() {
     req := operations.MybusinessAccountsCreateRequest{
         QueryParams: operations.MybusinessAccountsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "est",
-            Alt: "media",
-            Callback: "soluta",
-            Fields: "rerum",
-            Key: "perspiciatis",
-            OauthToken: "amet",
+            AccessToken: "aliquid",
+            Alt: "proto",
+            Callback: "quaerat",
+            Fields: "sed",
+            Key: "sint",
+            OauthToken: "sed",
             PrettyPrint: false,
-            PrimaryOwner: "suscipit",
-            QuotaUser: "in",
-            UploadType: "voluptas",
-            UploadProtocol: "impedit",
+            PrimaryOwner: "vel",
+            QuotaUser: "debitis",
+            UploadType: "neque",
+            UploadProtocol: "inventore",
         },
         Request: &shared.Account{
-            AccountName: "repellat",
-            AccountNumber: "nemo",
-            Name: "ut",
+            AccountName: "quasi",
+            AccountNumber: "labore",
+            Name: "dolores",
             OrganizationInfo: &shared.OrganizationInfo{
-                PhoneNumber: "adipisci",
+                PhoneNumber: "nobis",
                 PostalAddress: &shared.PostalAddress{
                     AddressLines: []string{
-                        "dolore",
-                        "consequuntur",
+                        "eaque",
                     },
-                    AdministrativeArea: "laboriosam",
-                    LanguageCode: "molestias",
-                    Locality: "in",
-                    Organization: "harum",
-                    PostalCode: "cupiditate",
+                    AdministrativeArea: "quia",
+                    LanguageCode: "id",
+                    Locality: "cupiditate",
+                    Organization: "iste",
+                    PostalCode: "pariatur",
                     Recipients: []string{
-                        "ea",
-                        "aliquid",
-                        "rem",
+                        "quia",
+                        "ipsam",
+                        "atque",
                     },
-                    RegionCode: "qui",
-                    Revision: 44272711320736584,
-                    SortingCode: "voluptatem",
-                    Sublocality: "molestiae",
+                    RegionCode: "dolorem",
+                    Revision: 336704244518395768,
+                    SortingCode: "recusandae",
+                    Sublocality: "sit",
                 },
-                RegisteredDomain: "quaerat",
+                RegisteredDomain: "est",
             },
-            PermissionLevel: "MEMBER_LEVEL",
-            Role: "ACCOUNT_ROLE_UNSPECIFIED",
+            PermissionLevel: "PERMISSION_LEVEL_UNSPECIFIED",
+            Role: "CO_OWNER",
             State: &shared.AccountState{
                 Status: "ACCOUNT_STATUS_UNSPECIFIED",
             },
-            Type: "LOCATION_GROUP",
+            Type: "ORGANIZATION",
         },
     }
     

@@ -3,13 +3,13 @@ package operations
 type GetUntagRoleActionEnum string
 
 const (
-	GetUntagRoleActionEnumUntagRole GetUntagRoleActionEnum = "UntagRole"
+	GETUntagRoleActionEnumUntagRole GetUntagRoleActionEnum = "UntagRole"
 )
 
 type GetUntagRoleVersionEnum string
 
 const (
-	GetUntagRoleVersionEnumTwoThousandAndTen0508 GetUntagRoleVersionEnum = "2010-05-08"
+	GETUntagRoleVersionEnumTwoThousandAndTen0508 GetUntagRoleVersionEnum = "2010-05-08"
 )
 
 type GetUntagRoleQueryParams struct {

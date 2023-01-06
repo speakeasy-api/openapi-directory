@@ -7,7 +7,7 @@ import (
 type CreateVpceConfigurationXAmzTargetEnum string
 
 const (
-	CreateVpceConfigurationXAmzTargetEnumDeviceFarm20150623CreateVpceConfiguration CreateVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.CreateVPCEConfiguration"
+	CreateVPCEConfigurationXAmzTargetEnumDeviceFarm20150623CreateVpceConfiguration CreateVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.CreateVPCEConfiguration"
 )
 
 type CreateVpceConfigurationHeaders struct {
@@ -29,7 +29,7 @@ type CreateVpceConfigurationRequest struct {
 type CreateVpceConfigurationResponse struct {
 	ArgumentException             *interface{}
 	ContentType                   string
-	CreateVpceConfigurationResult *shared.CreateVpceConfigurationResult
+	CreateVPCEConfigurationResult *shared.CreateVpceConfigurationResult
 	LimitExceededException        *interface{}
 	ServiceAccountException       *interface{}
 	StatusCode                    int64

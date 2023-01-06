@@ -7,13 +7,13 @@ import (
 type GetModifyInstanceEventStartTimeActionEnum string
 
 const (
-	GetModifyInstanceEventStartTimeActionEnumModifyInstanceEventStartTime GetModifyInstanceEventStartTimeActionEnum = "ModifyInstanceEventStartTime"
+	GETModifyInstanceEventStartTimeActionEnumModifyInstanceEventStartTime GetModifyInstanceEventStartTimeActionEnum = "ModifyInstanceEventStartTime"
 )
 
 type GetModifyInstanceEventStartTimeVersionEnum string
 
 const (
-	GetModifyInstanceEventStartTimeVersionEnumTwoThousandAndSixteen1115 GetModifyInstanceEventStartTimeVersionEnum = "2016-11-15"
+	GETModifyInstanceEventStartTimeVersionEnumTwoThousandAndSixteen1115 GetModifyInstanceEventStartTimeVersionEnum = "2016-11-15"
 )
 
 type GetModifyInstanceEventStartTimeQueryParams struct {

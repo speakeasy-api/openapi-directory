@@ -1,5 +1,5 @@
 package shared
 
 type CreateRouteResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

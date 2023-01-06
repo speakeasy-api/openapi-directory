@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,28 +26,28 @@ func main() {
         Security: operations.BooksBookshelvesGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.BooksBookshelvesGetPathParams{
-            Shelf: "distinctio",
-            UserID: "numquam",
+            Shelf: "nihil",
+            UserID: "totam",
         },
         QueryParams: operations.BooksBookshelvesGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "dolor",
-            Alt: "json",
-            Callback: "sint",
-            Fields: "eum",
-            Key: "est",
-            OauthToken: "unde",
+            AccessToken: "laudantium",
+            Alt: "proto",
+            Callback: "aut",
+            Fields: "quod",
+            Key: "cupiditate",
+            OauthToken: "et",
             PrettyPrint: true,
-            QuotaUser: "minima",
-            Source: "et",
-            UploadType: "est",
-            UploadProtocol: "illum",
+            QuotaUser: "dolores",
+            Source: "ipsum",
+            UploadType: "officiis",
+            UploadProtocol: "cumque",
         },
     }
     

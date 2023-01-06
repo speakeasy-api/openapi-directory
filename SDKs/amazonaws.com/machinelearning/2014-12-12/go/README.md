@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,36 +34,36 @@ func main() {
     
     req := operations.AddTagsRequest{
         Headers: operations.AddTagsHeaders{
-            XAmzAlgorithm: "qui",
-            XAmzContentSha256: "et",
-            XAmzCredential: "ex",
-            XAmzDate: "adipisci",
-            XAmzSecurityToken: "ipsum",
-            XAmzSignature: "placeat",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "quasi",
+            XAmzContentSha256: "quis",
+            XAmzCredential: "vitae",
+            XAmzDate: "nesciunt",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "consequuntur",
             XAmzTarget: "AmazonML_20141212.AddTags",
         },
         Request: shared.AddTagsInput{
-            ResourceID: "sed",
+            ResourceID: "magni",
             ResourceType: "DataSource",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "atque",
-                    Value: "expedita",
+                    Key: "quia",
+                    Value: "sit",
                 },
                 shared.Tag{
-                    Key: "quo",
-                    Value: "facere",
+                    Key: "qui",
+                    Value: "qui",
                 },
                 shared.Tag{
-                    Key: "perferendis",
-                    Value: "voluptate",
+                    Key: "assumenda",
+                    Value: "excepturi",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddTags(ctx, req)
+    res, err := s.AddTags(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

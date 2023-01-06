@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.CalendarACLDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CalendarACLDeletePathParams{
-            CalendarID: "eius",
-            RuleID: "voluptatem",
+            CalendarID: "accusamus",
+            RuleID: "voluptate",
         },
         QueryParams: operations.CalendarACLDeleteQueryParams{
             Alt: "json",
-            Fields: "pariatur",
-            Key: "reprehenderit",
-            OauthToken: "rerum",
+            Fields: "quisquam",
+            Key: "cumque",
+            OauthToken: "repudiandae",
             PrettyPrint: false,
-            QuotaUser: "ut",
-            UserIP: "omnis",
+            QuotaUser: "hic",
+            UserIP: "ipsam",
         },
     }
     

@@ -3,13 +3,13 @@ package operations
 type PostDescribeReservedDbInstancesActionEnum string
 
 const (
-	PostDescribeReservedDbInstancesActionEnumDescribeReservedDbInstances PostDescribeReservedDbInstancesActionEnum = "DescribeReservedDBInstances"
+	POSTDescribeReservedDBInstancesActionEnumDescribeReservedDbInstances PostDescribeReservedDbInstancesActionEnum = "DescribeReservedDBInstances"
 )
 
 type PostDescribeReservedDbInstancesVersionEnum string
 
 const (
-	PostDescribeReservedDbInstancesVersionEnumTwoThousandAndFourteen1031 PostDescribeReservedDbInstancesVersionEnum = "2014-10-31"
+	POSTDescribeReservedDBInstancesVersionEnumTwoThousandAndFourteen1031 PostDescribeReservedDbInstancesVersionEnum = "2014-10-31"
 )
 
 type PostDescribeReservedDbInstancesQueryParams struct {

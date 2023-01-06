@@ -1,5 +1,5 @@
 package shared
 
 type PromoteReadReplicaDbClusterResult struct {
-	DbCluster *DbCluster
+	DBCluster *DbCluster
 }

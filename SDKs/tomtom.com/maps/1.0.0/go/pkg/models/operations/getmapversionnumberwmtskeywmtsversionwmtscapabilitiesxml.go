@@ -3,7 +3,7 @@ package operations
 type GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnum string
 
 const (
-	GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnumOne00 GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnum = "1.0.0"
+	GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnumOne00 GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnum = "1.0.0"
 )
 
 type GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLPathParams struct {

@@ -32,6 +32,6 @@ type GenerateRandomResponse struct {
 	CustomKeyStoreNotFoundException     *interface{}
 	DependencyTimeoutException          *interface{}
 	GenerateRandomResponse              *shared.GenerateRandomResponse
-	KmsInternalException                *interface{}
+	KMSInternalException                *interface{}
 	StatusCode                          int64
 }

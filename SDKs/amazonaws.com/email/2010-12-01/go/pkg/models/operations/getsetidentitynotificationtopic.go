@@ -3,21 +3,21 @@ package operations
 type GetSetIdentityNotificationTopicActionEnum string
 
 const (
-	GetSetIdentityNotificationTopicActionEnumSetIdentityNotificationTopic GetSetIdentityNotificationTopicActionEnum = "SetIdentityNotificationTopic"
+	GETSetIdentityNotificationTopicActionEnumSetIdentityNotificationTopic GetSetIdentityNotificationTopicActionEnum = "SetIdentityNotificationTopic"
 )
 
 type GetSetIdentityNotificationTopicNotificationTypeEnum string
 
 const (
-	GetSetIdentityNotificationTopicNotificationTypeEnumBounce    GetSetIdentityNotificationTopicNotificationTypeEnum = "Bounce"
-	GetSetIdentityNotificationTopicNotificationTypeEnumComplaint GetSetIdentityNotificationTopicNotificationTypeEnum = "Complaint"
-	GetSetIdentityNotificationTopicNotificationTypeEnumDelivery  GetSetIdentityNotificationTopicNotificationTypeEnum = "Delivery"
+	GETSetIdentityNotificationTopicNotificationTypeEnumBounce    GetSetIdentityNotificationTopicNotificationTypeEnum = "Bounce"
+	GETSetIdentityNotificationTopicNotificationTypeEnumComplaint GetSetIdentityNotificationTopicNotificationTypeEnum = "Complaint"
+	GETSetIdentityNotificationTopicNotificationTypeEnumDelivery  GetSetIdentityNotificationTopicNotificationTypeEnum = "Delivery"
 )
 
 type GetSetIdentityNotificationTopicVersionEnum string
 
 const (
-	GetSetIdentityNotificationTopicVersionEnumTwoThousandAndTen1201 GetSetIdentityNotificationTopicVersionEnum = "2010-12-01"
+	GETSetIdentityNotificationTopicVersionEnumTwoThousandAndTen1201 GetSetIdentityNotificationTopicVersionEnum = "2010-12-01"
 )
 
 type GetSetIdentityNotificationTopicQueryParams struct {

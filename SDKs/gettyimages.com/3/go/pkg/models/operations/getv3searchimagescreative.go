@@ -37,7 +37,7 @@ type GetV3SearchImagesCreativeQueryParams struct {
 
 type GetV3SearchImagesCreativeHeaders struct {
 	AcceptLanguage *string `header:"style=simple,explode=false,name=Accept-Language"`
-	GiCountryCode  *string `header:"style=simple,explode=false,name=GI-Country-Code"`
+	GICountryCode  *string `header:"style=simple,explode=false,name=GI-Country-Code"`
 }
 
 type GetV3SearchImagesCreativeRequest struct {

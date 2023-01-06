@@ -3,13 +3,13 @@ package operations
 type GetDescribePlatformVersionActionEnum string
 
 const (
-	GetDescribePlatformVersionActionEnumDescribePlatformVersion GetDescribePlatformVersionActionEnum = "DescribePlatformVersion"
+	GETDescribePlatformVersionActionEnumDescribePlatformVersion GetDescribePlatformVersionActionEnum = "DescribePlatformVersion"
 )
 
 type GetDescribePlatformVersionVersionEnum string
 
 const (
-	GetDescribePlatformVersionVersionEnumTwoThousandAndTen1201 GetDescribePlatformVersionVersionEnum = "2010-12-01"
+	GETDescribePlatformVersionVersionEnumTwoThousandAndTen1201 GetDescribePlatformVersionVersionEnum = "2010-12-01"
 )
 
 type GetDescribePlatformVersionQueryParams struct {

@@ -7,7 +7,7 @@ import (
 // StreamingDistribution
 // A streaming distribution.
 type StreamingDistribution struct {
-	Arn                         string
+	ARN                         string
 	ActiveTrustedSigners        ActiveTrustedSigners
 	DomainName                  string
 	ID                          string

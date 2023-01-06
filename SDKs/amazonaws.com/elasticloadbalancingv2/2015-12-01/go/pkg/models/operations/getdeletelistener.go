@@ -3,13 +3,13 @@ package operations
 type GetDeleteListenerActionEnum string
 
 const (
-	GetDeleteListenerActionEnumDeleteListener GetDeleteListenerActionEnum = "DeleteListener"
+	GETDeleteListenerActionEnumDeleteListener GetDeleteListenerActionEnum = "DeleteListener"
 )
 
 type GetDeleteListenerVersionEnum string
 
 const (
-	GetDeleteListenerVersionEnumTwoThousandAndFifteen1201 GetDeleteListenerVersionEnum = "2015-12-01"
+	GETDeleteListenerVersionEnumTwoThousandAndFifteen1201 GetDeleteListenerVersionEnum = "2015-12-01"
 )
 
 type GetDeleteListenerQueryParams struct {

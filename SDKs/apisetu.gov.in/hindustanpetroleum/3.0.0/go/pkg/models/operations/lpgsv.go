@@ -5,11 +5,11 @@ import (
 )
 
 type LpgsvRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Gender   string `json:"GENDER"`
-	LpgID    string `json:"LPGId"`
-	SvNo     string `json:"SVNo"`
+	GENDER   string `json:"GENDER"`
+	LPGID    string `json:"LPGId"`
+	SVNo     string `json:"SVNo"`
 	UID      string `json:"UID"`
 }
 
@@ -86,7 +86,7 @@ type Lpgsv404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Lpgsv404ApplicationJSONErrorDescriptionEnumNoRecordFound               Lpgsv404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Lpgsv404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Lpgsv404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Lpgsv404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Lpgsv404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Lpgsv404ApplicationJSON struct {

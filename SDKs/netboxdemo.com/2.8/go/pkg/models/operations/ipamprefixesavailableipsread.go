@@ -13,7 +13,7 @@ type IpamPrefixesAvailableIpsReadRequest struct {
 }
 
 type IpamPrefixesAvailableIpsReadResponse struct {
-	AvailableIps []shared.AvailableIP
+	AvailableIPS []shared.AvailableIP
 	ContentType  string
 	StatusCode   int64
 }

@@ -36,8 +36,8 @@ type SendClientsMessageUsingPostRequest struct {
 type SendClientsMessageUsingPostResponse struct {
 	ContentType                                         string
 	StatusCode                                          int64
-	SendClientsMessageUsingPost200ApplicationJSONObject *SendClientsMessageUsingPost200ApplicationJSON
-	SendClientsMessageUsingPost400ApplicationJSONObject *SendClientsMessageUsingPost400ApplicationJSON
-	SendClientsMessageUsingPost401ApplicationJSONObject *SendClientsMessageUsingPost401ApplicationJSON
-	SendClientsMessageUsingPost500ApplicationJSONObject *SendClientsMessageUsingPost500ApplicationJSON
+	SendClientsMessageUsingPOST200ApplicationJSONObject *SendClientsMessageUsingPost200ApplicationJSON
+	SendClientsMessageUsingPOST400ApplicationJSONObject *SendClientsMessageUsingPost400ApplicationJSON
+	SendClientsMessageUsingPOST401ApplicationJSONObject *SendClientsMessageUsingPost401ApplicationJSON
+	SendClientsMessageUsingPOST500ApplicationJSONObject *SendClientsMessageUsingPost500ApplicationJSON
 }

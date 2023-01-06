@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -171,7 +172,7 @@ func (s *SDK) CreateDeliveryStream(ctx context.Context, request operations.Creat
 				return nil, err
 			}
 
-			res.InvalidKmsResourceException = out
+			res.InvalidKMSResourceException = out
 		}
 	}
 
@@ -521,7 +522,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.InvalidKmsResourceException = out
+			res.InvalidKMSResourceException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -613,7 +614,7 @@ func (s *SDK) PutRecordBatch(ctx context.Context, request operations.PutRecordBa
 				return nil, err
 			}
 
-			res.InvalidKmsResourceException = out
+			res.InvalidKMSResourceException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -725,7 +726,7 @@ func (s *SDK) StartDeliveryStreamEncryption(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.InvalidKmsResourceException = out
+			res.InvalidKMSResourceException = out
 		}
 	}
 

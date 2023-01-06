@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,13 +22,7 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.GetComicIDInfo0JSONRequest{
-        PathParams: operations.GetComicIDInfo0JSONPathParams{
-            ComicID: 17.100000,
-        },
-    }
-    
-    res, err := s.Sdk.GetComicIDInfo0JSON(ctx, req)
+    res, err := s.GetInfo0JSON(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,9 +38,9 @@ func main() {
 
 ### SDK SDK
 
-* `GetComicIDInfo0JSON` - Fetch comics and metadata  by comic id.
-
 * `GetInfo0JSON` - Fetch current comic and metadata.
+
+* `GetComicIDInfo0JSON` - Fetch comics and metadata  by comic id.
 
 
 <!-- End SDK Available Operations -->

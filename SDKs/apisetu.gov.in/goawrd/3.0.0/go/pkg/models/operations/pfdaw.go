@@ -82,7 +82,7 @@ type Pfdaw404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Pfdaw404ApplicationJSONErrorDescriptionEnumNoRecordFound               Pfdaw404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Pfdaw404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Pfdaw404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Pfdaw404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pfdaw404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Pfdaw404ApplicationJSON struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AssociateKmsKeyRequest{
         Headers: operations.AssociateKmsKeyHeaders{
-            XAmzAlgorithm: "tempore",
-            XAmzContentSha256: "tempore",
-            XAmzCredential: "assumenda",
-            XAmzDate: "deleniti",
-            XAmzSecurityToken: "ea",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "dignissimos",
+            XAmzAlgorithm: "incidunt",
+            XAmzContentSha256: "neque",
+            XAmzCredential: "quo",
+            XAmzDate: "omnis",
+            XAmzSecurityToken: "ratione",
+            XAmzSignature: "tempora",
+            XAmzSignedHeaders: "cupiditate",
             XAmzTarget: "Logs_20140328.AssociateKmsKey",
         },
         Request: shared.AssociateKmsKeyRequest{
-            KmsKeyID: "voluptatem",
-            LogGroupName: "quo",
+            KmsKeyID: "odit",
+            LogGroupName: "hic",
         },
     }
     
-    res, err := s.Sdk.AssociateKmsKey(ctx, req)
+    res, err := s.AssociateKmsKey(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

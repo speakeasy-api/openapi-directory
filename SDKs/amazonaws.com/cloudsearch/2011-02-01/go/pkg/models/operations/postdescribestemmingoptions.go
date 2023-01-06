@@ -3,13 +3,13 @@ package operations
 type PostDescribeStemmingOptionsActionEnum string
 
 const (
-	PostDescribeStemmingOptionsActionEnumDescribeStemmingOptions PostDescribeStemmingOptionsActionEnum = "DescribeStemmingOptions"
+	POSTDescribeStemmingOptionsActionEnumDescribeStemmingOptions PostDescribeStemmingOptionsActionEnum = "DescribeStemmingOptions"
 )
 
 type PostDescribeStemmingOptionsVersionEnum string
 
 const (
-	PostDescribeStemmingOptionsVersionEnumTwoThousandAndEleven0201 PostDescribeStemmingOptionsVersionEnum = "2011-02-01"
+	POSTDescribeStemmingOptionsVersionEnumTwoThousandAndEleven0201 PostDescribeStemmingOptionsVersionEnum = "2011-02-01"
 )
 
 type PostDescribeStemmingOptionsQueryParams struct {

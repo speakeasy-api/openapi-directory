@@ -3,13 +3,13 @@ package operations
 type PostDeleteKeyPairActionEnum string
 
 const (
-	PostDeleteKeyPairActionEnumDeleteKeyPair PostDeleteKeyPairActionEnum = "DeleteKeyPair"
+	POSTDeleteKeyPairActionEnumDeleteKeyPair PostDeleteKeyPairActionEnum = "DeleteKeyPair"
 )
 
 type PostDeleteKeyPairVersionEnum string
 
 const (
-	PostDeleteKeyPairVersionEnumTwoThousandAndSixteen1115 PostDeleteKeyPairVersionEnum = "2016-11-15"
+	POSTDeleteKeyPairVersionEnumTwoThousandAndSixteen1115 PostDeleteKeyPairVersionEnum = "2016-11-15"
 )
 
 type PostDeleteKeyPairQueryParams struct {

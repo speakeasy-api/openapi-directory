@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,24 @@ func main() {
     
     req := operations.DeleteScalingPolicyRequest{
         Headers: operations.DeleteScalingPolicyHeaders{
-            XAmzAlgorithm: "eos",
-            XAmzContentSha256: "praesentium",
-            XAmzCredential: "itaque",
-            XAmzDate: "ipsum",
-            XAmzSecurityToken: "natus",
-            XAmzSignature: "quas",
-            XAmzSignedHeaders: "nesciunt",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "qui",
+            XAmzCredential: "inventore",
+            XAmzDate: "omnis",
+            XAmzSecurityToken: "veritatis",
+            XAmzSignature: "minus",
+            XAmzSignedHeaders: "quia",
             XAmzTarget: "AnyScaleFrontendService.DeleteScalingPolicy",
         },
         Request: shared.DeleteScalingPolicyRequest{
-            PolicyName: "quod",
-            ResourceID: "repudiandae",
-            ScalableDimension: "ecs:service:DesiredCount",
-            ServiceNamespace: "elasticmapreduce",
+            PolicyName: "vitae",
+            ResourceID: "quia",
+            ScalableDimension: "elasticache:replication-group:NodeGroups",
+            ServiceNamespace: "cassandra",
         },
     }
     
-    res, err := s.Sdk.DeleteScalingPolicy(ctx, req)
+    res, err := s.DeleteScalingPolicy(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

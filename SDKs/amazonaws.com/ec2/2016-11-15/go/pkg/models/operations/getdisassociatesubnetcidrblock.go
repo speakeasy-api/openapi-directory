@@ -3,13 +3,13 @@ package operations
 type GetDisassociateSubnetCidrBlockActionEnum string
 
 const (
-	GetDisassociateSubnetCidrBlockActionEnumDisassociateSubnetCidrBlock GetDisassociateSubnetCidrBlockActionEnum = "DisassociateSubnetCidrBlock"
+	GETDisassociateSubnetCidrBlockActionEnumDisassociateSubnetCidrBlock GetDisassociateSubnetCidrBlockActionEnum = "DisassociateSubnetCidrBlock"
 )
 
 type GetDisassociateSubnetCidrBlockVersionEnum string
 
 const (
-	GetDisassociateSubnetCidrBlockVersionEnumTwoThousandAndSixteen1115 GetDisassociateSubnetCidrBlockVersionEnum = "2016-11-15"
+	GETDisassociateSubnetCidrBlockVersionEnumTwoThousandAndSixteen1115 GetDisassociateSubnetCidrBlockVersionEnum = "2016-11-15"
 )
 
 type GetDisassociateSubnetCidrBlockQueryParams struct {

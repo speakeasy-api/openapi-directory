@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,34 +27,33 @@ func main() {
             Option1: &operations.CloudresourcemanagerLiensCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.CloudresourcemanagerLiensCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "voluptatem",
-            Alt: "json",
-            Callback: "qui",
-            Fields: "magni",
-            Key: "quo",
-            OauthToken: "iusto",
+            AccessToken: "aut",
+            Alt: "media",
+            Callback: "eligendi",
+            Fields: "et",
+            Key: "ad",
+            OauthToken: "dicta",
             PrettyPrint: false,
-            QuotaUser: "optio",
-            UploadType: "nihil",
-            UploadProtocol: "voluptatem",
+            QuotaUser: "beatae",
+            UploadType: "neque",
+            UploadProtocol: "ea",
         },
         Request: &shared.Lien{
-            CreateTime: "ea",
-            Name: "molestiae",
-            Origin: "enim",
-            Parent: "aut",
-            Reason: "quis",
+            CreateTime: "libero",
+            Name: "error",
+            Origin: "eos",
+            Parent: "ex",
+            Reason: "occaecati",
             Restrictions: []string{
-                "voluptatem",
-                "odit",
+                "dolorem",
             },
         },
     }

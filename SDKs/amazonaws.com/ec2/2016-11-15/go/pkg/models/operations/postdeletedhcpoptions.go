@@ -3,13 +3,13 @@ package operations
 type PostDeleteDhcpOptionsActionEnum string
 
 const (
-	PostDeleteDhcpOptionsActionEnumDeleteDhcpOptions PostDeleteDhcpOptionsActionEnum = "DeleteDhcpOptions"
+	POSTDeleteDhcpOptionsActionEnumDeleteDhcpOptions PostDeleteDhcpOptionsActionEnum = "DeleteDhcpOptions"
 )
 
 type PostDeleteDhcpOptionsVersionEnum string
 
 const (
-	PostDeleteDhcpOptionsVersionEnumTwoThousandAndSixteen1115 PostDeleteDhcpOptionsVersionEnum = "2016-11-15"
+	POSTDeleteDhcpOptionsVersionEnumTwoThousandAndSixteen1115 PostDeleteDhcpOptionsVersionEnum = "2016-11-15"
 )
 
 type PostDeleteDhcpOptionsQueryParams struct {

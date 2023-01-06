@@ -7,6 +7,5 @@ type BelegeBelegeGruppe struct {
 }
 
 type Belege struct {
-	Belege       []Beleg              `json:"Belege,omitempty"`
 	BelegeGruppe []BelegeBelegeGruppe `json:"Belege-Gruppe,omitempty"`
 }

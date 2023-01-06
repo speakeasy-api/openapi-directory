@@ -3,13 +3,13 @@ package operations
 type PostDeleteHsmConfigurationActionEnum string
 
 const (
-	PostDeleteHsmConfigurationActionEnumDeleteHsmConfiguration PostDeleteHsmConfigurationActionEnum = "DeleteHsmConfiguration"
+	POSTDeleteHsmConfigurationActionEnumDeleteHsmConfiguration PostDeleteHsmConfigurationActionEnum = "DeleteHsmConfiguration"
 )
 
 type PostDeleteHsmConfigurationVersionEnum string
 
 const (
-	PostDeleteHsmConfigurationVersionEnumTwoThousandAndTwelve1201 PostDeleteHsmConfigurationVersionEnum = "2012-12-01"
+	POSTDeleteHsmConfigurationVersionEnumTwoThousandAndTwelve1201 PostDeleteHsmConfigurationVersionEnum = "2012-12-01"
 )
 
 type PostDeleteHsmConfigurationQueryParams struct {

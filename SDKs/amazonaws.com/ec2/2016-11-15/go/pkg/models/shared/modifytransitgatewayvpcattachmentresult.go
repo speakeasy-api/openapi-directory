@@ -1,5 +1,5 @@
 package shared
 
 type ModifyTransitGatewayVpcAttachmentResult struct {
-	TransitGatewayVpcAttachment *TransitGatewayVpcAttachment
+	TransitGatewayVpcAttachment map[string]interface{}
 }

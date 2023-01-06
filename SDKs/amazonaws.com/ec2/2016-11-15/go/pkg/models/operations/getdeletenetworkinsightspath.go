@@ -3,13 +3,13 @@ package operations
 type GetDeleteNetworkInsightsPathActionEnum string
 
 const (
-	GetDeleteNetworkInsightsPathActionEnumDeleteNetworkInsightsPath GetDeleteNetworkInsightsPathActionEnum = "DeleteNetworkInsightsPath"
+	GETDeleteNetworkInsightsPathActionEnumDeleteNetworkInsightsPath GetDeleteNetworkInsightsPathActionEnum = "DeleteNetworkInsightsPath"
 )
 
 type GetDeleteNetworkInsightsPathVersionEnum string
 
 const (
-	GetDeleteNetworkInsightsPathVersionEnumTwoThousandAndSixteen1115 GetDeleteNetworkInsightsPathVersionEnum = "2016-11-15"
+	GETDeleteNetworkInsightsPathVersionEnumTwoThousandAndSixteen1115 GetDeleteNetworkInsightsPathVersionEnum = "2016-11-15"
 )
 
 type GetDeleteNetworkInsightsPathQueryParams struct {

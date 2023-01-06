@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,12 +29,12 @@ func main() {
             },
         },
         PathParams: operations.ExtensionCtrlGetAccountExtensionByIDPathParams{
-            AccountID: "maxime",
-            ExtensionNumber: 99.199997,
+            AccountID: "officia",
+            ExtensionNumber: 28.100000,
         },
     }
     
-    res, err := s.Sdk.ExtensionCtrlGetAccountExtensionByID(ctx, req)
+    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

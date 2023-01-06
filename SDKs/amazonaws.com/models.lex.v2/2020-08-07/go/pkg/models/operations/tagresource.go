@@ -1,7 +1,7 @@
 package operations
 
 type TagResourcePathParams struct {
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceARN"`
+	ResourceARN string `pathParam:"style=simple,explode=false,name=resourceARN"`
 }
 
 type TagResourceHeaders struct {

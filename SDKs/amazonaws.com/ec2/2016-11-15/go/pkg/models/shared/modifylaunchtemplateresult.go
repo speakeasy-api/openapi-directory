@@ -1,5 +1,5 @@
 package shared
 
 type ModifyLaunchTemplateResult struct {
-	LaunchTemplate *LaunchTemplate
+	LaunchTemplate map[string]interface{}
 }

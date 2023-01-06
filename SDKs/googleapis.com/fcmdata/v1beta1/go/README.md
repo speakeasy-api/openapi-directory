@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,28 +26,28 @@ func main() {
         Security: operations.FcmdataProjectsAndroidAppsDeliveryDataListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.FcmdataProjectsAndroidAppsDeliveryDataListPathParams{
-            Parent: "fugiat",
+            Parent: "sequi",
         },
         QueryParams: operations.FcmdataProjectsAndroidAppsDeliveryDataListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "consequuntur",
-            Alt: "media",
-            Callback: "aut",
-            Fields: "rerum",
-            Key: "cupiditate",
-            OauthToken: "corporis",
-            PageSize: 1651007273087402724,
-            PageToken: "provident",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nemo",
-            UploadProtocol: "rerum",
+            AccessToken: "quae",
+            Alt: "json",
+            Callback: "et",
+            Fields: "et",
+            Key: "eum",
+            OauthToken: "itaque",
+            PageSize: 7316543229150888277,
+            PageToken: "rem",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "repellat",
+            UploadProtocol: "eum",
         },
     }
     

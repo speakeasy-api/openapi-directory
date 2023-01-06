@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,42 +34,58 @@ func main() {
     
     req := operations.CreateDatasetRequest{
         Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "odio",
-            XAmzContentSha256: "est",
-            XAmzCredential: "adipisci",
-            XAmzDate: "quo",
-            XAmzSecurityToken: "rerum",
-            XAmzSignature: "error",
-            XAmzSignedHeaders: "suscipit",
+            XAmzAlgorithm: "similique",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "praesentium",
+            XAmzDate: "ipsa",
+            XAmzSecurityToken: "ipsa",
+            XAmzSignature: "rerum",
+            XAmzSignedHeaders: "iure",
             XAmzTarget: "AmazonForecast.CreateDataset",
         },
         Request: shared.CreateDatasetRequest{
-            DataFrequency: "minus",
-            DatasetName: "ullam",
+            DataFrequency: "dolore",
+            DatasetName: "doloribus",
             DatasetType: "RELATED_TIME_SERIES",
-            Domain: "EC2_CAPACITY",
+            Domain: "METRICS",
             EncryptionConfig: &shared.EncryptionConfig{
-                KmsKeyArn: "et",
-                RoleArn: "nobis",
+                KMSKeyArn: "ut",
+                RoleArn: "sint",
             },
             Schema: shared.Schema{
                 Attributes: []shared.SchemaAttribute{
                     shared.SchemaAttribute{
-                        AttributeName: "eius",
-                        AttributeType: "geolocation",
+                        AttributeName: "officia",
+                        AttributeType: "integer",
+                    },
+                    shared.SchemaAttribute{
+                        AttributeName: "sit",
+                        AttributeType: "float",
+                    },
+                    shared.SchemaAttribute{
+                        AttributeName: "earum",
+                        AttributeType: "integer",
                     },
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "est",
-                    Value: "in",
+                    Key: "et",
+                    Value: "alias",
+                },
+                shared.Tag{
+                    Key: "in",
+                    Value: "repellendus",
+                },
+                shared.Tag{
+                    Key: "repudiandae",
+                    Value: "sed",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateDataset(ctx, req)
+    res, err := s.CreateDataset(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

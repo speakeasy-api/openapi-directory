@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,22 +22,22 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.PostCheckAccountHolderRequest{
-        Security: operations.PostCheckAccountHolderSecurity{
+    req := operations.PostCloseAccountHolderRequest{
+        Security: operations.PostCloseAccountHolderSecurity{
             BasicAuth: &shared.SchemeBasicAuth{
                 Password: "YOUR_PASSWORD_HERE",
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "ut",
+        Request: "et",
     }
     
-    res, err := s.Sdk.PostCheckAccountHolder(ctx, req)
+    res, err := s.AccountHolders.PostCloseAccountHolder(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GenericResponse != nil {
+    if res.CloseAccountHolderResponse != nil {
         // handle response
     }
 ```
@@ -47,26 +46,32 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account holders
 
-* `PostCheckAccountHolder` - Trigger verification.
-* `PostCloseAccount` - Close an account.
 * `PostCloseAccountHolder` - Close an account holder.
 * `PostCloseStores` - Close stores.
-* `PostCreateAccount` - Create a new account.
 * `PostCreateAccountHolder` - Create a new account holder.
+* `PostGetAccountHolder` - Get an account holder.
+* `PostGetTaxForm` - Get a tax form.
+* `PostSuspendAccountHolder` - Suspend an account holder.
+* `PostUnSuspendAccountHolder` - Unsuspend an account holder.
+* `PostUpdateAccountHolder` - Update an account holder.
+* `PostUpdateAccountHolderState` - Update payout or processing state.
+
+### Accounts
+
+* `PostCloseAccount` - Close an account.
+* `PostCreateAccount` - Create a new account.
+* `PostUpdateAccount` - Update an account.
+
+### Verification
+
+* `PostCheckAccountHolder` - Trigger verification.
 * `PostDeleteBankAccounts` - Delete bank accounts.
 * `PostDeletePayoutMethods` - Delete payout methods.
 * `PostDeleteShareholders` - Delete shareholders.
 * `PostDeleteSignatories` - Delete signatories.
-* `PostGetAccountHolder` - Get an account holder.
-* `PostGetTaxForm` - Get a tax form.
 * `PostGetUploadedDocuments` - Get documents.
-* `PostSuspendAccountHolder` - Suspend an account holder.
-* `PostUnSuspendAccountHolder` - Unsuspend an account holder.
-* `PostUpdateAccount` - Update an account.
-* `PostUpdateAccountHolder` - Update an account holder.
-* `PostUpdateAccountHolderState` - Update payout or processing state.
 * `PostUploadDocument` - Upload a document.
 
 <!-- End SDK Available Operations -->

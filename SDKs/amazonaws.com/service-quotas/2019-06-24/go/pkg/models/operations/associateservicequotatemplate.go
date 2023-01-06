@@ -23,7 +23,7 @@ type AssociateServiceQuotaTemplateRequest struct {
 }
 
 type AssociateServiceQuotaTemplateResponse struct {
-	AwsServiceAccessNotEnabledException       *interface{}
+	AWSServiceAccessNotEnabledException       *interface{}
 	AccessDeniedException                     *interface{}
 	AssociateServiceQuotaTemplateResponse     map[string]interface{}
 	ContentType                               string

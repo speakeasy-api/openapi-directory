@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -15,8 +16,10 @@ type HTTPClient interface {
 
 // SDK Documentation: https://cloud.google.com/text-to-speech/
 type SDK struct {
-	Text   *Text
-	Voices *Voices
+	Operations *Operations
+	Projects   *Projects
+	Text       *Text
+	Voices     *Voices
 
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
@@ -67,6 +70,24 @@ func New(opts ...SDKOption) *SDK {
 	if sdk._serverURL == "" {
 		sdk._serverURL = ServerList[0]
 	}
+
+	sdk.Operations = NewOperations(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Projects = NewProjects(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
 
 	sdk.Text = NewText(
 		sdk._defaultClient,

@@ -855,7 +855,7 @@ const (
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItem
 // Loan Item
 type GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItem struct {
-	CcaRegulatedEntity                   bool                                                                                            `json:"CCARegulatedEntity"`
+	CCARegulatedEntity                   bool                                                                                            `json:"CCARegulatedEntity"`
 	DateOfChange                         *string                                                                                         `json:"DateOfChange,omitempty"`
 	IsALowInterestRepaymentStartPossible bool                                                                                            `json:"IsALowInterestRepaymentStartPossible"`
 	IsThisAnInterestOnlyLoan             bool                                                                                            `json:"IsThisAnInterestOnlyLoan"`
@@ -870,15 +870,15 @@ type GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoan
 type GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum string
 
 const (
-	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnumUk GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "UK"
-	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnumEu GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "EU"
+	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumUk GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "UK"
+	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumEu GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "EU"
 )
 
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrand
 // Brand
 type GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrand struct {
 	TrademarkID      string                                                                                                       `json:"TrademarkID"`
-	TrademarkIpoCode GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
+	TrademarkIPOCode GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
 }
 
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisationOrganisationName
@@ -890,8 +890,8 @@ type GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrga
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisation
 // Parent organisation
 type GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisation struct {
-	Bic              *string                                                                                                               `json:"BIC,omitempty"`
-	Lei              *string                                                                                                               `json:"LEI,omitempty"`
+	BIC              *string                                                                                                               `json:"BIC,omitempty"`
+	LEI              *string                                                                                                               `json:"LEI,omitempty"`
 	OrganisationName GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisationOrganisationName `json:"OrganisationName"`
 }
 
@@ -993,7 +993,7 @@ type GetUnsecuredSmeLoansResponse struct {
 	FiveHundredAndThreeErrorObject                                            *GetUnsecuredSmeLoans503ErrorObject
 	ContentType                                                               string
 	ErrorObject                                                               *GetUnsecuredSmeLoansErrorObject
-	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	Headers                                                                   map[string][]string
 	StatusCode                                                                int64
+	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSON
 }

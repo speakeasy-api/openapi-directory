@@ -3,13 +3,13 @@ package operations
 type PostDescribeOrderableClusterOptionsActionEnum string
 
 const (
-	PostDescribeOrderableClusterOptionsActionEnumDescribeOrderableClusterOptions PostDescribeOrderableClusterOptionsActionEnum = "DescribeOrderableClusterOptions"
+	POSTDescribeOrderableClusterOptionsActionEnumDescribeOrderableClusterOptions PostDescribeOrderableClusterOptionsActionEnum = "DescribeOrderableClusterOptions"
 )
 
 type PostDescribeOrderableClusterOptionsVersionEnum string
 
 const (
-	PostDescribeOrderableClusterOptionsVersionEnumTwoThousandAndTwelve1201 PostDescribeOrderableClusterOptionsVersionEnum = "2012-12-01"
+	POSTDescribeOrderableClusterOptionsVersionEnumTwoThousandAndTwelve1201 PostDescribeOrderableClusterOptionsVersionEnum = "2012-12-01"
 )
 
 type PostDescribeOrderableClusterOptionsQueryParams struct {

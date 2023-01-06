@@ -1,6 +1,6 @@
 package shared
 
 type SearchTransitGatewayRoutesResult struct {
-	AdditionalRoutesAvailable *bool
-	Routes                    []TransitGatewayRoute
+	AdditionalRoutesAvailable map[string]interface{}
+	Routes                    map[string]interface{}
 }

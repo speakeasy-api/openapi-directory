@@ -3,13 +3,13 @@ package operations
 type PostDescribeEngineDefaultParametersActionEnum string
 
 const (
-	PostDescribeEngineDefaultParametersActionEnumDescribeEngineDefaultParameters PostDescribeEngineDefaultParametersActionEnum = "DescribeEngineDefaultParameters"
+	POSTDescribeEngineDefaultParametersActionEnumDescribeEngineDefaultParameters PostDescribeEngineDefaultParametersActionEnum = "DescribeEngineDefaultParameters"
 )
 
 type PostDescribeEngineDefaultParametersVersionEnum string
 
 const (
-	PostDescribeEngineDefaultParametersVersionEnumTwoThousandAndThirteen0110 PostDescribeEngineDefaultParametersVersionEnum = "2013-01-10"
+	POSTDescribeEngineDefaultParametersVersionEnumTwoThousandAndThirteen0110 PostDescribeEngineDefaultParametersVersionEnum = "2013-01-10"
 )
 
 type PostDescribeEngineDefaultParametersQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,17 +29,17 @@ func main() {
             },
         },
         PathParams: operations.GetMostemailedSectionTimePeriodJSONPathParams{
-            Section: "Magazine",
-            TimePeriod: "1",
+            Section: "Automobiles",
+            TimePeriod: "30",
         },
     }
     
-    res, err := s.Sdk.GetMostemailedSectionTimePeriodJSON(ctx, req)
+    res, err := s.GetMostemailedSectionTimePeriodJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GetMostemailedSectionTimePeriodJSON200ApplicationJSONObject != nil {
+    if res.GETMostemailedSectionTimePeriodJSON200ApplicationJSONObject != nil {
         // handle response
     }
 ```

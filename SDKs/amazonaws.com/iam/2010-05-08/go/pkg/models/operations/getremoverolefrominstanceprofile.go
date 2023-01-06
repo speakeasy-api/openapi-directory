@@ -3,13 +3,13 @@ package operations
 type GetRemoveRoleFromInstanceProfileActionEnum string
 
 const (
-	GetRemoveRoleFromInstanceProfileActionEnumRemoveRoleFromInstanceProfile GetRemoveRoleFromInstanceProfileActionEnum = "RemoveRoleFromInstanceProfile"
+	GETRemoveRoleFromInstanceProfileActionEnumRemoveRoleFromInstanceProfile GetRemoveRoleFromInstanceProfileActionEnum = "RemoveRoleFromInstanceProfile"
 )
 
 type GetRemoveRoleFromInstanceProfileVersionEnum string
 
 const (
-	GetRemoveRoleFromInstanceProfileVersionEnumTwoThousandAndTen0508 GetRemoveRoleFromInstanceProfileVersionEnum = "2010-05-08"
+	GETRemoveRoleFromInstanceProfileVersionEnumTwoThousandAndTen0508 GetRemoveRoleFromInstanceProfileVersionEnum = "2010-05-08"
 )
 
 type GetRemoveRoleFromInstanceProfileQueryParams struct {

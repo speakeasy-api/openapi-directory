@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.CreateProjectRequest{
         QueryParams: operations.CreateProjectQueryParams{
-            Name: "ea",
-            Region: "quaerat",
-            SnapshotID: "dolorem",
+            Name: "explicabo",
+            Region: "id",
+            SnapshotID: "blanditiis",
         },
         Headers: operations.CreateProjectHeaders{
-            XAmzAlgorithm: "nemo",
-            XAmzContentSha256: "quia",
-            XAmzCredential: "provident",
-            XAmzDate: "sint",
-            XAmzSecurityToken: "distinctio",
-            XAmzSignature: "maiores",
-            XAmzSignedHeaders: "exercitationem",
+            XAmzAlgorithm: "explicabo",
+            XAmzContentSha256: "voluptate",
+            XAmzCredential: "exercitationem",
+            XAmzDate: "et",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "odit",
+            XAmzSignedHeaders: "qui",
         },
         Request: operations.CreateProjectRequestBody{
-            Contents: "sunt",
+            Contents: "et",
         },
     }
     
-    res, err := s.Sdk.CreateProject(ctx, req)
+    res, err := s.CreateProject(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

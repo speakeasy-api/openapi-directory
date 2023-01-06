@@ -38,6 +38,6 @@ type OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListRequest struct {
 
 type OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListResponse struct {
 	ContentType                               string
-	ListInstanceOsPoliciesCompliancesResponse *shared.ListInstanceOsPoliciesCompliancesResponse
+	ListInstanceOSPoliciesCompliancesResponse *shared.ListInstanceOsPoliciesCompliancesResponse
 	StatusCode                                int64
 }

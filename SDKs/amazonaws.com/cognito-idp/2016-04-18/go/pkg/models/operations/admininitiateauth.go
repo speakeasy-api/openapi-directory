@@ -35,7 +35,7 @@ type AdminInitiateAuthResponse struct {
 	InvalidSmsRoleAccessPolicyException      *interface{}
 	InvalidSmsRoleTrustRelationshipException *interface{}
 	InvalidUserPoolConfigurationException    *interface{}
-	MfaMethodNotFoundException               *interface{}
+	MFAMethodNotFoundException               *interface{}
 	NotAuthorizedException                   *interface{}
 	PasswordResetRequiredException           *interface{}
 	ResourceNotFoundException                *interface{}

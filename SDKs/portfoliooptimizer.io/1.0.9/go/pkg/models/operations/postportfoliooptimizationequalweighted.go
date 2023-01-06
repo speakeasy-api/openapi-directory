@@ -14,6 +14,6 @@ type PostPortfolioOptimizationEqualWeightedRequest struct {
 
 type PostPortfolioOptimizationEqualWeightedResponse struct {
 	ContentType                                                    string
-	PostPortfolioOptimizationEqualWeighted200ApplicationJSONObject *PostPortfolioOptimizationEqualWeighted200ApplicationJSON
 	StatusCode                                                     int64
+	PostPortfolioOptimizationEqualWeighted200ApplicationJSONObject *PostPortfolioOptimizationEqualWeighted200ApplicationJSON
 }

@@ -2,8 +2,9 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -178,7 +179,7 @@ type SDK struct {
 	Switch                             *Switch
 	SyslogServers                      *SyslogServers
 	TargetGroups                       *TargetGroups
-	ThirdPartyVpnPeers                 *ThirdPartyVpnPeers
+	ThirdPartyVPNPeers                 *ThirdPartyVpnPeers
 	Traffic                            *Traffic
 	TrafficAnalysis                    *TrafficAnalysis
 	TrafficHistory                     *TrafficHistory
@@ -1733,7 +1734,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.ThirdPartyVpnPeers = NewThirdPartyVpnPeers(
+	sdk.ThirdPartyVPNPeers = NewThirdPartyVpnPeers(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

@@ -26,12 +26,12 @@ type UpdatePushTemplateHeaders struct {
 // UpdatePushTemplateRequestBodyPushNotificationTemplateRequest
 // Specifies the content and settings for a message template that can be used in messages that are sent through a push notification channel.
 type UpdatePushTemplateRequestBodyPushNotificationTemplateRequest struct {
-	Adm                  *shared.AndroidPushNotificationTemplate `json:"ADM,omitempty"`
-	Apns                 *shared.ApnsPushNotificationTemplate    `json:"APNS,omitempty"`
+	ADM                  *shared.AndroidPushNotificationTemplate `json:"ADM,omitempty"`
+	APNS                 *shared.ApnsPushNotificationTemplate    `json:"APNS,omitempty"`
 	Baidu                *shared.AndroidPushNotificationTemplate `json:"Baidu,omitempty"`
 	Default              *shared.DefaultPushNotificationTemplate `json:"Default,omitempty"`
 	DefaultSubstitutions *string                                 `json:"DefaultSubstitutions,omitempty"`
-	Gcm                  *shared.AndroidPushNotificationTemplate `json:"GCM,omitempty"`
+	GCM                  *shared.AndroidPushNotificationTemplate `json:"GCM,omitempty"`
 	RecommenderID        *string                                 `json:"RecommenderId,omitempty"`
 	TemplateDescription  *string                                 `json:"TemplateDescription,omitempty"`
 	Tags                 map[string]string                       `json:"tags,omitempty"`

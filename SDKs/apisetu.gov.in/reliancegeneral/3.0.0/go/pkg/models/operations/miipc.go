@@ -5,9 +5,9 @@ import (
 )
 
 type MiipcRequestBodyCertificateParameters struct {
-	Dob        string `json:"DOB"`
+	DOB        string `json:"DOB"`
 	FullName   string `json:"FullName"`
-	Gender     string `json:"GENDER"`
+	GENDER     string `json:"GENDER"`
 	PolicyNo   string `json:"PolicyNo"`
 	PolicyType string `json:"PolicyType"`
 }
@@ -85,7 +85,7 @@ type Miipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Miipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Miipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Miipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Miipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Miipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Miipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Miipc404ApplicationJSON struct {

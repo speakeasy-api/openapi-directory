@@ -3,13 +3,13 @@ package operations
 type PostUpdateServiceSpecificCredentialActionEnum string
 
 const (
-	PostUpdateServiceSpecificCredentialActionEnumUpdateServiceSpecificCredential PostUpdateServiceSpecificCredentialActionEnum = "UpdateServiceSpecificCredential"
+	POSTUpdateServiceSpecificCredentialActionEnumUpdateServiceSpecificCredential PostUpdateServiceSpecificCredentialActionEnum = "UpdateServiceSpecificCredential"
 )
 
 type PostUpdateServiceSpecificCredentialVersionEnum string
 
 const (
-	PostUpdateServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 PostUpdateServiceSpecificCredentialVersionEnum = "2010-05-08"
+	POSTUpdateServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 PostUpdateServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
 type PostUpdateServiceSpecificCredentialQueryParams struct {

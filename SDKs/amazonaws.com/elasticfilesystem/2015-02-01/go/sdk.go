@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -238,7 +239,7 @@ func (s *SDK) CreateFileSystem(ctx context.Context, request operations.CreateFil
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.FileSystemDescription
+			var out *shared.FileSystemDescription1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -2017,7 +2018,7 @@ func (s *SDK) PutFileSystemPolicy(ctx context.Context, request operations.PutFil
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.FileSystemPolicyDescription
+			var out *shared.FileSystemPolicyDescription1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -2359,7 +2360,7 @@ func (s *SDK) UpdateFileSystem(ctx context.Context, request operations.UpdateFil
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.FileSystemDescription
+			var out *shared.FileSystemDescription1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

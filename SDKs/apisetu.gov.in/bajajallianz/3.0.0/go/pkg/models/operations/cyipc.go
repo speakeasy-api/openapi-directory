@@ -82,7 +82,7 @@ type Cyipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cyipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cyipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cyipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cyipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cyipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cyipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cyipc404ApplicationJSON struct {

@@ -27,8 +27,8 @@ type CheckTokenUsingPost500ApplicationJSON struct {
 type CheckTokenUsingPostResponse struct {
 	ContentType                                 string
 	StatusCode                                  int64
-	CheckTokenUsingPost200ApplicationJSONObject *CheckTokenUsingPost200ApplicationJSON
-	CheckTokenUsingPost400ApplicationJSONObject *CheckTokenUsingPost400ApplicationJSON
-	CheckTokenUsingPost401ApplicationJSONObject *CheckTokenUsingPost401ApplicationJSON
-	CheckTokenUsingPost500ApplicationJSONObject *CheckTokenUsingPost500ApplicationJSON
+	CheckTokenUsingPOST200ApplicationJSONObject *CheckTokenUsingPost200ApplicationJSON
+	CheckTokenUsingPOST400ApplicationJSONObject *CheckTokenUsingPost400ApplicationJSON
+	CheckTokenUsingPOST401ApplicationJSONObject *CheckTokenUsingPost401ApplicationJSON
+	CheckTokenUsingPOST500ApplicationJSONObject *CheckTokenUsingPost500ApplicationJSON
 }

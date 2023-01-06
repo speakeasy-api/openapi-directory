@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,20 +24,20 @@ func main() {
     
     req := operations.AdexperiencereportSitesGetRequest{
         PathParams: operations.AdexperiencereportSitesGetPathParams{
-            Name: "consequatur",
+            Name: "omnis",
         },
         QueryParams: operations.AdexperiencereportSitesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "natus",
-            Alt: "json",
-            Callback: "qui",
-            Fields: "excepturi",
-            Key: "ex",
-            OauthToken: "maxime",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "commodi",
-            UploadProtocol: "voluptatum",
+            AccessToken: "repellendus",
+            Alt: "media",
+            Callback: "omnis",
+            Fields: "architecto",
+            Key: "ea",
+            OauthToken: "et",
+            PrettyPrint: false,
+            QuotaUser: "ullam",
+            UploadType: "ea",
+            UploadProtocol: "veritatis",
         },
     }
     

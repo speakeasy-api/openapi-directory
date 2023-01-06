@@ -54,7 +54,7 @@ const (
 // UpdateIntegrationRequestBodyTLSConfig
 // The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.
 type UpdateIntegrationRequestBodyTLSConfig struct {
-	ServerNameToVerify *string `json:"ServerNameToVerify,omitempty"`
+	ServerNameToVerify map[string]interface{} `json:"ServerNameToVerify,omitempty"`
 }
 
 type UpdateIntegrationRequestBody struct {

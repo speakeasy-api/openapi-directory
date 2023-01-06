@@ -7,7 +7,7 @@ import (
 type GetEbsVolumeRecommendationsXAmzTargetEnum string
 
 const (
-	GetEbsVolumeRecommendationsXAmzTargetEnumComputeOptimizerServiceGetEbsVolumeRecommendations GetEbsVolumeRecommendationsXAmzTargetEnum = "ComputeOptimizerService.GetEBSVolumeRecommendations"
+	GetEBSVolumeRecommendationsXAmzTargetEnumComputeOptimizerServiceGetEbsVolumeRecommendations GetEbsVolumeRecommendationsXAmzTargetEnum = "ComputeOptimizerService.GetEBSVolumeRecommendations"
 )
 
 type GetEbsVolumeRecommendationsHeaders struct {
@@ -29,7 +29,7 @@ type GetEbsVolumeRecommendationsRequest struct {
 type GetEbsVolumeRecommendationsResponse struct {
 	AccessDeniedException               *interface{}
 	ContentType                         string
-	GetEbsVolumeRecommendationsResponse *shared.GetEbsVolumeRecommendationsResponse
+	GetEBSVolumeRecommendationsResponse *shared.GetEbsVolumeRecommendationsResponse
 	InternalServerException             *interface{}
 	InvalidParameterValueException      *interface{}
 	MissingAuthenticationToken          *interface{}

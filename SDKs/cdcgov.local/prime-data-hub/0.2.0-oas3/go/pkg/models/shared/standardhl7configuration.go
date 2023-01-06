@@ -13,13 +13,13 @@ const (
 type StandardHl7Configuration struct {
 	ConvertTimestampToDateTime *string                                            `json:"convertTimestampToDateTime,omitempty"`
 	DefaultAoeToUnknown        *bool                                              `json:"defaultAoeToUnknown,omitempty"`
-	IncludeAoe                 bool                                               `json:"includeAOE"`
+	IncludeAOE                 bool                                               `json:"includeAOE"`
 	NameFormat                 *string                                            `json:"nameFormat,omitempty"`
 	PhoneNumberFormatting      *StandardHl7ConfigurationPhoneNumberFormattingEnum `json:"phoneNumberFormatting,omitempty"`
 	ReceivingApplicationName   *string                                            `json:"receivingApplicationName,omitempty"`
-	ReceivingApplicationOid    *string                                            `json:"receivingApplicationOID,omitempty"`
+	ReceivingApplicationOID    *string                                            `json:"receivingApplicationOID,omitempty"`
 	ReceivingFacilityName      *string                                            `json:"receivingFacilityName,omitempty"`
-	ReceivingFacilityOid       *string                                            `json:"receivingFacilityOID,omitempty"`
+	ReceivingFacilityOID       *string                                            `json:"receivingFacilityOID,omitempty"`
 	ReceivingOrganization      *string                                            `json:"receivingOrganization,omitempty"`
 	ReportingFacilityID        *string                                            `json:"reportingFacilityId,omitempty"`
 	ReportingFacilityIDType    *string                                            `json:"reportingFacilityIdType,omitempty"`
@@ -28,7 +28,7 @@ type StandardHl7Configuration struct {
 	SuppressHl7Fields          *string                                            `json:"suppressHl7Fields,omitempty"`
 	SuppressQstForAoe          *bool                                              `json:"suppressQstForAoe,omitempty"`
 	Transport                  interface{}                                        `json:"transport"`
-	TruncateHdNamespaceIds     *bool                                              `json:"truncateHDNamespaceIds,omitempty"`
+	TruncateHDNamespaceIds     *bool                                              `json:"truncateHDNamespaceIds,omitempty"`
 	Type                       string                                             `json:"type"`
 	UseBatchHeaders            bool                                               `json:"useBatchHeaders"`
 	UseBlankInsteadOfUnknown   *string                                            `json:"useBlankInsteadOfUnknown,omitempty"`

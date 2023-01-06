@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,7 +25,7 @@ func main() {
             shared.Security{
                 APIKey: shared.SchemeAPIKey{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 APISecret: shared.SchemeAPISecret{
                     APIKey: "YOUR_API_KEY_HERE",
                 },
@@ -38,13 +37,13 @@ func main() {
     
     req := operations.BuyANumberRequest{
         Request: shared.NumberDetails{
-            Country: "dignissimos",
-            Msisdn: "vel",
-            TargetAPIKey: "dolorem",
+            Country: "est",
+            Msisdn: "quidem",
+            TargetAPIKey: "inventore",
         },
     }
     
-    res, err := s.Sdk.BuyANumber(ctx, req)
+    res, err := s.BuyANumber(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,48 +34,48 @@ func main() {
     
     req := operations.AssociateRepositoryRequest{
         Headers: operations.AssociateRepositoryHeaders{
-            XAmzAlgorithm: "id",
-            XAmzContentSha256: "repellat",
-            XAmzCredential: "repellendus",
-            XAmzDate: "numquam",
-            XAmzSecurityToken: "aspernatur",
-            XAmzSignature: "ad",
-            XAmzSignedHeaders: "velit",
+            XAmzAlgorithm: "explicabo",
+            XAmzContentSha256: "omnis",
+            XAmzCredential: "ut",
+            XAmzDate: "libero",
+            XAmzSecurityToken: "consequatur",
+            XAmzSignature: "qui",
+            XAmzSignedHeaders: "sit",
         },
         Request: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "distinctio",
-            KmsKeyDetails: &operations.AssociateRepositoryRequestBodyKmsKeyDetails{
+            ClientRequestToken: "quasi",
+            KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKmsKeyDetails{
                 EncryptionOption: "AWS_OWNED_CMK",
-                KmsKeyID: "ad",
+                KMSKeyID: "voluptate",
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "error",
-                    Name: "enim",
-                    Owner: "necessitatibus",
+                    ConnectionArn: "ut",
+                    Name: "deserunt",
+                    Owner: "sed",
                 },
                 CodeCommit: &shared.CodeCommitRepository{
-                    Name: "non",
+                    Name: "sint",
                 },
                 GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "nam",
-                    Name: "in",
-                    Owner: "eum",
+                    ConnectionArn: "est",
+                    Name: "est",
+                    Owner: "omnis",
                 },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "hic",
-                    Name: "ut",
+                    BucketName: "reiciendis",
+                    Name: "ipsam",
                 },
             },
             Tags: map[string]string{
-                "odio": "voluptate",
-                "velit": "commodi",
-                "iste": "vero",
+                "et": "molestias",
+                "minus": "pariatur",
+                "voluptatum": "tenetur",
             },
         },
     }
     
-    res, err := s.Sdk.AssociateRepository(ctx, req)
+    res, err := s.AssociateRepository(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

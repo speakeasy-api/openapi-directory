@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,13 +34,13 @@ func main() {
     
     req := operations.DescribeRecommendationExportJobsRequest{
         Headers: operations.DescribeRecommendationExportJobsHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "sed",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "harum",
-            XAmzSignature: "repudiandae",
-            XAmzSignedHeaders: "similique",
+            XAmzAlgorithm: "inventore",
+            XAmzContentSha256: "voluptatem",
+            XAmzCredential: "voluptates",
+            XAmzDate: "quisquam",
+            XAmzSecurityToken: "architecto",
+            XAmzSignature: "sunt",
+            XAmzSignedHeaders: "ut",
             XAmzTarget: "ComputeOptimizerService.DescribeRecommendationExportJobs",
         },
         Request: shared.DescribeRecommendationExportJobsRequest{
@@ -49,29 +48,36 @@ func main() {
                 shared.JobFilter{
                     Name: "JobStatus",
                     Values: []string{
-                        "rerum",
+                        "et",
+                        "ipsam",
                     },
                 },
                 shared.JobFilter{
                     Name: "JobStatus",
                     Values: []string{
-                        "cumque",
-                        "accusamus",
-                        "voluptates",
+                        "inventore",
+                        "impedit",
+                        "molestiae",
+                    },
+                },
+                shared.JobFilter{
+                    Name: "ResourceType",
+                    Values: []string{
+                        "consectetur",
+                        "repellendus",
+                        "molestias",
                     },
                 },
             },
             JobIds: []string{
-                "inventore",
-                "quibusdam",
-                "minima",
+                "quia",
             },
-            MaxResults: 8170362699033353861,
-            NextToken: "adipisci",
+            MaxResults: 6233872421368037055,
+            NextToken: "sit",
         },
     }
     
-    res, err := s.Sdk.DescribeRecommendationExportJobs(ctx, req)
+    res, err := s.DescribeRecommendationExportJobs(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

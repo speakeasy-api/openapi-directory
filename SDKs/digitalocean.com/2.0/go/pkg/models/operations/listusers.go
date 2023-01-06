@@ -8,14 +8,14 @@ type ListUsersPathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type ListUsersRequest struct {
-	PathParams ListUsersPathParams
-}
-
 type ListUsers401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListUsersRequest struct {
+	PathParams ListUsersPathParams
 }
 
 type ListUsersResponse struct {

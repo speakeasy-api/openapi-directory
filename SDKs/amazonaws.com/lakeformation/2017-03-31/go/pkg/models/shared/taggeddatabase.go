@@ -4,5 +4,5 @@ package shared
 // A structure describing a database resource with tags.
 type TaggedDatabase struct {
 	Database *DatabaseResource `json:"Database,omitempty"`
-	LfTags   []LfTagPair       `json:"LFTags,omitempty"`
+	LFTags   []LfTagPair       `json:"LFTags,omitempty"`
 }

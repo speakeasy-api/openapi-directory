@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTransitGatewayConnectPeersResult struct {
-	NextToken                  *string
-	TransitGatewayConnectPeers []TransitGatewayConnectPeer
+	NextToken                  map[string]interface{}
+	TransitGatewayConnectPeers map[string]interface{}
 }

@@ -1,5 +1,5 @@
 package shared
 
 type UpdateProjectOutput struct {
-	Project *Project `json:"project,omitempty"`
+	Project *Project2 `json:"project,omitempty"`
 }

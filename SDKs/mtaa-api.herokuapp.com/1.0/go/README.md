@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.DistrictsInARegionRequest{
         PathParams: operations.DistrictsInARegionPathParams{
-            Country: "quibusdam",
-            Region: "ab",
+            Country: "ut",
+            Region: "et",
         },
     }
     
-    res, err := s.Sdk.DistrictsInARegion(ctx, req)
+    res, err := s.DistrictsInRegion.DistrictsInARegion(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,13 +43,25 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Districts in region
 
 * `DistrictsInARegion` - Returns all districts in region
-* `TanzaniaRegions` - Returns all regions present in Tanzania
-* `WardsInADistrict` - Returns all wards in a district
-* `NeighborhoodInAStreet` - Returns all neighborhood in a street
+
+### Streets in a ward
+
 * `StreetsInAWard` - Returns all streets in a ward
+
+### Tanzania regions
+
+* `TanzaniaRegions` - Returns all regions present in Tanzania
+
+### Wards in a district
+
+* `WardsInADistrict` - Returns all wards in a district
+
+### neighborhood in a street
+
+* `NeighborhoodInAStreet` - Returns all neighborhood in a street
 
 <!-- End SDK Available Operations -->
 

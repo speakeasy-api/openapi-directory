@@ -3,13 +3,13 @@ package operations
 type PostModifyClusterSubnetGroupActionEnum string
 
 const (
-	PostModifyClusterSubnetGroupActionEnumModifyClusterSubnetGroup PostModifyClusterSubnetGroupActionEnum = "ModifyClusterSubnetGroup"
+	POSTModifyClusterSubnetGroupActionEnumModifyClusterSubnetGroup PostModifyClusterSubnetGroupActionEnum = "ModifyClusterSubnetGroup"
 )
 
 type PostModifyClusterSubnetGroupVersionEnum string
 
 const (
-	PostModifyClusterSubnetGroupVersionEnumTwoThousandAndTwelve1201 PostModifyClusterSubnetGroupVersionEnum = "2012-12-01"
+	POSTModifyClusterSubnetGroupVersionEnumTwoThousandAndTwelve1201 PostModifyClusterSubnetGroupVersionEnum = "2012-12-01"
 )
 
 type PostModifyClusterSubnetGroupQueryParams struct {

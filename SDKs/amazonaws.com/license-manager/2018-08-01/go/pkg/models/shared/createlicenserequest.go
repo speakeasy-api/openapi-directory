@@ -10,6 +10,6 @@ type CreateLicenseRequest struct {
 	LicenseMetadata          []Metadata               `json:"LicenseMetadata,omitempty"`
 	LicenseName              string                   `json:"LicenseName"`
 	ProductName              string                   `json:"ProductName"`
-	ProductSku               string                   `json:"ProductSKU"`
+	ProductSKU               string                   `json:"ProductSKU"`
 	Validity                 DatetimeRange            `json:"Validity"`
 }

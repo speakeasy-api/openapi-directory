@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1432,7 +1433,7 @@ func (s *SDK) IssueCertificate(ctx context.Context, request operations.IssueCert
 				return nil, err
 			}
 
-			res.MalformedCsrException = out
+			res.MalformedCSRException = out
 		}
 	}
 

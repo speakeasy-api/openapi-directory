@@ -1,5 +1,5 @@
 package shared
 
 type DeleteCarrierGatewayResult struct {
-	CarrierGateway *CarrierGateway
+	CarrierGateway map[string]interface{}
 }

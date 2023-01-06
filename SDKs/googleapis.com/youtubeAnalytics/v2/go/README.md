@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,26 +27,26 @@ func main() {
             Option1: &operations.YoutubeAnalyticsGroupItemsDeleteSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.YoutubeAnalyticsGroupItemsDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "sequi",
+            DollarXgafv: "1",
+            AccessToken: "doloremque",
             Alt: "proto",
-            Callback: "officia",
-            Fields: "ad",
-            ID: "eum",
-            Key: "autem",
-            OauthToken: "sint",
-            OnBehalfOfContentOwner: "rem",
-            PrettyPrint: true,
-            QuotaUser: "a",
-            UploadType: "alias",
-            UploadProtocol: "quisquam",
+            Callback: "dicta",
+            Fields: "optio",
+            ID: "exercitationem",
+            Key: "porro",
+            OauthToken: "nihil",
+            OnBehalfOfContentOwner: "aut",
+            PrettyPrint: false,
+            QuotaUser: "cum",
+            UploadType: "sunt",
+            UploadProtocol: "assumenda",
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type CreateDbInstanceResult struct {
-	DbInstance *DbInstance
+	DBInstance *DbInstance
 }

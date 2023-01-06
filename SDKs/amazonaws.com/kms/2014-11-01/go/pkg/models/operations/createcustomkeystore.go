@@ -35,6 +35,6 @@ type CreateCustomKeyStoreResponse struct {
 	CreateCustomKeyStoreResponse                 *shared.CreateCustomKeyStoreResponse
 	CustomKeyStoreNameInUseException             *interface{}
 	IncorrectTrustAnchorException                *interface{}
-	KmsInternalException                         *interface{}
+	KMSInternalException                         *interface{}
 	StatusCode                                   int64
 }

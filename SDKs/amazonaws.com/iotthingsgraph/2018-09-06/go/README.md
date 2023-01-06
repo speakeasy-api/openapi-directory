@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateEntityToThingRequest{
         Headers: operations.AssociateEntityToThingHeaders{
-            XAmzAlgorithm: "adipisci",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "et",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "dolores",
-            XAmzSignature: "iste",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "non",
+            XAmzContentSha256: "facilis",
+            XAmzCredential: "id",
+            XAmzDate: "reprehenderit",
+            XAmzSecurityToken: "sit",
+            XAmzSignature: "at",
+            XAmzSignedHeaders: "ex",
             XAmzTarget: "IotThingsGraphFrontEndService.AssociateEntityToThing",
         },
         Request: shared.AssociateEntityToThingRequest{
-            EntityID: "dolorum",
-            NamespaceVersion: 4016723412169243643,
-            ThingName: "ducimus",
+            EntityID: "qui",
+            NamespaceVersion: 1539407075852850598,
+            ThingName: "dolorum",
         },
     }
     
-    res, err := s.Sdk.AssociateEntityToThing(ctx, req)
+    res, err := s.AssociateEntityToThing(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

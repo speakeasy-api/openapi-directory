@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,364 +26,798 @@ func main() {
         Security: operations.OsconfigProjectsGuestPoliciesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.OsconfigProjectsGuestPoliciesCreatePathParams{
-            Parent: "earum",
+            Parent: "quo",
         },
         QueryParams: operations.OsconfigProjectsGuestPoliciesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "laboriosam",
+            DollarXgafv: "2",
+            AccessToken: "perspiciatis",
             Alt: "media",
-            Callback: "quam",
-            Fields: "aut",
-            GuestPolicyID: "aut",
-            Key: "est",
-            OauthToken: "similique",
+            Callback: "omnis",
+            Fields: "sit",
+            GuestPolicyID: "et",
+            Key: "totam",
+            OauthToken: "magnam",
             PrettyPrint: true,
-            QuotaUser: "dolor",
-            UploadType: "et",
-            UploadProtocol: "est",
+            QuotaUser: "commodi",
+            UploadType: "alias",
+            UploadProtocol: "et",
         },
         Request: &shared.GuestPolicyInput{
             Assignment: &shared.Assignment{
                 GroupLabels: []shared.AssignmentGroupLabel{
                     shared.AssignmentGroupLabel{
                         Labels: map[string]string{
-                            "fugit": "expedita",
+                            "non": "corrupti",
+                            "rerum": "assumenda",
                         },
                     },
                 },
                 InstanceNamePrefixes: []string{
-                    "neque",
-                    "quia",
+                    "nesciunt",
+                    "recusandae",
                 },
                 Instances: []string{
-                    "soluta",
-                    "non",
-                    "et",
+                    "odit",
+                    "voluptatum",
                 },
                 OsTypes: []shared.AssignmentOsType{
                     shared.AssignmentOsType{
-                        OsArchitecture: "eius",
-                        OsShortName: "aut",
-                        OsVersion: "provident",
+                        OsArchitecture: "temporibus",
+                        OsShortName: "eos",
+                        OsVersion: "harum",
                     },
                 },
                 Zones: []string{
-                    "dolorem",
+                    "fugit",
+                    "a",
                 },
             },
-            Description: "cum",
-            Etag: "earum",
-            Name: "harum",
+            Description: "amet",
+            Etag: "quibusdam",
+            Name: "tenetur",
             PackageRepositories: []shared.PackageRepository{
                 shared.PackageRepository{
                     Apt: &shared.AptRepository{
                         ArchiveType: "DEB_SRC",
                         Components: []string{
-                            "voluptatem",
+                            "id",
+                            "enim",
                         },
-                        Distribution: "quae",
-                        GpgKey: "ea",
-                        URI: "quia",
+                        Distribution: "illum",
+                        GpgKey: "ut",
+                        URI: "optio",
                     },
                     Goo: &shared.GooRepository{
-                        Name: "dolorem",
-                        URL: "beatae",
-                    },
-                    Yum: &shared.YumRepository{
-                        BaseURL: "voluptatem",
-                        DisplayName: "dolor",
-                        GpgKeys: []string{
-                            "dolorem",
-                            "sunt",
-                        },
-                        ID: "ut",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "quia",
-                        DisplayName: "dolorum",
-                        GpgKeys: []string{
-                            "non",
-                        },
-                        ID: "dolor",
-                    },
-                },
-                shared.PackageRepository{
-                    Apt: &shared.AptRepository{
-                        ArchiveType: "DEB",
-                        Components: []string{
-                            "omnis",
-                        },
-                        Distribution: "vitae",
-                        GpgKey: "dolorem",
-                        URI: "voluptas",
-                    },
-                    Goo: &shared.GooRepository{
-                        Name: "molestiae",
-                        URL: "debitis",
+                        Name: "quisquam",
+                        URL: "mollitia",
                     },
                     Yum: &shared.YumRepository{
                         BaseURL: "et",
-                        DisplayName: "et",
+                        DisplayName: "hic",
                         GpgKeys: []string{
-                            "animi",
-                            "dolore",
+                            "quas",
+                            "tenetur",
+                            "neque",
                         },
-                        ID: "dolores",
+                        ID: "repellat",
                     },
                     Zypper: &shared.ZypperRepository{
-                        BaseURL: "nihil",
-                        DisplayName: "quas",
+                        BaseURL: "facere",
+                        DisplayName: "recusandae",
                         GpgKeys: []string{
-                            "nemo",
+                            "aut",
                         },
-                        ID: "aut",
-                    },
-                },
-                shared.PackageRepository{
-                    Apt: &shared.AptRepository{
-                        ArchiveType: "DEB",
-                        Components: []string{
-                            "in",
-                        },
-                        Distribution: "quia",
-                        GpgKey: "quidem",
-                        URI: "sunt",
-                    },
-                    Goo: &shared.GooRepository{
-                        Name: "tempora",
-                        URL: "blanditiis",
-                    },
-                    Yum: &shared.YumRepository{
-                        BaseURL: "reiciendis",
-                        DisplayName: "ad",
-                        GpgKeys: []string{
-                            "explicabo",
-                            "enim",
-                            "nihil",
-                        },
-                        ID: "eius",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "ut",
-                        DisplayName: "maiores",
-                        GpgKeys: []string{
-                            "adipisci",
-                            "ab",
-                        },
-                        ID: "quia",
+                        ID: "nobis",
                     },
                 },
             },
             Packages: []shared.Package{
                 shared.Package{
                     DesiredState: "DESIRED_STATE_UNSPECIFIED",
-                    Manager: "APT",
-                    Name: "aspernatur",
+                    Manager: "ANY",
+                    Name: "doloremque",
+                },
+                shared.Package{
+                    DesiredState: "UPDATED",
+                    Manager: "YUM",
+                    Name: "voluptatem",
+                },
+                shared.Package{
+                    DesiredState: "REMOVED",
+                    Manager: "GOO",
+                    Name: "accusamus",
                 },
             },
             Recipes: []shared.SoftwareRecipe{
                 shared.SoftwareRecipe{
                     Artifacts: []shared.SoftwareRecipeArtifact{
                         shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
+                            AllowInsecure: true,
                             Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "ipsam",
-                                Generation: "omnis",
-                                Object: "nam",
+                                Bucket: "optio",
+                                Generation: "in",
+                                Object: "et",
                             },
-                            ID: "sint",
+                            ID: "voluptatum",
                             Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "minus",
-                                URI: "et",
+                                Checksum: "ducimus",
+                                URI: "voluptas",
                             },
                         },
                         shared.SoftwareRecipeArtifact{
                             AllowInsecure: true,
                             Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "sapiente",
-                                Generation: "explicabo",
-                                Object: "architecto",
+                                Bucket: "magnam",
+                                Generation: "quidem",
+                                Object: "quis",
                             },
-                            ID: "quam",
+                            ID: "impedit",
                             Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "alias",
-                                URI: "similique",
+                                Checksum: "quis",
+                                URI: "pariatur",
+                            },
+                        },
+                        shared.SoftwareRecipeArtifact{
+                            AllowInsecure: true,
+                            Gcs: &shared.SoftwareRecipeArtifactGcs{
+                                Bucket: "repudiandae",
+                                Generation: "consequatur",
+                                Object: "incidunt",
+                            },
+                            ID: "autem",
+                            Remote: &shared.SoftwareRecipeArtifactRemote{
+                                Checksum: "voluptatem",
+                                URI: "qui",
+                            },
+                        },
+                    },
+                    DesiredState: "REMOVED",
+                    InstallSteps: []shared.SoftwareRecipeStep{
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "molestiae",
+                                Destination: "ipsum",
+                                Type: "TAR_LZMA",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "dignissimos",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "omnis",
+                                Destination: "maiores",
+                                Overwrite: false,
+                                Permissions: "iste",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    2321652858545718495,
+                                },
+                                Args: []string{
+                                    "nesciunt",
+                                    "libero",
+                                    "sint",
+                                },
+                                ArtifactID: "architecto",
+                                LocalPath: "facere",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    2600104984111499421,
+                                    801919713860541343,
+                                    8091713230454783072,
+                                },
+                                ArtifactID: "tenetur",
+                                Flags: []string{
+                                    "nobis",
+                                    "animi",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "laboriosam",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    9092355897977314672,
+                                },
+                                Interpreter: "SHELL",
+                                Script: "ipsa",
+                            },
+                        },
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "sit",
+                                Destination: "voluptatibus",
+                                Type: "TAR",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "aspernatur",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "eum",
+                                Destination: "vel",
+                                Overwrite: false,
+                                Permissions: "omnis",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    1138555545343431620,
+                                    3648632884966860357,
+                                },
+                                Args: []string{
+                                    "expedita",
+                                    "eius",
+                                    "vero",
+                                },
+                                ArtifactID: "perferendis",
+                                LocalPath: "labore",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    1740399200513402290,
+                                },
+                                ArtifactID: "voluptatem",
+                                Flags: []string{
+                                    "itaque",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "corporis",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    3909571325232464917,
+                                },
+                                Interpreter: "POWERSHELL",
+                                Script: "ea",
+                            },
+                        },
+                    },
+                    Name: "porro",
+                    UpdateSteps: []shared.SoftwareRecipeStep{
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "quidem",
+                                Destination: "aut",
+                                Type: "TAR_GZIP",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "quam",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "harum",
+                                Destination: "nam",
+                                Overwrite: false,
+                                Permissions: "deserunt",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    5406168200080687935,
+                                },
+                                Args: []string{
+                                    "maxime",
+                                    "vel",
+                                    "iusto",
+                                },
+                                ArtifactID: "numquam",
+                                LocalPath: "tempore",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    7497738140442995187,
+                                },
+                                ArtifactID: "cum",
+                                Flags: []string{
+                                    "sequi",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "omnis",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    3310938803414307472,
+                                    1257723659178083677,
+                                    6424616684946641422,
+                                },
+                                Interpreter: "INTERPRETER_UNSPECIFIED",
+                                Script: "qui",
+                            },
+                        },
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "quis",
+                                Destination: "aut",
+                                Type: "TAR_GZIP",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "culpa",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "vel",
+                                Destination: "non",
+                                Overwrite: true,
+                                Permissions: "est",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    5340947795557067830,
+                                    3865998802449302642,
+                                    2002784040749981055,
+                                },
+                                Args: []string{
+                                    "quis",
+                                    "nulla",
+                                },
+                                ArtifactID: "corrupti",
+                                LocalPath: "ut",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    8461969961211307587,
+                                    6537277290524699113,
+                                    3706120604258394001,
+                                },
+                                ArtifactID: "eum",
+                                Flags: []string{
+                                    "non",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "non",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    8620937073649976645,
+                                    4760963621477527542,
+                                    1665542080604327158,
+                                },
+                                Interpreter: "POWERSHELL",
+                                Script: "maiores",
+                            },
+                        },
+                    },
+                    Version: "eum",
+                },
+                shared.SoftwareRecipe{
+                    Artifacts: []shared.SoftwareRecipeArtifact{
+                        shared.SoftwareRecipeArtifact{
+                            AllowInsecure: false,
+                            Gcs: &shared.SoftwareRecipeArtifactGcs{
+                                Bucket: "iste",
+                                Generation: "reprehenderit",
+                                Object: "repellat",
+                            },
+                            ID: "aut",
+                            Remote: &shared.SoftwareRecipeArtifactRemote{
+                                Checksum: "ut",
+                                URI: "voluptatibus",
                             },
                         },
                         shared.SoftwareRecipeArtifact{
                             AllowInsecure: false,
                             Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "est",
-                                Generation: "aut",
-                                Object: "repellat",
+                                Bucket: "repellendus",
+                                Generation: "totam",
+                                Object: "facilis",
                             },
-                            ID: "qui",
+                            ID: "quae",
                             Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "aut",
-                                URI: "distinctio",
+                                Checksum: "ut",
+                                URI: "dicta",
+                            },
+                        },
+                        shared.SoftwareRecipeArtifact{
+                            AllowInsecure: false,
+                            Gcs: &shared.SoftwareRecipeArtifactGcs{
+                                Bucket: "aut",
+                                Generation: "quo",
+                                Object: "dignissimos",
+                            },
+                            ID: "quo",
+                            Remote: &shared.SoftwareRecipeArtifactRemote{
+                                Checksum: "commodi",
+                                URI: "rerum",
                             },
                         },
                     },
-                    DesiredState: "DESIRED_STATE_UNSPECIFIED",
+                    DesiredState: "REMOVED",
                     InstallSteps: []shared.SoftwareRecipeStep{
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "cum",
-                                Destination: "est",
-                                Type: "TAR",
+                                ArtifactID: "quia",
+                                Destination: "vel",
+                                Type: "TAR_XZ",
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "atque",
+                                ArtifactID: "et",
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "eum",
-                                Destination: "similique",
+                                ArtifactID: "sed",
+                                Destination: "aut",
                                 Overwrite: true,
-                                Permissions: "deleniti",
+                                Permissions: "modi",
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int32{
-                                    7122569346342062927,
+                                    8554483107017482103,
                                 },
                                 Args: []string{
-                                    "hic",
+                                    "aut",
+                                    "qui",
+                                    "voluptates",
                                 },
-                                ArtifactID: "aperiam",
-                                LocalPath: "asperiores",
+                                ArtifactID: "odio",
+                                LocalPath: "pariatur",
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int32{
-                                    2178124038817671216,
-                                    2444525000112152390,
+                                    1061238324564434350,
+                                    5548841646479524062,
                                 },
-                                ArtifactID: "quam",
+                                ArtifactID: "veritatis",
                                 Flags: []string{
-                                    "officiis",
+                                    "vero",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "molestias",
+                                ArtifactID: "autem",
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int32{
-                                    9039477044149418637,
+                                    899845756277798671,
+                                    404125353896821593,
                                 },
-                                Interpreter: "POWERSHELL",
-                                Script: "rerum",
+                                Interpreter: "SHELL",
+                                Script: "esse",
                             },
                         },
-                    },
-                    Name: "rerum",
-                    UpdateSteps: []shared.SoftwareRecipeStep{
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "similique",
-                                Destination: "alias",
-                                Type: "ARCHIVE_TYPE_UNSPECIFIED",
+                                ArtifactID: "minus",
+                                Destination: "harum",
+                                Type: "TAR_XZ",
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "consequuntur",
+                                ArtifactID: "perspiciatis",
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "fuga",
-                                Destination: "quos",
-                                Overwrite: true,
-                                Permissions: "facere",
+                                ArtifactID: "iure",
+                                Destination: "beatae",
+                                Overwrite: false,
+                                Permissions: "non",
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int32{
-                                    6177610145225093962,
-                                    465178855250046112,
-                                    3551547707500116900,
+                                    3870156042731119877,
+                                    8346381042517631720,
                                 },
                                 Args: []string{
-                                    "et",
-                                    "facere",
-                                    "et",
+                                    "est",
+                                    "doloremque",
+                                    "libero",
                                 },
-                                ArtifactID: "officiis",
-                                LocalPath: "similique",
+                                ArtifactID: "dolor",
+                                LocalPath: "nulla",
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int32{
-                                    6900656949720075118,
+                                    3182393284648836137,
+                                    1659637740585707350,
                                 },
-                                ArtifactID: "sit",
+                                ArtifactID: "sint",
                                 Flags: []string{
+                                    "quia",
+                                    "pariatur",
+                                    "perspiciatis",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "laboriosam",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    8735615298781067252,
+                                },
+                                Interpreter: "SHELL",
+                                Script: "dignissimos",
+                            },
+                        },
+                    },
+                    Name: "sit",
+                    UpdateSteps: []shared.SoftwareRecipeStep{
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "omnis",
+                                Destination: "sint",
+                                Type: "ZIP",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "nemo",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "provident",
+                                Destination: "illo",
+                                Overwrite: true,
+                                Permissions: "quia",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    8322370022356032251,
+                                    1534262714647058148,
+                                },
+                                Args: []string{
+                                    "quos",
+                                },
+                                ArtifactID: "atque",
+                                LocalPath: "corrupti",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    7730561243286952435,
+                                    3149485240230655415,
+                                },
+                                ArtifactID: "repellat",
+                                Flags: []string{
+                                    "laboriosam",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "soluta",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    8980840374397286997,
+                                },
+                                Interpreter: "POWERSHELL",
+                                Script: "sequi",
+                            },
+                        },
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "velit",
+                                Destination: "illo",
+                                Type: "TAR_XZ",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "iusto",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "dolorem",
+                                Destination: "quaerat",
+                                Overwrite: false,
+                                Permissions: "nihil",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    6983500922031649356,
+                                },
+                                Args: []string{
+                                    "laudantium",
+                                },
+                                ArtifactID: "cumque",
+                                LocalPath: "eos",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    368367004006732208,
+                                    2779445853509790904,
+                                },
+                                ArtifactID: "ut",
+                                Flags: []string{
+                                    "maiores",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "accusamus",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    9158175489434425846,
+                                },
+                                Interpreter: "POWERSHELL",
+                                Script: "sunt",
+                            },
+                        },
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "fugiat",
+                                Destination: "repellat",
+                                Type: "TAR",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "alias",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "est",
+                                Destination: "iure",
+                                Overwrite: false,
+                                Permissions: "quis",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    8048456707693668888,
+                                    8482804986149830933,
+                                    8169199727241313816,
+                                },
+                                Args: []string{
+                                    "ipsa",
+                                    "est",
+                                    "natus",
+                                },
+                                ArtifactID: "quas",
+                                LocalPath: "dolor",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    4201548361809464114,
+                                },
+                                ArtifactID: "eum",
+                                Flags: []string{
+                                    "voluptatem",
+                                    "dicta",
                                     "sed",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "esse",
+                                ArtifactID: "quibusdam",
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int32{
-                                    4708595733770981717,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "culpa",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "deleniti",
-                                Destination: "corporis",
-                                Type: "ARCHIVE_TYPE_UNSPECIFIED",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "quo",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "dolorem",
-                                Destination: "saepe",
-                                Overwrite: true,
-                                Permissions: "et",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int32{
-                                    14991002672757812,
-                                },
-                                Args: []string{
-                                    "tempora",
-                                    "et",
-                                    "quia",
-                                },
-                                ArtifactID: "porro",
-                                LocalPath: "officia",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int32{
-                                    1902411893298843288,
-                                    263922135336930585,
-                                    926545870077699743,
-                                },
-                                ArtifactID: "tempore",
-                                Flags: []string{
-                                    "similique",
-                                    "laborum",
-                                    "voluptates",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "iure",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int32{
-                                    7440842171506281591,
-                                    3826893327860544255,
+                                    2860742136279775158,
                                 },
                                 Interpreter: "SHELL",
-                                Script: "eum",
+                                Script: "facilis",
                             },
                         },
                     },
-                    Version: "culpa",
+                    Version: "consequatur",
+                },
+                shared.SoftwareRecipe{
+                    Artifacts: []shared.SoftwareRecipeArtifact{
+                        shared.SoftwareRecipeArtifact{
+                            AllowInsecure: true,
+                            Gcs: &shared.SoftwareRecipeArtifactGcs{
+                                Bucket: "cupiditate",
+                                Generation: "ea",
+                                Object: "ad",
+                            },
+                            ID: "est",
+                            Remote: &shared.SoftwareRecipeArtifactRemote{
+                                Checksum: "aut",
+                                URI: "sit",
+                            },
+                        },
+                        shared.SoftwareRecipeArtifact{
+                            AllowInsecure: false,
+                            Gcs: &shared.SoftwareRecipeArtifactGcs{
+                                Bucket: "quos",
+                                Generation: "est",
+                                Object: "aut",
+                            },
+                            ID: "reiciendis",
+                            Remote: &shared.SoftwareRecipeArtifactRemote{
+                                Checksum: "ad",
+                                URI: "beatae",
+                            },
+                        },
+                    },
+                    DesiredState: "INSTALLED",
+                    InstallSteps: []shared.SoftwareRecipeStep{
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "ut",
+                                Destination: "aspernatur",
+                                Type: "TAR_LZMA",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "omnis",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "explicabo",
+                                Destination: "ut",
+                                Overwrite: false,
+                                Permissions: "voluptatibus",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    8821612559708424094,
+                                    7367365699305899169,
+                                },
+                                Args: []string{
+                                    "at",
+                                    "qui",
+                                    "quo",
+                                },
+                                ArtifactID: "nihil",
+                                LocalPath: "adipisci",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    3121275403531694500,
+                                    4685244290181475938,
+                                    2931544158483105982,
+                                },
+                                ArtifactID: "odio",
+                                Flags: []string{
+                                    "exercitationem",
+                                    "non",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "rerum",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    458963275543265880,
+                                    2975189056811284908,
+                                },
+                                Interpreter: "SHELL",
+                                Script: "qui",
+                            },
+                        },
+                    },
+                    Name: "sed",
+                    UpdateSteps: []shared.SoftwareRecipeStep{
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "ex",
+                                Destination: "placeat",
+                                Type: "TAR_LZMA",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "ipsum",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "ipsam",
+                                Destination: "consequuntur",
+                                Overwrite: true,
+                                Permissions: "sed",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int32{
+                                    2965901311183202146,
+                                    4200455192467119335,
+                                },
+                                Args: []string{
+                                    "enim",
+                                    "voluptatem",
+                                },
+                                ArtifactID: "qui",
+                                LocalPath: "aliquam",
+                            },
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
+                                AllowedExitCodes: []int32{
+                                    2167523793923098445,
+                                    2323300099458444151,
+                                },
+                                ArtifactID: "eius",
+                                Flags: []string{
+                                    "tempore",
+                                    "nulla",
+                                    "qui",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "nam",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int32{
+                                    6375114522580675724,
+                                    2538183736422389712,
+                                    3911673990289496854,
+                                },
+                                Interpreter: "SHELL",
+                                Script: "quam",
+                            },
+                        },
+                    },
+                    Version: "rerum",
                 },
             },
         },

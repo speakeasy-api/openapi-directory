@@ -9,14 +9,14 @@ type DeleteDomainRecordPathParams struct {
 	DomainRecordID int64  `pathParam:"style=simple,explode=false,name=domain_record_id"`
 }
 
-type DeleteDomainRecordRequest struct {
-	PathParams DeleteDomainRecordPathParams
-}
-
 type DeleteDomainRecord401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteDomainRecordRequest struct {
+	PathParams DeleteDomainRecordPathParams
 }
 
 type DeleteDomainRecordResponse struct {

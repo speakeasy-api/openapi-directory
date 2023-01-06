@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.ClearUserSessionsRequest{
         PathParams: operations.ClearUserSessionsPathParams{
-            UserID: "illo",
+            UserID: "aliquid",
         },
-        Request: []byte("aperiam"),
+        Request: []byte("vitae"),
     }
     
-    res, err := s.Sdk.ClearUserSessions(ctx, req)
+    res, err := s.ClearUserSessions(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

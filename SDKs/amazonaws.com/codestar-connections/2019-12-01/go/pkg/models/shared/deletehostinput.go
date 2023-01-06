@@ -1,5 +1,5 @@
 package shared
 
 type DeleteHostInput struct {
-	HostArn string `json:"HostArn"`
+	HostArn map[string]interface{} `json:"HostArn"`
 }

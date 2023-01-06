@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.DeleteSettingsOrganizationsOrganizationNamePathParams{
-            OrganizationName: "ab",
+            OrganizationName: "laboriosam",
         },
     }
     
-    res, err := s.Sdk.DeleteSettingsOrganizationsOrganizationName(ctx, req)
+    res, err := s.DeleteSettingsOrganizationsOrganizationName(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -17,8 +17,8 @@ type CreateDomainNameHeaders struct {
 // CreateDomainNameRequestBodyMutualTLSAuthentication
 // The mutual TLS authentication configuration for a custom domain name.
 type CreateDomainNameRequestBodyMutualTLSAuthentication struct {
-	TruststoreURI     *string `json:"TruststoreUri,omitempty"`
-	TruststoreVersion *string `json:"TruststoreVersion,omitempty"`
+	TruststoreURI     map[string]interface{} `json:"TruststoreUri,omitempty"`
+	TruststoreVersion map[string]interface{} `json:"TruststoreVersion,omitempty"`
 }
 
 type CreateDomainNameRequestBody struct {

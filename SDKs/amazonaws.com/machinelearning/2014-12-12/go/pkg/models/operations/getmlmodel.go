@@ -7,7 +7,7 @@ import (
 type GetMlModelXAmzTargetEnum string
 
 const (
-	GetMlModelXAmzTargetEnumAmazonMl20141212GetMlModel GetMlModelXAmzTargetEnum = "AmazonML_20141212.GetMLModel"
+	GetMLModelXAmzTargetEnumAmazonMl20141212GetMlModel GetMlModelXAmzTargetEnum = "AmazonML_20141212.GetMLModel"
 )
 
 type GetMlModelHeaders struct {
@@ -28,7 +28,7 @@ type GetMlModelRequest struct {
 
 type GetMlModelResponse struct {
 	ContentType               string
-	GetMlModelOutput          *shared.GetMlModelOutput
+	GetMLModelOutput          *shared.GetMlModelOutput
 	InternalServerException   *interface{}
 	InvalidInputException     *interface{}
 	ResourceNotFoundException *interface{}

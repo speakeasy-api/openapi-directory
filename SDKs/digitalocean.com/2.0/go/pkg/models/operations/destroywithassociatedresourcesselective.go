@@ -8,14 +8,14 @@ type DestroyWithAssociatedResourcesSelectivePathParams struct {
 	DropletID int64 `pathParam:"style=simple,explode=false,name=droplet_id"`
 }
 
-type DestroyWithAssociatedResourcesSelectiveRequest struct {
-	PathParams DestroyWithAssociatedResourcesSelectivePathParams
-}
-
 type DestroyWithAssociatedResourcesSelective401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DestroyWithAssociatedResourcesSelectiveRequest struct {
+	PathParams DestroyWithAssociatedResourcesSelectivePathParams
 }
 
 type DestroyWithAssociatedResourcesSelectiveResponse struct {

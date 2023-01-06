@@ -1,6 +1,6 @@
 package shared
 
 type DescribeClientVpnTargetNetworksResult struct {
-	ClientVpnTargetNetworks []TargetNetwork
-	NextToken               *string
+	ClientVpnTargetNetworks map[string]interface{}
+	NextToken               map[string]interface{}
 }

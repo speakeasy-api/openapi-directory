@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,24 @@ func main() {
     
     req := operations.AssociateFirewallPolicyRequest{
         Headers: operations.AssociateFirewallPolicyHeaders{
-            XAmzAlgorithm: "ipsa",
-            XAmzContentSha256: "est",
-            XAmzCredential: "autem",
-            XAmzDate: "magni",
-            XAmzSecurityToken: "recusandae",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "dolorem",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "sed",
+            XAmzCredential: "voluptas",
+            XAmzDate: "adipisci",
+            XAmzSecurityToken: "exercitationem",
+            XAmzSignature: "deserunt",
+            XAmzSignedHeaders: "ex",
             XAmzTarget: "NetworkFirewall_20201112.AssociateFirewallPolicy",
         },
         Request: shared.AssociateFirewallPolicyRequest{
-            FirewallArn: "minus",
-            FirewallName: "inventore",
-            FirewallPolicyArn: "est",
-            UpdateToken: "dolor",
+            FirewallArn: "at",
+            FirewallName: "harum",
+            FirewallPolicyArn: "magnam",
+            UpdateToken: "earum",
         },
     }
     
-    res, err := s.Sdk.AssociateFirewallPolicy(ctx, req)
+    res, err := s.AssociateFirewallPolicy(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

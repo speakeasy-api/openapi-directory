@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTransitGatewayRouteTableResult struct {
-	TransitGatewayRouteTable *TransitGatewayRouteTable
+	TransitGatewayRouteTable map[string]interface{}
 }

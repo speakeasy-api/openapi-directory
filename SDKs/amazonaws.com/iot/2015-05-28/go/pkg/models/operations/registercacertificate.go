@@ -45,7 +45,7 @@ type RegisterCaCertificateResponse struct {
 	InternalFailureException            *interface{}
 	InvalidRequestException             *interface{}
 	LimitExceededException              *interface{}
-	RegisterCaCertificateResponse       *shared.RegisterCaCertificateResponse
+	RegisterCACertificateResponse       *shared.RegisterCaCertificateResponse
 	RegistrationCodeValidationException *interface{}
 	ResourceAlreadyExistsException      *interface{}
 	ServiceUnavailableException         *interface{}

@@ -1,0 +1,42 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.CncerRequest{
+        Security: operations.CncerSecurity{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            ClientID: shared.SchemeClientID{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        },
+        Request: &operations.CncerRequestBody{
+            CertificateParameters: &operations.CncerRequestBodyCertificateParameters{
+                DocumentNumber: "rerum",
+            },
+            ConsentArtifact: "iure",
+            Format: "xml",
+            TxnID: "nam",
+        },
+    }
+    
+    res, err := s.APIs.Cncer(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Body != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

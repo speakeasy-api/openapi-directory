@@ -8,14 +8,14 @@ type GetDropletPathParams struct {
 	DropletID int64 `pathParam:"style=simple,explode=false,name=droplet_id"`
 }
 
-type GetDropletRequest struct {
-	PathParams GetDropletPathParams
-}
-
 type GetDroplet401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDropletRequest struct {
+	PathParams GetDropletPathParams
 }
 
 type GetDropletResponse struct {

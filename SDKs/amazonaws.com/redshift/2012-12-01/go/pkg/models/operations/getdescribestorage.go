@@ -3,13 +3,13 @@ package operations
 type GetDescribeStorageActionEnum string
 
 const (
-	GetDescribeStorageActionEnumDescribeStorage GetDescribeStorageActionEnum = "DescribeStorage"
+	GETDescribeStorageActionEnumDescribeStorage GetDescribeStorageActionEnum = "DescribeStorage"
 )
 
 type GetDescribeStorageVersionEnum string
 
 const (
-	GetDescribeStorageVersionEnumTwoThousandAndTwelve1201 GetDescribeStorageVersionEnum = "2012-12-01"
+	GETDescribeStorageVersionEnumTwoThousandAndTwelve1201 GetDescribeStorageVersionEnum = "2012-12-01"
 )
 
 type GetDescribeStorageQueryParams struct {

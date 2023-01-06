@@ -3,13 +3,13 @@ package operations
 type PostGetServiceLinkedRoleDeletionStatusActionEnum string
 
 const (
-	PostGetServiceLinkedRoleDeletionStatusActionEnumGetServiceLinkedRoleDeletionStatus PostGetServiceLinkedRoleDeletionStatusActionEnum = "GetServiceLinkedRoleDeletionStatus"
+	POSTGetServiceLinkedRoleDeletionStatusActionEnumGetServiceLinkedRoleDeletionStatus PostGetServiceLinkedRoleDeletionStatusActionEnum = "GetServiceLinkedRoleDeletionStatus"
 )
 
 type PostGetServiceLinkedRoleDeletionStatusVersionEnum string
 
 const (
-	PostGetServiceLinkedRoleDeletionStatusVersionEnumTwoThousandAndTen0508 PostGetServiceLinkedRoleDeletionStatusVersionEnum = "2010-05-08"
+	POSTGetServiceLinkedRoleDeletionStatusVersionEnumTwoThousandAndTen0508 PostGetServiceLinkedRoleDeletionStatusVersionEnum = "2010-05-08"
 )
 
 type PostGetServiceLinkedRoleDeletionStatusQueryParams struct {

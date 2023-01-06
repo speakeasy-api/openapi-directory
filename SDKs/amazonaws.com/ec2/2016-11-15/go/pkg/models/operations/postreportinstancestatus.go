@@ -3,13 +3,13 @@ package operations
 type PostReportInstanceStatusActionEnum string
 
 const (
-	PostReportInstanceStatusActionEnumReportInstanceStatus PostReportInstanceStatusActionEnum = "ReportInstanceStatus"
+	POSTReportInstanceStatusActionEnumReportInstanceStatus PostReportInstanceStatusActionEnum = "ReportInstanceStatus"
 )
 
 type PostReportInstanceStatusVersionEnum string
 
 const (
-	PostReportInstanceStatusVersionEnumTwoThousandAndSixteen1115 PostReportInstanceStatusVersionEnum = "2016-11-15"
+	POSTReportInstanceStatusVersionEnumTwoThousandAndSixteen1115 PostReportInstanceStatusVersionEnum = "2016-11-15"
 )
 
 type PostReportInstanceStatusQueryParams struct {

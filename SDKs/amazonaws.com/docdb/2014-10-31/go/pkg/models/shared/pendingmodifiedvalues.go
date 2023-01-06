@@ -6,15 +6,15 @@ package shared
 type PendingModifiedValues struct {
 	AllocatedStorage             *int64
 	BackupRetentionPeriod        *int64
-	CaCertificateIdentifier      *string
-	DbInstanceClass              *string
-	DbInstanceIdentifier         *string
-	DbSubnetGroupName            *string
+	CACertificateIdentifier      *string
+	DBInstanceClass              *string
+	DBInstanceIdentifier         *string
+	DBSubnetGroupName            *string
 	EngineVersion                *string
 	Iops                         *int64
 	LicenseModel                 *string
 	MasterUserPassword           *string
-	MultiAz                      *bool
+	MultiAZ                      *bool
 	PendingCloudwatchLogsExports *PendingCloudwatchLogsExports
 	Port                         *int64
 	StorageType                  *string

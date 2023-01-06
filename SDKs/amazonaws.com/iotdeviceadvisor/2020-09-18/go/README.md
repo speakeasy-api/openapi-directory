@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,42 +34,35 @@ func main() {
     
     req := operations.CreateSuiteDefinitionRequest{
         Headers: operations.CreateSuiteDefinitionHeaders{
-            XAmzAlgorithm: "autem",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "est",
-            XAmzDate: "est",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "ad",
+            XAmzAlgorithm: "optio",
+            XAmzContentSha256: "at",
+            XAmzCredential: "a",
+            XAmzDate: "rerum",
+            XAmzSecurityToken: "repudiandae",
+            XAmzSignature: "praesentium",
+            XAmzSignedHeaders: "tempora",
         },
         Request: operations.CreateSuiteDefinitionRequestBody{
             SuiteDefinitionConfiguration: &operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration{
-                DevicePermissionRoleArn: "nemo",
+                DevicePermissionRoleArn: "est",
                 Devices: []shared.DeviceUnderTest{
                     shared.DeviceUnderTest{
-                        CertificateArn: "neque",
-                        ThingArn: "totam",
-                    },
-                    shared.DeviceUnderTest{
-                        CertificateArn: "dolores",
-                        ThingArn: "labore",
-                    },
-                    shared.DeviceUnderTest{
-                        CertificateArn: "cupiditate",
-                        ThingArn: "unde",
+                        CertificateArn: "dignissimos",
+                        ThingArn: "et",
                     },
                 },
                 IntendedForQualification: true,
-                RootGroup: "odio",
-                SuiteDefinitionName: "rerum",
+                RootGroup: "vitae",
+                SuiteDefinitionName: "ipsum",
             },
             Tags: map[string]string{
-                "nostrum": "repellat",
+                "magni": "expedita",
+                "ea": "dolor",
             },
         },
     }
     
-    res, err := s.Sdk.CreateSuiteDefinition(ctx, req)
+    res, err := s.CreateSuiteDefinition(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

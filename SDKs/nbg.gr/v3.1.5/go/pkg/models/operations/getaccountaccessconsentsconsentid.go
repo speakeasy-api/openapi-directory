@@ -29,8 +29,7 @@ type GetAccountAccessConsentsConsentIDRequest struct {
 
 type GetAccountAccessConsentsConsentIDResponse struct {
 	ContentType            string
-	Headers                map[string][]string
-	ObErrorResponse1       *shared.ObErrorResponse1
-	ObReadConsentResponse1 *shared.ObReadConsentResponse1
+	OBErrorResponse1       *shared.ObErrorResponse1
+	OBReadConsentResponse1 *shared.ObReadConsentResponse1
 	StatusCode             int64
 }

@@ -29,8 +29,8 @@ type GetRecordsRecordIDJSONRequest struct {
 type GetRecordsRecordIDJSONResponse struct {
 	Body                                           []byte
 	ContentType                                    string
+	StatusCode                                     int64
 	GetRecordsRecordIDJSON403ApplicationJSONObject map[string]interface{}
 	GetRecordsRecordIDJSON404ApplicationJSONObject map[string]interface{}
-	StatusCode                                     int64
 	Record                                         *shared.Record
 }

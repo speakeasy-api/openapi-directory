@@ -3,13 +3,13 @@ package operations
 type PostDeleteSuggesterActionEnum string
 
 const (
-	PostDeleteSuggesterActionEnumDeleteSuggester PostDeleteSuggesterActionEnum = "DeleteSuggester"
+	POSTDeleteSuggesterActionEnumDeleteSuggester PostDeleteSuggesterActionEnum = "DeleteSuggester"
 )
 
 type PostDeleteSuggesterVersionEnum string
 
 const (
-	PostDeleteSuggesterVersionEnumTwoThousandAndThirteen0101 PostDeleteSuggesterVersionEnum = "2013-01-01"
+	POSTDeleteSuggesterVersionEnumTwoThousandAndThirteen0101 PostDeleteSuggesterVersionEnum = "2013-01-01"
 )
 
 type PostDeleteSuggesterQueryParams struct {

@@ -10,10 +10,6 @@ type GetDropletFilesystemFreeMetricsQueryParams struct {
 	Start  string `queryParam:"style=form,explode=true,name=start"`
 }
 
-type GetDropletFilesystemFreeMetricsRequest struct {
-	QueryParams GetDropletFilesystemFreeMetricsQueryParams
-}
-
 type GetDropletFilesystemFreeMetrics200ApplicationJSONDataResult struct {
 	Metric map[string]string `json:"metric"`
 	Values [][]interface{}   `json:"values"`
@@ -46,6 +42,10 @@ type GetDropletFilesystemFreeMetrics401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDropletFilesystemFreeMetricsRequest struct {
+	QueryParams GetDropletFilesystemFreeMetricsQueryParams
 }
 
 type GetDropletFilesystemFreeMetricsResponse struct {

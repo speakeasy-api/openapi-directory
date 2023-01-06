@@ -3,13 +3,13 @@ package operations
 type PostDeleteFlowLogsActionEnum string
 
 const (
-	PostDeleteFlowLogsActionEnumDeleteFlowLogs PostDeleteFlowLogsActionEnum = "DeleteFlowLogs"
+	POSTDeleteFlowLogsActionEnumDeleteFlowLogs PostDeleteFlowLogsActionEnum = "DeleteFlowLogs"
 )
 
 type PostDeleteFlowLogsVersionEnum string
 
 const (
-	PostDeleteFlowLogsVersionEnumTwoThousandAndSixteen1115 PostDeleteFlowLogsVersionEnum = "2016-11-15"
+	POSTDeleteFlowLogsVersionEnumTwoThousandAndSixteen1115 PostDeleteFlowLogsVersionEnum = "2016-11-15"
 )
 
 type PostDeleteFlowLogsQueryParams struct {

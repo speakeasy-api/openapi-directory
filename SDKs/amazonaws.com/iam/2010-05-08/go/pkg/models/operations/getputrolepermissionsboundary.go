@@ -3,13 +3,13 @@ package operations
 type GetPutRolePermissionsBoundaryActionEnum string
 
 const (
-	GetPutRolePermissionsBoundaryActionEnumPutRolePermissionsBoundary GetPutRolePermissionsBoundaryActionEnum = "PutRolePermissionsBoundary"
+	GETPutRolePermissionsBoundaryActionEnumPutRolePermissionsBoundary GetPutRolePermissionsBoundaryActionEnum = "PutRolePermissionsBoundary"
 )
 
 type GetPutRolePermissionsBoundaryVersionEnum string
 
 const (
-	GetPutRolePermissionsBoundaryVersionEnumTwoThousandAndTen0508 GetPutRolePermissionsBoundaryVersionEnum = "2010-05-08"
+	GETPutRolePermissionsBoundaryVersionEnumTwoThousandAndTen0508 GetPutRolePermissionsBoundaryVersionEnum = "2010-05-08"
 )
 
 type GetPutRolePermissionsBoundaryQueryParams struct {

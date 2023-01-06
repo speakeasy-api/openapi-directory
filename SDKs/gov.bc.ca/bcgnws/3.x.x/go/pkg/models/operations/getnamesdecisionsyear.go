@@ -31,7 +31,7 @@ type GetNamesDecisionsYearQueryParams struct {
 	FeatureType     *string                               `queryParam:"style=form,explode=true,name=featureType"`
 	ItemsPerPage    *int64                                `queryParam:"style=form,explode=true,name=itemsPerPage"`
 	OutputFormat    GetNamesDecisionsYearOutputFormatEnum `queryParam:"style=form,explode=true,name=outputFormat"`
-	OutputSrs       *int64                                `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS       *int64                                `queryParam:"style=form,explode=true,name=outputSRS"`
 	OutputStyle     *GetNamesDecisionsYearOutputStyleEnum `queryParam:"style=form,explode=true,name=outputStyle"`
 	SortBy          *GetNamesDecisionsYearSortByEnum      `queryParam:"style=form,explode=true,name=sortBy"`
 	StartIndex      *int64                                `queryParam:"style=form,explode=true,name=startIndex"`

@@ -3,13 +3,13 @@ package operations
 type PostSendCustomVerificationEmailActionEnum string
 
 const (
-	PostSendCustomVerificationEmailActionEnumSendCustomVerificationEmail PostSendCustomVerificationEmailActionEnum = "SendCustomVerificationEmail"
+	POSTSendCustomVerificationEmailActionEnumSendCustomVerificationEmail PostSendCustomVerificationEmailActionEnum = "SendCustomVerificationEmail"
 )
 
 type PostSendCustomVerificationEmailVersionEnum string
 
 const (
-	PostSendCustomVerificationEmailVersionEnumTwoThousandAndTen1201 PostSendCustomVerificationEmailVersionEnum = "2010-12-01"
+	POSTSendCustomVerificationEmailVersionEnumTwoThousandAndTen1201 PostSendCustomVerificationEmailVersionEnum = "2010-12-01"
 )
 
 type PostSendCustomVerificationEmailQueryParams struct {

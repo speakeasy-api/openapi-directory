@@ -1,6 +1,6 @@
 package shared
 
 type DescribeClientVpnConnectionsResult struct {
-	Connections []ClientVpnConnection
-	NextToken   *string
+	Connections map[string]interface{}
+	NextToken   map[string]interface{}
 }

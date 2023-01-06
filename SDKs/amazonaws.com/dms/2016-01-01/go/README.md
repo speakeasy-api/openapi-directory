@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,38 +34,38 @@ func main() {
     
     req := operations.AddTagsToResourceRequest{
         Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "a",
-            XAmzContentSha256: "tempore",
-            XAmzCredential: "veniam",
-            XAmzDate: "consequatur",
-            XAmzSecurityToken: "corporis",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "iure",
+            XAmzAlgorithm: "iste",
+            XAmzContentSha256: "at",
+            XAmzCredential: "accusantium",
+            XAmzDate: "qui",
+            XAmzSecurityToken: "ea",
+            XAmzSignature: "illo",
+            XAmzSignedHeaders: "voluptas",
             XAmzTarget: "AmazonDMSv20160101.AddTagsToResource",
         },
         Request: shared.AddTagsToResourceMessage{
-            ResourceArn: "est",
+            ResourceArn: "debitis",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "consequatur",
-                    ResourceArn: "non",
-                    Value: "nulla",
+                    Key: "at",
+                    ResourceArn: "vero",
+                    Value: "quis",
                 },
                 shared.Tag{
-                    Key: "inventore",
-                    ResourceArn: "reprehenderit",
-                    Value: "quos",
+                    Key: "nisi",
+                    ResourceArn: "qui",
+                    Value: "quasi",
                 },
                 shared.Tag{
-                    Key: "saepe",
-                    ResourceArn: "aperiam",
-                    Value: "est",
+                    Key: "quis",
+                    ResourceArn: "vitae",
+                    Value: "nesciunt",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddTagsToResource(ctx, req)
+    res, err := s.AddTagsToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

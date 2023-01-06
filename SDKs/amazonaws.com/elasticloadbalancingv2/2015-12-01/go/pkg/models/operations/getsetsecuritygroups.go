@@ -3,13 +3,13 @@ package operations
 type GetSetSecurityGroupsActionEnum string
 
 const (
-	GetSetSecurityGroupsActionEnumSetSecurityGroups GetSetSecurityGroupsActionEnum = "SetSecurityGroups"
+	GETSetSecurityGroupsActionEnumSetSecurityGroups GetSetSecurityGroupsActionEnum = "SetSecurityGroups"
 )
 
 type GetSetSecurityGroupsVersionEnum string
 
 const (
-	GetSetSecurityGroupsVersionEnumTwoThousandAndFifteen1201 GetSetSecurityGroupsVersionEnum = "2015-12-01"
+	GETSetSecurityGroupsVersionEnumTwoThousandAndFifteen1201 GetSetSecurityGroupsVersionEnum = "2015-12-01"
 )
 
 type GetSetSecurityGroupsQueryParams struct {

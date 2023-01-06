@@ -3,8 +3,8 @@ package shared
 type OtaUpdateStatusEnum string
 
 const (
-	OtaUpdateStatusEnumCreatePending    OtaUpdateStatusEnum = "CREATE_PENDING"
-	OtaUpdateStatusEnumCreateInProgress OtaUpdateStatusEnum = "CREATE_IN_PROGRESS"
-	OtaUpdateStatusEnumCreateComplete   OtaUpdateStatusEnum = "CREATE_COMPLETE"
-	OtaUpdateStatusEnumCreateFailed     OtaUpdateStatusEnum = "CREATE_FAILED"
+	OTAUpdateStatusEnumCreatePending    OtaUpdateStatusEnum = "CREATE_PENDING"
+	OTAUpdateStatusEnumCreateInProgress OtaUpdateStatusEnum = "CREATE_IN_PROGRESS"
+	OTAUpdateStatusEnumCreateComplete   OtaUpdateStatusEnum = "CREATE_COMPLETE"
+	OTAUpdateStatusEnumCreateFailed     OtaUpdateStatusEnum = "CREATE_FAILED"
 )

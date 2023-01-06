@@ -3,13 +3,13 @@ package operations
 type GetDeleteReceiptFilterActionEnum string
 
 const (
-	GetDeleteReceiptFilterActionEnumDeleteReceiptFilter GetDeleteReceiptFilterActionEnum = "DeleteReceiptFilter"
+	GETDeleteReceiptFilterActionEnumDeleteReceiptFilter GetDeleteReceiptFilterActionEnum = "DeleteReceiptFilter"
 )
 
 type GetDeleteReceiptFilterVersionEnum string
 
 const (
-	GetDeleteReceiptFilterVersionEnumTwoThousandAndTen1201 GetDeleteReceiptFilterVersionEnum = "2010-12-01"
+	GETDeleteReceiptFilterVersionEnumTwoThousandAndTen1201 GetDeleteReceiptFilterVersionEnum = "2010-12-01"
 )
 
 type GetDeleteReceiptFilterQueryParams struct {

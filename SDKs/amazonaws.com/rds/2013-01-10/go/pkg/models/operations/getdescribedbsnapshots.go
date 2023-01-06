@@ -3,19 +3,19 @@ package operations
 type GetDescribeDbSnapshotsActionEnum string
 
 const (
-	GetDescribeDbSnapshotsActionEnumDescribeDbSnapshots GetDescribeDbSnapshotsActionEnum = "DescribeDBSnapshots"
+	GETDescribeDBSnapshotsActionEnumDescribeDbSnapshots GetDescribeDbSnapshotsActionEnum = "DescribeDBSnapshots"
 )
 
 type GetDescribeDbSnapshotsVersionEnum string
 
 const (
-	GetDescribeDbSnapshotsVersionEnumTwoThousandAndThirteen0110 GetDescribeDbSnapshotsVersionEnum = "2013-01-10"
+	GETDescribeDBSnapshotsVersionEnumTwoThousandAndThirteen0110 GetDescribeDbSnapshotsVersionEnum = "2013-01-10"
 )
 
 type GetDescribeDbSnapshotsQueryParams struct {
 	Action               GetDescribeDbSnapshotsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier *string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
-	DbSnapshotIdentifier *string                           `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
+	DBInstanceIdentifier *string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBSnapshotIdentifier *string                           `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Marker               *string                           `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords           *int64                            `queryParam:"style=form,explode=true,name=MaxRecords"`
 	SnapshotType         *string                           `queryParam:"style=form,explode=true,name=SnapshotType"`

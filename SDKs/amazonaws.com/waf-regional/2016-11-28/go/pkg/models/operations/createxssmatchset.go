@@ -30,10 +30,10 @@ type CreateXSSMatchSetResponse struct {
 	ContentType                  string
 	CreateXSSMatchSetResponse    *shared.CreateXSSMatchSetResponse
 	StatusCode                   int64
-	WafDisallowedNameException   *interface{}
-	WafInternalErrorException    *interface{}
-	WafInvalidAccountException   *interface{}
-	WafInvalidParameterException *interface{}
-	WafLimitsExceededException   *interface{}
-	WafStaleDataException        *interface{}
+	WAFDisallowedNameException   *interface{}
+	WAFInternalErrorException    *interface{}
+	WAFInvalidAccountException   *interface{}
+	WAFInvalidParameterException *interface{}
+	WAFLimitsExceededException   *interface{}
+	WAFStaleDataException        *interface{}
 }

@@ -1,5 +1,5 @@
 package shared
 
 type ModifyVpcEndpointResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

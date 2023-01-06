@@ -12,6 +12,5 @@ type CreateTimeOffPeriodResponseData struct {
 }
 
 type CreateTimeOffPeriodResponse struct {
-	Data    CreateTimeOffPeriodResponseData `json:"data"`
-	Success bool                            `json:"success"`
+	Data CreateTimeOffPeriodResponseData `json:"data"`
 }

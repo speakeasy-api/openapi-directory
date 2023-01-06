@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,34 +24,31 @@ func main() {
     
     req := operations.DeparturesGetForStopRequest{
         PathParams: operations.DeparturesGetForStopPathParams{
-            RouteType: 6630931860368459851,
-            StopID: 829498391807953224,
+            RouteType: 2729417514030567241,
+            StopID: 2467764531831227751,
         },
         QueryParams: operations.DeparturesGetForStopQueryParams{
-            DateUtc: "1998-11-11T18:14:23Z",
-            Devid: "sed",
-            DirectionID: 6626872615399574248,
+            DateUtc: "1976-12-05T11:08:08Z",
+            Devid: "vero",
+            DirectionID: 7857940956246050573,
             Expand: []DeparturesGetForStopExpandEnum{
-                "Route",
-                "Direction",
+                "Run",
                 "Disruption",
             },
-            Gtfs: false,
-            IncludeCancelled: false,
-            IncludeGeopath: true,
+            Gtfs: true,
+            IncludeCancelled: true,
+            IncludeGeopath: false,
             LookBackwards: true,
-            MaxResults: 4552221498027089411,
+            MaxResults: 3280036500610443897,
             PlatformNumbers: []int32{
-                5772850537798811911,
-                1368122250028032720,
-                1149259997749928352,
+                1207938721107635436,
             },
-            Signature: "maxime",
-            Token: "voluptatum",
+            Signature: "harum",
+            Token: "officia",
         },
     }
     
-    res, err := s.Sdk.DeparturesGetForStop(ctx, req)
+    res, err := s.Departures.DeparturesGetForStop(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -66,31 +62,61 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Departures
 
 * `DeparturesGetForStop` - View departures for all routes from a stop
 * `DeparturesGetForStopAndRoute` - View departures for a specific route from a stop
+
+### Directions
+
 * `DirectionsForDirection` - View all routes for a direction of travel
 * `DirectionsForDirectionAndType` - View all routes of a particular type for a direction of travel
 * `DirectionsForRoute` - View directions that a route travels in
+
+### Disruptions
+
 * `DisruptionsGetAllDisruptions` - View all disruptions for all route types
 * `DisruptionsGetDisruptionByID` - View a specific disruption
 * `DisruptionsGetDisruptionModes` - Get all disruption modes
 * `DisruptionsGetDisruptionsByRoute` - View all disruptions for a particular route
 * `DisruptionsGetDisruptionsByRouteAndStop` - View all disruptions for a particular route and stop
 * `DisruptionsGetDisruptionsByStop` - View all disruptions for a particular stop
+
+### FareEstimate
+
 * `FareEstimateGetFareEstimateByZone` - Estimate a fare by zone
+
+### Outlets
+
 * `OutletsGetAllOutlets` - List all ticket outlets
 * `OutletsGetOutletsByGeolocation` - List ticket outlets near a specific location
+
+### Patterns
+
 * `PatternsGetPatternByRun` - View the stopping pattern for a specific trip/service run
+
+### RouteTypes
+
 * `RouteTypesGetRouteTypes` - View all route types and their names
+
+### Routes
+
 * `RoutesOneOrMoreRoutes` - View route names and numbers for all routes
 * `RoutesRouteFromID` - View route name and number for specific route ID
+
+### Runs
+
 * `RunsForRoute` - View all trip/service runs for a specific route ID
 * `RunsForRouteAndRouteType` - View all trip/service runs for a specific route ID and route type
 * `RunsForRun` - View all trip/service runs for a specific run_ref
 * `RunsForRunAndRouteType` - View the trip/service run for a specific run_ref and route type
+
+### Search
+
 * `SearchSearch` - View stops, routes and myki ticket outlets that match the search term
+
+### Stops
+
 * `StopsStopDetails` - View facilities at a specific stop (Metro and V/Line stations only)
 * `StopsStopsByGeolocation` - View all stops near a specific location
 * `StopsStopsForRoute` - View all stops on a specific route

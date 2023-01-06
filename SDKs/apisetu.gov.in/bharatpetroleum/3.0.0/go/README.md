@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.LpgsvSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.LpgsvRequestBody{
             CertificateParameters: &operations.LpgsvRequestBodyCertificateParameters{
-                Lpgid: "aut",
-                Svid: "ea",
+                LPGID: "magni",
+                SVID: "reprehenderit",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "omnis",
             Format: "pdf",
-            TxnID: "enim",
+            TxnID: "molestiae",
         },
     }
     
-    res, err := s.Sdk.Lpgsv(ctx, req)
+    res, err := s.APIs.Lpgsv(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Lpgsv` - LPG Subscription Voucher
 

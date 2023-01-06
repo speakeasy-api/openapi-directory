@@ -3,9 +3,9 @@ package shared
 // KeyPair
 // Describes a key pair.
 type KeyPair struct {
-	KeyFingerprint *string
-	KeyMaterial    *string
-	KeyName        *string
-	KeyPairID      *string
-	Tags           []Tag
+	KeyFingerprint map[string]interface{}
+	KeyMaterial    map[string]interface{}
+	KeyName        map[string]interface{}
+	KeyPairID      map[string]interface{}
+	Tags           map[string]interface{}
 }

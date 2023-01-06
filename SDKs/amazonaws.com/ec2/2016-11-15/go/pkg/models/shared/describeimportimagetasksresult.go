@@ -1,6 +1,6 @@
 package shared
 
 type DescribeImportImageTasksResult struct {
-	ImportImageTasks []ImportImageTask
-	NextToken        *string
+	ImportImageTasks map[string]interface{}
+	NextToken        map[string]interface{}
 }

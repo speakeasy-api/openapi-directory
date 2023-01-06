@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,20 +22,25 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest{
-        QueryParams: operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastQueryParams{
-            AggregateHours: "totam",
-            AllowAsynch: false,
-            ContentType: "asperiores",
-            Key: "ut",
-            Locations: "ex",
-            SendAsDatasource: false,
+    req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
+        QueryParams: operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams{
+            AggregateHours: "ut",
+            AllowAsynch: true,
+            CollectStationContributions: false,
+            ContentType: "sit",
+            EndDateTime: "et",
+            IncludeNormals: true,
+            Key: "autem",
+            Locations: "et",
+            MaxDistance: "repudiandae",
+            MaxStations: "debitis",
             ShortColumnNames: true,
-            UnitGroup: "fugiat",
+            StartDateTime: "officia",
+            UnitGroup: "quis",
         },
     }
     
-    res, err := s.Sdk.GetVisualCrossingWebServicesRestServicesWeatherdataForecast(ctx, req)
+    res, err := s.HistoricalWeather.GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,10 +54,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Historical Weather
+
+* `GetVisualCrossingWebServicesRestServicesWeatherdataHistory` - Retrieves hourly or daily historical weather records.
+
+### Weather Forecast
 
 * `GetVisualCrossingWebServicesRestServicesWeatherdataForecast` - Weather Forecast API
-* `GetVisualCrossingWebServicesRestServicesWeatherdataHistory` - Retrieves hourly or daily historical weather records.
 
 <!-- End SDK Available Operations -->
 

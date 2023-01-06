@@ -3,18 +3,18 @@ package operations
 type GetDescribeDbSecurityGroupsActionEnum string
 
 const (
-	GetDescribeDbSecurityGroupsActionEnumDescribeDbSecurityGroups GetDescribeDbSecurityGroupsActionEnum = "DescribeDBSecurityGroups"
+	GETDescribeDBSecurityGroupsActionEnumDescribeDbSecurityGroups GetDescribeDbSecurityGroupsActionEnum = "DescribeDBSecurityGroups"
 )
 
 type GetDescribeDbSecurityGroupsVersionEnum string
 
 const (
-	GetDescribeDbSecurityGroupsVersionEnumTwoThousandAndThirteen0212 GetDescribeDbSecurityGroupsVersionEnum = "2013-02-12"
+	GETDescribeDBSecurityGroupsVersionEnumTwoThousandAndThirteen0212 GetDescribeDbSecurityGroupsVersionEnum = "2013-02-12"
 )
 
 type GetDescribeDbSecurityGroupsQueryParams struct {
 	Action              GetDescribeDbSecurityGroupsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbSecurityGroupName *string                                `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
+	DBSecurityGroupName *string                                `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
 	Marker              *string                                `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords          *int64                                 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version             GetDescribeDbSecurityGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`

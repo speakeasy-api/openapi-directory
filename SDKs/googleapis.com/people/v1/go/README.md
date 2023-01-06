@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,30 +27,30 @@ func main() {
             Option1: &operations.PeopleContactGroupsBatchGetSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.PeopleContactGroupsBatchGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "quia",
-            Alt: "media",
-            Callback: "nihil",
-            Fields: "et",
-            GroupFields: "dolor",
-            Key: "et",
-            MaxMembers: 9176577634530861449,
-            OauthToken: "blanditiis",
-            PrettyPrint: true,
-            QuotaUser: "atque",
+            AccessToken: "ut",
+            Alt: "json",
+            Callback: "quia",
+            Fields: "dolorem",
+            GroupFields: "accusantium",
+            Key: "doloremque",
+            MaxMembers: 6367538758405694653,
+            OauthToken: "deserunt",
+            PrettyPrint: false,
+            QuotaUser: "ad",
             ResourceNames: []string{
-                "hic",
-                "eum",
+                "possimus",
+                "voluptates",
             },
-            UploadType: "sint",
-            UploadProtocol: "sint",
+            UploadType: "cum",
+            UploadProtocol: "saepe",
         },
     }
     

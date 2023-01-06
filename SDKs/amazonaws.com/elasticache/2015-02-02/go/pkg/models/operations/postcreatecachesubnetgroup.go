@@ -3,13 +3,13 @@ package operations
 type PostCreateCacheSubnetGroupActionEnum string
 
 const (
-	PostCreateCacheSubnetGroupActionEnumCreateCacheSubnetGroup PostCreateCacheSubnetGroupActionEnum = "CreateCacheSubnetGroup"
+	POSTCreateCacheSubnetGroupActionEnumCreateCacheSubnetGroup PostCreateCacheSubnetGroupActionEnum = "CreateCacheSubnetGroup"
 )
 
 type PostCreateCacheSubnetGroupVersionEnum string
 
 const (
-	PostCreateCacheSubnetGroupVersionEnumTwoThousandAndFifteen0202 PostCreateCacheSubnetGroupVersionEnum = "2015-02-02"
+	POSTCreateCacheSubnetGroupVersionEnumTwoThousandAndFifteen0202 PostCreateCacheSubnetGroupVersionEnum = "2015-02-02"
 )
 
 type PostCreateCacheSubnetGroupQueryParams struct {

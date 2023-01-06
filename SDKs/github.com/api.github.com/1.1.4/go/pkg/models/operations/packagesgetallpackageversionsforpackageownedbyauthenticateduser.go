@@ -9,17 +9,10 @@ type PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPathParams s
 	PackageType shared.PackageTypeEnum `pathParam:"style=simple,explode=false,name=package_type"`
 }
 
-type PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum string
-
-const (
-	PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnumActive  PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum = "active"
-	PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnumDeleted PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum = "deleted"
-)
-
 type PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserQueryParams struct {
-	Page    *int64                                                                    `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                                                                    `queryParam:"style=form,explode=true,name=per_page"`
-	State   *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum `queryParam:"style=form,explode=true,name=state"`
+	Page    *int64              `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64              `queryParam:"style=form,explode=true,name=per_page"`
+	State   *shared.PerPageEnum `queryParam:"style=form,explode=true,name=state"`
 }
 
 type PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRequest struct {

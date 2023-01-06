@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -231,7 +232,7 @@ func (s *SDK) CreateCluster(ctx context.Context, request operations.CreateCluste
 				return nil, err
 			}
 
-			res.InvalidVpcNetworkStateFault = out
+			res.InvalidVPCNetworkStateFault = out
 		}
 	case httpRes.StatusCode == 490:
 		switch {
@@ -1497,7 +1498,7 @@ func (s *SDK) IncreaseReplicationFactor(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.InvalidVpcNetworkStateFault = out
+			res.InvalidVPCNetworkStateFault = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1619,7 +1620,7 @@ func (s *SDK) ListTags(ctx context.Context, request operations.ListTagsRequest) 
 				return nil, err
 			}
 
-			res.InvalidArnFault = out
+			res.InvalidARNFault = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1853,7 +1854,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.InvalidArnFault = out
+			res.InvalidARNFault = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1965,7 +1966,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.InvalidArnFault = out
+			res.InvalidARNFault = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {

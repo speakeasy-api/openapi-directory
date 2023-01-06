@@ -8,14 +8,14 @@ type GetSSHKeyPathParams struct {
 	SSHKeyIdentifier interface{} `pathParam:"style=simple,explode=false,name=ssh_key_identifier"`
 }
 
-type GetSSHKeyRequest struct {
-	PathParams GetSSHKeyPathParams
-}
-
 type GetSSHKey401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetSSHKeyRequest struct {
+	PathParams GetSSHKeyPathParams
 }
 
 type GetSSHKeyResponse struct {

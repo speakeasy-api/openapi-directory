@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -86,7 +86,7 @@ func (s *GeocodingAPI) GetGeocode(ctx context.Context, request operations.GetGeo
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	}
 

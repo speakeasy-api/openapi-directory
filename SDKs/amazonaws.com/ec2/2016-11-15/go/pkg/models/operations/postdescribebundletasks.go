@@ -3,13 +3,13 @@ package operations
 type PostDescribeBundleTasksActionEnum string
 
 const (
-	PostDescribeBundleTasksActionEnumDescribeBundleTasks PostDescribeBundleTasksActionEnum = "DescribeBundleTasks"
+	POSTDescribeBundleTasksActionEnumDescribeBundleTasks PostDescribeBundleTasksActionEnum = "DescribeBundleTasks"
 )
 
 type PostDescribeBundleTasksVersionEnum string
 
 const (
-	PostDescribeBundleTasksVersionEnumTwoThousandAndSixteen1115 PostDescribeBundleTasksVersionEnum = "2016-11-15"
+	POSTDescribeBundleTasksVersionEnumTwoThousandAndSixteen1115 PostDescribeBundleTasksVersionEnum = "2016-11-15"
 )
 
 type PostDescribeBundleTasksQueryParams struct {

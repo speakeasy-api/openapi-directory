@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,128 +34,157 @@ func main() {
     
     req := operations.CreateExperimentTemplateRequest{
         Headers: operations.CreateExperimentTemplateHeaders{
-            XAmzAlgorithm: "facere",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "illo",
-            XAmzDate: "tempore",
-            XAmzSecurityToken: "velit",
-            XAmzSignature: "corporis",
-            XAmzSignedHeaders: "quidem",
+            XAmzAlgorithm: "recusandae",
+            XAmzContentSha256: "nostrum",
+            XAmzCredential: "illum",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "quo",
+            XAmzSignature: "minus",
+            XAmzSignedHeaders: "facilis",
         },
         Request: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
-                "officiis": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "veniam",
-                    Description: "ducimus",
+                "officia": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "vel",
+                    Description: "magni",
                     Parameters: map[string]string{
-                        "nobis": "aliquam",
-                        "qui": "debitis",
+                        "ut": "ut",
+                        "distinctio": "dolor",
+                        "nemo": "aut",
                     },
                     StartAfter: []string{
-                        "consequatur",
-                        "iusto",
-                        "assumenda",
+                        "in",
+                        "voluptatem",
+                        "velit",
                     },
                     Targets: map[string]string{
-                        "distinctio": "ut",
+                        "est": "dignissimos",
+                        "hic": "accusantium",
+                        "dolores": "et",
+                    },
+                },
+                "quia": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "qui",
+                    Description: "sit",
+                    Parameters: map[string]string{
+                        "aperiam": "nulla",
+                    },
+                    StartAfter: []string{
+                        "qui",
+                        "ea",
+                    },
+                    Targets: map[string]string{
+                        "eveniet": "reiciendis",
+                        "velit": "qui",
                     },
                 },
             },
-            ClientToken: "ut",
-            Description: "expedita",
-            RoleArn: "repellendus",
+            ClientToken: "quam",
+            Description: "sequi",
+            RoleArn: "ut",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "exercitationem",
-                    Value: "nihil",
+                    Source: "vel",
+                    Value: "reprehenderit",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "perferendis",
-                    Value: "odit",
+                    Source: "nesciunt",
+                    Value: "tenetur",
                 },
             },
             Tags: map[string]string{
-                "dolore": "aliquam",
-                "soluta": "accusantium",
+                "fuga": "dolor",
+                "enim": "animi",
             },
             Targets: map[string]shared.CreateExperimentTemplateTargetInput{
-                "aut": shared.CreateExperimentTemplateTargetInput{
+                "sit": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "ex",
+                            Path: "in",
                             Values: []string{
-                                "nihil",
-                                "et",
-                                "deleniti",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "minima",
-                            Values: []string{
-                                "omnis",
-                                "eum",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "error",
-                            Values: []string{
-                                "sed",
-                                "ipsa",
-                                "explicabo",
+                                "id",
+                                "ea",
                             },
                         },
                     },
                     ResourceArns: []string{
-                        "corporis",
-                        "modi",
+                        "pariatur",
+                        "id",
                     },
                     ResourceTags: map[string]string{
-                        "odio": "expedita",
+                        "esse": "in",
+                        "amet": "consectetur",
                     },
-                    ResourceType: "aliquid",
-                    SelectionMode: "ipsum",
+                    ResourceType: "et",
+                    SelectionMode: "nesciunt",
                 },
-                "saepe": shared.CreateExperimentTemplateTargetInput{
+                "ab": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "atque",
+                            Path: "sapiente",
                             Values: []string{
-                                "suscipit",
+                                "autem",
+                                "placeat",
+                                "velit",
                             },
                         },
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "architecto",
+                            Path: "minus",
                             Values: []string{
-                                "ipsa",
-                                "quos",
+                                "minus",
                             },
                         },
                         shared.ExperimentTemplateTargetInputFilter{
                             Path: "voluptas",
                             Values: []string{
-                                "a",
-                                "iusto",
+                                "aut",
                                 "et",
                             },
                         },
                     },
                     ResourceArns: []string{
-                        "voluptas",
-                        "nisi",
-                        "quia",
+                        "atque",
+                        "praesentium",
+                        "perferendis",
                     },
                     ResourceTags: map[string]string{
-                        "corporis": "omnis",
-                        "dolores": "expedita",
+                        "cumque": "minus",
                     },
-                    ResourceType: "enim",
-                    SelectionMode: "quo",
+                    ResourceType: "quo",
+                    SelectionMode: "enim",
+                },
+                "eaque": shared.CreateExperimentTemplateTargetInput{
+                    Filters: []shared.ExperimentTemplateTargetInputFilter{
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "maxime",
+                            Values: []string{
+                                "qui",
+                                "ea",
+                                "porro",
+                            },
+                        },
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "labore",
+                            Values: []string{
+                                "sint",
+                                "non",
+                            },
+                        },
+                    },
+                    ResourceArns: []string{
+                        "omnis",
+                    },
+                    ResourceTags: map[string]string{
+                        "cum": "hic",
+                    },
+                    ResourceType: "qui",
+                    SelectionMode: "cum",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateExperimentTemplate(ctx, req)
+    res, err := s.CreateExperimentTemplate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

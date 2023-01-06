@@ -7,7 +7,7 @@ import (
 type GetAwsOrganizationsAccessStatusXAmzTargetEnum string
 
 const (
-	GetAwsOrganizationsAccessStatusXAmzTargetEnumAws242ServiceCatalogServiceGetAwsOrganizationsAccessStatus GetAwsOrganizationsAccessStatusXAmzTargetEnum = "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus"
+	GetAWSOrganizationsAccessStatusXAmzTargetEnumAws242ServiceCatalogServiceGetAwsOrganizationsAccessStatus GetAwsOrganizationsAccessStatusXAmzTargetEnum = "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus"
 )
 
 type GetAwsOrganizationsAccessStatusHeaders struct {
@@ -28,7 +28,7 @@ type GetAwsOrganizationsAccessStatusRequest struct {
 
 type GetAwsOrganizationsAccessStatusResponse struct {
 	ContentType                           string
-	GetAwsOrganizationsAccessStatusOutput *shared.GetAwsOrganizationsAccessStatusOutput
+	GetAWSOrganizationsAccessStatusOutput *shared.GetAwsOrganizationsAccessStatusOutput
 	OperationNotSupportedException        *interface{}
 	ResourceNotFoundException             *interface{}
 	StatusCode                            int64

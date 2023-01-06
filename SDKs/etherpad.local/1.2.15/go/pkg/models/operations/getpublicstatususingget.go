@@ -39,8 +39,8 @@ type GetPublicStatusUsingGetRequest struct {
 type GetPublicStatusUsingGetResponse struct {
 	ContentType                                     string
 	StatusCode                                      int64
-	GetPublicStatusUsingGet200ApplicationJSONObject *GetPublicStatusUsingGet200ApplicationJSON
-	GetPublicStatusUsingGet400ApplicationJSONObject *GetPublicStatusUsingGet400ApplicationJSON
-	GetPublicStatusUsingGet401ApplicationJSONObject *GetPublicStatusUsingGet401ApplicationJSON
-	GetPublicStatusUsingGet500ApplicationJSONObject *GetPublicStatusUsingGet500ApplicationJSON
+	GETPublicStatusUsingGET200ApplicationJSONObject *GetPublicStatusUsingGet200ApplicationJSON
+	GETPublicStatusUsingGET400ApplicationJSONObject *GetPublicStatusUsingGet400ApplicationJSON
+	GETPublicStatusUsingGET401ApplicationJSONObject *GetPublicStatusUsingGet401ApplicationJSON
+	GETPublicStatusUsingGET500ApplicationJSONObject *GetPublicStatusUsingGet500ApplicationJSON
 }

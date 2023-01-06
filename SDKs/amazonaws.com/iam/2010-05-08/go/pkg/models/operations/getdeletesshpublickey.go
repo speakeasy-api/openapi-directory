@@ -3,13 +3,13 @@ package operations
 type GetDeleteSSHPublicKeyActionEnum string
 
 const (
-	GetDeleteSSHPublicKeyActionEnumDeleteSSHPublicKey GetDeleteSSHPublicKeyActionEnum = "DeleteSSHPublicKey"
+	GETDeleteSSHPublicKeyActionEnumDeleteSSHPublicKey GetDeleteSSHPublicKeyActionEnum = "DeleteSSHPublicKey"
 )
 
 type GetDeleteSSHPublicKeyVersionEnum string
 
 const (
-	GetDeleteSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetDeleteSSHPublicKeyVersionEnum = "2010-05-08"
+	GETDeleteSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetDeleteSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
 type GetDeleteSSHPublicKeyQueryParams struct {

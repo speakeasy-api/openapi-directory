@@ -16,6 +16,6 @@ type GetContainersMessagesRequest struct {
 
 type GetContainersMessagesResponse struct {
 	ContentType                                   string
-	GetContainersMessages200ApplicationJSONObject *GetContainersMessages200ApplicationJSON
 	StatusCode                                    int64
+	GetContainersMessages200ApplicationJSONObject *GetContainersMessages200ApplicationJSON
 }

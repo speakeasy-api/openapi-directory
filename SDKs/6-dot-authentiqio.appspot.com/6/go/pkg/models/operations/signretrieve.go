@@ -18,6 +18,6 @@ type SignRetrieveResponse struct {
 	Body        []byte
 	ContentType string
 	Error       *interface{}
-	Jwt         *SignRetrieveJwt
+	JWT         *SignRetrieveJwt
 	StatusCode  int64
 }

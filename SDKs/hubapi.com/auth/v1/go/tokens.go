@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -70,7 +70,7 @@ func (s *Tokens) PostOauthV1TokenCreateToken(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.TokenResponseIf = out
+			res.TokenResponseIF = out
 		}
 	default:
 		switch {

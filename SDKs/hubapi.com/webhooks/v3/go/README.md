@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteWebhooksV3AppIDSettingsClearPathParams{
-            AppID: 4545634859653222470,
+            AppID: 5756861921549140493,
         },
     }
     

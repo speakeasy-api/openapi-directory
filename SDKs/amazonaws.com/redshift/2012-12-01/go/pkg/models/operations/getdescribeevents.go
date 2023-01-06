@@ -7,23 +7,23 @@ import (
 type GetDescribeEventsActionEnum string
 
 const (
-	GetDescribeEventsActionEnumDescribeEvents GetDescribeEventsActionEnum = "DescribeEvents"
+	GETDescribeEventsActionEnumDescribeEvents GetDescribeEventsActionEnum = "DescribeEvents"
 )
 
 type GetDescribeEventsSourceTypeEnum string
 
 const (
-	GetDescribeEventsSourceTypeEnumCluster               GetDescribeEventsSourceTypeEnum = "cluster"
-	GetDescribeEventsSourceTypeEnumClusterParameterGroup GetDescribeEventsSourceTypeEnum = "cluster-parameter-group"
-	GetDescribeEventsSourceTypeEnumClusterSecurityGroup  GetDescribeEventsSourceTypeEnum = "cluster-security-group"
-	GetDescribeEventsSourceTypeEnumClusterSnapshot       GetDescribeEventsSourceTypeEnum = "cluster-snapshot"
-	GetDescribeEventsSourceTypeEnumScheduledAction       GetDescribeEventsSourceTypeEnum = "scheduled-action"
+	GETDescribeEventsSourceTypeEnumCluster               GetDescribeEventsSourceTypeEnum = "cluster"
+	GETDescribeEventsSourceTypeEnumClusterParameterGroup GetDescribeEventsSourceTypeEnum = "cluster-parameter-group"
+	GETDescribeEventsSourceTypeEnumClusterSecurityGroup  GetDescribeEventsSourceTypeEnum = "cluster-security-group"
+	GETDescribeEventsSourceTypeEnumClusterSnapshot       GetDescribeEventsSourceTypeEnum = "cluster-snapshot"
+	GETDescribeEventsSourceTypeEnumScheduledAction       GetDescribeEventsSourceTypeEnum = "scheduled-action"
 )
 
 type GetDescribeEventsVersionEnum string
 
 const (
-	GetDescribeEventsVersionEnumTwoThousandAndTwelve1201 GetDescribeEventsVersionEnum = "2012-12-01"
+	GETDescribeEventsVersionEnumTwoThousandAndTwelve1201 GetDescribeEventsVersionEnum = "2012-12-01"
 )
 
 type GetDescribeEventsQueryParams struct {

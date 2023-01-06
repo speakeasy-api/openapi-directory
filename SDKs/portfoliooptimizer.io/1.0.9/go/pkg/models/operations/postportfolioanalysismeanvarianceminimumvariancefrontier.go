@@ -34,6 +34,6 @@ type PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequest struct {
 
 type PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse struct {
 	ContentType                                                                      string
-	PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject *PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON
 	StatusCode                                                                       int64
+	PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject *PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON
 }

@@ -38,6 +38,7 @@ const (
 	DropInfoCauseEnumVpcConnectorNotSet                              DropInfoCauseEnum = "VPC_CONNECTOR_NOT_SET"
 	DropInfoCauseEnumVpcConnectorNotRunning                          DropInfoCauseEnum = "VPC_CONNECTOR_NOT_RUNNING"
 	DropInfoCauseEnumPscConnectionNotAccepted                        DropInfoCauseEnum = "PSC_CONNECTION_NOT_ACCEPTED"
+	DropInfoCauseEnumCloudRunRevisionNotReady                        DropInfoCauseEnum = "CLOUD_RUN_REVISION_NOT_READY"
 )
 
 // DropInfo

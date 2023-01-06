@@ -3,13 +3,13 @@ package operations
 type GetDeleteClusterParameterGroupActionEnum string
 
 const (
-	GetDeleteClusterParameterGroupActionEnumDeleteClusterParameterGroup GetDeleteClusterParameterGroupActionEnum = "DeleteClusterParameterGroup"
+	GETDeleteClusterParameterGroupActionEnumDeleteClusterParameterGroup GetDeleteClusterParameterGroupActionEnum = "DeleteClusterParameterGroup"
 )
 
 type GetDeleteClusterParameterGroupVersionEnum string
 
 const (
-	GetDeleteClusterParameterGroupVersionEnumTwoThousandAndTwelve1201 GetDeleteClusterParameterGroupVersionEnum = "2012-12-01"
+	GETDeleteClusterParameterGroupVersionEnumTwoThousandAndTwelve1201 GetDeleteClusterParameterGroupVersionEnum = "2012-12-01"
 )
 
 type GetDeleteClusterParameterGroupQueryParams struct {

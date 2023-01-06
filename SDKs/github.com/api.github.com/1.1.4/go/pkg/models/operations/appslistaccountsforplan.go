@@ -8,18 +8,11 @@ type AppsListAccountsForPlanPathParams struct {
 	PlanID int64 `pathParam:"style=simple,explode=false,name=plan_id"`
 }
 
-type AppsListAccountsForPlanDirectionEnum string
-
-const (
-	AppsListAccountsForPlanDirectionEnumAsc  AppsListAccountsForPlanDirectionEnum = "asc"
-	AppsListAccountsForPlanDirectionEnumDesc AppsListAccountsForPlanDirectionEnum = "desc"
-)
-
 type AppsListAccountsForPlanQueryParams struct {
-	Direction *AppsListAccountsForPlanDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                                `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                                `queryParam:"style=form,explode=true,name=per_page"`
-	Sort      *shared.SortEnum                      `queryParam:"style=form,explode=true,name=sort"`
+	Direction *shared.SortEnum1 `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	Sort      *shared.SortEnum  `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type AppsListAccountsForPlanRequest struct {

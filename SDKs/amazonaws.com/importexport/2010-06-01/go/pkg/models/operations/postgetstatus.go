@@ -3,23 +3,23 @@ package operations
 type PostGetStatusActionEnum string
 
 const (
-	PostGetStatusActionEnumGetStatus PostGetStatusActionEnum = "GetStatus"
+	POSTGetStatusActionEnumGetStatus PostGetStatusActionEnum = "GetStatus"
 )
 
 type PostGetStatusOperationEnum string
 
 const (
-	PostGetStatusOperationEnumGetStatus PostGetStatusOperationEnum = "GetStatus"
+	POSTGetStatusOperationEnumGetStatus PostGetStatusOperationEnum = "GetStatus"
 )
 
 type PostGetStatusVersionEnum string
 
 const (
-	PostGetStatusVersionEnumTwoThousandAndTen0601 PostGetStatusVersionEnum = "2010-06-01"
+	POSTGetStatusVersionEnumTwoThousandAndTen0601 PostGetStatusVersionEnum = "2010-06-01"
 )
 
 type PostGetStatusQueryParams struct {
-	AwsAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostGetStatusActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        PostGetStatusOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`

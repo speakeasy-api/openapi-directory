@@ -2,5 +2,5 @@ package shared
 
 type ListSimulationJobsResponse struct {
 	NextToken              *string                `json:"nextToken,omitempty"`
-	SimulationJobSummaries []SimulationJobSummary `json:"simulationJobSummaries"`
+	SimulationJobSummaries map[string]interface{} `json:"simulationJobSummaries"`
 }

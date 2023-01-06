@@ -12,7 +12,7 @@ type ListFhirImportJobsQueryParams struct {
 type ListFhirImportJobsXAmzTargetEnum string
 
 const (
-	ListFhirImportJobsXAmzTargetEnumHealthLakeListFhirImportJobs ListFhirImportJobsXAmzTargetEnum = "HealthLake.ListFHIRImportJobs"
+	ListFHIRImportJobsXAmzTargetEnumHealthLakeListFhirImportJobs ListFhirImportJobsXAmzTargetEnum = "HealthLake.ListFHIRImportJobs"
 )
 
 type ListFhirImportJobsHeaders struct {
@@ -36,7 +36,7 @@ type ListFhirImportJobsResponse struct {
 	AccessDeniedException      *interface{}
 	ContentType                string
 	InternalServerException    *interface{}
-	ListFhirImportJobsResponse *shared.ListFhirImportJobsResponse
+	ListFHIRImportJobsResponse *shared.ListFhirImportJobsResponse
 	ResourceNotFoundException  *interface{}
 	StatusCode                 int64
 	ThrottlingException        *interface{}

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "fugiat",
-            RepositoryID: 7721589441139439455,
-            RunnerGroupID: 3226718161535449406,
+            Org: "dolorem",
+            RepositoryID: 4152570933925469665,
+            RunnerGroupID: 8770402387887639586,
         },
     }
     
-    res, err := s.Sdk.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx, req)
+    res, err := s.Actions.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,7 +44,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### actions
 
 * `ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg` - Add repository access to a self-hosted runner group in an organization
 * `ActionsAddSelectedRepoToOrgSecret` - Add selected repository to an organization secret
@@ -129,6 +128,9 @@ func main() {
 * `ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization` - Set selected repositories enabled for GitHub Actions in an organization
 * `ActionsSetSelfHostedRunnersInGroupForOrg` - Set self-hosted runners in a group for an organization
 * `ActionsUpdateSelfHostedRunnerGroupForOrg` - Update a self-hosted runner group for an organization
+
+### activity
+
 * `ActivityCheckRepoIsStarredByAuthenticatedUser` - Check if a repository is starred by the authenticated user
 * `ActivityDeleteRepoSubscription` - Delete a repository subscription
 * `ActivityDeleteThreadSubscription` - Delete a thread subscription
@@ -160,6 +162,9 @@ func main() {
 * `ActivitySetThreadSubscription` - Set a thread subscription
 * `ActivityStarRepoForAuthenticatedUser` - Star a repository for the authenticated user
 * `ActivityUnstarRepoForAuthenticatedUser` - Unstar a repository for the authenticated user
+
+### apps
+
 * `AppsAddRepoToInstallation` - Add a repository to an app installation
 * `AppsCheckAuthorization` - Check an authorization
 * `AppsCheckToken` - Check a token
@@ -198,7 +203,13 @@ func main() {
 * `AppsSuspendInstallation` - Suspend an app installation
 * `AppsUnsuspendInstallation` - Unsuspend an app installation
 * `AppsUpdateWebhookConfigForApp` - Update a webhook configuration for an app
+
+### audit-log
+
 * `AuditLogGetAuditLog` - Get the audit log for an enterprise
+
+### billing
+
 * `BillingGetGithubActionsBillingGhe` - Get GitHub Actions billing for an enterprise
 * `BillingGetGithubActionsBillingOrg` - Get GitHub Actions billing for an organization
 * `BillingGetGithubActionsBillingUser` - Get GitHub Actions billing for a user
@@ -208,6 +219,9 @@ func main() {
 * `BillingGetSharedStorageBillingGhe` - Get shared storage billing for an enterprise
 * `BillingGetSharedStorageBillingOrg` - Get shared storage billing for an organization
 * `BillingGetSharedStorageBillingUser` - Get shared storage billing for a user
+
+### checks
+
 * `ChecksCreate` - Create a check run
 * `ChecksCreateSuite` - Create a check suite
 * `ChecksGet` - Get a check run
@@ -219,6 +233,9 @@ func main() {
 * `ChecksRerequestSuite` - Rerequest a check suite
 * `ChecksSetSuitesPreferences` - Update repository preferences for check suites
 * `ChecksUpdate` - Update a check run
+
+### code-scanning
+
 * `CodeScanningDeleteAnalysis` - Delete a code scanning analysis from a repository
 * `CodeScanningGetAlert` - Get a code scanning alert
 * `CodeScanningGetAnalysis` - Get a code scanning analysis for a repository
@@ -228,10 +245,19 @@ func main() {
 * `CodeScanningListRecentAnalyses` - List code scanning analyses for a repository
 * `CodeScanningUpdateAlert` - Update a code scanning alert
 * `CodeScanningUploadSarif` - Upload an analysis as SARIF data
+
+### codes-of-conduct
+
 * `CodesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `CodesOfConductGetConductCode` - Get a code of conduct
 * `CodesOfConductGetForRepo` - Get the code of conduct for a repository
+
+### emojis
+
 * `EmojisGet` - Get emojis
+
+### enterprise-admin
+
 * `EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise` - Add organization access to a self-hosted runner group in an enterprise
 * `EnterpriseAdminAddSelfHostedRunnerToGroupForEnterprise` - Add a self-hosted runner to a group for an enterprise
 * `EnterpriseAdminCreateRegistrationTokenForEnterprise` - Create a registration token for an enterprise
@@ -271,6 +297,9 @@ func main() {
 * `EnterpriseAdminUpdateAttributeForEnterpriseGroup` - Update an attribute for a SCIM enterprise group
 * `EnterpriseAdminUpdateAttributeForEnterpriseUser` - Update an attribute for a SCIM enterprise user
 * `EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise` - Update a self-hosted runner group for an enterprise
+
+### gists
+
 * `GistsCheckIsStarred` - Check if a gist is starred
 * `GistsCreate` - Create a gist
 * `GistsCreateComment` - Create a gist comment
@@ -291,6 +320,9 @@ func main() {
 * `GistsUnstar` - Unstar a gist
 * `GistsUpdate` - Update a gist
 * `GistsUpdateComment` - Update a gist comment
+
+### git
+
 * `GitCreateBlob` - Create a blob
 * `GitCreateCommit` - Create a commit
 * `GitCreateRef` - Create a reference
@@ -304,8 +336,14 @@ func main() {
 * `GitGetTree` - Get a tree
 * `GitListMatchingRefs` - List matching references
 * `GitUpdateRef` - Update a reference
+
+### gitignore
+
 * `GitignoreGetAllTemplates` - Get all gitignore templates
 * `GitignoreGetTemplate` - Get a gitignore template
+
+### interactions
+
 * `InteractionsGetRestrictionsForAuthenticatedUser` - Get interaction restrictions for your public repositories
 * `InteractionsGetRestrictionsForOrg` - Get interaction restrictions for an organization
 * `InteractionsGetRestrictionsForRepo` - Get interaction restrictions for a repository
@@ -315,6 +353,9 @@ func main() {
 * `InteractionsSetRestrictionsForAuthenticatedUser` - Set interaction restrictions for your public repositories
 * `InteractionsSetRestrictionsForOrg` - Set interaction restrictions for an organization
 * `InteractionsSetRestrictionsForRepo` - Set interaction restrictions for a repository
+
+### issues
+
 * `IssuesAddAssignees` - Add assignees to an issue
 * `IssuesAddLabels` - Add labels to an issue
 * `IssuesCheckUserCanBeAssigned` - Check if a user can be assigned
@@ -354,15 +395,27 @@ func main() {
 * `IssuesUpdateComment` - Update an issue comment
 * `IssuesUpdateLabel` - Update a label
 * `IssuesUpdateMilestone` - Update a milestone
+
+### licenses
+
 * `LicensesGet` - Get a license
 * `LicensesGetAllCommonlyUsed` - Get all commonly used licenses
 * `LicensesGetForRepo` - Get the license for a repository
+
+### markdown
+
 * `MarkdownRender` - Render a Markdown document
 * `MarkdownRenderRaw` - Render a Markdown document in raw mode
+
+### meta
+
 * `MetaGet` - Get GitHub meta information
 * `MetaGetOctocat` - Get Octocat
 * `MetaGetZen` - Get the Zen of GitHub
 * `MetaRoot` - GitHub API Root
+
+### migrations
+
 * `MigrationsCancelImport` - Cancel an import
 * `MigrationsDeleteArchiveForAuthenticatedUser` - Delete a user migration archive
 * `MigrationsDeleteArchiveForOrg` - Delete an organization migration archive
@@ -385,6 +438,9 @@ func main() {
 * `MigrationsUnlockRepoForAuthenticatedUser` - Unlock a user repository
 * `MigrationsUnlockRepoForOrg` - Unlock an organization repository
 * `MigrationsUpdateImport` - Update an import
+
+### oauth-authorizations
+
 * `OauthAuthorizationsCreateAuthorization` - Create a new authorization
 * `OauthAuthorizationsDeleteAuthorization` - Delete an authorization
 * `OauthAuthorizationsDeleteGrant` - Delete a grant
@@ -395,6 +451,9 @@ func main() {
 * `OauthAuthorizationsListAuthorizations` - List your authorizations
 * `OauthAuthorizationsListGrants` - List your grants
 * `OauthAuthorizationsUpdateAuthorization` - Update an existing authorization
+
+### orgs
+
 * `OrgsBlockUser` - Block a user from an organization
 * `OrgsCancelInvitation` - Cancel an organization invitation
 * `OrgsCheckBlockedUser` - Check if a user is blocked by an organization
@@ -437,6 +496,9 @@ func main() {
 * `OrgsUpdateMembershipForAuthenticatedUser` - Update an organization membership for the authenticated user
 * `OrgsUpdateWebhook` - Update an organization webhook
 * `OrgsUpdateWebhookConfigForOrg` - Update a webhook configuration for an organization
+
+### packages
+
 * `PackagesDeletePackageForAuthenticatedUser` - Delete a package for the authenticated user
 * `PackagesDeletePackageForOrg` - Delete a package for an organization
 * `PackagesDeletePackageVersionForAuthenticatedUser` - Delete a package version for the authenticated user
@@ -454,6 +516,9 @@ func main() {
 * `PackagesRestorePackageForOrg` - Restore a package for an organization
 * `PackagesRestorePackageVersionForAuthenticatedUser` - Restore a package version for the authenticated user
 * `PackagesRestorePackageVersionForOrg` - Restore package version for an organization
+
+### projects
+
 * `ProjectsAddCollaborator` - Add project collaborator
 * `ProjectsCreateCard` - Create a project card
 * `ProjectsCreateColumn` - Create a project column
@@ -479,6 +544,9 @@ func main() {
 * `ProjectsUpdate` - Update a project
 * `ProjectsUpdateCard` - Update an existing project card
 * `ProjectsUpdateColumn` - Update an existing project column
+
+### pulls
+
 * `PullsCheckIfMerged` - Check if a pull request has been merged
 * `PullsCreate` - Create a pull request
 * `PullsCreateReplyForReviewComment` - Create a reply for a review comment
@@ -506,7 +574,13 @@ func main() {
 * `PullsUpdateBranch` - Update a pull request branch
 * `PullsUpdateReview` - Update a review for a pull request
 * `PullsUpdateReviewComment` - Update a review comment for a pull request
+
+### rate-limit
+
 * `RateLimitGet` - Get rate limit status for the authenticated user
+
+### reactions
+
 * `ReactionsCreateForCommitComment` - Create reaction for a commit comment
 * `ReactionsCreateForIssue` - Create reaction for an issue
 * `ReactionsCreateForIssueComment` - Create reaction for an issue comment
@@ -530,6 +604,9 @@ func main() {
 * `ReactionsListForTeamDiscussionCommentLegacy` - List reactions for a team discussion comment (Legacy)
 * `ReactionsListForTeamDiscussionInOrg` - List reactions for a team discussion
 * `ReactionsListForTeamDiscussionLegacy` - List reactions for a team discussion (Legacy)
+
+### repos
+
 * `ReposAcceptInvitation` - Accept a repository invitation
 * `ReposAddAppAccessRestrictions` - Add app access restrictions
 * `ReposAddCollaborator` - Add a repository collaborator
@@ -678,12 +755,18 @@ func main() {
 * `ReposUpdateWebhook` - Update a repository webhook
 * `ReposUpdateWebhookConfigForRepo` - Update a webhook configuration for a repository
 * `ReposUploadReleaseAsset` - Upload a release asset
+
+### scim
+
 * `ScimDeleteUserFromOrg` - Delete a SCIM user from an organization
 * `ScimGetProvisioningInformationForUser` - Get SCIM provisioning information for a user
 * `ScimListProvisionedIdentities` - List SCIM provisioned identities
 * `ScimProvisionAndInviteUser` - Provision and invite a SCIM user
 * `ScimSetInformationForProvisionedUser` - Update a provisioned organization membership
 * `ScimUpdateAttributeForUser` - Update an attribute for a SCIM user
+
+### search
+
 * `SearchCode` - Search code
 * `SearchCommits` - Search commits
 * `SearchIssuesAndPullRequests` - Search issues and pull requests
@@ -691,9 +774,15 @@ func main() {
 * `SearchRepos` - Search repositories
 * `SearchTopics` - Search topics
 * `SearchUsers` - Search users
+
+### secret-scanning
+
 * `SecretScanningGetAlert` - Get a secret scanning alert
 * `SecretScanningListAlertsForRepo` - List secret scanning alerts for a repository
 * `SecretScanningUpdateAlert` - Update a secret scanning alert
+
+### teams
+
 * `TeamsAddMemberLegacy` - Add team member (Legacy)
 * `TeamsAddOrUpdateMembershipForUserInOrg` - Add or update team membership for a user
 * `TeamsAddOrUpdateMembershipForUserLegacy` - Add or update team membership for a user (Legacy)
@@ -759,6 +848,9 @@ func main() {
 * `TeamsUpdateDiscussionLegacy` - Update a discussion (Legacy)
 * `TeamsUpdateInOrg` - Update a team
 * `TeamsUpdateLegacy` - Update a team (Legacy)
+
+### users
+
 * `UsersAddEmailForAuthenticated` - Add an email address for the authenticated user
 * `UsersBlock` - Block a user
 * `UsersCheckBlocked` - Check if a user is blocked by the authenticated user

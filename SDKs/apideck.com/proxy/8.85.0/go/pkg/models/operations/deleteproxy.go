@@ -32,7 +32,6 @@ type DeleteProxyRequest struct {
 
 type DeleteProxyResponse struct {
 	ContentType                          string
-	Headers                              map[string][]string
 	StatusCode                           int64
 	DeleteProxy200ApplicationJSONAny     *interface{}
 	DeleteProxy401ApplicationJSONObject  *DeleteProxy401ApplicationJSON

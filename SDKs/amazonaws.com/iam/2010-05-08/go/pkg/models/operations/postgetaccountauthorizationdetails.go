@@ -3,13 +3,13 @@ package operations
 type PostGetAccountAuthorizationDetailsActionEnum string
 
 const (
-	PostGetAccountAuthorizationDetailsActionEnumGetAccountAuthorizationDetails PostGetAccountAuthorizationDetailsActionEnum = "GetAccountAuthorizationDetails"
+	POSTGetAccountAuthorizationDetailsActionEnumGetAccountAuthorizationDetails PostGetAccountAuthorizationDetailsActionEnum = "GetAccountAuthorizationDetails"
 )
 
 type PostGetAccountAuthorizationDetailsVersionEnum string
 
 const (
-	PostGetAccountAuthorizationDetailsVersionEnumTwoThousandAndTen0508 PostGetAccountAuthorizationDetailsVersionEnum = "2010-05-08"
+	POSTGetAccountAuthorizationDetailsVersionEnumTwoThousandAndTen0508 PostGetAccountAuthorizationDetailsVersionEnum = "2010-05-08"
 )
 
 type PostGetAccountAuthorizationDetailsQueryParams struct {

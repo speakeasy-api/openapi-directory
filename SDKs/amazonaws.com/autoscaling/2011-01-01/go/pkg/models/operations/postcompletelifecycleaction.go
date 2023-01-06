@@ -3,13 +3,13 @@ package operations
 type PostCompleteLifecycleActionActionEnum string
 
 const (
-	PostCompleteLifecycleActionActionEnumCompleteLifecycleAction PostCompleteLifecycleActionActionEnum = "CompleteLifecycleAction"
+	POSTCompleteLifecycleActionActionEnumCompleteLifecycleAction PostCompleteLifecycleActionActionEnum = "CompleteLifecycleAction"
 )
 
 type PostCompleteLifecycleActionVersionEnum string
 
 const (
-	PostCompleteLifecycleActionVersionEnumTwoThousandAndEleven0101 PostCompleteLifecycleActionVersionEnum = "2011-01-01"
+	POSTCompleteLifecycleActionVersionEnumTwoThousandAndEleven0101 PostCompleteLifecycleActionVersionEnum = "2011-01-01"
 )
 
 type PostCompleteLifecycleActionQueryParams struct {

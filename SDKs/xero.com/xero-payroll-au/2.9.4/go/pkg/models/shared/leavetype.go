@@ -9,7 +9,7 @@ type LeaveType struct {
 	NormalEntitlement *float64 `json:"NormalEntitlement,omitempty"`
 	ShowOnPayslip     *bool    `json:"ShowOnPayslip,omitempty"`
 	TypeOfUnits       *string  `json:"TypeOfUnits,omitempty"`
-	UpdatedDateUtc    *string  `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC    *string  `json:"UpdatedDateUTC,omitempty"`
 }
 
 type LeaveTypeInput struct {

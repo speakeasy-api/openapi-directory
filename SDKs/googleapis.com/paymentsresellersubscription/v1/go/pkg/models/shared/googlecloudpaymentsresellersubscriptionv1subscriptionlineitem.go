@@ -11,30 +11,33 @@ const (
 type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum string
 
 const (
-	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateUnspecified  GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_UNSPECIFIED"
-	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateActive       GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_ACTIVE"
-	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateInactive     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_INACTIVE"
-	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateNew          GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_NEW"
-	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateActivating   GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_ACTIVATING"
-	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateDeactivating GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_DEACTIVATING"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateUnspecified         GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_UNSPECIFIED"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateActive              GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_ACTIVE"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateInactive            GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_INACTIVE"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateNew                 GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_NEW"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateActivating          GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_ACTIVATING"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateDeactivating        GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_DEACTIVATING"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateWaitingToDeactivate GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_WAITING_TO_DEACTIVATE"
 )
 
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
-// Individual line item definition of a subscription. Next id: 9
+// Individual line item definition of a subscription.
 type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem struct {
 	Description              *string                                                                                `json:"description,omitempty"`
 	LineItemFreeTrialEndTime *string                                                                                `json:"lineItemFreeTrialEndTime,omitempty"`
 	LineItemPromotionSpecs   []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec                   `json:"lineItemPromotionSpecs,omitempty"`
 	OneTimeRecurrenceDetails *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails `json:"oneTimeRecurrenceDetails,omitempty"`
 	Product                  *string                                                                                `json:"product,omitempty"`
+	ProductPayload           *GoogleCloudPaymentsResellerSubscriptionV1ProductPayload                               `json:"productPayload,omitempty"`
 	RecurrenceType           *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum       `json:"recurrenceType,omitempty"`
 	State                    *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum                `json:"state,omitempty"`
 }
 
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput
-// Individual line item definition of a subscription. Next id: 9
+// Individual line item definition of a subscription.
 type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput struct {
 	LineItemPromotionSpecs   []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput              `json:"lineItemPromotionSpecs,omitempty"`
 	OneTimeRecurrenceDetails *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails `json:"oneTimeRecurrenceDetails,omitempty"`
 	Product                  *string                                                                                `json:"product,omitempty"`
+	ProductPayload           *GoogleCloudPaymentsResellerSubscriptionV1ProductPayload                               `json:"productPayload,omitempty"`
 }

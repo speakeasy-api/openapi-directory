@@ -5,7 +5,7 @@ package shared
 type EvaluationResult struct {
 	EvalActionName                    string
 	EvalDecision                      PolicyEvaluationDecisionTypeEnum
-	EvalDecisionDetails               map[string]PolicyEvaluationDecisionTypeEnum
+	EvalDecisionDetails               map[string]string
 	EvalResourceName                  *string
 	MatchedStatements                 []Statement
 	MissingContextValues              []string

@@ -15,6 +15,6 @@ type PostCompanyTimeOffsRequest struct {
 type PostCompanyTimeOffsResponse struct {
 	ContentType                                 string
 	ErrorResponse                               *shared.ErrorResponse
-	PostCompanyTimeOffs201ApplicationJSONObject *PostCompanyTimeOffs201ApplicationJSON
 	StatusCode                                  int64
+	PostCompanyTimeOffs201ApplicationJSONObject *PostCompanyTimeOffs201ApplicationJSON
 }

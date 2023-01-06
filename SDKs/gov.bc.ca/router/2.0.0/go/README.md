@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,18 +34,18 @@ func main() {
     
     req := operations.GetDirectionsOutputFormatRequest{
         PathParams: operations.GetDirectionsOutputFormatPathParams{
-            OutputFormat: "html",
+            OutputFormat: "kml",
         },
         QueryParams: operations.GetDirectionsOutputFormatQueryParams{
             CorrectSide: true,
             Criteria: "fastest",
-            Departure: "2022-04-20T03:53:46Z",
-            Disable: "omnis",
+            Departure: "1975-06-27T08:22:02Z",
+            Disable: "eos",
             DistanceUnit: "mi",
-            OutputSrs: 7152912201065642640,
-            Points: "voluptatibus",
-            RoundTrip: true,
-            RouteDescription: "dolor",
+            OutputSRS: 5076055979029686948,
+            Points: "exercitationem",
+            RoundTrip: false,
+            RouteDescription: "maiores",
         },
     }
     
@@ -77,14 +76,14 @@ func main() {
 
 ### distance
 
-* `GetDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 * `GetDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `GetTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points for a commercial vehicle
+* `GetDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 * `GetTruckDistanceOutputFormat` - Get distance and travel time between two geographic points for a commercial vehicle
-* `PostDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
+* `GetTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points for a commercial vehicle
 * `PostDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `PostTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
+* `PostDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 * `PostTruckDistanceOutputFormat` - Get distance and travel time between two geographic points
+* `PostTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 
 ### route
 

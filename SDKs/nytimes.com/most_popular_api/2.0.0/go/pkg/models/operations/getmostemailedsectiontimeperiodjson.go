@@ -35,8 +35,8 @@ type GetMostemailedSectionTimePeriodJSONRequest struct {
 type GetMostemailedSectionTimePeriodJSONResponse struct {
 	Body                                                        []byte
 	ContentType                                                 string
-	GetMostemailedSectionTimePeriodJSON200ApplicationJSONObject *GetMostemailedSectionTimePeriodJSON200ApplicationJSON
-	GetMostemailedSectionTimePeriodJSON400ApplicationJSONObject *GetMostemailedSectionTimePeriodJSON400ApplicationJSON
-	GetMostemailedSectionTimePeriodJSON403ApplicationJSONObject map[string]interface{}
+	GETMostemailedSectionTimePeriodJSON200ApplicationJSONObject *GetMostemailedSectionTimePeriodJSON200ApplicationJSON
+	GETMostemailedSectionTimePeriodJSON400ApplicationJSONObject *GetMostemailedSectionTimePeriodJSON400ApplicationJSON
+	GETMostemailedSectionTimePeriodJSON403ApplicationJSONObject map[string]interface{}
 	StatusCode                                                  int64
 }

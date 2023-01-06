@@ -5,8 +5,8 @@ import (
 )
 
 type ShcerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
-	DsnNo    string `json:"DSNNo"`
+	DOB      string `json:"DOB"`
+	DSNNo    string `json:"DSNNo"`
 	Father   string `json:"Father"`
 	FullName string `json:"FullName"`
 	UID      string `json:"UID"`
@@ -85,7 +85,7 @@ type Shcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Shcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Shcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Shcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Shcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Shcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Shcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Shcer404ApplicationJSON struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,38 +34,38 @@ func main() {
     
     req := operations.CompareFacesRequest{
         Headers: operations.CompareFacesHeaders{
-            XAmzAlgorithm: "cum",
-            XAmzContentSha256: "necessitatibus",
-            XAmzCredential: "sequi",
-            XAmzDate: "velit",
-            XAmzSecurityToken: "nobis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "iusto",
+            XAmzAlgorithm: "maiores",
+            XAmzContentSha256: "rerum",
+            XAmzCredential: "pariatur",
+            XAmzDate: "quia",
+            XAmzSecurityToken: "ut",
+            XAmzSignature: "non",
+            XAmzSignedHeaders: "incidunt",
             XAmzTarget: "RekognitionService.CompareFaces",
         },
         Request: shared.CompareFacesRequest{
-            QualityFilter: "MEDIUM",
-            SimilarityThreshold: 48.099998,
+            QualityFilter: "NONE",
+            SimilarityThreshold: 6.200000,
             SourceImage: shared.Image{
-                Bytes: "voluptatem",
+                Bytes: "et",
                 S3Object: &shared.S3Object{
-                    Bucket: "dignissimos",
-                    Name: "velit",
-                    Version: "magnam",
+                    Bucket: "maxime",
+                    Name: "pariatur",
+                    Version: "amet",
                 },
             },
             TargetImage: shared.Image{
-                Bytes: "vitae",
+                Bytes: "cupiditate",
                 S3Object: &shared.S3Object{
-                    Bucket: "quasi",
-                    Name: "ipsum",
-                    Version: "incidunt",
+                    Bucket: "hic",
+                    Name: "reiciendis",
+                    Version: "voluptatem",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CompareFaces(ctx, req)
+    res, err := s.CompareFaces(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

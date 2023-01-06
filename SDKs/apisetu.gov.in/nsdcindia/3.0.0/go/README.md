@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.EscerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.EscerRequestBody{
             CertificateParameters: &operations.EscerRequestBodyCertificateParameters{
-                Dob: "omnis",
-                Docid: "doloribus",
-                FullName: "rerum",
+                DOB: "ut",
+                DOCID: "soluta",
+                FullName: "voluptatem",
             },
-            ConsentArtifact: "ratione",
+            ConsentArtifact: "adipisci",
             Format: "pdf",
-            TxnID: "recusandae",
+            TxnID: "cum",
         },
     }
     
-    res, err := s.Sdk.Escer(ctx, req)
+    res, err := s.APIs.Escer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Escer` - Executive Skill Enhancement Certificate
 * `Skcer` - Skill Certificate

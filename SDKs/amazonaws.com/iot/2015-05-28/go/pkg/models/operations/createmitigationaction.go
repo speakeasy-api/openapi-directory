@@ -25,7 +25,7 @@ type CreateMitigationActionRequestBodyActionParams struct {
 	EnableIoTLoggingParams            *shared.EnableIoTLoggingParams            `json:"enableIoTLoggingParams,omitempty"`
 	PublishFindingToSnsParams         *shared.PublishFindingToSnsParams         `json:"publishFindingToSnsParams,omitempty"`
 	ReplaceDefaultPolicyVersionParams *shared.ReplaceDefaultPolicyVersionParams `json:"replaceDefaultPolicyVersionParams,omitempty"`
-	UpdateCaCertificateParams         *shared.UpdateCaCertificateParams         `json:"updateCACertificateParams,omitempty"`
+	UpdateCACertificateParams         *shared.UpdateCaCertificateParams         `json:"updateCACertificateParams,omitempty"`
 	UpdateDeviceCertificateParams     *shared.UpdateDeviceCertificateParams     `json:"updateDeviceCertificateParams,omitempty"`
 }
 

@@ -1,5 +1,5 @@
 package shared
 
 type CreateSnapshotsResult struct {
-	Snapshots []SnapshotInfo
+	Snapshots map[string]interface{}
 }

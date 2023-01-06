@@ -7,8 +7,8 @@ import (
 type ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteDomesticScheduledConsent4DataAuthorisation
@@ -69,14 +69,14 @@ type ObWriteDomesticScheduledConsent4DataInitiation struct {
 type ObWriteDomesticScheduledConsent4DataPermissionEnum string
 
 const (
-	ObWriteDomesticScheduledConsent4DataPermissionEnumCreate ObWriteDomesticScheduledConsent4DataPermissionEnum = "Create"
+	OBWriteDomesticScheduledConsent4DataPermissionEnumCreate ObWriteDomesticScheduledConsent4DataPermissionEnum = "Create"
 )
 
 type ObWriteDomesticScheduledConsent4DataReadRefundAccountEnum string
 
 const (
-	ObWriteDomesticScheduledConsent4DataReadRefundAccountEnumNo  ObWriteDomesticScheduledConsent4DataReadRefundAccountEnum = "No"
-	ObWriteDomesticScheduledConsent4DataReadRefundAccountEnumYes ObWriteDomesticScheduledConsent4DataReadRefundAccountEnum = "Yes"
+	OBWriteDomesticScheduledConsent4DataReadRefundAccountEnumNo  ObWriteDomesticScheduledConsent4DataReadRefundAccountEnum = "No"
+	OBWriteDomesticScheduledConsent4DataReadRefundAccountEnumYes ObWriteDomesticScheduledConsent4DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteDomesticScheduledConsent4Data struct {
@@ -84,7 +84,7 @@ type ObWriteDomesticScheduledConsent4Data struct {
 	Initiation        ObWriteDomesticScheduledConsent4DataInitiation             `json:"Initiation"`
 	Permission        ObWriteDomesticScheduledConsent4DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount *ObWriteDomesticScheduledConsent4DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData    *ObscaSupportData1                                         `json:"SCASupportData,omitempty"`
+	SCASupportData    *ObscaSupportData1                                         `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteDomesticScheduledConsent4 struct {

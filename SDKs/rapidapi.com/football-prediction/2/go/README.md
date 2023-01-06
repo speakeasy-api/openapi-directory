@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetAPIV2ListFederationsRequest{
         Headers: operations.GetAPIV2ListFederationsHeaders{
-            XRapidAPIKey: "vel",
+            XRapidAPIKey: "fugit",
         },
     }
     
-    res, err := s.Sdk.GetAPIV2ListFederations(ctx, req)
+    res, err := s.GetAPIV2ListFederations(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

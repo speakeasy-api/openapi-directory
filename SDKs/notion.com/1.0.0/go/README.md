@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,7 +24,7 @@ func main() {
     
     req := operations.AppendBlockChildrenRequest{
         PathParams: operations.AppendBlockChildrenPathParams{
-            ID: "ut",
+            ID: "adipisci",
         },
         Request: &operations.AppendBlockChildrenRequestBody{
             Children: []AppendBlockChildrenRequestBodyChildren{
@@ -34,26 +33,28 @@ func main() {
                         Text: []AppendBlockChildrenRequestBodyChildrenHeading2Text{
                             operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
                                 Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "quae",
+                                    Content: "et",
                                 },
-                                Type: "rerum",
-                            },
-                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
-                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "corrupti",
-                                },
-                                Type: "qui",
-                            },
-                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
-                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "animi",
-                                },
-                                Type: "eum",
+                                Type: "exercitationem",
                             },
                         },
                     },
-                    Object: "occaecati",
-                    Type: "eum",
+                    Object: "reiciendis",
+                    Type: "inventore",
+                },
+                operations.AppendBlockChildrenRequestBodyChildren{
+                    Heading2: &operations.AppendBlockChildrenRequestBodyChildrenHeading2{
+                        Text: []AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "soluta",
+                                },
+                                Type: "deserunt",
+                            },
+                        },
+                    },
+                    Object: "dolores",
+                    Type: "dolorum",
                 },
             },
         },

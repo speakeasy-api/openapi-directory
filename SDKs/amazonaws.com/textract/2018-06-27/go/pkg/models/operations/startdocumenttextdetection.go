@@ -33,7 +33,7 @@ type StartDocumentTextDetectionResponse struct {
 	DocumentTooLargeException              *interface{}
 	IdempotentParameterMismatchException   *interface{}
 	InternalServerError                    *interface{}
-	InvalidKmsKeyException                 *interface{}
+	InvalidKMSKeyException                 *interface{}
 	InvalidParameterException              *interface{}
 	InvalidS3ObjectException               *interface{}
 	LimitExceededException                 *interface{}

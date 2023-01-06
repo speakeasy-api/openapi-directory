@@ -46,8 +46,8 @@ type ListSessionsOfAuthorUsingPostRequest struct {
 type ListSessionsOfAuthorUsingPostResponse struct {
 	ContentType                                           string
 	StatusCode                                            int64
-	ListSessionsOfAuthorUsingPost200ApplicationJSONObject *ListSessionsOfAuthorUsingPost200ApplicationJSON
-	ListSessionsOfAuthorUsingPost400ApplicationJSONObject *ListSessionsOfAuthorUsingPost400ApplicationJSON
-	ListSessionsOfAuthorUsingPost401ApplicationJSONObject *ListSessionsOfAuthorUsingPost401ApplicationJSON
-	ListSessionsOfAuthorUsingPost500ApplicationJSONObject *ListSessionsOfAuthorUsingPost500ApplicationJSON
+	ListSessionsOfAuthorUsingPOST200ApplicationJSONObject *ListSessionsOfAuthorUsingPost200ApplicationJSON
+	ListSessionsOfAuthorUsingPOST400ApplicationJSONObject *ListSessionsOfAuthorUsingPost400ApplicationJSON
+	ListSessionsOfAuthorUsingPOST401ApplicationJSONObject *ListSessionsOfAuthorUsingPost401ApplicationJSON
+	ListSessionsOfAuthorUsingPOST500ApplicationJSONObject *ListSessionsOfAuthorUsingPost500ApplicationJSON
 }

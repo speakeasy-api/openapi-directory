@@ -3,13 +3,13 @@ package operations
 type PostCreateSubnetCidrReservationActionEnum string
 
 const (
-	PostCreateSubnetCidrReservationActionEnumCreateSubnetCidrReservation PostCreateSubnetCidrReservationActionEnum = "CreateSubnetCidrReservation"
+	POSTCreateSubnetCidrReservationActionEnumCreateSubnetCidrReservation PostCreateSubnetCidrReservationActionEnum = "CreateSubnetCidrReservation"
 )
 
 type PostCreateSubnetCidrReservationVersionEnum string
 
 const (
-	PostCreateSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 PostCreateSubnetCidrReservationVersionEnum = "2016-11-15"
+	POSTCreateSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 PostCreateSubnetCidrReservationVersionEnum = "2016-11-15"
 )
 
 type PostCreateSubnetCidrReservationQueryParams struct {

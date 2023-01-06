@@ -3,6 +3,6 @@ package shared
 type DashFragmentSelectorTypeEnum string
 
 const (
-	DashFragmentSelectorTypeEnumProducerTimestamp DashFragmentSelectorTypeEnum = "PRODUCER_TIMESTAMP"
-	DashFragmentSelectorTypeEnumServerTimestamp   DashFragmentSelectorTypeEnum = "SERVER_TIMESTAMP"
+	DASHFragmentSelectorTypeEnumProducerTimestamp DashFragmentSelectorTypeEnum = "PRODUCER_TIMESTAMP"
+	DASHFragmentSelectorTypeEnumServerTimestamp   DashFragmentSelectorTypeEnum = "SERVER_TIMESTAMP"
 )

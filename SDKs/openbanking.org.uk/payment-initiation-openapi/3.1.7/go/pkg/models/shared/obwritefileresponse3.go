@@ -46,9 +46,9 @@ type ObWriteFileResponse3DataInitiation struct {
 type ObWriteFileResponse3DataMultiAuthorisationStatusEnum string
 
 const (
-	ObWriteFileResponse3DataMultiAuthorisationStatusEnumAuthorised                   ObWriteFileResponse3DataMultiAuthorisationStatusEnum = "Authorised"
-	ObWriteFileResponse3DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteFileResponse3DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
-	ObWriteFileResponse3DataMultiAuthorisationStatusEnumRejected                     ObWriteFileResponse3DataMultiAuthorisationStatusEnum = "Rejected"
+	OBWriteFileResponse3DataMultiAuthorisationStatusEnumAuthorised                   ObWriteFileResponse3DataMultiAuthorisationStatusEnum = "Authorised"
+	OBWriteFileResponse3DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteFileResponse3DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
+	OBWriteFileResponse3DataMultiAuthorisationStatusEnumRejected                     ObWriteFileResponse3DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
 // ObWriteFileResponse3DataMultiAuthorisation
@@ -64,9 +64,9 @@ type ObWriteFileResponse3DataMultiAuthorisation struct {
 type ObWriteFileResponse3DataStatusEnum string
 
 const (
-	ObWriteFileResponse3DataStatusEnumInitiationCompleted ObWriteFileResponse3DataStatusEnum = "InitiationCompleted"
-	ObWriteFileResponse3DataStatusEnumInitiationFailed    ObWriteFileResponse3DataStatusEnum = "InitiationFailed"
-	ObWriteFileResponse3DataStatusEnumInitiationPending   ObWriteFileResponse3DataStatusEnum = "InitiationPending"
+	OBWriteFileResponse3DataStatusEnumInitiationCompleted ObWriteFileResponse3DataStatusEnum = "InitiationCompleted"
+	OBWriteFileResponse3DataStatusEnumInitiationFailed    ObWriteFileResponse3DataStatusEnum = "InitiationFailed"
+	OBWriteFileResponse3DataStatusEnumInitiationPending   ObWriteFileResponse3DataStatusEnum = "InitiationPending"
 )
 
 type ObWriteFileResponse3Data struct {

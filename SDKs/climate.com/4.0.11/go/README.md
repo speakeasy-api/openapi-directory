@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -31,7 +30,7 @@ func main() {
         },
         Request: &shared.BoundariesQuery{
             Ids: []string{
-                "et",
+                "in",
             },
         },
     }

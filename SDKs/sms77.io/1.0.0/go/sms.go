@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -66,12 +66,13 @@ func (s *Sms) Sms(ctx context.Context, request operations.SmsRequest) (*operatio
 
 			res.Sms200ApplicationJSONObject = out
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.Sms200TextPlainObject = &out
 		}
 	}
 

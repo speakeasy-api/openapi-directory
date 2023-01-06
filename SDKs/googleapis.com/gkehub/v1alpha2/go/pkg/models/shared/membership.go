@@ -8,6 +8,16 @@ const (
 	MembershipInfrastructureTypeEnumMultiCloud                    MembershipInfrastructureTypeEnum = "MULTI_CLOUD"
 )
 
+// MembershipInput
+// Membership contains information about a member cluster.
+type MembershipInput struct {
+	Authority          *AuthorityInput                   `json:"authority,omitempty"`
+	Endpoint           *MembershipEndpointInput          `json:"endpoint,omitempty"`
+	ExternalID         *string                           `json:"externalId,omitempty"`
+	InfrastructureType *MembershipInfrastructureTypeEnum `json:"infrastructureType,omitempty"`
+	Labels             map[string]string                 `json:"labels,omitempty"`
+}
+
 // Membership
 // Membership contains information about a member cluster.
 type Membership struct {
@@ -24,14 +34,4 @@ type Membership struct {
 	State              *MembershipState                  `json:"state,omitempty"`
 	UniqueID           *string                           `json:"uniqueId,omitempty"`
 	UpdateTime         *string                           `json:"updateTime,omitempty"`
-}
-
-// MembershipInput
-// Membership contains information about a member cluster.
-type MembershipInput struct {
-	Authority          *AuthorityInput                   `json:"authority,omitempty"`
-	Endpoint           *MembershipEndpointInput          `json:"endpoint,omitempty"`
-	ExternalID         *string                           `json:"externalId,omitempty"`
-	InfrastructureType *MembershipInfrastructureTypeEnum `json:"infrastructureType,omitempty"`
-	Labels             map[string]string                 `json:"labels,omitempty"`
 }

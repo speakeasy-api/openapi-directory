@@ -3,13 +3,13 @@ package operations
 type GetBuildSuggestersActionEnum string
 
 const (
-	GetBuildSuggestersActionEnumBuildSuggesters GetBuildSuggestersActionEnum = "BuildSuggesters"
+	GETBuildSuggestersActionEnumBuildSuggesters GetBuildSuggestersActionEnum = "BuildSuggesters"
 )
 
 type GetBuildSuggestersVersionEnum string
 
 const (
-	GetBuildSuggestersVersionEnumTwoThousandAndThirteen0101 GetBuildSuggestersVersionEnum = "2013-01-01"
+	GETBuildSuggestersVersionEnumTwoThousandAndThirteen0101 GetBuildSuggestersVersionEnum = "2013-01-01"
 )
 
 type GetBuildSuggestersQueryParams struct {

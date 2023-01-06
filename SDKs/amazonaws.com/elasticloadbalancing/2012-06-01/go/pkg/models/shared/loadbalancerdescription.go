@@ -13,7 +13,7 @@ type LoadBalancerDescription struct {
 	CanonicalHostedZoneNameID *string
 	CreatedTime               *time.Time
 	DNSName                   *string
-	HealthCheck               *HealthCheck
+	HealthCheck               *HealthCheck1
 	Instances                 []Instance
 	ListenerDescriptions      []ListenerDescription
 	LoadBalancerName          *string
@@ -22,5 +22,5 @@ type LoadBalancerDescription struct {
 	SecurityGroups            []string
 	SourceSecurityGroup       *SourceSecurityGroup
 	Subnets                   []string
-	VpcID                     *string
+	VPCID                     *string
 }

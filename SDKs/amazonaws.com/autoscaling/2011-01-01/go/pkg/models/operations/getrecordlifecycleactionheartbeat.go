@@ -3,13 +3,13 @@ package operations
 type GetRecordLifecycleActionHeartbeatActionEnum string
 
 const (
-	GetRecordLifecycleActionHeartbeatActionEnumRecordLifecycleActionHeartbeat GetRecordLifecycleActionHeartbeatActionEnum = "RecordLifecycleActionHeartbeat"
+	GETRecordLifecycleActionHeartbeatActionEnumRecordLifecycleActionHeartbeat GetRecordLifecycleActionHeartbeatActionEnum = "RecordLifecycleActionHeartbeat"
 )
 
 type GetRecordLifecycleActionHeartbeatVersionEnum string
 
 const (
-	GetRecordLifecycleActionHeartbeatVersionEnumTwoThousandAndEleven0101 GetRecordLifecycleActionHeartbeatVersionEnum = "2011-01-01"
+	GETRecordLifecycleActionHeartbeatVersionEnumTwoThousandAndEleven0101 GetRecordLifecycleActionHeartbeatVersionEnum = "2011-01-01"
 )
 
 type GetRecordLifecycleActionHeartbeatQueryParams struct {

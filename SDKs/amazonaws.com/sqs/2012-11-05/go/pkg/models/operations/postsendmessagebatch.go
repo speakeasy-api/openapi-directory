@@ -3,13 +3,13 @@ package operations
 type PostSendMessageBatchActionEnum string
 
 const (
-	PostSendMessageBatchActionEnumSendMessageBatch PostSendMessageBatchActionEnum = "SendMessageBatch"
+	POSTSendMessageBatchActionEnumSendMessageBatch PostSendMessageBatchActionEnum = "SendMessageBatch"
 )
 
 type PostSendMessageBatchVersionEnum string
 
 const (
-	PostSendMessageBatchVersionEnumTwoThousandAndTwelve1105 PostSendMessageBatchVersionEnum = "2012-11-05"
+	POSTSendMessageBatchVersionEnumTwoThousandAndTwelve1105 PostSendMessageBatchVersionEnum = "2012-11-05"
 )
 
 type PostSendMessageBatchQueryParams struct {

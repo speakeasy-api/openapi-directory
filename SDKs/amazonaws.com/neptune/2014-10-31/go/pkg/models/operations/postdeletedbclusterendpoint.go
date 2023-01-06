@@ -3,13 +3,13 @@ package operations
 type PostDeleteDbClusterEndpointActionEnum string
 
 const (
-	PostDeleteDbClusterEndpointActionEnumDeleteDbClusterEndpoint PostDeleteDbClusterEndpointActionEnum = "DeleteDBClusterEndpoint"
+	POSTDeleteDBClusterEndpointActionEnumDeleteDbClusterEndpoint PostDeleteDbClusterEndpointActionEnum = "DeleteDBClusterEndpoint"
 )
 
 type PostDeleteDbClusterEndpointVersionEnum string
 
 const (
-	PostDeleteDbClusterEndpointVersionEnumTwoThousandAndFourteen1031 PostDeleteDbClusterEndpointVersionEnum = "2014-10-31"
+	POSTDeleteDBClusterEndpointVersionEnumTwoThousandAndFourteen1031 PostDeleteDbClusterEndpointVersionEnum = "2014-10-31"
 )
 
 type PostDeleteDbClusterEndpointQueryParams struct {

@@ -39,8 +39,8 @@ type ListAuthorsOfPadUsingPostRequest struct {
 type ListAuthorsOfPadUsingPostResponse struct {
 	ContentType                                       string
 	StatusCode                                        int64
-	ListAuthorsOfPadUsingPost200ApplicationJSONObject *ListAuthorsOfPadUsingPost200ApplicationJSON
-	ListAuthorsOfPadUsingPost400ApplicationJSONObject *ListAuthorsOfPadUsingPost400ApplicationJSON
-	ListAuthorsOfPadUsingPost401ApplicationJSONObject *ListAuthorsOfPadUsingPost401ApplicationJSON
-	ListAuthorsOfPadUsingPost500ApplicationJSONObject *ListAuthorsOfPadUsingPost500ApplicationJSON
+	ListAuthorsOfPadUsingPOST200ApplicationJSONObject *ListAuthorsOfPadUsingPost200ApplicationJSON
+	ListAuthorsOfPadUsingPOST400ApplicationJSONObject *ListAuthorsOfPadUsingPost400ApplicationJSON
+	ListAuthorsOfPadUsingPOST401ApplicationJSONObject *ListAuthorsOfPadUsingPost401ApplicationJSON
+	ListAuthorsOfPadUsingPOST500ApplicationJSONObject *ListAuthorsOfPadUsingPost500ApplicationJSON
 }

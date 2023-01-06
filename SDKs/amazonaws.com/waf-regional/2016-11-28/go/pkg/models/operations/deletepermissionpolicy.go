@@ -30,7 +30,7 @@ type DeletePermissionPolicyResponse struct {
 	ContentType                    string
 	DeletePermissionPolicyResponse map[string]interface{}
 	StatusCode                     int64
-	WafInternalErrorException      *interface{}
-	WafNonexistentItemException    *interface{}
-	WafStaleDataException          *interface{}
+	WAFInternalErrorException      *interface{}
+	WAFNonexistentItemException    *interface{}
+	WAFStaleDataException          *interface{}
 }

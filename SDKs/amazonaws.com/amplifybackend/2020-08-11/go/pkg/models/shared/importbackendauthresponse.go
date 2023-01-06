@@ -1,10 +1,10 @@
 package shared
 
 type ImportBackendAuthResponse struct {
-	AppID                  *string `json:"AppId,omitempty"`
-	BackendEnvironmentName *string `json:"BackendEnvironmentName,omitempty"`
-	Error                  *string `json:"Error,omitempty"`
-	JobID                  *string `json:"JobId,omitempty"`
-	Operation              *string `json:"Operation,omitempty"`
-	Status                 *string `json:"Status,omitempty"`
+	AppID                  map[string]interface{} `json:"AppId,omitempty"`
+	BackendEnvironmentName map[string]interface{} `json:"BackendEnvironmentName,omitempty"`
+	Error                  map[string]interface{} `json:"Error,omitempty"`
+	JobID                  map[string]interface{} `json:"JobId,omitempty"`
+	Operation              map[string]interface{} `json:"Operation,omitempty"`
+	Status                 map[string]interface{} `json:"Status,omitempty"`
 }

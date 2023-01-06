@@ -39,8 +39,8 @@ type CreateAuthorUsingGetRequest struct {
 type CreateAuthorUsingGetResponse struct {
 	ContentType                                  string
 	StatusCode                                   int64
-	CreateAuthorUsingGet200ApplicationJSONObject *CreateAuthorUsingGet200ApplicationJSON
-	CreateAuthorUsingGet400ApplicationJSONObject *CreateAuthorUsingGet400ApplicationJSON
-	CreateAuthorUsingGet401ApplicationJSONObject *CreateAuthorUsingGet401ApplicationJSON
-	CreateAuthorUsingGet500ApplicationJSONObject *CreateAuthorUsingGet500ApplicationJSON
+	CreateAuthorUsingGET200ApplicationJSONObject *CreateAuthorUsingGet200ApplicationJSON
+	CreateAuthorUsingGET400ApplicationJSONObject *CreateAuthorUsingGet400ApplicationJSON
+	CreateAuthorUsingGET401ApplicationJSONObject *CreateAuthorUsingGet401ApplicationJSON
+	CreateAuthorUsingGET500ApplicationJSONObject *CreateAuthorUsingGet500ApplicationJSON
 }

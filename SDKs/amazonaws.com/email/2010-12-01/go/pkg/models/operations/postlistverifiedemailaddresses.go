@@ -3,13 +3,13 @@ package operations
 type PostListVerifiedEmailAddressesActionEnum string
 
 const (
-	PostListVerifiedEmailAddressesActionEnumListVerifiedEmailAddresses PostListVerifiedEmailAddressesActionEnum = "ListVerifiedEmailAddresses"
+	POSTListVerifiedEmailAddressesActionEnumListVerifiedEmailAddresses PostListVerifiedEmailAddressesActionEnum = "ListVerifiedEmailAddresses"
 )
 
 type PostListVerifiedEmailAddressesVersionEnum string
 
 const (
-	PostListVerifiedEmailAddressesVersionEnumTwoThousandAndTen1201 PostListVerifiedEmailAddressesVersionEnum = "2010-12-01"
+	POSTListVerifiedEmailAddressesVersionEnumTwoThousandAndTen1201 PostListVerifiedEmailAddressesVersionEnum = "2010-12-01"
 )
 
 type PostListVerifiedEmailAddressesQueryParams struct {

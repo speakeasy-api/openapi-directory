@@ -3,17 +3,17 @@ package operations
 type GetDomainMetadataActionEnum string
 
 const (
-	GetDomainMetadataActionEnumDomainMetadata GetDomainMetadataActionEnum = "DomainMetadata"
+	GETDomainMetadataActionEnumDomainMetadata GetDomainMetadataActionEnum = "DomainMetadata"
 )
 
 type GetDomainMetadataVersionEnum string
 
 const (
-	GetDomainMetadataVersionEnumTwoThousandAndNine0415 GetDomainMetadataVersionEnum = "2009-04-15"
+	GETDomainMetadataVersionEnumTwoThousandAndNine0415 GetDomainMetadataVersionEnum = "2009-04-15"
 )
 
 type GetDomainMetadataQueryParams struct {
-	AwsAccessKeyID   string                       `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                       `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetDomainMetadataActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DomainName       string                       `queryParam:"style=form,explode=true,name=DomainName"`
 	Signature        string                       `queryParam:"style=form,explode=true,name=Signature"`

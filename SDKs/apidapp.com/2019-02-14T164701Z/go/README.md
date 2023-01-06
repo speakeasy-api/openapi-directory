@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.DeleteKeyKeyRequest{
         PathParams: operations.DeleteKeyKeyPathParams{
-            Key: "maxime",
+            Key: "qui",
         },
     }
     
-    res, err := s.Sdk.DeleteKeyKey(ctx, req)
+    res, err := s.DeleteKeyKey(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

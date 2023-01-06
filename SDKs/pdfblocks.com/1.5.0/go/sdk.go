@@ -1,13 +1,14 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -140,7 +141,7 @@ func (s *SDK) AddImageWatermarkV1(ctx context.Context, request operations.AddIma
 				return nil, err
 			}
 
-			res.AddImageWatermarkV14XxApplicationProblemPlusJSONObject = out
+			res.AddImageWatermarkV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -202,7 +203,7 @@ func (s *SDK) AddPasswordV1(ctx context.Context, request operations.AddPasswordV
 				return nil, err
 			}
 
-			res.AddPasswordV14XxApplicationProblemPlusJSONObject = out
+			res.AddPasswordV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -264,7 +265,7 @@ func (s *SDK) AddRestrictionsV1(ctx context.Context, request operations.AddRestr
 				return nil, err
 			}
 
-			res.AddRestrictionsV14XxApplicationProblemPlusJSONObject = out
+			res.AddRestrictionsV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -326,7 +327,7 @@ func (s *SDK) AddTextWatermarkV1(ctx context.Context, request operations.AddText
 				return nil, err
 			}
 
-			res.AddTextWatermarkV14XxApplicationProblemPlusJSONObject = out
+			res.AddTextWatermarkV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -388,7 +389,7 @@ func (s *SDK) ExtractPagesV1(ctx context.Context, request operations.ExtractPage
 				return nil, err
 			}
 
-			res.ExtractPagesV14XxApplicationProblemPlusJSONObject = out
+			res.ExtractPagesV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -450,7 +451,7 @@ func (s *SDK) MergeDocumentsV1(ctx context.Context, request operations.MergeDocu
 				return nil, err
 			}
 
-			res.MergeDocumentsV14XxApplicationProblemPlusJSONObject = out
+			res.MergeDocumentsV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -512,7 +513,7 @@ func (s *SDK) RemovePagesV1(ctx context.Context, request operations.RemovePagesV
 				return nil, err
 			}
 
-			res.RemovePagesV14XxApplicationProblemPlusJSONObject = out
+			res.RemovePagesV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -574,7 +575,7 @@ func (s *SDK) RemovePasswordV1(ctx context.Context, request operations.RemovePas
 				return nil, err
 			}
 
-			res.RemovePasswordV14XxApplicationProblemPlusJSONObject = out
+			res.RemovePasswordV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -636,7 +637,7 @@ func (s *SDK) RemoveRestrictionsV1(ctx context.Context, request operations.Remov
 				return nil, err
 			}
 
-			res.RemoveRestrictionsV14XxApplicationProblemPlusJSONObject = out
+			res.RemoveRestrictionsV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -698,7 +699,7 @@ func (s *SDK) RemoveSignaturesV1(ctx context.Context, request operations.RemoveS
 				return nil, err
 			}
 
-			res.RemoveSignaturesV14XxApplicationProblemPlusJSONObject = out
+			res.RemoveSignaturesV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -760,7 +761,7 @@ func (s *SDK) ReversePagesV1(ctx context.Context, request operations.ReversePage
 				return nil, err
 			}
 
-			res.ReversePagesV14XxApplicationProblemPlusJSONObject = out
+			res.ReversePagesV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 
@@ -822,7 +823,7 @@ func (s *SDK) RotatePagesV1(ctx context.Context, request operations.RotatePagesV
 				return nil, err
 			}
 
-			res.RotatePagesV14XxApplicationProblemPlusJSONObject = out
+			res.RotatePagesV14XXApplicationProblemPlusJSONObject = out
 		}
 	}
 

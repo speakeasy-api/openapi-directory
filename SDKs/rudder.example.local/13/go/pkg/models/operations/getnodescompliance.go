@@ -13,7 +13,7 @@ const (
 type GetNodesCompliance200ApplicationJSONDataNodesComplianceDetails struct {
 	Error                      *float32 `json:"error,omitempty"`
 	NoReport                   *float32 `json:"noReport,omitempty"`
-	SuccessAlreadyOk           *float32 `json:"successAlreadyOK,omitempty"`
+	SuccessAlreadyOK           *float32 `json:"successAlreadyOK,omitempty"`
 	SuccessNotApplicable       *float32 `json:"successNotApplicable,omitempty"`
 	SuccessRepaired            *float32 `json:"successRepaired,omitempty"`
 	UnexpectedMissingComponent *float32 `json:"unexpectedMissingComponent,omitempty"`

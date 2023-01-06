@@ -21,6 +21,6 @@ type UsRaceEthnicityZip5Request struct {
 
 type UsRaceEthnicityZip5Response struct {
 	ContentType                     string
-	FirstLastNameUsRaceEthnicityOut *shared.FirstLastNameUsRaceEthnicityOut
+	FirstLastNameUSRaceEthnicityOut *shared.FirstLastNameUsRaceEthnicityOut
 	StatusCode                      int64
 }

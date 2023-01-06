@@ -65,6 +65,6 @@ type PutNetworksIDRequest struct {
 
 type PutNetworksIDResponse struct {
 	ContentType                           string
-	PutNetworksID200ApplicationJSONObject *PutNetworksID200ApplicationJSON
 	StatusCode                            int64
+	PutNetworksID200ApplicationJSONObject *PutNetworksID200ApplicationJSON
 }

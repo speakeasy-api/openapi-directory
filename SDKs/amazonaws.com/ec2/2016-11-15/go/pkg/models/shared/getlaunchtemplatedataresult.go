@@ -1,5 +1,5 @@
 package shared
 
 type GetLaunchTemplateDataResult struct {
-	LaunchTemplateData *ResponseLaunchTemplateData
+	LaunchTemplateData map[string]interface{}
 }

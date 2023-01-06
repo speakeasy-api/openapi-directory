@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.CreateEventNotificationRequest{
         Headers: operations.CreateEventNotificationHeaders{
-            XFapiFinancialID: "cumque",
-            XFapiInteractionID: "repudiandae",
+            XFapiFinancialID: "autem",
+            XFapiInteractionID: "autem",
         },
-        Request: "suscipit",
+        Request: "ex",
     }
     
-    res, err := s.Sdk.CreateEventNotification(ctx, req)
+    res, err := s.EventNotification.CreateEventNotification(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,7 +44,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Event Notification
 
 * `CreateEventNotification` - Send an event notification
 

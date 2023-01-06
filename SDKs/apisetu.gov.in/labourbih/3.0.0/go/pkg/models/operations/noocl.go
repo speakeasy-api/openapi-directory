@@ -82,7 +82,7 @@ type Noocl404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Noocl404ApplicationJSONErrorDescriptionEnumNoRecordFound               Noocl404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Noocl404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Noocl404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Noocl404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Noocl404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Noocl404ApplicationJSON struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,28 +26,28 @@ func main() {
         Security: operations.PlaycustomappAccountsCustomAppsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.PlaycustomappAccountsCustomAppsCreatePathParams{
-            Account: "ad",
+            Account: "minus",
         },
         QueryParams: operations.PlaycustomappAccountsCustomAppsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "est",
+            DollarXgafv: "2",
+            AccessToken: "reprehenderit",
             Alt: "json",
-            Callback: "incidunt",
-            Fields: "inventore",
-            Key: "est",
-            OauthToken: "voluptas",
+            Callback: "aut",
+            Fields: "aut",
+            Key: "nulla",
+            OauthToken: "culpa",
             PrettyPrint: false,
-            QuotaUser: "eaque",
-            UploadType: "aspernatur",
-            UploadProtocol: "ea",
+            QuotaUser: "aut",
+            UploadType: "ea",
+            UploadProtocol: "officia",
         },
-        Request: []byte("quod"),
+        Request: []byte("placeat"),
     }
     
     res, err := s.Accounts.PlaycustomappAccountsCustomAppsCreate(ctx, req)

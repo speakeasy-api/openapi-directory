@@ -3,13 +3,13 @@ package operations
 type PostModifyDefaultCreditSpecificationActionEnum string
 
 const (
-	PostModifyDefaultCreditSpecificationActionEnumModifyDefaultCreditSpecification PostModifyDefaultCreditSpecificationActionEnum = "ModifyDefaultCreditSpecification"
+	POSTModifyDefaultCreditSpecificationActionEnumModifyDefaultCreditSpecification PostModifyDefaultCreditSpecificationActionEnum = "ModifyDefaultCreditSpecification"
 )
 
 type PostModifyDefaultCreditSpecificationVersionEnum string
 
 const (
-	PostModifyDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 PostModifyDefaultCreditSpecificationVersionEnum = "2016-11-15"
+	POSTModifyDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 PostModifyDefaultCreditSpecificationVersionEnum = "2016-11-15"
 )
 
 type PostModifyDefaultCreditSpecificationQueryParams struct {

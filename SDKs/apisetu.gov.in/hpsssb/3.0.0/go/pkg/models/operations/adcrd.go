@@ -5,7 +5,7 @@ import (
 )
 
 type AdcrdRequestBodyCertificateParameters struct {
-	Dob        string `json:"DOB"`
+	DOB        string `json:"DOB"`
 	FatherName string `json:"FatherName"`
 	FullName   string `json:"FullName"`
 }
@@ -83,7 +83,7 @@ type Adcrd404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Adcrd404ApplicationJSONErrorDescriptionEnumNoRecordFound               Adcrd404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Adcrd404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Adcrd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Adcrd404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Adcrd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Adcrd404ApplicationJSON struct {

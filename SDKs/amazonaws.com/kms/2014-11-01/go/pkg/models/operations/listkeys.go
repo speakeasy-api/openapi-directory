@@ -36,7 +36,7 @@ type ListKeysResponse struct {
 	ContentType                string
 	DependencyTimeoutException *interface{}
 	InvalidMarkerException     *interface{}
-	KmsInternalException       *interface{}
+	KMSInternalException       *interface{}
 	ListKeysResponse           *shared.ListKeysResponse
 	StatusCode                 int64
 }

@@ -3,13 +3,13 @@ package operations
 type PostSendMessageActionEnum string
 
 const (
-	PostSendMessageActionEnumSendMessage PostSendMessageActionEnum = "SendMessage"
+	POSTSendMessageActionEnumSendMessage PostSendMessageActionEnum = "SendMessage"
 )
 
 type PostSendMessageVersionEnum string
 
 const (
-	PostSendMessageVersionEnumTwoThousandAndTwelve1105 PostSendMessageVersionEnum = "2012-11-05"
+	POSTSendMessageVersionEnumTwoThousandAndTwelve1105 PostSendMessageVersionEnum = "2012-11-05"
 )
 
 type PostSendMessageQueryParams struct {

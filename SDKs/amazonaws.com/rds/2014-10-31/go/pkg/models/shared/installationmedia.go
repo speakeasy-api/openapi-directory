@@ -9,6 +9,6 @@ type InstallationMedia struct {
 	EngineVersion               *string
 	FailureCause                *InstallationMediaFailureCause
 	InstallationMediaID         *string
-	OsInstallationMediaPath     *string
+	OSInstallationMediaPath     *string
 	Status                      *string
 }

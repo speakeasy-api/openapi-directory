@@ -3,13 +3,13 @@ package operations
 type PostDescribeReplaceRootVolumeTasksActionEnum string
 
 const (
-	PostDescribeReplaceRootVolumeTasksActionEnumDescribeReplaceRootVolumeTasks PostDescribeReplaceRootVolumeTasksActionEnum = "DescribeReplaceRootVolumeTasks"
+	POSTDescribeReplaceRootVolumeTasksActionEnumDescribeReplaceRootVolumeTasks PostDescribeReplaceRootVolumeTasksActionEnum = "DescribeReplaceRootVolumeTasks"
 )
 
 type PostDescribeReplaceRootVolumeTasksVersionEnum string
 
 const (
-	PostDescribeReplaceRootVolumeTasksVersionEnumTwoThousandAndSixteen1115 PostDescribeReplaceRootVolumeTasksVersionEnum = "2016-11-15"
+	POSTDescribeReplaceRootVolumeTasksVersionEnumTwoThousandAndSixteen1115 PostDescribeReplaceRootVolumeTasksVersionEnum = "2016-11-15"
 )
 
 type PostDescribeReplaceRootVolumeTasksQueryParams struct {

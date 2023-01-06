@@ -1,9 +1,9 @@
 package shared
 
 type DbSubnetGroup struct {
-	DbSubnetGroupDescription *string
-	DbSubnetGroupName        *string
+	DBSubnetGroupDescription *string
+	DBSubnetGroupName        *string
 	SubnetGroupStatus        *string
-	Subnets                  []Subnet
+	Subnets                  []map[string]interface{}
 	VpcID                    *string
 }

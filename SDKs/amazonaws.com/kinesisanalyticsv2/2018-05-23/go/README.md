@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,26 @@ func main() {
     
     req := operations.AddApplicationCloudWatchLoggingOptionRequest{
         Headers: operations.AddApplicationCloudWatchLoggingOptionHeaders{
-            XAmzAlgorithm: "asperiores",
-            XAmzContentSha256: "amet",
-            XAmzCredential: "cupiditate",
-            XAmzDate: "nisi",
-            XAmzSecurityToken: "nihil",
-            XAmzSignature: "dolorem",
-            XAmzSignedHeaders: "impedit",
+            XAmzAlgorithm: "corporis",
+            XAmzContentSha256: "accusamus",
+            XAmzCredential: "fugit",
+            XAmzDate: "qui",
+            XAmzSecurityToken: "vel",
+            XAmzSignature: "veniam",
+            XAmzSignedHeaders: "quidem",
             XAmzTarget: "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption",
         },
         Request: shared.AddApplicationCloudWatchLoggingOptionRequest{
-            ApplicationName: "iste",
+            ApplicationName: "nemo",
             CloudWatchLoggingOption: shared.CloudWatchLoggingOption{
-                LogStreamArn: "soluta",
+                LogStreamARN: "cumque",
             },
-            ConditionalToken: "ut",
-            CurrentApplicationVersionID: 7456969667962586618,
+            ConditionalToken: "ipsam",
+            CurrentApplicationVersionID: 8368034457782691777,
         },
     }
     
-    res, err := s.Sdk.AddApplicationCloudWatchLoggingOption(ctx, req)
+    res, err := s.AddApplicationCloudWatchLoggingOption(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -10,19 +10,12 @@ type ChecksListForSuitePathParams struct {
 	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type ChecksListForSuiteFilterEnum string
-
-const (
-	ChecksListForSuiteFilterEnumLatest ChecksListForSuiteFilterEnum = "latest"
-	ChecksListForSuiteFilterEnumAll    ChecksListForSuiteFilterEnum = "all"
-)
-
 type ChecksListForSuiteQueryParams struct {
-	CheckName *string                       `queryParam:"style=form,explode=true,name=check_name"`
-	Filter    *ChecksListForSuiteFilterEnum `queryParam:"style=form,explode=true,name=filter"`
-	Page      *int64                        `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                        `queryParam:"style=form,explode=true,name=per_page"`
-	Status    *shared.StatusEnum            `queryParam:"style=form,explode=true,name=status"`
+	CheckName *string             `queryParam:"style=form,explode=true,name=check_name"`
+	Filter    *shared.StatusEnum1 `queryParam:"style=form,explode=true,name=filter"`
+	Page      *int64              `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64              `queryParam:"style=form,explode=true,name=per_page"`
+	Status    *shared.StatusEnum  `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ChecksListForSuite200ApplicationJSON struct {

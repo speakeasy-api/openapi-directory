@@ -3,13 +3,13 @@ package operations
 type PostDeleteInstanceEventWindowActionEnum string
 
 const (
-	PostDeleteInstanceEventWindowActionEnumDeleteInstanceEventWindow PostDeleteInstanceEventWindowActionEnum = "DeleteInstanceEventWindow"
+	POSTDeleteInstanceEventWindowActionEnumDeleteInstanceEventWindow PostDeleteInstanceEventWindowActionEnum = "DeleteInstanceEventWindow"
 )
 
 type PostDeleteInstanceEventWindowVersionEnum string
 
 const (
-	PostDeleteInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 PostDeleteInstanceEventWindowVersionEnum = "2016-11-15"
+	POSTDeleteInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 PostDeleteInstanceEventWindowVersionEnum = "2016-11-15"
 )
 
 type PostDeleteInstanceEventWindowQueryParams struct {

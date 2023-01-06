@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,138 +27,137 @@ func main() {
             Option1: &operations.FcmProjectsMessagesSendSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.FcmProjectsMessagesSendPathParams{
-            Parent: "eaque",
+            Parent: "ipsum",
         },
         QueryParams: operations.FcmProjectsMessagesSendQueryParams{
             DollarXgafv: "1",
             AccessToken: "magni",
             Alt: "json",
-            Callback: "exercitationem",
-            Fields: "et",
-            Key: "recusandae",
-            OauthToken: "rem",
+            Callback: "et",
+            Fields: "qui",
+            Key: "quibusdam",
+            OauthToken: "vero",
             PrettyPrint: false,
-            QuotaUser: "facilis",
-            UploadType: "provident",
-            UploadProtocol: "illum",
+            QuotaUser: "non",
+            UploadType: "quae",
+            UploadProtocol: "architecto",
         },
         Request: &shared.SendMessageRequest{
             Message: &shared.Message{
                 Android: &shared.AndroidConfig{
-                    CollapseKey: "est",
+                    CollapseKey: "labore",
                     Data: map[string]string{
-                        "illum": "quia",
+                        "harum": "qui",
                     },
                     DirectBootOk: true,
                     FcmOptions: &shared.AndroidFcmOptions{
-                        AnalyticsLabel: "quae",
+                        AnalyticsLabel: "occaecati",
                     },
                     Notification: &shared.AndroidNotification{
-                        Body: "consectetur",
+                        Body: "dignissimos",
                         BodyLocArgs: []string{
-                            "aut",
+                            "dignissimos",
+                            "omnis",
+                            "quae",
                         },
-                        BodyLocKey: "praesentium",
-                        BypassProxyNotification: true,
-                        ChannelID: "labore",
-                        ClickAction: "quisquam",
-                        Color: "dicta",
-                        DefaultLightSettings: false,
-                        DefaultSound: false,
-                        DefaultVibrateTimings: false,
-                        EventTime: "ut",
-                        Icon: "et",
-                        Image: "tempora",
+                        BodyLocKey: "nisi",
+                        BypassProxyNotification: false,
+                        ChannelID: "necessitatibus",
+                        ClickAction: "voluptatem",
+                        Color: "tempora",
+                        DefaultLightSettings: true,
+                        DefaultSound: true,
+                        DefaultVibrateTimings: true,
+                        EventTime: "illo",
+                        Icon: "in",
+                        Image: "voluptas",
                         LightSettings: &shared.LightSettings{
                             Color: &shared.Color{
-                                Alpha: 37.200001,
-                                Blue: 52.200001,
-                                Green: 70.199997,
-                                Red: 45.099998,
+                                Alpha: 73.199997,
+                                Blue: 74.099998,
+                                Green: 17.100000,
+                                Red: 40.099998,
                             },
-                            LightOffDuration: "incidunt",
-                            LightOnDuration: "iusto",
+                            LightOffDuration: "voluptates",
+                            LightOnDuration: "cupiditate",
                         },
-                        LocalOnly: false,
-                        NotificationCount: 9090797606458476403,
-                        NotificationPriority: "PRIORITY_HIGH",
-                        Sound: "id",
+                        LocalOnly: true,
+                        NotificationCount: 8167081647083032097,
+                        NotificationPriority: "PRIORITY_DEFAULT",
+                        Sound: "non",
                         Sticky: false,
-                        Tag: "autem",
-                        Ticker: "consequatur",
-                        Title: "officiis",
+                        Tag: "similique",
+                        Ticker: "esse",
+                        Title: "enim",
                         TitleLocArgs: []string{
-                            "voluptate",
-                            "doloribus",
-                            "nesciunt",
+                            "rem",
                         },
-                        TitleLocKey: "exercitationem",
+                        TitleLocKey: "eius",
                         VibrateTimings: []string{
-                            "ut",
+                            "sint",
                         },
-                        Visibility: "SECRET",
+                        Visibility: "VISIBILITY_UNSPECIFIED",
                     },
-                    Priority: "HIGH",
-                    RestrictedPackageName: "ducimus",
-                    TTL: "et",
+                    Priority: "NORMAL",
+                    RestrictedPackageName: "natus",
+                    TTL: "voluptates",
                 },
                 Apns: &shared.ApnsConfig{
                     FcmOptions: &shared.ApnsFcmOptions{
-                        AnalyticsLabel: "quia",
-                        Image: "error",
+                        AnalyticsLabel: "dolore",
+                        Image: "recusandae",
                     },
                     Headers: map[string]string{
-                        "molestias": "sequi",
+                        "quasi": "esse",
+                        "laborum": "soluta",
                     },
                     Payload: map[string]interface{}{
-                        "id": "occaecati",
-                        "nulla": "omnis",
-                        "molestias": "nemo",
+                        "amet": "et",
                     },
                 },
-                Condition: "provident",
+                Condition: "voluptatem",
                 Data: map[string]string{
-                    "officiis": "et",
-                    "eaque": "a",
-                    "odit": "velit",
+                    "eaque": "maiores",
+                    "perferendis": "aut",
+                    "labore": "qui",
                 },
                 FcmOptions: &shared.FcmOptions{
-                    AnalyticsLabel: "est",
+                    AnalyticsLabel: "quidem",
                 },
-                Name: "sunt",
+                Name: "ut",
                 Notification: &shared.Notification{
-                    Body: "nisi",
-                    Image: "commodi",
-                    Title: "facere",
+                    Body: "ut",
+                    Image: "quo",
+                    Title: "consectetur",
                 },
-                Token: "pariatur",
-                Topic: "voluptate",
+                Token: "nostrum",
+                Topic: "doloribus",
                 Webpush: &shared.WebpushConfig{
                     Data: map[string]string{
-                        "voluptatum": "perferendis",
-                        "quis": "ab",
-                        "et": "distinctio",
+                        "officia": "incidunt",
+                        "minima": "iste",
+                        "sit": "maiores",
                     },
                     FcmOptions: &shared.WebpushFcmOptions{
-                        AnalyticsLabel: "doloremque",
-                        Link: "voluptas",
+                        AnalyticsLabel: "molestiae",
+                        Link: "rerum",
                     },
                     Headers: map[string]string{
-                        "consequatur": "alias",
+                        "consequatur": "quo",
                     },
                     Notification: map[string]interface{}{
-                        "fuga": "ab",
+                        "assumenda": "ipsam",
                     },
                 },
             },
-            ValidateOnly: true,
+            ValidateOnly: false,
         },
     }
     

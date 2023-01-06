@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,27 +26,27 @@ func main() {
         Security: operations.DfareportingAccountActiveAdSummariesGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DfareportingAccountActiveAdSummariesGetPathParams{
-            ProfileID: "doloribus",
-            SummaryAccountID: "autem",
+            ProfileID: "aliquid",
+            SummaryAccountID: "voluptatum",
         },
         QueryParams: operations.DfareportingAccountActiveAdSummariesGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "ut",
-            Alt: "proto",
-            Callback: "quaerat",
-            Fields: "occaecati",
-            Key: "velit",
-            OauthToken: "cumque",
-            PrettyPrint: false,
-            QuotaUser: "cumque",
-            UploadType: "qui",
-            UploadProtocol: "voluptatibus",
+            DollarXgafv: "1",
+            AccessToken: "laudantium",
+            Alt: "json",
+            Callback: "vel",
+            Fields: "quibusdam",
+            Key: "deleniti",
+            OauthToken: "ullam",
+            PrettyPrint: true,
+            QuotaUser: "hic",
+            UploadType: "at",
+            UploadProtocol: "fuga",
         },
     }
     

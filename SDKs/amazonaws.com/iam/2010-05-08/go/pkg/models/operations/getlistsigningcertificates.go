@@ -3,13 +3,13 @@ package operations
 type GetListSigningCertificatesActionEnum string
 
 const (
-	GetListSigningCertificatesActionEnumListSigningCertificates GetListSigningCertificatesActionEnum = "ListSigningCertificates"
+	GETListSigningCertificatesActionEnumListSigningCertificates GetListSigningCertificatesActionEnum = "ListSigningCertificates"
 )
 
 type GetListSigningCertificatesVersionEnum string
 
 const (
-	GetListSigningCertificatesVersionEnumTwoThousandAndTen0508 GetListSigningCertificatesVersionEnum = "2010-05-08"
+	GETListSigningCertificatesVersionEnumTwoThousandAndTen0508 GetListSigningCertificatesVersionEnum = "2010-05-08"
 )
 
 type GetListSigningCertificatesQueryParams struct {

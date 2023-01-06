@@ -3,13 +3,13 @@ package operations
 type PostGetPasswordDataActionEnum string
 
 const (
-	PostGetPasswordDataActionEnumGetPasswordData PostGetPasswordDataActionEnum = "GetPasswordData"
+	POSTGetPasswordDataActionEnumGetPasswordData PostGetPasswordDataActionEnum = "GetPasswordData"
 )
 
 type PostGetPasswordDataVersionEnum string
 
 const (
-	PostGetPasswordDataVersionEnumTwoThousandAndSixteen1115 PostGetPasswordDataVersionEnum = "2016-11-15"
+	POSTGetPasswordDataVersionEnumTwoThousandAndSixteen1115 PostGetPasswordDataVersionEnum = "2016-11-15"
 )
 
 type PostGetPasswordDataQueryParams struct {

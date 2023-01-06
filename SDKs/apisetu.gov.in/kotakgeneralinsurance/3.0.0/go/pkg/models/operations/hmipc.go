@@ -83,7 +83,7 @@ type Hmipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Hmipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Hmipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Hmipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Hmipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Hmipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Hmipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Hmipc404ApplicationJSON struct {

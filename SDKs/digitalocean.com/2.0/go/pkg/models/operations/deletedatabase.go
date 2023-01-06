@@ -9,14 +9,14 @@ type DeleteDatabasePathParams struct {
 	DatabaseName        string `pathParam:"style=simple,explode=false,name=database_name"`
 }
 
-type DeleteDatabaseRequest struct {
-	PathParams DeleteDatabasePathParams
-}
-
 type DeleteDatabase401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteDatabaseRequest struct {
+	PathParams DeleteDatabasePathParams
 }
 
 type DeleteDatabaseResponse struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,9 +29,9 @@ func main() {
             },
         },
         Request: &operations.AccountCreateRequestBody{
-            Email: "nihil",
-            Name: "eum",
-            Password: "voluptates",
+            Email: "asperiores",
+            Name: "dicta",
+            Password: "sunt",
         },
     }
     

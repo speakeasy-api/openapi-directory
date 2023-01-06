@@ -405,6 +405,6 @@ type PostLoadBalancersRequest struct {
 
 type PostLoadBalancersResponse struct {
 	ContentType                               string
-	PostLoadBalancers201ApplicationJSONObject *PostLoadBalancers201ApplicationJSON
 	StatusCode                                int64
+	PostLoadBalancers201ApplicationJSONObject *PostLoadBalancers201ApplicationJSON
 }

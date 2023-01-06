@@ -3,25 +3,25 @@ package operations
 type HooksPostActionEnum string
 
 const (
-	HooksPostActionEnumSubscribe   HooksPostActionEnum = "subscribe"
-	HooksPostActionEnumUnsubscribe HooksPostActionEnum = "unsubscribe"
+	HooksPOSTActionEnumSubscribe   HooksPostActionEnum = "subscribe"
+	HooksPOSTActionEnumUnsubscribe HooksPostActionEnum = "unsubscribe"
 )
 
 type HooksPostEventTypeEnum string
 
 const (
-	HooksPostEventTypeEnumAll         HooksPostEventTypeEnum = "all"
-	HooksPostEventTypeEnumSmsMo       HooksPostEventTypeEnum = "sms_mo"
-	HooksPostEventTypeEnumDlr         HooksPostEventTypeEnum = "dlr"
-	HooksPostEventTypeEnumVoiceStatus HooksPostEventTypeEnum = "voice_status"
+	HooksPOSTEventTypeEnumAll         HooksPostEventTypeEnum = "all"
+	HooksPOSTEventTypeEnumSmsMo       HooksPostEventTypeEnum = "sms_mo"
+	HooksPOSTEventTypeEnumDlr         HooksPostEventTypeEnum = "dlr"
+	HooksPOSTEventTypeEnumVoiceStatus HooksPostEventTypeEnum = "voice_status"
 )
 
 type HooksPostRequestMethodEnum string
 
 const (
-	HooksPostRequestMethodEnumPost HooksPostRequestMethodEnum = "POST"
-	HooksPostRequestMethodEnumJSON HooksPostRequestMethodEnum = "JSON"
-	HooksPostRequestMethodEnumGet  HooksPostRequestMethodEnum = "GET"
+	HooksPOSTRequestMethodEnumPost HooksPostRequestMethodEnum = "POST"
+	HooksPOSTRequestMethodEnumJSON HooksPostRequestMethodEnum = "JSON"
+	HooksPOSTRequestMethodEnumGet  HooksPostRequestMethodEnum = "GET"
 )
 
 type HooksPostQueryParams struct {
@@ -43,6 +43,6 @@ type HooksPostRequest struct {
 
 type HooksPostResponse struct {
 	ContentType                       string
-	HooksPost200ApplicationJSONObject *HooksPost200ApplicationJSON
+	HooksPOST200ApplicationJSONObject *HooksPost200ApplicationJSON
 	StatusCode                        int64
 }

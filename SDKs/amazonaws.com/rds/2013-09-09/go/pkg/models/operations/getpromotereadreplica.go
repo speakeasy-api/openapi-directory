@@ -3,19 +3,19 @@ package operations
 type GetPromoteReadReplicaActionEnum string
 
 const (
-	GetPromoteReadReplicaActionEnumPromoteReadReplica GetPromoteReadReplicaActionEnum = "PromoteReadReplica"
+	GETPromoteReadReplicaActionEnumPromoteReadReplica GetPromoteReadReplicaActionEnum = "PromoteReadReplica"
 )
 
 type GetPromoteReadReplicaVersionEnum string
 
 const (
-	GetPromoteReadReplicaVersionEnumTwoThousandAndThirteen0909 GetPromoteReadReplicaVersionEnum = "2013-09-09"
+	GETPromoteReadReplicaVersionEnumTwoThousandAndThirteen0909 GetPromoteReadReplicaVersionEnum = "2013-09-09"
 )
 
 type GetPromoteReadReplicaQueryParams struct {
 	Action                GetPromoteReadReplicaActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	BackupRetentionPeriod *int64                           `queryParam:"style=form,explode=true,name=BackupRetentionPeriod"`
-	DbInstanceIdentifier  string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier  string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	PreferredBackupWindow *string                          `queryParam:"style=form,explode=true,name=PreferredBackupWindow"`
 	Version               GetPromoteReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

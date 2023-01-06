@@ -16,6 +16,6 @@ type PostAuthStartRequest struct {
 
 type PostAuthStartResponse struct {
 	ContentType                           string
-	PostAuthStart200ApplicationJSONObject *PostAuthStart200ApplicationJSON
 	StatusCode                            int64
+	PostAuthStart200ApplicationJSONObject *PostAuthStart200ApplicationJSON
 }

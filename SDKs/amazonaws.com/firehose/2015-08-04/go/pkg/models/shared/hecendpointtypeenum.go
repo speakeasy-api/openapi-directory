@@ -3,6 +3,6 @@ package shared
 type HecEndpointTypeEnum string
 
 const (
-	HecEndpointTypeEnumRaw   HecEndpointTypeEnum = "Raw"
-	HecEndpointTypeEnumEvent HecEndpointTypeEnum = "Event"
+	HECEndpointTypeEnumRaw   HecEndpointTypeEnum = "Raw"
+	HECEndpointTypeEnumEvent HecEndpointTypeEnum = "Event"
 )

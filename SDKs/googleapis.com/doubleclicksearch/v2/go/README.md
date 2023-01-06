@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,37 +26,37 @@ func main() {
         Security: operations.DoubleclicksearchConversionGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DoubleclicksearchConversionGetPathParams{
-            AdvertiserID: "tempora",
-            AgencyID: "quaerat",
-            EngineAccountID: "necessitatibus",
+            AdvertiserID: "quia",
+            AgencyID: "et",
+            EngineAccountID: "architecto",
         },
         QueryParams: operations.DoubleclicksearchConversionGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "voluptas",
-            AdGroupID: "molestias",
-            AdID: "veritatis",
-            Alt: "json",
-            Callback: "sapiente",
-            CampaignID: "tenetur",
-            CriterionID: "at",
-            CustomerID: "hic",
-            EndDate: 6671246700554211078,
-            Fields: "ex",
-            Key: "aut",
-            OauthToken: "ut",
-            PrettyPrint: true,
-            QuotaUser: "dignissimos",
-            RowCount: 4770506001507987573,
-            StartDate: 4493533068511629898,
-            StartRow: 7241857586899297361,
-            UploadType: "ut",
-            UploadProtocol: "enim",
+            AccessToken: "assumenda",
+            AdGroupID: "perferendis",
+            AdID: "saepe",
+            Alt: "proto",
+            Callback: "consequuntur",
+            CampaignID: "quia",
+            CriterionID: "et",
+            CustomerID: "sequi",
+            EndDate: 8068737254242446709,
+            Fields: "quibusdam",
+            Key: "ipsum",
+            OauthToken: "assumenda",
+            PrettyPrint: false,
+            QuotaUser: "quidem",
+            RowCount: 4349003661882617157,
+            StartDate: 4256512249820213041,
+            StartRow: 7309891088640560876,
+            UploadType: "sint",
+            UploadProtocol: "qui",
         },
     }
     

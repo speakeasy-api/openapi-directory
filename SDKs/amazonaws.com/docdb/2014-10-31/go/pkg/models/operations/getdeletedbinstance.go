@@ -3,18 +3,18 @@ package operations
 type GetDeleteDbInstanceActionEnum string
 
 const (
-	GetDeleteDbInstanceActionEnumDeleteDbInstance GetDeleteDbInstanceActionEnum = "DeleteDBInstance"
+	GETDeleteDBInstanceActionEnumDeleteDbInstance GetDeleteDbInstanceActionEnum = "DeleteDBInstance"
 )
 
 type GetDeleteDbInstanceVersionEnum string
 
 const (
-	GetDeleteDbInstanceVersionEnumTwoThousandAndFourteen1031 GetDeleteDbInstanceVersionEnum = "2014-10-31"
+	GETDeleteDBInstanceVersionEnumTwoThousandAndFourteen1031 GetDeleteDbInstanceVersionEnum = "2014-10-31"
 )
 
 type GetDeleteDbInstanceQueryParams struct {
 	Action               GetDeleteDbInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Version              GetDeleteDbInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

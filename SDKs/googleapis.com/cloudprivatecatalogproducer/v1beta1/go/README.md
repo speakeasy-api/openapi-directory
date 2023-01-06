@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,32 @@ func main() {
         Security: operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams{
-            Parent: "dolorem",
+            Parent: "aperiam",
         },
         QueryParams: operations.CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "quo",
-            Alt: "json",
-            Callback: "natus",
-            Fields: "quo",
-            Key: "est",
-            OauthToken: "molestiae",
+            AccessToken: "et",
+            Alt: "media",
+            Callback: "voluptatum",
+            Fields: "nisi",
+            Key: "pariatur",
+            OauthToken: "natus",
             PrettyPrint: false,
-            QuotaUser: "quae",
-            UploadType: "quasi",
-            UploadProtocol: "saepe",
+            QuotaUser: "earum",
+            UploadType: "ex",
+            UploadProtocol: "ab",
         },
         Request: &shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest{
             Association: &shared.GoogleCloudPrivatecatalogproducerV1beta1Association{
-                CreateTime: "sit",
-                Name: "temporibus",
-                Resource: "fugiat",
+                CreateTime: "ad",
+                Name: "earum",
+                Resource: "nam",
             },
         },
     }

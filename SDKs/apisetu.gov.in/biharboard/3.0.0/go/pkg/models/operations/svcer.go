@@ -5,10 +5,10 @@ import (
 )
 
 type SvcerRequestBodyCertificateParameters struct {
-	Dob       string `json:"DOB"`
+	DOB       string `json:"DOB"`
 	FullName  string `json:"FullName"`
-	Rroll     string `json:"RROLL"`
-	RrollCode string `json:"RROLL_CODE"`
+	RROLL     string `json:"RROLL"`
+	RROLLCODE string `json:"RROLL_CODE"`
 	Year      string `json:"year"`
 }
 
@@ -85,7 +85,7 @@ type Svcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Svcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Svcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Svcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Svcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Svcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Svcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Svcer404ApplicationJSON struct {

@@ -28,10 +28,10 @@ type DeleteCustomKeyStoreRequest struct {
 
 type DeleteCustomKeyStoreResponse struct {
 	ContentType                         string
-	CustomKeyStoreHasCmKsException      *interface{}
+	CustomKeyStoreHasCMKsException      *interface{}
 	CustomKeyStoreInvalidStateException *interface{}
 	CustomKeyStoreNotFoundException     *interface{}
 	DeleteCustomKeyStoreResponse        map[string]interface{}
-	KmsInternalException                *interface{}
+	KMSInternalException                *interface{}
 	StatusCode                          int64
 }

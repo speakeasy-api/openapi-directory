@@ -1,0 +1,755 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type PortfolioOptimization struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewPortfolioOptimization(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *PortfolioOptimization {
+	return &PortfolioOptimization{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// PostPortfolioOptimizationEqualRiskContributions - Equal Risk Contributions Portfolio
+// Compute the assets weights of the equal risk contributions portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+//
+// References
+//   - [Richard, Jean-Charles and Roncalli, Thierry, Constrained Risk Budgeting Portfolios: Theory, Algorithms, Applications & Puzzles](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3331184)
+func (s *PortfolioOptimization) PostPortfolioOptimizationEqualRiskContributions(ctx context.Context, request operations.PostPortfolioOptimizationEqualRiskContributionsRequest) (*operations.PostPortfolioOptimizationEqualRiskContributionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-risk-contributions"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationEqualRiskContributionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationEqualRiskContributions200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationEqualRiskContributions200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationEqualSharpeRatioContributions - Equal Sharpe Ratio Contributions Portfolio
+// Compute the assets weights of the equal Sharpe Ratio contributions portfolio.
+//
+// References
+//   - [Andreas Steiner, Sharpe Ratio Contribution and Attribution Analysis](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1839166")
+func (s *PortfolioOptimization) PostPortfolioOptimizationEqualSharpeRatioContributions(ctx context.Context, request operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequest) (*operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-sharpe-ratio-contributions"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationEqualWeighted - Equal Weighted Portfolio
+// Compute the assets weights of the equal-weighted portfolio.
+//
+// References
+//   - [Victor DeMiguel and al., Optimal Versus Naive Diversification: How Inefficient is the 1/N Portfolio Strategy?](https://academic.oup.com/rfs/article-abstract/22/5/1915/1592901?redirectedFrom=fulltext)
+func (s *PortfolioOptimization) PostPortfolioOptimizationEqualWeighted(ctx context.Context, request operations.PostPortfolioOptimizationEqualWeightedRequest) (*operations.PostPortfolioOptimizationEqualWeightedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-weighted"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationEqualWeightedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationEqualWeighted200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationEqualWeighted200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationInverseVarianceWeighted - Inverse Variance Weighted Portfolio
+// Compute the assets weights of the inverse variance-weighted portfolio.
+//
+// References
+//   - [Raul Leote de Carvalho and al., Demystifying Equity Risk-Based Strategies: A Simple Alpha Plus Beta Description](https://doi.org/10.3905/jpm.2012.38.3.056)
+func (s *PortfolioOptimization) PostPortfolioOptimizationInverseVarianceWeighted(ctx context.Context, request operations.PostPortfolioOptimizationInverseVarianceWeightedRequest) (*operations.PostPortfolioOptimizationInverseVarianceWeightedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/inverse-variance-weighted"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationInverseVarianceWeightedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationInverseVolatilityWeighted - Inverse Volatility Weighted Portfolio
+// Compute the assets weights of the inverse volatility-weighted portfolio, also known as the naive-risk parity portfolio.
+//
+// References
+//   - [Raul Leote de Carvalho and al., Demystifying Equity Risk-Based Strategies: A Simple Alpha Plus Beta Description](https://doi.org/10.3905/jpm.2012.38.3.056)
+func (s *PortfolioOptimization) PostPortfolioOptimizationInverseVolatilityWeighted(ctx context.Context, request operations.PostPortfolioOptimizationInverseVolatilityWeightedRequest) (*operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/inverse-volatility-weighted"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMarketCapitalizationWeighted - Market Capitalization Weighted Portfolio
+// Compute the assets weights of the market capitalization-weighted portfolio.
+//
+// References
+//   - [Wikipedia, Capitalization-weighted Index](https://en.wikipedia.org/wiki/Capitalization-weighted_index)
+func (s *PortfolioOptimization) PostPortfolioOptimizationMarketCapitalizationWeighted(ctx context.Context, request operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequest) (*operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/market-capitalization-weighted"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMaximumDecorrelation - Maximum Decorrelation Portfolio
+// Compute the assets weights of the maximum decorrelation portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+// * Maximum group weights constraints
+// * Minimum and maximum portfolio exposure constraints
+//
+// References
+//   - [F. Goltz, S. Sivasubramanian, Scientific Beta Maximum Decorrelation Indices](http://www.scientificbeta.com/download/file/scientific-beta-max-decorrelation-indices)
+//
+// https://docs.portfoliooptimizer.io/#maximum-decorrelation-portfolio
+func (s *PortfolioOptimization) PostPortfolioOptimizationMaximumDecorrelation(ctx context.Context, request operations.PostPortfolioOptimizationMaximumDecorrelationRequest) (*operations.PostPortfolioOptimizationMaximumDecorrelationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-decorrelation"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMaximumDecorrelationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMaximumReturn - Maximum Return Portfolio
+// Compute the assets weights of the maximum return portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+// * Maximum group weights constraints
+// * Minimum and maximum portfolio exposure constraints
+//
+// References
+//   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
+func (s *PortfolioOptimization) PostPortfolioOptimizationMaximumReturn(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnRequest) (*operations.PostPortfolioOptimizationMaximumReturnResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-return"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMaximumReturnResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMaximumReturn200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMaximumReturn200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMaximumSharpeRatio - Maximum Sharpe Ratio Portfolio
+// Compute the assets weights of the maximum Sharpe ratio portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+// * Maximum group weights constraints
+// * Minimum and maximum portfolio exposure constraints
+//
+// References
+//   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
+func (s *PortfolioOptimization) PostPortfolioOptimizationMaximumSharpeRatio(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioRequest) (*operations.PostPortfolioOptimizationMaximumSharpeRatioResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-sharpe-ratio"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMaximumSharpeRatioResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMeanVarianceEfficient - Mean-Variance Efficient Portfolio
+// Compute the assets weights of a mean-variance efficient portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+// * Maximum group weights constraints
+// * Minimum and maximum portfolio exposure constraints
+//
+// > A mean-variance efficient portfolio is a portfolio belonging to [the mean-variance efficient frontier](#post-/portfolio/analysis/mean-variance/efficient-frontier).
+//
+// References
+//   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
+func (s *PortfolioOptimization) PostPortfolioOptimizationMeanVarianceEfficient(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientRequest) (*operations.PostPortfolioOptimizationMeanVarianceEfficientResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/mean-variance-efficient"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMeanVarianceEfficientResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMinimumCorrelation - Minimum Correlation Portfolio
+// Compute the assets weights of the (heuristic) minimum correlation portfolio, which is a portfolio built using the Minimum Correlation Algorithm discovered by [David Varadi](https://cssanalytics.wordpress.com/).
+//
+// References
+//   - [CSSA, Minimum Correlation Algorithm Paper Release](https://cssanalytics.wordpress.com/2012/09/21/minimum-correlation-algorithm-paper-release/)
+func (s *PortfolioOptimization) PostPortfolioOptimizationMinimumCorrelation(ctx context.Context, request operations.PostPortfolioOptimizationMinimumCorrelationRequest) (*operations.PostPortfolioOptimizationMinimumCorrelationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-correlation"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMinimumCorrelationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMinimumCorrelation200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMinimumVariance - Minimum Variance Portfolio
+// Compute the assets weights of the minimum variance portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+// * Maximum group weights constraints
+// * Minimum and maximum portfolio exposure constraints
+//
+// References
+//   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
+func (s *PortfolioOptimization) PostPortfolioOptimizationMinimumVariance(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceRequest) (*operations.PostPortfolioOptimizationMinimumVarianceResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-variance"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMinimumVarianceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMinimumVariance200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMinimumVariance200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioOptimizationMostDiversified - Most Diversified Portfolio
+// Compute the assets weights of the most diversified portfolio, optionally subject to:
+// * Minimum and maximum weights constraints
+// * Maximum group weights constraints
+// * Minimum and maximum portfolio exposure constraints
+//
+// References
+//   - [Yves Choueifaty and Yves Coignard, Toward Maximum Diversification, The Journal of Portfolio Management Fall 2008, 35 (1) 40-51](https://doi.org/10.3905/JPM.2008.35.1.40)
+func (s *PortfolioOptimization) PostPortfolioOptimizationMostDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMostDiversifiedRequest) (*operations.PostPortfolioOptimizationMostDiversifiedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/most-diversified"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioOptimizationMostDiversifiedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioOptimizationMostDiversified200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioOptimizationMostDiversified200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}

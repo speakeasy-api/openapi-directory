@@ -3,13 +3,13 @@ package operations
 type PostDeleteMessageActionEnum string
 
 const (
-	PostDeleteMessageActionEnumDeleteMessage PostDeleteMessageActionEnum = "DeleteMessage"
+	POSTDeleteMessageActionEnumDeleteMessage PostDeleteMessageActionEnum = "DeleteMessage"
 )
 
 type PostDeleteMessageVersionEnum string
 
 const (
-	PostDeleteMessageVersionEnumTwoThousandAndTwelve1105 PostDeleteMessageVersionEnum = "2012-11-05"
+	POSTDeleteMessageVersionEnumTwoThousandAndTwelve1105 PostDeleteMessageVersionEnum = "2012-11-05"
 )
 
 type PostDeleteMessageQueryParams struct {

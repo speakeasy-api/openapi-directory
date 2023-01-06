@@ -30,11 +30,11 @@ type TagResourceResponse struct {
 	ContentType                           string
 	StatusCode                            int64
 	TagResourceResponse                   map[string]interface{}
-	WafBadRequestException                *interface{}
-	WafInternalErrorException             *interface{}
-	WafInvalidParameterException          *interface{}
-	WafLimitsExceededException            *interface{}
-	WafNonexistentItemException           *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFBadRequestException                *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidParameterException          *interface{}
+	WAFLimitsExceededException            *interface{}
+	WAFNonexistentItemException           *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

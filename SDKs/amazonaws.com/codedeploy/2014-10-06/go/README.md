@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,34 +34,29 @@ func main() {
     
     req := operations.AddTagsToOnPremisesInstancesRequest{
         Headers: operations.AddTagsToOnPremisesInstancesHeaders{
-            XAmzAlgorithm: "sed",
-            XAmzContentSha256: "praesentium",
-            XAmzCredential: "excepturi",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "architecto",
-            XAmzSignature: "omnis",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "ea",
+            XAmzContentSha256: "dolor",
+            XAmzCredential: "consequatur",
+            XAmzDate: "assumenda",
+            XAmzSecurityToken: "occaecati",
+            XAmzSignature: "veniam",
+            XAmzSignedHeaders: "sed",
             XAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
         },
         Request: shared.AddTagsToOnPremisesInstancesInput{
             InstanceNames: []string{
-                "nisi",
-                "dolores",
+                "explicabo",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "dolorem",
-                    Value: "in",
-                },
-                shared.Tag{
-                    Key: "est",
-                    Value: "quos",
+                    Key: "ducimus",
+                    Value: "et",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddTagsToOnPremisesInstances(ctx, req)
+    res, err := s.AddTagsToOnPremisesInstances(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

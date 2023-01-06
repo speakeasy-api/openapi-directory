@@ -22,6 +22,8 @@ type GistSimpleGistFiles struct {
 	Type     *string `json:"type,omitempty"`
 }
 
+// GistSimpleGistSimpleUser
+// Simple User
 type GistSimpleGistSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,54 +34,146 @@ func main() {
     
     req := operations.CreateAppRequest{
         Headers: operations.CreateAppHeaders{
-            XAmzAlgorithm: "id",
-            XAmzContentSha256: "in",
-            XAmzCredential: "doloribus",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "occaecati",
-            XAmzSignature: "iste",
-            XAmzSignedHeaders: "asperiores",
+            XAmzAlgorithm: "iusto",
+            XAmzContentSha256: "et",
+            XAmzCredential: "eos",
+            XAmzDate: "voluptas",
+            XAmzSecurityToken: "nisi",
+            XAmzSignature: "quia",
+            XAmzSignedHeaders: "voluptas",
             XAmzTarget: "AWSServerMigrationService_V2016_10_24.CreateApp",
         },
         Request: shared.CreateAppRequest{
-            ClientToken: "tenetur",
-            Description: "mollitia",
-            Name: "veniam",
-            RoleName: "eum",
+            ClientToken: "omnis",
+            Description: "dolores",
+            Name: "expedita",
+            RoleName: "enim",
             ServerGroups: []shared.ServerGroup{
                 shared.ServerGroup{
-                    Name: "et",
-                    ServerGroupID: "consequatur",
+                    Name: "consectetur",
+                    ServerGroupID: "sequi",
                     ServerList: []shared.Server{
                         shared.Server{
-                            ReplicationJobID: "quod",
+                            ReplicationJobID: "illo",
                             ReplicationJobTerminated: true,
-                            ServerID: "dignissimos",
+                            ServerID: "et",
                             ServerType: "VIRTUAL_MACHINE",
                             VMServer: &shared.VMServer{
-                                VMManagerName: "saepe",
-                                VMManagerType: "VSPHERE",
-                                VMName: "ea",
-                                VMPath: "corrupti",
+                                VMManagerName: "iste",
+                                VMManagerType: "HYPERV-MANAGER",
+                                VMName: "odio",
+                                VMPath: "est",
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolor",
-                                    VMManagerID: "itaque",
+                                    VMID: "adipisci",
+                                    VMManagerID: "quo",
                                 },
                             },
                         },
                         shared.Server{
-                            ReplicationJobID: "rem",
+                            ReplicationJobID: "rerum",
                             ReplicationJobTerminated: false,
-                            ServerID: "sint",
+                            ServerID: "suscipit",
                             ServerType: "VIRTUAL_MACHINE",
                             VMServer: &shared.VMServer{
-                                VMManagerName: "adipisci",
+                                VMManagerName: "minus",
+                                VMManagerType: "HYPERV-MANAGER",
+                                VMName: "vero",
+                                VMPath: "est",
+                                VMServerAddress: &shared.VMServerAddress{
+                                    VMID: "et",
+                                    VMManagerID: "nobis",
+                                },
+                            },
+                        },
+                        shared.Server{
+                            ReplicationJobID: "voluptatum",
+                            ReplicationJobTerminated: true,
+                            ServerID: "nobis",
+                            ServerType: "VIRTUAL_MACHINE",
+                            VMServer: &shared.VMServer{
+                                VMManagerName: "est",
+                                VMManagerType: "HYPERV-MANAGER",
+                                VMName: "maiores",
+                                VMPath: "repellendus",
+                                VMServerAddress: &shared.VMServerAddress{
+                                    VMID: "repellendus",
+                                    VMManagerID: "error",
+                                },
+                            },
+                        },
+                    },
+                },
+                shared.ServerGroup{
+                    Name: "ea",
+                    ServerGroupID: "fugit",
+                    ServerList: []shared.Server{
+                        shared.Server{
+                            ReplicationJobID: "dolores",
+                            ReplicationJobTerminated: true,
+                            ServerID: "nam",
+                            ServerType: "VIRTUAL_MACHINE",
+                            VMServer: &shared.VMServer{
+                                VMManagerName: "molestias",
+                                VMManagerType: "HYPERV-MANAGER",
+                                VMName: "cumque",
+                                VMPath: "aut",
+                                VMServerAddress: &shared.VMServerAddress{
+                                    VMID: "deserunt",
+                                    VMManagerID: "voluptatem",
+                                },
+                            },
+                        },
+                    },
+                },
+                shared.ServerGroup{
+                    Name: "provident",
+                    ServerGroupID: "aut",
+                    ServerList: []shared.Server{
+                        shared.Server{
+                            ReplicationJobID: "placeat",
+                            ReplicationJobTerminated: false,
+                            ServerID: "aut",
+                            ServerType: "VIRTUAL_MACHINE",
+                            VMServer: &shared.VMServer{
+                                VMManagerName: "voluptatibus",
+                                VMManagerType: "HYPERV-MANAGER",
+                                VMName: "reiciendis",
+                                VMPath: "amet",
+                                VMServerAddress: &shared.VMServerAddress{
+                                    VMID: "laboriosam",
+                                    VMManagerID: "ut",
+                                },
+                            },
+                        },
+                        shared.Server{
+                            ReplicationJobID: "laudantium",
+                            ReplicationJobTerminated: true,
+                            ServerID: "molestiae",
+                            ServerType: "VIRTUAL_MACHINE",
+                            VMServer: &shared.VMServer{
+                                VMManagerName: "voluptates",
                                 VMManagerType: "HYPERV-MANAGER",
                                 VMName: "et",
-                                VMPath: "expedita",
+                                VMPath: "deserunt",
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "doloribus",
-                                    VMManagerID: "iste",
+                                    VMID: "placeat",
+                                    VMManagerID: "et",
+                                },
+                            },
+                        },
+                        shared.Server{
+                            ReplicationJobID: "vero",
+                            ReplicationJobTerminated: true,
+                            ServerID: "rem",
+                            ServerType: "VIRTUAL_MACHINE",
+                            VMServer: &shared.VMServer{
+                                VMManagerName: "ut",
+                                VMManagerType: "VSPHERE",
+                                VMName: "officiis",
+                                VMPath: "aliquam",
+                                VMServerAddress: &shared.VMServerAddress{
+                                    VMID: "ratione",
+                                    VMManagerID: "adipisci",
                                 },
                             },
                         },
@@ -91,14 +182,22 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "doloremque",
-                    Value: "placeat",
+                    Key: "inventore",
+                    Value: "qui",
+                },
+                shared.Tag{
+                    Key: "molestiae",
+                    Value: "dignissimos",
+                },
+                shared.Tag{
+                    Key: "voluptates",
+                    Value: "officia",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateApp(ctx, req)
+    res, err := s.CreateApp(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

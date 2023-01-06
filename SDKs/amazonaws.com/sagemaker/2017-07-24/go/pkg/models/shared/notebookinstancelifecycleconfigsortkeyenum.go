@@ -1,9 +1,0 @@
-package shared
-
-type NotebookInstanceLifecycleConfigSortKeyEnum string
-
-const (
-	NotebookInstanceLifecycleConfigSortKeyEnumName             NotebookInstanceLifecycleConfigSortKeyEnum = "Name"
-	NotebookInstanceLifecycleConfigSortKeyEnumCreationTime     NotebookInstanceLifecycleConfigSortKeyEnum = "CreationTime"
-	NotebookInstanceLifecycleConfigSortKeyEnumLastModifiedTime NotebookInstanceLifecycleConfigSortKeyEnum = "LastModifiedTime"
-)

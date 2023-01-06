@@ -6,6 +6,6 @@ import (
 
 type SummaryGetV2SummaryGetResponse struct {
 	ContentType  string
-	OpenAqResult *shared.OpenAqResult
+	OpenAQResult *shared.OpenAqResult
 	StatusCode   int64
 }

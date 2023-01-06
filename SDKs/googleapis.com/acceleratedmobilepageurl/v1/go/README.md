@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,21 +25,23 @@ func main() {
     req := operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest{
         QueryParams: operations.AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "et",
-            Alt: "proto",
-            Callback: "delectus",
-            Fields: "omnis",
-            Key: "molestiae",
-            OauthToken: "repudiandae",
-            PrettyPrint: true,
-            QuotaUser: "odio",
-            UploadType: "doloremque",
-            UploadProtocol: "provident",
+            AccessToken: "vero",
+            Alt: "json",
+            Callback: "maxime",
+            Fields: "est",
+            Key: "natus",
+            OauthToken: "possimus",
+            PrettyPrint: false,
+            QuotaUser: "recusandae",
+            UploadType: "saepe",
+            UploadProtocol: "dolorem",
         },
         Request: &shared.BatchGetAmpUrlsRequest{
-            LookupStrategy: "FETCH_LIVE_DOC",
+            LookupStrategy: "IN_INDEX_DOC",
             Urls: []string{
-                "rem",
+                "atque",
+                "maiores",
+                "beatae",
             },
         },
     }

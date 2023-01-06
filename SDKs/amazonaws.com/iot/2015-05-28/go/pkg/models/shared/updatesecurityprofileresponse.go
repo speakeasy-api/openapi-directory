@@ -5,7 +5,7 @@ import (
 )
 
 type UpdateSecurityProfileResponse struct {
-	AdditionalMetricsToRetain   []string               `json:"additionalMetricsToRetain,omitempty"`
+	AdditionalMetricsToRetain   map[string]interface{} `json:"additionalMetricsToRetain,omitempty"`
 	AdditionalMetricsToRetainV2 []MetricToRetain       `json:"additionalMetricsToRetainV2,omitempty"`
 	AlertTargets                map[string]AlertTarget `json:"alertTargets,omitempty"`
 	Behaviors                   []Behavior             `json:"behaviors,omitempty"`

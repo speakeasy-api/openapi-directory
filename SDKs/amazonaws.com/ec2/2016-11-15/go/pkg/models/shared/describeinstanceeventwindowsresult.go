@@ -1,6 +1,6 @@
 package shared
 
 type DescribeInstanceEventWindowsResult struct {
-	InstanceEventWindows []InstanceEventWindow
-	NextToken            *string
+	InstanceEventWindows map[string]interface{}
+	NextToken            map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type PostDeleteNotificationConfigurationActionEnum string
 
 const (
-	PostDeleteNotificationConfigurationActionEnumDeleteNotificationConfiguration PostDeleteNotificationConfigurationActionEnum = "DeleteNotificationConfiguration"
+	POSTDeleteNotificationConfigurationActionEnumDeleteNotificationConfiguration PostDeleteNotificationConfigurationActionEnum = "DeleteNotificationConfiguration"
 )
 
 type PostDeleteNotificationConfigurationVersionEnum string
 
 const (
-	PostDeleteNotificationConfigurationVersionEnumTwoThousandAndEleven0101 PostDeleteNotificationConfigurationVersionEnum = "2011-01-01"
+	POSTDeleteNotificationConfigurationVersionEnumTwoThousandAndEleven0101 PostDeleteNotificationConfigurationVersionEnum = "2011-01-01"
 )
 
 type PostDeleteNotificationConfigurationQueryParams struct {

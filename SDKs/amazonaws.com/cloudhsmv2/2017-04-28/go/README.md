@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,36 +34,36 @@ func main() {
     
     req := operations.CopyBackupToRegionRequest{
         Headers: operations.CopyBackupToRegionHeaders{
-            XAmzAlgorithm: "maxime",
-            XAmzContentSha256: "omnis",
-            XAmzCredential: "dolor",
-            XAmzDate: "non",
-            XAmzSecurityToken: "veniam",
-            XAmzSignature: "dolorem",
-            XAmzSignedHeaders: "minima",
+            XAmzAlgorithm: "animi",
+            XAmzContentSha256: "est",
+            XAmzCredential: "voluptas",
+            XAmzDate: "ea",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "necessitatibus",
+            XAmzSignedHeaders: "iure",
             XAmzTarget: "BaldrApiService.CopyBackupToRegion",
         },
         Request: shared.CopyBackupToRegionRequest{
-            BackupID: "iste",
-            DestinationRegion: "magni",
+            BackupID: "quaerat",
+            DestinationRegion: "aut",
             TagList: []shared.Tag{
                 shared.Tag{
                     Key: "omnis",
-                    Value: "iste",
+                    Value: "debitis",
                 },
                 shared.Tag{
-                    Key: "unde",
-                    Value: "adipisci",
+                    Key: "nihil",
+                    Value: "magni",
                 },
                 shared.Tag{
-                    Key: "impedit",
-                    Value: "tempora",
+                    Key: "vitae",
+                    Value: "excepturi",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CopyBackupToRegion(ctx, req)
+    res, err := s.CopyBackupToRegion(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

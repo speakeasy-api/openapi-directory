@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,7 +24,7 @@ func main() {
     
     req := operations.GetLookupSha1Sha1Request{
         PathParams: operations.GetLookupSha1Sha1PathParams{
-            Sha1: "sit",
+            Sha1: "necessitatibus",
         },
     }
     

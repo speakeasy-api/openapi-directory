@@ -3,20 +3,20 @@ package shared
 type ObscaSupportData1AppliedAuthenticationApproachEnum string
 
 const (
-	ObscaSupportData1AppliedAuthenticationApproachEnumCa  ObscaSupportData1AppliedAuthenticationApproachEnum = "CA"
-	ObscaSupportData1AppliedAuthenticationApproachEnumSca ObscaSupportData1AppliedAuthenticationApproachEnum = "SCA"
+	OBSCASupportData1AppliedAuthenticationApproachEnumCa  ObscaSupportData1AppliedAuthenticationApproachEnum = "CA"
+	OBSCASupportData1AppliedAuthenticationApproachEnumSca ObscaSupportData1AppliedAuthenticationApproachEnum = "SCA"
 )
 
 type ObscaSupportData1RequestedScaExemptionTypeEnum string
 
 const (
-	ObscaSupportData1RequestedScaExemptionTypeEnumBillPayment       ObscaSupportData1RequestedScaExemptionTypeEnum = "BillPayment"
-	ObscaSupportData1RequestedScaExemptionTypeEnumContactlessTravel ObscaSupportData1RequestedScaExemptionTypeEnum = "ContactlessTravel"
-	ObscaSupportData1RequestedScaExemptionTypeEnumEcommerceGoods    ObscaSupportData1RequestedScaExemptionTypeEnum = "EcommerceGoods"
-	ObscaSupportData1RequestedScaExemptionTypeEnumEcommerceServices ObscaSupportData1RequestedScaExemptionTypeEnum = "EcommerceServices"
-	ObscaSupportData1RequestedScaExemptionTypeEnumKiosk             ObscaSupportData1RequestedScaExemptionTypeEnum = "Kiosk"
-	ObscaSupportData1RequestedScaExemptionTypeEnumParking           ObscaSupportData1RequestedScaExemptionTypeEnum = "Parking"
-	ObscaSupportData1RequestedScaExemptionTypeEnumPartyToParty      ObscaSupportData1RequestedScaExemptionTypeEnum = "PartyToParty"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumBillPayment       ObscaSupportData1RequestedScaExemptionTypeEnum = "BillPayment"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumContactlessTravel ObscaSupportData1RequestedScaExemptionTypeEnum = "ContactlessTravel"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumEcommerceGoods    ObscaSupportData1RequestedScaExemptionTypeEnum = "EcommerceGoods"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumEcommerceServices ObscaSupportData1RequestedScaExemptionTypeEnum = "EcommerceServices"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumKiosk             ObscaSupportData1RequestedScaExemptionTypeEnum = "Kiosk"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumParking           ObscaSupportData1RequestedScaExemptionTypeEnum = "Parking"
+	OBSCASupportData1RequestedSCAExemptionTypeEnumPartyToParty      ObscaSupportData1RequestedScaExemptionTypeEnum = "PartyToParty"
 )
 
 // ObscaSupportData1
@@ -24,5 +24,5 @@ const (
 type ObscaSupportData1 struct {
 	AppliedAuthenticationApproach *ObscaSupportData1AppliedAuthenticationApproachEnum `json:"AppliedAuthenticationApproach,omitempty"`
 	ReferencePaymentOrderID       *string                                             `json:"ReferencePaymentOrderId,omitempty"`
-	RequestedScaExemptionType     *ObscaSupportData1RequestedScaExemptionTypeEnum     `json:"RequestedSCAExemptionType,omitempty"`
+	RequestedSCAExemptionType     *ObscaSupportData1RequestedScaExemptionTypeEnum     `json:"RequestedSCAExemptionType,omitempty"`
 }

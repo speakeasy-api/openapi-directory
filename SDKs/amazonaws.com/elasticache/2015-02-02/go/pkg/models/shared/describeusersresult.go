@@ -1,6 +1,6 @@
 package shared
 
 type DescribeUsersResult struct {
-	Marker *string
+	Marker map[string]interface{}
 	Users  []User
 }

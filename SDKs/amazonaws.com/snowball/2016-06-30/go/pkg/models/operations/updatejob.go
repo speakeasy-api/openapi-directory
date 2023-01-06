@@ -33,7 +33,7 @@ type UpdateJobResponse struct {
 	InvalidInputCombinationException *interface{}
 	InvalidJobStateException         *interface{}
 	InvalidResourceException         *interface{}
-	KmsRequestFailedException        *interface{}
+	KMSRequestFailedException        *interface{}
 	StatusCode                       int64
 	UpdateJobResult                  map[string]interface{}
 }

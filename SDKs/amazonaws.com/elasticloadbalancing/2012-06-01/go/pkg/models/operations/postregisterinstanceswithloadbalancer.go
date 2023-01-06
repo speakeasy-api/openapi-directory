@@ -3,13 +3,13 @@ package operations
 type PostRegisterInstancesWithLoadBalancerActionEnum string
 
 const (
-	PostRegisterInstancesWithLoadBalancerActionEnumRegisterInstancesWithLoadBalancer PostRegisterInstancesWithLoadBalancerActionEnum = "RegisterInstancesWithLoadBalancer"
+	POSTRegisterInstancesWithLoadBalancerActionEnumRegisterInstancesWithLoadBalancer PostRegisterInstancesWithLoadBalancerActionEnum = "RegisterInstancesWithLoadBalancer"
 )
 
 type PostRegisterInstancesWithLoadBalancerVersionEnum string
 
 const (
-	PostRegisterInstancesWithLoadBalancerVersionEnumTwoThousandAndTwelve0601 PostRegisterInstancesWithLoadBalancerVersionEnum = "2012-06-01"
+	POSTRegisterInstancesWithLoadBalancerVersionEnumTwoThousandAndTwelve0601 PostRegisterInstancesWithLoadBalancerVersionEnum = "2012-06-01"
 )
 
 type PostRegisterInstancesWithLoadBalancerQueryParams struct {

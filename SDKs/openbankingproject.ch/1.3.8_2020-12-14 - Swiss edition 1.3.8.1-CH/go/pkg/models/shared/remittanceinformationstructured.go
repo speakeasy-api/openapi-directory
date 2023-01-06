@@ -3,15 +3,15 @@ package shared
 type RemittanceInformationStructuredScoRorQrRorIpiEnum string
 
 const (
-	RemittanceInformationStructuredScoRorQrRorIpiEnumScor RemittanceInformationStructuredScoRorQrRorIpiEnum = "SCOR"
-	RemittanceInformationStructuredScoRorQrRorIpiEnumQrr  RemittanceInformationStructuredScoRorQrRorIpiEnum = "QRR"
-	RemittanceInformationStructuredScoRorQrRorIpiEnumIpi  RemittanceInformationStructuredScoRorQrRorIpiEnum = "IPI"
+	RemittanceInformationStructuredSCORorQRRorIPIEnumScor RemittanceInformationStructuredScoRorQrRorIpiEnum = "SCOR"
+	RemittanceInformationStructuredSCORorQRRorIPIEnumQrr  RemittanceInformationStructuredScoRorQrRorIpiEnum = "QRR"
+	RemittanceInformationStructuredSCORorQRRorIPIEnumIpi  RemittanceInformationStructuredScoRorQrRorIpiEnum = "IPI"
 )
 
 // RemittanceInformationStructured
 // Structured remittance information.
 type RemittanceInformationStructured struct {
-	ScoRorQrRorIpi                  *RemittanceInformationStructuredScoRorQrRorIpiEnum `json:"SCORorQRRorIPI,omitempty"`
+	SCORorQRRorIPI                  *RemittanceInformationStructuredScoRorQrRorIpiEnum `json:"SCORorQRRorIPI,omitempty"`
 	AdditionalRemittanceInformation *string                                            `json:"additionalRemittanceInformation,omitempty"`
 	Reference                       string                                             `json:"reference"`
 	ReferenceIssuer                 *string                                            `json:"referenceIssuer,omitempty"`

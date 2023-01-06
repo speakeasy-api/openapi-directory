@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -32,10 +31,17 @@ func main() {
         Request: shared.BatchInputCallbackCompletionBatchRequest{
             Inputs: []shared.CallbackCompletionBatchRequest{
                 shared.CallbackCompletionBatchRequest{
-                    CallbackID: "nam",
+                    CallbackID: "ullam",
                     OutputFields: map[string]string{
-                        "blanditiis": "temporibus",
-                        "laborum": "quia",
+                        "libero": "autem",
+                    },
+                },
+                shared.CallbackCompletionBatchRequest{
+                    CallbackID: "hic",
+                    OutputFields: map[string]string{
+                        "nulla": "possimus",
+                        "et": "quia",
+                        "in": "consequatur",
                     },
                 },
             },

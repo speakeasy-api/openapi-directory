@@ -5,19 +5,15 @@ import (
 )
 
 // TransactionResourceAttributesCashback
-// If all or part of this transaction was instantly reimbursed in the
-// form of cashback, details of the reimbursement.
+// Provides information about an instant reimbursement in the form of
+// cashback.
 type TransactionResourceAttributesCashback struct {
 	Amount      MoneyObject `json:"amount"`
 	Description string      `json:"description"`
 }
 
 // TransactionResourceAttributesForeignAmount
-// The foreign currency amount of this transaction. This field will be
-// `null` for domestic transactions. The amount was converted to the AUD
-// amount reflected in the `amount` of this transaction. Refer to the
-// `holdInfo` field for the original `foreignAmount` the transaction was
-// `HELD` at.
+// Provides information about a value of money.
 type TransactionResourceAttributesForeignAmount struct {
 	CurrencyCode     string `json:"currencyCode"`
 	Value            string `json:"value"`
@@ -25,9 +21,7 @@ type TransactionResourceAttributesForeignAmount struct {
 }
 
 // TransactionResourceAttributesHoldInfoForeignAmount
-// The foreign currency amount of this transaction while in the `HELD`
-// status. This field will be `null` for domestic transactions. The amount
-// was converted to the AUD amount reflected in the `amount` field.
+// Provides information about a value of money.
 type TransactionResourceAttributesHoldInfoForeignAmount struct {
 	CurrencyCode     string `json:"currencyCode"`
 	Value            string `json:"value"`
@@ -35,18 +29,15 @@ type TransactionResourceAttributesHoldInfoForeignAmount struct {
 }
 
 // TransactionResourceAttributesHoldInfo
-// If this transaction is currently in the `HELD` status, or was ever in
-// the `HELD` status, the `amount` and `foreignAmount` of the
-// transaction while `HELD`.
+// Provides information about the amount at which a transaction was in the
+// `HELD` status.
 type TransactionResourceAttributesHoldInfo struct {
 	Amount        MoneyObject                                        `json:"amount"`
 	ForeignAmount TransactionResourceAttributesHoldInfoForeignAmount `json:"foreignAmount"`
 }
 
 // TransactionResourceAttributesRoundUpBoostPortion
-// The portion of the Round Up `amount` owing to boosted Round Ups,
-// represented as a negative value. If no boost was added to the Round Up
-// this field will be `null`.
+// Provides information about a value of money.
 type TransactionResourceAttributesRoundUpBoostPortion struct {
 	CurrencyCode     string `json:"currencyCode"`
 	Value            string `json:"value"`
@@ -54,8 +45,8 @@ type TransactionResourceAttributesRoundUpBoostPortion struct {
 }
 
 // TransactionResourceAttributesRoundUp
-// Details of how this transaction was rounded-up. If no Round Up was
-// applied this field will be `null`.
+// Provides information about how a Round Up was applied, such as whether or
+// not a boost was included in the Round Up.
 type TransactionResourceAttributesRoundUp struct {
 	Amount       MoneyObject                                      `json:"amount"`
 	BoostPortion TransactionResourceAttributesRoundUpBoostPortion `json:"boostPortion"`

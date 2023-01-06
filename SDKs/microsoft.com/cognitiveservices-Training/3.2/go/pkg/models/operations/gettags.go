@@ -1,0 +1,26 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type GetTagsPathParams struct {
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+}
+
+type GetTagsQueryParams struct {
+	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
+}
+
+type GetTagsRequest struct {
+	PathParams  GetTagsPathParams
+	QueryParams GetTagsQueryParams
+}
+
+type GetTagsResponse struct {
+	Body              []byte
+	ContentType       string
+	CustomVisionError *shared.CustomVisionError
+	StatusCode        int64
+	Tags              []shared.Tag
+}

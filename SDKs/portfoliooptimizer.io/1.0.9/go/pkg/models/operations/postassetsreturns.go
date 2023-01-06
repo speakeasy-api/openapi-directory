@@ -22,6 +22,6 @@ type PostAssetsReturnsRequest struct {
 
 type PostAssetsReturnsResponse struct {
 	ContentType                               string
-	PostAssetsReturns200ApplicationJSONObject *PostAssetsReturns200ApplicationJSON
 	StatusCode                                int64
+	PostAssetsReturns200ApplicationJSONObject *PostAssetsReturns200ApplicationJSON
 }

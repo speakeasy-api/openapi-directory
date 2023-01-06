@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,54 +27,77 @@ func main() {
             Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "dolore",
+            SiteURL: "nihil",
         },
         QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "odit",
-            Alt: "json",
-            Callback: "omnis",
-            Fields: "hic",
-            Key: "eum",
-            OauthToken: "quae",
+            DollarXgafv: "2",
+            AccessToken: "accusamus",
+            Alt: "proto",
+            Callback: "eum",
+            Fields: "perspiciatis",
+            Key: "distinctio",
+            OauthToken: "velit",
             PrettyPrint: true,
-            QuotaUser: "quis",
-            UploadType: "eius",
-            UploadProtocol: "et",
+            QuotaUser: "numquam",
+            UploadType: "minima",
+            UploadProtocol: "vel",
         },
         Request: &shared.SearchAnalyticsQueryRequest{
             AggregationType: "BY_PROPERTY",
-            DataState: "FINAL",
+            DataState: "ALL",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
                             Dimension: "PAGE",
-                            Expression: "libero",
-                            Operator: "NOT_CONTAINS",
+                            Expression: "quis",
+                            Operator: "INCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "COUNTRY",
+                            Expression: "quo",
+                            Operator: "INCLUDING_REGEX",
+                        },
+                    },
+                    GroupType: "AND",
+                },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "COUNTRY",
+                            Expression: "beatae",
+                            Operator: "EQUALS",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "QUERY",
+                            Expression: "sunt",
+                            Operator: "INCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "QUERY",
+                            Expression: "rem",
+                            Operator: "INCLUDING_REGEX",
                         },
                     },
                     GroupType: "AND",
                 },
             },
             Dimensions: []shared.SearchAnalyticsQueryRequestDimensionsEnum{
-                "DATE",
-                "COUNTRY",
                 "PAGE",
             },
-            EndDate: "ducimus",
-            RowLimit: 6882839132048010878,
-            SearchType: "IMAGE",
-            StartDate: "praesentium",
-            StartRow: 8542795201567454831,
-            Type: "IMAGE",
+            EndDate: "eveniet",
+            RowLimit: 9208246729111981672,
+            SearchType: "VIDEO",
+            StartDate: "et",
+            StartRow: 1522702349187420273,
+            Type: "GOOGLE_NEWS",
         },
     }
     

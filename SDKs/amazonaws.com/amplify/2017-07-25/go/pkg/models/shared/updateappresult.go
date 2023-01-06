@@ -4,5 +4,5 @@ package shared
 //
 //	The result structure for an Amplify app update request.
 type UpdateAppResult struct {
-	App App `json:"app"`
+	App App2 `json:"app"`
 }

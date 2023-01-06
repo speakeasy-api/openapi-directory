@@ -9,7 +9,6 @@ type CreateDropletRequestBodySingleDropletRequest struct {
 	Image             interface{}   `json:"image"`
 	Ipv6              *bool         `json:"ipv6,omitempty"`
 	Monitoring        *bool         `json:"monitoring,omitempty"`
-	Name              string        `json:"name"`
 	PrivateNetworking *bool         `json:"private_networking,omitempty"`
 	Region            string        `json:"region"`
 	Size              string        `json:"size"`
@@ -25,7 +24,6 @@ type CreateDropletRequestBodyMultipleDropletRequest struct {
 	Image             interface{}   `json:"image"`
 	Ipv6              *bool         `json:"ipv6,omitempty"`
 	Monitoring        *bool         `json:"monitoring,omitempty"`
-	Names             []string      `json:"names"`
 	PrivateNetworking *bool         `json:"private_networking,omitempty"`
 	Region            string        `json:"region"`
 	Size              string        `json:"size"`
@@ -36,14 +34,14 @@ type CreateDropletRequestBodyMultipleDropletRequest struct {
 	WithDropletAgent  *bool         `json:"with_droplet_agent,omitempty"`
 }
 
-type CreateDropletRequest struct {
-	Request *interface{} `request:"mediaType=application/json"`
-}
-
 type CreateDroplet401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateDropletRequest struct {
+	Request *interface{} `request:"mediaType=application/json"`
 }
 
 type CreateDropletResponse struct {

@@ -3,13 +3,13 @@ package operations
 type PostRemoveFromGlobalClusterActionEnum string
 
 const (
-	PostRemoveFromGlobalClusterActionEnumRemoveFromGlobalCluster PostRemoveFromGlobalClusterActionEnum = "RemoveFromGlobalCluster"
+	POSTRemoveFromGlobalClusterActionEnumRemoveFromGlobalCluster PostRemoveFromGlobalClusterActionEnum = "RemoveFromGlobalCluster"
 )
 
 type PostRemoveFromGlobalClusterVersionEnum string
 
 const (
-	PostRemoveFromGlobalClusterVersionEnumTwoThousandAndFourteen1031 PostRemoveFromGlobalClusterVersionEnum = "2014-10-31"
+	POSTRemoveFromGlobalClusterVersionEnumTwoThousandAndFourteen1031 PostRemoveFromGlobalClusterVersionEnum = "2014-10-31"
 )
 
 type PostRemoveFromGlobalClusterQueryParams struct {

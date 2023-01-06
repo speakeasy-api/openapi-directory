@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.CreateContainerRequest{
         Headers: operations.CreateContainerHeaders{
-            XAmzAlgorithm: "excepturi",
-            XAmzContentSha256: "vel",
-            XAmzCredential: "beatae",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "illo",
-            XAmzSignature: "sapiente",
-            XAmzSignedHeaders: "officia",
+            XAmzAlgorithm: "illo",
+            XAmzContentSha256: "aliquam",
+            XAmzCredential: "qui",
+            XAmzDate: "quia",
+            XAmzSecurityToken: "aperiam",
+            XAmzSignature: "ad",
+            XAmzSignedHeaders: "voluptatem",
             XAmzTarget: "MediaStore_20170901.CreateContainer",
         },
         Request: shared.CreateContainerInput{
-            ContainerName: "voluptatibus",
+            ContainerName: "error",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "nam",
-                    Value: "dolor",
+                    Key: "eaque",
+                    Value: "non",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateContainer(ctx, req)
+    res, err := s.CreateContainer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -23,6 +23,6 @@ type GetSecdefRequest struct {
 
 type GetSecdefResponse struct {
 	ContentType                        string
-	GetSecdef200ApplicationJSONObjects []GetSecdef200ApplicationJSON
 	StatusCode                         int64
+	GetSecdef200ApplicationJSONObjects []GetSecdef200ApplicationJSON
 }

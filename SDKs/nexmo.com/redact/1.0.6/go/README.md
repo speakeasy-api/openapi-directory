@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -31,13 +30,13 @@ func main() {
             },
         },
         Request: shared.RedactTransaction{
-            ID: "repellendus",
-            Product: "voice",
-            Type: "inbound",
+            ID: "asperiores",
+            Product: "verify",
+            Type: "outbound",
         },
     }
     
-    res, err := s.Sdk.RedactMessage(ctx, req)
+    res, err := s.RedactMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeReplaceRootVolumeTasksResult struct {
-	NextToken              *string
-	ReplaceRootVolumeTasks []ReplaceRootVolumeTask
+	NextToken              map[string]interface{}
+	ReplaceRootVolumeTasks map[string]interface{}
 }

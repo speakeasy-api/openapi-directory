@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AssociateMemberAccountRequest{
         Headers: operations.AssociateMemberAccountHeaders{
-            XAmzAlgorithm: "assumenda",
-            XAmzContentSha256: "fugiat",
-            XAmzCredential: "eos",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "laborum",
-            XAmzSignature: "praesentium",
-            XAmzSignedHeaders: "aut",
+            XAmzAlgorithm: "sapiente",
+            XAmzContentSha256: "doloribus",
+            XAmzCredential: "accusantium",
+            XAmzDate: "explicabo",
+            XAmzSecurityToken: "rem",
+            XAmzSignature: "corporis",
+            XAmzSignedHeaders: "pariatur",
             XAmzTarget: "MacieService.AssociateMemberAccount",
         },
         Request: shared.AssociateMemberAccountRequest{
-            MemberAccountID: "aspernatur",
+            MemberAccountID: "quisquam",
         },
     }
     
-    res, err := s.Sdk.AssociateMemberAccount(ctx, req)
+    res, err := s.AssociateMemberAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

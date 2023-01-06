@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -181,7 +182,7 @@ func (s *SDK) AssociateServiceQuotaTemplate(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -333,7 +334,7 @@ func (s *SDK) DeleteServiceQuotaIncreaseRequestFromTemplate(ctx context.Context,
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -465,7 +466,7 @@ func (s *SDK) DisassociateServiceQuotaTemplate(ctx context.Context, request oper
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -537,7 +538,7 @@ func (s *SDK) GetAwsDefaultServiceQuota(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.GetAwsDefaultServiceQuotaResponse = out
+			res.GetAWSDefaultServiceQuotaResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -699,7 +700,7 @@ func (s *SDK) GetAssociationForServiceQuotaTemplate(ctx context.Context, request
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1045,7 +1046,7 @@ func (s *SDK) GetServiceQuotaIncreaseRequestFromTemplate(ctx context.Context, re
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -1119,7 +1120,7 @@ func (s *SDK) ListAwsDefaultServiceQuotas(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.ListAwsDefaultServiceQuotasResponse = out
+			res.ListAWSDefaultServiceQuotasResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1521,7 +1522,7 @@ func (s *SDK) ListServiceQuotaIncreaseRequestsInTemplate(ctx context.Context, re
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1993,7 +1994,7 @@ func (s *SDK) PutServiceQuotaIncreaseRequestIntoTemplate(ctx context.Context, re
 				return nil, err
 			}
 
-			res.AwsServiceAccessNotEnabledException = out
+			res.AWSServiceAccessNotEnabledException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.ChangeServerLifeCycleStateRequest{
         Headers: operations.ChangeServerLifeCycleStateHeaders{
-            XAmzAlgorithm: "molestiae",
-            XAmzContentSha256: "id",
-            XAmzCredential: "quia",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "sit",
-            XAmzSignature: "non",
+            XAmzAlgorithm: "adipisci",
+            XAmzContentSha256: "dolorem",
+            XAmzCredential: "quas",
+            XAmzDate: "eum",
+            XAmzSecurityToken: "distinctio",
+            XAmzSignature: "nostrum",
             XAmzSignedHeaders: "sed",
         },
         Request: operations.ChangeServerLifeCycleStateRequestBody{
             LifeCycle: operations.ChangeServerLifeCycleStateRequestBodyLifeCycle{
                 State: "READY_FOR_CUTOVER",
             },
-            SourceServerID: "architecto",
+            SourceServerID: "mollitia",
         },
     }
     
-    res, err := s.Sdk.ChangeServerLifeCycleState(ctx, req)
+    res, err := s.ChangeServerLifeCycleState(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

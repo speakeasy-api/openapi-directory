@@ -35,8 +35,8 @@ type DeleteSessionUsingGetRequest struct {
 type DeleteSessionUsingGetResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	DeleteSessionUsingGet200ApplicationJSONObject *DeleteSessionUsingGet200ApplicationJSON
-	DeleteSessionUsingGet400ApplicationJSONObject *DeleteSessionUsingGet400ApplicationJSON
-	DeleteSessionUsingGet401ApplicationJSONObject *DeleteSessionUsingGet401ApplicationJSON
-	DeleteSessionUsingGet500ApplicationJSONObject *DeleteSessionUsingGet500ApplicationJSON
+	DeleteSessionUsingGET200ApplicationJSONObject *DeleteSessionUsingGet200ApplicationJSON
+	DeleteSessionUsingGET400ApplicationJSONObject *DeleteSessionUsingGet400ApplicationJSON
+	DeleteSessionUsingGET401ApplicationJSONObject *DeleteSessionUsingGet401ApplicationJSON
+	DeleteSessionUsingGET500ApplicationJSONObject *DeleteSessionUsingGet500ApplicationJSON
 }

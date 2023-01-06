@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,36 +26,33 @@ func main() {
         Security: operations.CloudtasksAPIQueueUpdateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.CloudtasksAPIQueueUpdateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "harum",
+            DollarXgafv: "2",
+            AccessToken: "possimus",
             Alt: "proto",
-            AppID: "voluptatem",
-            Callback: "tenetur",
-            Fields: "et",
-            Key: "facilis",
-            OauthToken: "architecto",
+            AppID: "qui",
+            Callback: "laudantium",
+            Fields: "repellendus",
+            Key: "architecto",
+            OauthToken: "pariatur",
             PrettyPrint: true,
-            QuotaUser: "qui",
-            UploadType: "id",
-            UploadProtocol: "soluta",
+            QuotaUser: "animi",
+            UploadType: "error",
+            UploadProtocol: "vel",
         },
         Request: &shared.HTTPBody{
-            ContentType: "voluptas",
-            Data: "saepe",
+            ContentType: "sit",
+            Data: "tempore",
             Extensions: []map[string]interface{}{
                 map[string]interface{}{
-                    "aperiam": "perspiciatis",
-                    "nemo": "tempore",
-                },
-                map[string]interface{}{
-                    "voluptates": "magnam",
-                    "a": "velit",
+                    "sed": "consequatur",
+                    "nulla": "officia",
+                    "sunt": "accusamus",
                 },
             },
         },

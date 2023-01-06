@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,30 +27,30 @@ func main() {
             Option1: &operations.ArtifactregistryProjectsLocationsListSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.ArtifactregistryProjectsLocationsListPathParams{
-            Name: "aliquid",
+            Name: "aperiam",
         },
         QueryParams: operations.ArtifactregistryProjectsLocationsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "voluptatem",
-            Alt: "media",
-            Callback: "ut",
-            Fields: "dignissimos",
-            Filter: "qui",
-            Key: "minus",
-            OauthToken: "quam",
-            PageSize: 1623812058245264445,
-            PageToken: "saepe",
+            AccessToken: "assumenda",
+            Alt: "proto",
+            Callback: "omnis",
+            Fields: "commodi",
+            Filter: "doloremque",
+            Key: "quis",
+            OauthToken: "iste",
+            PageSize: 7328465705078294941,
+            PageToken: "aliquam",
             PrettyPrint: true,
-            QuotaUser: "enim",
-            UploadType: "qui",
-            UploadProtocol: "commodi",
+            QuotaUser: "tenetur",
+            UploadType: "quo",
+            UploadProtocol: "omnis",
         },
     }
     

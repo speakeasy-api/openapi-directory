@@ -3,17 +3,17 @@ package operations
 type GetCreateDomainActionEnum string
 
 const (
-	GetCreateDomainActionEnumCreateDomain GetCreateDomainActionEnum = "CreateDomain"
+	GETCreateDomainActionEnumCreateDomain GetCreateDomainActionEnum = "CreateDomain"
 )
 
 type GetCreateDomainVersionEnum string
 
 const (
-	GetCreateDomainVersionEnumTwoThousandAndNine0415 GetCreateDomainVersionEnum = "2009-04-15"
+	GETCreateDomainVersionEnumTwoThousandAndNine0415 GetCreateDomainVersionEnum = "2009-04-15"
 )
 
 type GetCreateDomainQueryParams struct {
-	AwsAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetCreateDomainActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DomainName       string                     `queryParam:"style=form,explode=true,name=DomainName"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,13 +25,13 @@ func main() {
     req := operations.SvgconvertRequest{
         Request: operations.SvgconvertFileToConvert{
             File: &operations.SvgconvertFileToConvertFile{
-                Content: []byte("porro"),
-                File: "sit",
+                Content: []byte("voluptate"),
+                File: "tempora",
             },
         },
     }
     
-    res, err := s.Sdk.Svgconvert(ctx, req)
+    res, err := s.Svgconvert(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -3,18 +3,18 @@ package operations
 type GetStopDbClusterActionEnum string
 
 const (
-	GetStopDbClusterActionEnumStopDbCluster GetStopDbClusterActionEnum = "StopDBCluster"
+	GETStopDBClusterActionEnumStopDbCluster GetStopDbClusterActionEnum = "StopDBCluster"
 )
 
 type GetStopDbClusterVersionEnum string
 
 const (
-	GetStopDbClusterVersionEnumTwoThousandAndFourteen1031 GetStopDbClusterVersionEnum = "2014-10-31"
+	GETStopDBClusterVersionEnumTwoThousandAndFourteen1031 GetStopDbClusterVersionEnum = "2014-10-31"
 )
 
 type GetStopDbClusterQueryParams struct {
 	Action              GetStopDbClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterIdentifier string                      `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
+	DBClusterIdentifier string                      `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	Version             GetStopDbClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

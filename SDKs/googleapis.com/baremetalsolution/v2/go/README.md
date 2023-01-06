@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchPathParams{
-            Location: "soluta",
+            Location: "rerum",
         },
         QueryParams: operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "ducimus",
+            DollarXgafv: "2",
+            AccessToken: "molestiae",
             Alt: "media",
-            Callback: "amet",
-            Fields: "iusto",
-            Key: "atque",
-            OauthToken: "et",
+            Callback: "sed",
+            Fields: "enim",
+            Key: "natus",
+            OauthToken: "laudantium",
             PrettyPrint: false,
-            QuotaUser: "eligendi",
-            UploadType: "sit",
-            UploadProtocol: "illum",
+            QuotaUser: "id",
+            UploadType: "voluptates",
+            UploadProtocol: "nihil",
         },
     }
     

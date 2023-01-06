@@ -1,0 +1,24 @@
+package shared
+
+type PlanDetailsWebhookOptions struct {
+	Amount           *int64   `json:"amount,omitempty"`
+	IncludeTriggers  *string  `json:"includeTriggers,omitempty"`
+	RestrictionTypes []string `json:"restrictionTypes,omitempty"`
+}
+
+type PlanDetails struct {
+	APIKeys        *int64                     `json:"apiKeys,omitempty"`
+	APITokens      *int64                     `json:"apiTokens,omitempty"`
+	ColorSchema    *bool                      `json:"colorSchema,omitempty"`
+	CustomDomain   *bool                      `json:"customDomain,omitempty"`
+	CustomName     *bool                      `json:"customName,omitempty"`
+	DirectLinks    *bool                      `json:"directLinks,omitempty"`
+	IPWhitelist    *bool                      `json:"ipWhitelist,omitempty"`
+	SharingOptions []string                   `json:"sharingOptions,omitempty"`
+	SSHKeys        *int64                     `json:"sshKeys,omitempty"`
+	StorageAddOn   *int64                     `json:"storageAddOn,omitempty"`
+	UnlimitedUsers *bool                      `json:"unlimitedUsers,omitempty"`
+	UserExpiration *bool                      `json:"userExpiration,omitempty"`
+	UserImport     *bool                      `json:"userImport,omitempty"`
+	WebhookOptions *PlanDetailsWebhookOptions `json:"webhookOptions,omitempty"`
+}

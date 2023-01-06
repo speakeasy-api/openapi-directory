@@ -1,5 +1,5 @@
 package shared
 
 type ListTagsForResourceResponse struct {
-	Tags []Tag `json:"tags"`
+	Tags map[string]interface{} `json:"tags"`
 }

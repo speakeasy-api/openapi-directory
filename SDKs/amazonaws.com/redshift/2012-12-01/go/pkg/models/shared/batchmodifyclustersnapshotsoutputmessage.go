@@ -1,6 +1,6 @@
 package shared
 
 type BatchModifyClusterSnapshotsOutputMessage struct {
-	Errors    []SnapshotErrorMessage
-	Resources []string
+	Errors    []map[string]interface{}
+	Resources []map[string]interface{}
 }

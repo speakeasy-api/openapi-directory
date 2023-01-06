@@ -1,5 +1,5 @@
 package shared
 
 type CreateDefaultSubnetResult struct {
-	Subnet *Subnet
+	Subnet map[string]interface{}
 }

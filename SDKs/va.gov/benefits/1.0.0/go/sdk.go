@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -15,7 +16,7 @@ type HTTPClient interface {
 }
 
 type SDK struct {
-	VbaDocuments *VbaDocuments
+	VBADocuments *VbaDocuments
 
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
@@ -67,7 +68,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.VbaDocuments = NewVbaDocuments(
+	sdk.VBADocuments = NewVbaDocuments(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

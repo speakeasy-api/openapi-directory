@@ -30,7 +30,7 @@ type CreateDeliveryStreamResponse struct {
 	ContentType                 string
 	CreateDeliveryStreamOutput  *shared.CreateDeliveryStreamOutput
 	InvalidArgumentException    *interface{}
-	InvalidKmsResourceException *interface{}
+	InvalidKMSResourceException *interface{}
 	LimitExceededException      *interface{}
 	ResourceInUseException      *interface{}
 	StatusCode                  int64

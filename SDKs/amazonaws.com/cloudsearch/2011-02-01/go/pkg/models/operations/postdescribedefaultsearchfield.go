@@ -3,13 +3,13 @@ package operations
 type PostDescribeDefaultSearchFieldActionEnum string
 
 const (
-	PostDescribeDefaultSearchFieldActionEnumDescribeDefaultSearchField PostDescribeDefaultSearchFieldActionEnum = "DescribeDefaultSearchField"
+	POSTDescribeDefaultSearchFieldActionEnumDescribeDefaultSearchField PostDescribeDefaultSearchFieldActionEnum = "DescribeDefaultSearchField"
 )
 
 type PostDescribeDefaultSearchFieldVersionEnum string
 
 const (
-	PostDescribeDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 PostDescribeDefaultSearchFieldVersionEnum = "2011-02-01"
+	POSTDescribeDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 PostDescribeDefaultSearchFieldVersionEnum = "2011-02-01"
 )
 
 type PostDescribeDefaultSearchFieldQueryParams struct {

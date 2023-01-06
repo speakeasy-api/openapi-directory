@@ -1,5 +1,14 @@
 package shared
 
+// DNSAuthorizationInput
+// A DnsAuthorization resource describes a way to perform domain authorization for certificate issuance.
+type DNSAuthorizationInput struct {
+	Description *string           `json:"description,omitempty"`
+	Domain      *string           `json:"domain,omitempty"`
+	Labels      map[string]string `json:"labels,omitempty"`
+	Name        *string           `json:"name,omitempty"`
+}
+
 // DNSAuthorization
 // A DnsAuthorization resource describes a way to perform domain authorization for certificate issuance.
 type DNSAuthorization struct {
@@ -10,13 +19,4 @@ type DNSAuthorization struct {
 	Labels            map[string]string  `json:"labels,omitempty"`
 	Name              *string            `json:"name,omitempty"`
 	UpdateTime        *string            `json:"updateTime,omitempty"`
-}
-
-// DNSAuthorizationInput
-// A DnsAuthorization resource describes a way to perform domain authorization for certificate issuance.
-type DNSAuthorizationInput struct {
-	Description *string           `json:"description,omitempty"`
-	Domain      *string           `json:"domain,omitempty"`
-	Labels      map[string]string `json:"labels,omitempty"`
-	Name        *string           `json:"name,omitempty"`
 }

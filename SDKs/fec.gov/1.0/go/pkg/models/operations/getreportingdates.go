@@ -34,6 +34,6 @@ type GetReportingDatesRequest struct {
 
 type GetReportingDatesResponse struct {
 	ContentType                                   string
-	GetReportingDatesDefaultApplicationJSONObject *GetReportingDatesDefaultApplicationJSON
 	StatusCode                                    int64
+	GetReportingDatesDefaultApplicationJSONObject *GetReportingDatesDefaultApplicationJSON
 }

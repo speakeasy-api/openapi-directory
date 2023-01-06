@@ -3,13 +3,13 @@ package operations
 type PostDescribeTargetGroupsActionEnum string
 
 const (
-	PostDescribeTargetGroupsActionEnumDescribeTargetGroups PostDescribeTargetGroupsActionEnum = "DescribeTargetGroups"
+	POSTDescribeTargetGroupsActionEnumDescribeTargetGroups PostDescribeTargetGroupsActionEnum = "DescribeTargetGroups"
 )
 
 type PostDescribeTargetGroupsVersionEnum string
 
 const (
-	PostDescribeTargetGroupsVersionEnumTwoThousandAndFifteen1201 PostDescribeTargetGroupsVersionEnum = "2015-12-01"
+	POSTDescribeTargetGroupsVersionEnumTwoThousandAndFifteen1201 PostDescribeTargetGroupsVersionEnum = "2015-12-01"
 )
 
 type PostDescribeTargetGroupsQueryParams struct {

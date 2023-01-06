@@ -1,11 +1,7 @@
 package operations
 
-import (
-	"openapi/pkg/models/shared"
-)
-
 type GetSpotsetsResponse struct {
 	ContentType string
-	SpotSet     *shared.SpotSet
+	SpotSet     map[string]interface{}
 	StatusCode  int64
 }

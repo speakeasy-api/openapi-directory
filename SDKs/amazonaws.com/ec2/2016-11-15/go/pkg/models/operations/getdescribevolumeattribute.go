@@ -3,20 +3,20 @@ package operations
 type GetDescribeVolumeAttributeActionEnum string
 
 const (
-	GetDescribeVolumeAttributeActionEnumDescribeVolumeAttribute GetDescribeVolumeAttributeActionEnum = "DescribeVolumeAttribute"
+	GETDescribeVolumeAttributeActionEnumDescribeVolumeAttribute GetDescribeVolumeAttributeActionEnum = "DescribeVolumeAttribute"
 )
 
 type GetDescribeVolumeAttributeAttributeEnum string
 
 const (
-	GetDescribeVolumeAttributeAttributeEnumAutoEnableIo GetDescribeVolumeAttributeAttributeEnum = "autoEnableIO"
-	GetDescribeVolumeAttributeAttributeEnumProductCodes GetDescribeVolumeAttributeAttributeEnum = "productCodes"
+	GETDescribeVolumeAttributeAttributeEnumAutoEnableIo GetDescribeVolumeAttributeAttributeEnum = "autoEnableIO"
+	GETDescribeVolumeAttributeAttributeEnumProductCodes GetDescribeVolumeAttributeAttributeEnum = "productCodes"
 )
 
 type GetDescribeVolumeAttributeVersionEnum string
 
 const (
-	GetDescribeVolumeAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeVolumeAttributeVersionEnum = "2016-11-15"
+	GETDescribeVolumeAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeVolumeAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeVolumeAttributeQueryParams struct {

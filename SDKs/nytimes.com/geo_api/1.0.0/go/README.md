@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.GetQueryJSONRequest{
         QueryParams: operations.GetQueryJSONQueryParams{
-            DateRange: "aut",
-            Elevation: 4088759659408494563,
-            Facets: 2233668648628867046,
-            Filter: "et",
-            Latitude: "est",
-            Limit: 1376335282631291362,
-            Longitude: "dolore",
-            Name: "rerum",
-            Offset: 4281730421960989148,
-            Query: "eaque",
-            Sort: "nisi",
-            Sw: "ut",
+            DateRange: "culpa",
+            Elevation: 3890080421283342007,
+            Facets: 227706880003303016,
+            Filter: "ab",
+            Latitude: "incidunt",
+            Limit: 3184538614141096155,
+            Longitude: "esse",
+            Name: "incidunt",
+            Offset: 263238491685024644,
+            Query: "nesciunt",
+            Sort: "sit",
+            Sw: "sequi",
         },
     }
     
-    res, err := s.Sdk.GetQueryJSON(ctx, req)
+    res, err := s.Events.GetQueryJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -64,7 +63,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Events
 
 * `GetQueryJSON` - Geographic API
 

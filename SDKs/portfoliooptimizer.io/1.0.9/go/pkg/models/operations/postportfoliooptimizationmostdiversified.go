@@ -26,6 +26,6 @@ type PostPortfolioOptimizationMostDiversifiedRequest struct {
 
 type PostPortfolioOptimizationMostDiversifiedResponse struct {
 	ContentType                                                      string
-	PostPortfolioOptimizationMostDiversified200ApplicationJSONObject *PostPortfolioOptimizationMostDiversified200ApplicationJSON
 	StatusCode                                                       int64
+	PostPortfolioOptimizationMostDiversified200ApplicationJSONObject *PostPortfolioOptimizationMostDiversified200ApplicationJSON
 }

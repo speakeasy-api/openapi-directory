@@ -3,13 +3,13 @@ package operations
 type PostDeleteRuleActionEnum string
 
 const (
-	PostDeleteRuleActionEnumDeleteRule PostDeleteRuleActionEnum = "DeleteRule"
+	POSTDeleteRuleActionEnumDeleteRule PostDeleteRuleActionEnum = "DeleteRule"
 )
 
 type PostDeleteRuleVersionEnum string
 
 const (
-	PostDeleteRuleVersionEnumTwoThousandAndFifteen1201 PostDeleteRuleVersionEnum = "2015-12-01"
+	POSTDeleteRuleVersionEnumTwoThousandAndFifteen1201 PostDeleteRuleVersionEnum = "2015-12-01"
 )
 
 type PostDeleteRuleQueryParams struct {

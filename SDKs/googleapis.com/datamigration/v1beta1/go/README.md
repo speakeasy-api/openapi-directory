@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,110 +26,113 @@ func main() {
         Security: operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "expedita",
+            Parent: "cupiditate",
         },
         QueryParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "eaque",
-            Alt: "json",
-            Callback: "consequatur",
-            ConnectionProfileID: "laudantium",
-            Fields: "fugit",
-            Key: "a",
-            OauthToken: "ducimus",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            RequestID: "amet",
-            UploadType: "exercitationem",
-            UploadProtocol: "et",
+            AccessToken: "quo",
+            Alt: "proto",
+            Callback: "doloremque",
+            ConnectionProfileID: "magnam",
+            Fields: "suscipit",
+            Key: "earum",
+            OauthToken: "ut",
+            PrettyPrint: false,
+            QuotaUser: "occaecati",
+            RequestID: "consequatur",
+            UploadType: "fugit",
+            UploadProtocol: "qui",
         },
         Request: &shared.ConnectionProfileInput{
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
-                    AutoStorageIncrease: false,
-                    DataDiskSizeGb: "consequuntur",
-                    DataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
+                    ActivationPolicy: "NEVER",
+                    AutoStorageIncrease: true,
+                    DataDiskSizeGb: "reprehenderit",
+                    DataDiskType: "PD_HDD",
                     DatabaseFlags: map[string]string{
-                        "iusto": "est",
-                        "eveniet": "quia",
-                        "accusantium": "quibusdam",
+                        "quod": "perspiciatis",
+                        "accusantium": "impedit",
                     },
-                    DatabaseVersion: "MYSQL_5_6",
+                    DatabaseVersion: "MYSQL_5_7",
                     IPConfig: &shared.SQLIPConfig{
                         AuthorizedNetworks: []shared.SQLACLEntry{
                             shared.SQLACLEntry{
-                                ExpireTime: "voluptatibus",
-                                Label: "consequatur",
-                                TTL: "tenetur",
-                                Value: "consequatur",
+                                ExpireTime: "voluptatum",
+                                Label: "sapiente",
+                                TTL: "autem",
+                                Value: "omnis",
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "sit",
-                                Label: "amet",
-                                TTL: "quia",
-                                Value: "sed",
+                                ExpireTime: "placeat",
+                                Label: "expedita",
+                                TTL: "quis",
+                                Value: "fugit",
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "ut",
-                                Label: "dolorem",
-                                TTL: "repudiandae",
-                                Value: "tempore",
+                                ExpireTime: "rem",
+                                Label: "enim",
+                                TTL: "tempora",
+                                Value: "praesentium",
                             },
                         },
-                        EnableIpv4: true,
-                        PrivateNetwork: "aut",
-                        RequireSsl: true,
+                        EnableIpv4: false,
+                        PrivateNetwork: "alias",
+                        RequireSsl: false,
                     },
-                    RootPassword: "voluptas",
-                    SourceID: "sint",
-                    StorageAutoResizeLimit: "animi",
-                    Tier: "repudiandae",
+                    RootPassword: "voluptatum",
+                    SourceID: "mollitia",
+                    StorageAutoResizeLimit: "fugit",
+                    Tier: "aspernatur",
                     UserLabels: map[string]string{
-                        "eligendi": "iure",
-                        "est": "ut",
+                        "nostrum": "perferendis",
+                        "animi": "unde",
+                        "expedita": "recusandae",
                     },
-                    Zone: "distinctio",
+                    Zone: "consectetur",
                 },
             },
-            DisplayName: "et",
+            DisplayName: "possimus",
             Error: &shared.Status{
-                Code: 3622039482314880459,
+                Code: 108300845224474151,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "ipsa": "vel",
-                        "qui": "voluptatum",
-                        "inventore": "quis",
+                        "magnam": "ea",
+                        "nostrum": "incidunt",
+                        "quo": "unde",
+                    },
+                    map[string]interface{}{
+                        "qui": "dolorem",
+                        "similique": "est",
+                        "impedit": "harum",
                     },
                 },
-                Message: "quis",
+                Message: "distinctio",
             },
             Labels: map[string]string{
-                "quasi": "architecto",
-                "suscipit": "voluptates",
-                "ad": "laborum",
+                "ad": "qui",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "id",
-                Host: "odio",
-                Password: "saepe",
-                Port: 5731875210557201765,
+                CloudSQLID: "dolor",
+                Host: "consequatur",
+                Password: "earum",
+                Port: 5276743471450151556,
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "hic",
-                    ClientCertificate: "voluptate",
-                    ClientKey: "reprehenderit",
+                    CaCertificate: "et",
+                    ClientCertificate: "et",
+                    ClientKey: "molestiae",
                 },
-                Username: "voluptas",
+                Username: "id",
             },
-            Name: "porro",
-            Provider: "RDS",
-            State: "DELETED",
+            Name: "perferendis",
+            Provider: "CLOUDSQL",
+            State: "UPDATING",
         },
     }
     

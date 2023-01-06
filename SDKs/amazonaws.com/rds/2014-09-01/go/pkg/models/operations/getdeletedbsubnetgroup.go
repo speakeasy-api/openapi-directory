@@ -3,18 +3,18 @@ package operations
 type GetDeleteDbSubnetGroupActionEnum string
 
 const (
-	GetDeleteDbSubnetGroupActionEnumDeleteDbSubnetGroup GetDeleteDbSubnetGroupActionEnum = "DeleteDBSubnetGroup"
+	GETDeleteDBSubnetGroupActionEnumDeleteDbSubnetGroup GetDeleteDbSubnetGroupActionEnum = "DeleteDBSubnetGroup"
 )
 
 type GetDeleteDbSubnetGroupVersionEnum string
 
 const (
-	GetDeleteDbSubnetGroupVersionEnumTwoThousandAndFourteen0901 GetDeleteDbSubnetGroupVersionEnum = "2014-09-01"
+	GETDeleteDBSubnetGroupVersionEnumTwoThousandAndFourteen0901 GetDeleteDbSubnetGroupVersionEnum = "2014-09-01"
 )
 
 type GetDeleteDbSubnetGroupQueryParams struct {
 	Action            GetDeleteDbSubnetGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbSubnetGroupName string                            `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
+	DBSubnetGroupName string                            `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
 	Version           GetDeleteDbSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

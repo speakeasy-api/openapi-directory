@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetaddressmatchRequest{
         QueryParams: operations.GetaddressmatchQueryParams{
-            Address: "omnis",
-            License: "dicta",
+            Address: "sit",
+            License: "totam",
         },
     }
     
-    res, err := s.Sdk.Getaddressmatch(ctx, req)
+    res, err := s.StreetAddressSimilarityKey.Getaddressmatch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Street Address Similarity Key
 
 * `Getaddressmatch` - Gets a similarity key for matching purposes for address data
 

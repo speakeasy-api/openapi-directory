@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVpcEndpointServicePermissionsResult struct {
-	AllowedPrincipals []AllowedPrincipal
-	NextToken         *string
+	AllowedPrincipals map[string]interface{}
+	NextToken         map[string]interface{}
 }

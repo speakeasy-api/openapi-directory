@@ -3,13 +3,13 @@ package operations
 type PostAuthorizeDbSecurityGroupIngressActionEnum string
 
 const (
-	PostAuthorizeDbSecurityGroupIngressActionEnumAuthorizeDbSecurityGroupIngress PostAuthorizeDbSecurityGroupIngressActionEnum = "AuthorizeDBSecurityGroupIngress"
+	POSTAuthorizeDBSecurityGroupIngressActionEnumAuthorizeDbSecurityGroupIngress PostAuthorizeDbSecurityGroupIngressActionEnum = "AuthorizeDBSecurityGroupIngress"
 )
 
 type PostAuthorizeDbSecurityGroupIngressVersionEnum string
 
 const (
-	PostAuthorizeDbSecurityGroupIngressVersionEnumTwoThousandAndFourteen1031 PostAuthorizeDbSecurityGroupIngressVersionEnum = "2014-10-31"
+	POSTAuthorizeDBSecurityGroupIngressVersionEnumTwoThousandAndFourteen1031 PostAuthorizeDbSecurityGroupIngressVersionEnum = "2014-10-31"
 )
 
 type PostAuthorizeDbSecurityGroupIngressQueryParams struct {

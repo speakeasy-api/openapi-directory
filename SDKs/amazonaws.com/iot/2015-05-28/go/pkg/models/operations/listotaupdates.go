@@ -7,10 +7,10 @@ import (
 type ListOtaUpdatesOtaUpdateStatusEnum string
 
 const (
-	ListOtaUpdatesOtaUpdateStatusEnumCreatePending    ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_PENDING"
-	ListOtaUpdatesOtaUpdateStatusEnumCreateInProgress ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_IN_PROGRESS"
-	ListOtaUpdatesOtaUpdateStatusEnumCreateComplete   ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_COMPLETE"
-	ListOtaUpdatesOtaUpdateStatusEnumCreateFailed     ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_FAILED"
+	ListOTAUpdatesOTAUpdateStatusEnumCreatePending    ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_PENDING"
+	ListOTAUpdatesOTAUpdateStatusEnumCreateInProgress ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_IN_PROGRESS"
+	ListOTAUpdatesOTAUpdateStatusEnumCreateComplete   ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_COMPLETE"
+	ListOTAUpdatesOTAUpdateStatusEnumCreateFailed     ListOtaUpdatesOtaUpdateStatusEnum = "CREATE_FAILED"
 )
 
 type ListOtaUpdatesQueryParams struct {
@@ -38,7 +38,7 @@ type ListOtaUpdatesResponse struct {
 	ContentType                 string
 	InternalFailureException    *interface{}
 	InvalidRequestException     *interface{}
-	ListOtaUpdatesResponse      *shared.ListOtaUpdatesResponse
+	ListOTAUpdatesResponse      *shared.ListOtaUpdatesResponse
 	ServiceUnavailableException *interface{}
 	StatusCode                  int64
 	ThrottlingException         *interface{}

@@ -3,18 +3,18 @@ package operations
 type GetDeleteDbSnapshotActionEnum string
 
 const (
-	GetDeleteDbSnapshotActionEnumDeleteDbSnapshot GetDeleteDbSnapshotActionEnum = "DeleteDBSnapshot"
+	GETDeleteDBSnapshotActionEnumDeleteDbSnapshot GetDeleteDbSnapshotActionEnum = "DeleteDBSnapshot"
 )
 
 type GetDeleteDbSnapshotVersionEnum string
 
 const (
-	GetDeleteDbSnapshotVersionEnumTwoThousandAndFourteen1031 GetDeleteDbSnapshotVersionEnum = "2014-10-31"
+	GETDeleteDBSnapshotVersionEnumTwoThousandAndFourteen1031 GetDeleteDbSnapshotVersionEnum = "2014-10-31"
 )
 
 type GetDeleteDbSnapshotQueryParams struct {
 	Action               GetDeleteDbSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbSnapshotIdentifier string                         `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
+	DBSnapshotIdentifier string                         `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Version              GetDeleteDbSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

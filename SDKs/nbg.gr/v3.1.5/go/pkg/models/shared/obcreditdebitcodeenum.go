@@ -3,6 +3,6 @@ package shared
 type ObCreditDebitCodeEnum string
 
 const (
-	ObCreditDebitCodeEnumCredit ObCreditDebitCodeEnum = "Credit"
-	ObCreditDebitCodeEnumDebit  ObCreditDebitCodeEnum = "Debit"
+	OBCreditDebitCodeEnumCredit ObCreditDebitCodeEnum = "Credit"
+	OBCreditDebitCodeEnumDebit  ObCreditDebitCodeEnum = "Debit"
 )

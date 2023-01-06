@@ -3,13 +3,13 @@ package operations
 type PostCreateEventSubscriptionActionEnum string
 
 const (
-	PostCreateEventSubscriptionActionEnumCreateEventSubscription PostCreateEventSubscriptionActionEnum = "CreateEventSubscription"
+	POSTCreateEventSubscriptionActionEnumCreateEventSubscription PostCreateEventSubscriptionActionEnum = "CreateEventSubscription"
 )
 
 type PostCreateEventSubscriptionVersionEnum string
 
 const (
-	PostCreateEventSubscriptionVersionEnumTwoThousandAndFourteen0901 PostCreateEventSubscriptionVersionEnum = "2014-09-01"
+	POSTCreateEventSubscriptionVersionEnumTwoThousandAndFourteen0901 PostCreateEventSubscriptionVersionEnum = "2014-09-01"
 )
 
 type PostCreateEventSubscriptionQueryParams struct {

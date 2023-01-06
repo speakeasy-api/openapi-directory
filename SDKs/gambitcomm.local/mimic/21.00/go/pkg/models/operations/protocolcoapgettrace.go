@@ -13,7 +13,7 @@ type ProtocolCoapGetTraceRequest struct {
 }
 
 type ProtocolCoapGetTraceResponse struct {
-	ConfigCoap  *shared.ConfigCoap
+	ConfigCOAP  *shared.ConfigCoap
 	ContentType string
 	StatusCode  int64
 }

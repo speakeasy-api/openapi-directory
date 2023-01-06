@@ -4,14 +4,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchDefaultProjectRequest struct {
-	Request shared.Onev21projectsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesProjectsItems `request:"mediaType=application/json"`
-}
-
 type PatchDefaultProject401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type PatchDefaultProjectRequest struct {
+	Request shared.Onev21projectsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesProjectsItems `request:"mediaType=application/json"`
 }
 
 type PatchDefaultProjectResponse struct {

@@ -26,6 +26,6 @@ type OndStatusRequest struct {
 
 type OndStatusResponse struct {
 	ContentType                       string
-	OndStatus200ApplicationJSONString *string
+	ONDStatus200ApplicationJSONString *string
 	StatusCode                        int64
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,31 @@ func main() {
     
     req := operations.AddTagsToResourceRequest{
         Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "modi",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "omnis",
-            XAmzDate: "explicabo",
-            XAmzSecurityToken: "voluptatum",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "perferendis",
+            XAmzAlgorithm: "hic",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "et",
+            XAmzDate: "odio",
+            XAmzSecurityToken: "voluptate",
+            XAmzSignature: "velit",
+            XAmzSignedHeaders: "commodi",
             XAmzTarget: "CloudHsmFrontendService.AddTagsToResource",
         },
         Request: shared.AddTagsToResourceRequest{
-            ResourceArn: "incidunt",
+            ResourceArn: "vero",
             TagList: []shared.Tag{
                 shared.Tag{
-                    Key: "velit",
-                    Value: "voluptatem",
+                    Key: "placeat",
+                    Value: "odio",
+                },
+                shared.Tag{
+                    Key: "autem",
+                    Value: "eligendi",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddTagsToResource(ctx, req)
+    res, err := s.AddTagsToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

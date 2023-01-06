@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,100 +27,101 @@ func main() {
             Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "sit",
+            Parent: "cumque",
         },
         QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "in",
-            Fields: "qui",
-            Key: "expedita",
-            OauthToken: "dicta",
-            PrettyPrint: false,
-            QuotaUser: "voluptatem",
-            UploadType: "et",
-            UploadProtocol: "quibusdam",
+            AccessToken: "eius",
+            Alt: "proto",
+            Callback: "officia",
+            Fields: "repellat",
+            Key: "esse",
+            OauthToken: "dolore",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            UploadType: "ab",
+            UploadProtocol: "maiores",
         },
         Request: &shared.GoogleCloudBillingBudgetsV1BudgetInput{
             Amount: &shared.GoogleCloudBillingBudgetsV1BudgetAmount{
                 LastPeriodAmount: map[string]interface{}{
-                    "neque": "soluta",
-                    "voluptate": "minima",
+                    "explicabo": "rerum",
                 },
                 SpecifiedAmount: &shared.GoogleTypeMoney{
-                    CurrencyCode: "libero",
-                    Nanos: 6204113631619794035,
-                    Units: "ratione",
+                    CurrencyCode: "qui",
+                    Nanos: 8985795213304127196,
+                    Units: "rem",
                 },
             },
             BudgetFilter: &shared.GoogleCloudBillingBudgetsV1Filter{
-                CalendarPeriod: "MONTH",
+                CalendarPeriod: "CALENDAR_PERIOD_UNSPECIFIED",
                 CreditTypes: []string{
-                    "minima",
-                    "velit",
+                    "sunt",
+                    "nam",
+                    "omnis",
                 },
                 CreditTypesTreatment: "EXCLUDE_ALL_CREDITS",
                 CustomPeriod: &shared.GoogleCloudBillingBudgetsV1CustomPeriod{
                     EndDate: &shared.GoogleTypeDate{
-                        Day: 1521486426180571951,
-                        Month: 9000291902311776059,
-                        Year: 4786425625306782624,
+                        Day: 8333690218060858671,
+                        Month: 2533105141029214426,
+                        Year: 1410349808972765185,
                     },
                     StartDate: &shared.GoogleTypeDate{
-                        Day: 3524430840374632814,
-                        Month: 121253028379321650,
-                        Year: 4275829936943250503,
+                        Day: 1275637256825083909,
+                        Month: 468591680390426196,
+                        Year: 6684335792117637658,
                     },
                 },
                 Labels: map[string][]interface{}{
-                    "ex": []interface{}{
-                        "perferendis",
-                        "dolores",
-                        "molestiae",
+                    "a": []interface{}{
+                        "et",
+                        "ipsum",
+                        "vel",
+                    },
+                    "repellendus": []interface{}{
+                        "vel",
+                    },
+                    "est": []interface{}{
+                        "voluptas",
+                        "omnis",
                     },
                 },
                 Projects: []string{
-                    "maxime",
-                    "amet",
+                    "repellat",
+                    "veritatis",
+                    "neque",
                 },
                 Services: []string{
-                    "quia",
+                    "enim",
                 },
                 Subaccounts: []string{
-                    "cupiditate",
+                    "porro",
                 },
             },
-            DisplayName: "excepturi",
-            Etag: "itaque",
+            DisplayName: "dicta",
+            Etag: "cupiditate",
             NotificationsRule: &shared.GoogleCloudBillingBudgetsV1NotificationsRule{
-                DisableDefaultIamRecipients: false,
+                DisableDefaultIamRecipients: true,
                 MonitoringNotificationChannels: []string{
-                    "ut",
-                    "excepturi",
+                    "nemo",
+                    "eos",
+                    "atque",
                 },
-                PubsubTopic: "autem",
-                SchemaVersion: "neque",
+                PubsubTopic: "qui",
+                SchemaVersion: "cumque",
             },
             ThresholdRules: []shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "FORECASTED_SPEND",
-                    ThresholdPercent: 98.199997,
-                },
-                shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "BASIS_UNSPECIFIED",
-                    ThresholdPercent: 53.099998,
-                },
-                shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "BASIS_UNSPECIFIED",
-                    ThresholdPercent: 69.099998,
+                    SpendBasis: "CURRENT_SPEND",
+                    ThresholdPercent: 0.100000,
                 },
             },
         },

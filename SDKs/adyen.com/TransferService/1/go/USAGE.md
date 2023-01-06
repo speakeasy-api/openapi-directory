@@ -1,0 +1,32 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.PostTransfersRequest{
+        Security: operations.PostTransfersSecurity{
+            APIKeyAuth: shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        },
+        Request: "aut",
+    }
+    
+    res, err := s.General.PostTransfers(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.TransferOld != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

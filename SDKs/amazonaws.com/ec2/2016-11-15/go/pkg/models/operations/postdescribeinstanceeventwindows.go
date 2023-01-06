@@ -3,13 +3,13 @@ package operations
 type PostDescribeInstanceEventWindowsActionEnum string
 
 const (
-	PostDescribeInstanceEventWindowsActionEnumDescribeInstanceEventWindows PostDescribeInstanceEventWindowsActionEnum = "DescribeInstanceEventWindows"
+	POSTDescribeInstanceEventWindowsActionEnumDescribeInstanceEventWindows PostDescribeInstanceEventWindowsActionEnum = "DescribeInstanceEventWindows"
 )
 
 type PostDescribeInstanceEventWindowsVersionEnum string
 
 const (
-	PostDescribeInstanceEventWindowsVersionEnumTwoThousandAndSixteen1115 PostDescribeInstanceEventWindowsVersionEnum = "2016-11-15"
+	POSTDescribeInstanceEventWindowsVersionEnumTwoThousandAndSixteen1115 PostDescribeInstanceEventWindowsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeInstanceEventWindowsQueryParams struct {

@@ -3,20 +3,20 @@ package operations
 type GetRequestEnvironmentInfoActionEnum string
 
 const (
-	GetRequestEnvironmentInfoActionEnumRequestEnvironmentInfo GetRequestEnvironmentInfoActionEnum = "RequestEnvironmentInfo"
+	GETRequestEnvironmentInfoActionEnumRequestEnvironmentInfo GetRequestEnvironmentInfoActionEnum = "RequestEnvironmentInfo"
 )
 
 type GetRequestEnvironmentInfoInfoTypeEnum string
 
 const (
-	GetRequestEnvironmentInfoInfoTypeEnumTail   GetRequestEnvironmentInfoInfoTypeEnum = "tail"
-	GetRequestEnvironmentInfoInfoTypeEnumBundle GetRequestEnvironmentInfoInfoTypeEnum = "bundle"
+	GETRequestEnvironmentInfoInfoTypeEnumTail   GetRequestEnvironmentInfoInfoTypeEnum = "tail"
+	GETRequestEnvironmentInfoInfoTypeEnumBundle GetRequestEnvironmentInfoInfoTypeEnum = "bundle"
 )
 
 type GetRequestEnvironmentInfoVersionEnum string
 
 const (
-	GetRequestEnvironmentInfoVersionEnumTwoThousandAndTen1201 GetRequestEnvironmentInfoVersionEnum = "2010-12-01"
+	GETRequestEnvironmentInfoVersionEnumTwoThousandAndTen1201 GetRequestEnvironmentInfoVersionEnum = "2010-12-01"
 )
 
 type GetRequestEnvironmentInfoQueryParams struct {

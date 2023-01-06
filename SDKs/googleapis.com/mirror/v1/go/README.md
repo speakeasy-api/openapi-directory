@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,44 +24,43 @@ func main() {
     
     req := operations.MirrorAccountsInsertRequest{
         PathParams: operations.MirrorAccountsInsertPathParams{
-            AccountName: "asperiores",
-            AccountType: "totam",
-            UserToken: "est",
+            AccountName: "odio",
+            AccountType: "et",
+            UserToken: "voluptas",
         },
         QueryParams: operations.MirrorAccountsInsertQueryParams{
             Alt: "json",
-            Fields: "atque",
-            Key: "corporis",
-            OauthToken: "quaerat",
+            Fields: "aut",
+            Key: "nostrum",
+            OauthToken: "vero",
             PrettyPrint: true,
             QuotaUser: "dolor",
-            UserIP: "illum",
+            UserIP: "eveniet",
         },
         Request: &shared.Account{
             AuthTokens: []shared.AuthToken{
                 shared.AuthToken{
-                    AuthToken: "quasi",
-                    Type: "rerum",
+                    AuthToken: "id",
+                    Type: "architecto",
                 },
                 shared.AuthToken{
-                    AuthToken: "sunt",
-                    Type: "omnis",
-                },
-                shared.AuthToken{
-                    AuthToken: "nam",
-                    Type: "non",
+                    AuthToken: "aperiam",
+                    Type: "tempora",
                 },
             },
             Features: []string{
-                "vero",
-                "quas",
-                "iste",
+                "et",
+                "aliquam",
             },
-            Password: "distinctio",
+            Password: "laudantium",
             UserData: []shared.UserData{
                 shared.UserData{
-                    Key: "autem",
-                    Value: "saepe",
+                    Key: "error",
+                    Value: "magnam",
+                },
+                shared.UserData{
+                    Key: "qui",
+                    Value: "hic",
                 },
             },
         },

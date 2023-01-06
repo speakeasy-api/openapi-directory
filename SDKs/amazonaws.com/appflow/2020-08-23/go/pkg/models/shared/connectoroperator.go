@@ -11,7 +11,7 @@ type ConnectorOperator struct {
 	InforNexus      *InforNexusConnectorOperatorEnum      `json:"InforNexus,omitempty"`
 	Marketo         *MarketoConnectorOperatorEnum         `json:"Marketo,omitempty"`
 	S3              *S3ConnectorOperatorEnum              `json:"S3,omitempty"`
-	SapoData        *SapoDataConnectorOperatorEnum        `json:"SAPOData,omitempty"`
+	SAPOData        *SapoDataConnectorOperatorEnum        `json:"SAPOData,omitempty"`
 	Salesforce      *SalesforceConnectorOperatorEnum      `json:"Salesforce,omitempty"`
 	ServiceNow      *ServiceNowConnectorOperatorEnum      `json:"ServiceNow,omitempty"`
 	Singular        *SingularConnectorOperatorEnum        `json:"Singular,omitempty"`

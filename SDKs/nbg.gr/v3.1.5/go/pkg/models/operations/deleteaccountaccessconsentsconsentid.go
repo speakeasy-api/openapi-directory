@@ -29,7 +29,6 @@ type DeleteAccountAccessConsentsConsentIDRequest struct {
 
 type DeleteAccountAccessConsentsConsentIDResponse struct {
 	ContentType      string
-	Headers          map[string][]string
-	ObErrorResponse1 *shared.ObErrorResponse1
+	OBErrorResponse1 *shared.ObErrorResponse1
 	StatusCode       int64
 }

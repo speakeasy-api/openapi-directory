@@ -3,13 +3,13 @@ package operations
 type PostGetOpenIDConnectProviderActionEnum string
 
 const (
-	PostGetOpenIDConnectProviderActionEnumGetOpenIDConnectProvider PostGetOpenIDConnectProviderActionEnum = "GetOpenIDConnectProvider"
+	POSTGetOpenIDConnectProviderActionEnumGetOpenIDConnectProvider PostGetOpenIDConnectProviderActionEnum = "GetOpenIDConnectProvider"
 )
 
 type PostGetOpenIDConnectProviderVersionEnum string
 
 const (
-	PostGetOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 PostGetOpenIDConnectProviderVersionEnum = "2010-05-08"
+	POSTGetOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 PostGetOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
 type PostGetOpenIDConnectProviderQueryParams struct {

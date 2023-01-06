@@ -1,5 +1,5 @@
 package shared
 
 type ModifyFleetResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

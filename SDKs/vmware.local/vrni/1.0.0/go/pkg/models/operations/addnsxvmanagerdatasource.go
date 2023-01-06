@@ -16,6 +16,6 @@ type AddNsxvManagerDatasourceRequest struct {
 type AddNsxvManagerDatasourceResponse struct {
 	APIError              *shared.APIError
 	ContentType           string
-	NsxvManagerDataSource *shared.NsxvManagerDataSource
+	NSXVManagerDataSource *shared.NsxvManagerDataSource
 	StatusCode            int64
 }

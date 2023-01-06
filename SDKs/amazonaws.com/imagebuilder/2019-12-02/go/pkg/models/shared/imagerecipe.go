@@ -5,7 +5,7 @@ package shared
 type ImageRecipe struct {
 	AdditionalInstanceConfiguration *AdditionalInstanceConfiguration `json:"additionalInstanceConfiguration,omitempty"`
 	Arn                             *string                          `json:"arn,omitempty"`
-	BlockDeviceMappings             []InstanceBlockDeviceMapping     `json:"blockDeviceMappings,omitempty"`
+	BlockDeviceMappings             []InstanceBlockDeviceMapping1    `json:"blockDeviceMappings,omitempty"`
 	Components                      []ComponentConfiguration         `json:"components,omitempty"`
 	DateCreated                     *string                          `json:"dateCreated,omitempty"`
 	Description                     *string                          `json:"description,omitempty"`

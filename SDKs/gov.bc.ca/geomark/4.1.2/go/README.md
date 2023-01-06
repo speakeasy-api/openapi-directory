@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionRequest{
         PathParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionPathParams{
-            FileFormatExtension: "kmz",
-            GeomarkID: "repellat",
+            FileFormatExtension: "shp",
+            GeomarkID: "nihil",
         },
         QueryParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionQueryParams{
-            Srid: 7267726663042679943,
+            Srid: 2293241265575495963,
         },
     }
     

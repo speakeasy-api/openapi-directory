@@ -3,13 +3,13 @@ package operations
 type PostDeleteCustomAvailabilityZoneActionEnum string
 
 const (
-	PostDeleteCustomAvailabilityZoneActionEnumDeleteCustomAvailabilityZone PostDeleteCustomAvailabilityZoneActionEnum = "DeleteCustomAvailabilityZone"
+	POSTDeleteCustomAvailabilityZoneActionEnumDeleteCustomAvailabilityZone PostDeleteCustomAvailabilityZoneActionEnum = "DeleteCustomAvailabilityZone"
 )
 
 type PostDeleteCustomAvailabilityZoneVersionEnum string
 
 const (
-	PostDeleteCustomAvailabilityZoneVersionEnumTwoThousandAndFourteen1031 PostDeleteCustomAvailabilityZoneVersionEnum = "2014-10-31"
+	POSTDeleteCustomAvailabilityZoneVersionEnumTwoThousandAndFourteen1031 PostDeleteCustomAvailabilityZoneVersionEnum = "2014-10-31"
 )
 
 type PostDeleteCustomAvailabilityZoneQueryParams struct {

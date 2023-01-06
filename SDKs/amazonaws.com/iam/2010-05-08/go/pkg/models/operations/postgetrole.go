@@ -3,13 +3,13 @@ package operations
 type PostGetRoleActionEnum string
 
 const (
-	PostGetRoleActionEnumGetRole PostGetRoleActionEnum = "GetRole"
+	POSTGetRoleActionEnumGetRole PostGetRoleActionEnum = "GetRole"
 )
 
 type PostGetRoleVersionEnum string
 
 const (
-	PostGetRoleVersionEnumTwoThousandAndTen0508 PostGetRoleVersionEnum = "2010-05-08"
+	POSTGetRoleVersionEnumTwoThousandAndTen0508 PostGetRoleVersionEnum = "2010-05-08"
 )
 
 type PostGetRoleQueryParams struct {

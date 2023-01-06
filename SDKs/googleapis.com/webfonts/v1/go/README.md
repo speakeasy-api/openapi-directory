@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,17 +25,17 @@ func main() {
     req := operations.WebfontsWebfontsListRequest{
         QueryParams: operations.WebfontsWebfontsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "harum",
-            Alt: "media",
-            Callback: "adipisci",
-            Fields: "non",
-            Key: "voluptatem",
-            OauthToken: "quia",
-            PrettyPrint: true,
-            QuotaUser: "similique",
-            Sort: "ALPHA",
-            UploadType: "id",
-            UploadProtocol: "cupiditate",
+            AccessToken: "soluta",
+            Alt: "proto",
+            Callback: "hic",
+            Fields: "recusandae",
+            Key: "earum",
+            OauthToken: "quidem",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            Sort: "DATE",
+            UploadType: "eveniet",
+            UploadProtocol: "iure",
         },
     }
     

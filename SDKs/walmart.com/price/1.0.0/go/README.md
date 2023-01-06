@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,19 +35,19 @@ func main() {
     
     req := operations.OptCapProgramInPriceRequest{
         Headers: operations.OptCapProgramInPriceHeaders{
-            Authorization: "sunt",
-            WmConsumerChannelType: "vel",
-            WmQosCorrelationID: "molestiae",
-            WmSecAccessToken: "aut",
-            WmSvcName: "nesciunt",
+            Authorization: "perspiciatis",
+            WMCONSUMERCHANNELTYPE: "sequi",
+            WMQOSCORRELATIONID: "ut",
+            WMSECACCESSTOKEN: "id",
+            WMSVCNAME: "voluptas",
         },
         Request: operations.OptCapProgramInPriceRequestBody{
-            SubsidyEnrolled: true,
+            SubsidyEnrolled: false,
             SubsidyPreference: true,
         },
     }
     
-    res, err := s.Sdk.OptCapProgramInPrice(ctx, req)
+    res, err := s.Prices.OptCapProgramInPrice(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -62,7 +61,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Prices
 
 * `OptCapProgramInPrice` - Set up CAP SKU All
 * `PriceBulkUploads` - Update bulk prices (Multiple)

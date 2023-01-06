@@ -21,7 +21,7 @@ type UpdateClusterConfigHeaders struct {
 // UpdateClusterConfigRequestBodyLogging
 // An object representing the logging configuration for resources in your cluster.
 type UpdateClusterConfigRequestBodyLogging struct {
-	ClusterLogging []shared.LogSetup `json:"clusterLogging,omitempty"`
+	ClusterLogging map[string]interface{} `json:"clusterLogging,omitempty"`
 }
 
 // UpdateClusterConfigRequestBodyResourcesVpcConfig

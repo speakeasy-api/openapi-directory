@@ -19,7 +19,6 @@ type GetSearchRequest struct {
 
 type GetSearchResponse struct {
 	ContentType                    string
-	GetSearch200ApplicationJSONAny *interface{}
-	Headers                        map[string][]string
 	StatusCode                     int64
+	GetSearch200ApplicationJSONAny *interface{}
 }

@@ -12,10 +12,6 @@ type CreateFloatingIPRequestBodyReserveToRegion struct {
 	Region string `json:"region"`
 }
 
-type CreateFloatingIPRequest struct {
-	Request interface{} `request:"mediaType=application/json"`
-}
-
 type CreateFloatingIP202ApplicationJSONLinks struct {
 	Actions  []shared.Onev21dropletsPostResponses202ContentApplication1jsonSchemaOneOf0PropertiesLinksPropertiesActionsItems `json:"actions,omitempty"`
 	Droplets []shared.Onev21dropletsPostResponses202ContentApplication1jsonSchemaOneOf0PropertiesLinksPropertiesActionsItems `json:"droplets,omitempty"`
@@ -30,6 +26,10 @@ type CreateFloatingIP401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateFloatingIPRequest struct {
+	Request interface{} `request:"mediaType=application/json"`
 }
 
 type CreateFloatingIPResponse struct {

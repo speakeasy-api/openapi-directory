@@ -46,8 +46,8 @@ type PadUsersUsingGetRequest struct {
 type PadUsersUsingGetResponse struct {
 	ContentType                              string
 	StatusCode                               int64
-	PadUsersUsingGet200ApplicationJSONObject *PadUsersUsingGet200ApplicationJSON
-	PadUsersUsingGet400ApplicationJSONObject *PadUsersUsingGet400ApplicationJSON
-	PadUsersUsingGet401ApplicationJSONObject *PadUsersUsingGet401ApplicationJSON
-	PadUsersUsingGet500ApplicationJSONObject *PadUsersUsingGet500ApplicationJSON
+	PadUsersUsingGET200ApplicationJSONObject *PadUsersUsingGet200ApplicationJSON
+	PadUsersUsingGET400ApplicationJSONObject *PadUsersUsingGet400ApplicationJSON
+	PadUsersUsingGET401ApplicationJSONObject *PadUsersUsingGet401ApplicationJSON
+	PadUsersUsingGET500ApplicationJSONObject *PadUsersUsingGet500ApplicationJSON
 }

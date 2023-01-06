@@ -30,12 +30,12 @@ type CreateRateBasedRuleResponse struct {
 	ContentType                           string
 	CreateRateBasedRuleResponse           *shared.CreateRateBasedRuleResponse
 	StatusCode                            int64
-	WafBadRequestException                *interface{}
-	WafDisallowedNameException            *interface{}
-	WafInternalErrorException             *interface{}
-	WafInvalidParameterException          *interface{}
-	WafLimitsExceededException            *interface{}
-	WafStaleDataException                 *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFBadRequestException                *interface{}
+	WAFDisallowedNameException            *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidParameterException          *interface{}
+	WAFLimitsExceededException            *interface{}
+	WAFStaleDataException                 *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

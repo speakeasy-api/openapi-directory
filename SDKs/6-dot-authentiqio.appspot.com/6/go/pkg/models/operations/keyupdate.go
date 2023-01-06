@@ -1,7 +1,7 @@
 package operations
 
 type KeyUpdatePathParams struct {
-	Pk string `pathParam:"style=simple,explode=false,name=PK"`
+	PK string `pathParam:"style=simple,explode=false,name=PK"`
 }
 
 type KeyUpdate200ApplicationJSON struct {

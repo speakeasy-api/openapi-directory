@@ -29,7 +29,7 @@ type ModifyReplicationTaskRequest struct {
 type ModifyReplicationTaskResponse struct {
 	ContentType                   string
 	InvalidResourceStateFault     *interface{}
-	KmsKeyNotAccessibleFault      *interface{}
+	KMSKeyNotAccessibleFault      *interface{}
 	ModifyReplicationTaskResponse *shared.ModifyReplicationTaskResponse
 	ResourceAlreadyExistsFault    *interface{}
 	ResourceNotFoundFault         *interface{}

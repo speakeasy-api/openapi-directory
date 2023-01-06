@@ -1,5 +1,5 @@
 package shared
 
 type ImportClientVpnClientCertificateRevocationListResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

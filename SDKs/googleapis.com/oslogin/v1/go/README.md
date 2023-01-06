@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,29 +27,29 @@ func main() {
             Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.OsloginUsersGetLoginProfilePathParams{
-            Name: "eius",
+            Name: "quo",
         },
         QueryParams: operations.OsloginUsersGetLoginProfileQueryParams{
             DollarXgafv: "2",
-            AccessToken: "quisquam",
-            Alt: "proto",
-            Callback: "vel",
-            Fields: "ipsam",
-            Key: "nobis",
-            OauthToken: "cupiditate",
-            PrettyPrint: true,
-            ProjectID: "dolorem",
-            QuotaUser: "inventore",
-            SystemID: "sunt",
-            UploadType: "enim",
-            UploadProtocol: "distinctio",
+            AccessToken: "aut",
+            Alt: "json",
+            Callback: "qui",
+            Fields: "dolor",
+            Key: "ullam",
+            OauthToken: "quod",
+            PrettyPrint: false,
+            ProjectID: "velit",
+            QuotaUser: "aliquam",
+            SystemID: "cum",
+            UploadType: "quasi",
+            UploadProtocol: "et",
         },
     }
     

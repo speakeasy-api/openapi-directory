@@ -20,7 +20,7 @@ type GetGeocodeRequest struct {
 
 type GetGeocodeResponse struct {
 	ContentType       string
-	GhError           *shared.GhError
+	GHError           *shared.GhError
 	GeocodingResponse *interface{}
 	Headers           map[string][]string
 	StatusCode        int64

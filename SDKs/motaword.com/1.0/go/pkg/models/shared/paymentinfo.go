@@ -1,0 +1,18 @@
+package shared
+
+type PaymentInfoCorporate struct {
+	AllowAPIInvoicing   *bool           `json:"allow_api_invoicing,omitempty"`
+	AllowPaymentCode    *bool           `json:"allow_payment_code,omitempty"`
+	AutoCharge          *bool           `json:"auto_charge,omitempty"`
+	Billing             *BillingAddress `json:"billing,omitempty"`
+	Card                *CreditCard     `json:"card,omitempty"`
+	ContactEmailAddress *string         `json:"contact_email_address,omitempty"`
+	PaymentCode         *string         `json:"payment_code,omitempty"`
+}
+
+type PaymentInfo struct {
+	Billing    *BillingAddress       `json:"billing,omitempty"`
+	Card       *CreditCard           `json:"card,omitempty"`
+	Corporate  *PaymentInfoCorporate `json:"corporate,omitempty"`
+	SharedCard *CreditCard           `json:"shared_card,omitempty"`
+}

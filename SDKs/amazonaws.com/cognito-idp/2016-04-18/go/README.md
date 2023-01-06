@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,68 +34,38 @@ func main() {
     
     req := operations.AddCustomAttributesRequest{
         Headers: operations.AddCustomAttributesHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "sed",
-            XAmzCredential: "sint",
-            XAmzDate: "est",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "omnis",
-            XAmzSignedHeaders: "reiciendis",
+            XAmzAlgorithm: "voluptatem",
+            XAmzContentSha256: "optio",
+            XAmzCredential: "et",
+            XAmzDate: "consequatur",
+            XAmzSecurityToken: "saepe",
+            XAmzSignature: "consequatur",
+            XAmzSignedHeaders: "non",
             XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
         },
         Request: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Boolean",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: true,
-                    Name: "pariatur",
-                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "voluptatum",
-                        MinValue: "tenetur",
-                    },
-                    Required: true,
-                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "autem",
-                        MinLength: "enim",
-                    },
-                },
-                shared.SchemaAttributeType{
-                    AttributeDataType: "DateTime",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: true,
-                    Name: "numquam",
-                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "et",
-                        MinValue: "officiis",
-                    },
-                    Required: false,
-                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "vel",
-                        MinLength: "et",
-                    },
-                },
-                shared.SchemaAttributeType{
                     AttributeDataType: "DateTime",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "asperiores",
+                    Name: "sit",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "tempora",
-                        MinValue: "voluptate",
+                        MaxValue: "est",
+                        MinValue: "rerum",
                     },
-                    Required: true,
+                    Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "nostrum",
-                        MinLength: "mollitia",
+                        MaxLength: "dolor",
+                        MinLength: "itaque",
                     },
                 },
             },
-            UserPoolID: "aut",
+            UserPoolID: "reiciendis",
         },
     }
     
-    res, err := s.Sdk.AddCustomAttributes(ctx, req)
+    res, err := s.AddCustomAttributes(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

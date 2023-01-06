@@ -36,8 +36,8 @@ type SaveRevisionUsingGetRequest struct {
 type SaveRevisionUsingGetResponse struct {
 	ContentType                                  string
 	StatusCode                                   int64
-	SaveRevisionUsingGet200ApplicationJSONObject *SaveRevisionUsingGet200ApplicationJSON
-	SaveRevisionUsingGet400ApplicationJSONObject *SaveRevisionUsingGet400ApplicationJSON
-	SaveRevisionUsingGet401ApplicationJSONObject *SaveRevisionUsingGet401ApplicationJSON
-	SaveRevisionUsingGet500ApplicationJSONObject *SaveRevisionUsingGet500ApplicationJSON
+	SaveRevisionUsingGET200ApplicationJSONObject *SaveRevisionUsingGet200ApplicationJSON
+	SaveRevisionUsingGET400ApplicationJSONObject *SaveRevisionUsingGet400ApplicationJSON
+	SaveRevisionUsingGET401ApplicationJSONObject *SaveRevisionUsingGet401ApplicationJSON
+	SaveRevisionUsingGET500ApplicationJSONObject *SaveRevisionUsingGet500ApplicationJSON
 }

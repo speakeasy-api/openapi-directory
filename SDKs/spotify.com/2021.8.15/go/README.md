@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,13 +29,13 @@ func main() {
             },
         },
         PathParams: operations.EndpointGetAnAlbumPathParams{
-            ID: "atque",
+            ID: "molestiae",
         },
         QueryParams: operations.EndpointGetAnAlbumQueryParams{
-            Market: "aliquid",
+            Market: "est",
         },
         Headers: operations.EndpointGetAnAlbumHeaders{
-            Authorization: "itaque",
+            Authorization: "autem",
         },
     }
     

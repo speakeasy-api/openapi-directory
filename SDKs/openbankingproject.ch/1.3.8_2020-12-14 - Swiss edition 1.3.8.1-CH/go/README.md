@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -40,133 +39,115 @@ func main() {
             },
         },
         Headers: operations.CreateConsentHeaders{
-            Digest: "eos",
-            PsuAccept: "quia",
-            PsuAcceptCharset: "molestias",
-            PsuAcceptEncoding: "qui",
-            PsuAcceptLanguage: "dolore",
-            PsuCorporateID: "explicabo",
-            PsuCorporateIDType: "ut",
-            PsuDeviceID: "dignissimos",
-            PsuGeoLocation: "aut",
-            PsuHTTPMethod: "GET",
-            PsuID: "doloremque",
-            PsuIDType: "numquam",
-            PsuIPAddress: "suscipit",
-            PsuIPPort: "qui",
-            PsuUserAgent: "iure",
-            Signature: "quae",
-            TppBrandLoggingInformation: "dolore",
-            TppExplicitAuthorisationPreferred: false,
-            TppNokRedirectURI: "consequatur",
-            TppNotificationContentPreferred: "quis",
-            TppNotificationURI: "voluptatum",
-            TppRedirectPreferred: true,
-            TppRedirectURI: "sint",
-            TppSignatureCertificate: "alias",
-            XRequestID: "porro",
+            Digest: "amet",
+            PSUAccept: "deserunt",
+            PSUAcceptCharset: "placeat",
+            PSUAcceptEncoding: "voluptatum",
+            PSUAcceptLanguage: "tempore",
+            PSUCorporateID: "iusto",
+            PSUCorporateIDType: "et",
+            PSUDeviceID: "ad",
+            PSUGeoLocation: "nihil",
+            PSUHTTPMethod: "PUT",
+            PSUID: "ducimus",
+            PSUIDType: "velit",
+            PSUIPAddress: "nisi",
+            PSUIPPort: "odit",
+            PSUUserAgent: "fugiat",
+            Signature: "rerum",
+            TPPBrandLoggingInformation: "sunt",
+            TPPExplicitAuthorisationPreferred: false,
+            TPPNokRedirectURI: "possimus",
+            TPPNotificationContentPreferred: "dolor",
+            TPPNotificationURI: "eaque",
+            TPPRedirectPreferred: false,
+            TPPRedirectURI: "totam",
+            TPPSignatureCertificate: "libero",
+            XRequestID: "maxime",
         },
         Request: &shared.Consents{
             Access: shared.AccountAccess{
                 Accounts: []shared.AccountReference16Ch{
                     shared.AccountReference16Ch{
-                        CashAccountType: "nobis",
-                        Currency: "sunt",
-                        Iban: "quisquam",
-                        OtherAccountIdentification: "blanditiis",
+                        CashAccountType: "dolorem",
+                        Currency: "maxime",
+                        Iban: "nihil",
+                        OtherAccountIdentification: "at",
                     },
                     shared.AccountReference16Ch{
-                        CashAccountType: "voluptas",
-                        Currency: "modi",
-                        Iban: "aut",
-                        OtherAccountIdentification: "dolor",
+                        CashAccountType: "a",
+                        Currency: "reiciendis",
+                        Iban: "officia",
+                        OtherAccountIdentification: "expedita",
                     },
                 },
                 AdditionalInformation: &shared.AdditionalInformationAccess{
                     OwnerName: []shared.AccountReference16Ch{
                         shared.AccountReference16Ch{
-                            CashAccountType: "molestias",
-                            Currency: "debitis",
-                            Iban: "ad",
-                            OtherAccountIdentification: "consequatur",
-                        },
-                        shared.AccountReference16Ch{
-                            CashAccountType: "in",
-                            Currency: "tenetur",
-                            Iban: "et",
-                            OtherAccountIdentification: "sed",
-                        },
-                        shared.AccountReference16Ch{
-                            CashAccountType: "eius",
-                            Currency: "et",
-                            Iban: "mollitia",
-                            OtherAccountIdentification: "ea",
+                            CashAccountType: "ut",
+                            Currency: "molestiae",
+                            Iban: "ab",
+                            OtherAccountIdentification: "voluptatum",
                         },
                     },
                     TrustedBeneficiaries: []shared.AccountReference16Ch{
                         shared.AccountReference16Ch{
-                            CashAccountType: "reiciendis",
-                            Currency: "eos",
-                            Iban: "assumenda",
-                            OtherAccountIdentification: "vel",
-                        },
-                        shared.AccountReference16Ch{
-                            CashAccountType: "at",
-                            Currency: "ea",
-                            Iban: "inventore",
-                            OtherAccountIdentification: "veritatis",
-                        },
-                        shared.AccountReference16Ch{
-                            CashAccountType: "inventore",
-                            Currency: "in",
-                            Iban: "earum",
-                            OtherAccountIdentification: "voluptatum",
+                            CashAccountType: "consequatur",
+                            Currency: "iure",
+                            Iban: "quaerat",
+                            OtherAccountIdentification: "nesciunt",
                         },
                     },
                 },
-                AllPsd2: "allAccounts",
-                AvailableAccounts: "allAccounts",
-                AvailableAccountsWithBalance: "allAccountsWithOwnerName",
+                AllPsd2: "allAccountsWithOwnerName",
+                AvailableAccounts: "allAccountsWithOwnerName",
+                AvailableAccountsWithBalance: "allAccounts",
                 Balances: []shared.AccountReference16Ch{
                     shared.AccountReference16Ch{
-                        CashAccountType: "vero",
-                        Currency: "aut",
-                        Iban: "laboriosam",
-                        OtherAccountIdentification: "cumque",
+                        CashAccountType: "quis",
+                        Currency: "est",
+                        Iban: "dicta",
+                        OtherAccountIdentification: "error",
+                    },
+                    shared.AccountReference16Ch{
+                        CashAccountType: "error",
+                        Currency: "omnis",
+                        Iban: "perferendis",
+                        OtherAccountIdentification: "harum",
+                    },
+                    shared.AccountReference16Ch{
+                        CashAccountType: "occaecati",
+                        Currency: "deserunt",
+                        Iban: "voluptas",
+                        OtherAccountIdentification: "quae",
                     },
                 },
                 RestrictedTo: []string{
-                    "eos",
+                    "vitae",
                 },
                 Transactions: []shared.AccountReference16Ch{
                     shared.AccountReference16Ch{
-                        CashAccountType: "dicta",
-                        Currency: "fugiat",
-                        Iban: "rerum",
-                        OtherAccountIdentification: "animi",
+                        CashAccountType: "possimus",
+                        Currency: "rerum",
+                        Iban: "animi",
+                        OtherAccountIdentification: "ipsum",
                     },
                     shared.AccountReference16Ch{
-                        CashAccountType: "est",
-                        Currency: "excepturi",
-                        Iban: "consectetur",
-                        OtherAccountIdentification: "et",
-                    },
-                    shared.AccountReference16Ch{
-                        CashAccountType: "ut",
-                        Currency: "non",
-                        Iban: "aut",
-                        OtherAccountIdentification: "accusantium",
+                        CashAccountType: "totam",
+                        Currency: "eum",
+                        Iban: "molestiae",
+                        OtherAccountIdentification: "fuga",
                     },
                 },
             },
-            CombinedServiceIndicator: true,
-            FrequencyPerDay: 7555813660748480679,
-            RecurringIndicator: false,
-            ValidUntil: "1973-10-13",
+            CombinedServiceIndicator: false,
+            FrequencyPerDay: 3985793072333781251,
+            RecurringIndicator: true,
+            ValidUntil: "2003-11-02",
         },
     }
     
-    res, err := s.AccountInformationServiceAis.CreateConsent(ctx, req)
+    res, err := s.AccountInformationServiceAIS.CreateConsent(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

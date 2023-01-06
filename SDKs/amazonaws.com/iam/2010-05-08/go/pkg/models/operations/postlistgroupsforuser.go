@@ -3,13 +3,13 @@ package operations
 type PostListGroupsForUserActionEnum string
 
 const (
-	PostListGroupsForUserActionEnumListGroupsForUser PostListGroupsForUserActionEnum = "ListGroupsForUser"
+	POSTListGroupsForUserActionEnumListGroupsForUser PostListGroupsForUserActionEnum = "ListGroupsForUser"
 )
 
 type PostListGroupsForUserVersionEnum string
 
 const (
-	PostListGroupsForUserVersionEnumTwoThousandAndTen0508 PostListGroupsForUserVersionEnum = "2010-05-08"
+	POSTListGroupsForUserVersionEnumTwoThousandAndTen0508 PostListGroupsForUserVersionEnum = "2010-05-08"
 )
 
 type PostListGroupsForUserQueryParams struct {

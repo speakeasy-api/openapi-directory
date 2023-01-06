@@ -19,6 +19,6 @@ type GetV1EmailDisposableRequest struct {
 
 type GetV1EmailDisposableResponse struct {
 	ContentType                                  string
-	GetV1EmailDisposable200ApplicationJSONString *string
 	StatusCode                                   int64
+	GetV1EmailDisposable200ApplicationJSONString *string
 }

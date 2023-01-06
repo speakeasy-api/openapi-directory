@@ -14,6 +14,19 @@ const (
 	StreamStateEnumDraining          StreamStateEnum = "DRAINING"
 )
 
+// StreamInput
+// A resource representing streaming data from a source to a destination.
+type StreamInput struct {
+	BackfillAll                  *BackfillAllStrategy   `json:"backfillAll,omitempty"`
+	BackfillNone                 map[string]interface{} `json:"backfillNone,omitempty"`
+	CustomerManagedEncryptionKey *string                `json:"customerManagedEncryptionKey,omitempty"`
+	DestinationConfig            *DestinationConfig     `json:"destinationConfig,omitempty"`
+	DisplayName                  *string                `json:"displayName,omitempty"`
+	Labels                       map[string]string      `json:"labels,omitempty"`
+	SourceConfig                 *SourceConfig          `json:"sourceConfig,omitempty"`
+	State                        *StreamStateEnum       `json:"state,omitempty"`
+}
+
 // Stream
 // A resource representing streaming data from a source to a destination.
 type Stream struct {
@@ -29,17 +42,4 @@ type Stream struct {
 	SourceConfig                 *SourceConfig          `json:"sourceConfig,omitempty"`
 	State                        *StreamStateEnum       `json:"state,omitempty"`
 	UpdateTime                   *string                `json:"updateTime,omitempty"`
-}
-
-// StreamInput
-// A resource representing streaming data from a source to a destination.
-type StreamInput struct {
-	BackfillAll                  *BackfillAllStrategy   `json:"backfillAll,omitempty"`
-	BackfillNone                 map[string]interface{} `json:"backfillNone,omitempty"`
-	CustomerManagedEncryptionKey *string                `json:"customerManagedEncryptionKey,omitempty"`
-	DestinationConfig            *DestinationConfig     `json:"destinationConfig,omitempty"`
-	DisplayName                  *string                `json:"displayName,omitempty"`
-	Labels                       map[string]string      `json:"labels,omitempty"`
-	SourceConfig                 *SourceConfig          `json:"sourceConfig,omitempty"`
-	State                        *StreamStateEnum       `json:"state,omitempty"`
 }

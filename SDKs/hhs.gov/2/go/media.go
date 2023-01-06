@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -29,6 +29,51 @@ func NewMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 		_sdkVersion:     sdkVersion,
 		_genVersion:     genVersion,
 	}
+}
+
+// GetResourcesMediaJSON - Get MediaItems
+// Media Items Listings
+func (s *Media) GetResourcesMediaJSON(ctx context.Context, request operations.GetResourcesMediaJSONRequest) (*operations.GetResourcesMediaJSONResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/resources/media.json"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesMediaJSONResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.MediaItemWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaItemWrappeds = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
 }
 
 // GetResourcesMediaFeaturedJSON - Get the list of featured content in the syndication system
@@ -68,6 +113,139 @@ func (s *Media) GetResourcesMediaFeaturedJSON(ctx context.Context, request opera
 			}
 
 			res.MediaItems = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetResourcesMediaMostPopularMediaFormat - Get MediaItems by popularity
+// Get the media with the highest ratings.
+func (s *Media) GetResourcesMediaMostPopularMediaFormat(ctx context.Context, request operations.GetResourcesMediaMostPopularMediaFormatRequest) (*operations.GetResourcesMediaMostPopularMediaFormatResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/mostPopularMedia.{format}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesMediaMostPopularMediaFormatResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.MediaItemWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaItemWrappeds = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetResourcesMediaSearchResultsJSON - Get MediaItems by search query
+// Full search
+func (s *Media) GetResourcesMediaSearchResultsJSON(ctx context.Context, request operations.GetResourcesMediaSearchResultsJSONRequest) (*operations.GetResourcesMediaSearchResultsJSONResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/resources/media/searchResults.json"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesMediaSearchResultsJSONResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.MediaItemWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaItemWrappeds = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetResourcesMediaIDJSON - Get MediaItem by ID
+// Information about a specific media item
+func (s *Media) GetResourcesMediaIDJSON(ctx context.Context, request operations.GetResourcesMediaIDJSONRequest) (*operations.GetResourcesMediaIDJSONResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}.json", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesMediaIDJSONResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.MediaItemWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaItemWrappeds = out
 		}
 	case httpRes.StatusCode == 400:
 	case httpRes.StatusCode == 500:
@@ -160,49 +338,6 @@ func (s *Media) GetResourcesMediaIDEmbedJSON(ctx context.Context, request operat
 
 			out := string(data)
 			res.GetResourcesMediaIDEmbedJSON200ApplicationJSONString = &out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesMediaIDJSON - Get MediaItem by ID
-// Information about a specific media item
-func (s *Media) GetResourcesMediaIDJSON(ctx context.Context, request operations.GetResourcesMediaIDJSONRequest) (*operations.GetResourcesMediaIDJSONResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}.json", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesMediaIDJSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.MediaItemWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.MediaItemWrappeds = out
 		}
 	case httpRes.StatusCode == 400:
 	case httpRes.StatusCode == 500:
@@ -422,141 +557,6 @@ func (s *Media) GetResourcesMediaIDYoutubeMetaDataJSON(ctx context.Context, requ
 			}
 
 			res.GetResourcesMediaIDYoutubeMetaDataJSON200ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesMediaJSON - Get MediaItems
-// Media Items Listings
-func (s *Media) GetResourcesMediaJSON(ctx context.Context, request operations.GetResourcesMediaJSONRequest) (*operations.GetResourcesMediaJSONResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/resources/media.json"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesMediaJSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.MediaItemWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.MediaItemWrappeds = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesMediaMostPopularMediaFormat - Get MediaItems by popularity
-// Get the media with the highest ratings.
-func (s *Media) GetResourcesMediaMostPopularMediaFormat(ctx context.Context, request operations.GetResourcesMediaMostPopularMediaFormatRequest) (*operations.GetResourcesMediaMostPopularMediaFormatResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/mostPopularMedia.{format}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesMediaMostPopularMediaFormatResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.MediaItemWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.MediaItemWrappeds = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesMediaSearchResultsJSON - Get MediaItems by search query
-// Full search
-func (s *Media) GetResourcesMediaSearchResultsJSON(ctx context.Context, request operations.GetResourcesMediaSearchResultsJSONRequest) (*operations.GetResourcesMediaSearchResultsJSONResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/resources/media/searchResults.json"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesMediaSearchResultsJSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.MediaItemWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.MediaItemWrappeds = out
 		}
 	case httpRes.StatusCode == 400:
 	case httpRes.StatusCode == 500:

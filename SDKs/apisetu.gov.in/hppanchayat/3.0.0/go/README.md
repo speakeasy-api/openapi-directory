@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.FmcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.FmcerRequestBody{
             CertificateParameters: &operations.FmcerRequestBodyCertificateParameters{
-                UID: "eveniet",
+                UID: "numquam",
             },
-            ConsentArtifact: "aut",
+            ConsentArtifact: "occaecati",
             Format: "pdf",
-            TxnID: "rem",
+            TxnID: "est",
         },
     }
     
-    res, err := s.Sdk.Fmcer(ctx, req)
+    res, err := s.APIs.Fmcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Fmcer` - Family Membership Certificate
 

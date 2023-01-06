@@ -24,5 +24,5 @@ type RemoveSignaturesV1Response struct {
 	ContentType                                           string
 	StatusCode                                            int64
 	RemoveSignaturesV1200ApplicationPdfBinaryString       []byte
-	RemoveSignaturesV14XxApplicationProblemPlusJSONObject *RemoveSignaturesV14XxApplicationProblemPlusJSON
+	RemoveSignaturesV14XXApplicationProblemPlusJSONObject *RemoveSignaturesV14XxApplicationProblemPlusJSON
 }

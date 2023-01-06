@@ -10,6 +10,14 @@ const (
 	OnPremClusterClusterTypeEnumUser                   OnPremClusterClusterTypeEnum = "USER"
 )
 
+// OnPremClusterInput
+// OnPremCluster contains information specific to GKE On-Prem clusters.
+type OnPremClusterInput struct {
+	AdminCluster *bool                         `json:"adminCluster,omitempty"`
+	ClusterType  *OnPremClusterClusterTypeEnum `json:"clusterType,omitempty"`
+	ResourceLink *string                       `json:"resourceLink,omitempty"`
+}
+
 // OnPremCluster
 // OnPremCluster contains information specific to GKE On-Prem clusters.
 type OnPremCluster struct {
@@ -17,12 +25,4 @@ type OnPremCluster struct {
 	ClusterMissing *bool                         `json:"clusterMissing,omitempty"`
 	ClusterType    *OnPremClusterClusterTypeEnum `json:"clusterType,omitempty"`
 	ResourceLink   *string                       `json:"resourceLink,omitempty"`
-}
-
-// OnPremClusterInput
-// OnPremCluster contains information specific to GKE On-Prem clusters.
-type OnPremClusterInput struct {
-	AdminCluster *bool                         `json:"adminCluster,omitempty"`
-	ClusterType  *OnPremClusterClusterTypeEnum `json:"clusterType,omitempty"`
-	ResourceLink *string                       `json:"resourceLink,omitempty"`
 }

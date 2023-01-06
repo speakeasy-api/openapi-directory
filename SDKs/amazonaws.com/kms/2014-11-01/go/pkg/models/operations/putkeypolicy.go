@@ -30,8 +30,8 @@ type PutKeyPolicyResponse struct {
 	ContentType                      string
 	DependencyTimeoutException       *interface{}
 	InvalidArnException              *interface{}
-	KmsInternalException             *interface{}
-	KmsInvalidStateException         *interface{}
+	KMSInternalException             *interface{}
+	KMSInvalidStateException         *interface{}
 	LimitExceededException           *interface{}
 	MalformedPolicyDocumentException *interface{}
 	NotFoundException                *interface{}

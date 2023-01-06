@@ -3,13 +3,13 @@ package operations
 type PostDescribeLoadBalancersActionEnum string
 
 const (
-	PostDescribeLoadBalancersActionEnumDescribeLoadBalancers PostDescribeLoadBalancersActionEnum = "DescribeLoadBalancers"
+	POSTDescribeLoadBalancersActionEnumDescribeLoadBalancers PostDescribeLoadBalancersActionEnum = "DescribeLoadBalancers"
 )
 
 type PostDescribeLoadBalancersVersionEnum string
 
 const (
-	PostDescribeLoadBalancersVersionEnumTwoThousandAndFifteen1201 PostDescribeLoadBalancersVersionEnum = "2015-12-01"
+	POSTDescribeLoadBalancersVersionEnumTwoThousandAndFifteen1201 PostDescribeLoadBalancersVersionEnum = "2015-12-01"
 )
 
 type PostDescribeLoadBalancersQueryParams struct {

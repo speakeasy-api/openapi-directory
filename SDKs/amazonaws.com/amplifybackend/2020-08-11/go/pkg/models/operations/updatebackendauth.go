@@ -22,10 +22,10 @@ type UpdateBackendAuthHeaders struct {
 // UpdateBackendAuthRequestBodyResourceConfig
 // Defines the resource configuration when updating an authentication resource in your Amplify project.
 type UpdateBackendAuthRequestBodyResourceConfig struct {
-	AuthResources       *shared.AuthResourcesEnum                   `json:"AuthResources,omitempty"`
-	IdentityPoolConfigs *shared.UpdateBackendAuthIdentityPoolConfig `json:"IdentityPoolConfigs,omitempty"`
-	Service             *shared.ServiceEnum                         `json:"Service,omitempty"`
-	UserPoolConfigs     *shared.UpdateBackendAuthUserPoolConfig     `json:"UserPoolConfigs,omitempty"`
+	AuthResources       map[string]interface{} `json:"AuthResources,omitempty"`
+	IdentityPoolConfigs map[string]interface{} `json:"IdentityPoolConfigs,omitempty"`
+	Service             map[string]interface{} `json:"Service,omitempty"`
+	UserPoolConfigs     map[string]interface{} `json:"UserPoolConfigs,omitempty"`
 }
 
 type UpdateBackendAuthRequestBody struct {

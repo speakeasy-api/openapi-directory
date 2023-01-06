@@ -17,6 +17,6 @@ type PostPortfolioOptimizationEqualSharpeRatioContributionsRequest struct {
 
 type PostPortfolioOptimizationEqualSharpeRatioContributionsResponse struct {
 	ContentType                                                                    string
-	PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject *PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON
 	StatusCode                                                                     int64
+	PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject *PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON
 }

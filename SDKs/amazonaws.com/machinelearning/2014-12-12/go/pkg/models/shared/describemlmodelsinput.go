@@ -1,14 +1,14 @@
 package shared
 
 type DescribeMlModelsInput struct {
-	Eq             *string                    `json:"EQ,omitempty"`
+	EQ             *string                    `json:"EQ,omitempty"`
 	FilterVariable *MlModelFilterVariableEnum `json:"FilterVariable,omitempty"`
-	Ge             *string                    `json:"GE,omitempty"`
-	Gt             *string                    `json:"GT,omitempty"`
-	Le             *string                    `json:"LE,omitempty"`
-	Lt             *string                    `json:"LT,omitempty"`
+	GE             *string                    `json:"GE,omitempty"`
+	GT             *string                    `json:"GT,omitempty"`
+	LE             *string                    `json:"LE,omitempty"`
+	LT             *string                    `json:"LT,omitempty"`
 	Limit          *int64                     `json:"Limit,omitempty"`
-	Ne             *string                    `json:"NE,omitempty"`
+	NE             *string                    `json:"NE,omitempty"`
 	NextToken      *string                    `json:"NextToken,omitempty"`
 	Prefix         *string                    `json:"Prefix,omitempty"`
 	SortOrder      *SortOrderEnum             `json:"SortOrder,omitempty"`

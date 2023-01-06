@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,43 +34,37 @@ func main() {
     
     req := operations.CreateNotificationRuleRequest{
         Headers: operations.CreateNotificationRuleHeaders{
-            XAmzAlgorithm: "consectetur",
-            XAmzContentSha256: "ducimus",
-            XAmzCredential: "consequatur",
-            XAmzDate: "non",
-            XAmzSecurityToken: "vel",
-            XAmzSignature: "at",
-            XAmzSignedHeaders: "cumque",
+            XAmzAlgorithm: "occaecati",
+            XAmzContentSha256: "maiores",
+            XAmzCredential: "rerum",
+            XAmzDate: "nobis",
+            XAmzSecurityToken: "libero",
+            XAmzSignature: "cumque",
+            XAmzSignedHeaders: "accusamus",
         },
         Request: operations.CreateNotificationRuleRequestBody{
-            ClientRequestToken: "occaecati",
-            DetailType: "FULL",
+            ClientRequestToken: "voluptates",
+            DetailType: "BASIC",
             EventTypeIds: []string{
-                "deserunt",
-                "maiores",
-                "error",
+                "quibusdam",
             },
-            Name: "eius",
-            Resource: "dolorem",
+            Name: "minima",
+            Resource: "iusto",
             Status: "ENABLED",
             Tags: map[string]string{
-                "excepturi": "voluptates",
-                "quo": "est",
+                "sed": "quo",
+                "animi": "et",
             },
             Targets: []shared.Target{
                 shared.Target{
-                    TargetAddress: "optio",
-                    TargetType: "at",
-                },
-                shared.Target{
-                    TargetAddress: "a",
-                    TargetType: "rerum",
+                    TargetAddress: "est",
+                    TargetType: "quod",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateNotificationRule(ctx, req)
+    res, err := s.CreateNotificationRule(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

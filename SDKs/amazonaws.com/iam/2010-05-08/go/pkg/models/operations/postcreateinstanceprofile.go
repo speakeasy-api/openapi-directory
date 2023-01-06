@@ -3,13 +3,13 @@ package operations
 type PostCreateInstanceProfileActionEnum string
 
 const (
-	PostCreateInstanceProfileActionEnumCreateInstanceProfile PostCreateInstanceProfileActionEnum = "CreateInstanceProfile"
+	POSTCreateInstanceProfileActionEnumCreateInstanceProfile PostCreateInstanceProfileActionEnum = "CreateInstanceProfile"
 )
 
 type PostCreateInstanceProfileVersionEnum string
 
 const (
-	PostCreateInstanceProfileVersionEnumTwoThousandAndTen0508 PostCreateInstanceProfileVersionEnum = "2010-05-08"
+	POSTCreateInstanceProfileVersionEnumTwoThousandAndTen0508 PostCreateInstanceProfileVersionEnum = "2010-05-08"
 )
 
 type PostCreateInstanceProfileQueryParams struct {

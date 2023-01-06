@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,18 +24,18 @@ func main() {
     
     req := operations.CreateContactInMailinglistRequest{
         PathParams: operations.CreateContactInMailinglistPathParams{
-            DirectoryID: "aut",
-            MailingListID: "sapiente",
+            DirectoryID: "ea",
+            MailingListID: "blanditiis",
         },
         Request: shared.CreateContactInMailingList{
-            Email: "magni",
-            FirstName: "alias",
-            LastName: "possimus",
+            Email: "doloremque",
+            FirstName: "architecto",
+            LastName: "a",
             Unsubscribed: true,
         },
     }
     
-    res, err := s.Sdk.CreateContactInMailinglist(ctx, req)
+    res, err := s.CreateContactInMailinglist(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

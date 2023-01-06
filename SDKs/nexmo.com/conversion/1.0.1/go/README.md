@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,10 +26,10 @@ func main() {
                 Option1: &shared.SecurityOption1{
                     APIKey: shared.SchemeAPIKey{
                         APIKey: "YOUR_API_KEY_HERE",
-                    }
+                    },
                     APISecret: shared.SchemeAPISecret{
                         APIKey: "YOUR_API_KEY_HERE",
-                    }
+                    },
                 },
             }
         ),
@@ -40,13 +39,13 @@ func main() {
     
     req := operations.SmsConversionRequest{
         QueryParams: operations.SmsConversionQueryParams{
-            Delivered: "animi",
-            MessageID: "a",
-            Timestamp: "voluptatem",
+            Delivered: "eos",
+            MessageID: "minima",
+            Timestamp: "iure",
         },
     }
     
-    res, err := s.SmsConversion.SmsConversion(ctx, req)
+    res, err := s.SMSConversion.SmsConversion(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

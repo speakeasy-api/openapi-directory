@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -91,14 +91,14 @@ func (s *ConfirmationOfFundsServicePiis) CheckAvailabilityOfFunds(ctx context.Co
 				return nil, err
 			}
 
-			res.Error400NgAis = out
+			res.Error400NGAIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error400Ais
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error400Ais = out
+			res.Error400AIS = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -110,14 +110,14 @@ func (s *ConfirmationOfFundsServicePiis) CheckAvailabilityOfFunds(ctx context.Co
 				return nil, err
 			}
 
-			res.Error401NgPiis = out
+			res.Error401NGPIIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error401Piis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error401Piis = out
+			res.Error401PIIS = out
 		}
 	case httpRes.StatusCode == 403:
 		res.Headers = httpRes.Header
@@ -129,14 +129,14 @@ func (s *ConfirmationOfFundsServicePiis) CheckAvailabilityOfFunds(ctx context.Co
 				return nil, err
 			}
 
-			res.Error403NgPiis = out
+			res.Error403NGPIIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error403Piis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error403Piis = out
+			res.Error403PIIS = out
 		}
 	case httpRes.StatusCode == 404:
 		res.Headers = httpRes.Header
@@ -148,14 +148,14 @@ func (s *ConfirmationOfFundsServicePiis) CheckAvailabilityOfFunds(ctx context.Co
 				return nil, err
 			}
 
-			res.Error404NgPiis = out
+			res.Error404NGPIIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error404Piis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error404Piis = out
+			res.Error404PIIS = out
 		}
 	case httpRes.StatusCode == 405:
 		res.Headers = httpRes.Header
@@ -167,14 +167,14 @@ func (s *ConfirmationOfFundsServicePiis) CheckAvailabilityOfFunds(ctx context.Co
 				return nil, err
 			}
 
-			res.Error405NgPiis = out
+			res.Error405NGPIIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error405Piis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error405Piis = out
+			res.Error405PIIS = out
 		}
 	case httpRes.StatusCode == 406:
 		res.Headers = httpRes.Header
@@ -192,14 +192,14 @@ func (s *ConfirmationOfFundsServicePiis) CheckAvailabilityOfFunds(ctx context.Co
 				return nil, err
 			}
 
-			res.Error409NgPiis = out
+			res.Error409NGPIIS = out
 		case utils.MatchContentType(contentType, `application/problem+json`):
 			var out *shared.Error409Piis
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Error409Piis = out
+			res.Error409PIIS = out
 		}
 	case httpRes.StatusCode == 415:
 		res.Headers = httpRes.Header

@@ -1,5 +1,5 @@
 package shared
 
 type DisableAddOnResult struct {
-	Operations []Operation `json:"operations,omitempty"`
+	Operations []Operation1 `json:"operations,omitempty"`
 }

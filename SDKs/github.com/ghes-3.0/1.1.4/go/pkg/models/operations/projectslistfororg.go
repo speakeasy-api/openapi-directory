@@ -8,18 +8,10 @@ type ProjectsListForOrgPathParams struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
-type ProjectsListForOrgStateEnum string
-
-const (
-	ProjectsListForOrgStateEnumOpen   ProjectsListForOrgStateEnum = "open"
-	ProjectsListForOrgStateEnumClosed ProjectsListForOrgStateEnum = "closed"
-	ProjectsListForOrgStateEnumAll    ProjectsListForOrgStateEnum = "all"
-)
-
 type ProjectsListForOrgQueryParams struct {
-	Page    *int64                       `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                       `queryParam:"style=form,explode=true,name=per_page"`
-	State   *ProjectsListForOrgStateEnum `queryParam:"style=form,explode=true,name=state"`
+	Page    *int64           `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64           `queryParam:"style=form,explode=true,name=per_page"`
+	State   *shared.OrgEnum1 `queryParam:"style=form,explode=true,name=state"`
 }
 
 type ProjectsListForOrgRequest struct {

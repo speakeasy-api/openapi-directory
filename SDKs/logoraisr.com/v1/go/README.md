@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.PreviewsReadRequest{
         PathParams: operations.PreviewsReadPathParams{
-            FileID: "quidem",
+            FileID: "et",
         },
     }
     
-    res, err := s.Sdk.PreviewsRead(ctx, req)
+    res, err := s.Previews.PreviewsRead(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -53,17 +52,32 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### previews
 
 * `PreviewsRead` - Get preview image of uploaded file
+
+### processes
+
 * `ProcessesList` - Get process list.
+
+### projects
+
 * `ProjectsCreate` - Create a new project.
 * `ProjectsList` - Get user project list.
 * `ProjectsRead` - Get project details.
+
+### reports
+
 * `ReportsCreate` - Create a new report.
 * `ReportsList` - Get user report list.
 * `ReportsRead` - Get report details.
+
+### results
+
 * `ResultsRead` - Get the result from image processing
+
+### uploads
+
 * `UploadsCreate` - Upload a new image
 
 <!-- End SDK Available Operations -->

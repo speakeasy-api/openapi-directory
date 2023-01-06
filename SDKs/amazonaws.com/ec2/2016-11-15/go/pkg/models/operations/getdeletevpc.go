@@ -3,13 +3,13 @@ package operations
 type GetDeleteVpcActionEnum string
 
 const (
-	GetDeleteVpcActionEnumDeleteVpc GetDeleteVpcActionEnum = "DeleteVpc"
+	GETDeleteVpcActionEnumDeleteVpc GetDeleteVpcActionEnum = "DeleteVpc"
 )
 
 type GetDeleteVpcVersionEnum string
 
 const (
-	GetDeleteVpcVersionEnumTwoThousandAndSixteen1115 GetDeleteVpcVersionEnum = "2016-11-15"
+	GETDeleteVpcVersionEnumTwoThousandAndSixteen1115 GetDeleteVpcVersionEnum = "2016-11-15"
 )
 
 type GetDeleteVpcQueryParams struct {

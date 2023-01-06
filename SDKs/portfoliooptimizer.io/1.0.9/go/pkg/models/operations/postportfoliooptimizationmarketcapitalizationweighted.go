@@ -15,6 +15,6 @@ type PostPortfolioOptimizationMarketCapitalizationWeightedRequest struct {
 
 type PostPortfolioOptimizationMarketCapitalizationWeightedResponse struct {
 	ContentType                                                                   string
-	PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSONObject *PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON
 	StatusCode                                                                    int64
+	PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSONObject *PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON
 }

@@ -1,5 +1,5 @@
 package shared
 
 type RestoreDbInstanceFromDbSnapshotResult struct {
-	DbInstance *DbInstance
+	DBInstance *DbInstance1
 }

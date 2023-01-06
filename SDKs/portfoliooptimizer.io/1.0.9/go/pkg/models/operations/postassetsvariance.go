@@ -8,17 +8,17 @@ type PostAssetsVarianceRequestBody1 struct {
 	Assets []PostAssetsVarianceRequestBody1Assets `json:"assets"`
 }
 
-type PostAssetsVarianceRequestBody2 struct {
-	Assets                 int64       `json:"assets"`
-	AssetsCovarianceMatrix [][]float64 `json:"assetsCovarianceMatrix"`
-}
-
-type PostAssetsVarianceRequestBody3Assets struct {
+type PostAssetsVarianceRequestBody2Assets struct {
 	AssetVolatility float64 `json:"assetVolatility"`
 }
 
+type PostAssetsVarianceRequestBody2 struct {
+	Assets []PostAssetsVarianceRequestBody2Assets `json:"assets"`
+}
+
 type PostAssetsVarianceRequestBody3 struct {
-	Assets []PostAssetsVarianceRequestBody3Assets `json:"assets"`
+	Assets                 int64       `json:"assets"`
+	AssetsCovarianceMatrix [][]float64 `json:"assetsCovarianceMatrix"`
 }
 
 type PostAssetsVariance200ApplicationJSONAssets struct {
@@ -35,6 +35,6 @@ type PostAssetsVarianceRequest struct {
 
 type PostAssetsVarianceResponse struct {
 	ContentType                                string
-	PostAssetsVariance200ApplicationJSONObject *PostAssetsVariance200ApplicationJSON
 	StatusCode                                 int64
+	PostAssetsVariance200ApplicationJSONObject *PostAssetsVariance200ApplicationJSON
 }

@@ -3,10 +3,10 @@ package shared
 type DbProxyEndpointStatusEnum string
 
 const (
-	DbProxyEndpointStatusEnumAvailable                  DbProxyEndpointStatusEnum = "available"
-	DbProxyEndpointStatusEnumModifying                  DbProxyEndpointStatusEnum = "modifying"
-	DbProxyEndpointStatusEnumIncompatibleNetwork        DbProxyEndpointStatusEnum = "incompatible-network"
-	DbProxyEndpointStatusEnumInsufficientResourceLimits DbProxyEndpointStatusEnum = "insufficient-resource-limits"
-	DbProxyEndpointStatusEnumCreating                   DbProxyEndpointStatusEnum = "creating"
-	DbProxyEndpointStatusEnumDeleting                   DbProxyEndpointStatusEnum = "deleting"
+	DBProxyEndpointStatusEnumAvailable                  DbProxyEndpointStatusEnum = "available"
+	DBProxyEndpointStatusEnumModifying                  DbProxyEndpointStatusEnum = "modifying"
+	DBProxyEndpointStatusEnumIncompatibleNetwork        DbProxyEndpointStatusEnum = "incompatible-network"
+	DBProxyEndpointStatusEnumInsufficientResourceLimits DbProxyEndpointStatusEnum = "insufficient-resource-limits"
+	DBProxyEndpointStatusEnumCreating                   DbProxyEndpointStatusEnum = "creating"
+	DBProxyEndpointStatusEnumDeleting                   DbProxyEndpointStatusEnum = "deleting"
 )

@@ -29,7 +29,7 @@ type UntagResourceRequest struct {
 type UntagResourceResponse struct {
 	ClusterNotFoundFault                 *interface{}
 	ContentType                          string
-	InvalidArnFault                      *interface{}
+	InvalidARNFault                      *interface{}
 	InvalidClusterStateFault             *interface{}
 	InvalidParameterCombinationException *interface{}
 	InvalidParameterValueException       *interface{}

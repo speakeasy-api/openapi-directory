@@ -3,13 +3,13 @@ package operations
 type PostDeleteRouteTableActionEnum string
 
 const (
-	PostDeleteRouteTableActionEnumDeleteRouteTable PostDeleteRouteTableActionEnum = "DeleteRouteTable"
+	POSTDeleteRouteTableActionEnumDeleteRouteTable PostDeleteRouteTableActionEnum = "DeleteRouteTable"
 )
 
 type PostDeleteRouteTableVersionEnum string
 
 const (
-	PostDeleteRouteTableVersionEnumTwoThousandAndSixteen1115 PostDeleteRouteTableVersionEnum = "2016-11-15"
+	POSTDeleteRouteTableVersionEnumTwoThousandAndSixteen1115 PostDeleteRouteTableVersionEnum = "2016-11-15"
 )
 
 type PostDeleteRouteTableQueryParams struct {

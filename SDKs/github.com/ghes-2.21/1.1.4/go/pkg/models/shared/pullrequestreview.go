@@ -17,6 +17,8 @@ type PullRequestReviewLinks struct {
 	PullRequest PullRequestReviewLinksPullRequest `json:"pull_request"`
 }
 
+// PullRequestReviewSimpleUser
+// Simple User
 type PullRequestReviewSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

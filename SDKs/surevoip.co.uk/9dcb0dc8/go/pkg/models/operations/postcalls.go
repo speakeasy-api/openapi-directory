@@ -39,8 +39,8 @@ type PostCallsRequest struct {
 type PostCallsResponse struct {
 	ContentType                                                   string
 	Headers                                                       map[string][]string
-	PostCalls202ApplicationJSONObject                             *PostCalls202ApplicationJSON
 	StatusCode                                                    int64
+	PostCalls202ApplicationJSONObject                             *PostCalls202ApplicationJSON
 	OneannouncementsPostResponses400ContentApplication1jsonSchema *shared.OneannouncementsPostResponses400ContentApplication1jsonSchema
 	OneannouncementsPostResponses403ContentApplication1jsonSchema *shared.OneannouncementsPostResponses403ContentApplication1jsonSchema
 }

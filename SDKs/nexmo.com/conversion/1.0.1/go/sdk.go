@@ -2,8 +2,9 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -16,7 +17,7 @@ type HTTPClient interface {
 
 // SDK Documentation: https://developer.nexmo.com/api/conversion
 type SDK struct {
-	SmsConversion   *SmsConversion
+	SMSConversion   *SmsConversion
 	VoiceConversion *VoiceConversion
 
 	_defaultClient  HTTPClient
@@ -79,7 +80,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.SmsConversion = NewSmsConversion(
+	sdk.SMSConversion = NewSmsConversion(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

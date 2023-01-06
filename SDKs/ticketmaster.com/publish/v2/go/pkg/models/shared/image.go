@@ -3,9 +3,9 @@ package shared
 type ImageRatioEnum string
 
 const (
-	ImageRatioEnumOneHundredAndSixtyNine ImageRatioEnum = "169"
-	ImageRatioEnumThirtyTwo              ImageRatioEnum = "32"
-	ImageRatioEnumFortyThree             ImageRatioEnum = "43"
+	ImageRatioEnumSixteen9 ImageRatioEnum = "16_9"
+	ImageRatioEnumThree2   ImageRatioEnum = "3_2"
+	ImageRatioEnumFour3    ImageRatioEnum = "4_3"
 )
 
 // Image

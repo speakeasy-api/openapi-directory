@@ -3,13 +3,13 @@ package operations
 type PostDeleteDomainActionEnum string
 
 const (
-	PostDeleteDomainActionEnumDeleteDomain PostDeleteDomainActionEnum = "DeleteDomain"
+	POSTDeleteDomainActionEnumDeleteDomain PostDeleteDomainActionEnum = "DeleteDomain"
 )
 
 type PostDeleteDomainVersionEnum string
 
 const (
-	PostDeleteDomainVersionEnumTwoThousandAndEleven0201 PostDeleteDomainVersionEnum = "2011-02-01"
+	POSTDeleteDomainVersionEnumTwoThousandAndEleven0201 PostDeleteDomainVersionEnum = "2011-02-01"
 )
 
 type PostDeleteDomainQueryParams struct {

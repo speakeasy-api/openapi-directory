@@ -19,38 +19,30 @@ type GetImagesListQueryParams struct {
 	Type    *GetImagesListTypeEnum `queryParam:"style=form,explode=true,name=type"`
 }
 
-type GetImagesListRequest struct {
-	QueryParams GetImagesListQueryParams
-}
-
 type GetImagesList200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
+	Prev *string `json:"prev,omitempty"`
 }
 
-type GetImagesList200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
+type GetImagesList200ApplicationJSONLinksPages3 struct {
+	Next *string `json:"next,omitempty"`
 }
 
 type GetImagesList200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
-type GetImagesList200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type GetImagesList200ApplicationJSON struct {
-	Images []shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImage `json:"images"`
-	Links  *GetImagesList200ApplicationJSONLinks                                                                           `json:"links,omitempty"`
-	Meta   GetImagesList200ApplicationJSONMeta                                                                             `json:"meta"`
+	Links *GetImagesList200ApplicationJSONLinks `json:"links,omitempty"`
 }
 
 type GetImagesList401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetImagesListRequest struct {
+	QueryParams GetImagesListQueryParams
 }
 
 type GetImagesListResponse struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.KeysAPICurrentRequest{
         PathParams: operations.KeysAPICurrentPathParams{
-            Serial: "reiciendis",
+            Serial: "aliquam",
         },
     }
     
-    res, err := s.Sdk.KeysAPICurrent(ctx, req)
+    res, err := s.KeysAPI.KeysAPICurrent(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -43,12 +42,15 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### KeysApi
 
 * `KeysAPICurrent`
 * `KeysAPICustom`
 * `KeysAPIExpiry`
 * `KeysAPIFind`
+
+### ProductsApi
+
 * `ProductsAPICount`
 * `ProductsAPIDeleteProduct`
 * `ProductsAPIDeleteProduct2`
@@ -57,6 +59,9 @@ func main() {
 * `ProductsAPIPatchProduct`
 * `ProductsAPIPatchProduct2`
 * `ProductsAPISave`
+
+### SubscriptionsApi
+
 * `SubscriptionsAPICount`
 * `SubscriptionsAPIDeleteSubscription`
 * `SubscriptionsAPIDeleteSubscription2`

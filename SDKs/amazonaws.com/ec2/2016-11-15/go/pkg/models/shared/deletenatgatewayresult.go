@@ -1,5 +1,5 @@
 package shared
 
 type DeleteNatGatewayResult struct {
-	NatGatewayID *string
+	NatGatewayID map[string]interface{}
 }

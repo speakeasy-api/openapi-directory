@@ -30,6 +30,6 @@ type ListRateBasedRulesResponse struct {
 	ContentType                string
 	ListRateBasedRulesResponse *shared.ListRateBasedRulesResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

@@ -1,0 +1,70 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.SearchCseListRequest{
+        QueryParams: operations.SearchCseListQueryParams{
+            DollarXgafv: "1",
+            AccessToken: "et",
+            Alt: "json",
+            C2coff: "tenetur",
+            Callback: "omnis",
+            Cr: "excepturi",
+            Cx: "voluptas",
+            DateRestrict: "ut",
+            ExactTerms: "magni",
+            ExcludeTerms: "asperiores",
+            Fields: "eum",
+            FileType: "soluta",
+            Filter: "mollitia",
+            Gl: "tenetur",
+            Googlehost: "sit",
+            HighRange: "ut",
+            Hl: "earum",
+            Hq: "eveniet",
+            ImgColorType: "gray",
+            ImgDominantColor: "gray",
+            ImgSize: "XXLARGE",
+            ImgType: "lineart",
+            Key: "consequatur",
+            LinkSite: "distinctio",
+            LowRange: "vel",
+            Lr: "sequi",
+            Num: 5399078865432157693,
+            OauthToken: "non",
+            OrTerms: "cum",
+            PrettyPrint: true,
+            Q: "earum",
+            QuotaUser: "consectetur",
+            RelatedSite: "vero",
+            Rights: "perspiciatis",
+            Safe: "off",
+            SearchType: "image",
+            SiteSearch: "id",
+            SiteSearchFilter: "i",
+            Sort: "quam",
+            Start: 448127392292838201,
+            UploadType: "excepturi",
+            UploadProtocol: "aspernatur",
+        },
+    }
+    
+    res, err := s.Cse.SearchCseList(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Search != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

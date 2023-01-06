@@ -7,25 +7,25 @@ import (
 type GetDescribeEventsActionEnum string
 
 const (
-	GetDescribeEventsActionEnumDescribeEvents GetDescribeEventsActionEnum = "DescribeEvents"
+	GETDescribeEventsActionEnumDescribeEvents GetDescribeEventsActionEnum = "DescribeEvents"
 )
 
 type GetDescribeEventsSourceTypeEnum string
 
 const (
-	GetDescribeEventsSourceTypeEnumCacheCluster        GetDescribeEventsSourceTypeEnum = "cache-cluster"
-	GetDescribeEventsSourceTypeEnumCacheParameterGroup GetDescribeEventsSourceTypeEnum = "cache-parameter-group"
-	GetDescribeEventsSourceTypeEnumCacheSecurityGroup  GetDescribeEventsSourceTypeEnum = "cache-security-group"
-	GetDescribeEventsSourceTypeEnumCacheSubnetGroup    GetDescribeEventsSourceTypeEnum = "cache-subnet-group"
-	GetDescribeEventsSourceTypeEnumReplicationGroup    GetDescribeEventsSourceTypeEnum = "replication-group"
-	GetDescribeEventsSourceTypeEnumUser                GetDescribeEventsSourceTypeEnum = "user"
-	GetDescribeEventsSourceTypeEnumUserGroup           GetDescribeEventsSourceTypeEnum = "user-group"
+	GETDescribeEventsSourceTypeEnumCacheCluster        GetDescribeEventsSourceTypeEnum = "cache-cluster"
+	GETDescribeEventsSourceTypeEnumCacheParameterGroup GetDescribeEventsSourceTypeEnum = "cache-parameter-group"
+	GETDescribeEventsSourceTypeEnumCacheSecurityGroup  GetDescribeEventsSourceTypeEnum = "cache-security-group"
+	GETDescribeEventsSourceTypeEnumCacheSubnetGroup    GetDescribeEventsSourceTypeEnum = "cache-subnet-group"
+	GETDescribeEventsSourceTypeEnumReplicationGroup    GetDescribeEventsSourceTypeEnum = "replication-group"
+	GETDescribeEventsSourceTypeEnumUser                GetDescribeEventsSourceTypeEnum = "user"
+	GETDescribeEventsSourceTypeEnumUserGroup           GetDescribeEventsSourceTypeEnum = "user-group"
 )
 
 type GetDescribeEventsVersionEnum string
 
 const (
-	GetDescribeEventsVersionEnumTwoThousandAndFifteen0202 GetDescribeEventsVersionEnum = "2015-02-02"
+	GETDescribeEventsVersionEnumTwoThousandAndFifteen0202 GetDescribeEventsVersionEnum = "2015-02-02"
 )
 
 type GetDescribeEventsQueryParams struct {

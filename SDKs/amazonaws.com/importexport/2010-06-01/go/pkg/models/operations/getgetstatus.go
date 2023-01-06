@@ -3,24 +3,24 @@ package operations
 type GetGetStatusActionEnum string
 
 const (
-	GetGetStatusActionEnumGetStatus GetGetStatusActionEnum = "GetStatus"
+	GETGETStatusActionEnumGetStatus GetGetStatusActionEnum = "GetStatus"
 )
 
 type GetGetStatusOperationEnum string
 
 const (
-	GetGetStatusOperationEnumGetStatus GetGetStatusOperationEnum = "GetStatus"
+	GETGETStatusOperationEnumGetStatus GetGetStatusOperationEnum = "GetStatus"
 )
 
 type GetGetStatusVersionEnum string
 
 const (
-	GetGetStatusVersionEnumTwoThousandAndTen0601 GetGetStatusVersionEnum = "2010-06-01"
+	GETGETStatusVersionEnumTwoThousandAndTen0601 GetGetStatusVersionEnum = "2010-06-01"
 )
 
 type GetGetStatusQueryParams struct {
 	APIVersion       *string                   `queryParam:"style=form,explode=true,name=APIVersion"`
-	AwsAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetGetStatusActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	JobID            string                    `queryParam:"style=form,explode=true,name=JobId"`
 	Operation        GetGetStatusOperationEnum `queryParam:"style=form,explode=true,name=Operation"`

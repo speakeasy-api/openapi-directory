@@ -10,6 +10,6 @@ type LifecycleHook struct {
 	LifecycleHookName     *string
 	LifecycleTransition   *string
 	NotificationMetadata  *string
-	NotificationTargetArn *string
-	RoleArn               *string
+	NotificationTargetARN *string
+	RoleARN               *string
 }

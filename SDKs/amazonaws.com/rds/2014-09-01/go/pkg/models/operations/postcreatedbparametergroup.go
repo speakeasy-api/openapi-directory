@@ -3,13 +3,13 @@ package operations
 type PostCreateDbParameterGroupActionEnum string
 
 const (
-	PostCreateDbParameterGroupActionEnumCreateDbParameterGroup PostCreateDbParameterGroupActionEnum = "CreateDBParameterGroup"
+	POSTCreateDBParameterGroupActionEnumCreateDbParameterGroup PostCreateDbParameterGroupActionEnum = "CreateDBParameterGroup"
 )
 
 type PostCreateDbParameterGroupVersionEnum string
 
 const (
-	PostCreateDbParameterGroupVersionEnumTwoThousandAndFourteen0901 PostCreateDbParameterGroupVersionEnum = "2014-09-01"
+	POSTCreateDBParameterGroupVersionEnumTwoThousandAndFourteen0901 PostCreateDbParameterGroupVersionEnum = "2014-09-01"
 )
 
 type PostCreateDbParameterGroupQueryParams struct {

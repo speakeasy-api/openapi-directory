@@ -3,13 +3,13 @@ package operations
 type PostAttachNetworkInterfaceActionEnum string
 
 const (
-	PostAttachNetworkInterfaceActionEnumAttachNetworkInterface PostAttachNetworkInterfaceActionEnum = "AttachNetworkInterface"
+	POSTAttachNetworkInterfaceActionEnumAttachNetworkInterface PostAttachNetworkInterfaceActionEnum = "AttachNetworkInterface"
 )
 
 type PostAttachNetworkInterfaceVersionEnum string
 
 const (
-	PostAttachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 PostAttachNetworkInterfaceVersionEnum = "2016-11-15"
+	POSTAttachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 PostAttachNetworkInterfaceVersionEnum = "2016-11-15"
 )
 
 type PostAttachNetworkInterfaceQueryParams struct {

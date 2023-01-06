@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,18 +32,18 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.GetAdminsForDistrictRequest{
-        PathParams: operations.GetAdminsForDistrictPathParams{
-            ID: "nisi",
+    req := operations.GetContactRequest{
+        PathParams: operations.GetContactPathParams{
+            ID: "sint",
         },
     }
     
-    res, err := s.Sdk.GetAdminsForDistrict(ctx, req)
+    res, err := s.Contacts.GetContact(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DistrictAdminsResponse != nil {
+    if res.StudentContactResponse != nil {
         // handle response
     }
 ```
@@ -53,52 +52,73 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Contacts
 
-* `GetAdminsForDistrict` - Returns the admins for a district
 * `GetContact` - Returns a specific student contact
 * `GetContacts` - Returns a list of student contacts
-* `GetContactsForStudent` - Returns the contacts for a student
-* `GetDistrict` - Returns a specific district
+* `GetDistrictForStudentContact` - Returns the district for a student contact
+* `GetStudentForContact` - Returns the student for a student contact
+
+### District Admins
+
 * `GetDistrictAdmin` - Returns a specific district admin
 * `GetDistrictAdmins` - Returns a list of district admins
-* `GetDistrictForSchool` - Returns the district for a school
-* `GetDistrictForSection` - Returns the district for a section
-* `GetDistrictForStudent` - Returns the district for a student
-* `GetDistrictForStudentContact` - Returns the district for a student contact
-* `GetDistrictForTeacher` - Returns the district for a teacher
+
+### Districts
+
+* `GetAdminsForDistrict` - Returns the admins for a district
+* `GetDistrict` - Returns a specific district
 * `GetDistrictStatus` - Returns the status of the district
 * `GetDistricts` - Returns a list of districts
-* `GetGradeLevelsForTeacher` - Returns the grade levels for sections a teacher teaches
-* `GetSchool` - Returns a specific school
+* `GetSchoolsForDistrict` - Returns the schools for a district
+* `GetSectionsForDistrict` - Returns the sections for a district
+* `GetStudentsForDistrict` - Returns the students for a district
+* `GetTeachersForDistrict` - Returns the teachers for a district
+
+### School Admins
+
 * `GetSchoolAdmin` - Returns a specific school admin
 * `GetSchoolAdmins` - Returns a list of school admins
-* `GetSchoolForSection` - Returns the school for a section
-* `GetSchoolForStudent` - Returns the primary school for a student
-* `GetSchoolForTeacher` - Retrieves school info for a teacher.
-* `GetSchools` - Returns a list of schools
-* `GetSchoolsForDistrict` - Returns the schools for a district
 * `GetSchoolsForSchoolAdmin` - Returns the schools for a school admin
+
+### Schools
+
+* `GetDistrictForSchool` - Returns the district for a school
+* `GetSchool` - Returns a specific school
+* `GetSchools` - Returns a list of schools
+* `GetSectionsForSchool` - Returns the sections for a school
+* `GetStudentsForSchool` - Returns the students for a school
+* `GetTeachersForSchool` - Returns the teachers for a school
+
+### Sections
+
+* `GetDistrictForSection` - Returns the district for a section
+* `GetSchoolForSection` - Returns the school for a section
 * `GetSection` - Returns a specific section
 * `GetSections` - Returns a list of sections
-* `GetSectionsForDistrict` - Returns the sections for a district
-* `GetSectionsForSchool` - Returns the sections for a school
-* `GetSectionsForStudent` - Returns the sections for a student
-* `GetSectionsForTeacher` - Returns the sections for a teacher
-* `GetStudent` - Returns a specific student
-* `GetStudentForContact` - Returns the student for a student contact
-* `GetStudents` - Returns a list of students
-* `GetStudentsForDistrict` - Returns the students for a district
-* `GetStudentsForSchool` - Returns the students for a school
 * `GetStudentsForSection` - Returns the students for a section
+* `GetTeacherForSection` - Returns the primary teacher for a section
+* `GetTeachersForSection` - Returns the teachers for a section
+
+### Students
+
+* `GetContactsForStudent` - Returns the contacts for a student
+* `GetDistrictForStudent` - Returns the district for a student
+* `GetSchoolForStudent` - Returns the primary school for a student
+* `GetSectionsForStudent` - Returns the sections for a student
+* `GetStudent` - Returns a specific student
+* `GetStudents` - Returns a list of students
+* `GetTeachersForStudent` - Returns the teachers for a student
+
+### Teachers
+
+* `GetDistrictForTeacher` - Returns the district for a teacher
+* `GetGradeLevelsForTeacher` - Returns the grade levels for sections a teacher teaches
+* `GetSchoolForTeacher` - Retrieves school info for a teacher.
+* `GetSectionsForTeacher` - Returns the sections for a teacher
 * `GetStudentsForTeacher` - Returns the students for a teacher
 * `GetTeacher` - Returns a specific teacher
-* `GetTeacherForSection` - Returns the primary teacher for a section
 * `GetTeachers` - Returns a list of teachers
-* `GetTeachersForDistrict` - Returns the teachers for a district
-* `GetTeachersForSchool` - Returns the teachers for a school
-* `GetTeachersForSection` - Returns the teachers for a section
-* `GetTeachersForStudent` - Returns the teachers for a student
 
 <!-- End SDK Available Operations -->
 

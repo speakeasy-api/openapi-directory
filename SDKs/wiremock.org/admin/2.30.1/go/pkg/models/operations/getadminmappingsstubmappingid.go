@@ -71,6 +71,6 @@ type GetAdminMappingsStubMappingIDRequest struct {
 
 type GetAdminMappingsStubMappingIDResponse struct {
 	ContentType                                           string
-	GetAdminMappingsStubMappingID200ApplicationJSONObject *GetAdminMappingsStubMappingID200ApplicationJSON
 	StatusCode                                            int64
+	GetAdminMappingsStubMappingID200ApplicationJSONObject *GetAdminMappingsStubMappingID200ApplicationJSON
 }

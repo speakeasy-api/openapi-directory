@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,23 +22,39 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.CountAllProductsRequest{
-        Security: operations.CountAllProductsSecurity{
+    req := operations.CreateCategoriesRequest{
+        Security: operations.CreateCategoriesSecurity{
             ZettleAPIKey: &shared.SchemeZettleAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        PathParams: operations.CountAllProductsPathParams{
-            OrganizationUUID: "distinctio",
+        PathParams: operations.CreateCategoriesPathParams{
+            OrganizationUUID: "sequi",
+        },
+        Request: shared.CategoryRequest{
+            Categories: []shared.CategoryDto{
+                shared.CategoryDto{
+                    Name: "provident",
+                    UUID: "numquam",
+                },
+                shared.CategoryDto{
+                    Name: "inventore",
+                    UUID: "harum",
+                },
+                shared.CategoryDto{
+                    Name: "est",
+                    UUID: "dolor",
+                },
+            },
         },
     }
     
-    res, err := s.Sdk.CountAllProducts(ctx, req)
+    res, err := s.Categories.CreateCategories(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ProductCountResponses != nil {
+    if res.StatusCode == http.StatusOK {
         // handle response
     }
 ```
@@ -48,37 +63,58 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### categories
+
+* `CreateCategories` - Creates a new category
+* `GetProductTypes` - Retrieves all categories
+
+### discounts
+
+* `CreateDiscount` - Creates a discount
+* `DeleteDiscount` - Deletes a single discount 
+* `GetAllDiscounts` - Retrieves all discounts
+* `GetDiscount` - Retrieves a single discount
+* `UpdateDiscount` - Updates a single discount
+
+### images
+
+* `GetAllImageUrls` - Retrieves all library item images
+
+### import
+
+* `GetLatestImportStatus` - Gets status for latest import
+* `GetStatusByUUID` - Gets status for an import
+* `ImportLibraryV2` - Bulk import library items
+
+### library
+
+* `GetLibrary` - Retrieves the entire library
+
+### products
 
 * `CountAllProducts` - Retrieves the count of existing products
-* `CreateCategories` - Creates a new category
-* `CreateDiscount` - Creates a discount
 * `CreateProduct` - Creates a new product
-* `CreateProductSlug` - Creates a product identifier
-* `CreateTaxRates` - Creates new tax rates
-* `DeleteDiscount` - Deletes a single discount 
 * `DeleteProduct` - Deletes a single product
 * `DeleteProducts` - Deletes a list of products
-* `DeleteTaxRate` - Deletes a single tax rate
-* `GetAllDiscounts` - Retrieves all discounts
-* `GetAllImageUrls` - Retrieves all library item images
 * `GetAllOptions` - Retrieves an aggregate of active Options in the library
 * `GetAllProductsInPos` - Retrieves all products visible in POS
 * `GetAllProductsV2` - Retrieves all products visible in POS – v2
-* `GetDiscount` - Retrieves a single discount
-* `GetLatestImportStatus` - Gets status for latest import
-* `GetLibrary` - Retrieves the entire library
 * `GetProduct` - Retrieves a single product
+* `UpdateProduct` - Updates a single product
+
+### products/online
+
+* `CreateProductSlug` - Creates a product identifier
+
+### taxes
+
+* `CreateTaxRates` - Creates new tax rates
+* `DeleteTaxRate` - Deletes a single tax rate
 * `GetProductCountForAllTaxes` - Gets all tax rates and a count of products associated with each
-* `GetProductTypes` - Retrieves all categories
-* `GetStatusByUUID` - Gets status for an import
 * `GetTaxRate` - Gets a single tax rate
 * `GetTaxRates` - Gets all tax rates available
 * `GetTaxSettings` - Gets the organization tax settings 
-* `ImportLibraryV2` - Bulk import library items
 * `SetTaxationMode` - Updates the organization tax settings
-* `UpdateDiscount` - Updates a single discount
-* `UpdateProduct` - Updates a single product
 * `UpdateTaxRate` - Updates a single tax rate
 
 <!-- End SDK Available Operations -->

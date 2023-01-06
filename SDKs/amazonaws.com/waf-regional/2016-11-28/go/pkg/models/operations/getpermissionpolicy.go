@@ -30,6 +30,6 @@ type GetPermissionPolicyResponse struct {
 	ContentType                 string
 	GetPermissionPolicyResponse *shared.GetPermissionPolicyResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFNonexistentItemException *interface{}
 }

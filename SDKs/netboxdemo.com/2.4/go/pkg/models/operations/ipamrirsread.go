@@ -14,6 +14,6 @@ type IpamRirsReadRequest struct {
 
 type IpamRirsReadResponse struct {
 	ContentType string
-	Rir         *shared.Rir
+	RIR         *shared.Rir
 	StatusCode  int64
 }

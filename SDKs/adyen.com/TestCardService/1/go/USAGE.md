@@ -1,0 +1,33 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.PostCreateTestCardRangesRequest{
+        Security: operations.PostCreateTestCardRangesSecurity{
+            BasicAuth: &shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        },
+        Request: "omnis",
+    }
+    
+    res, err := s.General.PostCreateTestCardRanges(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.CreateTestCardRangesResult != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

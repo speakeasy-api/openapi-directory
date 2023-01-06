@@ -1,7 +1,7 @@
 package shared
 
 type GetCoipPoolUsageResult struct {
-	CoipAddressUsages        []CoipAddressUsage
-	CoipPoolID               *string
-	LocalGatewayRouteTableID *string
+	CoipAddressUsages        map[string]interface{}
+	CoipPoolID               map[string]interface{}
+	LocalGatewayRouteTableID map[string]interface{}
 }

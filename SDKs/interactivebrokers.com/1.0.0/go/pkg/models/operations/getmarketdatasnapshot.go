@@ -47,6 +47,6 @@ type GetMarketdataSnapshotRequest struct {
 
 type GetMarketdataSnapshotResponse struct {
 	ContentType                                    string
-	GetMarketdataSnapshot200ApplicationJSONObjects []GetMarketdataSnapshot200ApplicationJSON
 	StatusCode                                     int64
+	GetMarketdataSnapshot200ApplicationJSONObjects []GetMarketdataSnapshot200ApplicationJSON
 }

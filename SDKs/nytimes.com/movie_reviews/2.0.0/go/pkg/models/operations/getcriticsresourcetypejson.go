@@ -21,6 +21,6 @@ type GetCriticsResourceTypeJSONRequest struct {
 
 type GetCriticsResourceTypeJSONResponse struct {
 	ContentType                                        string
-	GetCriticsResourceTypeJSON200ApplicationJSONObject *GetCriticsResourceTypeJSON200ApplicationJSON
 	StatusCode                                         int64
+	GetCriticsResourceTypeJSON200ApplicationJSONObject *GetCriticsResourceTypeJSON200ApplicationJSON
 }

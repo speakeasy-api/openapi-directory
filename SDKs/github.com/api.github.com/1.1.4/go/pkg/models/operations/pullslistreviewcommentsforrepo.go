@@ -9,27 +9,12 @@ type PullsListReviewCommentsForRepoPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type PullsListReviewCommentsForRepoDirectionEnum string
-
-const (
-	PullsListReviewCommentsForRepoDirectionEnumAsc  PullsListReviewCommentsForRepoDirectionEnum = "asc"
-	PullsListReviewCommentsForRepoDirectionEnumDesc PullsListReviewCommentsForRepoDirectionEnum = "desc"
-)
-
-type PullsListReviewCommentsForRepoSortEnum string
-
-const (
-	PullsListReviewCommentsForRepoSortEnumCreated   PullsListReviewCommentsForRepoSortEnum = "created"
-	PullsListReviewCommentsForRepoSortEnumUpdated   PullsListReviewCommentsForRepoSortEnum = "updated"
-	PullsListReviewCommentsForRepoSortEnumCreatedAt PullsListReviewCommentsForRepoSortEnum = "created_at"
-)
-
 type PullsListReviewCommentsForRepoQueryParams struct {
-	Direction *PullsListReviewCommentsForRepoDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                                       `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                                       `queryParam:"style=form,explode=true,name=per_page"`
-	Since     *string                                      `queryParam:"style=form,explode=true,name=since"`
-	Sort      *PullsListReviewCommentsForRepoSortEnum      `queryParam:"style=form,explode=true,name=sort"`
+	Direction *shared.RepoEnum4 `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	Since     *string           `queryParam:"style=form,explode=true,name=since"`
+	Sort      *shared.RepoEnum6 `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type PullsListReviewCommentsForRepoRequest struct {

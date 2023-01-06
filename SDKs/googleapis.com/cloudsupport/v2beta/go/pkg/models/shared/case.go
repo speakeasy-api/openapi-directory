@@ -42,6 +42,7 @@ type Case struct {
 	Description              *string             `json:"description,omitempty"`
 	DisplayName              *string             `json:"displayName,omitempty"`
 	Escalated                *bool               `json:"escalated,omitempty"`
+	LanguageCode             *string             `json:"languageCode,omitempty"`
 	Name                     *string             `json:"name,omitempty"`
 	Priority                 *CasePriorityEnum   `json:"priority,omitempty"`
 	Severity                 *CaseSeverityEnum   `json:"severity,omitempty"`
@@ -60,6 +61,7 @@ type CaseInput struct {
 	Description              *string             `json:"description,omitempty"`
 	DisplayName              *string             `json:"displayName,omitempty"`
 	Escalated                *bool               `json:"escalated,omitempty"`
+	LanguageCode             *string             `json:"languageCode,omitempty"`
 	Name                     *string             `json:"name,omitempty"`
 	Priority                 *CasePriorityEnum   `json:"priority,omitempty"`
 	Severity                 *CaseSeverityEnum   `json:"severity,omitempty"`

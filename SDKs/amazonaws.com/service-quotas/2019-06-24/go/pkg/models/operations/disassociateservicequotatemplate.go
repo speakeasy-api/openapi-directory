@@ -23,7 +23,7 @@ type DisassociateServiceQuotaTemplateRequest struct {
 }
 
 type DisassociateServiceQuotaTemplateResponse struct {
-	AwsServiceAccessNotEnabledException      *interface{}
+	AWSServiceAccessNotEnabledException      *interface{}
 	AccessDeniedException                    *interface{}
 	ContentType                              string
 	DependencyAccessDeniedException          *interface{}

@@ -30,8 +30,8 @@ type PutLoggingConfigurationResponse struct {
 	ContentType                        string
 	PutLoggingConfigurationResponse    *shared.PutLoggingConfigurationResponse
 	StatusCode                         int64
-	WafInternalErrorException          *interface{}
-	WafNonexistentItemException        *interface{}
-	WafServiceLinkedRoleErrorException *interface{}
-	WafStaleDataException              *interface{}
+	WAFInternalErrorException          *interface{}
+	WAFNonexistentItemException        *interface{}
+	WAFServiceLinkedRoleErrorException *interface{}
+	WAFStaleDataException              *interface{}
 }

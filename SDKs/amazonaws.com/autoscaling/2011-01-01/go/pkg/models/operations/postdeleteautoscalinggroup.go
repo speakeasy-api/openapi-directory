@@ -3,13 +3,13 @@ package operations
 type PostDeleteAutoScalingGroupActionEnum string
 
 const (
-	PostDeleteAutoScalingGroupActionEnumDeleteAutoScalingGroup PostDeleteAutoScalingGroupActionEnum = "DeleteAutoScalingGroup"
+	POSTDeleteAutoScalingGroupActionEnumDeleteAutoScalingGroup PostDeleteAutoScalingGroupActionEnum = "DeleteAutoScalingGroup"
 )
 
 type PostDeleteAutoScalingGroupVersionEnum string
 
 const (
-	PostDeleteAutoScalingGroupVersionEnumTwoThousandAndEleven0101 PostDeleteAutoScalingGroupVersionEnum = "2011-01-01"
+	POSTDeleteAutoScalingGroupVersionEnumTwoThousandAndEleven0101 PostDeleteAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
 type PostDeleteAutoScalingGroupQueryParams struct {

@@ -1,0 +1,77 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    opts := []sdk.SDKOption{
+        sdk.WithSecurity(
+            shared.Security{
+                APIKeyAuth: shared.SchemeAPIKeyAuth{
+                    APIKey: "YOUR_API_KEY_HERE",
+                },
+            }
+        ),
+    }
+
+    s := sdk.New(opts...)
+    
+    req := operations.GetRecordsFormatRequest{
+        PathParams: operations.GetRecordsFormatPathParams{
+            Format: "xml",
+        },
+        QueryParams: operations.GetRecordsFormatQueryParams{
+            AndCategory: "Newspapers",
+            AndCentury: "nulla",
+            AndCollection: "error",
+            AndContentPartner: "autem",
+            AndCreator: "est",
+            AndDate: "qui",
+            AndDcType: "eum",
+            AndDecade: "ut",
+            AndFormat: "veniam",
+            AndHasLargeThumbnailURL: "Y",
+            AndHasLatLng: false,
+            AndIsCommercialUse: false,
+            AndOrFilterField: "omnis",
+            AndPlacename: "officia",
+            AndPrimaryCollection: "expedita",
+            AndSubject: "eligendi",
+            AndTitle: "accusamus",
+            AndUsage: "Share",
+            AndYear: "consequuntur",
+            APIKey: "reiciendis",
+            Direction: "desc",
+            ExcludeFiltersFromFacets: false,
+            Facets: []shared.FieldsEnum2{
+                "copyright",
+                "year",
+                "creator",
+            },
+            FacetsPage: 4519067991908913368,
+            FacetsPerPage: 7436533455547273823,
+            Fields: "consequuntur",
+            GeoBbox: "sit",
+            Page: 4533488582174557333,
+            PerPage: 6894329672744535763,
+            Sort: "syndication_date",
+            Text: "nam",
+            WithoutFilterField: "dolores",
+        },
+    }
+    
+    res, err := s.APICalls.GetRecordsFormat(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.GetRecordsFormat200ApplicationJSONObject != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

@@ -32,8 +32,8 @@ type RetireGrantResponse struct {
 	InvalidArnException        *interface{}
 	InvalidGrantIDException    *interface{}
 	InvalidGrantTokenException *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64
 }

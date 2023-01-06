@@ -4,7 +4,7 @@ type RunTaskRequest struct {
 	CapacityProviderStrategy []CapacityProviderStrategyItem `json:"capacityProviderStrategy,omitempty"`
 	Cluster                  *string                        `json:"cluster,omitempty"`
 	Count                    *int64                         `json:"count,omitempty"`
-	EnableEcsManagedTags     *bool                          `json:"enableECSManagedTags,omitempty"`
+	EnableECSManagedTags     *bool                          `json:"enableECSManagedTags,omitempty"`
 	EnableExecuteCommand     *bool                          `json:"enableExecuteCommand,omitempty"`
 	Group                    *string                        `json:"group,omitempty"`
 	LaunchType               *LaunchTypeEnum                `json:"launchType,omitempty"`

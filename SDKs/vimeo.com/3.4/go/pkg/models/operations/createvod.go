@@ -26,18 +26,18 @@ const (
 )
 
 type CreateVodRequestBodyBuyPrice struct {
-	Aud *float64 `json:"AUD,omitempty"`
-	Cad *float64 `json:"CAD,omitempty"`
-	Chf *float64 `json:"CHF,omitempty"`
-	Dkk *float64 `json:"DKK,omitempty"`
-	Eur *float64 `json:"EUR,omitempty"`
-	Gbp *float64 `json:"GBP,omitempty"`
-	Jpy *float64 `json:"JPY,omitempty"`
-	Krw *float64 `json:"KRW,omitempty"`
-	Nok *float64 `json:"NOK,omitempty"`
-	Pln *float64 `json:"PLN,omitempty"`
-	Sek *float64 `json:"SEK,omitempty"`
-	Usd *float64 `json:"USD,omitempty"`
+	AUD *float64 `json:"AUD,omitempty"`
+	CAD *float64 `json:"CAD,omitempty"`
+	CHF *float64 `json:"CHF,omitempty"`
+	DKK *float64 `json:"DKK,omitempty"`
+	EUR *float64 `json:"EUR,omitempty"`
+	GBP *float64 `json:"GBP,omitempty"`
+	JPY *float64 `json:"JPY,omitempty"`
+	KRW *float64 `json:"KRW,omitempty"`
+	NOK *float64 `json:"NOK,omitempty"`
+	PLN *float64 `json:"PLN,omitempty"`
+	SEK *float64 `json:"SEK,omitempty"`
+	USD *float64 `json:"USD,omitempty"`
 }
 
 type CreateVodRequestBodyBuy struct {
@@ -58,7 +58,7 @@ const (
 )
 
 type CreateVodRequestBodyEpisodesBuyPrice struct {
-	Usd *float64 `json:"USD,omitempty"`
+	USD *float64 `json:"USD,omitempty"`
 }
 
 type CreateVodRequestBodyEpisodesBuy struct {
@@ -81,7 +81,7 @@ const (
 )
 
 type CreateVodRequestBodyEpisodesRentPrice struct {
-	Usd *float64 `json:"USD,omitempty"`
+	USD *float64 `json:"USD,omitempty"`
 }
 
 type CreateVodRequestBodyEpisodesRent struct {
@@ -109,18 +109,18 @@ const (
 )
 
 type CreateVodRequestBodyRentPrice struct {
-	Aud *float64 `json:"AUD,omitempty"`
-	Cad *float64 `json:"CAD,omitempty"`
-	Chf *float64 `json:"CHF,omitempty"`
-	Dkk *float64 `json:"DKK,omitempty"`
-	Eur *float64 `json:"EUR,omitempty"`
-	Gbp *float64 `json:"GBP,omitempty"`
-	Jpy *float64 `json:"JPY,omitempty"`
-	Krw *float64 `json:"KRW,omitempty"`
-	Nok *float64 `json:"NOK,omitempty"`
-	Pln *float64 `json:"PLN,omitempty"`
-	Sek *float64 `json:"SEK,omitempty"`
-	Usd *float64 `json:"USD,omitempty"`
+	AUD *float64 `json:"AUD,omitempty"`
+	CAD *float64 `json:"CAD,omitempty"`
+	CHF *float64 `json:"CHF,omitempty"`
+	DKK *float64 `json:"DKK,omitempty"`
+	EUR *float64 `json:"EUR,omitempty"`
+	GBP *float64 `json:"GBP,omitempty"`
+	JPY *float64 `json:"JPY,omitempty"`
+	KRW *float64 `json:"KRW,omitempty"`
+	NOK *float64 `json:"NOK,omitempty"`
+	PLN *float64 `json:"PLN,omitempty"`
+	SEK *float64 `json:"SEK,omitempty"`
+	USD *float64 `json:"USD,omitempty"`
 }
 
 type CreateVodRequestBodyRent struct {
@@ -130,7 +130,7 @@ type CreateVodRequestBodyRent struct {
 }
 
 type CreateVodRequestBodySubscriptionMonthlyPrice struct {
-	Usd *float64 `json:"USD,omitempty"`
+	USD *float64 `json:"USD,omitempty"`
 }
 
 type CreateVodRequestBodySubscriptionMonthly struct {

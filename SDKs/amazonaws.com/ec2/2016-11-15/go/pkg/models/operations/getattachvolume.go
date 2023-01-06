@@ -3,13 +3,13 @@ package operations
 type GetAttachVolumeActionEnum string
 
 const (
-	GetAttachVolumeActionEnumAttachVolume GetAttachVolumeActionEnum = "AttachVolume"
+	GETAttachVolumeActionEnumAttachVolume GetAttachVolumeActionEnum = "AttachVolume"
 )
 
 type GetAttachVolumeVersionEnum string
 
 const (
-	GetAttachVolumeVersionEnumTwoThousandAndSixteen1115 GetAttachVolumeVersionEnum = "2016-11-15"
+	GETAttachVolumeVersionEnumTwoThousandAndSixteen1115 GetAttachVolumeVersionEnum = "2016-11-15"
 )
 
 type GetAttachVolumeQueryParams struct {

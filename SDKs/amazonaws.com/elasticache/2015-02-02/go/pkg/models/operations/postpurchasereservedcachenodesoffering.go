@@ -3,13 +3,13 @@ package operations
 type PostPurchaseReservedCacheNodesOfferingActionEnum string
 
 const (
-	PostPurchaseReservedCacheNodesOfferingActionEnumPurchaseReservedCacheNodesOffering PostPurchaseReservedCacheNodesOfferingActionEnum = "PurchaseReservedCacheNodesOffering"
+	POSTPurchaseReservedCacheNodesOfferingActionEnumPurchaseReservedCacheNodesOffering PostPurchaseReservedCacheNodesOfferingActionEnum = "PurchaseReservedCacheNodesOffering"
 )
 
 type PostPurchaseReservedCacheNodesOfferingVersionEnum string
 
 const (
-	PostPurchaseReservedCacheNodesOfferingVersionEnumTwoThousandAndFifteen0202 PostPurchaseReservedCacheNodesOfferingVersionEnum = "2015-02-02"
+	POSTPurchaseReservedCacheNodesOfferingVersionEnumTwoThousandAndFifteen0202 PostPurchaseReservedCacheNodesOfferingVersionEnum = "2015-02-02"
 )
 
 type PostPurchaseReservedCacheNodesOfferingQueryParams struct {

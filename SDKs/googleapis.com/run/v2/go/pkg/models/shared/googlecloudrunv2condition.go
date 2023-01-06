@@ -44,6 +44,7 @@ const (
 	GoogleCloudRunV2ConditionRevisionReasonEnumActiveRevisionLimitReached    GoogleCloudRunV2ConditionRevisionReasonEnum = "ACTIVE_REVISION_LIMIT_REACHED"
 	GoogleCloudRunV2ConditionRevisionReasonEnumNoDeployment                  GoogleCloudRunV2ConditionRevisionReasonEnum = "NO_DEPLOYMENT"
 	GoogleCloudRunV2ConditionRevisionReasonEnumHealthCheckSkipped            GoogleCloudRunV2ConditionRevisionReasonEnum = "HEALTH_CHECK_SKIPPED"
+	GoogleCloudRunV2ConditionRevisionReasonEnumMinInstancesWarming           GoogleCloudRunV2ConditionRevisionReasonEnum = "MIN_INSTANCES_WARMING"
 )
 
 type GoogleCloudRunV2ConditionSeverityEnum string

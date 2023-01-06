@@ -4,5 +4,5 @@ package shared
 // A list of your dead letter source queues.
 type ListDeadLetterSourceQueuesResult struct {
 	NextToken *string
-	QueueUrls []string
+	QueueUrls []map[string]interface{}
 }

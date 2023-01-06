@@ -3,7 +3,7 @@ package operations
 type GetConfigureHealthCheckActionEnum string
 
 const (
-	GetConfigureHealthCheckActionEnumConfigureHealthCheck GetConfigureHealthCheckActionEnum = "ConfigureHealthCheck"
+	GETConfigureHealthCheckActionEnumConfigureHealthCheck GetConfigureHealthCheckActionEnum = "ConfigureHealthCheck"
 )
 
 // GetConfigureHealthCheckHealthCheck
@@ -19,7 +19,7 @@ type GetConfigureHealthCheckHealthCheck struct {
 type GetConfigureHealthCheckVersionEnum string
 
 const (
-	GetConfigureHealthCheckVersionEnumTwoThousandAndTwelve0601 GetConfigureHealthCheckVersionEnum = "2012-06-01"
+	GETConfigureHealthCheckVersionEnumTwoThousandAndTwelve0601 GetConfigureHealthCheckVersionEnum = "2012-06-01"
 )
 
 type GetConfigureHealthCheckQueryParams struct {

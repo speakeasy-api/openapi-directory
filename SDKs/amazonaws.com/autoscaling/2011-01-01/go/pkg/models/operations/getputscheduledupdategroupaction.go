@@ -7,13 +7,13 @@ import (
 type GetPutScheduledUpdateGroupActionActionEnum string
 
 const (
-	GetPutScheduledUpdateGroupActionActionEnumPutScheduledUpdateGroupAction GetPutScheduledUpdateGroupActionActionEnum = "PutScheduledUpdateGroupAction"
+	GETPutScheduledUpdateGroupActionActionEnumPutScheduledUpdateGroupAction GetPutScheduledUpdateGroupActionActionEnum = "PutScheduledUpdateGroupAction"
 )
 
 type GetPutScheduledUpdateGroupActionVersionEnum string
 
 const (
-	GetPutScheduledUpdateGroupActionVersionEnumTwoThousandAndEleven0101 GetPutScheduledUpdateGroupActionVersionEnum = "2011-01-01"
+	GETPutScheduledUpdateGroupActionVersionEnumTwoThousandAndEleven0101 GetPutScheduledUpdateGroupActionVersionEnum = "2011-01-01"
 )
 
 type GetPutScheduledUpdateGroupActionQueryParams struct {

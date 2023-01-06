@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTransitGatewayVpcAttachmentsResult struct {
-	NextToken                    *string
-	TransitGatewayVpcAttachments []TransitGatewayVpcAttachment
+	NextToken                    map[string]interface{}
+	TransitGatewayVpcAttachments map[string]interface{}
 }

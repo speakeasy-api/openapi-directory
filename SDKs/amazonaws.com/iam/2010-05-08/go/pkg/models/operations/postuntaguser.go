@@ -3,13 +3,13 @@ package operations
 type PostUntagUserActionEnum string
 
 const (
-	PostUntagUserActionEnumUntagUser PostUntagUserActionEnum = "UntagUser"
+	POSTUntagUserActionEnumUntagUser PostUntagUserActionEnum = "UntagUser"
 )
 
 type PostUntagUserVersionEnum string
 
 const (
-	PostUntagUserVersionEnumTwoThousandAndTen0508 PostUntagUserVersionEnum = "2010-05-08"
+	POSTUntagUserVersionEnumTwoThousandAndTen0508 PostUntagUserVersionEnum = "2010-05-08"
 )
 
 type PostUntagUserQueryParams struct {

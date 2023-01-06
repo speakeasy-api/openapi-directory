@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,18 +33,25 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.DeleteWebhooksIDRequest{
-        PathParams: operations.DeleteWebhooksIDPathParams{
-            ID: "dolor",
+    req := operations.PostRmmPreSignAttachmentRequest{
+        Security: operations.PostRmmPreSignAttachmentSecurity{
+            BasicAuth: shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        },
+        Request: shared.PreSignRequest{
+            FileExtension: "deserunt",
+            MediaType: "corporis",
         },
     }
     
-    res, err := s.Sdk.DeleteWebhooksID(ctx, req)
+    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.PreSignInfo != nil {
         // handle response
     }
 ```
@@ -54,20 +60,32 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Attachments
 
-* `DeleteWebhooksID` - Delete a webhook
+* `PostRmmPreSignAttachment` - Upload an attachment via a signed URL
+
+### Blocked Numbers
+
 * `GetBlockedNumbers` - List blocked numbers
+* `PostBlockedNumbers` - Create a blocked number
+
+### Message
+
 * `GetMessages` - Retrieve Messages
+* `GetMessagesSend` - Send message by simple GET or POST
 * `GetMessagesID` - Show Message
 * `GetMessagesIDRelatedReceivedMessages` - List Related Messages
-* `GetMessagesSend` - Send message by simple GET or POST
+* `PostMessages` - Send Messages
+
+### Profile
+
 * `GetProfile` - Get profile
+
+### Webhooks
+
+* `DeleteWebhooksID` - Delete a webhook
 * `GetWebhooks` - List webhooks
 * `GetWebhooksID` - Read a webhook
-* `PostBlockedNumbers` - Create a blocked number
-* `PostMessages` - Send Messages
-* `PostRmmPreSignAttachment` - Upload an attachment via a signed URL
 * `PostWebhooks` - Create a webhook
 * `PostWebhooksID` - Update a webhook
 

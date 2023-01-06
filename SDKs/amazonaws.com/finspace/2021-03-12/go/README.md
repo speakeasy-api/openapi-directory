@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,37 +34,38 @@ func main() {
     
     req := operations.CreateEnvironmentRequest{
         Headers: operations.CreateEnvironmentHeaders{
-            XAmzAlgorithm: "sequi",
-            XAmzContentSha256: "corrupti",
-            XAmzCredential: "porro",
-            XAmzDate: "at",
-            XAmzSecurityToken: "saepe",
-            XAmzSignature: "id",
-            XAmzSignedHeaders: "consequatur",
+            XAmzAlgorithm: "non",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "repellat",
+            XAmzDate: "quo",
+            XAmzSecurityToken: "dolorum",
+            XAmzSignature: "laboriosam",
+            XAmzSignedHeaders: "velit",
         },
         Request: operations.CreateEnvironmentRequestBody{
-            Description: "quis",
+            Description: "ea",
             FederationMode: "LOCAL",
             FederationParameters: &operations.CreateEnvironmentRequestBodyFederationParameters{
-                ApplicationCallBackURL: "molestiae",
+                ApplicationCallBackURL: "fugit",
                 AttributeMap: map[string]string{
-                    "similique": "neque",
-                    "deserunt": "ab",
+                    "tempora": "aliquid",
+                    "mollitia": "non",
+                    "magni": "recusandae",
                 },
-                FederationProviderName: "earum",
-                FederationUrn: "omnis",
-                SamlMetadataDocument: "est",
-                SamlMetadataURL: "aliquid",
+                FederationProviderName: "illum",
+                FederationURN: "consequatur",
+                SamlMetadataDocument: "dolores",
+                SamlMetadataURL: "hic",
             },
-            KmsKeyID: "quia",
-            Name: "animi",
+            KmsKeyID: "nihil",
+            Name: "explicabo",
             Tags: map[string]string{
-                "repudiandae": "non",
+                "iure": "et",
             },
         },
     }
     
-    res, err := s.Sdk.CreateEnvironment(ctx, req)
+    res, err := s.CreateEnvironment(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

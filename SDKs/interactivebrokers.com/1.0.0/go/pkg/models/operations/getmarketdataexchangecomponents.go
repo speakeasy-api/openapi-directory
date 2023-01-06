@@ -14,6 +14,6 @@ type GetMarketdataExchangeComponents200ApplicationJSON struct {
 
 type GetMarketdataExchangeComponentsResponse struct {
 	ContentType                                              string
-	GetMarketdataExchangeComponents200ApplicationJSONObjects []GetMarketdataExchangeComponents200ApplicationJSON
 	StatusCode                                               int64
+	GetMarketdataExchangeComponents200ApplicationJSONObjects []GetMarketdataExchangeComponents200ApplicationJSON
 }

@@ -3,19 +3,19 @@ package operations
 type GetStopDbInstanceActionEnum string
 
 const (
-	GetStopDbInstanceActionEnumStopDbInstance GetStopDbInstanceActionEnum = "StopDBInstance"
+	GETStopDBInstanceActionEnumStopDbInstance GetStopDbInstanceActionEnum = "StopDBInstance"
 )
 
 type GetStopDbInstanceVersionEnum string
 
 const (
-	GetStopDbInstanceVersionEnumTwoThousandAndFourteen1031 GetStopDbInstanceVersionEnum = "2014-10-31"
+	GETStopDBInstanceVersionEnumTwoThousandAndFourteen1031 GetStopDbInstanceVersionEnum = "2014-10-31"
 )
 
 type GetStopDbInstanceQueryParams struct {
 	Action               GetStopDbInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                       `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
-	DbSnapshotIdentifier *string                      `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
+	DBInstanceIdentifier string                       `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBSnapshotIdentifier *string                      `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Version              GetStopDbInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

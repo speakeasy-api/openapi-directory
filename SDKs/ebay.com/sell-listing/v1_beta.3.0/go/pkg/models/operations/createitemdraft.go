@@ -6,7 +6,7 @@ import (
 
 type CreateItemDraftHeaders struct {
 	ContentLanguage     *string `header:"style=simple,explode=false,name=Content-Language"`
-	XEbayCMarketplaceID string  `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	XEBAYCMARKETPLACEID string  `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type CreateItemDraftSecurity struct {

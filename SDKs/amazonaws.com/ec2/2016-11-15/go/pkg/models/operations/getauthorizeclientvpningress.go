@@ -3,13 +3,13 @@ package operations
 type GetAuthorizeClientVpnIngressActionEnum string
 
 const (
-	GetAuthorizeClientVpnIngressActionEnumAuthorizeClientVpnIngress GetAuthorizeClientVpnIngressActionEnum = "AuthorizeClientVpnIngress"
+	GETAuthorizeClientVpnIngressActionEnumAuthorizeClientVpnIngress GetAuthorizeClientVpnIngressActionEnum = "AuthorizeClientVpnIngress"
 )
 
 type GetAuthorizeClientVpnIngressVersionEnum string
 
 const (
-	GetAuthorizeClientVpnIngressVersionEnumTwoThousandAndSixteen1115 GetAuthorizeClientVpnIngressVersionEnum = "2016-11-15"
+	GETAuthorizeClientVpnIngressVersionEnumTwoThousandAndSixteen1115 GetAuthorizeClientVpnIngressVersionEnum = "2016-11-15"
 )
 
 type GetAuthorizeClientVpnIngressQueryParams struct {

@@ -32,7 +32,7 @@ type PutFileSystemPolicyRequest struct {
 type PutFileSystemPolicyResponse struct {
 	ContentType                       string
 	FileSystemNotFound                *interface{}
-	FileSystemPolicyDescription       *shared.FileSystemPolicyDescription
+	FileSystemPolicyDescription       *shared.FileSystemPolicyDescription1
 	IncorrectFileSystemLifeCycleState *interface{}
 	InternalServerError               *interface{}
 	InvalidPolicyException            *interface{}

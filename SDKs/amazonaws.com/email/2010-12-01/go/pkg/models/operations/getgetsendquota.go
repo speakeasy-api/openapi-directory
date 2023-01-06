@@ -3,13 +3,13 @@ package operations
 type GetGetSendQuotaActionEnum string
 
 const (
-	GetGetSendQuotaActionEnumGetSendQuota GetGetSendQuotaActionEnum = "GetSendQuota"
+	GETGETSendQuotaActionEnumGetSendQuota GetGetSendQuotaActionEnum = "GetSendQuota"
 )
 
 type GetGetSendQuotaVersionEnum string
 
 const (
-	GetGetSendQuotaVersionEnumTwoThousandAndTen1201 GetGetSendQuotaVersionEnum = "2010-12-01"
+	GETGETSendQuotaVersionEnumTwoThousandAndTen1201 GetGetSendQuotaVersionEnum = "2010-12-01"
 )
 
 type GetGetSendQuotaQueryParams struct {

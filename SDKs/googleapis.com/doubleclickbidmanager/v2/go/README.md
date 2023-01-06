@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,69 +26,75 @@ func main() {
         Security: operations.DoubleclickbidmanagerQueriesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.DoubleclickbidmanagerQueriesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "alias",
+            DollarXgafv: "1",
+            AccessToken: "voluptatem",
             Alt: "proto",
-            Callback: "commodi",
-            Fields: "sunt",
-            Key: "corrupti",
-            OauthToken: "voluptatem",
-            PrettyPrint: false,
-            QuotaUser: "molestiae",
-            UploadType: "asperiores",
-            UploadProtocol: "consequatur",
+            Callback: "ut",
+            Fields: "dolorem",
+            Key: "est",
+            OauthToken: "dolor",
+            PrettyPrint: true,
+            QuotaUser: "quia",
+            UploadType: "voluptatem",
+            UploadProtocol: "doloremque",
         },
         Request: &shared.QueryInput{
             Metadata: &shared.QueryMetadata{
                 DataRange: &shared.DataRange{
                     CustomEndDate: &shared.Date{
-                        Day: 6671789434805244583,
-                        Month: 5212482904067058666,
-                        Year: 6059164999202033981,
+                        Day: 2854160533723993438,
+                        Month: 4333142927948137677,
+                        Year: 782988781588668671,
                     },
                     CustomStartDate: &shared.Date{
-                        Day: 7939716795557568095,
-                        Month: 4222494168206318085,
-                        Year: 1307568881775119472,
+                        Day: 3585929577210151539,
+                        Month: 4884585508191509271,
+                        Year: 7922268105250499989,
                     },
-                    Range: "YEAR_TO_DATE",
+                    Range: "PREVIOUS_YEAR",
                 },
-                Format: "XLSX",
-                SendNotification: false,
+                Format: "FORMAT_UNSPECIFIED",
+                SendNotification: true,
                 ShareEmailAddress: []string{
-                    "dolorem",
-                    "omnis",
-                    "delectus",
+                    "beatae",
                 },
-                Title: "corrupti",
+                Title: "illo",
             },
             Params: &shared.Parameters{
                 Filters: []shared.FilterPair{
                     shared.FilterPair{
-                        Type: "nesciunt",
-                        Value: "voluptatem",
+                        Type: "atque",
+                        Value: "qui",
+                    },
+                    shared.FilterPair{
+                        Type: "incidunt",
+                        Value: "at",
+                    },
+                    shared.FilterPair{
+                        Type: "dolor",
+                        Value: "totam",
                     },
                 },
                 GroupBys: []string{
-                    "quo",
-                    "eaque",
+                    "consequatur",
                 },
                 Metrics: []string{
-                    "officiis",
-                    "asperiores",
+                    "qui",
+                    "vel",
+                    "accusamus",
                 },
                 Options: &shared.Options{
-                    IncludeOnlyTargetedUserLists: false,
+                    IncludeOnlyTargetedUserLists: true,
                     PathQueryOptions: &shared.PathQueryOptions{
                         ChannelGrouping: &shared.ChannelGrouping{
-                            FallbackName: "qui",
-                            Name: "corporis",
+                            FallbackName: "architecto",
+                            Name: "harum",
                             Rules: []shared.Rule{
                                 shared.Rule{
                                     DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
@@ -97,134 +102,45 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "ipsa",
-                                                        Match: "PARTIAL",
+                                                        Filter: "eum",
+                                                        Match: "UNKNOWN",
                                                         Values: []string{
-                                                            "possimus",
+                                                            "unde",
+                                                            "id",
+                                                            "itaque",
                                                         },
                                                     },
                                                 },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "illo",
+                                                        Filter: "voluptatibus",
                                                         Match: "WILDCARD_EXPRESSION",
                                                         Values: []string{
-                                                            "aperiam",
+                                                            "aliquam",
+                                                            "omnis",
+                                                            "in",
                                                         },
                                                     },
                                                 },
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "cumque",
-                                                        Match: "BEGINS_WITH",
+                                                        Filter: "iusto",
+                                                        Match: "UNKNOWN",
                                                         Values: []string{
-                                                            "dolorum",
                                                             "et",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "velit",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "sequi",
-                                                        Match: "WILDCARD_EXPRESSION",
-                                                        Values: []string{
-                                                            "modi",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "quia",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "accusantium",
-                                                            "ut",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "modi",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "iusto",
-                                                            "esse",
-                                                            "repudiandae",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "consequatur",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "accusamus",
-                                                            "iste",
-                                                            "animi",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "iste",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "perspiciatis",
-                                                            "deserunt",
-                                                            "dolorem",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "sint",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
-                                                            "vel",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "quia",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "est",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "sint",
-                                                            "velit",
                                                             "et",
+                                                            "nisi",
                                                         },
                                                     },
                                                 },
                                             },
                                         },
                                     },
-                                    Name: "harum",
+                                    Name: "laboriosam",
                                 },
                             },
                         },
@@ -233,34 +149,31 @@ func main() {
                                 EventFilters: []shared.EventFilter{
                                     shared.EventFilter{
                                         DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "recusandae",
-                                            Match: "EXACT",
+                                            Filter: "velit",
+                                            Match: "WILDCARD_EXPRESSION",
                                             Values: []string{
-                                                "dolor",
-                                                "atque",
-                                                "mollitia",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "rerum",
-                                            Match: "EXACT",
-                                            Values: []string{
-                                                "distinctio",
-                                                "reprehenderit",
-                                                "dolorem",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "omnis",
-                                            Match: "UNKNOWN",
-                                            Values: []string{
-                                                "itaque",
-                                                "consequuntur",
+                                                "facilis",
+                                                "deleniti",
                                                 "in",
+                                            },
+                                        },
+                                    },
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: "reiciendis",
+                                            Match: "EXACT",
+                                            Values: []string{
+                                                "nemo",
+                                                "officiis",
+                                            },
+                                        },
+                                    },
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: "sed",
+                                            Match: "WILDCARD_EXPRESSION",
+                                            Values: []string{
+                                                "quo",
                                             },
                                         },
                                     },
@@ -270,20 +183,20 @@ func main() {
                         },
                     },
                 },
-                Type: "STANDARD",
+                Type: "FULL_PATH",
             },
             Schedule: &shared.QuerySchedule{
                 EndDate: &shared.Date{
-                    Day: 1398871752352432732,
-                    Month: 496797688226034688,
-                    Year: 2217355476950766575,
+                    Day: 1484522708020359980,
+                    Month: 2769641103013381022,
+                    Year: 154072379343606070,
                 },
-                Frequency: "DAILY",
-                NextRunTimezoneCode: "qui",
+                Frequency: "QUARTERLY",
+                NextRunTimezoneCode: "incidunt",
                 StartDate: &shared.Date{
-                    Day: 1533745246519513631,
-                    Month: 7560247571997630603,
-                    Year: 8121837298909135117,
+                    Day: 5464428400347090066,
+                    Month: 9136781607006472501,
+                    Year: 6351368281535303786,
                 },
             },
         },

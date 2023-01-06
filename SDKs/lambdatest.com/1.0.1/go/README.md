@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,21 +22,24 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.LocationsRequest{
-        Security: operations.LocationsSecurity{
+    req := operations.DevicesRequest{
+        Security: operations.DevicesSecurity{
             BasicAuth: shared.SchemeBasicAuth{
                 Password: "YOUR_PASSWORD_HERE",
                 Username: "YOUR_USERNAME_HERE",
             },
         },
+        QueryParams: operations.DevicesQueryParams{
+            Os: "in",
+        },
     }
     
-    res, err := s.Sdk.Locations(ctx, req)
+    res, err := s.GetDevices.Devices(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Locations != nil {
+    if res.OsDevices != nil {
         // handle response
     }
 ```
@@ -46,16 +48,40 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Get Devices
+
+* `Devices` - Fetch all available device combinations.
+
+### Get Locations
 
 * `Locations` - Fetch Locations
-* `Profiles` - Fetch login profiles
-* `Resolutions` - Fetch all available resolution on different OS
-* `StartScreenshotTest` - Start Screenshot Test
-* `ZippedScreenshots` - Fetch Zipped Screenshots
-* `Devices` - Fetch all available device combinations.
+
+### Get OS-Browsers
+
 * `OsBrowsers` - Fetch all available os-browser combinations.
+
+### Get Profiles
+
+* `Profiles` - Fetch login profiles
+
+### Get Resolutions
+
+* `Resolutions` - Fetch all available resolution on different OS
+
+### Get Screenshots
+
 * `Screenshots` - Fetch specified screenshot details
+
+### Get Zipped Screenshots
+
+* `ZippedScreenshots` - Fetch Zipped Screenshots
+
+### Start Screenshot Test
+
+* `StartScreenshotTest` - Start Screenshot Test
+
+### Stop Screenshot Test
+
 * `StopScreenshotsTest` - Stop specified screenshot test
 
 <!-- End SDK Available Operations -->

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,24 @@ func main() {
     
     req := operations.CloneBackendRequest{
         PathParams: operations.CloneBackendPathParams{
-            AppID: "culpa",
-            BackendEnvironmentName: "repellendus",
+            AppID: "consequatur",
+            BackendEnvironmentName: "dolores",
         },
         Headers: operations.CloneBackendHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "veniam",
-            XAmzDate: "architecto",
-            XAmzSecurityToken: "molestias",
-            XAmzSignature: "rerum",
-            XAmzSignedHeaders: "quo",
+            XAmzAlgorithm: "hic",
+            XAmzContentSha256: "nihil",
+            XAmzCredential: "explicabo",
+            XAmzDate: "ex",
+            XAmzSecurityToken: "iure",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "quos",
         },
         Request: operations.CloneBackendRequestBody{
             TargetEnvironmentName: "et",
         },
     }
     
-    res, err := s.Sdk.CloneBackend(ctx, req)
+    res, err := s.CloneBackend(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

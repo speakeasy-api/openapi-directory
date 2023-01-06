@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVpcEndpointServiceConfigurationsResult struct {
-	NextToken             *string
-	ServiceConfigurations []ServiceConfiguration
+	NextToken             map[string]interface{}
+	ServiceConfigurations map[string]interface{}
 }

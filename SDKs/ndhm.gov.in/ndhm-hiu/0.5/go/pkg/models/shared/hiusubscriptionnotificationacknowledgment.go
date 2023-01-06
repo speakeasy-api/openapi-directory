@@ -7,7 +7,7 @@ import (
 type HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum string
 
 const (
-	HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnumOk HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum = "OK"
+	HIUSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnumOk HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum = "OK"
 )
 
 type HiuSubscriptionNotificationAcknowledgmentAcknowledgement struct {

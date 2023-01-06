@@ -22,6 +22,6 @@ type GetResourcesMediaIDEmbedJSONRequest struct {
 
 type GetResourcesMediaIDEmbedJSONResponse struct {
 	ContentType                                          string
-	GetResourcesMediaIDEmbedJSON200ApplicationJSONString *string
 	StatusCode                                           int64
+	GetResourcesMediaIDEmbedJSON200ApplicationJSONString *string
 }

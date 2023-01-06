@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,25 +22,19 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.DeleteContainersGroupsNameOrIDRequest{
-        PathParams: operations.DeleteContainersGroupsNameOrIDPathParams{
-            NameOrID: "laborum",
-        },
-        QueryParams: operations.DeleteContainersGroupsNameOrIDQueryParams{
-            Force: "ipsum",
-        },
-        Headers: operations.DeleteContainersGroupsNameOrIDHeaders{
-            XAuthProjectID: "quae",
-            XAuthToken: "minima",
+    req := operations.GetContainersMessagesRequest{
+        Headers: operations.GetContainersMessagesHeaders{
+            XAuthProjectID: "veritatis",
+            XAuthToken: "hic",
         },
     }
     
-    res, err := s.Sdk.DeleteContainersGroupsNameOrID(ctx, req)
+    res, err := s.APIInfo.GetContainersMessages(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.GetContainersMessages200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -50,55 +43,82 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### API info
+
+* `GetContainersMessages` - List messages for the user
+* `GetContainersVersion` - List latest API version
+
+### Authentication
+
+* `GetTlskey` - Retrieve the TLS Certificate
+* `PutTlskeyRefresh` - Refresh the TLS Certificate
+
+### Container Groups
 
 * `DeleteContainersGroupsNameOrID` - Stop and delete all container instances in a container group.
-* `DeleteContainersNameOrID` - Remove a single container
-* `DeleteImagesID` - Remove a Docker image.
-* `DeleteVolumesFsName` - Delete a file share
-* `DeleteVolumesName` - Delete a volume
-* `GetContainersFloatingIps` - List available public IP addresses in a space
 * `GetContainersGroups` - List all container groups in a space
 * `GetContainersGroupsNameOrID` - Inspect a container group.
-* `GetContainersIDStatus` - List the current state of a container.
-* `GetContainersJSON` - List single containers in a space.
-* `GetContainersMessages` - List messages for the user
-* `GetContainersNameOrIDJSON` - Inspect a single container
-* `GetContainersQuota` - Retrieve organization and space specific quota
-* `GetContainersUsage` - List container sizes and quota limits
-* `GetContainersVersion` - List latest API version
-* `GetImagesJSON` - List all Docker images that are available in your private Bluemix registry.
-* `GetImagesNameOrIDJSON` - Inspect a Docker image in private Bluemix registry
-* `GetRegistryNamespaces` - Retrieve the namespace of an organization.
-* `GetRegistryNamespacesNamespace` - Check the availability of a namespace
-* `GetTlskey` - Retrieve the TLS Certificate
-* `GetVolumesFsFlavorsJSON` - List available file share sizes
-* `GetVolumesFsJSON` - List available file shares in a space
-* `GetVolumesFsNameJSON` - Inspect a file share
-* `GetVolumesJSON` - List all volumes for a space
-* `GetVolumesNameJSON` - Retrieve detailed information about a volume. 
 * `PatchContainersGroupsNameOrID` - Update a container group.
-* `PostBuild` - Build a Docker image from a Dockerfile
-* `PostContainersCreate` - Create and start a single container
-* `PostContainersFloatingIpsIPRelease` - Release public IP address
-* `PostContainersFloatingIpsRequest` - Request a public IP address for a space
 * `PostContainersGroups` - Create and start a container group.
 * `PostContainersGroupsNameOrIDMaproute` - Map a public route to a container group.
 * `PostContainersGroupsNameOrIDUnmaproute` - Unmap a public route from a container group
+
+### File shares
+
+* `DeleteVolumesFsName` - Delete a file share
+* `GetVolumesFsFlavorsJSON` - List available file share sizes
+* `GetVolumesFsJSON` - List available file shares in a space
+* `GetVolumesFsNameJSON` - Inspect a file share
+* `PostVolumesFsCreate` - Create a file share in a space
+
+### Images
+
+* `DeleteImagesID` - Remove a Docker image.
+* `GetImagesJSON` - List all Docker images that are available in your private Bluemix registry.
+* `GetImagesNameOrIDJSON` - Inspect a Docker image in private Bluemix registry
+* `PostBuild` - Build a Docker image from a Dockerfile
+
+### Private Docker images registry
+
+* `GetRegistryNamespaces` - Retrieve the namespace of an organization.
+* `GetRegistryNamespacesNamespace` - Check the availability of a namespace
+* `PutRegistryNamespacesNamespace` - Set a namespace for your private Bluemix registry.
+
+### Public IP addresses
+
+* `GetContainersFloatingIps` - List available public IP addresses in a space
+* `PostContainersFloatingIpsRequest` - Request a public IP address for a space
+* `PostContainersFloatingIpsIPRelease` - Release public IP address
 * `PostContainersNameOrIDFloatingIpsIPBind` - Bind a public IP address to a single container
 * `PostContainersNameOrIDFloatingIpsIPUnbind` - Unbind a public IP address from a container
+
+### Quota
+
+* `GetContainersQuota` - Retrieve organization and space specific quota
+* `GetContainersUsage` - List container sizes and quota limits
+* `PutContainersQuota` - Update space quota
+
+### Single containers
+
+* `DeleteContainersNameOrID` - Remove a single container
+* `GetContainersJSON` - List single containers in a space.
+* `GetContainersIDStatus` - List the current state of a container.
+* `GetContainersNameOrIDJSON` - Inspect a single container
+* `PostContainersCreate` - Create and start a single container
 * `PostContainersNameOrIDPause` - Pause a single container
 * `PostContainersNameOrIDRename` - Rename a single container
 * `PostContainersNameOrIDRestart` - Restart a single container
 * `PostContainersNameOrIDStart` - Start a single container
 * `PostContainersNameOrIDStop` - Stop a single container
 * `PostContainersNameOrIDUnpause` - Unpause a single container
+
+### Volumes
+
+* `DeleteVolumesName` - Delete a volume
+* `GetVolumesJSON` - List all volumes for a space
+* `GetVolumesNameJSON` - Retrieve detailed information about a volume. 
 * `PostVolumesCreate` - Create a volume in a space
-* `PostVolumesFsCreate` - Create a file share in a space
 * `PostVolumesName` - Share a volume with another space
-* `PutContainersQuota` - Update space quota
-* `PutRegistryNamespacesNamespace` - Set a namespace for your private Bluemix registry.
-* `PutTlskeyRefresh` - Refresh the TLS Certificate
 
 <!-- End SDK Available Operations -->
 

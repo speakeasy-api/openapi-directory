@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,7 +32,7 @@ func main() {
 
     s := sdk.New(opts...)
     
-    res, err := s.Sdk.GetAPIPdf(ctx)
+    res, err := s.Pdf.GetAPIPdf(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,7 +46,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Pdf
 
 * `GetAPIPdf` - Basic method to verify api is up and running
 * `PostAPIPdfWkhtmltopdf` - Generate pdf file from url using the excellent tool wkhtmltopdf.

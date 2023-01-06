@@ -5,9 +5,9 @@ import (
 )
 
 type EpfscRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Scno     string `json:"SCNO"`
+	SCNO     string `json:"SCNO"`
 }
 
 type EpfscRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Epfsc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Epfsc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Epfsc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Epfsc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Epfsc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Epfsc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Epfsc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Epfsc404ApplicationJSON struct {

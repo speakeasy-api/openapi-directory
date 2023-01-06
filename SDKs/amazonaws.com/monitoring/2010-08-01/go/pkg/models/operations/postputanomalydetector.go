@@ -3,13 +3,13 @@ package operations
 type PostPutAnomalyDetectorActionEnum string
 
 const (
-	PostPutAnomalyDetectorActionEnumPutAnomalyDetector PostPutAnomalyDetectorActionEnum = "PutAnomalyDetector"
+	POSTPutAnomalyDetectorActionEnumPutAnomalyDetector PostPutAnomalyDetectorActionEnum = "PutAnomalyDetector"
 )
 
 type PostPutAnomalyDetectorVersionEnum string
 
 const (
-	PostPutAnomalyDetectorVersionEnumTwoThousandAndTen0801 PostPutAnomalyDetectorVersionEnum = "2010-08-01"
+	POSTPutAnomalyDetectorVersionEnumTwoThousandAndTen0801 PostPutAnomalyDetectorVersionEnum = "2010-08-01"
 )
 
 type PostPutAnomalyDetectorQueryParams struct {

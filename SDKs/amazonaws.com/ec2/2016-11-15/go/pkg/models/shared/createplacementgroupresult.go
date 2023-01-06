@@ -1,5 +1,5 @@
 package shared
 
 type CreatePlacementGroupResult struct {
-	PlacementGroup *PlacementGroup
+	PlacementGroup map[string]interface{}
 }

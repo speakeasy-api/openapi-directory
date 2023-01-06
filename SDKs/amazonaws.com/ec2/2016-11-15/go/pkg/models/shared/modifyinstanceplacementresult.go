@@ -1,5 +1,5 @@
 package shared
 
 type ModifyInstancePlacementResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

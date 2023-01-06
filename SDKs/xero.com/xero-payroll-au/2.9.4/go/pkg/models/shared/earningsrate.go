@@ -17,7 +17,7 @@ type EarningsRate struct {
 	RatePerUnit                      *string                               `json:"RatePerUnit,omitempty"`
 	RateType                         *RateTypeEnum                         `json:"RateType,omitempty"`
 	TypeOfUnits                      *string                               `json:"TypeOfUnits,omitempty"`
-	UpdatedDateUtc                   *string                               `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC                   *string                               `json:"UpdatedDateUTC,omitempty"`
 }
 
 type EarningsRateInput struct {

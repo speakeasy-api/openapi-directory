@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,42 +27,42 @@ func main() {
             Option1: &operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams{
-            Parent: "ratione",
+            Parent: "dolores",
         },
         QueryParams: operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "deserunt",
-            Alt: "json",
-            Callback: "itaque",
-            ConnectionID: "nam",
-            Fields: "possimus",
-            Key: "aspernatur",
-            OauthToken: "est",
-            PrettyPrint: true,
-            QuotaUser: "cum",
-            UploadType: "dolorum",
-            UploadProtocol: "voluptas",
+            DollarXgafv: "1",
+            AccessToken: "incidunt",
+            Alt: "media",
+            Callback: "veniam",
+            ConnectionID: "et",
+            Fields: "enim",
+            Key: "sapiente",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "omnis",
+            UploadType: "maiores",
+            UploadProtocol: "et",
         },
         Request: &shared.ConnectionInput{
             CloudSQL: &shared.CloudSQLPropertiesInput{
                 Credential: &shared.CloudSQLCredential{
-                    Password: "et",
-                    Username: "dolor",
+                    Password: "aut",
+                    Username: "dolorem",
                 },
-                Database: "sint",
-                InstanceID: "et",
+                Database: "nisi",
+                InstanceID: "quod",
                 Type: "DATABASE_TYPE_UNSPECIFIED",
             },
-            Description: "est",
-            FriendlyName: "aut",
-            Name: "autem",
+            Description: "quod",
+            FriendlyName: "blanditiis",
+            Name: "et",
         },
     }
     

@@ -3,13 +3,13 @@ package operations
 type PostUntagServerCertificateActionEnum string
 
 const (
-	PostUntagServerCertificateActionEnumUntagServerCertificate PostUntagServerCertificateActionEnum = "UntagServerCertificate"
+	POSTUntagServerCertificateActionEnumUntagServerCertificate PostUntagServerCertificateActionEnum = "UntagServerCertificate"
 )
 
 type PostUntagServerCertificateVersionEnum string
 
 const (
-	PostUntagServerCertificateVersionEnumTwoThousandAndTen0508 PostUntagServerCertificateVersionEnum = "2010-05-08"
+	POSTUntagServerCertificateVersionEnumTwoThousandAndTen0508 PostUntagServerCertificateVersionEnum = "2010-05-08"
 )
 
 type PostUntagServerCertificateQueryParams struct {

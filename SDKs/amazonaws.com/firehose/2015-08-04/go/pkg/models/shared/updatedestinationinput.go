@@ -8,6 +8,6 @@ type UpdateDestinationInput struct {
 	ExtendedS3DestinationUpdate    *ExtendedS3DestinationUpdate    `json:"ExtendedS3DestinationUpdate,omitempty"`
 	HTTPEndpointDestinationUpdate  *HTTPEndpointDestinationUpdate  `json:"HttpEndpointDestinationUpdate,omitempty"`
 	RedshiftDestinationUpdate      *RedshiftDestinationUpdate      `json:"RedshiftDestinationUpdate,omitempty"`
-	S3DestinationUpdate            *S3DestinationUpdate            `json:"S3DestinationUpdate,omitempty"`
+	S3DestinationUpdate            map[string]interface{}          `json:"S3DestinationUpdate,omitempty"`
 	SplunkDestinationUpdate        *SplunkDestinationUpdate        `json:"SplunkDestinationUpdate,omitempty"`
 }

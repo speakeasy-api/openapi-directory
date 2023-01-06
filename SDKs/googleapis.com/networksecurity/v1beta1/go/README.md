@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,56 +26,74 @@ func main() {
         Security: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams{
-            Parent: "qui",
+            Parent: "labore",
         },
         QueryParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "placeat",
-            Alt: "proto",
-            AuthorizationPolicyID: "officia",
-            Callback: "accusamus",
-            Fields: "ut",
-            Key: "id",
-            OauthToken: "et",
+            DollarXgafv: "1",
+            AccessToken: "sit",
+            Alt: "json",
+            AuthorizationPolicyID: "veniam",
+            Callback: "odit",
+            Fields: "ipsa",
+            Key: "aspernatur",
+            OauthToken: "deserunt",
             PrettyPrint: true,
-            QuotaUser: "at",
-            UploadType: "excepturi",
-            UploadProtocol: "et",
+            QuotaUser: "accusantium",
+            UploadType: "atque",
+            UploadProtocol: "possimus",
         },
         Request: &shared.AuthorizationPolicyInput{
-            Action: "ALLOW",
-            Description: "vero",
+            Action: "ACTION_UNSPECIFIED",
+            Description: "repellendus",
             Labels: map[string]string{
-                "aut": "in",
-                "fugiat": "cumque",
-                "sint": "iste",
+                "omnis": "cupiditate",
             },
-            Name: "et",
+            Name: "voluptas",
             Rules: []shared.Rule{
                 shared.Rule{
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "placeat",
+                                "consequatur",
+                                "molestiae",
+                                "rerum",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "est",
-                                RegexMatch: "dolor",
+                                HeaderName: "exercitationem",
+                                RegexMatch: "nesciunt",
                             },
                             Methods: []string{
-                                "iste",
-                                "qui",
+                                "odio",
+                                "blanditiis",
+                                "veritatis",
                             },
                             Ports: []int64{
-                                8958702389796972570,
-                                640832359014892917,
-                                3832344256514173857,
+                                6695643534660566332,
+                            },
+                        },
+                        shared.Destination{
+                            Hosts: []string{
+                                "magni",
+                                "quibusdam",
+                                "assumenda",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "qui",
+                                RegexMatch: "minus",
+                            },
+                            Methods: []string{
+                                "quod",
+                                "corporis",
+                            },
+                            Ports: []int64{
+                                8980937939307082954,
+                                2944845089668073648,
                             },
                         },
                     },
@@ -84,29 +101,13 @@ func main() {
                         shared.Source{
                             IPBlocks: []string{
                                 "et",
+                                "neque",
+                                "enim",
                             },
                             Principals: []string{
-                                "est",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "molestias",
-                            },
-                            Principals: []string{
-                                "qui",
-                                "harum",
-                                "laboriosam",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "laborum",
-                                "maiores",
-                                "iusto",
-                            },
-                            Principals: []string{
-                                "repellat",
+                                "ut",
+                                "expedita",
+                                "quo",
                             },
                         },
                     },

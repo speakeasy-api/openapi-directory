@@ -4,5 +4,5 @@ package shared
 //
 //	The properties that are applied when Datadog is being used as a source.
 type DatadogSourceProperties struct {
-	Object string `json:"object"`
+	Object map[string]interface{} `json:"object"`
 }

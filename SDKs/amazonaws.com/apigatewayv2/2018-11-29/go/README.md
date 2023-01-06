@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,55 +34,60 @@ func main() {
     
     req := operations.CreateAPIRequest{
         Headers: operations.CreateAPIHeaders{
-            XAmzAlgorithm: "quae",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "magni",
-            XAmzDate: "minus",
-            XAmzSecurityToken: "sit",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "neque",
+            XAmzAlgorithm: "tenetur",
+            XAmzContentSha256: "esse",
+            XAmzCredential: "similique",
+            XAmzDate: "mollitia",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "laboriosam",
+            XAmzSignedHeaders: "quam",
         },
         Request: operations.CreateAPIRequestBody{
-            APIKeySelectionExpression: "iusto",
+            APIKeySelectionExpression: "maiores",
             CorsConfiguration: &operations.CreateAPIRequestBodyCorsConfiguration{
-                AllowCredentials: false,
-                AllowHeaders: []string{
-                    "debitis",
-                    "autem",
+                AllowCredentials: map[string]interface{}{
+                    "iusto": "aperiam",
+                    "repellendus": "sunt",
+                    "eum": "earum",
                 },
-                AllowMethods: []string{
-                    "enim",
-                    "ut",
+                AllowHeaders: map[string]interface{}{
+                    "officia": "aut",
                 },
-                AllowOrigins: []string{
-                    "nihil",
-                    "laborum",
-                    "recusandae",
+                AllowMethods: map[string]interface{}{
+                    "quia": "quaerat",
+                    "ea": "et",
                 },
-                ExposeHeaders: []string{
-                    "exercitationem",
-                    "iste",
+                AllowOrigins: map[string]interface{}{
+                    "recusandae": "qui",
+                    "qui": "aut",
                 },
-                MaxAge: 2856324619161861976,
+                ExposeHeaders: map[string]interface{}{
+                    "cupiditate": "temporibus",
+                    "saepe": "sed",
+                    "voluptatem": "vel",
+                },
+                MaxAge: map[string]interface{}{
+                    "nesciunt": "et",
+                    "qui": "quis",
+                },
             },
-            CredentialsArn: "id",
-            Description: "autem",
-            DisableExecuteAPIEndpoint: true,
+            CredentialsArn: "eligendi",
+            Description: "velit",
+            DisableExecuteAPIEndpoint: false,
             DisableSchemaValidation: false,
-            Name: "omnis",
+            Name: "vero",
             ProtocolType: "HTTP",
-            RouteKey: "qui",
-            RouteSelectionExpression: "omnis",
+            RouteKey: "et",
+            RouteSelectionExpression: "voluptatem",
             Tags: map[string]string{
-                "nostrum": "non",
-                "sit": "repellat",
+                "quae": "placeat",
             },
-            Target: "quo",
-            Version: "dolorum",
+            Target: "vitae",
+            Version: "rerum",
         },
     }
     
-    res, err := s.Sdk.CreateAPI(ctx, req)
+    res, err := s.CreateAPI(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

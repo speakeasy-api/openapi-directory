@@ -35,8 +35,8 @@ type DeleteSessionUsingPostRequest struct {
 type DeleteSessionUsingPostResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	DeleteSessionUsingPost200ApplicationJSONObject *DeleteSessionUsingPost200ApplicationJSON
-	DeleteSessionUsingPost400ApplicationJSONObject *DeleteSessionUsingPost400ApplicationJSON
-	DeleteSessionUsingPost401ApplicationJSONObject *DeleteSessionUsingPost401ApplicationJSON
-	DeleteSessionUsingPost500ApplicationJSONObject *DeleteSessionUsingPost500ApplicationJSON
+	DeleteSessionUsingPOST200ApplicationJSONObject *DeleteSessionUsingPost200ApplicationJSON
+	DeleteSessionUsingPOST400ApplicationJSONObject *DeleteSessionUsingPost400ApplicationJSON
+	DeleteSessionUsingPOST401ApplicationJSONObject *DeleteSessionUsingPost401ApplicationJSON
+	DeleteSessionUsingPOST500ApplicationJSONObject *DeleteSessionUsingPost500ApplicationJSON
 }

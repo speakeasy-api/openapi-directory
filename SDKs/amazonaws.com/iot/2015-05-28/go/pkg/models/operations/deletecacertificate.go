@@ -22,7 +22,7 @@ type DeleteCaCertificateRequest struct {
 type DeleteCaCertificateResponse struct {
 	CertificateStateException   *interface{}
 	ContentType                 string
-	DeleteCaCertificateResponse map[string]interface{}
+	DeleteCACertificateResponse map[string]interface{}
 	InternalFailureException    *interface{}
 	InvalidRequestException     *interface{}
 	ResourceNotFoundException   *interface{}

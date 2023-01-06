@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,7 +24,7 @@ func main() {
     
     req := operations.GetFeaturesFeatureIDRequest{
         PathParams: operations.GetFeaturesFeatureIDPathParams{
-            FeatureID: 914375363837464697,
+            FeatureID: 465684000766492701,
         },
     }
     
@@ -59,11 +58,11 @@ func main() {
 * `GetNamesDecisionsRecent` - Search for names affected by recent naming decision
 * `GetNamesDecisionsYear` - Search for names affected by naming decisions in a given year
 * `GetNamesInside` - Search in a geographic area
-* `GetNamesNameIDOutputFormat` - Get a name by its nameId
 * `GetNamesNear` - Search near to a geographic point
 * `GetNamesNotOfficialSearch` - Search by name, limit to unofficial names only
 * `GetNamesOfficialSearch` - Search by name, limit to official names only
 * `GetNamesSearch` - Search by name
+* `GetNamesNameIDOutputFormat` - Get a name by its nameId
 
 ### name authority
 

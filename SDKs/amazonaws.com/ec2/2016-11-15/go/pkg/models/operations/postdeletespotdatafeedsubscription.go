@@ -3,13 +3,13 @@ package operations
 type PostDeleteSpotDatafeedSubscriptionActionEnum string
 
 const (
-	PostDeleteSpotDatafeedSubscriptionActionEnumDeleteSpotDatafeedSubscription PostDeleteSpotDatafeedSubscriptionActionEnum = "DeleteSpotDatafeedSubscription"
+	POSTDeleteSpotDatafeedSubscriptionActionEnumDeleteSpotDatafeedSubscription PostDeleteSpotDatafeedSubscriptionActionEnum = "DeleteSpotDatafeedSubscription"
 )
 
 type PostDeleteSpotDatafeedSubscriptionVersionEnum string
 
 const (
-	PostDeleteSpotDatafeedSubscriptionVersionEnumTwoThousandAndSixteen1115 PostDeleteSpotDatafeedSubscriptionVersionEnum = "2016-11-15"
+	POSTDeleteSpotDatafeedSubscriptionVersionEnumTwoThousandAndSixteen1115 PostDeleteSpotDatafeedSubscriptionVersionEnum = "2016-11-15"
 )
 
 type PostDeleteSpotDatafeedSubscriptionQueryParams struct {

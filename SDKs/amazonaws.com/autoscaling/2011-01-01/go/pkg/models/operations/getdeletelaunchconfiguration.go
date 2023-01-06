@@ -3,13 +3,13 @@ package operations
 type GetDeleteLaunchConfigurationActionEnum string
 
 const (
-	GetDeleteLaunchConfigurationActionEnumDeleteLaunchConfiguration GetDeleteLaunchConfigurationActionEnum = "DeleteLaunchConfiguration"
+	GETDeleteLaunchConfigurationActionEnumDeleteLaunchConfiguration GetDeleteLaunchConfigurationActionEnum = "DeleteLaunchConfiguration"
 )
 
 type GetDeleteLaunchConfigurationVersionEnum string
 
 const (
-	GetDeleteLaunchConfigurationVersionEnumTwoThousandAndEleven0101 GetDeleteLaunchConfigurationVersionEnum = "2011-01-01"
+	GETDeleteLaunchConfigurationVersionEnumTwoThousandAndEleven0101 GetDeleteLaunchConfigurationVersionEnum = "2011-01-01"
 )
 
 type GetDeleteLaunchConfigurationQueryParams struct {

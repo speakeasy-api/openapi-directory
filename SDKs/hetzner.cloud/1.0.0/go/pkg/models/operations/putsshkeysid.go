@@ -29,6 +29,6 @@ type PutSSHKeysIDRequest struct {
 
 type PutSSHKeysIDResponse struct {
 	ContentType                          string
-	PutSSHKeysID200ApplicationJSONObject *PutSSHKeysID200ApplicationJSON
 	StatusCode                           int64
+	PutSSHKeysID200ApplicationJSONObject *PutSSHKeysID200ApplicationJSON
 }

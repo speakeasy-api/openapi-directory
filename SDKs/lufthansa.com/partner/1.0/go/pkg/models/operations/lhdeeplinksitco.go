@@ -40,6 +40,6 @@ type LhDeepLinksItcoRequest struct {
 
 type LhDeepLinksItcoResponse struct {
 	ContentType                             string
-	LhDeepLinksItco200ApplicationJSONString *string
+	LHDeepLinksITCO200ApplicationJSONString *string
 	StatusCode                              int64
 }

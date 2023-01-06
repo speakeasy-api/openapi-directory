@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -273,7 +274,7 @@ func (s *SDK) GetDashStreamingSessionURL(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.GetDashStreamingSessionURLOutput = out
+			res.GetDASHStreamingSessionURLOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -405,7 +406,7 @@ func (s *SDK) GetHlsStreamingSessionURL(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.GetHlsStreamingSessionURLOutput = out
+			res.GetHLSStreamingSessionURLOutput = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

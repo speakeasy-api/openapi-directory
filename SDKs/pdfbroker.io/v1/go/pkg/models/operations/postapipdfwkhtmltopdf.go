@@ -11,7 +11,7 @@ type PostAPIPdfWkhtmltopdfRequest struct {
 type PostAPIPdfWkhtmltopdfResponse struct {
 	ContentType                                        string
 	ErrorResponseDto                                   *shared.ErrorResponseDto
-	PostAPIPdfWkhtmltopdf200ApplicationPdfBinaryString []byte
 	PdfResponseDto                                     *shared.PdfResponseDto
 	StatusCode                                         int64
+	PostAPIPdfWkhtmltopdf200ApplicationPdfBinaryString []byte
 }

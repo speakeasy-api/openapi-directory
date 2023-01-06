@@ -37,8 +37,8 @@ type CreateDiffHTMLUsingGetRequest struct {
 type CreateDiffHTMLUsingGetResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	CreateDiffHTMLUsingGet200ApplicationJSONObject *CreateDiffHTMLUsingGet200ApplicationJSON
-	CreateDiffHTMLUsingGet400ApplicationJSONObject *CreateDiffHTMLUsingGet400ApplicationJSON
-	CreateDiffHTMLUsingGet401ApplicationJSONObject *CreateDiffHTMLUsingGet401ApplicationJSON
-	CreateDiffHTMLUsingGet500ApplicationJSONObject *CreateDiffHTMLUsingGet500ApplicationJSON
+	CreateDiffHTMLUsingGET200ApplicationJSONObject *CreateDiffHTMLUsingGet200ApplicationJSON
+	CreateDiffHTMLUsingGET400ApplicationJSONObject *CreateDiffHTMLUsingGet400ApplicationJSON
+	CreateDiffHTMLUsingGET401ApplicationJSONObject *CreateDiffHTMLUsingGet401ApplicationJSON
+	CreateDiffHTMLUsingGET500ApplicationJSONObject *CreateDiffHTMLUsingGet500ApplicationJSON
 }

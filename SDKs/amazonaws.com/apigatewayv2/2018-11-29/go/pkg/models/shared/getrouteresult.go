@@ -1,17 +1,17 @@
 package shared
 
 type GetRouteResult struct {
-	APIGatewayManaged                *bool                           `json:"ApiGatewayManaged,omitempty"`
-	APIKeyRequired                   *bool                           `json:"ApiKeyRequired,omitempty"`
-	AuthorizationScopes              []string                        `json:"AuthorizationScopes,omitempty"`
-	AuthorizationType                *AuthorizationTypeEnum          `json:"AuthorizationType,omitempty"`
-	AuthorizerID                     *string                         `json:"AuthorizerId,omitempty"`
-	ModelSelectionExpression         *string                         `json:"ModelSelectionExpression,omitempty"`
-	OperationName                    *string                         `json:"OperationName,omitempty"`
+	APIGatewayManaged                map[string]interface{}          `json:"ApiGatewayManaged,omitempty"`
+	APIKeyRequired                   map[string]interface{}          `json:"ApiKeyRequired,omitempty"`
+	AuthorizationScopes              map[string]interface{}          `json:"AuthorizationScopes,omitempty"`
+	AuthorizationType                map[string]interface{}          `json:"AuthorizationType,omitempty"`
+	AuthorizerID                     map[string]interface{}          `json:"AuthorizerId,omitempty"`
+	ModelSelectionExpression         map[string]interface{}          `json:"ModelSelectionExpression,omitempty"`
+	OperationName                    map[string]interface{}          `json:"OperationName,omitempty"`
 	RequestModels                    map[string]string               `json:"RequestModels,omitempty"`
 	RequestParameters                map[string]ParameterConstraints `json:"RequestParameters,omitempty"`
-	RouteID                          *string                         `json:"RouteId,omitempty"`
-	RouteKey                         *string                         `json:"RouteKey,omitempty"`
-	RouteResponseSelectionExpression *string                         `json:"RouteResponseSelectionExpression,omitempty"`
-	Target                           *string                         `json:"Target,omitempty"`
+	RouteID                          map[string]interface{}          `json:"RouteId,omitempty"`
+	RouteKey                         map[string]interface{}          `json:"RouteKey,omitempty"`
+	RouteResponseSelectionExpression map[string]interface{}          `json:"RouteResponseSelectionExpression,omitempty"`
+	Target                           map[string]interface{}          `json:"Target,omitempty"`
 }

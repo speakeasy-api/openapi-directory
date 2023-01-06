@@ -7,8 +7,8 @@ import (
 type ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteDomesticConsent4DataAuthorisation
@@ -68,15 +68,15 @@ type ObWriteDomesticConsent4DataInitiation struct {
 type ObWriteDomesticConsent4DataReadRefundAccountEnum string
 
 const (
-	ObWriteDomesticConsent4DataReadRefundAccountEnumNo  ObWriteDomesticConsent4DataReadRefundAccountEnum = "No"
-	ObWriteDomesticConsent4DataReadRefundAccountEnumYes ObWriteDomesticConsent4DataReadRefundAccountEnum = "Yes"
+	OBWriteDomesticConsent4DataReadRefundAccountEnumNo  ObWriteDomesticConsent4DataReadRefundAccountEnum = "No"
+	OBWriteDomesticConsent4DataReadRefundAccountEnumYes ObWriteDomesticConsent4DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteDomesticConsent4Data struct {
 	Authorisation     *ObWriteDomesticConsent4DataAuthorisation         `json:"Authorisation,omitempty"`
 	Initiation        ObWriteDomesticConsent4DataInitiation             `json:"Initiation"`
 	ReadRefundAccount *ObWriteDomesticConsent4DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData    *ObscaSupportData1                                `json:"SCASupportData,omitempty"`
+	SCASupportData    *ObscaSupportData1                                `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteDomesticConsent4 struct {

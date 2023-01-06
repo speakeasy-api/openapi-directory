@@ -3,13 +3,13 @@ package operations
 type GetDescribeAutoScalingGroupsActionEnum string
 
 const (
-	GetDescribeAutoScalingGroupsActionEnumDescribeAutoScalingGroups GetDescribeAutoScalingGroupsActionEnum = "DescribeAutoScalingGroups"
+	GETDescribeAutoScalingGroupsActionEnumDescribeAutoScalingGroups GetDescribeAutoScalingGroupsActionEnum = "DescribeAutoScalingGroups"
 )
 
 type GetDescribeAutoScalingGroupsVersionEnum string
 
 const (
-	GetDescribeAutoScalingGroupsVersionEnumTwoThousandAndEleven0101 GetDescribeAutoScalingGroupsVersionEnum = "2011-01-01"
+	GETDescribeAutoScalingGroupsVersionEnumTwoThousandAndEleven0101 GetDescribeAutoScalingGroupsVersionEnum = "2011-01-01"
 )
 
 type GetDescribeAutoScalingGroupsQueryParams struct {

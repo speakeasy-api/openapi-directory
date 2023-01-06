@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetemailinfoRequest{
         QueryParams: operations.GetemailinfoQueryParams{
-            Email: "voluptatem",
-            License: "nobis",
+            Email: "ut",
+            License: "omnis",
         },
     }
     
-    res, err := s.Sdk.Getemailinfo(ctx, req)
+    res, err := s.EmailAddressInformation.Getemailinfo(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Email Address Information
 
 * `Getemailinfo` - Gets email validation information for an email address
 

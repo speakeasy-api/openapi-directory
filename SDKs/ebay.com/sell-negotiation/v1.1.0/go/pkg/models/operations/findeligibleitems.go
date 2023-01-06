@@ -10,7 +10,7 @@ type FindEligibleItemsQueryParams struct {
 }
 
 type FindEligibleItemsHeaders struct {
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	XEBAYCMARKETPLACEID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type FindEligibleItemsSecurity struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,31 +26,33 @@ func main() {
         Security: operations.EssentialcontactsProjectsContactsComputeSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.EssentialcontactsProjectsContactsComputePathParams{
-            Parent: "animi",
+            Parent: "voluptas",
         },
         QueryParams: operations.EssentialcontactsProjectsContactsComputeQueryParams{
             DollarXgafv: "2",
-            AccessToken: "numquam",
-            Alt: "proto",
-            Callback: "amet",
-            Fields: "quia",
-            Key: "maiores",
+            AccessToken: "quaerat",
+            Alt: "media",
+            Callback: "aperiam",
+            Fields: "perspiciatis",
+            Key: "nemo",
             NotificationCategories: []EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum{
                 "PRODUCT_UPDATES",
+                "TECHNICAL",
+                "SECURITY",
             },
-            OauthToken: "non",
-            PageSize: 2052705281164802646,
-            PageToken: "omnis",
+            OauthToken: "a",
+            PageSize: 3339606016778658165,
+            PageToken: "nostrum",
             PrettyPrint: true,
-            QuotaUser: "ut",
-            UploadType: "fugit",
-            UploadProtocol: "doloribus",
+            QuotaUser: "vero",
+            UploadType: "ut",
+            UploadProtocol: "cumque",
         },
     }
     

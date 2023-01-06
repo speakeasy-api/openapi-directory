@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,147 +26,141 @@ func main() {
         Security: operations.ConnectorsProjectsLocationsConnectionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ConnectorsProjectsLocationsConnectionsCreatePathParams{
-            Parent: "non",
+            Parent: "dolor",
         },
         QueryParams: operations.ConnectorsProjectsLocationsConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "eligendi",
-            Alt: "json",
-            Callback: "voluptas",
-            ConnectionID: "eos",
-            Fields: "modi",
-            Key: "et",
-            OauthToken: "rem",
+            DollarXgafv: "2",
+            AccessToken: "est",
+            Alt: "media",
+            Callback: "rerum",
+            ConnectionID: "dolorem",
+            Fields: "sapiente",
+            Key: "optio",
+            OauthToken: "occaecati",
             PrettyPrint: false,
-            QuotaUser: "molestias",
-            UploadType: "libero",
-            UploadProtocol: "occaecati",
+            QuotaUser: "vel",
+            UploadType: "et",
+            UploadProtocol: "odit",
         },
         Request: &shared.ConnectionInput{
             AuthConfig: &shared.AuthConfig{
                 AdditionalVariables: []shared.ConfigVariable{
                     shared.ConfigVariable{
                         BoolValue: true,
-                        IntValue: "eos",
-                        Key: "rerum",
+                        IntValue: "sed",
+                        Key: "earum",
                         SecretValue: &shared.Secret{
-                            SecretVersion: "excepturi",
+                            SecretVersion: "aut",
                         },
-                        StringValue: "repellendus",
+                        StringValue: "corrupti",
+                    },
+                    shared.ConfigVariable{
+                        BoolValue: false,
+                        IntValue: "soluta",
+                        Key: "nam",
+                        SecretValue: &shared.Secret{
+                            SecretVersion: "corrupti",
+                        },
+                        StringValue: "minima",
                     },
                 },
-                AuthType: "OAUTH2_CLIENT_CREDENTIALS",
+                AuthType: "AUTH_TYPE_UNSPECIFIED",
                 Oauth2ClientCredentials: &shared.Oauth2ClientCredentials{
-                    ClientID: "qui",
+                    ClientID: "aperiam",
                     ClientSecret: &shared.Secret{
-                        SecretVersion: "commodi",
+                        SecretVersion: "excepturi",
                     },
                 },
                 Oauth2JwtBearer: &shared.Oauth2JwtBearer{
                     ClientKey: &shared.Secret{
-                        SecretVersion: "dolores",
+                        SecretVersion: "debitis",
                     },
                     JwtClaims: &shared.JwtClaims{
-                        Audience: "aut",
-                        Issuer: "necessitatibus",
-                        Subject: "nesciunt",
+                        Audience: "omnis",
+                        Issuer: "illum",
+                        Subject: "minima",
                     },
                 },
                 SSHPublicKey: &shared.SSHPublicKey{
-                    CertType: "magni",
+                    CertType: "voluptas",
                     SSHClientCert: &shared.Secret{
-                        SecretVersion: "non",
+                        SecretVersion: "laudantium",
                     },
                     SSHClientCertPass: &shared.Secret{
-                        SecretVersion: "distinctio",
+                        SecretVersion: "ut",
                     },
-                    Username: "minima",
+                    Username: "recusandae",
                 },
                 UserPassword: &shared.UserPassword{
                     Password: &shared.Secret{
-                        SecretVersion: "ut",
+                        SecretVersion: "tempore",
                     },
-                    Username: "aperiam",
+                    Username: "itaque",
                 },
             },
             ConfigVariables: []shared.ConfigVariable{
                 shared.ConfigVariable{
                     BoolValue: false,
-                    IntValue: "sunt",
-                    Key: "animi",
+                    IntValue: "sint",
+                    Key: "aut",
                     SecretValue: &shared.Secret{
-                        SecretVersion: "mollitia",
+                        SecretVersion: "temporibus",
                     },
-                    StringValue: "excepturi",
-                },
-                shared.ConfigVariable{
-                    BoolValue: false,
-                    IntValue: "ut",
-                    Key: "ex",
-                    SecretValue: &shared.Secret{
-                        SecretVersion: "ad",
-                    },
-                    StringValue: "assumenda",
+                    StringValue: "ea",
                 },
             },
-            ConnectorVersion: "eaque",
-            Description: "consequatur",
+            ConnectorVersion: "ducimus",
+            Description: "necessitatibus",
             DestinationConfigs: []shared.DestinationConfig{
                 shared.DestinationConfig{
                     Destinations: []shared.Destination{
                         shared.Destination{
-                            Host: "velit",
-                            Port: 7322938111960336165,
+                            Host: "ea",
+                            Port: 6850399738405605986,
+                            ServiceAttachment: "sint",
+                        },
+                        shared.Destination{
+                            Host: "voluptatem",
+                            Port: 3003290611676134007,
                             ServiceAttachment: "in",
                         },
-                        shared.Destination{
-                            Host: "veritatis",
-                            Port: 5952822771195429582,
-                            ServiceAttachment: "modi",
-                        },
-                        shared.Destination{
-                            Host: "est",
-                            Port: 1427910665186750051,
-                            ServiceAttachment: "cumque",
-                        },
                     },
-                    Key: "natus",
+                    Key: "libero",
                 },
                 shared.DestinationConfig{
                     Destinations: []shared.Destination{
                         shared.Destination{
-                            Host: "beatae",
-                            Port: 9144606812326692045,
-                            ServiceAttachment: "amet",
+                            Host: "aut",
+                            Port: 5542383823497440249,
+                            ServiceAttachment: "est",
                         },
                     },
-                    Key: "dolorem",
+                    Key: "aut",
                 },
             },
             Labels: map[string]string{
-                "similique": "et",
-                "ducimus": "cupiditate",
-                "consequatur": "exercitationem",
+                "consequuntur": "placeat",
+                "optio": "illo",
             },
             LockConfig: &shared.LockConfig{
                 Locked: false,
-                Reason: "voluptas",
+                Reason: "est",
             },
             NodeConfig: &shared.NodeConfig{
-                MaxNodeCount: 6413110699676294475,
-                MinNodeCount: 8175015999967088442,
+                MaxNodeCount: 4403239330009925815,
+                MinNodeCount: 6813042753866779208,
             },
-            ServiceAccount: "iste",
+            ServiceAccount: "vitae",
             Status: &shared.ConnectionStatus{
-                Description: "corrupti",
-                State: "UPDATING",
-                Status: "quia",
+                Description: "nihil",
+                State: "STATE_UNSPECIFIED",
+                Status: "porro",
             },
             Suspended: true,
         },

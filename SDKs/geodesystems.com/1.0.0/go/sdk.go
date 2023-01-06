@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -223,7 +224,7 @@ type SDK struct {
 	TypeTypePointNoaaMadis               *TypeTypePointNoaaMadis
 	TypeTypePointNoaaTower               *TypeTypePointNoaaTower
 	TypeTypePointOceanCnv                *TypeTypePointOceanCnv
-	TypeTypePointOceanCsvSadoTts         *TypeTypePointOceanCsvSadoTts
+	TypeTypePointOceanCsvSadoTTS         *TypeTypePointOceanCsvSadoTts
 	TypeTypePointOceanCsvSadoMeteo       *TypeTypePointOceanCsvSadoMeteo
 	TypeTypePointOceanCsvSadoPosition    *TypeTypePointOceanCsvSadoPosition
 	TypeTypePointOceanNetcdfGlider       *TypeTypePointOceanNetcdfGlider
@@ -2187,7 +2188,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.TypeTypePointOceanCsvSadoTts = NewTypeTypePointOceanCsvSadoTts(
+	sdk.TypeTypePointOceanCsvSadoTTS = NewTypeTypePointOceanCsvSadoTts(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

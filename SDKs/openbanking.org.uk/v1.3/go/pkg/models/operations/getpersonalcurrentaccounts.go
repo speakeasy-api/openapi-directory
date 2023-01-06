@@ -226,15 +226,15 @@ type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDa
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum string
 
 const (
-	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnumFutureMultipleTerms GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum = "FutureMultipleTerms"
-	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnumPromotional         GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum = "Promotional"
-	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnumRegular             GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum = "Regular"
+	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCAPricingProductStateEnumFutureMultipleTerms GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum = "FutureMultipleTerms"
+	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCAPricingProductStateEnumPromotional         GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum = "Promotional"
+	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCAPricingProductStateEnumRegular             GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum = "Regular"
 )
 
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricing
 // Card Price
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricing struct {
-	CaPricingItem GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingCaPricingItem    `json:"CAPricingItem"`
+	CAPricingItem GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingCaPricingItem    `json:"CAPricingItem"`
 	ProductState  GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricingProductStateEnum `json:"ProductState"`
 }
 
@@ -294,7 +294,7 @@ const (
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers
 // Credit Interest Tiers
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers struct {
-	ApraerRate            *string                                                                                                                                                              `json:"APRAERRate,omitempty"`
+	APRAERRate            *string                                                                                                                                                              `json:"APRAERRate,omitempty"`
 	DailyChargeForMaximum *string                                                                                                                                                              `json:"DailyChargeForMaximum,omitempty"`
 	DailyChargeForMinimum *string                                                                                                                                                              `json:"DailyChargeForMinimum,omitempty"`
 	InterestTier          *string                                                                                                                                                              `json:"InterestTier,omitempty"`
@@ -1001,15 +1001,15 @@ const (
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum string
 
 const (
-	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnumUk GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "UK"
-	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnumEu GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "EU"
+	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumUk GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "UK"
+	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumEu GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum = "EU"
 )
 
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrand
 // Brand
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrand struct {
 	TrademarkID      string                                                                                                             `json:"TrademarkID"`
-	TrademarkIpoCode GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
+	TrademarkIPOCode GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
 }
 
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisationOrganisationName
@@ -1021,8 +1021,8 @@ type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDa
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisation
 // Parent organisation
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisation struct {
-	Bic              *string                                                                                                                     `json:"BIC,omitempty"`
-	Lei              *string                                                                                                                     `json:"LEI,omitempty"`
+	BIC              *string                                                                                                                     `json:"BIC,omitempty"`
+	LEI              *string                                                                                                                     `json:"LEI,omitempty"`
 	OrganisationName GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationParentOrganisationOrganisationName `json:"OrganisationName"`
 }
 
@@ -1367,7 +1367,7 @@ type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDa
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetOverdraftTierBand
 // Tiers
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetOverdraftTierBand struct {
-	Ear                    *string                                                                                                                                     `json:"EAR,omitempty"`
+	EAR                    *string                                                                                                                                     `json:"EAR,omitempty"`
 	FeesAndCharges         []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges `json:"FeesAndCharges,omitempty"`
 	Notes                  *string                                                                                                                                     `json:"Notes,omitempty"`
 	TierBandIdentification *string                                                                                                                                     `json:"TierBandIdentification,omitempty"`
@@ -1381,8 +1381,8 @@ type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDa
 	ArrangementOtherType      *GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetArrangementOtherType `json:"ArrangementOtherType,omitempty"`
 	ArrangementType           GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetArrangementTypeEnum   `json:"ArrangementType"`
 	BufferAmount              *string                                                                                                                         `json:"BufferAmount,omitempty"`
-	CmaDefinedIndicator       bool                                                                                                                            `json:"CMADefinedIndicator"`
-	Ear                       *string                                                                                                                         `json:"EAR,omitempty"`
+	CMADefinedIndicator       bool                                                                                                                            `json:"CMADefinedIndicator"`
+	EAR                       *string                                                                                                                         `json:"EAR,omitempty"`
 	FeesAndCharges            []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetFeesAndCharges      `json:"FeesAndCharges,omitempty"`
 	Notes                     *string                                                                                                                         `json:"Notes,omitempty"`
 	OverdraftTierBand         []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOverdraftOverdraftTierBandSetOverdraftTierBand   `json:"OverdraftTierBand,omitempty"`
@@ -1442,7 +1442,7 @@ const (
 type GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONData struct {
 	AccessChannels                                                          []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataAccessChannelsEnum                                                          `json:"AccessChannels"`
 	Benefits                                                                GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefits                                                                      `json:"Benefits"`
-	CaPricing                                                               []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricing                                                                   `json:"CAPricing"`
+	CAPricing                                                               []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCaPricing                                                                   `json:"CAPricing"`
 	CardNotes                                                               *string                                                                                                                                                    `json:"CardNotes,omitempty"`
 	CardType                                                                []GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCardTypeEnum                                                                `json:"CardType"`
 	CardWithdrawalLimit                                                     string                                                                                                                                                     `json:"CardWithdrawalLimit"`
@@ -1517,7 +1517,7 @@ type GetPersonalCurrentAccountsResponse struct {
 	FiveHundredAndThreeErrorObject                                                  *GetPersonalCurrentAccounts503ErrorObject
 	ContentType                                                                     string
 	ErrorObject                                                                     *GetPersonalCurrentAccountsErrorObject
-	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	Headers                                                                         map[string][]string
 	StatusCode                                                                      int64
+	GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSON
 }

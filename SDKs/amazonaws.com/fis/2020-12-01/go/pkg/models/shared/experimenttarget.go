@@ -1,7 +1,5 @@
 package shared
 
-// ExperimentTarget
-// Describes a target for an experiment.
 type ExperimentTarget struct {
 	Filters       []ExperimentTargetFilter `json:"filters,omitempty"`
 	ResourceArns  []string                 `json:"resourceArns,omitempty"`

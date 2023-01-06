@@ -1,5 +1,5 @@
 package shared
 
 type RejectTransitGatewayVpcAttachmentResult struct {
-	TransitGatewayVpcAttachment *TransitGatewayVpcAttachment
+	TransitGatewayVpcAttachment map[string]interface{}
 }

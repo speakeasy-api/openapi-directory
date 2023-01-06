@@ -4,5 +4,5 @@ package shared
 // <p/>
 type SnapshotCopyGrantMessage struct {
 	Marker             *string
-	SnapshotCopyGrants []SnapshotCopyGrant
+	SnapshotCopyGrants []map[string]interface{}
 }

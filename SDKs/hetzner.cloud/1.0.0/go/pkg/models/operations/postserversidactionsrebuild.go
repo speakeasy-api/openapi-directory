@@ -51,6 +51,6 @@ type PostServersIDActionsRebuildRequest struct {
 
 type PostServersIDActionsRebuildResponse struct {
 	ContentType                                         string
-	PostServersIDActionsRebuild201ApplicationJSONObject *PostServersIDActionsRebuild201ApplicationJSON
 	StatusCode                                          int64
+	PostServersIDActionsRebuild201ApplicationJSONObject *PostServersIDActionsRebuild201ApplicationJSON
 }

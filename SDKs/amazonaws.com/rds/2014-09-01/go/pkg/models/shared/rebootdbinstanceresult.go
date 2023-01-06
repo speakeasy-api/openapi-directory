@@ -1,5 +1,5 @@
 package shared
 
 type RebootDbInstanceResult struct {
-	DbInstance *DbInstance
+	DBInstance *DbInstance2
 }

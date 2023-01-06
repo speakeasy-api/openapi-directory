@@ -26,6 +26,6 @@ type DeleteAccountsAccountOrdersCustomerOrderIDRequest struct {
 
 type DeleteAccountsAccountOrdersCustomerOrderIDResponse struct {
 	ContentType                                                         string
-	DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSONObjects []DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSON
 	StatusCode                                                          int64
+	DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSONObjects []DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSON
 }

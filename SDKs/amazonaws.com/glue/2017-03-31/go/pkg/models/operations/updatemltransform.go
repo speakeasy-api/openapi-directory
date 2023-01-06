@@ -7,7 +7,7 @@ import (
 type UpdateMlTransformXAmzTargetEnum string
 
 const (
-	UpdateMlTransformXAmzTargetEnumAwsGlueUpdateMlTransform UpdateMlTransformXAmzTargetEnum = "AWSGlue.UpdateMLTransform"
+	UpdateMLTransformXAmzTargetEnumAwsGlueUpdateMlTransform UpdateMlTransformXAmzTargetEnum = "AWSGlue.UpdateMLTransform"
 )
 
 type UpdateMlTransformHeaders struct {
@@ -34,5 +34,5 @@ type UpdateMlTransformResponse struct {
 	InvalidInputException     *interface{}
 	OperationTimeoutException *interface{}
 	StatusCode                int64
-	UpdateMlTransformResponse *shared.UpdateMlTransformResponse
+	UpdateMLTransformResponse *shared.UpdateMlTransformResponse
 }

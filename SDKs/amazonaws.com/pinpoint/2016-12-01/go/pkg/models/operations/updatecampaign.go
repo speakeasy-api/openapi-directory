@@ -22,7 +22,7 @@ type UpdateCampaignHeaders struct {
 // UpdateCampaignRequestBodyWriteCampaignRequest
 // Specifies the configuration and other settings for a campaign.
 type UpdateCampaignRequestBodyWriteCampaignRequest struct {
-	AdditionalTreatments        []shared.WriteTreatmentResource     `json:"AdditionalTreatments,omitempty"`
+	AdditionalTreatments        []shared.WriteTreatmentResource1    `json:"AdditionalTreatments,omitempty"`
 	CustomDeliveryConfiguration *shared.CustomDeliveryConfiguration `json:"CustomDeliveryConfiguration,omitempty"`
 	Description                 *string                             `json:"Description,omitempty"`
 	HoldoutPercent              *int64                              `json:"HoldoutPercent,omitempty"`

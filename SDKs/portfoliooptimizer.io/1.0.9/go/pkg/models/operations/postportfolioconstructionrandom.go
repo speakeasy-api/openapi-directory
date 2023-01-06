@@ -27,6 +27,6 @@ type PostPortfolioConstructionRandomRequest struct {
 
 type PostPortfolioConstructionRandomResponse struct {
 	ContentType                                             string
-	PostPortfolioConstructionRandom200ApplicationJSONObject *PostPortfolioConstructionRandom200ApplicationJSON
 	StatusCode                                              int64
+	PostPortfolioConstructionRandom200ApplicationJSONObject *PostPortfolioConstructionRandom200ApplicationJSON
 }

@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -151,7 +152,7 @@ func (s *SDK) AddTags(ctx context.Context, request operations.AddTagsRequest) (*
 				return nil, err
 			}
 
-			res.CloudTrailArnInvalidException = out
+			res.CloudTrailARNInvalidException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1313,7 +1314,7 @@ func (s *SDK) ListTags(ctx context.Context, request operations.ListTagsRequest) 
 				return nil, err
 			}
 
-			res.CloudTrailArnInvalidException = out
+			res.CloudTrailARNInvalidException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1927,7 +1928,7 @@ func (s *SDK) RemoveTags(ctx context.Context, request operations.RemoveTagsReque
 				return nil, err
 			}
 
-			res.CloudTrailArnInvalidException = out
+			res.CloudTrailARNInvalidException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {

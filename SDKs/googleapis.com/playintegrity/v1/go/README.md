@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.PlayintegrityDecodeIntegrityTokenSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.PlayintegrityDecodeIntegrityTokenPathParams{
-            PackageName: "sint",
+            PackageName: "velit",
         },
         QueryParams: operations.PlayintegrityDecodeIntegrityTokenQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "nobis",
-            Alt: "json",
-            Callback: "sint",
-            Fields: "enim",
-            Key: "soluta",
-            OauthToken: "veniam",
+            DollarXgafv: "2",
+            AccessToken: "possimus",
+            Alt: "media",
+            Callback: "veritatis",
+            Fields: "est",
+            Key: "est",
+            OauthToken: "et",
             PrettyPrint: false,
-            QuotaUser: "quis",
-            UploadType: "reprehenderit",
-            UploadProtocol: "enim",
+            QuotaUser: "at",
+            UploadType: "doloremque",
+            UploadProtocol: "consequuntur",
         },
         Request: &shared.DecodeIntegrityTokenRequest{
-            IntegrityToken: "voluptate",
+            IntegrityToken: "ducimus",
         },
     }
     

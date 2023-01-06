@@ -1,6 +1,6 @@
 package shared
 
 type DescribeDhcpOptionsResult struct {
-	DhcpOptions []DhcpOptions
-	NextToken   *string
+	DhcpOptions map[string]interface{}
+	NextToken   map[string]interface{}
 }

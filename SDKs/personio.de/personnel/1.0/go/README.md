@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.DeleteCompanyAttendancesIDRequest{
         PathParams: operations.DeleteCompanyAttendancesIDPathParams{
-            ID: 7272408682010926025,
+            ID: 7900740091320171094,
         },
     }
     
-    res, err := s.Sdk.DeleteCompanyAttendancesID(ctx, req)
+    res, err := s.DeleteCompanyAttendancesID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

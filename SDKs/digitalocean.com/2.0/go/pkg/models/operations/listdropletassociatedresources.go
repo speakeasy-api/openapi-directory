@@ -8,10 +8,8 @@ type ListDropletAssociatedResourcesPathParams struct {
 	DropletID int64 `pathParam:"style=simple,explode=false,name=droplet_id"`
 }
 
-type ListDropletAssociatedResourcesRequest struct {
-	PathParams ListDropletAssociatedResourcesPathParams
-}
-
+// ListDropletAssociatedResources200ApplicationJSONSnapshots
+// An objects containing information about a resource associated with a Droplet.
 type ListDropletAssociatedResources200ApplicationJSONSnapshots struct {
 	Cost *string `json:"cost,omitempty"`
 	ID   *string `json:"id,omitempty"`
@@ -28,6 +26,10 @@ type ListDropletAssociatedResources401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListDropletAssociatedResourcesRequest struct {
+	PathParams ListDropletAssociatedResourcesPathParams
 }
 
 type ListDropletAssociatedResourcesResponse struct {

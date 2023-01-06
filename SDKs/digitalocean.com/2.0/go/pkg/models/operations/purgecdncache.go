@@ -12,15 +12,15 @@ type PurgeCdnCacheRequestBody struct {
 	Files []string `json:"files"`
 }
 
-type PurgeCdnCacheRequest struct {
-	PathParams PurgeCdnCachePathParams
-	Request    PurgeCdnCacheRequestBody `request:"mediaType=application/json"`
-}
-
 type PurgeCdnCache401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type PurgeCdnCacheRequest struct {
+	PathParams PurgeCdnCachePathParams
+	Request    PurgeCdnCacheRequestBody `request:"mediaType=application/json"`
 }
 
 type PurgeCdnCacheResponse struct {

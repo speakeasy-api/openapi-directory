@@ -3,13 +3,13 @@ package operations
 type GetDisableVpcClassicLinkActionEnum string
 
 const (
-	GetDisableVpcClassicLinkActionEnumDisableVpcClassicLink GetDisableVpcClassicLinkActionEnum = "DisableVpcClassicLink"
+	GETDisableVpcClassicLinkActionEnumDisableVpcClassicLink GetDisableVpcClassicLinkActionEnum = "DisableVpcClassicLink"
 )
 
 type GetDisableVpcClassicLinkVersionEnum string
 
 const (
-	GetDisableVpcClassicLinkVersionEnumTwoThousandAndSixteen1115 GetDisableVpcClassicLinkVersionEnum = "2016-11-15"
+	GETDisableVpcClassicLinkVersionEnumTwoThousandAndSixteen1115 GetDisableVpcClassicLinkVersionEnum = "2016-11-15"
 )
 
 type GetDisableVpcClassicLinkQueryParams struct {

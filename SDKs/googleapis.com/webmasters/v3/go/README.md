@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,64 +27,53 @@ func main() {
             Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "aut",
+            SiteURL: "sint",
         },
         QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
             Alt: "json",
-            Fields: "et",
-            Key: "exercitationem",
-            OauthToken: "omnis",
+            Fields: "dolorem",
+            Key: "earum",
+            OauthToken: "recusandae",
             PrettyPrint: true,
-            QuotaUser: "magnam",
-            UserIP: "necessitatibus",
+            QuotaUser: "in",
+            UserIP: "ut",
         },
         Request: &shared.SearchAnalyticsQueryRequest{
-            AggregationType: "sunt",
-            DataState: "quia",
+            AggregationType: "reprehenderit",
+            DataState: "architecto",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "quia",
-                            Expression: "consectetur",
-                            Operator: "doloremque",
-                        },
-                    },
-                    GroupType: "sit",
-                },
-                shared.APIDimensionFilterGroup{
-                    Filters: []shared.APIDimensionFilter{
-                        shared.APIDimensionFilter{
-                            Dimension: "voluptatum",
-                            Expression: "modi",
-                            Operator: "id",
+                            Dimension: "reiciendis",
+                            Expression: "asperiores",
+                            Operator: "dolorum",
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "laboriosam",
-                            Expression: "qui",
-                            Operator: "voluptas",
+                            Dimension: "reiciendis",
+                            Expression: "quo",
+                            Operator: "magni",
                         },
                     },
-                    GroupType: "exercitationem",
+                    GroupType: "dolores",
                 },
             },
             Dimensions: []string{
-                "quaerat",
-                "aspernatur",
-                "animi",
+                "fugiat",
+                "aliquid",
             },
-            EndDate: "voluptatem",
-            RowLimit: 2546119660664386404,
-            SearchType: "maiores",
-            StartDate: "aliquid",
-            StartRow: 8414654423399060815,
+            EndDate: "expedita",
+            RowLimit: 6718298119585506763,
+            SearchType: "fugit",
+            StartDate: "voluptates",
+            StartRow: 8112342789618834040,
         },
     }
     

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,13 +34,13 @@ func main() {
     
     req := operations.GetTimestagsRequest{
         QueryParams: operations.GetTimestagsQueryParams{
-            Filter: "Per",
-            Max: 4978267807534720283,
-            Query: "excepturi",
+            Filter: "Geo",
+            Max: 386129215567178564,
+            Query: "veritatis",
         },
     }
     
-    res, err := s.Sdk.GetTimestags(ctx, req)
+    res, err := s.GetTimestags(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

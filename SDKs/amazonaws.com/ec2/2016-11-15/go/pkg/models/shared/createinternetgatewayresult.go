@@ -1,5 +1,5 @@
 package shared
 
 type CreateInternetGatewayResult struct {
-	InternetGateway *InternetGateway
+	InternetGateway map[string]interface{}
 }

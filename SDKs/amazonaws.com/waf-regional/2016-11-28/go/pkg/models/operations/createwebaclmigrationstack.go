@@ -30,9 +30,9 @@ type CreateWebACLMigrationStackResponse struct {
 	ContentType                        string
 	CreateWebACLMigrationStackResponse *shared.CreateWebACLMigrationStackResponse
 	StatusCode                         int64
-	WafEntityMigrationException        *interface{}
-	WafInternalErrorException          *interface{}
-	WafInvalidOperationException       *interface{}
-	WafInvalidParameterException       *interface{}
-	WafNonexistentItemException        *interface{}
+	WAFEntityMigrationException        *interface{}
+	WAFInternalErrorException          *interface{}
+	WAFInvalidOperationException       *interface{}
+	WAFInvalidParameterException       *interface{}
+	WAFNonexistentItemException        *interface{}
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.VochseSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.VochseRequestBody{
             CertificateParameters: &operations.VochseRequestBodyCertificateParameters{
-                Dob: "quasi",
-                FullName: "odit",
-                Regno: "sit",
-                Year: "voluptas",
-                Type: "sint",
+                DOB: "voluptate",
+                FullName: "quibusdam",
+                Regno: "vero",
+                Year: "ea",
+                Type: "doloremque",
             },
-            ConsentArtifact: "voluptate",
+            ConsentArtifact: "maxime",
             Format: "pdf",
-            TxnID: "aut",
+            TxnID: "ut",
         },
     }
     
-    res, err := s.Sdk.Vochse(ctx, req)
+    res, err := s.APIs.Vochse(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -60,7 +59,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Vochse` - Vocational Higher Secondary
 

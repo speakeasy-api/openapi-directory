@@ -15,5 +15,5 @@ type AwsElasticsearchDomainDetails struct {
 	LogPublishingOptions        *AwsElasticsearchDomainLogPublishingOptions              `json:"LogPublishingOptions,omitempty"`
 	NodeToNodeEncryptionOptions *AwsElasticsearchDomainNodeToNodeEncryptionOptions       `json:"NodeToNodeEncryptionOptions,omitempty"`
 	ServiceSoftwareOptions      *AwsElasticsearchDomainServiceSoftwareOptions            `json:"ServiceSoftwareOptions,omitempty"`
-	VpcOptions                  *AwsElasticsearchDomainVpcOptions                        `json:"VPCOptions,omitempty"`
+	VPCOptions                  *AwsElasticsearchDomainVpcOptions                        `json:"VPCOptions,omitempty"`
 }

@@ -3,13 +3,13 @@ package operations
 type PostConfigureHealthCheckActionEnum string
 
 const (
-	PostConfigureHealthCheckActionEnumConfigureHealthCheck PostConfigureHealthCheckActionEnum = "ConfigureHealthCheck"
+	POSTConfigureHealthCheckActionEnumConfigureHealthCheck PostConfigureHealthCheckActionEnum = "ConfigureHealthCheck"
 )
 
 type PostConfigureHealthCheckVersionEnum string
 
 const (
-	PostConfigureHealthCheckVersionEnumTwoThousandAndTwelve0601 PostConfigureHealthCheckVersionEnum = "2012-06-01"
+	POSTConfigureHealthCheckVersionEnumTwoThousandAndTwelve0601 PostConfigureHealthCheckVersionEnum = "2012-06-01"
 )
 
 type PostConfigureHealthCheckQueryParams struct {

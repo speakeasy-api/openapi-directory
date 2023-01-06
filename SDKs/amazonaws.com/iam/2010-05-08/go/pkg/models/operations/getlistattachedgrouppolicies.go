@@ -3,13 +3,13 @@ package operations
 type GetListAttachedGroupPoliciesActionEnum string
 
 const (
-	GetListAttachedGroupPoliciesActionEnumListAttachedGroupPolicies GetListAttachedGroupPoliciesActionEnum = "ListAttachedGroupPolicies"
+	GETListAttachedGroupPoliciesActionEnumListAttachedGroupPolicies GetListAttachedGroupPoliciesActionEnum = "ListAttachedGroupPolicies"
 )
 
 type GetListAttachedGroupPoliciesVersionEnum string
 
 const (
-	GetListAttachedGroupPoliciesVersionEnumTwoThousandAndTen0508 GetListAttachedGroupPoliciesVersionEnum = "2010-05-08"
+	GETListAttachedGroupPoliciesVersionEnumTwoThousandAndTen0508 GetListAttachedGroupPoliciesVersionEnum = "2010-05-08"
 )
 
 type GetListAttachedGroupPoliciesQueryParams struct {

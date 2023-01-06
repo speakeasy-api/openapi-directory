@@ -3,13 +3,13 @@ package operations
 type PostSetInstanceHealthActionEnum string
 
 const (
-	PostSetInstanceHealthActionEnumSetInstanceHealth PostSetInstanceHealthActionEnum = "SetInstanceHealth"
+	POSTSetInstanceHealthActionEnumSetInstanceHealth PostSetInstanceHealthActionEnum = "SetInstanceHealth"
 )
 
 type PostSetInstanceHealthVersionEnum string
 
 const (
-	PostSetInstanceHealthVersionEnumTwoThousandAndEleven0101 PostSetInstanceHealthVersionEnum = "2011-01-01"
+	POSTSetInstanceHealthVersionEnumTwoThousandAndEleven0101 PostSetInstanceHealthVersionEnum = "2011-01-01"
 )
 
 type PostSetInstanceHealthQueryParams struct {

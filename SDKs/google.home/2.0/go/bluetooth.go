@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -74,12 +74,13 @@ func (s *Bluetooth) ChangeDiscoverability(ctx context.Context, request operation
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.ChangeDiscoverability200TextPlainObject = &out
 		}
 	}
 
@@ -129,12 +130,13 @@ func (s *Bluetooth) Forgetpaireddevice(ctx context.Context, request operations.F
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.Forgetpaireddevice200TextPlainObject = &out
 		}
 	}
 
@@ -279,12 +281,13 @@ func (s *Bluetooth) PairwithSpeaker(ctx context.Context, request operations.Pair
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.PairwithSpeaker200TextPlainObject = &out
 		}
 	}
 
@@ -335,12 +338,13 @@ func (s *Bluetooth) Scanfordevices(ctx context.Context, request operations.Scanf
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			out, err := io.ReadAll(httpRes.Body)
+			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.Body = out
+			out := string(data)
+			res.Scanfordevices200TextPlainObject = &out
 		}
 	}
 

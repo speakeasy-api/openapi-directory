@@ -33,7 +33,6 @@ type PutProxyRequest struct {
 
 type PutProxyResponse struct {
 	ContentType                       string
-	Headers                           map[string][]string
 	StatusCode                        int64
 	PutProxy200ApplicationJSONAny     *interface{}
 	PutProxy401ApplicationJSONObject  *PutProxy401ApplicationJSON

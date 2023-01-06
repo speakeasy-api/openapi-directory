@@ -20,6 +20,6 @@ type GetCompanyTimeOffTypesRequest struct {
 
 type GetCompanyTimeOffTypesResponse struct {
 	ContentType                                    string
-	GetCompanyTimeOffTypes200ApplicationJSONObject *GetCompanyTimeOffTypes200ApplicationJSON
 	StatusCode                                     int64
+	GetCompanyTimeOffTypes200ApplicationJSONObject *GetCompanyTimeOffTypes200ApplicationJSON
 }

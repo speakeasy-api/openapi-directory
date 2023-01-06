@@ -29,7 +29,7 @@ type BuildBatch struct {
 	ProjectName             *string                     `json:"projectName,omitempty"`
 	QueuedTimeoutInMinutes  *int64                      `json:"queuedTimeoutInMinutes,omitempty"`
 	ResolvedSourceVersion   *string                     `json:"resolvedSourceVersion,omitempty"`
-	SecondaryArtifacts      []BuildArtifacts            `json:"secondaryArtifacts,omitempty"`
+	SecondaryArtifacts      []BuildArtifacts1           `json:"secondaryArtifacts,omitempty"`
 	SecondarySourceVersions []ProjectSourceVersion      `json:"secondarySourceVersions,omitempty"`
 	SecondarySources        []ProjectSource             `json:"secondarySources,omitempty"`
 	ServiceRole             *string                     `json:"serviceRole,omitempty"`

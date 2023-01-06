@@ -3,13 +3,13 @@ package operations
 type PostRevokeDbSecurityGroupIngressActionEnum string
 
 const (
-	PostRevokeDbSecurityGroupIngressActionEnumRevokeDbSecurityGroupIngress PostRevokeDbSecurityGroupIngressActionEnum = "RevokeDBSecurityGroupIngress"
+	POSTRevokeDBSecurityGroupIngressActionEnumRevokeDbSecurityGroupIngress PostRevokeDbSecurityGroupIngressActionEnum = "RevokeDBSecurityGroupIngress"
 )
 
 type PostRevokeDbSecurityGroupIngressVersionEnum string
 
 const (
-	PostRevokeDbSecurityGroupIngressVersionEnumTwoThousandAndFourteen0901 PostRevokeDbSecurityGroupIngressVersionEnum = "2014-09-01"
+	POSTRevokeDBSecurityGroupIngressVersionEnumTwoThousandAndFourteen0901 PostRevokeDbSecurityGroupIngressVersionEnum = "2014-09-01"
 )
 
 type PostRevokeDbSecurityGroupIngressQueryParams struct {

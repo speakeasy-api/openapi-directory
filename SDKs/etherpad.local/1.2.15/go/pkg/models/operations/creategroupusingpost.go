@@ -31,8 +31,8 @@ type CreateGroupUsingPost500ApplicationJSON struct {
 type CreateGroupUsingPostResponse struct {
 	ContentType                                  string
 	StatusCode                                   int64
-	CreateGroupUsingPost200ApplicationJSONObject *CreateGroupUsingPost200ApplicationJSON
-	CreateGroupUsingPost400ApplicationJSONObject *CreateGroupUsingPost400ApplicationJSON
-	CreateGroupUsingPost401ApplicationJSONObject *CreateGroupUsingPost401ApplicationJSON
-	CreateGroupUsingPost500ApplicationJSONObject *CreateGroupUsingPost500ApplicationJSON
+	CreateGroupUsingPOST200ApplicationJSONObject *CreateGroupUsingPost200ApplicationJSON
+	CreateGroupUsingPOST400ApplicationJSONObject *CreateGroupUsingPost400ApplicationJSON
+	CreateGroupUsingPOST401ApplicationJSONObject *CreateGroupUsingPost401ApplicationJSON
+	CreateGroupUsingPOST500ApplicationJSONObject *CreateGroupUsingPost500ApplicationJSON
 }

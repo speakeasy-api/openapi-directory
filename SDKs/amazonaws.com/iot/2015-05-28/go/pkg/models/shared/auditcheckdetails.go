@@ -1,7 +1,5 @@
 package shared
 
-// AuditCheckDetails
-// Information about the audit check.
 type AuditCheckDetails struct {
 	CheckCompliant                       *bool                    `json:"checkCompliant,omitempty"`
 	CheckRunStatus                       *AuditCheckRunStatusEnum `json:"checkRunStatus,omitempty"`

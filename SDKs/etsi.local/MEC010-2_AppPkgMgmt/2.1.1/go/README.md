@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,14 +24,14 @@ func main() {
     
     req := operations.AppDgetRequest{
         PathParams: operations.AppDgetPathParams{
-            AppDID: "qui",
+            AppDID: "veritatis",
         },
         QueryParams: operations.AppDgetQueryParams{
-            AllFields: "rerum",
-            ExcludeDefault: "in",
-            ExcludeFields: "pariatur",
-            Fields: "illum",
-            Filter: "fugiat",
+            AllFields: "ut",
+            ExcludeDefault: "sed",
+            ExcludeFields: "est",
+            Fields: "qui",
+            Filter: "ad",
         },
     }
     
@@ -66,6 +65,7 @@ func main() {
 * `IndividualSubscriptionDelete` - Deletes the individual subscription to notifications about application package changes in MEO.
 * `IndividualSubscriptionGet` - Used to represent an individual subscription to notifications about application package changes.
 * `SubscriptionsGet` - used to retrieve the information of subscriptions to individual application package resource in MEO
+* `SubscriptionsPost` - Subscribe to notifications about on-boarding an application package
 
 ### app-pkgm-notifications
 

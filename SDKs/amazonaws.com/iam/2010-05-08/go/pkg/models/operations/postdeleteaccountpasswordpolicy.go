@@ -3,13 +3,13 @@ package operations
 type PostDeleteAccountPasswordPolicyActionEnum string
 
 const (
-	PostDeleteAccountPasswordPolicyActionEnumDeleteAccountPasswordPolicy PostDeleteAccountPasswordPolicyActionEnum = "DeleteAccountPasswordPolicy"
+	POSTDeleteAccountPasswordPolicyActionEnumDeleteAccountPasswordPolicy PostDeleteAccountPasswordPolicyActionEnum = "DeleteAccountPasswordPolicy"
 )
 
 type PostDeleteAccountPasswordPolicyVersionEnum string
 
 const (
-	PostDeleteAccountPasswordPolicyVersionEnumTwoThousandAndTen0508 PostDeleteAccountPasswordPolicyVersionEnum = "2010-05-08"
+	POSTDeleteAccountPasswordPolicyVersionEnumTwoThousandAndTen0508 PostDeleteAccountPasswordPolicyVersionEnum = "2010-05-08"
 )
 
 type PostDeleteAccountPasswordPolicyQueryParams struct {

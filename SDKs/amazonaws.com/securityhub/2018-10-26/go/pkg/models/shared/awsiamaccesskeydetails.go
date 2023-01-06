@@ -11,5 +11,5 @@ type AwsIamAccessKeyDetails struct {
 	PrincipalType  *string                        `json:"PrincipalType,omitempty"`
 	SessionContext *AwsIamAccessKeySessionContext `json:"SessionContext,omitempty"`
 	Status         *AwsIamAccessKeyStatusEnum     `json:"Status,omitempty"`
-	UserName       *string                        `json:"UserName,omitempty"`
+	UserName       map[string]interface{}         `json:"UserName,omitempty"`
 }

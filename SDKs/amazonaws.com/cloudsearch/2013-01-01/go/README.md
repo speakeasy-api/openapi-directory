@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,21 +35,21 @@ func main() {
     req := operations.GetBuildSuggestersRequest{
         QueryParams: operations.GetBuildSuggestersQueryParams{
             Action: "BuildSuggesters",
-            DomainName: "dolore",
+            DomainName: "consectetur",
             Version: "2013-01-01",
         },
         Headers: operations.GetBuildSuggestersHeaders{
-            XAmzAlgorithm: "accusantium",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "consequatur",
-            XAmzDate: "doloremque",
-            XAmzSecurityToken: "animi",
-            XAmzSignature: "exercitationem",
-            XAmzSignedHeaders: "quia",
+            XAmzAlgorithm: "reprehenderit",
+            XAmzContentSha256: "qui",
+            XAmzCredential: "libero",
+            XAmzDate: "enim",
+            XAmzSecurityToken: "sint",
+            XAmzSignature: "qui",
+            XAmzSignedHeaders: "rem",
         },
     }
     
-    res, err := s.Sdk.GetBuildSuggesters(ctx, req)
+    res, err := s.GetBuildSuggesters(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

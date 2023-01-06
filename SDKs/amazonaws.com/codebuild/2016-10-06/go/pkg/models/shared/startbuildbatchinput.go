@@ -17,7 +17,7 @@ type StartBuildBatchInput struct {
 	ImageOverride                    *string                       `json:"imageOverride,omitempty"`
 	ImagePullCredentialsTypeOverride *ImagePullCredentialsTypeEnum `json:"imagePullCredentialsTypeOverride,omitempty"`
 	InsecureSslOverride              *bool                         `json:"insecureSslOverride,omitempty"`
-	LogsConfigOverride               *LogsConfig                   `json:"logsConfigOverride,omitempty"`
+	LogsConfigOverride               *LogsConfig1                  `json:"logsConfigOverride,omitempty"`
 	PrivilegedModeOverride           *bool                         `json:"privilegedModeOverride,omitempty"`
 	ProjectName                      string                        `json:"projectName"`
 	QueuedTimeoutInMinutesOverride   *int64                        `json:"queuedTimeoutInMinutesOverride,omitempty"`

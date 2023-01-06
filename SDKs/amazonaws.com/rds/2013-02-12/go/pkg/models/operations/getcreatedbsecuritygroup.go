@@ -3,19 +3,19 @@ package operations
 type GetCreateDbSecurityGroupActionEnum string
 
 const (
-	GetCreateDbSecurityGroupActionEnumCreateDbSecurityGroup GetCreateDbSecurityGroupActionEnum = "CreateDBSecurityGroup"
+	GETCreateDBSecurityGroupActionEnumCreateDbSecurityGroup GetCreateDbSecurityGroupActionEnum = "CreateDBSecurityGroup"
 )
 
 type GetCreateDbSecurityGroupVersionEnum string
 
 const (
-	GetCreateDbSecurityGroupVersionEnumTwoThousandAndThirteen0212 GetCreateDbSecurityGroupVersionEnum = "2013-02-12"
+	GETCreateDBSecurityGroupVersionEnumTwoThousandAndThirteen0212 GetCreateDbSecurityGroupVersionEnum = "2013-02-12"
 )
 
 type GetCreateDbSecurityGroupQueryParams struct {
 	Action                     GetCreateDbSecurityGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbSecurityGroupDescription string                              `queryParam:"style=form,explode=true,name=DBSecurityGroupDescription"`
-	DbSecurityGroupName        string                              `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
+	DBSecurityGroupDescription string                              `queryParam:"style=form,explode=true,name=DBSecurityGroupDescription"`
+	DBSecurityGroupName        string                              `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
 	Version                    GetCreateDbSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

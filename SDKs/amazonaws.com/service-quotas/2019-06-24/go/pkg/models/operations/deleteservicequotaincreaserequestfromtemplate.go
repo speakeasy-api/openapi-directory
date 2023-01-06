@@ -27,7 +27,7 @@ type DeleteServiceQuotaIncreaseRequestFromTemplateRequest struct {
 }
 
 type DeleteServiceQuotaIncreaseRequestFromTemplateResponse struct {
-	AwsServiceAccessNotEnabledException                   *interface{}
+	AWSServiceAccessNotEnabledException                   *interface{}
 	AccessDeniedException                                 *interface{}
 	ContentType                                           string
 	DeleteServiceQuotaIncreaseRequestFromTemplateResponse map[string]interface{}

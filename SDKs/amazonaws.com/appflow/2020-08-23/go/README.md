@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,214 +34,218 @@ func main() {
     
     req := operations.CreateConnectorProfileRequest{
         Headers: operations.CreateConnectorProfileHeaders{
-            XAmzAlgorithm: "laboriosam",
-            XAmzContentSha256: "velit",
-            XAmzCredential: "ea",
-            XAmzDate: "tempore",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "tempora",
+            XAmzAlgorithm: "officiis",
+            XAmzContentSha256: "commodi",
+            XAmzCredential: "sed",
+            XAmzDate: "voluptates",
+            XAmzSecurityToken: "enim",
+            XAmzSignature: "eos",
+            XAmzSignedHeaders: "ipsa",
         },
         Request: operations.CreateConnectorProfileRequestBody{
             ConnectionMode: "Public",
             ConnectorProfileConfig: operations.CreateConnectorProfileRequestBodyConnectorProfileConfig{
                 ConnectorProfileCredentials: &shared.ConnectorProfileCredentials{
                     Amplitude: &shared.AmplitudeConnectorProfileCredentials{
-                        APIKey: "mollitia",
-                        SecretKey: "non",
+                        APIKey: "sint",
+                        SecretKey: "aut",
                     },
                     Datadog: &shared.DatadogConnectorProfileCredentials{
-                        APIKey: "magni",
-                        ApplicationKey: "recusandae",
+                        APIKey: "eaque",
+                        ApplicationKey: "facilis",
                     },
                     Dynatrace: &shared.DynatraceConnectorProfileCredentials{
-                        APIToken: "illum",
+                        APIToken: "et",
                     },
                     GoogleAnalytics: &shared.GoogleAnalyticsConnectorProfileCredentials{
-                        AccessToken: "consequatur",
-                        ClientID: "dolores",
-                        ClientSecret: "hic",
+                        AccessToken: "ut",
+                        ClientID: "et",
+                        ClientSecret: "quam",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "nihil",
-                            RedirectURI: "explicabo",
+                            AuthCode: "sit",
+                            RedirectURI: "voluptate",
                         },
-                        RefreshToken: "ex",
+                        RefreshToken: "eaque",
                     },
                     Honeycode: &shared.HoneycodeConnectorProfileCredentials{
-                        AccessToken: "iure",
+                        AccessToken: "consequuntur",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
                             AuthCode: "et",
-                            RedirectURI: "quos",
+                            RedirectURI: "amet",
                         },
-                        RefreshToken: "et",
+                        RefreshToken: "distinctio",
                     },
                     InforNexus: &shared.InforNexusConnectorProfileCredentials{
-                        AccessKeyID: "explicabo",
-                        Datakey: "necessitatibus",
-                        SecretAccessKey: "veniam",
-                        UserID: "qui",
+                        AccessKeyID: "in",
+                        Datakey: "consectetur",
+                        SecretAccessKey: "minima",
+                        UserID: "sequi",
                     },
                     Marketo: &shared.MarketoConnectorProfileCredentials{
-                        AccessToken: "in",
-                        ClientID: "odit",
-                        ClientSecret: "molestias",
+                        AccessToken: "et",
+                        ClientID: "consequatur",
+                        ClientSecret: "eum",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "corporis",
-                            RedirectURI: "tenetur",
+                            AuthCode: "sunt",
+                            RedirectURI: "cupiditate",
                         },
                     },
                     Redshift: &shared.RedshiftConnectorProfileCredentials{
-                        Password: "esse",
-                        Username: "similique",
+                        Password: "quam",
+                        Username: "repellendus",
                     },
-                    SapoData: &shared.SapoDataConnectorProfileCredentials{
+                    SAPOData: &shared.SapoDataConnectorProfileCredentials{
                         BasicAuthCredentials: &shared.BasicAuthCredentials{
-                            Password: "mollitia",
-                            Username: "id",
+                            Password: "dolores",
+                            Username: "nihil",
                         },
                         OAuthCredentials: &shared.OAuthCredentials{
-                            AccessToken: "laboriosam",
-                            ClientID: "quam",
-                            ClientSecret: "maiores",
+                            AccessToken: "ullam",
+                            ClientID: "architecto",
+                            ClientSecret: "architecto",
                             OAuthRequest: &shared.ConnectorOAuthRequest{
-                                AuthCode: "totam",
-                                RedirectURI: "iusto",
+                                AuthCode: "beatae",
+                                RedirectURI: "consequatur",
                             },
-                            RefreshToken: "aperiam",
+                            RefreshToken: "veniam",
                         },
                     },
                     Salesforce: &shared.SalesforceConnectorProfileCredentials{
-                        AccessToken: "repellendus",
-                        ClientCredentialsArn: "sunt",
+                        AccessToken: "hic",
+                        ClientCredentialsArn: "beatae",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "eum",
-                            RedirectURI: "earum",
+                            AuthCode: "veritatis",
+                            RedirectURI: "architecto",
                         },
-                        RefreshToken: "et",
+                        RefreshToken: "voluptas",
                     },
                     ServiceNow: &shared.ServiceNowConnectorProfileCredentials{
-                        Password: "officia",
-                        Username: "aut",
+                        Password: "voluptatibus",
+                        Username: "maiores",
                     },
                     Singular: &shared.SingularConnectorProfileCredentials{
-                        APIKey: "dolor",
+                        APIKey: "consectetur",
                     },
                     Slack: &shared.SlackConnectorProfileCredentials{
-                        AccessToken: "quia",
-                        ClientID: "quaerat",
-                        ClientSecret: "ea",
+                        AccessToken: "modi",
+                        ClientID: "eos",
+                        ClientSecret: "praesentium",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "et",
-                            RedirectURI: "expedita",
+                            AuthCode: "itaque",
+                            RedirectURI: "ipsum",
                         },
                     },
                     Snowflake: &shared.SnowflakeConnectorProfileCredentials{
-                        Password: "recusandae",
-                        Username: "qui",
+                        Password: "natus",
+                        Username: "quas",
                     },
                     Trendmicro: &shared.TrendmicroConnectorProfileCredentials{
-                        APISecretKey: "qui",
+                        APISecretKey: "nesciunt",
                     },
                     Veeva: &shared.VeevaConnectorProfileCredentials{
-                        Password: "aut",
-                        Username: "explicabo",
+                        Password: "nostrum",
+                        Username: "quod",
                     },
                     Zendesk: &shared.ZendeskConnectorProfileCredentials{
-                        AccessToken: "cupiditate",
-                        ClientID: "temporibus",
-                        ClientSecret: "saepe",
+                        AccessToken: "repudiandae",
+                        ClientID: "eius",
+                        ClientSecret: "totam",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "sed",
-                            RedirectURI: "voluptatem",
+                            AuthCode: "amet",
+                            RedirectURI: "blanditiis",
                         },
                     },
                 },
                 ConnectorProfileProperties: &shared.ConnectorProfileProperties{
                     Amplitude: map[string]interface{}{
-                        "fugiat": "nesciunt",
-                        "et": "qui",
+                        "nihil": "asperiores",
+                        "quaerat": "hic",
+                        "quo": "est",
                     },
                     Datadog: &shared.DatadogConnectorProfileProperties{
-                        InstanceURL: "quis",
+                        InstanceURL: "nostrum",
                     },
                     Dynatrace: &shared.DynatraceConnectorProfileProperties{
-                        InstanceURL: "eligendi",
+                        InstanceURL: "pariatur",
                     },
                     GoogleAnalytics: map[string]interface{}{
-                        "fuga": "aliquid",
+                        "occaecati": "possimus",
+                        "temporibus": "laborum",
                     },
                     Honeycode: map[string]interface{}{
-                        "aut": "et",
-                        "voluptatem": "sunt",
+                        "modi": "atque",
+                        "soluta": "tempora",
+                        "qui": "nihil",
                     },
                     InforNexus: &shared.InforNexusConnectorProfileProperties{
-                        InstanceURL: "quae",
+                        InstanceURL: "quas",
                     },
                     Marketo: &shared.MarketoConnectorProfileProperties{
-                        InstanceURL: "placeat",
+                        InstanceURL: "facere",
                     },
                     Redshift: &shared.RedshiftConnectorProfileProperties{
-                        BucketName: "vitae",
-                        BucketPrefix: "rerum",
-                        DatabaseURL: "officiis",
-                        RoleArn: "commodi",
+                        BucketName: "eveniet",
+                        BucketPrefix: "dolores",
+                        DatabaseURL: "fuga",
+                        RoleArn: "error",
                     },
-                    SapoData: &shared.SapoDataConnectorProfileProperties{
-                        ApplicationHostURL: "sed",
-                        ApplicationServicePath: "voluptates",
-                        ClientNumber: "enim",
-                        LogonLanguage: "eos",
+                    SAPOData: &shared.SapoDataConnectorProfileProperties{
+                        ApplicationHostURL: "autem",
+                        ApplicationServicePath: "eaque",
+                        ClientNumber: "omnis",
+                        LogonLanguage: "esse",
                         OAuthProperties: &shared.OAuthProperties{
-                            AuthCodeURL: "ipsa",
+                            AuthCodeURL: "veritatis",
                             OAuthScopes: []string{
-                                "sint",
+                                "incidunt",
                             },
-                            TokenURL: "aut",
+                            TokenURL: "sit",
                         },
-                        PortNumber: 8912790974007895797,
-                        PrivateLinkServiceName: "facilis",
+                        PortNumber: 4790775879297943507,
+                        PrivateLinkServiceName: "est",
                     },
                     Salesforce: &shared.SalesforceConnectorProfileProperties{
-                        InstanceURL: "et",
-                        IsSandboxEnvironment: false,
+                        InstanceURL: "odio",
+                        IsSandboxEnvironment: true,
                     },
                     ServiceNow: &shared.ServiceNowConnectorProfileProperties{
-                        InstanceURL: "et",
+                        InstanceURL: "delectus",
                     },
                     Singular: map[string]interface{}{
-                        "sit": "voluptate",
+                        "et": "et",
+                        "in": "ipsa",
+                        "repellat": "deleniti",
                     },
                     Slack: &shared.SlackConnectorProfileProperties{
-                        InstanceURL: "eaque",
+                        InstanceURL: "asperiores",
                     },
                     Snowflake: &shared.SnowflakeConnectorProfileProperties{
-                        AccountName: "consequuntur",
-                        BucketName: "et",
-                        BucketPrefix: "amet",
-                        PrivateLinkServiceName: "distinctio",
-                        Region: "in",
-                        Stage: "consectetur",
-                        Warehouse: "minima",
+                        AccountName: "voluptatem",
+                        BucketName: "hic",
+                        BucketPrefix: "doloribus",
+                        PrivateLinkServiceName: "corrupti",
+                        Region: "nemo",
+                        Stage: "architecto",
+                        Warehouse: "neque",
                     },
                     Trendmicro: map[string]interface{}{
-                        "et": "consequatur",
-                        "eum": "sunt",
+                        "saepe": "voluptatem",
                     },
                     Veeva: &shared.VeevaConnectorProfileProperties{
-                        InstanceURL: "cupiditate",
+                        InstanceURL: "error",
                     },
                     Zendesk: &shared.ZendeskConnectorProfileProperties{
-                        InstanceURL: "quam",
+                        InstanceURL: "consequuntur",
                     },
                 },
             },
-            ConnectorProfileName: "repellendus",
-            ConnectorType: "Trendmicro",
-            KmsArn: "nihil",
+            ConnectorProfileName: "in",
+            ConnectorType: "Datadog",
+            KmsArn: "autem",
         },
     }
     
-    res, err := s.Sdk.CreateConnectorProfile(ctx, req)
+    res, err := s.CreateConnectorProfile(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,14 +22,7 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.UsersAddonAccountsListRequest{
-        PathParams: operations.UsersAddonAccountsListPathParams{
-            Provider: "ut",
-            UserID: "quas",
-        },
-    }
-    
-    res, err := s.Sdk.UsersAddonAccountsList(ctx, req)
+    res, err := s.Addons.AddonsList(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,14 +36,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Addons
 
-* `UsersAddonAccountsList` - List all addon accounts
-* `UsersAddonAccountsRead` - Retrieve an addon account
 * `AddonsList` - List all addons
+
+### Base
+
 * `BaseRead` - Root
+
+### Citations
+
 * `CitationsStylesList` - List all citation styles
 * `CitationsStylesRead` - Retrieve a citation style
+
+### Collections
+
 * `CollectionsAddMetadata` - Add Metadata or Subjects to a Entitiy in a Collection
 * `CollectionsCollectedMetadata` - Retrieve subject data for a specific piece of metadata info for a collection
 * `CollectionsCreate` - Create a Collection
@@ -73,24 +72,45 @@ func main() {
 * `CollectionsMetadataRegistrationsList` - Retrieve a list of collected metadata for a collection
 * `CollectionsMetadataSubjectsRelationships` - Retrieve subject metadata for a specific piece of metadata in a collection
 * `CollectionsMetadataSubjectsRelationshipsUpdate` - Update subjects for a specific piece of metadata in a collection
+
+### Comments
+
 * `CommentsDelete` - Delete a comment
 * `CommentsPut` - Update a comment
 * `CommentsRead` - Retrieve a comment
+
+### Files
+
 * `FilesDetail` - Retrieve a file
 * `FilesPatch` - Update a file
 * `FilesVersionDetail` - Retrieve a file version
 * `FilesVersions` - List all file versions
+
+### Institutions
+
 * `InstitutionsDetail` - Retrieve an institution
 * `InstitutionsList` - List all institutions
 * `InstitutionsNodeList` - List all affiliated nodes
 * `InstitutionsRegistrationList` - List all affiliated registrations
 * `InstitutionsUsersList` - List all affiliated users
+
+### Licenses
+
 * `LicenseList` - List all licenses
 * `LicensesRead` - Retrieve a license
+
+### Logs
+
 * `LogsActions` - Actions
 * `LogsRead` - Retrieve a log
+
+### Metaschemas
+
 * `MetaschemasList` - List all metaschemas
 * `MetaschemasRead` - Retrieve a metaschema
+
+### Nodes
+
 * `NodesAddonRead` - Retrieve an addon
 * `NodesAddonsFoldersList` - List all addon folders
 * `NodesAddonsList` - List all addons
@@ -131,17 +151,26 @@ func main() {
 * `NodesViewOnlyLinksList` - List all view only links
 * `NodesViewOnlyLinksRead` - Retrieve a view only link
 * `NodesWikisList` - List all wikis
+
+### Preprint Providers
+
 * `PreprintProviderDetail` - Retrieve a preprint provider
 * `PreprintProviderLicensesList` - List all licenses
 * `PreprintProviderList` - List all preprint providers
 * `PreprintProviderTaxonomiesList` - List all taxonomies
 * `PreprintProvidersPreprintsList` - List all preprints
+
+### Preprints
+
 * `PreprintsCitationList` - Retrieve citation details
 * `PreprintsCitationRead` - Retrieve a styled citation
 * `PreprintsCreate` - Create a preprint
 * `PreprintsList` - List all preprints
 * `PreprintsPartialUpdate` - Update a preprint
 * `PreprintsRead` - Retrieve a preprint
+
+### Registrations
+
 * `RegistrationsChildrenList` - List all child registrations
 * `RegistrationsCitationRead` - Retrieve a citation
 * `RegistrationsCitationsList` - List all citation styles
@@ -163,8 +192,16 @@ func main() {
 * `RegistrationsViewOnlyLinksList` - List all view only links
 * `RegistrationsViewOnlyLinksRead` - Retrieve a view only link
 * `RegistrationsWikisList` - List all wikis
+
+### Taxonomies
+
 * `TaxonomiesList` - List all taxonomies
 * `TaxonomiesRead` - Retrieve a taxonomy
+
+### Users
+
+* `UsersAddonAccountsList` - List all addon accounts
+* `UsersAddonAccountsRead` - Retrieve an addon account
 * `UsersAddonsList` - List all user addons
 * `UsersAddonsRead` - Retrieve a user addon
 * `UsersInstitutionsList` - List all institutions
@@ -174,8 +211,14 @@ func main() {
 * `UsersPreprintsList` - List all preprints
 * `UsersRead` - Retrieve a user
 * `UsersRegistrationsList` - List all registrations
+
+### View Only Links
+
 * `ViewOnlyLinksNodeList` - List all nodes
 * `ViewOnlyLinksRead` - Retrieve a view only link
+
+### Wikis
+
 * `WikiContent` - Retrieve the Content of a Wiki
 * `WikiRead` - Retrieve a Wiki
 

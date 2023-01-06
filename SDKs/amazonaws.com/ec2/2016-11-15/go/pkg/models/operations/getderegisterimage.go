@@ -3,13 +3,13 @@ package operations
 type GetDeregisterImageActionEnum string
 
 const (
-	GetDeregisterImageActionEnumDeregisterImage GetDeregisterImageActionEnum = "DeregisterImage"
+	GETDeregisterImageActionEnumDeregisterImage GetDeregisterImageActionEnum = "DeregisterImage"
 )
 
 type GetDeregisterImageVersionEnum string
 
 const (
-	GetDeregisterImageVersionEnumTwoThousandAndSixteen1115 GetDeregisterImageVersionEnum = "2016-11-15"
+	GETDeregisterImageVersionEnumTwoThousandAndSixteen1115 GetDeregisterImageVersionEnum = "2016-11-15"
 )
 
 type GetDeregisterImageQueryParams struct {

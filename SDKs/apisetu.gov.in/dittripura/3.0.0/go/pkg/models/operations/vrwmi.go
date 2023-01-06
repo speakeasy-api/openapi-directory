@@ -82,7 +82,7 @@ type Vrwmi404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Vrwmi404ApplicationJSONErrorDescriptionEnumNoRecordFound               Vrwmi404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Vrwmi404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Vrwmi404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Vrwmi404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Vrwmi404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Vrwmi404ApplicationJSON struct {

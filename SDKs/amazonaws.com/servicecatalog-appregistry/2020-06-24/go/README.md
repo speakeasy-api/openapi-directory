@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AssociateAttributeGroupRequest{
         PathParams: operations.AssociateAttributeGroupPathParams{
-            Application: "eligendi",
-            AttributeGroup: "alias",
+            Application: "assumenda",
+            AttributeGroup: "iusto",
         },
         Headers: operations.AssociateAttributeGroupHeaders{
-            XAmzAlgorithm: "deleniti",
-            XAmzContentSha256: "cupiditate",
-            XAmzCredential: "vero",
-            XAmzDate: "in",
-            XAmzSecurityToken: "libero",
-            XAmzSignature: "veniam",
-            XAmzSignedHeaders: "voluptatem",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "ut",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "repellendus",
+            XAmzSignature: "commodi",
+            XAmzSignedHeaders: "exercitationem",
         },
     }
     
-    res, err := s.Sdk.AssociateAttributeGroup(ctx, req)
+    res, err := s.AssociateAttributeGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

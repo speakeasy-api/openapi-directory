@@ -13,7 +13,7 @@ type ProtocolProxyGetTraceRequest struct {
 }
 
 type ProtocolProxyGetTraceResponse struct {
-	ConfigProxy *shared.ConfigProxy
+	ConfigPROXY *shared.ConfigProxy
 	ContentType string
 	StatusCode  int64
 }

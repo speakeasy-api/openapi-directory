@@ -39,8 +39,8 @@ type GetLastEditedUsingGetRequest struct {
 type GetLastEditedUsingGetResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	GetLastEditedUsingGet200ApplicationJSONObject *GetLastEditedUsingGet200ApplicationJSON
-	GetLastEditedUsingGet400ApplicationJSONObject *GetLastEditedUsingGet400ApplicationJSON
-	GetLastEditedUsingGet401ApplicationJSONObject *GetLastEditedUsingGet401ApplicationJSON
-	GetLastEditedUsingGet500ApplicationJSONObject *GetLastEditedUsingGet500ApplicationJSON
+	GETLastEditedUsingGET200ApplicationJSONObject *GetLastEditedUsingGet200ApplicationJSON
+	GETLastEditedUsingGET400ApplicationJSONObject *GetLastEditedUsingGet400ApplicationJSON
+	GETLastEditedUsingGET401ApplicationJSONObject *GetLastEditedUsingGet401ApplicationJSON
+	GETLastEditedUsingGET500ApplicationJSONObject *GetLastEditedUsingGet500ApplicationJSON
 }

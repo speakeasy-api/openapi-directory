@@ -86,7 +86,7 @@ type Fitcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Fitcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Fitcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Fitcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Fitcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Fitcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Fitcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Fitcer404ApplicationJSON struct {

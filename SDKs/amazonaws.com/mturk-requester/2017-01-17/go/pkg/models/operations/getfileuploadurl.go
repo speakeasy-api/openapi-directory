@@ -7,7 +7,7 @@ import (
 type GetFileUploadUrlxAmzTargetEnum string
 
 const (
-	GetFileUploadUrlxAmzTargetEnumMTurkRequesterServiceV20170117GetFileUploadURL GetFileUploadUrlxAmzTargetEnum = "MTurkRequesterServiceV20170117.GetFileUploadURL"
+	GetFileUploadURLXAmzTargetEnumMTurkRequesterServiceV20170117GetFileUploadURL GetFileUploadUrlxAmzTargetEnum = "MTurkRequesterServiceV20170117.GetFileUploadURL"
 )
 
 type GetFileUploadURLHeaders struct {

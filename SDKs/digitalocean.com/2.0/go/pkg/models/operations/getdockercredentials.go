@@ -9,10 +9,6 @@ type GetDockerCredentialsQueryParams struct {
 	ReadWrite     *bool  `queryParam:"style=form,explode=true,name=read_write"`
 }
 
-type GetDockerCredentialsRequest struct {
-	QueryParams GetDockerCredentialsQueryParams
-}
-
 type GetDockerCredentials200ApplicationJSONAuthsRegistryDigitaloceanCom struct {
 	Auth *string `json:"auth,omitempty"`
 }
@@ -29,6 +25,10 @@ type GetDockerCredentials401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDockerCredentialsRequest struct {
+	QueryParams GetDockerCredentialsQueryParams
 }
 
 type GetDockerCredentialsResponse struct {

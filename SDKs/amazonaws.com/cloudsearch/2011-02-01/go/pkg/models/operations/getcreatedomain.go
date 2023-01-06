@@ -3,13 +3,13 @@ package operations
 type GetCreateDomainActionEnum string
 
 const (
-	GetCreateDomainActionEnumCreateDomain GetCreateDomainActionEnum = "CreateDomain"
+	GETCreateDomainActionEnumCreateDomain GetCreateDomainActionEnum = "CreateDomain"
 )
 
 type GetCreateDomainVersionEnum string
 
 const (
-	GetCreateDomainVersionEnumTwoThousandAndEleven0201 GetCreateDomainVersionEnum = "2011-02-01"
+	GETCreateDomainVersionEnumTwoThousandAndEleven0201 GetCreateDomainVersionEnum = "2011-02-01"
 )
 
 type GetCreateDomainQueryParams struct {

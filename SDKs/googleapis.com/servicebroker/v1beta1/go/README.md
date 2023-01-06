@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,32 @@ func main() {
         Security: operations.ServicebrokerProjectsBrokersCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ServicebrokerProjectsBrokersCreatePathParams{
-            Parent: "voluptatem",
+            Parent: "doloribus",
         },
         QueryParams: operations.ServicebrokerProjectsBrokersCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "placeat",
-            Alt: "proto",
-            Callback: "itaque",
-            Fields: "animi",
-            Key: "eum",
-            OauthToken: "non",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "nulla",
-            UploadProtocol: "qui",
+            AccessToken: "maxime",
+            Alt: "media",
+            Callback: "corporis",
+            Fields: "nam",
+            Key: "assumenda",
+            OauthToken: "molestias",
+            PrettyPrint: true,
+            QuotaUser: "esse",
+            UploadType: "totam",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudServicebrokerV1beta1Broker{
-            CreateTime: "veritatis",
-            Name: "laboriosam",
-            Title: "illum",
-            URL: "nemo",
+            CreateTime: "cumque",
+            Name: "aut",
+            Title: "qui",
+            URL: "incidunt",
         },
     }
     

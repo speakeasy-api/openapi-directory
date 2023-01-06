@@ -3,13 +3,13 @@ package operations
 type GetGetServiceLastAccessedDetailsActionEnum string
 
 const (
-	GetGetServiceLastAccessedDetailsActionEnumGetServiceLastAccessedDetails GetGetServiceLastAccessedDetailsActionEnum = "GetServiceLastAccessedDetails"
+	GETGETServiceLastAccessedDetailsActionEnumGetServiceLastAccessedDetails GetGetServiceLastAccessedDetailsActionEnum = "GetServiceLastAccessedDetails"
 )
 
 type GetGetServiceLastAccessedDetailsVersionEnum string
 
 const (
-	GetGetServiceLastAccessedDetailsVersionEnumTwoThousandAndTen0508 GetGetServiceLastAccessedDetailsVersionEnum = "2010-05-08"
+	GETGETServiceLastAccessedDetailsVersionEnumTwoThousandAndTen0508 GetGetServiceLastAccessedDetailsVersionEnum = "2010-05-08"
 )
 
 type GetGetServiceLastAccessedDetailsQueryParams struct {

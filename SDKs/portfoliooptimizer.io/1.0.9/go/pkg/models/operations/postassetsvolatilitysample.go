@@ -22,6 +22,6 @@ type PostAssetsVolatilitySampleRequest struct {
 
 type PostAssetsVolatilitySampleResponse struct {
 	ContentType                                        string
-	PostAssetsVolatilitySample200ApplicationJSONObject *PostAssetsVolatilitySample200ApplicationJSON
 	StatusCode                                         int64
+	PostAssetsVolatilitySample200ApplicationJSONObject *PostAssetsVolatilitySample200ApplicationJSON
 }

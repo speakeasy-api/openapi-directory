@@ -7,8 +7,8 @@ import (
 type DbSnapshot struct {
 	AllocatedStorage     *int64
 	AvailabilityZone     *string
-	DbInstanceIdentifier *string
-	DbSnapshotIdentifier *string
+	DBInstanceIdentifier *string
+	DBSnapshotIdentifier *string
 	Engine               *string
 	EngineVersion        *string
 	InstanceCreateTime   *time.Time

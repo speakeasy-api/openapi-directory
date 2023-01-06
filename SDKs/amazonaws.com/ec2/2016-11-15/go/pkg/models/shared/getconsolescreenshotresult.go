@@ -1,6 +1,6 @@
 package shared
 
 type GetConsoleScreenshotResult struct {
-	ImageData  *string
-	InstanceID *string
+	ImageData  map[string]interface{}
+	InstanceID map[string]interface{}
 }

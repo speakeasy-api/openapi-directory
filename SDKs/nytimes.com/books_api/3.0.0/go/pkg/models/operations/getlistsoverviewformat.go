@@ -7,8 +7,8 @@ import (
 type GetListsOverviewFormatFormatEnum string
 
 const (
-	GetListsOverviewFormatFormatEnumJSON  GetListsOverviewFormatFormatEnum = "json"
-	GetListsOverviewFormatFormatEnumJsonp GetListsOverviewFormatFormatEnum = "jsonp"
+	GETListsOverviewFormatFormatEnumJSON  GetListsOverviewFormatFormatEnum = "json"
+	GETListsOverviewFormatFormatEnumJsonp GetListsOverviewFormatFormatEnum = "jsonp"
 )
 
 type GetListsOverviewFormatPathParams struct {
@@ -70,6 +70,6 @@ type GetListsOverviewFormatRequest struct {
 
 type GetListsOverviewFormatResponse struct {
 	ContentType                                    string
-	GetListsOverviewFormat200ApplicationJSONObject *GetListsOverviewFormat200ApplicationJSON
+	GETListsOverviewFormat200ApplicationJSONObject *GetListsOverviewFormat200ApplicationJSON
 	StatusCode                                     int64
 }

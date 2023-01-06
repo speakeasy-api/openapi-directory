@@ -3,13 +3,13 @@ package operations
 type GetDeleteSubnetActionEnum string
 
 const (
-	GetDeleteSubnetActionEnumDeleteSubnet GetDeleteSubnetActionEnum = "DeleteSubnet"
+	GETDeleteSubnetActionEnumDeleteSubnet GetDeleteSubnetActionEnum = "DeleteSubnet"
 )
 
 type GetDeleteSubnetVersionEnum string
 
 const (
-	GetDeleteSubnetVersionEnumTwoThousandAndSixteen1115 GetDeleteSubnetVersionEnum = "2016-11-15"
+	GETDeleteSubnetVersionEnumTwoThousandAndSixteen1115 GetDeleteSubnetVersionEnum = "2016-11-15"
 )
 
 type GetDeleteSubnetQueryParams struct {

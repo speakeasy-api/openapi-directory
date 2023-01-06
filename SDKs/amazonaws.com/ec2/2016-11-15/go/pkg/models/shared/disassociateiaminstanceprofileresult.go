@@ -1,5 +1,5 @@
 package shared
 
 type DisassociateIamInstanceProfileResult struct {
-	IamInstanceProfileAssociation *IamInstanceProfileAssociation
+	IamInstanceProfileAssociation map[string]interface{}
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,258 +26,155 @@ func main() {
         Security: operations.BatchProjectsLocationsJobsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.BatchProjectsLocationsJobsCreatePathParams{
-            Parent: "neque",
+            Parent: "provident",
         },
         QueryParams: operations.BatchProjectsLocationsJobsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "alias",
+            AccessToken: "ut",
             Alt: "json",
-            Callback: "et",
-            Fields: "amet",
-            JobID: "magnam",
-            Key: "nihil",
-            OauthToken: "ipsa",
-            PrettyPrint: true,
-            QuotaUser: "laboriosam",
-            RequestID: "placeat",
-            UploadType: "aliquid",
-            UploadProtocol: "iusto",
+            Callback: "accusamus",
+            Fields: "sunt",
+            JobID: "voluptatem",
+            Key: "et",
+            OauthToken: "quam",
+            PrettyPrint: false,
+            QuotaUser: "iure",
+            RequestID: "dolores",
+            UploadType: "rerum",
+            UploadProtocol: "ut",
         },
         Request: &shared.JobInput{
             AllocationPolicy: &shared.AllocationPolicy{
                 Instances: []shared.InstancePolicyOrTemplate{
                     shared.InstancePolicyOrTemplate{
-                        InstallGpuDrivers: false,
-                        InstanceTemplate: "nisi",
-                        Policy: &shared.InstancePolicy{
-                            Accelerators: []shared.Accelerator{
-                                shared.Accelerator{
-                                    Count: "quis",
-                                    InstallGpuDrivers: true,
-                                    Type: "suscipit",
-                                },
-                                shared.Accelerator{
-                                    Count: "eveniet",
-                                    InstallGpuDrivers: true,
-                                    Type: "quasi",
-                                },
-                            },
-                            Disks: []shared.AttachedDisk{
-                                shared.AttachedDisk{
-                                    DeviceName: "non",
-                                    ExistingDisk: "atque",
-                                    NewDisk: &shared.Disk{
-                                        DiskInterface: "sint",
-                                        Image: "rem",
-                                        SizeGb: "excepturi",
-                                        Snapshot: "quisquam",
-                                        Type: "nulla",
-                                    },
-                                },
-                                shared.AttachedDisk{
-                                    DeviceName: "enim",
-                                    ExistingDisk: "repellat",
-                                    NewDisk: &shared.Disk{
-                                        DiskInterface: "nisi",
-                                        Image: "esse",
-                                        SizeGb: "non",
-                                        Snapshot: "minima",
-                                        Type: "aperiam",
-                                    },
-                                },
-                            },
-                            MachineType: "molestiae",
-                            MinCPUPlatform: "provident",
-                            ProvisioningModel: "PREEMPTIBLE",
-                        },
-                    },
-                    shared.InstancePolicyOrTemplate{
                         InstallGpuDrivers: true,
-                        InstanceTemplate: "eveniet",
+                        InstanceTemplate: "dolorum",
                         Policy: &shared.InstancePolicy{
                             Accelerators: []shared.Accelerator{
                                 shared.Accelerator{
-                                    Count: "porro",
-                                    InstallGpuDrivers: false,
-                                    Type: "consequuntur",
-                                },
-                                shared.Accelerator{
-                                    Count: "sit",
-                                    InstallGpuDrivers: false,
-                                    Type: "vel",
-                                },
-                            },
-                            Disks: []shared.AttachedDisk{
-                                shared.AttachedDisk{
-                                    DeviceName: "itaque",
-                                    ExistingDisk: "similique",
-                                    NewDisk: &shared.Disk{
-                                        DiskInterface: "ut",
-                                        Image: "rerum",
-                                        SizeGb: "iusto",
-                                        Snapshot: "adipisci",
-                                        Type: "repellendus",
-                                    },
-                                },
-                            },
-                            MachineType: "et",
-                            MinCPUPlatform: "et",
-                            ProvisioningModel: "PREEMPTIBLE",
-                        },
-                    },
-                    shared.InstancePolicyOrTemplate{
-                        InstallGpuDrivers: true,
-                        InstanceTemplate: "blanditiis",
-                        Policy: &shared.InstancePolicy{
-                            Accelerators: []shared.Accelerator{
-                                shared.Accelerator{
-                                    Count: "quia",
+                                    Count: "sed",
                                     InstallGpuDrivers: true,
-                                    Type: "necessitatibus",
+                                    Type: "voluptatibus",
                                 },
                                 shared.Accelerator{
-                                    Count: "nostrum",
+                                    Count: "laudantium",
                                     InstallGpuDrivers: false,
-                                    Type: "repudiandae",
+                                    Type: "aperiam",
                                 },
                             },
                             Disks: []shared.AttachedDisk{
                                 shared.AttachedDisk{
-                                    DeviceName: "cumque",
-                                    ExistingDisk: "ipsa",
+                                    DeviceName: "et",
+                                    ExistingDisk: "fuga",
                                     NewDisk: &shared.Disk{
-                                        DiskInterface: "enim",
-                                        Image: "animi",
-                                        SizeGb: "iusto",
-                                        Snapshot: "veritatis",
-                                        Type: "ea",
-                                    },
-                                },
-                                shared.AttachedDisk{
-                                    DeviceName: "rerum",
-                                    ExistingDisk: "minus",
-                                    NewDisk: &shared.Disk{
-                                        DiskInterface: "ab",
-                                        Image: "assumenda",
-                                        SizeGb: "fuga",
-                                        Snapshot: "et",
-                                        Type: "quam",
+                                        DiskInterface: "autem",
+                                        Image: "qui",
+                                        SizeGb: "autem",
+                                        Snapshot: "unde",
+                                        Type: "accusantium",
                                     },
                                 },
                             },
-                            MachineType: "est",
-                            MinCPUPlatform: "perspiciatis",
+                            MachineType: "harum",
+                            MinCPUPlatform: "aliquid",
                             ProvisioningModel: "STANDARD",
                         },
                     },
                 },
                 Labels: map[string]string{
-                    "aut": "quas",
-                    "est": "iusto",
+                    "officia": "ratione",
+                    "quam": "non",
                 },
                 Location: &shared.LocationPolicy{
                     AllowedLocations: []string{
-                        "molestias",
+                        "ut",
+                        "dolorem",
                     },
                 },
                 Network: &shared.NetworkPolicy{
                     NetworkInterfaces: []shared.NetworkInterface{
                         shared.NetworkInterface{
-                            Network: "ab",
+                            Network: "doloribus",
                             NoExternalIPAddress: true,
-                            Subnetwork: "fugiat",
+                            Subnetwork: "similique",
                         },
                         shared.NetworkInterface{
-                            Network: "consectetur",
-                            NoExternalIPAddress: false,
-                            Subnetwork: "quaerat",
-                        },
-                        shared.NetworkInterface{
-                            Network: "ab",
+                            Network: "similique",
                             NoExternalIPAddress: true,
-                            Subnetwork: "ullam",
+                            Subnetwork: "rerum",
                         },
                     },
                 },
                 ServiceAccount: &shared.ServiceAccount{
-                    Email: "dignissimos",
+                    Email: "occaecati",
                 },
             },
             Labels: map[string]string{
-                "quas": "dolor",
+                "reprehenderit": "consequatur",
+                "corrupti": "occaecati",
             },
             LogsPolicy: &shared.LogsPolicy{
-                Destination: "PATH",
-                LogsPath: "ducimus",
+                Destination: "CLOUD_LOGGING",
+                LogsPath: "aut",
             },
             Notifications: []shared.JobNotification{
                 shared.JobNotification{
                     Message: &shared.Message{
-                        NewJobState: "RUNNING",
-                        NewTaskState: "PENDING",
-                        Type: "TYPE_UNSPECIFIED",
-                    },
-                    PubsubTopic: "optio",
-                },
-                shared.JobNotification{
-                    Message: &shared.Message{
-                        NewJobState: "SCHEDULED",
+                        NewJobState: "QUEUED",
                         NewTaskState: "FAILED",
-                        Type: "TYPE_UNSPECIFIED",
+                        Type: "TASK_STATE_CHANGED",
                     },
-                    PubsubTopic: "illo",
-                },
-                shared.JobNotification{
-                    Message: &shared.Message{
-                        NewJobState: "DELETION_IN_PROGRESS",
-                        NewTaskState: "FAILED",
-                        Type: "JOB_STATE_CHANGED",
-                    },
-                    PubsubTopic: "assumenda",
+                    PubsubTopic: "temporibus",
                 },
             },
-            Priority: "aspernatur",
+            Priority: "nemo",
             Status: &shared.JobStatus{
-                RunDuration: "in",
-                State: "SCHEDULED",
+                RunDuration: "reiciendis",
+                State: "DELETION_IN_PROGRESS",
                 StatusEvents: []shared.StatusEvent{
                     shared.StatusEvent{
-                        Description: "quia",
-                        EventTime: "voluptatum",
+                        Description: "dolor",
+                        EventTime: "quidem",
                         TaskExecution: &shared.TaskExecution{
-                            ExitCode: 3978957507316565666,
+                            ExitCode: 7272507434266527321,
                         },
-                        Type: "sit",
+                        Type: "non",
+                    },
+                    shared.StatusEvent{
+                        Description: "dolorum",
+                        EventTime: "iusto",
+                        TaskExecution: &shared.TaskExecution{
+                            ExitCode: 4522791024445429453,
+                        },
+                        Type: "quos",
                     },
                 },
                 TaskGroups: map[string]shared.TaskGroupStatus{
-                    "ea": shared.TaskGroupStatus{
+                    "similique": shared.TaskGroupStatus{
                         Counts: map[string]string{
-                            "perferendis": "esse",
-                            "aut": "nihil",
-                            "ea": "doloremque",
+                            "incidunt": "et",
                         },
                         Instances: []shared.InstanceStatus{
                             shared.InstanceStatus{
-                                MachineType: "iusto",
-                                ProvisioningModel: "PROVISIONING_MODEL_UNSPECIFIED",
-                                TaskPack: "molestiae",
+                                MachineType: "asperiores",
+                                ProvisioningModel: "PREEMPTIBLE",
+                                TaskPack: "similique",
                             },
                             shared.InstanceStatus{
-                                MachineType: "in",
-                                ProvisioningModel: "SPOT",
-                                TaskPack: "sunt",
+                                MachineType: "molestias",
+                                ProvisioningModel: "STANDARD",
+                                TaskPack: "velit",
                             },
                             shared.InstanceStatus{
-                                MachineType: "harum",
-                                ProvisioningModel: "SPOT",
-                                TaskPack: "eos",
+                                MachineType: "eos",
+                                ProvisioningModel: "STANDARD",
+                                TaskPack: "tempore",
                             },
                         },
                     },
@@ -286,58 +182,54 @@ func main() {
             },
             TaskGroups: []shared.TaskGroupInput{
                 shared.TaskGroupInput{
-                    Parallelism: "aut",
-                    PermissiveSSH: false,
-                    RequireHostsFile: true,
-                    TaskCount: "provident",
-                    TaskCountPerNode: "aut",
+                    Parallelism: "rem",
+                    PermissiveSSH: true,
+                    RequireHostsFile: false,
+                    TaskCount: "at",
+                    TaskCountPerNode: "natus",
                     TaskEnvironments: []shared.Environment{
                         shared.Environment{
                             Variables: map[string]string{
-                                "sapiente": "et",
-                                "aut": "rerum",
+                                "et": "deleniti",
                             },
                         },
                         shared.Environment{
                             Variables: map[string]string{
-                                "doloremque": "incidunt",
-                                "provident": "voluptas",
+                                "recusandae": "quasi",
                             },
                         },
                     },
                     TaskSpec: &shared.TaskSpec{
                         ComputeResource: &shared.ComputeResource{
-                            BootDiskMib: "assumenda",
-                            CPUMilli: "sunt",
-                            MemoryMib: "nemo",
+                            BootDiskMib: "qui",
+                            CPUMilli: "debitis",
+                            MemoryMib: "maiores",
                         },
                         Environment: &shared.Environment{
                             Variables: map[string]string{
-                                "quia": "voluptatem",
-                                "culpa": "illum",
-                                "mollitia": "ex",
+                                "non": "quo",
+                                "voluptatem": "dolores",
                             },
                         },
                         Environments: map[string]string{
-                            "molestiae": "dignissimos",
-                            "laudantium": "quo",
-                            "voluptatem": "totam",
+                            "maxime": "quae",
                         },
                         LifecyclePolicies: []shared.LifecyclePolicy{
                             shared.LifecyclePolicy{
-                                Action: "FAIL_TASK",
+                                Action: "ACTION_UNSPECIFIED",
                                 ActionCondition: &shared.ActionCondition{
                                     ExitCodes: []int32{
-                                        2867170436337082363,
-                                        7615081996316769988,
+                                        3949601812501700666,
+                                        9181463986524583615,
                                     },
                                 },
                             },
                             shared.LifecyclePolicy{
-                                Action: "RETRY_TASK",
+                                Action: "ACTION_UNSPECIFIED",
                                 ActionCondition: &shared.ActionCondition{
                                     ExitCodes: []int32{
-                                        2130911999686545789,
+                                        9000514264736311475,
+                                        3661698189582736879,
                                     },
                                 },
                             },
@@ -345,113 +237,95 @@ func main() {
                                 Action: "FAIL_TASK",
                                 ActionCondition: &shared.ActionCondition{
                                     ExitCodes: []int32{
-                                        3871201309715112538,
+                                        5320225905259023026,
+                                        4226060982335490971,
+                                        6988089158248186858,
                                     },
                                 },
                             },
                         },
-                        MaxRetryCount: 1677093497499828344,
-                        MaxRunDuration: "enim",
+                        MaxRetryCount: 6601998192391808988,
+                        MaxRunDuration: "consequatur",
                         Runnables: []shared.Runnable{
-                            shared.Runnable{
-                                AlwaysRun: false,
-                                Background: false,
-                                Barrier: &shared.Barrier{
-                                    Name: "recusandae",
-                                },
-                                Container: &shared.Container{
-                                    BlockExternalNetwork: false,
-                                    Commands: []string{
-                                        "sunt",
-                                    },
-                                    Entrypoint: "ipsum",
-                                    ImageURI: "qui",
-                                    Options: "autem",
-                                    Password: "enim",
-                                    Username: "ab",
-                                    Volumes: []string{
-                                        "molestiae",
-                                        "accusantium",
-                                    },
-                                },
-                                Environment: &shared.Environment{
-                                    Variables: map[string]string{
-                                        "sint": "quo",
-                                    },
-                                },
-                                IgnoreExitStatus: true,
-                                Script: &shared.Script{
-                                    Path: "tenetur",
-                                    Text: "assumenda",
-                                },
-                                Timeout: "voluptatum",
-                            },
                             shared.Runnable{
                                 AlwaysRun: true,
                                 Background: false,
                                 Barrier: &shared.Barrier{
-                                    Name: "maxime",
+                                    Name: "iure",
                                 },
                                 Container: &shared.Container{
                                     BlockExternalNetwork: false,
                                     Commands: []string{
-                                        "ea",
-                                        "temporibus",
-                                        "perspiciatis",
+                                        "aut",
+                                        "voluptate",
+                                        "vero",
                                     },
-                                    Entrypoint: "natus",
-                                    ImageURI: "saepe",
-                                    Options: "natus",
-                                    Password: "fugit",
-                                    Username: "qui",
+                                    Entrypoint: "mollitia",
+                                    ImageURI: "atque",
+                                    Options: "placeat",
+                                    Password: "est",
+                                    Username: "velit",
                                     Volumes: []string{
-                                        "et",
-                                        "ullam",
+                                        "enim",
                                     },
                                 },
                                 Environment: &shared.Environment{
                                     Variables: map[string]string{
-                                        "porro": "sit",
-                                        "modi": "est",
+                                        "molestias": "alias",
                                     },
                                 },
                                 IgnoreExitStatus: false,
                                 Script: &shared.Script{
-                                    Path: "cum",
-                                    Text: "dolorem",
+                                    Path: "aut",
+                                    Text: "inventore",
                                 },
-                                Timeout: "qui",
+                                Timeout: "illo",
                             },
                         },
                         Volumes: []shared.Volume{
                             shared.Volume{
-                                DeviceName: "ex",
+                                DeviceName: "sit",
                                 Gcs: &shared.Gcs{
-                                    RemotePath: "fugiat",
+                                    RemotePath: "porro",
                                 },
                                 MountOptions: []string{
-                                    "soluta",
-                                    "exercitationem",
-                                    "repudiandae",
+                                    "eos",
                                 },
-                                MountPath: "possimus",
+                                MountPath: "dolore",
                                 Nfs: &shared.Nfs{
-                                    RemotePath: "rerum",
-                                    Server: "iusto",
+                                    RemotePath: "quia",
+                                    Server: "aut",
                                 },
                             },
                             shared.Volume{
-                                DeviceName: "architecto",
+                                DeviceName: "porro",
                                 Gcs: &shared.Gcs{
-                                    RemotePath: "eaque",
+                                    RemotePath: "ducimus",
                                 },
                                 MountOptions: []string{
-                                    "vel",
+                                    "cupiditate",
+                                    "placeat",
+                                    "mollitia",
                                 },
-                                MountPath: "ullam",
+                                MountPath: "quia",
                                 Nfs: &shared.Nfs{
-                                    RemotePath: "ut",
-                                    Server: "numquam",
+                                    RemotePath: "et",
+                                    Server: "maiores",
+                                },
+                            },
+                            shared.Volume{
+                                DeviceName: "sint",
+                                Gcs: &shared.Gcs{
+                                    RemotePath: "autem",
+                                },
+                                MountOptions: []string{
+                                    "et",
+                                    "saepe",
+                                },
+                                MountPath: "rem",
+                                Nfs: &shared.Nfs{
+                                    RemotePath: "itaque",
+                                    Server: "dignissimos",
                                 },
                             },
                         },

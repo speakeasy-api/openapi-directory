@@ -145,6 +145,6 @@ type GetPricing200ApplicationJSON struct {
 
 type GetPricingResponse struct {
 	ContentType                        string
-	GetPricing200ApplicationJSONObject *GetPricing200ApplicationJSON
 	StatusCode                         int64
+	GetPricing200ApplicationJSONObject *GetPricing200ApplicationJSON
 }

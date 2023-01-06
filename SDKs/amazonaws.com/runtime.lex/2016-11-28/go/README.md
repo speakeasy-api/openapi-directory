@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.DeleteSessionRequest{
         PathParams: operations.DeleteSessionPathParams{
-            BotAlias: "consequatur",
-            BotName: "delectus",
-            UserID: "qui",
+            BotAlias: "molestiae",
+            BotName: "explicabo",
+            UserID: "aut",
         },
         Headers: operations.DeleteSessionHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "quaerat",
-            XAmzCredential: "voluptatem",
-            XAmzDate: "et",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "deleniti",
+            XAmzAlgorithm: "sequi",
+            XAmzContentSha256: "eum",
+            XAmzCredential: "iusto",
+            XAmzDate: "sed",
+            XAmzSecurityToken: "sunt",
+            XAmzSignature: "ea",
+            XAmzSignedHeaders: "et",
         },
     }
     
-    res, err := s.Sdk.DeleteSession(ctx, req)
+    res, err := s.DeleteSession(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

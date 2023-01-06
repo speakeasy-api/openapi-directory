@@ -3,13 +3,13 @@ package operations
 type GetSetInstanceProtectionActionEnum string
 
 const (
-	GetSetInstanceProtectionActionEnumSetInstanceProtection GetSetInstanceProtectionActionEnum = "SetInstanceProtection"
+	GETSetInstanceProtectionActionEnumSetInstanceProtection GetSetInstanceProtectionActionEnum = "SetInstanceProtection"
 )
 
 type GetSetInstanceProtectionVersionEnum string
 
 const (
-	GetSetInstanceProtectionVersionEnumTwoThousandAndEleven0101 GetSetInstanceProtectionVersionEnum = "2011-01-01"
+	GETSetInstanceProtectionVersionEnumTwoThousandAndEleven0101 GetSetInstanceProtectionVersionEnum = "2011-01-01"
 )
 
 type GetSetInstanceProtectionQueryParams struct {

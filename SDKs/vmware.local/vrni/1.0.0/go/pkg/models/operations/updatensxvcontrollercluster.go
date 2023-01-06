@@ -21,6 +21,6 @@ type UpdateNsxvControllerClusterRequest struct {
 type UpdateNsxvControllerClusterResponse struct {
 	APIError                    *shared.APIError
 	ContentType                 string
-	NsxControllerDataCollection *shared.NsxControllerDataCollection
+	NSXControllerDataCollection *shared.NsxControllerDataCollection
 	StatusCode                  int64
 }

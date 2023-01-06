@@ -3,20 +3,20 @@ package operations
 type GetPutWarmPoolActionEnum string
 
 const (
-	GetPutWarmPoolActionEnumPutWarmPool GetPutWarmPoolActionEnum = "PutWarmPool"
+	GETPutWarmPoolActionEnumPutWarmPool GetPutWarmPoolActionEnum = "PutWarmPool"
 )
 
 type GetPutWarmPoolPoolStateEnum string
 
 const (
-	GetPutWarmPoolPoolStateEnumStopped GetPutWarmPoolPoolStateEnum = "Stopped"
-	GetPutWarmPoolPoolStateEnumRunning GetPutWarmPoolPoolStateEnum = "Running"
+	GETPutWarmPoolPoolStateEnumStopped GetPutWarmPoolPoolStateEnum = "Stopped"
+	GETPutWarmPoolPoolStateEnumRunning GetPutWarmPoolPoolStateEnum = "Running"
 )
 
 type GetPutWarmPoolVersionEnum string
 
 const (
-	GetPutWarmPoolVersionEnumTwoThousandAndEleven0101 GetPutWarmPoolVersionEnum = "2011-01-01"
+	GETPutWarmPoolVersionEnumTwoThousandAndEleven0101 GetPutWarmPoolVersionEnum = "2011-01-01"
 )
 
 type GetPutWarmPoolQueryParams struct {

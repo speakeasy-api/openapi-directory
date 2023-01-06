@@ -30,8 +30,8 @@ type CreateRegexPatternSetResponse struct {
 	ContentType                   string
 	CreateRegexPatternSetResponse *shared.CreateRegexPatternSetResponse
 	StatusCode                    int64
-	WafDisallowedNameException    *interface{}
-	WafInternalErrorException     *interface{}
-	WafLimitsExceededException    *interface{}
-	WafStaleDataException         *interface{}
+	WAFDisallowedNameException    *interface{}
+	WAFInternalErrorException     *interface{}
+	WAFLimitsExceededException    *interface{}
+	WAFStaleDataException         *interface{}
 }

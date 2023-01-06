@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,35 @@ func main() {
     
     req := operations.AddAttachmentsToSetRequest{
         Headers: operations.AddAttachmentsToSetHeaders{
-            XAmzAlgorithm: "aperiam",
-            XAmzContentSha256: "ducimus",
-            XAmzCredential: "repellendus",
-            XAmzDate: "officia",
-            XAmzSecurityToken: "in",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "assumenda",
+            XAmzContentSha256: "fuga",
+            XAmzCredential: "aut",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "amet",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "iusto",
             XAmzTarget: "AWSSupport_20130415.AddAttachmentsToSet",
         },
         Request: shared.AddAttachmentsToSetRequest{
             AttachmentSetID: "nesciunt",
             Attachments: []shared.Attachment{
                 shared.Attachment{
-                    Data: "explicabo",
-                    FileName: "ea",
+                    Data: "quasi",
+                    FileName: "et",
+                },
+                shared.Attachment{
+                    Data: "quod",
+                    FileName: "autem",
+                },
+                shared.Attachment{
+                    Data: "quod",
+                    FileName: "impedit",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddAttachmentsToSet(ctx, req)
+    res, err := s.AddAttachmentsToSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

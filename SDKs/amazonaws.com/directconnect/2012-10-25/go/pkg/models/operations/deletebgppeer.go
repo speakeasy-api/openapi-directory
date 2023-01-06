@@ -7,7 +7,7 @@ import (
 type DeleteBgpPeerXAmzTargetEnum string
 
 const (
-	DeleteBgpPeerXAmzTargetEnumOvertureServiceDeleteBgpPeer DeleteBgpPeerXAmzTargetEnum = "OvertureService.DeleteBGPPeer"
+	DeleteBGPPeerXAmzTargetEnumOvertureServiceDeleteBgpPeer DeleteBgpPeerXAmzTargetEnum = "OvertureService.DeleteBGPPeer"
 )
 
 type DeleteBgpPeerHeaders struct {
@@ -28,7 +28,7 @@ type DeleteBgpPeerRequest struct {
 
 type DeleteBgpPeerResponse struct {
 	ContentType                  string
-	DeleteBgpPeerResponse        *shared.DeleteBgpPeerResponse
+	DeleteBGPPeerResponse        *shared.DeleteBgpPeerResponse
 	DirectConnectClientException *interface{}
 	DirectConnectServerException *interface{}
 	StatusCode                   int64

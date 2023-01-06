@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -3148,7 +3149,7 @@ func (s *SDK) CreateOtaUpdate(ctx context.Context, request operations.CreateOtaU
 				return nil, err
 			}
 
-			res.CreateOtaUpdateResponse = out
+			res.CreateOTAUpdateResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -5205,7 +5206,7 @@ func (s *SDK) DeleteCaCertificate(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.DeleteCaCertificateResponse = out
+			res.DeleteCACertificateResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -6184,7 +6185,7 @@ func (s *SDK) DeleteOtaUpdate(ctx context.Context, request operations.DeleteOtaU
 				return nil, err
 			}
 
-			res.DeleteOtaUpdateResponse = out
+			res.DeleteOTAUpdateResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -8444,7 +8445,7 @@ func (s *SDK) DescribeCaCertificate(ctx context.Context, request operations.Desc
 				return nil, err
 			}
 
-			res.DescribeCaCertificateResponse = out
+			res.DescribeCACertificateResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -11994,7 +11995,7 @@ func (s *SDK) GetOtaUpdate(ctx context.Context, request operations.GetOtaUpdateR
 				return nil, err
 			}
 
-			res.GetOtaUpdateResponse = out
+			res.GetOTAUpdateResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -13680,7 +13681,7 @@ func (s *SDK) ListCaCertificates(ctx context.Context, request operations.ListCaC
 				return nil, err
 			}
 
-			res.ListCaCertificatesResponse = out
+			res.ListCACertificatesResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -13868,7 +13869,7 @@ func (s *SDK) ListCertificatesByCa(ctx context.Context, request operations.ListC
 				return nil, err
 			}
 
-			res.ListCertificatesByCaResponse = out
+			res.ListCertificatesByCAResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -14940,7 +14941,7 @@ func (s *SDK) ListOtaUpdates(ctx context.Context, request operations.ListOtaUpda
 				return nil, err
 			}
 
-			res.ListOtaUpdatesResponse = out
+			res.ListOTAUpdatesResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -17648,7 +17649,7 @@ func (s *SDK) RegisterCaCertificate(ctx context.Context, request operations.Regi
 				return nil, err
 			}
 
-			res.RegisterCaCertificateResponse = out
+			res.RegisterCACertificateResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -17934,7 +17935,7 @@ func (s *SDK) RegisterCertificateWithoutCa(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.RegisterCertificateWithoutCaResponse = out
+			res.RegisterCertificateWithoutCAResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

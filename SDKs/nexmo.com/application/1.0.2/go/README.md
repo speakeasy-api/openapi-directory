@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,22 +24,22 @@ func main() {
     
     req := operations.CreateApplicationRequest{
         Request: &operations.CreateApplicationRequestBody{
-            AnswerMethod: "quia",
-            AnswerURL: "ipsam",
-            APIKey: "rerum",
-            APISecret: "voluptates",
-            EventMethod: "aut",
-            EventURL: "sequi",
-            InboundMethod: "ut",
-            InboundURL: "eius",
-            Name: "nemo",
-            StatusMethod: "et",
-            StatusURL: "rerum",
-            Type: "messages",
+            AnswerMethod: "ut",
+            AnswerURL: "odit",
+            APIKey: "vel",
+            APISecret: "saepe",
+            EventMethod: "veritatis",
+            EventURL: "laudantium",
+            InboundMethod: "doloribus",
+            InboundURL: "adipisci",
+            Name: "est",
+            StatusMethod: "voluptatem",
+            StatusURL: "pariatur",
+            Type: "voice",
         },
     }
     
-    res, err := s.Sdk.CreateApplication(ctx, req)
+    res, err := s.CreateApplication(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

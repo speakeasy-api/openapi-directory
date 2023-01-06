@@ -3,13 +3,13 @@ package operations
 type GetDeleteServiceSpecificCredentialActionEnum string
 
 const (
-	GetDeleteServiceSpecificCredentialActionEnumDeleteServiceSpecificCredential GetDeleteServiceSpecificCredentialActionEnum = "DeleteServiceSpecificCredential"
+	GETDeleteServiceSpecificCredentialActionEnumDeleteServiceSpecificCredential GetDeleteServiceSpecificCredentialActionEnum = "DeleteServiceSpecificCredential"
 )
 
 type GetDeleteServiceSpecificCredentialVersionEnum string
 
 const (
-	GetDeleteServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GetDeleteServiceSpecificCredentialVersionEnum = "2010-05-08"
+	GETDeleteServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GetDeleteServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
 type GetDeleteServiceSpecificCredentialQueryParams struct {

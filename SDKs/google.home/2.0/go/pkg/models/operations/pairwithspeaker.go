@@ -9,7 +9,7 @@ type PairwithSpeakerRequest struct {
 }
 
 type PairwithSpeakerResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                       string
+	PairwithSpeaker200TextPlainObject *string
+	StatusCode                        int64
 }

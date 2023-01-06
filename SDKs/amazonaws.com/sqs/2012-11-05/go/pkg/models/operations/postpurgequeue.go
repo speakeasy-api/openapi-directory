@@ -3,13 +3,13 @@ package operations
 type PostPurgeQueueActionEnum string
 
 const (
-	PostPurgeQueueActionEnumPurgeQueue PostPurgeQueueActionEnum = "PurgeQueue"
+	POSTPurgeQueueActionEnumPurgeQueue PostPurgeQueueActionEnum = "PurgeQueue"
 )
 
 type PostPurgeQueueVersionEnum string
 
 const (
-	PostPurgeQueueVersionEnumTwoThousandAndTwelve1105 PostPurgeQueueVersionEnum = "2012-11-05"
+	POSTPurgeQueueVersionEnumTwoThousandAndTwelve1105 PostPurgeQueueVersionEnum = "2012-11-05"
 )
 
 type PostPurgeQueueQueryParams struct {

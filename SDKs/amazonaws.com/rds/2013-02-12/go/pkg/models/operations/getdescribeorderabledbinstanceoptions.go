@@ -3,18 +3,18 @@ package operations
 type GetDescribeOrderableDbInstanceOptionsActionEnum string
 
 const (
-	GetDescribeOrderableDbInstanceOptionsActionEnumDescribeOrderableDbInstanceOptions GetDescribeOrderableDbInstanceOptionsActionEnum = "DescribeOrderableDBInstanceOptions"
+	GETDescribeOrderableDBInstanceOptionsActionEnumDescribeOrderableDbInstanceOptions GetDescribeOrderableDbInstanceOptionsActionEnum = "DescribeOrderableDBInstanceOptions"
 )
 
 type GetDescribeOrderableDbInstanceOptionsVersionEnum string
 
 const (
-	GetDescribeOrderableDbInstanceOptionsVersionEnumTwoThousandAndThirteen0212 GetDescribeOrderableDbInstanceOptionsVersionEnum = "2013-02-12"
+	GETDescribeOrderableDBInstanceOptionsVersionEnumTwoThousandAndThirteen0212 GetDescribeOrderableDbInstanceOptionsVersionEnum = "2013-02-12"
 )
 
 type GetDescribeOrderableDbInstanceOptionsQueryParams struct {
 	Action          GetDescribeOrderableDbInstanceOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceClass *string                                          `queryParam:"style=form,explode=true,name=DBInstanceClass"`
+	DBInstanceClass *string                                          `queryParam:"style=form,explode=true,name=DBInstanceClass"`
 	Engine          string                                           `queryParam:"style=form,explode=true,name=Engine"`
 	EngineVersion   *string                                          `queryParam:"style=form,explode=true,name=EngineVersion"`
 	LicenseModel    *string                                          `queryParam:"style=form,explode=true,name=LicenseModel"`

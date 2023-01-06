@@ -17,8 +17,8 @@ type CreateDetectorModelHeaders struct {
 // CreateDetectorModelRequestBodyDetectorModelDefinition
 // Information that defines how a detector operates.
 type CreateDetectorModelRequestBodyDetectorModelDefinition struct {
-	InitialStateName *string        `json:"initialStateName,omitempty"`
-	States           []shared.State `json:"states,omitempty"`
+	InitialStateName *string         `json:"initialStateName,omitempty"`
+	States           []shared.State1 `json:"states,omitempty"`
 }
 
 type CreateDetectorModelRequestBodyEvaluationMethodEnum string

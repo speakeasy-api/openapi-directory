@@ -3,13 +3,13 @@ package operations
 type GetDeleteHsmConfigurationActionEnum string
 
 const (
-	GetDeleteHsmConfigurationActionEnumDeleteHsmConfiguration GetDeleteHsmConfigurationActionEnum = "DeleteHsmConfiguration"
+	GETDeleteHsmConfigurationActionEnumDeleteHsmConfiguration GetDeleteHsmConfigurationActionEnum = "DeleteHsmConfiguration"
 )
 
 type GetDeleteHsmConfigurationVersionEnum string
 
 const (
-	GetDeleteHsmConfigurationVersionEnumTwoThousandAndTwelve1201 GetDeleteHsmConfigurationVersionEnum = "2012-12-01"
+	GETDeleteHsmConfigurationVersionEnumTwoThousandAndTwelve1201 GetDeleteHsmConfigurationVersionEnum = "2012-12-01"
 )
 
 type GetDeleteHsmConfigurationQueryParams struct {

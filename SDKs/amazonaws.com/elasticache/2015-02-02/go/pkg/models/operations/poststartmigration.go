@@ -3,13 +3,13 @@ package operations
 type PostStartMigrationActionEnum string
 
 const (
-	PostStartMigrationActionEnumStartMigration PostStartMigrationActionEnum = "StartMigration"
+	POSTStartMigrationActionEnumStartMigration PostStartMigrationActionEnum = "StartMigration"
 )
 
 type PostStartMigrationVersionEnum string
 
 const (
-	PostStartMigrationVersionEnumTwoThousandAndFifteen0202 PostStartMigrationVersionEnum = "2015-02-02"
+	POSTStartMigrationVersionEnumTwoThousandAndFifteen0202 PostStartMigrationVersionEnum = "2015-02-02"
 )
 
 type PostStartMigrationQueryParams struct {

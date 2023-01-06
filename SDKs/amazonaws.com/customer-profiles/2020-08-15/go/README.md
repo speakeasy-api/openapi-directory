@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.AddProfileKeyRequest{
         PathParams: operations.AddProfileKeyPathParams{
-            DomainName: "nisi",
+            DomainName: "aut",
         },
         Headers: operations.AddProfileKeyHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "est",
-            XAmzCredential: "rerum",
-            XAmzDate: "quisquam",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "itaque",
-            XAmzSignedHeaders: "reiciendis",
+            XAmzAlgorithm: "dicta",
+            XAmzContentSha256: "minima",
+            XAmzCredential: "pariatur",
+            XAmzDate: "nesciunt",
+            XAmzSecurityToken: "ducimus",
+            XAmzSignature: "dolores",
+            XAmzSignedHeaders: "magni",
         },
         Request: operations.AddProfileKeyRequestBody{
-            KeyName: "expedita",
-            ProfileID: "itaque",
+            KeyName: "inventore",
+            ProfileID: "qui",
             Values: []string{
-                "voluptatum",
+                "accusantium",
             },
         },
     }
     
-    res, err := s.Sdk.AddProfileKey(ctx, req)
+    res, err := s.AddProfileKey(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

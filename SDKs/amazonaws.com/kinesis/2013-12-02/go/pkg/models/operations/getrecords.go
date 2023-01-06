@@ -31,12 +31,12 @@ type GetRecordsResponse struct {
 	ExpiredIteratorException               *interface{}
 	GetRecordsOutput                       *shared.GetRecordsOutput
 	InvalidArgumentException               *interface{}
-	KmsAccessDeniedException               *interface{}
-	KmsDisabledException                   *interface{}
-	KmsInvalidStateException               *interface{}
-	KmsNotFoundException                   *interface{}
-	KmsOptInRequired                       *interface{}
-	KmsThrottlingException                 *interface{}
+	KMSAccessDeniedException               *interface{}
+	KMSDisabledException                   *interface{}
+	KMSInvalidStateException               *interface{}
+	KMSNotFoundException                   *interface{}
+	KMSOptInRequired                       *interface{}
+	KMSThrottlingException                 *interface{}
 	ProvisionedThroughputExceededException *interface{}
 	ResourceNotFoundException              *interface{}
 	StatusCode                             int64

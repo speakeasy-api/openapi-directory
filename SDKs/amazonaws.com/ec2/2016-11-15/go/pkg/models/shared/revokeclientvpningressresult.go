@@ -1,5 +1,5 @@
 package shared
 
 type RevokeClientVpnIngressResult struct {
-	Status *ClientVpnAuthorizationRuleStatus
+	Status map[string]interface{}
 }

@@ -34,7 +34,7 @@ type UpdateSmsTemplateRequestBodySmsTemplateRequest struct {
 }
 
 type UpdateSmsTemplateRequestBody struct {
-	SmsTemplateRequest UpdateSmsTemplateRequestBodySmsTemplateRequest `json:"SMSTemplateRequest"`
+	SMSTemplateRequest UpdateSmsTemplateRequestBodySmsTemplateRequest `json:"SMSTemplateRequest"`
 }
 
 type UpdateSmsTemplateRequest struct {

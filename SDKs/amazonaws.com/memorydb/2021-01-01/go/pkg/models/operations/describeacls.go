@@ -7,7 +7,7 @@ import (
 type DescribeAcLsXAmzTargetEnum string
 
 const (
-	DescribeAcLsXAmzTargetEnumAmazonMemoryDbDescribeAcLs DescribeAcLsXAmzTargetEnum = "AmazonMemoryDB.DescribeACLs"
+	DescribeACLsXAmzTargetEnumAmazonMemoryDbDescribeAcLs DescribeAcLsXAmzTargetEnum = "AmazonMemoryDB.DescribeACLs"
 )
 
 type DescribeAcLsHeaders struct {
@@ -29,7 +29,7 @@ type DescribeAcLsRequest struct {
 type DescribeAcLsResponse struct {
 	ACLNotFoundFault                     *interface{}
 	ContentType                          string
-	DescribeAcLsResponse                 *shared.DescribeAcLsResponse
+	DescribeACLsResponse                 *shared.DescribeAcLsResponse
 	InvalidParameterCombinationException *interface{}
 	StatusCode                           int64
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,14 +24,14 @@ func main() {
     
     req := operations.GetAddWordRequest{
         QueryParams: operations.GetAddWordQueryParams{
-            Author: "voluptatem",
-            Definition: "molestias",
-            Related: "mollitia",
-            Word: "earum",
+            Author: "velit",
+            Definition: "amet",
+            Related: "sapiente",
+            Word: "nisi",
         },
     }
     
-    res, err := s.Sdk.GetAddWord(ctx, req)
+    res, err := s.GetAddWord(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

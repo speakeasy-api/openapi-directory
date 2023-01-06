@@ -31,8 +31,8 @@ type GetKeyRotationStatusResponse struct {
 	DependencyTimeoutException    *interface{}
 	GetKeyRotationStatusResponse  *shared.GetKeyRotationStatusResponse
 	InvalidArnException           *interface{}
-	KmsInternalException          *interface{}
-	KmsInvalidStateException      *interface{}
+	KMSInternalException          *interface{}
+	KMSInvalidStateException      *interface{}
 	NotFoundException             *interface{}
 	StatusCode                    int64
 	UnsupportedOperationException *interface{}

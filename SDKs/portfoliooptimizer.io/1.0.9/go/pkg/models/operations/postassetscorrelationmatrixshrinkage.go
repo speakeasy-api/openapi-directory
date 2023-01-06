@@ -32,6 +32,6 @@ type PostAssetsCorrelationMatrixShrinkageRequest struct {
 
 type PostAssetsCorrelationMatrixShrinkageResponse struct {
 	ContentType                                                  string
-	PostAssetsCorrelationMatrixShrinkage200ApplicationJSONObject *PostAssetsCorrelationMatrixShrinkage200ApplicationJSON
 	StatusCode                                                   int64
+	PostAssetsCorrelationMatrixShrinkage200ApplicationJSONObject *PostAssetsCorrelationMatrixShrinkage200ApplicationJSON
 }

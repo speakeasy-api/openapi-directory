@@ -30,6 +30,6 @@ type PostPortfolioAnalysisDrawdownsRequest struct {
 
 type PostPortfolioAnalysisDrawdownsResponse struct {
 	ContentType                                            string
-	PostPortfolioAnalysisDrawdowns200ApplicationJSONObject *PostPortfolioAnalysisDrawdowns200ApplicationJSON
 	StatusCode                                             int64
+	PostPortfolioAnalysisDrawdowns200ApplicationJSONObject *PostPortfolioAnalysisDrawdowns200ApplicationJSON
 }

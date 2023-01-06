@@ -11,7 +11,7 @@ const (
 )
 
 type GetAllCve200ApplicationJSONData struct {
-	CvEs []shared.CveDetails `json:"CVEs"`
+	CVEs []shared.CveDetails `json:"CVEs"`
 }
 
 type GetAllCve200ApplicationJSONResultEnum string

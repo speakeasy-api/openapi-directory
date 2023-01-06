@@ -37,8 +37,8 @@ type MovePadUsingGetRequest struct {
 type MovePadUsingGetResponse struct {
 	ContentType                             string
 	StatusCode                              int64
-	MovePadUsingGet200ApplicationJSONObject *MovePadUsingGet200ApplicationJSON
-	MovePadUsingGet400ApplicationJSONObject *MovePadUsingGet400ApplicationJSON
-	MovePadUsingGet401ApplicationJSONObject *MovePadUsingGet401ApplicationJSON
-	MovePadUsingGet500ApplicationJSONObject *MovePadUsingGet500ApplicationJSON
+	MovePadUsingGET200ApplicationJSONObject *MovePadUsingGet200ApplicationJSON
+	MovePadUsingGET400ApplicationJSONObject *MovePadUsingGet400ApplicationJSON
+	MovePadUsingGET401ApplicationJSONObject *MovePadUsingGet401ApplicationJSON
+	MovePadUsingGET500ApplicationJSONObject *MovePadUsingGet500ApplicationJSON
 }

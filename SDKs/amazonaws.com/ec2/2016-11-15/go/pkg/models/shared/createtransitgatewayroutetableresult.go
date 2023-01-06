@@ -1,5 +1,5 @@
 package shared
 
 type CreateTransitGatewayRouteTableResult struct {
-	TransitGatewayRouteTable *TransitGatewayRouteTable
+	TransitGatewayRouteTable map[string]interface{}
 }

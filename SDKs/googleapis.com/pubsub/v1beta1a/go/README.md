@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,31 +27,30 @@ func main() {
             Option1: &operations.PubsubSubscriptionsAcknowledgeSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.PubsubSubscriptionsAcknowledgeQueryParams{
             DollarXgafv: "1",
-            AccessToken: "est",
-            Alt: "proto",
-            Callback: "inventore",
-            Fields: "eum",
-            Key: "modi",
-            OauthToken: "esse",
-            PrettyPrint: false,
-            QuotaUser: "facilis",
-            UploadType: "doloremque",
-            UploadProtocol: "atque",
+            AccessToken: "et",
+            Alt: "media",
+            Callback: "pariatur",
+            Fields: "dolorem",
+            Key: "eveniet",
+            OauthToken: "perspiciatis",
+            PrettyPrint: true,
+            QuotaUser: "sit",
+            UploadType: "eligendi",
+            UploadProtocol: "esse",
         },
         Request: &shared.AcknowledgeRequest{
             AckID: []string{
-                "porro",
-                "error",
+                "et",
             },
-            Subscription: "et",
+            Subscription: "tempora",
         },
     }
     

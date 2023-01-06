@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.AssociateAssetsRequest{
         PathParams: operations.AssociateAssetsPathParams{
-            AssetID: "quis",
+            AssetID: "molestiae",
         },
         Headers: operations.AssociateAssetsHeaders{
-            XAmzAlgorithm: "dolor",
-            XAmzContentSha256: "esse",
-            XAmzCredential: "doloremque",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "voluptatem",
+            XAmzAlgorithm: "aut",
+            XAmzContentSha256: "dignissimos",
+            XAmzCredential: "consectetur",
+            XAmzDate: "repellendus",
+            XAmzSecurityToken: "molestias",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "quia",
         },
         Request: operations.AssociateAssetsRequestBody{
-            ChildAssetID: "consectetur",
-            ClientToken: "est",
-            HierarchyID: "ducimus",
+            ChildAssetID: "ipsa",
+            ClientToken: "sit",
+            HierarchyID: "repellat",
         },
     }
     
-    res, err := s.Sdk.AssociateAssets(ctx, req)
+    res, err := s.AssociateAssets(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

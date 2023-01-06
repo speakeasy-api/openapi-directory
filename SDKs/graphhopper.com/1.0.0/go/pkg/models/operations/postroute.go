@@ -10,7 +10,7 @@ type PostRouteRequest struct {
 
 type PostRouteResponse struct {
 	ContentType   string
-	GhError       *shared.GhError
+	GHError       *shared.GhError
 	Headers       map[string][]string
 	RouteResponse *shared.RouteResponse
 	StatusCode    int64

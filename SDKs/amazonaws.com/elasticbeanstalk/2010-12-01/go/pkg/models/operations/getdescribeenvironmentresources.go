@@ -3,13 +3,13 @@ package operations
 type GetDescribeEnvironmentResourcesActionEnum string
 
 const (
-	GetDescribeEnvironmentResourcesActionEnumDescribeEnvironmentResources GetDescribeEnvironmentResourcesActionEnum = "DescribeEnvironmentResources"
+	GETDescribeEnvironmentResourcesActionEnumDescribeEnvironmentResources GetDescribeEnvironmentResourcesActionEnum = "DescribeEnvironmentResources"
 )
 
 type GetDescribeEnvironmentResourcesVersionEnum string
 
 const (
-	GetDescribeEnvironmentResourcesVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentResourcesVersionEnum = "2010-12-01"
+	GETDescribeEnvironmentResourcesVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentResourcesVersionEnum = "2010-12-01"
 )
 
 type GetDescribeEnvironmentResourcesQueryParams struct {

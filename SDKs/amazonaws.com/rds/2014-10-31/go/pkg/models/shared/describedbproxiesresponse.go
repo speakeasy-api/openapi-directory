@@ -1,6 +1,6 @@
 package shared
 
 type DescribeDbProxiesResponse struct {
-	DbProxies []DbProxy
+	DBProxies []DbProxy
 	Marker    *string
 }

@@ -3,13 +3,13 @@ package operations
 type GetDeleteEgressOnlyInternetGatewayActionEnum string
 
 const (
-	GetDeleteEgressOnlyInternetGatewayActionEnumDeleteEgressOnlyInternetGateway GetDeleteEgressOnlyInternetGatewayActionEnum = "DeleteEgressOnlyInternetGateway"
+	GETDeleteEgressOnlyInternetGatewayActionEnumDeleteEgressOnlyInternetGateway GetDeleteEgressOnlyInternetGatewayActionEnum = "DeleteEgressOnlyInternetGateway"
 )
 
 type GetDeleteEgressOnlyInternetGatewayVersionEnum string
 
 const (
-	GetDeleteEgressOnlyInternetGatewayVersionEnumTwoThousandAndSixteen1115 GetDeleteEgressOnlyInternetGatewayVersionEnum = "2016-11-15"
+	GETDeleteEgressOnlyInternetGatewayVersionEnumTwoThousandAndSixteen1115 GetDeleteEgressOnlyInternetGatewayVersionEnum = "2016-11-15"
 )
 
 type GetDeleteEgressOnlyInternetGatewayQueryParams struct {

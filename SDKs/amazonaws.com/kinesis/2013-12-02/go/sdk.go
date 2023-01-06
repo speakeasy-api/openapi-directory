@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1040,7 +1041,7 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 				return nil, err
 			}
 
-			res.KmsDisabledException = out
+			res.KMSDisabledException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1050,7 +1051,7 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1060,7 +1061,7 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 				return nil, err
 			}
 
-			res.KmsAccessDeniedException = out
+			res.KMSAccessDeniedException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -1070,7 +1071,7 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 				return nil, err
 			}
 
-			res.KmsNotFoundException = out
+			res.KMSNotFoundException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -1080,7 +1081,7 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 				return nil, err
 			}
 
-			res.KmsOptInRequired = out
+			res.KMSOptInRequired = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -1090,7 +1091,7 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 				return nil, err
 			}
 
-			res.KmsThrottlingException = out
+			res.KMSThrottlingException = out
 		}
 	}
 
@@ -1782,7 +1783,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.KmsDisabledException = out
+			res.KMSDisabledException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1792,7 +1793,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1802,7 +1803,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.KmsAccessDeniedException = out
+			res.KMSAccessDeniedException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1812,7 +1813,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.KmsNotFoundException = out
+			res.KMSNotFoundException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -1822,7 +1823,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.KmsOptInRequired = out
+			res.KMSOptInRequired = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -1832,7 +1833,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 				return nil, err
 			}
 
-			res.KmsThrottlingException = out
+			res.KMSThrottlingException = out
 		}
 	}
 
@@ -1924,7 +1925,7 @@ func (s *SDK) PutRecords(ctx context.Context, request operations.PutRecordsReque
 				return nil, err
 			}
 
-			res.KmsDisabledException = out
+			res.KMSDisabledException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1934,7 +1935,7 @@ func (s *SDK) PutRecords(ctx context.Context, request operations.PutRecordsReque
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1944,7 +1945,7 @@ func (s *SDK) PutRecords(ctx context.Context, request operations.PutRecordsReque
 				return nil, err
 			}
 
-			res.KmsAccessDeniedException = out
+			res.KMSAccessDeniedException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1954,7 +1955,7 @@ func (s *SDK) PutRecords(ctx context.Context, request operations.PutRecordsReque
 				return nil, err
 			}
 
-			res.KmsNotFoundException = out
+			res.KMSNotFoundException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -1964,7 +1965,7 @@ func (s *SDK) PutRecords(ctx context.Context, request operations.PutRecordsReque
 				return nil, err
 			}
 
-			res.KmsOptInRequired = out
+			res.KMSOptInRequired = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -1974,7 +1975,7 @@ func (s *SDK) PutRecords(ctx context.Context, request operations.PutRecordsReque
 				return nil, err
 			}
 
-			res.KmsThrottlingException = out
+			res.KMSThrottlingException = out
 		}
 	}
 
@@ -2325,7 +2326,7 @@ func (s *SDK) StartStreamEncryption(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.KmsDisabledException = out
+			res.KMSDisabledException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2335,7 +2336,7 @@ func (s *SDK) StartStreamEncryption(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -2345,7 +2346,7 @@ func (s *SDK) StartStreamEncryption(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.KmsAccessDeniedException = out
+			res.KMSAccessDeniedException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2355,7 +2356,7 @@ func (s *SDK) StartStreamEncryption(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.KmsNotFoundException = out
+			res.KMSNotFoundException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -2365,7 +2366,7 @@ func (s *SDK) StartStreamEncryption(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.KmsOptInRequired = out
+			res.KMSOptInRequired = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -2375,7 +2376,7 @@ func (s *SDK) StartStreamEncryption(ctx context.Context, request operations.Star
 				return nil, err
 			}
 
-			res.KmsThrottlingException = out
+			res.KMSThrottlingException = out
 		}
 	}
 

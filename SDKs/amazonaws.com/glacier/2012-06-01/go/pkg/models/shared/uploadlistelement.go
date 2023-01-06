@@ -7,5 +7,5 @@ type UploadListElement struct {
 	CreationDate       *string `json:"CreationDate,omitempty"`
 	MultipartUploadID  *string `json:"MultipartUploadId,omitempty"`
 	PartSizeInBytes    *int64  `json:"PartSizeInBytes,omitempty"`
-	VaultArn           *string `json:"VaultARN,omitempty"`
+	VaultARN           *string `json:"VaultARN,omitempty"`
 }

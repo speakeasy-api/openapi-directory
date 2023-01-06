@@ -3,7 +3,7 @@ package operations
 type DisableAwsOrganizationsAccessXAmzTargetEnum string
 
 const (
-	DisableAwsOrganizationsAccessXAmzTargetEnumAws242ServiceCatalogServiceDisableAwsOrganizationsAccess DisableAwsOrganizationsAccessXAmzTargetEnum = "AWS242ServiceCatalogService.DisableAWSOrganizationsAccess"
+	DisableAWSOrganizationsAccessXAmzTargetEnumAws242ServiceCatalogServiceDisableAwsOrganizationsAccess DisableAwsOrganizationsAccessXAmzTargetEnum = "AWS242ServiceCatalogService.DisableAWSOrganizationsAccess"
 )
 
 type DisableAwsOrganizationsAccessHeaders struct {
@@ -24,7 +24,7 @@ type DisableAwsOrganizationsAccessRequest struct {
 
 type DisableAwsOrganizationsAccessResponse struct {
 	ContentType                         string
-	DisableAwsOrganizationsAccessOutput map[string]interface{}
+	DisableAWSOrganizationsAccessOutput map[string]interface{}
 	InvalidStateException               *interface{}
 	OperationNotSupportedException      *interface{}
 	ResourceNotFoundException           *interface{}

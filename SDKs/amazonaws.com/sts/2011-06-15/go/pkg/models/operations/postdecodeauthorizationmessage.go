@@ -3,13 +3,13 @@ package operations
 type PostDecodeAuthorizationMessageActionEnum string
 
 const (
-	PostDecodeAuthorizationMessageActionEnumDecodeAuthorizationMessage PostDecodeAuthorizationMessageActionEnum = "DecodeAuthorizationMessage"
+	POSTDecodeAuthorizationMessageActionEnumDecodeAuthorizationMessage PostDecodeAuthorizationMessageActionEnum = "DecodeAuthorizationMessage"
 )
 
 type PostDecodeAuthorizationMessageVersionEnum string
 
 const (
-	PostDecodeAuthorizationMessageVersionEnumTwoThousandAndEleven0615 PostDecodeAuthorizationMessageVersionEnum = "2011-06-15"
+	POSTDecodeAuthorizationMessageVersionEnumTwoThousandAndEleven0615 PostDecodeAuthorizationMessageVersionEnum = "2011-06-15"
 )
 
 type PostDecodeAuthorizationMessageQueryParams struct {

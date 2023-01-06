@@ -1,0 +1,63 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.VectortileTerraintilesGetRequest{
+        PathParams: operations.VectortileTerraintilesGetPathParams{
+            Name: "eum",
+        },
+        QueryParams: operations.VectortileTerraintilesGetQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "dicta",
+            Alt: "media",
+            AltitudePrecisionCentimeters: 5039781528859720320,
+            Callback: "quia",
+            ClientInfoAPIClient: "enim",
+            ClientInfoApplicationID: "sequi",
+            ClientInfoApplicationVersion: "accusamus",
+            ClientInfoDeviceModel: "dolores",
+            ClientInfoOperatingSystem: "eius",
+            ClientInfoPlatform: "WINDOWS",
+            ClientInfoUserID: "possimus",
+            EnableModeledVolumes: true,
+            EnablePoliticalFeatures: true,
+            EnablePrivateRoads: false,
+            EnableUnclippedBuildings: true,
+            Fields: "delectus",
+            Key: "quo",
+            LanguageCode: "magni",
+            MaxElevationResolutionCells: 8939274956743009490,
+            MinElevationResolutionCells: 6543241831060686800,
+            OauthToken: "omnis",
+            PrettyPrint: true,
+            QuotaUser: "quam",
+            RegionCode: "error",
+            TerrainFormats: []VectortileTerraintilesGetTerrainFormatsEnum{
+                "TERRAIN_FORMAT_UNKNOWN",
+                "TERRAIN_FORMAT_UNKNOWN",
+                "FIRST_DERIVATIVE",
+            },
+            UploadType: "voluptas",
+            UploadProtocol: "quia",
+        },
+    }
+    
+    res, err := s.Terraintiles.VectortileTerraintilesGet(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.TerrainTile != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

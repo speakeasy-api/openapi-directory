@@ -31,5 +31,5 @@ type GetDomainSuggestionsResponse struct {
 	GetDomainSuggestionsResponse *shared.GetDomainSuggestionsResponse
 	InvalidInput                 *interface{}
 	StatusCode                   int64
-	UnsupportedTld               *interface{}
+	UnsupportedTLD               *interface{}
 }

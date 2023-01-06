@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetBng2latlongEastingNorthingRequest{
         PathParams: operations.GetBng2latlongEastingNorthingPathParams{
-            Easting: 5561808368852659813,
-            Northing: 1590752966597604705,
+            Easting: 5030344460686700699,
+            Northing: 8123206870442361011,
         },
     }
     
-    res, err := s.Sdk.GetBng2latlongEastingNorthing(ctx, req)
+    res, err := s.GetBng2latlongEastingNorthing(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

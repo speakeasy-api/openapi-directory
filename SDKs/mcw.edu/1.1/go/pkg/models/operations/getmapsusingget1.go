@@ -11,5 +11,5 @@ type GetMapsUsingGet1Request struct {
 type GetMapsUsingGet1Response struct {
 	ContentType                       string
 	StatusCode                        int64
-	GetMapsUsingGet1200WildcardString *string
+	GETMapsUsingGET1200WildcardString *string
 }

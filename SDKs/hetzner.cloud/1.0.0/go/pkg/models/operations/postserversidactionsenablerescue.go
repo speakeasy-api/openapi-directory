@@ -60,6 +60,6 @@ type PostServersIDActionsEnableRescueRequest struct {
 
 type PostServersIDActionsEnableRescueResponse struct {
 	ContentType                                              string
-	PostServersIDActionsEnableRescue201ApplicationJSONObject *PostServersIDActionsEnableRescue201ApplicationJSON
 	StatusCode                                               int64
+	PostServersIDActionsEnableRescue201ApplicationJSONObject *PostServersIDActionsEnableRescue201ApplicationJSON
 }

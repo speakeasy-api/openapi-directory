@@ -1,8 +1,0 @@
-package shared
-
-type LaunchTemplateInstanceMetadataOptionsStateEnum string
-
-const (
-	LaunchTemplateInstanceMetadataOptionsStateEnumPending LaunchTemplateInstanceMetadataOptionsStateEnum = "pending"
-	LaunchTemplateInstanceMetadataOptionsStateEnumApplied LaunchTemplateInstanceMetadataOptionsStateEnum = "applied"
-)

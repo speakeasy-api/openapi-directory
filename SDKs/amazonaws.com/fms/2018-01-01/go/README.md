@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AssociateAdminAccountRequest{
         Headers: operations.AssociateAdminAccountHeaders{
-            XAmzAlgorithm: "consectetur",
-            XAmzContentSha256: "sequi",
-            XAmzCredential: "et",
-            XAmzDate: "illo",
-            XAmzSecurityToken: "enim",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "praesentium",
+            XAmzAlgorithm: "facilis",
+            XAmzContentSha256: "consequatur",
+            XAmzCredential: "molestiae",
+            XAmzDate: "laudantium",
+            XAmzSecurityToken: "tempore",
+            XAmzSignature: "est",
+            XAmzSignedHeaders: "eum",
             XAmzTarget: "AWSFMS_20180101.AssociateAdminAccount",
         },
         Request: shared.AssociateAdminAccountRequest{
-            AdminAccount: "omnis",
+            AdminAccount: "ut",
         },
     }
     
-    res, err := s.Sdk.AssociateAdminAccount(ctx, req)
+    res, err := s.AssociateAdminAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

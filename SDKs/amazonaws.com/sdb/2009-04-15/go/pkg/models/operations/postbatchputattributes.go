@@ -3,17 +3,17 @@ package operations
 type PostBatchPutAttributesActionEnum string
 
 const (
-	PostBatchPutAttributesActionEnumBatchPutAttributes PostBatchPutAttributesActionEnum = "BatchPutAttributes"
+	POSTBatchPutAttributesActionEnumBatchPutAttributes PostBatchPutAttributesActionEnum = "BatchPutAttributes"
 )
 
 type PostBatchPutAttributesVersionEnum string
 
 const (
-	PostBatchPutAttributesVersionEnumTwoThousandAndNine0415 PostBatchPutAttributesVersionEnum = "2009-04-15"
+	POSTBatchPutAttributesVersionEnumTwoThousandAndNine0415 PostBatchPutAttributesVersionEnum = "2009-04-15"
 )
 
 type PostBatchPutAttributesQueryParams struct {
-	AwsAccessKeyID   string                            `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                            `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostBatchPutAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Signature        string                            `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                            `queryParam:"style=form,explode=true,name=SignatureMethod"`

@@ -5,7 +5,7 @@ import (
 )
 
 type KeyRetrievePathParams struct {
-	Pk string `pathParam:"style=simple,explode=false,name=PK"`
+	PK string `pathParam:"style=simple,explode=false,name=PK"`
 }
 
 type KeyRetrieveJwt struct {
@@ -22,6 +22,6 @@ type KeyRetrieveResponse struct {
 	Body        []byte
 	ContentType string
 	Error       *interface{}
-	Jwt         *KeyRetrieveJwt
+	JWT         *KeyRetrieveJwt
 	StatusCode  int64
 }

@@ -32,6 +32,6 @@ type CreateClusterResponse struct {
 	Ec2RequestFailedException        *interface{}
 	InvalidInputCombinationException *interface{}
 	InvalidResourceException         *interface{}
-	KmsRequestFailedException        *interface{}
+	KMSRequestFailedException        *interface{}
 	StatusCode                       int64
 }

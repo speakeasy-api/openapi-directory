@@ -1,6 +1,6 @@
 package shared
 
 type DescribeLocalGatewayVirtualInterfaceGroupsResult struct {
-	LocalGatewayVirtualInterfaceGroups []LocalGatewayVirtualInterfaceGroup
-	NextToken                          *string
+	LocalGatewayVirtualInterfaceGroups map[string]interface{}
+	NextToken                          map[string]interface{}
 }

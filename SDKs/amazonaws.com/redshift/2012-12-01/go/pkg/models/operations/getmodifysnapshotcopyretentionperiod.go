@@ -3,13 +3,13 @@ package operations
 type GetModifySnapshotCopyRetentionPeriodActionEnum string
 
 const (
-	GetModifySnapshotCopyRetentionPeriodActionEnumModifySnapshotCopyRetentionPeriod GetModifySnapshotCopyRetentionPeriodActionEnum = "ModifySnapshotCopyRetentionPeriod"
+	GETModifySnapshotCopyRetentionPeriodActionEnumModifySnapshotCopyRetentionPeriod GetModifySnapshotCopyRetentionPeriodActionEnum = "ModifySnapshotCopyRetentionPeriod"
 )
 
 type GetModifySnapshotCopyRetentionPeriodVersionEnum string
 
 const (
-	GetModifySnapshotCopyRetentionPeriodVersionEnumTwoThousandAndTwelve1201 GetModifySnapshotCopyRetentionPeriodVersionEnum = "2012-12-01"
+	GETModifySnapshotCopyRetentionPeriodVersionEnumTwoThousandAndTwelve1201 GetModifySnapshotCopyRetentionPeriodVersionEnum = "2012-12-01"
 )
 
 type GetModifySnapshotCopyRetentionPeriodQueryParams struct {

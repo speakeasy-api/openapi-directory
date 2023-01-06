@@ -1,6 +1,13 @@
 package shared
 
+type FirmwareRiskRiskSummary struct {
+	ClientToolsRisk *string `json:"client_tools_risk,omitempty"`
+	CryptoRisk      *string `json:"crypto_risk,omitempty"`
+	KernelRisk      *string `json:"kernel_risk,omitempty"`
+	NetServicesRisk *string `json:"net_services_risk,omitempty"`
+}
+
 type FirmwareRisk struct {
-	RiskSummary          *RiskSummary          `json:"risk_summary,omitempty"`
-	VulnerableComponents []VulnerableComponent `json:"vulnerable_components,omitempty"`
+	RiskSummary          *FirmwareRiskRiskSummary `json:"risk_summary,omitempty"`
+	VulnerableComponents []VulnerableComponent    `json:"vulnerable_components,omitempty"`
 }

@@ -8,14 +8,14 @@ type GetVolumePathParams struct {
 	VolumeID string `pathParam:"style=simple,explode=false,name=volume_id"`
 }
 
-type GetVolumeRequest struct {
-	PathParams GetVolumePathParams
-}
-
 type GetVolume401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetVolumeRequest struct {
+	PathParams GetVolumePathParams
 }
 
 type GetVolumeResponse struct {

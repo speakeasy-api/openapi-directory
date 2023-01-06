@@ -21,7 +21,6 @@ type GetSandboxSandboxIDRequest struct {
 type GetSandboxSandboxIDResponse struct {
 	ContentType   string
 	ErrorResponse *shared.ErrorResponse
-	Headers       map[string][]string
 	Sandbox       *shared.Sandbox
 	StatusCode    int64
 }

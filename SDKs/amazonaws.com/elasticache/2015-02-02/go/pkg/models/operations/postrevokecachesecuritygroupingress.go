@@ -3,13 +3,13 @@ package operations
 type PostRevokeCacheSecurityGroupIngressActionEnum string
 
 const (
-	PostRevokeCacheSecurityGroupIngressActionEnumRevokeCacheSecurityGroupIngress PostRevokeCacheSecurityGroupIngressActionEnum = "RevokeCacheSecurityGroupIngress"
+	POSTRevokeCacheSecurityGroupIngressActionEnumRevokeCacheSecurityGroupIngress PostRevokeCacheSecurityGroupIngressActionEnum = "RevokeCacheSecurityGroupIngress"
 )
 
 type PostRevokeCacheSecurityGroupIngressVersionEnum string
 
 const (
-	PostRevokeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202 PostRevokeCacheSecurityGroupIngressVersionEnum = "2015-02-02"
+	POSTRevokeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202 PostRevokeCacheSecurityGroupIngressVersionEnum = "2015-02-02"
 )
 
 type PostRevokeCacheSecurityGroupIngressQueryParams struct {

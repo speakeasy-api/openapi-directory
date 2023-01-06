@@ -21,5 +21,5 @@ type ExportAssetsJsonlRequest struct {
 type ExportAssetsJsonlResponse struct {
 	ContentType                                     string
 	StatusCode                                      int64
-	ExportAssetsJsonl200ApplicationJSONBinaryString []byte
+	ExportAssetsJSONL200ApplicationJSONBinaryString []byte
 }

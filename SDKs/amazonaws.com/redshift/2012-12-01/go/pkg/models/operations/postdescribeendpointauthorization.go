@@ -3,13 +3,13 @@ package operations
 type PostDescribeEndpointAuthorizationActionEnum string
 
 const (
-	PostDescribeEndpointAuthorizationActionEnumDescribeEndpointAuthorization PostDescribeEndpointAuthorizationActionEnum = "DescribeEndpointAuthorization"
+	POSTDescribeEndpointAuthorizationActionEnumDescribeEndpointAuthorization PostDescribeEndpointAuthorizationActionEnum = "DescribeEndpointAuthorization"
 )
 
 type PostDescribeEndpointAuthorizationVersionEnum string
 
 const (
-	PostDescribeEndpointAuthorizationVersionEnumTwoThousandAndTwelve1201 PostDescribeEndpointAuthorizationVersionEnum = "2012-12-01"
+	POSTDescribeEndpointAuthorizationVersionEnumTwoThousandAndTwelve1201 PostDescribeEndpointAuthorizationVersionEnum = "2012-12-01"
 )
 
 type PostDescribeEndpointAuthorizationQueryParams struct {

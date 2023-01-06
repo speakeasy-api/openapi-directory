@@ -13,7 +13,7 @@ type UpdateSettingValueBySdkkeyQueryParams struct {
 }
 
 type UpdateSettingValueBySdkkeyHeaders struct {
-	XConfigcatSdkkey string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
+	XCONFIGCATSDKKEY string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
 }
 
 type UpdateSettingValueBySdkkeyRequests struct {

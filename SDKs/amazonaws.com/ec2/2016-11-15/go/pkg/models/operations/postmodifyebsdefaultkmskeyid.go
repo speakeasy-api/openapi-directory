@@ -3,13 +3,13 @@ package operations
 type PostModifyEbsDefaultKmsKeyIDActionEnum string
 
 const (
-	PostModifyEbsDefaultKmsKeyIDActionEnumModifyEbsDefaultKmsKeyID PostModifyEbsDefaultKmsKeyIDActionEnum = "ModifyEbsDefaultKmsKeyId"
+	POSTModifyEbsDefaultKmsKeyIDActionEnumModifyEbsDefaultKmsKeyID PostModifyEbsDefaultKmsKeyIDActionEnum = "ModifyEbsDefaultKmsKeyId"
 )
 
 type PostModifyEbsDefaultKmsKeyIDVersionEnum string
 
 const (
-	PostModifyEbsDefaultKmsKeyIDVersionEnumTwoThousandAndSixteen1115 PostModifyEbsDefaultKmsKeyIDVersionEnum = "2016-11-15"
+	POSTModifyEbsDefaultKmsKeyIDVersionEnumTwoThousandAndSixteen1115 PostModifyEbsDefaultKmsKeyIDVersionEnum = "2016-11-15"
 )
 
 type PostModifyEbsDefaultKmsKeyIDQueryParams struct {

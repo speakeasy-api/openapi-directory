@@ -7,8 +7,8 @@ import (
 type ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticScheduledConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteDomesticScheduledConsentResponse5DataAuthorisation
@@ -77,23 +77,23 @@ type ObWriteDomesticScheduledConsentResponse5DataInitiation struct {
 type ObWriteDomesticScheduledConsentResponse5DataPermissionEnum string
 
 const (
-	ObWriteDomesticScheduledConsentResponse5DataPermissionEnumCreate ObWriteDomesticScheduledConsentResponse5DataPermissionEnum = "Create"
+	OBWriteDomesticScheduledConsentResponse5DataPermissionEnumCreate ObWriteDomesticScheduledConsentResponse5DataPermissionEnum = "Create"
 )
 
 type ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum string
 
 const (
-	ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnumNo  ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum = "No"
-	ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnumYes ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum = "Yes"
+	OBWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnumNo  ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum = "No"
+	OBWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnumYes ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteDomesticScheduledConsentResponse5DataStatusEnum string
 
 const (
-	ObWriteDomesticScheduledConsentResponse5DataStatusEnumAuthorised            ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "Authorised"
-	ObWriteDomesticScheduledConsentResponse5DataStatusEnumAwaitingAuthorisation ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteDomesticScheduledConsentResponse5DataStatusEnumConsumed              ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "Consumed"
-	ObWriteDomesticScheduledConsentResponse5DataStatusEnumRejected              ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "Rejected"
+	OBWriteDomesticScheduledConsentResponse5DataStatusEnumAuthorised            ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "Authorised"
+	OBWriteDomesticScheduledConsentResponse5DataStatusEnumAwaitingAuthorisation ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteDomesticScheduledConsentResponse5DataStatusEnumConsumed              ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "Consumed"
+	OBWriteDomesticScheduledConsentResponse5DataStatusEnumRejected              ObWriteDomesticScheduledConsentResponse5DataStatusEnum = "Rejected"
 )
 
 type ObWriteDomesticScheduledConsentResponse5Data struct {
@@ -108,7 +108,7 @@ type ObWriteDomesticScheduledConsentResponse5Data struct {
 	Initiation                 ObWriteDomesticScheduledConsentResponse5DataInitiation             `json:"Initiation"`
 	Permission                 ObWriteDomesticScheduledConsentResponse5DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount          *ObWriteDomesticScheduledConsentResponse5DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData             *ObscaSupportData1                                                 `json:"SCASupportData,omitempty"`
+	SCASupportData             *ObscaSupportData1                                                 `json:"SCASupportData,omitempty"`
 	Status                     ObWriteDomesticScheduledConsentResponse5DataStatusEnum             `json:"Status"`
 	StatusUpdateDateTime       time.Time                                                          `json:"StatusUpdateDateTime"`
 }

@@ -3,13 +3,13 @@ package operations
 type PostTestRenderTemplateActionEnum string
 
 const (
-	PostTestRenderTemplateActionEnumTestRenderTemplate PostTestRenderTemplateActionEnum = "TestRenderTemplate"
+	POSTTestRenderTemplateActionEnumTestRenderTemplate PostTestRenderTemplateActionEnum = "TestRenderTemplate"
 )
 
 type PostTestRenderTemplateVersionEnum string
 
 const (
-	PostTestRenderTemplateVersionEnumTwoThousandAndTen1201 PostTestRenderTemplateVersionEnum = "2010-12-01"
+	POSTTestRenderTemplateVersionEnumTwoThousandAndTen1201 PostTestRenderTemplateVersionEnum = "2010-12-01"
 )
 
 type PostTestRenderTemplateQueryParams struct {

@@ -20,24 +20,24 @@ type GetAccountsAccountSummary200ApplicationJSONInfo struct {
 	SegmentTitleC            *string `json:"SegmentTitle-C,omitempty"`
 	SegmentTitleS            *string `json:"SegmentTitle-S,omitempty"`
 	TradingTypeS             *string `json:"TradingType-S,omitempty"`
-	WhatIfPmEnabled          *string `json:"WhatIfPMEnabled,omitempty"`
+	WhatIfPMEnabled          *string `json:"WhatIfPMEnabled,omitempty"`
 }
 
 type GetAccountsAccountSummary200ApplicationJSONLedger struct {
 	CashBalance             *float64 `json:"CashBalance,omitempty"`
-	CashBalanceFxSegment    *float64 `json:"CashBalanceFXSegment,omitempty"`
+	CashBalanceFXSegment    *float64 `json:"CashBalanceFXSegment,omitempty"`
 	CashCumQty              *float64 `json:"CashCumQty,omitempty"`
 	ExchangeRate            *float64 `json:"ExchangeRate,omitempty"`
 	FutureOptionMarketValue *float64 `json:"FutureOptionMarketValue,omitempty"`
-	FuturePnl               *float64 `json:"FuturePNL,omitempty"`
+	FuturePNL               *float64 `json:"FuturePNL,omitempty"`
 	NetDividend             *float64 `json:"NetDividend,omitempty"`
 	NetInterest             *float64 `json:"NetInterest,omitempty"`
 	NetLiquidation          *float64 `json:"NetLiquidation,omitempty"`
 	OptionMarketValue       *float64 `json:"OptionMarketValue,omitempty"`
-	RealizedPnl             *float64 `json:"RealizedPNL,omitempty"`
+	RealizedPNL             *float64 `json:"RealizedPNL,omitempty"`
 	StockMarketValue        *float64 `json:"StockMarketValue,omitempty"`
 	TotalCashBalance        *float64 `json:"TotalCashBalance,omitempty"`
-	UnrealizedPnl           *float64 `json:"UnrealizedPNL,omitempty"`
+	UnrealizedPNL           *float64 `json:"UnrealizedPNL,omitempty"`
 }
 
 type GetAccountsAccountSummary200ApplicationJSONSummary struct {
@@ -103,9 +103,9 @@ type GetAccountsAccountSummary200ApplicationJSONSummary struct {
 	NetLiquidationC           *float64 `json:"NetLiquidation-C,omitempty"`
 	NetLiquidationS           *float64 `json:"NetLiquidation-S,omitempty"`
 	NetLiquidationUncertainty *float64 `json:"NetLiquidationUncertainty,omitempty"`
-	PaSharesValue             *float64 `json:"PASharesValue,omitempty"`
-	PaSharesValueC            *float64 `json:"PASharesValue-C,omitempty"`
-	PaSharesValueS            *float64 `json:"PASharesValue-S,omitempty"`
+	PASharesValue             *float64 `json:"PASharesValue,omitempty"`
+	PASharesValueC            *float64 `json:"PASharesValue-C,omitempty"`
+	PASharesValueS            *float64 `json:"PASharesValue-S,omitempty"`
 	PostExpirationExcess      *float64 `json:"PostExpirationExcess,omitempty"`
 	PostExpirationExcessC     *float64 `json:"PostExpirationExcess-C,omitempty"`
 	PostExpirationExcessS     *float64 `json:"PostExpirationExcess-S,omitempty"`
@@ -116,8 +116,8 @@ type GetAccountsAccountSummary200ApplicationJSONSummary struct {
 	RegTEquityS               *float64 `json:"RegTEquity-S,omitempty"`
 	RegTMargin                *float64 `json:"RegTMargin,omitempty"`
 	RegTMarginS               *float64 `json:"RegTMargin-S,omitempty"`
-	Sma                       *float64 `json:"SMA,omitempty"`
-	SmaS                      *float64 `json:"SMA-S,omitempty"`
+	SMA                       *float64 `json:"SMA,omitempty"`
+	SMAS                      *float64 `json:"SMA-S,omitempty"`
 	TotalCashValue            *float64 `json:"TotalCashValue,omitempty"`
 	TotalCashValueC           *float64 `json:"TotalCashValue-C,omitempty"`
 	TotalCashValueS           *float64 `json:"TotalCashValue-S,omitempty"`
@@ -135,6 +135,6 @@ type GetAccountsAccountSummaryRequest struct {
 
 type GetAccountsAccountSummaryResponse struct {
 	ContentType                                       string
-	GetAccountsAccountSummary200ApplicationJSONObject *GetAccountsAccountSummary200ApplicationJSON
 	StatusCode                                        int64
+	GetAccountsAccountSummary200ApplicationJSONObject *GetAccountsAccountSummary200ApplicationJSON
 }

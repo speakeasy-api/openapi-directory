@@ -3,13 +3,13 @@ package operations
 type PostDisassociateDataShareConsumerActionEnum string
 
 const (
-	PostDisassociateDataShareConsumerActionEnumDisassociateDataShareConsumer PostDisassociateDataShareConsumerActionEnum = "DisassociateDataShareConsumer"
+	POSTDisassociateDataShareConsumerActionEnumDisassociateDataShareConsumer PostDisassociateDataShareConsumerActionEnum = "DisassociateDataShareConsumer"
 )
 
 type PostDisassociateDataShareConsumerVersionEnum string
 
 const (
-	PostDisassociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 PostDisassociateDataShareConsumerVersionEnum = "2012-12-01"
+	POSTDisassociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 PostDisassociateDataShareConsumerVersionEnum = "2012-12-01"
 )
 
 type PostDisassociateDataShareConsumerQueryParams struct {

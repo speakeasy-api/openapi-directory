@@ -17,7 +17,7 @@ type GetInternationalPaymentConsentsConsentIDFundsConfirmationHeaders struct {
 }
 
 type GetInternationalPaymentConsentsConsentIDFundsConfirmationSecurity struct {
-	PsuoAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetInternationalPaymentConsentsConsentIDFundsConfirmationRequest struct {
@@ -30,7 +30,7 @@ type GetInternationalPaymentConsentsConsentIDFundsConfirmationResponse struct {
 	Body                              []byte
 	ContentType                       string
 	Headers                           map[string][]string
-	ObErrorResponse1                  *shared.ObErrorResponse1
-	ObWriteFundsConfirmationResponse1 *shared.ObWriteFundsConfirmationResponse1
+	OBErrorResponse1                  *shared.ObErrorResponse1
+	OBWriteFundsConfirmationResponse1 *shared.ObWriteFundsConfirmationResponse1
 	StatusCode                        int64
 }

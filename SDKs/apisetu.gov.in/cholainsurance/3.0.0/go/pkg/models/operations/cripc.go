@@ -5,7 +5,7 @@ import (
 )
 
 type CripcRequestBodyCertificateParameters struct {
-	Dob   string `json:"DOB"`
+	DOB   string `json:"DOB"`
 	Polno string `json:"polno"`
 }
 
@@ -82,7 +82,7 @@ type Cripc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cripc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cripc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cripc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cripc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cripc404ApplicationJSON struct {

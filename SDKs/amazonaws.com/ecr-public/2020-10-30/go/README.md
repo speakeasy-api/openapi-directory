@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,25 @@ func main() {
     
     req := operations.BatchCheckLayerAvailabilityRequest{
         Headers: operations.BatchCheckLayerAvailabilityHeaders{
-            XAmzAlgorithm: "placeat",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "ipsam",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "cum",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "modi",
+            XAmzAlgorithm: "necessitatibus",
+            XAmzContentSha256: "in",
+            XAmzCredential: "possimus",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "dolorum",
+            XAmzSignature: "doloribus",
+            XAmzSignedHeaders: "saepe",
             XAmzTarget: "SpencerFrontendService.BatchCheckLayerAvailability",
         },
         Request: shared.BatchCheckLayerAvailabilityRequest{
             LayerDigests: []string{
-                "quis",
-                "in",
-                "velit",
+                "et",
             },
-            RegistryID: "eligendi",
-            RepositoryName: "quis",
+            RegistryID: "ut",
+            RepositoryName: "asperiores",
         },
     }
     
-    res, err := s.Sdk.BatchCheckLayerAvailability(ctx, req)
+    res, err := s.BatchCheckLayerAvailability(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

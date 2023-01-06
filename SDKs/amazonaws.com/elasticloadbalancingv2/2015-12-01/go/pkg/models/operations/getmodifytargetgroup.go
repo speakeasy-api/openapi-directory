@@ -3,19 +3,19 @@ package operations
 type GetModifyTargetGroupActionEnum string
 
 const (
-	GetModifyTargetGroupActionEnumModifyTargetGroup GetModifyTargetGroupActionEnum = "ModifyTargetGroup"
+	GETModifyTargetGroupActionEnumModifyTargetGroup GetModifyTargetGroupActionEnum = "ModifyTargetGroup"
 )
 
 type GetModifyTargetGroupHealthCheckProtocolEnum string
 
 const (
-	GetModifyTargetGroupHealthCheckProtocolEnumHTTP   GetModifyTargetGroupHealthCheckProtocolEnum = "HTTP"
-	GetModifyTargetGroupHealthCheckProtocolEnumHTTPS  GetModifyTargetGroupHealthCheckProtocolEnum = "HTTPS"
-	GetModifyTargetGroupHealthCheckProtocolEnumTCP    GetModifyTargetGroupHealthCheckProtocolEnum = "TCP"
-	GetModifyTargetGroupHealthCheckProtocolEnumTLS    GetModifyTargetGroupHealthCheckProtocolEnum = "TLS"
-	GetModifyTargetGroupHealthCheckProtocolEnumUDP    GetModifyTargetGroupHealthCheckProtocolEnum = "UDP"
-	GetModifyTargetGroupHealthCheckProtocolEnumTcpudp GetModifyTargetGroupHealthCheckProtocolEnum = "TCP_UDP"
-	GetModifyTargetGroupHealthCheckProtocolEnumGeneve GetModifyTargetGroupHealthCheckProtocolEnum = "GENEVE"
+	GETModifyTargetGroupHealthCheckProtocolEnumHTTP   GetModifyTargetGroupHealthCheckProtocolEnum = "HTTP"
+	GETModifyTargetGroupHealthCheckProtocolEnumHTTPS  GetModifyTargetGroupHealthCheckProtocolEnum = "HTTPS"
+	GETModifyTargetGroupHealthCheckProtocolEnumTCP    GetModifyTargetGroupHealthCheckProtocolEnum = "TCP"
+	GETModifyTargetGroupHealthCheckProtocolEnumTLS    GetModifyTargetGroupHealthCheckProtocolEnum = "TLS"
+	GETModifyTargetGroupHealthCheckProtocolEnumUDP    GetModifyTargetGroupHealthCheckProtocolEnum = "UDP"
+	GETModifyTargetGroupHealthCheckProtocolEnumTCPUDP GetModifyTargetGroupHealthCheckProtocolEnum = "TCP_UDP"
+	GETModifyTargetGroupHealthCheckProtocolEnumGeneve GetModifyTargetGroupHealthCheckProtocolEnum = "GENEVE"
 )
 
 // GetModifyTargetGroupMatcher
@@ -28,7 +28,7 @@ type GetModifyTargetGroupMatcher struct {
 type GetModifyTargetGroupVersionEnum string
 
 const (
-	GetModifyTargetGroupVersionEnumTwoThousandAndFifteen1201 GetModifyTargetGroupVersionEnum = "2015-12-01"
+	GETModifyTargetGroupVersionEnumTwoThousandAndFifteen1201 GetModifyTargetGroupVersionEnum = "2015-12-01"
 )
 
 type GetModifyTargetGroupQueryParams struct {

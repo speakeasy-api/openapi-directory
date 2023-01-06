@@ -3,19 +3,19 @@ package operations
 type GetUpdateAvailabilityOptionsActionEnum string
 
 const (
-	GetUpdateAvailabilityOptionsActionEnumUpdateAvailabilityOptions GetUpdateAvailabilityOptionsActionEnum = "UpdateAvailabilityOptions"
+	GETUpdateAvailabilityOptionsActionEnumUpdateAvailabilityOptions GetUpdateAvailabilityOptionsActionEnum = "UpdateAvailabilityOptions"
 )
 
 type GetUpdateAvailabilityOptionsVersionEnum string
 
 const (
-	GetUpdateAvailabilityOptionsVersionEnumTwoThousandAndEleven0201 GetUpdateAvailabilityOptionsVersionEnum = "2011-02-01"
+	GETUpdateAvailabilityOptionsVersionEnumTwoThousandAndEleven0201 GetUpdateAvailabilityOptionsVersionEnum = "2011-02-01"
 )
 
 type GetUpdateAvailabilityOptionsQueryParams struct {
 	Action     GetUpdateAvailabilityOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                                  `queryParam:"style=form,explode=true,name=DomainName"`
-	MultiAz    bool                                    `queryParam:"style=form,explode=true,name=MultiAZ"`
+	MultiAZ    bool                                    `queryParam:"style=form,explode=true,name=MultiAZ"`
 	Version    GetUpdateAvailabilityOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

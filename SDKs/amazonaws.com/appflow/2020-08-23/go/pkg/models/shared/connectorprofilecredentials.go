@@ -12,7 +12,7 @@ type ConnectorProfileCredentials struct {
 	InforNexus      *InforNexusConnectorProfileCredentials      `json:"InforNexus,omitempty"`
 	Marketo         *MarketoConnectorProfileCredentials         `json:"Marketo,omitempty"`
 	Redshift        *RedshiftConnectorProfileCredentials        `json:"Redshift,omitempty"`
-	SapoData        *SapoDataConnectorProfileCredentials        `json:"SAPOData,omitempty"`
+	SAPOData        *SapoDataConnectorProfileCredentials        `json:"SAPOData,omitempty"`
 	Salesforce      *SalesforceConnectorProfileCredentials      `json:"Salesforce,omitempty"`
 	ServiceNow      *ServiceNowConnectorProfileCredentials      `json:"ServiceNow,omitempty"`
 	Singular        *SingularConnectorProfileCredentials        `json:"Singular,omitempty"`

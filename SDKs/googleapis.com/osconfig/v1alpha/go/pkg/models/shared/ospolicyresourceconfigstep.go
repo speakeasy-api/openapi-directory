@@ -3,19 +3,19 @@ package shared
 type OsPolicyResourceConfigStepOutcomeEnum string
 
 const (
-	OsPolicyResourceConfigStepOutcomeEnumOutcomeUnspecified OsPolicyResourceConfigStepOutcomeEnum = "OUTCOME_UNSPECIFIED"
-	OsPolicyResourceConfigStepOutcomeEnumSucceeded          OsPolicyResourceConfigStepOutcomeEnum = "SUCCEEDED"
-	OsPolicyResourceConfigStepOutcomeEnumFailed             OsPolicyResourceConfigStepOutcomeEnum = "FAILED"
+	OSPolicyResourceConfigStepOutcomeEnumOutcomeUnspecified OsPolicyResourceConfigStepOutcomeEnum = "OUTCOME_UNSPECIFIED"
+	OSPolicyResourceConfigStepOutcomeEnumSucceeded          OsPolicyResourceConfigStepOutcomeEnum = "SUCCEEDED"
+	OSPolicyResourceConfigStepOutcomeEnumFailed             OsPolicyResourceConfigStepOutcomeEnum = "FAILED"
 )
 
 type OsPolicyResourceConfigStepTypeEnum string
 
 const (
-	OsPolicyResourceConfigStepTypeEnumTypeUnspecified                  OsPolicyResourceConfigStepTypeEnum = "TYPE_UNSPECIFIED"
-	OsPolicyResourceConfigStepTypeEnumValidation                       OsPolicyResourceConfigStepTypeEnum = "VALIDATION"
-	OsPolicyResourceConfigStepTypeEnumDesiredStateCheck                OsPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_CHECK"
-	OsPolicyResourceConfigStepTypeEnumDesiredStateEnforcement          OsPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_ENFORCEMENT"
-	OsPolicyResourceConfigStepTypeEnumDesiredStateCheckPostEnforcement OsPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_CHECK_POST_ENFORCEMENT"
+	OSPolicyResourceConfigStepTypeEnumTypeUnspecified                  OsPolicyResourceConfigStepTypeEnum = "TYPE_UNSPECIFIED"
+	OSPolicyResourceConfigStepTypeEnumValidation                       OsPolicyResourceConfigStepTypeEnum = "VALIDATION"
+	OSPolicyResourceConfigStepTypeEnumDesiredStateCheck                OsPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_CHECK"
+	OSPolicyResourceConfigStepTypeEnumDesiredStateEnforcement          OsPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_ENFORCEMENT"
+	OSPolicyResourceConfigStepTypeEnumDesiredStateCheckPostEnforcement OsPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_CHECK_POST_ENFORCEMENT"
 )
 
 // OsPolicyResourceConfigStep

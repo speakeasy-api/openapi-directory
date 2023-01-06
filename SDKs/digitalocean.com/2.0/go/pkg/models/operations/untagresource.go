@@ -8,15 +8,15 @@ type UntagResourcePathParams struct {
 	TagID string `pathParam:"style=simple,explode=false,name=tag_id"`
 }
 
-type UntagResourceRequest struct {
-	PathParams UntagResourcePathParams
-	Request    shared.Onev21tags1Percent7BtagIDPercent7D1resourcesPostRequestBodyContentApplication1jsonSchema `request:"mediaType=application/json"`
-}
-
 type UntagResource401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UntagResourceRequest struct {
+	PathParams UntagResourcePathParams
+	Request    shared.Onev21tags1Percent7BtagIDPercent7D1resourcesPostRequestBodyContentApplication1jsonSchema `request:"mediaType=application/json"`
 }
 
 type UntagResourceResponse struct {

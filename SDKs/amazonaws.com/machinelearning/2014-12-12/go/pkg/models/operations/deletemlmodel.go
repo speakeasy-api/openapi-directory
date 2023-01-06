@@ -7,7 +7,7 @@ import (
 type DeleteMlModelXAmzTargetEnum string
 
 const (
-	DeleteMlModelXAmzTargetEnumAmazonMl20141212DeleteMlModel DeleteMlModelXAmzTargetEnum = "AmazonML_20141212.DeleteMLModel"
+	DeleteMLModelXAmzTargetEnumAmazonMl20141212DeleteMlModel DeleteMlModelXAmzTargetEnum = "AmazonML_20141212.DeleteMLModel"
 )
 
 type DeleteMlModelHeaders struct {
@@ -28,7 +28,7 @@ type DeleteMlModelRequest struct {
 
 type DeleteMlModelResponse struct {
 	ContentType               string
-	DeleteMlModelOutput       *shared.DeleteMlModelOutput
+	DeleteMLModelOutput       *shared.DeleteMlModelOutput
 	InternalServerException   *interface{}
 	InvalidInputException     *interface{}
 	ResourceNotFoundException *interface{}

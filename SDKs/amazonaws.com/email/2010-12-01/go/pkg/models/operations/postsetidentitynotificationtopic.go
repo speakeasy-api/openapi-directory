@@ -3,13 +3,13 @@ package operations
 type PostSetIdentityNotificationTopicActionEnum string
 
 const (
-	PostSetIdentityNotificationTopicActionEnumSetIdentityNotificationTopic PostSetIdentityNotificationTopicActionEnum = "SetIdentityNotificationTopic"
+	POSTSetIdentityNotificationTopicActionEnumSetIdentityNotificationTopic PostSetIdentityNotificationTopicActionEnum = "SetIdentityNotificationTopic"
 )
 
 type PostSetIdentityNotificationTopicVersionEnum string
 
 const (
-	PostSetIdentityNotificationTopicVersionEnumTwoThousandAndTen1201 PostSetIdentityNotificationTopicVersionEnum = "2010-12-01"
+	POSTSetIdentityNotificationTopicVersionEnumTwoThousandAndTen1201 PostSetIdentityNotificationTopicVersionEnum = "2010-12-01"
 )
 
 type PostSetIdentityNotificationTopicQueryParams struct {

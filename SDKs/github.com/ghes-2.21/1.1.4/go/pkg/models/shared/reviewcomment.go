@@ -24,6 +24,8 @@ const (
 	ReviewCommentStartSideEnumRight ReviewCommentStartSideEnum = "RIGHT"
 )
 
+// ReviewCommentSimpleUser
+// Simple User
 type ReviewCommentSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

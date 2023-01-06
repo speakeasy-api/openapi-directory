@@ -12,7 +12,7 @@ type NetworkFirewallInternetTrafficNotInspectedViolation struct {
 	ExpectedInternetGatewayRoutes    []ExpectedRoute `json:"ExpectedInternetGatewayRoutes,omitempty"`
 	FirewallSubnetID                 *string         `json:"FirewallSubnetId,omitempty"`
 	InternetGatewayID                *string         `json:"InternetGatewayId,omitempty"`
-	IsRouteTableUsedInDifferentAz    *bool           `json:"IsRouteTableUsedInDifferentAZ,omitempty"`
+	IsRouteTableUsedInDifferentAZ    *bool           `json:"IsRouteTableUsedInDifferentAZ,omitempty"`
 	RouteTableID                     *string         `json:"RouteTableId,omitempty"`
 	SubnetAvailabilityZone           *string         `json:"SubnetAvailabilityZone,omitempty"`
 	SubnetID                         *string         `json:"SubnetId,omitempty"`

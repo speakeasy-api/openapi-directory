@@ -99,6 +99,6 @@ type GetUserContentRecentJSONRequest struct {
 
 type GetUserContentRecentJSONResponse struct {
 	ContentType                                      string
-	GetUserContentRecentJSON200ApplicationJSONObject *GetUserContentRecentJSON200ApplicationJSON
+	GETUserContentRecentJSON200ApplicationJSONObject *GetUserContentRecentJSON200ApplicationJSON
 	StatusCode                                       int64
 }

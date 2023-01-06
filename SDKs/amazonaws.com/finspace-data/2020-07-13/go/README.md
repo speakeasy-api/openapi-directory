@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,40 +34,35 @@ func main() {
     
     req := operations.CreateChangesetRequest{
         PathParams: operations.CreateChangesetPathParams{
-            DatasetID: "harum",
+            DatasetID: "quos",
         },
         Headers: operations.CreateChangesetHeaders{
-            XAmzAlgorithm: "ipsa",
-            XAmzContentSha256: "rerum",
-            XAmzCredential: "nisi",
-            XAmzDate: "maiores",
-            XAmzSecurityToken: "non",
-            XAmzSignature: "autem",
-            XAmzSignedHeaders: "deleniti",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "explicabo",
+            XAmzCredential: "necessitatibus",
+            XAmzDate: "veniam",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "in",
+            XAmzSignedHeaders: "odit",
         },
         Request: operations.CreateChangesetRequestBody{
-            ChangeType: "REPLACE",
+            ChangeType: "MODIFY",
             FormatParams: map[string]string{
-                "consequuntur": "amet",
-                "sunt": "non",
-                "blanditiis": "omnis",
+                "tenetur": "esse",
             },
-            FormatType: "PARQUET",
+            FormatType: "XML",
             SourceParams: map[string]string{
-                "iusto": "voluptatibus",
-                "explicabo": "iure",
-                "est": "ex",
+                "id": "laboriosam",
+                "quam": "maiores",
             },
             SourceType: "S3",
             Tags: map[string]string{
-                "omnis": "ipsam",
-                "omnis": "quidem",
-                "id": "illum",
+                "aperiam": "repellendus",
             },
         },
     }
     
-    res, err := s.Sdk.CreateChangeset(ctx, req)
+    res, err := s.CreateChangeset(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

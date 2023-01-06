@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.GetRawMessageContentRequest{
         PathParams: operations.GetRawMessageContentPathParams{
-            MessageID: "neque",
+            MessageID: "ipsa",
         },
         Headers: operations.GetRawMessageContentHeaders{
-            XAmzAlgorithm: "non",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "veniam",
-            XAmzDate: "quos",
-            XAmzSecurityToken: "natus",
-            XAmzSignature: "porro",
-            XAmzSignedHeaders: "dolorem",
+            XAmzAlgorithm: "nemo",
+            XAmzContentSha256: "reiciendis",
+            XAmzCredential: "quae",
+            XAmzDate: "odit",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "ut",
+            XAmzSignedHeaders: "occaecati",
         },
     }
     
-    res, err := s.Sdk.GetRawMessageContent(ctx, req)
+    res, err := s.GetRawMessageContent(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

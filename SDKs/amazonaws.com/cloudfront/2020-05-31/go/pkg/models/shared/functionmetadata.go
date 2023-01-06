@@ -8,7 +8,7 @@ import (
 // Contains metadata about a CloudFront function.
 type FunctionMetadata struct {
 	CreatedTime      *time.Time
-	FunctionArn      string
+	FunctionARN      string
 	LastModifiedTime time.Time
 	Stage            *FunctionStageEnum
 }

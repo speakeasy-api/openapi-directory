@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,42 +24,51 @@ func main() {
     
     req := operations.PatchAttractionRequest{
         PathParams: operations.PatchAttractionPathParams{
-            ID: "molestiae",
+            ID: "non",
         },
         Headers: operations.PatchAttractionHeaders{
-            TmpsCorrelationID: "autem",
+            TMPSCorrelationID: "ullam",
         },
         Request: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "sed",
-                    Op: "add",
-                    Path: "et",
+                    From: "error",
+                    Op: "copy",
+                    Path: "doloremque",
                     Value: map[string]interface{}{
-                        "maiores": "praesentium",
-                        "molestiae": "praesentium",
+                        "non": "et",
                     },
                 },
                 shared.Change{
-                    From: "facere",
+                    From: "sint",
                     Op: "replace",
-                    Path: "voluptate",
+                    Path: "repellat",
                     Value: map[string]interface{}{
-                        "ut": "deserunt",
-                        "est": "esse",
-                        "at": "atque",
+                        "eos": "ut",
+                        "culpa": "nostrum",
+                        "error": "ratione",
+                    },
+                },
+                shared.Change{
+                    From: "aliquam",
+                    Op: "test",
+                    Path: "reprehenderit",
+                    Value: map[string]interface{}{
+                        "ut": "quisquam",
+                        "voluptatem": "eaque",
+                        "non": "sit",
                     },
                 },
             },
-            RelatedEntityID: "alias",
+            RelatedEntityID: "id",
             RelatedEntityType: "event",
-            Score: 64.099998,
-            Source: "itaque",
-            VersionNumber: 8426159091266627890,
+            Score: 96.099998,
+            Source: "totam",
+            VersionNumber: 721356596753963764,
         },
     }
     
-    res, err := s.Sdk.PatchAttraction(ctx, req)
+    res, err := s.PatchAttraction(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

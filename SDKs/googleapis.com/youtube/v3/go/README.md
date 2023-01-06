@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,63 +27,69 @@ func main() {
             Option1: &operations.YoutubeAbuseReportsInsertSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.YoutubeAbuseReportsInsertQueryParams{
             DollarXgafv: "1",
-            AccessToken: "qui",
-            Alt: "media",
-            Callback: "est",
+            AccessToken: "fugiat",
+            Alt: "json",
+            Callback: "inventore",
             Fields: "eos",
-            Key: "qui",
-            OauthToken: "animi",
+            Key: "at",
+            OauthToken: "minus",
             Part: []string{
-                "rem",
-                "nobis",
+                "sit",
+                "eveniet",
             },
             PrettyPrint: false,
-            QuotaUser: "quia",
-            UploadType: "ut",
-            UploadProtocol: "ea",
+            QuotaUser: "in",
+            UploadType: "animi",
+            UploadProtocol: "illum",
         },
         Request: &shared.AbuseReport{
             AbuseTypes: []shared.AbuseType{
                 shared.AbuseType{
-                    ID: "tenetur",
+                    ID: "minus",
+                },
+                shared.AbuseType{
+                    ID: "autem",
+                },
+                shared.AbuseType{
+                    ID: "et",
                 },
             },
-            Description: "atque",
+            Description: "dolore",
             RelatedEntities: []shared.RelatedEntity{
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
+                        ID: "velit",
+                        TypeID: "explicabo",
+                        URL: "cum",
+                    },
+                },
+                shared.RelatedEntity{
+                    Entity: &shared.Entity{
                         ID: "ut",
-                        TypeID: "ea",
-                        URL: "harum",
+                        TypeID: "non",
+                        URL: "expedita",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "quos",
-                        TypeID: "delectus",
-                        URL: "quisquam",
-                    },
-                },
-                shared.RelatedEntity{
-                    Entity: &shared.Entity{
-                        ID: "sed",
-                        TypeID: "id",
-                        URL: "numquam",
+                        ID: "assumenda",
+                        TypeID: "atque",
+                        URL: "libero",
                     },
                 },
             },
             Subject: &shared.Entity{
-                ID: "saepe",
-                TypeID: "voluptatem",
-                URL: "quaerat",
+                ID: "veniam",
+                TypeID: "vel",
+                URL: "quasi",
             },
         },
     }

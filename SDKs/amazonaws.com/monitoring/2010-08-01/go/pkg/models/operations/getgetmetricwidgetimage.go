@@ -3,13 +3,13 @@ package operations
 type GetGetMetricWidgetImageActionEnum string
 
 const (
-	GetGetMetricWidgetImageActionEnumGetMetricWidgetImage GetGetMetricWidgetImageActionEnum = "GetMetricWidgetImage"
+	GETGETMetricWidgetImageActionEnumGetMetricWidgetImage GetGetMetricWidgetImageActionEnum = "GetMetricWidgetImage"
 )
 
 type GetGetMetricWidgetImageVersionEnum string
 
 const (
-	GetGetMetricWidgetImageVersionEnumTwoThousandAndTen0801 GetGetMetricWidgetImageVersionEnum = "2010-08-01"
+	GETGETMetricWidgetImageVersionEnumTwoThousandAndTen0801 GetGetMetricWidgetImageVersionEnum = "2010-08-01"
 )
 
 type GetGetMetricWidgetImageQueryParams struct {

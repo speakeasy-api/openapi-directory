@@ -3,13 +3,13 @@ package operations
 type PostDeleteVolumeActionEnum string
 
 const (
-	PostDeleteVolumeActionEnumDeleteVolume PostDeleteVolumeActionEnum = "DeleteVolume"
+	POSTDeleteVolumeActionEnumDeleteVolume PostDeleteVolumeActionEnum = "DeleteVolume"
 )
 
 type PostDeleteVolumeVersionEnum string
 
 const (
-	PostDeleteVolumeVersionEnumTwoThousandAndSixteen1115 PostDeleteVolumeVersionEnum = "2016-11-15"
+	POSTDeleteVolumeVersionEnumTwoThousandAndSixteen1115 PostDeleteVolumeVersionEnum = "2016-11-15"
 )
 
 type PostDeleteVolumeQueryParams struct {

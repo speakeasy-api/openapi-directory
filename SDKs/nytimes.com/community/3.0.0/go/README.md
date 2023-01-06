@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,16 +29,16 @@ func main() {
             },
         },
         QueryParams: operations.GetUserContentByDateJSONQueryParams{
-            Date: "sit",
+            Date: "itaque",
         },
     }
     
-    res, err := s.Sdk.GetUserContentByDateJSON(ctx, req)
+    res, err := s.GetUserContentByDateJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GetUserContentByDateJSON200ApplicationJSONObject != nil {
+    if res.GETUserContentByDateJSON200ApplicationJSONObject != nil {
         // handle response
     }
 ```

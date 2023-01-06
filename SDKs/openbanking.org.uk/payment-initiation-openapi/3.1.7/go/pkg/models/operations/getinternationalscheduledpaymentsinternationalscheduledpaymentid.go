@@ -17,7 +17,7 @@ type GetInternationalScheduledPaymentsInternationalScheduledPaymentIDHeaders str
 }
 
 type GetInternationalScheduledPaymentsInternationalScheduledPaymentIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetInternationalScheduledPaymentsInternationalScheduledPaymentIDRequest struct {
@@ -30,7 +30,7 @@ type GetInternationalScheduledPaymentsInternationalScheduledPaymentIDResponse st
 	Body                                   []byte
 	ContentType                            string
 	Headers                                map[string][]string
-	ObErrorResponse1                       *shared.ObErrorResponse1
-	ObWriteInternationalScheduledResponse6 *shared.ObWriteInternationalScheduledResponse6
+	OBErrorResponse1                       *shared.ObErrorResponse1
+	OBWriteInternationalScheduledResponse6 *shared.ObWriteInternationalScheduledResponse6
 	StatusCode                             int64
 }

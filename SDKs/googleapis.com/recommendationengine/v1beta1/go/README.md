@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,116 +26,112 @@ func main() {
         Security: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams{
-            Parent: "aut",
+            Parent: "quia",
         },
         QueryParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "nobis",
-            Alt: "media",
-            Callback: "est",
-            Fields: "magnam",
-            Key: "consequuntur",
-            OauthToken: "ut",
+            AccessToken: "nisi",
+            Alt: "json",
+            Callback: "doloremque",
+            Fields: "possimus",
+            Key: "officia",
+            OauthToken: "maxime",
             PrettyPrint: false,
-            QuotaUser: "earum",
-            UploadType: "porro",
-            UploadProtocol: "dolorem",
+            QuotaUser: "adipisci",
+            UploadType: "cumque",
+            UploadProtocol: "quo",
         },
         Request: &shared.GoogleCloudRecommendationengineV1beta1CatalogItem{
             CategoryHierarchies: []shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                     Categories: []string{
-                        "aut",
+                        "et",
+                        "facere",
                     },
                 },
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                     Categories: []string{
-                        "odit",
-                        "quis",
+                        "aut",
+                        "sit",
+                    },
+                },
+                shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
+                    Categories: []string{
+                        "officia",
                     },
                 },
             },
-            Description: "maiores",
-            ID: "cumque",
+            Description: "est",
+            ID: "omnis",
             ItemAttributes: &shared.GoogleCloudRecommendationengineV1beta1FeatureMap{
                 CategoricalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                    "labore": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "sit": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "sint",
+                            "sed",
+                            "magnam",
+                            "dolor",
                         },
                     },
-                    "nihil": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "blanditiis": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "sint",
-                            "est",
+                            "autem",
+                        },
+                    },
+                    "et": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                        Value: []string{
+                            "reprehenderit",
+                            "vel",
                         },
                     },
                 },
                 NumericalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                    "officiis": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "placeat": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
-                            11.100000,
-                            8.200000,
-                            97.099998,
-                        },
-                    },
-                    "voluptatem": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                        Value: []float32{
-                            8.200000,
+                            58.200001,
+                            66.199997,
                         },
                     },
                 },
             },
-            ItemGroupID: "dolorum",
-            LanguageCode: "harum",
+            ItemGroupID: "repellendus",
+            LanguageCode: "magnam",
             ProductMetadata: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem{
-                AvailableQuantity: "officiis",
-                CanonicalProductURI: "corrupti",
+                AvailableQuantity: "soluta",
+                CanonicalProductURI: "aperiam",
                 Costs: map[string]float32{
-                    "sunt": 90.199997,
-                    "voluptate": 37.200001,
-                    "ea": 90.199997,
+                    "voluptas": 52.099998,
+                    "ipsam": 14.200000,
                 },
-                CurrencyCode: "explicabo",
+                CurrencyCode: "tempora",
                 ExactPrice: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice{
-                    DisplayPrice: 25.200001,
-                    OriginalPrice: 99.199997,
+                    DisplayPrice: 81.099998,
+                    OriginalPrice: 4.200000,
                 },
                 Images: []shared.GoogleCloudRecommendationengineV1beta1Image{
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 7746893585940478322,
-                        URI: "atque",
-                        Width: 5348356178737988486,
-                    },
-                    shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 401863722195270076,
-                        URI: "et",
-                        Width: 6249467380623826659,
-                    },
-                    shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 5112485330184857086,
-                        URI: "ipsum",
-                        Width: 4962516065621625535,
+                        Height: 1423209342964650157,
+                        URI: "sit",
+                        Width: 2729455759893167140,
                     },
                 },
                 PriceRange: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange{
-                    Max: 57.099998,
-                    Min: 16.200001,
+                    Max: 30.200001,
+                    Min: 46.200001,
                 },
                 StockState: "PREORDER",
             },
             Tags: []string{
-                "deserunt",
-                "expedita",
-                "illum",
+                "pariatur",
+                "quas",
+                "autem",
             },
-            Title: "vitae",
+            Title: "officia",
         },
     }
     

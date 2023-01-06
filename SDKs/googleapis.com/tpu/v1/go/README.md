@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,30 @@ func main() {
         Security: operations.TpuProjectsLocationsAcceleratorTypesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.TpuProjectsLocationsAcceleratorTypesListPathParams{
-            Parent: "quidem",
+            Parent: "voluptatem",
         },
         QueryParams: operations.TpuProjectsLocationsAcceleratorTypesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "quasi",
+            DollarXgafv: "2",
+            AccessToken: "quis",
             Alt: "media",
-            Callback: "aut",
-            Fields: "in",
-            Filter: "veritatis",
-            Key: "quos",
-            OauthToken: "molestiae",
-            OrderBy: "blanditiis",
-            PageSize: 4836021948156843738,
-            PageToken: "ipsum",
-            PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "necessitatibus",
-            UploadProtocol: "adipisci",
+            Callback: "nobis",
+            Fields: "et",
+            Filter: "modi",
+            Key: "excepturi",
+            OauthToken: "id",
+            OrderBy: "error",
+            PageSize: 1014192855358704636,
+            PageToken: "harum",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            UploadType: "architecto",
+            UploadProtocol: "velit",
         },
     }
     

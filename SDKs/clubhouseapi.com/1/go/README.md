@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetCheckForUpdateRequest{
         QueryParams: operations.GetCheckForUpdateQueryParams{
-            IsTestflight: 5600163302665965753,
+            IsTestflight: 1976051185898035910,
         },
     }
     
-    res, err := s.Sdk.GetCheckForUpdate(ctx, req)
+    res, err := s.GetCheckForUpdate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

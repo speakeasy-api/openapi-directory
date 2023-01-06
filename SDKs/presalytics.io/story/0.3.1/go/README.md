@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,18 +22,12 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.CacheNonceGetRequest{
-        PathParams: operations.CacheNonceGetPathParams{
-            Nonce: "animi",
-        },
-    }
-    
-    res, err := s.Sdk.CacheNonceGet(ctx, req)
+    res, err := s.GetEnvironment(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.LoginButton != nil {
+    if res.GetEnvironment200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -45,46 +38,76 @@ func main() {
 
 ### SDK SDK
 
+* `GetEnvironment` - Environment: Get
+* `SpecNoTags` - Specification: No tags
+
+### Cache
+
 * `CacheNonceGet` - Cache: Get Subdocument
 * `CachePost` - Cache: Store Subdocument
-* `CollaboratorsPost` - Collborators: Bulk Update (Admin Only)
-* `GetEnvironment` - Environment: Get
-* `SessionIDDelete` - Sessions: Delete by Id
-* `SessionIDGet` - Sessions: Get
-* `SessionsIDViewsGet` - Views: List Session Views
-* `SessionsIDViewsPost` - Views: Create A Session View
-* `SpecNoTags` - Specification: No tags
-* `StoryGet` - Story: Get List of User Stories
-* `StoryIDAnalytics` - Story: View Analytics
-* `StoryIDCollaboratorsGet` - Story Collaborators: List
-* `StoryIDCollaboratorsInactivePost` - Story Collaborators: Edit Inactive User Permission
-* `StoryIDCollaboratorsPost` - Story Collaborators: Add New User
-* `StoryIDCollaboratorsUseridDelete` - Story Collaborators: Remove User
-* `StoryIDCollaboratorsUseridGet` - Story Collaborators: Access Permissions
-* `StoryIDCollaboratorsUseridPermissiontypeGet` - Permissions: Story Authorization for a User
-* `StoryIDCollaboratorsUseridPut` - Story Collaborators: Edit Access Rights
-* `StoryIDDelete` - Story: Delete by Id
+
+### Conversation
+
+* `StoryIDMessagesGet` - Conversation: List Conversation Messages
+* `StoryIDMessagesPost` - Conversation: Send a Message
+
+### Events
+
 * `StoryIDEventsGet` - Events: List Events
 * `StoryIDEventsPost` - Events: Manage Events
+
+### Permissions
+
+* `StoryIDCollaboratorsUseridPermissiontypeGet` - Permissions: Story Authorization for a User
+* `StoryPermissionTypesGet` - Permissions: List Permission Types
+
+### Restricted
+
+* `CollaboratorsPost` - Collborators: Bulk Update (Admin Only)
+
+### Schemas
+
+* `StoryOutlineSchema` - Story Outline Schema
+
+### Sessions
+
+* `SessionIDDelete` - Sessions: Delete by Id
+* `SessionIDGet` - Sessions: Get
+* `StoryIDSessionPost` - Sessions: Create a Session
+* `StoryIDSessionsGet` - Sessions: List Story Sessions
+
+### Story
+
+* `StoryGet` - Story: Get List of User Stories
+* `StoryIDAnalytics` - Story: View Analytics
+* `StoryIDDelete` - Story: Delete by Id
 * `StoryIDFileOoxmlautomationidDelete` - Story: Delete Subdocument
 * `StoryIDFileOoxmlautomationidGet` - Story: Download Updated File
 * `StoryIDFilePost` - Story: Upload a File To Existing Story
 * `StoryIDGet` - Story: Get by Id
-* `StoryIDMessagesGet` - Conversation: List Conversation Messages
-* `StoryIDMessagesPost` - Conversation: Send a Message
 * `StoryIDOutlineGet` - Story: Get Story Outline
 * `StoryIDOutlinePost` - Story: Post Story Outline
 * `StoryIDPublic` - Story: Public Link to Story Reveal.js Document
 * `StoryIDPut` - Story: Modify
 * `StoryIDReveal` - Story: Get Story at Reveal.js Document
-* `StoryIDSessionPost` - Sessions: Create a Session
-* `StoryIDSessionsGet` - Sessions: List Story Sessions
 * `StoryIDStatusGet` - Story: Get Story Status
-* `StoryOutlineSchema` - Story Outline Schema
-* `StoryPermissionTypesGet` - Permissions: List Permission Types
 * `StoryPost` - Story: Upload
 * `StoryPostFile` - Story: Upload a File
 * `StoryPostFileJSON` - Story: Upload a File (base64)
+
+### Story Collaborators
+
+* `StoryIDCollaboratorsGet` - Story Collaborators: List
+* `StoryIDCollaboratorsInactivePost` - Story Collaborators: Edit Inactive User Permission
+* `StoryIDCollaboratorsPost` - Story Collaborators: Add New User
+* `StoryIDCollaboratorsUseridDelete` - Story Collaborators: Remove User
+* `StoryIDCollaboratorsUseridGet` - Story Collaborators: Access Permissions
+* `StoryIDCollaboratorsUseridPut` - Story Collaborators: Edit Access Rights
+
+### Views
+
+* `SessionsIDViewsGet` - Views: List Session Views
+* `SessionsIDViewsPost` - Views: Create A Session View
 * `ViewsIDDelete` - Views: Delete by Id
 * `ViewsIDGet` - Views: Get View
 

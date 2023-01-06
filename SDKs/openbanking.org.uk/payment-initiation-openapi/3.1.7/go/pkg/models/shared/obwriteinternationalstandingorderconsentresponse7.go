@@ -7,8 +7,8 @@ import (
 type ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalStandingOrderConsentResponse7DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteInternationalStandingOrderConsentResponse7DataAuthorisation
@@ -93,23 +93,23 @@ type ObWriteInternationalStandingOrderConsentResponse7DataInitiation struct {
 type ObWriteInternationalStandingOrderConsentResponse7DataPermissionEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsentResponse7DataPermissionEnumCreate ObWriteInternationalStandingOrderConsentResponse7DataPermissionEnum = "Create"
+	OBWriteInternationalStandingOrderConsentResponse7DataPermissionEnumCreate ObWriteInternationalStandingOrderConsentResponse7DataPermissionEnum = "Create"
 )
 
 type ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnumNo  ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnum = "No"
-	ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnumYes ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnum = "Yes"
+	OBWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnumNo  ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnum = "No"
+	OBWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnumYes ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsentResponse7DataStatusEnumAuthorised            ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "Authorised"
-	ObWriteInternationalStandingOrderConsentResponse7DataStatusEnumAwaitingAuthorisation ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteInternationalStandingOrderConsentResponse7DataStatusEnumConsumed              ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "Consumed"
-	ObWriteInternationalStandingOrderConsentResponse7DataStatusEnumRejected              ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "Rejected"
+	OBWriteInternationalStandingOrderConsentResponse7DataStatusEnumAuthorised            ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "Authorised"
+	OBWriteInternationalStandingOrderConsentResponse7DataStatusEnumAwaitingAuthorisation ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteInternationalStandingOrderConsentResponse7DataStatusEnumConsumed              ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "Consumed"
+	OBWriteInternationalStandingOrderConsentResponse7DataStatusEnumRejected              ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum = "Rejected"
 )
 
 type ObWriteInternationalStandingOrderConsentResponse7Data struct {
@@ -122,7 +122,7 @@ type ObWriteInternationalStandingOrderConsentResponse7Data struct {
 	Initiation           ObWriteInternationalStandingOrderConsentResponse7DataInitiation             `json:"Initiation"`
 	Permission           ObWriteInternationalStandingOrderConsentResponse7DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount    *ObWriteInternationalStandingOrderConsentResponse7DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData       *ObscaSupportData1                                                          `json:"SCASupportData,omitempty"`
+	SCASupportData       *ObscaSupportData1                                                          `json:"SCASupportData,omitempty"`
 	Status               ObWriteInternationalStandingOrderConsentResponse7DataStatusEnum             `json:"Status"`
 	StatusUpdateDateTime time.Time                                                                   `json:"StatusUpdateDateTime"`
 }

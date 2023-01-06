@@ -3,18 +3,18 @@ package operations
 type GetRemoveRoleFromDbInstanceActionEnum string
 
 const (
-	GetRemoveRoleFromDbInstanceActionEnumRemoveRoleFromDbInstance GetRemoveRoleFromDbInstanceActionEnum = "RemoveRoleFromDBInstance"
+	GETRemoveRoleFromDBInstanceActionEnumRemoveRoleFromDbInstance GetRemoveRoleFromDbInstanceActionEnum = "RemoveRoleFromDBInstance"
 )
 
 type GetRemoveRoleFromDbInstanceVersionEnum string
 
 const (
-	GetRemoveRoleFromDbInstanceVersionEnumTwoThousandAndFourteen1031 GetRemoveRoleFromDbInstanceVersionEnum = "2014-10-31"
+	GETRemoveRoleFromDBInstanceVersionEnumTwoThousandAndFourteen1031 GetRemoveRoleFromDbInstanceVersionEnum = "2014-10-31"
 )
 
 type GetRemoveRoleFromDbInstanceQueryParams struct {
 	Action               GetRemoveRoleFromDbInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                                 `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                                 `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	FeatureName          string                                 `queryParam:"style=form,explode=true,name=FeatureName"`
 	RoleArn              string                                 `queryParam:"style=form,explode=true,name=RoleArn"`
 	Version              GetRemoveRoleFromDbInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`

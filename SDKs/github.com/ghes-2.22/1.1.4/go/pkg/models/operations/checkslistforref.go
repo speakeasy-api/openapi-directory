@@ -10,20 +10,13 @@ type ChecksListForRefPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type ChecksListForRefFilterEnum string
-
-const (
-	ChecksListForRefFilterEnumLatest ChecksListForRefFilterEnum = "latest"
-	ChecksListForRefFilterEnumAll    ChecksListForRefFilterEnum = "all"
-)
-
 type ChecksListForRefQueryParams struct {
-	AppID     *int64                      `queryParam:"style=form,explode=true,name=app_id"`
-	CheckName *string                     `queryParam:"style=form,explode=true,name=check_name"`
-	Filter    *ChecksListForRefFilterEnum `queryParam:"style=form,explode=true,name=filter"`
-	Page      *int64                      `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                      `queryParam:"style=form,explode=true,name=per_page"`
-	Status    *shared.StatusEnum          `queryParam:"style=form,explode=true,name=status"`
+	AppID     *int64              `queryParam:"style=form,explode=true,name=app_id"`
+	CheckName *string             `queryParam:"style=form,explode=true,name=check_name"`
+	Filter    *shared.StatusEnum1 `queryParam:"style=form,explode=true,name=filter"`
+	Page      *int64              `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64              `queryParam:"style=form,explode=true,name=per_page"`
+	Status    *shared.StatusEnum  `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ChecksListForRef200ApplicationJSON struct {

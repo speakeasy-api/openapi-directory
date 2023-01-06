@@ -81,7 +81,7 @@ type Tapcn404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Tapcn404ApplicationJSONErrorDescriptionEnumNoRecordFound               Tapcn404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Tapcn404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Tapcn404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Tapcn404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tapcn404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Tapcn404ApplicationJSON struct {

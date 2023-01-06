@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.AccountCtrlGetAccountServicesByAccountIDPathParams{
-            AccountID: 99.199997,
+            AccountID: 68.099998,
         },
     }
     
-    res, err := s.Sdk.AccountCtrlGetAccountServicesByAccountID(ctx, req)
+    res, err := s.AccountCtrlGetAccountServicesByAccountID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

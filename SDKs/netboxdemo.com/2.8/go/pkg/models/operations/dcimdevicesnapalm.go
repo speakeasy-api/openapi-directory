@@ -19,6 +19,6 @@ type DcimDevicesNapalmRequest struct {
 
 type DcimDevicesNapalmResponse struct {
 	ContentType  string
-	DeviceNapalm *shared.DeviceNapalm
+	DeviceNAPALM *shared.DeviceNapalm
 	StatusCode   int64
 }

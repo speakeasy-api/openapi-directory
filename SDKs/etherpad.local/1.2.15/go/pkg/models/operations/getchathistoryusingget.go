@@ -48,8 +48,8 @@ type GetChatHistoryUsingGetRequest struct {
 type GetChatHistoryUsingGetResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	GetChatHistoryUsingGet200ApplicationJSONObject *GetChatHistoryUsingGet200ApplicationJSON
-	GetChatHistoryUsingGet400ApplicationJSONObject *GetChatHistoryUsingGet400ApplicationJSON
-	GetChatHistoryUsingGet401ApplicationJSONObject *GetChatHistoryUsingGet401ApplicationJSON
-	GetChatHistoryUsingGet500ApplicationJSONObject *GetChatHistoryUsingGet500ApplicationJSON
+	GETChatHistoryUsingGET200ApplicationJSONObject *GetChatHistoryUsingGet200ApplicationJSON
+	GETChatHistoryUsingGET400ApplicationJSONObject *GetChatHistoryUsingGet400ApplicationJSON
+	GETChatHistoryUsingGET401ApplicationJSONObject *GetChatHistoryUsingGet401ApplicationJSON
+	GETChatHistoryUsingGET500ApplicationJSONObject *GetChatHistoryUsingGet500ApplicationJSON
 }

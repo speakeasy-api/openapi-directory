@@ -10,6 +10,6 @@ type IpamRirsCreateRequest struct {
 
 type IpamRirsCreateResponse struct {
 	ContentType string
-	Rir         *shared.Rir
+	RIR         *shared.Rir
 	StatusCode  int64
 }

@@ -21,10 +21,10 @@ type CreateBackendAuthHeaders struct {
 // CreateBackendAuthRequestBodyResourceConfig
 // Defines the resource configuration when creating an auth resource in your Amplify project.
 type CreateBackendAuthRequestBodyResourceConfig struct {
-	AuthResources       *shared.AuthResourcesEnum                   `json:"AuthResources,omitempty"`
-	IdentityPoolConfigs *shared.CreateBackendAuthIdentityPoolConfig `json:"IdentityPoolConfigs,omitempty"`
-	Service             *shared.ServiceEnum                         `json:"Service,omitempty"`
-	UserPoolConfigs     *shared.CreateBackendAuthUserPoolConfig     `json:"UserPoolConfigs,omitempty"`
+	AuthResources       map[string]interface{} `json:"AuthResources,omitempty"`
+	IdentityPoolConfigs map[string]interface{} `json:"IdentityPoolConfigs,omitempty"`
+	Service             map[string]interface{} `json:"Service,omitempty"`
+	UserPoolConfigs     map[string]interface{} `json:"UserPoolConfigs,omitempty"`
 }
 
 type CreateBackendAuthRequestBody struct {

@@ -1,7 +1,7 @@
 package shared
 
 // ServicePrincipalUpdateParameters
-// Request parameters for update an existing service principal.
+// Active Directory service principal common properties shared among GET, POST and PATCH
 type ServicePrincipalUpdateParameters struct {
 	AccountEnabled            *bool                               `json:"accountEnabled,omitempty"`
 	AppRoleAssignmentRequired *bool                               `json:"appRoleAssignmentRequired,omitempty"`

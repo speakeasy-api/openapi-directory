@@ -1,5 +1,5 @@
 package shared
 
 type DescribeGatewayRouteOutput struct {
-	GatewayRoute GatewayRouteData `json:"gatewayRoute"`
+	GatewayRoute GatewayRouteData1 `json:"gatewayRoute"`
 }

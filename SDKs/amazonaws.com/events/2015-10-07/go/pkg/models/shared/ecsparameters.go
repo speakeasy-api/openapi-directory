@@ -4,7 +4,7 @@ package shared
 // The custom parameters to be used when the target is an Amazon ECS task.
 type EcsParameters struct {
 	CapacityProviderStrategy []CapacityProviderStrategyItem `json:"CapacityProviderStrategy,omitempty"`
-	EnableEcsManagedTags     *bool                          `json:"EnableECSManagedTags,omitempty"`
+	EnableECSManagedTags     *bool                          `json:"EnableECSManagedTags,omitempty"`
 	EnableExecuteCommand     *bool                          `json:"EnableExecuteCommand,omitempty"`
 	Group                    *string                        `json:"Group,omitempty"`
 	LaunchType               *LaunchTypeEnum                `json:"LaunchType,omitempty"`

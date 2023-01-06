@@ -7,7 +7,7 @@ import (
 type ListPhiDetectionJobsXAmzTargetEnum string
 
 const (
-	ListPhiDetectionJobsXAmzTargetEnumComprehendMedical20181030ListPhiDetectionJobs ListPhiDetectionJobsXAmzTargetEnum = "ComprehendMedical_20181030.ListPHIDetectionJobs"
+	ListPHIDetectionJobsXAmzTargetEnumComprehendMedical20181030ListPhiDetectionJobs ListPhiDetectionJobsXAmzTargetEnum = "ComprehendMedical_20181030.ListPHIDetectionJobs"
 )
 
 type ListPhiDetectionJobsHeaders struct {
@@ -30,7 +30,7 @@ type ListPhiDetectionJobsResponse struct {
 	ContentType                  string
 	InternalServerException      *interface{}
 	InvalidRequestException      *interface{}
-	ListPhiDetectionJobsResponse *shared.ListPhiDetectionJobsResponse
+	ListPHIDetectionJobsResponse *shared.ListPhiDetectionJobsResponse
 	StatusCode                   int64
 	TooManyRequestsException     *interface{}
 	ValidationException          *interface{}

@@ -9,6 +9,6 @@ type Action struct {
 	ForwardConfig             *ForwardActionConfig
 	Order                     *int64
 	RedirectConfig            *RedirectActionConfig
-	TargetGroupArn            *string
+	TargetGroupArn            map[string]interface{}
 	Type                      ActionTypeEnumEnum
 }

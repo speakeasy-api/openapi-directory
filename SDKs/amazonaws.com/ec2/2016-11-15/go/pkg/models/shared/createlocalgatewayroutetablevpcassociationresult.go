@@ -1,5 +1,5 @@
 package shared
 
 type CreateLocalGatewayRouteTableVpcAssociationResult struct {
-	LocalGatewayRouteTableVpcAssociation *LocalGatewayRouteTableVpcAssociation
+	LocalGatewayRouteTableVpcAssociation map[string]interface{}
 }

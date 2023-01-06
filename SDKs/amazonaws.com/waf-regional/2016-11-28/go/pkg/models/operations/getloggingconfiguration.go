@@ -30,6 +30,6 @@ type GetLoggingConfigurationResponse struct {
 	ContentType                     string
 	GetLoggingConfigurationResponse *shared.GetLoggingConfigurationResponse
 	StatusCode                      int64
-	WafInternalErrorException       *interface{}
-	WafNonexistentItemException     *interface{}
+	WAFInternalErrorException       *interface{}
+	WAFNonexistentItemException     *interface{}
 }

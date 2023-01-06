@@ -49,6 +49,6 @@ type GetUserUsernameRequest struct {
 
 type GetUserUsernameResponse struct {
 	ContentType                             string
-	GetUserUsername200ApplicationJSONObject *GetUserUsername200ApplicationJSON
 	StatusCode                              int64
+	GetUserUsername200ApplicationJSONObject *GetUserUsername200ApplicationJSON
 }

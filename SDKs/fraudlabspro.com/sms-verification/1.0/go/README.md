@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,13 +25,13 @@ func main() {
     req := operations.GetV1VerificationResultRequest{
         QueryParams: operations.GetV1VerificationResultQueryParams{
             Format: "xml",
-            Key: "suscipit",
-            Otp: "est",
-            TranID: "aut",
+            Key: "dolorem",
+            Otp: "voluptatibus",
+            TranID: "provident",
         },
     }
     
-    res, err := s.Sdk.GetV1VerificationResult(ctx, req)
+    res, err := s.GetV1VerificationResult(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

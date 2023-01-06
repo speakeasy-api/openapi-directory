@@ -47,6 +47,6 @@ type PostServersIDActionsRequestConsoleRequest struct {
 
 type PostServersIDActionsRequestConsoleResponse struct {
 	ContentType                                                string
-	PostServersIDActionsRequestConsole201ApplicationJSONObject *PostServersIDActionsRequestConsole201ApplicationJSON
 	StatusCode                                                 int64
+	PostServersIDActionsRequestConsole201ApplicationJSONObject *PostServersIDActionsRequestConsole201ApplicationJSON
 }

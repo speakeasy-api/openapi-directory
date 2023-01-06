@@ -1,6 +1,6 @@
 package shared
 
 type DescribeFlowLogsResult struct {
-	FlowLogs  []FlowLog
-	NextToken *string
+	FlowLogs  map[string]interface{}
+	NextToken map[string]interface{}
 }

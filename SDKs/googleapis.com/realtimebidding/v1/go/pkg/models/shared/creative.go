@@ -1,14 +1,5 @@
 package shared
 
-type CreativeCreativeFormatEnum string
-
-const (
-	CreativeCreativeFormatEnumCreativeFormatUnspecified CreativeCreativeFormatEnum = "CREATIVE_FORMAT_UNSPECIFIED"
-	CreativeCreativeFormatEnumHTML                      CreativeCreativeFormatEnum = "HTML"
-	CreativeCreativeFormatEnumVideo                     CreativeCreativeFormatEnum = "VIDEO"
-	CreativeCreativeFormatEnumNative                    CreativeCreativeFormatEnum = "NATIVE"
-)
-
 type CreativeDeclaredAttributesEnum string
 
 const (
@@ -66,6 +57,35 @@ const (
 	CreativeRestrictedCategoriesEnumAlcohol                       CreativeRestrictedCategoriesEnum = "ALCOHOL"
 )
 
+type CreativeCreativeFormatEnum string
+
+const (
+	CreativeCreativeFormatEnumCreativeFormatUnspecified CreativeCreativeFormatEnum = "CREATIVE_FORMAT_UNSPECIFIED"
+	CreativeCreativeFormatEnumHTML                      CreativeCreativeFormatEnum = "HTML"
+	CreativeCreativeFormatEnumVideo                     CreativeCreativeFormatEnum = "VIDEO"
+	CreativeCreativeFormatEnumNative                    CreativeCreativeFormatEnum = "NATIVE"
+)
+
+// CreativeInput
+// A creative and its classification data.
+type CreativeInput struct {
+	AdChoicesDestinationURL      *string                                    `json:"adChoicesDestinationUrl,omitempty"`
+	AdvertiserName               *string                                    `json:"advertiserName,omitempty"`
+	AgencyID                     *string                                    `json:"agencyId,omitempty"`
+	CreativeID                   *string                                    `json:"creativeId,omitempty"`
+	CreativeServingDecision      *CreativeServingDecision                   `json:"creativeServingDecision,omitempty"`
+	DeclaredAttributes           []CreativeDeclaredAttributesEnum           `json:"declaredAttributes,omitempty"`
+	DeclaredClickThroughUrls     []string                                   `json:"declaredClickThroughUrls,omitempty"`
+	DeclaredRestrictedCategories []CreativeDeclaredRestrictedCategoriesEnum `json:"declaredRestrictedCategories,omitempty"`
+	DeclaredVendorIds            []int32                                    `json:"declaredVendorIds,omitempty"`
+	HTML                         *HTMLContent                               `json:"html,omitempty"`
+	ImpressionTrackingUrls       []string                                   `json:"impressionTrackingUrls,omitempty"`
+	Native                       *NativeContent                             `json:"native,omitempty"`
+	RenderURL                    *string                                    `json:"renderUrl,omitempty"`
+	RestrictedCategories         []CreativeRestrictedCategoriesEnum         `json:"restrictedCategories,omitempty"`
+	Video                        *VideoContent                              `json:"video,omitempty"`
+}
+
 // Creative
 // A creative and its classification data.
 type Creative struct {
@@ -89,25 +109,5 @@ type Creative struct {
 	RenderURL                    *string                                    `json:"renderUrl,omitempty"`
 	RestrictedCategories         []CreativeRestrictedCategoriesEnum         `json:"restrictedCategories,omitempty"`
 	Version                      *int32                                     `json:"version,omitempty"`
-	Video                        *VideoContent                              `json:"video,omitempty"`
-}
-
-// CreativeInput
-// A creative and its classification data.
-type CreativeInput struct {
-	AdChoicesDestinationURL      *string                                    `json:"adChoicesDestinationUrl,omitempty"`
-	AdvertiserName               *string                                    `json:"advertiserName,omitempty"`
-	AgencyID                     *string                                    `json:"agencyId,omitempty"`
-	CreativeID                   *string                                    `json:"creativeId,omitempty"`
-	CreativeServingDecision      *CreativeServingDecision                   `json:"creativeServingDecision,omitempty"`
-	DeclaredAttributes           []CreativeDeclaredAttributesEnum           `json:"declaredAttributes,omitempty"`
-	DeclaredClickThroughUrls     []string                                   `json:"declaredClickThroughUrls,omitempty"`
-	DeclaredRestrictedCategories []CreativeDeclaredRestrictedCategoriesEnum `json:"declaredRestrictedCategories,omitempty"`
-	DeclaredVendorIds            []int32                                    `json:"declaredVendorIds,omitempty"`
-	HTML                         *HTMLContent                               `json:"html,omitempty"`
-	ImpressionTrackingUrls       []string                                   `json:"impressionTrackingUrls,omitempty"`
-	Native                       *NativeContent                             `json:"native,omitempty"`
-	RenderURL                    *string                                    `json:"renderUrl,omitempty"`
-	RestrictedCategories         []CreativeRestrictedCategoriesEnum         `json:"restrictedCategories,omitempty"`
 	Video                        *VideoContent                              `json:"video,omitempty"`
 }

@@ -7,7 +7,7 @@ type CreateServiceRequest struct {
 	DeploymentConfiguration       *DeploymentConfiguration       `json:"deploymentConfiguration,omitempty"`
 	DeploymentController          *DeploymentController          `json:"deploymentController,omitempty"`
 	DesiredCount                  *int64                         `json:"desiredCount,omitempty"`
-	EnableEcsManagedTags          *bool                          `json:"enableECSManagedTags,omitempty"`
+	EnableECSManagedTags          *bool                          `json:"enableECSManagedTags,omitempty"`
 	EnableExecuteCommand          *bool                          `json:"enableExecuteCommand,omitempty"`
 	HealthCheckGracePeriodSeconds *int64                         `json:"healthCheckGracePeriodSeconds,omitempty"`
 	LaunchType                    *LaunchTypeEnum                `json:"launchType,omitempty"`

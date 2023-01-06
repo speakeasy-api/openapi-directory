@@ -64,7 +64,7 @@ const (
 	DeviceSummaryTypeEnumLayer3Switch            DeviceSummaryTypeEnum = "LAYER_3_SWITCH"
 	DeviceSummaryTypeEnumCentralOfficeSwitch     DeviceSummaryTypeEnum = "CENTRAL_OFFICE_SWITCH"
 	DeviceSummaryTypeEnumAccessServer            DeviceSummaryTypeEnum = "ACCESS_SERVER"
-	DeviceSummaryTypeEnumIo                      DeviceSummaryTypeEnum = "I_O"
+	DeviceSummaryTypeEnumIO                      DeviceSummaryTypeEnum = "I_O"
 	DeviceSummaryTypeEnumWebCaching              DeviceSummaryTypeEnum = "WEB_CACHING"
 	DeviceSummaryTypeEnumManagement              DeviceSummaryTypeEnum = "MANAGEMENT"
 	DeviceSummaryTypeEnumBlockServer             DeviceSummaryTypeEnum = "BLOCK_SERVER"
@@ -119,7 +119,7 @@ type DeviceSummary struct {
 	AgentName            *string
 	AmbientTemperature   *float64
 	CollectTime          *string
-	DeviceTsmoKey        *string
+	DeviceTSMOKey        *string
 	DeviceURL            *string
 	HeatingMargin        *float64
 	HeatingMarginUnit    *string

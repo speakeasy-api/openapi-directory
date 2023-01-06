@@ -5,10 +5,10 @@ import (
 )
 
 type CvipcRequestBodyCertificateParameters struct {
-	Dob            string `json:"DOB"`
+	DOB            string `json:"DOB"`
 	DocumentNumber string `json:"DocumentNumber"`
 	FullName       string `json:"FullName"`
-	Gender         string `json:"GENDER"`
+	GENDER         string `json:"GENDER"`
 	PolicyNumber   string `json:"PolicyNumber"`
 	SearchDocument string `json:"SearchDocument"`
 }
@@ -86,7 +86,7 @@ type Cvipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cvipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cvipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cvipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cvipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cvipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cvipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cvipc404ApplicationJSON struct {

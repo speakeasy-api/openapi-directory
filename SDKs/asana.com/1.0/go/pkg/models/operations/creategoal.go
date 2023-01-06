@@ -11,8 +11,8 @@ type CreateGoalQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateGoalRequestBodyInput struct {
-	Data *shared.GoalRequestInput `json:"data,omitempty"`
+type CreateGoalRequestBody struct {
+	Data *shared.GoalRequest `json:"data,omitempty"`
 }
 
 type CreateGoal201ApplicationJSON struct {
@@ -21,7 +21,7 @@ type CreateGoal201ApplicationJSON struct {
 
 type CreateGoalRequest struct {
 	QueryParams CreateGoalQueryParams
-	Request     CreateGoalRequestBodyInput `request:"mediaType=application/json"`
+	Request     CreateGoalRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateGoalResponse struct {

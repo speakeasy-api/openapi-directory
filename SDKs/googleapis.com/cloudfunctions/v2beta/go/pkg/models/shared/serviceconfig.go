@@ -28,38 +28,42 @@ const (
 // ServiceConfigInput
 // Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
 type ServiceConfigInput struct {
-	AllTrafficOnLatestRevision *bool                                        `json:"allTrafficOnLatestRevision,omitempty"`
-	AvailableMemory            *string                                      `json:"availableMemory,omitempty"`
-	EnvironmentVariables       map[string]string                            `json:"environmentVariables,omitempty"`
-	IngressSettings            *ServiceConfigIngressSettingsEnum            `json:"ingressSettings,omitempty"`
-	MaxInstanceCount           *int32                                       `json:"maxInstanceCount,omitempty"`
-	MinInstanceCount           *int32                                       `json:"minInstanceCount,omitempty"`
-	SecretEnvironmentVariables []SecretEnvVar                               `json:"secretEnvironmentVariables,omitempty"`
-	SecretVolumes              []SecretVolume                               `json:"secretVolumes,omitempty"`
-	SecurityLevel              *ServiceConfigSecurityLevelEnum              `json:"securityLevel,omitempty"`
-	ServiceAccountEmail        *string                                      `json:"serviceAccountEmail,omitempty"`
-	TimeoutSeconds             *int32                                       `json:"timeoutSeconds,omitempty"`
-	VpcConnector               *string                                      `json:"vpcConnector,omitempty"`
-	VpcConnectorEgressSettings *ServiceConfigVpcConnectorEgressSettingsEnum `json:"vpcConnectorEgressSettings,omitempty"`
+	AllTrafficOnLatestRevision    *bool                                        `json:"allTrafficOnLatestRevision,omitempty"`
+	AvailableCPU                  *string                                      `json:"availableCpu,omitempty"`
+	AvailableMemory               *string                                      `json:"availableMemory,omitempty"`
+	EnvironmentVariables          map[string]string                            `json:"environmentVariables,omitempty"`
+	IngressSettings               *ServiceConfigIngressSettingsEnum            `json:"ingressSettings,omitempty"`
+	MaxInstanceCount              *int32                                       `json:"maxInstanceCount,omitempty"`
+	MaxInstanceRequestConcurrency *int32                                       `json:"maxInstanceRequestConcurrency,omitempty"`
+	MinInstanceCount              *int32                                       `json:"minInstanceCount,omitempty"`
+	SecretEnvironmentVariables    []SecretEnvVar                               `json:"secretEnvironmentVariables,omitempty"`
+	SecretVolumes                 []SecretVolume                               `json:"secretVolumes,omitempty"`
+	SecurityLevel                 *ServiceConfigSecurityLevelEnum              `json:"securityLevel,omitempty"`
+	ServiceAccountEmail           *string                                      `json:"serviceAccountEmail,omitempty"`
+	TimeoutSeconds                *int32                                       `json:"timeoutSeconds,omitempty"`
+	VpcConnector                  *string                                      `json:"vpcConnector,omitempty"`
+	VpcConnectorEgressSettings    *ServiceConfigVpcConnectorEgressSettingsEnum `json:"vpcConnectorEgressSettings,omitempty"`
 }
 
 // ServiceConfig
 // Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
 type ServiceConfig struct {
-	AllTrafficOnLatestRevision *bool                                        `json:"allTrafficOnLatestRevision,omitempty"`
-	AvailableMemory            *string                                      `json:"availableMemory,omitempty"`
-	EnvironmentVariables       map[string]string                            `json:"environmentVariables,omitempty"`
-	IngressSettings            *ServiceConfigIngressSettingsEnum            `json:"ingressSettings,omitempty"`
-	MaxInstanceCount           *int32                                       `json:"maxInstanceCount,omitempty"`
-	MinInstanceCount           *int32                                       `json:"minInstanceCount,omitempty"`
-	Revision                   *string                                      `json:"revision,omitempty"`
-	SecretEnvironmentVariables []SecretEnvVar                               `json:"secretEnvironmentVariables,omitempty"`
-	SecretVolumes              []SecretVolume                               `json:"secretVolumes,omitempty"`
-	SecurityLevel              *ServiceConfigSecurityLevelEnum              `json:"securityLevel,omitempty"`
-	Service                    *string                                      `json:"service,omitempty"`
-	ServiceAccountEmail        *string                                      `json:"serviceAccountEmail,omitempty"`
-	TimeoutSeconds             *int32                                       `json:"timeoutSeconds,omitempty"`
-	URI                        *string                                      `json:"uri,omitempty"`
-	VpcConnector               *string                                      `json:"vpcConnector,omitempty"`
-	VpcConnectorEgressSettings *ServiceConfigVpcConnectorEgressSettingsEnum `json:"vpcConnectorEgressSettings,omitempty"`
+	AllTrafficOnLatestRevision    *bool                                        `json:"allTrafficOnLatestRevision,omitempty"`
+	AvailableCPU                  *string                                      `json:"availableCpu,omitempty"`
+	AvailableMemory               *string                                      `json:"availableMemory,omitempty"`
+	EnvironmentVariables          map[string]string                            `json:"environmentVariables,omitempty"`
+	IngressSettings               *ServiceConfigIngressSettingsEnum            `json:"ingressSettings,omitempty"`
+	MaxInstanceCount              *int32                                       `json:"maxInstanceCount,omitempty"`
+	MaxInstanceRequestConcurrency *int32                                       `json:"maxInstanceRequestConcurrency,omitempty"`
+	MinInstanceCount              *int32                                       `json:"minInstanceCount,omitempty"`
+	Revision                      *string                                      `json:"revision,omitempty"`
+	SecretEnvironmentVariables    []SecretEnvVar                               `json:"secretEnvironmentVariables,omitempty"`
+	SecretVolumes                 []SecretVolume                               `json:"secretVolumes,omitempty"`
+	SecurityLevel                 *ServiceConfigSecurityLevelEnum              `json:"securityLevel,omitempty"`
+	Service                       *string                                      `json:"service,omitempty"`
+	ServiceAccountEmail           *string                                      `json:"serviceAccountEmail,omitempty"`
+	TimeoutSeconds                *int32                                       `json:"timeoutSeconds,omitempty"`
+	URI                           *string                                      `json:"uri,omitempty"`
+	VpcConnector                  *string                                      `json:"vpcConnector,omitempty"`
+	VpcConnectorEgressSettings    *ServiceConfigVpcConnectorEgressSettingsEnum `json:"vpcConnectorEgressSettings,omitempty"`
 }

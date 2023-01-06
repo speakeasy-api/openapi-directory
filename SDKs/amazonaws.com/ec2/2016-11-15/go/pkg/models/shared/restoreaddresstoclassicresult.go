@@ -1,6 +1,6 @@
 package shared
 
 type RestoreAddressToClassicResult struct {
-	PublicIP *string
-	Status   *StatusEnum
+	PublicIP map[string]interface{}
+	Status   map[string]interface{}
 }

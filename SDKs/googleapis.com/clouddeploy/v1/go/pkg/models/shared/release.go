@@ -9,21 +9,6 @@ const (
 	ReleaseRenderStateEnumInProgress             ReleaseRenderStateEnum = "IN_PROGRESS"
 )
 
-// ReleaseInput
-// A `Release` resource in the Google Cloud Deploy API. A `Release` defines a specific Skaffold configuration instance that can be deployed.
-type ReleaseInput struct {
-	Annotations              map[string]string      `json:"annotations,omitempty"`
-	BuildArtifacts           []BuildArtifact        `json:"buildArtifacts,omitempty"`
-	DeliveryPipelineSnapshot *DeliveryPipelineInput `json:"deliveryPipelineSnapshot,omitempty"`
-	Description              *string                `json:"description,omitempty"`
-	Etag                     *string                `json:"etag,omitempty"`
-	Labels                   map[string]string      `json:"labels,omitempty"`
-	Name                     *string                `json:"name,omitempty"`
-	SkaffoldConfigPath       *string                `json:"skaffoldConfigPath,omitempty"`
-	SkaffoldConfigURI        *string                `json:"skaffoldConfigUri,omitempty"`
-	SkaffoldVersion          *string                `json:"skaffoldVersion,omitempty"`
-}
-
 // Release
 // A `Release` resource in the Google Cloud Deploy API. A `Release` defines a specific Skaffold configuration instance that can be deployed.
 type Release struct {
@@ -46,4 +31,19 @@ type Release struct {
 	TargetRenders            map[string]TargetRender   `json:"targetRenders,omitempty"`
 	TargetSnapshots          []Target                  `json:"targetSnapshots,omitempty"`
 	UID                      *string                   `json:"uid,omitempty"`
+}
+
+// ReleaseInput
+// A `Release` resource in the Google Cloud Deploy API. A `Release` defines a specific Skaffold configuration instance that can be deployed.
+type ReleaseInput struct {
+	Annotations              map[string]string      `json:"annotations,omitempty"`
+	BuildArtifacts           []BuildArtifact        `json:"buildArtifacts,omitempty"`
+	DeliveryPipelineSnapshot *DeliveryPipelineInput `json:"deliveryPipelineSnapshot,omitempty"`
+	Description              *string                `json:"description,omitempty"`
+	Etag                     *string                `json:"etag,omitempty"`
+	Labels                   map[string]string      `json:"labels,omitempty"`
+	Name                     *string                `json:"name,omitempty"`
+	SkaffoldConfigPath       *string                `json:"skaffoldConfigPath,omitempty"`
+	SkaffoldConfigURI        *string                `json:"skaffoldConfigUri,omitempty"`
+	SkaffoldVersion          *string                `json:"skaffoldVersion,omitempty"`
 }

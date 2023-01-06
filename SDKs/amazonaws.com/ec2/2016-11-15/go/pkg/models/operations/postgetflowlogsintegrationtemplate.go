@@ -3,13 +3,13 @@ package operations
 type PostGetFlowLogsIntegrationTemplateActionEnum string
 
 const (
-	PostGetFlowLogsIntegrationTemplateActionEnumGetFlowLogsIntegrationTemplate PostGetFlowLogsIntegrationTemplateActionEnum = "GetFlowLogsIntegrationTemplate"
+	POSTGetFlowLogsIntegrationTemplateActionEnumGetFlowLogsIntegrationTemplate PostGetFlowLogsIntegrationTemplateActionEnum = "GetFlowLogsIntegrationTemplate"
 )
 
 type PostGetFlowLogsIntegrationTemplateVersionEnum string
 
 const (
-	PostGetFlowLogsIntegrationTemplateVersionEnumTwoThousandAndSixteen1115 PostGetFlowLogsIntegrationTemplateVersionEnum = "2016-11-15"
+	POSTGetFlowLogsIntegrationTemplateVersionEnumTwoThousandAndSixteen1115 PostGetFlowLogsIntegrationTemplateVersionEnum = "2016-11-15"
 )
 
 type PostGetFlowLogsIntegrationTemplateQueryParams struct {

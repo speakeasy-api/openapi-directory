@@ -3,7 +3,7 @@ package shared
 type StartTaskRequest struct {
 	Cluster              *string               `json:"cluster,omitempty"`
 	ContainerInstances   []string              `json:"containerInstances"`
-	EnableEcsManagedTags *bool                 `json:"enableECSManagedTags,omitempty"`
+	EnableECSManagedTags *bool                 `json:"enableECSManagedTags,omitempty"`
 	EnableExecuteCommand *bool                 `json:"enableExecuteCommand,omitempty"`
 	Group                *string               `json:"group,omitempty"`
 	NetworkConfiguration *NetworkConfiguration `json:"networkConfiguration,omitempty"`

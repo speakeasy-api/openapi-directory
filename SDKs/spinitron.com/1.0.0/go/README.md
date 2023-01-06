@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,17 +34,17 @@ func main() {
     
     req := operations.GetPersonasRequest{
         QueryParams: operations.GetPersonasQueryParams{
-            Count: 5306988050669204383,
+            Count: 2812151115189038889,
             Expand: []string{
-                "quo",
-                "dicta",
+                "ex",
+                "excepturi",
+                "suscipit",
             },
             Fields: []string{
                 "omnis",
-                "fugit",
             },
-            Name: "eos",
-            Page: 7149139835524661956,
+            Name: "esse",
+            Page: 6580372123814961441,
         },
     }
     

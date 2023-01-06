@@ -3,13 +3,13 @@ package operations
 type PostRemoveTagsActionEnum string
 
 const (
-	PostRemoveTagsActionEnumRemoveTags PostRemoveTagsActionEnum = "RemoveTags"
+	POSTRemoveTagsActionEnumRemoveTags PostRemoveTagsActionEnum = "RemoveTags"
 )
 
 type PostRemoveTagsVersionEnum string
 
 const (
-	PostRemoveTagsVersionEnumTwoThousandAndFifteen1201 PostRemoveTagsVersionEnum = "2015-12-01"
+	POSTRemoveTagsVersionEnumTwoThousandAndFifteen1201 PostRemoveTagsVersionEnum = "2015-12-01"
 )
 
 type PostRemoveTagsQueryParams struct {

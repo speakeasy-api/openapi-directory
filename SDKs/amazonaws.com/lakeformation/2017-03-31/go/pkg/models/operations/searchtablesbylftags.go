@@ -7,7 +7,7 @@ import (
 type SearchTablesByLfTagsXAmzTargetEnum string
 
 const (
-	SearchTablesByLfTagsXAmzTargetEnumAwsLakeFormationSearchTablesByLfTags SearchTablesByLfTagsXAmzTargetEnum = "AWSLakeFormation.SearchTablesByLFTags"
+	SearchTablesByLFTagsXAmzTargetEnumAwsLakeFormationSearchTablesByLfTags SearchTablesByLfTagsXAmzTargetEnum = "AWSLakeFormation.SearchTablesByLFTags"
 )
 
 type SearchTablesByLfTagsHeaders struct {
@@ -34,6 +34,6 @@ type SearchTablesByLfTagsResponse struct {
 	InternalServiceException     *interface{}
 	InvalidInputException        *interface{}
 	OperationTimeoutException    *interface{}
-	SearchTablesByLfTagsResponse *shared.SearchTablesByLfTagsResponse
+	SearchTablesByLFTagsResponse *shared.SearchTablesByLfTagsResponse
 	StatusCode                   int64
 }

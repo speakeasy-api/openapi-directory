@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,22 +24,22 @@ func main() {
     
     req := operations.AdmobAccountsAdSourcesListRequest{
         PathParams: operations.AdmobAccountsAdSourcesListPathParams{
-            Parent: "ullam",
+            Parent: "nesciunt",
         },
         QueryParams: operations.AdmobAccountsAdSourcesListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "a",
-            Alt: "json",
-            Callback: "porro",
-            Fields: "impedit",
-            Key: "soluta",
-            OauthToken: "reprehenderit",
-            PageSize: 23726374025352581,
-            PageToken: "voluptates",
+            AccessToken: "debitis",
+            Alt: "media",
+            Callback: "ut",
+            Fields: "sint",
+            Key: "optio",
+            OauthToken: "aut",
+            PageSize: 7147025795779270845,
+            PageToken: "corporis",
             PrettyPrint: false,
-            QuotaUser: "temporibus",
-            UploadType: "a",
-            UploadProtocol: "cupiditate",
+            QuotaUser: "eaque",
+            UploadType: "facilis",
+            UploadProtocol: "quidem",
         },
     }
     

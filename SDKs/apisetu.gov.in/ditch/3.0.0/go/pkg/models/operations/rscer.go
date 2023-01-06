@@ -5,8 +5,8 @@ import (
 )
 
 type RscerRequestBodyCertificateParameters struct {
-	Appno  string `json:"APPNO"`
-	Certno string `json:"CERTNO"`
+	APPNO  string `json:"APPNO"`
+	CERTNO string `json:"CERTNO"`
 }
 
 type RscerRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Rscer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Rscer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Rscer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Rscer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Rscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Rscer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Rscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Rscer404ApplicationJSON struct {

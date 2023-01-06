@@ -92,6 +92,6 @@ type GetVolumesRequest struct {
 
 type GetVolumesResponse struct {
 	ContentType                        string
-	GetVolumes200ApplicationJSONObject *GetVolumes200ApplicationJSON
 	StatusCode                         int64
+	GetVolumes200ApplicationJSONObject *GetVolumes200ApplicationJSON
 }

@@ -21,16 +21,6 @@ type PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2 struct {
 	ClientID     string                                                               `json:"client_id"`
 	ClientSecret string                                                               `json:"client_secret"`
 	GrantType    PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum `json:"grant_type"`
-	Password     string                                                               `json:"password"`
-	Scope        PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum     `json:"scope"`
-	Username     string                                                               `json:"username"`
-}
-
-type PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 struct {
-	ClientID     string                                                               `json:"client_id"`
-	ClientSecret string                                                               `json:"client_secret"`
-	GrantType    PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum `json:"grant_type"`
-	RefreshToken string                                                               `json:"refresh_token"`
 	Scope        PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum     `json:"scope"`
 }
 

@@ -28,7 +28,7 @@ type AddTagsRequest struct {
 
 type AddTagsResponse struct {
 	AddTagsResponse                       map[string]interface{}
-	CloudTrailArnInvalidException         *interface{}
+	CloudTrailARNInvalidException         *interface{}
 	ContentType                           string
 	InvalidTagParameterException          *interface{}
 	InvalidTrailNameException             *interface{}

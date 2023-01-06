@@ -6,16 +6,16 @@ import (
 
 type ReservedDbInstance struct {
 	CurrencyCode                  *string
-	DbInstanceClass               *string
-	DbInstanceCount               *int64
+	DBInstanceClass               *string
+	DBInstanceCount               *int64
 	Duration                      *int64
 	FixedPrice                    *float64
-	MultiAz                       *bool
+	MultiAZ                       *bool
 	OfferingType                  *string
 	ProductDescription            *string
-	RecurringCharges              []RecurringCharge
-	ReservedDbInstanceID          *string
-	ReservedDbInstancesOfferingID *string
+	RecurringCharges              []map[string]interface{}
+	ReservedDBInstanceID          *string
+	ReservedDBInstancesOfferingID *string
 	StartTime                     *time.Time
 	State                         *string
 	UsagePrice                    *float64

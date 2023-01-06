@@ -3,13 +3,13 @@ package operations
 type PostDeleteTemplateActionEnum string
 
 const (
-	PostDeleteTemplateActionEnumDeleteTemplate PostDeleteTemplateActionEnum = "DeleteTemplate"
+	POSTDeleteTemplateActionEnumDeleteTemplate PostDeleteTemplateActionEnum = "DeleteTemplate"
 )
 
 type PostDeleteTemplateVersionEnum string
 
 const (
-	PostDeleteTemplateVersionEnumTwoThousandAndTen1201 PostDeleteTemplateVersionEnum = "2010-12-01"
+	POSTDeleteTemplateVersionEnumTwoThousandAndTen1201 PostDeleteTemplateVersionEnum = "2010-12-01"
 )
 
 type PostDeleteTemplateQueryParams struct {

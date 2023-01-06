@@ -13,7 +13,7 @@ type GetEventItemsQueryParams struct {
 }
 
 type GetEventItemsHeaders struct {
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	XEBAYCMARKETPLACEID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type GetEventItemsSecurity struct {

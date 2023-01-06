@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,47 +34,50 @@ func main() {
     
     req := operations.DescribeDimensionKeysRequest{
         Headers: operations.DescribeDimensionKeysHeaders{
-            XAmzAlgorithm: "hic",
-            XAmzContentSha256: "doloribus",
-            XAmzCredential: "porro",
-            XAmzDate: "est",
-            XAmzSecurityToken: "deserunt",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "incidunt",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "est",
+            XAmzDate: "necessitatibus",
+            XAmzSecurityToken: "ut",
+            XAmzSignature: "iusto",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
         },
         Request: shared.DescribeDimensionKeysRequest{
-            EndTime: "2005-09-27T09:36:32Z",
+            EndTime: "1997-03-28T01:34:42Z",
             Filter: map[string]string{
-                "totam": "omnis",
+                "ullam": "atque",
+                "quisquam": "aut",
+                "ipsa": "ut",
             },
             GroupBy: shared.DimensionGroup{
                 Dimensions: []string{
-                    "neque",
-                    "officia",
-                    "quo",
+                    "sed",
+                    "ducimus",
                 },
-                Group: "alias",
-                Limit: 7931175086771856082,
+                Group: "vel",
+                Limit: 8822795913292991854,
             },
-            Identifier: "non",
-            MaxResults: 4192957126934884321,
-            Metric: "sed",
-            NextToken: "consequatur",
+            Identifier: "nam",
+            MaxResults: 7173580319038902782,
+            Metric: "consequuntur",
+            NextToken: "autem",
             PartitionBy: &shared.DimensionGroup{
                 Dimensions: []string{
-                    "maiores",
+                    "rerum",
+                    "repellat",
+                    "earum",
                 },
-                Group: "aliquid",
-                Limit: 7497142883454927133,
+                Group: "modi",
+                Limit: 3290167875846611358,
             },
-            PeriodInSeconds: 3056127560860615106,
+            PeriodInSeconds: 4005798154613431552,
             ServiceType: "RDS",
-            StartTime: "1973-01-06T20:15:01Z",
+            StartTime: "2022-03-22T23:47:38Z",
         },
     }
     
-    res, err := s.Sdk.DescribeDimensionKeys(ctx, req)
+    res, err := s.DescribeDimensionKeys(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

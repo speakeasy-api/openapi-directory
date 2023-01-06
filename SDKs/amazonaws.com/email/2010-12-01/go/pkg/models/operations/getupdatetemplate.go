@@ -3,7 +3,7 @@ package operations
 type GetUpdateTemplateActionEnum string
 
 const (
-	GetUpdateTemplateActionEnumUpdateTemplate GetUpdateTemplateActionEnum = "UpdateTemplate"
+	GETUpdateTemplateActionEnumUpdateTemplate GetUpdateTemplateActionEnum = "UpdateTemplate"
 )
 
 // GetUpdateTemplateTemplate
@@ -18,7 +18,7 @@ type GetUpdateTemplateTemplate struct {
 type GetUpdateTemplateVersionEnum string
 
 const (
-	GetUpdateTemplateVersionEnumTwoThousandAndTen1201 GetUpdateTemplateVersionEnum = "2010-12-01"
+	GETUpdateTemplateVersionEnumTwoThousandAndTen1201 GetUpdateTemplateVersionEnum = "2010-12-01"
 )
 
 type GetUpdateTemplateQueryParams struct {

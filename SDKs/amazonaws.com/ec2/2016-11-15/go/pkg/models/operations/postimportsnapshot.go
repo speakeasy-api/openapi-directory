@@ -3,13 +3,13 @@ package operations
 type PostImportSnapshotActionEnum string
 
 const (
-	PostImportSnapshotActionEnumImportSnapshot PostImportSnapshotActionEnum = "ImportSnapshot"
+	POSTImportSnapshotActionEnumImportSnapshot PostImportSnapshotActionEnum = "ImportSnapshot"
 )
 
 type PostImportSnapshotVersionEnum string
 
 const (
-	PostImportSnapshotVersionEnumTwoThousandAndSixteen1115 PostImportSnapshotVersionEnum = "2016-11-15"
+	POSTImportSnapshotVersionEnumTwoThousandAndSixteen1115 PostImportSnapshotVersionEnum = "2016-11-15"
 )
 
 type PostImportSnapshotQueryParams struct {

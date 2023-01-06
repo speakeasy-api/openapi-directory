@@ -3,13 +3,13 @@ package operations
 type GetDetachGroupPolicyActionEnum string
 
 const (
-	GetDetachGroupPolicyActionEnumDetachGroupPolicy GetDetachGroupPolicyActionEnum = "DetachGroupPolicy"
+	GETDetachGroupPolicyActionEnumDetachGroupPolicy GetDetachGroupPolicyActionEnum = "DetachGroupPolicy"
 )
 
 type GetDetachGroupPolicyVersionEnum string
 
 const (
-	GetDetachGroupPolicyVersionEnumTwoThousandAndTen0508 GetDetachGroupPolicyVersionEnum = "2010-05-08"
+	GETDetachGroupPolicyVersionEnumTwoThousandAndTen0508 GetDetachGroupPolicyVersionEnum = "2010-05-08"
 )
 
 type GetDetachGroupPolicyQueryParams struct {

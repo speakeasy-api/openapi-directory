@@ -10,6 +10,6 @@ type GetResourcesMediaIDThumbnailJpgRequest struct {
 
 type GetResourcesMediaIDThumbnailJpgResponse struct {
 	ContentType                                             string
-	GetResourcesMediaIDThumbnailJpg200ApplicationJSONObject map[string]interface{}
 	StatusCode                                              int64
+	GetResourcesMediaIDThumbnailJpg200ApplicationJSONObject map[string]interface{}
 }

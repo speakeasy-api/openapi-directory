@@ -3,13 +3,13 @@ package operations
 type PostUpdateTemplateActionEnum string
 
 const (
-	PostUpdateTemplateActionEnumUpdateTemplate PostUpdateTemplateActionEnum = "UpdateTemplate"
+	POSTUpdateTemplateActionEnumUpdateTemplate PostUpdateTemplateActionEnum = "UpdateTemplate"
 )
 
 type PostUpdateTemplateVersionEnum string
 
 const (
-	PostUpdateTemplateVersionEnumTwoThousandAndTen1201 PostUpdateTemplateVersionEnum = "2010-12-01"
+	POSTUpdateTemplateVersionEnumTwoThousandAndTen1201 PostUpdateTemplateVersionEnum = "2010-12-01"
 )
 
 type PostUpdateTemplateQueryParams struct {

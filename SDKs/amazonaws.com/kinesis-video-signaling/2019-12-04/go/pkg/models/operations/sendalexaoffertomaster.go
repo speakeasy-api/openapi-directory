@@ -15,7 +15,7 @@ type SendAlexaOfferToMasterHeaders struct {
 }
 
 type SendAlexaOfferToMasterRequestBody struct {
-	ChannelArn     string `json:"ChannelARN"`
+	ChannelARN     string `json:"ChannelARN"`
 	MessagePayload string `json:"MessagePayload"`
 	SenderClientID string `json:"SenderClientId"`
 }

@@ -1,6 +1,6 @@
 package shared
 
 type CreateEgressOnlyInternetGatewayResult struct {
-	ClientToken               *string
-	EgressOnlyInternetGateway *EgressOnlyInternetGateway
+	ClientToken               map[string]interface{}
+	EgressOnlyInternetGateway map[string]interface{}
 }

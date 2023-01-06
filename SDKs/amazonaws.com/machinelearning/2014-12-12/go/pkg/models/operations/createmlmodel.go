@@ -7,7 +7,7 @@ import (
 type CreateMlModelXAmzTargetEnum string
 
 const (
-	CreateMlModelXAmzTargetEnumAmazonMl20141212CreateMlModel CreateMlModelXAmzTargetEnum = "AmazonML_20141212.CreateMLModel"
+	CreateMLModelXAmzTargetEnumAmazonMl20141212CreateMlModel CreateMlModelXAmzTargetEnum = "AmazonML_20141212.CreateMLModel"
 )
 
 type CreateMlModelHeaders struct {
@@ -28,7 +28,7 @@ type CreateMlModelRequest struct {
 
 type CreateMlModelResponse struct {
 	ContentType                          string
-	CreateMlModelOutput                  *shared.CreateMlModelOutput
+	CreateMLModelOutput                  *shared.CreateMlModelOutput
 	IdempotentParameterMismatchException *interface{}
 	InternalServerException              *interface{}
 	InvalidInputException                *interface{}

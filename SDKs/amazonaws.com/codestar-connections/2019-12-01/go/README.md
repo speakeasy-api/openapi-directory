@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,33 +34,37 @@ func main() {
     
     req := operations.CreateConnectionRequest{
         Headers: operations.CreateConnectionHeaders{
-            XAmzAlgorithm: "quo",
-            XAmzContentSha256: "quo",
-            XAmzCredential: "id",
-            XAmzDate: "illo",
-            XAmzSecurityToken: "enim",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "aut",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "soluta",
+            XAmzDate: "minima",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "accusamus",
+            XAmzSignedHeaders: "et",
             XAmzTarget: "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection",
         },
         Request: shared.CreateConnectionInput{
-            ConnectionName: "mollitia",
-            HostArn: "praesentium",
-            ProviderType: "Bitbucket",
+            ConnectionName: "quod",
+            HostArn: "ut",
+            ProviderType: "GitHubEnterpriseServer",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "sint",
-                    Value: "quaerat",
+                    Key: "quibusdam",
+                    Value: "harum",
                 },
                 shared.Tag{
-                    Key: "sed",
-                    Value: "omnis",
+                    Key: "repudiandae",
+                    Value: "similique",
+                },
+                shared.Tag{
+                    Key: "molestiae",
+                    Value: "rerum",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateConnection(ctx, req)
+    res, err := s.CreateConnection(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

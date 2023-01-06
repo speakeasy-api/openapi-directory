@@ -30,6 +30,6 @@ type PostPortfolioOptimizationMeanVarianceEfficientRequest struct {
 
 type PostPortfolioOptimizationMeanVarianceEfficientResponse struct {
 	ContentType                                                            string
-	PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSONObject *PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSON
 	StatusCode                                                             int64
+	PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSONObject *PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSON
 }

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -122,7 +122,7 @@ func (s *Entities) GetDatacenter(ctx context.Context, request operations.GetData
 				return nil, err
 			}
 
-			res.VcDatacenter = out
+			res.VCDatacenter = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {

@@ -3,13 +3,13 @@ package operations
 type PostModifyNetworkInterfaceAttributeActionEnum string
 
 const (
-	PostModifyNetworkInterfaceAttributeActionEnumModifyNetworkInterfaceAttribute PostModifyNetworkInterfaceAttributeActionEnum = "ModifyNetworkInterfaceAttribute"
+	POSTModifyNetworkInterfaceAttributeActionEnumModifyNetworkInterfaceAttribute PostModifyNetworkInterfaceAttributeActionEnum = "ModifyNetworkInterfaceAttribute"
 )
 
 type PostModifyNetworkInterfaceAttributeVersionEnum string
 
 const (
-	PostModifyNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 PostModifyNetworkInterfaceAttributeVersionEnum = "2016-11-15"
+	POSTModifyNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 PostModifyNetworkInterfaceAttributeVersionEnum = "2016-11-15"
 )
 
 type PostModifyNetworkInterfaceAttributeQueryParams struct {

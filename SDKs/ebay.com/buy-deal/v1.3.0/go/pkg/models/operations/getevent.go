@@ -9,7 +9,7 @@ type GetEventPathParams struct {
 }
 
 type GetEventHeaders struct {
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	XEBAYCMARKETPLACEID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type GetEventSecurity struct {

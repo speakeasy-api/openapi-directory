@@ -21,6 +21,6 @@ type PostV1VerificationSendRequest struct {
 
 type PostV1VerificationSendResponse struct {
 	ContentType                                    string
-	PostV1VerificationSend200ApplicationJSONString *string
 	StatusCode                                     int64
+	PostV1VerificationSend200ApplicationJSONString *string
 }

@@ -82,7 +82,7 @@ type ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum s
 
 const (
 	ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnumNoRecordFound               ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum = "No record found"
-	ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect."
+	ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect."
 )
 
 type ImporterExporterCodeVerificationAPI404ApplicationJSON struct {

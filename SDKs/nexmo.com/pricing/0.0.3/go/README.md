@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,16 +24,16 @@ func main() {
     
     req := operations.RetrievePrefixPricingRequest{
         PathParams: operations.RetrievePrefixPricingPathParams{
-            Type: "pariatur",
+            Type: "sequi",
         },
         QueryParams: operations.RetrievePrefixPricingQueryParams{
-            APIKey: "asperiores",
-            APISecret: "dolorem",
-            Prefix: "quae",
+            APIKey: "ipsam",
+            APISecret: "omnis",
+            Prefix: "incidunt",
         },
     }
     
-    res, err := s.Sdk.RetrievePrefixPricing(ctx, req)
+    res, err := s.Pricing.RetrievePrefixPricing(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Pricing
 
 * `RetrievePrefixPricing` - Retrieve outbound pricing for a specific dialing prefix.
 * `RetrievePricingAllCountries` - Retrieve outbound pricing for all countries.

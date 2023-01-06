@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -16,7 +17,6 @@ type HTTPClient interface {
 // SDK Documentation: https://developers.google.com/games/
 type SDK struct {
 	AchievementConfigurations *AchievementConfigurations
-	ImageConfigurations       *ImageConfigurations
 	LeaderboardConfigurations *LeaderboardConfigurations
 
 	_defaultClient  HTTPClient
@@ -70,15 +70,6 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.AchievementConfigurations = NewAchievementConfigurations(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.ImageConfigurations = NewImageConfigurations(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

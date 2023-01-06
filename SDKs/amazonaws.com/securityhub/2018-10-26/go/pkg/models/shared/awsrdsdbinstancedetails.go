@@ -8,13 +8,13 @@ type AwsRdsDbInstanceDetails struct {
 	AutoMinorVersionUpgrade               *bool                              `json:"AutoMinorVersionUpgrade,omitempty"`
 	AvailabilityZone                      *string                            `json:"AvailabilityZone,omitempty"`
 	BackupRetentionPeriod                 *int64                             `json:"BackupRetentionPeriod,omitempty"`
-	CaCertificateIdentifier               *string                            `json:"CACertificateIdentifier,omitempty"`
+	CACertificateIdentifier               *string                            `json:"CACertificateIdentifier,omitempty"`
 	CharacterSetName                      *string                            `json:"CharacterSetName,omitempty"`
 	CopyTagsToSnapshot                    *bool                              `json:"CopyTagsToSnapshot,omitempty"`
-	DbClusterIdentifier                   *string                            `json:"DBClusterIdentifier,omitempty"`
-	DbInstanceClass                       *string                            `json:"DBInstanceClass,omitempty"`
-	DbInstanceIdentifier                  *string                            `json:"DBInstanceIdentifier,omitempty"`
-	DbName                                *string                            `json:"DBName,omitempty"`
+	DBClusterIdentifier                   *string                            `json:"DBClusterIdentifier,omitempty"`
+	DBInstanceClass                       *string                            `json:"DBInstanceClass,omitempty"`
+	DBInstanceIdentifier                  *string                            `json:"DBInstanceIdentifier,omitempty"`
+	DBName                                *string                            `json:"DBName,omitempty"`
 	DbInstancePort                        *int64                             `json:"DbInstancePort,omitempty"`
 	DbInstanceStatus                      *string                            `json:"DbInstanceStatus,omitempty"`
 	DbParameterGroups                     []AwsRdsDbParameterGroup           `json:"DbParameterGroups,omitempty"`
@@ -28,8 +28,8 @@ type AwsRdsDbInstanceDetails struct {
 	Engine                                *string                            `json:"Engine,omitempty"`
 	EngineVersion                         *string                            `json:"EngineVersion,omitempty"`
 	EnhancedMonitoringResourceArn         *string                            `json:"EnhancedMonitoringResourceArn,omitempty"`
-	IamDatabaseAuthenticationEnabled      *bool                              `json:"IAMDatabaseAuthenticationEnabled,omitempty"`
-	InstanceCreateTime                    *string                            `json:"InstanceCreateTime,omitempty"`
+	IAMDatabaseAuthenticationEnabled      *bool                              `json:"IAMDatabaseAuthenticationEnabled,omitempty"`
+	InstanceCreateTime                    map[string]interface{}             `json:"InstanceCreateTime,omitempty"`
 	Iops                                  *int64                             `json:"Iops,omitempty"`
 	KmsKeyID                              *string                            `json:"KmsKeyId,omitempty"`
 	LatestRestorableTime                  *string                            `json:"LatestRestorableTime,omitempty"`
@@ -50,9 +50,9 @@ type AwsRdsDbInstanceDetails struct {
 	ProcessorFeatures                     []AwsRdsDbProcessorFeature         `json:"ProcessorFeatures,omitempty"`
 	PromotionTier                         *int64                             `json:"PromotionTier,omitempty"`
 	PubliclyAccessible                    *bool                              `json:"PubliclyAccessible,omitempty"`
-	ReadReplicaDbClusterIdentifiers       []string                           `json:"ReadReplicaDBClusterIdentifiers,omitempty"`
-	ReadReplicaDbInstanceIdentifiers      []string                           `json:"ReadReplicaDBInstanceIdentifiers,omitempty"`
-	ReadReplicaSourceDbInstanceIdentifier *string                            `json:"ReadReplicaSourceDBInstanceIdentifier,omitempty"`
+	ReadReplicaDBClusterIdentifiers       []string                           `json:"ReadReplicaDBClusterIdentifiers,omitempty"`
+	ReadReplicaDBInstanceIdentifiers      []string                           `json:"ReadReplicaDBInstanceIdentifiers,omitempty"`
+	ReadReplicaSourceDBInstanceIdentifier *string                            `json:"ReadReplicaSourceDBInstanceIdentifier,omitempty"`
 	SecondaryAvailabilityZone             *string                            `json:"SecondaryAvailabilityZone,omitempty"`
 	StatusInfos                           []AwsRdsDbStatusInfo               `json:"StatusInfos,omitempty"`
 	StorageEncrypted                      *bool                              `json:"StorageEncrypted,omitempty"`

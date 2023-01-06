@@ -3,13 +3,13 @@ package operations
 type PostAssignPrivateIPAddressesActionEnum string
 
 const (
-	PostAssignPrivateIPAddressesActionEnumAssignPrivateIPAddresses PostAssignPrivateIPAddressesActionEnum = "AssignPrivateIpAddresses"
+	POSTAssignPrivateIPAddressesActionEnumAssignPrivateIPAddresses PostAssignPrivateIPAddressesActionEnum = "AssignPrivateIpAddresses"
 )
 
 type PostAssignPrivateIPAddressesVersionEnum string
 
 const (
-	PostAssignPrivateIPAddressesVersionEnumTwoThousandAndSixteen1115 PostAssignPrivateIPAddressesVersionEnum = "2016-11-15"
+	POSTAssignPrivateIPAddressesVersionEnumTwoThousandAndSixteen1115 PostAssignPrivateIPAddressesVersionEnum = "2016-11-15"
 )
 
 type PostAssignPrivateIPAddressesQueryParams struct {

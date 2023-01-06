@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -80,7 +80,7 @@ func (s *DigiLockerSignUpApIs) SignUpID(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.SignUpID400ApplicationJSONOneOf = out
+			res.SIGNUPID400ApplicationJSONOneOf = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -90,7 +90,7 @@ func (s *DigiLockerSignUpApIs) SignUpID(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.SignUpID401ApplicationJSONObject = out
+			res.SIGNUPID401ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -100,7 +100,7 @@ func (s *DigiLockerSignUpApIs) SignUpID(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.SignUpID500ApplicationJSONObject = out
+			res.SIGNUPID500ApplicationJSONObject = out
 		}
 	}
 
@@ -158,7 +158,7 @@ func (s *DigiLockerSignUpApIs) VerifyOtpID(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.VerifyOtpID400ApplicationJSONOneOf = out
+			res.VerifyOTPID400ApplicationJSONOneOf = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -168,7 +168,7 @@ func (s *DigiLockerSignUpApIs) VerifyOtpID(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.VerifyOtpID401ApplicationJSONObject = out
+			res.VerifyOTPID401ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -178,7 +178,7 @@ func (s *DigiLockerSignUpApIs) VerifyOtpID(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.VerifyOtpID500ApplicationJSONObject = out
+			res.VerifyOTPID500ApplicationJSONObject = out
 		}
 	}
 

@@ -3,13 +3,13 @@ package operations
 type GetDescribeTableRestoreStatusActionEnum string
 
 const (
-	GetDescribeTableRestoreStatusActionEnumDescribeTableRestoreStatus GetDescribeTableRestoreStatusActionEnum = "DescribeTableRestoreStatus"
+	GETDescribeTableRestoreStatusActionEnumDescribeTableRestoreStatus GetDescribeTableRestoreStatusActionEnum = "DescribeTableRestoreStatus"
 )
 
 type GetDescribeTableRestoreStatusVersionEnum string
 
 const (
-	GetDescribeTableRestoreStatusVersionEnumTwoThousandAndTwelve1201 GetDescribeTableRestoreStatusVersionEnum = "2012-12-01"
+	GETDescribeTableRestoreStatusVersionEnumTwoThousandAndTwelve1201 GetDescribeTableRestoreStatusVersionEnum = "2012-12-01"
 )
 
 type GetDescribeTableRestoreStatusQueryParams struct {

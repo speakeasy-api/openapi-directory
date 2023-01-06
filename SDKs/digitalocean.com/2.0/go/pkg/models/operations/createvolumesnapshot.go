@@ -8,15 +8,15 @@ type CreateVolumeSnapshotPathParams struct {
 	VolumeID string `pathParam:"style=simple,explode=false,name=volume_id"`
 }
 
-type CreateVolumeSnapshotRequest struct {
-	PathParams CreateVolumeSnapshotPathParams
-	Request    interface{} `request:"mediaType=application/json"`
-}
-
 type CreateVolumeSnapshot401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateVolumeSnapshotRequest struct {
+	PathParams CreateVolumeSnapshotPathParams
+	Request    interface{} `request:"mediaType=application/json"`
 }
 
 type CreateVolumeSnapshotResponse struct {

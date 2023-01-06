@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,21 +35,21 @@ func main() {
     req := operations.CircuitsCircuitTerminationsCreateRequest{
         Request: shared.WritableCircuitTerminationInput{
             Cable: &shared.NestedCableInput{
-                Label: "aliquid",
+                Label: "quo",
             },
-            Circuit: 5396713859516954870,
-            ConnectionStatus: true,
-            Description: "animi",
-            PortSpeed: 5767282679630353800,
-            PpInfo: "magni",
-            Site: 3444678983313942400,
+            Circuit: 2146534388476206377,
+            ConnectionStatus: false,
+            Description: "praesentium",
+            PortSpeed: 7326317870258218444,
+            PpInfo: "ea",
+            Site: 5660394970143440116,
             TermSide: "A",
-            UpstreamSpeed: 2772754371455433371,
-            XconnectID: "eveniet",
+            UpstreamSpeed: 1079096460568329341,
+            XconnectID: "aut",
         },
     }
     
-    res, err := s.Sdk.CircuitsCircuitTerminationsCreate(ctx, req)
+    res, err := s.Circuits.CircuitsCircuitTerminationsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -64,7 +63,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### circuits
 
 * `CircuitsCircuitTerminationsCreate`
 * `CircuitsCircuitTerminationsDelete`
@@ -91,6 +90,9 @@ func main() {
 * `CircuitsProvidersPartialUpdate`
 * `CircuitsProvidersRead` - Call to super to allow for caching
 * `CircuitsProvidersUpdate`
+
+### dcim
+
 * `DcimCablesCreate`
 * `DcimCablesDelete`
 * `DcimCablesList` - Call to super to allow for caching
@@ -304,6 +306,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `DcimVirtualChassisPartialUpdate`
 * `DcimVirtualChassisRead` - Call to super to allow for caching
 * `DcimVirtualChassisUpdate`
+
+### extras
+
 * `ExtrasCustomFieldChoicesList`
 * `ExtrasCustomFieldChoicesRead`
 * `ExtrasConfigContextsCreate`
@@ -343,6 +348,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `ExtrasTagsPartialUpdate`
 * `ExtrasTagsRead` - Call to super to allow for caching
 * `ExtrasTagsUpdate`
+
+### ipam
+
 * `IpamAggregatesCreate`
 * `IpamAggregatesDelete`
 * `IpamAggregatesList` - Call to super to allow for caching
@@ -411,6 +419,9 @@ invoked in parallel, which results in a race condition where multiple insertions
 * `IpamVrfsPartialUpdate`
 * `IpamVrfsRead` - Call to super to allow for caching
 * `IpamVrfsUpdate`
+
+### secrets
+
 * `SecretsGenerateRsaKeyPairList` - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
 * `SecretsGetSessionKeyCreate` - Retrieve a temporary session key to use for encrypting and decrypting secrets via the API. The user's private RSA
 key is POSTed with the name `private_key`. An example:
@@ -438,6 +449,9 @@ key will be returned instead of a new one.
 * `SecretsSecretsPartialUpdate`
 * `SecretsSecretsRead`
 * `SecretsSecretsUpdate`
+
+### tenancy
+
 * `TenancyTenantGroupsCreate`
 * `TenancyTenantGroupsDelete`
 * `TenancyTenantGroupsList` - Call to super to allow for caching
@@ -450,6 +464,9 @@ key will be returned instead of a new one.
 * `TenancyTenantsPartialUpdate`
 * `TenancyTenantsRead` - Call to super to allow for caching
 * `TenancyTenantsUpdate`
+
+### virtualization
+
 * `VirtualizationClusterGroupsCreate`
 * `VirtualizationClusterGroupsDelete`
 * `VirtualizationClusterGroupsList` - Call to super to allow for caching

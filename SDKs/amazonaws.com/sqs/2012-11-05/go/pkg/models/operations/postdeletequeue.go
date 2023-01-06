@@ -3,13 +3,13 @@ package operations
 type PostDeleteQueueActionEnum string
 
 const (
-	PostDeleteQueueActionEnumDeleteQueue PostDeleteQueueActionEnum = "DeleteQueue"
+	POSTDeleteQueueActionEnumDeleteQueue PostDeleteQueueActionEnum = "DeleteQueue"
 )
 
 type PostDeleteQueueVersionEnum string
 
 const (
-	PostDeleteQueueVersionEnumTwoThousandAndTwelve1105 PostDeleteQueueVersionEnum = "2012-11-05"
+	POSTDeleteQueueVersionEnumTwoThousandAndTwelve1105 PostDeleteQueueVersionEnum = "2012-11-05"
 )
 
 type PostDeleteQueueQueryParams struct {

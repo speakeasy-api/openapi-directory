@@ -3,13 +3,13 @@ package operations
 type PostDeleteInstanceProfileActionEnum string
 
 const (
-	PostDeleteInstanceProfileActionEnumDeleteInstanceProfile PostDeleteInstanceProfileActionEnum = "DeleteInstanceProfile"
+	POSTDeleteInstanceProfileActionEnumDeleteInstanceProfile PostDeleteInstanceProfileActionEnum = "DeleteInstanceProfile"
 )
 
 type PostDeleteInstanceProfileVersionEnum string
 
 const (
-	PostDeleteInstanceProfileVersionEnumTwoThousandAndTen0508 PostDeleteInstanceProfileVersionEnum = "2010-05-08"
+	POSTDeleteInstanceProfileVersionEnumTwoThousandAndTen0508 PostDeleteInstanceProfileVersionEnum = "2010-05-08"
 )
 
 type PostDeleteInstanceProfileQueryParams struct {

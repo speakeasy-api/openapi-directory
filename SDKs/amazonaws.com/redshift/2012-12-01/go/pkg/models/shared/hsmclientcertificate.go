@@ -5,5 +5,5 @@ package shared
 type HsmClientCertificate struct {
 	HsmClientCertificateIdentifier *string
 	HsmClientCertificatePublicKey  *string
-	Tags                           []Tag
+	Tags                           []map[string]interface{}
 }

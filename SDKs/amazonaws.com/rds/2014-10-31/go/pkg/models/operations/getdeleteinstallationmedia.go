@@ -3,13 +3,13 @@ package operations
 type GetDeleteInstallationMediaActionEnum string
 
 const (
-	GetDeleteInstallationMediaActionEnumDeleteInstallationMedia GetDeleteInstallationMediaActionEnum = "DeleteInstallationMedia"
+	GETDeleteInstallationMediaActionEnumDeleteInstallationMedia GetDeleteInstallationMediaActionEnum = "DeleteInstallationMedia"
 )
 
 type GetDeleteInstallationMediaVersionEnum string
 
 const (
-	GetDeleteInstallationMediaVersionEnumTwoThousandAndFourteen1031 GetDeleteInstallationMediaVersionEnum = "2014-10-31"
+	GETDeleteInstallationMediaVersionEnumTwoThousandAndFourteen1031 GetDeleteInstallationMediaVersionEnum = "2014-10-31"
 )
 
 type GetDeleteInstallationMediaQueryParams struct {

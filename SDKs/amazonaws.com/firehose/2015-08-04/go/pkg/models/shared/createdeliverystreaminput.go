@@ -9,7 +9,7 @@ type CreateDeliveryStreamInput struct {
 	HTTPEndpointDestinationConfiguration       *HTTPEndpointDestinationConfiguration       `json:"HttpEndpointDestinationConfiguration,omitempty"`
 	KinesisStreamSourceConfiguration           *KinesisStreamSourceConfiguration           `json:"KinesisStreamSourceConfiguration,omitempty"`
 	RedshiftDestinationConfiguration           *RedshiftDestinationConfiguration           `json:"RedshiftDestinationConfiguration,omitempty"`
-	S3DestinationConfiguration                 *S3DestinationConfiguration                 `json:"S3DestinationConfiguration,omitempty"`
+	S3DestinationConfiguration                 map[string]interface{}                      `json:"S3DestinationConfiguration,omitempty"`
 	SplunkDestinationConfiguration             *SplunkDestinationConfiguration             `json:"SplunkDestinationConfiguration,omitempty"`
 	Tags                                       []Tag                                       `json:"Tags,omitempty"`
 }

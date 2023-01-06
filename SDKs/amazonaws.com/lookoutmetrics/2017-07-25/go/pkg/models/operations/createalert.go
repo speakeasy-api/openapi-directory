@@ -18,7 +18,7 @@ type CreateAlertHeaders struct {
 // A configuration that specifies the action to perform when anomalies are detected.
 type CreateAlertRequestBodyAction struct {
 	LambdaConfiguration *shared.LambdaConfiguration `json:"LambdaConfiguration,omitempty"`
-	SnsConfiguration    *shared.SnsConfiguration    `json:"SNSConfiguration,omitempty"`
+	SNSConfiguration    *shared.SnsConfiguration    `json:"SNSConfiguration,omitempty"`
 }
 
 type CreateAlertRequestBody struct {

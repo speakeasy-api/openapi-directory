@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,25 @@ func main() {
     
     req := operations.DescribeJobExecutionRequest{
         PathParams: operations.DescribeJobExecutionPathParams{
-            JobID: "optio",
-            ThingName: "omnis",
+            JobID: "qui",
+            ThingName: "rem",
         },
         QueryParams: operations.DescribeJobExecutionQueryParams{
-            ExecutionNumber: 8768690139785603795,
-            IncludeJobDocument: true,
+            ExecutionNumber: 3347108421516776634,
+            IncludeJobDocument: false,
         },
         Headers: operations.DescribeJobExecutionHeaders{
-            XAmzAlgorithm: "reiciendis",
-            XAmzContentSha256: "maxime",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "asperiores",
-            XAmzSecurityToken: "provident",
-            XAmzSignature: "doloribus",
-            XAmzSignedHeaders: "architecto",
+            XAmzAlgorithm: "quo",
+            XAmzContentSha256: "id",
+            XAmzCredential: "illo",
+            XAmzDate: "enim",
+            XAmzSecurityToken: "est",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "eum",
         },
     }
     
-    res, err := s.Sdk.DescribeJobExecution(ctx, req)
+    res, err := s.DescribeJobExecution(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

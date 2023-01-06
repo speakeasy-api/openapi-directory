@@ -1,5 +1,5 @@
 package shared
 
 type CreateSignalingChannelOutput struct {
-	ChannelArn *string `json:"ChannelARN,omitempty"`
+	ChannelARN *string `json:"ChannelARN,omitempty"`
 }

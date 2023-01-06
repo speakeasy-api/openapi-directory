@@ -3,13 +3,13 @@ package operations
 type PostUpdateAutoScalingGroupActionEnum string
 
 const (
-	PostUpdateAutoScalingGroupActionEnumUpdateAutoScalingGroup PostUpdateAutoScalingGroupActionEnum = "UpdateAutoScalingGroup"
+	POSTUpdateAutoScalingGroupActionEnumUpdateAutoScalingGroup PostUpdateAutoScalingGroupActionEnum = "UpdateAutoScalingGroup"
 )
 
 type PostUpdateAutoScalingGroupVersionEnum string
 
 const (
-	PostUpdateAutoScalingGroupVersionEnumTwoThousandAndEleven0101 PostUpdateAutoScalingGroupVersionEnum = "2011-01-01"
+	POSTUpdateAutoScalingGroupVersionEnumTwoThousandAndEleven0101 PostUpdateAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
 type PostUpdateAutoScalingGroupQueryParams struct {

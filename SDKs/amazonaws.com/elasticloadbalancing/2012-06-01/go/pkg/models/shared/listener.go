@@ -7,5 +7,5 @@ type Listener struct {
 	InstanceProtocol *string
 	LoadBalancerPort int64
 	Protocol         string
-	SslCertificateID *string
+	SSLCertificateID *string
 }

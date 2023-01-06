@@ -14,6 +14,6 @@ type PostPortfolioAnalysisAlphaRequest struct {
 
 type PostPortfolioAnalysisAlphaResponse struct {
 	ContentType                                        string
-	PostPortfolioAnalysisAlpha200ApplicationJSONObject *PostPortfolioAnalysisAlpha200ApplicationJSON
 	StatusCode                                         int64
+	PostPortfolioAnalysisAlpha200ApplicationJSONObject *PostPortfolioAnalysisAlpha200ApplicationJSON
 }

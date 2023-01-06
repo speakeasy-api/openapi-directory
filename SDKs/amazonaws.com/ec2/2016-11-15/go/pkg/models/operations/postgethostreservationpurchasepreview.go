@@ -3,13 +3,13 @@ package operations
 type PostGetHostReservationPurchasePreviewActionEnum string
 
 const (
-	PostGetHostReservationPurchasePreviewActionEnumGetHostReservationPurchasePreview PostGetHostReservationPurchasePreviewActionEnum = "GetHostReservationPurchasePreview"
+	POSTGetHostReservationPurchasePreviewActionEnumGetHostReservationPurchasePreview PostGetHostReservationPurchasePreviewActionEnum = "GetHostReservationPurchasePreview"
 )
 
 type PostGetHostReservationPurchasePreviewVersionEnum string
 
 const (
-	PostGetHostReservationPurchasePreviewVersionEnumTwoThousandAndSixteen1115 PostGetHostReservationPurchasePreviewVersionEnum = "2016-11-15"
+	POSTGetHostReservationPurchasePreviewVersionEnumTwoThousandAndSixteen1115 PostGetHostReservationPurchasePreviewVersionEnum = "2016-11-15"
 )
 
 type PostGetHostReservationPurchasePreviewQueryParams struct {

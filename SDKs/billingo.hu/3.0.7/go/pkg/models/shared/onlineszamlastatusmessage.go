@@ -1,0 +1,7 @@
+package shared
+
+type OnlineSzamlaStatusMessage struct {
+	HumanReadableMessage *string `json:"human_readable_message,omitempty"`
+	ValidationErrorCode  *string `json:"validation_error_code,omitempty"`
+	ValidationResultCode *string `json:"validation_result_code,omitempty"`
+}

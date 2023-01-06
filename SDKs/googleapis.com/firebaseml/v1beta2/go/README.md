@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,57 +26,54 @@ func main() {
         Security: operations.FirebasemlProjectsModelsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.FirebasemlProjectsModelsCreatePathParams{
-            Parent: "magnam",
+            Parent: "autem",
         },
         QueryParams: operations.FirebasemlProjectsModelsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "non",
-            Alt: "media",
-            Callback: "atque",
-            Fields: "sunt",
-            Key: "voluptatibus",
-            OauthToken: "sint",
+            DollarXgafv: "2",
+            AccessToken: "ut",
+            Alt: "json",
+            Callback: "minus",
+            Fields: "mollitia",
+            Key: "minima",
+            OauthToken: "consequatur",
             PrettyPrint: false,
-            QuotaUser: "voluptatem",
-            UploadType: "quos",
-            UploadProtocol: "deserunt",
+            QuotaUser: "voluptate",
+            UploadType: "deserunt",
+            UploadProtocol: "laudantium",
         },
         Request: &shared.ModelInput{
-            DisplayName: "quidem",
-            Name: "sed",
+            DisplayName: "sequi",
+            Name: "quia",
             State: &shared.ModelState{
                 Published: true,
                 ValidationError: &shared.Status{
-                    Code: 8138891359880252570,
+                    Code: 1195584967025216397,
                     Details: []map[string]interface{}{
                         map[string]interface{}{
-                            "earum": "hic",
-                            "non": "et",
+                            "quae": "sint",
+                            "culpa": "magni",
                         },
                         map[string]interface{}{
-                            "nisi": "optio",
-                            "iure": "accusantium",
-                            "sapiente": "rerum",
-                        },
-                        map[string]interface{}{
-                            "dolorem": "sit",
+                            "eveniet": "et",
+                            "qui": "fugit",
                         },
                     },
-                    Message: "culpa",
+                    Message: "voluptas",
                 },
             },
             Tags: []string{
-                "quis",
+                "occaecati",
+                "quia",
             },
             TfliteModel: &shared.TfLiteModelInput{
-                AutomlModel: "hic",
-                GcsTfliteURI: "accusamus",
+                AutomlModel: "quia",
+                GcsTfliteURI: "accusantium",
             },
         },
     }

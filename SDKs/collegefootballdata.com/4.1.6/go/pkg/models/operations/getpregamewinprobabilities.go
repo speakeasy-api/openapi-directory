@@ -17,6 +17,6 @@ type GetPregameWinProbabilitiesRequest struct {
 
 type GetPregameWinProbabilitiesResponse struct {
 	ContentType string
-	PregameWps  []shared.PregameWp
+	PregameWPS  []shared.PregameWp
 	StatusCode  int64
 }

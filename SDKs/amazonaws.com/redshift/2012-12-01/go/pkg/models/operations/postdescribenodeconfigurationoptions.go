@@ -3,13 +3,13 @@ package operations
 type PostDescribeNodeConfigurationOptionsActionEnum string
 
 const (
-	PostDescribeNodeConfigurationOptionsActionEnumDescribeNodeConfigurationOptions PostDescribeNodeConfigurationOptionsActionEnum = "DescribeNodeConfigurationOptions"
+	POSTDescribeNodeConfigurationOptionsActionEnumDescribeNodeConfigurationOptions PostDescribeNodeConfigurationOptionsActionEnum = "DescribeNodeConfigurationOptions"
 )
 
 type PostDescribeNodeConfigurationOptionsVersionEnum string
 
 const (
-	PostDescribeNodeConfigurationOptionsVersionEnumTwoThousandAndTwelve1201 PostDescribeNodeConfigurationOptionsVersionEnum = "2012-12-01"
+	POSTDescribeNodeConfigurationOptionsVersionEnumTwoThousandAndTwelve1201 PostDescribeNodeConfigurationOptionsVersionEnum = "2012-12-01"
 )
 
 type PostDescribeNodeConfigurationOptionsQueryParams struct {

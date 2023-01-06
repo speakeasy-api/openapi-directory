@@ -3,13 +3,13 @@ package operations
 type PostDeleteCacheClusterActionEnum string
 
 const (
-	PostDeleteCacheClusterActionEnumDeleteCacheCluster PostDeleteCacheClusterActionEnum = "DeleteCacheCluster"
+	POSTDeleteCacheClusterActionEnumDeleteCacheCluster PostDeleteCacheClusterActionEnum = "DeleteCacheCluster"
 )
 
 type PostDeleteCacheClusterVersionEnum string
 
 const (
-	PostDeleteCacheClusterVersionEnumTwoThousandAndFifteen0202 PostDeleteCacheClusterVersionEnum = "2015-02-02"
+	POSTDeleteCacheClusterVersionEnumTwoThousandAndFifteen0202 PostDeleteCacheClusterVersionEnum = "2015-02-02"
 )
 
 type PostDeleteCacheClusterQueryParams struct {

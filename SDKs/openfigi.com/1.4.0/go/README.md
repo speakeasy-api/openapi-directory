@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.GetMappingValuesKeyRequest{
         PathParams: operations.GetMappingValuesKeyPathParams{
-            Key: "securityType2",
+            Key: "micCode",
         },
     }
     
-    res, err := s.Sdk.GetMappingValuesKey(ctx, req)
+    res, err := s.GetMappingValuesKey(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

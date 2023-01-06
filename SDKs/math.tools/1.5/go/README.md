@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,9 +29,9 @@ func main() {
             },
         },
         QueryParams: operations.GetNumbersBaseQueryParams{
-            From: 728171767558320508,
-            Number: 4202576256773833716,
-            To: 7402369184756779626,
+            From: 6103547779745543967,
+            Number: 6357648265329028289,
+            To: 4433821285997355071,
         },
     }
     

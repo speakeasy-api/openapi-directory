@@ -3,13 +3,13 @@ package operations
 type PostAssociateInstanceEventWindowActionEnum string
 
 const (
-	PostAssociateInstanceEventWindowActionEnumAssociateInstanceEventWindow PostAssociateInstanceEventWindowActionEnum = "AssociateInstanceEventWindow"
+	POSTAssociateInstanceEventWindowActionEnumAssociateInstanceEventWindow PostAssociateInstanceEventWindowActionEnum = "AssociateInstanceEventWindow"
 )
 
 type PostAssociateInstanceEventWindowVersionEnum string
 
 const (
-	PostAssociateInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 PostAssociateInstanceEventWindowVersionEnum = "2016-11-15"
+	POSTAssociateInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 PostAssociateInstanceEventWindowVersionEnum = "2016-11-15"
 )
 
 type PostAssociateInstanceEventWindowQueryParams struct {

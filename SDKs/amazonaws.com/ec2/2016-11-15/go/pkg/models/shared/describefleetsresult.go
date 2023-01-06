@@ -1,6 +1,6 @@
 package shared
 
 type DescribeFleetsResult struct {
-	Fleets    []FleetData
-	NextToken *string
+	Fleets    map[string]interface{}
+	NextToken map[string]interface{}
 }

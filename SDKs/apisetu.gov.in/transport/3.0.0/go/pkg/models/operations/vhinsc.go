@@ -85,7 +85,7 @@ type Vhinsc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Vhinsc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Vhinsc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Vhinsc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Vhinsc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Vhinsc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Vhinsc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Vhinsc404ApplicationJSON struct {

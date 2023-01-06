@@ -17,14 +17,14 @@ type CreateRegistryRequestBody struct {
 	SubscriptionTierSlug CreateRegistryRequestBodySubscriptionTierSlugEnum `json:"subscription_tier_slug"`
 }
 
-type CreateRegistryRequest struct {
-	Request CreateRegistryRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateRegistry401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateRegistryRequest struct {
+	Request CreateRegistryRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateRegistryResponse struct {

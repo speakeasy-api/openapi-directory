@@ -5,7 +5,7 @@ import (
 )
 
 type PostSpotsetsRequest struct {
-	Request shared.SpotSetCreateInput `request:"mediaType=application/json"`
+	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostSpotsetsResponse struct {

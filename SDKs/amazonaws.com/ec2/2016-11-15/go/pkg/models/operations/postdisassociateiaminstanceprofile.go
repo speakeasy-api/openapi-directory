@@ -3,13 +3,13 @@ package operations
 type PostDisassociateIamInstanceProfileActionEnum string
 
 const (
-	PostDisassociateIamInstanceProfileActionEnumDisassociateIamInstanceProfile PostDisassociateIamInstanceProfileActionEnum = "DisassociateIamInstanceProfile"
+	POSTDisassociateIamInstanceProfileActionEnumDisassociateIamInstanceProfile PostDisassociateIamInstanceProfileActionEnum = "DisassociateIamInstanceProfile"
 )
 
 type PostDisassociateIamInstanceProfileVersionEnum string
 
 const (
-	PostDisassociateIamInstanceProfileVersionEnumTwoThousandAndSixteen1115 PostDisassociateIamInstanceProfileVersionEnum = "2016-11-15"
+	POSTDisassociateIamInstanceProfileVersionEnumTwoThousandAndSixteen1115 PostDisassociateIamInstanceProfileVersionEnum = "2016-11-15"
 )
 
 type PostDisassociateIamInstanceProfileQueryParams struct {

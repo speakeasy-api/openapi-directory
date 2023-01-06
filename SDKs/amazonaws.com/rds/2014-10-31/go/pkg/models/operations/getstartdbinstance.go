@@ -3,18 +3,18 @@ package operations
 type GetStartDbInstanceActionEnum string
 
 const (
-	GetStartDbInstanceActionEnumStartDbInstance GetStartDbInstanceActionEnum = "StartDBInstance"
+	GETStartDBInstanceActionEnumStartDbInstance GetStartDbInstanceActionEnum = "StartDBInstance"
 )
 
 type GetStartDbInstanceVersionEnum string
 
 const (
-	GetStartDbInstanceVersionEnumTwoThousandAndFourteen1031 GetStartDbInstanceVersionEnum = "2014-10-31"
+	GETStartDBInstanceVersionEnumTwoThousandAndFourteen1031 GetStartDbInstanceVersionEnum = "2014-10-31"
 )
 
 type GetStartDbInstanceQueryParams struct {
 	Action               GetStartDbInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                        `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                        `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Version              GetStartDbInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

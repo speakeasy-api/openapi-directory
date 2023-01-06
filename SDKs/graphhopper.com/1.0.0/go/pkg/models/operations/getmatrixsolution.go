@@ -14,7 +14,7 @@ type GetMatrixSolutionRequest struct {
 
 type GetMatrixSolutionResponse struct {
 	ContentType    string
-	GhError        *shared.GhError
+	GHError        *shared.GhError
 	Headers        map[string][]string
 	MatrixResponse *shared.MatrixResponse
 	StatusCode     int64

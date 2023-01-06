@@ -3,18 +3,18 @@ package operations
 type GetStartDbClusterActionEnum string
 
 const (
-	GetStartDbClusterActionEnumStartDbCluster GetStartDbClusterActionEnum = "StartDBCluster"
+	GETStartDBClusterActionEnumStartDbCluster GetStartDbClusterActionEnum = "StartDBCluster"
 )
 
 type GetStartDbClusterVersionEnum string
 
 const (
-	GetStartDbClusterVersionEnumTwoThousandAndFourteen1031 GetStartDbClusterVersionEnum = "2014-10-31"
+	GETStartDBClusterVersionEnumTwoThousandAndFourteen1031 GetStartDbClusterVersionEnum = "2014-10-31"
 )
 
 type GetStartDbClusterQueryParams struct {
 	Action              GetStartDbClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterIdentifier string                       `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
+	DBClusterIdentifier string                       `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	Version             GetStartDbClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

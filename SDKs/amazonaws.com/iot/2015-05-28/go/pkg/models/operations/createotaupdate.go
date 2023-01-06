@@ -34,7 +34,7 @@ type CreateOtaUpdateRequestBodyAwsJobExecutionsRolloutConfig struct {
 // CreateOtaUpdateRequestBodyAwsJobPresignedURLConfig
 // Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.
 type CreateOtaUpdateRequestBodyAwsJobPresignedURLConfig struct {
-	ExpiresInSec *int64 `json:"expiresInSec,omitempty"`
+	ExpiresInSec map[string]interface{} `json:"expiresInSec,omitempty"`
 }
 
 // CreateOtaUpdateRequestBodyAwsJobTimeoutConfig
@@ -46,8 +46,8 @@ type CreateOtaUpdateRequestBodyAwsJobTimeoutConfig struct {
 type CreateOtaUpdateRequestBodyTargetSelectionEnum string
 
 const (
-	CreateOtaUpdateRequestBodyTargetSelectionEnumContinuous CreateOtaUpdateRequestBodyTargetSelectionEnum = "CONTINUOUS"
-	CreateOtaUpdateRequestBodyTargetSelectionEnumSnapshot   CreateOtaUpdateRequestBodyTargetSelectionEnum = "SNAPSHOT"
+	CreateOTAUpdateRequestBodyTargetSelectionEnumContinuous CreateOtaUpdateRequestBodyTargetSelectionEnum = "CONTINUOUS"
+	CreateOTAUpdateRequestBodyTargetSelectionEnumSnapshot   CreateOtaUpdateRequestBodyTargetSelectionEnum = "SNAPSHOT"
 )
 
 type CreateOtaUpdateRequestBody struct {
@@ -73,7 +73,7 @@ type CreateOtaUpdateRequest struct {
 
 type CreateOtaUpdateResponse struct {
 	ContentType                    string
-	CreateOtaUpdateResponse        *shared.CreateOtaUpdateResponse
+	CreateOTAUpdateResponse        *shared.CreateOtaUpdateResponse
 	InternalFailureException       *interface{}
 	InvalidRequestException        *interface{}
 	LimitExceededException         *interface{}

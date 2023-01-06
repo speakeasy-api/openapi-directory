@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Tags struct {
@@ -67,6 +67,92 @@ func (s *Tags) GetResourcesTagsFormat(ctx context.Context, request operations.Ge
 			}
 
 			res.TagMarshallerWrappeds = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetResourcesTagsTagLanguagesFormat - Get TagLanguages
+// List of Tag Languages
+func (s *Tags) GetResourcesTagsTagLanguagesFormat(ctx context.Context, request operations.GetResourcesTagsTagLanguagesFormatRequest) (*operations.GetResourcesTagsTagLanguagesFormatResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagLanguages.{format}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesTagsTagLanguagesFormatResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.TagLanguageMarshallerWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TagLanguageMarshallerWrappeds = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetResourcesTagsTagTypesFormat - Get MediaItems for Tag
+// List of Types
+func (s *Tags) GetResourcesTagsTagTypesFormat(ctx context.Context, request operations.GetResourcesTagsTagTypesFormatRequest) (*operations.GetResourcesTagsTagTypesFormatResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagTypes.{format}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetResourcesTagsTagTypesFormatResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.TagTypeMarshallerWrapped
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TagTypeMarshallerWrappeds = out
 		}
 	case httpRes.StatusCode == 400:
 	case httpRes.StatusCode == 500:
@@ -246,92 +332,6 @@ func (s *Tags) GetResourcesTagsIDSyndicateFormat(ctx context.Context, request op
 
 			out := string(data)
 			res.GetResourcesTagsIDSyndicateFormat200ApplicationJSONString = &out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesTagsTagLanguagesFormat - Get TagLanguages
-// List of Tag Languages
-func (s *Tags) GetResourcesTagsTagLanguagesFormat(ctx context.Context, request operations.GetResourcesTagsTagLanguagesFormatRequest) (*operations.GetResourcesTagsTagLanguagesFormatResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagLanguages.{format}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesTagsTagLanguagesFormatResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.TagLanguageMarshallerWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.TagLanguageMarshallerWrappeds = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
-// GetResourcesTagsTagTypesFormat - Get MediaItems for Tag
-// List of Types
-func (s *Tags) GetResourcesTagsTagTypesFormat(ctx context.Context, request operations.GetResourcesTagsTagTypesFormatRequest) (*operations.GetResourcesTagsTagTypesFormatResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagTypes.{format}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetResourcesTagsTagTypesFormatResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.TagTypeMarshallerWrapped
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.TagTypeMarshallerWrappeds = out
 		}
 	case httpRes.StatusCode == 400:
 	case httpRes.StatusCode == 500:

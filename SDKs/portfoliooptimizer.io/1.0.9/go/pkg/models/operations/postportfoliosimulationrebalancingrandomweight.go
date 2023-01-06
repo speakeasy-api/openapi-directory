@@ -23,6 +23,6 @@ type PostPortfolioSimulationRebalancingRandomWeightRequest struct {
 
 type PostPortfolioSimulationRebalancingRandomWeightResponse struct {
 	ContentType                                                            string
-	PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject *PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON
 	StatusCode                                                             int64
+	PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject *PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON
 }

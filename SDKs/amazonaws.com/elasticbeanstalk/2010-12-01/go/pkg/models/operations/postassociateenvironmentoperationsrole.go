@@ -3,13 +3,13 @@ package operations
 type PostAssociateEnvironmentOperationsRoleActionEnum string
 
 const (
-	PostAssociateEnvironmentOperationsRoleActionEnumAssociateEnvironmentOperationsRole PostAssociateEnvironmentOperationsRoleActionEnum = "AssociateEnvironmentOperationsRole"
+	POSTAssociateEnvironmentOperationsRoleActionEnumAssociateEnvironmentOperationsRole PostAssociateEnvironmentOperationsRoleActionEnum = "AssociateEnvironmentOperationsRole"
 )
 
 type PostAssociateEnvironmentOperationsRoleVersionEnum string
 
 const (
-	PostAssociateEnvironmentOperationsRoleVersionEnumTwoThousandAndTen1201 PostAssociateEnvironmentOperationsRoleVersionEnum = "2010-12-01"
+	POSTAssociateEnvironmentOperationsRoleVersionEnumTwoThousandAndTen1201 PostAssociateEnvironmentOperationsRoleVersionEnum = "2010-12-01"
 )
 
 type PostAssociateEnvironmentOperationsRoleQueryParams struct {

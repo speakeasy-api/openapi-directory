@@ -15,7 +15,7 @@ type PostBundlesRequestBody struct {
 	MaxUses               *int32     `multipartForm:"name=max_uses"`
 	Note                  *string    `multipartForm:"name=note"`
 	Password              *string    `multipartForm:"name=password"`
-	Paths                 []string   `multipartForm:"name=paths"`
+	Paths                 []string   `multipartForm:"name=paths,json"`
 	PreviewOnly           *bool      `multipartForm:"name=preview_only"`
 	RequireRegistration   *bool      `multipartForm:"name=require_registration"`
 	RequireShareRecipient *bool      `multipartForm:"name=require_share_recipient"`

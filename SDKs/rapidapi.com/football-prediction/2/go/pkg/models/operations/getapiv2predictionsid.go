@@ -18,7 +18,7 @@ type GetAPIV2PredictionsIDRequest struct {
 
 type GetAPIV2PredictionsIDResponse struct {
 	ContentType                                   string
+	StatusCode                                    int64
 	GetAPIV2PredictionsID200ApplicationJSONObject *GetAPIV2PredictionsID200ApplicationJSON
 	GetAPIV2PredictionsID404ApplicationJSONObject *GetAPIV2PredictionsID404ApplicationJSON
-	StatusCode                                    int64
 }

@@ -13,12 +13,12 @@ type Hit struct {
 	CreationTime                 *time.Time                 `json:"CreationTime,omitempty"`
 	Description                  *string                    `json:"Description,omitempty"`
 	Expiration                   *time.Time                 `json:"Expiration,omitempty"`
-	HitGroupID                   *string                    `json:"HITGroupId,omitempty"`
-	HitID                        *string                    `json:"HITId,omitempty"`
-	HitLayoutID                  *string                    `json:"HITLayoutId,omitempty"`
-	HitReviewStatus              *HitReviewStatusEnum       `json:"HITReviewStatus,omitempty"`
-	HitStatus                    *HitStatusEnum             `json:"HITStatus,omitempty"`
-	HitTypeID                    *string                    `json:"HITTypeId,omitempty"`
+	HITGroupID                   *string                    `json:"HITGroupId,omitempty"`
+	HITID                        *string                    `json:"HITId,omitempty"`
+	HITLayoutID                  *string                    `json:"HITLayoutId,omitempty"`
+	HITReviewStatus              *HitReviewStatusEnum       `json:"HITReviewStatus,omitempty"`
+	HITStatus                    *HitStatusEnum             `json:"HITStatus,omitempty"`
+	HITTypeID                    *string                    `json:"HITTypeId,omitempty"`
 	Keywords                     *string                    `json:"Keywords,omitempty"`
 	MaxAssignments               *int64                     `json:"MaxAssignments,omitempty"`
 	NumberOfAssignmentsAvailable *int64                     `json:"NumberOfAssignmentsAvailable,omitempty"`

@@ -3,13 +3,13 @@ package operations
 type GetListAllowedNodeTypeModificationsActionEnum string
 
 const (
-	GetListAllowedNodeTypeModificationsActionEnumListAllowedNodeTypeModifications GetListAllowedNodeTypeModificationsActionEnum = "ListAllowedNodeTypeModifications"
+	GETListAllowedNodeTypeModificationsActionEnumListAllowedNodeTypeModifications GetListAllowedNodeTypeModificationsActionEnum = "ListAllowedNodeTypeModifications"
 )
 
 type GetListAllowedNodeTypeModificationsVersionEnum string
 
 const (
-	GetListAllowedNodeTypeModificationsVersionEnumTwoThousandAndFifteen0202 GetListAllowedNodeTypeModificationsVersionEnum = "2015-02-02"
+	GETListAllowedNodeTypeModificationsVersionEnumTwoThousandAndFifteen0202 GetListAllowedNodeTypeModificationsVersionEnum = "2015-02-02"
 )
 
 type GetListAllowedNodeTypeModificationsQueryParams struct {

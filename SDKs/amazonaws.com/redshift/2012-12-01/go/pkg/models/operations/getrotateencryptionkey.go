@@ -3,13 +3,13 @@ package operations
 type GetRotateEncryptionKeyActionEnum string
 
 const (
-	GetRotateEncryptionKeyActionEnumRotateEncryptionKey GetRotateEncryptionKeyActionEnum = "RotateEncryptionKey"
+	GETRotateEncryptionKeyActionEnumRotateEncryptionKey GetRotateEncryptionKeyActionEnum = "RotateEncryptionKey"
 )
 
 type GetRotateEncryptionKeyVersionEnum string
 
 const (
-	GetRotateEncryptionKeyVersionEnumTwoThousandAndTwelve1201 GetRotateEncryptionKeyVersionEnum = "2012-12-01"
+	GETRotateEncryptionKeyVersionEnumTwoThousandAndTwelve1201 GetRotateEncryptionKeyVersionEnum = "2012-12-01"
 )
 
 type GetRotateEncryptionKeyQueryParams struct {

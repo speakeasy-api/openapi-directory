@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.RotoballerArticlesRequest{
         PathParams: operations.RotoballerArticlesPathParams{
-            Format: "json",
+            Format: "xml",
         },
     }
     
-    res, err := s.Sdk.RotoballerArticles(ctx, req)
+    res, err := s.RotoballerArticles(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

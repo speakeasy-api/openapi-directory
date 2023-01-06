@@ -3,20 +3,20 @@ package operations
 type GetSetLoadBalancerListenerSslCertificateActionEnum string
 
 const (
-	GetSetLoadBalancerListenerSslCertificateActionEnumSetLoadBalancerListenerSslCertificate GetSetLoadBalancerListenerSslCertificateActionEnum = "SetLoadBalancerListenerSSLCertificate"
+	GETSetLoadBalancerListenerSSLCertificateActionEnumSetLoadBalancerListenerSslCertificate GetSetLoadBalancerListenerSslCertificateActionEnum = "SetLoadBalancerListenerSSLCertificate"
 )
 
 type GetSetLoadBalancerListenerSslCertificateVersionEnum string
 
 const (
-	GetSetLoadBalancerListenerSslCertificateVersionEnumTwoThousandAndTwelve0601 GetSetLoadBalancerListenerSslCertificateVersionEnum = "2012-06-01"
+	GETSetLoadBalancerListenerSSLCertificateVersionEnumTwoThousandAndTwelve0601 GetSetLoadBalancerListenerSslCertificateVersionEnum = "2012-06-01"
 )
 
 type GetSetLoadBalancerListenerSslCertificateQueryParams struct {
 	Action           GetSetLoadBalancerListenerSslCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	LoadBalancerName string                                              `queryParam:"style=form,explode=true,name=LoadBalancerName"`
 	LoadBalancerPort int64                                               `queryParam:"style=form,explode=true,name=LoadBalancerPort"`
-	SslCertificateID string                                              `queryParam:"style=form,explode=true,name=SSLCertificateId"`
+	SSLCertificateID string                                              `queryParam:"style=form,explode=true,name=SSLCertificateId"`
 	Version          GetSetLoadBalancerListenerSslCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

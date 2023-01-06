@@ -20,6 +20,6 @@ type GetResourcesMediaIDYoutubeMetaDataJSONRequest struct {
 
 type GetResourcesMediaIDYoutubeMetaDataJSONResponse struct {
 	ContentType                                                    string
-	GetResourcesMediaIDYoutubeMetaDataJSON200ApplicationJSONObject *GetResourcesMediaIDYoutubeMetaDataJSON200ApplicationJSON
 	StatusCode                                                     int64
+	GetResourcesMediaIDYoutubeMetaDataJSON200ApplicationJSONObject *GetResourcesMediaIDYoutubeMetaDataJSON200ApplicationJSON
 }

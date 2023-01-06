@@ -8,28 +8,28 @@ import (
 type GetDescribeAlarmHistoryActionEnum string
 
 const (
-	GetDescribeAlarmHistoryActionEnumDescribeAlarmHistory GetDescribeAlarmHistoryActionEnum = "DescribeAlarmHistory"
+	GETDescribeAlarmHistoryActionEnumDescribeAlarmHistory GetDescribeAlarmHistoryActionEnum = "DescribeAlarmHistory"
 )
 
 type GetDescribeAlarmHistoryHistoryItemTypeEnum string
 
 const (
-	GetDescribeAlarmHistoryHistoryItemTypeEnumConfigurationUpdate GetDescribeAlarmHistoryHistoryItemTypeEnum = "ConfigurationUpdate"
-	GetDescribeAlarmHistoryHistoryItemTypeEnumStateUpdate         GetDescribeAlarmHistoryHistoryItemTypeEnum = "StateUpdate"
-	GetDescribeAlarmHistoryHistoryItemTypeEnumAction              GetDescribeAlarmHistoryHistoryItemTypeEnum = "Action"
+	GETDescribeAlarmHistoryHistoryItemTypeEnumConfigurationUpdate GetDescribeAlarmHistoryHistoryItemTypeEnum = "ConfigurationUpdate"
+	GETDescribeAlarmHistoryHistoryItemTypeEnumStateUpdate         GetDescribeAlarmHistoryHistoryItemTypeEnum = "StateUpdate"
+	GETDescribeAlarmHistoryHistoryItemTypeEnumAction              GetDescribeAlarmHistoryHistoryItemTypeEnum = "Action"
 )
 
 type GetDescribeAlarmHistoryScanByEnum string
 
 const (
-	GetDescribeAlarmHistoryScanByEnumTimestampDescending GetDescribeAlarmHistoryScanByEnum = "TimestampDescending"
-	GetDescribeAlarmHistoryScanByEnumTimestampAscending  GetDescribeAlarmHistoryScanByEnum = "TimestampAscending"
+	GETDescribeAlarmHistoryScanByEnumTimestampDescending GetDescribeAlarmHistoryScanByEnum = "TimestampDescending"
+	GETDescribeAlarmHistoryScanByEnumTimestampAscending  GetDescribeAlarmHistoryScanByEnum = "TimestampAscending"
 )
 
 type GetDescribeAlarmHistoryVersionEnum string
 
 const (
-	GetDescribeAlarmHistoryVersionEnumTwoThousandAndTen0801 GetDescribeAlarmHistoryVersionEnum = "2010-08-01"
+	GETDescribeAlarmHistoryVersionEnumTwoThousandAndTen0801 GetDescribeAlarmHistoryVersionEnum = "2010-08-01"
 )
 
 type GetDescribeAlarmHistoryQueryParams struct {

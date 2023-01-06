@@ -82,7 +82,7 @@ type Mpkby404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Mpkby404ApplicationJSONErrorDescriptionEnumNoRecordFound               Mpkby404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Mpkby404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Mpkby404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Mpkby404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Mpkby404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Mpkby404ApplicationJSON struct {

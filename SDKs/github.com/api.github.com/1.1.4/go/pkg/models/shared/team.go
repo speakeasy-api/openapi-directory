@@ -1,5 +1,7 @@
 package shared
 
+// TeamTeamSimple
+// Groups of organization members that gives permissions on specified repositories.
 type TeamTeamSimple struct {
 	Description     string  `json:"description"`
 	HTMLURL         string  `json:"html_url"`

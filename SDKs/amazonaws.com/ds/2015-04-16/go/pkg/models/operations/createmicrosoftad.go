@@ -7,7 +7,7 @@ import (
 type CreateMicrosoftAdxAmzTargetEnum string
 
 const (
-	CreateMicrosoftAdxAmzTargetEnumDirectoryService20150416CreateMicrosoftAd CreateMicrosoftAdxAmzTargetEnum = "DirectoryService_20150416.CreateMicrosoftAD"
+	CreateMicrosoftADXAmzTargetEnumDirectoryService20150416CreateMicrosoftAd CreateMicrosoftAdxAmzTargetEnum = "DirectoryService_20150416.CreateMicrosoftAD"
 )
 
 type CreateMicrosoftAdHeaders struct {
@@ -29,7 +29,7 @@ type CreateMicrosoftAdRequest struct {
 type CreateMicrosoftAdResponse struct {
 	ClientException                 *interface{}
 	ContentType                     string
-	CreateMicrosoftAdResult         *shared.CreateMicrosoftAdResult
+	CreateMicrosoftADResult         *shared.CreateMicrosoftAdResult
 	DirectoryLimitExceededException *interface{}
 	InvalidParameterException       *interface{}
 	ServiceException                *interface{}

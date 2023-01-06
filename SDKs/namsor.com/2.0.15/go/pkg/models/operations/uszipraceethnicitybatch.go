@@ -14,7 +14,7 @@ type UsZipRaceEthnicityBatchRequest struct {
 }
 
 type UsZipRaceEthnicityBatchResponse struct {
-	BatchFirstLastNameUsRaceEthnicityOut *shared.BatchFirstLastNameUsRaceEthnicityOut
+	BatchFirstLastNameUSRaceEthnicityOut *shared.BatchFirstLastNameUsRaceEthnicityOut
 	ContentType                          string
 	StatusCode                           int64
 }

@@ -28,6 +28,6 @@ type PostPortfolioOptimizationMaximumSharpeRatioRequest struct {
 
 type PostPortfolioOptimizationMaximumSharpeRatioResponse struct {
 	ContentType                                                         string
-	PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject *PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON
 	StatusCode                                                          int64
+	PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject *PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON
 }

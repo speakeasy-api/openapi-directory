@@ -3,13 +3,13 @@ package operations
 type PostUntagResourceActionEnum string
 
 const (
-	PostUntagResourceActionEnumUntagResource PostUntagResourceActionEnum = "UntagResource"
+	POSTUntagResourceActionEnumUntagResource PostUntagResourceActionEnum = "UntagResource"
 )
 
 type PostUntagResourceVersionEnum string
 
 const (
-	PostUntagResourceVersionEnumTwoThousandAndTen0801 PostUntagResourceVersionEnum = "2010-08-01"
+	POSTUntagResourceVersionEnumTwoThousandAndTen0801 PostUntagResourceVersionEnum = "2010-08-01"
 )
 
 type PostUntagResourceQueryParams struct {

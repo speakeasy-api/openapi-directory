@@ -1,5 +1,5 @@
 package shared
 
 type StopDbInstanceAutomatedBackupsReplicationResult struct {
-	DbInstanceAutomatedBackup *DbInstanceAutomatedBackup
+	DBInstanceAutomatedBackup *DbInstanceAutomatedBackup
 }

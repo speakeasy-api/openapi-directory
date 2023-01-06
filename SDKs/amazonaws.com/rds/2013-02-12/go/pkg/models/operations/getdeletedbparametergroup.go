@@ -3,18 +3,18 @@ package operations
 type GetDeleteDbParameterGroupActionEnum string
 
 const (
-	GetDeleteDbParameterGroupActionEnumDeleteDbParameterGroup GetDeleteDbParameterGroupActionEnum = "DeleteDBParameterGroup"
+	GETDeleteDBParameterGroupActionEnumDeleteDbParameterGroup GetDeleteDbParameterGroupActionEnum = "DeleteDBParameterGroup"
 )
 
 type GetDeleteDbParameterGroupVersionEnum string
 
 const (
-	GetDeleteDbParameterGroupVersionEnumTwoThousandAndThirteen0212 GetDeleteDbParameterGroupVersionEnum = "2013-02-12"
+	GETDeleteDBParameterGroupVersionEnumTwoThousandAndThirteen0212 GetDeleteDbParameterGroupVersionEnum = "2013-02-12"
 )
 
 type GetDeleteDbParameterGroupQueryParams struct {
 	Action               GetDeleteDbParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbParameterGroupName string                               `queryParam:"style=form,explode=true,name=DBParameterGroupName"`
+	DBParameterGroupName string                               `queryParam:"style=form,explode=true,name=DBParameterGroupName"`
 	Version              GetDeleteDbParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

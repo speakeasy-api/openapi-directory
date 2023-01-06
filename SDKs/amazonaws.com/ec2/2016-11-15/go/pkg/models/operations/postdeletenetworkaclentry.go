@@ -3,13 +3,13 @@ package operations
 type PostDeleteNetworkACLEntryActionEnum string
 
 const (
-	PostDeleteNetworkACLEntryActionEnumDeleteNetworkACLEntry PostDeleteNetworkACLEntryActionEnum = "DeleteNetworkAclEntry"
+	POSTDeleteNetworkACLEntryActionEnumDeleteNetworkACLEntry PostDeleteNetworkACLEntryActionEnum = "DeleteNetworkAclEntry"
 )
 
 type PostDeleteNetworkACLEntryVersionEnum string
 
 const (
-	PostDeleteNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 PostDeleteNetworkACLEntryVersionEnum = "2016-11-15"
+	POSTDeleteNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 PostDeleteNetworkACLEntryVersionEnum = "2016-11-15"
 )
 
 type PostDeleteNetworkACLEntryQueryParams struct {

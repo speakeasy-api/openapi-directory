@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,108 +27,114 @@ func main() {
             Option1: &operations.VisionFilesAnnotateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.VisionFilesAnnotateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "necessitatibus",
-            Alt: "proto",
-            Callback: "inventore",
-            Fields: "sapiente",
-            Key: "reprehenderit",
-            OauthToken: "et",
+            AccessToken: "sit",
+            Alt: "json",
+            Callback: "doloremque",
+            Fields: "aut",
+            Key: "in",
+            OauthToken: "sunt",
             PrettyPrint: true,
-            QuotaUser: "expedita",
-            UploadType: "et",
-            UploadProtocol: "omnis",
+            QuotaUser: "dicta",
+            UploadType: "ea",
+            UploadProtocol: "eveniet",
         },
         Request: &shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest{
-            Parent: "maxime",
+            Parent: "qui",
             Requests: []shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 1213201996933488666,
-                            Model: "voluptatibus",
-                            Type: "PRODUCT_SEARCH",
+                            MaxResults: 1097148276936863326,
+                            Model: "consequatur",
+                            Type: "IMAGE_PROPERTIES",
                         },
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 3456238072829815161,
-                            Model: "sed",
+                            MaxResults: 7793704364488399491,
+                            Model: "doloremque",
                             Type: "OBJECT_LOCALIZATION",
-                        },
-                        shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 6642228921464980690,
-                            Model: "sit",
-                            Type: "DOCUMENT_TEXT_DETECTION",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
                             AspectRatios: []float32{
-                                90.199997,
+                                23.200001,
                             },
                         },
                         LanguageHints: []string{
-                            "fugit",
-                            "aperiam",
-                            "repudiandae",
+                            "officia",
+                            "atque",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 28.100000,
-                                Longitude: 9.200000,
+                                Latitude: 44.099998,
+                                Longitude: 39.200001,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 21.100000,
-                                Longitude: 23.200001,
+                                Latitude: 43.200001,
+                                Longitude: 3.100000,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 12.100000,
-                                        Y: 36.200001,
+                                        X: 71.099998,
+                                        Y: 83.199997,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                        X: 17.200001,
+                                        Y: 59.099998,
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p2beta1Vertex{
                                     shared.GoogleCloudVisionV1p2beta1Vertex{
-                                        X: 3381637034097052270,
-                                        Y: 7257984784277687128,
+                                        X: 1664478937018203628,
+                                        Y: 8391256688233226568,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1Vertex{
+                                        X: 8997849101297700852,
+                                        Y: 3981809433914354677,
                                     },
                                 },
                             },
-                            Filter: "voluptate",
+                            Filter: "eos",
                             ProductCategories: []string{
-                                "inventore",
+                                "rerum",
+                                "illum",
                             },
-                            ProductSet: "ab",
+                            ProductSet: "sunt",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "provident",
-                                "doloremque",
+                                "reprehenderit",
+                                "ut",
+                                "suscipit",
                             },
-                            EnableTextDetectionConfidenceScore: true,
+                            EnableTextDetectionConfidenceScore: false,
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p2beta1WebDetectionParams{
-                            IncludeGeoResults: false,
+                            IncludeGeoResults: true,
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "voluptas",
+                        Content: "laboriosam",
                         GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "optio",
+                            URI: "dolores",
                         },
-                        MimeType: "veritatis",
+                        MimeType: "totam",
                     },
                     Pages: []int32{
-                        8333952790492756531,
+                        372452157611894385,
+                        4547094199366570460,
+                        6805473071622971373,
                     },
                 },
             },

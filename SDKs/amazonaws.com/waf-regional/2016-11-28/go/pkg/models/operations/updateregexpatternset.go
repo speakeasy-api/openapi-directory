@@ -30,12 +30,12 @@ type UpdateRegexPatternSetResponse struct {
 	ContentType                      string
 	StatusCode                       int64
 	UpdateRegexPatternSetResponse    *shared.UpdateRegexPatternSetResponse
-	WafInternalErrorException        *interface{}
-	WafInvalidAccountException       *interface{}
-	WafInvalidOperationException     *interface{}
-	WafInvalidRegexPatternException  *interface{}
-	WafLimitsExceededException       *interface{}
-	WafNonexistentContainerException *interface{}
-	WafNonexistentItemException      *interface{}
-	WafStaleDataException            *interface{}
+	WAFInternalErrorException        *interface{}
+	WAFInvalidAccountException       *interface{}
+	WAFInvalidOperationException     *interface{}
+	WAFInvalidRegexPatternException  *interface{}
+	WAFLimitsExceededException       *interface{}
+	WAFNonexistentContainerException *interface{}
+	WAFNonexistentItemException      *interface{}
+	WAFStaleDataException            *interface{}
 }

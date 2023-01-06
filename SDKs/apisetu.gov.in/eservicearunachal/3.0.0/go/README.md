@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.ChcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.ChcerRequestBody{
             CertificateParameters: &operations.ChcerRequestBodyCertificateParameters{
-                FullName: "similique",
-                RefNo: "illum",
-                TokenNo: "soluta",
+                FullName: "eaque",
+                RefNo: "sed",
+                TokenNo: "ut",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "aliquam",
         },
     }
     
-    res, err := s.Sdk.Chcer(ctx, req)
+    res, err := s.APIs.Chcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Chcer` - Character Certificate
 * `Dmcer` - Domicile Certificate

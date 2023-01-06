@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.AndroidpublisherEditsApklistingsDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AndroidpublisherEditsApklistingsDeletePathParams{
-            ApkVersionCode: 3004786443331028729,
-            EditID: "consequuntur",
-            Language: "tenetur",
-            PackageName: "eos",
+            ApkVersionCode: 2867676335299060471,
+            EditID: "ipsum",
+            Language: "sunt",
+            PackageName: "soluta",
         },
         QueryParams: operations.AndroidpublisherEditsApklistingsDeleteQueryParams{
             Alt: "json",
-            Fields: "et",
-            Key: "cumque",
-            OauthToken: "reprehenderit",
-            PrettyPrint: false,
-            QuotaUser: "ut",
-            UserIP: "dicta",
+            Fields: "earum",
+            Key: "illo",
+            OauthToken: "ducimus",
+            PrettyPrint: true,
+            QuotaUser: "blanditiis",
+            UserIP: "non",
         },
     }
     

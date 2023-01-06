@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,29 +34,30 @@ func main() {
     
     req := operations.CreateEventIntegrationRequest{
         Headers: operations.CreateEventIntegrationHeaders{
-            XAmzAlgorithm: "ullam",
-            XAmzContentSha256: "architecto",
-            XAmzCredential: "architecto",
-            XAmzDate: "beatae",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "veniam",
-            XAmzSignedHeaders: "hic",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "autem",
+            XAmzDate: "vitae",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "non",
+            XAmzSignedHeaders: "aut",
         },
         Request: operations.CreateEventIntegrationRequestBody{
-            ClientToken: "beatae",
-            Description: "veritatis",
-            EventBridgeBus: "architecto",
+            ClientToken: "autem",
+            Description: "dolores",
+            EventBridgeBus: "aperiam",
             EventFilter: operations.CreateEventIntegrationRequestBodyEventFilter{
-                Source: "voluptas",
+                Source: "maiores",
             },
-            Name: "voluptatibus",
+            Name: "culpa",
             Tags: map[string]string{
-                "consectetur": "modi",
+                "possimus": "harum",
+                "laudantium": "odio",
             },
         },
     }
     
-    res, err := s.Sdk.CreateEventIntegration(ctx, req)
+    res, err := s.CreateEventIntegration(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

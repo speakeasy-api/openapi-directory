@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,43 +24,41 @@ func main() {
     
     req := operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest{
         Security: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity{
-            Hapikey: &shared.SchemeHapikey{
+            PrivateAppsLegacy: &shared.SchemePrivateAppsLegacy{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         PathParams: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams{
-            ExternalEventID: "at",
-            SubscriberState: "alias",
+            ExternalEventID: "amet",
+            SubscriberState: "consectetur",
         },
         QueryParams: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams{
-            ExternalAccountID: "itaque",
+            ExternalAccountID: "doloremque",
         },
         Request: shared.BatchInputMarketingEventSubscriber{
             Inputs: []shared.MarketingEventSubscriber{
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 2302967267970027547,
+                    InteractionDateTime: 1596208050830488021,
                     Properties: map[string]string{
-                        "molestias": "unde",
-                        "est": "magni",
+                        "harum": "ut",
                     },
-                    Vid: 7565841782221576307,
+                    Vid: 7630631086049095972,
                 },
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 2142591452447809195,
+                    InteractionDateTime: 5340899317600091008,
                     Properties: map[string]string{
-                        "sed": "et",
-                        "aut": "magni",
-                        "suscipit": "itaque",
+                        "sit": "voluptas",
+                        "sit": "et",
                     },
-                    Vid: 1952180925797314726,
+                    Vid: 7215831375494083812,
                 },
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 5471217105972249296,
+                    InteractionDateTime: 8602367534737535781,
                     Properties: map[string]string{
-                        "laudantium": "molestiae",
-                        "omnis": "maiores",
+                        "impedit": "neque",
+                        "ipsam": "commodi",
                     },
-                    Vid: 1075583259233509778,
+                    Vid: 3732851331951527695,
                 },
             },
         },

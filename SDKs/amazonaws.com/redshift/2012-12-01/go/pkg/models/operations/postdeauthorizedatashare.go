@@ -3,13 +3,13 @@ package operations
 type PostDeauthorizeDataShareActionEnum string
 
 const (
-	PostDeauthorizeDataShareActionEnumDeauthorizeDataShare PostDeauthorizeDataShareActionEnum = "DeauthorizeDataShare"
+	POSTDeauthorizeDataShareActionEnumDeauthorizeDataShare PostDeauthorizeDataShareActionEnum = "DeauthorizeDataShare"
 )
 
 type PostDeauthorizeDataShareVersionEnum string
 
 const (
-	PostDeauthorizeDataShareVersionEnumTwoThousandAndTwelve1201 PostDeauthorizeDataShareVersionEnum = "2012-12-01"
+	POSTDeauthorizeDataShareVersionEnumTwoThousandAndTwelve1201 PostDeauthorizeDataShareVersionEnum = "2012-12-01"
 )
 
 type PostDeauthorizeDataShareQueryParams struct {

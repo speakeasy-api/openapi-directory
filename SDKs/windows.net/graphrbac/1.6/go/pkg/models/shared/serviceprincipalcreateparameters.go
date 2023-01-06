@@ -1,10 +1,9 @@
 package shared
 
 // ServicePrincipalCreateParameters
-// Request parameters for creating a new service principal.
+// Active Directory service principal common properties shared among GET, POST and PATCH
 type ServicePrincipalCreateParameters struct {
 	AccountEnabled            *bool                               `json:"accountEnabled,omitempty"`
-	AppID                     string                              `json:"appId"`
 	AppRoleAssignmentRequired *bool                               `json:"appRoleAssignmentRequired,omitempty"`
 	KeyCredentials            []map[string]map[string]interface{} `json:"keyCredentials,omitempty"`
 	PasswordCredentials       []map[string]map[string]interface{} `json:"passwordCredentials,omitempty"`

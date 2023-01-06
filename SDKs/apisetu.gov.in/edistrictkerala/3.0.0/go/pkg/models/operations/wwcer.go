@@ -83,7 +83,7 @@ type Wwcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Wwcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Wwcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Wwcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Wwcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Wwcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Wwcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Wwcer404ApplicationJSON struct {

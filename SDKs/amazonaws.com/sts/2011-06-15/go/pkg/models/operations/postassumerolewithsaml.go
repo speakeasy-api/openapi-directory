@@ -3,13 +3,13 @@ package operations
 type PostAssumeRoleWithSamlActionEnum string
 
 const (
-	PostAssumeRoleWithSamlActionEnumAssumeRoleWithSaml PostAssumeRoleWithSamlActionEnum = "AssumeRoleWithSAML"
+	POSTAssumeRoleWithSAMLActionEnumAssumeRoleWithSaml PostAssumeRoleWithSamlActionEnum = "AssumeRoleWithSAML"
 )
 
 type PostAssumeRoleWithSamlVersionEnum string
 
 const (
-	PostAssumeRoleWithSamlVersionEnumTwoThousandAndEleven0615 PostAssumeRoleWithSamlVersionEnum = "2011-06-15"
+	POSTAssumeRoleWithSAMLVersionEnumTwoThousandAndEleven0615 PostAssumeRoleWithSamlVersionEnum = "2011-06-15"
 )
 
 type PostAssumeRoleWithSamlQueryParams struct {

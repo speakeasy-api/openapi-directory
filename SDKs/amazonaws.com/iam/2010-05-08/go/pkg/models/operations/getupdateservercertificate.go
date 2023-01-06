@@ -3,13 +3,13 @@ package operations
 type GetUpdateServerCertificateActionEnum string
 
 const (
-	GetUpdateServerCertificateActionEnumUpdateServerCertificate GetUpdateServerCertificateActionEnum = "UpdateServerCertificate"
+	GETUpdateServerCertificateActionEnumUpdateServerCertificate GetUpdateServerCertificateActionEnum = "UpdateServerCertificate"
 )
 
 type GetUpdateServerCertificateVersionEnum string
 
 const (
-	GetUpdateServerCertificateVersionEnumTwoThousandAndTen0508 GetUpdateServerCertificateVersionEnum = "2010-05-08"
+	GETUpdateServerCertificateVersionEnumTwoThousandAndTen0508 GetUpdateServerCertificateVersionEnum = "2010-05-08"
 )
 
 type GetUpdateServerCertificateQueryParams struct {

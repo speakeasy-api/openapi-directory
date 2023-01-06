@@ -38,8 +38,8 @@ type PostSamlConfigurationRequest struct {
 }
 
 type PostSamlConfigurationResponse struct {
-	Body                                        []byte
 	ContentType                                 string
+	SamlConfigurationInfo                       *string
 	StatusCode                                  int64
 	PostSamlConfiguration302TextPlainString     *string
 	PostSamlConfigurationDefaultTextPlainString *string

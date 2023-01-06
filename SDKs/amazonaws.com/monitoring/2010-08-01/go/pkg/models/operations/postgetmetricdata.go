@@ -3,13 +3,13 @@ package operations
 type PostGetMetricDataActionEnum string
 
 const (
-	PostGetMetricDataActionEnumGetMetricData PostGetMetricDataActionEnum = "GetMetricData"
+	POSTGetMetricDataActionEnumGetMetricData PostGetMetricDataActionEnum = "GetMetricData"
 )
 
 type PostGetMetricDataVersionEnum string
 
 const (
-	PostGetMetricDataVersionEnumTwoThousandAndTen0801 PostGetMetricDataVersionEnum = "2010-08-01"
+	POSTGetMetricDataVersionEnumTwoThousandAndTen0801 PostGetMetricDataVersionEnum = "2010-08-01"
 )
 
 type PostGetMetricDataQueryParams struct {

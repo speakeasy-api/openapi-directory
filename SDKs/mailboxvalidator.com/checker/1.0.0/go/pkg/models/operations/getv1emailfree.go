@@ -19,6 +19,6 @@ type GetV1EmailFreeRequest struct {
 
 type GetV1EmailFreeResponse struct {
 	ContentType                            string
-	GetV1EmailFree200ApplicationJSONString *string
 	StatusCode                             int64
+	GetV1EmailFree200ApplicationJSONString *string
 }

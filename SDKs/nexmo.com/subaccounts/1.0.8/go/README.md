@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -31,11 +30,11 @@ func main() {
             },
         },
         PathParams: operations.CreateSubAccountPathParams{
-            APIKey: "quae",
+            APIKey: "illum",
         },
         Request: shared.NewSubaccountRequest{
-            Name: "soluta",
-            Secret: "molestiae",
+            Name: "nemo",
+            Secret: "deserunt",
             UsePrimaryAccountBalance: false,
         },
     }

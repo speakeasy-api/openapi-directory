@@ -8,10 +8,6 @@ type CreateAppRequestBody struct {
 	Spec shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItemsPropertiesSpec `json:"spec"`
 }
 
-type CreateAppRequest struct {
-	Request CreateAppRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateApp200ApplicationJSON struct {
 	App *shared.Onev21appsGetResponses200ContentApplication1jsonSchemaPropertiesAppsItems `json:"app,omitempty"`
 }
@@ -20,6 +16,10 @@ type CreateApp401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateAppRequest struct {
+	Request CreateAppRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateAppResponse struct {

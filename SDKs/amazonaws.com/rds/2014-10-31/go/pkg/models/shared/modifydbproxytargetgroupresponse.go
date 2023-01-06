@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDbProxyTargetGroupResponse struct {
-	DbProxyTargetGroup *DbProxyTargetGroup
+	DBProxyTargetGroup *DbProxyTargetGroup
 }

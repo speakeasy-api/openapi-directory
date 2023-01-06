@@ -7,7 +7,7 @@ import (
 type StopPhiDetectionJobXAmzTargetEnum string
 
 const (
-	StopPhiDetectionJobXAmzTargetEnumComprehendMedical20181030StopPhiDetectionJob StopPhiDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.StopPHIDetectionJob"
+	StopPHIDetectionJobXAmzTargetEnumComprehendMedical20181030StopPhiDetectionJob StopPhiDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.StopPHIDetectionJob"
 )
 
 type StopPhiDetectionJobHeaders struct {
@@ -32,5 +32,5 @@ type StopPhiDetectionJobResponse struct {
 	InvalidRequestException     *interface{}
 	ResourceNotFoundException   *interface{}
 	StatusCode                  int64
-	StopPhiDetectionJobResponse *shared.StopPhiDetectionJobResponse
+	StopPHIDetectionJobResponse *shared.StopPhiDetectionJobResponse
 }

@@ -31,5 +31,5 @@ type CheckDomainAvailabilityResponse struct {
 	ContentType                     string
 	InvalidInput                    *interface{}
 	StatusCode                      int64
-	UnsupportedTld                  *interface{}
+	UnsupportedTLD                  *interface{}
 }

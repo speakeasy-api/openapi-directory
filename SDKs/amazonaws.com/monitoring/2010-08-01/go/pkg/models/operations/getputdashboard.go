@@ -3,13 +3,13 @@ package operations
 type GetPutDashboardActionEnum string
 
 const (
-	GetPutDashboardActionEnumPutDashboard GetPutDashboardActionEnum = "PutDashboard"
+	GETPutDashboardActionEnumPutDashboard GetPutDashboardActionEnum = "PutDashboard"
 )
 
 type GetPutDashboardVersionEnum string
 
 const (
-	GetPutDashboardVersionEnumTwoThousandAndTen0801 GetPutDashboardVersionEnum = "2010-08-01"
+	GETPutDashboardVersionEnumTwoThousandAndTen0801 GetPutDashboardVersionEnum = "2010-08-01"
 )
 
 type GetPutDashboardQueryParams struct {

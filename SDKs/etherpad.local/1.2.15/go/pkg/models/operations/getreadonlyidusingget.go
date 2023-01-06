@@ -39,8 +39,8 @@ type GetReadOnlyIDUsingGetRequest struct {
 type GetReadOnlyIDUsingGetResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	GetReadOnlyIDUsingGet200ApplicationJSONObject *GetReadOnlyIDUsingGet200ApplicationJSON
-	GetReadOnlyIDUsingGet400ApplicationJSONObject *GetReadOnlyIDUsingGet400ApplicationJSON
-	GetReadOnlyIDUsingGet401ApplicationJSONObject *GetReadOnlyIDUsingGet401ApplicationJSON
-	GetReadOnlyIDUsingGet500ApplicationJSONObject *GetReadOnlyIDUsingGet500ApplicationJSON
+	GETReadOnlyIDUsingGET200ApplicationJSONObject *GetReadOnlyIDUsingGet200ApplicationJSON
+	GETReadOnlyIDUsingGET400ApplicationJSONObject *GetReadOnlyIDUsingGet400ApplicationJSON
+	GETReadOnlyIDUsingGET401ApplicationJSONObject *GetReadOnlyIDUsingGet401ApplicationJSON
+	GETReadOnlyIDUsingGET500ApplicationJSONObject *GetReadOnlyIDUsingGet500ApplicationJSON
 }

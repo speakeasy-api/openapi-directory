@@ -15,6 +15,8 @@ type PullRequestLinks struct {
 	Statuses       Link `json:"statuses"`
 }
 
+// PullRequestSimpleUser
+// Simple User
 type PullRequestSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -37,6 +39,8 @@ type PullRequestSimpleUser struct {
 	URL               string  `json:"url"`
 }
 
+// PullRequestBaseRepoLicenseSimple
+// License Simple
 type PullRequestBaseRepoLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -342,6 +346,8 @@ type PullRequestLabels struct {
 	URL         *string `json:"url,omitempty"`
 }
 
+// PullRequestMilestoneSimpleUser
+// Simple User
 type PullRequestMilestoneSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -371,6 +377,8 @@ const (
 	PullRequestMilestoneStateEnumClosed PullRequestMilestoneStateEnum = "closed"
 )
 
+// PullRequestMilestone
+// A collection of related issues and pull requests.
 type PullRequestMilestone struct {
 	ClosedAt     time.Time                      `json:"closed_at"`
 	ClosedIssues int64                          `json:"closed_issues"`

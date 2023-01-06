@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.CreateActivityRequest{
         Headers: operations.CreateActivityHeaders{
-            XAmzAlgorithm: "aperiam",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "illum",
-            XAmzDate: "hic",
-            XAmzSecurityToken: "quisquam",
-            XAmzSignature: "sit",
-            XAmzSignedHeaders: "autem",
+            XAmzAlgorithm: "earum",
+            XAmzContentSha256: "est",
+            XAmzCredential: "error",
+            XAmzDate: "ipsa",
+            XAmzSecurityToken: "sint",
+            XAmzSignature: "saepe",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "AWSStepFunctions.CreateActivity",
         },
         Request: shared.CreateActivityInput{
-            Name: "itaque",
+            Name: "neque",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "et",
-                    Value: "et",
+                    Key: "ab",
+                    Value: "dolore",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateActivity(ctx, req)
+    res, err := s.CreateActivity(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

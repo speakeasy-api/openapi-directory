@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,46 +34,46 @@ func main() {
     
     req := operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest{
         PathParams: operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams{
-            ContentType: "xml",
-            Origin: "nemo",
-            VersionNumber: 3236422529230403831,
+            ContentType: "json",
+            Origin: "architecto",
+            VersionNumber: 3109224644026671343,
         },
         QueryParams: operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams{
-            AccelerationEfficiency: 2.100000,
-            ArriveAt: "et",
-            AuxiliaryPowerInLitersPerHour: 99.099998,
-            Avoid: "dignissimos",
-            Callback: "rerum",
-            ConstantSpeedConsumptionInLitersPerHundredkm: "commodi",
-            ConstantSpeedConsumptionInkWhPerHundredkm: "veritatis",
-            CurrentFuelInLiters: 19.200001,
-            DecelerationEfficiency: 9.100000,
-            DepartAt: "id",
-            DownhillEfficiency: 6.100000,
-            EnergyBudgetInkWh: 86.199997,
-            FuelBudgetInLiters: 72.099998,
-            FuelEnergyDensityInMJoulesPerLiter: 25.200001,
-            Hilliness: "low",
+            AccelerationEfficiency: 83.099998,
+            ArriveAt: "eos",
+            AuxiliaryPowerInLitersPerHour: 14.200000,
+            Avoid: "molestias",
+            Callback: "iusto",
+            ConstantSpeedConsumptionInLitersPerHundredkm: "amet",
+            ConstantSpeedConsumptionInkWhPerHundredkm: "et",
+            CurrentFuelInLiters: 38.200001,
+            DecelerationEfficiency: 41.099998,
+            DepartAt: "ad",
+            DownhillEfficiency: 52.200001,
+            EnergyBudgetInkWh: 82.099998,
+            FuelBudgetInLiters: 41.200001,
+            FuelEnergyDensityInMJoulesPerLiter: 58.099998,
+            Hilliness: "normal",
             Report: "effectiveSettings",
-            RouteType: "thrilling",
+            RouteType: "eco",
             TimeBudgetInSec: 84.099998,
             Traffic: true,
-            TravelMode: "bus",
-            UphillEfficiency: 38.200001,
-            VehicleAxleWeight: 2631421531907859636,
+            TravelMode: "motorcycle",
+            UphillEfficiency: 85.099998,
+            VehicleAxleWeight: 6257482572452617891,
             VehicleCommercial: true,
-            VehicleEngineType: "combustion",
-            VehicleHeight: 80.099998,
-            VehicleLength: 34.099998,
-            VehicleLoadType: "aut",
-            VehicleMaxSpeed: 4236942523811675930,
-            VehicleWeight: 8034398868187943685,
-            VehicleWidth: 83.099998,
-            Windingness: "high",
+            VehicleEngineType: "electric",
+            VehicleHeight: 74.099998,
+            VehicleLength: 84.099998,
+            VehicleLoadType: "sunt",
+            VehicleMaxSpeed: 8279762398787749343,
+            VehicleWeight: 8039547287523212804,
+            VehicleWidth: 43.200001,
+            Windingness: "low",
         },
     }
     
-    res, err := s.Sdk.GetRoutingVersionNumberCalculateReachableRangeOriginContentType(ctx, req)
+    res, err := s.Routing.GetRoutingVersionNumberCalculateReachableRangeOriginContentType(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -88,7 +87,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Routing
 
 * `GetRoutingVersionNumberCalculateReachableRangeOriginContentType` - Reachable Range
 * `GetRoutingVersionNumberCalculateRouteLocationsContentType` - Calculate Route

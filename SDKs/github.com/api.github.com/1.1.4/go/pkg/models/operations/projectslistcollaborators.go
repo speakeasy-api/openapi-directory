@@ -8,18 +8,10 @@ type ProjectsListCollaboratorsPathParams struct {
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
-type ProjectsListCollaboratorsAffiliationEnum string
-
-const (
-	ProjectsListCollaboratorsAffiliationEnumOutside ProjectsListCollaboratorsAffiliationEnum = "outside"
-	ProjectsListCollaboratorsAffiliationEnumDirect  ProjectsListCollaboratorsAffiliationEnum = "direct"
-	ProjectsListCollaboratorsAffiliationEnumAll     ProjectsListCollaboratorsAffiliationEnum = "all"
-)
-
 type ProjectsListCollaboratorsQueryParams struct {
-	Affiliation *ProjectsListCollaboratorsAffiliationEnum `queryParam:"style=form,explode=true,name=affiliation"`
-	Page        *int64                                    `queryParam:"style=form,explode=true,name=page"`
-	PerPage     *int64                                    `queryParam:"style=form,explode=true,name=per_page"`
+	Affiliation *shared.ProjectIDEnum `queryParam:"style=form,explode=true,name=affiliation"`
+	Page        *int64                `queryParam:"style=form,explode=true,name=page"`
+	PerPage     *int64                `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type ProjectsListCollaborators415ApplicationJSON struct {

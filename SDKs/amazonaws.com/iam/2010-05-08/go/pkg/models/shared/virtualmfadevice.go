@@ -9,7 +9,7 @@ import (
 type VirtualMfaDevice struct {
 	Base32StringSeed *string
 	EnableDate       *time.Time
-	QrCodePng        *string
+	QRCodePNG        *string
 	SerialNumber     string
 	Tags             []Tag
 	User             *User

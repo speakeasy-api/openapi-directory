@@ -1,0 +1,20 @@
+package shared
+
+type PatientMessagePatientMessageAttachment struct {
+	Attachment *string `json:"attachment,omitempty"`
+	CreatedAt  *string `json:"created_at,omitempty"`
+	Doctor     *int64  `json:"doctor,omitempty"`
+	UpdatedAt  *string `json:"updated_at,omitempty"`
+}
+
+type PatientMessage struct {
+	Attachments []PatientMessagePatientMessageAttachment `json:"attachments,omitempty"`
+	Body        *string                                  `json:"body,omitempty"`
+	CreatedAt   *string                                  `json:"created_at,omitempty"`
+	Doctor      int64                                    `json:"doctor"`
+	ID          *int64                                   `json:"id,omitempty"`
+	Message     *string                                  `json:"message,omitempty"`
+	Patient     int64                                    `json:"patient"`
+	Subject     string                                   `json:"subject"`
+	UpdatedAt   *string                                  `json:"updated_at,omitempty"`
+}

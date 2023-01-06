@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -55,8 +54,8 @@ func main() {
 * `DeleteAdminRequests` - Delete all requests in journal
 * `DeleteAdminRequestsRequestID` - Delete request by ID
 * `GetAdminRequests` - Get all requests in journal
-* `GetAdminRequestsRequestID` - Get request by ID
 * `GetAdminRequestsUnmatched` - Find unmatched requests
+* `GetAdminRequestsRequestID` - Get request by ID
 * `PostAdminRequestsCount` - Count requests by criteria
 * `PostAdminRequestsFind` - Find requests by criteria
 * `PostAdminRequestsRemove` - Remove requests by criteria

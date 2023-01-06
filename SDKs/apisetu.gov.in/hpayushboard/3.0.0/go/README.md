@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.PhcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.PhcerRequestBody{
             CertificateParameters: &operations.PhcerRequestBodyCertificateParameters{
-                FullName: "rem",
-                RegistrationNo: "totam",
+                FullName: "a",
+                RegistrationNo: "et",
             },
-            ConsentArtifact: "culpa",
+            ConsentArtifact: "omnis",
             Format: "pdf",
-            TxnID: "eos",
+            TxnID: "in",
         },
     }
     
-    res, err := s.Sdk.Phcer(ctx, req)
+    res, err := s.APIs.Phcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Phcer` - Pharmacist Registration Certificate
 * `Rpcer` - Pharmacist Renewal certificate

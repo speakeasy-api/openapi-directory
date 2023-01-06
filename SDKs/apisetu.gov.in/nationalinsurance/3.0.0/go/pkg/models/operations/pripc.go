@@ -83,7 +83,7 @@ type Pripc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Pripc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Pripc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Pripc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Pripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Pripc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Pripc404ApplicationJSON struct {

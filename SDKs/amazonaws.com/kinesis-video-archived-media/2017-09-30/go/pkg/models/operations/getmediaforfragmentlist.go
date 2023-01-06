@@ -16,7 +16,7 @@ type GetMediaForFragmentListHeaders struct {
 
 type GetMediaForFragmentListRequestBody struct {
 	Fragments  []string `json:"Fragments"`
-	StreamArn  *string  `json:"StreamARN,omitempty"`
+	StreamARN  *string  `json:"StreamARN,omitempty"`
 	StreamName *string  `json:"StreamName,omitempty"`
 }
 

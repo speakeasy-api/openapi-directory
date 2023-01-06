@@ -5,7 +5,7 @@ import (
 )
 
 type WtrblRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Wtrbl404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Wtrbl404ApplicationJSONErrorDescriptionEnumNoRecordFound               Wtrbl404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Wtrbl404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Wtrbl404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Wtrbl404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Wtrbl404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Wtrbl404ApplicationJSON struct {

@@ -18,8 +18,8 @@ type CompanyDeepsearchIsinRequest struct {
 }
 
 type CompanyDeepsearchIsinResponse struct {
-	CompanyDeepsearchIsin200ApplicationJSONAnies   []interface{}
-	CompanyDeepsearchIsinDefaultApplicationJSONAny *interface{}
+	CompanyDeepsearchISIN200ApplicationJSONAnies   []interface{}
+	CompanyDeepsearchISINDefaultApplicationJSONAny *interface{}
 	ContentType                                    string
 	StatusCode                                     int64
 }

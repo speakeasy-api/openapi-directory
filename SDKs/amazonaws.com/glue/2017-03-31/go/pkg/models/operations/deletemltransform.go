@@ -7,7 +7,7 @@ import (
 type DeleteMlTransformXAmzTargetEnum string
 
 const (
-	DeleteMlTransformXAmzTargetEnumAwsGlueDeleteMlTransform DeleteMlTransformXAmzTargetEnum = "AWSGlue.DeleteMLTransform"
+	DeleteMLTransformXAmzTargetEnumAwsGlueDeleteMlTransform DeleteMlTransformXAmzTargetEnum = "AWSGlue.DeleteMLTransform"
 )
 
 type DeleteMlTransformHeaders struct {
@@ -28,7 +28,7 @@ type DeleteMlTransformRequest struct {
 
 type DeleteMlTransformResponse struct {
 	ContentType               string
-	DeleteMlTransformResponse *shared.DeleteMlTransformResponse
+	DeleteMLTransformResponse *shared.DeleteMlTransformResponse
 	EntityNotFoundException   *interface{}
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}

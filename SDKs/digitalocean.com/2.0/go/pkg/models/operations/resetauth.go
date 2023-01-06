@@ -13,11 +13,6 @@ type ResetAuthRequestBody struct {
 	MysqlSettings *shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesUsersItemsPropertiesMysqlSettings `json:"mysql_settings,omitempty"`
 }
 
-type ResetAuthRequest struct {
-	PathParams ResetAuthPathParams
-	Request    ResetAuthRequestBody `request:"mediaType=application/json"`
-}
-
 type ResetAuth200ApplicationJSON struct {
 	User shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesUsersItems `json:"user"`
 }
@@ -26,6 +21,11 @@ type ResetAuth401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ResetAuthRequest struct {
+	PathParams ResetAuthPathParams
+	Request    ResetAuthRequestBody `request:"mediaType=application/json"`
 }
 
 type ResetAuthResponse struct {

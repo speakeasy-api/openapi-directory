@@ -30,12 +30,12 @@ type StartReplicationTaskAssessmentRunResponse struct {
 	AccessDeniedFault                         *interface{}
 	ContentType                               string
 	InvalidResourceStateFault                 *interface{}
-	KmsAccessDeniedFault                      *interface{}
-	KmsDisabledFault                          *interface{}
-	KmsFault                                  *interface{}
-	KmsInvalidStateFault                      *interface{}
-	KmsKeyNotAccessibleFault                  *interface{}
-	KmsNotFoundFault                          *interface{}
+	KMSAccessDeniedFault                      *interface{}
+	KMSDisabledFault                          *interface{}
+	KMSFault                                  *interface{}
+	KMSInvalidStateFault                      *interface{}
+	KMSKeyNotAccessibleFault                  *interface{}
+	KMSNotFoundFault                          *interface{}
 	ResourceAlreadyExistsFault                *interface{}
 	ResourceNotFoundFault                     *interface{}
 	S3AccessDeniedFault                       *interface{}

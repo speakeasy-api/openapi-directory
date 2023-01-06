@@ -7,13 +7,13 @@ import (
 type GetModifyClusterMaintenanceActionEnum string
 
 const (
-	GetModifyClusterMaintenanceActionEnumModifyClusterMaintenance GetModifyClusterMaintenanceActionEnum = "ModifyClusterMaintenance"
+	GETModifyClusterMaintenanceActionEnumModifyClusterMaintenance GetModifyClusterMaintenanceActionEnum = "ModifyClusterMaintenance"
 )
 
 type GetModifyClusterMaintenanceVersionEnum string
 
 const (
-	GetModifyClusterMaintenanceVersionEnumTwoThousandAndTwelve1201 GetModifyClusterMaintenanceVersionEnum = "2012-12-01"
+	GETModifyClusterMaintenanceVersionEnumTwoThousandAndTwelve1201 GetModifyClusterMaintenanceVersionEnum = "2012-12-01"
 )
 
 type GetModifyClusterMaintenanceQueryParams struct {

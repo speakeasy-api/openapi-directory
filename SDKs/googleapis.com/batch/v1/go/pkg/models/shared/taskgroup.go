@@ -1,8 +1,9 @@
 package shared
 
-// TaskGroupInput
+// TaskGroup
 // A TaskGroup contains one or multiple Tasks that share the same Runnable but with different runtime parameters.
-type TaskGroupInput struct {
+type TaskGroup struct {
+	Name             *string       `json:"name,omitempty"`
 	Parallelism      *string       `json:"parallelism,omitempty"`
 	PermissiveSSH    *bool         `json:"permissiveSsh,omitempty"`
 	RequireHostsFile *bool         `json:"requireHostsFile,omitempty"`
@@ -12,10 +13,9 @@ type TaskGroupInput struct {
 	TaskSpec         *TaskSpec     `json:"taskSpec,omitempty"`
 }
 
-// TaskGroup
+// TaskGroupInput
 // A TaskGroup contains one or multiple Tasks that share the same Runnable but with different runtime parameters.
-type TaskGroup struct {
-	Name             *string       `json:"name,omitempty"`
+type TaskGroupInput struct {
 	Parallelism      *string       `json:"parallelism,omitempty"`
 	PermissiveSSH    *bool         `json:"permissiveSsh,omitempty"`
 	RequireHostsFile *bool         `json:"requireHostsFile,omitempty"`

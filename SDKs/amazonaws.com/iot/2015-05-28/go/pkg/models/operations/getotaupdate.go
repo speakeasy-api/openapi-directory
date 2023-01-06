@@ -25,7 +25,7 @@ type GetOtaUpdateRequest struct {
 
 type GetOtaUpdateResponse struct {
 	ContentType                 string
-	GetOtaUpdateResponse        *shared.GetOtaUpdateResponse
+	GetOTAUpdateResponse        *shared.GetOtaUpdateResponse
 	InternalFailureException    *interface{}
 	InvalidRequestException     *interface{}
 	ResourceNotFoundException   *interface{}

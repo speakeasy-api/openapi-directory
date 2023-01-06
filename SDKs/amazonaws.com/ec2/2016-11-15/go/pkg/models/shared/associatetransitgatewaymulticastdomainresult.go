@@ -1,5 +1,5 @@
 package shared
 
 type AssociateTransitGatewayMulticastDomainResult struct {
-	Associations *TransitGatewayMulticastDomainAssociations
+	Associations map[string]interface{}
 }

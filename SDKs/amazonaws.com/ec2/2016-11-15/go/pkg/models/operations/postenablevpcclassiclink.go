@@ -3,13 +3,13 @@ package operations
 type PostEnableVpcClassicLinkActionEnum string
 
 const (
-	PostEnableVpcClassicLinkActionEnumEnableVpcClassicLink PostEnableVpcClassicLinkActionEnum = "EnableVpcClassicLink"
+	POSTEnableVpcClassicLinkActionEnumEnableVpcClassicLink PostEnableVpcClassicLinkActionEnum = "EnableVpcClassicLink"
 )
 
 type PostEnableVpcClassicLinkVersionEnum string
 
 const (
-	PostEnableVpcClassicLinkVersionEnumTwoThousandAndSixteen1115 PostEnableVpcClassicLinkVersionEnum = "2016-11-15"
+	POSTEnableVpcClassicLinkVersionEnumTwoThousandAndSixteen1115 PostEnableVpcClassicLinkVersionEnum = "2016-11-15"
 )
 
 type PostEnableVpcClassicLinkQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,40 +27,42 @@ func main() {
             Option1: &operations.CloudprofilerProjectsProfilesCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.CloudprofilerProjectsProfilesCreatePathParams{
-            Parent: "perferendis",
+            Parent: "neque",
         },
         QueryParams: operations.CloudprofilerProjectsProfilesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "praesentium",
+            DollarXgafv: "1",
+            AccessToken: "adipisci",
             Alt: "media",
-            Callback: "omnis",
-            Fields: "et",
-            Key: "magni",
-            OauthToken: "ratione",
-            PrettyPrint: true,
-            QuotaUser: "maiores",
-            UploadType: "quisquam",
-            UploadProtocol: "mollitia",
+            Callback: "soluta",
+            Fields: "nulla",
+            Key: "aut",
+            OauthToken: "voluptatibus",
+            PrettyPrint: false,
+            QuotaUser: "deleniti",
+            UploadType: "libero",
+            UploadProtocol: "dolorum",
         },
         Request: &shared.CreateProfileRequest{
             Deployment: &shared.Deployment{
                 Labels: map[string]string{
-                    "nemo": "perferendis",
-                    "corporis": "assumenda",
+                    "impedit": "ipsa",
+                    "qui": "velit",
+                    "officia": "iste",
                 },
-                ProjectID: "inventore",
-                Target: "voluptatem",
+                ProjectID: "fugiat",
+                Target: "minus",
             },
             ProfileType: []shared.CreateProfileRequestProfileTypeEnum{
-                "THREADS",
-                "WALL",
+                "HEAP",
+                "PROFILE_TYPE_UNSPECIFIED",
+                "HEAP_ALLOC",
             },
         },
     }

@@ -1,0 +1,491 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+)
+
+type SSH struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewSSH(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *SSH {
+	return &SSH{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// DeleteUsersSelectedUserSSHKeysKeyID - Deletes a specific SSH public key from a user's account
+//
+// Example:
+// ```
+// $ curl -X DELETE https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/{b15b6026-9c02-4626-b4ad-b905f99f763a}
+// ```
+func (s *SSH) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.DeleteUsersSelectedUserSSHKeysKeyIDRequest) (*operations.DeleteUsersSelectedUserSSHKeysKeyIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteUsersSelectedUserSSHKeysKeyIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetUsersSelectedUserSSHKeys - Returns a paginated list of the user's SSH public keys.
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys
+//
+//	{
+//	    "page": 1,
+//	    "pagelen": 10,
+//	    "size": 1,
+//	    "values": [
+//	        {
+//	            "comment": "user@myhost",
+//	            "created_on": "2018-03-14T13:17:05.196003+00:00",
+//	            "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKqP3Cr632C2dNhhgKVcon4ldUSAeKiku2yP9O9/bDtY",
+//	            "label": "",
+//	            "last_used": "2018-03-20T13:18:05.196003+00:00",
+//	            "links": {
+//	                "self": {
+//	                    "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/b15b6026-9c02-4626-b4ad-b905f99f763a"
+//	                }
+//	            },
+//	            "owner": {
+//	                "display_name": "Mark Adams",
+//	                "links": {
+//	                    "avatar": {
+//	                        "href": "https://bitbucket.org/account/markadams-atl/avatar/32/"
+//	                    },
+//	                    "html": {
+//	                        "href": "https://bitbucket.org/markadams-atl/"
+//	                    },
+//	                    "self": {
+//	                        "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}"
+//	                    }
+//	                },
+//	                "type": "user",
+//	                "username": "markadams-atl",
+//	                "nickname": "markadams-atl",
+//	                "uuid": "{d7dd0e2d-3994-4a50-a9ee-d260b6cefdab}"
+//	            },
+//	            "type": "ssh_key",
+//	            "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
+//	        }
+//	    ]
+//	}
+//
+// ```
+func (s *SSH) GetUsersSelectedUserSSHKeys(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysRequest) (*operations.GetUsersSelectedUserSSHKeysResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersSelectedUserSSHKeysResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedSSHUserKeys
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedSSHUserKeys = out
+		}
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetUsersSelectedUserSSHKeysKeyID - Returns a specific SSH public key belonging to a user.
+//
+// Example:
+// ```
+// $ curl https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/{fbe4bbab-f6f7-4dde-956b-5c58323c54b3}
+//
+//	{
+//	    "comment": "user@myhost",
+//	    "created_on": "2018-03-14T13:17:05.196003+00:00",
+//	    "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKqP3Cr632C2dNhhgKVcon4ldUSAeKiku2yP9O9/bDtY",
+//	    "label": "",
+//	    "last_used": "2018-03-20T13:18:05.196003+00:00",
+//	    "links": {
+//	        "self": {
+//	            "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/b15b6026-9c02-4626-b4ad-b905f99f763a"
+//	        }
+//	    },
+//	    "owner": {
+//	        "display_name": "Mark Adams",
+//	        "links": {
+//	            "avatar": {
+//	                "href": "https://bitbucket.org/account/markadams-atl/avatar/32/"
+//	            },
+//	            "html": {
+//	                "href": "https://bitbucket.org/markadams-atl/"
+//	            },
+//	            "self": {
+//	                "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}"
+//	            }
+//	        },
+//	        "type": "user",
+//	        "username": "markadams-atl",
+//	        "nickname": "markadams-atl",
+//	        "uuid": "{d7dd0e2d-3994-4a50-a9ee-d260b6cefdab}"
+//	    },
+//	    "type": "ssh_key",
+//	    "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
+//	}
+//
+// ```
+func (s *SSH) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysKeyIDRequest) (*operations.GetUsersSelectedUserSSHKeysKeyIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersSelectedUserSSHKeysKeyIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SSHAccountKey = out
+		}
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostUsersSelectedUserSSHKeys - Adds a new SSH public key to the specified user account and returns the resulting key.
+//
+// Example:
+// ```
+// $ curl -X POST -H "Content-Type: application/json" -d '{"key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKqP3Cr632C2dNhhgKVcon4ldUSAeKiku2yP9O9/bDtY user@myhost"}' https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys
+//
+//	{
+//	    "comment": "user@myhost",
+//	    "created_on": "2018-03-14T13:17:05.196003+00:00",
+//	    "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKqP3Cr632C2dNhhgKVcon4ldUSAeKiku2yP9O9/bDtY",
+//	    "label": "",
+//	    "last_used": "2018-03-20T13:18:05.196003+00:00",
+//	    "links": {
+//	        "self": {
+//	            "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/b15b6026-9c02-4626-b4ad-b905f99f763a"
+//	        }
+//	    },
+//	    "owner": {
+//	        "display_name": "Mark Adams",
+//	        "links": {
+//	            "avatar": {
+//	                "href": "https://bitbucket.org/account/markadams-atl/avatar/32/"
+//	            },
+//	            "html": {
+//	                "href": "https://bitbucket.org/markadams-atl/"
+//	            },
+//	            "self": {
+//	                "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}"
+//	            }
+//	        },
+//	        "type": "user",
+//	        "username": "markadams-atl",
+//	        "nickname": "markadams-atl",
+//	        "uuid": "{d7dd0e2d-3994-4a50-a9ee-d260b6cefdab}"
+//	    },
+//	    "type": "ssh_key",
+//	    "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
+//	}
+//
+// ```
+func (s *SSH) PostUsersSelectedUserSSHKeys(ctx context.Context, request operations.PostUsersSelectedUserSSHKeysRequest) (*operations.PostUsersSelectedUserSSHKeysResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostUsersSelectedUserSSHKeysResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 201:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SSHAccountKey = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutUsersSelectedUserSSHKeysKeyID - Updates a specific SSH public key on a user's account
+//
+// Note: Only the 'comment' field can be updated using this API. To modify the key or comment values, you must delete and add the key again.
+//
+// Example:
+// ```
+// $ curl -X PUT -H "Content-Type: application/json" -d '{"label": "Work key"}' https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/{b15b6026-9c02-4626-b4ad-b905f99f763a}
+//
+//	{
+//	    "comment": "",
+//	    "created_on": "2018-03-14T13:17:05.196003+00:00",
+//	    "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKqP3Cr632C2dNhhgKVcon4ldUSAeKiku2yP9O9/bDtY",
+//	    "label": "Work key",
+//	    "last_used": "2018-03-20T13:18:05.196003+00:00",
+//	    "links": {
+//	        "self": {
+//	            "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/b15b6026-9c02-4626-b4ad-b905f99f763a"
+//	        }
+//	    },
+//	    "owner": {
+//	        "display_name": "Mark Adams",
+//	        "links": {
+//	            "avatar": {
+//	                "href": "https://bitbucket.org/account/markadams-atl/avatar/32/"
+//	            },
+//	            "html": {
+//	                "href": "https://bitbucket.org/markadams-atl/"
+//	            },
+//	            "self": {
+//	                "href": "https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}"
+//	            }
+//	        },
+//	        "type": "user",
+//	        "username": "markadams-atl",
+//	        "nickname": "markadams-atl",
+//	        "uuid": "{d7dd0e2d-3994-4a50-a9ee-d260b6cefdab}"
+//	    },
+//	    "type": "ssh_key",
+//	    "uuid": "{b15b6026-9c02-4626-b4ad-b905f99f763a}"
+//	}
+//
+// ```
+func (s *SSH) PutUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.PutUsersSelectedUserSSHKeysKeyIDRequest) (*operations.PutUsersSelectedUserSSHKeysKeyIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutUsersSelectedUserSSHKeysKeyIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SSHAccountKey = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}

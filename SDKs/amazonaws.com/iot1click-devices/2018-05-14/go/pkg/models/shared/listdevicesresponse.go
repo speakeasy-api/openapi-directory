@@ -1,6 +1,6 @@
 package shared
 
 type ListDevicesResponse struct {
-	Devices   []DeviceDescription `json:"Devices,omitempty"`
-	NextToken *string             `json:"NextToken,omitempty"`
+	Devices   map[string]interface{} `json:"Devices,omitempty"`
+	NextToken map[string]interface{} `json:"NextToken,omitempty"`
 }

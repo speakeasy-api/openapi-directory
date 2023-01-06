@@ -10,23 +10,10 @@ type ReactionsListForCommitCommentPathParams struct {
 	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type ReactionsListForCommitCommentContentEnum string
-
-const (
-	ReactionsListForCommitCommentContentEnumPlus1    ReactionsListForCommitCommentContentEnum = "+1"
-	ReactionsListForCommitCommentContentEnumMinus1   ReactionsListForCommitCommentContentEnum = "-1"
-	ReactionsListForCommitCommentContentEnumLaugh    ReactionsListForCommitCommentContentEnum = "laugh"
-	ReactionsListForCommitCommentContentEnumConfused ReactionsListForCommitCommentContentEnum = "confused"
-	ReactionsListForCommitCommentContentEnumHeart    ReactionsListForCommitCommentContentEnum = "heart"
-	ReactionsListForCommitCommentContentEnumHooray   ReactionsListForCommitCommentContentEnum = "hooray"
-	ReactionsListForCommitCommentContentEnumRocket   ReactionsListForCommitCommentContentEnum = "rocket"
-	ReactionsListForCommitCommentContentEnumEyes     ReactionsListForCommitCommentContentEnum = "eyes"
-)
-
 type ReactionsListForCommitCommentQueryParams struct {
-	Content *ReactionsListForCommitCommentContentEnum `queryParam:"style=form,explode=true,name=content"`
-	Page    *int64                                    `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                                    `queryParam:"style=form,explode=true,name=per_page"`
+	Content *shared.CommentIDEnum `queryParam:"style=form,explode=true,name=content"`
+	Page    *int64                `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64                `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type ReactionsListForCommitComment415ApplicationJSON struct {

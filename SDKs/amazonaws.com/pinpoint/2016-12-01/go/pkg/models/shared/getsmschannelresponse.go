@@ -1,5 +1,5 @@
 package shared
 
 type GetSmsChannelResponse struct {
-	SmsChannelResponse SmsChannelResponse `json:"SMSChannelResponse"`
+	SMSChannelResponse SmsChannelResponse `json:"SMSChannelResponse"`
 }

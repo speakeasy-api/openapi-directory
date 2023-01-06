@@ -3,18 +3,18 @@ package operations
 type GetUntagResourceActionEnum string
 
 const (
-	GetUntagResourceActionEnumUntagResource GetUntagResourceActionEnum = "UntagResource"
+	GETUntagResourceActionEnumUntagResource GetUntagResourceActionEnum = "UntagResource"
 )
 
 type GetUntagResourceVersionEnum string
 
 const (
-	GetUntagResourceVersionEnumTwoThousandAndTen0801 GetUntagResourceVersionEnum = "2010-08-01"
+	GETUntagResourceVersionEnumTwoThousandAndTen0801 GetUntagResourceVersionEnum = "2010-08-01"
 )
 
 type GetUntagResourceQueryParams struct {
 	Action      GetUntagResourceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	ResourceArn string                      `queryParam:"style=form,explode=true,name=ResourceARN"`
+	ResourceARN string                      `queryParam:"style=form,explode=true,name=ResourceARN"`
 	TagKeys     []string                    `queryParam:"style=form,explode=true,name=TagKeys"`
 	Version     GetUntagResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

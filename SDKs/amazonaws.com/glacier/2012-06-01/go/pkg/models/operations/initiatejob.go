@@ -28,7 +28,7 @@ type InitiateJobRequestBodyJobParameters struct {
 	InventoryRetrievalParameters *shared.InventoryRetrievalJobInput `json:"InventoryRetrievalParameters,omitempty"`
 	OutputLocation               *shared.OutputLocation             `json:"OutputLocation,omitempty"`
 	RetrievalByteRange           *string                            `json:"RetrievalByteRange,omitempty"`
-	SnsTopic                     *string                            `json:"SNSTopic,omitempty"`
+	SNSTopic                     *string                            `json:"SNSTopic,omitempty"`
 	SelectParameters             *shared.SelectParameters           `json:"SelectParameters,omitempty"`
 	Tier                         *string                            `json:"Tier,omitempty"`
 	Type                         *string                            `json:"Type,omitempty"`

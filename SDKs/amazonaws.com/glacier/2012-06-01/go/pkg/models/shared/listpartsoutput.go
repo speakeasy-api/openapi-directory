@@ -9,5 +9,5 @@ type ListPartsOutput struct {
 	MultipartUploadID  *string           `json:"MultipartUploadId,omitempty"`
 	PartSizeInBytes    *int64            `json:"PartSizeInBytes,omitempty"`
 	Parts              []PartListElement `json:"Parts,omitempty"`
-	VaultArn           *string           `json:"VaultARN,omitempty"`
+	VaultARN           *string           `json:"VaultARN,omitempty"`
 }

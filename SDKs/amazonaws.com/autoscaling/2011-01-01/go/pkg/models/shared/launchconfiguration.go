@@ -9,17 +9,17 @@ import (
 type LaunchConfiguration struct {
 	AssociatePublicIPAddress     *bool
 	BlockDeviceMappings          []BlockDeviceMapping
-	ClassicLinkVpcID             *string
-	ClassicLinkVpcSecurityGroups []string
+	ClassicLinkVPCID             *string
+	ClassicLinkVPCSecurityGroups []string
 	CreatedTime                  time.Time
 	EbsOptimized                 *bool
-	IamInstanceProfile           *string
+	IamInstanceProfile           map[string]interface{}
 	ImageID                      string
 	InstanceMonitoring           *InstanceMonitoring
 	InstanceType                 string
 	KernelID                     *string
 	KeyName                      *string
-	LaunchConfigurationArn       *string
+	LaunchConfigurationARN       *string
 	LaunchConfigurationName      string
 	MetadataOptions              *InstanceMetadataOptions
 	PlacementTenancy             *string

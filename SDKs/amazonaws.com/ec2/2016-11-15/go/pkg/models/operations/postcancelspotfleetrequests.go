@@ -3,13 +3,13 @@ package operations
 type PostCancelSpotFleetRequestsActionEnum string
 
 const (
-	PostCancelSpotFleetRequestsActionEnumCancelSpotFleetRequests PostCancelSpotFleetRequestsActionEnum = "CancelSpotFleetRequests"
+	POSTCancelSpotFleetRequestsActionEnumCancelSpotFleetRequests PostCancelSpotFleetRequestsActionEnum = "CancelSpotFleetRequests"
 )
 
 type PostCancelSpotFleetRequestsVersionEnum string
 
 const (
-	PostCancelSpotFleetRequestsVersionEnumTwoThousandAndSixteen1115 PostCancelSpotFleetRequestsVersionEnum = "2016-11-15"
+	POSTCancelSpotFleetRequestsVersionEnumTwoThousandAndSixteen1115 PostCancelSpotFleetRequestsVersionEnum = "2016-11-15"
 )
 
 type PostCancelSpotFleetRequestsQueryParams struct {

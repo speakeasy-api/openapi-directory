@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,34 @@ func main() {
         Security: operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CloudassetProjectsBatchGetAssetsHistoryPathParams{
-            Parent: "quia",
+            Parent: "vel",
         },
         QueryParams: operations.CloudassetProjectsBatchGetAssetsHistoryQueryParams{
             DollarXgafv: "2",
-            AccessToken: "eum",
+            AccessToken: "alias",
             Alt: "media",
             AssetNames: []string{
-                "voluptas",
+                "ratione",
+                "labore",
+                "exercitationem",
             },
-            Callback: "est",
+            Callback: "facilis",
             ContentType: "CONTENT_TYPE_UNSPECIFIED",
-            Fields: "minima",
-            Key: "doloremque",
-            OauthToken: "provident",
+            Fields: "expedita",
+            Key: "repellendus",
+            OauthToken: "atque",
             PrettyPrint: false,
-            QuotaUser: "earum",
-            ReadTimeWindowEndTime: "est",
-            ReadTimeWindowStartTime: "aut",
-            UploadType: "optio",
-            UploadProtocol: "est",
+            QuotaUser: "laboriosam",
+            ReadTimeWindowEndTime: "quos",
+            ReadTimeWindowStartTime: "quis",
+            UploadType: "modi",
+            UploadProtocol: "sed",
         },
     }
     

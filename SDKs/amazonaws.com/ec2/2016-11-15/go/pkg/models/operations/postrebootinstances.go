@@ -3,13 +3,13 @@ package operations
 type PostRebootInstancesActionEnum string
 
 const (
-	PostRebootInstancesActionEnumRebootInstances PostRebootInstancesActionEnum = "RebootInstances"
+	POSTRebootInstancesActionEnumRebootInstances PostRebootInstancesActionEnum = "RebootInstances"
 )
 
 type PostRebootInstancesVersionEnum string
 
 const (
-	PostRebootInstancesVersionEnumTwoThousandAndSixteen1115 PostRebootInstancesVersionEnum = "2016-11-15"
+	POSTRebootInstancesVersionEnumTwoThousandAndSixteen1115 PostRebootInstancesVersionEnum = "2016-11-15"
 )
 
 type PostRebootInstancesQueryParams struct {

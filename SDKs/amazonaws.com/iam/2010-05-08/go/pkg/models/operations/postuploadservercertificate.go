@@ -3,13 +3,13 @@ package operations
 type PostUploadServerCertificateActionEnum string
 
 const (
-	PostUploadServerCertificateActionEnumUploadServerCertificate PostUploadServerCertificateActionEnum = "UploadServerCertificate"
+	POSTUploadServerCertificateActionEnumUploadServerCertificate PostUploadServerCertificateActionEnum = "UploadServerCertificate"
 )
 
 type PostUploadServerCertificateVersionEnum string
 
 const (
-	PostUploadServerCertificateVersionEnumTwoThousandAndTen0508 PostUploadServerCertificateVersionEnum = "2010-05-08"
+	POSTUploadServerCertificateVersionEnumTwoThousandAndTen0508 PostUploadServerCertificateVersionEnum = "2010-05-08"
 )
 
 type PostUploadServerCertificateQueryParams struct {

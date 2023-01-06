@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,58 +32,25 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.BulkCreateTransactionsRequest{
-        PathParams: operations.BulkCreateTransactionsPathParams{
-            BudgetID: "esse",
+    req := operations.CreateAccountRequest{
+        PathParams: operations.CreateAccountPathParams{
+            BudgetID: "repellat",
         },
-        Request: shared.BulkTransactions{
-            Transactions: []shared.SaveTransaction{
-                shared.SaveTransaction{
-                    AccountID: "reiciendis",
-                    Amount: 3980895351131401136,
-                    Approved: true,
-                    CategoryID: "quam",
-                    Cleared: "reconciled",
-                    Date: "1999-04-27",
-                    FlagColor: "red",
-                    ImportID: "magnam",
-                    Memo: "hic",
-                    PayeeID: "sit",
-                    PayeeName: "ut",
-                    Subtransactions: []shared.SaveSubTransaction{
-                        shared.SaveSubTransaction{
-                            Amount: 4934187139318920637,
-                            CategoryID: "delectus",
-                            Memo: "est",
-                            PayeeID: "facilis",
-                            PayeeName: "porro",
-                        },
-                        shared.SaveSubTransaction{
-                            Amount: 2665025749108563884,
-                            CategoryID: "amet",
-                            Memo: "labore",
-                            PayeeID: "beatae",
-                            PayeeName: "repellendus",
-                        },
-                        shared.SaveSubTransaction{
-                            Amount: 961304557501690962,
-                            CategoryID: "officia",
-                            Memo: "nemo",
-                            PayeeID: "optio",
-                            PayeeName: "sed",
-                        },
-                    },
-                },
+        Request: shared.SaveAccountWrapper{
+            Account: shared.SaveAccount{
+                Balance: 2062512057044578664,
+                Name: "praesentium",
+                Type: "savings",
             },
         },
     }
     
-    res, err := s.Sdk.BulkCreateTransactions(ctx, req)
+    res, err := s.Accounts.CreateAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.BulkResponse != nil {
+    if res.AccountResponse != nil {
         // handle response
     }
 ```
@@ -93,38 +59,65 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Accounts
 
-* `BulkCreateTransactions` - Bulk create transactions
 * `CreateAccount` - Create a new account
-* `CreateTransaction` - Create a single transaction or multiple transactions
 * `GetAccountByID` - Single account
 * `GetAccounts` - Account list
+
+### Budgets
+
 * `GetBudgetByID` - Single budget
-* `GetBudgetMonth` - Single budget month
-* `GetBudgetMonths` - List budget months
 * `GetBudgetSettingsByID` - Budget Settings
 * `GetBudgets` - List budgets
+
+### Categories
+
 * `GetCategories` - List categories
 * `GetCategoryByID` - Single category
 * `GetMonthCategoryByID` - Single category for a specific budget month
-* `GetPayeeByID` - Single payee
+* `UpdateMonthCategory` - Update a category for a specific month
+
+### Deprecated
+
+* `BulkCreateTransactions` - Bulk create transactions
+
+### Months
+
+* `GetBudgetMonth` - Single budget month
+* `GetBudgetMonths` - List budget months
+
+### Payee Locations
+
 * `GetPayeeLocationByID` - Single payee location
 * `GetPayeeLocations` - List payee locations
 * `GetPayeeLocationsByPayee` - List locations for a payee
+
+### Payees
+
+* `GetPayeeByID` - Single payee
 * `GetPayees` - List payees
+
+### Scheduled Transactions
+
 * `GetScheduledTransactionByID` - Single scheduled transaction
 * `GetScheduledTransactions` - List scheduled transactions
+
+### Transactions
+
+* `CreateTransaction` - Create a single transaction or multiple transactions
 * `GetTransactionByID` - Single transaction
 * `GetTransactions` - List transactions
 * `GetTransactionsByAccount` - List account transactions
 * `GetTransactionsByCategory` - List category transactions
 * `GetTransactionsByPayee` - List payee transactions
-* `GetUser` - User info
 * `ImportTransactions` - Import transactions
-* `UpdateMonthCategory` - Update a category for a specific month
 * `UpdateTransaction` - Updates an existing transaction
 * `UpdateTransactions` - Update multiple transactions
+
+### User
+
+* `GetUser` - User info
 
 <!-- End SDK Available Operations -->
 

@@ -40,8 +40,8 @@ type CreateAuthorIfNotExistsForUsingGetRequest struct {
 type CreateAuthorIfNotExistsForUsingGetResponse struct {
 	ContentType                                                string
 	StatusCode                                                 int64
-	CreateAuthorIfNotExistsForUsingGet200ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet200ApplicationJSON
-	CreateAuthorIfNotExistsForUsingGet400ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet400ApplicationJSON
-	CreateAuthorIfNotExistsForUsingGet401ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet401ApplicationJSON
-	CreateAuthorIfNotExistsForUsingGet500ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet500ApplicationJSON
+	CreateAuthorIfNotExistsForUsingGET200ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet200ApplicationJSON
+	CreateAuthorIfNotExistsForUsingGET400ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet400ApplicationJSON
+	CreateAuthorIfNotExistsForUsingGET401ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet401ApplicationJSON
+	CreateAuthorIfNotExistsForUsingGET500ApplicationJSONObject *CreateAuthorIfNotExistsForUsingGet500ApplicationJSON
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,33 +27,33 @@ func main() {
             Option1: &operations.AnalyticsDataGaGetSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.AnalyticsDataGaGetQueryParams{
             Alt: "json",
-            Dimensions: "molestiae",
-            EndDate: "mollitia",
-            Fields: "non",
-            Filters: "similique",
-            Ids: "id",
-            IncludeEmptyRows: true,
-            Key: "quia",
-            MaxResults: 8874339057685439512,
-            Metrics: "tenetur",
-            OauthToken: "non",
-            Output: "json",
-            PrettyPrint: true,
-            QuotaUser: "perspiciatis",
-            SamplingLevel: "HIGHER_PRECISION",
-            Segment: "aut",
-            Sort: "ut",
-            StartDate: "voluptas",
-            StartIndex: 2569169535412766127,
-            UserIP: "molestias",
+            Dimensions: "omnis",
+            EndDate: "quam",
+            Fields: "tempora",
+            Filters: "sed",
+            Ids: "recusandae",
+            IncludeEmptyRows: false,
+            Key: "et",
+            MaxResults: 3531634285688427985,
+            Metrics: "labore",
+            OauthToken: "consectetur",
+            Output: "dataTable",
+            PrettyPrint: false,
+            QuotaUser: "saepe",
+            SamplingLevel: "FASTER",
+            Segment: "sunt",
+            Sort: "quia",
+            StartDate: "nulla",
+            StartIndex: 6560194854368822570,
+            UserIP: "officia",
         },
     }
     

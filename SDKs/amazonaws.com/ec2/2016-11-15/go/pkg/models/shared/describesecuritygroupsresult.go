@@ -1,6 +1,6 @@
 package shared
 
 type DescribeSecurityGroupsResult struct {
-	NextToken      *string
-	SecurityGroups []SecurityGroup
+	NextToken      map[string]interface{}
+	SecurityGroups map[string]interface{}
 }

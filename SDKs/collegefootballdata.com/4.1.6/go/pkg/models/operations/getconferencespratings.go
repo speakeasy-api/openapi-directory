@@ -14,7 +14,7 @@ type GetConferenceSpRatingsRequest struct {
 }
 
 type GetConferenceSpRatingsResponse struct {
-	ConferenceSpRatings []shared.ConferenceSpRating
+	ConferenceSPRatings []shared.ConferenceSpRating
 	ContentType         string
 	StatusCode          int64
 }

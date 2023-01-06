@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateAlias20200531Request{
         PathParams: operations.AssociateAlias20200531PathParams{
-            TargetDistributionID: "sunt",
+            TargetDistributionID: "mollitia",
         },
         QueryParams: operations.AssociateAlias20200531QueryParams{
-            Alias: "soluta",
+            Alias: "ad",
         },
         Headers: operations.AssociateAlias20200531Headers{
-            XAmzAlgorithm: "cum",
-            XAmzContentSha256: "placeat",
-            XAmzCredential: "ullam",
-            XAmzDate: "minima",
-            XAmzSecurityToken: "exercitationem",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "unde",
+            XAmzAlgorithm: "error",
+            XAmzContentSha256: "enim",
+            XAmzCredential: "necessitatibus",
+            XAmzDate: "non",
+            XAmzSecurityToken: "nam",
+            XAmzSignature: "in",
+            XAmzSignedHeaders: "eum",
         },
     }
     
-    res, err := s.Sdk.AssociateAlias20200531(ctx, req)
+    res, err := s.AssociateAlias20200531(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

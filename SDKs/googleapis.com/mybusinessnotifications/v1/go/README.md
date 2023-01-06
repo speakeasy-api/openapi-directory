@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,20 +24,20 @@ func main() {
     
     req := operations.MybusinessnotificationsAccountsGetNotificationSettingRequest{
         PathParams: operations.MybusinessnotificationsAccountsGetNotificationSettingPathParams{
-            Name: "numquam",
+            Name: "libero",
         },
         QueryParams: operations.MybusinessnotificationsAccountsGetNotificationSettingQueryParams{
             DollarXgafv: "1",
-            AccessToken: "et",
+            AccessToken: "corrupti",
             Alt: "media",
-            Callback: "in",
-            Fields: "repellat",
-            Key: "incidunt",
-            OauthToken: "molestiae",
+            Callback: "sunt",
+            Fields: "et",
+            Key: "sed",
+            OauthToken: "ut",
             PrettyPrint: false,
-            QuotaUser: "ut",
-            UploadType: "ad",
-            UploadProtocol: "adipisci",
+            QuotaUser: "velit",
+            UploadType: "dolorum",
+            UploadProtocol: "qui",
         },
     }
     

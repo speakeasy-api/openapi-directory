@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,19 +24,19 @@ func main() {
     
     req := operations.GetAPIVVersionCurrenciesHistoryRequest{
         PathParams: operations.GetAPIVVersionCurrenciesHistoryPathParams{
-            Version: "nemo",
+            Version: "dolore",
         },
         QueryParams: operations.GetAPIVVersionCurrenciesHistoryQueryParams{
-            End: "2007-07-14T21:42:06Z",
+            End: "2010-01-25T22:13:49Z",
             Format: "json",
-            Interval: "rerum",
-            Pairs: "aut",
-            Start: "2009-02-03T03:54:01Z",
-            Token: "deserunt",
+            Interval: "et",
+            Pairs: "omnis",
+            Start: "1983-11-30T07:57:18Z",
+            Token: "autem",
         },
     }
     
-    res, err := s.Sdk.GetAPIVVersionCurrenciesHistory(ctx, req)
+    res, err := s.Currencies.GetAPIVVersionCurrenciesHistory(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -51,7 +50,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Currencies
 
 * `GetAPIVVersionCurrenciesHistory` - Get historical prices for requested currency pairs
 * `GetAPIVVersionCurrenciesHistorySupported` - Get list of currency pairs supported by the history endpoint
@@ -59,6 +58,9 @@ func main() {
 * `GetAPIVVersionCurrenciesRateSupported` - Get list of currencies supported by the rate endpoint
 * `GetAPIVVersionCurrenciesSummary` - Get latest Summary for requested currency pairs
 * `GetAPIVVersionCurrenciesSummarySupported` - Get list of currency pairs supported by the Summary endpoint
+
+### Metals
+
 * `GetAPIVVersionMetalsBenchmarkHistory` - Get historical benchmark prices for requested metals
 * `GetAPIVVersionMetalsBenchmarkSummary` - Get latest Benchmark prices for requested metals
 * `GetAPIVVersionMetalsBenchmarkSupported` - Get list of symbols supported by the benchmark endpoints

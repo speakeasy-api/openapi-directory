@@ -26,5 +26,5 @@ type GetDatacenterResponse struct {
 	APIError     *shared.APIError
 	ContentType  string
 	StatusCode   int64
-	VcDatacenter *shared.VcDatacenter
+	VCDatacenter *shared.VcDatacenter
 }

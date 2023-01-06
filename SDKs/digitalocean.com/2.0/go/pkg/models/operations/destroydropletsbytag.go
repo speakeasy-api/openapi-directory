@@ -8,14 +8,14 @@ type DestroyDropletsByTagQueryParams struct {
 	TagName string `queryParam:"style=form,explode=true,name=tag_name"`
 }
 
-type DestroyDropletsByTagRequest struct {
-	QueryParams DestroyDropletsByTagQueryParams
-}
-
 type DestroyDropletsByTag401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DestroyDropletsByTagRequest struct {
+	QueryParams DestroyDropletsByTagQueryParams
 }
 
 type DestroyDropletsByTagResponse struct {

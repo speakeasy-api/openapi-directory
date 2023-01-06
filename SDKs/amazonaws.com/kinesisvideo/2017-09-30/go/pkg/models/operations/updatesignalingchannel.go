@@ -17,7 +17,7 @@ type UpdateSignalingChannelRequestBodySingleMasterConfiguration struct {
 }
 
 type UpdateSignalingChannelRequestBody struct {
-	ChannelArn                string                                                      `json:"ChannelARN"`
+	ChannelARN                string                                                      `json:"ChannelARN"`
 	CurrentVersion            string                                                      `json:"CurrentVersion"`
 	SingleMasterConfiguration *UpdateSignalingChannelRequestBodySingleMasterConfiguration `json:"SingleMasterConfiguration,omitempty"`
 }

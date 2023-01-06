@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,42 +34,42 @@ func main() {
     
     req := operations.CountClosedWorkflowExecutionsRequest{
         Headers: operations.CountClosedWorkflowExecutionsHeaders{
-            XAmzAlgorithm: "magnam",
-            XAmzContentSha256: "a",
-            XAmzCredential: "nulla",
-            XAmzDate: "harum",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "quaerat",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "nostrum",
+            XAmzContentSha256: "repudiandae",
+            XAmzCredential: "dicta",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "ea",
+            XAmzSignature: "delectus",
+            XAmzSignedHeaders: "nam",
             XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
         },
         Request: shared.CountClosedWorkflowExecutionsInput{
             CloseStatusFilter: &shared.CloseStatusFilter{
-                Status: "TERMINATED",
+                Status: "CONTINUED_AS_NEW",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2015-09-10T11:22:15Z",
-                OldestDate: "1982-08-21T09:17:11Z",
+                LatestDate: "2004-05-19T05:47:13Z",
+                OldestDate: "2003-11-01T03:28:06Z",
             },
-            Domain: "sed",
+            Domain: "dicta",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "labore",
+                WorkflowID: "laudantium",
             },
-            StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2001-12-16T11:50:50Z",
-                OldestDate: "1992-03-13T12:09:53Z",
+            StartTimeFilter: &shared.CountClosedWorkflowExecutionsInputStartTimeFilter{
+                LatestDate: "1991-06-30T10:57:41Z",
+                OldestDate: "1971-09-30T18:40:33Z",
             },
             TagFilter: &shared.TagFilter{
-                Tag: "voluptatum",
+                Tag: "facilis",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "minima",
-                Version: "necessitatibus",
+                Name: "fugit",
+                Version: "aut",
             },
         },
     }
     
-    res, err := s.Sdk.CountClosedWorkflowExecutions(ctx, req)
+    res, err := s.CountClosedWorkflowExecutions(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

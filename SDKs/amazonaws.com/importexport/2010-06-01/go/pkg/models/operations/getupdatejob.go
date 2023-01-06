@@ -3,31 +3,31 @@ package operations
 type GetUpdateJobActionEnum string
 
 const (
-	GetUpdateJobActionEnumUpdateJob GetUpdateJobActionEnum = "UpdateJob"
+	GETUpdateJobActionEnumUpdateJob GetUpdateJobActionEnum = "UpdateJob"
 )
 
 type GetUpdateJobJobTypeEnum string
 
 const (
-	GetUpdateJobJobTypeEnumImport GetUpdateJobJobTypeEnum = "Import"
-	GetUpdateJobJobTypeEnumExport GetUpdateJobJobTypeEnum = "Export"
+	GETUpdateJobJobTypeEnumImport GetUpdateJobJobTypeEnum = "Import"
+	GETUpdateJobJobTypeEnumExport GetUpdateJobJobTypeEnum = "Export"
 )
 
 type GetUpdateJobOperationEnum string
 
 const (
-	GetUpdateJobOperationEnumUpdateJob GetUpdateJobOperationEnum = "UpdateJob"
+	GETUpdateJobOperationEnumUpdateJob GetUpdateJobOperationEnum = "UpdateJob"
 )
 
 type GetUpdateJobVersionEnum string
 
 const (
-	GetUpdateJobVersionEnumTwoThousandAndTen0601 GetUpdateJobVersionEnum = "2010-06-01"
+	GETUpdateJobVersionEnumTwoThousandAndTen0601 GetUpdateJobVersionEnum = "2010-06-01"
 )
 
 type GetUpdateJobQueryParams struct {
 	APIVersion       *string                   `queryParam:"style=form,explode=true,name=APIVersion"`
-	AwsAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetUpdateJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	JobID            string                    `queryParam:"style=form,explode=true,name=JobId"`
 	JobType          GetUpdateJobJobTypeEnum   `queryParam:"style=form,explode=true,name=JobType"`

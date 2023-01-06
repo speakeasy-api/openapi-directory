@@ -19,7 +19,6 @@ type UpdateMediaAffinityIntentHandlingRequest struct {
 
 type UpdateMediaAffinityIntentHandlingResponse struct {
 	ContentType                                          string
-	Headers                                              map[string][]string
 	StatusCode                                           int64
 	UpdateMediaAffinityIntentHandlingInvocationResponses []interface{}
 }

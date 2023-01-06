@@ -3,13 +3,13 @@ package operations
 type GetDeleteAccessKeyActionEnum string
 
 const (
-	GetDeleteAccessKeyActionEnumDeleteAccessKey GetDeleteAccessKeyActionEnum = "DeleteAccessKey"
+	GETDeleteAccessKeyActionEnumDeleteAccessKey GetDeleteAccessKeyActionEnum = "DeleteAccessKey"
 )
 
 type GetDeleteAccessKeyVersionEnum string
 
 const (
-	GetDeleteAccessKeyVersionEnumTwoThousandAndTen0508 GetDeleteAccessKeyVersionEnum = "2010-05-08"
+	GETDeleteAccessKeyVersionEnumTwoThousandAndTen0508 GetDeleteAccessKeyVersionEnum = "2010-05-08"
 )
 
 type GetDeleteAccessKeyQueryParams struct {

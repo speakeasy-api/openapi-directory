@@ -30,12 +30,12 @@ type DeleteRuleGroupResponse struct {
 	ContentType                           string
 	DeleteRuleGroupResponse               *shared.DeleteRuleGroupResponse
 	StatusCode                            int64
-	WafInternalErrorException             *interface{}
-	WafInvalidOperationException          *interface{}
-	WafNonEmptyEntityException            *interface{}
-	WafNonexistentItemException           *interface{}
-	WafReferencedItemException            *interface{}
-	WafStaleDataException                 *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidOperationException          *interface{}
+	WAFNonEmptyEntityException            *interface{}
+	WAFNonexistentItemException           *interface{}
+	WAFReferencedItemException            *interface{}
+	WAFStaleDataException                 *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

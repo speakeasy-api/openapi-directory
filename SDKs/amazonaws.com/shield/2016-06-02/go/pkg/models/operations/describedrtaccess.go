@@ -7,7 +7,7 @@ import (
 type DescribeDrtAccessXAmzTargetEnum string
 
 const (
-	DescribeDrtAccessXAmzTargetEnumAwsShield20160616DescribeDrtAccess DescribeDrtAccessXAmzTargetEnum = "AWSShield_20160616.DescribeDRTAccess"
+	DescribeDRTAccessXAmzTargetEnumAwsShield20160616DescribeDrtAccess DescribeDrtAccessXAmzTargetEnum = "AWSShield_20160616.DescribeDRTAccess"
 )
 
 type DescribeDrtAccessHeaders struct {
@@ -28,7 +28,7 @@ type DescribeDrtAccessRequest struct {
 
 type DescribeDrtAccessResponse struct {
 	ContentType               string
-	DescribeDrtAccessResponse *shared.DescribeDrtAccessResponse
+	DescribeDRTAccessResponse *shared.DescribeDrtAccessResponse
 	InternalErrorException    *interface{}
 	ResourceNotFoundException *interface{}
 	StatusCode                int64

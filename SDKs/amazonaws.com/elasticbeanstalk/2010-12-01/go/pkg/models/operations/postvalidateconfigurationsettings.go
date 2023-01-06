@@ -3,13 +3,13 @@ package operations
 type PostValidateConfigurationSettingsActionEnum string
 
 const (
-	PostValidateConfigurationSettingsActionEnumValidateConfigurationSettings PostValidateConfigurationSettingsActionEnum = "ValidateConfigurationSettings"
+	POSTValidateConfigurationSettingsActionEnumValidateConfigurationSettings PostValidateConfigurationSettingsActionEnum = "ValidateConfigurationSettings"
 )
 
 type PostValidateConfigurationSettingsVersionEnum string
 
 const (
-	PostValidateConfigurationSettingsVersionEnumTwoThousandAndTen1201 PostValidateConfigurationSettingsVersionEnum = "2010-12-01"
+	POSTValidateConfigurationSettingsVersionEnumTwoThousandAndTen1201 PostValidateConfigurationSettingsVersionEnum = "2010-12-01"
 )
 
 type PostValidateConfigurationSettingsQueryParams struct {

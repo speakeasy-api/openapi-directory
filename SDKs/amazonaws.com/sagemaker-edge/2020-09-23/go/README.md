@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.GetDeviceRegistrationRequest{
         Headers: operations.GetDeviceRegistrationHeaders{
-            XAmzAlgorithm: "aliquid",
-            XAmzContentSha256: "velit",
-            XAmzCredential: "atque",
-            XAmzDate: "non",
-            XAmzSecurityToken: "dicta",
-            XAmzSignature: "recusandae",
-            XAmzSignedHeaders: "sint",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "maxime",
+            XAmzCredential: "error",
+            XAmzDate: "exercitationem",
+            XAmzSecurityToken: "quisquam",
+            XAmzSignature: "maiores",
+            XAmzSignedHeaders: "quaerat",
         },
         Request: operations.GetDeviceRegistrationRequestBody{
-            DeviceFleetName: "inventore",
-            DeviceName: "natus",
+            DeviceFleetName: "earum",
+            DeviceName: "alias",
         },
     }
     
-    res, err := s.Sdk.GetDeviceRegistration(ctx, req)
+    res, err := s.GetDeviceRegistration(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

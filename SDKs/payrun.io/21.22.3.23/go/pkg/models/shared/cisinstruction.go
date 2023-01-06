@@ -10,14 +10,14 @@ const (
 type CisInstructionCisInstructionUomEnum string
 
 const (
-	CisInstructionCisInstructionUomEnumNotSet CisInstructionCisInstructionUomEnum = "NotSet"
-	CisInstructionCisInstructionUomEnumMinute CisInstructionCisInstructionUomEnum = "Minute"
-	CisInstructionCisInstructionUomEnumHour   CisInstructionCisInstructionUomEnum = "Hour"
-	CisInstructionCisInstructionUomEnumDay    CisInstructionCisInstructionUomEnum = "Day"
-	CisInstructionCisInstructionUomEnumWeek   CisInstructionCisInstructionUomEnum = "Week"
-	CisInstructionCisInstructionUomEnumMonth  CisInstructionCisInstructionUomEnum = "Month"
-	CisInstructionCisInstructionUomEnumYear   CisInstructionCisInstructionUomEnum = "Year"
-	CisInstructionCisInstructionUomEnumUnit   CisInstructionCisInstructionUomEnum = "Unit"
+	CisInstructionCisInstructionUOMEnumNotSet CisInstructionCisInstructionUomEnum = "NotSet"
+	CisInstructionCisInstructionUOMEnumMinute CisInstructionCisInstructionUomEnum = "Minute"
+	CisInstructionCisInstructionUOMEnumHour   CisInstructionCisInstructionUomEnum = "Hour"
+	CisInstructionCisInstructionUOMEnumDay    CisInstructionCisInstructionUomEnum = "Day"
+	CisInstructionCisInstructionUOMEnumWeek   CisInstructionCisInstructionUomEnum = "Week"
+	CisInstructionCisInstructionUOMEnumMonth  CisInstructionCisInstructionUomEnum = "Month"
+	CisInstructionCisInstructionUOMEnumYear   CisInstructionCisInstructionUomEnum = "Year"
+	CisInstructionCisInstructionUOMEnumUnit   CisInstructionCisInstructionUomEnum = "Unit"
 )
 
 type CisInstructionCisInstruction struct {
@@ -29,9 +29,9 @@ type CisInstructionCisInstruction struct {
 	PeriodStart  *int32                                        `json:"PeriodStart,omitempty"`
 	TaxYearEnd   *int32                                        `json:"TaxYearEnd,omitempty"`
 	TaxYearStart *int32                                        `json:"TaxYearStart,omitempty"`
-	Uom          *CisInstructionCisInstructionUomEnum          `json:"UOM,omitempty"`
+	UOM          *CisInstructionCisInstructionUomEnum          `json:"UOM,omitempty"`
 	Units        *float64                                      `json:"Units,omitempty"`
-	Vat          *float64                                      `json:"VAT,omitempty"`
+	VAT          *float64                                      `json:"VAT,omitempty"`
 	Value        *float64                                      `json:"Value,omitempty"`
 }
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.ClaimDevicesByClaimCodeRequest{
         PathParams: operations.ClaimDevicesByClaimCodePathParams{
-            ClaimCode: "est",
+            ClaimCode: "mollitia",
         },
         Headers: operations.ClaimDevicesByClaimCodeHeaders{
-            XAmzAlgorithm: "beatae",
-            XAmzContentSha256: "odio",
-            XAmzCredential: "blanditiis",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "ea",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "at",
+            XAmzAlgorithm: "praesentium",
+            XAmzContentSha256: "inventore",
+            XAmzCredential: "adipisci",
+            XAmzDate: "sint",
+            XAmzSecurityToken: "quaerat",
+            XAmzSignature: "sed",
+            XAmzSignedHeaders: "omnis",
         },
     }
     
-    res, err := s.Sdk.ClaimDevicesByClaimCode(ctx, req)
+    res, err := s.ClaimDevicesByClaimCode(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

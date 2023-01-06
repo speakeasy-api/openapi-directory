@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,25 @@ func main() {
     
     req := operations.CreateAttachmentForTaskRequest{
         PathParams: operations.CreateAttachmentForTaskPathParams{
-            TaskGid: "aspernatur",
+            TaskGid: "ea",
         },
         QueryParams: operations.CreateAttachmentForTaskQueryParams{
-            Limit: 4782768469875935138,
-            Offset: "modi",
+            Limit: 4146570165734796573,
+            Offset: "a",
             OptFields: []string{
-                "expedita",
+                "harum",
+                "et",
             },
-            OptPretty: false,
+            OptPretty: true,
         },
         Request: shared.AttachmentRequest{
             File: &shared.AttachmentRequestFile{
-                Content: []byte("omnis"),
-                File: "aliquam",
+                Content: []byte("ut"),
+                File: "sed",
             },
-            Name: "provident",
-            ResourceSubtype: "external",
-            URL: "aut",
+            Name: "et",
+            ResourceSubtype: "asana_file_attachments",
+            URL: "facere",
         },
     }
     

@@ -12,5 +12,5 @@ const (
 	RevocationReasonEnumCertificateHold      RevocationReasonEnum = "CERTIFICATE_HOLD"
 	RevocationReasonEnumRemoveFromCrl        RevocationReasonEnum = "REMOVE_FROM_CRL"
 	RevocationReasonEnumPrivilegeWithdrawn   RevocationReasonEnum = "PRIVILEGE_WITHDRAWN"
-	RevocationReasonEnumAaCompromise         RevocationReasonEnum = "A_A_COMPROMISE"
+	RevocationReasonEnumAACompromise         RevocationReasonEnum = "A_A_COMPROMISE"
 )

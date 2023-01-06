@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -585,7 +585,7 @@ func (s *Plaid) AssetReportPdfGet(ctx context.Context, request operations.AssetR
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.AssetReportPdfGetResponse = out
+			res.AssetReportPDFGetResponse = out
 		}
 	}
 
@@ -1289,7 +1289,7 @@ func (s *Plaid) CategoriesGet(ctx context.Context, request operations.Categories
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s._defaultClient
+	client := s._securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

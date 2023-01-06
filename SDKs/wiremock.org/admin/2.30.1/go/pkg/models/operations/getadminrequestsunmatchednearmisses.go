@@ -15,6 +15,6 @@ type GetAdminRequestsUnmatchedNearMisses200ApplicationJSON struct {
 
 type GetAdminRequestsUnmatchedNearMissesResponse struct {
 	ContentType                                                 string
-	GetAdminRequestsUnmatchedNearMisses200ApplicationJSONObject *GetAdminRequestsUnmatchedNearMisses200ApplicationJSON
 	StatusCode                                                  int64
+	GetAdminRequestsUnmatchedNearMisses200ApplicationJSONObject *GetAdminRequestsUnmatchedNearMisses200ApplicationJSON
 }

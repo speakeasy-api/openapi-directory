@@ -46,8 +46,8 @@ type GetChatHeadUsingPostRequest struct {
 type GetChatHeadUsingPostResponse struct {
 	ContentType                                  string
 	StatusCode                                   int64
-	GetChatHeadUsingPost200ApplicationJSONObject *GetChatHeadUsingPost200ApplicationJSON
-	GetChatHeadUsingPost400ApplicationJSONObject *GetChatHeadUsingPost400ApplicationJSON
-	GetChatHeadUsingPost401ApplicationJSONObject *GetChatHeadUsingPost401ApplicationJSON
-	GetChatHeadUsingPost500ApplicationJSONObject *GetChatHeadUsingPost500ApplicationJSON
+	GetChatHeadUsingPOST200ApplicationJSONObject *GetChatHeadUsingPost200ApplicationJSON
+	GetChatHeadUsingPOST400ApplicationJSONObject *GetChatHeadUsingPost400ApplicationJSON
+	GetChatHeadUsingPOST401ApplicationJSONObject *GetChatHeadUsingPost401ApplicationJSON
+	GetChatHeadUsingPOST500ApplicationJSONObject *GetChatHeadUsingPost500ApplicationJSON
 }

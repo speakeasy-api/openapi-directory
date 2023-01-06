@@ -3,13 +3,13 @@ package operations
 type PostCreateTrafficMirrorTargetActionEnum string
 
 const (
-	PostCreateTrafficMirrorTargetActionEnumCreateTrafficMirrorTarget PostCreateTrafficMirrorTargetActionEnum = "CreateTrafficMirrorTarget"
+	POSTCreateTrafficMirrorTargetActionEnumCreateTrafficMirrorTarget PostCreateTrafficMirrorTargetActionEnum = "CreateTrafficMirrorTarget"
 )
 
 type PostCreateTrafficMirrorTargetVersionEnum string
 
 const (
-	PostCreateTrafficMirrorTargetVersionEnumTwoThousandAndSixteen1115 PostCreateTrafficMirrorTargetVersionEnum = "2016-11-15"
+	POSTCreateTrafficMirrorTargetVersionEnumTwoThousandAndSixteen1115 PostCreateTrafficMirrorTargetVersionEnum = "2016-11-15"
 )
 
 type PostCreateTrafficMirrorTargetQueryParams struct {

@@ -1,5 +1,5 @@
 package shared
 
 type RejectVpcPeeringConnectionResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

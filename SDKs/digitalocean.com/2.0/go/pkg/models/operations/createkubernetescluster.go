@@ -4,14 +4,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateKubernetesClusterRequest struct {
-	Request shared.Onev21kubernetes1clustersGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesKubernetesClustersItems `request:"mediaType=application/json"`
-}
-
 type CreateKubernetesCluster401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type CreateKubernetesClusterRequest struct {
+	Request shared.Onev21kubernetes1clustersGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesKubernetesClustersItemsInput `request:"mediaType=application/json"`
 }
 
 type CreateKubernetesClusterResponse struct {

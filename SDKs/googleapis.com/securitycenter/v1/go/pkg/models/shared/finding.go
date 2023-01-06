@@ -38,41 +38,6 @@ const (
 	FindingStateEnumInactive         FindingStateEnum = "INACTIVE"
 )
 
-// FindingInput
-// Security Command Center finding. A finding is a record of assessment data like security, risk, health, or privacy, that is ingested into Security Command Center for presentation, notification, analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine application is a finding.
-type FindingInput struct {
-	Access           *Access                  `json:"access,omitempty"`
-	CanonicalName    *string                  `json:"canonicalName,omitempty"`
-	Category         *string                  `json:"category,omitempty"`
-	Compliances      []Compliance             `json:"compliances,omitempty"`
-	Connections      []Connection             `json:"connections,omitempty"`
-	Containers       []Container              `json:"containers,omitempty"`
-	CreateTime       *string                  `json:"createTime,omitempty"`
-	Database         *Database                `json:"database,omitempty"`
-	Description      *string                  `json:"description,omitempty"`
-	EventTime        *string                  `json:"eventTime,omitempty"`
-	Exfiltration     *Exfiltration            `json:"exfiltration,omitempty"`
-	ExternalURI      *string                  `json:"externalUri,omitempty"`
-	Files            []File                   `json:"files,omitempty"`
-	FindingClass     *FindingFindingClassEnum `json:"findingClass,omitempty"`
-	IamBindings      []IamBinding             `json:"iamBindings,omitempty"`
-	Indicator        *Indicator               `json:"indicator,omitempty"`
-	Kubernetes       *Kubernetes              `json:"kubernetes,omitempty"`
-	MitreAttack      *MitreAttack             `json:"mitreAttack,omitempty"`
-	Mute             *FindingMuteEnum         `json:"mute,omitempty"`
-	MuteInitiator    *string                  `json:"muteInitiator,omitempty"`
-	Name             *string                  `json:"name,omitempty"`
-	NextSteps        *string                  `json:"nextSteps,omitempty"`
-	Parent           *string                  `json:"parent,omitempty"`
-	Processes        []Process                `json:"processes,omitempty"`
-	ResourceName     *string                  `json:"resourceName,omitempty"`
-	SecurityMarks    *SecurityMarks           `json:"securityMarks,omitempty"`
-	Severity         *FindingSeverityEnum     `json:"severity,omitempty"`
-	SourceProperties map[string]interface{}   `json:"sourceProperties,omitempty"`
-	State            *FindingStateEnum        `json:"state,omitempty"`
-	Vulnerability    *Vulnerability           `json:"vulnerability,omitempty"`
-}
-
 // Finding
 // Security Command Center finding. A finding is a record of assessment data like security, risk, health, or privacy, that is ingested into Security Command Center for presentation, notification, analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine application is a finding.
 type Finding struct {
@@ -94,6 +59,7 @@ type Finding struct {
 	FindingClass      *FindingFindingClassEnum                             `json:"findingClass,omitempty"`
 	IamBindings       []IamBinding                                         `json:"iamBindings,omitempty"`
 	Indicator         *Indicator                                           `json:"indicator,omitempty"`
+	KernelRootkit     *KernelRootkit                                       `json:"kernelRootkit,omitempty"`
 	Kubernetes        *Kubernetes                                          `json:"kubernetes,omitempty"`
 	MitreAttack       *MitreAttack                                         `json:"mitreAttack,omitempty"`
 	Mute              *FindingMuteEnum                                     `json:"mute,omitempty"`
@@ -110,4 +76,40 @@ type Finding struct {
 	SourceProperties  map[string]interface{}                               `json:"sourceProperties,omitempty"`
 	State             *FindingStateEnum                                    `json:"state,omitempty"`
 	Vulnerability     *Vulnerability                                       `json:"vulnerability,omitempty"`
+}
+
+// FindingInput
+// Security Command Center finding. A finding is a record of assessment data like security, risk, health, or privacy, that is ingested into Security Command Center for presentation, notification, analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine application is a finding.
+type FindingInput struct {
+	Access           *Access                  `json:"access,omitempty"`
+	CanonicalName    *string                  `json:"canonicalName,omitempty"`
+	Category         *string                  `json:"category,omitempty"`
+	Compliances      []Compliance             `json:"compliances,omitempty"`
+	Connections      []Connection             `json:"connections,omitempty"`
+	Containers       []Container              `json:"containers,omitempty"`
+	CreateTime       *string                  `json:"createTime,omitempty"`
+	Database         *Database                `json:"database,omitempty"`
+	Description      *string                  `json:"description,omitempty"`
+	EventTime        *string                  `json:"eventTime,omitempty"`
+	Exfiltration     *Exfiltration            `json:"exfiltration,omitempty"`
+	ExternalURI      *string                  `json:"externalUri,omitempty"`
+	Files            []File                   `json:"files,omitempty"`
+	FindingClass     *FindingFindingClassEnum `json:"findingClass,omitempty"`
+	IamBindings      []IamBinding             `json:"iamBindings,omitempty"`
+	Indicator        *Indicator               `json:"indicator,omitempty"`
+	KernelRootkit    *KernelRootkit           `json:"kernelRootkit,omitempty"`
+	Kubernetes       *Kubernetes              `json:"kubernetes,omitempty"`
+	MitreAttack      *MitreAttack             `json:"mitreAttack,omitempty"`
+	Mute             *FindingMuteEnum         `json:"mute,omitempty"`
+	MuteInitiator    *string                  `json:"muteInitiator,omitempty"`
+	Name             *string                  `json:"name,omitempty"`
+	NextSteps        *string                  `json:"nextSteps,omitempty"`
+	Parent           *string                  `json:"parent,omitempty"`
+	Processes        []Process                `json:"processes,omitempty"`
+	ResourceName     *string                  `json:"resourceName,omitempty"`
+	SecurityMarks    *SecurityMarks           `json:"securityMarks,omitempty"`
+	Severity         *FindingSeverityEnum     `json:"severity,omitempty"`
+	SourceProperties map[string]interface{}   `json:"sourceProperties,omitempty"`
+	State            *FindingStateEnum        `json:"state,omitempty"`
+	Vulnerability    *Vulnerability           `json:"vulnerability,omitempty"`
 }

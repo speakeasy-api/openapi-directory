@@ -3,7 +3,7 @@ package shared
 // RdsSourceConfig
 // Contains information about the Amazon Relational Database Service (RDS) configuration.
 type RdsSourceConfig struct {
-	DbInstanceIdentifier string           `json:"DBInstanceIdentifier"`
+	DBInstanceIdentifier string           `json:"DBInstanceIdentifier"`
 	DatabaseHost         string           `json:"DatabaseHost"`
 	DatabaseName         string           `json:"DatabaseName"`
 	DatabasePort         int64            `json:"DatabasePort"`

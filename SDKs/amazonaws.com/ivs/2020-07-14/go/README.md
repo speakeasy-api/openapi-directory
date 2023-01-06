@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.BatchGetChannelRequest{
         Headers: operations.BatchGetChannelHeaders{
-            XAmzAlgorithm: "ipsum",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "est",
-            XAmzDate: "voluptates",
-            XAmzSecurityToken: "repellat",
-            XAmzSignature: "eligendi",
-            XAmzSignedHeaders: "adipisci",
+            XAmzAlgorithm: "ea",
+            XAmzContentSha256: "enim",
+            XAmzCredential: "sunt",
+            XAmzDate: "quos",
+            XAmzSecurityToken: "at",
+            XAmzSignature: "iusto",
+            XAmzSignedHeaders: "et",
         },
         Request: operations.BatchGetChannelRequestBody{
             Arns: []string{
-                "optio",
+                "consectetur",
             },
         },
     }
     
-    res, err := s.Sdk.BatchGetChannel(ctx, req)
+    res, err := s.BatchGetChannel(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

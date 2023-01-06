@@ -5,7 +5,7 @@ import (
 )
 
 type DeleteSecretResponse struct {
-	Arn          *string    `json:"ARN,omitempty"`
+	ARN          *string    `json:"ARN,omitempty"`
 	DeletionDate *time.Time `json:"DeletionDate,omitempty"`
 	Name         *string    `json:"Name,omitempty"`
 }

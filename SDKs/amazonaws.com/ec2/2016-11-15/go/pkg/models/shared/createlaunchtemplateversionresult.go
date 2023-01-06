@@ -1,6 +1,6 @@
 package shared
 
 type CreateLaunchTemplateVersionResult struct {
-	LaunchTemplateVersion *LaunchTemplateVersion
-	Warning               *ValidationWarning
+	LaunchTemplateVersion map[string]interface{}
+	Warning               map[string]interface{}
 }

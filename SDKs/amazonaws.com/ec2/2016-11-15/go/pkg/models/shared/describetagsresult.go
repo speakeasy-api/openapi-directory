@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTagsResult struct {
-	NextToken *string
-	Tags      []TagDescription
+	NextToken map[string]interface{}
+	Tags      map[string]interface{}
 }

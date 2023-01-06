@@ -30,9 +30,9 @@ type GetWebACLForResourceResponse struct {
 	ContentType                   string
 	GetWebACLForResourceResponse  *shared.GetWebACLForResourceResponse
 	StatusCode                    int64
-	WafInternalErrorException     *interface{}
-	WafInvalidAccountException    *interface{}
-	WafInvalidParameterException  *interface{}
-	WafNonexistentItemException   *interface{}
-	WafUnavailableEntityException *interface{}
+	WAFInternalErrorException     *interface{}
+	WAFInvalidAccountException    *interface{}
+	WAFInvalidParameterException  *interface{}
+	WAFNonexistentItemException   *interface{}
+	WAFUnavailableEntityException *interface{}
 }

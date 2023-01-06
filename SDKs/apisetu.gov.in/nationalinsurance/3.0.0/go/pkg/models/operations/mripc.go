@@ -83,7 +83,7 @@ type Mripc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Mripc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Mripc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Mripc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Mripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Mripc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Mripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Mripc404ApplicationJSON struct {

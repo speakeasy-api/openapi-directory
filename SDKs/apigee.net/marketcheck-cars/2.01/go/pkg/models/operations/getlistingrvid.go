@@ -20,6 +20,6 @@ type GetListingRvIDRequest struct {
 type GetListingRvIDResponse struct {
 	ContentType string
 	Error       *shared.Error
-	RvListing   *shared.RvListing
+	RVListing   *shared.RvListing
 	StatusCode  int64
 }

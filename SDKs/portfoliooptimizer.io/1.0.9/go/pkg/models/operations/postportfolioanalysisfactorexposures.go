@@ -29,6 +29,6 @@ type PostPortfolioAnalysisFactorExposuresRequest struct {
 
 type PostPortfolioAnalysisFactorExposuresResponse struct {
 	ContentType                                                  string
-	PostPortfolioAnalysisFactorExposures200ApplicationJSONObject *PostPortfolioAnalysisFactorExposures200ApplicationJSON
 	StatusCode                                                   int64
+	PostPortfolioAnalysisFactorExposures200ApplicationJSONObject *PostPortfolioAnalysisFactorExposures200ApplicationJSON
 }

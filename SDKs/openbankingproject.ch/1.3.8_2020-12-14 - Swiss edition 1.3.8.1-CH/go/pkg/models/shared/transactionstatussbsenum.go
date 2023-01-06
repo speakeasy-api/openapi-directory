@@ -3,10 +3,10 @@ package shared
 type TransactionStatusSbsEnum string
 
 const (
-	TransactionStatusSbsEnumAcsc TransactionStatusSbsEnum = "ACSC"
-	TransactionStatusSbsEnumActc TransactionStatusSbsEnum = "ACTC"
-	TransactionStatusSbsEnumPatc TransactionStatusSbsEnum = "PATC"
-	TransactionStatusSbsEnumRcvd TransactionStatusSbsEnum = "RCVD"
-	TransactionStatusSbsEnumRjct TransactionStatusSbsEnum = "RJCT"
-	TransactionStatusSbsEnumCanc TransactionStatusSbsEnum = "CANC"
+	TransactionStatusSBSEnumAcsc TransactionStatusSbsEnum = "ACSC"
+	TransactionStatusSBSEnumActc TransactionStatusSbsEnum = "ACTC"
+	TransactionStatusSBSEnumPatc TransactionStatusSbsEnum = "PATC"
+	TransactionStatusSBSEnumRcvd TransactionStatusSbsEnum = "RCVD"
+	TransactionStatusSBSEnumRjct TransactionStatusSbsEnum = "RJCT"
+	TransactionStatusSBSEnumCanc TransactionStatusSbsEnum = "CANC"
 )

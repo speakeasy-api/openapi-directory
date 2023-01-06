@@ -36,8 +36,8 @@ type SendClientsMessageUsingGetRequest struct {
 type SendClientsMessageUsingGetResponse struct {
 	ContentType                                        string
 	StatusCode                                         int64
-	SendClientsMessageUsingGet200ApplicationJSONObject *SendClientsMessageUsingGet200ApplicationJSON
-	SendClientsMessageUsingGet400ApplicationJSONObject *SendClientsMessageUsingGet400ApplicationJSON
-	SendClientsMessageUsingGet401ApplicationJSONObject *SendClientsMessageUsingGet401ApplicationJSON
-	SendClientsMessageUsingGet500ApplicationJSONObject *SendClientsMessageUsingGet500ApplicationJSON
+	SendClientsMessageUsingGET200ApplicationJSONObject *SendClientsMessageUsingGet200ApplicationJSON
+	SendClientsMessageUsingGET400ApplicationJSONObject *SendClientsMessageUsingGet400ApplicationJSON
+	SendClientsMessageUsingGET401ApplicationJSONObject *SendClientsMessageUsingGet401ApplicationJSON
+	SendClientsMessageUsingGET500ApplicationJSONObject *SendClientsMessageUsingGet500ApplicationJSON
 }

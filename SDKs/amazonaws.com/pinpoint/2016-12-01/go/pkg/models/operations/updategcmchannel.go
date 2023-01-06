@@ -26,7 +26,7 @@ type UpdateGcmChannelRequestBodyGcmChannelRequest struct {
 }
 
 type UpdateGcmChannelRequestBody struct {
-	GcmChannelRequest UpdateGcmChannelRequestBodyGcmChannelRequest `json:"GCMChannelRequest"`
+	GCMChannelRequest UpdateGcmChannelRequestBodyGcmChannelRequest `json:"GCMChannelRequest"`
 }
 
 type UpdateGcmChannelRequest struct {

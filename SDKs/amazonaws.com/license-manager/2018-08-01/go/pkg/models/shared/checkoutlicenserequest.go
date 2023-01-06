@@ -7,5 +7,5 @@ type CheckoutLicenseRequest struct {
 	Entitlements   []EntitlementData `json:"Entitlements"`
 	KeyFingerprint string            `json:"KeyFingerprint"`
 	NodeID         *string           `json:"NodeId,omitempty"`
-	ProductSku     string            `json:"ProductSKU"`
+	ProductSKU     string            `json:"ProductSKU"`
 }

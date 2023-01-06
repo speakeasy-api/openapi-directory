@@ -12,6 +12,8 @@ type MinimalRepositoryLicense struct {
 	URL    *string `json:"url,omitempty"`
 }
 
+// MinimalRepositorySimpleUser
+// Simple User
 type MinimalRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -40,6 +42,8 @@ type MinimalRepositoryPermissions struct {
 	Push  *bool `json:"push,omitempty"`
 }
 
+// MinimalRepositoryRepositoryLicenseSimple
+// License Simple
 type MinimalRepositoryRepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -49,6 +53,8 @@ type MinimalRepositoryRepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// MinimalRepositoryRepositorySimpleUser
+// Simple User
 type MinimalRepositoryRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -189,6 +195,8 @@ type MinimalRepositoryRepositoryTemplateRepository struct {
 	WatchersCount       *int64                                                    `json:"watchers_count,omitempty"`
 }
 
+// MinimalRepositoryRepository
+// A git repository
 type MinimalRepositoryRepository struct {
 	AllowMergeCommit    *bool                                          `json:"allow_merge_commit,omitempty"`
 	AllowRebaseMerge    *bool                                          `json:"allow_rebase_merge,omitempty"`

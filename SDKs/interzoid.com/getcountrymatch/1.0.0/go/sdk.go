@@ -1,12 +1,9 @@
 package sdk
 
 import (
-	"context"
-	"fmt"
 	"net/http"
-	"openapi/internal/utils"
-	"openapi/pkg/models/operations"
-	"strings"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -19,6 +16,8 @@ type HTTPClient interface {
 
 // SDK Documentation: https://www.interzoid.com/services/getcountrymatch - API home page and documentation
 type SDK struct {
+	CountryMatchSimilarityKey *CountryMatchSimilarityKey
+
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
 
@@ -69,53 +68,14 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.CountryMatchSimilarityKey = NewCountryMatchSimilarityKey(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	return sdk
-}
-
-// Getcountrymatch - Gets a similarity key for matching purposes for country name data
-// Gets a similarity key to use for matching purposes for country name data
-func (s *SDK) Getcountrymatch(ctx context.Context, request operations.GetcountrymatchRequest) (*operations.GetcountrymatchResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/getcountrymatch"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetcountrymatchResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.Getcountrymatch200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Getcountrymatch200ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
 }

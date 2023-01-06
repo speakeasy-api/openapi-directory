@@ -35,8 +35,8 @@ type ListSavedRevisionsUsingPostRequest struct {
 type ListSavedRevisionsUsingPostResponse struct {
 	ContentType                                         string
 	StatusCode                                          int64
-	ListSavedRevisionsUsingPost200ApplicationJSONObject *ListSavedRevisionsUsingPost200ApplicationJSON
-	ListSavedRevisionsUsingPost400ApplicationJSONObject *ListSavedRevisionsUsingPost400ApplicationJSON
-	ListSavedRevisionsUsingPost401ApplicationJSONObject *ListSavedRevisionsUsingPost401ApplicationJSON
-	ListSavedRevisionsUsingPost500ApplicationJSONObject *ListSavedRevisionsUsingPost500ApplicationJSON
+	ListSavedRevisionsUsingPOST200ApplicationJSONObject *ListSavedRevisionsUsingPost200ApplicationJSON
+	ListSavedRevisionsUsingPOST400ApplicationJSONObject *ListSavedRevisionsUsingPost400ApplicationJSON
+	ListSavedRevisionsUsingPOST401ApplicationJSONObject *ListSavedRevisionsUsingPost401ApplicationJSON
+	ListSavedRevisionsUsingPOST500ApplicationJSONObject *ListSavedRevisionsUsingPost500ApplicationJSON
 }

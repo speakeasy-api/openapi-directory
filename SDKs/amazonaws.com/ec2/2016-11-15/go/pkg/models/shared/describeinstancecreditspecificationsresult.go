@@ -1,6 +1,6 @@
 package shared
 
 type DescribeInstanceCreditSpecificationsResult struct {
-	InstanceCreditSpecifications []InstanceCreditSpecification
-	NextToken                    *string
+	InstanceCreditSpecifications map[string]interface{}
+	NextToken                    map[string]interface{}
 }

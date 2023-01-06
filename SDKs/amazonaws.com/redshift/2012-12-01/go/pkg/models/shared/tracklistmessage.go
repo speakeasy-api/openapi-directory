@@ -1,6 +1,6 @@
 package shared
 
 type TrackListMessage struct {
-	MaintenanceTracks []MaintenanceTrack
+	MaintenanceTracks []map[string]interface{}
 	Marker            *string
 }

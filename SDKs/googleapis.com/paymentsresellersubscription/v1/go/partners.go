@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Partners struct {
@@ -309,7 +309,7 @@ func (s *Partners) PaymentsresellersubscriptionPartnersSubscriptionsEntitle(ctx 
 	return res, nil
 }
 
-// PaymentsresellersubscriptionPartnersSubscriptionsExtend - Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+// PaymentsresellersubscriptionPartnersSubscriptionsExtend - [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
 func (s *Partners) PaymentsresellersubscriptionPartnersSubscriptionsExtend(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:extend", request.PathParams)

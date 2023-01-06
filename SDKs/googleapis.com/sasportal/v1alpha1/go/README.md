@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.SasportalCustomersListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.SasportalCustomersListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "explicabo",
+            DollarXgafv: "1",
+            AccessToken: "porro",
             Alt: "media",
-            Callback: "ducimus",
-            Fields: "explicabo",
-            Key: "voluptas",
-            OauthToken: "non",
-            PageSize: 1559748410318463885,
-            PageToken: "quae",
+            Callback: "sunt",
+            Fields: "sed",
+            Key: "qui",
+            OauthToken: "dolores",
+            PageSize: 7180547750487573969,
+            PageToken: "impedit",
             PrettyPrint: false,
-            QuotaUser: "voluptas",
-            UploadType: "voluptates",
-            UploadProtocol: "magnam",
+            QuotaUser: "dolorum",
+            UploadType: "aut",
+            UploadProtocol: "et",
         },
     }
     

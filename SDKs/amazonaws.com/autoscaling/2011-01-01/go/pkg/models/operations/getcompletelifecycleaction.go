@@ -3,13 +3,13 @@ package operations
 type GetCompleteLifecycleActionActionEnum string
 
 const (
-	GetCompleteLifecycleActionActionEnumCompleteLifecycleAction GetCompleteLifecycleActionActionEnum = "CompleteLifecycleAction"
+	GETCompleteLifecycleActionActionEnumCompleteLifecycleAction GetCompleteLifecycleActionActionEnum = "CompleteLifecycleAction"
 )
 
 type GetCompleteLifecycleActionVersionEnum string
 
 const (
-	GetCompleteLifecycleActionVersionEnumTwoThousandAndEleven0101 GetCompleteLifecycleActionVersionEnum = "2011-01-01"
+	GETCompleteLifecycleActionVersionEnumTwoThousandAndEleven0101 GetCompleteLifecycleActionVersionEnum = "2011-01-01"
 )
 
 type GetCompleteLifecycleActionQueryParams struct {

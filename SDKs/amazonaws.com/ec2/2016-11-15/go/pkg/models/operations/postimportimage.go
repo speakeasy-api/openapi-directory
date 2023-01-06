@@ -3,13 +3,13 @@ package operations
 type PostImportImageActionEnum string
 
 const (
-	PostImportImageActionEnumImportImage PostImportImageActionEnum = "ImportImage"
+	POSTImportImageActionEnumImportImage PostImportImageActionEnum = "ImportImage"
 )
 
 type PostImportImageVersionEnum string
 
 const (
-	PostImportImageVersionEnumTwoThousandAndSixteen1115 PostImportImageVersionEnum = "2016-11-15"
+	POSTImportImageVersionEnumTwoThousandAndSixteen1115 PostImportImageVersionEnum = "2016-11-15"
 )
 
 type PostImportImageQueryParams struct {

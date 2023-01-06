@@ -1,7 +1,0 @@
-package shared
-
-type Onerequest1Percent7BidPercent7DCmdEqualDiffPostResponses200ContentApplication1xmlPercent20charsetEqualUtf8SchemaPropertiesActionPropertiesSourcediffPropertiesFilesItemsPropertiesFilePropertiesOld struct {
-	Md5  *string
-	Name *string
-	Size *string
-}

@@ -3,13 +3,13 @@ package operations
 type PostPutScheduledUpdateGroupActionActionEnum string
 
 const (
-	PostPutScheduledUpdateGroupActionActionEnumPutScheduledUpdateGroupAction PostPutScheduledUpdateGroupActionActionEnum = "PutScheduledUpdateGroupAction"
+	POSTPutScheduledUpdateGroupActionActionEnumPutScheduledUpdateGroupAction PostPutScheduledUpdateGroupActionActionEnum = "PutScheduledUpdateGroupAction"
 )
 
 type PostPutScheduledUpdateGroupActionVersionEnum string
 
 const (
-	PostPutScheduledUpdateGroupActionVersionEnumTwoThousandAndEleven0101 PostPutScheduledUpdateGroupActionVersionEnum = "2011-01-01"
+	POSTPutScheduledUpdateGroupActionVersionEnumTwoThousandAndEleven0101 PostPutScheduledUpdateGroupActionVersionEnum = "2011-01-01"
 )
 
 type PostPutScheduledUpdateGroupActionQueryParams struct {

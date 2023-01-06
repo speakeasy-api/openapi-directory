@@ -22,6 +22,6 @@ type DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest struct {
 
 type DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse struct {
 	ContentType                                                                string
-	DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject *DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON
 	StatusCode                                                                 int64
+	DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject *DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON
 }

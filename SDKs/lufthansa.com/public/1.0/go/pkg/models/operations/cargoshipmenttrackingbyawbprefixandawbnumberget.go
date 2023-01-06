@@ -5,8 +5,8 @@ import (
 )
 
 type CargoShipmentTrackingByAwbPrefixAndAwbNumberGetPathParams struct {
-	AWbNumber string `pathParam:"style=simple,explode=false,name=aWBNumber"`
-	AWbPrefix string `pathParam:"style=simple,explode=false,name=aWBPrefix"`
+	AWBNumber string `pathParam:"style=simple,explode=false,name=aWBNumber"`
+	AWBPrefix string `pathParam:"style=simple,explode=false,name=aWBPrefix"`
 }
 
 type CargoShipmentTrackingByAwbPrefixAndAwbNumberGetHeaders struct {
@@ -24,7 +24,7 @@ type CargoShipmentTrackingByAwbPrefixAndAwbNumberGetRequest struct {
 }
 
 type CargoShipmentTrackingByAwbPrefixAndAwbNumberGetResponse struct {
-	CargoShipmentTrackingByAwbPrefixAndAwbNumberGet200ApplicationJSONObject map[string]interface{}
+	CargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject map[string]interface{}
 	ContentType                                                             string
 	StatusCode                                                              int64
 }

@@ -29,8 +29,7 @@ type GetAccountsAccountIDStandingOrdersRequest struct {
 
 type GetAccountsAccountIDStandingOrdersResponse struct {
 	ContentType          string
-	Headers              map[string][]string
-	ObErrorResponse1     *shared.ObErrorResponse1
-	ObReadStandingOrder6 *shared.ObReadStandingOrder6
+	OBErrorResponse1     *shared.ObErrorResponse1
+	OBReadStandingOrder6 *shared.ObReadStandingOrder6
 	StatusCode           int64
 }

@@ -30,7 +30,7 @@ type TestConnectionResponse struct {
 	AccessDeniedFault          *interface{}
 	ContentType                string
 	InvalidResourceStateFault  *interface{}
-	KmsKeyNotAccessibleFault   *interface{}
+	KMSKeyNotAccessibleFault   *interface{}
 	ResourceNotFoundFault      *interface{}
 	ResourceQuotaExceededFault *interface{}
 	StatusCode                 int64

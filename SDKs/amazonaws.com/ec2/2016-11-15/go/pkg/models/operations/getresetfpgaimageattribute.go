@@ -3,19 +3,19 @@ package operations
 type GetResetFpgaImageAttributeActionEnum string
 
 const (
-	GetResetFpgaImageAttributeActionEnumResetFpgaImageAttribute GetResetFpgaImageAttributeActionEnum = "ResetFpgaImageAttribute"
+	GETResetFpgaImageAttributeActionEnumResetFpgaImageAttribute GetResetFpgaImageAttributeActionEnum = "ResetFpgaImageAttribute"
 )
 
 type GetResetFpgaImageAttributeAttributeEnum string
 
 const (
-	GetResetFpgaImageAttributeAttributeEnumLoadPermission GetResetFpgaImageAttributeAttributeEnum = "loadPermission"
+	GETResetFpgaImageAttributeAttributeEnumLoadPermission GetResetFpgaImageAttributeAttributeEnum = "loadPermission"
 )
 
 type GetResetFpgaImageAttributeVersionEnum string
 
 const (
-	GetResetFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 GetResetFpgaImageAttributeVersionEnum = "2016-11-15"
+	GETResetFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 GetResetFpgaImageAttributeVersionEnum = "2016-11-15"
 )
 
 type GetResetFpgaImageAttributeQueryParams struct {

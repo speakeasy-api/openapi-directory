@@ -59,7 +59,7 @@ const (
 	PowerPortTemplateTypeLabelEnumCs8465C            PowerPortTemplateTypeLabelEnum = "CS8465C"
 	PowerPortTemplateTypeLabelEnumItaTypeECee75      PowerPortTemplateTypeLabelEnum = "ITA Type E (CEE 7/5)"
 	PowerPortTemplateTypeLabelEnumItaTypeFCee74      PowerPortTemplateTypeLabelEnum = "ITA Type F (CEE 7/4)"
-	PowerPortTemplateTypeLabelEnumItaTypeEfCee77     PowerPortTemplateTypeLabelEnum = "ITA Type E/F (CEE 7/7)"
+	PowerPortTemplateTypeLabelEnumItaTypeEFCee77     PowerPortTemplateTypeLabelEnum = "ITA Type E/F (CEE 7/7)"
 	PowerPortTemplateTypeLabelEnumItaTypeGBs1363     PowerPortTemplateTypeLabelEnum = "ITA Type G (BS 1363)"
 	PowerPortTemplateTypeLabelEnumItaTypeH           PowerPortTemplateTypeLabelEnum = "ITA Type H"
 	PowerPortTemplateTypeLabelEnumItaTypeI           PowerPortTemplateTypeLabelEnum = "ITA Type I"

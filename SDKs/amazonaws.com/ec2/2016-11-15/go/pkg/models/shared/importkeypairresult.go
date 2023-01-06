@@ -1,8 +1,8 @@
 package shared
 
 type ImportKeyPairResult struct {
-	KeyFingerprint *string
-	KeyName        *string
-	KeyPairID      *string
-	Tags           []Tag
+	KeyFingerprint map[string]interface{}
+	KeyName        map[string]interface{}
+	KeyPairID      map[string]interface{}
+	Tags           map[string]interface{}
 }

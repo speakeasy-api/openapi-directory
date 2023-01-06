@@ -15,6 +15,8 @@ type PullRequestSimpleLinks struct {
 	Statuses       Link `json:"statuses"`
 }
 
+// PullRequestSimpleSimpleUser
+// Simple User
 type PullRequestSimpleSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -37,6 +39,8 @@ type PullRequestSimpleSimpleUser struct {
 	URL               string  `json:"url"`
 }
 
+// PullRequestSimpleBaseSimpleUser
+// Simple User
 type PullRequestSimpleBaseSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -67,6 +71,8 @@ type PullRequestSimpleBase struct {
 	User  PullRequestSimpleBaseSimpleUser `json:"user"`
 }
 
+// PullRequestSimpleHeadSimpleUser
+// Simple User
 type PullRequestSimpleHeadSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -107,6 +113,8 @@ type PullRequestSimpleLabels struct {
 	URL         *string `json:"url,omitempty"`
 }
 
+// PullRequestSimpleMilestoneSimpleUser
+// Simple User
 type PullRequestSimpleMilestoneSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -136,6 +144,8 @@ const (
 	PullRequestSimpleMilestoneStateEnumClosed PullRequestSimpleMilestoneStateEnum = "closed"
 )
 
+// PullRequestSimpleMilestone
+// A collection of related issues and pull requests.
 type PullRequestSimpleMilestone struct {
 	ClosedAt     time.Time                            `json:"closed_at"`
 	ClosedIssues int64                                `json:"closed_issues"`

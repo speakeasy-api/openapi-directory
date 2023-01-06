@@ -1,6 +1,6 @@
 package shared
 
 type CreateTrafficMirrorSessionResult struct {
-	ClientToken          *string
-	TrafficMirrorSession *TrafficMirrorSession
+	ClientToken          map[string]interface{}
+	TrafficMirrorSession map[string]interface{}
 }

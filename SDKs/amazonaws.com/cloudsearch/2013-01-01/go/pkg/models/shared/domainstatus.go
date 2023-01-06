@@ -3,7 +3,7 @@ package shared
 // DomainStatus
 // The current status of the search domain.
 type DomainStatus struct {
-	Arn                    *string
+	ARN                    *string
 	Created                *bool
 	Deleted                *bool
 	DocService             *ServiceEndpoint

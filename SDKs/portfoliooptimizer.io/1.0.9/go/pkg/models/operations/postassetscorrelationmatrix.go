@@ -23,6 +23,6 @@ type PostAssetsCorrelationMatrixRequest struct {
 
 type PostAssetsCorrelationMatrixResponse struct {
 	ContentType                                         string
-	PostAssetsCorrelationMatrix200ApplicationJSONObject *PostAssetsCorrelationMatrix200ApplicationJSON
 	StatusCode                                          int64
+	PostAssetsCorrelationMatrix200ApplicationJSONObject *PostAssetsCorrelationMatrix200ApplicationJSON
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AssociateFleetRequest{
         Headers: operations.AssociateFleetHeaders{
-            XAmzAlgorithm: "consequatur",
-            XAmzContentSha256: "dolores",
-            XAmzCredential: "et",
-            XAmzDate: "quos",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "neque",
+            XAmzAlgorithm: "sapiente",
+            XAmzContentSha256: "ipsam",
+            XAmzCredential: "autem",
+            XAmzDate: "placeat",
+            XAmzSecurityToken: "velit",
+            XAmzSignature: "minus",
+            XAmzSignedHeaders: "praesentium",
             XAmzTarget: "PhotonAdminProxyService.AssociateFleet",
         },
         Request: shared.AssociateFleetRequest{
-            FleetName: "quis",
-            StackName: "eius",
+            FleetName: "voluptas",
+            StackName: "consequatur",
         },
     }
     
-    res, err := s.Sdk.AssociateFleet(ctx, req)
+    res, err := s.AssociateFleet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetcitymatchRequest{
         QueryParams: operations.GetcitymatchQueryParams{
-            City: "saepe",
-            License: "ea",
+            City: "quibusdam",
+            License: "beatae",
         },
     }
     
-    res, err := s.Sdk.Getcitymatch(ctx, req)
+    res, err := s.CityNameSimilarityKey.Getcitymatch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### City Name Similarity Key
 
 * `Getcitymatch` - Gets a similarity key for matching purposes for city name data
 

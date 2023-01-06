@@ -36,8 +36,8 @@ type AppendTextUsingGetRequest struct {
 type AppendTextUsingGetResponse struct {
 	ContentType                                string
 	StatusCode                                 int64
-	AppendTextUsingGet200ApplicationJSONObject *AppendTextUsingGet200ApplicationJSON
-	AppendTextUsingGet400ApplicationJSONObject *AppendTextUsingGet400ApplicationJSON
-	AppendTextUsingGet401ApplicationJSONObject *AppendTextUsingGet401ApplicationJSON
-	AppendTextUsingGet500ApplicationJSONObject *AppendTextUsingGet500ApplicationJSON
+	AppendTextUsingGET200ApplicationJSONObject *AppendTextUsingGet200ApplicationJSON
+	AppendTextUsingGET400ApplicationJSONObject *AppendTextUsingGet400ApplicationJSON
+	AppendTextUsingGET401ApplicationJSONObject *AppendTextUsingGet401ApplicationJSON
+	AppendTextUsingGET500ApplicationJSONObject *AppendTextUsingGet500ApplicationJSON
 }

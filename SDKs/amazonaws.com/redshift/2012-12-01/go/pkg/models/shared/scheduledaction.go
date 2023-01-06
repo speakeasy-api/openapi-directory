@@ -9,7 +9,7 @@ import (
 type ScheduledAction struct {
 	EndTime                    *time.Time
 	IamRole                    *string
-	NextInvocations            []time.Time
+	NextInvocations            []map[string]interface{}
 	Schedule                   *string
 	ScheduledActionDescription *string
 	ScheduledActionName        *string

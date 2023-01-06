@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,34 +22,26 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.AllFaresRequest{
-        Security: operations.AllFaresSecurity{
+    req := operations.BaggageTripAndContactRequest{
+        Security: operations.BaggageTripAndContactSecurity{
             Auth: shared.SchemeAuth{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        QueryParams: operations.AllFaresQueryParams{
-            CabinClass: "vitae",
-            Catalogues: "fugiat",
-            Destination: "enim",
-            FareFamily: "et",
-            Origin: "aspernatur",
-            ReturnDate: "fuga",
-            Trackingid: "odit",
-            TravelDate: "voluptas",
-            Travelers: "voluptas",
+        PathParams: operations.BaggageTripAndContactPathParams{
+            SearchID: "enim",
         },
-        Headers: operations.AllFaresHeaders{
-            Accept: "facilis",
+        Headers: operations.BaggageTripAndContactHeaders{
+            Accept: "cupiditate",
         },
     }
     
-    res, err := s.Sdk.AllFares(ctx, req)
+    res, err := s.Baggage.BaggageTripAndContact(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AllFares200ApplicationJSONString != nil {
+    if res.BaggageTripAndContact200ApplicationJSONString != nil {
         // handle response
     }
 ```
@@ -59,11 +50,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Baggage
+
+* `BaggageTripAndContact` - Baggage Trip and Contact
+
+### Offers
 
 * `AllFares` - All Fares
-* `AutoCheckIn` - Auto Check-In
-* `BaggageTripAndContact` - Baggage Trip and Contact
 * `BestFares` - Best Fares
 * `DeepLinks` - Deep Links
 * `Fares` - Fares
@@ -73,10 +66,23 @@ func main() {
 * `LowestFares` - Lowest Fares
 * `OndRoute` - OND Route
 * `OndStatus` - OND Status
-* `Orders` - Orders
-* `PriceOffers` - Price Offers
-* `SeatDetails` - Seat Details
 * `TopOnd` - Top OND
+
+### Orders
+
+* `Orders` - Orders
+
+### Preflight
+
+* `AutoCheckIn` - Auto Check-In
+
+### Promotions
+
+* `PriceOffers` - Price Offers
+
+### Reference Data
+
+* `SeatDetails` - Seat Details
 
 <!-- End SDK Available Operations -->
 

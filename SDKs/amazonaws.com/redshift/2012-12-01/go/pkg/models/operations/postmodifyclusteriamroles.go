@@ -3,13 +3,13 @@ package operations
 type PostModifyClusterIamRolesActionEnum string
 
 const (
-	PostModifyClusterIamRolesActionEnumModifyClusterIamRoles PostModifyClusterIamRolesActionEnum = "ModifyClusterIamRoles"
+	POSTModifyClusterIamRolesActionEnumModifyClusterIamRoles PostModifyClusterIamRolesActionEnum = "ModifyClusterIamRoles"
 )
 
 type PostModifyClusterIamRolesVersionEnum string
 
 const (
-	PostModifyClusterIamRolesVersionEnumTwoThousandAndTwelve1201 PostModifyClusterIamRolesVersionEnum = "2012-12-01"
+	POSTModifyClusterIamRolesVersionEnumTwoThousandAndTwelve1201 PostModifyClusterIamRolesVersionEnum = "2012-12-01"
 )
 
 type PostModifyClusterIamRolesQueryParams struct {

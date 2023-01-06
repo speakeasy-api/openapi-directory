@@ -1,0 +1,12 @@
+package shared
+
+type DocumentOrganization struct {
+	Address       *Address             `json:"address,omitempty"`
+	BankAccount   *DocumentBankAccount `json:"bank_account,omitempty"`
+	CashSettled   *bool                `json:"cash_settled,omitempty"`
+	EuTaxNumber   *string              `json:"eu_tax_number,omitempty"`
+	EvNumber      *string              `json:"ev_number,omitempty"`
+	Name          *string              `json:"name,omitempty"`
+	SmallTaxpayer *bool                `json:"small_taxpayer,omitempty"`
+	TaxNumber     *string              `json:"tax_number,omitempty"`
+}

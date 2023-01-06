@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.DeleteThingShadowRequest{
         PathParams: operations.DeleteThingShadowPathParams{
-            ThingName: "modi",
+            ThingName: "asperiores",
         },
         QueryParams: operations.DeleteThingShadowQueryParams{
-            Name: "quia",
+            Name: "reprehenderit",
         },
         Headers: operations.DeleteThingShadowHeaders{
-            XAmzAlgorithm: "pariatur",
-            XAmzContentSha256: "velit",
-            XAmzCredential: "possimus",
-            XAmzDate: "cumque",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "officia",
+            XAmzAlgorithm: "consectetur",
+            XAmzContentSha256: "sequi",
+            XAmzCredential: "reprehenderit",
+            XAmzDate: "qui",
+            XAmzSecurityToken: "libero",
+            XAmzSignature: "enim",
+            XAmzSignedHeaders: "sint",
         },
     }
     
-    res, err := s.Sdk.DeleteThingShadow(ctx, req)
+    res, err := s.DeleteThingShadow(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

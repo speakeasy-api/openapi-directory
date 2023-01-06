@@ -9,7 +9,7 @@ import (
 type ScalingPolicy struct {
 	Alarms                                   []Alarm                                   `json:"Alarms,omitempty"`
 	CreationTime                             time.Time                                 `json:"CreationTime"`
-	PolicyArn                                string                                    `json:"PolicyARN"`
+	PolicyARN                                string                                    `json:"PolicyARN"`
 	PolicyName                               string                                    `json:"PolicyName"`
 	PolicyType                               PolicyTypeEnum                            `json:"PolicyType"`
 	ResourceID                               string                                    `json:"ResourceId"`

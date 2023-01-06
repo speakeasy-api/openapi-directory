@@ -21,12 +21,12 @@ type UpdateAPIHeaders struct {
 // UpdateAPIRequestBodyCorsConfiguration
 // Represents a CORS configuration. Supported only for HTTP APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html">Configuring CORS</a> for more information.
 type UpdateAPIRequestBodyCorsConfiguration struct {
-	AllowCredentials *bool    `json:"AllowCredentials,omitempty"`
-	AllowHeaders     []string `json:"AllowHeaders,omitempty"`
-	AllowMethods     []string `json:"AllowMethods,omitempty"`
-	AllowOrigins     []string `json:"AllowOrigins,omitempty"`
-	ExposeHeaders    []string `json:"ExposeHeaders,omitempty"`
-	MaxAge           *int64   `json:"MaxAge,omitempty"`
+	AllowCredentials map[string]interface{} `json:"AllowCredentials,omitempty"`
+	AllowHeaders     map[string]interface{} `json:"AllowHeaders,omitempty"`
+	AllowMethods     map[string]interface{} `json:"AllowMethods,omitempty"`
+	AllowOrigins     map[string]interface{} `json:"AllowOrigins,omitempty"`
+	ExposeHeaders    map[string]interface{} `json:"ExposeHeaders,omitempty"`
+	MaxAge           map[string]interface{} `json:"MaxAge,omitempty"`
 }
 
 type UpdateAPIRequestBody struct {

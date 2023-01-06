@@ -1,7 +1,6 @@
 package operations
 
 import (
-	"openapi/pkg/models/shared"
 	"time"
 )
 
@@ -30,13 +29,7 @@ type GetSpotsQueryParams struct {
 }
 
 type GetSpots200ApplicationJSON struct {
-	Count           *int64           `json:"count,omitempty"`
-	CountCurrent    *int64           `json:"count_current,omitempty"`
-	IsLimited       *bool            `json:"is_limited,omitempty"`
-	NextURL         *string          `json:"next_url,omitempty"`
-	QueryDurationMs *int64           `json:"query_duration_ms,omitempty"`
-	Results         []shared.SpotGet `json:"results,omitempty"`
-	URL             *string          `json:"url,omitempty"`
+	Results []map[string]interface{} `json:"results,omitempty"`
 }
 
 type GetSpotsRequest struct {

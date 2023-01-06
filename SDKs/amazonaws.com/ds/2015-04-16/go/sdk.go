@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1343,7 +1344,7 @@ func (s *SDK) CreateMicrosoftAd(ctx context.Context, request operations.CreateMi
 				return nil, err
 			}
 
-			res.CreateMicrosoftAdResult = out
+			res.CreateMicrosoftADResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3007,7 +3008,7 @@ func (s *SDK) DescribeLdapsSettings(ctx context.Context, request operations.Desc
 				return nil, err
 			}
 
-			res.DescribeLdapsSettingsResult = out
+			res.DescribeLDAPSSettingsResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3679,7 +3680,7 @@ func (s *SDK) DisableLdaps(ctx context.Context, request operations.DisableLdapsR
 				return nil, err
 			}
 
-			res.DisableLdapsResult = out
+			res.DisableLDAPSResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3709,7 +3710,7 @@ func (s *SDK) DisableLdaps(ctx context.Context, request operations.DisableLdapsR
 				return nil, err
 			}
 
-			res.InvalidLdapsStatusException = out
+			res.InvalidLDAPSStatusException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -4107,7 +4108,7 @@ func (s *SDK) EnableLdaps(ctx context.Context, request operations.EnableLdapsReq
 				return nil, err
 			}
 
-			res.EnableLdapsResult = out
+			res.EnableLDAPSResult = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -4147,7 +4148,7 @@ func (s *SDK) EnableLdaps(ctx context.Context, request operations.EnableLdapsReq
 				return nil, err
 			}
 
-			res.InvalidLdapsStatusException = out
+			res.InvalidLDAPSStatusException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {

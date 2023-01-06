@@ -3,17 +3,17 @@ package operations
 type PostDomainMetadataActionEnum string
 
 const (
-	PostDomainMetadataActionEnumDomainMetadata PostDomainMetadataActionEnum = "DomainMetadata"
+	POSTDomainMetadataActionEnumDomainMetadata PostDomainMetadataActionEnum = "DomainMetadata"
 )
 
 type PostDomainMetadataVersionEnum string
 
 const (
-	PostDomainMetadataVersionEnumTwoThousandAndNine0415 PostDomainMetadataVersionEnum = "2009-04-15"
+	POSTDomainMetadataVersionEnumTwoThousandAndNine0415 PostDomainMetadataVersionEnum = "2009-04-15"
 )
 
 type PostDomainMetadataQueryParams struct {
-	AwsAccessKeyID   string                        `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                        `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostDomainMetadataActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Signature        string                        `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                        `queryParam:"style=form,explode=true,name=SignatureMethod"`

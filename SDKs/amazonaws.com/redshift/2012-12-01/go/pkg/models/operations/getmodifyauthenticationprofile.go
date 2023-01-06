@@ -3,13 +3,13 @@ package operations
 type GetModifyAuthenticationProfileActionEnum string
 
 const (
-	GetModifyAuthenticationProfileActionEnumModifyAuthenticationProfile GetModifyAuthenticationProfileActionEnum = "ModifyAuthenticationProfile"
+	GETModifyAuthenticationProfileActionEnumModifyAuthenticationProfile GetModifyAuthenticationProfileActionEnum = "ModifyAuthenticationProfile"
 )
 
 type GetModifyAuthenticationProfileVersionEnum string
 
 const (
-	GetModifyAuthenticationProfileVersionEnumTwoThousandAndTwelve1201 GetModifyAuthenticationProfileVersionEnum = "2012-12-01"
+	GETModifyAuthenticationProfileVersionEnumTwoThousandAndTwelve1201 GetModifyAuthenticationProfileVersionEnum = "2012-12-01"
 )
 
 type GetModifyAuthenticationProfileQueryParams struct {

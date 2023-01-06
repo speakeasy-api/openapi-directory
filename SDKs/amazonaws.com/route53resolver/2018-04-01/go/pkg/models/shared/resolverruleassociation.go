@@ -8,5 +8,5 @@ type ResolverRuleAssociation struct {
 	ResolverRuleID *string                            `json:"ResolverRuleId,omitempty"`
 	Status         *ResolverRuleAssociationStatusEnum `json:"Status,omitempty"`
 	StatusMessage  *string                            `json:"StatusMessage,omitempty"`
-	VpcID          *string                            `json:"VPCId,omitempty"`
+	VPCID          *string                            `json:"VPCId,omitempty"`
 }

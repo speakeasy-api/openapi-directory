@@ -3,20 +3,20 @@ package operations
 type GetResetSnapshotAttributeActionEnum string
 
 const (
-	GetResetSnapshotAttributeActionEnumResetSnapshotAttribute GetResetSnapshotAttributeActionEnum = "ResetSnapshotAttribute"
+	GETResetSnapshotAttributeActionEnumResetSnapshotAttribute GetResetSnapshotAttributeActionEnum = "ResetSnapshotAttribute"
 )
 
 type GetResetSnapshotAttributeAttributeEnum string
 
 const (
-	GetResetSnapshotAttributeAttributeEnumProductCodes           GetResetSnapshotAttributeAttributeEnum = "productCodes"
-	GetResetSnapshotAttributeAttributeEnumCreateVolumePermission GetResetSnapshotAttributeAttributeEnum = "createVolumePermission"
+	GETResetSnapshotAttributeAttributeEnumProductCodes           GetResetSnapshotAttributeAttributeEnum = "productCodes"
+	GETResetSnapshotAttributeAttributeEnumCreateVolumePermission GetResetSnapshotAttributeAttributeEnum = "createVolumePermission"
 )
 
 type GetResetSnapshotAttributeVersionEnum string
 
 const (
-	GetResetSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 GetResetSnapshotAttributeVersionEnum = "2016-11-15"
+	GETResetSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 GetResetSnapshotAttributeVersionEnum = "2016-11-15"
 )
 
 type GetResetSnapshotAttributeQueryParams struct {

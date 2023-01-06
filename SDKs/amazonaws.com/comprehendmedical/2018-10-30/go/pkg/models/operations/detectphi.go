@@ -7,7 +7,7 @@ import (
 type DetectPhixAmzTargetEnum string
 
 const (
-	DetectPhixAmzTargetEnumComprehendMedical20181030DetectPhi DetectPhixAmzTargetEnum = "ComprehendMedical_20181030.DetectPHI"
+	DetectPHIXAmzTargetEnumComprehendMedical20181030DetectPhi DetectPhixAmzTargetEnum = "ComprehendMedical_20181030.DetectPHI"
 )
 
 type DetectPhiHeaders struct {
@@ -28,7 +28,7 @@ type DetectPhiRequest struct {
 
 type DetectPhiResponse struct {
 	ContentType                    string
-	DetectPhiResponse              *shared.DetectPhiResponse
+	DetectPHIResponse              *shared.DetectPhiResponse
 	InternalServerException        *interface{}
 	InvalidEncodingException       *interface{}
 	InvalidRequestException        *interface{}

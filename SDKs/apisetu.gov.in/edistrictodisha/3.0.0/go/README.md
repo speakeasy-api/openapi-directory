@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.CtcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.CtcerRequestBody{
             CertificateParameters: &operations.CtcerRequestBodyCertificateParameters{
-                UID: "numquam",
-                Refno: "est",
+                UID: "suscipit",
+                Refno: "voluptatem",
             },
-            ConsentArtifact: "molestias",
+            ConsentArtifact: "veniam",
             Format: "pdf",
-            TxnID: "consequatur",
+            TxnID: "maxime",
         },
     }
     
-    res, err := s.Sdk.Ctcer(ctx, req)
+    res, err := s.APIs.Ctcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Ctcer` - Caste Certificate
 * `Ewcer` - Economically Weaker Section Certificate

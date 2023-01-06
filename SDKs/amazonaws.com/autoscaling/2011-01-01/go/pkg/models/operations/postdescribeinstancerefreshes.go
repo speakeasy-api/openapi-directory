@@ -3,13 +3,13 @@ package operations
 type PostDescribeInstanceRefreshesActionEnum string
 
 const (
-	PostDescribeInstanceRefreshesActionEnumDescribeInstanceRefreshes PostDescribeInstanceRefreshesActionEnum = "DescribeInstanceRefreshes"
+	POSTDescribeInstanceRefreshesActionEnumDescribeInstanceRefreshes PostDescribeInstanceRefreshesActionEnum = "DescribeInstanceRefreshes"
 )
 
 type PostDescribeInstanceRefreshesVersionEnum string
 
 const (
-	PostDescribeInstanceRefreshesVersionEnumTwoThousandAndEleven0101 PostDescribeInstanceRefreshesVersionEnum = "2011-01-01"
+	POSTDescribeInstanceRefreshesVersionEnumTwoThousandAndEleven0101 PostDescribeInstanceRefreshesVersionEnum = "2011-01-01"
 )
 
 type PostDescribeInstanceRefreshesQueryParams struct {

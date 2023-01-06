@@ -8,14 +8,14 @@ type ValidateRegistryNameRequestBody struct {
 	Name string `json:"name"`
 }
 
-type ValidateRegistryNameRequest struct {
-	Request ValidateRegistryNameRequestBody `request:"mediaType=application/json"`
-}
-
 type ValidateRegistryName401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ValidateRegistryNameRequest struct {
+	Request ValidateRegistryNameRequestBody `request:"mediaType=application/json"`
 }
 
 type ValidateRegistryNameResponse struct {

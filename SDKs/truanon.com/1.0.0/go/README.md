@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetProfileRequest{
         QueryParams: operations.GetProfileQueryParams{
-            ID: "sed",
-            Service: "optio",
+            ID: "sit",
+            Service: "rerum",
         },
     }
     
-    res, err := s.Sdk.GetProfile(ctx, req)
+    res, err := s.GetProfile(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

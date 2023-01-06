@@ -5,8 +5,8 @@ import (
 )
 
 type PrfndRequestBodyCertificateParameters struct {
-	AcNo string `json:"AC_NO"`
-	Dob  string `json:"DOB"`
+	ACNO string `json:"AC_NO"`
+	DOB  string `json:"DOB"`
 }
 
 type PrfndRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Prfnd404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Prfnd404ApplicationJSONErrorDescriptionEnumNoRecordFound               Prfnd404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Prfnd404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Prfnd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Prfnd404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Prfnd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Prfnd404ApplicationJSON struct {

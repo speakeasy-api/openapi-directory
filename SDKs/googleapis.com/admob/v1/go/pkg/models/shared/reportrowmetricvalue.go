@@ -1,7 +1,5 @@
 package shared
 
-// ReportRowMetricValue
-// Representation of a metric value.
 type ReportRowMetricValue struct {
 	DoubleValue  *float64 `json:"doubleValue,omitempty"`
 	IntegerValue *string  `json:"integerValue,omitempty"`

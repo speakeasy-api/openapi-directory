@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,28 +26,28 @@ func main() {
         Security: operations.CloudresourcemanagerFoldersCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.CloudresourcemanagerFoldersCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "quibusdam",
-            Alt: "media",
-            Callback: "dolorum",
-            Fields: "ea",
-            Key: "molestias",
-            OauthToken: "omnis",
-            Parent: "nobis",
-            PrettyPrint: false,
-            QuotaUser: "animi",
-            UploadType: "minima",
-            UploadProtocol: "provident",
+            DollarXgafv: "1",
+            AccessToken: "voluptatem",
+            Alt: "json",
+            Callback: "voluptatem",
+            Fields: "quia",
+            Key: "laboriosam",
+            OauthToken: "voluptatem",
+            Parent: "aut",
+            PrettyPrint: true,
+            QuotaUser: "libero",
+            UploadType: "dolorem",
+            UploadProtocol: "illo",
         },
         Request: &shared.FolderInput{
-            DisplayName: "et",
-            Parent: "impedit",
+            DisplayName: "sunt",
+            Parent: "in",
         },
     }
     

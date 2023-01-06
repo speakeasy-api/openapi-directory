@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,40 +26,40 @@ func main() {
         Security: operations.IdentitytoolkitRelyingpartyCreateAuthURISecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.IdentitytoolkitRelyingpartyCreateAuthURIQueryParams{
             Alt: "json",
-            Fields: "tempora",
-            Key: "sit",
-            OauthToken: "ut",
+            Fields: "vitae",
+            Key: "facilis",
+            OauthToken: "ipsa",
             PrettyPrint: true,
-            QuotaUser: "eum",
-            UserIP: "sed",
+            QuotaUser: "deleniti",
+            UserIP: "et",
         },
         Request: &shared.IdentitytoolkitRelyingpartyCreateAuthURIRequest{
-            AppID: "dolore",
-            AuthFlowType: "reprehenderit",
-            ClientID: "odio",
-            Context: "aut",
-            ContinueURI: "et",
+            AppID: "sed",
+            AuthFlowType: "ad",
+            ClientID: "omnis",
+            Context: "ut",
+            ContinueURI: "voluptas",
             CustomParameter: map[string]string{
-                "aperiam": "sunt",
-                "aut": "in",
+                "inventore": "nihil",
+                "ad": "quisquam",
             },
-            HostedDomain: "expedita",
-            Identifier: "maiores",
+            HostedDomain: "deleniti",
+            Identifier: "dolor",
             OauthConsumerKey: "ut",
-            OauthScope: "et",
-            OpenidRealm: "nesciunt",
-            OtaApp: "quidem",
-            ProviderID: "voluptas",
-            SessionID: "asperiores",
-            TenantID: "enim",
-            TenantProjectNumber: "perferendis",
+            OauthScope: "natus",
+            OpenidRealm: "odio",
+            OtaApp: "error",
+            ProviderID: "ea",
+            SessionID: "possimus",
+            TenantID: "ipsum",
+            TenantProjectNumber: "qui",
         },
     }
     

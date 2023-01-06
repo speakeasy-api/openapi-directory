@@ -14,14 +14,10 @@ type UpsertUserRequestBody struct {
 	Properties     map[string]interface{}              `json:"properties,omitempty"`
 }
 
-type UpsertUser201ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// UpsertUser201ApplicationJSON
+// The object was created
 type UpsertUser201ApplicationJSON struct {
-	Message string                           `json:"message"`
-	Meta    UpsertUser201ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 // UpsertUser400ApplicationJSONErrorsParameters
@@ -39,35 +35,22 @@ type UpsertUser400ApplicationJSONErrors struct {
 	Parameters *UpsertUser400ApplicationJSONErrorsParameters `json:"parameters,omitempty"`
 }
 
-type UpsertUser400ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// UpsertUser400ApplicationJSON
+// Specify the fields and/ or parameters that had errors
 type UpsertUser400ApplicationJSON struct {
-	Errors  UpsertUser400ApplicationJSONErrors `json:"errors"`
-	Message string                             `json:"message"`
-	Meta    UpsertUser400ApplicationJSONMeta   `json:"meta"`
+	Errors UpsertUser400ApplicationJSONErrors `json:"errors"`
 }
 
-type UpsertUser401ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// UpsertUser401ApplicationJSON
+// The error message should specify what cause the error
 type UpsertUser401ApplicationJSON struct {
-	Message string                           `json:"message"`
-	Meta    UpsertUser401ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
-type UpsertUser403ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// UpsertUser403ApplicationJSON
+// The error message should specify what cause the error
 type UpsertUser403ApplicationJSON struct {
-	Message string                           `json:"message"`
-	Meta    UpsertUser403ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 type UpsertUser429ApplicationJSONMeta struct {
@@ -75,19 +58,16 @@ type UpsertUser429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
+// UpsertUser429ApplicationJSON
+// The basic response containing the unique ID of the request and the response status
 type UpsertUser429ApplicationJSON struct {
-	Message string                           `json:"message"`
-	Meta    UpsertUser429ApplicationJSONMeta `json:"meta"`
+	Meta UpsertUser429ApplicationJSONMeta `json:"meta"`
 }
 
-type UpsertUser500ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
+// UpsertUser500ApplicationJSON
+// The error message should specify what cause the error
 type UpsertUser500ApplicationJSON struct {
-	Message string                           `json:"message"`
-	Meta    UpsertUser500ApplicationJSONMeta `json:"meta"`
+	Message string `json:"message"`
 }
 
 type UpsertUserRequest struct {

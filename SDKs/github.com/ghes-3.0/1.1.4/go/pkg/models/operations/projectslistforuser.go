@@ -8,18 +8,10 @@ type ProjectsListForUserPathParams struct {
 	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
-type ProjectsListForUserStateEnum string
-
-const (
-	ProjectsListForUserStateEnumOpen   ProjectsListForUserStateEnum = "open"
-	ProjectsListForUserStateEnumClosed ProjectsListForUserStateEnum = "closed"
-	ProjectsListForUserStateEnumAll    ProjectsListForUserStateEnum = "all"
-)
-
 type ProjectsListForUserQueryParams struct {
-	Page    *int64                        `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                        `queryParam:"style=form,explode=true,name=per_page"`
-	State   *ProjectsListForUserStateEnum `queryParam:"style=form,explode=true,name=state"`
+	Page    *int64                `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64                `queryParam:"style=form,explode=true,name=per_page"`
+	State   *shared.UsernameEnum1 `queryParam:"style=form,explode=true,name=state"`
 }
 
 type ProjectsListForUser415ApplicationJSON struct {

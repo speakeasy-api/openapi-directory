@@ -30,8 +30,8 @@ type CreateRegexMatchSetResponse struct {
 	ContentType                 string
 	CreateRegexMatchSetResponse *shared.CreateRegexMatchSetResponse
 	StatusCode                  int64
-	WafDisallowedNameException  *interface{}
-	WafInternalErrorException   *interface{}
-	WafLimitsExceededException  *interface{}
-	WafStaleDataException       *interface{}
+	WAFDisallowedNameException  *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFLimitsExceededException  *interface{}
+	WAFStaleDataException       *interface{}
 }

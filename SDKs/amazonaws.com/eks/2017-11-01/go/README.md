@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,51 +34,33 @@ func main() {
     
     req := operations.AssociateEncryptionConfigRequest{
         PathParams: operations.AssociateEncryptionConfigPathParams{
-            Name: "temporibus",
+            Name: "dolore",
         },
         Headers: operations.AssociateEncryptionConfigHeaders{
-            XAmzAlgorithm: "nemo",
-            XAmzContentSha256: "ea",
-            XAmzCredential: "vero",
-            XAmzDate: "debitis",
-            XAmzSecurityToken: "vitae",
-            XAmzSignature: "illo",
-            XAmzSignedHeaders: "dolor",
+            XAmzAlgorithm: "repellat",
+            XAmzContentSha256: "velit",
+            XAmzCredential: "officia",
+            XAmzDate: "modi",
+            XAmzSecurityToken: "sunt",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "amet",
         },
         Request: operations.AssociateEncryptionConfigRequestBody{
-            ClientRequestToken: "aut",
+            ClientRequestToken: "et",
             EncryptionConfig: []shared.EncryptionConfig{
                 shared.EncryptionConfig{
-                    Provider: &shared.Provider{
-                        KeyArn: "iusto",
+                    Provider: &shared.EncryptionConfigProvider{
+                        KeyArn: "qui",
                     },
                     Resources: []string{
-                        "voluptas",
-                        "quod",
-                    },
-                },
-                shared.EncryptionConfig{
-                    Provider: &shared.Provider{
-                        KeyArn: "maxime",
-                    },
-                    Resources: []string{
-                        "eligendi",
-                    },
-                },
-                shared.EncryptionConfig{
-                    Provider: &shared.Provider{
-                        KeyArn: "dolorum",
-                    },
-                    Resources: []string{
-                        "magni",
-                        "nostrum",
+                        "autem",
                     },
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AssociateEncryptionConfig(ctx, req)
+    res, err := s.AssociateEncryptionConfig(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

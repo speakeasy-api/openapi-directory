@@ -5,7 +5,7 @@ import (
 )
 
 type BknocRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Bknoc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Bknoc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Bknoc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Bknoc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Bknoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Bknoc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Bknoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Bknoc404ApplicationJSON struct {

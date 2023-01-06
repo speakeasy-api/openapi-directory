@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,85 +26,95 @@ func main() {
         Security: operations.RedisProjectsLocationsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.RedisProjectsLocationsInstancesCreatePathParams{
-            Parent: "distinctio",
+            Parent: "qui",
         },
         QueryParams: operations.RedisProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "corporis",
-            Alt: "media",
-            Callback: "necessitatibus",
-            Fields: "commodi",
-            InstanceID: "nulla",
-            Key: "quo",
-            OauthToken: "aperiam",
-            PrettyPrint: false,
-            QuotaUser: "quasi",
-            UploadType: "similique",
-            UploadProtocol: "quod",
+            DollarXgafv: "2",
+            AccessToken: "perferendis",
+            Alt: "proto",
+            Callback: "fuga",
+            Fields: "beatae",
+            InstanceID: "porro",
+            Key: "assumenda",
+            OauthToken: "iste",
+            PrettyPrint: true,
+            QuotaUser: "est",
+            UploadType: "laborum",
+            UploadProtocol: "sit",
         },
         Request: &shared.InstanceInput{
-            AlternativeLocationID: "et",
+            AlternativeLocationID: "molestias",
             AuthEnabled: false,
-            AuthorizedNetwork: "est",
-            ConnectMode: "PRIVATE_SERVICE_ACCESS",
-            CustomerManagedKey: "et",
-            DisplayName: "occaecati",
+            AuthorizedNetwork: "similique",
+            ConnectMode: "DIRECT_PEERING",
+            CustomerManagedKey: "ut",
+            DisplayName: "dignissimos",
             Labels: map[string]string{
-                "numquam": "quo",
-                "dolor": "aspernatur",
-                "officiis": "quo",
+                "eius": "et",
+                "architecto": "blanditiis",
+                "ipsa": "fugit",
             },
-            LocationID: "at",
+            LocationID: "quam",
             MaintenancePolicy: &shared.MaintenancePolicyInput{
-                Description: "inventore",
+                Description: "quis",
                 WeeklyMaintenanceWindow: []shared.WeeklyMaintenanceWindowInput{
                     shared.WeeklyMaintenanceWindowInput{
-                        Day: "DAY_OF_WEEK_UNSPECIFIED",
+                        Day: "FRIDAY",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 4589677787592018309,
-                            Minutes: 4871412941294140056,
-                            Nanos: 4695694551733737161,
-                            Seconds: 1737807491654169512,
+                            Hours: 4087296727165618714,
+                            Minutes: 1067629835772252789,
+                            Nanos: 7621345094498405750,
+                            Seconds: 5727821470484534194,
                         },
                     },
                     shared.WeeklyMaintenanceWindowInput{
                         Day: "SUNDAY",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 6597343676242190148,
-                            Minutes: 2077057246974141476,
-                            Nanos: 6789962086798724761,
-                            Seconds: 5773450730765709866,
+                            Hours: 1248126322763821706,
+                            Minutes: 6599205684482159674,
+                            Nanos: 530124589493357256,
+                            Seconds: 3224546940256709254,
+                        },
+                    },
+                    shared.WeeklyMaintenanceWindowInput{
+                        Day: "FRIDAY",
+                        StartTime: &shared.TimeOfDay{
+                            Hours: 9072737200707746105,
+                            Minutes: 7293997328744385729,
+                            Nanos: 3952702246579491058,
+                            Seconds: 6240154433186329948,
                         },
                     },
                 },
             },
             MaintenanceSchedule: &shared.MaintenanceScheduleInput{
-                CanReschedule: true,
+                CanReschedule: false,
             },
-            MemorySizeGb: 4466320768410931399,
-            Name: "nobis",
+            MemorySizeGb: 187607562694229957,
+            Name: "ea",
             PersistenceConfig: &shared.PersistenceConfigInput{
-                PersistenceMode: "DISABLED",
-                RdbSnapshotPeriod: "SIX_HOURS",
-                RdbSnapshotStartTime: "distinctio",
+                PersistenceMode: "RDB",
+                RdbSnapshotPeriod: "SNAPSHOT_PERIOD_UNSPECIFIED",
+                RdbSnapshotStartTime: "rerum",
             },
-            ReadReplicasMode: "READ_REPLICAS_MODE_UNSPECIFIED",
+            ReadReplicasMode: "READ_REPLICAS_DISABLED",
             RedisConfigs: map[string]string{
-                "voluptates": "dolores",
+                "consequuntur": "perferendis",
+                "quidem": "qui",
             },
-            RedisVersion: "veniam",
-            ReplicaCount: 6344519173458084389,
-            ReservedIPRange: "quo",
-            SecondaryIPRange: "adipisci",
+            RedisVersion: "dolor",
+            ReplicaCount: 1486815324808672126,
+            ReservedIPRange: "voluptas",
+            SecondaryIPRange: "dolorem",
             SuspensionReasons: []shared.InstanceSuspensionReasonsEnum{
-                "SUSPENSION_REASON_UNSPECIFIED",
-                "SUSPENSION_REASON_UNSPECIFIED",
+                "CUSTOMER_MANAGED_KEY_ISSUE",
+                "CUSTOMER_MANAGED_KEY_ISSUE",
             },
             Tier: "TIER_UNSPECIFIED",
             TransitEncryptionMode: "DISABLED",

@@ -1,6 +1,6 @@
 package shared
 
 type DisableFastSnapshotRestoresResult struct {
-	Successful   []DisableFastSnapshotRestoreSuccessItem
-	Unsuccessful []DisableFastSnapshotRestoreErrorItem
+	Successful   map[string]interface{}
+	Unsuccessful map[string]interface{}
 }

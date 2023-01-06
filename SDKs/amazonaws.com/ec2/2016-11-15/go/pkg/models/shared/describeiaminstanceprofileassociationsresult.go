@@ -1,6 +1,6 @@
 package shared
 
 type DescribeIamInstanceProfileAssociationsResult struct {
-	IamInstanceProfileAssociations []IamInstanceProfileAssociation
-	NextToken                      *string
+	IamInstanceProfileAssociations map[string]interface{}
+	NextToken                      map[string]interface{}
 }

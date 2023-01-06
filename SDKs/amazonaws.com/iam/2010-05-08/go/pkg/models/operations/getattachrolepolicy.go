@@ -3,13 +3,13 @@ package operations
 type GetAttachRolePolicyActionEnum string
 
 const (
-	GetAttachRolePolicyActionEnumAttachRolePolicy GetAttachRolePolicyActionEnum = "AttachRolePolicy"
+	GETAttachRolePolicyActionEnumAttachRolePolicy GetAttachRolePolicyActionEnum = "AttachRolePolicy"
 )
 
 type GetAttachRolePolicyVersionEnum string
 
 const (
-	GetAttachRolePolicyVersionEnumTwoThousandAndTen0508 GetAttachRolePolicyVersionEnum = "2010-05-08"
+	GETAttachRolePolicyVersionEnumTwoThousandAndTen0508 GetAttachRolePolicyVersionEnum = "2010-05-08"
 )
 
 type GetAttachRolePolicyQueryParams struct {

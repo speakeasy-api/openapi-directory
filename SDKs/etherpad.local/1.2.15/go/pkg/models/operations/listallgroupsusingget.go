@@ -31,8 +31,8 @@ type ListAllGroupsUsingGet500ApplicationJSON struct {
 type ListAllGroupsUsingGetResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	ListAllGroupsUsingGet200ApplicationJSONObject *ListAllGroupsUsingGet200ApplicationJSON
-	ListAllGroupsUsingGet400ApplicationJSONObject *ListAllGroupsUsingGet400ApplicationJSON
-	ListAllGroupsUsingGet401ApplicationJSONObject *ListAllGroupsUsingGet401ApplicationJSON
-	ListAllGroupsUsingGet500ApplicationJSONObject *ListAllGroupsUsingGet500ApplicationJSON
+	ListAllGroupsUsingGET200ApplicationJSONObject *ListAllGroupsUsingGet200ApplicationJSON
+	ListAllGroupsUsingGET400ApplicationJSONObject *ListAllGroupsUsingGet400ApplicationJSON
+	ListAllGroupsUsingGET401ApplicationJSONObject *ListAllGroupsUsingGet401ApplicationJSON
+	ListAllGroupsUsingGET500ApplicationJSONObject *ListAllGroupsUsingGet500ApplicationJSON
 }

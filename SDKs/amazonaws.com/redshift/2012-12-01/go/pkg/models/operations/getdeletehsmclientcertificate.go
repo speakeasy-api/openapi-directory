@@ -3,13 +3,13 @@ package operations
 type GetDeleteHsmClientCertificateActionEnum string
 
 const (
-	GetDeleteHsmClientCertificateActionEnumDeleteHsmClientCertificate GetDeleteHsmClientCertificateActionEnum = "DeleteHsmClientCertificate"
+	GETDeleteHsmClientCertificateActionEnumDeleteHsmClientCertificate GetDeleteHsmClientCertificateActionEnum = "DeleteHsmClientCertificate"
 )
 
 type GetDeleteHsmClientCertificateVersionEnum string
 
 const (
-	GetDeleteHsmClientCertificateVersionEnumTwoThousandAndTwelve1201 GetDeleteHsmClientCertificateVersionEnum = "2012-12-01"
+	GETDeleteHsmClientCertificateVersionEnumTwoThousandAndTwelve1201 GetDeleteHsmClientCertificateVersionEnum = "2012-12-01"
 )
 
 type GetDeleteHsmClientCertificateQueryParams struct {

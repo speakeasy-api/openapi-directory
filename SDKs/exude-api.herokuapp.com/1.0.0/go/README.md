@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,17 +24,17 @@ func main() {
     
     req := operations.FilterFileDataStoppingsRequest{
         PathParams: operations.FilterFileDataStoppingsPathParams{
-            Type: "earum",
+            Type: "iusto",
         },
         Request: operations.FilterFileDataStoppingsRequestBody{
             File: &operations.FilterFileDataStoppingsRequestBodyFile{
-                Content: []byte("esse"),
-                File: "non",
+                Content: []byte("odio"),
+                File: "et",
             },
         },
     }
     
-    res, err := s.Sdk.FilterFileDataStoppings(ctx, req)
+    res, err := s.Exude.FilterFileDataStoppings(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -49,7 +48,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### exude
 
 * `FilterFileDataStoppings` - Filter the stopping words from the provided input file
 * `FilterStoppings` - Filter the stopping words from the provided input data or links

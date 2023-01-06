@@ -3,13 +3,13 @@ package operations
 type PostAssociateEnclaveCertificateIamRoleActionEnum string
 
 const (
-	PostAssociateEnclaveCertificateIamRoleActionEnumAssociateEnclaveCertificateIamRole PostAssociateEnclaveCertificateIamRoleActionEnum = "AssociateEnclaveCertificateIamRole"
+	POSTAssociateEnclaveCertificateIamRoleActionEnumAssociateEnclaveCertificateIamRole PostAssociateEnclaveCertificateIamRoleActionEnum = "AssociateEnclaveCertificateIamRole"
 )
 
 type PostAssociateEnclaveCertificateIamRoleVersionEnum string
 
 const (
-	PostAssociateEnclaveCertificateIamRoleVersionEnumTwoThousandAndSixteen1115 PostAssociateEnclaveCertificateIamRoleVersionEnum = "2016-11-15"
+	POSTAssociateEnclaveCertificateIamRoleVersionEnumTwoThousandAndSixteen1115 PostAssociateEnclaveCertificateIamRoleVersionEnum = "2016-11-15"
 )
 
 type PostAssociateEnclaveCertificateIamRoleQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type PostDescribeResizeActionEnum string
 
 const (
-	PostDescribeResizeActionEnumDescribeResize PostDescribeResizeActionEnum = "DescribeResize"
+	POSTDescribeResizeActionEnumDescribeResize PostDescribeResizeActionEnum = "DescribeResize"
 )
 
 type PostDescribeResizeVersionEnum string
 
 const (
-	PostDescribeResizeVersionEnumTwoThousandAndTwelve1201 PostDescribeResizeVersionEnum = "2012-12-01"
+	POSTDescribeResizeVersionEnumTwoThousandAndTwelve1201 PostDescribeResizeVersionEnum = "2012-12-01"
 )
 
 type PostDescribeResizeQueryParams struct {

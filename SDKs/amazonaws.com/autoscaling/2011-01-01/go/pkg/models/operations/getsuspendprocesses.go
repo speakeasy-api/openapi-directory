@@ -3,13 +3,13 @@ package operations
 type GetSuspendProcessesActionEnum string
 
 const (
-	GetSuspendProcessesActionEnumSuspendProcesses GetSuspendProcessesActionEnum = "SuspendProcesses"
+	GETSuspendProcessesActionEnumSuspendProcesses GetSuspendProcessesActionEnum = "SuspendProcesses"
 )
 
 type GetSuspendProcessesVersionEnum string
 
 const (
-	GetSuspendProcessesVersionEnumTwoThousandAndEleven0101 GetSuspendProcessesVersionEnum = "2011-01-01"
+	GETSuspendProcessesVersionEnumTwoThousandAndEleven0101 GetSuspendProcessesVersionEnum = "2011-01-01"
 )
 
 type GetSuspendProcessesQueryParams struct {

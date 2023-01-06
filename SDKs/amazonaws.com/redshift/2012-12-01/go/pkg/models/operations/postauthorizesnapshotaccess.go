@@ -3,13 +3,13 @@ package operations
 type PostAuthorizeSnapshotAccessActionEnum string
 
 const (
-	PostAuthorizeSnapshotAccessActionEnumAuthorizeSnapshotAccess PostAuthorizeSnapshotAccessActionEnum = "AuthorizeSnapshotAccess"
+	POSTAuthorizeSnapshotAccessActionEnumAuthorizeSnapshotAccess PostAuthorizeSnapshotAccessActionEnum = "AuthorizeSnapshotAccess"
 )
 
 type PostAuthorizeSnapshotAccessVersionEnum string
 
 const (
-	PostAuthorizeSnapshotAccessVersionEnumTwoThousandAndTwelve1201 PostAuthorizeSnapshotAccessVersionEnum = "2012-12-01"
+	POSTAuthorizeSnapshotAccessVersionEnumTwoThousandAndTwelve1201 PostAuthorizeSnapshotAccessVersionEnum = "2012-12-01"
 )
 
 type PostAuthorizeSnapshotAccessQueryParams struct {

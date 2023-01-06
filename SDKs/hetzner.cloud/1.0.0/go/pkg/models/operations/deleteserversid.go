@@ -45,6 +45,6 @@ type DeleteServersIDRequest struct {
 
 type DeleteServersIDResponse struct {
 	ContentType                             string
-	DeleteServersID200ApplicationJSONObject *DeleteServersID200ApplicationJSON
 	StatusCode                              int64
+	DeleteServersID200ApplicationJSONObject *DeleteServersID200ApplicationJSON
 }

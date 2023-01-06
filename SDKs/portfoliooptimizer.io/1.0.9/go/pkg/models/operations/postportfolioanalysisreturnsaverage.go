@@ -22,6 +22,6 @@ type PostPortfolioAnalysisReturnsAverageRequest struct {
 
 type PostPortfolioAnalysisReturnsAverageResponse struct {
 	ContentType                                                 string
-	PostPortfolioAnalysisReturnsAverage200ApplicationJSONObject *PostPortfolioAnalysisReturnsAverage200ApplicationJSON
 	StatusCode                                                  int64
+	PostPortfolioAnalysisReturnsAverage200ApplicationJSONObject *PostPortfolioAnalysisReturnsAverage200ApplicationJSON
 }

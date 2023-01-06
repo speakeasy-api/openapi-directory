@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,13 +22,13 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.CinemaDetailSearchReadRequest{
-        PathParams: operations.CinemaDetailSearchReadPathParams{
-            CinemaName: "ut",
+    req := operations.CinemaSearchReadRequest{
+        PathParams: operations.CinemaSearchReadPathParams{
+            ID: "magnam",
         },
     }
     
-    res, err := s.Sdk.CinemaDetailSearchRead(ctx, req)
+    res, err := s.Cinema.CinemaSearchRead(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -43,33 +42,84 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cinema
+
+* `CinemaSearchRead` - Return cinema search result
+
+### cinema-detail
 
 * `CinemaDetailSearchRead` - Return cinema details search result
+
+### cinema-schedule
+
 * `CinemaScheduleSearchRead` - Return cinema schedule search result
 * `CinemaScheduleSearchallRead` - Return cinema schedule search result
+
+### cinema-shedule-showtime
+
 * `CinemaSheduleShowtimeSearchRead` - Return cinema schedule and showtime search result
 * `CinemaSheduleShowtimeSearchallRead` - Return cinema schedule and showtime search result
-* `CinemaSearchRead` - Return cinema search result
+
+### company
+
+* `CompanySearchRead` - Return company search result
+
+### company-credits
+
 * `CompanyCreditsSearchRead` - Return company credits search result
 * `CompanyCreditsSearchallRead` - Return company credits search result
-* `CompanySearchRead` - Return company search result
-* `FilmographyTypeSearchRead` - Return filmography type search result
+
+### filmography
+
 * `FilmographySearchRead` - Return filmography search result
 * `FilmographySearchallRead` - Return filmography search result
-* `GenreTypeSearchRead` - Return genre type search result
+
+### filmography-type
+
+* `FilmographyTypeSearchRead` - Return filmography type search result
+
+### genre
+
 * `GenreSearchRead` - Return movie genre search result
 * `GenreSearchallRead` - Return movie genre search result
+
+### genre-type
+
+* `GenreTypeSearchRead` - Return genre type search result
+
+### job
+
 * `JobSearchRead` - Return job details search result
 * `JobSearchallRead` - Return job details search result
+
+### media
+
 * `MediaSearchRead` - Return movie media search result
 * `MediaSearchallRead` - Return cast media search result
+
+### movie
+
+* `MovieSearchRead` - Return movie search result
+
+### movie-cast
+
 * `MovieCastSearchRead` - Return movie cast search result
 * `MovieCastSearchallRead` - Return movie cast search result
-* `MovieSearchRead` - Return movie search result
+
+### news
+
 * `NewsSearchRead` - Return news or article search result
+
+### people
+
 * `PeopleSearchRead` - Return cast search result
+
+### showtime
+
 * `ShowtimeSearchallRead` - Return showtime search result
+
+### watchlist
+
 * `WatchlistSearchRead` - Return watchlist search result
 * `WatchlistSearchallRead` - Return watchlist search result
 

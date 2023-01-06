@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,22 +29,22 @@ func main() {
             },
         },
         QueryParams: operations.GetListsBestSellersHistoryJSONQueryParams{
-            AgeGroup: "sed",
-            Author: "non",
-            Contributor: "voluptatibus",
-            Isbn: "sint",
-            Price: "provident",
-            Publisher: "doloremque",
-            Title: "possimus",
+            AgeGroup: "exercitationem",
+            Author: "magni",
+            Contributor: "non",
+            Isbn: "laboriosam",
+            Price: "perspiciatis",
+            Publisher: "dolore",
+            Title: "odio",
         },
     }
     
-    res, err := s.Sdk.GetListsBestSellersHistoryJSON(ctx, req)
+    res, err := s.GetListsBestSellersHistoryJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GetListsBestSellersHistoryJSON200ApplicationJSONObject != nil {
+    if res.GETListsBestSellersHistoryJSON200ApplicationJSONObject != nil {
         // handle response
     }
 ```

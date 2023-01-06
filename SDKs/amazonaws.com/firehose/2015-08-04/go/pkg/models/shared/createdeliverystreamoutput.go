@@ -1,5 +1,5 @@
 package shared
 
 type CreateDeliveryStreamOutput struct {
-	DeliveryStreamArn *string `json:"DeliveryStreamARN,omitempty"`
+	DeliveryStreamARN *string `json:"DeliveryStreamARN,omitempty"`
 }

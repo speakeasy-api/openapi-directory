@@ -3,13 +3,13 @@ package operations
 type PostCreateCarrierGatewayActionEnum string
 
 const (
-	PostCreateCarrierGatewayActionEnumCreateCarrierGateway PostCreateCarrierGatewayActionEnum = "CreateCarrierGateway"
+	POSTCreateCarrierGatewayActionEnumCreateCarrierGateway PostCreateCarrierGatewayActionEnum = "CreateCarrierGateway"
 )
 
 type PostCreateCarrierGatewayVersionEnum string
 
 const (
-	PostCreateCarrierGatewayVersionEnumTwoThousandAndSixteen1115 PostCreateCarrierGatewayVersionEnum = "2016-11-15"
+	POSTCreateCarrierGatewayVersionEnumTwoThousandAndSixteen1115 PostCreateCarrierGatewayVersionEnum = "2016-11-15"
 )
 
 type PostCreateCarrierGatewayQueryParams struct {

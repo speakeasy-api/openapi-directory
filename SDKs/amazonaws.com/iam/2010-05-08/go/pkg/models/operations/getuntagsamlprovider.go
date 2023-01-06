@@ -3,18 +3,18 @@ package operations
 type GetUntagSamlProviderActionEnum string
 
 const (
-	GetUntagSamlProviderActionEnumUntagSamlProvider GetUntagSamlProviderActionEnum = "UntagSAMLProvider"
+	GETUntagSAMLProviderActionEnumUntagSamlProvider GetUntagSamlProviderActionEnum = "UntagSAMLProvider"
 )
 
 type GetUntagSamlProviderVersionEnum string
 
 const (
-	GetUntagSamlProviderVersionEnumTwoThousandAndTen0508 GetUntagSamlProviderVersionEnum = "2010-05-08"
+	GETUntagSAMLProviderVersionEnumTwoThousandAndTen0508 GetUntagSamlProviderVersionEnum = "2010-05-08"
 )
 
 type GetUntagSamlProviderQueryParams struct {
 	Action          GetUntagSamlProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SamlProviderArn string                          `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
+	SAMLProviderArn string                          `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
 	TagKeys         []string                        `queryParam:"style=form,explode=true,name=TagKeys"`
 	Version         GetUntagSamlProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

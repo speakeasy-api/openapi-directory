@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,48 +26,48 @@ func main() {
         Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "illum",
+            AppsID: "fuga",
         },
         QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "quas",
+            AccessToken: "soluta",
             Alt: "proto",
-            Callback: "adipisci",
-            Fields: "deleniti",
-            Key: "corrupti",
-            OauthToken: "fuga",
+            Callback: "ea",
+            Fields: "tempora",
+            Key: "ducimus",
+            OauthToken: "assumenda",
             PrettyPrint: false,
-            QuotaUser: "omnis",
-            UploadType: "qui",
-            UploadProtocol: "et",
+            QuotaUser: "dolorem",
+            UploadType: "ea",
+            UploadProtocol: "dignissimos",
         },
         Request: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "possimus",
-                PublicCertificate: "rerum",
+                PrivateKey: "adipisci",
+                PublicCertificate: "enim",
             },
-            DisplayName: "odio",
-            DomainMappingsCount: 5943836182714085786,
+            DisplayName: "deserunt",
+            DomainMappingsCount: 3038134888676807101,
             DomainNames: []string{
-                "ea",
+                "iusto",
+                "ex",
+                "eum",
             },
-            ExpireTime: "quam",
-            ID: "dolorum",
+            ExpireTime: "commodi",
+            ID: "soluta",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "consequatur",
+                LastRenewalTime: "rerum",
                 Status: "FAILED_RETRYING_NOT_VISIBLE",
             },
-            Name: "natus",
+            Name: "blanditiis",
             VisibleDomainMappings: []string{
-                "id",
-                "ad",
-                "non",
+                "ex",
             },
         },
     }

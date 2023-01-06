@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,12 +22,12 @@ import (
 func main() {
     s := sdk.New()
     
-    res, err := s.Sdk.GetV05Certs(ctx)
+    res, err := s.Gateway.GetV05WellKnownOpenidConfiguration(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Certs != nil {
+    if res.OpenIDConfiguration != nil {
         // handle response
     }
 ```
@@ -37,38 +36,65 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Gateway
 
-* `GetV05Certs` - Get certs for JWT verification
-* `GetV05Heartbeat` - Get consent request status
 * `GetV05WellKnownOpenidConfiguration` - Get openid configuration
-* `PostV05CareContextsDiscover` - Discover patient's accounts
+* `GetV05Certs` - Get certs for JWT verification
 * `PostV05CareContextsOnDiscover` - Response to patient's account discovery request
-* `PostV05ConsentsHipNotify` - Consent notification
 * `PostV05ConsentsHipOnNotify` - Consent notification
 * `PostV05HealthInformationHipOnRequest` - Health information data request
-* `PostV05HealthInformationHipRequest` - Health information data request
 * `PostV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `PostV05HealthInformationTransfer` - health information transfer API
 * `PostV05LinksLinkAddContexts` - API for HIP initiated care-context linking for patient
-* `PostV05LinksLinkConfirm` - Token submission by Consent Manager for link confirmation
-* `PostV05LinksLinkInit` - Link patient's care contexts
-* `PostV05LinksLinkOnAddContexts` - callback API for HIP initiated patient linking /link/add-context
 * `PostV05LinksLinkOnConfirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
 * `PostV05LinksLinkOnInit` - Response to patient's care context link request
 * `PostV05PatientsProfileOnShare` - Response to patient's share profile request
-* `PostV05PatientsProfileShare` - Share patient profile details
 * `PostV05PatientsSmsNotify` - API for HIP to send SMS notifications to patients
-* `PostV05PatientsSmsOnNotify` - Acknowledgment response for SMS notification sent to patient by HIP
 * `PostV05Sessions` - Get access token
 * `PostV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
 * `PostV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
 * `PostV05UsersAuthInit` - Initialize authentication from HIP
+* `PostV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
+
+### consent flow
+
+* `PostV05ConsentsHipNotify` - Consent notification
+
+### data flow
+
+* `PostV05HealthInformationHipRequest` - Health information data request
+
+### data transfer
+
+* `PostV05HealthInformationTransfer` - health information transfer API
+
+### discovery
+
+* `PostV05CareContextsDiscover` - Discover patient's accounts
+
+### link
+
+* `PostV05LinksLinkConfirm` - Token submission by Consent Manager for link confirmation
+* `PostV05LinksLinkInit` - Link patient's care contexts
+* `PostV05LinksLinkOnAddContexts` - callback API for HIP initiated patient linking /link/add-context
+
+### monitoring
+
+* `GetV05Heartbeat` - Get consent request status
+
+### patient notification
+
+* `PostV05PatientsSmsOnNotify` - Acknowledgment response for SMS notification sent to patient by HIP
+
+### profile
+
+* `PostV05PatientsProfileShare` - Share patient profile details
+
+### user auth
+
 * `PostV05UsersAuthNotify` - notification API in case of DIRECT mode of authentication by the CM
 * `PostV05UsersAuthOnConfirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
 * `PostV05UsersAuthOnFetchModes` - Identification result for a consent-manager user-id
 * `PostV05UsersAuthOnInit` - Response to user authentication initialization from HIP
-* `PostV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
 
 <!-- End SDK Available Operations -->
 

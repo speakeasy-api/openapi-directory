@@ -3,19 +3,19 @@ package operations
 type GetGetQueueURLActionEnum string
 
 const (
-	GetGetQueueURLActionEnumGetQueueURL GetGetQueueURLActionEnum = "GetQueueUrl"
+	GETGETQueueURLActionEnumGetQueueURL GetGetQueueURLActionEnum = "GetQueueUrl"
 )
 
 type GetGetQueueURLVersionEnum string
 
 const (
-	GetGetQueueURLVersionEnumTwoThousandAndTwelve1105 GetGetQueueURLVersionEnum = "2012-11-05"
+	GETGETQueueURLVersionEnumTwoThousandAndTwelve1105 GetGetQueueURLVersionEnum = "2012-11-05"
 )
 
 type GetGetQueueURLQueryParams struct {
 	Action                 GetGetQueueURLActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	QueueName              string                    `queryParam:"style=form,explode=true,name=QueueName"`
-	QueueOwnerAwsAccountID *string                   `queryParam:"style=form,explode=true,name=QueueOwnerAWSAccountId"`
+	QueueOwnerAWSAccountID *string                   `queryParam:"style=form,explode=true,name=QueueOwnerAWSAccountId"`
 	Version                GetGetQueueURLVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

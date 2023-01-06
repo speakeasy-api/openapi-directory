@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,17 +34,17 @@ func main() {
     
     req := operations.ChromeFromHTMLPostRequest{
         Request: &shared.ChromeHTMLToPdfRequest{
-            FileName: "qui",
-            HTML: "quisquam",
+            FileName: "et",
+            HTML: "voluptatem",
             InlinePdf: false,
             Options: &shared.ChromeAdvancedOptions{
-                Landscape: "aut",
+                Landscape: "soluta",
                 PrintBackground: true,
             },
         },
     }
     
-    res, err := s.Sdk.ChromeFromHTMLPost(ctx, req)
+    res, err := s.HeadlessChrome.ChromeFromHTMLPost(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,17 +58,29 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Headless Chrome
 
 * `ChromeFromHTMLPost` - Convert raw HTML to PDF
 * `ChromeFromURLGet` - Convert URL to PDF
 * `ChromeFromURLPost` - Convert URL to PDF
+
+### LibreOffice
+
 * `LibreConvertPost` - Convert office document or image to PDF
+
+### Merge / Combine Pdfs
+
 * `MergePost` - Merge multiple PDFs together
+
+### ZXING (Zebra Crossing) Bar Codes
+
+* `ZebraGet` - Generate bar codes and QR codes with ZXING.
+
+### wkhtmltopdf
+
 * `WkhtmltopdfFromHTMLPost` - Convert raw HTML to PDF
 * `WkhtmltopdfFromURLGet` - Convert URL to PDF
 * `WkhtmltopdfFromURLPost` - Convert URL to PDF
-* `ZebraGet` - Generate bar codes and QR codes with ZXING.
 
 <!-- End SDK Available Operations -->
 

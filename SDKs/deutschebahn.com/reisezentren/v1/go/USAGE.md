@@ -1,0 +1,29 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.GetReisezentrenRequest{
+        QueryParams: operations.GetReisezentrenQueryParams{
+            Name: "consequuntur",
+        },
+    }
+    
+    res, err := s.GetReisezentren(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.TravelCenterList != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

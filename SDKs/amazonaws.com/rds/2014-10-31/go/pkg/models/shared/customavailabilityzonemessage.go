@@ -1,6 +1,6 @@
 package shared
 
 type CustomAvailabilityZoneMessage struct {
-	CustomAvailabilityZones []CustomAvailabilityZone
+	CustomAvailabilityZones []map[string]interface{}
 	Marker                  *string
 }

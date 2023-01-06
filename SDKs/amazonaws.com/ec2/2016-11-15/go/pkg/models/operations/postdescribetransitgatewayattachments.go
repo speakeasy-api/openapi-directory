@@ -3,13 +3,13 @@ package operations
 type PostDescribeTransitGatewayAttachmentsActionEnum string
 
 const (
-	PostDescribeTransitGatewayAttachmentsActionEnumDescribeTransitGatewayAttachments PostDescribeTransitGatewayAttachmentsActionEnum = "DescribeTransitGatewayAttachments"
+	POSTDescribeTransitGatewayAttachmentsActionEnumDescribeTransitGatewayAttachments PostDescribeTransitGatewayAttachmentsActionEnum = "DescribeTransitGatewayAttachments"
 )
 
 type PostDescribeTransitGatewayAttachmentsVersionEnum string
 
 const (
-	PostDescribeTransitGatewayAttachmentsVersionEnumTwoThousandAndSixteen1115 PostDescribeTransitGatewayAttachmentsVersionEnum = "2016-11-15"
+	POSTDescribeTransitGatewayAttachmentsVersionEnumTwoThousandAndSixteen1115 PostDescribeTransitGatewayAttachmentsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeTransitGatewayAttachmentsQueryParams struct {

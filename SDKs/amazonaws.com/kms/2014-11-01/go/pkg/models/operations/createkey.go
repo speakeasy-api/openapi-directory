@@ -34,7 +34,7 @@ type CreateKeyResponse struct {
 	CustomKeyStoreNotFoundException              *interface{}
 	DependencyTimeoutException                   *interface{}
 	InvalidArnException                          *interface{}
-	KmsInternalException                         *interface{}
+	KMSInternalException                         *interface{}
 	LimitExceededException                       *interface{}
 	MalformedPolicyDocumentException             *interface{}
 	StatusCode                                   int64

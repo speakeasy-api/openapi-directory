@@ -1,6 +1,6 @@
 package shared
 
 type DbSubnetGroupMessage struct {
-	DbSubnetGroups []DbSubnetGroup
+	DBSubnetGroups []map[string]interface{}
 	Marker         *string
 }

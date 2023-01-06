@@ -3,13 +3,13 @@ package operations
 type GetListMetricStreamsActionEnum string
 
 const (
-	GetListMetricStreamsActionEnumListMetricStreams GetListMetricStreamsActionEnum = "ListMetricStreams"
+	GETListMetricStreamsActionEnumListMetricStreams GetListMetricStreamsActionEnum = "ListMetricStreams"
 )
 
 type GetListMetricStreamsVersionEnum string
 
 const (
-	GetListMetricStreamsVersionEnumTwoThousandAndTen0801 GetListMetricStreamsVersionEnum = "2010-08-01"
+	GETListMetricStreamsVersionEnumTwoThousandAndTen0801 GetListMetricStreamsVersionEnum = "2010-08-01"
 )
 
 type GetListMetricStreamsQueryParams struct {

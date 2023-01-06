@@ -3,17 +3,17 @@ package operations
 type PostDeleteDomainActionEnum string
 
 const (
-	PostDeleteDomainActionEnumDeleteDomain PostDeleteDomainActionEnum = "DeleteDomain"
+	POSTDeleteDomainActionEnumDeleteDomain PostDeleteDomainActionEnum = "DeleteDomain"
 )
 
 type PostDeleteDomainVersionEnum string
 
 const (
-	PostDeleteDomainVersionEnumTwoThousandAndNine0415 PostDeleteDomainVersionEnum = "2009-04-15"
+	POSTDeleteDomainVersionEnumTwoThousandAndNine0415 PostDeleteDomainVersionEnum = "2009-04-15"
 )
 
 type PostDeleteDomainQueryParams struct {
-	AwsAccessKeyID   string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostDeleteDomainActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Signature        string                      `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                      `queryParam:"style=form,explode=true,name=SignatureMethod"`

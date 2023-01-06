@@ -7,7 +7,7 @@ type ReceiptAction struct {
 	BounceAction    *BounceAction
 	LambdaAction    *LambdaAction
 	S3Action        *S3Action
-	SnsAction       *SnsAction
+	SNSAction       *SnsAction
 	StopAction      *StopAction
 	WorkmailAction  *WorkmailAction
 }

@@ -11,17 +11,6 @@ const (
 	CampaignEntityStatusEnumEntityStatusScheduledForDeletion CampaignEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
-// CampaignInput
-// A single campaign.
-type CampaignInput struct {
-	CampaignBudgets []CampaignBudget          `json:"campaignBudgets,omitempty"`
-	CampaignFlight  *CampaignFlight           `json:"campaignFlight,omitempty"`
-	CampaignGoal    *CampaignGoal             `json:"campaignGoal,omitempty"`
-	DisplayName     *string                   `json:"displayName,omitempty"`
-	EntityStatus    *CampaignEntityStatusEnum `json:"entityStatus,omitempty"`
-	FrequencyCap    *FrequencyCap             `json:"frequencyCap,omitempty"`
-}
-
 // Campaign
 // A single campaign.
 type Campaign struct {
@@ -35,4 +24,15 @@ type Campaign struct {
 	FrequencyCap    *FrequencyCap             `json:"frequencyCap,omitempty"`
 	Name            *string                   `json:"name,omitempty"`
 	UpdateTime      *string                   `json:"updateTime,omitempty"`
+}
+
+// CampaignInput
+// A single campaign.
+type CampaignInput struct {
+	CampaignBudgets []CampaignBudget          `json:"campaignBudgets,omitempty"`
+	CampaignFlight  *CampaignFlight           `json:"campaignFlight,omitempty"`
+	CampaignGoal    *CampaignGoal             `json:"campaignGoal,omitempty"`
+	DisplayName     *string                   `json:"displayName,omitempty"`
+	EntityStatus    *CampaignEntityStatusEnum `json:"entityStatus,omitempty"`
+	FrequencyCap    *FrequencyCap             `json:"frequencyCap,omitempty"`
 }

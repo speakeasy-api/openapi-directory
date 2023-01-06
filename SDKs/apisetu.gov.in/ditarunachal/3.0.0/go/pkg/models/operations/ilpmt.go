@@ -7,8 +7,8 @@ import (
 type IlpmtRequestBodyCertificateParameters struct {
 	FullName          string `json:"FullName"`
 	UID               string `json:"UID"`
-	EIlpAppID         string `json:"eILPAppId"`
-	EIlpContactNumber string `json:"eILPContactNumber"`
+	EILPAppID         string `json:"eILPAppId"`
+	EILPContactNumber string `json:"eILPContactNumber"`
 }
 
 type IlpmtRequestBodyFormatEnum string
@@ -84,7 +84,7 @@ type Ilpmt404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Ilpmt404ApplicationJSONErrorDescriptionEnumNoRecordFound               Ilpmt404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Ilpmt404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Ilpmt404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Ilpmt404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ilpmt404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Ilpmt404ApplicationJSON struct {

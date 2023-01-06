@@ -3,13 +3,13 @@ package operations
 type GetListQueuesActionEnum string
 
 const (
-	GetListQueuesActionEnumListQueues GetListQueuesActionEnum = "ListQueues"
+	GETListQueuesActionEnumListQueues GetListQueuesActionEnum = "ListQueues"
 )
 
 type GetListQueuesVersionEnum string
 
 const (
-	GetListQueuesVersionEnumTwoThousandAndTwelve1105 GetListQueuesVersionEnum = "2012-11-05"
+	GETListQueuesVersionEnumTwoThousandAndTwelve1105 GetListQueuesVersionEnum = "2012-11-05"
 )
 
 type GetListQueuesQueryParams struct {

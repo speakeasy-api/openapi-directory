@@ -3,6 +3,6 @@ package shared
 type ReviewableHitStatusEnum string
 
 const (
-	ReviewableHitStatusEnumReviewable ReviewableHitStatusEnum = "Reviewable"
-	ReviewableHitStatusEnumReviewing  ReviewableHitStatusEnum = "Reviewing"
+	ReviewableHITStatusEnumReviewable ReviewableHitStatusEnum = "Reviewable"
+	ReviewableHITStatusEnumReviewing  ReviewableHitStatusEnum = "Reviewing"
 )

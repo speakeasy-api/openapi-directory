@@ -1,11 +1,5 @@
 package shared
 
-// NegativeKeywordListInput
-// A list of negative keywords used for targeting.
-type NegativeKeywordListInput struct {
-	DisplayName *string `json:"displayName,omitempty"`
-}
-
 // NegativeKeywordList
 // A list of negative keywords used for targeting.
 type NegativeKeywordList struct {
@@ -14,4 +8,10 @@ type NegativeKeywordList struct {
 	Name                  *string `json:"name,omitempty"`
 	NegativeKeywordListID *string `json:"negativeKeywordListId,omitempty"`
 	TargetedLineItemCount *string `json:"targetedLineItemCount,omitempty"`
+}
+
+// NegativeKeywordListInput
+// A list of negative keywords used for targeting.
+type NegativeKeywordListInput struct {
+	DisplayName *string `json:"displayName,omitempty"`
 }

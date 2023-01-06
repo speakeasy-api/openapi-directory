@@ -7,7 +7,7 @@ import (
 type CreateStreamingUrlxAmzTargetEnum string
 
 const (
-	CreateStreamingUrlxAmzTargetEnumPhotonAdminProxyServiceCreateStreamingURL CreateStreamingUrlxAmzTargetEnum = "PhotonAdminProxyService.CreateStreamingURL"
+	CreateStreamingURLXAmzTargetEnumPhotonAdminProxyServiceCreateStreamingURL CreateStreamingUrlxAmzTargetEnum = "PhotonAdminProxyService.CreateStreamingURL"
 )
 
 type CreateStreamingURLHeaders struct {

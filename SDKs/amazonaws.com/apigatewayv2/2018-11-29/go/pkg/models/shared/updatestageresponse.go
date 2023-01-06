@@ -1,22 +1,18 @@
 package shared
 
-import (
-	"time"
-)
-
 type UpdateStageResponse struct {
-	AccessLogSettings           *AccessLogSettings       `json:"AccessLogSettings,omitempty"`
-	APIGatewayManaged           *bool                    `json:"ApiGatewayManaged,omitempty"`
-	AutoDeploy                  *bool                    `json:"AutoDeploy,omitempty"`
-	ClientCertificateID         *string                  `json:"ClientCertificateId,omitempty"`
-	CreatedDate                 *time.Time               `json:"CreatedDate,omitempty"`
-	DefaultRouteSettings        *RouteSettings           `json:"DefaultRouteSettings,omitempty"`
-	DeploymentID                *string                  `json:"DeploymentId,omitempty"`
-	Description                 *string                  `json:"Description,omitempty"`
-	LastDeploymentStatusMessage *string                  `json:"LastDeploymentStatusMessage,omitempty"`
-	LastUpdatedDate             *time.Time               `json:"LastUpdatedDate,omitempty"`
+	AccessLogSettings           map[string]interface{}   `json:"AccessLogSettings,omitempty"`
+	APIGatewayManaged           map[string]interface{}   `json:"ApiGatewayManaged,omitempty"`
+	AutoDeploy                  map[string]interface{}   `json:"AutoDeploy,omitempty"`
+	ClientCertificateID         map[string]interface{}   `json:"ClientCertificateId,omitempty"`
+	CreatedDate                 map[string]interface{}   `json:"CreatedDate,omitempty"`
+	DefaultRouteSettings        map[string]interface{}   `json:"DefaultRouteSettings,omitempty"`
+	DeploymentID                map[string]interface{}   `json:"DeploymentId,omitempty"`
+	Description                 map[string]interface{}   `json:"Description,omitempty"`
+	LastDeploymentStatusMessage map[string]interface{}   `json:"LastDeploymentStatusMessage,omitempty"`
+	LastUpdatedDate             map[string]interface{}   `json:"LastUpdatedDate,omitempty"`
 	RouteSettings               map[string]RouteSettings `json:"RouteSettings,omitempty"`
-	StageName                   *string                  `json:"StageName,omitempty"`
+	StageName                   map[string]interface{}   `json:"StageName,omitempty"`
 	StageVariables              map[string]string        `json:"StageVariables,omitempty"`
 	Tags                        map[string]string        `json:"Tags,omitempty"`
 }

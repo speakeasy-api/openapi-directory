@@ -21,7 +21,7 @@ type UpdateDataRetentionRequestBody struct {
 	CurrentVersion             string                                      `json:"CurrentVersion"`
 	DataRetentionChangeInHours int64                                       `json:"DataRetentionChangeInHours"`
 	Operation                  UpdateDataRetentionRequestBodyOperationEnum `json:"Operation"`
-	StreamArn                  *string                                     `json:"StreamARN,omitempty"`
+	StreamARN                  *string                                     `json:"StreamARN,omitempty"`
 	StreamName                 *string                                     `json:"StreamName,omitempty"`
 }
 

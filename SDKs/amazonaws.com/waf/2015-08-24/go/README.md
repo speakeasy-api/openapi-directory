@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.CreateByteMatchSetRequest{
         Headers: operations.CreateByteMatchSetHeaders{
-            XAmzAlgorithm: "ipsa",
-            XAmzContentSha256: "sequi",
-            XAmzCredential: "inventore",
-            XAmzDate: "earum",
-            XAmzSecurityToken: "ad",
-            XAmzSignature: "eligendi",
-            XAmzSignedHeaders: "quia",
+            XAmzAlgorithm: "dolores",
+            XAmzContentSha256: "labore",
+            XAmzCredential: "cupiditate",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "cupiditate",
+            XAmzSignature: "odio",
+            XAmzSignedHeaders: "rerum",
             XAmzTarget: "AWSWAF_20150824.CreateByteMatchSet",
         },
         Request: shared.CreateByteMatchSetRequest{
-            ChangeToken: "nihil",
-            Name: "dolorum",
+            ChangeToken: "nostrum",
+            Name: "repellat",
         },
     }
     
-    res, err := s.Sdk.CreateByteMatchSet(ctx, req)
+    res, err := s.CreateByteMatchSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

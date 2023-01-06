@@ -3,13 +3,13 @@ package operations
 type PostModifyInstancePlacementActionEnum string
 
 const (
-	PostModifyInstancePlacementActionEnumModifyInstancePlacement PostModifyInstancePlacementActionEnum = "ModifyInstancePlacement"
+	POSTModifyInstancePlacementActionEnumModifyInstancePlacement PostModifyInstancePlacementActionEnum = "ModifyInstancePlacement"
 )
 
 type PostModifyInstancePlacementVersionEnum string
 
 const (
-	PostModifyInstancePlacementVersionEnumTwoThousandAndSixteen1115 PostModifyInstancePlacementVersionEnum = "2016-11-15"
+	POSTModifyInstancePlacementVersionEnumTwoThousandAndSixteen1115 PostModifyInstancePlacementVersionEnum = "2016-11-15"
 )
 
 type PostModifyInstancePlacementQueryParams struct {

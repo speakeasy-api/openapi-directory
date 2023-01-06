@@ -7,7 +7,7 @@ import (
 // ReplicationGroup
 // Contains all of the attributes of a specific Redis replication group.
 type ReplicationGroup struct {
-	Arn                        *string
+	ARN                        *string
 	AtRestEncryptionEnabled    *bool
 	AuthTokenEnabled           *bool
 	AuthTokenLastModifiedDate  *time.Time
@@ -18,11 +18,11 @@ type ReplicationGroup struct {
 	Description                *string
 	GlobalReplicationGroupInfo *GlobalReplicationGroupInfo
 	KmsKeyID                   *string
-	LogDeliveryConfigurations  []LogDeliveryConfiguration
-	MemberClusters             []string
-	MemberClustersOutpostArns  []string
-	MultiAz                    *MultiAzStatusEnum
-	NodeGroups                 []NodeGroup
+	LogDeliveryConfigurations  []map[string]interface{}
+	MemberClusters             []map[string]interface{}
+	MemberClustersOutpostArns  []map[string]interface{}
+	MultiAZ                    *MultiAzStatusEnum
+	NodeGroups                 []map[string]interface{}
 	PendingModifiedValues      *ReplicationGroupPendingModifiedValues
 	ReplicationGroupCreateTime *time.Time
 	ReplicationGroupID         *string

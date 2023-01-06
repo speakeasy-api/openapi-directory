@@ -30,6 +30,6 @@ type GetSampledRequestsResponse struct {
 	ContentType                 string
 	GetSampledRequestsResponse  *shared.GetSampledRequestsResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFNonexistentItemException *interface{}
 }

@@ -34,6 +34,6 @@ type GetTenantTenantnameRequest struct {
 
 type GetTenantTenantnameResponse struct {
 	ContentType                                 string
-	GetTenantTenantname200ApplicationJSONObject *GetTenantTenantname200ApplicationJSON
 	StatusCode                                  int64
+	GetTenantTenantname200ApplicationJSONObject *GetTenantTenantname200ApplicationJSON
 }

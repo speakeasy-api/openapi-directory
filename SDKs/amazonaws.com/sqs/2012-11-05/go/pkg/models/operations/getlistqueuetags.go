@@ -8,13 +8,13 @@ type GetListQueueTagsPathParams struct {
 type GetListQueueTagsActionEnum string
 
 const (
-	GetListQueueTagsActionEnumListQueueTags GetListQueueTagsActionEnum = "ListQueueTags"
+	GETListQueueTagsActionEnumListQueueTags GetListQueueTagsActionEnum = "ListQueueTags"
 )
 
 type GetListQueueTagsVersionEnum string
 
 const (
-	GetListQueueTagsVersionEnumTwoThousandAndTwelve1105 GetListQueueTagsVersionEnum = "2012-11-05"
+	GETListQueueTagsVersionEnumTwoThousandAndTwelve1105 GetListQueueTagsVersionEnum = "2012-11-05"
 )
 
 type GetListQueueTagsQueryParams struct {

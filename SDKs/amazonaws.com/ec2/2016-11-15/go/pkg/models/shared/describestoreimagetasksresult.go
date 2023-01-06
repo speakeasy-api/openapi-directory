@@ -1,6 +1,6 @@
 package shared
 
 type DescribeStoreImageTasksResult struct {
-	NextToken             *string
-	StoreImageTaskResults []StoreImageTaskResult
+	NextToken             map[string]interface{}
+	StoreImageTaskResults map[string]interface{}
 }

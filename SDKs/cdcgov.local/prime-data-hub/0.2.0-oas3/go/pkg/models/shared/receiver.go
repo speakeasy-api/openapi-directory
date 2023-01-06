@@ -32,17 +32,6 @@ type ReceiverTiming struct {
 	Frequency ReceiverTimingFrequencyEnum `json:"frequency"`
 }
 
-// ReceiverInput
-// A receiver of reports from the data hub
-type ReceiverInput struct {
-	Description           string                          `json:"description"`
-	JurisdictionalFilters []ReceiverJurisdictionalFilters `json:"jurisdictionalFilters,omitempty"`
-	Name                  string                          `json:"name"`
-	Timing                ReceiverTiming                  `json:"timing"`
-	Topic                 string                          `json:"topic"`
-	Translations          []interface{}                   `json:"translations,omitempty"`
-}
-
 // Receiver
 // A receiver of reports from the data hub
 type Receiver struct {
@@ -51,6 +40,17 @@ type Receiver struct {
 	Meta                  *SettingMetadata                `json:"meta,omitempty"`
 	Name                  string                          `json:"name"`
 	OrganizationName      *string                         `json:"organizationName,omitempty"`
+	Timing                ReceiverTiming                  `json:"timing"`
+	Topic                 string                          `json:"topic"`
+	Translations          []interface{}                   `json:"translations,omitempty"`
+}
+
+// ReceiverInput
+// A receiver of reports from the data hub
+type ReceiverInput struct {
+	Description           string                          `json:"description"`
+	JurisdictionalFilters []ReceiverJurisdictionalFilters `json:"jurisdictionalFilters,omitempty"`
+	Name                  string                          `json:"name"`
 	Timing                ReceiverTiming                  `json:"timing"`
 	Topic                 string                          `json:"topic"`
 	Translations          []interface{}                   `json:"translations,omitempty"`

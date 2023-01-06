@@ -3,13 +3,13 @@ package operations
 type PostDeleteDbProxyActionEnum string
 
 const (
-	PostDeleteDbProxyActionEnumDeleteDbProxy PostDeleteDbProxyActionEnum = "DeleteDBProxy"
+	POSTDeleteDBProxyActionEnumDeleteDbProxy PostDeleteDbProxyActionEnum = "DeleteDBProxy"
 )
 
 type PostDeleteDbProxyVersionEnum string
 
 const (
-	PostDeleteDbProxyVersionEnumTwoThousandAndFourteen1031 PostDeleteDbProxyVersionEnum = "2014-10-31"
+	POSTDeleteDBProxyVersionEnumTwoThousandAndFourteen1031 PostDeleteDbProxyVersionEnum = "2014-10-31"
 )
 
 type PostDeleteDbProxyQueryParams struct {

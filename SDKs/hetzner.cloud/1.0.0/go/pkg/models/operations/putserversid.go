@@ -287,6 +287,6 @@ type PutServersIDRequest struct {
 
 type PutServersIDResponse struct {
 	ContentType                          string
-	PutServersID200ApplicationJSONObject *PutServersID200ApplicationJSON
 	StatusCode                           int64
+	PutServersID200ApplicationJSONObject *PutServersID200ApplicationJSON
 }

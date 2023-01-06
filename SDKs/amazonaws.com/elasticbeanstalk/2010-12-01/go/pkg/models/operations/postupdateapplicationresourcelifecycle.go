@@ -3,13 +3,13 @@ package operations
 type PostUpdateApplicationResourceLifecycleActionEnum string
 
 const (
-	PostUpdateApplicationResourceLifecycleActionEnumUpdateApplicationResourceLifecycle PostUpdateApplicationResourceLifecycleActionEnum = "UpdateApplicationResourceLifecycle"
+	POSTUpdateApplicationResourceLifecycleActionEnumUpdateApplicationResourceLifecycle PostUpdateApplicationResourceLifecycleActionEnum = "UpdateApplicationResourceLifecycle"
 )
 
 type PostUpdateApplicationResourceLifecycleVersionEnum string
 
 const (
-	PostUpdateApplicationResourceLifecycleVersionEnumTwoThousandAndTen1201 PostUpdateApplicationResourceLifecycleVersionEnum = "2010-12-01"
+	POSTUpdateApplicationResourceLifecycleVersionEnumTwoThousandAndTen1201 PostUpdateApplicationResourceLifecycleVersionEnum = "2010-12-01"
 )
 
 type PostUpdateApplicationResourceLifecycleQueryParams struct {

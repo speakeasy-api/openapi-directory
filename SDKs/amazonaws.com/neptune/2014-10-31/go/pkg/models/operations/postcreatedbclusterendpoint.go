@@ -3,13 +3,13 @@ package operations
 type PostCreateDbClusterEndpointActionEnum string
 
 const (
-	PostCreateDbClusterEndpointActionEnumCreateDbClusterEndpoint PostCreateDbClusterEndpointActionEnum = "CreateDBClusterEndpoint"
+	POSTCreateDBClusterEndpointActionEnumCreateDbClusterEndpoint PostCreateDbClusterEndpointActionEnum = "CreateDBClusterEndpoint"
 )
 
 type PostCreateDbClusterEndpointVersionEnum string
 
 const (
-	PostCreateDbClusterEndpointVersionEnumTwoThousandAndFourteen1031 PostCreateDbClusterEndpointVersionEnum = "2014-10-31"
+	POSTCreateDBClusterEndpointVersionEnumTwoThousandAndFourteen1031 PostCreateDbClusterEndpointVersionEnum = "2014-10-31"
 )
 
 type PostCreateDbClusterEndpointQueryParams struct {

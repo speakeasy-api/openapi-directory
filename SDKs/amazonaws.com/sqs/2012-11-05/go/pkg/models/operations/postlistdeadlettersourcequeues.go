@@ -3,13 +3,13 @@ package operations
 type PostListDeadLetterSourceQueuesActionEnum string
 
 const (
-	PostListDeadLetterSourceQueuesActionEnumListDeadLetterSourceQueues PostListDeadLetterSourceQueuesActionEnum = "ListDeadLetterSourceQueues"
+	POSTListDeadLetterSourceQueuesActionEnumListDeadLetterSourceQueues PostListDeadLetterSourceQueuesActionEnum = "ListDeadLetterSourceQueues"
 )
 
 type PostListDeadLetterSourceQueuesVersionEnum string
 
 const (
-	PostListDeadLetterSourceQueuesVersionEnumTwoThousandAndTwelve1105 PostListDeadLetterSourceQueuesVersionEnum = "2012-11-05"
+	POSTListDeadLetterSourceQueuesVersionEnumTwoThousandAndTwelve1105 PostListDeadLetterSourceQueuesVersionEnum = "2012-11-05"
 )
 
 type PostListDeadLetterSourceQueuesQueryParams struct {

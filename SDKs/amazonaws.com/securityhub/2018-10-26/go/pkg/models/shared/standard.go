@@ -3,8 +3,8 @@ package shared
 // Standard
 // Provides information about a specific standard.
 type Standard struct {
-	Description      *string `json:"Description,omitempty"`
-	EnabledByDefault *bool   `json:"EnabledByDefault,omitempty"`
-	Name             *string `json:"Name,omitempty"`
-	StandardsArn     *string `json:"StandardsArn,omitempty"`
+	Description      *string                `json:"Description,omitempty"`
+	EnabledByDefault *bool                  `json:"EnabledByDefault,omitempty"`
+	Name             *string                `json:"Name,omitempty"`
+	StandardsArn     map[string]interface{} `json:"StandardsArn,omitempty"`
 }

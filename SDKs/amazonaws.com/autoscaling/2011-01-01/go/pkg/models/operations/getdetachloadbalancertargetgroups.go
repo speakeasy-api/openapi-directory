@@ -3,19 +3,19 @@ package operations
 type GetDetachLoadBalancerTargetGroupsActionEnum string
 
 const (
-	GetDetachLoadBalancerTargetGroupsActionEnumDetachLoadBalancerTargetGroups GetDetachLoadBalancerTargetGroupsActionEnum = "DetachLoadBalancerTargetGroups"
+	GETDetachLoadBalancerTargetGroupsActionEnumDetachLoadBalancerTargetGroups GetDetachLoadBalancerTargetGroupsActionEnum = "DetachLoadBalancerTargetGroups"
 )
 
 type GetDetachLoadBalancerTargetGroupsVersionEnum string
 
 const (
-	GetDetachLoadBalancerTargetGroupsVersionEnumTwoThousandAndEleven0101 GetDetachLoadBalancerTargetGroupsVersionEnum = "2011-01-01"
+	GETDetachLoadBalancerTargetGroupsVersionEnumTwoThousandAndEleven0101 GetDetachLoadBalancerTargetGroupsVersionEnum = "2011-01-01"
 )
 
 type GetDetachLoadBalancerTargetGroupsQueryParams struct {
 	Action               GetDetachLoadBalancerTargetGroupsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoScalingGroupName string                                       `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
-	TargetGroupArNs      []string                                     `queryParam:"style=form,explode=true,name=TargetGroupARNs"`
+	TargetGroupARNs      []string                                     `queryParam:"style=form,explode=true,name=TargetGroupARNs"`
 	Version              GetDetachLoadBalancerTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

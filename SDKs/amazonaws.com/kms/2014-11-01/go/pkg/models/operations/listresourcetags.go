@@ -30,7 +30,7 @@ type ListResourceTagsResponse struct {
 	ContentType              string
 	InvalidArnException      *interface{}
 	InvalidMarkerException   *interface{}
-	KmsInternalException     *interface{}
+	KMSInternalException     *interface{}
 	ListResourceTagsResponse *shared.ListResourceTagsResponse
 	NotFoundException        *interface{}
 	StatusCode               int64

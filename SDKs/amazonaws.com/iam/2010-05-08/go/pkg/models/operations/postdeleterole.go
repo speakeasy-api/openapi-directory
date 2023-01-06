@@ -3,13 +3,13 @@ package operations
 type PostDeleteRoleActionEnum string
 
 const (
-	PostDeleteRoleActionEnumDeleteRole PostDeleteRoleActionEnum = "DeleteRole"
+	POSTDeleteRoleActionEnumDeleteRole PostDeleteRoleActionEnum = "DeleteRole"
 )
 
 type PostDeleteRoleVersionEnum string
 
 const (
-	PostDeleteRoleVersionEnumTwoThousandAndTen0508 PostDeleteRoleVersionEnum = "2010-05-08"
+	POSTDeleteRoleVersionEnumTwoThousandAndTen0508 PostDeleteRoleVersionEnum = "2010-05-08"
 )
 
 type PostDeleteRoleQueryParams struct {

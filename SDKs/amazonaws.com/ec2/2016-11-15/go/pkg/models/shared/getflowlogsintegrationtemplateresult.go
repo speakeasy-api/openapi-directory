@@ -1,5 +1,5 @@
 package shared
 
 type GetFlowLogsIntegrationTemplateResult struct {
-	Result *string
+	Result map[string]interface{}
 }

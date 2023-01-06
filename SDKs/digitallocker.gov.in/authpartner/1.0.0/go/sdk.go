@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -17,9 +18,9 @@ type SDK struct {
 	AccountDetailAPI     *AccountDetailAPI
 	Authorization        *Authorization
 	AuthorizationAPI     *AuthorizationAPI
-	DigiLockerMetaApIs   *DigiLockerMetaApIs
-	DigiLockerSignUpApIs *DigiLockerSignUpApIs
-	FileApIs             *FileApIs
+	DigiLockerMetaAPIs   *DigiLockerMetaApIs
+	DigiLockerSignUpAPIs *DigiLockerSignUpApIs
+	FileAPIs             *FileApIs
 	TokenRevocationAPI   *TokenRevocationAPI
 
 	_defaultClient  HTTPClient
@@ -99,7 +100,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.DigiLockerMetaApIs = NewDigiLockerMetaApIs(
+	sdk.DigiLockerMetaAPIs = NewDigiLockerMetaApIs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -108,7 +109,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.DigiLockerSignUpApIs = NewDigiLockerSignUpApIs(
+	sdk.DigiLockerSignUpAPIs = NewDigiLockerSignUpApIs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -117,7 +118,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.FileApIs = NewFileApIs(
+	sdk.FileAPIs = NewFileApIs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

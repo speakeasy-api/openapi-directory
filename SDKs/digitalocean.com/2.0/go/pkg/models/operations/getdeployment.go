@@ -9,14 +9,14 @@ type GetDeploymentPathParams struct {
 	DeploymentID string `pathParam:"style=simple,explode=false,name=deployment_id"`
 }
 
-type GetDeploymentRequest struct {
-	PathParams GetDeploymentPathParams
-}
-
 type GetDeployment401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetDeploymentRequest struct {
+	PathParams GetDeploymentPathParams
 }
 
 type GetDeploymentResponse struct {

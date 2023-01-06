@@ -8,12 +8,6 @@ const (
 	NoteCreatorRoleEnumSeller                     NoteCreatorRoleEnum = "SELLER"
 )
 
-// NoteInput
-// A proposal may be associated to several notes.
-type NoteInput struct {
-	Note *string `json:"note,omitempty"`
-}
-
 // Note
 // A proposal may be associated to several notes.
 type Note struct {
@@ -22,4 +16,10 @@ type Note struct {
 	Note             *string              `json:"note,omitempty"`
 	NoteID           *string              `json:"noteId,omitempty"`
 	ProposalRevision *string              `json:"proposalRevision,omitempty"`
+}
+
+// NoteInput
+// A proposal may be associated to several notes.
+type NoteInput struct {
+	Note *string `json:"note,omitempty"`
 }

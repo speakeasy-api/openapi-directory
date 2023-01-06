@@ -8,10 +8,6 @@ type GetInstanceSizePathParams struct {
 	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
-type GetInstanceSizeRequest struct {
-	PathParams GetInstanceSizePathParams
-}
-
 type GetInstanceSize200ApplicationJSON struct {
 	InstanceSize *shared.Onev21apps1tiers1instanceSizesGetResponses200ContentApplication1jsonSchemaPropertiesInstanceSizesItems `json:"instance_size,omitempty"`
 }
@@ -20,6 +16,10 @@ type GetInstanceSize401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetInstanceSizeRequest struct {
+	PathParams GetInstanceSizePathParams
 }
 
 type GetInstanceSizeResponse struct {

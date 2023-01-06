@@ -3,13 +3,13 @@ package operations
 type PostCreatePlacementGroupActionEnum string
 
 const (
-	PostCreatePlacementGroupActionEnumCreatePlacementGroup PostCreatePlacementGroupActionEnum = "CreatePlacementGroup"
+	POSTCreatePlacementGroupActionEnumCreatePlacementGroup PostCreatePlacementGroupActionEnum = "CreatePlacementGroup"
 )
 
 type PostCreatePlacementGroupVersionEnum string
 
 const (
-	PostCreatePlacementGroupVersionEnumTwoThousandAndSixteen1115 PostCreatePlacementGroupVersionEnum = "2016-11-15"
+	POSTCreatePlacementGroupVersionEnumTwoThousandAndSixteen1115 PostCreatePlacementGroupVersionEnum = "2016-11-15"
 )
 
 type PostCreatePlacementGroupQueryParams struct {

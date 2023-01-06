@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,32 +24,32 @@ func main() {
     
     req := operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest{
         PathParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams{
-            Name: "ut",
+            Name: "molestiae",
         },
         QueryParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "magni",
-            Alt: "media",
-            Callback: "maiores",
-            DailyMetric: "BUSINESS_FOOD_ORDERS",
-            DailyRangeEndDateDay: 6910391474305585133,
-            DailyRangeEndDateMonth: 5695242762713337677,
-            DailyRangeEndDateYear: 7386097625889100208,
-            DailyRangeStartDateDay: 5016857923634303661,
-            DailyRangeStartDateMonth: 743896963189385316,
-            DailyRangeStartDateYear: 4029721498741443506,
-            DailySubEntityTypeDayOfWeek: "THURSDAY",
-            DailySubEntityTypeTimeOfDayHours: 7753313494815849564,
-            DailySubEntityTypeTimeOfDayMinutes: 3820220690062292513,
-            DailySubEntityTypeTimeOfDayNanos: 4531441787659076409,
-            DailySubEntityTypeTimeOfDaySeconds: 63846108552878779,
-            Fields: "et",
-            Key: "cum",
-            OauthToken: "qui",
+            DollarXgafv: "1",
+            AccessToken: "repellat",
+            Alt: "json",
+            Callback: "sed",
+            DailyMetric: "WEBSITE_CLICKS",
+            DailyRangeEndDateDay: 1221540476095319119,
+            DailyRangeEndDateMonth: 5012945083598127645,
+            DailyRangeEndDateYear: 6870436931398380512,
+            DailyRangeStartDateDay: 910907678208424806,
+            DailyRangeStartDateMonth: 5210307319228776145,
+            DailyRangeStartDateYear: 3304053977307046580,
+            DailySubEntityTypeDayOfWeek: "DAY_OF_WEEK_UNSPECIFIED",
+            DailySubEntityTypeTimeOfDayHours: 5207396030113692353,
+            DailySubEntityTypeTimeOfDayMinutes: 2146413783345853326,
+            DailySubEntityTypeTimeOfDayNanos: 149675784360604258,
+            DailySubEntityTypeTimeOfDaySeconds: 7863208141981153686,
+            Fields: "at",
+            Key: "saepe",
+            OauthToken: "voluptatem",
             PrettyPrint: true,
-            QuotaUser: "ratione",
-            UploadType: "aliquam",
-            UploadProtocol: "quia",
+            QuotaUser: "soluta",
+            UploadType: "est",
+            UploadProtocol: "quam",
         },
     }
     

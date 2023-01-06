@@ -10,10 +10,10 @@ type GetWfsInventoryQueryParams struct {
 
 type GetWfsInventoryHeaders struct {
 	Authorization         string `header:"style=simple,explode=false,name=Authorization"`
-	WmConsumerChannelType string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
-	WmQosCorrelationID    string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
-	WmSecAccessToken      string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
-	WmSvcName             string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
+	WMCONSUMERCHANNELTYPE string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	WMQOSCORRELATIONID    string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
+	WMSECACCESSTOKEN      string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
+	WMSVCNAME             string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
 }
 
 type GetWfsInventory200ApplicationJSONHeaders struct {
@@ -51,5 +51,5 @@ type GetWfsInventoryRequest struct {
 type GetWfsInventoryResponse struct {
 	ContentType                             string
 	StatusCode                              int64
-	GetWfsInventory200ApplicationJSONObject *GetWfsInventory200ApplicationJSON
+	GetWFSInventory200ApplicationJSONObject *GetWfsInventory200ApplicationJSON
 }

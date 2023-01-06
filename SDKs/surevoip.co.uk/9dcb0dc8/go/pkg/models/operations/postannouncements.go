@@ -49,9 +49,9 @@ type PostAnnouncementsRequest struct {
 
 type PostAnnouncementsResponse struct {
 	ContentType                                                   string
+	StatusCode                                                    int64
 	PostAnnouncements201ApplicationJSONObject                     *PostAnnouncements201ApplicationJSON
 	PostAnnouncements400ApplicationJSONObject                     *PostAnnouncements400ApplicationJSON
 	PostAnnouncements403ApplicationJSONObject                     *PostAnnouncements403ApplicationJSON
-	StatusCode                                                    int64
 	OneannouncementsPostResponses403ContentApplication1jsonSchema *shared.OneannouncementsPostResponses403ContentApplication1jsonSchema
 }

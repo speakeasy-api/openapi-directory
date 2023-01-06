@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -537,7 +538,7 @@ func (s *SDK) CreateCluster(ctx context.Context, request operations.CreateCluste
 				return nil, err
 			}
 
-			res.InvalidVpcNetworkStateFault = out
+			res.InvalidVPCNetworkStateFault = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -1719,7 +1720,7 @@ func (s *SDK) DescribeAcLs(ctx context.Context, request operations.DescribeAcLsR
 				return nil, err
 			}
 
-			res.DescribeAcLsResponse = out
+			res.DescribeACLsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2599,7 +2600,7 @@ func (s *SDK) FailoverShard(ctx context.Context, request operations.FailoverShar
 				return nil, err
 			}
 
-			res.InvalidKmsKeyFault = out
+			res.InvalidKMSKeyFault = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -2823,7 +2824,7 @@ func (s *SDK) ListTags(ctx context.Context, request operations.ListTagsRequest) 
 				return nil, err
 			}
 
-			res.InvalidArnFault = out
+			res.InvalidARNFault = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -3097,7 +3098,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.InvalidArnFault = out
+			res.InvalidARNFault = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -3219,7 +3220,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.InvalidArnFault = out
+			res.InvalidARNFault = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -3483,7 +3484,7 @@ func (s *SDK) UpdateCluster(ctx context.Context, request operations.UpdateCluste
 				return nil, err
 			}
 
-			res.InvalidVpcNetworkStateFault = out
+			res.InvalidVPCNetworkStateFault = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3503,7 +3504,7 @@ func (s *SDK) UpdateCluster(ctx context.Context, request operations.UpdateCluste
 				return nil, err
 			}
 
-			res.InvalidKmsKeyFault = out
+			res.InvalidKMSKeyFault = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {

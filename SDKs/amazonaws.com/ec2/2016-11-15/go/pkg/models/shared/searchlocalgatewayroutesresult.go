@@ -1,6 +1,6 @@
 package shared
 
 type SearchLocalGatewayRoutesResult struct {
-	NextToken *string
-	Routes    []LocalGatewayRoute
+	NextToken map[string]interface{}
+	Routes    map[string]interface{}
 }

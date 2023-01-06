@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.ActivateAnomalyDetectorRequest{
         Headers: operations.ActivateAnomalyDetectorHeaders{
-            XAmzAlgorithm: "saepe",
-            XAmzContentSha256: "harum",
-            XAmzCredential: "animi",
-            XAmzDate: "eius",
-            XAmzSecurityToken: "necessitatibus",
-            XAmzSignature: "optio",
-            XAmzSignedHeaders: "amet",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "debitis",
+            XAmzCredential: "in",
+            XAmzDate: "at",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "quis",
+            XAmzSignedHeaders: "nisi",
         },
         Request: operations.ActivateAnomalyDetectorRequestBody{
-            AnomalyDetectorArn: "eaque",
+            AnomalyDetectorArn: "qui",
         },
     }
     
-    res, err := s.Sdk.ActivateAnomalyDetector(ctx, req)
+    res, err := s.ActivateAnomalyDetector(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

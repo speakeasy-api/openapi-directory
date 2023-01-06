@@ -23,12 +23,12 @@ type PlayerSeasonPpaTotalPpa struct {
 }
 
 type PlayerSeasonPpa struct {
-	AveragePpa *PlayerSeasonPpaAveragePpa `json:"averagePPA,omitempty"`
+	AveragePPA *PlayerSeasonPpaAveragePpa `json:"averagePPA,omitempty"`
 	Conference *string                    `json:"conference,omitempty"`
 	ID         *int64                     `json:"id,omitempty"`
 	Name       *string                    `json:"name,omitempty"`
 	Position   *string                    `json:"position,omitempty"`
 	Season     *int64                     `json:"season,omitempty"`
 	Team       *string                    `json:"team,omitempty"`
-	TotalPpa   *PlayerSeasonPpaTotalPpa   `json:"totalPPA,omitempty"`
+	TotalPPA   *PlayerSeasonPpaTotalPpa   `json:"totalPPA,omitempty"`
 }

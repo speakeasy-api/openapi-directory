@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateTrackerConsumerRequest{
         PathParams: operations.AssociateTrackerConsumerPathParams{
-            TrackerName: "quis",
+            TrackerName: "reiciendis",
         },
         Headers: operations.AssociateTrackerConsumerHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "dolorum",
-            XAmzCredential: "ut",
-            XAmzDate: "veniam",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "blanditiis",
-            XAmzSignedHeaders: "aliquid",
+            XAmzAlgorithm: "rerum",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "eaque",
+            XAmzDate: "debitis",
+            XAmzSecurityToken: "dolore",
+            XAmzSignature: "sapiente",
+            XAmzSignedHeaders: "eum",
         },
         Request: operations.AssociateTrackerConsumerRequestBody{
-            ConsumerArn: "asperiores",
+            ConsumerArn: "incidunt",
         },
     }
     
-    res, err := s.Sdk.AssociateTrackerConsumer(ctx, req)
+    res, err := s.AssociateTrackerConsumer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -30,8 +30,8 @@ type ScheduleKeyDeletionResponse struct {
 	ContentType                 string
 	DependencyTimeoutException  *interface{}
 	InvalidArnException         *interface{}
-	KmsInternalException        *interface{}
-	KmsInvalidStateException    *interface{}
+	KMSInternalException        *interface{}
+	KMSInvalidStateException    *interface{}
 	NotFoundException           *interface{}
 	ScheduleKeyDeletionResponse *shared.ScheduleKeyDeletionResponse
 	StatusCode                  int64

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.AnalyticsRequest{
         QueryParams: operations.AnalyticsQueryParams{
-            End: "hic",
-            GroupBy: "date",
-            Label: "consequatur",
-            Start: "illum",
-            Subaccounts: "corporis",
+            End: "id",
+            GroupBy: "country",
+            Label: "nam",
+            Start: "voluptatem",
+            Subaccounts: "unde",
         },
     }
     

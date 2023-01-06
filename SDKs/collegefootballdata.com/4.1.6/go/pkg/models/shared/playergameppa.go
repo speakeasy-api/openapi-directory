@@ -7,7 +7,7 @@ type PlayerGamePpaAveragePpa struct {
 }
 
 type PlayerGamePpa struct {
-	AveragePpa *PlayerGamePpaAveragePpa `json:"averagePPA,omitempty"`
+	AveragePPA *PlayerGamePpaAveragePpa `json:"averagePPA,omitempty"`
 	Name       *string                  `json:"name,omitempty"`
 	Opponent   *string                  `json:"opponent,omitempty"`
 	Position   *string                  `json:"position,omitempty"`

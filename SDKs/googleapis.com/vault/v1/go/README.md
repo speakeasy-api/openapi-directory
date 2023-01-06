@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,32 @@ func main() {
         Security: operations.VaultMattersAddPermissionsSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.VaultMattersAddPermissionsPathParams{
-            MatterID: "reiciendis",
+            MatterID: "labore",
         },
         QueryParams: operations.VaultMattersAddPermissionsQueryParams{
             DollarXgafv: "1",
-            AccessToken: "illum",
+            AccessToken: "debitis",
             Alt: "proto",
-            Callback: "totam",
-            Fields: "aspernatur",
-            Key: "beatae",
-            OauthToken: "occaecati",
-            PrettyPrint: false,
-            QuotaUser: "repellat",
-            UploadType: "totam",
-            UploadProtocol: "amet",
+            Callback: "et",
+            Fields: "accusantium",
+            Key: "consequatur",
+            OauthToken: "aut",
+            PrettyPrint: true,
+            QuotaUser: "est",
+            UploadType: "ullam",
+            UploadProtocol: "odit",
         },
         Request: &shared.AddMatterPermissionsRequest{
-            CcMe: false,
+            CcMe: true,
             MatterPermission: &shared.MatterPermission{
-                AccountID: "aliquam",
-                Role: "COLLABORATOR",
+                AccountID: "molestiae",
+                Role: "ROLE_UNSPECIFIED",
             },
             SendEmails: false,
         },

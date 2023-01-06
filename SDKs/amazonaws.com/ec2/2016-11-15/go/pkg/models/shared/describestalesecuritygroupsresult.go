@@ -1,6 +1,6 @@
 package shared
 
 type DescribeStaleSecurityGroupsResult struct {
-	NextToken             *string
-	StaleSecurityGroupSet []StaleSecurityGroup
+	NextToken             map[string]interface{}
+	StaleSecurityGroupSet map[string]interface{}
 }

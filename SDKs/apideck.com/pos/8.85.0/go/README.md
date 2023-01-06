@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -40,53 +39,52 @@ func main() {
             },
         },
         QueryParams: operations.ItemsAddQueryParams{
-            Raw: false,
+            Raw: true,
         },
         Headers: operations.ItemsAddHeaders{
-            XApideckAppID: "non",
-            XApideckConsumerID: "doloribus",
-            XApideckServiceID: "illo",
+            XApideckAppID: "animi",
+            XApideckConsumerID: "saepe",
+            XApideckServiceID: "harum",
         },
         Request: shared.ItemInput{
-            Abbreviation: "molestias",
+            Abbreviation: "animi",
             AbsentAtLocationIds: []string{
-                "asperiores",
+                "necessitatibus",
+                "optio",
             },
             Available: false,
             AvailableForPickup: true,
             AvailableOnline: false,
             Categories: []interface{}{
-                "odio",
+                "ex",
+                "adipisci",
             },
-            Code: "qui",
-            Cost: 37.099998,
+            Code: "ipsum",
+            Cost: 84.099998,
             Deleted: false,
-            Description: "dolore",
+            Description: "sed",
             Hidden: false,
-            ID: "explicabo",
-            IdempotencyKey: "repudiandae",
+            ID: "saepe",
+            IdempotencyKey: "atque",
             ModifierGroups: []interface{}{
-                "nesciunt",
-                "ab",
-                "ab",
+                "quo",
+                "facere",
             },
-            Name: "ullam",
+            Name: "perferendis",
             Options: []interface{}{
-                "eos",
-                "et",
+                "assumenda",
             },
             PresentAtAllLocations: true,
-            PriceAmount: 16.200001,
-            PriceCurrency: "MNT",
-            PricingType: "per_unit",
-            ProductType: "other",
-            Sku: "in",
+            PriceAmount: 33.099998,
+            PriceCurrency: "AFN",
+            PricingType: "fixed",
+            ProductType: "regular",
+            Sku: "ullam",
             TaxIds: []string{
-                "nesciunt",
-                "hic",
+                "laudantium",
             },
             Variations: []interface{}{
-                "quod",
+                "dolor",
             },
         },
     }

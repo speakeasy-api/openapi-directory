@@ -23,6 +23,6 @@ type PostPortfolioAnalysisTrackingErrorRequest struct {
 
 type PostPortfolioAnalysisTrackingErrorResponse struct {
 	ContentType                                                string
-	PostPortfolioAnalysisTrackingError200ApplicationJSONObject *PostPortfolioAnalysisTrackingError200ApplicationJSON
 	StatusCode                                                 int64
+	PostPortfolioAnalysisTrackingError200ApplicationJSONObject *PostPortfolioAnalysisTrackingError200ApplicationJSON
 }

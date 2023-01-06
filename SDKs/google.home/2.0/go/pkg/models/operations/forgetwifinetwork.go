@@ -9,7 +9,7 @@ type ForgetWiFiNetworkRequest struct {
 }
 
 type ForgetWiFiNetworkResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                         string
+	ForgetWiFiNetwork200TextPlainObject *string
+	StatusCode                          int64
 }

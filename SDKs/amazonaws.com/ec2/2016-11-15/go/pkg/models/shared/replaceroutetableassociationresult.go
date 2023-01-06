@@ -1,6 +1,6 @@
 package shared
 
 type ReplaceRouteTableAssociationResult struct {
-	AssociationState *RouteTableAssociationState
-	NewAssociationID *string
+	AssociationState map[string]interface{}
+	NewAssociationID map[string]interface{}
 }

@@ -35,8 +35,8 @@ type DeleteGroupUsingPostRequest struct {
 type DeleteGroupUsingPostResponse struct {
 	ContentType                                  string
 	StatusCode                                   int64
-	DeleteGroupUsingPost200ApplicationJSONObject *DeleteGroupUsingPost200ApplicationJSON
-	DeleteGroupUsingPost400ApplicationJSONObject *DeleteGroupUsingPost400ApplicationJSON
-	DeleteGroupUsingPost401ApplicationJSONObject *DeleteGroupUsingPost401ApplicationJSON
-	DeleteGroupUsingPost500ApplicationJSONObject *DeleteGroupUsingPost500ApplicationJSON
+	DeleteGroupUsingPOST200ApplicationJSONObject *DeleteGroupUsingPost200ApplicationJSON
+	DeleteGroupUsingPOST400ApplicationJSONObject *DeleteGroupUsingPost400ApplicationJSON
+	DeleteGroupUsingPOST401ApplicationJSONObject *DeleteGroupUsingPost401ApplicationJSON
+	DeleteGroupUsingPOST500ApplicationJSONObject *DeleteGroupUsingPost500ApplicationJSON
 }

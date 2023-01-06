@@ -3,20 +3,20 @@ package operations
 type GetCreateNetworkInterfacePermissionActionEnum string
 
 const (
-	GetCreateNetworkInterfacePermissionActionEnumCreateNetworkInterfacePermission GetCreateNetworkInterfacePermissionActionEnum = "CreateNetworkInterfacePermission"
+	GETCreateNetworkInterfacePermissionActionEnumCreateNetworkInterfacePermission GetCreateNetworkInterfacePermissionActionEnum = "CreateNetworkInterfacePermission"
 )
 
 type GetCreateNetworkInterfacePermissionPermissionEnum string
 
 const (
-	GetCreateNetworkInterfacePermissionPermissionEnumInstanceAttach GetCreateNetworkInterfacePermissionPermissionEnum = "INSTANCE-ATTACH"
-	GetCreateNetworkInterfacePermissionPermissionEnumEipAssociate   GetCreateNetworkInterfacePermissionPermissionEnum = "EIP-ASSOCIATE"
+	GETCreateNetworkInterfacePermissionPermissionEnumInstanceAttach GetCreateNetworkInterfacePermissionPermissionEnum = "INSTANCE-ATTACH"
+	GETCreateNetworkInterfacePermissionPermissionEnumEipAssociate   GetCreateNetworkInterfacePermissionPermissionEnum = "EIP-ASSOCIATE"
 )
 
 type GetCreateNetworkInterfacePermissionVersionEnum string
 
 const (
-	GetCreateNetworkInterfacePermissionVersionEnumTwoThousandAndSixteen1115 GetCreateNetworkInterfacePermissionVersionEnum = "2016-11-15"
+	GETCreateNetworkInterfacePermissionVersionEnumTwoThousandAndSixteen1115 GetCreateNetworkInterfacePermissionVersionEnum = "2016-11-15"
 )
 
 type GetCreateNetworkInterfacePermissionQueryParams struct {

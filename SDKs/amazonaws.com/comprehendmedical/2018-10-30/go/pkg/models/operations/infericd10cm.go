@@ -7,7 +7,7 @@ import (
 type InferIcd10CmxAmzTargetEnum string
 
 const (
-	InferIcd10CmxAmzTargetEnumComprehendMedical20181030InferIcd10Cm InferIcd10CmxAmzTargetEnum = "ComprehendMedical_20181030.InferICD10CM"
+	InferIcd10CMXAmzTargetEnumComprehendMedical20181030InferIcd10Cm InferIcd10CmxAmzTargetEnum = "ComprehendMedical_20181030.InferICD10CM"
 )
 
 type InferIcd10CmHeaders struct {
@@ -28,7 +28,7 @@ type InferIcd10CmRequest struct {
 
 type InferIcd10CmResponse struct {
 	ContentType                    string
-	InferIcd10CmResponse           *shared.InferIcd10CmResponse
+	InferIcd10CMResponse           *shared.InferIcd10CmResponse
 	InternalServerException        *interface{}
 	InvalidEncodingException       *interface{}
 	InvalidRequestException        *interface{}

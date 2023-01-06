@@ -8,10 +8,9 @@ const (
 	BuildConfigDockerRegistryEnumArtifactRegistry          BuildConfigDockerRegistryEnum = "ARTIFACT_REGISTRY"
 )
 
-// BuildConfig
+// BuildConfigInput
 // Describes the Build step of the function that builds a container from the given source.
-type BuildConfig struct {
-	Build                *string                        `json:"build,omitempty"`
+type BuildConfigInput struct {
 	BuildpackStack       *string                        `json:"buildpackStack,omitempty"`
 	DockerRegistry       *BuildConfigDockerRegistryEnum `json:"dockerRegistry,omitempty"`
 	DockerRepository     *string                        `json:"dockerRepository,omitempty"`
@@ -23,9 +22,10 @@ type BuildConfig struct {
 	WorkerPool           *string                        `json:"workerPool,omitempty"`
 }
 
-// BuildConfigInput
+// BuildConfig
 // Describes the Build step of the function that builds a container from the given source.
-type BuildConfigInput struct {
+type BuildConfig struct {
+	Build                *string                        `json:"build,omitempty"`
 	BuildpackStack       *string                        `json:"buildpackStack,omitempty"`
 	DockerRegistry       *BuildConfigDockerRegistryEnum `json:"dockerRegistry,omitempty"`
 	DockerRepository     *string                        `json:"dockerRepository,omitempty"`

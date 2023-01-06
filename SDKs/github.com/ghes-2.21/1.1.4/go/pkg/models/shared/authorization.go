@@ -27,6 +27,8 @@ type AuthorizationScopedInstallation struct {
 	SingleFilePaths        []string                                               `json:"single_file_paths,omitempty"`
 }
 
+// AuthorizationSimpleUser
+// Simple User
 type AuthorizationSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

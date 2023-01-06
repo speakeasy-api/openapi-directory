@@ -7,7 +7,7 @@ import (
 type GetPutConfigurationSetDeliveryOptionsActionEnum string
 
 const (
-	GetPutConfigurationSetDeliveryOptionsActionEnumPutConfigurationSetDeliveryOptions GetPutConfigurationSetDeliveryOptionsActionEnum = "PutConfigurationSetDeliveryOptions"
+	GETPutConfigurationSetDeliveryOptionsActionEnumPutConfigurationSetDeliveryOptions GetPutConfigurationSetDeliveryOptionsActionEnum = "PutConfigurationSetDeliveryOptions"
 )
 
 // GetPutConfigurationSetDeliveryOptionsDeliveryOptions
@@ -19,7 +19,7 @@ type GetPutConfigurationSetDeliveryOptionsDeliveryOptions struct {
 type GetPutConfigurationSetDeliveryOptionsVersionEnum string
 
 const (
-	GetPutConfigurationSetDeliveryOptionsVersionEnumTwoThousandAndTen1201 GetPutConfigurationSetDeliveryOptionsVersionEnum = "2010-12-01"
+	GETPutConfigurationSetDeliveryOptionsVersionEnumTwoThousandAndTen1201 GetPutConfigurationSetDeliveryOptionsVersionEnum = "2010-12-01"
 )
 
 type GetPutConfigurationSetDeliveryOptionsQueryParams struct {

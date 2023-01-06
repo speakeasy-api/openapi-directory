@@ -21,6 +21,6 @@ type UpdateAristaSwitchSnmpConfigRequest struct {
 type UpdateAristaSwitchSnmpConfigResponse struct {
 	APIError    *shared.APIError
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

@@ -3,23 +3,23 @@ package operations
 type PostCreateJobActionEnum string
 
 const (
-	PostCreateJobActionEnumCreateJob PostCreateJobActionEnum = "CreateJob"
+	POSTCreateJobActionEnumCreateJob PostCreateJobActionEnum = "CreateJob"
 )
 
 type PostCreateJobOperationEnum string
 
 const (
-	PostCreateJobOperationEnumCreateJob PostCreateJobOperationEnum = "CreateJob"
+	POSTCreateJobOperationEnumCreateJob PostCreateJobOperationEnum = "CreateJob"
 )
 
 type PostCreateJobVersionEnum string
 
 const (
-	PostCreateJobVersionEnumTwoThousandAndTen0601 PostCreateJobVersionEnum = "2010-06-01"
+	POSTCreateJobVersionEnumTwoThousandAndTen0601 PostCreateJobVersionEnum = "2010-06-01"
 )
 
 type PostCreateJobQueryParams struct {
-	AwsAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostCreateJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        PostCreateJobOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`

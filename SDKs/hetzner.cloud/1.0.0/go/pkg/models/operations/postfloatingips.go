@@ -104,6 +104,6 @@ type PostFloatingIpsRequest struct {
 
 type PostFloatingIpsResponse struct {
 	ContentType                             string
-	PostFloatingIps201ApplicationJSONObject *PostFloatingIps201ApplicationJSON
 	StatusCode                              int64
+	PostFloatingIps201ApplicationJSONObject *PostFloatingIps201ApplicationJSON
 }

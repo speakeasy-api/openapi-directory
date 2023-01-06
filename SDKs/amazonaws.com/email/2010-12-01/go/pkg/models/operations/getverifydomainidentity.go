@@ -3,13 +3,13 @@ package operations
 type GetVerifyDomainIdentityActionEnum string
 
 const (
-	GetVerifyDomainIdentityActionEnumVerifyDomainIdentity GetVerifyDomainIdentityActionEnum = "VerifyDomainIdentity"
+	GETVerifyDomainIdentityActionEnumVerifyDomainIdentity GetVerifyDomainIdentityActionEnum = "VerifyDomainIdentity"
 )
 
 type GetVerifyDomainIdentityVersionEnum string
 
 const (
-	GetVerifyDomainIdentityVersionEnumTwoThousandAndTen1201 GetVerifyDomainIdentityVersionEnum = "2010-12-01"
+	GETVerifyDomainIdentityVersionEnumTwoThousandAndTen1201 GetVerifyDomainIdentityVersionEnum = "2010-12-01"
 )
 
 type GetVerifyDomainIdentityQueryParams struct {

@@ -30,7 +30,7 @@ type ListTagsResponse struct {
 	ACLNotFoundFault               *interface{}
 	ClusterNotFoundFault           *interface{}
 	ContentType                    string
-	InvalidArnFault                *interface{}
+	InvalidARNFault                *interface{}
 	InvalidClusterStateFault       *interface{}
 	ListTagsResponse               *shared.ListTagsResponse
 	ParameterGroupNotFoundFault    *interface{}

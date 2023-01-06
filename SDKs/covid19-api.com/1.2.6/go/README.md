@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.GetDailyReportAllCountriesRequest{
         QueryParams: operations.GetDailyReportAllCountriesQueryParams{
-            Date: "quia",
-            DateFormat: "MM-DD-YYYY",
+            Date: "sed",
+            DateFormat: "YYYY-DD-MM",
             Format: "xml",
         },
     }
     
-    res, err := s.Sdk.GetDailyReportAllCountries(ctx, req)
+    res, err := s.Country.GetDailyReportAllCountries(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,17 +44,23 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country
 
 * `GetDailyReportAllCountries` - getDailyReportAllCountries
 * `GetDailyReportByCountryCode` - getDailyReportByCountryCode
 * `GetDailyReportByCountryName` - getDailyReportByCountryName
-* `GetDailyReportTotals` - getDailyReportTotals
 * `GetLatestAllCountries` - getLatestAllCountries
 * `GetLatestCountryDataByCode` - getLatestCountryDataByCode
 * `GetLatestCountryDataByName` - getLatestCountryDataByName
-* `GetLatestTotals` - getLatestTotals
+
+### Help
+
 * `GetListOfCountries` - getListOfCountries
+
+### Totals
+
+* `GetDailyReportTotals` - getDailyReportTotals
+* `GetLatestTotals` - getLatestTotals
 
 <!-- End SDK Available Operations -->
 

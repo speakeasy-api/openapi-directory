@@ -36,6 +36,6 @@ type GetContentSourceSectionJSONRequest struct {
 
 type GetContentSourceSectionJSONResponse struct {
 	ContentType                                         string
-	GetContentSourceSectionJSON200ApplicationJSONObject *GetContentSourceSectionJSON200ApplicationJSON
 	StatusCode                                          int64
+	GetContentSourceSectionJSON200ApplicationJSONObject *GetContentSourceSectionJSON200ApplicationJSON
 }

@@ -12,7 +12,7 @@ type GetMlTransformsQueryParams struct {
 type GetMlTransformsXAmzTargetEnum string
 
 const (
-	GetMlTransformsXAmzTargetEnumAwsGlueGetMlTransforms GetMlTransformsXAmzTargetEnum = "AWSGlue.GetMLTransforms"
+	GetMLTransformsXAmzTargetEnumAwsGlueGetMlTransforms GetMlTransformsXAmzTargetEnum = "AWSGlue.GetMLTransforms"
 )
 
 type GetMlTransformsHeaders struct {
@@ -35,7 +35,7 @@ type GetMlTransformsRequest struct {
 type GetMlTransformsResponse struct {
 	ContentType               string
 	EntityNotFoundException   *interface{}
-	GetMlTransformsResponse   *shared.GetMlTransformsResponse
+	GetMLTransformsResponse   *shared.GetMlTransformsResponse
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}
 	OperationTimeoutException *interface{}

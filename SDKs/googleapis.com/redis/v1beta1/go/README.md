@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,63 +26,52 @@ func main() {
         Security: operations.RedisProjectsLocationsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.RedisProjectsLocationsInstancesCreatePathParams{
-            Parent: "laboriosam",
+            Parent: "qui",
         },
         QueryParams: operations.RedisProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "vero",
+            DollarXgafv: "1",
+            AccessToken: "eos",
             Alt: "media",
-            Callback: "minima",
-            Fields: "et",
-            InstanceID: "qui",
-            Key: "aspernatur",
-            OauthToken: "repudiandae",
+            Callback: "aspernatur",
+            Fields: "culpa",
+            InstanceID: "est",
+            Key: "occaecati",
+            OauthToken: "sunt",
             PrettyPrint: true,
-            QuotaUser: "magnam",
-            UploadType: "odit",
-            UploadProtocol: "ratione",
+            QuotaUser: "culpa",
+            UploadType: "non",
+            UploadProtocol: "cumque",
         },
         Request: &shared.InstanceInput{
-            AlternativeLocationID: "tempora",
+            AlternativeLocationID: "omnis",
             AuthEnabled: true,
-            AuthorizedNetwork: "autem",
+            AuthorizedNetwork: "incidunt",
             AvailableMaintenanceVersions: []string{
-                "repellat",
-                "a",
-                "id",
+                "ea",
             },
-            ConnectMode: "DIRECT_PEERING",
-            CustomerManagedKey: "minima",
-            DisplayName: "non",
+            ConnectMode: "CONNECT_MODE_UNSPECIFIED",
+            CustomerManagedKey: "dolor",
+            DisplayName: "delectus",
             Labels: map[string]string{
-                "deleniti": "est",
+                "nostrum": "quos",
             },
-            LocationID: "voluptatum",
+            LocationID: "nam",
             MaintenancePolicy: &shared.MaintenancePolicyInput{
-                Description: "et",
+                Description: "iusto",
                 WeeklyMaintenanceWindow: []shared.WeeklyMaintenanceWindowInput{
-                    shared.WeeklyMaintenanceWindowInput{
-                        Day: "THURSDAY",
-                        StartTime: &shared.TimeOfDay{
-                            Hours: 8447988876140740075,
-                            Minutes: 5041146191201319909,
-                            Nanos: 5541796795475235323,
-                            Seconds: 2996517446438545323,
-                        },
-                    },
                     shared.WeeklyMaintenanceWindowInput{
                         Day: "SUNDAY",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 5521534650374502695,
-                            Minutes: 8981216204834136043,
-                            Nanos: 4874886829143815684,
-                            Seconds: 4478153492668249776,
+                            Hours: 5018370869501883230,
+                            Minutes: 2133319266033746062,
+                            Nanos: 8649617518309229479,
+                            Seconds: 593089783578800138,
                         },
                     },
                 },
@@ -91,29 +79,28 @@ func main() {
             MaintenanceSchedule: &shared.MaintenanceScheduleInput{
                 CanReschedule: true,
             },
-            MaintenanceVersion: "harum",
-            MemorySizeGb: 5129341615647848829,
-            Name: "iste",
+            MaintenanceVersion: "tenetur",
+            MemorySizeGb: 6664718901604938113,
+            Name: "non",
             PersistenceConfig: &shared.PersistenceConfigInput{
-                PersistenceMode: "PERSISTENCE_MODE_UNSPECIFIED",
-                RdbSnapshotPeriod: "SIX_HOURS",
-                RdbSnapshotStartTime: "atque",
+                PersistenceMode: "DISABLED",
+                RdbSnapshotPeriod: "TWENTY_FOUR_HOURS",
+                RdbSnapshotStartTime: "exercitationem",
             },
-            ReadReplicasMode: "READ_REPLICAS_MODE_UNSPECIFIED",
+            ReadReplicasMode: "READ_REPLICAS_DISABLED",
             RedisConfigs: map[string]string{
-                "mollitia": "pariatur",
-                "similique": "minus",
+                "dolores": "fuga",
+                "eum": "nihil",
             },
-            RedisVersion: "in",
-            ReplicaCount: 9035187264571426591,
-            ReservedIPRange: "modi",
-            SecondaryIPRange: "beatae",
+            RedisVersion: "deserunt",
+            ReplicaCount: 8061756071631393984,
+            ReservedIPRange: "repellendus",
+            SecondaryIPRange: "tempora",
             SuspensionReasons: []shared.InstanceSuspensionReasonsEnum{
-                "SUSPENSION_REASON_UNSPECIFIED",
                 "CUSTOMER_MANAGED_KEY_ISSUE",
             },
-            Tier: "TIER_UNSPECIFIED",
-            TransitEncryptionMode: "DISABLED",
+            Tier: "BASIC",
+            TransitEncryptionMode: "TRANSIT_ENCRYPTION_MODE_UNSPECIFIED",
         },
     }
     

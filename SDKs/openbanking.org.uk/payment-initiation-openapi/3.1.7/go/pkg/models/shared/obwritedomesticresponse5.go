@@ -62,9 +62,9 @@ type ObWriteDomesticResponse5DataInitiation struct {
 type ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum string
 
 const (
-	ObWriteDomesticResponse5DataMultiAuthorisationStatusEnumAuthorised                   ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "Authorised"
-	ObWriteDomesticResponse5DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
-	ObWriteDomesticResponse5DataMultiAuthorisationStatusEnumRejected                     ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "Rejected"
+	OBWriteDomesticResponse5DataMultiAuthorisationStatusEnumAuthorised                   ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "Authorised"
+	OBWriteDomesticResponse5DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
+	OBWriteDomesticResponse5DataMultiAuthorisationStatusEnumRejected                     ObWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
 // ObWriteDomesticResponse5DataMultiAuthorisation
@@ -95,12 +95,12 @@ type ObWriteDomesticResponse5DataRefund struct {
 type ObWriteDomesticResponse5DataStatusEnum string
 
 const (
-	ObWriteDomesticResponse5DataStatusEnumAcceptedCreditSettlementCompleted ObWriteDomesticResponse5DataStatusEnum = "AcceptedCreditSettlementCompleted"
-	ObWriteDomesticResponse5DataStatusEnumAcceptedSettlementCompleted       ObWriteDomesticResponse5DataStatusEnum = "AcceptedSettlementCompleted"
-	ObWriteDomesticResponse5DataStatusEnumAcceptedSettlementInProcess       ObWriteDomesticResponse5DataStatusEnum = "AcceptedSettlementInProcess"
-	ObWriteDomesticResponse5DataStatusEnumAcceptedWithoutPosting            ObWriteDomesticResponse5DataStatusEnum = "AcceptedWithoutPosting"
-	ObWriteDomesticResponse5DataStatusEnumPending                           ObWriteDomesticResponse5DataStatusEnum = "Pending"
-	ObWriteDomesticResponse5DataStatusEnumRejected                          ObWriteDomesticResponse5DataStatusEnum = "Rejected"
+	OBWriteDomesticResponse5DataStatusEnumAcceptedCreditSettlementCompleted ObWriteDomesticResponse5DataStatusEnum = "AcceptedCreditSettlementCompleted"
+	OBWriteDomesticResponse5DataStatusEnumAcceptedSettlementCompleted       ObWriteDomesticResponse5DataStatusEnum = "AcceptedSettlementCompleted"
+	OBWriteDomesticResponse5DataStatusEnumAcceptedSettlementInProcess       ObWriteDomesticResponse5DataStatusEnum = "AcceptedSettlementInProcess"
+	OBWriteDomesticResponse5DataStatusEnumAcceptedWithoutPosting            ObWriteDomesticResponse5DataStatusEnum = "AcceptedWithoutPosting"
+	OBWriteDomesticResponse5DataStatusEnumPending                           ObWriteDomesticResponse5DataStatusEnum = "Pending"
+	OBWriteDomesticResponse5DataStatusEnumRejected                          ObWriteDomesticResponse5DataStatusEnum = "Rejected"
 )
 
 type ObWriteDomesticResponse5Data struct {

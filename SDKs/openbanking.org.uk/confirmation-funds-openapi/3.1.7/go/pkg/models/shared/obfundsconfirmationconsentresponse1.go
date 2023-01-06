@@ -16,10 +16,10 @@ type ObFundsConfirmationConsentResponse1DataDebtorAccount struct {
 type ObFundsConfirmationConsentResponse1DataStatusEnum string
 
 const (
-	ObFundsConfirmationConsentResponse1DataStatusEnumAuthorised            ObFundsConfirmationConsentResponse1DataStatusEnum = "Authorised"
-	ObFundsConfirmationConsentResponse1DataStatusEnumAwaitingAuthorisation ObFundsConfirmationConsentResponse1DataStatusEnum = "AwaitingAuthorisation"
-	ObFundsConfirmationConsentResponse1DataStatusEnumRejected              ObFundsConfirmationConsentResponse1DataStatusEnum = "Rejected"
-	ObFundsConfirmationConsentResponse1DataStatusEnumRevoked               ObFundsConfirmationConsentResponse1DataStatusEnum = "Revoked"
+	OBFundsConfirmationConsentResponse1DataStatusEnumAuthorised            ObFundsConfirmationConsentResponse1DataStatusEnum = "Authorised"
+	OBFundsConfirmationConsentResponse1DataStatusEnumAwaitingAuthorisation ObFundsConfirmationConsentResponse1DataStatusEnum = "AwaitingAuthorisation"
+	OBFundsConfirmationConsentResponse1DataStatusEnumRejected              ObFundsConfirmationConsentResponse1DataStatusEnum = "Rejected"
+	OBFundsConfirmationConsentResponse1DataStatusEnumRevoked               ObFundsConfirmationConsentResponse1DataStatusEnum = "Revoked"
 )
 
 type ObFundsConfirmationConsentResponse1Data struct {

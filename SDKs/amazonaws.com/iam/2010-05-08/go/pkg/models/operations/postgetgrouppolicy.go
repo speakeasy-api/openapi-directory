@@ -3,13 +3,13 @@ package operations
 type PostGetGroupPolicyActionEnum string
 
 const (
-	PostGetGroupPolicyActionEnumGetGroupPolicy PostGetGroupPolicyActionEnum = "GetGroupPolicy"
+	POSTGetGroupPolicyActionEnumGetGroupPolicy PostGetGroupPolicyActionEnum = "GetGroupPolicy"
 )
 
 type PostGetGroupPolicyVersionEnum string
 
 const (
-	PostGetGroupPolicyVersionEnumTwoThousandAndTen0508 PostGetGroupPolicyVersionEnum = "2010-05-08"
+	POSTGetGroupPolicyVersionEnumTwoThousandAndTen0508 PostGetGroupPolicyVersionEnum = "2010-05-08"
 )
 
 type PostGetGroupPolicyQueryParams struct {

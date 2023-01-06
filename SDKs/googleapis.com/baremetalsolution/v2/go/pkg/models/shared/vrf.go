@@ -3,9 +3,9 @@ package shared
 type VrfStateEnum string
 
 const (
-	VrfStateEnumStateUnspecified VrfStateEnum = "STATE_UNSPECIFIED"
-	VrfStateEnumProvisioning     VrfStateEnum = "PROVISIONING"
-	VrfStateEnumProvisioned      VrfStateEnum = "PROVISIONED"
+	VRFStateEnumStateUnspecified VrfStateEnum = "STATE_UNSPECIFIED"
+	VRFStateEnumProvisioning     VrfStateEnum = "PROVISIONING"
+	VRFStateEnumProvisioned      VrfStateEnum = "PROVISIONED"
 )
 
 // Vrf

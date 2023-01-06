@@ -3,13 +3,13 @@ package operations
 type GetListInstanceProfilesForRoleActionEnum string
 
 const (
-	GetListInstanceProfilesForRoleActionEnumListInstanceProfilesForRole GetListInstanceProfilesForRoleActionEnum = "ListInstanceProfilesForRole"
+	GETListInstanceProfilesForRoleActionEnumListInstanceProfilesForRole GetListInstanceProfilesForRoleActionEnum = "ListInstanceProfilesForRole"
 )
 
 type GetListInstanceProfilesForRoleVersionEnum string
 
 const (
-	GetListInstanceProfilesForRoleVersionEnumTwoThousandAndTen0508 GetListInstanceProfilesForRoleVersionEnum = "2010-05-08"
+	GETListInstanceProfilesForRoleVersionEnumTwoThousandAndTen0508 GetListInstanceProfilesForRoleVersionEnum = "2010-05-08"
 )
 
 type GetListInstanceProfilesForRoleQueryParams struct {

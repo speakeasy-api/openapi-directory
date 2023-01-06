@@ -3,13 +3,13 @@ package operations
 type GetDeleteCustomerGatewayActionEnum string
 
 const (
-	GetDeleteCustomerGatewayActionEnumDeleteCustomerGateway GetDeleteCustomerGatewayActionEnum = "DeleteCustomerGateway"
+	GETDeleteCustomerGatewayActionEnumDeleteCustomerGateway GetDeleteCustomerGatewayActionEnum = "DeleteCustomerGateway"
 )
 
 type GetDeleteCustomerGatewayVersionEnum string
 
 const (
-	GetDeleteCustomerGatewayVersionEnumTwoThousandAndSixteen1115 GetDeleteCustomerGatewayVersionEnum = "2016-11-15"
+	GETDeleteCustomerGatewayVersionEnumTwoThousandAndSixteen1115 GetDeleteCustomerGatewayVersionEnum = "2016-11-15"
 )
 
 type GetDeleteCustomerGatewayQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type CopySnapshotResult struct {
-	SnapshotID *string
-	Tags       []Tag
+	SnapshotID map[string]interface{}
+	Tags       map[string]interface{}
 }

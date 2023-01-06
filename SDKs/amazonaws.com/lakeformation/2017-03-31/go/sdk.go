@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -131,7 +132,7 @@ func (s *SDK) AddLfTagsToResource(ctx context.Context, request operations.AddLfT
 				return nil, err
 			}
 
-			res.AddLfTagsToResourceResponse = out
+			res.AddLFTagsToResourceResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -387,7 +388,7 @@ func (s *SDK) CreateLfTag(ctx context.Context, request operations.CreateLfTagReq
 				return nil, err
 			}
 
-			res.CreateLfTagResponse = out
+			res.CreateLFTagResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -499,7 +500,7 @@ func (s *SDK) DeleteLfTag(ctx context.Context, request operations.DeleteLfTagReq
 				return nil, err
 			}
 
-			res.DeleteLfTagResponse = out
+			res.DeleteLFTagResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -961,7 +962,7 @@ func (s *SDK) GetLfTag(ctx context.Context, request operations.GetLfTagRequest) 
 				return nil, err
 			}
 
-			res.GetLfTagResponse = out
+			res.GetLFTagResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1063,7 +1064,7 @@ func (s *SDK) GetResourceLfTags(ctx context.Context, request operations.GetResou
 				return nil, err
 			}
 
-			res.GetResourceLfTagsResponse = out
+			res.GetResourceLFTagsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1257,7 +1258,7 @@ func (s *SDK) ListLfTags(ctx context.Context, request operations.ListLfTagsReque
 				return nil, err
 			}
 
-			res.ListLfTagsResponse = out
+			res.ListLFTagsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1681,7 +1682,7 @@ func (s *SDK) RemoveLfTagsFromResource(ctx context.Context, request operations.R
 				return nil, err
 			}
 
-			res.RemoveLfTagsFromResourceResponse = out
+			res.RemoveLFTagsFromResourceResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1885,7 +1886,7 @@ func (s *SDK) SearchDatabasesByLfTags(ctx context.Context, request operations.Se
 				return nil, err
 			}
 
-			res.SearchDatabasesByLfTagsResponse = out
+			res.SearchDatabasesByLFTagsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1997,7 +1998,7 @@ func (s *SDK) SearchTablesByLfTags(ctx context.Context, request operations.Searc
 				return nil, err
 			}
 
-			res.SearchTablesByLfTagsResponse = out
+			res.SearchTablesByLFTagsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2109,7 +2110,7 @@ func (s *SDK) UpdateLfTag(ctx context.Context, request operations.UpdateLfTagReq
 				return nil, err
 			}
 
-			res.UpdateLfTagResponse = out
+			res.UpdateLFTagResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

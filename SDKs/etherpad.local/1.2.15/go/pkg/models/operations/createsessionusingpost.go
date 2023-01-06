@@ -41,8 +41,8 @@ type CreateSessionUsingPostRequest struct {
 type CreateSessionUsingPostResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	CreateSessionUsingPost200ApplicationJSONObject *CreateSessionUsingPost200ApplicationJSON
-	CreateSessionUsingPost400ApplicationJSONObject *CreateSessionUsingPost400ApplicationJSON
-	CreateSessionUsingPost401ApplicationJSONObject *CreateSessionUsingPost401ApplicationJSON
-	CreateSessionUsingPost500ApplicationJSONObject *CreateSessionUsingPost500ApplicationJSON
+	CreateSessionUsingPOST200ApplicationJSONObject *CreateSessionUsingPost200ApplicationJSON
+	CreateSessionUsingPOST400ApplicationJSONObject *CreateSessionUsingPost400ApplicationJSON
+	CreateSessionUsingPOST401ApplicationJSONObject *CreateSessionUsingPost401ApplicationJSON
+	CreateSessionUsingPOST500ApplicationJSONObject *CreateSessionUsingPost500ApplicationJSON
 }

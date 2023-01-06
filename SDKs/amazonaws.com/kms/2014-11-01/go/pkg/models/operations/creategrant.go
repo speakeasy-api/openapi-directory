@@ -33,8 +33,8 @@ type CreateGrantResponse struct {
 	DisabledException          *interface{}
 	InvalidArnException        *interface{}
 	InvalidGrantTokenException *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	LimitExceededException     *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64

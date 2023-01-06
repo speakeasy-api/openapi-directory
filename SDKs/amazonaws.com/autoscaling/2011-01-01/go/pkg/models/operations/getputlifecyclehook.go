@@ -3,13 +3,13 @@ package operations
 type GetPutLifecycleHookActionEnum string
 
 const (
-	GetPutLifecycleHookActionEnumPutLifecycleHook GetPutLifecycleHookActionEnum = "PutLifecycleHook"
+	GETPutLifecycleHookActionEnumPutLifecycleHook GetPutLifecycleHookActionEnum = "PutLifecycleHook"
 )
 
 type GetPutLifecycleHookVersionEnum string
 
 const (
-	GetPutLifecycleHookVersionEnumTwoThousandAndEleven0101 GetPutLifecycleHookVersionEnum = "2011-01-01"
+	GETPutLifecycleHookVersionEnumTwoThousandAndEleven0101 GetPutLifecycleHookVersionEnum = "2011-01-01"
 )
 
 type GetPutLifecycleHookQueryParams struct {
@@ -20,8 +20,8 @@ type GetPutLifecycleHookQueryParams struct {
 	LifecycleHookName     string                         `queryParam:"style=form,explode=true,name=LifecycleHookName"`
 	LifecycleTransition   *string                        `queryParam:"style=form,explode=true,name=LifecycleTransition"`
 	NotificationMetadata  *string                        `queryParam:"style=form,explode=true,name=NotificationMetadata"`
-	NotificationTargetArn *string                        `queryParam:"style=form,explode=true,name=NotificationTargetARN"`
-	RoleArn               *string                        `queryParam:"style=form,explode=true,name=RoleARN"`
+	NotificationTargetARN *string                        `queryParam:"style=form,explode=true,name=NotificationTargetARN"`
+	RoleARN               *string                        `queryParam:"style=form,explode=true,name=RoleARN"`
 	Version               GetPutLifecycleHookVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

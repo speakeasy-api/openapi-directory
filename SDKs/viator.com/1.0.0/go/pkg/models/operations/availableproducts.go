@@ -101,19 +101,7 @@ type AvailableProducts200ApplicationJSONData struct {
 }
 
 type AvailableProducts200ApplicationJSON struct {
-	Data             []AvailableProducts200ApplicationJSONData `json:"data,omitempty"`
-	DateStamp        *string                                   `json:"dateStamp,omitempty"`
-	ErrorCodes       []string                                  `json:"errorCodes,omitempty"`
-	ErrorMessage     []interface{}                             `json:"errorMessage,omitempty"`
-	ErrorMessageText *string                                   `json:"errorMessageText,omitempty"`
-	ErrorName        *string                                   `json:"errorName,omitempty"`
-	ErrorReference   *string                                   `json:"errorReference,omitempty"`
-	ErrorType        *string                                   `json:"errorType,omitempty"`
-	ExtraInfo        map[string]interface{}                    `json:"extraInfo,omitempty"`
-	ExtraObject      map[string]interface{}                    `json:"extraObject,omitempty"`
-	Success          *bool                                     `json:"success,omitempty"`
-	TotalCount       *int64                                    `json:"totalCount,omitempty"`
-	Vmid             *string                                   `json:"vmid,omitempty"`
+	Data []AvailableProducts200ApplicationJSONData `json:"data,omitempty"`
 }
 
 type AvailableProductsRequest struct {

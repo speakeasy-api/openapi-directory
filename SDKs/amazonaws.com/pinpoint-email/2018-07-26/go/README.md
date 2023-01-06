@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,44 +34,44 @@ func main() {
     
     req := operations.CreateConfigurationSetRequest{
         Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "cupiditate",
-            XAmzContentSha256: "quia",
-            XAmzCredential: "facere",
-            XAmzDate: "sequi",
-            XAmzSecurityToken: "rerum",
-            XAmzSignature: "enim",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "ea",
+            XAmzContentSha256: "in",
+            XAmzCredential: "ut",
+            XAmzDate: "sit",
+            XAmzSecurityToken: "fuga",
+            XAmzSignature: "eveniet",
+            XAmzSignedHeaders: "culpa",
         },
         Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "unde",
+            ConfigurationSetName: "quisquam",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "assumenda",
-                TLSPolicy: "OPTIONAL",
+                SendingPoolName: "repudiandae",
+                TLSPolicy: "REQUIRE",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2020-04-19T06:12:08Z",
-                ReputationMetricsEnabled: true,
+                LastFreshStart: "2020-06-17T02:27:44Z",
+                ReputationMetricsEnabled: false,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
                 SendingEnabled: true,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "provident",
-                    Value: "placeat",
+                    Key: "enim",
+                    Value: "est",
                 },
                 shared.Tag{
-                    Key: "perspiciatis",
-                    Value: "dolorem",
+                    Key: "recusandae",
+                    Value: "neque",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "magni",
+                CustomRedirectDomain: "quia",
             },
         },
     }
     
-    res, err := s.Sdk.CreateConfigurationSet(ctx, req)
+    res, err := s.CreateConfigurationSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

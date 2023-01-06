@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,19 +22,18 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.DeleteAppsAppIDNamespacesNamespaceIDRequest{
-        Security: operations.DeleteAppsAppIDNamespacesNamespaceIDSecurity{
+    req := operations.DeleteAppsIDRequest{
+        Security: operations.DeleteAppsIDSecurity{
             BearerAuth: shared.SchemeBearerAuth{
                 Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        PathParams: operations.DeleteAppsAppIDNamespacesNamespaceIDPathParams{
-            AppID: "odio",
-            NamespaceID: "qui",
+        PathParams: operations.DeleteAppsIDPathParams{
+            ID: "et",
         },
     }
     
-    res, err := s.Sdk.DeleteAppsAppIDNamespacesNamespaceID(ctx, req)
+    res, err := s.Apps.DeleteAppsID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -49,30 +47,45 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### apps
 
-* `DeleteAppsAppIDNamespacesNamespaceID` - Deletes a namespace
-* `DeleteAppsAppIDQueuesQueueID` - Deletes a queue
-* `DeleteAppsAppIDRulesRuleID` - Deletes a Reactor rule
 * `DeleteAppsID` - Deletes an app
 * `GetAccountsAccountIDApps` - Lists apps
-* `GetAppsAppIDKeys` - Lists app keys
-* `GetAppsAppIDNamespaces` - Lists namespaces
-* `GetAppsAppIDQueues` - Lists queues
-* `GetAppsAppIDRules` - Lists Reactor rules
-* `GetAppsAppIDRulesRuleID` - Gets a reactor rule by rule ID
-* `GetMe` - Get token details
-* `PatchAppsAppIDKeysKeyID` - Updates a key
-* `PatchAppsAppIDNamespacesNamespaceID` - Updates a namespace
-* `PatchAppsAppIDRulesRuleID` - Updates a Reactor rule
 * `PatchAppsID` - Updates an app
 * `PostAccountsAccountIDApps` - Creates an app
+* `PostAppsIDPkcs12` - Updates app's APNs info from a `.p12` file
+
+### keys
+
+* `GetAppsAppIDKeys` - Lists app keys
+* `PatchAppsAppIDKeysKeyID` - Updates a key
 * `PostAppsAppIDKeys` - Creates a key
 * `PostAppsAppIDKeysKeyIDRevoke` - Revokes a key
+
+### namespaces
+
+* `DeleteAppsAppIDNamespacesNamespaceID` - Deletes a namespace
+* `GetAppsAppIDNamespaces` - Lists namespaces
+* `PatchAppsAppIDNamespacesNamespaceID` - Updates a namespace
 * `PostAppsAppIDNamespaces` - Creates a namespace
+
+### queues
+
+* `DeleteAppsAppIDQueuesQueueID` - Deletes a queue
+* `GetAppsAppIDQueues` - Lists queues
 * `PostAppsAppIDQueues` - Creates a queue
+
+### rules
+
+* `DeleteAppsAppIDRulesRuleID` - Deletes a Reactor rule
+* `GetAppsAppIDRules` - Lists Reactor rules
+* `GetAppsAppIDRulesRuleID` - Gets a reactor rule by rule ID
+* `PatchAppsAppIDRulesRuleID` - Updates a Reactor rule
 * `PostAppsAppIDRules` - Creates a Reactor rule
-* `PostAppsIDPkcs12` - Updates app's APNs info from a `.p12` file
+
+### tokens
+
+* `GetMe` - Get token details
 
 <!-- End SDK Available Operations -->
 

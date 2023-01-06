@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,36 +34,36 @@ func main() {
     
     req := operations.PutEventsRequest{
         Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "soluta",
-            XAmzContentSha256: "vel",
-            XAmzCredential: "fuga",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "non",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "numquam",
+            XAmzAlgorithm: "quidem",
+            XAmzContentSha256: "rerum",
+            XAmzCredential: "id",
+            XAmzDate: "facilis",
+            XAmzSecurityToken: "cum",
+            XAmzSignature: "occaecati",
+            XAmzSignedHeaders: "quia",
         },
         Request: operations.PutEventsRequestBody{
             EventList: []shared.Event{
                 shared.Event{
-                    EventID: "fugiat",
-                    EventType: "laboriosam",
-                    EventValue: 3.200000,
+                    EventID: "dicta",
+                    EventType: "ducimus",
+                    EventValue: 16.200001,
                     Impression: []string{
-                        "recusandae",
+                        "eos",
                     },
-                    ItemID: "incidunt",
-                    Properties: "delectus",
-                    RecommendationID: "qui",
-                    SentAt: "1997-07-06T11:27:45Z",
+                    ItemID: "sit",
+                    Properties: "et",
+                    RecommendationID: "sed",
+                    SentAt: "1977-02-01T10:40:02Z",
                 },
             },
-            SessionID: "fuga",
-            TrackingID: "at",
-            UserID: "ex",
+            SessionID: "voluptatum",
+            TrackingID: "dolor",
+            UserID: "sed",
         },
     }
     
-    res, err := s.Sdk.PutEvents(ctx, req)
+    res, err := s.PutEvents(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

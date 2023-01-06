@@ -40,22 +40,6 @@ const (
 	NodeStateEnumUnhiding         NodeStateEnum = "UNHIDING"
 )
 
-// NodeInput
-// A TPU instance.
-type NodeInput struct {
-	AcceleratorType      *string           `json:"acceleratorType,omitempty"`
-	CidrBlock            *string           `json:"cidrBlock,omitempty"`
-	Description          *string           `json:"description,omitempty"`
-	Health               *NodeHealthEnum   `json:"health,omitempty"`
-	IPAddress            *string           `json:"ipAddress,omitempty"`
-	Labels               map[string]string `json:"labels,omitempty"`
-	Network              *string           `json:"network,omitempty"`
-	Port                 *string           `json:"port,omitempty"`
-	SchedulingConfig     *SchedulingConfig `json:"schedulingConfig,omitempty"`
-	TensorflowVersion    *string           `json:"tensorflowVersion,omitempty"`
-	UseServiceNetworking *bool             `json:"useServiceNetworking,omitempty"`
-}
-
 // Node
 // A TPU instance.
 type Node struct {
@@ -78,4 +62,20 @@ type Node struct {
 	Symptoms             []Symptom           `json:"symptoms,omitempty"`
 	TensorflowVersion    *string             `json:"tensorflowVersion,omitempty"`
 	UseServiceNetworking *bool               `json:"useServiceNetworking,omitempty"`
+}
+
+// NodeInput
+// A TPU instance.
+type NodeInput struct {
+	AcceleratorType      *string           `json:"acceleratorType,omitempty"`
+	CidrBlock            *string           `json:"cidrBlock,omitempty"`
+	Description          *string           `json:"description,omitempty"`
+	Health               *NodeHealthEnum   `json:"health,omitempty"`
+	IPAddress            *string           `json:"ipAddress,omitempty"`
+	Labels               map[string]string `json:"labels,omitempty"`
+	Network              *string           `json:"network,omitempty"`
+	Port                 *string           `json:"port,omitempty"`
+	SchedulingConfig     *SchedulingConfig `json:"schedulingConfig,omitempty"`
+	TensorflowVersion    *string           `json:"tensorflowVersion,omitempty"`
+	UseServiceNetworking *bool             `json:"useServiceNetworking,omitempty"`
 }

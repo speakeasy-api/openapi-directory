@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -104,7 +104,7 @@ func (s *Hooks) HooksPost(ctx context.Context, request operations.HooksPostReque
 				return nil, err
 			}
 
-			res.HooksPost200ApplicationJSONObject = out
+			res.HooksPOST200ApplicationJSONObject = out
 		}
 	}
 

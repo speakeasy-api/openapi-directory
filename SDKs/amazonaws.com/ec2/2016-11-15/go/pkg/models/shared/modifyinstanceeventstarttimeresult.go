@@ -1,5 +1,5 @@
 package shared
 
 type ModifyInstanceEventStartTimeResult struct {
-	Event *InstanceStatusEvent
+	Event map[string]interface{}
 }

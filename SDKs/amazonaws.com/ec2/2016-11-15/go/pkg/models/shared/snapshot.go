@@ -1,25 +1,21 @@
 package shared
 
-import (
-	"time"
-)
-
 // Snapshot
 // Describes a snapshot.
 type Snapshot struct {
-	DataEncryptionKeyID *string
-	Description         *string
-	Encrypted           *bool
-	KmsKeyID            *string
-	OutpostArn          *string
-	OwnerAlias          *string
-	OwnerID             *string
-	Progress            *string
-	SnapshotID          *string
-	StartTime           *time.Time
-	State               *SnapshotStateEnum
-	StateMessage        *string
-	Tags                []Tag
-	VolumeID            *string
-	VolumeSize          *int64
+	DataEncryptionKeyID map[string]interface{}
+	Description         map[string]interface{}
+	Encrypted           map[string]interface{}
+	KmsKeyID            map[string]interface{}
+	OutpostArn          map[string]interface{}
+	OwnerAlias          map[string]interface{}
+	OwnerID             map[string]interface{}
+	Progress            map[string]interface{}
+	SnapshotID          map[string]interface{}
+	StartTime           map[string]interface{}
+	State               map[string]interface{}
+	StateMessage        map[string]interface{}
+	Tags                map[string]interface{}
+	VolumeID            map[string]interface{}
+	VolumeSize          map[string]interface{}
 }

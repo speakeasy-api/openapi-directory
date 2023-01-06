@@ -7,8 +7,8 @@ import (
 type GetReviewsFormatFormatEnum string
 
 const (
-	GetReviewsFormatFormatEnumJSON  GetReviewsFormatFormatEnum = "json"
-	GetReviewsFormatFormatEnumJsonp GetReviewsFormatFormatEnum = "jsonp"
+	GETReviewsFormatFormatEnumJSON  GetReviewsFormatFormatEnum = "json"
+	GETReviewsFormatFormatEnumJsonp GetReviewsFormatFormatEnum = "jsonp"
 )
 
 type GetReviewsFormatPathParams struct {
@@ -51,6 +51,6 @@ type GetReviewsFormatRequest struct {
 
 type GetReviewsFormatResponse struct {
 	ContentType                              string
-	GetReviewsFormat200ApplicationJSONObject *GetReviewsFormat200ApplicationJSON
+	GETReviewsFormat200ApplicationJSONObject *GetReviewsFormat200ApplicationJSON
 	StatusCode                               int64
 }

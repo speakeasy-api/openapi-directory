@@ -17,14 +17,6 @@ const (
 	MiscKeywordTypeEnumOther                     MiscKeywordTypeEnum = "OTHER"
 )
 
-// MiscKeywordInput
-// A person's miscellaneous keyword.
-type MiscKeywordInput struct {
-	Metadata *FieldMetadataInput  `json:"metadata,omitempty"`
-	Type     *MiscKeywordTypeEnum `json:"type,omitempty"`
-	Value    *string              `json:"value,omitempty"`
-}
-
 // MiscKeyword
 // A person's miscellaneous keyword.
 type MiscKeyword struct {
@@ -32,4 +24,12 @@ type MiscKeyword struct {
 	Metadata      *FieldMetadata       `json:"metadata,omitempty"`
 	Type          *MiscKeywordTypeEnum `json:"type,omitempty"`
 	Value         *string              `json:"value,omitempty"`
+}
+
+// MiscKeywordInput
+// A person's miscellaneous keyword.
+type MiscKeywordInput struct {
+	Metadata *FieldMetadataInput  `json:"metadata,omitempty"`
+	Type     *MiscKeywordTypeEnum `json:"type,omitempty"`
+	Value    *string              `json:"value,omitempty"`
 }

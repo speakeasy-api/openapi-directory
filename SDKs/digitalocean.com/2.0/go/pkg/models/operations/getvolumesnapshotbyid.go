@@ -8,14 +8,14 @@ type GetVolumeSnapshotByIDPathParams struct {
 	SnapshotID interface{} `pathParam:"style=simple,explode=false,name=snapshot_id"`
 }
 
-type GetVolumeSnapshotByIDRequest struct {
-	PathParams GetVolumeSnapshotByIDPathParams
-}
-
 type GetVolumeSnapshotByID401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetVolumeSnapshotByIDRequest struct {
+	PathParams GetVolumeSnapshotByIDPathParams
 }
 
 type GetVolumeSnapshotByIDResponse struct {

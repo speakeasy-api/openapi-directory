@@ -32,5 +32,5 @@ type ExportSystemAdvisoriesResponse struct {
 	Body                                 []byte
 	ContentType                          string
 	StatusCode                           int64
-	ControllersSystemAdvisoriesDbLookups []shared.ControllersSystemAdvisoriesDbLookup
+	ControllersSystemAdvisoriesDBLookups []shared.ControllersSystemAdvisoriesDbLookup
 }

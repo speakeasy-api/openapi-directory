@@ -3,13 +3,13 @@ package operations
 type PostDeleteNetworkInterfaceActionEnum string
 
 const (
-	PostDeleteNetworkInterfaceActionEnumDeleteNetworkInterface PostDeleteNetworkInterfaceActionEnum = "DeleteNetworkInterface"
+	POSTDeleteNetworkInterfaceActionEnumDeleteNetworkInterface PostDeleteNetworkInterfaceActionEnum = "DeleteNetworkInterface"
 )
 
 type PostDeleteNetworkInterfaceVersionEnum string
 
 const (
-	PostDeleteNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 PostDeleteNetworkInterfaceVersionEnum = "2016-11-15"
+	POSTDeleteNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 PostDeleteNetworkInterfaceVersionEnum = "2016-11-15"
 )
 
 type PostDeleteNetworkInterfaceQueryParams struct {

@@ -9,14 +9,14 @@ type DestroyReplicaPathParams struct {
 	ReplicaName         string `pathParam:"style=simple,explode=false,name=replica_name"`
 }
 
-type DestroyReplicaRequest struct {
-	PathParams DestroyReplicaPathParams
-}
-
 type DestroyReplica401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DestroyReplicaRequest struct {
+	PathParams DestroyReplicaPathParams
 }
 
 type DestroyReplicaResponse struct {

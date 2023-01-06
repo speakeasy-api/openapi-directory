@@ -10,14 +10,14 @@ type DeleteRepositoryTagPathParams struct {
 	RepositoryTag  string `pathParam:"style=simple,explode=false,name=repository_tag"`
 }
 
-type DeleteRepositoryTagRequest struct {
-	PathParams DeleteRepositoryTagPathParams
-}
-
 type DeleteRepositoryTag401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteRepositoryTagRequest struct {
+	PathParams DeleteRepositoryTagPathParams
 }
 
 type DeleteRepositoryTagResponse struct {

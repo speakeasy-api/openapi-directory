@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,47 +34,47 @@ func main() {
     
     req := operations.CreateFhirDatastoreRequest{
         Headers: operations.CreateFhirDatastoreHeaders{
-            XAmzAlgorithm: "tempora",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "voluptas",
-            XAmzDate: "sit",
-            XAmzSecurityToken: "maiores",
-            XAmzSignature: "aliquid",
-            XAmzSignedHeaders: "veritatis",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "perferendis",
+            XAmzCredential: "dolorem",
+            XAmzDate: "odit",
+            XAmzSecurityToken: "maxime",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "ipsa",
             XAmzTarget: "HealthLake.CreateFHIRDatastore",
         },
         Request: shared.CreateFhirDatastoreRequest{
-            ClientToken: "sequi",
-            DatastoreName: "libero",
+            ClientToken: "est",
+            DatastoreName: "velit",
             DatastoreTypeVersion: "R4",
             PreloadDataConfig: &shared.PreloadDataConfig{
                 PreloadDataType: "SYNTHEA",
             },
             SseConfiguration: &shared.SseConfiguration{
                 KmsEncryptionConfig: shared.KmsEncryptionConfig{
-                    CmkType: "CUSTOMER_MANAGED_KMS_KEY",
-                    KmsKeyID: "architecto",
+                    CmkType: "AWS_OWNED_KMS_KEY",
+                    KmsKeyID: "omnis",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "tempora",
-                    Value: "velit",
+                    Key: "velit",
+                    Value: "illum",
                 },
                 shared.Tag{
-                    Key: "aut",
-                    Value: "aut",
+                    Key: "eum",
+                    Value: "quo",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateFhirDatastore(ctx, req)
+    res, err := s.CreateFhirDatastore(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateFhirDatastoreResponse != nil {
+    if res.CreateFHIRDatastoreResponse != nil {
         // handle response
     }
 ```

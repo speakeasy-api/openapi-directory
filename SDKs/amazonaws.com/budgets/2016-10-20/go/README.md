@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,72 +34,72 @@ func main() {
     
     req := operations.CreateBudgetRequest{
         Headers: operations.CreateBudgetHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "quia",
-            XAmzCredential: "debitis",
-            XAmzDate: "harum",
-            XAmzSecurityToken: "vel",
-            XAmzSignature: "quo",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "quae",
+            XAmzContentSha256: "id",
+            XAmzCredential: "eaque",
+            XAmzDate: "et",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "ea",
+            XAmzSignedHeaders: "aliquid",
             XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
         },
         Request: shared.CreateBudgetRequest{
-            AccountID: "mollitia",
+            AccountID: "beatae",
             Budget: shared.Budget{
                 BudgetLimit: &shared.Spend{
-                    Amount: "dolorum",
-                    Unit: "at",
+                    Amount: "tempore",
+                    Unit: "reprehenderit",
                 },
-                BudgetName: "sunt",
-                BudgetType: "USAGE",
+                BudgetName: "nostrum",
+                BudgetType: "RI_COVERAGE",
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
-                        Amount: "voluptate",
-                        Unit: "excepturi",
+                        Amount: "necessitatibus",
+                        Unit: "illo",
                     },
                     ForecastedSpend: &shared.Spend{
-                        Amount: "illum",
-                        Unit: "labore",
+                        Amount: "aut",
+                        Unit: "quis",
                     },
                 },
                 CostFilters: map[string][]string{
-                    "officia": []string{
-                        "asperiores",
-                        "maxime",
-                        "ratione",
+                    "ab": []string{
+                        "eveniet",
+                        "id",
+                        "placeat",
                     },
-                    "voluptatem": []string{
-                        "eum",
-                        "sed",
+                    "error": []string{
+                        "qui",
+                    },
+                    "ea": []string{
+                        "et",
+                        "nemo",
+                        "illo",
                     },
                 },
                 CostTypes: &shared.CostTypes{
                     IncludeCredit: false,
-                    IncludeDiscount: false,
+                    IncludeDiscount: true,
                     IncludeOtherSubscription: false,
                     IncludeRecurring: false,
                     IncludeRefund: false,
                     IncludeSubscription: true,
                     IncludeSupport: false,
-                    IncludeTax: true,
-                    IncludeUpfront: true,
+                    IncludeTax: false,
+                    IncludeUpfront: false,
                     UseAmortized: true,
-                    UseBlended: false,
+                    UseBlended: true,
                 },
-                LastUpdatedTime: "2022-04-10T13:26:57Z",
+                LastUpdatedTime: "1975-11-18T11:17:30Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
-                    "doloremque": shared.Spend{
-                        Amount: "minus",
-                        Unit: "ex",
-                    },
-                    "dolores": shared.Spend{
-                        Amount: "quaerat",
-                        Unit: "iste",
+                    "cupiditate": shared.Spend{
+                        Amount: "aperiam",
+                        Unit: "id",
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "1976-06-20T11:56:50Z",
-                    Start: "1997-07-28T03:35:53Z",
+                    End: "1998-02-23T08:29:03Z",
+                    Start: "1985-02-16T06:56:35Z",
                 },
                 TimeUnit: "QUARTERLY",
             },
@@ -110,13 +109,13 @@ func main() {
                         ComparisonOperator: "EQUAL_TO",
                         NotificationState: "ALARM",
                         NotificationType: "ACTUAL",
-                        Threshold: 58.200001,
-                        ThresholdType: "ABSOLUTE_VALUE",
+                        Threshold: 24.200001,
+                        ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "dolore",
-                            SubscriptionType: "EMAIL",
+                            Address: "exercitationem",
+                            SubscriptionType: "SNS",
                         },
                     },
                 },
@@ -125,12 +124,20 @@ func main() {
                         ComparisonOperator: "EQUAL_TO",
                         NotificationState: "OK",
                         NotificationType: "FORECASTED",
-                        Threshold: 81.199997,
-                        ThresholdType: "ABSOLUTE_VALUE",
+                        Threshold: 61.099998,
+                        ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "tenetur",
+                            Address: "perferendis",
+                            SubscriptionType: "EMAIL",
+                        },
+                        shared.Subscriber{
+                            Address: "incidunt",
+                            SubscriptionType: "EMAIL",
+                        },
+                        shared.Subscriber{
+                            Address: "velit",
                             SubscriptionType: "SNS",
                         },
                     },
@@ -139,7 +146,7 @@ func main() {
         },
     }
     
-    res, err := s.Sdk.CreateBudget(ctx, req)
+    res, err := s.CreateBudget(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

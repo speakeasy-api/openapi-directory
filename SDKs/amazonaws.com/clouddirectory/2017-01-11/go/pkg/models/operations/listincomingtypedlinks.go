@@ -37,7 +37,7 @@ type ListIncomingTypedLinksRequestBodyObjectReference struct {
 
 type ListIncomingTypedLinksRequestBody struct {
 	ConsistencyLevel      *ListIncomingTypedLinksRequestBodyConsistencyLevelEnum `json:"ConsistencyLevel,omitempty"`
-	FilterAttributeRanges []shared.TypedLinkAttributeRange                       `json:"FilterAttributeRanges,omitempty"`
+	FilterAttributeRanges []shared.TypedLinkAttributeRange1                      `json:"FilterAttributeRanges,omitempty"`
 	FilterTypedLink       *ListIncomingTypedLinksRequestBodyFilterTypedLink      `json:"FilterTypedLink,omitempty"`
 	MaxResults            *int64                                                 `json:"MaxResults,omitempty"`
 	NextToken             *string                                                `json:"NextToken,omitempty"`

@@ -1,5 +1,5 @@
 package shared
 
 type DescribeFpgaImageAttributeResult struct {
-	FpgaImageAttribute *FpgaImageAttribute
+	FpgaImageAttribute map[string]interface{}
 }

@@ -5,7 +5,7 @@ import (
 )
 
 type DrvlcRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	Dlno     string `json:"dlno"`
 }
@@ -84,7 +84,7 @@ type Drvlc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Drvlc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Drvlc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Drvlc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Drvlc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Drvlc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Drvlc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Drvlc404ApplicationJSON struct {

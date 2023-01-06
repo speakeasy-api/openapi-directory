@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,28 +27,28 @@ func main() {
             Option1: &operations.CloudresourcemanagerOrganizationsGetSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.CloudresourcemanagerOrganizationsGetPathParams{
-            Name: "autem",
+            Name: "voluptas",
         },
         QueryParams: operations.CloudresourcemanagerOrganizationsGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "porro",
+            AccessToken: "iure",
             Alt: "json",
-            Callback: "voluptatem",
-            Fields: "expedita",
-            Key: "sapiente",
-            OauthToken: "deserunt",
-            OrganizationID: "aut",
-            PrettyPrint: false,
-            QuotaUser: "eos",
-            UploadType: "iure",
-            UploadProtocol: "voluptas",
+            Callback: "porro",
+            Fields: "quod",
+            Key: "soluta",
+            OauthToken: "eum",
+            OrganizationID: "qui",
+            PrettyPrint: true,
+            QuotaUser: "nisi",
+            UploadType: "id",
+            UploadProtocol: "omnis",
         },
     }
     

@@ -3,13 +3,13 @@ package operations
 type PostChangeMessageVisibilityActionEnum string
 
 const (
-	PostChangeMessageVisibilityActionEnumChangeMessageVisibility PostChangeMessageVisibilityActionEnum = "ChangeMessageVisibility"
+	POSTChangeMessageVisibilityActionEnumChangeMessageVisibility PostChangeMessageVisibilityActionEnum = "ChangeMessageVisibility"
 )
 
 type PostChangeMessageVisibilityVersionEnum string
 
 const (
-	PostChangeMessageVisibilityVersionEnumTwoThousandAndTwelve1105 PostChangeMessageVisibilityVersionEnum = "2012-11-05"
+	POSTChangeMessageVisibilityVersionEnumTwoThousandAndTwelve1105 PostChangeMessageVisibilityVersionEnum = "2012-11-05"
 )
 
 type PostChangeMessageVisibilityQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.ConfigConfigGetRequest{
         Headers: operations.ConfigConfigGetHeaders{
-            Authorization: "eaque",
+            Authorization: "quos",
         },
     }
     
-    res, err := s.Sdk.ConfigConfigGet(ctx, req)
+    res, err := s.ConfigConfigGet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,13 +45,25 @@ func main() {
 ### SDK SDK
 
 * `ConfigConfigGet` - Config
+* `TopicTopicTopicNameGet` - Topic
+
+### discord
+
 * `DiscordGetDiscordGet` - Discord Get
 * `DiscordPostDiscordPost` - Discord Post
+
+### slack
+
 * `SlackGetSlackGet` - Slack Get
 * `SlackPostSlackPost` - Slack Post
+
+### sns
+
 * `SnsGetSnsGet` - Sns Get
 * `SnsPostSnsPost` - Sns Post
-* `TopicTopicTopicNameGet` - Topic
+
+### twilio
+
 * `TwilioMessageGetTwilioGet` - Twilio Message Get
 * `TwilioMessagePostTwilioPost` - Twilio Message Post
 

@@ -7,7 +7,7 @@ import (
 type UpdateExpirationForHitxAmzTargetEnum string
 
 const (
-	UpdateExpirationForHitxAmzTargetEnumMTurkRequesterServiceV20170117UpdateExpirationForHit UpdateExpirationForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateExpirationForHIT"
+	UpdateExpirationForHITXAmzTargetEnumMTurkRequesterServiceV20170117UpdateExpirationForHit UpdateExpirationForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateExpirationForHIT"
 )
 
 type UpdateExpirationForHitHeaders struct {
@@ -31,5 +31,5 @@ type UpdateExpirationForHitResponse struct {
 	RequestError                   *interface{}
 	ServiceFault                   *interface{}
 	StatusCode                     int64
-	UpdateExpirationForHitResponse map[string]interface{}
+	UpdateExpirationForHITResponse map[string]interface{}
 }

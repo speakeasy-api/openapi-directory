@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,40 +26,40 @@ func main() {
         Security: operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams{
-            Parent: "tempora",
+            Parent: "ut",
         },
         QueryParams: operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "ipsum",
-            Alt: "media",
-            Callback: "fugiat",
-            EnvironmentID: "magnam",
-            Fields: "porro",
-            Key: "eos",
-            OauthToken: "consequatur",
-            PrettyPrint: false,
-            QuotaUser: "laudantium",
-            UploadType: "officia",
-            UploadProtocol: "quidem",
+            AccessToken: "ab",
+            Alt: "json",
+            Callback: "nam",
+            EnvironmentID: "esse",
+            Fields: "dolorem",
+            Key: "sed",
+            OauthToken: "doloremque",
+            PrettyPrint: true,
+            QuotaUser: "quas",
+            UploadType: "accusamus",
+            UploadProtocol: "dolores",
         },
         Request: &shared.EnvironmentInput{
             ContainerImage: &shared.ContainerImage{
-                Repository: "voluptatem",
-                Tag: "nesciunt",
+                Repository: "officia",
+                Tag: "eligendi",
             },
-            Description: "provident",
-            DisplayName: "perferendis",
-            PostStartupScript: "suscipit",
+            Description: "et",
+            DisplayName: "aut",
+            PostStartupScript: "quo",
             VMImage: &shared.VMImage{
-                ImageFamily: "sunt",
-                ImageName: "aut",
-                Project: "non",
+                ImageFamily: "aut",
+                ImageName: "vitae",
+                Project: "quis",
             },
         },
     }

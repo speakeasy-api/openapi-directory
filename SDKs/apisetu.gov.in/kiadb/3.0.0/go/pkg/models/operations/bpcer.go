@@ -5,7 +5,7 @@ import (
 )
 
 type BpcerRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Bpcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Bpcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Bpcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Bpcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Bpcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Bpcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Bpcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Bpcer404ApplicationJSON struct {

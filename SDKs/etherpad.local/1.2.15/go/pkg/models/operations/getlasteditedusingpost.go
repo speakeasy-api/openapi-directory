@@ -39,8 +39,8 @@ type GetLastEditedUsingPostRequest struct {
 type GetLastEditedUsingPostResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	GetLastEditedUsingPost200ApplicationJSONObject *GetLastEditedUsingPost200ApplicationJSON
-	GetLastEditedUsingPost400ApplicationJSONObject *GetLastEditedUsingPost400ApplicationJSON
-	GetLastEditedUsingPost401ApplicationJSONObject *GetLastEditedUsingPost401ApplicationJSON
-	GetLastEditedUsingPost500ApplicationJSONObject *GetLastEditedUsingPost500ApplicationJSON
+	GetLastEditedUsingPOST200ApplicationJSONObject *GetLastEditedUsingPost200ApplicationJSON
+	GetLastEditedUsingPOST400ApplicationJSONObject *GetLastEditedUsingPost400ApplicationJSON
+	GetLastEditedUsingPOST401ApplicationJSONObject *GetLastEditedUsingPost401ApplicationJSON
+	GetLastEditedUsingPOST500ApplicationJSONObject *GetLastEditedUsingPost500ApplicationJSON
 }

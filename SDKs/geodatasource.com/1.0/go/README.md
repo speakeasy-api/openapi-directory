@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,13 +25,13 @@ func main() {
     req := operations.GetCityRequest{
         QueryParams: operations.GetCityQueryParams{
             Format: "json",
-            Key: "voluptatem",
-            Lat: 62.200001,
-            Lng: 0.100000,
+            Key: "nesciunt",
+            Lat: 89.199997,
+            Lng: 72.099998,
         },
     }
     
-    res, err := s.Sdk.GetCity(ctx, req)
+    res, err := s.GetCity(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

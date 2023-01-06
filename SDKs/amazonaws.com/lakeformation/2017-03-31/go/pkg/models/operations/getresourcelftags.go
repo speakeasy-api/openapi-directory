@@ -7,7 +7,7 @@ import (
 type GetResourceLfTagsXAmzTargetEnum string
 
 const (
-	GetResourceLfTagsXAmzTargetEnumAwsLakeFormationGetResourceLfTags GetResourceLfTagsXAmzTargetEnum = "AWSLakeFormation.GetResourceLFTags"
+	GetResourceLFTagsXAmzTargetEnumAwsLakeFormationGetResourceLfTags GetResourceLfTagsXAmzTargetEnum = "AWSLakeFormation.GetResourceLFTags"
 )
 
 type GetResourceLfTagsHeaders struct {
@@ -30,7 +30,7 @@ type GetResourceLfTagsResponse struct {
 	AccessDeniedException     *interface{}
 	ContentType               string
 	EntityNotFoundException   *interface{}
-	GetResourceLfTagsResponse *shared.GetResourceLfTagsResponse
+	GetResourceLFTagsResponse *shared.GetResourceLfTagsResponse
 	GlueEncryptionException   *interface{}
 	InternalServiceException  *interface{}
 	InvalidInputException     *interface{}

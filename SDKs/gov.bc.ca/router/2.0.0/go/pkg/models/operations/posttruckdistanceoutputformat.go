@@ -36,7 +36,7 @@ type PostTruckDistanceOutputFormatQueryParams struct {
 	Departure        *time.Time                                     `queryParam:"style=form,explode=true,name=departure"`
 	Disable          *string                                        `queryParam:"style=form,explode=true,name=disable"`
 	DistanceUnit     *PostTruckDistanceOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
-	OutputSrs        *int64                                         `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS        *int64                                         `queryParam:"style=form,explode=true,name=outputSRS"`
 	Points           string                                         `queryParam:"style=form,explode=true,name=points"`
 	RoundTrip        *bool                                          `queryParam:"style=form,explode=true,name=roundTrip"`
 	RouteDescription *string                                        `queryParam:"style=form,explode=true,name=routeDescription"`

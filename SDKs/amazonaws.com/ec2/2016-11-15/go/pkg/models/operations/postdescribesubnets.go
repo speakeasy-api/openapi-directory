@@ -3,13 +3,13 @@ package operations
 type PostDescribeSubnetsActionEnum string
 
 const (
-	PostDescribeSubnetsActionEnumDescribeSubnets PostDescribeSubnetsActionEnum = "DescribeSubnets"
+	POSTDescribeSubnetsActionEnumDescribeSubnets PostDescribeSubnetsActionEnum = "DescribeSubnets"
 )
 
 type PostDescribeSubnetsVersionEnum string
 
 const (
-	PostDescribeSubnetsVersionEnumTwoThousandAndSixteen1115 PostDescribeSubnetsVersionEnum = "2016-11-15"
+	POSTDescribeSubnetsVersionEnumTwoThousandAndSixteen1115 PostDescribeSubnetsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeSubnetsQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,30 +27,30 @@ func main() {
             Option1: &operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListPathParams{
-            Parent: "quo",
+            Parent: "maxime",
         },
         QueryParams: operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "repellat",
-            Fields: "dolorem",
-            Filter: "eligendi",
-            Key: "illum",
-            OauthToken: "quia",
-            PageSize: 8631351793798156607,
-            PageToken: "nihil",
+            DollarXgafv: "1",
+            AccessToken: "et",
+            Alt: "json",
+            Callback: "saepe",
+            Fields: "voluptates",
+            Filter: "amet",
+            Key: "voluptas",
+            OauthToken: "consectetur",
+            PageSize: 9161478771946698252,
+            PageToken: "itaque",
             PrettyPrint: false,
-            QuotaUser: "laudantium",
-            UploadType: "quo",
-            UploadProtocol: "aliquid",
+            QuotaUser: "molestiae",
+            UploadType: "dolores",
+            UploadProtocol: "dolor",
         },
     }
     

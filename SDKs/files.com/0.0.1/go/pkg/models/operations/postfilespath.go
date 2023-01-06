@@ -11,8 +11,8 @@ type PostFilesPathPathParams struct {
 
 type PostFilesPathRequestBody struct {
 	Action        *string    `multipartForm:"name=action"`
-	EtagsEtag     []string   `multipartForm:"name=etags[etag]"`
-	EtagsPart     []int32    `multipartForm:"name=etags[part]"`
+	EtagsEtag     []string   `multipartForm:"name=etags[etag],json"`
+	EtagsPart     []int32    `multipartForm:"name=etags[part],json"`
 	Length        *int32     `multipartForm:"name=length"`
 	MkdirParents  *bool      `multipartForm:"name=mkdir_parents"`
 	Part          *int32     `multipartForm:"name=part"`

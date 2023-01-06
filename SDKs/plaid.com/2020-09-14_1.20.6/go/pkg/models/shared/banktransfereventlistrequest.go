@@ -9,6 +9,7 @@ type BankTransferEventListRequestBankTransferTypeEnum string
 const (
 	BankTransferEventListRequestBankTransferTypeEnumDebit  BankTransferEventListRequestBankTransferTypeEnum = "debit"
 	BankTransferEventListRequestBankTransferTypeEnumCredit BankTransferEventListRequestBankTransferTypeEnum = "credit"
+	BankTransferEventListRequestBankTransferTypeEnumNull   BankTransferEventListRequestBankTransferTypeEnum = "null"
 )
 
 type BankTransferEventListRequestBankTransferDirectionEnum string
@@ -16,6 +17,7 @@ type BankTransferEventListRequestBankTransferDirectionEnum string
 const (
 	BankTransferEventListRequestBankTransferDirectionEnumInbound  BankTransferEventListRequestBankTransferDirectionEnum = "inbound"
 	BankTransferEventListRequestBankTransferDirectionEnumOutbound BankTransferEventListRequestBankTransferDirectionEnum = "outbound"
+	BankTransferEventListRequestBankTransferDirectionEnumNull     BankTransferEventListRequestBankTransferDirectionEnum = "null"
 )
 
 // BankTransferEventListRequest

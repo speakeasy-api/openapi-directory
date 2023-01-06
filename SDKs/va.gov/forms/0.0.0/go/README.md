@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.FindFormByFormNamePathParams{
-            FormName: "qui",
+            FormName: "sint",
         },
     }
     
-    res, err := s.Sdk.FindFormByFormName(ctx, req)
+    res, err := s.Forms.FindFormByFormName(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Forms
 
 * `FindFormByFormName` - Find form by form name
 * `FindForms` - Returns all VA Forms and their last revision date

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.CancelQuantumTaskRequest{
         PathParams: operations.CancelQuantumTaskPathParams{
-            QuantumTaskArn: "minima",
+            QuantumTaskArn: "quisquam",
         },
         Headers: operations.CancelQuantumTaskHeaders{
-            XAmzAlgorithm: "hic",
-            XAmzContentSha256: "cumque",
-            XAmzCredential: "quia",
-            XAmzDate: "quasi",
-            XAmzSecurityToken: "inventore",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "rerum",
+            XAmzAlgorithm: "ipsum",
+            XAmzContentSha256: "dolor",
+            XAmzCredential: "nihil",
+            XAmzDate: "error",
+            XAmzSecurityToken: "sunt",
+            XAmzSignature: "quia",
+            XAmzSignedHeaders: "sed",
         },
         Request: operations.CancelQuantumTaskRequestBody{
-            ClientToken: "nisi",
+            ClientToken: "dolores",
         },
     }
     
-    res, err := s.Sdk.CancelQuantumTask(ctx, req)
+    res, err := s.CancelQuantumTask(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

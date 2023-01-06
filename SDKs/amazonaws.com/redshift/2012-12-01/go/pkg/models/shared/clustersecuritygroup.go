@@ -5,7 +5,7 @@ package shared
 type ClusterSecurityGroup struct {
 	ClusterSecurityGroupName *string
 	Description              *string
-	Ec2SecurityGroups        []Ec2SecurityGroup
-	IPRanges                 []IPRange
-	Tags                     []Tag
+	Ec2SecurityGroups        []map[string]interface{}
+	IPRanges                 []map[string]interface{}
+	Tags                     []map[string]interface{}
 }

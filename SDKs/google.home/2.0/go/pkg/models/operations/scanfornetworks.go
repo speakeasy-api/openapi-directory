@@ -1,7 +1,7 @@
 package operations
 
 type ScanforNetworksResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                       string
+	ScanforNetworks200TextPlainObject *string
+	StatusCode                        int64
 }

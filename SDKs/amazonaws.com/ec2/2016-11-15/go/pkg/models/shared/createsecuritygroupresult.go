@@ -1,6 +1,6 @@
 package shared
 
 type CreateSecurityGroupResult struct {
-	GroupID *string
-	Tags    []Tag
+	GroupID map[string]interface{}
+	Tags    map[string]interface{}
 }

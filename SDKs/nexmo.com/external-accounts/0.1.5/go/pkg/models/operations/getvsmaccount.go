@@ -22,5 +22,5 @@ type GetVsmAccountResponse struct {
 	FourHundredAndOneResponse *shared.FourHundredAndOneResponse
 	ContentType               string
 	StatusCode                int64
-	VsmAccountResponse        *shared.VsmAccountResponse
+	VSMAccountResponse        *shared.VsmAccountResponse
 }

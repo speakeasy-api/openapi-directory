@@ -13,8 +13,8 @@ type PostAccountAccessConsentsHeaders struct {
 }
 
 type PostAccountAccessConsentsRequests struct {
-	ObReadConsent1 *shared.ObReadConsent1 `request:"mediaType=application/json"`
-	ObReadConsent2 *shared.ObReadConsent1 `request:"mediaType=application/json"`
+	OBReadConsent1 *shared.ObReadConsent1 `request:"mediaType=application/json"`
+	OBReadConsent2 *shared.ObReadConsent1 `request:"mediaType=application/json"`
 }
 
 type PostAccountAccessConsentsSecurity struct {
@@ -30,8 +30,7 @@ type PostAccountAccessConsentsRequest struct {
 
 type PostAccountAccessConsentsResponse struct {
 	ContentType            string
-	Headers                map[string][]string
-	ObErrorResponse1       *shared.ObErrorResponse1
-	ObReadConsentResponse1 *shared.ObReadConsentResponse1
+	OBErrorResponse1       *shared.ObErrorResponse1
+	OBReadConsentResponse1 *shared.ObReadConsentResponse1
 	StatusCode             int64
 }

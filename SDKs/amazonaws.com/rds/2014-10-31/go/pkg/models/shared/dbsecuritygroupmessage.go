@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeDBSecurityGroups</code> action.
 type DbSecurityGroupMessage struct {
-	DbSecurityGroups []DbSecurityGroup
-	Marker           *string
+	DBSecurityGroups []map[string]interface{}
+	Marker           map[string]interface{}
 }

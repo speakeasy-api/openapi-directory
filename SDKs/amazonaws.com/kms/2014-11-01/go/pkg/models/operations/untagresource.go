@@ -29,8 +29,8 @@ type UntagResourceRequest struct {
 type UntagResourceResponse struct {
 	ContentType              string
 	InvalidArnException      *interface{}
-	KmsInternalException     *interface{}
-	KmsInvalidStateException *interface{}
+	KMSInternalException     *interface{}
+	KMSInvalidStateException *interface{}
 	NotFoundException        *interface{}
 	StatusCode               int64
 	TagException             *interface{}

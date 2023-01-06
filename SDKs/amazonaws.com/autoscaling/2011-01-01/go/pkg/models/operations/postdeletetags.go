@@ -3,13 +3,13 @@ package operations
 type PostDeleteTagsActionEnum string
 
 const (
-	PostDeleteTagsActionEnumDeleteTags PostDeleteTagsActionEnum = "DeleteTags"
+	POSTDeleteTagsActionEnumDeleteTags PostDeleteTagsActionEnum = "DeleteTags"
 )
 
 type PostDeleteTagsVersionEnum string
 
 const (
-	PostDeleteTagsVersionEnumTwoThousandAndEleven0101 PostDeleteTagsVersionEnum = "2011-01-01"
+	POSTDeleteTagsVersionEnumTwoThousandAndEleven0101 PostDeleteTagsVersionEnum = "2011-01-01"
 )
 
 type PostDeleteTagsQueryParams struct {

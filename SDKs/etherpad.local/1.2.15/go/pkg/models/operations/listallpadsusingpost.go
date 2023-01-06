@@ -31,8 +31,8 @@ type ListAllPadsUsingPost500ApplicationJSON struct {
 type ListAllPadsUsingPostResponse struct {
 	ContentType                                  string
 	StatusCode                                   int64
-	ListAllPadsUsingPost200ApplicationJSONObject *ListAllPadsUsingPost200ApplicationJSON
-	ListAllPadsUsingPost400ApplicationJSONObject *ListAllPadsUsingPost400ApplicationJSON
-	ListAllPadsUsingPost401ApplicationJSONObject *ListAllPadsUsingPost401ApplicationJSON
-	ListAllPadsUsingPost500ApplicationJSONObject *ListAllPadsUsingPost500ApplicationJSON
+	ListAllPadsUsingPOST200ApplicationJSONObject *ListAllPadsUsingPost200ApplicationJSON
+	ListAllPadsUsingPOST400ApplicationJSONObject *ListAllPadsUsingPost400ApplicationJSON
+	ListAllPadsUsingPOST401ApplicationJSONObject *ListAllPadsUsingPost401ApplicationJSON
+	ListAllPadsUsingPOST500ApplicationJSONObject *ListAllPadsUsingPost500ApplicationJSON
 }

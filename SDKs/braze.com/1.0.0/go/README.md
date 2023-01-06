@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,9 +24,9 @@ func main() {
     
     req := operations.CampaignAnalyticsRequest{
         QueryParams: operations.CampaignAnalyticsQueryParams{
-            CampaignID: "consequatur",
-            EndingAt: "veritatis",
-            Length: "officia",
+            CampaignID: "eius",
+            EndingAt: "impedit",
+            Length: "unde",
         },
     }
     

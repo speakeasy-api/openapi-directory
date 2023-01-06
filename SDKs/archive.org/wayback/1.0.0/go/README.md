@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,17 +24,17 @@ func main() {
     
     req := operations.GetWaybackV1AvailableRequest{
         QueryParams: operations.GetWaybackV1AvailableQueryParams{
-            Callback: "ut",
-            Closest: "before",
-            StatusCode: 8742568383646059138,
-            Tag: "et",
-            Timeout: 40.200001,
-            Timestamp: "quibusdam",
-            URL: "minima",
+            Callback: "et",
+            Closest: "after",
+            StatusCode: 4368752525937723844,
+            Tag: "aut",
+            Timeout: 64.199997,
+            Timestamp: "soluta",
+            URL: "ut",
         },
     }
     
-    res, err := s.Sdk.GetWaybackV1Available(ctx, req)
+    res, err := s.GetWaybackV1Available(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

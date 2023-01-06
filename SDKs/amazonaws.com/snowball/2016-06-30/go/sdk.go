@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -141,7 +142,7 @@ func (s *SDK) CancelCluster(ctx context.Context, request operations.CancelCluste
 				return nil, err
 			}
 
-			res.KmsRequestFailedException = out
+			res.KMSRequestFailedException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -243,7 +244,7 @@ func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest
 				return nil, err
 			}
 
-			res.KmsRequestFailedException = out
+			res.KMSRequestFailedException = out
 		}
 	}
 
@@ -387,7 +388,7 @@ func (s *SDK) CreateCluster(ctx context.Context, request operations.CreateCluste
 				return nil, err
 			}
 
-			res.KmsRequestFailedException = out
+			res.KMSRequestFailedException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -479,7 +480,7 @@ func (s *SDK) CreateJob(ctx context.Context, request operations.CreateJobRequest
 				return nil, err
 			}
 
-			res.KmsRequestFailedException = out
+			res.KMSRequestFailedException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1707,7 +1708,7 @@ func (s *SDK) UpdateCluster(ctx context.Context, request operations.UpdateCluste
 				return nil, err
 			}
 
-			res.KmsRequestFailedException = out
+			res.KMSRequestFailedException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1809,7 +1810,7 @@ func (s *SDK) UpdateJob(ctx context.Context, request operations.UpdateJobRequest
 				return nil, err
 			}
 
-			res.KmsRequestFailedException = out
+			res.KMSRequestFailedException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {

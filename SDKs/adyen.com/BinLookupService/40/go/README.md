@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,15 +29,15 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "aut",
+        Request: "et",
     }
     
-    res, err := s.Sdk.PostGet3dsAvailability(ctx, req)
+    res, err := s.General.PostGet3dsAvailability(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ThreeDsAvailabilityResponse != nil {
+    if res.ThreeDSAvailabilityResponse != nil {
         // handle response
     }
 ```
@@ -47,7 +46,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `PostGet3dsAvailability` - Checks 3D Secure availability.
 * `PostGetCostEstimate` - Gets a cost estimate.

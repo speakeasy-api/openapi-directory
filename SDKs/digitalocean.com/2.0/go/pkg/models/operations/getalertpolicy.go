@@ -8,14 +8,14 @@ type GetAlertPolicyPathParams struct {
 	AlertUUID string `pathParam:"style=simple,explode=false,name=alert_uuid"`
 }
 
-type GetAlertPolicyRequest struct {
-	PathParams GetAlertPolicyPathParams
-}
-
 type GetAlertPolicy401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetAlertPolicyRequest struct {
+	PathParams GetAlertPolicyPathParams
 }
 
 type GetAlertPolicyResponse struct {

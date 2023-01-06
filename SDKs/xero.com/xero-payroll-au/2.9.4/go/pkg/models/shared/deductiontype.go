@@ -8,17 +8,6 @@ const (
 	DeductionTypeDeductionCategoryEnumWorkplacegiving DeductionTypeDeductionCategoryEnum = "WORKPLACEGIVING"
 )
 
-type DeductionTypeInput struct {
-	AccountCode       *string                             `json:"AccountCode,omitempty"`
-	CurrentRecord     *bool                               `json:"CurrentRecord,omitempty"`
-	DeductionCategory *DeductionTypeDeductionCategoryEnum `json:"DeductionCategory,omitempty"`
-	DeductionTypeID   *string                             `json:"DeductionTypeID,omitempty"`
-	IsExemptFromW1    *bool                               `json:"IsExemptFromW1,omitempty"`
-	Name              *string                             `json:"Name,omitempty"`
-	ReducesSuper      *bool                               `json:"ReducesSuper,omitempty"`
-	ReducesTax        *bool                               `json:"ReducesTax,omitempty"`
-}
-
 type DeductionType struct {
 	AccountCode       *string                             `json:"AccountCode,omitempty"`
 	CurrentRecord     *bool                               `json:"CurrentRecord,omitempty"`
@@ -28,5 +17,16 @@ type DeductionType struct {
 	Name              *string                             `json:"Name,omitempty"`
 	ReducesSuper      *bool                               `json:"ReducesSuper,omitempty"`
 	ReducesTax        *bool                               `json:"ReducesTax,omitempty"`
-	UpdatedDateUtc    *string                             `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC    *string                             `json:"UpdatedDateUTC,omitempty"`
+}
+
+type DeductionTypeInput struct {
+	AccountCode       *string                             `json:"AccountCode,omitempty"`
+	CurrentRecord     *bool                               `json:"CurrentRecord,omitempty"`
+	DeductionCategory *DeductionTypeDeductionCategoryEnum `json:"DeductionCategory,omitempty"`
+	DeductionTypeID   *string                             `json:"DeductionTypeID,omitempty"`
+	IsExemptFromW1    *bool                               `json:"IsExemptFromW1,omitempty"`
+	Name              *string                             `json:"Name,omitempty"`
+	ReducesSuper      *bool                               `json:"ReducesSuper,omitempty"`
+	ReducesTax        *bool                               `json:"ReducesTax,omitempty"`
 }

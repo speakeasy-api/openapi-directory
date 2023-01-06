@@ -3,19 +3,19 @@ package operations
 type GetDeleteDbClusterActionEnum string
 
 const (
-	GetDeleteDbClusterActionEnumDeleteDbCluster GetDeleteDbClusterActionEnum = "DeleteDBCluster"
+	GETDeleteDBClusterActionEnumDeleteDbCluster GetDeleteDbClusterActionEnum = "DeleteDBCluster"
 )
 
 type GetDeleteDbClusterVersionEnum string
 
 const (
-	GetDeleteDbClusterVersionEnumTwoThousandAndFourteen1031 GetDeleteDbClusterVersionEnum = "2014-10-31"
+	GETDeleteDBClusterVersionEnumTwoThousandAndFourteen1031 GetDeleteDbClusterVersionEnum = "2014-10-31"
 )
 
 type GetDeleteDbClusterQueryParams struct {
 	Action                    GetDeleteDbClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterIdentifier       string                        `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
-	FinalDbSnapshotIdentifier *string                       `queryParam:"style=form,explode=true,name=FinalDBSnapshotIdentifier"`
+	DBClusterIdentifier       string                        `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
+	FinalDBSnapshotIdentifier *string                       `queryParam:"style=form,explode=true,name=FinalDBSnapshotIdentifier"`
 	SkipFinalSnapshot         *bool                         `queryParam:"style=form,explode=true,name=SkipFinalSnapshot"`
 	Version                   GetDeleteDbClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

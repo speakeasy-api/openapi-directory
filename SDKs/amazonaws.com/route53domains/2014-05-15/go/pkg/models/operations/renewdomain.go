@@ -33,6 +33,6 @@ type RenewDomainResponse struct {
 	OperationLimitExceeded *interface{}
 	RenewDomainResponse    *shared.RenewDomainResponse
 	StatusCode             int64
-	TldRulesViolation      *interface{}
-	UnsupportedTld         *interface{}
+	TLDRulesViolation      *interface{}
+	UnsupportedTLD         *interface{}
 }

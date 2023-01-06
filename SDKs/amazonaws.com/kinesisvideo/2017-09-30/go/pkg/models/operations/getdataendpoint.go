@@ -28,7 +28,7 @@ const (
 
 type GetDataEndpointRequestBody struct {
 	APIName    GetDataEndpointRequestBodyAPINameEnum `json:"APIName"`
-	StreamArn  *string                               `json:"StreamARN,omitempty"`
+	StreamARN  *string                               `json:"StreamARN,omitempty"`
 	StreamName *string                               `json:"StreamName,omitempty"`
 }
 

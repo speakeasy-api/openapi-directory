@@ -39,6 +39,6 @@ type PostAdminNearMissesRequestPatternRequest struct {
 
 type PostAdminNearMissesRequestPatternResponse struct {
 	ContentType                                               string
-	PostAdminNearMissesRequestPattern200ApplicationJSONObject *PostAdminNearMissesRequestPattern200ApplicationJSON
 	StatusCode                                                int64
+	PostAdminNearMissesRequestPattern200ApplicationJSONObject *PostAdminNearMissesRequestPattern200ApplicationJSON
 }

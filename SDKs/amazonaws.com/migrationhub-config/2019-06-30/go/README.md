@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,26 @@ func main() {
     
     req := operations.CreateHomeRegionControlRequest{
         Headers: operations.CreateHomeRegionControlHeaders{
-            XAmzAlgorithm: "accusantium",
-            XAmzContentSha256: "non",
+            XAmzAlgorithm: "totam",
+            XAmzContentSha256: "sit",
             XAmzCredential: "et",
-            XAmzDate: "molestias",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "deserunt",
-            XAmzSignedHeaders: "amet",
+            XAmzDate: "et",
+            XAmzSecurityToken: "praesentium",
+            XAmzSignature: "voluptates",
+            XAmzSignedHeaders: "inventore",
             XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
         },
         Request: shared.CreateHomeRegionControlRequest{
-            DryRun: false,
-            HomeRegion: "et",
+            DryRun: true,
+            HomeRegion: "facere",
             Target: shared.Target{
-                ID: "dolorem",
+                ID: "numquam",
                 Type: "ACCOUNT",
             },
         },
     }
     
-    res, err := s.Sdk.CreateHomeRegionControl(ctx, req)
+    res, err := s.CreateHomeRegionControl(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

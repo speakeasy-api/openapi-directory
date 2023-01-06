@@ -3,19 +3,19 @@ package operations
 type GetModifyDbProxyEndpointActionEnum string
 
 const (
-	GetModifyDbProxyEndpointActionEnumModifyDbProxyEndpoint GetModifyDbProxyEndpointActionEnum = "ModifyDBProxyEndpoint"
+	GETModifyDBProxyEndpointActionEnumModifyDbProxyEndpoint GetModifyDbProxyEndpointActionEnum = "ModifyDBProxyEndpoint"
 )
 
 type GetModifyDbProxyEndpointVersionEnum string
 
 const (
-	GetModifyDbProxyEndpointVersionEnumTwoThousandAndFourteen1031 GetModifyDbProxyEndpointVersionEnum = "2014-10-31"
+	GETModifyDBProxyEndpointVersionEnumTwoThousandAndFourteen1031 GetModifyDbProxyEndpointVersionEnum = "2014-10-31"
 )
 
 type GetModifyDbProxyEndpointQueryParams struct {
 	Action                 GetModifyDbProxyEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbProxyEndpointName    string                              `queryParam:"style=form,explode=true,name=DBProxyEndpointName"`
-	NewDbProxyEndpointName *string                             `queryParam:"style=form,explode=true,name=NewDBProxyEndpointName"`
+	DBProxyEndpointName    string                              `queryParam:"style=form,explode=true,name=DBProxyEndpointName"`
+	NewDBProxyEndpointName *string                             `queryParam:"style=form,explode=true,name=NewDBProxyEndpointName"`
 	Version                GetModifyDbProxyEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	VpcSecurityGroupIds    []string                            `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
 }

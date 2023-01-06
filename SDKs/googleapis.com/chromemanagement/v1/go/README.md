@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,30 @@ func main() {
         Security: operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ChromemanagementCustomersAppsCountChromeAppRequestsPathParams{
-            Customer: "vel",
+            Customer: "aut",
         },
         QueryParams: operations.ChromemanagementCustomersAppsCountChromeAppRequestsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "esse",
+            DollarXgafv: "2",
+            AccessToken: "et",
             Alt: "json",
-            Callback: "ab",
-            Fields: "vitae",
-            Key: "labore",
-            OauthToken: "nemo",
-            OrderBy: "atque",
-            OrgUnitID: "vel",
-            PageSize: 5104981729836945890,
-            PageToken: "nostrum",
-            PrettyPrint: true,
-            QuotaUser: "in",
-            UploadType: "recusandae",
-            UploadProtocol: "ut",
+            Callback: "praesentium",
+            Fields: "aliquid",
+            Key: "eligendi",
+            OauthToken: "repellendus",
+            OrderBy: "repudiandae",
+            OrgUnitID: "ab",
+            PageSize: 6670278064183390255,
+            PageToken: "explicabo",
+            PrettyPrint: false,
+            QuotaUser: "veritatis",
+            UploadType: "facilis",
+            UploadProtocol: "sit",
         },
     }
     
@@ -79,6 +78,7 @@ func main() {
 * `ChromemanagementCustomersReportsFindInstalledAppDevices` - Generate report of devices that have a specified app installed.
 * `ChromemanagementCustomersTelemetryDevicesGet` - Get telemetry device.
 * `ChromemanagementCustomersTelemetryDevicesList` - List all telemetry devices.
+* `ChromemanagementCustomersTelemetryEventsList` - List telemetry events.
 
 <!-- End SDK Available Operations -->
 

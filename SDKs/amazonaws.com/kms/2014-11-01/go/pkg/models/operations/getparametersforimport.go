@@ -31,8 +31,8 @@ type GetParametersForImportResponse struct {
 	DependencyTimeoutException     *interface{}
 	GetParametersForImportResponse *shared.GetParametersForImportResponse
 	InvalidArnException            *interface{}
-	KmsInternalException           *interface{}
-	KmsInvalidStateException       *interface{}
+	KMSInternalException           *interface{}
+	KMSInvalidStateException       *interface{}
 	NotFoundException              *interface{}
 	StatusCode                     int64
 	UnsupportedOperationException  *interface{}

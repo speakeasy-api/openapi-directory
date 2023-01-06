@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVpcClassicLinkDNSSupportResult struct {
-	NextToken *string
-	Vpcs      []ClassicLinkDNSSupport
+	NextToken map[string]interface{}
+	Vpcs      map[string]interface{}
 }

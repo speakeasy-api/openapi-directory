@@ -7,7 +7,7 @@ import (
 type CreateAclxAmzTargetEnum string
 
 const (
-	CreateAclxAmzTargetEnumAmazonMemoryDbCreateACL CreateAclxAmzTargetEnum = "AmazonMemoryDB.CreateACL"
+	CreateACLXAmzTargetEnumAmazonMemoryDbCreateACL CreateAclxAmzTargetEnum = "AmazonMemoryDB.CreateACL"
 )
 
 type CreateACLHeaders struct {

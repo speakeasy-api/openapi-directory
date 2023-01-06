@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.AgcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AgcerRequestBody{
             CertificateParameters: &operations.AgcerRequestBodyCertificateParameters{
-                Name: "enim",
-                RefNo: "minima",
+                Name: "beatae",
+                RefNo: "quae",
             },
-            ConsentArtifact: "incidunt",
+            ConsentArtifact: "ut",
             Format: "pdf",
-            TxnID: "autem",
+            TxnID: "maxime",
         },
     }
     
-    res, err := s.Sdk.Agcer(ctx, req)
+    res, err := s.APIs.Agcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Agcer` - Agriculture/ Agriculturist Certificate
 * `Bacer` - Backward Area Certificate

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeLaunchTemplateVersionsResult struct {
-	LaunchTemplateVersions []LaunchTemplateVersion
-	NextToken              *string
+	LaunchTemplateVersions map[string]interface{}
+	NextToken              map[string]interface{}
 }

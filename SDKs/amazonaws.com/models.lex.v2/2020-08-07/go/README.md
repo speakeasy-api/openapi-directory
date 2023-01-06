@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.BuildBotLocaleRequest{
         PathParams: operations.BuildBotLocalePathParams{
-            BotID: "ea",
-            BotVersion: "voluptate",
-            LocaleID: "et",
+            BotID: "voluptatem",
+            BotVersion: "tempore",
+            LocaleID: "est",
         },
         Headers: operations.BuildBotLocaleHeaders{
-            XAmzAlgorithm: "consequatur",
-            XAmzContentSha256: "aliquam",
-            XAmzCredential: "molestiae",
-            XAmzDate: "repellat",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "necessitatibus",
-            XAmzSignedHeaders: "deserunt",
+            XAmzAlgorithm: "molestias",
+            XAmzContentSha256: "ab",
+            XAmzCredential: "voluptas",
+            XAmzDate: "facilis",
+            XAmzSecurityToken: "quis",
+            XAmzSignature: "sunt",
+            XAmzSignedHeaders: "quis",
         },
     }
     
-    res, err := s.Sdk.BuildBotLocale(ctx, req)
+    res, err := s.BuildBotLocale(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

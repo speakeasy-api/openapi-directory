@@ -8,7 +8,7 @@ type GameWeather struct {
 	HomeTeam             *string  `json:"homeTeam,omitempty"`
 	Humidity             *float64 `json:"humidity,omitempty"`
 	ID                   *int64   `json:"id,omitempty"`
-	IsStartTimeTbd       *bool    `json:"isStartTimeTBD,omitempty"`
+	IsStartTimeTBD       *bool    `json:"isStartTimeTBD,omitempty"`
 	Precipitation        *float64 `json:"precipitation,omitempty"`
 	Pressure             *float64 `json:"pressure,omitempty"`
 	Season               *int64   `json:"season,omitempty"`

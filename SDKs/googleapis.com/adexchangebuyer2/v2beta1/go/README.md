@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,37 +26,37 @@ func main() {
         Security: operations.Adexchangebuyer2AccountsClientsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.Adexchangebuyer2AccountsClientsCreatePathParams{
-            AccountID: "ab",
+            AccountID: "qui",
         },
         QueryParams: operations.Adexchangebuyer2AccountsClientsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "non",
-            Alt: "proto",
-            Callback: "molestias",
-            Fields: "possimus",
-            Key: "non",
-            OauthToken: "id",
+            DollarXgafv: "2",
+            AccessToken: "error",
+            Alt: "media",
+            Callback: "quis",
+            Fields: "autem",
+            Key: "ratione",
+            OauthToken: "illo",
             PrettyPrint: false,
-            QuotaUser: "veritatis",
-            UploadType: "sapiente",
-            UploadProtocol: "ducimus",
+            QuotaUser: "cumque",
+            UploadType: "aut",
+            UploadProtocol: "eveniet",
         },
         Request: &shared.Client{
-            ClientAccountID: "qui",
-            ClientName: "dolore",
-            EntityID: "explicabo",
-            EntityName: "suscipit",
-            EntityType: "AGENCY",
-            PartnerClientID: "et",
-            Role: "CLIENT_DEAL_VIEWER",
-            Status: "ACTIVE",
-            VisibleToSeller: true,
+            ClientAccountID: "animi",
+            ClientName: "minus",
+            EntityID: "laudantium",
+            EntityName: "rerum",
+            EntityType: "ENTITY_TYPE_UNCLASSIFIED",
+            PartnerClientID: "qui",
+            Role: "CLIENT_DEAL_APPROVER",
+            Status: "CLIENT_STATUS_UNSPECIFIED",
+            VisibleToSeller: false,
         },
     }
     

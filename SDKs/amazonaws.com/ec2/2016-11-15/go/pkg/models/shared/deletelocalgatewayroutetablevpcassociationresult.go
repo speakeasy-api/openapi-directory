@@ -1,5 +1,5 @@
 package shared
 
 type DeleteLocalGatewayRouteTableVpcAssociationResult struct {
-	LocalGatewayRouteTableVpcAssociation *LocalGatewayRouteTableVpcAssociation
+	LocalGatewayRouteTableVpcAssociation map[string]interface{}
 }

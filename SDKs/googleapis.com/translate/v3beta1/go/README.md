@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,72 +26,68 @@ func main() {
         Security: operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "perferendis",
+            Parent: "omnis",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
             DollarXgafv: "1",
-            AccessToken: "omnis",
-            Alt: "media",
-            Callback: "veniam",
-            Fields: "officiis",
-            Key: "aliquam",
-            OauthToken: "at",
+            AccessToken: "illum",
+            Alt: "json",
+            Callback: "nihil",
+            Fields: "voluptatem",
+            Key: "qui",
+            OauthToken: "et",
             PrettyPrint: true,
-            QuotaUser: "qui",
-            UploadType: "quasi",
-            UploadProtocol: "nulla",
+            QuotaUser: "dolore",
+            UploadType: "minima",
+            UploadProtocol: "sed",
         },
         Request: &shared.BatchTranslateDocumentRequest{
             FormatConversions: map[string]string{
-                "minima": "aperiam",
-                "quos": "quae",
+                "quia": "ut",
+                "enim": "in",
+                "dolorum": "exercitationem",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "dicta": shared.TranslateTextGlossaryConfig{
-                    Glossary: "voluptatem",
+                "porro": shared.TranslateTextGlossaryConfig{
+                    Glossary: "omnis",
                     IgnoreCase: false,
                 },
-                "suscipit": shared.TranslateTextGlossaryConfig{
-                    Glossary: "et",
-                    IgnoreCase: false,
+                "est": shared.TranslateTextGlossaryConfig{
+                    Glossary: "voluptas",
+                    IgnoreCase: true,
+                },
+                "cum": shared.TranslateTextGlossaryConfig{
+                    Glossary: "quis",
+                    IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "dolorem",
-                    },
-                },
-                shared.BatchDocumentInputConfig{
-                    GcsSource: &shared.GcsSource{
-                        InputURI: "qui",
-                    },
-                },
-                shared.BatchDocumentInputConfig{
-                    GcsSource: &shared.GcsSource{
-                        InputURI: "sed",
+                        InputURI: "et",
                     },
                 },
             },
             Models: map[string]string{
-                "rerum": "ut",
-                "tempore": "eligendi",
-                "possimus": "quos",
+                "qui": "blanditiis",
+                "ut": "occaecati",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "eos",
+                    OutputURIPrefix: "ut",
                 },
             },
-            SourceLanguageCode: "veniam",
+            SourceLanguageCode: "soluta",
             TargetLanguageCodes: []string{
-                "beatae",
+                "ut",
+                "consequatur",
+                "placeat",
             },
         },
     }

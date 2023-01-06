@@ -7,13 +7,13 @@ import (
 type GetModifyTrafficMirrorSessionActionEnum string
 
 const (
-	GetModifyTrafficMirrorSessionActionEnumModifyTrafficMirrorSession GetModifyTrafficMirrorSessionActionEnum = "ModifyTrafficMirrorSession"
+	GETModifyTrafficMirrorSessionActionEnumModifyTrafficMirrorSession GetModifyTrafficMirrorSessionActionEnum = "ModifyTrafficMirrorSession"
 )
 
 type GetModifyTrafficMirrorSessionVersionEnum string
 
 const (
-	GetModifyTrafficMirrorSessionVersionEnumTwoThousandAndSixteen1115 GetModifyTrafficMirrorSessionVersionEnum = "2016-11-15"
+	GETModifyTrafficMirrorSessionVersionEnumTwoThousandAndSixteen1115 GetModifyTrafficMirrorSessionVersionEnum = "2016-11-15"
 )
 
 type GetModifyTrafficMirrorSessionQueryParams struct {

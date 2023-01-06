@@ -1,5 +1,5 @@
 package shared
 
 type DisableVpcClassicLinkResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

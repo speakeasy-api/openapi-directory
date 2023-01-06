@@ -32,7 +32,7 @@ type UpdateApnsVoipChannelRequestBodyApnsVoipChannelRequest struct {
 }
 
 type UpdateApnsVoipChannelRequestBody struct {
-	ApnsVoipChannelRequest UpdateApnsVoipChannelRequestBodyApnsVoipChannelRequest `json:"APNSVoipChannelRequest"`
+	APNSVoipChannelRequest UpdateApnsVoipChannelRequestBodyApnsVoipChannelRequest `json:"APNSVoipChannelRequest"`
 }
 
 type UpdateApnsVoipChannelRequest struct {

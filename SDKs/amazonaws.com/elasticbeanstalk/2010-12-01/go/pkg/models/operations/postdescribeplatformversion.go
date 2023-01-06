@@ -3,13 +3,13 @@ package operations
 type PostDescribePlatformVersionActionEnum string
 
 const (
-	PostDescribePlatformVersionActionEnumDescribePlatformVersion PostDescribePlatformVersionActionEnum = "DescribePlatformVersion"
+	POSTDescribePlatformVersionActionEnumDescribePlatformVersion PostDescribePlatformVersionActionEnum = "DescribePlatformVersion"
 )
 
 type PostDescribePlatformVersionVersionEnum string
 
 const (
-	PostDescribePlatformVersionVersionEnumTwoThousandAndTen1201 PostDescribePlatformVersionVersionEnum = "2010-12-01"
+	POSTDescribePlatformVersionVersionEnumTwoThousandAndTen1201 PostDescribePlatformVersionVersionEnum = "2010-12-01"
 )
 
 type PostDescribePlatformVersionQueryParams struct {

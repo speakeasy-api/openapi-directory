@@ -10,10 +10,6 @@ type ListAppsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
-type ListAppsRequest struct {
-	QueryParams ListAppsQueryParams
-}
-
 type ListApps200ApplicationJSONAppsDomainsPhaseEnum string
 
 const (
@@ -46,6 +42,8 @@ type ListApps200ApplicationJSONAppsGeographicalInformationAboutAnAppOrigin struc
 	Slug        *string  `json:"slug,omitempty"`
 }
 
+// ListApps200ApplicationJSONApps
+// An application's configuration and status.
 type ListApps200ApplicationJSONApps struct {
 	ActiveDeployment        *shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItems              `json:"active_deployment,omitempty"`
 	CreatedAt               *time.Time                                                                                                                                `json:"created_at,omitempty"`
@@ -74,6 +72,10 @@ type ListApps401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListAppsRequest struct {
+	QueryParams ListAppsQueryParams
 }
 
 type ListAppsResponse struct {

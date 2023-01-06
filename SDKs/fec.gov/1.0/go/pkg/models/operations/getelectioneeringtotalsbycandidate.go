@@ -23,6 +23,6 @@ type GetElectioneeringTotalsByCandidateRequest struct {
 
 type GetElectioneeringTotalsByCandidateResponse struct {
 	ContentType             string
-	EcTotalsByCandidatePage *shared.EcTotalsByCandidatePage
+	ECTotalsByCandidatePage *shared.EcTotalsByCandidatePage
 	StatusCode              int64
 }

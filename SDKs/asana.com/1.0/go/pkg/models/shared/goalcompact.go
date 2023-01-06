@@ -1,14 +1,8 @@
 package shared
 
-type GoalCompactOwner struct {
-	Gid          *string `json:"gid,omitempty"`
-	Name         *string `json:"name,omitempty"`
-	ResourceType *string `json:"resource_type,omitempty"`
-}
-
+// GoalCompact
+// A generic Asana Resource, containing a globally unique identifier.
 type GoalCompact struct {
-	Gid          *string           `json:"gid,omitempty"`
-	Name         *string           `json:"name,omitempty"`
-	Owner        *GoalCompactOwner `json:"owner,omitempty"`
-	ResourceType *string           `json:"resource_type,omitempty"`
+	Name  *string                `json:"name,omitempty"`
+	Owner map[string]interface{} `json:"owner,omitempty"`
 }

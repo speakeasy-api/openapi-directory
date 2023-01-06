@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Organizations struct {
@@ -198,6 +198,55 @@ func (s *Organizations) AssuredworkloadsOrganizationsLocationsWorkloadsList(ctx 
 			}
 
 			res.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
+func (s *Organizations) AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:mutatePartnerPermissions", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudAssuredworkloadsV1Workload
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudAssuredworkloadsV1Workload = out
 		}
 	}
 

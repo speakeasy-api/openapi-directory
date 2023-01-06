@@ -7,8 +7,8 @@ import (
 type ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnumAny    ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnumSingle ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnumAny    ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnumSingle ObWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteFileConsentResponse4DataAuthorisation
@@ -60,11 +60,11 @@ type ObWriteFileConsentResponse4DataInitiation struct {
 type ObWriteFileConsentResponse4DataStatusEnum string
 
 const (
-	ObWriteFileConsentResponse4DataStatusEnumAuthorised            ObWriteFileConsentResponse4DataStatusEnum = "Authorised"
-	ObWriteFileConsentResponse4DataStatusEnumAwaitingAuthorisation ObWriteFileConsentResponse4DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteFileConsentResponse4DataStatusEnumAwaitingUpload        ObWriteFileConsentResponse4DataStatusEnum = "AwaitingUpload"
-	ObWriteFileConsentResponse4DataStatusEnumConsumed              ObWriteFileConsentResponse4DataStatusEnum = "Consumed"
-	ObWriteFileConsentResponse4DataStatusEnumRejected              ObWriteFileConsentResponse4DataStatusEnum = "Rejected"
+	OBWriteFileConsentResponse4DataStatusEnumAuthorised            ObWriteFileConsentResponse4DataStatusEnum = "Authorised"
+	OBWriteFileConsentResponse4DataStatusEnumAwaitingAuthorisation ObWriteFileConsentResponse4DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteFileConsentResponse4DataStatusEnumAwaitingUpload        ObWriteFileConsentResponse4DataStatusEnum = "AwaitingUpload"
+	OBWriteFileConsentResponse4DataStatusEnumConsumed              ObWriteFileConsentResponse4DataStatusEnum = "Consumed"
+	OBWriteFileConsentResponse4DataStatusEnumRejected              ObWriteFileConsentResponse4DataStatusEnum = "Rejected"
 )
 
 type ObWriteFileConsentResponse4Data struct {
@@ -75,7 +75,7 @@ type ObWriteFileConsentResponse4Data struct {
 	CutOffDateTime       *time.Time                                    `json:"CutOffDateTime,omitempty"`
 	Debtor               *ObCashAccountDebtor4                         `json:"Debtor,omitempty"`
 	Initiation           ObWriteFileConsentResponse4DataInitiation     `json:"Initiation"`
-	ScaSupportData       *ObscaSupportData1                            `json:"SCASupportData,omitempty"`
+	SCASupportData       *ObscaSupportData1                            `json:"SCASupportData,omitempty"`
 	Status               ObWriteFileConsentResponse4DataStatusEnum     `json:"Status"`
 	StatusUpdateDateTime time.Time                                     `json:"StatusUpdateDateTime"`
 }

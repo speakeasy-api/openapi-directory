@@ -7,7 +7,7 @@ import (
 type CreateWebAclxAmzTargetEnum string
 
 const (
-	CreateWebAclxAmzTargetEnumAwswafRegional20161128CreateWebACL CreateWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.CreateWebACL"
+	CreateWebACLXAmzTargetEnumAwswafRegional20161128CreateWebACL CreateWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.CreateWebACL"
 )
 
 type CreateWebACLHeaders struct {
@@ -30,13 +30,13 @@ type CreateWebACLResponse struct {
 	ContentType                           string
 	CreateWebACLResponse                  *shared.CreateWebACLResponse
 	StatusCode                            int64
-	WafBadRequestException                *interface{}
-	WafDisallowedNameException            *interface{}
-	WafInternalErrorException             *interface{}
-	WafInvalidAccountException            *interface{}
-	WafInvalidParameterException          *interface{}
-	WafLimitsExceededException            *interface{}
-	WafStaleDataException                 *interface{}
-	WafTagOperationException              *interface{}
-	WafTagOperationInternalErrorException *interface{}
+	WAFBadRequestException                *interface{}
+	WAFDisallowedNameException            *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidAccountException            *interface{}
+	WAFInvalidParameterException          *interface{}
+	WAFLimitsExceededException            *interface{}
+	WAFStaleDataException                 *interface{}
+	WAFTagOperationException              *interface{}
+	WAFTagOperationInternalErrorException *interface{}
 }

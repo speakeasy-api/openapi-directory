@@ -3,20 +3,20 @@ package operations
 type GetUpdateServiceSpecificCredentialActionEnum string
 
 const (
-	GetUpdateServiceSpecificCredentialActionEnumUpdateServiceSpecificCredential GetUpdateServiceSpecificCredentialActionEnum = "UpdateServiceSpecificCredential"
+	GETUpdateServiceSpecificCredentialActionEnumUpdateServiceSpecificCredential GetUpdateServiceSpecificCredentialActionEnum = "UpdateServiceSpecificCredential"
 )
 
 type GetUpdateServiceSpecificCredentialStatusEnum string
 
 const (
-	GetUpdateServiceSpecificCredentialStatusEnumActive   GetUpdateServiceSpecificCredentialStatusEnum = "Active"
-	GetUpdateServiceSpecificCredentialStatusEnumInactive GetUpdateServiceSpecificCredentialStatusEnum = "Inactive"
+	GETUpdateServiceSpecificCredentialStatusEnumActive   GetUpdateServiceSpecificCredentialStatusEnum = "Active"
+	GETUpdateServiceSpecificCredentialStatusEnumInactive GetUpdateServiceSpecificCredentialStatusEnum = "Inactive"
 )
 
 type GetUpdateServiceSpecificCredentialVersionEnum string
 
 const (
-	GetUpdateServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GetUpdateServiceSpecificCredentialVersionEnum = "2010-05-08"
+	GETUpdateServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GetUpdateServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
 type GetUpdateServiceSpecificCredentialQueryParams struct {

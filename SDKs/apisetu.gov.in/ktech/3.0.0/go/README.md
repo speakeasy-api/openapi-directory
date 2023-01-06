@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.CocerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.CocerRequestBody{
             CertificateParameters: &operations.CocerRequestBodyCertificateParameters{
-                CertType: "aliquam",
-                CompanyName: "pariatur",
-                RegNo: "at",
-                Sector: "id",
+                CertType: "dicta",
+                CompanyName: "optio",
+                RegNo: "aut",
+                Sector: "eum",
             },
-            ConsentArtifact: "quidem",
+            ConsentArtifact: "error",
             Format: "pdf",
-            TxnID: "tempora",
+            TxnID: "corrupti",
         },
     }
     
-    res, err := s.Sdk.Cocer(ctx, req)
+    res, err := s.APIs.Cocer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Cocer` - Company Related Certificate
 * `Rfcer` - Registration Certificate of Firm/ Company

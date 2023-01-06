@@ -15,11 +15,11 @@ type ObRisk1DeliveryAddress struct {
 type ObRisk1PaymentContextCodeEnum string
 
 const (
-	ObRisk1PaymentContextCodeEnumBillPayment       ObRisk1PaymentContextCodeEnum = "BillPayment"
-	ObRisk1PaymentContextCodeEnumEcommerceGoods    ObRisk1PaymentContextCodeEnum = "EcommerceGoods"
-	ObRisk1PaymentContextCodeEnumEcommerceServices ObRisk1PaymentContextCodeEnum = "EcommerceServices"
-	ObRisk1PaymentContextCodeEnumOther             ObRisk1PaymentContextCodeEnum = "Other"
-	ObRisk1PaymentContextCodeEnumPartyToParty      ObRisk1PaymentContextCodeEnum = "PartyToParty"
+	OBRisk1PaymentContextCodeEnumBillPayment       ObRisk1PaymentContextCodeEnum = "BillPayment"
+	OBRisk1PaymentContextCodeEnumEcommerceGoods    ObRisk1PaymentContextCodeEnum = "EcommerceGoods"
+	OBRisk1PaymentContextCodeEnumEcommerceServices ObRisk1PaymentContextCodeEnum = "EcommerceServices"
+	OBRisk1PaymentContextCodeEnumOther             ObRisk1PaymentContextCodeEnum = "Other"
+	OBRisk1PaymentContextCodeEnumPartyToParty      ObRisk1PaymentContextCodeEnum = "PartyToParty"
 )
 
 // ObRisk1

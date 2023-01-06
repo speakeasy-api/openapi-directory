@@ -19,6 +19,6 @@ type GetCiscoSwitchSnmpConfigRequest struct {
 
 type GetCiscoSwitchSnmpConfigResponse struct {
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

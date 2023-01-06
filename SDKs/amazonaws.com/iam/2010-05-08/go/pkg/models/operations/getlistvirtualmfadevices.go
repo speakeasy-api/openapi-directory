@@ -3,21 +3,21 @@ package operations
 type GetListVirtualMfaDevicesActionEnum string
 
 const (
-	GetListVirtualMfaDevicesActionEnumListVirtualMfaDevices GetListVirtualMfaDevicesActionEnum = "ListVirtualMFADevices"
+	GETListVirtualMFADevicesActionEnumListVirtualMfaDevices GetListVirtualMfaDevicesActionEnum = "ListVirtualMFADevices"
 )
 
 type GetListVirtualMfaDevicesAssignmentStatusEnum string
 
 const (
-	GetListVirtualMfaDevicesAssignmentStatusEnumAssigned   GetListVirtualMfaDevicesAssignmentStatusEnum = "Assigned"
-	GetListVirtualMfaDevicesAssignmentStatusEnumUnassigned GetListVirtualMfaDevicesAssignmentStatusEnum = "Unassigned"
-	GetListVirtualMfaDevicesAssignmentStatusEnumAny        GetListVirtualMfaDevicesAssignmentStatusEnum = "Any"
+	GETListVirtualMFADevicesAssignmentStatusEnumAssigned   GetListVirtualMfaDevicesAssignmentStatusEnum = "Assigned"
+	GETListVirtualMFADevicesAssignmentStatusEnumUnassigned GetListVirtualMfaDevicesAssignmentStatusEnum = "Unassigned"
+	GETListVirtualMFADevicesAssignmentStatusEnumAny        GetListVirtualMfaDevicesAssignmentStatusEnum = "Any"
 )
 
 type GetListVirtualMfaDevicesVersionEnum string
 
 const (
-	GetListVirtualMfaDevicesVersionEnumTwoThousandAndTen0508 GetListVirtualMfaDevicesVersionEnum = "2010-05-08"
+	GETListVirtualMFADevicesVersionEnumTwoThousandAndTen0508 GetListVirtualMfaDevicesVersionEnum = "2010-05-08"
 )
 
 type GetListVirtualMfaDevicesQueryParams struct {

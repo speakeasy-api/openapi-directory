@@ -33,6 +33,6 @@ type ConnectCustomKeyStoreResponse struct {
 	ContentType                                  string
 	CustomKeyStoreInvalidStateException          *interface{}
 	CustomKeyStoreNotFoundException              *interface{}
-	KmsInternalException                         *interface{}
+	KMSInternalException                         *interface{}
 	StatusCode                                   int64
 }

@@ -4,20 +4,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListPublicKeysSortEnum string
-
-const (
-	EnterpriseAdminListPublicKeysSortEnumCreated  EnterpriseAdminListPublicKeysSortEnum = "created"
-	EnterpriseAdminListPublicKeysSortEnumUpdated  EnterpriseAdminListPublicKeysSortEnum = "updated"
-	EnterpriseAdminListPublicKeysSortEnumAccessed EnterpriseAdminListPublicKeysSortEnum = "accessed"
-)
-
 type EnterpriseAdminListPublicKeysQueryParams struct {
-	Direction *shared.DirectionEnum                  `queryParam:"style=form,explode=true,name=direction"`
-	Page      *int64                                 `queryParam:"style=form,explode=true,name=page"`
-	PerPage   *int64                                 `queryParam:"style=form,explode=true,name=per_page"`
-	Since     *string                                `queryParam:"style=form,explode=true,name=since"`
-	Sort      *EnterpriseAdminListPublicKeysSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	Direction *shared.DirectionEnum  `queryParam:"style=form,explode=true,name=direction"`
+	Page      *int64                 `queryParam:"style=form,explode=true,name=page"`
+	PerPage   *int64                 `queryParam:"style=form,explode=true,name=per_page"`
+	Since     *string                `queryParam:"style=form,explode=true,name=since"`
+	Sort      *shared.DirectionEnum1 `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type EnterpriseAdminListPublicKeysRequest struct {

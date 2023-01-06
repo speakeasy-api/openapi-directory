@@ -16,5 +16,5 @@ type ResendFailedIpnRequest struct {
 type ResendFailedIpnResponse struct {
 	ContentType     string
 	StatusCode      int64
-	ResendFailedIpn *shared.ResendFailedIpn
+	ResendFailedIPN *shared.ResendFailedIpn
 }

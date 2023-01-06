@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,509 +26,220 @@ func main() {
         Security: operations.GkehubProjectsLocationsFeaturesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.GkehubProjectsLocationsFeaturesCreatePathParams{
-            Parent: "rerum",
+            Parent: "quia",
         },
         QueryParams: operations.GkehubProjectsLocationsFeaturesCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "delectus",
-            Alt: "json",
-            Callback: "assumenda",
-            FeatureID: "fugiat",
-            Fields: "sed",
-            Key: "aperiam",
-            OauthToken: "vel",
+            AccessToken: "ut",
+            Alt: "proto",
+            Callback: "repudiandae",
+            FeatureID: "tempore",
+            Fields: "et",
+            Key: "aut",
+            OauthToken: "iure",
             PrettyPrint: false,
-            QuotaUser: "rerum",
-            RequestID: "eum",
-            UploadType: "rerum",
-            UploadProtocol: "et",
+            QuotaUser: "sint",
+            RequestID: "animi",
+            UploadType: "repudiandae",
+            UploadProtocol: "non",
         },
         Request: &shared.FeatureInput{
             Labels: map[string]string{
-                "et": "fugiat",
-                "nihil": "laboriosam",
+                "iure": "est",
+                "ut": "distinctio",
             },
             MembershipSpecs: map[string]shared.MembershipFeatureSpecInput{
-                "aut": shared.MembershipFeatureSpecInput{
-                    Anthosobservability: &shared.AnthosObservabilityMembershipSpec{
-                        DoNotOptimizeMetrics: false,
-                        EnableStackdriverOnApplications: false,
-                        Version: "officiis",
-                    },
-                    Cloudbuild: &shared.CloudBuildMembershipSpec{
-                        SecurityPolicy: "NON_PRIVILEGED",
-                        Version: "minima",
-                    },
-                    Configmanagement: &shared.ConfigManagementMembershipSpec{
-                        Binauthz: &shared.ConfigManagementBinauthzConfig{
-                            Enabled: true,
-                        },
-                        ConfigSync: &shared.ConfigManagementConfigSync{
-                            AllowVerticalScale: false,
-                            Enabled: false,
-                            Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "aut",
-                                HTTPSProxy: "incidunt",
-                                PolicyDir: "voluptatem",
-                                SecretType: "in",
-                                SyncBranch: "ut",
-                                SyncRepo: "hic",
-                                SyncRev: "molestiae",
-                                SyncWaitSecs: "omnis",
-                            },
-                            Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "quibusdam",
-                                PolicyDir: "ut",
-                                SecretType: "numquam",
-                                SyncRepo: "aperiam",
-                                SyncWaitSecs: "eligendi",
-                            },
-                            PreventDrift: false,
-                            SourceFormat: "ipsam",
-                        },
-                        HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
-                            EnableHierarchicalResourceQuota: true,
-                            EnablePodTreeLabels: true,
-                            Enabled: true,
-                        },
-                        PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "aspernatur",
-                            Enabled: true,
-                            ExemptableNamespaces: []string{
-                                "vel",
-                            },
-                            LogDeniesEnabled: false,
-                            Monitoring: &shared.ConfigManagementPolicyControllerMonitoring{
-                                Backends: []shared.ConfigManagementPolicyControllerMonitoringBackendsEnum{
-                                    "MONITORING_BACKEND_UNSPECIFIED",
-                                    "PROMETHEUS",
-                                },
-                            },
-                            MutationEnabled: false,
-                            ReferentialRulesEnabled: true,
-                            TemplateLibraryInstalled: false,
-                        },
-                        Version: "recusandae",
-                    },
-                    Fleetobservability: map[string]interface{}{
-                        "ullam": "id",
-                        "mollitia": "illo",
-                    },
-                    Identityservice: &shared.IdentityServiceMembershipSpecInput{
-                        AuthMethods: []shared.IdentityServiceAuthMethodInput{
-                            shared.IdentityServiceAuthMethodInput{
-                                AzureadConfig: &shared.IdentityServiceAzureAdConfigInput{
-                                    ClientID: "et",
-                                    ClientSecret: "sed",
-                                    KubectlRedirectURI: "nihil",
-                                    Tenant: "sed",
-                                },
-                                GoogleConfig: &shared.IdentityServiceGoogleConfig{
-                                    Disable: true,
-                                },
-                                Name: "rerum",
-                                OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "natus",
-                                    ClientID: "excepturi",
-                                    ClientSecret: "molestiae",
-                                    DeployCloudConsoleProxy: true,
-                                    EnableAccessToken: false,
-                                    ExtraParams: "ex",
-                                    GroupPrefix: "quis",
-                                    GroupsClaim: "et",
-                                    IssuerURI: "laudantium",
-                                    KubectlRedirectURI: "optio",
-                                    Scopes: "quae",
-                                    UserClaim: "nulla",
-                                    UserPrefix: "tempore",
-                                },
-                                Proxy: "voluptatem",
-                            },
-                            shared.IdentityServiceAuthMethodInput{
-                                AzureadConfig: &shared.IdentityServiceAzureAdConfigInput{
-                                    ClientID: "quis",
-                                    ClientSecret: "atque",
-                                    KubectlRedirectURI: "velit",
-                                    Tenant: "ut",
-                                },
-                                GoogleConfig: &shared.IdentityServiceGoogleConfig{
-                                    Disable: false,
-                                },
-                                Name: "dolorem",
-                                OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "magnam",
-                                    ClientID: "praesentium",
-                                    ClientSecret: "esse",
-                                    DeployCloudConsoleProxy: false,
-                                    EnableAccessToken: true,
-                                    ExtraParams: "totam",
-                                    GroupPrefix: "hic",
-                                    GroupsClaim: "porro",
-                                    IssuerURI: "accusantium",
-                                    KubectlRedirectURI: "illum",
-                                    Scopes: "est",
-                                    UserClaim: "deserunt",
-                                    UserPrefix: "at",
-                                },
-                                Proxy: "magnam",
-                            },
-                        },
-                    },
-                    Mesh: &shared.ServiceMeshMembershipSpec{
-                        ControlPlane: "MANUAL",
-                        DefaultChannel: "STABLE",
-                        Management: "MANAGEMENT_AUTOMATIC",
-                    },
-                    Policycontroller: &shared.PolicyControllerMembershipSpec{
-                        PolicyControllerHubConfig: &shared.PolicyControllerHubConfig{
-                            AuditIntervalSeconds: "excepturi",
-                            ExemptableNamespaces: []string{
-                                "fuga",
-                            },
-                            InstallSpec: "INSTALL_SPEC_SUSPENDED",
-                            LogDeniesEnabled: false,
-                            Monitoring: &shared.PolicyControllerMonitoringConfig{
-                                Backends: []shared.PolicyControllerMonitoringConfigBackendsEnum{
-                                    "PROMETHEUS",
-                                },
-                            },
-                            MutationEnabled: false,
-                            ReferentialRulesEnabled: false,
-                            TemplateLibraryConfig: &shared.PolicyControllerTemplateLibraryConfig{
-                                Included: true,
-                            },
-                        },
-                        Version: "sed",
-                    },
-                    Workloadcertificate: &shared.MembershipSpec{
-                        CertificateManagement: "ENABLED",
-                    },
-                },
-                "ipsum": shared.MembershipFeatureSpecInput{
+                "dolor": shared.MembershipFeatureSpecInput{
                     Anthosobservability: &shared.AnthosObservabilityMembershipSpec{
                         DoNotOptimizeMetrics: true,
                         EnableStackdriverOnApplications: false,
-                        Version: "autem",
+                        Version: "ipsa",
                     },
                     Cloudbuild: &shared.CloudBuildMembershipSpec{
                         SecurityPolicy: "NON_PRIVILEGED",
-                        Version: "incidunt",
+                        Version: "qui",
                     },
                     Configmanagement: &shared.ConfigManagementMembershipSpec{
                         Binauthz: &shared.ConfigManagementBinauthzConfig{
                             Enabled: false,
                         },
                         ConfigSync: &shared.ConfigManagementConfigSync{
-                            AllowVerticalScale: false,
-                            Enabled: true,
+                            AllowVerticalScale: true,
+                            Enabled: false,
                             Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "dolorum",
-                                HTTPSProxy: "sit",
-                                PolicyDir: "tempore",
-                                SecretType: "et",
-                                SyncBranch: "ut",
-                                SyncRepo: "quis",
-                                SyncRev: "officiis",
-                                SyncWaitSecs: "qui",
+                                GcpServiceAccountEmail: "quis",
+                                HTTPSProxy: "tempore",
+                                PolicyDir: "quasi",
+                                SecretType: "architecto",
+                                SyncBranch: "suscipit",
+                                SyncRepo: "voluptates",
+                                SyncRev: "ad",
+                                SyncWaitSecs: "laborum",
                             },
                             Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "suscipit",
-                                PolicyDir: "eos",
-                                SecretType: "ut",
-                                SyncRepo: "maxime",
-                                SyncWaitSecs: "aut",
+                                GcpServiceAccountEmail: "id",
+                                PolicyDir: "odio",
+                                SecretType: "saepe",
+                                SyncRepo: "saepe",
+                                SyncWaitSecs: "hic",
                             },
                             PreventDrift: true,
-                            SourceFormat: "aspernatur",
+                            SourceFormat: "reprehenderit",
                         },
                         HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
                             EnableHierarchicalResourceQuota: true,
-                            EnablePodTreeLabels: true,
+                            EnablePodTreeLabels: false,
                             Enabled: false,
                         },
                         PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "voluptatem",
+                            AuditIntervalSeconds: "tempora",
                             Enabled: true,
                             ExemptableNamespaces: []string{
-                                "illo",
+                                "ipsam",
                             },
                             LogDeniesEnabled: true,
                             Monitoring: &shared.ConfigManagementPolicyControllerMonitoring{
                                 Backends: []shared.ConfigManagementPolicyControllerMonitoringBackendsEnum{
                                     "MONITORING_BACKEND_UNSPECIFIED",
+                                    "MONITORING_BACKEND_UNSPECIFIED",
+                                    "MONITORING_BACKEND_UNSPECIFIED",
                                 },
                             },
                             MutationEnabled: false,
-                            ReferentialRulesEnabled: false,
-                            TemplateLibraryInstalled: false,
-                        },
-                        Version: "repudiandae",
-                    },
-                    Fleetobservability: map[string]interface{}{
-                        "aspernatur": "est",
-                    },
-                    Identityservice: &shared.IdentityServiceMembershipSpecInput{
-                        AuthMethods: []shared.IdentityServiceAuthMethodInput{
-                            shared.IdentityServiceAuthMethodInput{
-                                AzureadConfig: &shared.IdentityServiceAzureAdConfigInput{
-                                    ClientID: "eaque",
-                                    ClientSecret: "earum",
-                                    KubectlRedirectURI: "et",
-                                    Tenant: "facere",
-                                },
-                                GoogleConfig: &shared.IdentityServiceGoogleConfig{
-                                    Disable: false,
-                                },
-                                Name: "quam",
-                                OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "alias",
-                                    ClientID: "et",
-                                    ClientSecret: "saepe",
-                                    DeployCloudConsoleProxy: false,
-                                    EnableAccessToken: true,
-                                    ExtraParams: "quasi",
-                                    GroupPrefix: "autem",
-                                    GroupsClaim: "dolorum",
-                                    IssuerURI: "dolorem",
-                                    KubectlRedirectURI: "fugit",
-                                    Scopes: "voluptates",
-                                    UserClaim: "aut",
-                                    UserPrefix: "amet",
-                                },
-                                Proxy: "est",
-                            },
-                        },
-                    },
-                    Mesh: &shared.ServiceMeshMembershipSpec{
-                        ControlPlane: "AUTOMATIC",
-                        DefaultChannel: "RAPID",
-                        Management: "MANAGEMENT_UNSPECIFIED",
-                    },
-                    Policycontroller: &shared.PolicyControllerMembershipSpec{
-                        PolicyControllerHubConfig: &shared.PolicyControllerHubConfig{
-                            AuditIntervalSeconds: "inventore",
-                            ExemptableNamespaces: []string{
-                                "voluptatem",
-                                "molestiae",
-                            },
-                            InstallSpec: "INSTALL_SPEC_SUSPENDED",
-                            LogDeniesEnabled: false,
-                            Monitoring: &shared.PolicyControllerMonitoringConfig{
-                                Backends: []shared.PolicyControllerMonitoringConfigBackendsEnum{
-                                    "MONITORING_BACKEND_UNSPECIFIED",
-                                    "CLOUD_MONITORING",
-                                    "MONITORING_BACKEND_UNSPECIFIED",
-                                },
-                            },
-                            MutationEnabled: true,
-                            ReferentialRulesEnabled: true,
-                            TemplateLibraryConfig: &shared.PolicyControllerTemplateLibraryConfig{
-                                Included: false,
-                            },
-                        },
-                        Version: "excepturi",
-                    },
-                    Workloadcertificate: &shared.MembershipSpec{
-                        CertificateManagement: "CERTIFICATE_MANAGEMENT_UNSPECIFIED",
-                    },
-                },
-                "necessitatibus": shared.MembershipFeatureSpecInput{
-                    Anthosobservability: &shared.AnthosObservabilityMembershipSpec{
-                        DoNotOptimizeMetrics: false,
-                        EnableStackdriverOnApplications: true,
-                        Version: "vitae",
-                    },
-                    Cloudbuild: &shared.CloudBuildMembershipSpec{
-                        SecurityPolicy: "SECURITY_POLICY_UNSPECIFIED",
-                        Version: "explicabo",
-                    },
-                    Configmanagement: &shared.ConfigManagementMembershipSpec{
-                        Binauthz: &shared.ConfigManagementBinauthzConfig{
-                            Enabled: true,
-                        },
-                        ConfigSync: &shared.ConfigManagementConfigSync{
-                            AllowVerticalScale: false,
-                            Enabled: true,
-                            Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "repellendus",
-                                HTTPSProxy: "ad",
-                                PolicyDir: "corrupti",
-                                SecretType: "doloribus",
-                                SyncBranch: "et",
-                                SyncRepo: "sint",
-                                SyncRev: "ullam",
-                                SyncWaitSecs: "ea",
-                            },
-                            Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "expedita",
-                                PolicyDir: "ratione",
-                                SecretType: "qui",
-                                SyncRepo: "totam",
-                                SyncWaitSecs: "ut",
-                            },
-                            PreventDrift: false,
-                            SourceFormat: "consequatur",
-                        },
-                        HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
-                            EnableHierarchicalResourceQuota: false,
-                            EnablePodTreeLabels: true,
-                            Enabled: false,
-                        },
-                        PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "vero",
-                            Enabled: false,
-                            ExemptableNamespaces: []string{
-                                "beatae",
-                                "aut",
-                                "dolorem",
-                            },
-                            LogDeniesEnabled: false,
-                            Monitoring: &shared.ConfigManagementPolicyControllerMonitoring{
-                                Backends: []shared.ConfigManagementPolicyControllerMonitoringBackendsEnum{
-                                    "MONITORING_BACKEND_UNSPECIFIED",
-                                    "MONITORING_BACKEND_UNSPECIFIED",
-                                    "PROMETHEUS",
-                                },
-                            },
-                            MutationEnabled: true,
                             ReferentialRulesEnabled: true,
                             TemplateLibraryInstalled: true,
                         },
-                        Version: "enim",
+                        Version: "vel",
                     },
+                    FleetInherited: true,
                     Fleetobservability: map[string]interface{}{
-                        "quia": "quisquam",
-                        "est": "aliquam",
-                        "dolores": "ea",
+                        "tenetur": "incidunt",
+                        "voluptatem": "eos",
                     },
                     Identityservice: &shared.IdentityServiceMembershipSpecInput{
                         AuthMethods: []shared.IdentityServiceAuthMethodInput{
                             shared.IdentityServiceAuthMethodInput{
                                 AzureadConfig: &shared.IdentityServiceAzureAdConfigInput{
-                                    ClientID: "reprehenderit",
-                                    ClientSecret: "molestiae",
-                                    KubectlRedirectURI: "dolorum",
-                                    Tenant: "incidunt",
+                                    ClientID: "qui",
+                                    ClientSecret: "nemo",
+                                    KubectlRedirectURI: "ad",
+                                    Tenant: "saepe",
                                 },
                                 GoogleConfig: &shared.IdentityServiceGoogleConfig{
                                     Disable: true,
                                 },
-                                Name: "quis",
+                                Name: "ex",
                                 OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "qui",
-                                    ClientID: "temporibus",
-                                    ClientSecret: "natus",
-                                    DeployCloudConsoleProxy: true,
+                                    CertificateAuthorityData: "molestiae",
+                                    ClientID: "excepturi",
+                                    ClientSecret: "eligendi",
+                                    DeployCloudConsoleProxy: false,
                                     EnableAccessToken: false,
-                                    ExtraParams: "facere",
-                                    GroupPrefix: "in",
-                                    GroupsClaim: "nisi",
-                                    IssuerURI: "dolores",
-                                    KubectlRedirectURI: "voluptatem",
-                                    Scopes: "optio",
-                                    UserClaim: "eos",
-                                    UserPrefix: "tenetur",
+                                    ExtraParams: "nam",
+                                    GroupPrefix: "eaque",
+                                    GroupsClaim: "eos",
+                                    IssuerURI: "voluptas",
+                                    KubectlRedirectURI: "magnam",
+                                    Scopes: "repudiandae",
+                                    UserClaim: "tempora",
+                                    UserPrefix: "iusto",
                                 },
-                                Proxy: "libero",
+                                Proxy: "vero",
                             },
                         },
                     },
                     Mesh: &shared.ServiceMeshMembershipSpec{
                         ControlPlane: "AUTOMATIC",
-                        DefaultChannel: "CHANNEL_UNSPECIFIED",
-                        Management: "MANAGEMENT_AUTOMATIC",
+                        DefaultChannel: "STABLE",
+                        Management: "MANAGEMENT_UNSPECIFIED",
                     },
                     Policycontroller: &shared.PolicyControllerMembershipSpec{
                         PolicyControllerHubConfig: &shared.PolicyControllerHubConfig{
-                            AuditIntervalSeconds: "earum",
+                            AuditIntervalSeconds: "minima",
                             ExemptableNamespaces: []string{
-                                "provident",
-                                "eligendi",
+                                "enim",
                             },
-                            InstallSpec: "INSTALL_SPEC_UNSPECIFIED",
+                            InstallSpec: "INSTALL_SPEC_ENABLED",
                             LogDeniesEnabled: false,
                             Monitoring: &shared.PolicyControllerMonitoringConfig{
                                 Backends: []shared.PolicyControllerMonitoringConfigBackendsEnum{
+                                    "PROMETHEUS",
+                                    "PROMETHEUS",
                                     "MONITORING_BACKEND_UNSPECIFIED",
                                 },
                             },
                             MutationEnabled: false,
-                            ReferentialRulesEnabled: false,
+                            ReferentialRulesEnabled: true,
                             TemplateLibraryConfig: &shared.PolicyControllerTemplateLibraryConfig{
                                 Included: false,
                             },
                         },
-                        Version: "similique",
+                        Version: "hic",
                     },
                     Workloadcertificate: &shared.MembershipSpec{
-                        CertificateManagement: "DISABLED",
+                        CertificateManagement: "ENABLED",
                     },
                 },
             },
             ResourceState: &shared.FeatureResourceState{
-                State: "DISABLING",
+                State: "STATE_UNSPECIFIED",
             },
             ScopeSpecs: map[string]map[string]interface{}{
-                "expedita": map[string]interface{}{
-                    "harum": "ratione",
-                },
-                "in": map[string]interface{}{
-                    "ad": "ullam",
-                    "placeat": "repellat",
-                    "eius": "ducimus",
+                "dolores": map[string]interface{}{
+                    "corporis": "voluptatem",
+                    "vel": "nostrum",
                 },
             },
             Spec: &shared.CommonFeatureSpec{
                 Anthosobservability: &shared.AnthosObservabilityFeatureSpec{
                     DefaultMembershipSpec: &shared.AnthosObservabilityMembershipSpec{
-                        DoNotOptimizeMetrics: true,
-                        EnableStackdriverOnApplications: true,
-                        Version: "laudantium",
+                        DoNotOptimizeMetrics: false,
+                        EnableStackdriverOnApplications: false,
+                        Version: "ab",
                     },
                 },
                 Appdevexperience: map[string]interface{}{
-                    "odio": "placeat",
+                    "quia": "unde",
                 },
                 Cloudauditlogging: &shared.CloudAuditLoggingFeatureSpec{
                     AllowlistedServiceAccounts: []string{
-                        "dolorem",
+                        "distinctio",
                     },
                 },
                 Fleetobservability: map[string]interface{}{
-                    "quis": "vel",
-                    "corrupti": "dolorem",
+                    "exercitationem": "non",
                 },
                 Multiclusteringress: &shared.MultiClusterIngressFeatureSpec{
                     Billing: "BILLING_UNSPECIFIED",
-                    ConfigMembership: "eius",
+                    ConfigMembership: "rem",
                 },
                 Workloadcertificate: &shared.FeatureSpec{
                     DefaultConfig: &shared.MembershipSpec{
                         CertificateManagement: "CERTIFICATE_MANAGEMENT_UNSPECIFIED",
                     },
-                    ProvisionGoogleCa: "DISABLED",
+                    ProvisionGoogleCa: "GOOGLE_CA_PROVISIONING_UNSPECIFIED",
                 },
             },
             State: &shared.CommonFeatureState1{
                 Appdevexperience: &shared.AppDevExperienceFeatureState{
                     NetworkingInstallSucceeded: &shared.Status{
-                        Code: "FAILED",
-                        Description: "sed",
+                        Code: "UNKNOWN",
+                        Description: "velit",
                     },
                 },
                 Fleetobservability: map[string]interface{}{
-                    "quis": "est",
+                    "voluptatem": "qui",
                 },
                 State: &shared.FeatureState{
-                    Code: "OK",
-                    Description: "natus",
-                    UpdateTime: "consequatur",
+                    Code: "ERROR",
+                    Description: "expedita",
+                    UpdateTime: "rerum",
                 },
             },
         },

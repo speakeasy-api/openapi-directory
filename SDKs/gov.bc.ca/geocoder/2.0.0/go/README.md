@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,40 +34,40 @@ func main() {
     
     req := operations.GetAddressesOutputFormatRequest{
         PathParams: operations.GetAddressesOutputFormatPathParams{
-            OutputFormat: "json",
+            OutputFormat: "geojson",
         },
         QueryParams: operations.GetAddressesOutputFormatQueryParams{
-            AddressString: "adipisci",
-            AutoComplete: true,
-            Bbox: "nesciunt",
-            Brief: true,
-            Centre: "ut",
-            CivicNumber: "eaque",
-            CivicNumberSuffix: "sint",
+            AddressString: "quasi",
+            AutoComplete: false,
+            Bbox: "provident",
+            Brief: false,
+            Centre: "dolores",
+            CivicNumber: "ea",
+            CivicNumberSuffix: "assumenda",
             Echo: false,
-            Extrapolate: true,
-            Interpolation: "adaptive",
-            Localities: "qui",
-            LocalityName: "occaecati",
-            LocationDescriptor: "frontDoorPoint",
-            MatchPrecision: "est",
-            MatchPrecisionNot: "voluptates",
-            MaxDistance: 52.099998,
-            MaxResults: 427930109320837905,
-            MinScore: 4622879939173555609,
-            NotLocalities: "aut",
-            OutputSrs: 1463774971675998561,
-            ParcelPoint: "quo",
-            ProvinceCode: "et",
-            SetBack: 4124723190876299895,
-            SiteName: "saepe",
-            StreetDirection: "SW",
-            StreetName: "qui",
-            StreetQualifier: "ea",
-            StreetType: "voluptas",
-            UnitDesignator: "SUITE",
-            UnitNumber: "rerum",
-            UnitNumberSuffix: "iste",
+            Extrapolate: false,
+            Interpolation: "none",
+            Localities: "voluptatum",
+            LocalityName: "tempora",
+            LocationDescriptor: "parcelPoint",
+            MatchPrecision: "recusandae",
+            MatchPrecisionNot: "et",
+            MaxDistance: 59.099998,
+            MaxResults: 218132384973761410,
+            MinScore: 4262733293789900026,
+            NotLocalities: "deserunt",
+            OutputSRS: 8760308817684507304,
+            ParcelPoint: "omnis",
+            ProvinceCode: "voluptas",
+            SetBack: 1291634106762229870,
+            SiteName: "doloribus",
+            StreetDirection: "NW",
+            StreetName: "omnis",
+            StreetQualifier: "cumque",
+            StreetType: "cupiditate",
+            UnitDesignator: "APT",
+            UnitNumber: "nihil",
+            UnitNumberSuffix: "eum",
         },
     }
     
@@ -89,18 +88,18 @@ func main() {
 ### intersections
 
 * `GetAddressesOutputFormat` - Geocode an address
-* `GetIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
 * `GetIntersectionsNearOutputFormat` - Find intersections near to a geographic point
 * `GetIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
 * `GetIntersectionsWithinOutputFormat` - Find intersections in a geographic area
+* `GetIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
 
 ### occupants
 
 * `GetOccupantsAddressesOutputFormat` - Geocode an address and identify site occupants
 * `GetOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
 * `GetOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
-* `GetOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
 * `GetOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
+* `GetOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
 
 ### parcels
 
@@ -111,9 +110,9 @@ func main() {
 * `GetAddressesOutputFormat` - Geocode an address
 * `GetSitesNearOutputFormat` - Find sites near to a geographic point
 * `GetSitesNearestOutputFormat` - Find the site nearest to a geographic point
+* `GetSitesWithinOutputFormat` - Find sites in a geographic area
 * `GetSitesSiteIDOutputFormat` - Get a site by its unique ID
 * `GetSitesSiteIDSubsitesOutputFormat` - Represents all subsites of a given site
-* `GetSitesWithinOutputFormat` - Find sites in a geographic area
 
 <!-- End SDK Available Operations -->
 

@@ -16,5 +16,5 @@ type IpamVlansPartialUpdateRequest struct {
 type IpamVlansPartialUpdateResponse struct {
 	ContentType string
 	StatusCode  int64
-	Vlan        *shared.Vlan
+	VLAN        *shared.Vlan
 }

@@ -6,8 +6,8 @@ import (
 
 type DgmstRequestBodyCertificateParameters struct {
 	FullName string `json:"FullName"`
-	Rroll    string `json:"RROLL"`
-	Sem      string `json:"SEM"`
+	RROLL    string `json:"RROLL"`
+	SEM      string `json:"SEM"`
 }
 
 type DgmstRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Dgmst404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Dgmst404ApplicationJSONErrorDescriptionEnumNoRecordFound               Dgmst404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Dgmst404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Dgmst404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Dgmst404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Dgmst404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Dgmst404ApplicationJSON struct {

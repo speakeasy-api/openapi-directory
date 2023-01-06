@@ -1,8 +1,8 @@
 package shared
 
 type CreateBackendConfigResponse struct {
-	AppID                  *string `json:"AppId,omitempty"`
-	BackendEnvironmentName *string `json:"BackendEnvironmentName,omitempty"`
-	JobID                  *string `json:"JobId,omitempty"`
-	Status                 *string `json:"Status,omitempty"`
+	AppID                  map[string]interface{} `json:"AppId,omitempty"`
+	BackendEnvironmentName map[string]interface{} `json:"BackendEnvironmentName,omitempty"`
+	JobID                  map[string]interface{} `json:"JobId,omitempty"`
+	Status                 map[string]interface{} `json:"Status,omitempty"`
 }

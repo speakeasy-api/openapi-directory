@@ -3,13 +3,13 @@ package operations
 type PostEnableVolumeIoActionEnum string
 
 const (
-	PostEnableVolumeIoActionEnumEnableVolumeIo PostEnableVolumeIoActionEnum = "EnableVolumeIO"
+	POSTEnableVolumeIOActionEnumEnableVolumeIo PostEnableVolumeIoActionEnum = "EnableVolumeIO"
 )
 
 type PostEnableVolumeIoVersionEnum string
 
 const (
-	PostEnableVolumeIoVersionEnumTwoThousandAndSixteen1115 PostEnableVolumeIoVersionEnum = "2016-11-15"
+	POSTEnableVolumeIOVersionEnumTwoThousandAndSixteen1115 PostEnableVolumeIoVersionEnum = "2016-11-15"
 )
 
 type PostEnableVolumeIoQueryParams struct {

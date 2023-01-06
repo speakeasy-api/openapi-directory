@@ -33,7 +33,7 @@ type TransferDomainResponse struct {
 	InvalidInput           *interface{}
 	OperationLimitExceeded *interface{}
 	StatusCode             int64
-	TldRulesViolation      *interface{}
+	TLDRulesViolation      *interface{}
 	TransferDomainResponse *shared.TransferDomainResponse
-	UnsupportedTld         *interface{}
+	UnsupportedTLD         *interface{}
 }

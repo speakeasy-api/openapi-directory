@@ -3,6 +3,6 @@ package shared
 type DbProxyEndpointTargetRoleEnum string
 
 const (
-	DbProxyEndpointTargetRoleEnumReadWrite DbProxyEndpointTargetRoleEnum = "READ_WRITE"
-	DbProxyEndpointTargetRoleEnumReadOnly  DbProxyEndpointTargetRoleEnum = "READ_ONLY"
+	DBProxyEndpointTargetRoleEnumReadWrite DbProxyEndpointTargetRoleEnum = "READ_WRITE"
+	DBProxyEndpointTargetRoleEnumReadOnly  DbProxyEndpointTargetRoleEnum = "READ_ONLY"
 )

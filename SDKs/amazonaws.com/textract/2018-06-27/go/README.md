@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,43 +34,43 @@ func main() {
     
     req := operations.AnalyzeDocumentRequest{
         Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "molestias",
-            XAmzContentSha256: "autem",
-            XAmzCredential: "iure",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "nesciunt",
-            XAmzSignature: "eaque",
-            XAmzSignedHeaders: "corrupti",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "alias",
+            XAmzCredential: "aliquam",
+            XAmzDate: "vel",
+            XAmzSecurityToken: "cumque",
+            XAmzSignature: "ea",
+            XAmzSignedHeaders: "earum",
             XAmzTarget: "Textract.AnalyzeDocument",
         },
         Request: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "quos",
+                Bytes: "explicabo",
                 S3Object: &shared.S3Object{
-                    Bucket: "eius",
-                    Name: "impedit",
-                    Version: "unde",
+                    Bucket: "id",
+                    Name: "aperiam",
+                    Version: "esse",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
+                "TABLES",
+                "TABLES",
                 "FORMS",
-                "TABLES",
-                "TABLES",
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
                         "FreeOfAdultContent",
-                        "FreeOfAdultContent",
+                        "FreeOfPersonallyIdentifiableInformation",
                     },
                 },
-                FlowDefinitionArn: "deserunt",
-                HumanLoopName: "corporis",
+                FlowDefinitionArn: "maxime",
+                HumanLoopName: "expedita",
             },
         },
     }
     
-    res, err := s.Sdk.AnalyzeDocument(ctx, req)
+    res, err := s.AnalyzeDocument(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,5 +1,5 @@
 package shared
 
 type GetJobUnlockCodeRequest struct {
-	JobID string `json:"JobId"`
+	JobID map[string]interface{} `json:"JobId"`
 }

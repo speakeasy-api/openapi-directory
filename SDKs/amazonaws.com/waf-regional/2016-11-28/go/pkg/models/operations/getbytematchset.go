@@ -30,7 +30,7 @@ type GetByteMatchSetResponse struct {
 	ContentType                 string
 	GetByteMatchSetResponse     *shared.GetByteMatchSetResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

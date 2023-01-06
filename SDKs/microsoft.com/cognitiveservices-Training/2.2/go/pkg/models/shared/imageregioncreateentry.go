@@ -1,0 +1,12 @@
+package shared
+
+// ImageRegionCreateEntry
+// Entry associating a region to an image.
+type ImageRegionCreateEntry struct {
+	Height  *float32 `json:"height,omitempty"`
+	ImageID *string  `json:"imageId,omitempty"`
+	Left    *float32 `json:"left,omitempty"`
+	TagID   *string  `json:"tagId,omitempty"`
+	Top     *float32 `json:"top,omitempty"`
+	Width   *float32 `json:"width,omitempty"`
+}

@@ -25,6 +25,6 @@ type GetLocationsIDRequest struct {
 
 type GetLocationsIDResponse struct {
 	ContentType                            string
-	GetLocationsID200ApplicationJSONObject *GetLocationsID200ApplicationJSON
 	StatusCode                             int64
+	GetLocationsID200ApplicationJSONObject *GetLocationsID200ApplicationJSON
 }

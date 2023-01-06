@@ -1,6 +1,6 @@
 package shared
 
 type ListBackendJobsResponse struct {
-	Jobs      []BackendJobRespObj `json:"Jobs,omitempty"`
-	NextToken *string             `json:"NextToken,omitempty"`
+	Jobs      map[string]interface{} `json:"Jobs,omitempty"`
+	NextToken map[string]interface{} `json:"NextToken,omitempty"`
 }

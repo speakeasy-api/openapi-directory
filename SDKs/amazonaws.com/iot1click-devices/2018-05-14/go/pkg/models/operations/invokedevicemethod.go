@@ -21,8 +21,8 @@ type InvokeDeviceMethodHeaders struct {
 // InvokeDeviceMethodRequestBodyDeviceMethod
 // The device method to invoke.
 type InvokeDeviceMethodRequestBodyDeviceMethod struct {
-	DeviceType *string `json:"DeviceType,omitempty"`
-	MethodName *string `json:"MethodName,omitempty"`
+	DeviceType map[string]interface{} `json:"DeviceType,omitempty"`
+	MethodName map[string]interface{} `json:"MethodName,omitempty"`
 }
 
 type InvokeDeviceMethodRequestBody struct {

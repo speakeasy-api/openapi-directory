@@ -1,5 +1,5 @@
 package shared
 
 type DescribeIdentityIDFormatResult struct {
-	Statuses []IDFormat
+	Statuses map[string]interface{}
 }

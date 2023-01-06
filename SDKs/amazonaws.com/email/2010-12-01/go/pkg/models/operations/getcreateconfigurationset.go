@@ -3,7 +3,7 @@ package operations
 type GetCreateConfigurationSetActionEnum string
 
 const (
-	GetCreateConfigurationSetActionEnumCreateConfigurationSet GetCreateConfigurationSetActionEnum = "CreateConfigurationSet"
+	GETCreateConfigurationSetActionEnumCreateConfigurationSet GetCreateConfigurationSetActionEnum = "CreateConfigurationSet"
 )
 
 // GetCreateConfigurationSetConfigurationSet
@@ -15,7 +15,7 @@ type GetCreateConfigurationSetConfigurationSet struct {
 type GetCreateConfigurationSetVersionEnum string
 
 const (
-	GetCreateConfigurationSetVersionEnumTwoThousandAndTen1201 GetCreateConfigurationSetVersionEnum = "2010-12-01"
+	GETCreateConfigurationSetVersionEnumTwoThousandAndTen1201 GetCreateConfigurationSetVersionEnum = "2010-12-01"
 )
 
 type GetCreateConfigurationSetQueryParams struct {

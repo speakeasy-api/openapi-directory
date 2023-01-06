@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,52 +26,52 @@ func main() {
         Security: operations.VideointelligenceVideosAnnotateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.VideointelligenceVideosAnnotateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "delectus",
+            AccessToken: "et",
             Alt: "proto",
-            Callback: "autem",
-            Fields: "aperiam",
-            Key: "similique",
-            OauthToken: "molestiae",
-            PrettyPrint: false,
-            QuotaUser: "ipsum",
-            UploadType: "sit",
-            UploadProtocol: "nisi",
+            Callback: "laboriosam",
+            Fields: "repellat",
+            Key: "id",
+            OauthToken: "nihil",
+            PrettyPrint: true,
+            QuotaUser: "labore",
+            UploadType: "iure",
+            UploadProtocol: "dolores",
         },
         Request: &shared.GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequest{
             Features: []shared.GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequestFeaturesEnum{
-                "LOGO_RECOGNITION",
-                "OBJECT_TRACKING",
-                "FACE_DETECTION",
+                "FEATURE_UNSPECIFIED",
+                "SPEECH_TRANSCRIPTION",
+                "FEATURE_UNSPECIFIED",
             },
-            InputContent: "labore",
-            InputURI: "consequatur",
-            LocationID: "enim",
-            OutputURI: "molestias",
+            InputContent: "soluta",
+            InputURI: "incidunt",
+            LocationID: "quia",
+            OutputURI: "nisi",
             VideoContext: &shared.GoogleCloudVideointelligenceV1p1beta1VideoContext{
                 ExplicitContentDetectionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1ExplicitContentDetectionConfig{
-                    Model: "nam",
+                    Model: "est",
                 },
                 FaceDetectionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1FaceDetectionConfig{
                     IncludeAttributes: false,
-                    IncludeBoundingBoxes: true,
-                    Model: "qui",
+                    IncludeBoundingBoxes: false,
+                    Model: "sit",
                 },
                 LabelDetectionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfig{
-                    FrameConfidenceThreshold: 44.200001,
-                    LabelDetectionMode: "LABEL_DETECTION_MODE_UNSPECIFIED",
-                    Model: "deserunt",
-                    StationaryCamera: true,
-                    VideoConfidenceThreshold: 72.099998,
+                    FrameConfidenceThreshold: 30.200001,
+                    LabelDetectionMode: "SHOT_AND_FRAME_MODE",
+                    Model: "dolore",
+                    StationaryCamera: false,
+                    VideoConfidenceThreshold: 52.200001,
                 },
                 ObjectTrackingConfig: &shared.GoogleCloudVideointelligenceV1p1beta1ObjectTrackingConfig{
-                    Model: "alias",
+                    Model: "omnis",
                 },
                 PersonDetectionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1PersonDetectionConfig{
                     IncludeAttributes: true,
@@ -81,48 +80,51 @@ func main() {
                 },
                 Segments: []shared.GoogleCloudVideointelligenceV1p1beta1VideoSegment{
                     shared.GoogleCloudVideointelligenceV1p1beta1VideoSegment{
-                        EndTimeOffset: "doloribus",
-                        StartTimeOffset: "blanditiis",
-                    },
-                    shared.GoogleCloudVideointelligenceV1p1beta1VideoSegment{
-                        EndTimeOffset: "maiores",
-                        StartTimeOffset: "aliquid",
+                        EndTimeOffset: "excepturi",
+                        StartTimeOffset: "voluptatibus",
                     },
                 },
                 ShotChangeDetectionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1ShotChangeDetectionConfig{
-                    Model: "a",
+                    Model: "sapiente",
                 },
                 SpeechTranscriptionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig{
                     AudioTracks: []int32{
-                        1532090172114569710,
+                        1974261202536705039,
+                        5437406241235142632,
                     },
-                    DiarizationSpeakerCount: 1203560969764169467,
-                    EnableAutomaticPunctuation: true,
-                    EnableSpeakerDiarization: false,
+                    DiarizationSpeakerCount: 2376630504299246992,
+                    EnableAutomaticPunctuation: false,
+                    EnableSpeakerDiarization: true,
                     EnableWordConfidence: true,
                     FilterProfanity: false,
-                    LanguageCode: "delectus",
-                    MaxAlternatives: 5800051945060985895,
+                    LanguageCode: "id",
+                    MaxAlternatives: 3454383545197603946,
                     SpeechContexts: []shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext{
                         shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext{
                             Phrases: []string{
-                                "sed",
-                                "veniam",
+                                "magni",
+                                "ullam",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext{
                             Phrases: []string{
-                                "voluptas",
+                                "expedita",
+                                "animi",
+                            },
+                        },
+                        shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext{
+                            Phrases: []string{
+                                "sint",
+                                "praesentium",
                             },
                         },
                     },
                 },
                 TextDetectionConfig: &shared.GoogleCloudVideointelligenceV1p1beta1TextDetectionConfig{
                     LanguageHints: []string{
-                        "sint",
-                        "autem",
+                        "et",
                     },
-                    Model: "vel",
+                    Model: "nam",
                 },
             },
         },

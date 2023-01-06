@@ -14,7 +14,7 @@ type BranchModel struct {
 	FaxPhone     *string `json:"FaxPhone,omitempty"`
 	LandPhone    *string `json:"LandPhone,omitempty"`
 	Name         *string `json:"Name,omitempty"`
-	Oid          *string `json:"OID,omitempty"`
+	OID          *string `json:"OID,omitempty"`
 	Postcode     *string `json:"Postcode,omitempty"`
 	WebAddress   *string `json:"WebAddress,omitempty"`
 }

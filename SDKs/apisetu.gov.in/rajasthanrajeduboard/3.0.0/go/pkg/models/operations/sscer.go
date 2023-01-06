@@ -5,9 +5,9 @@ import (
 )
 
 type SscerRequestBodyCertificateParameters struct {
-	Cname string `json:"CNAME"`
-	Roll  string `json:"ROLL"`
-	Year  string `json:"YEAR"`
+	CNAME string `json:"CNAME"`
+	ROLL  string `json:"ROLL"`
+	YEAR  string `json:"YEAR"`
 }
 
 type SscerRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Sscer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Sscer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Sscer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Sscer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Sscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Sscer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Sscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Sscer404ApplicationJSON struct {

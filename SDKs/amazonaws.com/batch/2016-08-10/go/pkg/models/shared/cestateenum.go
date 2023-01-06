@@ -3,6 +3,6 @@ package shared
 type CeStateEnum string
 
 const (
-	CeStateEnumEnabled  CeStateEnum = "ENABLED"
-	CeStateEnumDisabled CeStateEnum = "DISABLED"
+	CEStateEnumEnabled  CeStateEnum = "ENABLED"
+	CEStateEnumDisabled CeStateEnum = "DISABLED"
 )

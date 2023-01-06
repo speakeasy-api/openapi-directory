@@ -33,7 +33,6 @@ type PostProxyRequest struct {
 
 type PostProxyResponse struct {
 	ContentType                        string
-	Headers                            map[string][]string
 	StatusCode                         int64
 	PostProxy200ApplicationJSONAny     *interface{}
 	PostProxy401ApplicationJSONObject  *PostProxy401ApplicationJSON

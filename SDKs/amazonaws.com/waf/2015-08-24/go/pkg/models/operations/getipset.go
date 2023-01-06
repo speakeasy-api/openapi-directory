@@ -30,7 +30,7 @@ type GetIPSetResponse struct {
 	ContentType                 string
 	GetIPSetResponse            *shared.GetIPSetResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

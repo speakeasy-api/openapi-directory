@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,16 +29,16 @@ func main() {
             },
         },
         PathParams: operations.CreateFileAssociationPathParams{
-            FileID: "molestiae",
+            FileID: "optio",
         },
         Headers: operations.CreateFileAssociationHeaders{
-            XeroTenantID: "voluptatem",
+            XeroTenantID: "magnam",
         },
         Request: &shared.Association{
-            FileID: "est",
-            ObjectGroup: "Invoice",
-            ObjectID: "eaque",
-            ObjectType: "Unknown",
+            FileID: "fugiat",
+            ObjectGroup: "Payment",
+            ObjectID: "voluptatem",
+            ObjectType: "Termliab",
         },
     }
     

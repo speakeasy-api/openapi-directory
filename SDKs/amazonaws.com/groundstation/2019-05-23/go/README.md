@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.CancelContactRequest{
         PathParams: operations.CancelContactPathParams{
-            ContactID: "error",
+            ContactID: "quia",
         },
         Headers: operations.CancelContactHeaders{
-            XAmzAlgorithm: "dolores",
-            XAmzContentSha256: "non",
-            XAmzCredential: "aspernatur",
-            XAmzDate: "rem",
-            XAmzSecurityToken: "vel",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "at",
+            XAmzAlgorithm: "qui",
+            XAmzContentSha256: "voluptates",
+            XAmzCredential: "consequatur",
+            XAmzDate: "explicabo",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "perferendis",
+            XAmzSignedHeaders: "ipsum",
         },
     }
     
-    res, err := s.Sdk.CancelContact(ctx, req)
+    res, err := s.CancelContact(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -16,6 +16,6 @@ type PostPortfolioOptimizationMinimumCorrelationRequest struct {
 
 type PostPortfolioOptimizationMinimumCorrelationResponse struct {
 	ContentType                                                         string
-	PostPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject *PostPortfolioOptimizationMinimumCorrelation200ApplicationJSON
 	StatusCode                                                          int64
+	PostPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject *PostPortfolioOptimizationMinimumCorrelation200ApplicationJSON
 }

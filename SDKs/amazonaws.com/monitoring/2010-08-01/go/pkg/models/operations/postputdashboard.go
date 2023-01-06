@@ -3,13 +3,13 @@ package operations
 type PostPutDashboardActionEnum string
 
 const (
-	PostPutDashboardActionEnumPutDashboard PostPutDashboardActionEnum = "PutDashboard"
+	POSTPutDashboardActionEnumPutDashboard PostPutDashboardActionEnum = "PutDashboard"
 )
 
 type PostPutDashboardVersionEnum string
 
 const (
-	PostPutDashboardVersionEnumTwoThousandAndTen0801 PostPutDashboardVersionEnum = "2010-08-01"
+	POSTPutDashboardVersionEnumTwoThousandAndTen0801 PostPutDashboardVersionEnum = "2010-08-01"
 )
 
 type PostPutDashboardQueryParams struct {

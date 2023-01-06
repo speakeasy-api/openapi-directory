@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,35 +33,29 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.AddOrUpdateIntegrationLinkRequest{
-        PathParams: operations.AddOrUpdateIntegrationLinkPathParams{
-            EnvironmentID: "vel",
-            IntegrationLinkType: "jira",
-            Key: "quas",
-            SettingID: 3815582250837815516,
+    req := operations.GetAuditlogsRequest{
+        PathParams: operations.GetAuditlogsPathParams{
+            ProductID: "quidem",
         },
-        Request: &operations.AddOrUpdateIntegrationLinkRequests{
-            AddOrUpdateIntegrationLinkModel: &shared.AddOrUpdateIntegrationLinkModel{
-                Description: "ut",
-                URL: "est",
+        QueryParams: operations.GetAuditlogsQueryParams{
+            AuditLogType: map[string]interface{}{
+                "sint": "dolorem",
+                "qui": "esse",
+                "et": "eum",
             },
-            AddOrUpdateIntegrationLinkModel1: &shared.AddOrUpdateIntegrationLinkModel{
-                Description: "ex",
-                URL: "iure",
-            },
-            AddOrUpdateIntegrationLinkModel2: &shared.AddOrUpdateIntegrationLinkModel{
-                Description: "nemo",
-                URL: "labore",
-            },
+            ConfigID: "quod",
+            EnvironmentID: "animi",
+            FromUtcDateTime: "1996-04-07T13:12:47Z",
+            ToUtcDateTime: "1985-09-19T09:58:13Z",
         },
     }
     
-    res, err := s.Sdk.AddOrUpdateIntegrationLink(ctx, req)
+    res, err := s.AuditLogs.GetAuditlogs(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.IntegrationLinkModel != nil {
+    if res.AuditLogItemModels != nil {
         // handle response
     }
 ```
@@ -71,59 +64,98 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Audit logs
 
-* `AddOrUpdateIntegrationLink` - Add or update Integration link
-* `CreateConfig` - Create Config
-* `CreateEnvironment` - Create Environment
-* `CreatePermissionGroup` - Create Permission Group
-* `CreateProduct` - Create Product
-* `CreateSetting` - Create Flag
-* `CreateTag` - Create Tag
-* `DeleteConfig` - Delete Config
-* `DeleteEnvironment` - Delete Environment
-* `DeleteIntegrationLink` - Delete Integration link
-* `DeleteOrganizationMember` - Delete Member from Organization
-* `DeletePermissionGroup` - Delete Permission Group
-* `DeleteProduct` - Delete Product
-* `DeleteProductMember` - Delete Member from Product
-* `DeleteSetting` - Delete Flag
-* `DeleteTag` - Delete Tag
 * `GetAuditlogs` - List Audit log items for Product
+* `GetDeletedSettings` - List Deleted Settings
+* `GetOrganizationAuditlogs` - List Audit log items for Organization
+
+### Configs
+
+* `CreateConfig` - Create Config
+* `DeleteConfig` - Delete Config
 * `GetConfig` - Get Config
 * `GetConfigs` - List Configs
-* `GetDeletedSettings` - List Deleted Settings
+* `UpdateConfig` - Update Config
+
+### Environments
+
+* `CreateEnvironment` - Create Environment
+* `DeleteEnvironment` - Delete Environment
 * `GetEnvironment` - Get Environment
 * `GetEnvironments` - List Environments
+* `UpdateEnvironment` - Update Environment
+
+### Feature Flag & Setting values
+
+* `GetSettingValue` - Get value
+* `GetSettingValues` - Get values
+* `ReplaceSettingValue` - Replace value
+* `UpdateSettingValue` - Update value
+
+### Feature Flag & Setting values using SDK Key
+
+* `GetSettingValueBySdkkey` - Get value
+* `ReplaceSettingValueBySdkkey` - Replace value
+* `UpdateSettingValueBySdkkey` - Update value
+
+### Feature Flags & Settings
+
+* `CreateSetting` - Create Flag
+* `DeleteSetting` - Delete Flag
+* `GetSetting` - Get Flag
+* `GetSettings` - List Flags
+* `UpdateSetting` - Update Flag
+
+### Integration links
+
+* `AddOrUpdateIntegrationLink` - Add or update Integration link
+* `DeleteIntegrationLink` - Delete Integration link
 * `GetIntegrationLinkDetails` - Get Integration link
+
+### Me
+
 * `GetMe` - Get authenticated user details
-* `GetOrganizationAuditlogs` - List Audit log items for Organization
+
+### Members
+
+* `DeleteOrganizationMember` - Delete Member from Organization
+* `DeleteProductMember` - Delete Member from Product
 * `GetOrganizationMembers` - List Organization Members
+* `GetProductMembers` - List Product Members
+* `InviteMember` - Invite Member
+
+### Organizations
+
 * `GetOrganizations` - List Organizations
+
+### Permission Groups
+
+* `CreatePermissionGroup` - Create Permission Group
+* `DeletePermissionGroup` - Delete Permission Group
 * `GetPermissionGroup` - Get Permission Group
 * `GetPermissionGroups` - List Permission Groups
+* `UpdatePermissionGroup` - Update Permission Group
+
+### Products
+
+* `CreateProduct` - Create Product
+* `DeleteProduct` - Delete Product
 * `GetProduct` - Get Product
-* `GetProductMembers` - List Product Members
 * `GetProducts` - List Products
+* `UpdateProduct` - Update Product
+
+### SDK Keys
+
 * `GetSdkKeys` - Get SDK Key
-* `GetSetting` - Get Flag
-* `GetSettingValue` - Get value
-* `GetSettingValueBySdkkey` - Get value
-* `GetSettingValues` - Get values
-* `GetSettings` - List Flags
+
+### Tags
+
+* `CreateTag` - Create Tag
+* `DeleteTag` - Delete Tag
 * `GetSettingsByTag` - List Settings by Tag
 * `GetTag` - Get Tag
 * `GetTags` - List Tags
-* `InviteMember` - Invite Member
-* `ReplaceSettingValue` - Replace value
-* `ReplaceSettingValueBySdkkey` - Replace value
-* `UpdateConfig` - Update Config
-* `UpdateEnvironment` - Update Environment
-* `UpdatePermissionGroup` - Update Permission Group
-* `UpdateProduct` - Update Product
-* `UpdateSetting` - Update Flag
-* `UpdateSettingValue` - Update value
-* `UpdateSettingValueBySdkkey` - Update value
 * `UpdateTag` - Update Tag
 
 <!-- End SDK Available Operations -->

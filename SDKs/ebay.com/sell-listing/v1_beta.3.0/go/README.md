@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,60 +29,56 @@ func main() {
             },
         },
         Headers: operations.CreateItemDraftHeaders{
-            ContentLanguage: "placeat",
-            XEbayCMarketplaceID: "cum",
+            ContentLanguage: "molestiae",
+            XEBAYCMARKETPLACEID: "praesentium",
         },
         Request: &shared.ItemDraft{
-            CategoryID: "qui",
+            CategoryID: "quis",
             Charity: &shared.Charity{
-                CharityID: "laudantium",
-                DonationPercentage: "perspiciatis",
+                CharityID: "omnis",
+                DonationPercentage: "praesentium",
             },
-            Condition: "enim",
-            Format: "deleniti",
+            Condition: "illo",
+            Format: "omnis",
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "rerum",
-                    Value: "aspernatur",
+                    Currency: "iure",
+                    Value: "est",
                 },
                 AuctionStartPrice: &shared.Amount{
-                    Currency: "dicta",
-                    Value: "veritatis",
+                    Currency: "eaque",
+                    Value: "quas",
                 },
                 Price: &shared.Amount{
-                    Currency: "unde",
-                    Value: "consequatur",
+                    Currency: "suscipit",
+                    Value: "et",
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "est",
+                        Name: "officiis",
                         Values: []string{
-                            "quia",
-                            "occaecati",
-                        },
-                    },
-                    shared.Aspect{
-                        Name: "veritatis",
-                        Values: []string{
-                            "voluptates",
-                            "at",
+                            "ut",
+                            "sapiente",
+                            "nulla",
                         },
                     },
                 },
-                Brand: "repellendus",
-                Description: "fuga",
-                Epid: "sequi",
+                Brand: "id",
+                Description: "et",
+                Epid: "voluptatem",
                 ImageUrls: []string{
-                    "ratione",
+                    "optio",
+                    "nihil",
+                    "corrupti",
                 },
-                Title: "ipsam",
+                Title: "voluptatem",
             },
         },
     }
     
-    res, err := s.Sdk.CreateItemDraft(ctx, req)
+    res, err := s.ItemDraft.CreateItemDraft(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,7 +92,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### item_draft
 
 * `CreateItemDraft` - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
 

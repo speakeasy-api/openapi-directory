@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.PostAuthRequest{
         QueryParams: operations.PostAuthQueryParams{
-            ClientID: "magnam",
-            ClientSecret: "ducimus",
+            ClientID: "quis",
+            ClientSecret: "aperiam",
         },
     }
     
-    res, err := s.Sdk.PostAuth(ctx, req)
+    res, err := s.PostAuth(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

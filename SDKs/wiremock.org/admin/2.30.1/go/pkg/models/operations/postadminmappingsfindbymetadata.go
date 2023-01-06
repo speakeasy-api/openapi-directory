@@ -1,5 +1,13 @@
 package operations
 
+type PostAdminMappingsFindByMetadataRequestBodyRegularExpressionMatch struct {
+	Matches string `json:"matches"`
+}
+
+type PostAdminMappingsFindByMetadataRequestBodyXMLEquality struct {
+	EqualToXML string `json:"equalToXml"`
+}
+
 type PostAdminMappingsFindByMetadataRequestBodyStringEquals struct {
 	CaseInsensitive *bool `json:"caseInsensitive,omitempty"`
 	EqualTo         bool  `json:"equalTo"`
@@ -9,12 +17,14 @@ type PostAdminMappingsFindByMetadataRequestBodyStringContains struct {
 	Contains string `json:"contains"`
 }
 
-type PostAdminMappingsFindByMetadataRequestBodyRegularExpressionMatch struct {
-	Matches string `json:"matches"`
-}
-
 type PostAdminMappingsFindByMetadataRequestBodyNegativeRegularExpressionMatch struct {
 	DoesNotMatch string `json:"doesNotMatch"`
+}
+
+type PostAdminMappingsFindByMetadataRequestBodyXPathMatch struct {
+	MatchesXpath string                 `json:"matchesXpath"`
+	Namespaces   map[string]interface{} `json:"namespaces,omitempty"`
+	ValuePattern map[string]interface{} `json:"valuePattern,omitempty"`
 }
 
 type PostAdminMappingsFindByMetadataRequestBodyJSONEquals struct {
@@ -25,16 +35,6 @@ type PostAdminMappingsFindByMetadataRequestBodyJSONPathMatch struct {
 	IgnoreArrayOrder    *bool  `json:"ignoreArrayOrder,omitempty"`
 	IgnoreExtraElements *bool  `json:"ignoreExtraElements,omitempty"`
 	MatchesJSONPath     string `json:"matchesJsonPath"`
-}
-
-type PostAdminMappingsFindByMetadataRequestBodyXMLEquality struct {
-	EqualToXML string `json:"equalToXml"`
-}
-
-type PostAdminMappingsFindByMetadataRequestBodyXPathMatch struct {
-	MatchesXpath string                 `json:"matchesXpath"`
-	Namespaces   map[string]interface{} `json:"namespaces,omitempty"`
-	ValuePattern map[string]interface{} `json:"valuePattern,omitempty"`
 }
 
 // PostAdminMappingsFindByMetadata200ApplicationJSONMappingsRequestBasicAuthCredentials
@@ -113,6 +113,6 @@ type PostAdminMappingsFindByMetadataRequest struct {
 
 type PostAdminMappingsFindByMetadataResponse struct {
 	ContentType                                             string
-	PostAdminMappingsFindByMetadata200ApplicationJSONObject *PostAdminMappingsFindByMetadata200ApplicationJSON
 	StatusCode                                              int64
+	PostAdminMappingsFindByMetadata200ApplicationJSONObject *PostAdminMappingsFindByMetadata200ApplicationJSON
 }

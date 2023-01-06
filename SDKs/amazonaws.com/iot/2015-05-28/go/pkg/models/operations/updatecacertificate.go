@@ -7,15 +7,15 @@ type UpdateCaCertificatePathParams struct {
 type UpdateCaCertificateNewAutoRegistrationStatusEnum string
 
 const (
-	UpdateCaCertificateNewAutoRegistrationStatusEnumEnable  UpdateCaCertificateNewAutoRegistrationStatusEnum = "ENABLE"
-	UpdateCaCertificateNewAutoRegistrationStatusEnumDisable UpdateCaCertificateNewAutoRegistrationStatusEnum = "DISABLE"
+	UpdateCACertificateNewAutoRegistrationStatusEnumEnable  UpdateCaCertificateNewAutoRegistrationStatusEnum = "ENABLE"
+	UpdateCACertificateNewAutoRegistrationStatusEnumDisable UpdateCaCertificateNewAutoRegistrationStatusEnum = "DISABLE"
 )
 
 type UpdateCaCertificateNewStatusEnum string
 
 const (
-	UpdateCaCertificateNewStatusEnumActive   UpdateCaCertificateNewStatusEnum = "ACTIVE"
-	UpdateCaCertificateNewStatusEnumInactive UpdateCaCertificateNewStatusEnum = "INACTIVE"
+	UpdateCACertificateNewStatusEnumActive   UpdateCaCertificateNewStatusEnum = "ACTIVE"
+	UpdateCACertificateNewStatusEnumInactive UpdateCaCertificateNewStatusEnum = "INACTIVE"
 )
 
 type UpdateCaCertificateQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type GetUploadSSHPublicKeyActionEnum string
 
 const (
-	GetUploadSSHPublicKeyActionEnumUploadSSHPublicKey GetUploadSSHPublicKeyActionEnum = "UploadSSHPublicKey"
+	GETUploadSSHPublicKeyActionEnumUploadSSHPublicKey GetUploadSSHPublicKeyActionEnum = "UploadSSHPublicKey"
 )
 
 type GetUploadSSHPublicKeyVersionEnum string
 
 const (
-	GetUploadSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetUploadSSHPublicKeyVersionEnum = "2010-05-08"
+	GETUploadSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetUploadSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
 type GetUploadSSHPublicKeyQueryParams struct {

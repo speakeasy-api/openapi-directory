@@ -3,13 +3,13 @@ package operations
 type GetCompleteMigrationActionEnum string
 
 const (
-	GetCompleteMigrationActionEnumCompleteMigration GetCompleteMigrationActionEnum = "CompleteMigration"
+	GETCompleteMigrationActionEnumCompleteMigration GetCompleteMigrationActionEnum = "CompleteMigration"
 )
 
 type GetCompleteMigrationVersionEnum string
 
 const (
-	GetCompleteMigrationVersionEnumTwoThousandAndFifteen0202 GetCompleteMigrationVersionEnum = "2015-02-02"
+	GETCompleteMigrationVersionEnumTwoThousandAndFifteen0202 GetCompleteMigrationVersionEnum = "2015-02-02"
 )
 
 type GetCompleteMigrationQueryParams struct {

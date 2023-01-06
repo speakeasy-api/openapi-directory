@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVpcEndpointConnectionNotificationsResult struct {
-	ConnectionNotificationSet []ConnectionNotification
-	NextToken                 *string
+	ConnectionNotificationSet map[string]interface{}
+	NextToken                 map[string]interface{}
 }

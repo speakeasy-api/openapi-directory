@@ -79,9 +79,9 @@ type ObWriteInternationalStandingOrderResponse7DataInitiation struct {
 type ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum string
 
 const (
-	ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumAuthorised                   ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "Authorised"
-	ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
-	ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumRejected                     ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "Rejected"
+	OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumAuthorised                   ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "Authorised"
+	OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumAwaitingFurtherAuthorisation ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "AwaitingFurtherAuthorisation"
+	OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumRejected                     ObWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
 // ObWriteInternationalStandingOrderResponse7DataMultiAuthorisation
@@ -128,10 +128,10 @@ type ObWriteInternationalStandingOrderResponse7DataRefund struct {
 type ObWriteInternationalStandingOrderResponse7DataStatusEnum string
 
 const (
-	ObWriteInternationalStandingOrderResponse7DataStatusEnumCancelled           ObWriteInternationalStandingOrderResponse7DataStatusEnum = "Cancelled"
-	ObWriteInternationalStandingOrderResponse7DataStatusEnumInitiationCompleted ObWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationCompleted"
-	ObWriteInternationalStandingOrderResponse7DataStatusEnumInitiationFailed    ObWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationFailed"
-	ObWriteInternationalStandingOrderResponse7DataStatusEnumInitiationPending   ObWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationPending"
+	OBWriteInternationalStandingOrderResponse7DataStatusEnumCancelled           ObWriteInternationalStandingOrderResponse7DataStatusEnum = "Cancelled"
+	OBWriteInternationalStandingOrderResponse7DataStatusEnumInitiationCompleted ObWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationCompleted"
+	OBWriteInternationalStandingOrderResponse7DataStatusEnumInitiationFailed    ObWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationFailed"
+	OBWriteInternationalStandingOrderResponse7DataStatusEnumInitiationPending   ObWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationPending"
 )
 
 type ObWriteInternationalStandingOrderResponse7Data struct {

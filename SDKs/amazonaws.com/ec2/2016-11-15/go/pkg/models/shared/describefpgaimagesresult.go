@@ -1,6 +1,6 @@
 package shared
 
 type DescribeFpgaImagesResult struct {
-	FpgaImages []FpgaImage
-	NextToken  *string
+	FpgaImages map[string]interface{}
+	NextToken  map[string]interface{}
 }

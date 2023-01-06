@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,69 +26,64 @@ func main() {
         Security: operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams{
-            Parent: "placeat",
+            Parent: "ut",
         },
         QueryParams: operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "vero",
+            AccessToken: "nam",
             Alt: "media",
-            BackupID: "sed",
-            Callback: "aut",
-            Fields: "voluptas",
-            Key: "debitis",
-            OauthToken: "reprehenderit",
+            BackupID: "et",
+            Callback: "et",
+            Fields: "velit",
+            Key: "quas",
+            OauthToken: "nostrum",
             PrettyPrint: false,
-            QuotaUser: "maxime",
-            UploadType: "et",
-            UploadProtocol: "sit",
+            QuotaUser: "veritatis",
+            UploadType: "quis",
+            UploadProtocol: "quidem",
         },
         Request: &shared.BackupInput{
             ClusterMetadata: &shared.ClusterMetadata{
-                AnthosVersion: "voluptas",
+                AnthosVersion: "ratione",
                 BackupCrdVersions: map[string]string{
-                    "perspiciatis": "nihil",
-                    "et": "est",
-                    "debitis": "qui",
+                    "perferendis": "enim",
+                    "natus": "repudiandae",
+                    "aperiam": "minus",
                 },
-                Cluster: "sed",
-                GkeVersion: "animi",
-                K8sVersion: "rerum",
+                Cluster: "esse",
+                GkeVersion: "molestias",
+                K8sVersion: "id",
             },
-            DeleteLockDays: 303880974147249365,
-            Description: "provident",
+            DeleteLockDays: 3787620476912475370,
+            Description: "neque",
             EncryptionKey: &shared.EncryptionKey{
-                GcpKmsEncryptionKey: "qui",
+                GcpKmsEncryptionKey: "sed",
             },
             Labels: map[string]string{
-                "et": "molestiae",
-                "perferendis": "vel",
+                "reprehenderit": "est",
+                "velit": "dolores",
+                "officia": "consequatur",
             },
-            RetainDays: 4896749636161315584,
+            RetainDays: 8850273851812276247,
             SelectedApplications: &shared.NamespacedNames{
                 NamespacedNames: []shared.NamespacedName{
                     shared.NamespacedName{
-                        Name: "dolorem",
-                        Namespace: "aut",
-                    },
-                    shared.NamespacedName{
-                        Name: "saepe",
-                        Namespace: "quas",
-                    },
-                    shared.NamespacedName{
-                        Name: "repudiandae",
-                        Namespace: "similique",
+                        Name: "et",
+                        Namespace: "iure",
                     },
                 },
             },
             SelectedNamespaces: &shared.Namespaces{
                 Namespaces: []string{
-                    "distinctio",
+                    "modi",
+                    "voluptatem",
+                    "iusto",
                 },
             },
         },

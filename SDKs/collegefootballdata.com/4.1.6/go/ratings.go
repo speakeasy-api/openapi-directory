@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -66,7 +66,7 @@ func (s *Ratings) GetConferenceSpRatings(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.ConferenceSpRatings = out
+			res.ConferenceSPRatings = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -110,7 +110,7 @@ func (s *Ratings) GetSpRatings(ctx context.Context, request operations.GetSpRati
 				return nil, err
 			}
 
-			res.TeamSpRatings = out
+			res.TeamSPRatings = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -154,7 +154,7 @@ func (s *Ratings) GetSrsRatings(ctx context.Context, request operations.GetSrsRa
 				return nil, err
 			}
 
-			res.TeamSrsRatings = out
+			res.TeamSRSRatings = out
 		}
 	case httpRes.StatusCode == 400:
 	}

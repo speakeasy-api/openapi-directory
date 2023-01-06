@@ -12,7 +12,7 @@ type ContainerProperties struct {
 	JobRoleArn                   *string                       `json:"jobRoleArn,omitempty"`
 	LinuxParameters              *LinuxParameters              `json:"linuxParameters,omitempty"`
 	LogConfiguration             *LogConfiguration             `json:"logConfiguration,omitempty"`
-	Memory                       *int64                        `json:"memory,omitempty"`
+	Memory                       map[string]interface{}        `json:"memory,omitempty"`
 	MountPoints                  []MountPoint                  `json:"mountPoints,omitempty"`
 	NetworkConfiguration         *NetworkConfiguration         `json:"networkConfiguration,omitempty"`
 	Privileged                   *bool                         `json:"privileged,omitempty"`
@@ -21,6 +21,6 @@ type ContainerProperties struct {
 	Secrets                      []Secret                      `json:"secrets,omitempty"`
 	Ulimits                      []Ulimit                      `json:"ulimits,omitempty"`
 	User                         *string                       `json:"user,omitempty"`
-	Vcpus                        *int64                        `json:"vcpus,omitempty"`
+	Vcpus                        map[string]interface{}        `json:"vcpus,omitempty"`
 	Volumes                      []Volume                      `json:"volumes,omitempty"`
 }

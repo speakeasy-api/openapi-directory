@@ -3,20 +3,20 @@ package operations
 type GetModifyAvailabilityZoneGroupActionEnum string
 
 const (
-	GetModifyAvailabilityZoneGroupActionEnumModifyAvailabilityZoneGroup GetModifyAvailabilityZoneGroupActionEnum = "ModifyAvailabilityZoneGroup"
+	GETModifyAvailabilityZoneGroupActionEnumModifyAvailabilityZoneGroup GetModifyAvailabilityZoneGroupActionEnum = "ModifyAvailabilityZoneGroup"
 )
 
 type GetModifyAvailabilityZoneGroupOptInStatusEnum string
 
 const (
-	GetModifyAvailabilityZoneGroupOptInStatusEnumOptedIn    GetModifyAvailabilityZoneGroupOptInStatusEnum = "opted-in"
-	GetModifyAvailabilityZoneGroupOptInStatusEnumNotOptedIn GetModifyAvailabilityZoneGroupOptInStatusEnum = "not-opted-in"
+	GETModifyAvailabilityZoneGroupOptInStatusEnumOptedIn    GetModifyAvailabilityZoneGroupOptInStatusEnum = "opted-in"
+	GETModifyAvailabilityZoneGroupOptInStatusEnumNotOptedIn GetModifyAvailabilityZoneGroupOptInStatusEnum = "not-opted-in"
 )
 
 type GetModifyAvailabilityZoneGroupVersionEnum string
 
 const (
-	GetModifyAvailabilityZoneGroupVersionEnumTwoThousandAndSixteen1115 GetModifyAvailabilityZoneGroupVersionEnum = "2016-11-15"
+	GETModifyAvailabilityZoneGroupVersionEnumTwoThousandAndSixteen1115 GetModifyAvailabilityZoneGroupVersionEnum = "2016-11-15"
 )
 
 type GetModifyAvailabilityZoneGroupQueryParams struct {

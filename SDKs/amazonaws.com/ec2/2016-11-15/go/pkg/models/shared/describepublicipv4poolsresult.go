@@ -1,6 +1,6 @@
 package shared
 
 type DescribePublicIpv4PoolsResult struct {
-	NextToken       *string
-	PublicIpv4Pools []PublicIpv4Pool
+	NextToken       map[string]interface{}
+	PublicIpv4Pools map[string]interface{}
 }

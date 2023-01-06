@@ -82,7 +82,7 @@ type Tpcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Tpcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Tpcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Tpcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Tpcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Tpcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tpcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Tpcer404ApplicationJSON struct {

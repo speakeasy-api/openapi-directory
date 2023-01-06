@@ -15,8 +15,8 @@ type CreateEnumOptionForCustomFieldQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateEnumOptionForCustomFieldRequestBodyInput struct {
-	Data *shared.EnumOptionRequestInput `json:"data,omitempty"`
+type CreateEnumOptionForCustomFieldRequestBody struct {
+	Data *shared.EnumOptionRequest `json:"data,omitempty"`
 }
 
 type CreateEnumOptionForCustomField201ApplicationJSON struct {
@@ -26,7 +26,7 @@ type CreateEnumOptionForCustomField201ApplicationJSON struct {
 type CreateEnumOptionForCustomFieldRequest struct {
 	PathParams  CreateEnumOptionForCustomFieldPathParams
 	QueryParams CreateEnumOptionForCustomFieldQueryParams
-	Request     *CreateEnumOptionForCustomFieldRequestBodyInput `request:"mediaType=application/json"`
+	Request     *CreateEnumOptionForCustomFieldRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateEnumOptionForCustomFieldResponse struct {

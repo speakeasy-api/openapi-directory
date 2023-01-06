@@ -1,6 +1,6 @@
 package shared
 
 type ConfirmProductInstanceResult struct {
-	OwnerID *string
-	Return  *bool
+	OwnerID map[string]interface{}
+	Return  map[string]interface{}
 }

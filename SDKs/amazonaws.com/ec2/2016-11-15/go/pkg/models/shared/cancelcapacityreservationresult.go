@@ -1,5 +1,5 @@
 package shared
 
 type CancelCapacityReservationResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

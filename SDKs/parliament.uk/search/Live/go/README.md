@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,7 +22,7 @@ import (
 func main() {
     s := sdk.New()
     
-    res, err := s.Sdk.GetDescription(ctx)
+    res, err := s.Description.GetDescription(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -37,9 +36,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Description
 
 * `GetDescription` - OpenSearch description document
+
+### Query
+
 * `GetQuery` - Search results
 * `GetQueryExtension` - Search results
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.LibraryagentShelvesBooksBorrowSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.LibraryagentShelvesBooksBorrowPathParams{
-            Name: "tempora",
+            Name: "provident",
         },
         QueryParams: operations.LibraryagentShelvesBooksBorrowQueryParams{
             DollarXgafv: "2",
-            AccessToken: "eos",
+            AccessToken: "saepe",
             Alt: "media",
-            Callback: "accusantium",
-            Fields: "doloremque",
-            Key: "accusamus",
-            OauthToken: "rerum",
-            PrettyPrint: false,
-            QuotaUser: "voluptates",
-            UploadType: "sequi",
-            UploadProtocol: "neque",
+            Callback: "voluptas",
+            Fields: "ad",
+            Key: "voluptatem",
+            OauthToken: "assumenda",
+            PrettyPrint: true,
+            QuotaUser: "necessitatibus",
+            UploadType: "ipsam",
+            UploadProtocol: "dolorem",
         },
     }
     

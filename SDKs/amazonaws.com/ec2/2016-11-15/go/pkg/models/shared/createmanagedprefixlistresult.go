@@ -1,5 +1,5 @@
 package shared
 
 type CreateManagedPrefixListResult struct {
-	PrefixList *ManagedPrefixList
+	PrefixList map[string]interface{}
 }

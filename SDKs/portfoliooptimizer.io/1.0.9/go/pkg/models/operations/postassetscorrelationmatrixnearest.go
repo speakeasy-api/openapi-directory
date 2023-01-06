@@ -16,6 +16,6 @@ type PostAssetsCorrelationMatrixNearestRequest struct {
 
 type PostAssetsCorrelationMatrixNearestResponse struct {
 	ContentType                                                string
-	PostAssetsCorrelationMatrixNearest200ApplicationJSONObject *PostAssetsCorrelationMatrixNearest200ApplicationJSON
 	StatusCode                                                 int64
+	PostAssetsCorrelationMatrixNearest200ApplicationJSONObject *PostAssetsCorrelationMatrixNearest200ApplicationJSON
 }

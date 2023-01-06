@@ -8,8 +8,8 @@ import (
 type GetListsFormatFormatEnum string
 
 const (
-	GetListsFormatFormatEnumJSON  GetListsFormatFormatEnum = "json"
-	GetListsFormatFormatEnumJsonp GetListsFormatFormatEnum = "jsonp"
+	GETListsFormatFormatEnumJSON  GetListsFormatFormatEnum = "json"
+	GETListsFormatFormatEnumJsonp GetListsFormatFormatEnum = "jsonp"
 )
 
 type GetListsFormatPathParams struct {
@@ -19,8 +19,8 @@ type GetListsFormatPathParams struct {
 type GetListsFormatSortOrderEnum string
 
 const (
-	GetListsFormatSortOrderEnumAsc  GetListsFormatSortOrderEnum = "ASC"
-	GetListsFormatSortOrderEnumDesc GetListsFormatSortOrderEnum = "DESC"
+	GETListsFormatSortOrderEnumAsc  GetListsFormatSortOrderEnum = "ASC"
+	GETListsFormatSortOrderEnumDesc GetListsFormatSortOrderEnum = "DESC"
 )
 
 type GetListsFormatQueryParams struct {
@@ -97,6 +97,6 @@ type GetListsFormatRequest struct {
 
 type GetListsFormatResponse struct {
 	ContentType                            string
-	GetListsFormat200ApplicationJSONObject *GetListsFormat200ApplicationJSON
+	GETListsFormat200ApplicationJSONObject *GetListsFormat200ApplicationJSON
 	StatusCode                             int64
 }

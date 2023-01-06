@@ -3,13 +3,13 @@ package operations
 type PostCreateSamlProviderActionEnum string
 
 const (
-	PostCreateSamlProviderActionEnumCreateSamlProvider PostCreateSamlProviderActionEnum = "CreateSAMLProvider"
+	POSTCreateSAMLProviderActionEnumCreateSamlProvider PostCreateSamlProviderActionEnum = "CreateSAMLProvider"
 )
 
 type PostCreateSamlProviderVersionEnum string
 
 const (
-	PostCreateSamlProviderVersionEnumTwoThousandAndTen0508 PostCreateSamlProviderVersionEnum = "2010-05-08"
+	POSTCreateSAMLProviderVersionEnumTwoThousandAndTen0508 PostCreateSamlProviderVersionEnum = "2010-05-08"
 )
 
 type PostCreateSamlProviderQueryParams struct {

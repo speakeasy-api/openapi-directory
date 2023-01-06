@@ -7,8 +7,8 @@ import (
 type GetListsNamesFormatFormatEnum string
 
 const (
-	GetListsNamesFormatFormatEnumJSON  GetListsNamesFormatFormatEnum = "json"
-	GetListsNamesFormatFormatEnumJsonp GetListsNamesFormatFormatEnum = "jsonp"
+	GETListsNamesFormatFormatEnumJSON  GetListsNamesFormatFormatEnum = "json"
+	GETListsNamesFormatFormatEnumJsonp GetListsNamesFormatFormatEnum = "jsonp"
 )
 
 type GetListsNamesFormatPathParams struct {
@@ -47,6 +47,6 @@ type GetListsNamesFormatRequest struct {
 
 type GetListsNamesFormatResponse struct {
 	ContentType                                 string
-	GetListsNamesFormat200ApplicationJSONObject *GetListsNamesFormat200ApplicationJSON
+	GETListsNamesFormat200ApplicationJSONObject *GetListsNamesFormat200ApplicationJSON
 	StatusCode                                  int64
 }

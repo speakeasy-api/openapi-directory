@@ -1,7 +1,7 @@
 package shared
 
 type User struct {
-	Arn            *string
+	ARN            *string
 	AccessString   *string
 	Authentication *Authentication
 	Engine         *string

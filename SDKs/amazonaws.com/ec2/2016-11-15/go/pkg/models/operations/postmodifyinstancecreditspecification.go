@@ -3,13 +3,13 @@ package operations
 type PostModifyInstanceCreditSpecificationActionEnum string
 
 const (
-	PostModifyInstanceCreditSpecificationActionEnumModifyInstanceCreditSpecification PostModifyInstanceCreditSpecificationActionEnum = "ModifyInstanceCreditSpecification"
+	POSTModifyInstanceCreditSpecificationActionEnumModifyInstanceCreditSpecification PostModifyInstanceCreditSpecificationActionEnum = "ModifyInstanceCreditSpecification"
 )
 
 type PostModifyInstanceCreditSpecificationVersionEnum string
 
 const (
-	PostModifyInstanceCreditSpecificationVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceCreditSpecificationVersionEnum = "2016-11-15"
+	POSTModifyInstanceCreditSpecificationVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceCreditSpecificationVersionEnum = "2016-11-15"
 )
 
 type PostModifyInstanceCreditSpecificationQueryParams struct {

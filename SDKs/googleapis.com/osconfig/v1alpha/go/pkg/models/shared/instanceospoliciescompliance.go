@@ -3,11 +3,11 @@ package shared
 type InstanceOsPoliciesComplianceStateEnum string
 
 const (
-	InstanceOsPoliciesComplianceStateEnumOsPolicyComplianceStateUnspecified InstanceOsPoliciesComplianceStateEnum = "OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED"
-	InstanceOsPoliciesComplianceStateEnumCompliant                          InstanceOsPoliciesComplianceStateEnum = "COMPLIANT"
-	InstanceOsPoliciesComplianceStateEnumNonCompliant                       InstanceOsPoliciesComplianceStateEnum = "NON_COMPLIANT"
-	InstanceOsPoliciesComplianceStateEnumUnknown                            InstanceOsPoliciesComplianceStateEnum = "UNKNOWN"
-	InstanceOsPoliciesComplianceStateEnumNoOsPoliciesApplicable             InstanceOsPoliciesComplianceStateEnum = "NO_OS_POLICIES_APPLICABLE"
+	InstanceOSPoliciesComplianceStateEnumOsPolicyComplianceStateUnspecified InstanceOsPoliciesComplianceStateEnum = "OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED"
+	InstanceOSPoliciesComplianceStateEnumCompliant                          InstanceOsPoliciesComplianceStateEnum = "COMPLIANT"
+	InstanceOSPoliciesComplianceStateEnumNonCompliant                       InstanceOsPoliciesComplianceStateEnum = "NON_COMPLIANT"
+	InstanceOSPoliciesComplianceStateEnumUnknown                            InstanceOsPoliciesComplianceStateEnum = "UNKNOWN"
+	InstanceOSPoliciesComplianceStateEnumNoOsPoliciesApplicable             InstanceOsPoliciesComplianceStateEnum = "NO_OS_POLICIES_APPLICABLE"
 )
 
 // InstanceOsPoliciesCompliance

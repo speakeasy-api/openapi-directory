@@ -3,13 +3,13 @@ package operations
 type PostDeleteFpgaImageActionEnum string
 
 const (
-	PostDeleteFpgaImageActionEnumDeleteFpgaImage PostDeleteFpgaImageActionEnum = "DeleteFpgaImage"
+	POSTDeleteFpgaImageActionEnumDeleteFpgaImage PostDeleteFpgaImageActionEnum = "DeleteFpgaImage"
 )
 
 type PostDeleteFpgaImageVersionEnum string
 
 const (
-	PostDeleteFpgaImageVersionEnumTwoThousandAndSixteen1115 PostDeleteFpgaImageVersionEnum = "2016-11-15"
+	POSTDeleteFpgaImageVersionEnumTwoThousandAndSixteen1115 PostDeleteFpgaImageVersionEnum = "2016-11-15"
 )
 
 type PostDeleteFpgaImageQueryParams struct {

@@ -1,5 +1,5 @@
 package shared
 
 type StartNetworkInsightsAnalysisResult struct {
-	NetworkInsightsAnalysis *NetworkInsightsAnalysis
+	NetworkInsightsAnalysis map[string]interface{}
 }

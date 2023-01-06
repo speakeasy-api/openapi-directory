@@ -13,7 +13,7 @@ type ProtocolTelnetGetTraceRequest struct {
 }
 
 type ProtocolTelnetGetTraceResponse struct {
-	ConfigTelnet *shared.ConfigTelnet
+	ConfigTELNET *shared.ConfigTelnet
 	ContentType  string
 	StatusCode   int64
 }

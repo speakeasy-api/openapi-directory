@@ -1,19 +1,15 @@
 package shared
 
-import (
-	"time"
-)
-
 // GetReservedInstancesExchangeQuoteResult
 // Contains the output of GetReservedInstancesExchangeQuote.
 type GetReservedInstancesExchangeQuoteResult struct {
-	CurrencyCode                        *string
-	IsValidExchange                     *bool
-	OutputReservedInstancesWillExpireAt *time.Time
-	PaymentDue                          *string
-	ReservedInstanceValueRollup         *ReservationValue
-	ReservedInstanceValueSet            []ReservedInstanceReservationValue
-	TargetConfigurationValueRollup      *ReservationValue
-	TargetConfigurationValueSet         []TargetReservationValue
-	ValidationFailureReason             *string
+	CurrencyCode                        map[string]interface{}
+	IsValidExchange                     map[string]interface{}
+	OutputReservedInstancesWillExpireAt map[string]interface{}
+	PaymentDue                          map[string]interface{}
+	ReservedInstanceValueRollup         map[string]interface{}
+	ReservedInstanceValueSet            map[string]interface{}
+	TargetConfigurationValueRollup      map[string]interface{}
+	TargetConfigurationValueSet         map[string]interface{}
+	ValidationFailureReason             map[string]interface{}
 }

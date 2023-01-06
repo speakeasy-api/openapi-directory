@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.RsbycSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.RsbycRequestBody{
             CertificateParameters: &operations.RsbycRequestBodyCertificateParameters{
-                UID: "sit",
+                UID: "occaecati",
             },
-            ConsentArtifact: "aut",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "totam",
+            TxnID: "non",
         },
     }
     
-    res, err := s.Sdk.Rsbyc(ctx, req)
+    res, err := s.APIs.Rsbyc(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Rsbyc` - Health Card/ Certificate
 

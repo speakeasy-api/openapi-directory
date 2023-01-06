@@ -15,7 +15,7 @@ type Assignment struct {
 	AssignmentStatus  *AssignmentStatusEnum `json:"AssignmentStatus,omitempty"`
 	AutoApprovalTime  *time.Time            `json:"AutoApprovalTime,omitempty"`
 	Deadline          *time.Time            `json:"Deadline,omitempty"`
-	HitID             *string               `json:"HITId,omitempty"`
+	HITID             *string               `json:"HITId,omitempty"`
 	RejectionTime     *time.Time            `json:"RejectionTime,omitempty"`
 	RequesterFeedback *string               `json:"RequesterFeedback,omitempty"`
 	SubmitTime        *time.Time            `json:"SubmitTime,omitempty"`

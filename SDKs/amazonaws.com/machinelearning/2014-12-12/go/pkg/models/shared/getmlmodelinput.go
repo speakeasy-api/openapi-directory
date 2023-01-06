@@ -1,6 +1,6 @@
 package shared
 
 type GetMlModelInput struct {
-	MlModelID string `json:"MLModelId"`
+	MLModelID string `json:"MLModelId"`
 	Verbose   *bool  `json:"Verbose,omitempty"`
 }

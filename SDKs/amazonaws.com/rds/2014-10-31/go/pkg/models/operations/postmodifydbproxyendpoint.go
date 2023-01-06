@@ -3,13 +3,13 @@ package operations
 type PostModifyDbProxyEndpointActionEnum string
 
 const (
-	PostModifyDbProxyEndpointActionEnumModifyDbProxyEndpoint PostModifyDbProxyEndpointActionEnum = "ModifyDBProxyEndpoint"
+	POSTModifyDBProxyEndpointActionEnumModifyDbProxyEndpoint PostModifyDbProxyEndpointActionEnum = "ModifyDBProxyEndpoint"
 )
 
 type PostModifyDbProxyEndpointVersionEnum string
 
 const (
-	PostModifyDbProxyEndpointVersionEnumTwoThousandAndFourteen1031 PostModifyDbProxyEndpointVersionEnum = "2014-10-31"
+	POSTModifyDBProxyEndpointVersionEnumTwoThousandAndFourteen1031 PostModifyDbProxyEndpointVersionEnum = "2014-10-31"
 )
 
 type PostModifyDbProxyEndpointQueryParams struct {

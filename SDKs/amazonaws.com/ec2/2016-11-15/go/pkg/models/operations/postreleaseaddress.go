@@ -3,13 +3,13 @@ package operations
 type PostReleaseAddressActionEnum string
 
 const (
-	PostReleaseAddressActionEnumReleaseAddress PostReleaseAddressActionEnum = "ReleaseAddress"
+	POSTReleaseAddressActionEnumReleaseAddress PostReleaseAddressActionEnum = "ReleaseAddress"
 )
 
 type PostReleaseAddressVersionEnum string
 
 const (
-	PostReleaseAddressVersionEnumTwoThousandAndSixteen1115 PostReleaseAddressVersionEnum = "2016-11-15"
+	POSTReleaseAddressVersionEnumTwoThousandAndSixteen1115 PostReleaseAddressVersionEnum = "2016-11-15"
 )
 
 type PostReleaseAddressQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type PostModifyInstanceMetadataOptionsActionEnum string
 
 const (
-	PostModifyInstanceMetadataOptionsActionEnumModifyInstanceMetadataOptions PostModifyInstanceMetadataOptionsActionEnum = "ModifyInstanceMetadataOptions"
+	POSTModifyInstanceMetadataOptionsActionEnumModifyInstanceMetadataOptions PostModifyInstanceMetadataOptionsActionEnum = "ModifyInstanceMetadataOptions"
 )
 
 type PostModifyInstanceMetadataOptionsVersionEnum string
 
 const (
-	PostModifyInstanceMetadataOptionsVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceMetadataOptionsVersionEnum = "2016-11-15"
+	POSTModifyInstanceMetadataOptionsVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceMetadataOptionsVersionEnum = "2016-11-15"
 )
 
 type PostModifyInstanceMetadataOptionsQueryParams struct {

@@ -27,5 +27,5 @@ type RotatePagesV1Response struct {
 	ContentType                                      string
 	StatusCode                                       int64
 	RotatePagesV1200ApplicationPdfBinaryString       []byte
-	RotatePagesV14XxApplicationProblemPlusJSONObject *RotatePagesV14XxApplicationProblemPlusJSON
+	RotatePagesV14XXApplicationProblemPlusJSONObject *RotatePagesV14XxApplicationProblemPlusJSON
 }

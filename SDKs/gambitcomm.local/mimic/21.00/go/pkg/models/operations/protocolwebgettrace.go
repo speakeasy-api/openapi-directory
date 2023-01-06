@@ -13,7 +13,7 @@ type ProtocolWebGetTraceRequest struct {
 }
 
 type ProtocolWebGetTraceResponse struct {
-	ConfigWeb   *shared.ConfigWeb
+	ConfigWEB   *shared.ConfigWeb
 	ContentType string
 	StatusCode  int64
 }

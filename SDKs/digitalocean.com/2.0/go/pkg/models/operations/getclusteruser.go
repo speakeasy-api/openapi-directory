@@ -8,10 +8,6 @@ type GetClusterUserPathParams struct {
 	ClusterID string `pathParam:"style=simple,explode=false,name=cluster_id"`
 }
 
-type GetClusterUserRequest struct {
-	PathParams GetClusterUserPathParams
-}
-
 type GetClusterUser200ApplicationJSONKubernetesClusterUser struct {
 	Groups   []string `json:"groups,omitempty"`
 	Username *string  `json:"username,omitempty"`
@@ -25,6 +21,10 @@ type GetClusterUser401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetClusterUserRequest struct {
+	PathParams GetClusterUserPathParams
 }
 
 type GetClusterUserResponse struct {

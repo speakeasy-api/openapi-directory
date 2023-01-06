@@ -29,12 +29,12 @@ type StartStreamEncryptionRequest struct {
 type StartStreamEncryptionResponse struct {
 	ContentType               string
 	InvalidArgumentException  *interface{}
-	KmsAccessDeniedException  *interface{}
-	KmsDisabledException      *interface{}
-	KmsInvalidStateException  *interface{}
-	KmsNotFoundException      *interface{}
-	KmsOptInRequired          *interface{}
-	KmsThrottlingException    *interface{}
+	KMSAccessDeniedException  *interface{}
+	KMSDisabledException      *interface{}
+	KMSInvalidStateException  *interface{}
+	KMSNotFoundException      *interface{}
+	KMSOptInRequired          *interface{}
+	KMSThrottlingException    *interface{}
 	LimitExceededException    *interface{}
 	ResourceInUseException    *interface{}
 	ResourceNotFoundException *interface{}

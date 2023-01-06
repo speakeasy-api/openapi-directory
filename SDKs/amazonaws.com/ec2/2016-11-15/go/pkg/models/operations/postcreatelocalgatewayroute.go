@@ -3,13 +3,13 @@ package operations
 type PostCreateLocalGatewayRouteActionEnum string
 
 const (
-	PostCreateLocalGatewayRouteActionEnumCreateLocalGatewayRoute PostCreateLocalGatewayRouteActionEnum = "CreateLocalGatewayRoute"
+	POSTCreateLocalGatewayRouteActionEnumCreateLocalGatewayRoute PostCreateLocalGatewayRouteActionEnum = "CreateLocalGatewayRoute"
 )
 
 type PostCreateLocalGatewayRouteVersionEnum string
 
 const (
-	PostCreateLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 PostCreateLocalGatewayRouteVersionEnum = "2016-11-15"
+	POSTCreateLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 PostCreateLocalGatewayRouteVersionEnum = "2016-11-15"
 )
 
 type PostCreateLocalGatewayRouteQueryParams struct {

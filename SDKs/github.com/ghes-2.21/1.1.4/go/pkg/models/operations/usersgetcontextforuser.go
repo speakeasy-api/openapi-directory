@@ -8,18 +8,9 @@ type UsersGetContextForUserPathParams struct {
 	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
-type UsersGetContextForUserSubjectTypeEnum string
-
-const (
-	UsersGetContextForUserSubjectTypeEnumOrganization UsersGetContextForUserSubjectTypeEnum = "organization"
-	UsersGetContextForUserSubjectTypeEnumRepository   UsersGetContextForUserSubjectTypeEnum = "repository"
-	UsersGetContextForUserSubjectTypeEnumIssue        UsersGetContextForUserSubjectTypeEnum = "issue"
-	UsersGetContextForUserSubjectTypeEnumPullRequest  UsersGetContextForUserSubjectTypeEnum = "pull_request"
-)
-
 type UsersGetContextForUserQueryParams struct {
-	SubjectID   *string                                `queryParam:"style=form,explode=true,name=subject_id"`
-	SubjectType *UsersGetContextForUserSubjectTypeEnum `queryParam:"style=form,explode=true,name=subject_type"`
+	SubjectID   *string              `queryParam:"style=form,explode=true,name=subject_id"`
+	SubjectType *shared.UsernameEnum `queryParam:"style=form,explode=true,name=subject_type"`
 }
 
 type UsersGetContextForUserRequest struct {

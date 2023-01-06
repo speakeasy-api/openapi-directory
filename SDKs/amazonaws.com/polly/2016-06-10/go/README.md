@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.DeleteLexiconRequest{
         PathParams: operations.DeleteLexiconPathParams{
-            LexiconName: "sequi",
+            LexiconName: "qui",
         },
         Headers: operations.DeleteLexiconHeaders{
-            XAmzAlgorithm: "non",
-            XAmzContentSha256: "a",
-            XAmzCredential: "recusandae",
-            XAmzDate: "molestias",
-            XAmzSecurityToken: "quis",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "sint",
+            XAmzAlgorithm: "qui",
+            XAmzContentSha256: "dolores",
+            XAmzCredential: "aliquam",
+            XAmzDate: "quisquam",
+            XAmzSecurityToken: "iure",
+            XAmzSignature: "hic",
+            XAmzSignedHeaders: "maxime",
         },
     }
     
-    res, err := s.Sdk.DeleteLexicon(ctx, req)
+    res, err := s.DeleteLexicon(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

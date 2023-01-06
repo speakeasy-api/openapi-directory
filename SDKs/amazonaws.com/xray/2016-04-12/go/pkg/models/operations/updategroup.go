@@ -23,7 +23,7 @@ type UpdateGroupRequestBodyInsightsConfiguration struct {
 
 type UpdateGroupRequestBody struct {
 	FilterExpression      *string                                      `json:"FilterExpression,omitempty"`
-	GroupArn              *string                                      `json:"GroupARN,omitempty"`
+	GroupARN              *string                                      `json:"GroupARN,omitempty"`
 	GroupName             *string                                      `json:"GroupName,omitempty"`
 	InsightsConfiguration *UpdateGroupRequestBodyInsightsConfiguration `json:"InsightsConfiguration,omitempty"`
 }

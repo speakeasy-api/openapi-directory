@@ -16,7 +16,7 @@ type ListTagsForStreamHeaders struct {
 
 type ListTagsForStreamRequestBody struct {
 	NextToken  *string `json:"NextToken,omitempty"`
-	StreamArn  *string `json:"StreamARN,omitempty"`
+	StreamARN  *string `json:"StreamARN,omitempty"`
 	StreamName *string `json:"StreamName,omitempty"`
 }
 

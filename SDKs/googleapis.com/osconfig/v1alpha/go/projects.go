@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Projects struct {
@@ -64,7 +64,7 @@ func (s *Projects) OsconfigProjectsLocationsInstanceOsPoliciesCompliancesList(ct
 				return nil, err
 			}
 
-			res.ListInstanceOsPoliciesCompliancesResponse = out
+			res.ListInstanceOSPoliciesCompliancesResponse = out
 		}
 	}
 
@@ -148,7 +148,7 @@ func (s *Projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsL
 				return nil, err
 			}
 
-			res.ListOsPolicyAssignmentReportsResponse = out
+			res.ListOSPolicyAssignmentReportsResponse = out
 		}
 	}
 
@@ -323,7 +323,7 @@ func (s *Projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.
 				return nil, err
 			}
 
-			res.ListOsPolicyAssignmentsResponse = out
+			res.ListOSPolicyAssignmentsResponse = out
 		}
 	}
 
@@ -365,7 +365,7 @@ func (s *Projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx
 				return nil, err
 			}
 
-			res.ListOsPolicyAssignmentRevisionsResponse = out
+			res.ListOSPolicyAssignmentRevisionsResponse = out
 		}
 	}
 

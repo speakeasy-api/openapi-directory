@@ -3,6 +3,6 @@ package shared
 // DescribeScheduledInstanceAvailabilityResult
 // Contains the output of DescribeScheduledInstanceAvailability.
 type DescribeScheduledInstanceAvailabilityResult struct {
-	NextToken                        *string
-	ScheduledInstanceAvailabilitySet []ScheduledInstanceAvailability
+	NextToken                        map[string]interface{}
+	ScheduledInstanceAvailabilitySet map[string]interface{}
 }

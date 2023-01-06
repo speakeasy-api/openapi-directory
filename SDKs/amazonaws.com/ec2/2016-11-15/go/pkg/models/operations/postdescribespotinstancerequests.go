@@ -3,13 +3,13 @@ package operations
 type PostDescribeSpotInstanceRequestsActionEnum string
 
 const (
-	PostDescribeSpotInstanceRequestsActionEnumDescribeSpotInstanceRequests PostDescribeSpotInstanceRequestsActionEnum = "DescribeSpotInstanceRequests"
+	POSTDescribeSpotInstanceRequestsActionEnumDescribeSpotInstanceRequests PostDescribeSpotInstanceRequestsActionEnum = "DescribeSpotInstanceRequests"
 )
 
 type PostDescribeSpotInstanceRequestsVersionEnum string
 
 const (
-	PostDescribeSpotInstanceRequestsVersionEnumTwoThousandAndSixteen1115 PostDescribeSpotInstanceRequestsVersionEnum = "2016-11-15"
+	POSTDescribeSpotInstanceRequestsVersionEnumTwoThousandAndSixteen1115 PostDescribeSpotInstanceRequestsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeSpotInstanceRequestsQueryParams struct {

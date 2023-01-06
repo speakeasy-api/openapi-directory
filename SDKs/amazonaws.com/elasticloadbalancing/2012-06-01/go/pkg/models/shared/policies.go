@@ -4,6 +4,6 @@ package shared
 // The policies for a load balancer.
 type Policies struct {
 	AppCookieStickinessPolicies []AppCookieStickinessPolicy
-	LbCookieStickinessPolicies  []LbCookieStickinessPolicy
+	LBCookieStickinessPolicies  []LbCookieStickinessPolicy
 	OtherPolicies               []string
 }

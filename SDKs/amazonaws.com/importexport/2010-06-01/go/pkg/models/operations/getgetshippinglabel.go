@@ -3,24 +3,24 @@ package operations
 type GetGetShippingLabelActionEnum string
 
 const (
-	GetGetShippingLabelActionEnumGetShippingLabel GetGetShippingLabelActionEnum = "GetShippingLabel"
+	GETGETShippingLabelActionEnumGetShippingLabel GetGetShippingLabelActionEnum = "GetShippingLabel"
 )
 
 type GetGetShippingLabelOperationEnum string
 
 const (
-	GetGetShippingLabelOperationEnumGetShippingLabel GetGetShippingLabelOperationEnum = "GetShippingLabel"
+	GETGETShippingLabelOperationEnumGetShippingLabel GetGetShippingLabelOperationEnum = "GetShippingLabel"
 )
 
 type GetGetShippingLabelVersionEnum string
 
 const (
-	GetGetShippingLabelVersionEnumTwoThousandAndTen0601 GetGetShippingLabelVersionEnum = "2010-06-01"
+	GETGETShippingLabelVersionEnumTwoThousandAndTen0601 GetGetShippingLabelVersionEnum = "2010-06-01"
 )
 
 type GetGetShippingLabelQueryParams struct {
 	APIVersion       *string                          `queryParam:"style=form,explode=true,name=APIVersion"`
-	AwsAccessKeyID   string                           `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                           `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GetGetShippingLabelActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        GetGetShippingLabelOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
 	Signature        string                           `queryParam:"style=form,explode=true,name=Signature"`

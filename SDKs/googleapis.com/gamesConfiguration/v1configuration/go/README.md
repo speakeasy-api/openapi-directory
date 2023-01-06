@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.GamesConfigurationAchievementConfigurationsDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.GamesConfigurationAchievementConfigurationsDeletePathParams{
-            AchievementID: "occaecati",
+            AchievementID: "exercitationem",
         },
         QueryParams: operations.GamesConfigurationAchievementConfigurationsDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "consequatur",
+            DollarXgafv: "2",
+            AccessToken: "ullam",
             Alt: "proto",
-            Callback: "officia",
-            Fields: "perspiciatis",
-            Key: "illo",
-            OauthToken: "quam",
-            PrettyPrint: false,
-            QuotaUser: "eum",
-            UploadType: "ducimus",
-            UploadProtocol: "sed",
+            Callback: "rerum",
+            Fields: "rerum",
+            Key: "sequi",
+            OauthToken: "libero",
+            PrettyPrint: true,
+            QuotaUser: "officiis",
+            UploadType: "vero",
+            UploadProtocol: "perferendis",
         },
     }
     
@@ -71,10 +70,6 @@ func main() {
 * `GamesConfigurationAchievementConfigurationsInsert` - Insert a new achievement configuration in this application.
 * `GamesConfigurationAchievementConfigurationsList` - Returns a list of the achievement configurations in this application.
 * `GamesConfigurationAchievementConfigurationsUpdate` - Update the metadata of the achievement configuration with the given ID.
-
-### imageConfigurations
-
-* `GamesConfigurationImageConfigurationsUpload` - Uploads an image for a resource with the given ID and image type.
 
 ### leaderboardConfigurations
 

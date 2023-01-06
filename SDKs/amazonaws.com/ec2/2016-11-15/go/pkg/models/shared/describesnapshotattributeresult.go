@@ -1,7 +1,7 @@
 package shared
 
 type DescribeSnapshotAttributeResult struct {
-	CreateVolumePermissions []CreateVolumePermission
-	ProductCodes            []ProductCode
-	SnapshotID              *string
+	CreateVolumePermissions map[string]interface{}
+	ProductCodes            map[string]interface{}
+	SnapshotID              map[string]interface{}
 }

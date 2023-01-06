@@ -4,5 +4,5 @@ package shared
 // Contains the output from the <a>DescribeClusterParameters</a> action.
 type ClusterParameterGroupDetails struct {
 	Marker     *string
-	Parameters []Parameter
+	Parameters []map[string]interface{}
 }

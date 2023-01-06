@@ -1,5 +1,5 @@
 package shared
 
 type CreateClientVpnRouteResult struct {
-	Status *ClientVpnRouteStatus
+	Status map[string]interface{}
 }

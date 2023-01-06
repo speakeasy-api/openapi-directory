@@ -38,6 +38,6 @@ type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest str
 
 type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse struct {
 	ContentType                           string
-	ListOsPolicyAssignmentReportsResponse *shared.ListOsPolicyAssignmentReportsResponse
+	ListOSPolicyAssignmentReportsResponse *shared.ListOsPolicyAssignmentReportsResponse
 	StatusCode                            int64
 }

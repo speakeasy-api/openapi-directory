@@ -3,13 +3,13 @@ package operations
 type PostDeleteAnomalyDetectorActionEnum string
 
 const (
-	PostDeleteAnomalyDetectorActionEnumDeleteAnomalyDetector PostDeleteAnomalyDetectorActionEnum = "DeleteAnomalyDetector"
+	POSTDeleteAnomalyDetectorActionEnumDeleteAnomalyDetector PostDeleteAnomalyDetectorActionEnum = "DeleteAnomalyDetector"
 )
 
 type PostDeleteAnomalyDetectorVersionEnum string
 
 const (
-	PostDeleteAnomalyDetectorVersionEnumTwoThousandAndTen0801 PostDeleteAnomalyDetectorVersionEnum = "2010-08-01"
+	POSTDeleteAnomalyDetectorVersionEnumTwoThousandAndTen0801 PostDeleteAnomalyDetectorVersionEnum = "2010-08-01"
 )
 
 type PostDeleteAnomalyDetectorQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,27 +26,27 @@ func main() {
         Security: operations.ManufacturersAccountsProductsDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ManufacturersAccountsProductsDeletePathParams{
-            Name: "est",
-            Parent: "est",
+            Name: "id",
+            Parent: "nesciunt",
         },
         QueryParams: operations.ManufacturersAccountsProductsDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "aut",
-            Alt: "json",
-            Callback: "aut",
-            Fields: "ea",
-            Key: "voluptates",
-            OauthToken: "rerum",
-            PrettyPrint: true,
-            QuotaUser: "aut",
-            UploadType: "rerum",
-            UploadProtocol: "earum",
+            DollarXgafv: "2",
+            AccessToken: "ut",
+            Alt: "proto",
+            Callback: "nisi",
+            Fields: "maiores",
+            Key: "mollitia",
+            OauthToken: "voluptatibus",
+            PrettyPrint: false,
+            QuotaUser: "illo",
+            UploadType: "voluptas",
+            UploadProtocol: "amet",
         },
     }
     

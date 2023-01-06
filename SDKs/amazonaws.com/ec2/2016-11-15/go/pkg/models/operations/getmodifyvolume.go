@@ -3,25 +3,25 @@ package operations
 type GetModifyVolumeActionEnum string
 
 const (
-	GetModifyVolumeActionEnumModifyVolume GetModifyVolumeActionEnum = "ModifyVolume"
+	GETModifyVolumeActionEnumModifyVolume GetModifyVolumeActionEnum = "ModifyVolume"
 )
 
 type GetModifyVolumeVersionEnum string
 
 const (
-	GetModifyVolumeVersionEnumTwoThousandAndSixteen1115 GetModifyVolumeVersionEnum = "2016-11-15"
+	GETModifyVolumeVersionEnumTwoThousandAndSixteen1115 GetModifyVolumeVersionEnum = "2016-11-15"
 )
 
 type GetModifyVolumeVolumeTypeEnum string
 
 const (
-	GetModifyVolumeVolumeTypeEnumStandard GetModifyVolumeVolumeTypeEnum = "standard"
-	GetModifyVolumeVolumeTypeEnumIo1      GetModifyVolumeVolumeTypeEnum = "io1"
-	GetModifyVolumeVolumeTypeEnumIo2      GetModifyVolumeVolumeTypeEnum = "io2"
-	GetModifyVolumeVolumeTypeEnumGp2      GetModifyVolumeVolumeTypeEnum = "gp2"
-	GetModifyVolumeVolumeTypeEnumSc1      GetModifyVolumeVolumeTypeEnum = "sc1"
-	GetModifyVolumeVolumeTypeEnumSt1      GetModifyVolumeVolumeTypeEnum = "st1"
-	GetModifyVolumeVolumeTypeEnumGp3      GetModifyVolumeVolumeTypeEnum = "gp3"
+	GETModifyVolumeVolumeTypeEnumStandard GetModifyVolumeVolumeTypeEnum = "standard"
+	GETModifyVolumeVolumeTypeEnumIo1      GetModifyVolumeVolumeTypeEnum = "io1"
+	GETModifyVolumeVolumeTypeEnumIo2      GetModifyVolumeVolumeTypeEnum = "io2"
+	GETModifyVolumeVolumeTypeEnumGp2      GetModifyVolumeVolumeTypeEnum = "gp2"
+	GETModifyVolumeVolumeTypeEnumSc1      GetModifyVolumeVolumeTypeEnum = "sc1"
+	GETModifyVolumeVolumeTypeEnumSt1      GetModifyVolumeVolumeTypeEnum = "st1"
+	GETModifyVolumeVolumeTypeEnumGp3      GetModifyVolumeVolumeTypeEnum = "gp3"
 )
 
 type GetModifyVolumeQueryParams struct {

@@ -5,5 +5,5 @@ package shared
 type NotificationConfiguration struct {
 	AutoScalingGroupName *string
 	NotificationType     *string
-	TopicArn             *string
+	TopicARN             *string
 }

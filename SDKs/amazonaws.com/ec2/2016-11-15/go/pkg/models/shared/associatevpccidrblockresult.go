@@ -1,7 +1,7 @@
 package shared
 
 type AssociateVpcCidrBlockResult struct {
-	CidrBlockAssociation     *VpcCidrBlockAssociation
-	Ipv6CidrBlockAssociation *VpcIpv6CidrBlockAssociation
-	VpcID                    *string
+	CidrBlockAssociation     map[string]interface{}
+	Ipv6CidrBlockAssociation map[string]interface{}
+	VpcID                    map[string]interface{}
 }

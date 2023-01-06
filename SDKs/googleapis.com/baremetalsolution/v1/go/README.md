@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,30 @@ func main() {
         Security: operations.BaremetalsolutionOperationsCancelSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.BaremetalsolutionOperationsCancelPathParams{
-            Name: "non",
+            Name: "delectus",
         },
         QueryParams: operations.BaremetalsolutionOperationsCancelQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "reprehenderit",
-            Alt: "media",
-            Callback: "doloribus",
-            Fields: "nihil",
-            Key: "commodi",
-            OauthToken: "consequatur",
+            DollarXgafv: "1",
+            AccessToken: "aut",
+            Alt: "proto",
+            Callback: "suscipit",
+            Fields: "et",
+            Key: "ipsam",
+            OauthToken: "eos",
             PrettyPrint: false,
-            QuotaUser: "reprehenderit",
-            UploadType: "tempore",
-            UploadProtocol: "consequatur",
+            QuotaUser: "qui",
+            UploadType: "vel",
+            UploadProtocol: "quo",
         },
         Request: map[string]interface{}{
-            "soluta": "molestiae",
-            "minima": "illum",
+            "eum": "id",
+            "molestias": "inventore",
         },
     }
     

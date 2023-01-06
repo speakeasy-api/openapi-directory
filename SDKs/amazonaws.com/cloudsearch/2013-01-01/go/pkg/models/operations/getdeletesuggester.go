@@ -3,13 +3,13 @@ package operations
 type GetDeleteSuggesterActionEnum string
 
 const (
-	GetDeleteSuggesterActionEnumDeleteSuggester GetDeleteSuggesterActionEnum = "DeleteSuggester"
+	GETDeleteSuggesterActionEnumDeleteSuggester GetDeleteSuggesterActionEnum = "DeleteSuggester"
 )
 
 type GetDeleteSuggesterVersionEnum string
 
 const (
-	GetDeleteSuggesterVersionEnumTwoThousandAndThirteen0101 GetDeleteSuggesterVersionEnum = "2013-01-01"
+	GETDeleteSuggesterVersionEnumTwoThousandAndThirteen0101 GetDeleteSuggesterVersionEnum = "2013-01-01"
 )
 
 type GetDeleteSuggesterQueryParams struct {

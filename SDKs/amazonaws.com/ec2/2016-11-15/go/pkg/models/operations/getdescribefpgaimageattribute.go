@@ -3,22 +3,22 @@ package operations
 type GetDescribeFpgaImageAttributeActionEnum string
 
 const (
-	GetDescribeFpgaImageAttributeActionEnumDescribeFpgaImageAttribute GetDescribeFpgaImageAttributeActionEnum = "DescribeFpgaImageAttribute"
+	GETDescribeFpgaImageAttributeActionEnumDescribeFpgaImageAttribute GetDescribeFpgaImageAttributeActionEnum = "DescribeFpgaImageAttribute"
 )
 
 type GetDescribeFpgaImageAttributeAttributeEnum string
 
 const (
-	GetDescribeFpgaImageAttributeAttributeEnumDescription    GetDescribeFpgaImageAttributeAttributeEnum = "description"
-	GetDescribeFpgaImageAttributeAttributeEnumName           GetDescribeFpgaImageAttributeAttributeEnum = "name"
-	GetDescribeFpgaImageAttributeAttributeEnumLoadPermission GetDescribeFpgaImageAttributeAttributeEnum = "loadPermission"
-	GetDescribeFpgaImageAttributeAttributeEnumProductCodes   GetDescribeFpgaImageAttributeAttributeEnum = "productCodes"
+	GETDescribeFpgaImageAttributeAttributeEnumDescription    GetDescribeFpgaImageAttributeAttributeEnum = "description"
+	GETDescribeFpgaImageAttributeAttributeEnumName           GetDescribeFpgaImageAttributeAttributeEnum = "name"
+	GETDescribeFpgaImageAttributeAttributeEnumLoadPermission GetDescribeFpgaImageAttributeAttributeEnum = "loadPermission"
+	GETDescribeFpgaImageAttributeAttributeEnumProductCodes   GetDescribeFpgaImageAttributeAttributeEnum = "productCodes"
 )
 
 type GetDescribeFpgaImageAttributeVersionEnum string
 
 const (
-	GetDescribeFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeFpgaImageAttributeVersionEnum = "2016-11-15"
+	GETDescribeFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 GetDescribeFpgaImageAttributeVersionEnum = "2016-11-15"
 )
 
 type GetDescribeFpgaImageAttributeQueryParams struct {

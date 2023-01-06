@@ -1,11 +1,5 @@
 package shared
 
-// FleetInput
-// Fleet contains the Fleet-wide metadata and configuration.
-type FleetInput struct {
-	DisplayName *string `json:"displayName,omitempty"`
-}
-
 // Fleet
 // Fleet contains the Fleet-wide metadata and configuration.
 type Fleet struct {
@@ -16,4 +10,10 @@ type Fleet struct {
 	State       *FleetLifecycleState `json:"state,omitempty"`
 	UID         *string              `json:"uid,omitempty"`
 	UpdateTime  *string              `json:"updateTime,omitempty"`
+}
+
+// FleetInput
+// Fleet contains the Fleet-wide metadata and configuration.
+type FleetInput struct {
+	DisplayName *string `json:"displayName,omitempty"`
 }

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeSubnetsResult struct {
-	NextToken *string
-	Subnets   []Subnet
+	NextToken map[string]interface{}
+	Subnets   map[string]interface{}
 }

@@ -20,7 +20,7 @@ type V3CreatePayeeRequest struct {
 
 type V3CreatePayeeResponse struct {
 	ContentType             string
-	CreatePayeesCsvResponse *shared.CreatePayeesCsvResponse
+	CreatePayeesCSVResponse *shared.CreatePayeesCsvResponse
 	StatusCode              int64
 	InlineResponse400       *interface{}
 	InlineResponse401       *interface{}

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,27 +26,27 @@ func main() {
         Security: operations.PancrSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.PancrRequestBody{
             CertificateParameters: &operations.PancrRequestBodyCertificateParameters{
-                Dob: "cumque",
-                FullName: "dicta",
-                Gender: "id",
-                PanFullName: "vitae",
-                UID: "atque",
-                Panno: "sit",
+                DOB: "officia",
+                FullName: "qui",
+                GENDER: "odit",
+                PANFullName: "tempora",
+                UID: "voluptatem",
+                Panno: "dignissimos",
             },
-            ConsentArtifact: "fugiat",
+            ConsentArtifact: "velit",
             Format: "pdf",
-            TxnID: "nesciunt",
+            TxnID: "vitae",
         },
     }
     
-    res, err := s.Sdk.Pancr(ctx, req)
+    res, err := s.APIs.Pancr(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -61,7 +60,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Pancr` - PAN Verification Record
 

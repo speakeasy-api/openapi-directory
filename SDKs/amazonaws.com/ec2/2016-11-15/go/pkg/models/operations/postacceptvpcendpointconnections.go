@@ -3,13 +3,13 @@ package operations
 type PostAcceptVpcEndpointConnectionsActionEnum string
 
 const (
-	PostAcceptVpcEndpointConnectionsActionEnumAcceptVpcEndpointConnections PostAcceptVpcEndpointConnectionsActionEnum = "AcceptVpcEndpointConnections"
+	POSTAcceptVpcEndpointConnectionsActionEnumAcceptVpcEndpointConnections PostAcceptVpcEndpointConnectionsActionEnum = "AcceptVpcEndpointConnections"
 )
 
 type PostAcceptVpcEndpointConnectionsVersionEnum string
 
 const (
-	PostAcceptVpcEndpointConnectionsVersionEnumTwoThousandAndSixteen1115 PostAcceptVpcEndpointConnectionsVersionEnum = "2016-11-15"
+	POSTAcceptVpcEndpointConnectionsVersionEnumTwoThousandAndSixteen1115 PostAcceptVpcEndpointConnectionsVersionEnum = "2016-11-15"
 )
 
 type PostAcceptVpcEndpointConnectionsQueryParams struct {

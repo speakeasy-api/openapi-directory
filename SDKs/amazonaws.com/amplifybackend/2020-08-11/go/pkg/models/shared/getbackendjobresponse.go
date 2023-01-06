@@ -1,12 +1,12 @@
 package shared
 
 type GetBackendJobResponse struct {
-	AppID                  *string `json:"AppId,omitempty"`
-	BackendEnvironmentName *string `json:"BackendEnvironmentName,omitempty"`
-	CreateTime             *string `json:"CreateTime,omitempty"`
-	Error                  *string `json:"Error,omitempty"`
-	JobID                  *string `json:"JobId,omitempty"`
-	Operation              *string `json:"Operation,omitempty"`
-	Status                 *string `json:"Status,omitempty"`
-	UpdateTime             *string `json:"UpdateTime,omitempty"`
+	AppID                  map[string]interface{} `json:"AppId,omitempty"`
+	BackendEnvironmentName map[string]interface{} `json:"BackendEnvironmentName,omitempty"`
+	CreateTime             map[string]interface{} `json:"CreateTime,omitempty"`
+	Error                  map[string]interface{} `json:"Error,omitempty"`
+	JobID                  map[string]interface{} `json:"JobId,omitempty"`
+	Operation              map[string]interface{} `json:"Operation,omitempty"`
+	Status                 map[string]interface{} `json:"Status,omitempty"`
+	UpdateTime             map[string]interface{} `json:"UpdateTime,omitempty"`
 }

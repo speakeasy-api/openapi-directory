@@ -82,7 +82,7 @@ type Mutan404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Mutan404ApplicationJSONErrorDescriptionEnumNoRecordFound               Mutan404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Mutan404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Mutan404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Mutan404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Mutan404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Mutan404ApplicationJSON struct {

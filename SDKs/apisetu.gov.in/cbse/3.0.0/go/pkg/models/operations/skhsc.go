@@ -83,7 +83,7 @@ type Skhsc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Skhsc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Skhsc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Skhsc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Skhsc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Skhsc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Skhsc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Skhsc404ApplicationJSON struct {

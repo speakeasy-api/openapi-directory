@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,29 +25,29 @@ func main() {
     req := operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest{
         QueryParams: operations.TravelimpactmodelFlightsComputeFlightEmissionsQueryParams{
             DollarXgafv: "1",
-            AccessToken: "necessitatibus",
-            Alt: "media",
-            Callback: "vel",
-            Fields: "accusamus",
-            Key: "quisquam",
-            OauthToken: "aliquid",
-            PrettyPrint: true,
-            QuotaUser: "officia",
-            UploadType: "commodi",
-            UploadProtocol: "est",
+            AccessToken: "tempore",
+            Alt: "proto",
+            Callback: "quia",
+            Fields: "ipsam",
+            Key: "qui",
+            OauthToken: "voluptates",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            UploadType: "quia",
+            UploadProtocol: "id",
         },
         Request: &shared.ComputeFlightEmissionsRequest{
             Flights: []shared.Flight{
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 39902411189383839,
-                        Month: 727541421606400517,
-                        Year: 8695851542853274209,
+                        Day: 3003735809913017506,
+                        Month: 4869670681117448416,
+                        Year: 830527645879017983,
                     },
-                    Destination: "earum",
-                    FlightNumber: 4507682604096346908,
-                    OperatingCarrierCode: "reprehenderit",
-                    Origin: "hic",
+                    Destination: "dolores",
+                    FlightNumber: 7557886016446646208,
+                    OperatingCarrierCode: "laboriosam",
+                    Origin: "quibusdam",
                 },
             },
         },

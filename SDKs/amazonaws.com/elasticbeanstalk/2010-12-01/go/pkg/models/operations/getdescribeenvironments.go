@@ -7,13 +7,13 @@ import (
 type GetDescribeEnvironmentsActionEnum string
 
 const (
-	GetDescribeEnvironmentsActionEnumDescribeEnvironments GetDescribeEnvironmentsActionEnum = "DescribeEnvironments"
+	GETDescribeEnvironmentsActionEnumDescribeEnvironments GetDescribeEnvironmentsActionEnum = "DescribeEnvironments"
 )
 
 type GetDescribeEnvironmentsVersionEnum string
 
 const (
-	GetDescribeEnvironmentsVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentsVersionEnum = "2010-12-01"
+	GETDescribeEnvironmentsVersionEnumTwoThousandAndTen1201 GetDescribeEnvironmentsVersionEnum = "2010-12-01"
 )
 
 type GetDescribeEnvironmentsQueryParams struct {

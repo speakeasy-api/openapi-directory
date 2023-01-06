@@ -36,7 +36,7 @@ type Observation struct {
 	RdsEventCategories        *string                    `json:"RdsEventCategories,omitempty"`
 	RdsEventMessage           *string                    `json:"RdsEventMessage,omitempty"`
 	S3EventName               *string                    `json:"S3EventName,omitempty"`
-	SourceArn                 *string                    `json:"SourceARN,omitempty"`
+	SourceARN                 *string                    `json:"SourceARN,omitempty"`
 	SourceType                *string                    `json:"SourceType,omitempty"`
 	StartTime                 *time.Time                 `json:"StartTime,omitempty"`
 	StatesArn                 *string                    `json:"StatesArn,omitempty"`

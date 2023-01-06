@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,20 +24,20 @@ func main() {
     
     req := operations.CashinRequest{
         PathParams: operations.CashinPathParams{
-            BetID: "tenetur",
+            BetID: "molestiae",
         },
         QueryParams: operations.CashinQueryParams{
-            CashInValue: 13.200000,
-            CashinBetDelayID: "minus",
+            CashInValue: 99.099998,
+            CashinBetDelayID: "vel",
         },
         Headers: operations.CashinHeaders{
-            APIKey: "sint",
-            APISecret: "est",
-            APITicket: "autem",
+            APIKey: "officia",
+            APISecret: "facere",
+            APITicket: "at",
         },
     }
     
-    res, err := s.Sdk.Cashin(ctx, req)
+    res, err := s.Bets.Cashin(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -52,7 +51,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Bets
 
 * `Cashin` - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
 * `GetBetHistory` - Retrieves the customer’s bet history.

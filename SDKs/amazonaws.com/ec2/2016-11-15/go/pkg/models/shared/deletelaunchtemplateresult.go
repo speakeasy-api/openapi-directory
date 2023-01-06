@@ -1,5 +1,5 @@
 package shared
 
 type DeleteLaunchTemplateResult struct {
-	LaunchTemplate *LaunchTemplate
+	LaunchTemplate map[string]interface{}
 }

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 )
 
 type ThirdPartyVpnPeers struct {
@@ -62,7 +62,7 @@ func (s *ThirdPartyVpnPeers) GetOrganizationApplianceVpnThirdPartyVpnPeers(ctx c
 				return nil, err
 			}
 
-			res.GetOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJSONObject = out
+			res.GetOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject = out
 		}
 	}
 
@@ -113,7 +113,7 @@ func (s *ThirdPartyVpnPeers) UpdateOrganizationApplianceVpnThirdPartyVpnPeers(ct
 				return nil, err
 			}
 
-			res.UpdateOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJSONObject = out
+			res.UpdateOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject = out
 		}
 	}
 

@@ -25,30 +25,6 @@ const (
 	TargetVMDetailsLicenseTypeEnumByol    TargetVMDetailsLicenseTypeEnum = "BYOL"
 )
 
-// TargetVMDetailsInput
-// TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
-type TargetVMDetailsInput struct {
-	AppliedLicense    *AppliedLicense                 `json:"appliedLicense,omitempty"`
-	ComputeScheduling *ComputeScheduling              `json:"computeScheduling,omitempty"`
-	DiskType          *TargetVMDetailsDiskTypeEnum    `json:"diskType,omitempty"`
-	ExternalIP        *string                         `json:"externalIp,omitempty"`
-	InternalIP        *string                         `json:"internalIp,omitempty"`
-	Labels            map[string]string               `json:"labels,omitempty"`
-	LicenseType       *TargetVMDetailsLicenseTypeEnum `json:"licenseType,omitempty"`
-	MachineType       *string                         `json:"machineType,omitempty"`
-	MachineTypeSeries *string                         `json:"machineTypeSeries,omitempty"`
-	Metadata          map[string]string               `json:"metadata,omitempty"`
-	Name              *string                         `json:"name,omitempty"`
-	Network           *string                         `json:"network,omitempty"`
-	NetworkInterfaces []NetworkInterface              `json:"networkInterfaces,omitempty"`
-	NetworkTags       []string                        `json:"networkTags,omitempty"`
-	SecureBoot        *bool                           `json:"secureBoot,omitempty"`
-	ServiceAccount    *string                         `json:"serviceAccount,omitempty"`
-	Subnetwork        *string                         `json:"subnetwork,omitempty"`
-	TargetProject     *string                         `json:"targetProject,omitempty"`
-	Zone              *string                         `json:"zone,omitempty"`
-}
-
 // TargetVMDetails
 // TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
 type TargetVMDetails struct {
@@ -68,6 +44,30 @@ type TargetVMDetails struct {
 	NetworkInterfaces []NetworkInterface              `json:"networkInterfaces,omitempty"`
 	NetworkTags       []string                        `json:"networkTags,omitempty"`
 	Project           *string                         `json:"project,omitempty"`
+	SecureBoot        *bool                           `json:"secureBoot,omitempty"`
+	ServiceAccount    *string                         `json:"serviceAccount,omitempty"`
+	Subnetwork        *string                         `json:"subnetwork,omitempty"`
+	TargetProject     *string                         `json:"targetProject,omitempty"`
+	Zone              *string                         `json:"zone,omitempty"`
+}
+
+// TargetVMDetailsInput
+// TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
+type TargetVMDetailsInput struct {
+	AppliedLicense    *AppliedLicense                 `json:"appliedLicense,omitempty"`
+	ComputeScheduling *ComputeScheduling              `json:"computeScheduling,omitempty"`
+	DiskType          *TargetVMDetailsDiskTypeEnum    `json:"diskType,omitempty"`
+	ExternalIP        *string                         `json:"externalIp,omitempty"`
+	InternalIP        *string                         `json:"internalIp,omitempty"`
+	Labels            map[string]string               `json:"labels,omitempty"`
+	LicenseType       *TargetVMDetailsLicenseTypeEnum `json:"licenseType,omitempty"`
+	MachineType       *string                         `json:"machineType,omitempty"`
+	MachineTypeSeries *string                         `json:"machineTypeSeries,omitempty"`
+	Metadata          map[string]string               `json:"metadata,omitempty"`
+	Name              *string                         `json:"name,omitempty"`
+	Network           *string                         `json:"network,omitempty"`
+	NetworkInterfaces []NetworkInterface              `json:"networkInterfaces,omitempty"`
+	NetworkTags       []string                        `json:"networkTags,omitempty"`
 	SecureBoot        *bool                           `json:"secureBoot,omitempty"`
 	ServiceAccount    *string                         `json:"serviceAccount,omitempty"`
 	Subnetwork        *string                         `json:"subnetwork,omitempty"`

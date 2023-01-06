@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,22 @@ func main() {
     
     req := operations.BatchDeleteWorldsRequest{
         Headers: operations.BatchDeleteWorldsHeaders{
-            XAmzAlgorithm: "totam",
-            XAmzContentSha256: "similique",
-            XAmzCredential: "sunt",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "quis",
-            XAmzSignature: "quis",
-            XAmzSignedHeaders: "amet",
+            XAmzAlgorithm: "sed",
+            XAmzContentSha256: "dolores",
+            XAmzCredential: "rem",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "molestias",
+            XAmzSignature: "repellendus",
+            XAmzSignedHeaders: "doloremque",
         },
         Request: operations.BatchDeleteWorldsRequestBody{
             Worlds: []string{
-                "totam",
-                "perspiciatis",
-                "cupiditate",
+                "consectetur",
             },
         },
     }
     
-    res, err := s.Sdk.BatchDeleteWorlds(ctx, req)
+    res, err := s.BatchDeleteWorlds(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

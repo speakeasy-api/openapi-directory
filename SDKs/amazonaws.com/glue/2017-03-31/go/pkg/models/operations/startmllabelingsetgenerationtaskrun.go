@@ -7,7 +7,7 @@ import (
 type StartMlLabelingSetGenerationTaskRunXAmzTargetEnum string
 
 const (
-	StartMlLabelingSetGenerationTaskRunXAmzTargetEnumAwsGlueStartMlLabelingSetGenerationTaskRun StartMlLabelingSetGenerationTaskRunXAmzTargetEnum = "AWSGlue.StartMLLabelingSetGenerationTaskRun"
+	StartMLLabelingSetGenerationTaskRunXAmzTargetEnumAwsGlueStartMlLabelingSetGenerationTaskRun StartMlLabelingSetGenerationTaskRunXAmzTargetEnum = "AWSGlue.StartMLLabelingSetGenerationTaskRun"
 )
 
 type StartMlLabelingSetGenerationTaskRunHeaders struct {
@@ -33,6 +33,6 @@ type StartMlLabelingSetGenerationTaskRunResponse struct {
 	InternalServiceException                    *interface{}
 	InvalidInputException                       *interface{}
 	OperationTimeoutException                   *interface{}
-	StartMlLabelingSetGenerationTaskRunResponse *shared.StartMlLabelingSetGenerationTaskRunResponse
+	StartMLLabelingSetGenerationTaskRunResponse *shared.StartMlLabelingSetGenerationTaskRunResponse
 	StatusCode                                  int64
 }

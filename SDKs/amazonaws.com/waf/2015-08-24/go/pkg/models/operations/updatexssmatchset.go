@@ -30,12 +30,12 @@ type UpdateXSSMatchSetResponse struct {
 	ContentType                      string
 	StatusCode                       int64
 	UpdateXSSMatchSetResponse        *shared.UpdateXSSMatchSetResponse
-	WafInternalErrorException        *interface{}
-	WafInvalidAccountException       *interface{}
-	WafInvalidOperationException     *interface{}
-	WafInvalidParameterException     *interface{}
-	WafLimitsExceededException       *interface{}
-	WafNonexistentContainerException *interface{}
-	WafNonexistentItemException      *interface{}
-	WafStaleDataException            *interface{}
+	WAFInternalErrorException        *interface{}
+	WAFInvalidAccountException       *interface{}
+	WAFInvalidOperationException     *interface{}
+	WAFInvalidParameterException     *interface{}
+	WAFLimitsExceededException       *interface{}
+	WAFNonexistentContainerException *interface{}
+	WAFNonexistentItemException      *interface{}
+	WAFStaleDataException            *interface{}
 }

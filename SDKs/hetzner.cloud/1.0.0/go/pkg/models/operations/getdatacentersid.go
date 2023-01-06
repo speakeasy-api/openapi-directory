@@ -41,6 +41,6 @@ type GetDatacentersIDRequest struct {
 
 type GetDatacentersIDResponse struct {
 	ContentType                              string
-	GetDatacentersID200ApplicationJSONObject *GetDatacentersID200ApplicationJSON
 	StatusCode                               int64
+	GetDatacentersID200ApplicationJSONObject *GetDatacentersID200ApplicationJSON
 }

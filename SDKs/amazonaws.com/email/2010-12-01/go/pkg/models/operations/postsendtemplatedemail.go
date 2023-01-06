@@ -3,13 +3,13 @@ package operations
 type PostSendTemplatedEmailActionEnum string
 
 const (
-	PostSendTemplatedEmailActionEnumSendTemplatedEmail PostSendTemplatedEmailActionEnum = "SendTemplatedEmail"
+	POSTSendTemplatedEmailActionEnumSendTemplatedEmail PostSendTemplatedEmailActionEnum = "SendTemplatedEmail"
 )
 
 type PostSendTemplatedEmailVersionEnum string
 
 const (
-	PostSendTemplatedEmailVersionEnumTwoThousandAndTen1201 PostSendTemplatedEmailVersionEnum = "2010-12-01"
+	POSTSendTemplatedEmailVersionEnumTwoThousandAndTen1201 PostSendTemplatedEmailVersionEnum = "2010-12-01"
 )
 
 type PostSendTemplatedEmailQueryParams struct {

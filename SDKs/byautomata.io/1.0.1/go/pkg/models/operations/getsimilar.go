@@ -23,6 +23,6 @@ type GetSimilarRequest struct {
 
 type GetSimilarResponse struct {
 	ContentType                        string
-	GetSimilar200ApplicationJSONObject *GetSimilar200ApplicationJSON
 	StatusCode                         int64
+	GetSimilar200ApplicationJSONObject *GetSimilar200ApplicationJSON
 }

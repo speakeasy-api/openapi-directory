@@ -7,8 +7,8 @@ import (
 type ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalScheduledConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteInternationalScheduledConsentResponse6DataAuthorisation
@@ -29,9 +29,9 @@ type ObWriteInternationalScheduledConsentResponse6DataCharges struct {
 type ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnumActual     ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnumActual     ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalScheduledConsentResponse6DataExchangeRateInformation
@@ -81,9 +81,9 @@ type ObWriteInternationalScheduledConsentResponse6DataInitiationDebtorAccount st
 type ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalScheduledConsentResponse6DataInitiationExchangeRateInformation
@@ -106,8 +106,8 @@ type ObWriteInternationalScheduledConsentResponse6DataInitiationInstructedAmount
 type ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnumNormal ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnum = "Normal"
-	ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnum = "Urgent"
+	OBWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnumNormal ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnum = "Normal"
+	OBWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalScheduledConsentResponse6DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
 // ObWriteInternationalScheduledConsentResponse6DataInitiationRemittanceInformation
@@ -143,23 +143,23 @@ type ObWriteInternationalScheduledConsentResponse6DataInitiation struct {
 type ObWriteInternationalScheduledConsentResponse6DataPermissionEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataPermissionEnumCreate ObWriteInternationalScheduledConsentResponse6DataPermissionEnum = "Create"
+	OBWriteInternationalScheduledConsentResponse6DataPermissionEnumCreate ObWriteInternationalScheduledConsentResponse6DataPermissionEnum = "Create"
 )
 
 type ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnumNo  ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum = "No"
-	ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnumYes ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum = "Yes"
+	OBWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnumNo  ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum = "No"
+	OBWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnumYes ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteInternationalScheduledConsentResponse6DataStatusEnum string
 
 const (
-	ObWriteInternationalScheduledConsentResponse6DataStatusEnumAuthorised            ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "Authorised"
-	ObWriteInternationalScheduledConsentResponse6DataStatusEnumAwaitingAuthorisation ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "AwaitingAuthorisation"
-	ObWriteInternationalScheduledConsentResponse6DataStatusEnumConsumed              ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "Consumed"
-	ObWriteInternationalScheduledConsentResponse6DataStatusEnumRejected              ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "Rejected"
+	OBWriteInternationalScheduledConsentResponse6DataStatusEnumAuthorised            ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "Authorised"
+	OBWriteInternationalScheduledConsentResponse6DataStatusEnumAwaitingAuthorisation ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "AwaitingAuthorisation"
+	OBWriteInternationalScheduledConsentResponse6DataStatusEnumConsumed              ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "Consumed"
+	OBWriteInternationalScheduledConsentResponse6DataStatusEnumRejected              ObWriteInternationalScheduledConsentResponse6DataStatusEnum = "Rejected"
 )
 
 type ObWriteInternationalScheduledConsentResponse6Data struct {
@@ -175,7 +175,7 @@ type ObWriteInternationalScheduledConsentResponse6Data struct {
 	Initiation                 ObWriteInternationalScheduledConsentResponse6DataInitiation               `json:"Initiation"`
 	Permission                 ObWriteInternationalScheduledConsentResponse6DataPermissionEnum           `json:"Permission"`
 	ReadRefundAccount          *ObWriteInternationalScheduledConsentResponse6DataReadRefundAccountEnum   `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData             *ObscaSupportData1                                                        `json:"SCASupportData,omitempty"`
+	SCASupportData             *ObscaSupportData1                                                        `json:"SCASupportData,omitempty"`
 	Status                     ObWriteInternationalScheduledConsentResponse6DataStatusEnum               `json:"Status"`
 	StatusUpdateDateTime       time.Time                                                                 `json:"StatusUpdateDateTime"`
 }

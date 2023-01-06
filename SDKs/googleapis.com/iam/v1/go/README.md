@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,32 @@ func main() {
         Security: operations.IamIamPoliciesLintPolicySecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.IamIamPoliciesLintPolicyQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "et",
-            Alt: "media",
-            Callback: "est",
-            Fields: "rem",
-            Key: "velit",
-            OauthToken: "voluptates",
+            DollarXgafv: "2",
+            AccessToken: "doloribus",
+            Alt: "json",
+            Callback: "excepturi",
+            Fields: "id",
+            Key: "quo",
+            OauthToken: "quia",
             PrettyPrint: true,
-            QuotaUser: "molestias",
-            UploadType: "sit",
-            UploadProtocol: "repellendus",
+            QuotaUser: "eum",
+            UploadType: "placeat",
+            UploadProtocol: "itaque",
         },
         Request: &shared.LintPolicyRequest{
             Condition: &shared.Expr{
-                Description: "amet",
-                Expression: "veritatis",
-                Location: "natus",
-                Title: "est",
+                Description: "impedit",
+                Expression: "placeat",
+                Location: "esse",
+                Title: "sunt",
             },
-            FullResourceName: "quos",
+            FullResourceName: "sapiente",
         },
     }
     

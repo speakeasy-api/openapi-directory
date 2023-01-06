@@ -1,5 +1,5 @@
 package shared
 
 type UpdateFieldLevelEncryptionProfileResult struct {
-	FieldLevelEncryptionProfile *FieldLevelEncryptionProfile
+	FieldLevelEncryptionProfile *FieldLevelEncryptionProfile1
 }

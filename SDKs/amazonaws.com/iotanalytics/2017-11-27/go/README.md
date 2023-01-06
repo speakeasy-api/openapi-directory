@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,26 @@ func main() {
     
     req := operations.BatchPutMessageRequest{
         Headers: operations.BatchPutMessageHeaders{
-            XAmzAlgorithm: "possimus",
-            XAmzContentSha256: "cumque",
-            XAmzCredential: "odit",
-            XAmzDate: "tempore",
-            XAmzSecurityToken: "maiores",
-            XAmzSignature: "dignissimos",
-            XAmzSignedHeaders: "eaque",
+            XAmzAlgorithm: "maiores",
+            XAmzContentSha256: "error",
+            XAmzCredential: "eius",
+            XAmzDate: "dolorem",
+            XAmzSecurityToken: "ratione",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "excepturi",
         },
         Request: operations.BatchPutMessageRequestBody{
-            ChannelName: "voluptatum",
+            ChannelName: "voluptates",
             Messages: []shared.Message{
                 shared.Message{
-                    MessageID: "corporis",
-                    Payload: "quas",
+                    MessageID: "est",
+                    Payload: "vel",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.BatchPutMessage(ctx, req)
+    res, err := s.BatchPutMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

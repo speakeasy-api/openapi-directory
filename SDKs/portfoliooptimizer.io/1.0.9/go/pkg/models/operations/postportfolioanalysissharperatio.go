@@ -14,6 +14,6 @@ type PostPortfolioAnalysisSharpeRatioRequest struct {
 
 type PostPortfolioAnalysisSharpeRatioResponse struct {
 	ContentType                                              string
-	PostPortfolioAnalysisSharpeRatio200ApplicationJSONObject *PostPortfolioAnalysisSharpeRatio200ApplicationJSON
 	StatusCode                                               int64
+	PostPortfolioAnalysisSharpeRatio200ApplicationJSONObject *PostPortfolioAnalysisSharpeRatio200ApplicationJSON
 }

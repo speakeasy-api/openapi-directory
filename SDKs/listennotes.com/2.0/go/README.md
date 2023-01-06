@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,24 +22,26 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.DeletePodcastByIDRequest{
-        PathParams: operations.DeletePodcastByIDPathParams{
-            ID: "rerum",
+    req := operations.GetBestPodcastsRequest{
+        QueryParams: operations.GetBestPodcastsQueryParams{
+            GenreID: "deleniti",
+            Language: "ea",
+            Page: 3673804603196576783,
+            PublisherRegion: "repellendus",
+            Region: "est",
+            SafeMode: 6073608601783819944,
         },
-        QueryParams: operations.DeletePodcastByIDQueryParams{
-            Reason: "eaque",
-        },
-        Headers: operations.DeletePodcastByIDHeaders{
-            XListenAPIKey: "accusantium",
+        Headers: operations.GetBestPodcastsHeaders{
+            XListenAPIKey: "nesciunt",
         },
     }
     
-    res, err := s.Sdk.DeletePodcastByID(ctx, req)
+    res, err := s.DirectoryAPI.GetBestPodcasts(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DeletePodcastResponse != nil {
+    if res.BestPodcastsResponse != nil {
         // handle response
     }
 ```
@@ -49,9 +50,8 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Directory API
 
-* `DeletePodcastByID` - Request to delete a podcast
 * `GetBestPodcasts` - Fetch a list of best podcasts by genre
 * `GetCuratedPodcastByID` - Fetch a curated list of podcasts by id
 * `GetCuratedPodcasts` - Fetch curated lists of podcasts
@@ -60,15 +60,25 @@ func main() {
 * `GetEpisodesInBatch` - Batch fetch basic meta data for episodes
 * `GetGenres` - Fetch a list of podcast genres
 * `GetLanguages` - Fetch a list of supported languages for podcasts
-* `GetPlaylistByID` - Fetch a playlist's info and items (i.e., episodes or podcasts).
-* `GetPlaylists` - Fetch a list of your playlists.
 * `GetPodcastByID` - Fetch detailed meta data and episodes for a podcast by id
 * `GetPodcastRecommendations` - Fetch recommendations for a podcast
 * `GetPodcastsInBatch` - Batch fetch basic meta data for podcasts
 * `GetRegions` - Fetch a list of supported countries/regions for best podcasts
 * `JustListen` - Fetch a random podcast episode
-* `Search` - Full-text search
+
+### Playlist API
+
+* `GetPlaylistByID` - Fetch a playlist's info and items (i.e., episodes or podcasts).
+* `GetPlaylists` - Fetch a list of your playlists.
+
+### Podcaster API
+
+* `DeletePodcastByID` - Request to delete a podcast
 * `SubmitPodcast` - Submit a podcast to Listen Notes database
+
+### Search API
+
+* `Search` - Full-text search
 * `Typeahead` - Typeahead search
 
 <!-- End SDK Available Operations -->

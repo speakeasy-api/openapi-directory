@@ -8,14 +8,14 @@ type DeleteLoadBalancerPathParams struct {
 	LbID string `pathParam:"style=simple,explode=false,name=lb_id"`
 }
 
-type DeleteLoadBalancerRequest struct {
-	PathParams DeleteLoadBalancerPathParams
-}
-
 type DeleteLoadBalancer401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteLoadBalancerRequest struct {
+	PathParams DeleteLoadBalancerPathParams
 }
 
 type DeleteLoadBalancerResponse struct {

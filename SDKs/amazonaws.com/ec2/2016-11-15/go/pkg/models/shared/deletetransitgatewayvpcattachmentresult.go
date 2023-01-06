@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTransitGatewayVpcAttachmentResult struct {
-	TransitGatewayVpcAttachment *TransitGatewayVpcAttachment
+	TransitGatewayVpcAttachment map[string]interface{}
 }

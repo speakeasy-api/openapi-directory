@@ -14,6 +14,6 @@ type GetWinProbabilityDataRequest struct {
 
 type GetWinProbabilityDataResponse struct {
 	ContentType string
-	PlayWps     []shared.PlayWp
+	PlayWPS     []shared.PlayWp
 	StatusCode  int64
 }

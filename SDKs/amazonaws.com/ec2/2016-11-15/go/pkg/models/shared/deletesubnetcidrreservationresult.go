@@ -1,5 +1,5 @@
 package shared
 
 type DeleteSubnetCidrReservationResult struct {
-	DeletedSubnetCidrReservation *SubnetCidrReservation
+	DeletedSubnetCidrReservation map[string]interface{}
 }

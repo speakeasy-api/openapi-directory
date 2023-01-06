@@ -3,13 +3,13 @@ package operations
 type PostDescribeClientVpnConnectionsActionEnum string
 
 const (
-	PostDescribeClientVpnConnectionsActionEnumDescribeClientVpnConnections PostDescribeClientVpnConnectionsActionEnum = "DescribeClientVpnConnections"
+	POSTDescribeClientVpnConnectionsActionEnumDescribeClientVpnConnections PostDescribeClientVpnConnectionsActionEnum = "DescribeClientVpnConnections"
 )
 
 type PostDescribeClientVpnConnectionsVersionEnum string
 
 const (
-	PostDescribeClientVpnConnectionsVersionEnumTwoThousandAndSixteen1115 PostDescribeClientVpnConnectionsVersionEnum = "2016-11-15"
+	POSTDescribeClientVpnConnectionsVersionEnumTwoThousandAndSixteen1115 PostDescribeClientVpnConnectionsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeClientVpnConnectionsQueryParams struct {

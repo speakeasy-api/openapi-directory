@@ -3,13 +3,13 @@ package operations
 type GetDeleteTrafficMirrorTargetActionEnum string
 
 const (
-	GetDeleteTrafficMirrorTargetActionEnumDeleteTrafficMirrorTarget GetDeleteTrafficMirrorTargetActionEnum = "DeleteTrafficMirrorTarget"
+	GETDeleteTrafficMirrorTargetActionEnumDeleteTrafficMirrorTarget GetDeleteTrafficMirrorTargetActionEnum = "DeleteTrafficMirrorTarget"
 )
 
 type GetDeleteTrafficMirrorTargetVersionEnum string
 
 const (
-	GetDeleteTrafficMirrorTargetVersionEnumTwoThousandAndSixteen1115 GetDeleteTrafficMirrorTargetVersionEnum = "2016-11-15"
+	GETDeleteTrafficMirrorTargetVersionEnumTwoThousandAndSixteen1115 GetDeleteTrafficMirrorTargetVersionEnum = "2016-11-15"
 )
 
 type GetDeleteTrafficMirrorTargetQueryParams struct {

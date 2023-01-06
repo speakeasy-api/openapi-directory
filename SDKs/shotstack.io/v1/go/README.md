@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,23 +22,23 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.DeleteAssetRequest{
-        Security: operations.DeleteAssetSecurity{
+    req := operations.GetRenderRequest{
+        Security: operations.GetRenderSecurity{
             DeveloperKey: shared.SchemeDeveloperKey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        PathParams: operations.DeleteAssetPathParams{
-            ID: "veritatis",
+        PathParams: operations.GetRenderPathParams{
+            ID: "quia",
         },
     }
     
-    res, err := s.Sdk.DeleteAsset(ctx, req)
+    res, err := s.Edit.GetRender(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.RenderResponse != nil {
         // handle response
     }
 ```
@@ -48,13 +47,16 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Edit
+
+* `GetRender` - Get Render Status
+* `PostRender` - Render Asset
+
+### Serve
 
 * `DeleteAsset` - Delete Asset
 * `GetAsset` - Get Asset
 * `GetAssetByRenderID` - Get Asset by Render ID
-* `GetRender` - Get Render Status
-* `PostRender` - Render Asset
 
 <!-- End SDK Available Operations -->
 

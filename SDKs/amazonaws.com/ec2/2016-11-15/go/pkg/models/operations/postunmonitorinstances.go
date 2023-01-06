@@ -3,13 +3,13 @@ package operations
 type PostUnmonitorInstancesActionEnum string
 
 const (
-	PostUnmonitorInstancesActionEnumUnmonitorInstances PostUnmonitorInstancesActionEnum = "UnmonitorInstances"
+	POSTUnmonitorInstancesActionEnumUnmonitorInstances PostUnmonitorInstancesActionEnum = "UnmonitorInstances"
 )
 
 type PostUnmonitorInstancesVersionEnum string
 
 const (
-	PostUnmonitorInstancesVersionEnumTwoThousandAndSixteen1115 PostUnmonitorInstancesVersionEnum = "2016-11-15"
+	POSTUnmonitorInstancesVersionEnumTwoThousandAndSixteen1115 PostUnmonitorInstancesVersionEnum = "2016-11-15"
 )
 
 type PostUnmonitorInstancesQueryParams struct {

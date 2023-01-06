@@ -3,13 +3,13 @@ package operations
 type PostDescribeEgressOnlyInternetGatewaysActionEnum string
 
 const (
-	PostDescribeEgressOnlyInternetGatewaysActionEnumDescribeEgressOnlyInternetGateways PostDescribeEgressOnlyInternetGatewaysActionEnum = "DescribeEgressOnlyInternetGateways"
+	POSTDescribeEgressOnlyInternetGatewaysActionEnumDescribeEgressOnlyInternetGateways PostDescribeEgressOnlyInternetGatewaysActionEnum = "DescribeEgressOnlyInternetGateways"
 )
 
 type PostDescribeEgressOnlyInternetGatewaysVersionEnum string
 
 const (
-	PostDescribeEgressOnlyInternetGatewaysVersionEnumTwoThousandAndSixteen1115 PostDescribeEgressOnlyInternetGatewaysVersionEnum = "2016-11-15"
+	POSTDescribeEgressOnlyInternetGatewaysVersionEnumTwoThousandAndSixteen1115 PostDescribeEgressOnlyInternetGatewaysVersionEnum = "2016-11-15"
 )
 
 type PostDescribeEgressOnlyInternetGatewaysQueryParams struct {

@@ -8,15 +8,15 @@ type GetInvoiceSummaryByUUIDPathParams struct {
 	InvoiceUUID string `pathParam:"style=simple,explode=false,name=invoice_uuid"`
 }
 
-type GetInvoiceSummaryByUUIDRequest struct {
-	PathParams GetInvoiceSummaryByUUIDPathParams
-}
-
+// GetInvoiceSummaryByUUID200ApplicationJSONCreditsAndAdjustments
+// A summary of the credits and adjustments contributing to the invoice.
 type GetInvoiceSummaryByUUID200ApplicationJSONCreditsAndAdjustments struct {
 	Amount *string `json:"amount,omitempty"`
 	Name   *string `json:"name,omitempty"`
 }
 
+// GetInvoiceSummaryByUUID200ApplicationJSONOverages
+// A summary of the overages contributing to the invoice.
 type GetInvoiceSummaryByUUID200ApplicationJSONOverages struct {
 	Amount *string `json:"amount,omitempty"`
 	Name   *string `json:"name,omitempty"`
@@ -28,17 +28,23 @@ type GetInvoiceSummaryByUUID200ApplicationJSONProductChargesItems struct {
 	Name   *string `json:"name,omitempty"`
 }
 
+// GetInvoiceSummaryByUUID200ApplicationJSONProductCharges
+// A summary of the product usage charges contributing to the invoice.  This will include an amount, and grouped aggregates by resource type  under the `items` key.
 type GetInvoiceSummaryByUUID200ApplicationJSONProductCharges struct {
 	Amount *string                                                        `json:"amount,omitempty"`
 	Items  []GetInvoiceSummaryByUUID200ApplicationJSONProductChargesItems `json:"items,omitempty"`
 	Name   *string                                                        `json:"name,omitempty"`
 }
 
+// GetInvoiceSummaryByUUID200ApplicationJSONTaxes
+// A summary of the taxes contributing to the invoice.
 type GetInvoiceSummaryByUUID200ApplicationJSONTaxes struct {
 	Amount *string `json:"amount,omitempty"`
 	Name   *string `json:"name,omitempty"`
 }
 
+// GetInvoiceSummaryByUUID200ApplicationJSONUserBillingAddress
+// The billing address of the customer being invoiced.
 type GetInvoiceSummaryByUUID200ApplicationJSONUserBillingAddress struct {
 	AddressLine1    *string `json:"address_line1,omitempty"`
 	AddressLine2    *string `json:"address_line2,omitempty"`
@@ -68,6 +74,10 @@ type GetInvoiceSummaryByUUID401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetInvoiceSummaryByUUIDRequest struct {
+	PathParams GetInvoiceSummaryByUUIDPathParams
 }
 
 type GetInvoiceSummaryByUUIDResponse struct {

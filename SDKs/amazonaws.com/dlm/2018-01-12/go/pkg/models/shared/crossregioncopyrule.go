@@ -9,5 +9,5 @@ type CrossRegionCopyRule struct {
 	Encrypted     bool                          `json:"Encrypted"`
 	RetainRule    *CrossRegionCopyRetainRule    `json:"RetainRule,omitempty"`
 	Target        *string                       `json:"Target,omitempty"`
-	TargetRegion  *string                       `json:"TargetRegion,omitempty"`
+	TargetRegion  map[string]interface{}        `json:"TargetRegion,omitempty"`
 }

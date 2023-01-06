@@ -3,19 +3,19 @@ package operations
 type GetCreateDbSnapshotActionEnum string
 
 const (
-	GetCreateDbSnapshotActionEnumCreateDbSnapshot GetCreateDbSnapshotActionEnum = "CreateDBSnapshot"
+	GETCreateDBSnapshotActionEnumCreateDbSnapshot GetCreateDbSnapshotActionEnum = "CreateDBSnapshot"
 )
 
 type GetCreateDbSnapshotVersionEnum string
 
 const (
-	GetCreateDbSnapshotVersionEnumTwoThousandAndThirteen0212 GetCreateDbSnapshotVersionEnum = "2013-02-12"
+	GETCreateDBSnapshotVersionEnumTwoThousandAndThirteen0212 GetCreateDbSnapshotVersionEnum = "2013-02-12"
 )
 
 type GetCreateDbSnapshotQueryParams struct {
 	Action               GetCreateDbSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
-	DbSnapshotIdentifier string                         `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
+	DBInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBSnapshotIdentifier string                         `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Version              GetCreateDbSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

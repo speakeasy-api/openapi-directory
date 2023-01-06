@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.ApplyArchiveRuleRequest{
         Headers: operations.ApplyArchiveRuleHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "quas",
-            XAmzCredential: "consequuntur",
-            XAmzDate: "laudantium",
-            XAmzSecurityToken: "autem",
-            XAmzSignature: "ipsa",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "rerum",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "laborum",
+            XAmzDate: "fugit",
+            XAmzSecurityToken: "quis",
+            XAmzSignature: "minus",
+            XAmzSignedHeaders: "soluta",
         },
         Request: operations.ApplyArchiveRuleRequestBody{
-            AnalyzerArn: "doloremque",
-            ClientToken: "perferendis",
-            RuleName: "atque",
+            AnalyzerArn: "aperiam",
+            ClientToken: "consequuntur",
+            RuleName: "excepturi",
         },
     }
     
-    res, err := s.Sdk.ApplyArchiveRule(ctx, req)
+    res, err := s.ApplyArchiveRule(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

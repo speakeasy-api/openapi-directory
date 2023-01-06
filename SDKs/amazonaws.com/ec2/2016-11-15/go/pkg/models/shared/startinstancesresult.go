@@ -1,5 +1,5 @@
 package shared
 
 type StartInstancesResult struct {
-	StartingInstances []InstanceStateChange
+	StartingInstances map[string]interface{}
 }

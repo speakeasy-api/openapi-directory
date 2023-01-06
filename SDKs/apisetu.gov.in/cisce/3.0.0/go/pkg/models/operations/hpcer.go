@@ -5,12 +5,12 @@ import (
 )
 
 type HpcerRequestBodyCertificateParameters struct {
-	Cuid     string `json:"CUID"`
-	Dob      string `json:"DOB"`
+	CUID     string `json:"CUID"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Idxn     string `json:"IDXN"`
+	IDXN     string `json:"IDXN"`
 	UID      string `json:"UID"`
-	Yoe      string `json:"YOE"`
+	YOE      string `json:"YOE"`
 }
 
 type HpcerRequestBodyFormatEnum string
@@ -86,7 +86,7 @@ type Hpcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Hpcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Hpcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Hpcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Hpcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Hpcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Hpcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Hpcer404ApplicationJSON struct {

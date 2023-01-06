@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,15 +29,15 @@ func main() {
             },
         },
         PathParams: operations.CompanyAlternativeSearchPathParams{
-            Country: "nihil",
+            Country: "quis",
         },
         Request: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "qui",
-            Name: "natus",
-            Number: "et",
-            Phone: "facere",
-            URL: "necessitatibus",
-            Vat: "iste",
+            Address: "dolorem",
+            Name: "quis",
+            Number: "rerum",
+            Phone: "voluptatem",
+            URL: "occaecati",
+            Vat: "ut",
         },
     }
     

@@ -6,5 +6,5 @@ import (
 
 type UpdateExpirationForHitRequest struct {
 	ExpireAt time.Time `json:"ExpireAt"`
-	HitID    string    `json:"HITId"`
+	HITID    string    `json:"HITId"`
 }

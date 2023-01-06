@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,29 +26,29 @@ func main() {
         Security: operations.GkehubProjectsLocationsListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.GkehubProjectsLocationsListPathParams{
-            Name: "fuga",
+            Name: "omnis",
         },
         QueryParams: operations.GkehubProjectsLocationsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "tempore",
-            Alt: "proto",
-            Callback: "et",
-            Fields: "voluptatem",
-            Filter: "dolores",
-            Key: "nulla",
-            OauthToken: "et",
-            PageSize: 6318403334757801594,
-            PageToken: "ab",
+            DollarXgafv: "2",
+            AccessToken: "et",
+            Alt: "json",
+            Callback: "voluptas",
+            Fields: "eligendi",
+            Filter: "architecto",
+            Key: "explicabo",
+            OauthToken: "nostrum",
+            PageSize: 9067063275803007797,
+            PageToken: "repudiandae",
             PrettyPrint: true,
-            QuotaUser: "dolorem",
-            UploadType: "nisi",
-            UploadProtocol: "quibusdam",
+            QuotaUser: "ut",
+            UploadType: "rerum",
+            UploadProtocol: "est",
         },
     }
     

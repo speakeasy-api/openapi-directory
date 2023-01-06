@@ -39,11 +39,11 @@ type AdminRespondToAuthChallengeResponse struct {
 	InvalidSmsRoleAccessPolicyException      *interface{}
 	InvalidSmsRoleTrustRelationshipException *interface{}
 	InvalidUserPoolConfigurationException    *interface{}
-	MfaMethodNotFoundException               *interface{}
+	MFAMethodNotFoundException               *interface{}
 	NotAuthorizedException                   *interface{}
 	PasswordResetRequiredException           *interface{}
 	ResourceNotFoundException                *interface{}
-	SoftwareTokenMfaNotFoundException        *interface{}
+	SoftwareTokenMFANotFoundException        *interface{}
 	StatusCode                               int64
 	TooManyRequestsException                 *interface{}
 	UnexpectedLambdaException                *interface{}

@@ -1,7 +1,5 @@
 package shared
 
-// ExperimentAction
-// Describes the action for an experiment.
 type ExperimentAction struct {
 	ActionID    *string                `json:"actionId,omitempty"`
 	Description *string                `json:"description,omitempty"`

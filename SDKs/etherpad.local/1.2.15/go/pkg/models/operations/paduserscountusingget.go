@@ -39,8 +39,8 @@ type PadUsersCountUsingGetRequest struct {
 type PadUsersCountUsingGetResponse struct {
 	ContentType                                   string
 	StatusCode                                    int64
-	PadUsersCountUsingGet200ApplicationJSONObject *PadUsersCountUsingGet200ApplicationJSON
-	PadUsersCountUsingGet400ApplicationJSONObject *PadUsersCountUsingGet400ApplicationJSON
-	PadUsersCountUsingGet401ApplicationJSONObject *PadUsersCountUsingGet401ApplicationJSON
-	PadUsersCountUsingGet500ApplicationJSONObject *PadUsersCountUsingGet500ApplicationJSON
+	PadUsersCountUsingGET200ApplicationJSONObject *PadUsersCountUsingGet200ApplicationJSON
+	PadUsersCountUsingGET400ApplicationJSONObject *PadUsersCountUsingGet400ApplicationJSON
+	PadUsersCountUsingGET401ApplicationJSONObject *PadUsersCountUsingGet401ApplicationJSON
+	PadUsersCountUsingGET500ApplicationJSONObject *PadUsersCountUsingGet500ApplicationJSON
 }

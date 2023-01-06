@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,113 +26,78 @@ func main() {
         Security: operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams{
-            Parent: "et",
+            Parent: "ut",
         },
         QueryParams: operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "odit",
-            Alt: "media",
-            APIConfigID: "repellat",
-            Callback: "voluptatum",
-            Fields: "consequatur",
-            Key: "provident",
-            OauthToken: "laboriosam",
+            DollarXgafv: "1",
+            AccessToken: "omnis",
+            Alt: "json",
+            APIConfigID: "quisquam",
+            Callback: "maxime",
+            Fields: "et",
+            Key: "eaque",
+            OauthToken: "voluptatibus",
             PrettyPrint: true,
-            QuotaUser: "dignissimos",
-            UploadType: "quos",
-            UploadProtocol: "reiciendis",
+            QuotaUser: "iure",
+            UploadType: "doloremque",
+            UploadProtocol: "quo",
         },
         Request: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "omnis",
-            GatewayServiceAccount: "quis",
+            DisplayName: "qui",
+            GatewayServiceAccount: "molestias",
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "velit",
-                        Path: "in",
+                        Contents: "minus",
+                        Path: "recusandae",
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "at",
-                            Path: "molestiae",
+                            Contents: "tenetur",
+                            Path: "eius",
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "odio",
-                            Path: "ipsam",
-                        },
-                    },
-                },
-                shared.ApigatewayAPIConfigGrpcServiceDefinition{
-                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "eos",
-                        Path: "eos",
-                    },
-                    Source: []shared.ApigatewayAPIConfigFile{
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "et",
-                            Path: "maxime",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "similique",
-                            Path: "esse",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "quo",
-                            Path: "et",
-                        },
-                    },
-                },
-                shared.ApigatewayAPIConfigGrpcServiceDefinition{
-                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "a",
-                        Path: "commodi",
-                    },
-                    Source: []shared.ApigatewayAPIConfigFile{
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "qui",
-                            Path: "et",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "maxime",
-                            Path: "beatae",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "doloremque",
-                            Path: "omnis",
+                            Contents: "repellat",
+                            Path: "sit",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "asperiores": "nulla",
+                "consequatur": "id",
+                "non": "saepe",
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "velit",
-                    Path: "et",
+                    Contents: "neque",
+                    Path: "ut",
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "velit",
-                    Path: "et",
+                    Contents: "dolorem",
+                    Path: "fugiat",
+                },
+                shared.ApigatewayAPIConfigFile{
+                    Contents: "sit",
+                    Path: "id",
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "voluptas",
-                        Path: "ab",
+                        Contents: "qui",
+                        Path: "quod",
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "sed",
-                        Path: "qui",
+                        Contents: "dignissimos",
+                        Path: "fugit",
                     },
                 },
             },

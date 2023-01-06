@@ -3,13 +3,13 @@ package operations
 type GetGetAccountSummaryActionEnum string
 
 const (
-	GetGetAccountSummaryActionEnumGetAccountSummary GetGetAccountSummaryActionEnum = "GetAccountSummary"
+	GETGETAccountSummaryActionEnumGetAccountSummary GetGetAccountSummaryActionEnum = "GetAccountSummary"
 )
 
 type GetGetAccountSummaryVersionEnum string
 
 const (
-	GetGetAccountSummaryVersionEnumTwoThousandAndTen0508 GetGetAccountSummaryVersionEnum = "2010-05-08"
+	GETGETAccountSummaryVersionEnumTwoThousandAndTen0508 GetGetAccountSummaryVersionEnum = "2010-05-08"
 )
 
 type GetGetAccountSummaryQueryParams struct {

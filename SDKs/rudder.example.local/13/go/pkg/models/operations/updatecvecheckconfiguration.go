@@ -10,7 +10,7 @@ type UpdateCveCheckConfigurationRequestBody struct {
 type UpdateCveCheckConfiguration200ApplicationJSONActionEnum string
 
 const (
-	UpdateCveCheckConfiguration200ApplicationJSONActionEnumUpdateCveCheckConfiguration UpdateCveCheckConfiguration200ApplicationJSONActionEnum = "updateCVECheckConfiguration"
+	UpdateCVECheckConfiguration200ApplicationJSONActionEnumUpdateCveCheckConfiguration UpdateCveCheckConfiguration200ApplicationJSONActionEnum = "updateCVECheckConfiguration"
 )
 
 type UpdateCveCheckConfiguration200ApplicationJSONData struct {
@@ -21,8 +21,8 @@ type UpdateCveCheckConfiguration200ApplicationJSONData struct {
 type UpdateCveCheckConfiguration200ApplicationJSONResultEnum string
 
 const (
-	UpdateCveCheckConfiguration200ApplicationJSONResultEnumSuccess UpdateCveCheckConfiguration200ApplicationJSONResultEnum = "success"
-	UpdateCveCheckConfiguration200ApplicationJSONResultEnumError   UpdateCveCheckConfiguration200ApplicationJSONResultEnum = "error"
+	UpdateCVECheckConfiguration200ApplicationJSONResultEnumSuccess UpdateCveCheckConfiguration200ApplicationJSONResultEnum = "success"
+	UpdateCVECheckConfiguration200ApplicationJSONResultEnumError   UpdateCveCheckConfiguration200ApplicationJSONResultEnum = "error"
 )
 
 type UpdateCveCheckConfiguration200ApplicationJSON struct {
@@ -38,5 +38,5 @@ type UpdateCveCheckConfigurationRequest struct {
 type UpdateCveCheckConfigurationResponse struct {
 	ContentType                                         string
 	StatusCode                                          int64
-	UpdateCveCheckConfiguration200ApplicationJSONObject *UpdateCveCheckConfiguration200ApplicationJSON
+	UpdateCVECheckConfiguration200ApplicationJSONObject *UpdateCveCheckConfiguration200ApplicationJSON
 }

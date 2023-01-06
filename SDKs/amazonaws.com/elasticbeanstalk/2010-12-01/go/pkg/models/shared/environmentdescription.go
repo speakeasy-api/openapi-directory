@@ -9,7 +9,7 @@ import (
 type EnvironmentDescription struct {
 	AbortableOperationInProgress *bool
 	ApplicationName              *string
-	Cname                        *string
+	CNAME                        *string
 	DateCreated                  *time.Time
 	DateUpdated                  *time.Time
 	Description                  *string

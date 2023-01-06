@@ -7,17 +7,17 @@ import (
 type VlanStatusLabelEnum string
 
 const (
-	VlanStatusLabelEnumActive     VlanStatusLabelEnum = "Active"
-	VlanStatusLabelEnumReserved   VlanStatusLabelEnum = "Reserved"
-	VlanStatusLabelEnumDeprecated VlanStatusLabelEnum = "Deprecated"
+	VLANStatusLabelEnumActive     VlanStatusLabelEnum = "Active"
+	VLANStatusLabelEnumReserved   VlanStatusLabelEnum = "Reserved"
+	VLANStatusLabelEnumDeprecated VlanStatusLabelEnum = "Deprecated"
 )
 
 type VlanStatusValueEnum string
 
 const (
-	VlanStatusValueEnumActive     VlanStatusValueEnum = "active"
-	VlanStatusValueEnumReserved   VlanStatusValueEnum = "reserved"
-	VlanStatusValueEnumDeprecated VlanStatusValueEnum = "deprecated"
+	VLANStatusValueEnumActive     VlanStatusValueEnum = "active"
+	VLANStatusValueEnumReserved   VlanStatusValueEnum = "reserved"
+	VLANStatusValueEnumDeprecated VlanStatusValueEnum = "deprecated"
 )
 
 type VlanStatus struct {

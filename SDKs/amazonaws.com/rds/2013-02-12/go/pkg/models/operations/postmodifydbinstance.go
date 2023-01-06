@@ -3,13 +3,13 @@ package operations
 type PostModifyDbInstanceActionEnum string
 
 const (
-	PostModifyDbInstanceActionEnumModifyDbInstance PostModifyDbInstanceActionEnum = "ModifyDBInstance"
+	POSTModifyDBInstanceActionEnumModifyDbInstance PostModifyDbInstanceActionEnum = "ModifyDBInstance"
 )
 
 type PostModifyDbInstanceVersionEnum string
 
 const (
-	PostModifyDbInstanceVersionEnumTwoThousandAndThirteen0212 PostModifyDbInstanceVersionEnum = "2013-02-12"
+	POSTModifyDBInstanceVersionEnumTwoThousandAndThirteen0212 PostModifyDbInstanceVersionEnum = "2013-02-12"
 )
 
 type PostModifyDbInstanceQueryParams struct {

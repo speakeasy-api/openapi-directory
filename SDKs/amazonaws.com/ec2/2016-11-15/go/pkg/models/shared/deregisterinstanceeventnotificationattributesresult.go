@@ -1,5 +1,5 @@
 package shared
 
 type DeregisterInstanceEventNotificationAttributesResult struct {
-	InstanceTagAttribute *InstanceTagNotificationAttribute
+	InstanceTagAttribute map[string]interface{}
 }

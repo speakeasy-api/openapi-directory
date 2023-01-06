@@ -3,13 +3,13 @@ package operations
 type PostGetGroupActionEnum string
 
 const (
-	PostGetGroupActionEnumGetGroup PostGetGroupActionEnum = "GetGroup"
+	POSTGetGroupActionEnumGetGroup PostGetGroupActionEnum = "GetGroup"
 )
 
 type PostGetGroupVersionEnum string
 
 const (
-	PostGetGroupVersionEnumTwoThousandAndTen0508 PostGetGroupVersionEnum = "2010-05-08"
+	POSTGetGroupVersionEnumTwoThousandAndTen0508 PostGetGroupVersionEnum = "2010-05-08"
 )
 
 type PostGetGroupQueryParams struct {

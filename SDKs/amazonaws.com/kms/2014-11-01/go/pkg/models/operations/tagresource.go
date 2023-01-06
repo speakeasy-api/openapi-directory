@@ -29,8 +29,8 @@ type TagResourceRequest struct {
 type TagResourceResponse struct {
 	ContentType              string
 	InvalidArnException      *interface{}
-	KmsInternalException     *interface{}
-	KmsInvalidStateException *interface{}
+	KMSInternalException     *interface{}
+	KMSInvalidStateException *interface{}
 	LimitExceededException   *interface{}
 	NotFoundException        *interface{}
 	StatusCode               int64

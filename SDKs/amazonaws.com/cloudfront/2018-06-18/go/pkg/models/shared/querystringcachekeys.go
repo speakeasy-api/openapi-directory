@@ -1,6 +1,6 @@
 package shared
 
 type QueryStringCacheKeys struct {
-	Items    []string
+	Items    []map[string]interface{}
 	Quantity int64
 }

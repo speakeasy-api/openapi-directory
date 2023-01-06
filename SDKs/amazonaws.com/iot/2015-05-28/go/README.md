@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AcceptCertificateTransferRequest{
         PathParams: operations.AcceptCertificateTransferPathParams{
-            CertificateID: "aut",
+            CertificateID: "ut",
         },
         QueryParams: operations.AcceptCertificateTransferQueryParams{
             SetAsActive: false,
         },
         Headers: operations.AcceptCertificateTransferHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "nisi",
-            XAmzCredential: "voluptatibus",
-            XAmzDate: "sapiente",
-            XAmzSecurityToken: "quasi",
-            XAmzSignature: "minima",
-            XAmzSignedHeaders: "odit",
+            XAmzAlgorithm: "blanditiis",
+            XAmzContentSha256: "voluptatibus",
+            XAmzCredential: "sint",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "fugiat",
+            XAmzSignature: "adipisci",
+            XAmzSignedHeaders: "sunt",
         },
     }
     
-    res, err := s.Sdk.AcceptCertificateTransfer(ctx, req)
+    res, err := s.AcceptCertificateTransfer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

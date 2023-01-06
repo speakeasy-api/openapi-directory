@@ -1,5 +1,5 @@
 package shared
 
 type AdvertiseByoipCidrResult struct {
-	ByoipCidr *ByoipCidr
+	ByoipCidr map[string]interface{}
 }

@@ -43,6 +43,6 @@ type GetIsosRequest struct {
 
 type GetIsosResponse struct {
 	ContentType                     string
-	GetIsos200ApplicationJSONObject *GetIsos200ApplicationJSON
 	StatusCode                      int64
+	GetIsos200ApplicationJSONObject *GetIsos200ApplicationJSON
 }

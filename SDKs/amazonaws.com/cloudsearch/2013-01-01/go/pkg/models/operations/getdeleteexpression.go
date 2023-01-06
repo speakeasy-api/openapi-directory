@@ -3,13 +3,13 @@ package operations
 type GetDeleteExpressionActionEnum string
 
 const (
-	GetDeleteExpressionActionEnumDeleteExpression GetDeleteExpressionActionEnum = "DeleteExpression"
+	GETDeleteExpressionActionEnumDeleteExpression GetDeleteExpressionActionEnum = "DeleteExpression"
 )
 
 type GetDeleteExpressionVersionEnum string
 
 const (
-	GetDeleteExpressionVersionEnumTwoThousandAndThirteen0101 GetDeleteExpressionVersionEnum = "2013-01-01"
+	GETDeleteExpressionVersionEnumTwoThousandAndThirteen0101 GetDeleteExpressionVersionEnum = "2013-01-01"
 )
 
 type GetDeleteExpressionQueryParams struct {

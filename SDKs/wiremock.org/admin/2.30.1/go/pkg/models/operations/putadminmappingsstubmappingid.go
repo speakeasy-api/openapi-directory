@@ -133,6 +133,6 @@ type PutAdminMappingsStubMappingIDRequest struct {
 
 type PutAdminMappingsStubMappingIDResponse struct {
 	ContentType                                           string
-	PutAdminMappingsStubMappingID200ApplicationJSONObject *PutAdminMappingsStubMappingID200ApplicationJSON
 	StatusCode                                            int64
+	PutAdminMappingsStubMappingID200ApplicationJSONObject *PutAdminMappingsStubMappingID200ApplicationJSON
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,26 @@ func main() {
     
     req := operations.AssociateConfigurationItemsToApplicationRequest{
         Headers: operations.AssociateConfigurationItemsToApplicationHeaders{
-            XAmzAlgorithm: "ab",
-            XAmzContentSha256: "dolores",
-            XAmzCredential: "sunt",
-            XAmzDate: "perferendis",
-            XAmzSecurityToken: "quas",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "dicta",
+            XAmzAlgorithm: "non",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "inventore",
+            XAmzDate: "reprehenderit",
+            XAmzSecurityToken: "quos",
+            XAmzSignature: "saepe",
+            XAmzSignedHeaders: "aperiam",
             XAmzTarget: "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication",
         },
         Request: shared.AssociateConfigurationItemsToApplicationRequest{
-            ApplicationConfigurationID: "pariatur",
+            ApplicationConfigurationID: "ab",
             ConfigurationIds: []string{
-                "ducimus",
+                "molestias",
+                "voluptas",
+                "animi",
             },
         },
     }
     
-    res, err := s.Sdk.AssociateConfigurationItemsToApplication(ctx, req)
+    res, err := s.AssociateConfigurationItemsToApplication(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

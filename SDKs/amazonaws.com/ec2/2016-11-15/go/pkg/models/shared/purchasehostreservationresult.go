@@ -1,9 +1,9 @@
 package shared
 
 type PurchaseHostReservationResult struct {
-	ClientToken       *string
-	CurrencyCode      *CurrencyCodeValuesEnum
-	Purchase          []Purchase
-	TotalHourlyPrice  *string
-	TotalUpfrontPrice *string
+	ClientToken       map[string]interface{}
+	CurrencyCode      map[string]interface{}
+	Purchase          map[string]interface{}
+	TotalHourlyPrice  map[string]interface{}
+	TotalUpfrontPrice map[string]interface{}
 }

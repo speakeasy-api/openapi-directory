@@ -1,6 +1,6 @@
 package shared
 
 type DescribeByoipCidrsResult struct {
-	ByoipCidrs []ByoipCidr
-	NextToken  *string
+	ByoipCidrs map[string]interface{}
+	NextToken  map[string]interface{}
 }

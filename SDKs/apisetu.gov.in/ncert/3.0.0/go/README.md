@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.MrcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.MrcerRequestBody{
             CertificateParameters: &operations.MrcerRequestBodyCertificateParameters{
-                Dob: "excepturi",
-                FullName: "accusantium",
-                Rroll: "alias",
-                Year: "ipsum",
+                DOB: "fuga",
+                FullName: "aut",
+                RROLL: "consectetur",
+                Year: "nihil",
             },
-            ConsentArtifact: "modi",
+            ConsentArtifact: "similique",
             Format: "pdf",
-            TxnID: "culpa",
+            TxnID: "mollitia",
         },
     }
     
-    res, err := s.Sdk.Mrcer(ctx, req)
+    res, err := s.APIs.Mrcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Mrcer` - Merit Certificate
 

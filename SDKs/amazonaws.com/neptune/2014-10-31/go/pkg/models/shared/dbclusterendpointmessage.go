@@ -1,6 +1,6 @@
 package shared
 
 type DbClusterEndpointMessage struct {
-	DbClusterEndpoints []DbClusterEndpoint
+	DBClusterEndpoints []map[string]interface{}
 	Marker             *string
 }

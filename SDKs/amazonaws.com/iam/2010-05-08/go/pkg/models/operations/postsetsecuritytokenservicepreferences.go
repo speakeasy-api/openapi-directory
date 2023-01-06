@@ -3,13 +3,13 @@ package operations
 type PostSetSecurityTokenServicePreferencesActionEnum string
 
 const (
-	PostSetSecurityTokenServicePreferencesActionEnumSetSecurityTokenServicePreferences PostSetSecurityTokenServicePreferencesActionEnum = "SetSecurityTokenServicePreferences"
+	POSTSetSecurityTokenServicePreferencesActionEnumSetSecurityTokenServicePreferences PostSetSecurityTokenServicePreferencesActionEnum = "SetSecurityTokenServicePreferences"
 )
 
 type PostSetSecurityTokenServicePreferencesVersionEnum string
 
 const (
-	PostSetSecurityTokenServicePreferencesVersionEnumTwoThousandAndTen0508 PostSetSecurityTokenServicePreferencesVersionEnum = "2010-05-08"
+	POSTSetSecurityTokenServicePreferencesVersionEnumTwoThousandAndTen0508 PostSetSecurityTokenServicePreferencesVersionEnum = "2010-05-08"
 )
 
 type PostSetSecurityTokenServicePreferencesQueryParams struct {

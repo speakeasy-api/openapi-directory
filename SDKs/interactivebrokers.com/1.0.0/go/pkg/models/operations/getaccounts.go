@@ -14,6 +14,6 @@ type GetAccountsRequest struct {
 
 type GetAccountsResponse struct {
 	ContentType                         string
-	GetAccounts200ApplicationJSONObject *GetAccounts200ApplicationJSON
 	StatusCode                          int64
+	GetAccounts200ApplicationJSONObject *GetAccounts200ApplicationJSON
 }

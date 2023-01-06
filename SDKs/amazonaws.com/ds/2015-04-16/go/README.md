@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AcceptSharedDirectoryRequest{
         Headers: operations.AcceptSharedDirectoryHeaders{
-            XAmzAlgorithm: "accusantium",
-            XAmzContentSha256: "facere",
-            XAmzCredential: "pariatur",
-            XAmzDate: "ipsum",
-            XAmzSecurityToken: "doloremque",
-            XAmzSignature: "architecto",
-            XAmzSignedHeaders: "temporibus",
+            XAmzAlgorithm: "rerum",
+            XAmzContentSha256: "dicta",
+            XAmzCredential: "debitis",
+            XAmzDate: "voluptatum",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "ut",
+            XAmzSignedHeaders: "dolorem",
             XAmzTarget: "DirectoryService_20150416.AcceptSharedDirectory",
         },
         Request: shared.AcceptSharedDirectoryRequest{
-            SharedDirectoryID: "rem",
+            SharedDirectoryID: "voluptate",
         },
     }
     
-    res, err := s.Sdk.AcceptSharedDirectory(ctx, req)
+    res, err := s.AcceptSharedDirectory(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

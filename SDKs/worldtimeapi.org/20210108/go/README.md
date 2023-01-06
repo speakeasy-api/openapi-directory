@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,7 +22,7 @@ import (
 func main() {
     s := sdk.New()
     
-    res, err := s.Sdk.GetIP(ctx)
+    res, err := s.GetIP(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -40,17 +39,17 @@ func main() {
 ### SDK SDK
 
 * `GetIP` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* `GetIPTxt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `GetIPIpv4` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `GetIPIpv4Txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `GetIPTxt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `GetTimezone` - a listing of all timezones.
+* `GetTimezoneTxt` - a listing of all timezones.
 * `GetTimezoneArea` - a listing of all timezones available for that area.
+* `GetTimezoneAreaTxt` - a listing of all timezones available for that area.
 * `GetTimezoneAreaLocation` - request the current time for a timezone.
+* `GetTimezoneAreaLocationTxt` - request the current time for a timezone.
 * `GetTimezoneAreaLocationRegion` - request the current time for a timezone.
 * `GetTimezoneAreaLocationRegionTxt` - request the current time for a timezone.
-* `GetTimezoneAreaLocationTxt` - request the current time for a timezone.
-* `GetTimezoneAreaTxt` - a listing of all timezones available for that area.
-* `GetTimezoneTxt` - a listing of all timezones.
 
 <!-- End SDK Available Operations -->
 

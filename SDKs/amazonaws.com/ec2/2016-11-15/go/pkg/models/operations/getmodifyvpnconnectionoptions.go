@@ -3,13 +3,13 @@ package operations
 type GetModifyVpnConnectionOptionsActionEnum string
 
 const (
-	GetModifyVpnConnectionOptionsActionEnumModifyVpnConnectionOptions GetModifyVpnConnectionOptionsActionEnum = "ModifyVpnConnectionOptions"
+	GETModifyVpnConnectionOptionsActionEnumModifyVpnConnectionOptions GetModifyVpnConnectionOptionsActionEnum = "ModifyVpnConnectionOptions"
 )
 
 type GetModifyVpnConnectionOptionsVersionEnum string
 
 const (
-	GetModifyVpnConnectionOptionsVersionEnumTwoThousandAndSixteen1115 GetModifyVpnConnectionOptionsVersionEnum = "2016-11-15"
+	GETModifyVpnConnectionOptionsVersionEnumTwoThousandAndSixteen1115 GetModifyVpnConnectionOptionsVersionEnum = "2016-11-15"
 )
 
 type GetModifyVpnConnectionOptionsQueryParams struct {

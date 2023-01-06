@@ -8,38 +8,30 @@ type ListFloatingIPActionsPathParams struct {
 	FloatingIP string `pathParam:"style=simple,explode=false,name=floating_ip"`
 }
 
-type ListFloatingIPActionsRequest struct {
-	PathParams ListFloatingIPActionsPathParams
-}
-
 type ListFloatingIPActions200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
+	Prev *string `json:"prev,omitempty"`
 }
 
-type ListFloatingIPActions200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
+type ListFloatingIPActions200ApplicationJSONLinksPages3 struct {
+	Next *string `json:"next,omitempty"`
 }
 
 type ListFloatingIPActions200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
-type ListFloatingIPActions200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListFloatingIPActions200ApplicationJSON struct {
-	Actions []shared.Onev21actionsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesActionsItems `json:"actions,omitempty"`
-	Links   *ListFloatingIPActions200ApplicationJSONLinks                                                  `json:"links,omitempty"`
-	Meta    ListFloatingIPActions200ApplicationJSONMeta                                                    `json:"meta"`
+	Links *ListFloatingIPActions200ApplicationJSONLinks `json:"links,omitempty"`
 }
 
 type ListFloatingIPActions401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListFloatingIPActionsRequest struct {
+	PathParams ListFloatingIPActionsPathParams
 }
 
 type ListFloatingIPActionsResponse struct {

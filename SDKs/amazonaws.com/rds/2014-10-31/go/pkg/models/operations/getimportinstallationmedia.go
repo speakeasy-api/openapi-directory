@@ -3,13 +3,13 @@ package operations
 type GetImportInstallationMediaActionEnum string
 
 const (
-	GetImportInstallationMediaActionEnumImportInstallationMedia GetImportInstallationMediaActionEnum = "ImportInstallationMedia"
+	GETImportInstallationMediaActionEnumImportInstallationMedia GetImportInstallationMediaActionEnum = "ImportInstallationMedia"
 )
 
 type GetImportInstallationMediaVersionEnum string
 
 const (
-	GetImportInstallationMediaVersionEnumTwoThousandAndFourteen1031 GetImportInstallationMediaVersionEnum = "2014-10-31"
+	GETImportInstallationMediaVersionEnumTwoThousandAndFourteen1031 GetImportInstallationMediaVersionEnum = "2014-10-31"
 )
 
 type GetImportInstallationMediaQueryParams struct {
@@ -18,7 +18,7 @@ type GetImportInstallationMediaQueryParams struct {
 	Engine                      string                                `queryParam:"style=form,explode=true,name=Engine"`
 	EngineInstallationMediaPath string                                `queryParam:"style=form,explode=true,name=EngineInstallationMediaPath"`
 	EngineVersion               string                                `queryParam:"style=form,explode=true,name=EngineVersion"`
-	OsInstallationMediaPath     string                                `queryParam:"style=form,explode=true,name=OSInstallationMediaPath"`
+	OSInstallationMediaPath     string                                `queryParam:"style=form,explode=true,name=OSInstallationMediaPath"`
 	Version                     GetImportInstallationMediaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

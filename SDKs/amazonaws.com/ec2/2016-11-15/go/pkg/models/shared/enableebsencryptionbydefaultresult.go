@@ -1,5 +1,5 @@
 package shared
 
 type EnableEbsEncryptionByDefaultResult struct {
-	EbsEncryptionByDefault *bool
+	EbsEncryptionByDefault map[string]interface{}
 }

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeVpcPeeringConnectionsResult struct {
-	NextToken             *string
-	VpcPeeringConnections []VpcPeeringConnection
+	NextToken             map[string]interface{}
+	VpcPeeringConnections map[string]interface{}
 }

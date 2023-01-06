@@ -1,5 +1,5 @@
 package shared
 
 type WithdrawByoipCidrResult struct {
-	ByoipCidr *ByoipCidr
+	ByoipCidr map[string]interface{}
 }

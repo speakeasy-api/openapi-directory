@@ -3,13 +3,13 @@ package operations
 type PostCreateNetworkACLActionEnum string
 
 const (
-	PostCreateNetworkACLActionEnumCreateNetworkACL PostCreateNetworkACLActionEnum = "CreateNetworkAcl"
+	POSTCreateNetworkACLActionEnumCreateNetworkACL PostCreateNetworkACLActionEnum = "CreateNetworkAcl"
 )
 
 type PostCreateNetworkACLVersionEnum string
 
 const (
-	PostCreateNetworkACLVersionEnumTwoThousandAndSixteen1115 PostCreateNetworkACLVersionEnum = "2016-11-15"
+	POSTCreateNetworkACLVersionEnumTwoThousandAndSixteen1115 PostCreateNetworkACLVersionEnum = "2016-11-15"
 )
 
 type PostCreateNetworkACLQueryParams struct {

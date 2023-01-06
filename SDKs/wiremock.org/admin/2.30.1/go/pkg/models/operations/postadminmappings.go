@@ -128,6 +128,6 @@ type PostAdminMappingsRequest struct {
 
 type PostAdminMappingsResponse struct {
 	ContentType                               string
-	PostAdminMappings201ApplicationJSONObject *PostAdminMappings201ApplicationJSON
 	StatusCode                                int64
+	PostAdminMappings201ApplicationJSONObject *PostAdminMappings201ApplicationJSON
 }

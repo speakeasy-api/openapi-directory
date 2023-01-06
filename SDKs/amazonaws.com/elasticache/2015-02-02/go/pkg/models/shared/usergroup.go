@@ -1,7 +1,7 @@
 package shared
 
 type UserGroup struct {
-	Arn               *string
+	ARN               *string
 	Engine            *string
 	PendingChanges    *UserGroupPendingChanges
 	ReplicationGroups []string

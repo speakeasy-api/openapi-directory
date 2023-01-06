@@ -23,7 +23,7 @@ type CreateImageRecipeRequestBodyAdditionalInstanceConfiguration struct {
 
 type CreateImageRecipeRequestBody struct {
 	AdditionalInstanceConfiguration *CreateImageRecipeRequestBodyAdditionalInstanceConfiguration `json:"additionalInstanceConfiguration,omitempty"`
-	BlockDeviceMappings             []shared.InstanceBlockDeviceMapping                          `json:"blockDeviceMappings,omitempty"`
+	BlockDeviceMappings             []shared.InstanceBlockDeviceMapping1                         `json:"blockDeviceMappings,omitempty"`
 	ClientToken                     string                                                       `json:"clientToken"`
 	Components                      []shared.ComponentConfiguration                              `json:"components"`
 	Description                     *string                                                      `json:"description,omitempty"`

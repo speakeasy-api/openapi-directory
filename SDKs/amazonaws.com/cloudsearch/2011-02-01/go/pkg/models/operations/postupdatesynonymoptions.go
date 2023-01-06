@@ -3,13 +3,13 @@ package operations
 type PostUpdateSynonymOptionsActionEnum string
 
 const (
-	PostUpdateSynonymOptionsActionEnumUpdateSynonymOptions PostUpdateSynonymOptionsActionEnum = "UpdateSynonymOptions"
+	POSTUpdateSynonymOptionsActionEnumUpdateSynonymOptions PostUpdateSynonymOptionsActionEnum = "UpdateSynonymOptions"
 )
 
 type PostUpdateSynonymOptionsVersionEnum string
 
 const (
-	PostUpdateSynonymOptionsVersionEnumTwoThousandAndEleven0201 PostUpdateSynonymOptionsVersionEnum = "2011-02-01"
+	POSTUpdateSynonymOptionsVersionEnumTwoThousandAndEleven0201 PostUpdateSynonymOptionsVersionEnum = "2011-02-01"
 )
 
 type PostUpdateSynonymOptionsQueryParams struct {

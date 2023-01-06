@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -223,7 +224,7 @@ func (s *SDK) DescribeIcd10CmInferenceJob(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.DescribeIcd10CmInferenceJobResponse = out
+			res.DescribeIcd10CMInferenceJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -315,7 +316,7 @@ func (s *SDK) DescribePhiDetectionJob(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.DescribePhiDetectionJobResponse = out
+			res.DescribePHIDetectionJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -723,7 +724,7 @@ func (s *SDK) DetectPhi(ctx context.Context, request operations.DetectPhiRequest
 				return nil, err
 			}
 
-			res.DetectPhiResponse = out
+			res.DetectPHIResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -835,7 +836,7 @@ func (s *SDK) InferIcd10Cm(ctx context.Context, request operations.InferIcd10CmR
 				return nil, err
 			}
 
-			res.InferIcd10CmResponse = out
+			res.InferIcd10CMResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1151,7 +1152,7 @@ func (s *SDK) ListIcd10CmInferenceJobs(ctx context.Context, request operations.L
 				return nil, err
 			}
 
-			res.ListIcd10CmInferenceJobsResponse = out
+			res.ListIcd10CMInferenceJobsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1243,7 +1244,7 @@ func (s *SDK) ListPhiDetectionJobs(ctx context.Context, request operations.ListP
 				return nil, err
 			}
 
-			res.ListPhiDetectionJobsResponse = out
+			res.ListPHIDetectionJobsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1519,7 +1520,7 @@ func (s *SDK) StartIcd10CmInferenceJob(ctx context.Context, request operations.S
 				return nil, err
 			}
 
-			res.StartIcd10CmInferenceJobResponse = out
+			res.StartIcd10CMInferenceJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1611,7 +1612,7 @@ func (s *SDK) StartPhiDetectionJob(ctx context.Context, request operations.Start
 				return nil, err
 			}
 
-			res.StartPhiDetectionJobResponse = out
+			res.StartPHIDetectionJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1877,7 +1878,7 @@ func (s *SDK) StopIcd10CmInferenceJob(ctx context.Context, request operations.St
 				return nil, err
 			}
 
-			res.StopIcd10CmInferenceJobResponse = out
+			res.StopIcd10CMInferenceJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1959,7 +1960,7 @@ func (s *SDK) StopPhiDetectionJob(ctx context.Context, request operations.StopPh
 				return nil, err
 			}
 
-			res.StopPhiDetectionJobResponse = out
+			res.StopPHIDetectionJobResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

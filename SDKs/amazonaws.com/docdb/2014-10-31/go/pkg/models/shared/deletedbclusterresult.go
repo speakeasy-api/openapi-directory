@@ -1,5 +1,5 @@
 package shared
 
 type DeleteDbClusterResult struct {
-	DbCluster *DbCluster
+	DBCluster *DbCluster1
 }

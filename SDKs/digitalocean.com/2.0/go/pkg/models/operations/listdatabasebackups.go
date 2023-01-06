@@ -9,10 +9,6 @@ type ListDatabaseBackupsPathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type ListDatabaseBackupsRequest struct {
-	PathParams ListDatabaseBackupsPathParams
-}
-
 type ListDatabaseBackups200ApplicationJSONBackups struct {
 	CreatedAt     time.Time `json:"created_at"`
 	SizeGigabytes float64   `json:"size_gigabytes"`
@@ -26,6 +22,10 @@ type ListDatabaseBackups401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListDatabaseBackupsRequest struct {
+	PathParams ListDatabaseBackupsPathParams
 }
 
 type ListDatabaseBackupsResponse struct {

@@ -2,5 +2,5 @@ package shared
 
 type ReservedDbInstancesOfferingMessage struct {
 	Marker                       *string
-	ReservedDbInstancesOfferings []ReservedDbInstancesOffering
+	ReservedDBInstancesOfferings []map[string]interface{}
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,31 +26,31 @@ func main() {
         Security: operations.AlertcenterAlertsBatchDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.AlertcenterAlertsBatchDeleteQueryParams{
             DollarXgafv: "1",
-            AccessToken: "quaerat",
+            AccessToken: "vero",
             Alt: "media",
-            Callback: "quia",
-            Fields: "minima",
-            Key: "similique",
-            OauthToken: "corrupti",
+            Callback: "veniam",
+            Fields: "et",
+            Key: "et",
+            OauthToken: "voluptatibus",
             PrettyPrint: false,
-            QuotaUser: "sint",
-            UploadType: "nulla",
-            UploadProtocol: "ab",
+            QuotaUser: "similique",
+            UploadType: "perspiciatis",
+            UploadProtocol: "ipsa",
         },
         Request: &shared.BatchDeleteAlertsRequest{
             AlertID: []string{
-                "quis",
-                "ut",
-                "nesciunt",
+                "voluptas",
+                "ullam",
+                "inventore",
             },
-            CustomerID: "veniam",
+            CustomerID: "unde",
         },
     }
     

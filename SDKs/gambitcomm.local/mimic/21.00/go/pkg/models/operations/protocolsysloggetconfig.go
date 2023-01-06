@@ -13,7 +13,7 @@ type ProtocolSyslogGetConfigRequest struct {
 }
 
 type ProtocolSyslogGetConfigResponse struct {
-	ConfigSyslog *shared.ConfigSyslog
+	ConfigSYSLOG *shared.ConfigSyslog
 	ContentType  string
 	StatusCode   int64
 }

@@ -3,13 +3,13 @@ package operations
 type PostModifyOptionGroupActionEnum string
 
 const (
-	PostModifyOptionGroupActionEnumModifyOptionGroup PostModifyOptionGroupActionEnum = "ModifyOptionGroup"
+	POSTModifyOptionGroupActionEnumModifyOptionGroup PostModifyOptionGroupActionEnum = "ModifyOptionGroup"
 )
 
 type PostModifyOptionGroupVersionEnum string
 
 const (
-	PostModifyOptionGroupVersionEnumTwoThousandAndThirteen0909 PostModifyOptionGroupVersionEnum = "2013-09-09"
+	POSTModifyOptionGroupVersionEnumTwoThousandAndThirteen0909 PostModifyOptionGroupVersionEnum = "2013-09-09"
 )
 
 type PostModifyOptionGroupQueryParams struct {

@@ -3,23 +3,23 @@ package operations
 type PostListJobsActionEnum string
 
 const (
-	PostListJobsActionEnumListJobs PostListJobsActionEnum = "ListJobs"
+	POSTListJobsActionEnumListJobs PostListJobsActionEnum = "ListJobs"
 )
 
 type PostListJobsOperationEnum string
 
 const (
-	PostListJobsOperationEnumListJobs PostListJobsOperationEnum = "ListJobs"
+	POSTListJobsOperationEnumListJobs PostListJobsOperationEnum = "ListJobs"
 )
 
 type PostListJobsVersionEnum string
 
 const (
-	PostListJobsVersionEnumTwoThousandAndTen0601 PostListJobsVersionEnum = "2010-06-01"
+	POSTListJobsVersionEnumTwoThousandAndTen0601 PostListJobsVersionEnum = "2010-06-01"
 )
 
 type PostListJobsQueryParams struct {
-	AwsAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
+	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           PostListJobsActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Marker           *string                   `queryParam:"style=form,explode=true,name=Marker"`
 	MaxJobs          *string                   `queryParam:"style=form,explode=true,name=MaxJobs"`

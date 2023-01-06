@@ -15,7 +15,7 @@ type Service struct {
 	DeploymentController          *DeploymentController          `json:"deploymentController,omitempty"`
 	Deployments                   []Deployment                   `json:"deployments,omitempty"`
 	DesiredCount                  *int64                         `json:"desiredCount,omitempty"`
-	EnableEcsManagedTags          *bool                          `json:"enableECSManagedTags,omitempty"`
+	EnableECSManagedTags          *bool                          `json:"enableECSManagedTags,omitempty"`
 	EnableExecuteCommand          *bool                          `json:"enableExecuteCommand,omitempty"`
 	Events                        []ServiceEvent                 `json:"events,omitempty"`
 	HealthCheckGracePeriodSeconds *int64                         `json:"healthCheckGracePeriodSeconds,omitempty"`

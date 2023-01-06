@@ -3,13 +3,13 @@ package operations
 type PostDescribeClusterSecurityGroupsActionEnum string
 
 const (
-	PostDescribeClusterSecurityGroupsActionEnumDescribeClusterSecurityGroups PostDescribeClusterSecurityGroupsActionEnum = "DescribeClusterSecurityGroups"
+	POSTDescribeClusterSecurityGroupsActionEnumDescribeClusterSecurityGroups PostDescribeClusterSecurityGroupsActionEnum = "DescribeClusterSecurityGroups"
 )
 
 type PostDescribeClusterSecurityGroupsVersionEnum string
 
 const (
-	PostDescribeClusterSecurityGroupsVersionEnumTwoThousandAndTwelve1201 PostDescribeClusterSecurityGroupsVersionEnum = "2012-12-01"
+	POSTDescribeClusterSecurityGroupsVersionEnumTwoThousandAndTwelve1201 PostDescribeClusterSecurityGroupsVersionEnum = "2012-12-01"
 )
 
 type PostDescribeClusterSecurityGroupsQueryParams struct {

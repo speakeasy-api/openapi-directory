@@ -3,13 +3,13 @@ package operations
 type GetDeleteClusterSubnetGroupActionEnum string
 
 const (
-	GetDeleteClusterSubnetGroupActionEnumDeleteClusterSubnetGroup GetDeleteClusterSubnetGroupActionEnum = "DeleteClusterSubnetGroup"
+	GETDeleteClusterSubnetGroupActionEnumDeleteClusterSubnetGroup GetDeleteClusterSubnetGroupActionEnum = "DeleteClusterSubnetGroup"
 )
 
 type GetDeleteClusterSubnetGroupVersionEnum string
 
 const (
-	GetDeleteClusterSubnetGroupVersionEnumTwoThousandAndTwelve1201 GetDeleteClusterSubnetGroupVersionEnum = "2012-12-01"
+	GETDeleteClusterSubnetGroupVersionEnumTwoThousandAndTwelve1201 GetDeleteClusterSubnetGroupVersionEnum = "2012-12-01"
 )
 
 type GetDeleteClusterSubnetGroupQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeLocalGatewayRouteTablesResult struct {
-	LocalGatewayRouteTables []LocalGatewayRouteTable
-	NextToken               *string
+	LocalGatewayRouteTables map[string]interface{}
+	NextToken               map[string]interface{}
 }

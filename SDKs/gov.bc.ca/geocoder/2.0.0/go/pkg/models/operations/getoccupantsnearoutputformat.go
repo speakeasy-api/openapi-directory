@@ -32,7 +32,7 @@ type GetOccupantsNearOutputFormatQueryParams struct {
 	LocationDescriptor *GetOccupantsNearOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	MaxDistance        *int64                                              `queryParam:"style=form,explode=true,name=maxDistance"`
 	MaxResults         *int64                                              `queryParam:"style=form,explode=true,name=maxResults"`
-	OutputSrs          *int64                                              `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS          *int64                                              `queryParam:"style=form,explode=true,name=outputSRS"`
 	Point              string                                              `queryParam:"style=form,explode=true,name=point"`
 	SetBack            *int64                                              `queryParam:"style=form,explode=true,name=setBack"`
 	Tags               *string                                             `queryParam:"style=form,explode=true,name=tags"`

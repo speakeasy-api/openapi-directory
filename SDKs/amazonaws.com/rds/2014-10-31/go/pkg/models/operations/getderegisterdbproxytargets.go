@@ -3,20 +3,20 @@ package operations
 type GetDeregisterDbProxyTargetsActionEnum string
 
 const (
-	GetDeregisterDbProxyTargetsActionEnumDeregisterDbProxyTargets GetDeregisterDbProxyTargetsActionEnum = "DeregisterDBProxyTargets"
+	GETDeregisterDBProxyTargetsActionEnumDeregisterDbProxyTargets GetDeregisterDbProxyTargetsActionEnum = "DeregisterDBProxyTargets"
 )
 
 type GetDeregisterDbProxyTargetsVersionEnum string
 
 const (
-	GetDeregisterDbProxyTargetsVersionEnumTwoThousandAndFourteen1031 GetDeregisterDbProxyTargetsVersionEnum = "2014-10-31"
+	GETDeregisterDBProxyTargetsVersionEnumTwoThousandAndFourteen1031 GetDeregisterDbProxyTargetsVersionEnum = "2014-10-31"
 )
 
 type GetDeregisterDbProxyTargetsQueryParams struct {
 	Action                GetDeregisterDbProxyTargetsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbClusterIdentifiers  []string                               `queryParam:"style=form,explode=true,name=DBClusterIdentifiers"`
-	DbInstanceIdentifiers []string                               `queryParam:"style=form,explode=true,name=DBInstanceIdentifiers"`
-	DbProxyName           string                                 `queryParam:"style=form,explode=true,name=DBProxyName"`
+	DBClusterIdentifiers  []string                               `queryParam:"style=form,explode=true,name=DBClusterIdentifiers"`
+	DBInstanceIdentifiers []string                               `queryParam:"style=form,explode=true,name=DBInstanceIdentifiers"`
+	DBProxyName           string                                 `queryParam:"style=form,explode=true,name=DBProxyName"`
 	TargetGroupName       *string                                `queryParam:"style=form,explode=true,name=TargetGroupName"`
 	Version               GetDeregisterDbProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

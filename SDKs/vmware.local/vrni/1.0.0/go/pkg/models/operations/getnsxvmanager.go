@@ -19,6 +19,6 @@ type GetNsxvManagerRequest struct {
 
 type GetNsxvManagerResponse struct {
 	ContentType           string
-	NsxvManagerDataSource *shared.NsxvManagerDataSource
+	NSXVManagerDataSource *shared.NsxvManagerDataSource
 	StatusCode            int64
 }

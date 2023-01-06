@@ -1,5 +1,5 @@
 package shared
 
 type DeletePlatformVersionResult struct {
-	PlatformSummary *PlatformSummary
+	PlatformSummary *PlatformSummary1
 }

@@ -154,7 +154,7 @@ type Bucket struct {
 	ProjectNumber         *string                      `json:"projectNumber,omitempty"`
 	RetentionPolicy       *BucketRetentionPolicy       `json:"retentionPolicy,omitempty"`
 	Rpo                   *string                      `json:"rpo,omitempty"`
-	SatisfiesPzs          *bool                        `json:"satisfiesPZS,omitempty"`
+	SatisfiesPZS          *bool                        `json:"satisfiesPZS,omitempty"`
 	SelfLink              *string                      `json:"selfLink,omitempty"`
 	StorageClass          *string                      `json:"storageClass,omitempty"`
 	TimeCreated           *time.Time                   `json:"timeCreated,omitempty"`

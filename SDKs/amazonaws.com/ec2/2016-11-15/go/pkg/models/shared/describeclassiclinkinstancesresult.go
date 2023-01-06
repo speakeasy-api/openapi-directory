@@ -1,6 +1,6 @@
 package shared
 
 type DescribeClassicLinkInstancesResult struct {
-	Instances []ClassicLinkInstance
-	NextToken *string
+	Instances map[string]interface{}
+	NextToken map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type GetAddUserToGroupActionEnum string
 
 const (
-	GetAddUserToGroupActionEnumAddUserToGroup GetAddUserToGroupActionEnum = "AddUserToGroup"
+	GETAddUserToGroupActionEnumAddUserToGroup GetAddUserToGroupActionEnum = "AddUserToGroup"
 )
 
 type GetAddUserToGroupVersionEnum string
 
 const (
-	GetAddUserToGroupVersionEnumTwoThousandAndTen0508 GetAddUserToGroupVersionEnum = "2010-05-08"
+	GETAddUserToGroupVersionEnumTwoThousandAndTen0508 GetAddUserToGroupVersionEnum = "2010-05-08"
 )
 
 type GetAddUserToGroupQueryParams struct {

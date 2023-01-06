@@ -1,5 +1,5 @@
 package shared
 
 type CreateReplaceRootVolumeTaskResult struct {
-	ReplaceRootVolumeTask *ReplaceRootVolumeTask
+	ReplaceRootVolumeTask map[string]interface{}
 }

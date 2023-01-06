@@ -15,7 +15,7 @@ type Instance struct {
 	InstanceID          *string                      `json:"instanceId,omitempty"`
 	InstanceType        *string                      `json:"instanceType,omitempty"`
 	PrivateIPAddress    *string                      `json:"privateIpAddress,omitempty"`
-	PublicIPAddress     *string                      `json:"publicIpAddress,omitempty"`
+	PublicIPAddress     map[string]interface{}       `json:"publicIpAddress,omitempty"`
 	RootDeviceName      *string                      `json:"rootDeviceName,omitempty"`
 	SecurityGroups      []SecurityGroupIdentifier    `json:"securityGroups,omitempty"`
 	State               *InstanceState               `json:"state,omitempty"`

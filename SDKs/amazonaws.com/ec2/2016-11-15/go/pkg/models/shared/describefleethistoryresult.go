@@ -1,13 +1,9 @@
 package shared
 
-import (
-	"time"
-)
-
 type DescribeFleetHistoryResult struct {
-	FleetID           *string
-	HistoryRecords    []HistoryRecordEntry
-	LastEvaluatedTime *time.Time
-	NextToken         *string
-	StartTime         *time.Time
+	FleetID           map[string]interface{}
+	HistoryRecords    map[string]interface{}
+	LastEvaluatedTime map[string]interface{}
+	NextToken         map[string]interface{}
+	StartTime         map[string]interface{}
 }

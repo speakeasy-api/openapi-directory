@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,25 @@ func main() {
     
     req := operations.CreateAppRequest{
         Headers: operations.CreateAppHeaders{
-            XAmzAlgorithm: "dolor",
-            XAmzContentSha256: "quidem",
-            XAmzCredential: "nulla",
-            XAmzDate: "dolores",
-            XAmzSecurityToken: "fuga",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "laboriosam",
+            XAmzContentSha256: "reprehenderit",
+            XAmzCredential: "non",
+            XAmzDate: "quis",
+            XAmzSecurityToken: "facilis",
+            XAmzSignature: "mollitia",
+            XAmzSignedHeaders: "sequi",
         },
         Request: operations.CreateAppRequestBody{
             CreateApplicationRequest: operations.CreateAppRequestBodyCreateApplicationRequest{
-                Name: "voluptatum",
+                Name: "maxime",
                 Tags: map[string]string{
-                    "distinctio": "dicta",
-                    "tenetur": "suscipit",
+                    "voluptas": "voluptatem",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateApp(ctx, req)
+    res, err := s.CreateApp(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -1,7 +1,7 @@
 package shared
 
 type GetSubnetCidrReservationsResult struct {
-	NextToken                  *string
-	SubnetIpv4CidrReservations []SubnetCidrReservation
-	SubnetIpv6CidrReservations []SubnetCidrReservation
+	NextToken                  map[string]interface{}
+	SubnetIpv4CidrReservations map[string]interface{}
+	SubnetIpv6CidrReservations map[string]interface{}
 }

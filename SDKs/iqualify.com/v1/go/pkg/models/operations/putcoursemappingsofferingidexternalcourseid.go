@@ -16,6 +16,6 @@ type PutCourseMappingsOfferingIDExternalCourseIDRequest struct {
 type PutCourseMappingsOfferingIDExternalCourseIDResponse struct {
 	ContentType                                                          string
 	Error                                                                *shared.Error
-	PutCourseMappingsOfferingIDExternalCourseID200ApplicationJSONStrings []string
 	StatusCode                                                           int64
+	PutCourseMappingsOfferingIDExternalCourseID200ApplicationJSONStrings []string
 }

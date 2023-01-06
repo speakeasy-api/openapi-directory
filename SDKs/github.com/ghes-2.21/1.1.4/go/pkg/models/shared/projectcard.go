@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// ProjectCardSimpleUser
+// Simple User
 type ProjectCardSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

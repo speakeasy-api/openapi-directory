@@ -7,5 +7,5 @@ type SupportedEndpointType struct {
 	EngineDisplayName                       *string                           `json:"EngineDisplayName,omitempty"`
 	EngineName                              *string                           `json:"EngineName,omitempty"`
 	ReplicationInstanceEngineMinimumVersion *string                           `json:"ReplicationInstanceEngineMinimumVersion,omitempty"`
-	SupportsCdc                             *bool                             `json:"SupportsCDC,omitempty"`
+	SupportsCDC                             *bool                             `json:"SupportsCDC,omitempty"`
 }

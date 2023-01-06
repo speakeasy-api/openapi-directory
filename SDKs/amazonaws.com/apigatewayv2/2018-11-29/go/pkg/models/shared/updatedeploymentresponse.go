@@ -1,14 +1,10 @@
 package shared
 
-import (
-	"time"
-)
-
 type UpdateDeploymentResponse struct {
-	AutoDeployed            *bool                 `json:"AutoDeployed,omitempty"`
-	CreatedDate             *time.Time            `json:"CreatedDate,omitempty"`
-	DeploymentID            *string               `json:"DeploymentId,omitempty"`
-	DeploymentStatus        *DeploymentStatusEnum `json:"DeploymentStatus,omitempty"`
-	DeploymentStatusMessage *string               `json:"DeploymentStatusMessage,omitempty"`
-	Description             *string               `json:"Description,omitempty"`
+	AutoDeployed            map[string]interface{} `json:"AutoDeployed,omitempty"`
+	CreatedDate             map[string]interface{} `json:"CreatedDate,omitempty"`
+	DeploymentID            map[string]interface{} `json:"DeploymentId,omitempty"`
+	DeploymentStatus        map[string]interface{} `json:"DeploymentStatus,omitempty"`
+	DeploymentStatusMessage map[string]interface{} `json:"DeploymentStatusMessage,omitempty"`
+	Description             map[string]interface{} `json:"Description,omitempty"`
 }

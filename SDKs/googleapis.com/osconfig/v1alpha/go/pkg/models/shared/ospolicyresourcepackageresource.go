@@ -3,9 +3,9 @@ package shared
 type OsPolicyResourcePackageResourceDesiredStateEnum string
 
 const (
-	OsPolicyResourcePackageResourceDesiredStateEnumDesiredStateUnspecified OsPolicyResourcePackageResourceDesiredStateEnum = "DESIRED_STATE_UNSPECIFIED"
-	OsPolicyResourcePackageResourceDesiredStateEnumInstalled               OsPolicyResourcePackageResourceDesiredStateEnum = "INSTALLED"
-	OsPolicyResourcePackageResourceDesiredStateEnumRemoved                 OsPolicyResourcePackageResourceDesiredStateEnum = "REMOVED"
+	OSPolicyResourcePackageResourceDesiredStateEnumDesiredStateUnspecified OsPolicyResourcePackageResourceDesiredStateEnum = "DESIRED_STATE_UNSPECIFIED"
+	OSPolicyResourcePackageResourceDesiredStateEnumInstalled               OsPolicyResourcePackageResourceDesiredStateEnum = "INSTALLED"
+	OSPolicyResourcePackageResourceDesiredStateEnumRemoved                 OsPolicyResourcePackageResourceDesiredStateEnum = "REMOVED"
 )
 
 // OsPolicyResourcePackageResource

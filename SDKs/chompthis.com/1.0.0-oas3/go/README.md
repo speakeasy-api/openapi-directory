@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         QueryParams: operations.GetFoodBrandedBarcodePhpQueryParams{
-            Code: "quibusdam",
+            Code: "nobis",
         },
     }
     
-    res, err := s.Sdk.GetFoodBrandedBarcodePhp(ctx, req)
+    res, err := s.GetFoodBrandedBarcodePhp(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

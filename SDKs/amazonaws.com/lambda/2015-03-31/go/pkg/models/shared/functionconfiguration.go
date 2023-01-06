@@ -13,7 +13,7 @@ type FunctionConfiguration struct {
 	FunctionName               *string                         `json:"FunctionName,omitempty"`
 	Handler                    *string                         `json:"Handler,omitempty"`
 	ImageConfigResponse        *ImageConfigResponse            `json:"ImageConfigResponse,omitempty"`
-	KmsKeyArn                  *string                         `json:"KMSKeyArn,omitempty"`
+	KMSKeyArn                  *string                         `json:"KMSKeyArn,omitempty"`
 	LastModified               *string                         `json:"LastModified,omitempty"`
 	LastUpdateStatus           *LastUpdateStatusEnum           `json:"LastUpdateStatus,omitempty"`
 	LastUpdateStatusReason     *string                         `json:"LastUpdateStatusReason,omitempty"`

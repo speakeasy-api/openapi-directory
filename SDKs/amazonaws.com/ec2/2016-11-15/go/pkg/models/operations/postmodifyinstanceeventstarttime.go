@@ -3,13 +3,13 @@ package operations
 type PostModifyInstanceEventStartTimeActionEnum string
 
 const (
-	PostModifyInstanceEventStartTimeActionEnumModifyInstanceEventStartTime PostModifyInstanceEventStartTimeActionEnum = "ModifyInstanceEventStartTime"
+	POSTModifyInstanceEventStartTimeActionEnumModifyInstanceEventStartTime PostModifyInstanceEventStartTimeActionEnum = "ModifyInstanceEventStartTime"
 )
 
 type PostModifyInstanceEventStartTimeVersionEnum string
 
 const (
-	PostModifyInstanceEventStartTimeVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceEventStartTimeVersionEnum = "2016-11-15"
+	POSTModifyInstanceEventStartTimeVersionEnumTwoThousandAndSixteen1115 PostModifyInstanceEventStartTimeVersionEnum = "2016-11-15"
 )
 
 type PostModifyInstanceEventStartTimeQueryParams struct {

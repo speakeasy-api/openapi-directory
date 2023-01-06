@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,57 +27,63 @@ func main() {
             Option1: &operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams{
-            Parent: "quidem",
+            Parent: "dignissimos",
         },
         QueryParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "dolores",
-            Alt: "media",
-            Callback: "illo",
-            EkmConnectionID: "nobis",
-            Fields: "in",
-            Key: "consequuntur",
-            OauthToken: "unde",
+            AccessToken: "esse",
+            Alt: "proto",
+            Callback: "eum",
+            EkmConnectionID: "aspernatur",
+            Fields: "molestiae",
+            Key: "minima",
+            OauthToken: "modi",
             PrettyPrint: true,
-            QuotaUser: "debitis",
-            UploadType: "velit",
-            UploadProtocol: "id",
+            QuotaUser: "molestiae",
+            UploadType: "porro",
+            UploadProtocol: "provident",
         },
         Request: &shared.EkmConnectionInput{
-            Etag: "occaecati",
+            Etag: "sequi",
             ServiceResolvers: []shared.ServiceResolverInput{
                 shared.ServiceResolverInput{
-                    EndpointFilter: "perferendis",
-                    Hostname: "sed",
+                    EndpointFilter: "dolor",
+                    Hostname: "pariatur",
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "ipsam",
+                            RawDer: "sed",
                         },
                         shared.CertificateInput{
-                            RawDer: "molestiae",
+                            RawDer: "dolores",
                         },
                         shared.CertificateInput{
-                            RawDer: "mollitia",
+                            RawDer: "quae",
                         },
                     },
-                    ServiceDirectoryService: "omnis",
+                    ServiceDirectoryService: "aut",
                 },
                 shared.ServiceResolverInput{
-                    EndpointFilter: "quaerat",
-                    Hostname: "eligendi",
+                    EndpointFilter: "hic",
+                    Hostname: "reprehenderit",
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "cum",
+                            RawDer: "nesciunt",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "quia",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "dolores",
                         },
                     },
-                    ServiceDirectoryService: "doloribus",
+                    ServiceDirectoryService: "dicta",
                 },
             },
         },

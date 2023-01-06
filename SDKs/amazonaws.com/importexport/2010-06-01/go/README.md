@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,20 +34,20 @@ func main() {
     
     req := operations.GetCancelJobRequest{
         QueryParams: operations.GetCancelJobQueryParams{
-            APIVersion: "voluptatem",
-            AwsAccessKeyID: "omnis",
+            APIVersion: "vero",
+            AWSAccessKeyID: "blanditiis",
             Action: "CancelJob",
-            JobID: "et",
+            JobID: "odio",
             Operation: "CancelJob",
-            Signature: "quasi",
-            SignatureMethod: "eum",
-            SignatureVersion: "dolor",
-            Timestamp: "ut",
+            Signature: "eligendi",
+            SignatureMethod: "animi",
+            SignatureVersion: "est",
+            Timestamp: "voluptas",
             Version: "2010-06-01",
         },
     }
     
-    res, err := s.Sdk.GetCancelJob(ctx, req)
+    res, err := s.GetCancelJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

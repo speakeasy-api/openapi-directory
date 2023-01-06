@@ -30,7 +30,7 @@ type ModifyEndpointResponse struct {
 	AccessDeniedFault          *interface{}
 	ContentType                string
 	InvalidResourceStateFault  *interface{}
-	KmsKeyNotAccessibleFault   *interface{}
+	KMSKeyNotAccessibleFault   *interface{}
 	ModifyEndpointResponse     *shared.ModifyEndpointResponse
 	ResourceAlreadyExistsFault *interface{}
 	ResourceNotFoundFault      *interface{}

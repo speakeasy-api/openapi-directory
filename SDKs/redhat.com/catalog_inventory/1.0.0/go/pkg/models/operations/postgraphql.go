@@ -10,6 +10,6 @@ type PostGraphQlRequest struct {
 
 type PostGraphQlResponse struct {
 	ContentType     string
-	GraphQlResponse *shared.GraphQlResponse
+	GraphQLResponse *shared.GraphQlResponse
 	StatusCode      int64
 }

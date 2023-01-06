@@ -9,8 +9,8 @@ type CreateTaskQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateTaskRequestBodyInput struct {
-	Data *shared.TaskRequestInput `json:"data,omitempty"`
+type CreateTaskRequestBody struct {
+	Data *shared.TaskRequest `json:"data,omitempty"`
 }
 
 type CreateTask201ApplicationJSON struct {
@@ -19,7 +19,7 @@ type CreateTask201ApplicationJSON struct {
 
 type CreateTaskRequest struct {
 	QueryParams CreateTaskQueryParams
-	Request     CreateTaskRequestBodyInput `request:"mediaType=application/json"`
+	Request     CreateTaskRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateTaskResponse struct {

@@ -18,7 +18,7 @@ type AwsRedshiftClusterDetails struct {
 	ClusterStatus                          *string                                       `json:"ClusterStatus,omitempty"`
 	ClusterSubnetGroupName                 *string                                       `json:"ClusterSubnetGroupName,omitempty"`
 	ClusterVersion                         *string                                       `json:"ClusterVersion,omitempty"`
-	DbName                                 *string                                       `json:"DBName,omitempty"`
+	DBName                                 *string                                       `json:"DBName,omitempty"`
 	DeferredMaintenanceWindows             []AwsRedshiftClusterDeferredMaintenanceWindow `json:"DeferredMaintenanceWindows,omitempty"`
 	ElasticIPStatus                        *AwsRedshiftClusterElasticIPStatus            `json:"ElasticIpStatus,omitempty"`
 	ElasticResizeNumberOfNodeOptions       *string                                       `json:"ElasticResizeNumberOfNodeOptions,omitempty"`

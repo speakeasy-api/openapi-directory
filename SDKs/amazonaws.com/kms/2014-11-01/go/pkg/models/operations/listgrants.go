@@ -38,8 +38,8 @@ type ListGrantsResponse struct {
 	InvalidArnException        *interface{}
 	InvalidGrantIDException    *interface{}
 	InvalidMarkerException     *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	ListGrantsResponse         *shared.ListGrantsResponse
 	NotFoundException          *interface{}
 	StatusCode                 int64

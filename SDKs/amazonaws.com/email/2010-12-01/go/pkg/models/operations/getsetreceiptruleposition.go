@@ -3,13 +3,13 @@ package operations
 type GetSetReceiptRulePositionActionEnum string
 
 const (
-	GetSetReceiptRulePositionActionEnumSetReceiptRulePosition GetSetReceiptRulePositionActionEnum = "SetReceiptRulePosition"
+	GETSetReceiptRulePositionActionEnumSetReceiptRulePosition GetSetReceiptRulePositionActionEnum = "SetReceiptRulePosition"
 )
 
 type GetSetReceiptRulePositionVersionEnum string
 
 const (
-	GetSetReceiptRulePositionVersionEnumTwoThousandAndTen1201 GetSetReceiptRulePositionVersionEnum = "2010-12-01"
+	GETSetReceiptRulePositionVersionEnumTwoThousandAndTen1201 GetSetReceiptRulePositionVersionEnum = "2010-12-01"
 )
 
 type GetSetReceiptRulePositionQueryParams struct {

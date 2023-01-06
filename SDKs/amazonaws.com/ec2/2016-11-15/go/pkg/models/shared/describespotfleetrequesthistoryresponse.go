@@ -1,15 +1,11 @@
 package shared
 
-import (
-	"time"
-)
-
 // DescribeSpotFleetRequestHistoryResponse
 // Contains the output of DescribeSpotFleetRequestHistory.
 type DescribeSpotFleetRequestHistoryResponse struct {
-	HistoryRecords     []HistoryRecord
-	LastEvaluatedTime  *time.Time
-	NextToken          *string
-	SpotFleetRequestID *string
-	StartTime          *time.Time
+	HistoryRecords     map[string]interface{}
+	LastEvaluatedTime  map[string]interface{}
+	NextToken          map[string]interface{}
+	SpotFleetRequestID map[string]interface{}
+	StartTime          map[string]interface{}
 }

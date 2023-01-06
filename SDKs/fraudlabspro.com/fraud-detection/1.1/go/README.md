@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,15 +24,15 @@ func main() {
     
     req := operations.PostV1OrderFeedbackRequest{
         QueryParams: operations.PostV1OrderFeedbackQueryParams{
-            Action: "REJECT_BLACKLIST",
-            Format: "xml",
-            ID: "voluptate",
-            Key: "exercitationem",
-            Notes: "facere",
+            Action: "APPROVE",
+            Format: "json",
+            ID: "fugiat",
+            Key: "nihil",
+            Notes: "nulla",
         },
     }
     
-    res, err := s.Sdk.PostV1OrderFeedback(ctx, req)
+    res, err := s.PostV1OrderFeedback(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

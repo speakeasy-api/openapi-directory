@@ -1,0 +1,33 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.CreateArtifactRuleRequest{
+        PathParams: operations.CreateArtifactRulePathParams{
+            ArtifactID: "at",
+        },
+        Request: shared.Rule{
+            Config: "nostrum",
+            Type: "VALIDITY",
+        },
+    }
+    
+    res, err := s.ArtifactRules.CreateArtifactRule(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

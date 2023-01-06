@@ -21,6 +21,6 @@ type PostOauthLiveSessionTokenRequest struct {
 
 type PostOauthLiveSessionTokenResponse struct {
 	ContentType                                       string
-	PostOauthLiveSessionToken200ApplicationJSONObject *PostOauthLiveSessionToken200ApplicationJSON
 	StatusCode                                        int64
+	PostOauthLiveSessionToken200ApplicationJSONObject *PostOauthLiveSessionToken200ApplicationJSON
 }

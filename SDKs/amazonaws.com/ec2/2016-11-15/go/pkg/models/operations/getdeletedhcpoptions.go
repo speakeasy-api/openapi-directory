@@ -3,13 +3,13 @@ package operations
 type GetDeleteDhcpOptionsActionEnum string
 
 const (
-	GetDeleteDhcpOptionsActionEnumDeleteDhcpOptions GetDeleteDhcpOptionsActionEnum = "DeleteDhcpOptions"
+	GETDeleteDhcpOptionsActionEnumDeleteDhcpOptions GetDeleteDhcpOptionsActionEnum = "DeleteDhcpOptions"
 )
 
 type GetDeleteDhcpOptionsVersionEnum string
 
 const (
-	GetDeleteDhcpOptionsVersionEnumTwoThousandAndSixteen1115 GetDeleteDhcpOptionsVersionEnum = "2016-11-15"
+	GETDeleteDhcpOptionsVersionEnumTwoThousandAndSixteen1115 GetDeleteDhcpOptionsVersionEnum = "2016-11-15"
 )
 
 type GetDeleteDhcpOptionsQueryParams struct {

@@ -27,6 +27,6 @@ type PostPortfolioSimulationRebalancingDriftWeightRequest struct {
 
 type PostPortfolioSimulationRebalancingDriftWeightResponse struct {
 	ContentType                                                           string
-	PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSONObject *PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSON
 	StatusCode                                                            int64
+	PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSONObject *PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSON
 }

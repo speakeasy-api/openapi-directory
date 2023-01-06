@@ -3,13 +3,13 @@ package operations
 type PostTerminateInstancesActionEnum string
 
 const (
-	PostTerminateInstancesActionEnumTerminateInstances PostTerminateInstancesActionEnum = "TerminateInstances"
+	POSTTerminateInstancesActionEnumTerminateInstances PostTerminateInstancesActionEnum = "TerminateInstances"
 )
 
 type PostTerminateInstancesVersionEnum string
 
 const (
-	PostTerminateInstancesVersionEnumTwoThousandAndSixteen1115 PostTerminateInstancesVersionEnum = "2016-11-15"
+	POSTTerminateInstancesVersionEnumTwoThousandAndSixteen1115 PostTerminateInstancesVersionEnum = "2016-11-15"
 )
 
 type PostTerminateInstancesQueryParams struct {

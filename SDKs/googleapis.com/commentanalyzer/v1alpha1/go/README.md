@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,65 +26,69 @@ func main() {
         Security: operations.CommentanalyzerCommentsAnalyzeSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.CommentanalyzerCommentsAnalyzeQueryParams{
             DollarXgafv: "1",
-            AccessToken: "suscipit",
-            Alt: "media",
-            Callback: "omnis",
-            Fields: "quae",
-            Key: "et",
-            OauthToken: "similique",
+            AccessToken: "aut",
+            Alt: "json",
+            Callback: "reiciendis",
+            Fields: "voluptas",
+            Key: "dolorem",
+            OauthToken: "rem",
             PrettyPrint: false,
-            QuotaUser: "quia",
-            UploadType: "at",
-            UploadProtocol: "voluptatibus",
+            QuotaUser: "voluptatum",
+            UploadType: "veritatis",
+            UploadProtocol: "quisquam",
         },
         Request: &shared.AnalyzeCommentRequest{
-            ClientToken: "repellendus",
+            ClientToken: "ducimus",
             Comment: &shared.TextEntry{
-                Text: "sequi",
-                Type: "TEXT_TYPE_UNSPECIFIED",
+                Text: "omnis",
+                Type: "HTML",
             },
-            CommunityID: "sit",
+            CommunityID: "fugit",
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "corporis",
+                        Text: "hic",
                         Type: "HTML",
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "qui",
-                        Type: "PLAIN_TEXT",
+                        Text: "quis",
+                        Type: "HTML",
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "quis",
+                        Text: "facere",
                         Type: "HTML",
+                    },
+                    shared.TextEntry{
+                        Text: "dolorem",
+                        Type: "HTML",
+                    },
+                    shared.TextEntry{
+                        Text: "quis",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                 },
             },
             DoNotStore: true,
             Languages: []string{
-                "quae",
+                "eius",
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
-                "placeat": shared.AttributeParameters{
-                    ScoreThreshold: 14.100000,
-                    ScoreType: "STD_DEV_SCORE",
-                },
-                "veniam": shared.AttributeParameters{
-                    ScoreThreshold: 4.200000,
+                "ipsa": shared.AttributeParameters{
+                    ScoreThreshold: 54.200001,
                     ScoreType: "SCORE_TYPE_UNSPECIFIED",
                 },
             },
-            SessionID: "sed",
-            SpanAnnotations: false,
+            SessionID: "consequatur",
+            SpanAnnotations: true,
         },
     }
     

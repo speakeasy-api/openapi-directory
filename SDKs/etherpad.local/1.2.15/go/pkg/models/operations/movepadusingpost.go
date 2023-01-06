@@ -37,8 +37,8 @@ type MovePadUsingPostRequest struct {
 type MovePadUsingPostResponse struct {
 	ContentType                              string
 	StatusCode                               int64
-	MovePadUsingPost200ApplicationJSONObject *MovePadUsingPost200ApplicationJSON
-	MovePadUsingPost400ApplicationJSONObject *MovePadUsingPost400ApplicationJSON
-	MovePadUsingPost401ApplicationJSONObject *MovePadUsingPost401ApplicationJSON
-	MovePadUsingPost500ApplicationJSONObject *MovePadUsingPost500ApplicationJSON
+	MovePadUsingPOST200ApplicationJSONObject *MovePadUsingPost200ApplicationJSON
+	MovePadUsingPOST400ApplicationJSONObject *MovePadUsingPost400ApplicationJSON
+	MovePadUsingPOST401ApplicationJSONObject *MovePadUsingPost401ApplicationJSON
+	MovePadUsingPOST500ApplicationJSONObject *MovePadUsingPost500ApplicationJSON
 }

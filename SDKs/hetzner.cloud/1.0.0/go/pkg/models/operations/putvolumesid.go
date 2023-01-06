@@ -66,6 +66,6 @@ type PutVolumesIDRequest struct {
 
 type PutVolumesIDResponse struct {
 	ContentType                          string
-	PutVolumesID200ApplicationJSONObject *PutVolumesID200ApplicationJSON
 	StatusCode                           int64
+	PutVolumesID200ApplicationJSONObject *PutVolumesID200ApplicationJSON
 }

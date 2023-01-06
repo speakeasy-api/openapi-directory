@@ -9,17 +9,10 @@ type SecretScanningListAlertsForRepoPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type SecretScanningListAlertsForRepoStateEnum string
-
-const (
-	SecretScanningListAlertsForRepoStateEnumOpen     SecretScanningListAlertsForRepoStateEnum = "open"
-	SecretScanningListAlertsForRepoStateEnumResolved SecretScanningListAlertsForRepoStateEnum = "resolved"
-)
-
 type SecretScanningListAlertsForRepoQueryParams struct {
-	Page    *int64                                    `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                                    `queryParam:"style=form,explode=true,name=per_page"`
-	State   *SecretScanningListAlertsForRepoStateEnum `queryParam:"style=form,explode=true,name=state"`
+	Page    *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	State   *shared.RepoEnum7 `queryParam:"style=form,explode=true,name=state"`
 }
 
 type SecretScanningListAlertsForRepo503ApplicationJSON struct {

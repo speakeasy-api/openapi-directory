@@ -16,7 +16,7 @@ type Cluster struct {
 	NotificationConfiguration     *NotificationConfiguration         `json:"NotificationConfiguration,omitempty"`
 	ParameterGroup                *ParameterGroupStatus              `json:"ParameterGroup,omitempty"`
 	PreferredMaintenanceWindow    *string                            `json:"PreferredMaintenanceWindow,omitempty"`
-	SseDescription                *SseDescription                    `json:"SSEDescription,omitempty"`
+	SSEDescription                *SseDescription                    `json:"SSEDescription,omitempty"`
 	SecurityGroups                []SecurityGroupMembership          `json:"SecurityGroups,omitempty"`
 	Status                        *string                            `json:"Status,omitempty"`
 	SubnetGroup                   *string                            `json:"SubnetGroup,omitempty"`

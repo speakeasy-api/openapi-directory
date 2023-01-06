@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -73,46 +74,6 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-// GetComicIDInfo0JSON - Fetch comics and metadata  by comic id.
-func (s *SDK) GetComicIDInfo0JSON(ctx context.Context, request operations.GetComicIDInfo0JSONRequest) (*operations.GetComicIDInfo0JSONResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{comicId}/info.0.json", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetComicIDInfo0JSONResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	}
-
-	return res, nil
-}
-
 // GetInfo0JSON - Fetch current comic and metadata.
 func (s *SDK) GetInfo0JSON(ctx context.Context) (*operations.GetInfo0JSONResponse, error) {
 	baseURL := s._serverURL
@@ -134,6 +95,46 @@ func (s *SDK) GetInfo0JSON(ctx context.Context) (*operations.GetInfo0JSONRespons
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetInfo0JSONResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetComicIDInfo0JSON - Fetch comics and metadata  by comic id.
+func (s *SDK) GetComicIDInfo0JSON(ctx context.Context, request operations.GetComicIDInfo0JSONRequest) (*operations.GetComicIDInfo0JSONResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{comicId}/info.0.json", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetComicIDInfo0JSONResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}

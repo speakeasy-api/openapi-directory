@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,47 +22,12 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.AveragesV2GetV2AveragesGetRequest{
-        QueryParams: operations.AveragesV2GetV2AveragesGetQueryParams{
-            Country: []string{
-                "quo",
-                "odio",
-            },
-            CountryID: "soluta",
-            DateFrom: "corporis",
-            DateTo: "dolorem",
-            Group: false,
-            Limit: 3626398465402282700,
-            Location: []string{
-                "sequi",
-            },
-            Offset: 964302703755083650,
-            Page: 1449801033460238130,
-            Parameter: []interface{}{
-                "quos",
-                "culpa",
-            },
-            ParameterID: 5603562048972080546,
-            Project: []interface{}{
-                "rerum",
-            },
-            ProjectID: 7842270398700374155,
-            Sort: "desc",
-            Spatial: "country",
-            Temporal: "day",
-            Unit: []string{
-                "accusantium",
-                "quisquam",
-            },
-        },
-    }
-    
-    res, err := s.Sdk.AveragesV2GetV2AveragesGet(ctx, req)
+    res, err := s.FavicoFaviconIcoGet(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.OpenAqResult != nil {
+    if res.FavicoFaviconIcoGet200ApplicationJSONAny != nil {
         // handle response
     }
 ```
@@ -74,40 +38,46 @@ func main() {
 
 ### SDK SDK
 
-* `AveragesV2GetV2AveragesGet` - Averages V2 Get
-* `CitiesGetV2CitiesGet` - Provides a simple listing of cities within the platform
+* `FavicoFaviconIcoGet` - Favico
+* `PongPingGet` - Pong
+
+### v1
+
 * `CitiesGetv1V1CitiesGet` - Provides a simple listing of cities within the platform
 * `CountriesGetV1CountriesCountryIDGet` - Countries Get
+* `CountriesGetv1V1CountriesGet` - Countries Getv1
+* `LatestV1GetV1LatestLocationIDGet` - Latest V1 Get
+* `LatestV1GetV1LatestGet` - Latest V1 Get
+* `Locationsv1GetV1LocationsLocationIDGet` - Locationsv1 Get
+* `Locationsv1GetV1LocationsGet` - Locationsv1 Get
+* `MeasurementsGetV1V1MeasurementsGet` - Measurements Get V1
+* `ParametersGetv1V1ParametersGet` - Parameters Getv1
+* `SourcesV1GetV1SourcesGet` - Sources V1 Get
+
+### v2
+
+* `AveragesV2GetV2AveragesGet` - Averages V2 Get
+* `CitiesGetV2CitiesGet` - Provides a simple listing of cities within the platform
 * `CountriesGetV2CountriesCountryIDGet` - Countries Get
 * `CountriesGetV2CountriesGet` - Countries Get
-* `CountriesGetv1V1CountriesGet` - Countries Getv1
 * `DemoV2LocationsTilesViewerGet` - Demo
-* `FavicoFaviconIcoGet` - Favico
 * `GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGet` - Get Mobilegentile
 * `GetMobiletileV2LocationsTilesMobileZXYPbfGet` - Get Mobiletile
 * `GetTileV2LocationsTilesZXYPbfGet` - Get Tile
 * `LatestGetV2LatestLocationIDGet` - Latest Get
 * `LatestGetV2LatestGet` - Latest Get
-* `LatestV1GetV1LatestLocationIDGet` - Latest V1 Get
-* `LatestV1GetV1LatestGet` - Latest V1 Get
 * `LocationsGetV2LocationsLocationIDGet` - Locations Get
 * `LocationsGetV2LocationsGet` - Locations Get
-* `Locationsv1GetV1LocationsLocationIDGet` - Locationsv1 Get
-* `Locationsv1GetV1LocationsGet` - Locationsv1 Get
-* `MeasurementsGetV1V1MeasurementsGet` - Measurements Get V1
 * `MeasurementsGetV2MeasurementsGet` - Measurements Get
 * `MfrGetV2ManufacturersGet` - Mfr Get
 * `MobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJSONGet` - Mobilegentilejson
 * `MobiletilejsonV2LocationsTilesMobileTilesJSONGet` - Mobiletilejson
 * `ModelGetV2ModelsGet` - Model Get
 * `ParametersGetV2ParametersGet` - Parameters Get
-* `ParametersGetv1V1ParametersGet` - Parameters Getv1
-* `PongPingGet` - Pong
 * `ProjectsGetV2ProjectsProjectIDGet` - Projects Get
 * `ProjectsGetV2ProjectsGet` - Projects Get
 * `ReadmeGetV2SourcesReadmeSlugGet` - Readme Get
 * `SourcesGetV2SourcesGet` - Sources Get
-* `SourcesV1GetV1SourcesGet` - Sources V1 Get
 * `SummaryGetV2SummaryGet` - Summary Get
 * `TilejsonV2LocationsTilesTilesJSONGet` - Tilejson
 

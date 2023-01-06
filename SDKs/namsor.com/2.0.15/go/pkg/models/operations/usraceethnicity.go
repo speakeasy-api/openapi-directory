@@ -20,6 +20,6 @@ type UsRaceEthnicityRequest struct {
 
 type UsRaceEthnicityResponse struct {
 	ContentType                     string
-	FirstLastNameUsRaceEthnicityOut *shared.FirstLastNameUsRaceEthnicityOut
+	FirstLastNameUSRaceEthnicityOut *shared.FirstLastNameUsRaceEthnicityOut
 	StatusCode                      int64
 }

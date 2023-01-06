@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AbortMultipartUploadRequest{
         PathParams: operations.AbortMultipartUploadPathParams{
-            AccountID: "ut",
-            UploadID: "inventore",
-            VaultName: "officiis",
+            AccountID: "aut",
+            UploadID: "rerum",
+            VaultName: "nisi",
         },
         Headers: operations.AbortMultipartUploadHeaders{
-            XAmzAlgorithm: "aliquam",
-            XAmzContentSha256: "ratione",
-            XAmzCredential: "adipisci",
-            XAmzDate: "hic",
-            XAmzSecurityToken: "inventore",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "molestiae",
+            XAmzAlgorithm: "aut",
+            XAmzContentSha256: "quia",
+            XAmzCredential: "debitis",
+            XAmzDate: "harum",
+            XAmzSecurityToken: "vel",
+            XAmzSignature: "quo",
+            XAmzSignedHeaders: "non",
         },
     }
     
-    res, err := s.Sdk.AbortMultipartUpload(ctx, req)
+    res, err := s.AbortMultipartUpload(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,21 @@ func main() {
     
     req := operations.AssociateServiceQuotaTemplateRequest{
         Headers: operations.AssociateServiceQuotaTemplateHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "et",
-            XAmzCredential: "est",
-            XAmzDate: "consectetur",
-            XAmzSecurityToken: "dignissimos",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "cum",
+            XAmzContentSha256: "id",
+            XAmzCredential: "ab",
+            XAmzDate: "facere",
+            XAmzSecurityToken: "deserunt",
+            XAmzSignature: "illo",
+            XAmzSignedHeaders: "tempore",
             XAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
         },
         Request: map[string]interface{}{
-            "veritatis": "molestiae",
-            "ad": "aut",
-            "esse": "rerum",
+            "quidem": "fuga",
         },
     }
     
-    res, err := s.Sdk.AssociateServiceQuotaTemplate(ctx, req)
+    res, err := s.AssociateServiceQuotaTemplate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -5,8 +5,8 @@ import (
 )
 
 type UncrdRequestBodyCertificateParameters struct {
-	Dob string `json:"DOB"`
-	Uan string `json:"UAN"`
+	DOB string `json:"DOB"`
+	UAN string `json:"UAN"`
 }
 
 type UncrdRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Uncrd404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Uncrd404ApplicationJSONErrorDescriptionEnumNoRecordFound               Uncrd404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Uncrd404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Uncrd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Uncrd404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Uncrd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Uncrd404ApplicationJSON struct {

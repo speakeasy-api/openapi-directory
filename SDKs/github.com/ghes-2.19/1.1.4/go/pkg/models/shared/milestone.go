@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// MilestoneSimpleUser
+// Simple User
 type MilestoneSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

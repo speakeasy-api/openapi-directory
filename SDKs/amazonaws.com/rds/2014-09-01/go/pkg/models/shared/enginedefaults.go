@@ -1,7 +1,7 @@
 package shared
 
 type EngineDefaults struct {
-	DbParameterGroupFamily *string
+	DBParameterGroupFamily *string
 	Marker                 *string
-	Parameters             []Parameter
+	Parameters             []map[string]interface{}
 }

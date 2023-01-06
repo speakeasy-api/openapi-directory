@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// FullRepositoryLicenseSimple
+// License Simple
 type FullRepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -13,6 +15,8 @@ type FullRepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// FullRepositorySimpleUser
+// Simple User
 type FullRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -41,6 +45,8 @@ type FullRepositoryPermissions struct {
 	Push  bool `json:"push"`
 }
 
+// FullRepositoryRepositoryLicenseSimple
+// License Simple
 type FullRepositoryRepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -50,6 +56,8 @@ type FullRepositoryRepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// FullRepositoryRepositorySimpleUser
+// Simple User
 type FullRepositoryRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -190,6 +198,8 @@ type FullRepositoryRepositoryTemplateRepository struct {
 	WatchersCount          *int64                                                 `json:"watchers_count,omitempty"`
 }
 
+// FullRepositoryRepository
+// A git repository
 type FullRepositoryRepository struct {
 	AllowMergeCommit       *bool                                       `json:"allow_merge_commit,omitempty"`
 	AllowRebaseMerge       *bool                                       `json:"allow_rebase_merge,omitempty"`

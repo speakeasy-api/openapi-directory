@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,38 +26,39 @@ func main() {
         Security: operations.IdsProjectsLocationsEndpointsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.IdsProjectsLocationsEndpointsCreatePathParams{
-            Parent: "sit",
+            Parent: "culpa",
         },
         QueryParams: operations.IdsProjectsLocationsEndpointsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "odit",
+            AccessToken: "eaque",
             Alt: "proto",
-            Callback: "et",
-            EndpointID: "tempore",
-            Fields: "reprehenderit",
-            Key: "tempore",
-            OauthToken: "perspiciatis",
+            Callback: "in",
+            EndpointID: "voluptas",
+            Fields: "suscipit",
+            Key: "hic",
+            OauthToken: "qui",
             PrettyPrint: false,
-            QuotaUser: "et",
-            RequestID: "pariatur",
-            UploadType: "sed",
-            UploadProtocol: "et",
+            QuotaUser: "hic",
+            RequestID: "nemo",
+            UploadType: "voluptatem",
+            UploadProtocol: "inventore",
         },
         Request: &shared.EndpointInput{
-            Description: "debitis",
+            Description: "molestias",
             Labels: map[string]string{
-                "labore": "qui",
-                "voluptatem": "consequatur",
+                "et": "in",
+                "eveniet": "excepturi",
+                "ea": "incidunt",
             },
-            Network: "mollitia",
-            Severity: "INFORMATIONAL",
-            TrafficLogs: false,
+            Network: "nisi",
+            Severity: "CRITICAL",
+            TrafficLogs: true,
         },
     }
     

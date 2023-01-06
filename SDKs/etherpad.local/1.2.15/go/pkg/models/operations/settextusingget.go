@@ -36,8 +36,8 @@ type SetTextUsingGetRequest struct {
 type SetTextUsingGetResponse struct {
 	ContentType                             string
 	StatusCode                              int64
-	SetTextUsingGet200ApplicationJSONObject *SetTextUsingGet200ApplicationJSON
-	SetTextUsingGet400ApplicationJSONObject *SetTextUsingGet400ApplicationJSON
-	SetTextUsingGet401ApplicationJSONObject *SetTextUsingGet401ApplicationJSON
-	SetTextUsingGet500ApplicationJSONObject *SetTextUsingGet500ApplicationJSON
+	SetTextUsingGET200ApplicationJSONObject *SetTextUsingGet200ApplicationJSON
+	SetTextUsingGET400ApplicationJSONObject *SetTextUsingGet400ApplicationJSON
+	SetTextUsingGET401ApplicationJSONObject *SetTextUsingGet401ApplicationJSON
+	SetTextUsingGET500ApplicationJSONObject *SetTextUsingGet500ApplicationJSON
 }

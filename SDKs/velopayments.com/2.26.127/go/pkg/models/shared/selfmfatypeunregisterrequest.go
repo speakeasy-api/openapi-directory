@@ -3,9 +3,9 @@ package shared
 type SelfMfaTypeUnregisterRequestMfaTypeEnum string
 
 const (
-	SelfMfaTypeUnregisterRequestMfaTypeEnumSms     SelfMfaTypeUnregisterRequestMfaTypeEnum = "SMS"
-	SelfMfaTypeUnregisterRequestMfaTypeEnumYubikey SelfMfaTypeUnregisterRequestMfaTypeEnum = "YUBIKEY"
-	SelfMfaTypeUnregisterRequestMfaTypeEnumTotp    SelfMfaTypeUnregisterRequestMfaTypeEnum = "TOTP"
+	SelfMFATypeUnregisterRequestMFATypeEnumSms     SelfMfaTypeUnregisterRequestMfaTypeEnum = "SMS"
+	SelfMFATypeUnregisterRequestMFATypeEnumYubikey SelfMfaTypeUnregisterRequestMfaTypeEnum = "YUBIKEY"
+	SelfMFATypeUnregisterRequestMFATypeEnumTotp    SelfMfaTypeUnregisterRequestMfaTypeEnum = "TOTP"
 )
 
 type SelfMfaTypeUnregisterRequest struct {

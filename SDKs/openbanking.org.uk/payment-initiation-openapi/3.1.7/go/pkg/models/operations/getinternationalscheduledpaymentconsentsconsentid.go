@@ -17,7 +17,7 @@ type GetInternationalScheduledPaymentConsentsConsentIDHeaders struct {
 }
 
 type GetInternationalScheduledPaymentConsentsConsentIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetInternationalScheduledPaymentConsentsConsentIDRequest struct {
@@ -30,7 +30,7 @@ type GetInternationalScheduledPaymentConsentsConsentIDResponse struct {
 	Body                                          []byte
 	ContentType                                   string
 	Headers                                       map[string][]string
-	ObErrorResponse1                              *shared.ObErrorResponse1
-	ObWriteInternationalScheduledConsentResponse6 *shared.ObWriteInternationalScheduledConsentResponse6
+	OBErrorResponse1                              *shared.ObErrorResponse1
+	OBWriteInternationalScheduledConsentResponse6 *shared.ObWriteInternationalScheduledConsentResponse6
 	StatusCode                                    int64
 }

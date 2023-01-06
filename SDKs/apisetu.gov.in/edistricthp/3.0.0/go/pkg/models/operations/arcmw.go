@@ -81,7 +81,7 @@ type Arcmw404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Arcmw404ApplicationJSONErrorDescriptionEnumNoRecordFound               Arcmw404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Arcmw404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Arcmw404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Arcmw404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Arcmw404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Arcmw404ApplicationJSON struct {

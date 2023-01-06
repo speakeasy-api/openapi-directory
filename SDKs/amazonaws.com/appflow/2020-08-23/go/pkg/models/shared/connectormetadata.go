@@ -15,7 +15,7 @@ type ConnectorMetadata struct {
 	Marketo          map[string]interface{}   `json:"Marketo,omitempty"`
 	Redshift         map[string]interface{}   `json:"Redshift,omitempty"`
 	S3               map[string]interface{}   `json:"S3,omitempty"`
-	SapoData         map[string]interface{}   `json:"SAPOData,omitempty"`
+	SAPOData         map[string]interface{}   `json:"SAPOData,omitempty"`
 	Salesforce       *SalesforceMetadata      `json:"Salesforce,omitempty"`
 	ServiceNow       map[string]interface{}   `json:"ServiceNow,omitempty"`
 	Singular         map[string]interface{}   `json:"Singular,omitempty"`

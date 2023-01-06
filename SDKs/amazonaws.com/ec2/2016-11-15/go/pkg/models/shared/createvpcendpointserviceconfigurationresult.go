@@ -1,6 +1,6 @@
 package shared
 
 type CreateVpcEndpointServiceConfigurationResult struct {
-	ClientToken          *string
-	ServiceConfiguration *ServiceConfiguration
+	ClientToken          map[string]interface{}
+	ServiceConfiguration map[string]interface{}
 }

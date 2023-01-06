@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.PmjaySecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.PmjayRequestBody{
             CertificateParameters: &operations.PmjayRequestBodyCertificateParameters{
-                Dob: "tempore",
-                FullName: "vitae",
-                Udf1: "in",
-                Udf2: "voluptatem",
+                DOB: "cupiditate",
+                FullName: "asperiores",
+                Udf1: "quasi",
+                Udf2: "eius",
             },
-            ConsentArtifact: "porro",
+            ConsentArtifact: "ea",
             Format: "pdf",
-            TxnID: "beatae",
+            TxnID: "eligendi",
         },
     }
     
-    res, err := s.Sdk.Pmjay(ctx, req)
+    res, err := s.APIs.Pmjay(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Pmjay` - Pradhan Mantri Jan Arogya Yojana
 

@@ -7,7 +7,7 @@ import (
 type StartPhiDetectionJobXAmzTargetEnum string
 
 const (
-	StartPhiDetectionJobXAmzTargetEnumComprehendMedical20181030StartPhiDetectionJob StartPhiDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.StartPHIDetectionJob"
+	StartPHIDetectionJobXAmzTargetEnumComprehendMedical20181030StartPhiDetectionJob StartPhiDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.StartPHIDetectionJob"
 )
 
 type StartPhiDetectionJobHeaders struct {
@@ -31,7 +31,7 @@ type StartPhiDetectionJobResponse struct {
 	InternalServerException      *interface{}
 	InvalidRequestException      *interface{}
 	ResourceNotFoundException    *interface{}
-	StartPhiDetectionJobResponse *shared.StartPhiDetectionJobResponse
+	StartPHIDetectionJobResponse *shared.StartPhiDetectionJobResponse
 	StatusCode                   int64
 	TooManyRequestsException     *interface{}
 }

@@ -11,8 +11,8 @@ type Relyingparty struct {
 	Challenge             *string `json:"challenge,omitempty"`
 	ContinueURL           *string `json:"continueUrl,omitempty"`
 	Email                 *string `json:"email,omitempty"`
-	IOsAppStoreID         *string `json:"iOSAppStoreId,omitempty"`
-	IOsBundleID           *string `json:"iOSBundleId,omitempty"`
+	IOSAppStoreID         *string `json:"iOSAppStoreId,omitempty"`
+	IOSBundleID           *string `json:"iOSBundleId,omitempty"`
 	IDToken               *string `json:"idToken,omitempty"`
 	Kind                  *string `json:"kind,omitempty"`
 	NewEmail              *string `json:"newEmail,omitempty"`

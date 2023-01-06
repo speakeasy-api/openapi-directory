@@ -3,13 +3,13 @@ package operations
 type GetDeleteVirtualMfaDeviceActionEnum string
 
 const (
-	GetDeleteVirtualMfaDeviceActionEnumDeleteVirtualMfaDevice GetDeleteVirtualMfaDeviceActionEnum = "DeleteVirtualMFADevice"
+	GETDeleteVirtualMFADeviceActionEnumDeleteVirtualMfaDevice GetDeleteVirtualMfaDeviceActionEnum = "DeleteVirtualMFADevice"
 )
 
 type GetDeleteVirtualMfaDeviceVersionEnum string
 
 const (
-	GetDeleteVirtualMfaDeviceVersionEnumTwoThousandAndTen0508 GetDeleteVirtualMfaDeviceVersionEnum = "2010-05-08"
+	GETDeleteVirtualMFADeviceVersionEnumTwoThousandAndTen0508 GetDeleteVirtualMfaDeviceVersionEnum = "2010-05-08"
 )
 
 type GetDeleteVirtualMfaDeviceQueryParams struct {

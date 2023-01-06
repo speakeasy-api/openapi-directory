@@ -8,15 +8,15 @@ type UpdateAlertPolicyPathParams struct {
 	AlertUUID string `pathParam:"style=simple,explode=false,name=alert_uuid"`
 }
 
-type UpdateAlertPolicyRequest struct {
-	PathParams UpdateAlertPolicyPathParams
-	Request    shared.Onev21monitoring1alertsPostRequestBodyContentApplication1jsonSchema `request:"mediaType=application/json"`
-}
-
 type UpdateAlertPolicy401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateAlertPolicyRequest struct {
+	PathParams UpdateAlertPolicyPathParams
+	Request    shared.Onev21monitoring1alertsPostRequestBodyContentApplication1jsonSchema `request:"mediaType=application/json"`
 }
 
 type UpdateAlertPolicyResponse struct {

@@ -3,13 +3,13 @@ package operations
 type PostDeleteDbParameterGroupActionEnum string
 
 const (
-	PostDeleteDbParameterGroupActionEnumDeleteDbParameterGroup PostDeleteDbParameterGroupActionEnum = "DeleteDBParameterGroup"
+	POSTDeleteDBParameterGroupActionEnumDeleteDbParameterGroup PostDeleteDbParameterGroupActionEnum = "DeleteDBParameterGroup"
 )
 
 type PostDeleteDbParameterGroupVersionEnum string
 
 const (
-	PostDeleteDbParameterGroupVersionEnumTwoThousandAndFourteen0901 PostDeleteDbParameterGroupVersionEnum = "2014-09-01"
+	POSTDeleteDBParameterGroupVersionEnumTwoThousandAndFourteen0901 PostDeleteDbParameterGroupVersionEnum = "2014-09-01"
 )
 
 type PostDeleteDbParameterGroupQueryParams struct {

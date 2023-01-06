@@ -5,9 +5,9 @@ import (
 )
 
 type TwipcRequestBodyCertificateParameters struct {
-	Inscode string `json:"INSCODE"`
-	Polno   string `json:"POLNO"`
-	Startdt string `json:"STARTDT"`
+	INSCODE string `json:"INSCODE"`
+	POLNO   string `json:"POLNO"`
+	STARTDT string `json:"STARTDT"`
 }
 
 type TwipcRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Twipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Twipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Twipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Twipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Twipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Twipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Twipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Twipc404ApplicationJSON struct {

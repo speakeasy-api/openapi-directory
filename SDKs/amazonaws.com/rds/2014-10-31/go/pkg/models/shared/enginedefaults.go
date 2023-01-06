@@ -4,7 +4,7 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeEngineDefaultParameters</code> action.
 type EngineDefaults struct {
-	DbParameterGroupFamily *string
+	DBParameterGroupFamily *string
 	Marker                 *string
-	Parameters             []Parameter
+	Parameters             []map[string]interface{}
 }

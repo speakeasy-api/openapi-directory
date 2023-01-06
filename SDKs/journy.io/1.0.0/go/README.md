@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,10 +24,10 @@ func main() {
     
     req := operations.AddUserToAccountRequest{
         PathParams: operations.AddUserToAccountPathParams{
-            AccountID: "assumenda",
+            AccountID: "et",
         },
         Request: operations.AddUserToAccountRequestBody{
-            UserID: "repellat",
+            UserID: "aut",
         },
     }
     

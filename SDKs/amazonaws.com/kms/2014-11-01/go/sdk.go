@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -171,7 +172,7 @@ func (s *SDK) CancelKeyDeletion(ctx context.Context, request operations.CancelKe
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -181,7 +182,7 @@ func (s *SDK) CancelKeyDeletion(ctx context.Context, request operations.CancelKe
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -273,7 +274,7 @@ func (s *SDK) ConnectCustomKeyStore(ctx context.Context, request operations.Conn
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -376,7 +377,7 @@ func (s *SDK) CreateAlias(ctx context.Context, request operations.CreateAliasReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -396,7 +397,7 @@ func (s *SDK) CreateAlias(ctx context.Context, request operations.CreateAliasReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -488,7 +489,7 @@ func (s *SDK) CreateCustomKeyStore(ctx context.Context, request operations.Creat
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -620,7 +621,7 @@ func (s *SDK) CreateGrant(ctx context.Context, request operations.CreateGrantReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -650,7 +651,7 @@ func (s *SDK) CreateGrant(ctx context.Context, request operations.CreateGrantReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -752,7 +753,7 @@ func (s *SDK) CreateKey(ctx context.Context, request operations.CreateKeyRequest
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -944,7 +945,7 @@ func (s *SDK) Decrypt(ctx context.Context, request operations.DecryptRequest) (*
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -954,7 +955,7 @@ func (s *SDK) Decrypt(ctx context.Context, request operations.DecryptRequest) (*
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -1027,7 +1028,7 @@ func (s *SDK) DeleteAlias(ctx context.Context, request operations.DeleteAliasReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -1037,7 +1038,7 @@ func (s *SDK) DeleteAlias(ctx context.Context, request operations.DeleteAliasReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -1099,7 +1100,7 @@ func (s *SDK) DeleteCustomKeyStore(ctx context.Context, request operations.Delet
 				return nil, err
 			}
 
-			res.CustomKeyStoreHasCmKsException = out
+			res.CustomKeyStoreHasCMKsException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1129,7 +1130,7 @@ func (s *SDK) DeleteCustomKeyStore(ctx context.Context, request operations.Delet
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	}
 
@@ -1222,7 +1223,7 @@ func (s *SDK) DeleteImportedKeyMaterial(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1232,7 +1233,7 @@ func (s *SDK) DeleteImportedKeyMaterial(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -1314,7 +1315,7 @@ func (s *SDK) DescribeCustomKeyStores(ctx context.Context, request operations.De
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	}
 
@@ -1406,7 +1407,7 @@ func (s *SDK) DescribeKey(ctx context.Context, request operations.DescribeKeyReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	}
 
@@ -1489,7 +1490,7 @@ func (s *SDK) DisableKey(ctx context.Context, request operations.DisableKeyReque
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1499,7 +1500,7 @@ func (s *SDK) DisableKey(ctx context.Context, request operations.DisableKeyReque
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -1592,7 +1593,7 @@ func (s *SDK) DisableKeyRotation(ctx context.Context, request operations.Disable
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1602,7 +1603,7 @@ func (s *SDK) DisableKeyRotation(ctx context.Context, request operations.Disable
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -1694,7 +1695,7 @@ func (s *SDK) DisconnectCustomKeyStore(ctx context.Context, request operations.D
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	}
 
@@ -1777,7 +1778,7 @@ func (s *SDK) EnableKey(ctx context.Context, request operations.EnableKeyRequest
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1797,7 +1798,7 @@ func (s *SDK) EnableKey(ctx context.Context, request operations.EnableKeyRequest
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -1890,7 +1891,7 @@ func (s *SDK) EnableKeyRotation(ctx context.Context, request operations.EnableKe
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -1900,7 +1901,7 @@ func (s *SDK) EnableKeyRotation(ctx context.Context, request operations.EnableKe
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -2032,7 +2033,7 @@ func (s *SDK) Encrypt(ctx context.Context, request operations.EncryptRequest) (*
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2042,7 +2043,7 @@ func (s *SDK) Encrypt(ctx context.Context, request operations.EncryptRequest) (*
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -2164,7 +2165,7 @@ func (s *SDK) GenerateDataKey(ctx context.Context, request operations.GenerateDa
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2174,7 +2175,7 @@ func (s *SDK) GenerateDataKey(ctx context.Context, request operations.GenerateDa
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -2296,7 +2297,7 @@ func (s *SDK) GenerateDataKeyPair(ctx context.Context, request operations.Genera
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2306,7 +2307,7 @@ func (s *SDK) GenerateDataKeyPair(ctx context.Context, request operations.Genera
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -2438,7 +2439,7 @@ func (s *SDK) GenerateDataKeyPairWithoutPlaintext(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2448,7 +2449,7 @@ func (s *SDK) GenerateDataKeyPairWithoutPlaintext(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -2580,7 +2581,7 @@ func (s *SDK) GenerateDataKeyWithoutPlaintext(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -2590,7 +2591,7 @@ func (s *SDK) GenerateDataKeyWithoutPlaintext(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -2662,7 +2663,7 @@ func (s *SDK) GenerateRandom(ctx context.Context, request operations.GenerateRan
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -2774,7 +2775,7 @@ func (s *SDK) GetKeyPolicy(ctx context.Context, request operations.GetKeyPolicyR
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2784,7 +2785,7 @@ func (s *SDK) GetKeyPolicy(ctx context.Context, request operations.GetKeyPolicyR
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -2876,7 +2877,7 @@ func (s *SDK) GetKeyRotationStatus(ctx context.Context, request operations.GetKe
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2886,7 +2887,7 @@ func (s *SDK) GetKeyRotationStatus(ctx context.Context, request operations.GetKe
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -2998,7 +2999,7 @@ func (s *SDK) GetParametersForImport(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3008,7 +3009,7 @@ func (s *SDK) GetParametersForImport(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -3150,7 +3151,7 @@ func (s *SDK) GetPublicKey(ctx context.Context, request operations.GetPublicKeyR
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -3160,7 +3161,7 @@ func (s *SDK) GetPublicKey(ctx context.Context, request operations.GetPublicKeyR
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -3262,7 +3263,7 @@ func (s *SDK) ImportKeyMaterial(ctx context.Context, request operations.ImportKe
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3272,7 +3273,7 @@ func (s *SDK) ImportKeyMaterial(ctx context.Context, request operations.ImportKe
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -3396,7 +3397,7 @@ func (s *SDK) ListAliases(ctx context.Context, request operations.ListAliasesReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -3530,7 +3531,7 @@ func (s *SDK) ListGrants(ctx context.Context, request operations.ListGrantsReque
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -3540,7 +3541,7 @@ func (s *SDK) ListGrants(ctx context.Context, request operations.ListGrantsReque
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -3634,7 +3635,7 @@ func (s *SDK) ListKeyPolicies(ctx context.Context, request operations.ListKeyPol
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3644,7 +3645,7 @@ func (s *SDK) ListKeyPolicies(ctx context.Context, request operations.ListKeyPol
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -3718,7 +3719,7 @@ func (s *SDK) ListKeys(ctx context.Context, request operations.ListKeysRequest) 
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -3790,7 +3791,7 @@ func (s *SDK) ListResourceTags(ctx context.Context, request operations.ListResou
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -3922,7 +3923,7 @@ func (s *SDK) ListRetirableGrants(ctx context.Context, request operations.ListRe
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	}
 
@@ -4025,7 +4026,7 @@ func (s *SDK) PutKeyPolicy(ctx context.Context, request operations.PutKeyPolicyR
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -4045,7 +4046,7 @@ func (s *SDK) PutKeyPolicy(ctx context.Context, request operations.PutKeyPolicyR
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -4187,7 +4188,7 @@ func (s *SDK) ReEncrypt(ctx context.Context, request operations.ReEncryptRequest
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -4197,7 +4198,7 @@ func (s *SDK) ReEncrypt(ctx context.Context, request operations.ReEncryptRequest
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -4289,7 +4290,7 @@ func (s *SDK) ReplicateKey(ctx context.Context, request operations.ReplicateKeyR
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -4299,7 +4300,7 @@ func (s *SDK) ReplicateKey(ctx context.Context, request operations.ReplicateKeyR
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -4452,7 +4453,7 @@ func (s *SDK) RetireGrant(ctx context.Context, request operations.RetireGrantReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -4462,7 +4463,7 @@ func (s *SDK) RetireGrant(ctx context.Context, request operations.RetireGrantReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -4555,7 +4556,7 @@ func (s *SDK) RevokeGrant(ctx context.Context, request operations.RevokeGrantReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -4565,7 +4566,7 @@ func (s *SDK) RevokeGrant(ctx context.Context, request operations.RevokeGrantReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -4657,7 +4658,7 @@ func (s *SDK) ScheduleKeyDeletion(ctx context.Context, request operations.Schedu
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -4667,7 +4668,7 @@ func (s *SDK) ScheduleKeyDeletion(ctx context.Context, request operations.Schedu
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -4789,7 +4790,7 @@ func (s *SDK) Sign(ctx context.Context, request operations.SignRequest) (*operat
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -4799,7 +4800,7 @@ func (s *SDK) Sign(ctx context.Context, request operations.SignRequest) (*operat
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -4852,7 +4853,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4882,7 +4883,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -4955,7 +4956,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -4985,7 +4986,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -5068,7 +5069,7 @@ func (s *SDK) UpdateAlias(ctx context.Context, request operations.UpdateAliasReq
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -5088,7 +5089,7 @@ func (s *SDK) UpdateAlias(ctx context.Context, request operations.UpdateAliasReq
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -5200,7 +5201,7 @@ func (s *SDK) UpdateCustomKeyStore(ctx context.Context, request operations.Updat
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -5303,7 +5304,7 @@ func (s *SDK) UpdateKeyDescription(ctx context.Context, request operations.Updat
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -5313,7 +5314,7 @@ func (s *SDK) UpdateKeyDescription(ctx context.Context, request operations.Updat
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	}
 
@@ -5386,7 +5387,7 @@ func (s *SDK) UpdatePrimaryRegion(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -5396,7 +5397,7 @@ func (s *SDK) UpdatePrimaryRegion(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -5538,7 +5539,7 @@ func (s *SDK) Verify(ctx context.Context, request operations.VerifyRequest) (*op
 				return nil, err
 			}
 
-			res.KmsInternalException = out
+			res.KMSInternalException = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -5548,7 +5549,7 @@ func (s *SDK) Verify(ctx context.Context, request operations.VerifyRequest) (*op
 				return nil, err
 			}
 
-			res.KmsInvalidStateException = out
+			res.KMSInvalidStateException = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -5558,7 +5559,7 @@ func (s *SDK) Verify(ctx context.Context, request operations.VerifyRequest) (*op
 				return nil, err
 			}
 
-			res.KmsInvalidSignatureException = out
+			res.KMSInvalidSignatureException = out
 		}
 	}
 

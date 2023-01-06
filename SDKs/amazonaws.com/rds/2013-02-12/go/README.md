@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.GetAddSourceIdentifierToSubscriptionRequest{
         QueryParams: operations.GetAddSourceIdentifierToSubscriptionQueryParams{
             Action: "AddSourceIdentifierToSubscription",
-            SourceIdentifier: "aliquam",
-            SubscriptionName: "aut",
+            SourceIdentifier: "illum",
+            SubscriptionName: "similique",
             Version: "2013-02-12",
         },
         Headers: operations.GetAddSourceIdentifierToSubscriptionHeaders{
-            XAmzAlgorithm: "tempora",
-            XAmzContentSha256: "quas",
-            XAmzCredential: "exercitationem",
-            XAmzDate: "tempore",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "magnam",
+            XAmzAlgorithm: "sint",
+            XAmzContentSha256: "rerum",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "voluptas",
+            XAmzSecurityToken: "molestiae",
+            XAmzSignature: "ut",
+            XAmzSignedHeaders: "qui",
         },
     }
     
-    res, err := s.Sdk.GetAddSourceIdentifierToSubscription(ctx, req)
+    res, err := s.GetAddSourceIdentifierToSubscription(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -70,13 +69,10 @@ func main() {
 * `GetAddSourceIdentifierToSubscription`
 * `GetAuthorizeDbSecurityGroupIngress`
 * `GetCopyDbSnapshot`
-* `GetCreateDbInstance`
 * `GetCreateDbInstanceReadReplica`
 * `GetCreateDbParameterGroup`
 * `GetCreateDbSecurityGroup`
 * `GetCreateDbSnapshot`
-* `GetCreateDbSubnetGroup`
-* `GetCreateEventSubscription`
 * `GetCreateOptionGroup`
 * `GetDeleteDbInstance`
 * `GetDeleteDbParameterGroup`
@@ -96,7 +92,6 @@ func main() {
 * `GetDescribeEngineDefaultParameters`
 * `GetDescribeEventCategories`
 * `GetDescribeEventSubscriptions`
-* `GetDescribeEvents`
 * `GetDescribeOptionGroupOptions`
 * `GetDescribeOptionGroups`
 * `GetDescribeOrderableDbInstanceOptions`
@@ -104,9 +99,6 @@ func main() {
 * `GetDescribeReservedDbInstancesOfferings`
 * `GetDownloadDbLogFilePortion`
 * `GetListTagsForResource`
-* `GetModifyDbInstance`
-* `GetModifyDbSubnetGroup`
-* `GetModifyEventSubscription`
 * `GetPromoteReadReplica`
 * `GetPurchaseReservedDbInstancesOffering`
 * `GetRebootDbInstance`

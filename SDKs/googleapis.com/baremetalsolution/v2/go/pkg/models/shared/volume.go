@@ -36,6 +36,14 @@ const (
 	VolumeStorageTypeEnumHdd                    VolumeStorageTypeEnum = "HDD"
 )
 
+type VolumeWorkloadProfileEnum string
+
+const (
+	VolumeWorkloadProfileEnumWorkloadProfileUnspecified VolumeWorkloadProfileEnum = "WORKLOAD_PROFILE_UNSPECIFIED"
+	VolumeWorkloadProfileEnumGeneric                    VolumeWorkloadProfileEnum = "GENERIC"
+	VolumeWorkloadProfileEnumHana                       VolumeWorkloadProfileEnum = "HANA"
+)
+
 type VolumeProtocolEnum string
 
 const (
@@ -65,6 +73,7 @@ type VolumeInput struct {
 	SnapshotSchedulePolicy     *string                               `json:"snapshotSchedulePolicy,omitempty"`
 	State                      *VolumeStateEnum                      `json:"state,omitempty"`
 	StorageType                *VolumeStorageTypeEnum                `json:"storageType,omitempty"`
+	WorkloadProfile            *VolumeWorkloadProfileEnum            `json:"workloadProfile,omitempty"`
 }
 
 // Volume
@@ -91,4 +100,5 @@ type Volume struct {
 	SnapshotSchedulePolicy     *string                               `json:"snapshotSchedulePolicy,omitempty"`
 	State                      *VolumeStateEnum                      `json:"state,omitempty"`
 	StorageType                *VolumeStorageTypeEnum                `json:"storageType,omitempty"`
+	WorkloadProfile            *VolumeWorkloadProfileEnum            `json:"workloadProfile,omitempty"`
 }

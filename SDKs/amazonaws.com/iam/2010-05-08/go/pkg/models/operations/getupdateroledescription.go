@@ -3,13 +3,13 @@ package operations
 type GetUpdateRoleDescriptionActionEnum string
 
 const (
-	GetUpdateRoleDescriptionActionEnumUpdateRoleDescription GetUpdateRoleDescriptionActionEnum = "UpdateRoleDescription"
+	GETUpdateRoleDescriptionActionEnumUpdateRoleDescription GetUpdateRoleDescriptionActionEnum = "UpdateRoleDescription"
 )
 
 type GetUpdateRoleDescriptionVersionEnum string
 
 const (
-	GetUpdateRoleDescriptionVersionEnumTwoThousandAndTen0508 GetUpdateRoleDescriptionVersionEnum = "2010-05-08"
+	GETUpdateRoleDescriptionVersionEnumTwoThousandAndTen0508 GetUpdateRoleDescriptionVersionEnum = "2010-05-08"
 )
 
 type GetUpdateRoleDescriptionQueryParams struct {

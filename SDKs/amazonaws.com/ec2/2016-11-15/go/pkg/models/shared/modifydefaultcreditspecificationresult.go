@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDefaultCreditSpecificationResult struct {
-	InstanceFamilyCreditSpecification *InstanceFamilyCreditSpecification
+	InstanceFamilyCreditSpecification map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type PostDescribeNetworkAclsActionEnum string
 
 const (
-	PostDescribeNetworkAclsActionEnumDescribeNetworkAcls PostDescribeNetworkAclsActionEnum = "DescribeNetworkAcls"
+	POSTDescribeNetworkAclsActionEnumDescribeNetworkAcls PostDescribeNetworkAclsActionEnum = "DescribeNetworkAcls"
 )
 
 type PostDescribeNetworkAclsVersionEnum string
 
 const (
-	PostDescribeNetworkAclsVersionEnumTwoThousandAndSixteen1115 PostDescribeNetworkAclsVersionEnum = "2016-11-15"
+	POSTDescribeNetworkAclsVersionEnumTwoThousandAndSixteen1115 PostDescribeNetworkAclsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeNetworkAclsQueryParams struct {

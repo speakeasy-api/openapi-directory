@@ -2,60 +2,52 @@
 
 <!-- Start SDK Installation -->
 ## SDK Installation
+
 ```bash
 go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
 import (
-	"openapi"
-	"openapi/pkg/models/shared"
-	"openapi/pkg/models/operations"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
 )
 
 func main() {
-	opts := []sdk.SDKOption{
-		sdk.WithSecurity(
+    opts := []sdk.SDKOption{
+        sdk.WithSecurity(
             shared.Security{
                 BearerAuth: shared.SchemeBearerAuth{
                     Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
                 },
             }
-		),
-	}
+        ),
+    }
 
-	s := sdk.New(opts...)
+    s := sdk.New(opts...)
     
-    req := operations.AddConnectionPoolRequest{
-        PathParams: operations.AddConnectionPoolPathParams{
-            DatabaseClusterUUID: "sit",
-        },
-        Request: shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1poolsGetResponses200ContentApplication1jsonSchemaPropertiesPoolsItems{
-            Connection: &shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1poolsGetResponses200ContentApplication1jsonSchemaPropertiesPoolsItemsConnection{
-            
+    req := operations.InstallKubernetesRequest{
+        Request: operations.InstallKubernetesRequestBody{
+            AddonSlugs: []string{
+                "corrupti",
+                "quod",
             },
-            Db: "voluptas",
-            Mode: "culpa",
-            Name: "expedita",
-            PrivateConnection: &shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1poolsGetResponses200ContentApplication1jsonSchemaPropertiesPoolsItemsPrivateConnection{
-            
-            },
-            Size: 3390393562759376202,
-            User: "dolor",
+            ClusterUUID: "voluptas",
         },
     }
     
-    res, err := s.AddConnectionPool(ctx, req)
+    res, err := s.OneClickApplications.InstallKubernetes(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AddConnectionPool201ApplicationJSONObject != nil {
+    if res.InstallKubernetes200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -63,249 +55,344 @@ func main() {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
-* `add_connection_pool` - Add a New Connection Pool (PostgreSQL)
-* `add_database` - Add a New Database
-* `add_firewall_droplets` - Add Droplets to a Firewall
-* `add_firewall_rules` - Add Rules to a Firewall
-* `add_firewall_tags` - Add Tags to a Firewall
-* `add_kubernetes_node_pool` - Add a Node Pool to a Kubernetes Cluster
-* `add_load_balancer_droplets` - Add Droplets to a Load Balancer
-* `add_load_balancer_forwarding_rules` - Add Forwarding Rules to a Load Balancer
-* `add_registry` - Add Container Registry to Kubernetes Clusters
-* `add_user` - Add a Database User
-* `assign_default_project_resources` - Assign Resources to Default Project
-* `assign_project_resources` - Assign Resources to a Project
-* `create_alert_policy` - Create Alert Policy
-* `create_app` - Create a New App
-* `create_cdn_endpoint` - Create a New CDN Endpoint
-* `create_certificates` - Create a New Certificate
-* `create_custom_image` - Create a Custom Image
-* `create_database_cluster` - Create a New Database Cluster
-* `create_deployment` - Create an App Deployment
-* `create_domain` - Create a New Domain
-* `create_domain_record` - Create a New Domain Record
-* `create_droplet` - Create a New Droplet
-* `create_firewall` - Create a New Firewall
-* `create_floating_ip` - Create a New Floating IP
-* `create_kubernetes_cluster` - Create a New Kubernetes Cluster
-* `create_load_balancer` - Create a New Load Balancer
-* `create_new_tag` - Create a New Tag
-* `create_new_volume` - Create a New Block Storage Volume
-* `create_project` - Create a Project
-* `create_registry` - Create Container Registry
-* `create_replica` - Create a Read-only Replica
-* `create_ssh_key` - Create a New SSH Key
-* `create_volume_snapshot` - Create Snapshot from a Volume
-* `create_vpc` - Create a New VPC
-* `delete_alert_policy` - Delete an Alert Policy
-* `delete_app` - Delete an App
-* `delete_cdn_endpoint` - Delete a CDN Endpoint
-* `delete_certificate` - Delete a Certificate
-* `delete_connection_pool` - Delete a Connection Pool (PostgreSQL)
-* `delete_database` - Delete a Database
-* `delete_domain` - Delete a Domain
-* `delete_domain_record` - Delete a Domain Record
-* `delete_firewall` - Delete a Firewall
-* `delete_firewall_droplets` - Remove Droplets from a Firewall
-* `delete_firewall_rules` - Remove Rules from a Firewall
-* `delete_firewall_tags` - Remove Tags from a Firewall
-* `delete_floating_ip` - Delete a Floating IPs
-* `delete_image` - Delete an Image
-* `delete_kubernetes_cluster` - Delete a Kubernetes Cluster
-* `delete_kubernetes_node` - Delete a Node in a Kubernetes Cluster
-* `delete_kubernetes_node_pool` - Delete a Node Pool in a Kubernetes Cluster
-* `delete_load_balancer` - Delete a Load Balancer
-* `delete_online_migration` - Stop an Online Migration
-* `delete_project` - Delete an Existing Project
-* `delete_registry` - Delete Container Registry
-* `delete_repository_manifest` - Delete Container Registry Repository Manifest
-* `delete_repository_tag` - Delete Container Registry Repository Tag
-* `delete_snapshot` - Delete a Snapshot
-* `delete_tag` - Delete a Tag
-* `delete_user` - Remove a Database User
-* `delete_volume` - Delete a Block Storage Volume
-* `delete_volume_by_name` - Delete a Block Storage Volume by Name
-* `delete_volume_snapshot_by_id` - Delete a Volume Snapshot
-* `delete_vpc` - Delete a VPC
-* `destroy_cluster` - Destroy a Database Cluster
-* `destroy_droplet` - Delete an Existing Droplet
-* `destroy_droplets_by_tag` - Deleting Droplets by Tag
-* `destroy_kubernetes_associated_resources_dangerous` - Delete a Cluster and All of its Associated Resources (Dangerous)
-* `destroy_kubernetes_associated_resources_selective` - Selectively Delete a Cluster and its Associated Resources
-* `destroy_replica` - Destroy a Read-only Replica
-* `destroy_ssh_key` - Delete an SSH Key
-* `destroy_with_associated_resources_dangerous` - Destroy a Droplet and All of its Associated Resources (Dangerous)
-* `destroy_with_associated_resources_selective` - Selectively Destroy a Droplet and its Associated Resources
-* `get_action` - Retrieve an Existing Action
-* `get_alert_policy` - Retrieve an Existing Alert Policy
-* `get_app` - Retrieve an Existing App
-* `get_available_upgrades` - Retrieve Available Upgrades for an Existing Kubernetes Cluster
-* `get_cdn_endpoint` - Retrieve an Existing CDN Endpoint
-* `get_certificate` - Retrieve an Existing Certificate
-* `get_cluster_user` - Retrieve User Information for a Kubernetes Cluster
-* `get_clusterlint_results` - Fetch Clusterlint Diagnostics for a Kubernetes Cluster
-* `get_connection_pool` - Retrieve Existing Connection Pool (PostgreSQL)
-* `get_credentials` - Retrieve Credentials for a Kubernetes Cluster
-* `get_customer_balance` - Get Customer Balance
-* `get_database` - Retrieve an Existing Database
-* `get_database_cluster` - Retrieve an Existing Database Cluster
-* `get_default_project` - Retrieve the Default Project
-* `get_deployment` - Retrieve an App Deployment
-* `get_destroy_with_associated_resources_status` - Check Status of a Droplet Destroy with Associated Resources Request
-* `get_docker_credentials` - Get Docker Credentials for Container Registry
-* `get_domain` - Retrieve an Existing Domain
-* `get_domain_record` - Retrieve an Existing Domain Record
-* `get_droplet` - Retrieve an Existing Droplet
-* `get_droplet_action` - Retrieve a Droplet Action
-* `get_droplet_bandwidth_metrics` - Get Droplet Bandwidth Metrics
-* `get_droplet_cpu_metrics` - Get Droplet CPU Metrics
-* `get_droplet_filesystem_free_metrics` - Get Droplet Filesystem Free Metrics
-* `get_droplet_filesystem_size_metrics` - Get Droplet Filesystem Size Metrics
-* `get_droplet_load15_metrics` - Get Droplet Load15 Metrics
-* `get_droplet_load1_metrics` - Get Droplet Load1 Metrics
-* `get_droplet_load5_metrics` - Get Droplet Load5 Metrics
-* `get_droplet_memory_available_metrics` - Get Droplet Available Memory Metrics
-* `get_droplet_memory_cached_metrics` - Get Droplet Cached Memory Metrics
-* `get_droplet_memory_free_metrics` - Get Droplet Free Memory Metrics
-* `get_droplet_memory_total_metrics` - Get Droplet Total Memory Metrics
-* `get_eviction_policy` - Retrieve the Eviction Policy for a Redis Cluster
-* `get_firewall` - Retrieve an Existing Firewall
-* `get_floating_ip` - Retrieve an Existing Floating IP
-* `get_floating_ip_action` - Retrieve an Existing Floating IP Action
-* `get_garbage_collection` - Get Active Garbage Collection
-* `get_image` - Retrieve an Existing Image
-* `get_image_action` - Retrieve an Existing Action
-* `get_images_list` - List All Images
-* `get_instance_size` - Retrieve an Instance Size
-* `get_invoice_by_uuid` - Retrieve an Invoice by UUID
-* `get_invoice_csv_by_uuid` - Retrieve an Invoice CSV by UUID
-* `get_invoice_pdf_by_uuid` - Retrieve an Invoice PDF by UUID
-* `get_invoice_summary_by_uuid` - Retrieve an Invoice Summary by UUID
-* `get_kubeconfig` - Retrieve the kubeconfig for a Kubernetes Cluster
-* `get_kubernetes_cluster` - Retrieve an Existing Kubernetes Cluster
-* `get_load_balancer` - Retrieve an Existing Load Balancer
-* `get_logs` - Retrieve Deployment Logs
-* `get_logs_aggregate` - Retrieve Aggregate Deployment Logs
-* `get_migration_status` - Retrieve the Status of an Online Migration
-* `get_node_pool` - Retrieve a Node Pool for a Kubernetes Cluster
-* `get_project` - Retrieve an Existing Project
-* `get_registry` - Get Container Registry Information
-* `get_registry_options` - List Available Subscription Tiers
-* `get_registry_subscription` - Get Subscription Information
-* `get_replica` - Retrieve an Existing Read-only Replica
-* `get_snapshot` - Retrieve an Existing Snapshot
-* `get_sql_mode` - Retrieve the SQL Modes for a MySQL Cluster
-* `get_ssh_key` - Retrieve an Existing SSH Key
-* `get_tag` - Retrieve a Tag
-* `get_tier` - Retrieve an App Tier
-* `get_user` - Retrieve an Existing Database User
-* `get_user_information` - Get User Information
-* `get_volume` - Retrieve an Existing Block Storage Volume
-* `get_volume_action` - Retrieve an Existing Volume Action
-* `get_volume_snapshot_by_id` - Retreive an Existing Volume Snapshot
-* `get_vpc` - Retrieve an Existing VPC
-* `install_kubernetes` - Install Kubernetes 1-Click Applications
-* `list` - List 1-Click Applications
-* `list_alert_policies` - List Alert Policies
-* `list_all_actions` - List All Actions
-* `list_all_domain_records` - List All Domain Records
-* `list_all_domains` - List All Domains
-* `list_all_droplet_neighbors_ids` - List All Droplet Neighbors
-* `list_all_droplets` - List All Droplets
-* `list_all_keys` - List All SSH Keys
-* `list_all_kubernetes_clusters` - List All Kubernetes Clusters
-* `list_all_load_balancers` - List All Load Balancers
-* `list_all_regions` - List All Data Center Regions
-* `list_all_sizes` - List All Droplet Sizes
-* `list_all_snapshots` - List All Snapshots
-* `list_all_tags` - List All Tags
-* `list_all_volume_actions` - List All Actions for a Volume
-* `list_all_volumes` - List All Block Storage Volumes
-* `list_apps` - List All Apps
-* `list_billing_history` - List Billing History
-* `list_cdn_endpoints` - List All CDN Endpoints
-* `list_certificates` - List All Certificates
-* `list_connection_pools` - List Connection Pools (PostgreSQL)
-* `list_database_backups` - List Backups for a Database Cluster
-* `list_database_clusters` - List All Database Clusters
-* `list_database_firewalls` - List Firewall Rules (Trusted Sources) for a Database Cluster
-* `list_databases` - List All Databases
-* `list_default_project_resources` - List Default Project Resources
-* `list_deployments` - List App Deployments
-* `list_droplet_actions` - List Actions for a Droplet
-* `list_droplet_associated_resources` - List Associated Resources for a Droplet
-* `list_droplet_backups` - List Backups for a Droplet
-* `list_droplet_firewalls` - List all Firewalls Applied to a Droplet
-* `list_droplet_kernels` - List All Available Kernels for a Droplet
-* `list_droplet_neighbors` - List Neighbors for a Droplet
-* `list_droplet_snapshots` - List Snapshots for a Droplet
-* `list_firewalls` - List All Firewalls
-* `list_floating_ip_actions` - List All Actions for a Floating IP
-* `list_floating_ips` - List All Floating IPs
-* `list_garbage_collections` - List Garbage Collections
-* `list_image_actions` - List All Actions for an Image
-* `list_instance_sizes` - List Instance Sizes
-* `list_invoices` - List All Invoices
-* `list_kubernetes_associated_resources` - List Associated Resources for Cluster Deletion
-* `list_kubernetes_options` - List Available Regions, Node Sizes, and Versions of Kubernetes
-* `list_node_pools` - List All Node Pools in a Kubernetes Clusters
-* `list_project_resources` - List Project Resources
-* `list_projects` - List All Projects
-* `list_regions` - List App Regions
-* `list_registry_repositories` - List All Container Registry Repositories
-* `list_replicas` - List All Read-only Replicas
-* `list_repository_tags` - List All Container Registry Repository Tags
-* `list_tiers` - List App Tiers
-* `list_users` - List all Database Users
-* `list_volume_snapshots` - List Snapshots for a Volume
-* `list_vpc_members` - List the Member Resources of a VPC
-* `list_vpcs` - List All VPCs
-* `patch_default_project` - Patch the Default Project
-* `patch_project` - Patch a Project
-* `patch_update_domain_record` - Update a Domain Record
-* `patch_vpc` - Partially Update a VPC
-* `post_cancel_deployment` - Cancel a Deployment
-* `post_droplet_action` - Initiate a Droplet Action
-* `post_droplet_action_by_tag` - Acting on Tagged Droplets
-* `post_floating_ip_action` - Initiate a Floating IP Action
-* `post_image_action` - Initiate an Image Action
-* `post_registry_subscription` - Update Subscription Tier
-* `post_volume_action_by_id` - Initiate A Block Storage Action By Volume Id
-* `post_volume_action_by_name` - Initiate A Block Storage Action By Volume Name
-* `purge_cdn_cache` - Purge the Cache for an Existing CDN Endpoint
-* `recycle_kubernetes_node_pool` - Recycle a Kubernetes Node Pool
-* `remove_load_balancer_droplets` - Remove Droplets from a Load Balancer
-* `remove_load_balancer_forwarding_rules` - Remove Forwarding Rules from a Load Balancer
-* `remove_registry` - Remove Container Registry from Kubernetes Clusters
-* `reset_auth` - Reset a Database User's Password or Authentication Method
-* `retry_destroy_with_associated_resource` - Retry a Droplet Destroy with Associated Resources Request
-* `run_clusterlint` - Run Clusterlint Checks on a Kubernetes Cluster
-* `run_garbage_collection` - Start Garbage Collection
-* `tag_resource` - Tag a Resource
-* `untag_resource` - Untag a Resource
-* `update_alert_policy` - Update an Alert Policy
-* `update_app` - Update an App
-* `update_cdn_endpoint` - Update a CDN Endpoint
-* `update_database_cluster` - Migrate a Database Cluster to a New Region
-* `update_database_cluster_size` - Resize a Database Cluster
-* `update_database_firewall` - Update Firewall Rules (Trusted Sources) for a Database
-* `update_default_project` - Update the Default Project
-* `update_domain_record` - Update a Domain Record
-* `update_eviction_policy` - Configure the Eviction Policy for a Redis Cluster
-* `update_firewall` - Update a Firewall
-* `update_garbage_collection` - Update Garbage Collection
-* `update_image` - Update an Image
-* `update_kubernetes_cluster` - Update a Kubernetes Cluster
-* `update_kubernetes_node_pool` - Update a Node Pool in a Kubernetes Cluster
-* `update_load_balancer` - Update a Load Balancer
-* `update_maintenance_window` - Configure a Database Cluster's Maintenance Window
-* `update_online_migration` - Start an Online Migration
-* `update_project` - Update a Project
-* `update_sql_mode` - Update SQL Mode for a Cluster
-* `update_ssh_key` - Update an SSH Key's Name
-* `update_vpc` - Update a VPC
-* `upgrade_kubernetes_cluster` - Upgrade a Kubernetes Cluster
-* `validate_app_spec` - Propose an App Spec
-* `validate_registry_name` - Validate a Container Registry Name
+
+### 1-Click Applications
+
+* `InstallKubernetes` - Install Kubernetes 1-Click Applications
+* `List` - List 1-Click Applications
+
+### Account
+
+* `GetUserInformation` - Get User Information
+
+### Actions
+
+* `GetAction` - Retrieve an Existing Action
+* `ListAllActions` - List All Actions
+
+### Apps
+
+* `CreateApp` - Create a New App
+* `CreateDeployment` - Create an App Deployment
+* `DeleteApp` - Delete an App
+* `GetApp` - Retrieve an Existing App
+* `GetDeployment` - Retrieve an App Deployment
+* `GetInstanceSize` - Retrieve an Instance Size
+* `GetLogs` - Retrieve Deployment Logs
+* `GetLogsAggregate` - Retrieve Aggregate Deployment Logs
+* `GetTier` - Retrieve an App Tier
+* `ListApps` - List All Apps
+* `ListDeployments` - List App Deployments
+* `ListInstanceSizes` - List Instance Sizes
+* `ListRegions` - List App Regions
+* `ListTiers` - List App Tiers
+* `PostCancelDeployment` - Cancel a Deployment
+* `UpdateApp` - Update an App
+* `ValidateAppSpec` - Propose an App Spec
+
+### Billing
+
+* `GetCustomerBalance` - Get Customer Balance
+* `GetInvoiceByUUID` - Retrieve an Invoice by UUID
+* `GetInvoiceCsvByUUID` - Retrieve an Invoice CSV by UUID
+* `GetInvoicePdfByUUID` - Retrieve an Invoice PDF by UUID
+* `GetInvoiceSummaryByUUID` - Retrieve an Invoice Summary by UUID
+* `ListBillingHistory` - List Billing History
+* `ListInvoices` - List All Invoices
+
+### Block Storage
+
+* `CreateNewVolume` - Create a New Block Storage Volume
+* `CreateVolumeSnapshot` - Create Snapshot from a Volume
+* `DeleteVolume` - Delete a Block Storage Volume
+* `DeleteVolumeByName` - Delete a Block Storage Volume by Name
+* `DeleteVolumeSnapshotByID` - Delete a Volume Snapshot
+* `GetVolume` - Retrieve an Existing Block Storage Volume
+* `GetVolumeSnapshotByID` - Retreive an Existing Volume Snapshot
+* `ListAllVolumes` - List All Block Storage Volumes
+* `ListVolumeSnapshots` - List Snapshots for a Volume
+
+### Block Storage Actions
+
+* `GetVolumeAction` - Retrieve an Existing Volume Action
+* `ListAllVolumeActions` - List All Actions for a Volume
+* `PostVolumeActionByID` - Initiate A Block Storage Action By Volume Id
+* `PostVolumeActionByName` - Initiate A Block Storage Action By Volume Name
+
+### CDN Endpoints
+
+* `CreateCdnEndpoint` - Create a New CDN Endpoint
+* `DeleteCdnEndpoint` - Delete a CDN Endpoint
+* `GetCdnEndpoint` - Retrieve an Existing CDN Endpoint
+* `ListCdnEndpoints` - List All CDN Endpoints
+* `PurgeCdnCache` - Purge the Cache for an Existing CDN Endpoint
+* `UpdateCdnEndpoint` - Update a CDN Endpoint
+
+### Certificates
+
+* `CreateCertificates` - Create a New Certificate
+* `DeleteCertificate` - Delete a Certificate
+* `GetCertificate` - Retrieve an Existing Certificate
+* `ListCertificates` - List All Certificates
+
+### Container Registry
+
+* `CreateRegistry` - Create Container Registry
+* `DeleteRegistry` - Delete Container Registry
+* `DeleteRepositoryManifest` - Delete Container Registry Repository Manifest
+* `DeleteRepositoryTag` - Delete Container Registry Repository Tag
+* `GetDockerCredentials` - Get Docker Credentials for Container Registry
+* `GetGarbageCollection` - Get Active Garbage Collection
+* `GetRegistry` - Get Container Registry Information
+* `GetRegistryOptions` - List Available Subscription Tiers
+* `GetRegistrySubscription` - Get Subscription Information
+* `ListGarbageCollections` - List Garbage Collections
+* `ListRegistryRepositories` - List All Container Registry Repositories
+* `ListRepositoryTags` - List All Container Registry Repository Tags
+* `PostRegistrySubscription` - Update Subscription Tier
+* `RunGarbageCollection` - Start Garbage Collection
+* `UpdateGarbageCollection` - Update Garbage Collection
+* `ValidateRegistryName` - Validate a Container Registry Name
+
+### Databases
+
+* `AddConnectionPool` - Add a New Connection Pool (PostgreSQL)
+* `AddDatabase` - Add a New Database
+* `AddUser` - Add a Database User
+* `CreateDatabaseCluster` - Create a New Database Cluster
+* `CreateReplica` - Create a Read-only Replica
+* `DeleteConnectionPool` - Delete a Connection Pool (PostgreSQL)
+* `DeleteDatabase` - Delete a Database
+* `DeleteOnlineMigration` - Stop an Online Migration
+* `DeleteUser` - Remove a Database User
+* `DestroyCluster` - Destroy a Database Cluster
+* `DestroyReplica` - Destroy a Read-only Replica
+* `GetConnectionPool` - Retrieve Existing Connection Pool (PostgreSQL)
+* `GetDatabase` - Retrieve an Existing Database
+* `GetDatabaseCluster` - Retrieve an Existing Database Cluster
+* `GetEvictionPolicy` - Retrieve the Eviction Policy for a Redis Cluster
+* `GetMigrationStatus` - Retrieve the Status of an Online Migration
+* `GetReplica` - Retrieve an Existing Read-only Replica
+* `GetSQLMode` - Retrieve the SQL Modes for a MySQL Cluster
+* `GetUser` - Retrieve an Existing Database User
+* `ListConnectionPools` - List Connection Pools (PostgreSQL)
+* `ListDatabaseBackups` - List Backups for a Database Cluster
+* `ListDatabaseClusters` - List All Database Clusters
+* `ListDatabaseFirewalls` - List Firewall Rules (Trusted Sources) for a Database Cluster
+* `ListDatabases` - List All Databases
+* `ListReplicas` - List All Read-only Replicas
+* `ListUsers` - List all Database Users
+* `ResetAuth` - Reset a Database User's Password or Authentication Method
+* `UpdateDatabaseCluster` - Migrate a Database Cluster to a New Region
+* `UpdateDatabaseClusterSize` - Resize a Database Cluster
+* `UpdateDatabaseFirewall` - Update Firewall Rules (Trusted Sources) for a Database
+* `UpdateEvictionPolicy` - Configure the Eviction Policy for a Redis Cluster
+* `UpdateMaintenanceWindow` - Configure a Database Cluster's Maintenance Window
+* `UpdateOnlineMigration` - Start an Online Migration
+* `UpdateSQLMode` - Update SQL Mode for a Cluster
+
+### Domain Records
+
+* `CreateDomainRecord` - Create a New Domain Record
+* `DeleteDomainRecord` - Delete a Domain Record
+* `GetDomainRecord` - Retrieve an Existing Domain Record
+* `ListAllDomainRecords` - List All Domain Records
+* `PatchUpdateDomainRecord` - Update a Domain Record
+* `UpdateDomainRecord` - Update a Domain Record
+
+### Domains
+
+* `CreateDomain` - Create a New Domain
+* `DeleteDomain` - Delete a Domain
+* `GetDomain` - Retrieve an Existing Domain
+* `ListAllDomains` - List All Domains
+
+### Droplet Actions
+
+* `GetDropletAction` - Retrieve a Droplet Action
+* `ListDropletActions` - List Actions for a Droplet
+* `PostDropletAction` - Initiate a Droplet Action
+* `PostDropletActionByTag` - Acting on Tagged Droplets
+
+### Droplets
+
+* `CreateDroplet` - Create a New Droplet
+* `DestroyDroplet` - Delete an Existing Droplet
+* `DestroyDropletsByTag` - Deleting Droplets by Tag
+* `DestroyWithAssociatedResourcesDangerous` - Destroy a Droplet and All of its Associated Resources (Dangerous)
+* `DestroyWithAssociatedResourcesSelective` - Selectively Destroy a Droplet and its Associated Resources
+* `GetDestroyWithAssociatedResourcesStatus` - Check Status of a Droplet Destroy with Associated Resources Request
+* `GetDroplet` - Retrieve an Existing Droplet
+* `ListAllDropletNeighborsIds` - List All Droplet Neighbors
+* `ListAllDroplets` - List All Droplets
+* `ListDropletAssociatedResources` - List Associated Resources for a Droplet
+* `ListDropletBackups` - List Backups for a Droplet
+* `ListDropletFirewalls` - List all Firewalls Applied to a Droplet
+* `ListDropletKernels` - List All Available Kernels for a Droplet
+* `ListDropletNeighbors` - List Neighbors for a Droplet
+* `ListDropletSnapshots` - List Snapshots for a Droplet
+* `RetryDestroyWithAssociatedResource` - Retry a Droplet Destroy with Associated Resources Request
+
+### Firewalls
+
+* `AddFirewallDroplets` - Add Droplets to a Firewall
+* `AddFirewallRules` - Add Rules to a Firewall
+* `AddFirewallTags` - Add Tags to a Firewall
+* `CreateFirewall` - Create a New Firewall
+* `DeleteFirewall` - Delete a Firewall
+* `DeleteFirewallDroplets` - Remove Droplets from a Firewall
+* `DeleteFirewallRules` - Remove Rules from a Firewall
+* `DeleteFirewallTags` - Remove Tags from a Firewall
+* `GetFirewall` - Retrieve an Existing Firewall
+* `ListFirewalls` - List All Firewalls
+* `UpdateFirewall` - Update a Firewall
+
+### Floating IP Actions
+
+* `GetFloatingIPAction` - Retrieve an Existing Floating IP Action
+* `ListFloatingIPActions` - List All Actions for a Floating IP
+* `PostFloatingIPAction` - Initiate a Floating IP Action
+
+### Floating IPs
+
+* `CreateFloatingIP` - Create a New Floating IP
+* `DeleteFloatingIP` - Delete a Floating IPs
+* `GetFloatingIP` - Retrieve an Existing Floating IP
+* `ListFloatingIps` - List All Floating IPs
+
+### Image Actions
+
+* `GetImageAction` - Retrieve an Existing Action
+* `ListImageActions` - List All Actions for an Image
+* `PostImageAction` - Initiate an Image Action
+
+### Images
+
+* `CreateCustomImage` - Create a Custom Image
+* `DeleteImage` - Delete an Image
+* `GetImage` - Retrieve an Existing Image
+* `GetImagesList` - List All Images
+* `UpdateImage` - Update an Image
+
+### Kubernetes
+
+* `AddKubernetesNodePool` - Add a Node Pool to a Kubernetes Cluster
+* `AddRegistry` - Add Container Registry to Kubernetes Clusters
+* `CreateKubernetesCluster` - Create a New Kubernetes Cluster
+* `DeleteKubernetesCluster` - Delete a Kubernetes Cluster
+* `DeleteKubernetesNode` - Delete a Node in a Kubernetes Cluster
+* `DeleteKubernetesNodePool` - Delete a Node Pool in a Kubernetes Cluster
+* `DestroyKubernetesAssociatedResourcesDangerous` - Delete a Cluster and All of its Associated Resources (Dangerous)
+* `DestroyKubernetesAssociatedResourcesSelective` - Selectively Delete a Cluster and its Associated Resources
+* `GetAvailableUpgrades` - Retrieve Available Upgrades for an Existing Kubernetes Cluster
+* `GetClusterUser` - Retrieve User Information for a Kubernetes Cluster
+* `GetClusterlintResults` - Fetch Clusterlint Diagnostics for a Kubernetes Cluster
+* `GetCredentials` - Retrieve Credentials for a Kubernetes Cluster
+* `GetKubeconfig` - Retrieve the kubeconfig for a Kubernetes Cluster
+* `GetKubernetesCluster` - Retrieve an Existing Kubernetes Cluster
+* `GetNodePool` - Retrieve a Node Pool for a Kubernetes Cluster
+* `ListAllKubernetesClusters` - List All Kubernetes Clusters
+* `ListKubernetesAssociatedResources` - List Associated Resources for Cluster Deletion
+* `ListKubernetesOptions` - List Available Regions, Node Sizes, and Versions of Kubernetes
+* `ListNodePools` - List All Node Pools in a Kubernetes Clusters
+* `RecycleKubernetesNodePool` - Recycle a Kubernetes Node Pool
+* `RemoveRegistry` - Remove Container Registry from Kubernetes Clusters
+* `RunClusterlint` - Run Clusterlint Checks on a Kubernetes Cluster
+* `UpdateKubernetesCluster` - Update a Kubernetes Cluster
+* `UpdateKubernetesNodePool` - Update a Node Pool in a Kubernetes Cluster
+* `UpgradeKubernetesCluster` - Upgrade a Kubernetes Cluster
+
+### Load Balancers
+
+* `AddLoadBalancerDroplets` - Add Droplets to a Load Balancer
+* `AddLoadBalancerForwardingRules` - Add Forwarding Rules to a Load Balancer
+* `CreateLoadBalancer` - Create a New Load Balancer
+* `DeleteLoadBalancer` - Delete a Load Balancer
+* `GetLoadBalancer` - Retrieve an Existing Load Balancer
+* `ListAllLoadBalancers` - List All Load Balancers
+* `RemoveLoadBalancerDroplets` - Remove Droplets from a Load Balancer
+* `RemoveLoadBalancerForwardingRules` - Remove Forwarding Rules from a Load Balancer
+* `UpdateLoadBalancer` - Update a Load Balancer
+
+### Monitoring
+
+* `CreateAlertPolicy` - Create Alert Policy
+* `DeleteAlertPolicy` - Delete an Alert Policy
+* `GetAlertPolicy` - Retrieve an Existing Alert Policy
+* `GetDropletBandwidthMetrics` - Get Droplet Bandwidth Metrics
+* `GetDropletCPUMetrics` - Get Droplet CPU Metrics
+* `GetDropletFilesystemFreeMetrics` - Get Droplet Filesystem Free Metrics
+* `GetDropletFilesystemSizeMetrics` - Get Droplet Filesystem Size Metrics
+* `GetDropletLoad15Metrics` - Get Droplet Load15 Metrics
+* `GetDropletLoad1Metrics` - Get Droplet Load1 Metrics
+* `GetDropletLoad5Metrics` - Get Droplet Load5 Metrics
+* `GetDropletMemoryAvailableMetrics` - Get Droplet Available Memory Metrics
+* `GetDropletMemoryCachedMetrics` - Get Droplet Cached Memory Metrics
+* `GetDropletMemoryFreeMetrics` - Get Droplet Free Memory Metrics
+* `GetDropletMemoryTotalMetrics` - Get Droplet Total Memory Metrics
+* `ListAlertPolicies` - List Alert Policies
+* `UpdateAlertPolicy` - Update an Alert Policy
+
+### Project Resources
+
+* `AssignDefaultProjectResources` - Assign Resources to Default Project
+* `AssignProjectResources` - Assign Resources to a Project
+* `ListDefaultProjectResources` - List Default Project Resources
+* `ListProjectResources` - List Project Resources
+
+### Projects
+
+* `CreateProject` - Create a Project
+* `DeleteProject` - Delete an Existing Project
+* `GetDefaultProject` - Retrieve the Default Project
+* `GetProject` - Retrieve an Existing Project
+* `ListProjects` - List All Projects
+* `PatchDefaultProject` - Patch the Default Project
+* `PatchProject` - Patch a Project
+* `UpdateDefaultProject` - Update the Default Project
+* `UpdateProject` - Update a Project
+
+### Regions
+
+* `ListAllRegions` - List All Data Center Regions
+
+### SSH Keys
+
+* `CreateSSHKey` - Create a New SSH Key
+* `DestroySSHKey` - Delete an SSH Key
+* `GetSSHKey` - Retrieve an Existing SSH Key
+* `ListAllKeys` - List All SSH Keys
+* `UpdateSSHKey` - Update an SSH Key's Name
+
+### Sizes
+
+* `ListAllSizes` - List All Droplet Sizes
+
+### Snapshots
+
+* `DeleteSnapshot` - Delete a Snapshot
+* `GetSnapshot` - Retrieve an Existing Snapshot
+* `ListAllSnapshots` - List All Snapshots
+
+### Tags
+
+* `CreateNewTag` - Create a New Tag
+* `DeleteTag` - Delete a Tag
+* `GetTag` - Retrieve a Tag
+* `ListAllTags` - List All Tags
+* `TagResource` - Tag a Resource
+* `UntagResource` - Untag a Resource
+
+### VPCs
+
+* `CreateVpc` - Create a New VPC
+* `DeleteVpc` - Delete a VPC
+* `GetVpc` - Retrieve an Existing VPC
+* `ListVpcMembers` - List the Member Resources of a VPC
+* `ListVpcs` - List All VPCs
+* `PatchVpc` - Partially Update a VPC
+* `UpdateVpc` - Update a VPC
 
 <!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

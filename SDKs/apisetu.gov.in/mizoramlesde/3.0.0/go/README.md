@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.GovidSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                Dob: "est",
-                FullName: "soluta",
-                Regno: "et",
+                DOB: "exercitationem",
+                FullName: "consequatur",
+                REGNO: "ut",
             },
-            ConsentArtifact: "eaque",
+            ConsentArtifact: "dolores",
             Format: "pdf",
-            TxnID: "corporis",
+            TxnID: "et",
         },
     }
     
-    res, err := s.Sdk.Govid(ctx, req)
+    res, err := s.APIs.Govid(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Govid` - ID Card
 

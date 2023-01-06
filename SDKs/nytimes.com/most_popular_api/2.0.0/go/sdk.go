@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -106,7 +107,7 @@ func (s *SDK) GetMostemailedSectionTimePeriodJSON(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.GetMostemailedSectionTimePeriodJSON200ApplicationJSONObject = out
+			res.GETMostemailedSectionTimePeriodJSON200ApplicationJSONObject = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -130,7 +131,7 @@ func (s *SDK) GetMostemailedSectionTimePeriodJSON(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.GetMostemailedSectionTimePeriodJSON400ApplicationJSONObject = out
+			res.GETMostemailedSectionTimePeriodJSON400ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 403:
 		switch {
@@ -147,7 +148,7 @@ func (s *SDK) GetMostemailedSectionTimePeriodJSON(ctx context.Context, request o
 				return nil, err
 			}
 
-			res.GetMostemailedSectionTimePeriodJSON403ApplicationJSONObject = out
+			res.GETMostemailedSectionTimePeriodJSON403ApplicationJSONObject = out
 		}
 	}
 
@@ -187,7 +188,7 @@ func (s *SDK) GetMostsharedSectionTimePeriodJSON(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.GetMostsharedSectionTimePeriodJSON200ApplicationJSONObject = out
+			res.GETMostsharedSectionTimePeriodJSON200ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -197,7 +198,7 @@ func (s *SDK) GetMostsharedSectionTimePeriodJSON(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.GetMostsharedSectionTimePeriodJSON400ApplicationJSONObject = out
+			res.GETMostsharedSectionTimePeriodJSON400ApplicationJSONObject = out
 		}
 	}
 
@@ -237,7 +238,7 @@ func (s *SDK) GetMostviewedSectionTimePeriodJSON(ctx context.Context, request op
 				return nil, err
 			}
 
-			res.GetMostviewedSectionTimePeriodJSON200ApplicationJSONObject = out
+			res.GETMostviewedSectionTimePeriodJSON200ApplicationJSONObject = out
 		}
 	}
 

@@ -4,5 +4,5 @@ package shared
 // Represents the output of a <code>DescribeReservedCacheNodesOfferings</code> operation.
 type ReservedCacheNodesOfferingMessage struct {
 	Marker                      *string
-	ReservedCacheNodesOfferings []ReservedCacheNodesOffering
+	ReservedCacheNodesOfferings []map[string]interface{}
 }

@@ -1,5 +1,5 @@
 package shared
 
 type DeleteVpcPeeringConnectionResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

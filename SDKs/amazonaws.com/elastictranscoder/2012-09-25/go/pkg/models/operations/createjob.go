@@ -32,17 +32,17 @@ type CreateJobRequestBodyInput struct {
 // CreateJobRequestBodyOutput
 // The <code>CreateJobOutput</code> structure.
 type CreateJobRequestBodyOutput struct {
-	AlbumArt            *shared.JobAlbumArt   `json:"AlbumArt,omitempty"`
-	Captions            *shared.Captions      `json:"Captions,omitempty"`
-	Composition         []shared.Clip         `json:"Composition,omitempty"`
-	Encryption          *shared.Encryption    `json:"Encryption,omitempty"`
-	Key                 *string               `json:"Key,omitempty"`
-	PresetID            *string               `json:"PresetId,omitempty"`
-	Rotate              *string               `json:"Rotate,omitempty"`
-	SegmentDuration     *string               `json:"SegmentDuration,omitempty"`
-	ThumbnailEncryption *shared.Encryption    `json:"ThumbnailEncryption,omitempty"`
-	ThumbnailPattern    *string               `json:"ThumbnailPattern,omitempty"`
-	Watermarks          []shared.JobWatermark `json:"Watermarks,omitempty"`
+	AlbumArt            *shared.JobAlbumArt    `json:"AlbumArt,omitempty"`
+	Captions            *shared.Captions       `json:"Captions,omitempty"`
+	Composition         map[string]interface{} `json:"Composition,omitempty"`
+	Encryption          *shared.Encryption     `json:"Encryption,omitempty"`
+	Key                 *string                `json:"Key,omitempty"`
+	PresetID            *string                `json:"PresetId,omitempty"`
+	Rotate              *string                `json:"Rotate,omitempty"`
+	SegmentDuration     *string                `json:"SegmentDuration,omitempty"`
+	ThumbnailEncryption *shared.Encryption     `json:"ThumbnailEncryption,omitempty"`
+	ThumbnailPattern    *string                `json:"ThumbnailPattern,omitempty"`
+	Watermarks          []shared.JobWatermark  `json:"Watermarks,omitempty"`
 }
 
 type CreateJobRequestBody struct {

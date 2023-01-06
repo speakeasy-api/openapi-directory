@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,25 +33,12 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.AppliedInventoriesTagsForServiceOfferingRequest{
-        PathParams: operations.AppliedInventoriesTagsForServiceOfferingPathParams{
-            ID: "consequatur",
-        },
-        Request: shared.AppliedInventoriesParametersServicePlan{
-            ServiceParameters: map[string]interface{}{
-                "non": "ipsa",
-                "aut": "debitis",
-                "doloribus": "distinctio",
-            },
-        },
-    }
-    
-    res, err := s.Sdk.AppliedInventoriesTagsForServiceOffering(ctx, req)
+    res, err := s.GetDocumentation(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Tags != nil {
+    if res.GetDocumentation200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -63,20 +49,55 @@ func main() {
 
 ### SDK SDK
 
-* `AppliedInventoriesTagsForServiceOffering` - Invokes computing of ServiceInventories tags for given ServiceOffering
 * `GetDocumentation` - Return this API document in JSON format
-* `IncrementalRefreshSource` - Incremental Refresh an existing Source
-* `ListServiceCredentialTypes` - List ServiceCredentialTypes
+* `PostGraphQl` - Perform a GraphQL Query
+
+### ServiceCredential
+
 * `ListServiceCredentials` - List ServiceCredentials
+* `ShowServiceCredential` - Show an existing ServiceCredential
+
+### ServiceCredentialType
+
+* `ListServiceCredentialTypes` - List ServiceCredentialTypes
+* `ShowServiceCredentialType` - Show an existing ServiceCredentialType
+
+### ServiceInstance
+
 * `ListServiceInstances` - List ServiceInstances
+* `ShowServiceInstance` - Show an existing ServiceInstance
+
+### ServiceInventory
+
 * `ListServiceInventories` - List ServiceInventories
 * `ListServiceInventoryTags` - List Tags for ServiceInventory
-* `ListServiceOfferingNodes` - List ServiceOfferingNodes
+* `ShowServiceInventory` - Show an existing ServiceInventory
+* `TagServiceInventory` - Tag a ServiceInventory
+* `UntagServiceInventory` - Untag a ServiceInventory
+
+### ServiceOffering
+
+* `AppliedInventoriesTagsForServiceOffering` - Invokes computing of ServiceInventories tags for given ServiceOffering
 * `ListServiceOfferingServiceInstances` - List ServiceInstances for ServiceOffering
 * `ListServiceOfferingServiceOfferingNodes` - List ServiceOfferingNodes for ServiceOffering
 * `ListServiceOfferingServicePlans` - List ServicePlans for ServiceOffering
 * `ListServiceOfferings` - List ServiceOfferings
+* `OrderServiceOffering` - Order an existing ServiceOffering
+* `ShowServiceOffering` - Show an existing ServiceOffering
+
+### ServiceOfferingNode
+
+* `ListServiceOfferingNodes` - List ServiceOfferingNodes
+* `ShowServiceOfferingNode` - Show an existing ServiceOfferingNode
+
+### ServicePlan
+
 * `ListServicePlans` - List ServicePlans
+* `ShowServicePlan` - Show an existing ServicePlan
+
+### Source
+
+* `IncrementalRefreshSource` - Incremental Refresh an existing Source
 * `ListSourceServiceInstances` - List ServiceInstances for Source
 * `ListSourceServiceInventories` - List ServiceInventories for Source
 * `ListSourceServiceOfferingNodes` - List ServiceOfferingNodes for Source
@@ -84,22 +105,17 @@ func main() {
 * `ListSourceServicePlans` - List ServicePlans for Source
 * `ListSourceTasks` - List Tasks for Source
 * `ListSources` - List Sources
-* `ListTags` - List Tags
-* `ListTasks` - List Tasks
-* `OrderServiceOffering` - Order an existing ServiceOffering
-* `PostGraphQl` - Perform a GraphQL Query
 * `RefreshSource` -  Refresh an existing Source
-* `ShowServiceCredential` - Show an existing ServiceCredential
-* `ShowServiceCredentialType` - Show an existing ServiceCredentialType
-* `ShowServiceInstance` - Show an existing ServiceInstance
-* `ShowServiceInventory` - Show an existing ServiceInventory
-* `ShowServiceOffering` - Show an existing ServiceOffering
-* `ShowServiceOfferingNode` - Show an existing ServiceOfferingNode
-* `ShowServicePlan` - Show an existing ServicePlan
 * `ShowSource` - Show an existing Source
+
+### Tags
+
+* `ListTags` - List Tags
+
+### Task
+
+* `ListTasks` - List Tasks
 * `ShowTask` - Show an existing Task
-* `TagServiceInventory` - Tag a ServiceInventory
-* `UntagServiceInventory` - Untag a ServiceInventory
 * `UpdateTask` - Update an existing Task
 
 <!-- End SDK Available Operations -->

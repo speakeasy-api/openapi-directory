@@ -3,13 +3,13 @@ package operations
 type PostListPlatformBranchesActionEnum string
 
 const (
-	PostListPlatformBranchesActionEnumListPlatformBranches PostListPlatformBranchesActionEnum = "ListPlatformBranches"
+	POSTListPlatformBranchesActionEnumListPlatformBranches PostListPlatformBranchesActionEnum = "ListPlatformBranches"
 )
 
 type PostListPlatformBranchesVersionEnum string
 
 const (
-	PostListPlatformBranchesVersionEnumTwoThousandAndTen1201 PostListPlatformBranchesVersionEnum = "2010-12-01"
+	POSTListPlatformBranchesVersionEnumTwoThousandAndTen1201 PostListPlatformBranchesVersionEnum = "2010-12-01"
 )
 
 type PostListPlatformBranchesQueryParams struct {

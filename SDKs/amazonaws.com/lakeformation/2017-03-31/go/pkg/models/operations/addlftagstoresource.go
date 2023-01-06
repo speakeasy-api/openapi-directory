@@ -7,7 +7,7 @@ import (
 type AddLfTagsToResourceXAmzTargetEnum string
 
 const (
-	AddLfTagsToResourceXAmzTargetEnumAwsLakeFormationAddLfTagsToResource AddLfTagsToResourceXAmzTargetEnum = "AWSLakeFormation.AddLFTagsToResource"
+	AddLFTagsToResourceXAmzTargetEnumAwsLakeFormationAddLfTagsToResource AddLfTagsToResourceXAmzTargetEnum = "AWSLakeFormation.AddLFTagsToResource"
 )
 
 type AddLfTagsToResourceHeaders struct {
@@ -28,7 +28,7 @@ type AddLfTagsToResourceRequest struct {
 
 type AddLfTagsToResourceResponse struct {
 	AccessDeniedException           *interface{}
-	AddLfTagsToResourceResponse     *shared.AddLfTagsToResourceResponse
+	AddLFTagsToResourceResponse     *shared.AddLfTagsToResourceResponse
 	ConcurrentModificationException *interface{}
 	ContentType                     string
 	EntityNotFoundException         *interface{}

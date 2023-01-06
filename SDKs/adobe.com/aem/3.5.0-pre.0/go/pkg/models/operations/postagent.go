@@ -31,8 +31,8 @@ type PostAgentQueryParams struct {
 	JcrContentProtocolSocketTimeout         *float64 `queryParam:"style=form,explode=true,name=jcr:content/protocolSocketTimeout"`
 	JcrContentProtocolVersion               *string  `queryParam:"style=form,explode=true,name=jcr:content/protocolVersion"`
 	JcrContentProxyHost                     *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyHost"`
-	JcrContentProxyNtlmDomain               *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyNTLMDomain"`
-	JcrContentProxyNtlmHost                 *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyNTLMHost"`
+	JcrContentProxyNTLMDomain               *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyNTLMDomain"`
+	JcrContentProxyNTLMHost                 *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyNTLMHost"`
 	JcrContentProxyPassword                 *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyPassword"`
 	JcrContentProxyPort                     *float64 `queryParam:"style=form,explode=true,name=jcr:content/proxyPort"`
 	JcrContentProxyUser                     *string  `queryParam:"style=form,explode=true,name=jcr:content/proxyUser"`
@@ -44,8 +44,8 @@ type PostAgentQueryParams struct {
 	JcrContentSerializationType             *string  `queryParam:"style=form,explode=true,name=jcr:content/serializationType"`
 	JcrContentSlingResourceType             *string  `queryParam:"style=form,explode=true,name=jcr:content/sling:resourceType"`
 	JcrContentSsl                           *string  `queryParam:"style=form,explode=true,name=jcr:content/ssl"`
-	JcrContentTransportNtlmDomain           *string  `queryParam:"style=form,explode=true,name=jcr:content/transportNTLMDomain"`
-	JcrContentTransportNtlmHost             *string  `queryParam:"style=form,explode=true,name=jcr:content/transportNTLMHost"`
+	JcrContentTransportNTLMDomain           *string  `queryParam:"style=form,explode=true,name=jcr:content/transportNTLMDomain"`
+	JcrContentTransportNTLMHost             *string  `queryParam:"style=form,explode=true,name=jcr:content/transportNTLMHost"`
 	JcrContentTransportPassword             *string  `queryParam:"style=form,explode=true,name=jcr:content/transportPassword"`
 	JcrContentTransportURI                  *string  `queryParam:"style=form,explode=true,name=jcr:content/transportUri"`
 	JcrContentTransportUser                 *string  `queryParam:"style=form,explode=true,name=jcr:content/transportUser"`

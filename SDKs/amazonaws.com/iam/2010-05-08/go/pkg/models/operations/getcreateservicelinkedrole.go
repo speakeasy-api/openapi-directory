@@ -3,17 +3,17 @@ package operations
 type GetCreateServiceLinkedRoleActionEnum string
 
 const (
-	GetCreateServiceLinkedRoleActionEnumCreateServiceLinkedRole GetCreateServiceLinkedRoleActionEnum = "CreateServiceLinkedRole"
+	GETCreateServiceLinkedRoleActionEnumCreateServiceLinkedRole GetCreateServiceLinkedRoleActionEnum = "CreateServiceLinkedRole"
 )
 
 type GetCreateServiceLinkedRoleVersionEnum string
 
 const (
-	GetCreateServiceLinkedRoleVersionEnumTwoThousandAndTen0508 GetCreateServiceLinkedRoleVersionEnum = "2010-05-08"
+	GETCreateServiceLinkedRoleVersionEnumTwoThousandAndTen0508 GetCreateServiceLinkedRoleVersionEnum = "2010-05-08"
 )
 
 type GetCreateServiceLinkedRoleQueryParams struct {
-	AwsServiceName string                                `queryParam:"style=form,explode=true,name=AWSServiceName"`
+	AWSServiceName string                                `queryParam:"style=form,explode=true,name=AWSServiceName"`
 	Action         GetCreateServiceLinkedRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	CustomSuffix   *string                               `queryParam:"style=form,explode=true,name=CustomSuffix"`
 	Description    *string                               `queryParam:"style=form,explode=true,name=Description"`

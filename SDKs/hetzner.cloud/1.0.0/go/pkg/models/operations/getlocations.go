@@ -25,6 +25,6 @@ type GetLocationsRequest struct {
 
 type GetLocationsResponse struct {
 	ContentType                          string
-	GetLocations200ApplicationJSONObject *GetLocations200ApplicationJSON
 	StatusCode                           int64
+	GetLocations200ApplicationJSONObject *GetLocations200ApplicationJSON
 }

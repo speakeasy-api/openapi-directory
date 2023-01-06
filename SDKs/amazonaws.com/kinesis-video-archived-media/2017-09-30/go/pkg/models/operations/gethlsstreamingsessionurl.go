@@ -17,23 +17,23 @@ type GetHlsStreamingSessionURLHeaders struct {
 type GetHlsStreamingSessionURLRequestBodyContainerFormatEnum string
 
 const (
-	GetHlsStreamingSessionURLRequestBodyContainerFormatEnumFragmentedMp4 GetHlsStreamingSessionURLRequestBodyContainerFormatEnum = "FRAGMENTED_MP4"
-	GetHlsStreamingSessionURLRequestBodyContainerFormatEnumMpegTs        GetHlsStreamingSessionURLRequestBodyContainerFormatEnum = "MPEG_TS"
+	GetHLSStreamingSessionURLRequestBodyContainerFormatEnumFragmentedMp4 GetHlsStreamingSessionURLRequestBodyContainerFormatEnum = "FRAGMENTED_MP4"
+	GetHLSStreamingSessionURLRequestBodyContainerFormatEnumMpegTs        GetHlsStreamingSessionURLRequestBodyContainerFormatEnum = "MPEG_TS"
 )
 
 type GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum string
 
 const (
-	GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnumAlways          GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum = "ALWAYS"
-	GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnumNever           GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum = "NEVER"
-	GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnumOnDiscontinuity GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum = "ON_DISCONTINUITY"
+	GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnumAlways          GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum = "ALWAYS"
+	GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnumNever           GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum = "NEVER"
+	GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnumOnDiscontinuity GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum = "ON_DISCONTINUITY"
 )
 
 type GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum string
 
 const (
-	GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumAlways GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "ALWAYS"
-	GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumNever  GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "NEVER"
+	GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumAlways GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "ALWAYS"
+	GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumNever  GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "NEVER"
 )
 
 // GetHlsStreamingSessionURLRequestBodyHlsFragmentSelector
@@ -46,9 +46,9 @@ type GetHlsStreamingSessionURLRequestBodyHlsFragmentSelector struct {
 type GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum string
 
 const (
-	GetHlsStreamingSessionURLRequestBodyPlaybackModeEnumLive       GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE"
-	GetHlsStreamingSessionURLRequestBodyPlaybackModeEnumLiveReplay GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE_REPLAY"
-	GetHlsStreamingSessionURLRequestBodyPlaybackModeEnumOnDemand   GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum = "ON_DEMAND"
+	GetHLSStreamingSessionURLRequestBodyPlaybackModeEnumLive       GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE"
+	GetHLSStreamingSessionURLRequestBodyPlaybackModeEnumLiveReplay GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE_REPLAY"
+	GetHLSStreamingSessionURLRequestBodyPlaybackModeEnumOnDemand   GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum = "ON_DEMAND"
 )
 
 type GetHlsStreamingSessionURLRequestBody struct {
@@ -56,10 +56,10 @@ type GetHlsStreamingSessionURLRequestBody struct {
 	DiscontinuityMode               *GetHlsStreamingSessionURLRequestBodyDiscontinuityModeEnum        `json:"DiscontinuityMode,omitempty"`
 	DisplayFragmentTimestamp        *GetHlsStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum `json:"DisplayFragmentTimestamp,omitempty"`
 	Expires                         *int64                                                            `json:"Expires,omitempty"`
-	HlsFragmentSelector             *GetHlsStreamingSessionURLRequestBodyHlsFragmentSelector          `json:"HLSFragmentSelector,omitempty"`
+	HLSFragmentSelector             *GetHlsStreamingSessionURLRequestBodyHlsFragmentSelector          `json:"HLSFragmentSelector,omitempty"`
 	MaxMediaPlaylistFragmentResults *int64                                                            `json:"MaxMediaPlaylistFragmentResults,omitempty"`
 	PlaybackMode                    *GetHlsStreamingSessionURLRequestBodyPlaybackModeEnum             `json:"PlaybackMode,omitempty"`
-	StreamArn                       *string                                                           `json:"StreamARN,omitempty"`
+	StreamARN                       *string                                                           `json:"StreamARN,omitempty"`
 	StreamName                      *string                                                           `json:"StreamName,omitempty"`
 }
 
@@ -71,7 +71,7 @@ type GetHlsStreamingSessionURLRequest struct {
 type GetHlsStreamingSessionURLResponse struct {
 	ClientLimitExceededException        *interface{}
 	ContentType                         string
-	GetHlsStreamingSessionURLOutput     *shared.GetHlsStreamingSessionURLOutput
+	GetHLSStreamingSessionURLOutput     *shared.GetHlsStreamingSessionURLOutput
 	InvalidArgumentException            *interface{}
 	InvalidCodecPrivateDataException    *interface{}
 	MissingCodecPrivateDataException    *interface{}

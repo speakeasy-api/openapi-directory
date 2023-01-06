@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.SkcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.SkcerRequestBody{
             CertificateParameters: &operations.SkcerRequestBodyCertificateParameters{
-                Coursename: "aut",
-                Personalno: "impedit",
-                Unit: "sint",
+                Coursename: "suscipit",
+                Personalno: "cupiditate",
+                Unit: "quia",
             },
-            ConsentArtifact: "velit",
+            ConsentArtifact: "facere",
             Format: "pdf",
-            TxnID: "libero",
+            TxnID: "rerum",
         },
     }
     
-    res, err := s.Sdk.Skcer(ctx, req)
+    res, err := s.APIs.Skcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Skcer` - Skill Certificate
 * `Skmst` - Skill Marksheet/ Score Card

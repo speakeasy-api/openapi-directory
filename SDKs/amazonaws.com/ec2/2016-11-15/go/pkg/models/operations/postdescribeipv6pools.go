@@ -3,13 +3,13 @@ package operations
 type PostDescribeIpv6PoolsActionEnum string
 
 const (
-	PostDescribeIpv6PoolsActionEnumDescribeIpv6Pools PostDescribeIpv6PoolsActionEnum = "DescribeIpv6Pools"
+	POSTDescribeIpv6PoolsActionEnumDescribeIpv6Pools PostDescribeIpv6PoolsActionEnum = "DescribeIpv6Pools"
 )
 
 type PostDescribeIpv6PoolsVersionEnum string
 
 const (
-	PostDescribeIpv6PoolsVersionEnumTwoThousandAndSixteen1115 PostDescribeIpv6PoolsVersionEnum = "2016-11-15"
+	POSTDescribeIpv6PoolsVersionEnumTwoThousandAndSixteen1115 PostDescribeIpv6PoolsVersionEnum = "2016-11-15"
 )
 
 type PostDescribeIpv6PoolsQueryParams struct {

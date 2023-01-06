@@ -3,9 +3,9 @@ package shared
 type OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum string
 
 const (
-	OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumArchiveTypeUnspecified OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "ARCHIVE_TYPE_UNSPECIFIED"
-	OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumDeb                    OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "DEB"
-	OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumDebSrc                 OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "DEB_SRC"
+	OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumArchiveTypeUnspecified OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "ARCHIVE_TYPE_UNSPECIFIED"
+	OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumDeb                    OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "DEB"
+	OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumDebSrc                 OsPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "DEB_SRC"
 )
 
 // OsPolicyResourceRepositoryResourceAptRepository

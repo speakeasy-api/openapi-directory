@@ -3,7 +3,7 @@ package shared
 // ListInstanceProfilesResponse
 // Contains the response to a successful <a>ListInstanceProfiles</a> request.
 type ListInstanceProfilesResponse struct {
-	InstanceProfiles []InstanceProfile
+	InstanceProfiles []InstanceProfile1
 	IsTruncated      *bool
 	Marker           *string
 }

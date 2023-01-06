@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,24 +24,24 @@ func main() {
     
     req := operations.PredictImageRequest{
         PathParams: operations.PredictImagePathParams{
-            ProjectID: "aspernatur",
+            ProjectID: "ipsa",
         },
         QueryParams: operations.PredictImageQueryParams{
-            Application: "in",
-            IterationID: "nostrum",
+            Application: "aut",
+            IterationID: "facere",
         },
         Headers: operations.PredictImageHeaders{
-            PredictionKey: "iure",
+            PredictionKey: "officia",
         },
         Request: operations.PredictImageRequestBody{
             ImageData: operations.PredictImageRequestBodyImageData{
-                Content: []byte("natus"),
-                ImageData: "commodi",
+                Content: []byte("eos"),
+                ImageData: "est",
             },
         },
     }
     
-    res, err := s.Sdk.PredictImage(ctx, req)
+    res, err := s.ImagePredictionAPI.PredictImage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ImagePredictionApi
 
 * `PredictImage` - Predict an image and saves the result
 * `PredictImageURL` - Predict an image url and saves the result

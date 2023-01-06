@@ -12,6 +12,6 @@ type PostMakePdfRequest struct {
 
 type PostMakePdfResponse struct {
 	ContentType                              string
-	PostMakePdf200ApplicationPdfBinaryString []byte
 	StatusCode                               int64
+	PostMakePdf200ApplicationPdfBinaryString []byte
 }

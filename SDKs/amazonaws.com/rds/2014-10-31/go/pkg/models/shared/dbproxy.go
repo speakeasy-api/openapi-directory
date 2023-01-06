@@ -9,8 +9,8 @@ import (
 type DbProxy struct {
 	Auth                []UserAuthConfigInfo
 	CreatedDate         *time.Time
-	DbProxyArn          *string
-	DbProxyName         *string
+	DBProxyArn          *string
+	DBProxyName         *string
 	DebugLogging        *bool
 	Endpoint            *string
 	EngineFamily        *string

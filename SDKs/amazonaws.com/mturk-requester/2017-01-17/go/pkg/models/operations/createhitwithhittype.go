@@ -7,7 +7,7 @@ import (
 type CreateHitWithHitTypeXAmzTargetEnum string
 
 const (
-	CreateHitWithHitTypeXAmzTargetEnumMTurkRequesterServiceV20170117CreateHitWithHitType CreateHitWithHitTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateHITWithHITType"
+	CreateHITWithHITTypeXAmzTargetEnumMTurkRequesterServiceV20170117CreateHitWithHitType CreateHitWithHitTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateHITWithHITType"
 )
 
 type CreateHitWithHitTypeHeaders struct {
@@ -28,7 +28,7 @@ type CreateHitWithHitTypeRequest struct {
 
 type CreateHitWithHitTypeResponse struct {
 	ContentType                  string
-	CreateHitWithHitTypeResponse *shared.CreateHitWithHitTypeResponse
+	CreateHITWithHITTypeResponse *shared.CreateHitWithHitTypeResponse
 	RequestError                 *interface{}
 	ServiceFault                 *interface{}
 	StatusCode                   int64

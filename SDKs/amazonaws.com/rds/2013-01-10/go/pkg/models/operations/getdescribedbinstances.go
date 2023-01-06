@@ -3,18 +3,18 @@ package operations
 type GetDescribeDbInstancesActionEnum string
 
 const (
-	GetDescribeDbInstancesActionEnumDescribeDbInstances GetDescribeDbInstancesActionEnum = "DescribeDBInstances"
+	GETDescribeDBInstancesActionEnumDescribeDbInstances GetDescribeDbInstancesActionEnum = "DescribeDBInstances"
 )
 
 type GetDescribeDbInstancesVersionEnum string
 
 const (
-	GetDescribeDbInstancesVersionEnumTwoThousandAndThirteen0110 GetDescribeDbInstancesVersionEnum = "2013-01-10"
+	GETDescribeDBInstancesVersionEnumTwoThousandAndThirteen0110 GetDescribeDbInstancesVersionEnum = "2013-01-10"
 )
 
 type GetDescribeDbInstancesQueryParams struct {
 	Action               GetDescribeDbInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier *string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier *string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Marker               *string                           `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords           *int64                            `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version              GetDescribeDbInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`

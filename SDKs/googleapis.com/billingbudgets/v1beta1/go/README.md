@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,103 +27,102 @@ func main() {
             Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "ratione",
+            Parent: "nihil",
         },
         QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "libero",
-            Alt: "proto",
-            Callback: "qui",
-            Fields: "quae",
-            Key: "iste",
-            OauthToken: "animi",
-            PrettyPrint: true,
-            QuotaUser: "pariatur",
-            UploadType: "adipisci",
-            UploadProtocol: "recusandae",
+            DollarXgafv: "2",
+            AccessToken: "dolores",
+            Alt: "media",
+            Callback: "ipsam",
+            Fields: "est",
+            Key: "ut",
+            OauthToken: "corrupti",
+            PrettyPrint: false,
+            QuotaUser: "illum",
+            UploadType: "et",
+            UploadProtocol: "sunt",
         },
         Request: &shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput{
             Budget: &shared.GoogleCloudBillingBudgetsV1beta1BudgetInput{
                 AllUpdatesRule: &shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule{
-                    DisableDefaultIamRecipients: true,
+                    DisableDefaultIamRecipients: false,
                     MonitoringNotificationChannels: []string{
-                        "unde",
+                        "omnis",
                     },
-                    PubsubTopic: "et",
-                    SchemaVersion: "voluptatum",
+                    PubsubTopic: "hic",
+                    SchemaVersion: "voluptatem",
                 },
                 Amount: &shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount{
                     LastPeriodAmount: map[string]interface{}{
-                        "molestiae": "tempora",
+                        "autem": "nesciunt",
+                        "voluptas": "non",
+                        "et": "debitis",
                     },
                     SpecifiedAmount: &shared.GoogleTypeMoney{
-                        CurrencyCode: "praesentium",
-                        Nanos: 2369452140427811028,
-                        Units: "sed",
+                        CurrencyCode: "rerum",
+                        Nanos: 3935183703835838449,
+                        Units: "deleniti",
                     },
                 },
                 BudgetFilter: &shared.GoogleCloudBillingBudgetsV1beta1Filter{
                     CalendarPeriod: "YEAR",
                     CreditTypes: []string{
-                        "aliquid",
-                        "sit",
-                        "aut",
+                        "quis",
+                        "id",
                     },
-                    CreditTypesTreatment: "EXCLUDE_ALL_CREDITS",
+                    CreditTypesTreatment: "INCLUDE_ALL_CREDITS",
                     CustomPeriod: &shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod{
                         EndDate: &shared.GoogleTypeDate{
-                            Day: 5424098840598598124,
-                            Month: 6573536602896611658,
-                            Year: 5050765952509064220,
+                            Day: 3108647445270735640,
+                            Month: 6367047841469662539,
+                            Year: 2246308380640359291,
                         },
                         StartDate: &shared.GoogleTypeDate{
-                            Day: 2424619421979615217,
-                            Month: 3868935517736166565,
-                            Year: 2032218833617120042,
+                            Day: 4454711727644508773,
+                            Month: 893560508835310437,
+                            Year: 538351812575737580,
                         },
                     },
                     Labels: map[string][]interface{}{
                         "aut": []interface{}{
-                            "voluptatum",
-                            "officia",
-                            "illum",
-                        },
-                        "incidunt": []interface{}{
-                            "et",
-                            "dolorem",
+                            "porro",
+                            "reprehenderit",
+                            "magni",
                         },
                     },
                     Projects: []string{
-                        "laborum",
+                        "eligendi",
                     },
                     Services: []string{
-                        "dicta",
+                        "qui",
+                        "omnis",
+                        "ut",
                     },
                     Subaccounts: []string{
-                        "nisi",
+                        "placeat",
                     },
                 },
-                DisplayName: "tempore",
-                Etag: "rerum",
+                DisplayName: "aut",
+                Etag: "cumque",
                 ThresholdRules: []shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "FORECASTED_SPEND",
-                        ThresholdPercent: 71.199997,
-                    },
-                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "FORECASTED_SPEND",
-                        ThresholdPercent: 78.199997,
-                    },
-                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                         SpendBasis: "CURRENT_SPEND",
-                        ThresholdPercent: 44.099998,
+                        ThresholdPercent: 26.200001,
+                    },
+                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
+                        SpendBasis: "BASIS_UNSPECIFIED",
+                        ThresholdPercent: 78.099998,
+                    },
+                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
+                        SpendBasis: "FORECASTED_SPEND",
+                        ThresholdPercent: 77.099998,
                     },
                 },
             },

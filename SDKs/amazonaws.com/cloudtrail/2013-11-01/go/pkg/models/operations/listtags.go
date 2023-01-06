@@ -32,7 +32,7 @@ type ListTagsRequest struct {
 }
 
 type ListTagsResponse struct {
-	CloudTrailArnInvalidException     *interface{}
+	CloudTrailARNInvalidException     *interface{}
 	ContentType                       string
 	InvalidTokenException             *interface{}
 	InvalidTrailNameException         *interface{}

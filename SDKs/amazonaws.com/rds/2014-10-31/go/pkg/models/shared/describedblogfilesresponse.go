@@ -4,6 +4,6 @@ package shared
 //
 //	The response from a call to <code>DescribeDBLogFiles</code>.
 type DescribeDbLogFilesResponse struct {
-	DescribeDbLogFiles []DescribeDbLogFilesDetails
+	DescribeDBLogFiles []map[string]interface{}
 	Marker             *string
 }

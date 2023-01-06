@@ -9,7 +9,7 @@ type AssetReportPdfGetRequest struct {
 }
 
 type AssetReportPdfGetResponse struct {
-	AssetReportPdfGetResponse []byte
+	AssetReportPDFGetResponse []byte
 	ContentType               string
 	StatusCode                int64
 }

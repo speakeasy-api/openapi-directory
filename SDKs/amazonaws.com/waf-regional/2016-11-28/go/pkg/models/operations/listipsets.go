@@ -30,6 +30,6 @@ type ListIPSetsResponse struct {
 	ContentType                string
 	ListIPSetsResponse         *shared.ListIPSetsResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

@@ -7,7 +7,7 @@ import (
 type UpdateMlModelXAmzTargetEnum string
 
 const (
-	UpdateMlModelXAmzTargetEnumAmazonMl20141212UpdateMlModel UpdateMlModelXAmzTargetEnum = "AmazonML_20141212.UpdateMLModel"
+	UpdateMLModelXAmzTargetEnumAmazonMl20141212UpdateMlModel UpdateMlModelXAmzTargetEnum = "AmazonML_20141212.UpdateMLModel"
 )
 
 type UpdateMlModelHeaders struct {
@@ -32,5 +32,5 @@ type UpdateMlModelResponse struct {
 	InvalidInputException     *interface{}
 	ResourceNotFoundException *interface{}
 	StatusCode                int64
-	UpdateMlModelOutput       *shared.UpdateMlModelOutput
+	UpdateMLModelOutput       *shared.UpdateMlModelOutput
 }

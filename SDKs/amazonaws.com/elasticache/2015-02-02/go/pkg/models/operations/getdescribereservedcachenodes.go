@@ -3,13 +3,13 @@ package operations
 type GetDescribeReservedCacheNodesActionEnum string
 
 const (
-	GetDescribeReservedCacheNodesActionEnumDescribeReservedCacheNodes GetDescribeReservedCacheNodesActionEnum = "DescribeReservedCacheNodes"
+	GETDescribeReservedCacheNodesActionEnumDescribeReservedCacheNodes GetDescribeReservedCacheNodesActionEnum = "DescribeReservedCacheNodes"
 )
 
 type GetDescribeReservedCacheNodesVersionEnum string
 
 const (
-	GetDescribeReservedCacheNodesVersionEnumTwoThousandAndFifteen0202 GetDescribeReservedCacheNodesVersionEnum = "2015-02-02"
+	GETDescribeReservedCacheNodesVersionEnumTwoThousandAndFifteen0202 GetDescribeReservedCacheNodesVersionEnum = "2015-02-02"
 )
 
 type GetDescribeReservedCacheNodesQueryParams struct {

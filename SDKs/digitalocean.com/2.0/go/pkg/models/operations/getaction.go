@@ -8,14 +8,14 @@ type GetActionPathParams struct {
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 }
 
-type GetActionRequest struct {
-	PathParams GetActionPathParams
-}
-
 type GetAction401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetActionRequest struct {
+	PathParams GetActionPathParams
 }
 
 type GetActionResponse struct {

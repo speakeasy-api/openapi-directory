@@ -2,5 +2,5 @@ package shared
 
 type ServiceUpdatesMessage struct {
 	Marker         *string
-	ServiceUpdates []ServiceUpdate
+	ServiceUpdates []map[string]interface{}
 }

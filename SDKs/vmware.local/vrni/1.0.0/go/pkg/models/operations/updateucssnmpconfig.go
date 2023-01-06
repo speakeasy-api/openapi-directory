@@ -21,6 +21,6 @@ type UpdateUcsSnmpConfigRequest struct {
 type UpdateUcsSnmpConfigResponse struct {
 	APIError    *shared.APIError
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

@@ -5,9 +5,9 @@ import (
 )
 
 type CripcRequestBodyCertificateParameters struct {
-	Inscode string `json:"INSCODE"`
-	Polno   string `json:"POLNO"`
-	Startdt string `json:"STARTDT"`
+	INSCODE string `json:"INSCODE"`
+	POLNO   string `json:"POLNO"`
+	STARTDT string `json:"STARTDT"`
 }
 
 type CripcRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Cripc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cripc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cripc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cripc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cripc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cripc404ApplicationJSON struct {

@@ -3,13 +3,13 @@ package operations
 type PostDescribeInstanceAttributeActionEnum string
 
 const (
-	PostDescribeInstanceAttributeActionEnumDescribeInstanceAttribute PostDescribeInstanceAttributeActionEnum = "DescribeInstanceAttribute"
+	POSTDescribeInstanceAttributeActionEnumDescribeInstanceAttribute PostDescribeInstanceAttributeActionEnum = "DescribeInstanceAttribute"
 )
 
 type PostDescribeInstanceAttributeVersionEnum string
 
 const (
-	PostDescribeInstanceAttributeVersionEnumTwoThousandAndSixteen1115 PostDescribeInstanceAttributeVersionEnum = "2016-11-15"
+	POSTDescribeInstanceAttributeVersionEnumTwoThousandAndSixteen1115 PostDescribeInstanceAttributeVersionEnum = "2016-11-15"
 )
 
 type PostDescribeInstanceAttributeQueryParams struct {

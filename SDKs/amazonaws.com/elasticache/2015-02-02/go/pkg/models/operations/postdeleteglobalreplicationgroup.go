@@ -3,13 +3,13 @@ package operations
 type PostDeleteGlobalReplicationGroupActionEnum string
 
 const (
-	PostDeleteGlobalReplicationGroupActionEnumDeleteGlobalReplicationGroup PostDeleteGlobalReplicationGroupActionEnum = "DeleteGlobalReplicationGroup"
+	POSTDeleteGlobalReplicationGroupActionEnumDeleteGlobalReplicationGroup PostDeleteGlobalReplicationGroupActionEnum = "DeleteGlobalReplicationGroup"
 )
 
 type PostDeleteGlobalReplicationGroupVersionEnum string
 
 const (
-	PostDeleteGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 PostDeleteGlobalReplicationGroupVersionEnum = "2015-02-02"
+	POSTDeleteGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 PostDeleteGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
 type PostDeleteGlobalReplicationGroupQueryParams struct {

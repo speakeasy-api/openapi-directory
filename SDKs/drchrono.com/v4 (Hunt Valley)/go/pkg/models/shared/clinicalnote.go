@@ -1,0 +1,20 @@
+package shared
+
+type ClinicalNoteClinicalNoteSectionValue struct {
+	ClinicalNoteField *int64  `json:"clinical_note_field,omitempty"`
+	ID                *int64  `json:"id,omitempty"`
+	Value             *string `json:"value,omitempty"`
+}
+
+type ClinicalNoteClinicalNoteSection struct {
+	ClinicalNoteTemplate *int64                                 `json:"clinical_note_template,omitempty"`
+	Name                 *string                                `json:"name,omitempty"`
+	Values               []ClinicalNoteClinicalNoteSectionValue `json:"values,omitempty"`
+}
+
+type ClinicalNote struct {
+	Appointment          *string                           `json:"appointment,omitempty"`
+	Archived             *bool                             `json:"archived,omitempty"`
+	ClinicalNoteSections []ClinicalNoteClinicalNoteSection `json:"clinical_note_sections,omitempty"`
+	Patient              *string                           `json:"patient,omitempty"`
+}

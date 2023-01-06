@@ -3,9 +3,9 @@ package shared
 type WritableVlanStatusEnum string
 
 const (
-	WritableVlanStatusEnumActive     WritableVlanStatusEnum = "active"
-	WritableVlanStatusEnumReserved   WritableVlanStatusEnum = "reserved"
-	WritableVlanStatusEnumDeprecated WritableVlanStatusEnum = "deprecated"
+	WritableVLANStatusEnumActive     WritableVlanStatusEnum = "active"
+	WritableVLANStatusEnumReserved   WritableVlanStatusEnum = "reserved"
+	WritableVLANStatusEnumDeprecated WritableVlanStatusEnum = "deprecated"
 )
 
 type WritableVlanInput struct {

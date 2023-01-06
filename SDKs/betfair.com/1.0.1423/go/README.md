@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -24,10 +23,10 @@ func main() {
     s := sdk.New()
     
     req := operations.PostRequestRequest{
-        Request: "aspernatur",
+        Request: "et",
     }
     
-    res, err := s.Sdk.PostRequest(ctx, req)
+    res, err := s.PostRequest(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

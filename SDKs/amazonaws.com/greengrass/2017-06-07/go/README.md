@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateRoleToGroupRequest{
         PathParams: operations.AssociateRoleToGroupPathParams{
-            GroupID: "cupiditate",
+            GroupID: "accusantium",
         },
         Headers: operations.AssociateRoleToGroupHeaders{
-            XAmzAlgorithm: "impedit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "reprehenderit",
-            XAmzDate: "nesciunt",
-            XAmzSecurityToken: "aut",
-            XAmzSignature: "necessitatibus",
-            XAmzSignedHeaders: "corrupti",
+            XAmzAlgorithm: "ut",
+            XAmzContentSha256: "consequatur",
+            XAmzCredential: "doloremque",
+            XAmzDate: "animi",
+            XAmzSecurityToken: "exercitationem",
+            XAmzSignature: "quia",
+            XAmzSignedHeaders: "ut",
         },
         Request: operations.AssociateRoleToGroupRequestBody{
-            RoleArn: "aspernatur",
+            RoleArn: "hic",
         },
     }
     
-    res, err := s.Sdk.AssociateRoleToGroup(ctx, req)
+    res, err := s.AssociateRoleToGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

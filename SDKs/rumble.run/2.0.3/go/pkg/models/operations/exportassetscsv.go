@@ -20,5 +20,5 @@ type ExportAssetsCsvRequest struct {
 type ExportAssetsCsvResponse struct {
 	ContentType                           string
 	StatusCode                            int64
-	ExportAssetsCsv200TextCsvBinaryString []byte
+	ExportAssetsCSV200TextCSVBinaryString []byte
 }

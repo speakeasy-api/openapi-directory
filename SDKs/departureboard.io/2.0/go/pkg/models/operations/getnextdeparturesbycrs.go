@@ -1,7 +1,7 @@
 package operations
 
 type GetNextDeparturesByCrsPathParams struct {
-	Crs string `pathParam:"style=simple,explode=false,name=CRS"`
+	CRS string `pathParam:"style=simple,explode=false,name=CRS"`
 }
 
 type GetNextDeparturesByCrsQueryParams struct {

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeSnapshotsResult struct {
-	NextToken *string
-	Snapshots []Snapshot
+	NextToken map[string]interface{}
+	Snapshots map[string]interface{}
 }

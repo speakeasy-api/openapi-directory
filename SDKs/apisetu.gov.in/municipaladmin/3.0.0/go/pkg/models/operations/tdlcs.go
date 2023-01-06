@@ -81,7 +81,7 @@ type Tdlcs404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Tdlcs404ApplicationJSONErrorDescriptionEnumNoRecordFound               Tdlcs404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Tdlcs404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Tdlcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Tdlcs404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tdlcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Tdlcs404ApplicationJSON struct {

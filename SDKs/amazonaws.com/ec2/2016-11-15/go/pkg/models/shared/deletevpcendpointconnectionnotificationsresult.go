@@ -1,5 +1,5 @@
 package shared
 
 type DeleteVpcEndpointConnectionNotificationsResult struct {
-	Unsuccessful []UnsuccessfulItem
+	Unsuccessful map[string]interface{}
 }

@@ -3,13 +3,13 @@ package operations
 type PostTestFailoverActionEnum string
 
 const (
-	PostTestFailoverActionEnumTestFailover PostTestFailoverActionEnum = "TestFailover"
+	POSTTestFailoverActionEnumTestFailover PostTestFailoverActionEnum = "TestFailover"
 )
 
 type PostTestFailoverVersionEnum string
 
 const (
-	PostTestFailoverVersionEnumTwoThousandAndFifteen0202 PostTestFailoverVersionEnum = "2015-02-02"
+	POSTTestFailoverVersionEnumTwoThousandAndFifteen0202 PostTestFailoverVersionEnum = "2015-02-02"
 )
 
 type PostTestFailoverQueryParams struct {

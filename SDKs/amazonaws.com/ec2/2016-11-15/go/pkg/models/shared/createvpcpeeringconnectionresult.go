@@ -1,5 +1,5 @@
 package shared
 
 type CreateVpcPeeringConnectionResult struct {
-	VpcPeeringConnection *VpcPeeringConnection
+	VpcPeeringConnection map[string]interface{}
 }

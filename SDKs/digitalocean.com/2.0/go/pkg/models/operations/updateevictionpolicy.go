@@ -8,15 +8,15 @@ type UpdateEvictionPolicyPathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type UpdateEvictionPolicyRequest struct {
-	PathParams UpdateEvictionPolicyPathParams
-	Request    shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1evictionPolicyGetResponses200ContentApplication1jsonSchema `request:"mediaType=application/json"`
-}
-
 type UpdateEvictionPolicy401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateEvictionPolicyRequest struct {
+	PathParams UpdateEvictionPolicyPathParams
+	Request    shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1evictionPolicyGetResponses200ContentApplication1jsonSchema `request:"mediaType=application/json"`
 }
 
 type UpdateEvictionPolicyResponse struct {

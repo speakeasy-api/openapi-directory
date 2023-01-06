@@ -34,7 +34,7 @@ type IncreaseReplicationFactorResponse struct {
 	InvalidClusterStateFault             *interface{}
 	InvalidParameterCombinationException *interface{}
 	InvalidParameterValueException       *interface{}
-	InvalidVpcNetworkStateFault          *interface{}
+	InvalidVPCNetworkStateFault          *interface{}
 	NodeQuotaForClusterExceededFault     *interface{}
 	NodeQuotaForCustomerExceededFault    *interface{}
 	ServiceLinkedRoleNotFoundFault       *interface{}

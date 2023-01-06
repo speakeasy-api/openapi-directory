@@ -3,13 +3,13 @@ package operations
 type PostModifyCurrentDbClusterCapacityActionEnum string
 
 const (
-	PostModifyCurrentDbClusterCapacityActionEnumModifyCurrentDbClusterCapacity PostModifyCurrentDbClusterCapacityActionEnum = "ModifyCurrentDBClusterCapacity"
+	POSTModifyCurrentDBClusterCapacityActionEnumModifyCurrentDbClusterCapacity PostModifyCurrentDbClusterCapacityActionEnum = "ModifyCurrentDBClusterCapacity"
 )
 
 type PostModifyCurrentDbClusterCapacityVersionEnum string
 
 const (
-	PostModifyCurrentDbClusterCapacityVersionEnumTwoThousandAndFourteen1031 PostModifyCurrentDbClusterCapacityVersionEnum = "2014-10-31"
+	POSTModifyCurrentDBClusterCapacityVersionEnumTwoThousandAndFourteen1031 PostModifyCurrentDbClusterCapacityVersionEnum = "2014-10-31"
 )
 
 type PostModifyCurrentDbClusterCapacityQueryParams struct {

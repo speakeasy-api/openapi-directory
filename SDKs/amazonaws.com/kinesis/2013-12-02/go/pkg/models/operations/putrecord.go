@@ -29,12 +29,12 @@ type PutRecordRequest struct {
 type PutRecordResponse struct {
 	ContentType                            string
 	InvalidArgumentException               *interface{}
-	KmsAccessDeniedException               *interface{}
-	KmsDisabledException                   *interface{}
-	KmsInvalidStateException               *interface{}
-	KmsNotFoundException                   *interface{}
-	KmsOptInRequired                       *interface{}
-	KmsThrottlingException                 *interface{}
+	KMSAccessDeniedException               *interface{}
+	KMSDisabledException                   *interface{}
+	KMSInvalidStateException               *interface{}
+	KMSNotFoundException                   *interface{}
+	KMSOptInRequired                       *interface{}
+	KMSThrottlingException                 *interface{}
 	ProvisionedThroughputExceededException *interface{}
 	PutRecordOutput                        *shared.PutRecordOutput
 	ResourceNotFoundException              *interface{}

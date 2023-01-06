@@ -6,6 +6,6 @@ type CreateConnectionRequest struct {
 	LagID          *string `json:"lagId,omitempty"`
 	Location       string  `json:"location"`
 	ProviderName   *string `json:"providerName,omitempty"`
-	RequestMacSec  *bool   `json:"requestMACSec,omitempty"`
+	RequestMACSec  *bool   `json:"requestMACSec,omitempty"`
 	Tags           []Tag   `json:"tags,omitempty"`
 }

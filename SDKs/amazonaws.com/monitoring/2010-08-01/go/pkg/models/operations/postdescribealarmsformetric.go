@@ -3,13 +3,13 @@ package operations
 type PostDescribeAlarmsForMetricActionEnum string
 
 const (
-	PostDescribeAlarmsForMetricActionEnumDescribeAlarmsForMetric PostDescribeAlarmsForMetricActionEnum = "DescribeAlarmsForMetric"
+	POSTDescribeAlarmsForMetricActionEnumDescribeAlarmsForMetric PostDescribeAlarmsForMetricActionEnum = "DescribeAlarmsForMetric"
 )
 
 type PostDescribeAlarmsForMetricVersionEnum string
 
 const (
-	PostDescribeAlarmsForMetricVersionEnumTwoThousandAndTen0801 PostDescribeAlarmsForMetricVersionEnum = "2010-08-01"
+	POSTDescribeAlarmsForMetricVersionEnumTwoThousandAndTen0801 PostDescribeAlarmsForMetricVersionEnum = "2010-08-01"
 )
 
 type PostDescribeAlarmsForMetricQueryParams struct {

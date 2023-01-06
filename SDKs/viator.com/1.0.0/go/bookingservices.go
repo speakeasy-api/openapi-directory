@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -837,7 +837,7 @@ func (s *BookingServices) CancelBooking(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.FourHundredAndOneUnauthorized = out
+			res.FourHundredAndOneUNAUTHORIZED = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {
@@ -857,7 +857,7 @@ func (s *BookingServices) CancelBooking(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.FourHundredAndSixNotAcceptable = out
+			res.FourHundredAndSixNOTACCEPTABLE = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -867,7 +867,7 @@ func (s *BookingServices) CancelBooking(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.FiveHundredInternalServerError = out
+			res.FiveHundredINTERNALSERVERERROR = out
 		}
 	case httpRes.StatusCode == 503:
 		switch {
@@ -877,7 +877,7 @@ func (s *BookingServices) CancelBooking(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.FiveHundredAndThreeServiceUnavailable = out
+			res.FiveHundredAndThreeSERVICEUNAVAILABLE = out
 		}
 	}
 
@@ -939,7 +939,7 @@ func (s *BookingServices) CancelBookingQuote(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.FourHundredAndOneUnauthorized = out
+			res.FourHundredAndOneUNAUTHORIZED = out
 		}
 	case httpRes.StatusCode == 406:
 		switch {
@@ -949,7 +949,7 @@ func (s *BookingServices) CancelBookingQuote(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.FourHundredAndSixNotAcceptable = out
+			res.FourHundredAndSixNOTACCEPTABLE = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -959,7 +959,7 @@ func (s *BookingServices) CancelBookingQuote(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.FiveHundredInternalServerError = out
+			res.FiveHundredINTERNALSERVERERROR = out
 		}
 	case httpRes.StatusCode == 503:
 		switch {
@@ -969,7 +969,7 @@ func (s *BookingServices) CancelBookingQuote(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.FiveHundredAndThreeServiceUnavailable = out
+			res.FiveHundredAndThreeSERVICEUNAVAILABLE = out
 		}
 	}
 
@@ -1033,7 +1033,7 @@ func (s *BookingServices) CancellationReasons(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.FourHundredAndOneUnauthorized = out
+			res.FourHundredAndOneUNAUTHORIZED = out
 		}
 	case httpRes.StatusCode == 406:
 		switch {
@@ -1043,7 +1043,7 @@ func (s *BookingServices) CancellationReasons(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.FourHundredAndSixNotAcceptable = out
+			res.FourHundredAndSixNOTACCEPTABLE = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -1053,7 +1053,7 @@ func (s *BookingServices) CancellationReasons(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.FiveHundredInternalServerError = out
+			res.FiveHundredINTERNALSERVERERROR = out
 		}
 	case httpRes.StatusCode == 503:
 		switch {
@@ -1063,7 +1063,7 @@ func (s *BookingServices) CancellationReasons(ctx context.Context, request opera
 				return nil, err
 			}
 
-			res.FiveHundredAndThreeServiceUnavailable = out
+			res.FiveHundredAndThreeSERVICEUNAVAILABLE = out
 		}
 	}
 

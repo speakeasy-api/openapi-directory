@@ -3,13 +3,13 @@ package operations
 type GetUntagInstanceProfileActionEnum string
 
 const (
-	GetUntagInstanceProfileActionEnumUntagInstanceProfile GetUntagInstanceProfileActionEnum = "UntagInstanceProfile"
+	GETUntagInstanceProfileActionEnumUntagInstanceProfile GetUntagInstanceProfileActionEnum = "UntagInstanceProfile"
 )
 
 type GetUntagInstanceProfileVersionEnum string
 
 const (
-	GetUntagInstanceProfileVersionEnumTwoThousandAndTen0508 GetUntagInstanceProfileVersionEnum = "2010-05-08"
+	GETUntagInstanceProfileVersionEnumTwoThousandAndTen0508 GetUntagInstanceProfileVersionEnum = "2010-05-08"
 )
 
 type GetUntagInstanceProfileQueryParams struct {

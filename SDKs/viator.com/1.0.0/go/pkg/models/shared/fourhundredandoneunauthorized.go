@@ -3,13 +3,13 @@ package shared
 type FourHundredAndOneUnauthorizedCodeEnum string
 
 const (
-	FourHundredAndOneUnauthorizedCodeEnumUnauthorized FourHundredAndOneUnauthorizedCodeEnum = "UNAUTHORIZED"
+	FourHundredAndOneUNAUTHORIZEDCodeEnumUnauthorized FourHundredAndOneUnauthorizedCodeEnum = "UNAUTHORIZED"
 )
 
 type FourHundredAndOneUnauthorizedMessageEnum string
 
 const (
-	FourHundredAndOneUnauthorizedMessageEnumInvalidAPIKey FourHundredAndOneUnauthorizedMessageEnum = "Invalid API key"
+	FourHundredAndOneUNAUTHORIZEDMessageEnumInvalidAPIKey FourHundredAndOneUnauthorizedMessageEnum = "Invalid API key"
 )
 
 type FourHundredAndOneUnauthorized struct {

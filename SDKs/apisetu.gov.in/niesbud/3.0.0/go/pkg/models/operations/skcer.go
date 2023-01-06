@@ -5,7 +5,7 @@ import (
 )
 
 type SkcerRequestBodyCertificateParameters struct {
-	CourseNo        string `json:"COURSE_NO"`
+	COURSENO        string `json:"COURSE_NO"`
 	FullName        string `json:"FullName"`
 	CertificateType string `json:"certificate_type"`
 }
@@ -83,7 +83,7 @@ type Skcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Skcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Skcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Skcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Skcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Skcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Skcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Skcer404ApplicationJSON struct {

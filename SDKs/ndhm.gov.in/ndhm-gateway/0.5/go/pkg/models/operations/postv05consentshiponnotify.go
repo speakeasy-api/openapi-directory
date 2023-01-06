@@ -6,12 +6,12 @@ import (
 
 type PostV05ConsentsHipOnNotifyHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XCmID         string `header:"style=simple,explode=false,name=X-CM-ID"`
+	XCMID         string `header:"style=simple,explode=false,name=X-CM-ID"`
 }
 
 type PostV05ConsentsHipOnNotifyRequests struct {
 	ApplicationXML                 []byte                                 `request:"mediaType=application/xml"`
-	HipConsentNotificationResponse *shared.HipConsentNotificationResponse `request:"mediaType=application/json"`
+	HIPConsentNotificationResponse *shared.HipConsentNotificationResponse `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentsHipOnNotifyRequest struct {

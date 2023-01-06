@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -31,15 +30,15 @@ func main() {
             },
         },
         QueryParams: operations.GetAPIV1DonationsCarbonCalculateQueryParams{
-            DestinationAddress: 24.200001,
-            DistanceMi: 76.199997,
-            OriginAddress: 3.200000,
+            DestinationAddress: 7.200000,
+            DistanceMi: 45.200001,
+            OriginAddress: 50.200001,
             TransportationMethod: "truck",
-            WeightLb: 79.199997,
+            WeightLb: 2.100000,
         },
     }
     
-    res, err := s.Sdk.GetAPIV1DonationsCarbonCalculate(ctx, req)
+    res, err := s.GetAPIV1DonationsCarbonCalculate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

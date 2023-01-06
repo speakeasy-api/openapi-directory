@@ -1,5 +1,5 @@
 package shared
 
 type CreateLocalGatewayRouteResult struct {
-	Route *LocalGatewayRoute
+	Route map[string]interface{}
 }

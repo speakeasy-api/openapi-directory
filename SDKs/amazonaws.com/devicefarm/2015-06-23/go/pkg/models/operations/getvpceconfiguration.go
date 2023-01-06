@@ -7,7 +7,7 @@ import (
 type GetVpceConfigurationXAmzTargetEnum string
 
 const (
-	GetVpceConfigurationXAmzTargetEnumDeviceFarm20150623GetVpceConfiguration GetVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.GetVPCEConfiguration"
+	GetVPCEConfigurationXAmzTargetEnumDeviceFarm20150623GetVpceConfiguration GetVpceConfigurationXAmzTargetEnum = "DeviceFarm_20150623.GetVPCEConfiguration"
 )
 
 type GetVpceConfigurationHeaders struct {
@@ -29,7 +29,7 @@ type GetVpceConfigurationRequest struct {
 type GetVpceConfigurationResponse struct {
 	ArgumentException          *interface{}
 	ContentType                string
-	GetVpceConfigurationResult *shared.GetVpceConfigurationResult
+	GetVPCEConfigurationResult *shared.GetVpceConfigurationResult
 	NotFoundException          *interface{}
 	ServiceAccountException    *interface{}
 	StatusCode                 int64

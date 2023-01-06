@@ -18,10 +18,10 @@ type GlacierJobDescription struct {
 	OutputLocation               *OutputLocation                   `json:"OutputLocation,omitempty"`
 	RetrievalByteRange           *string                           `json:"RetrievalByteRange,omitempty"`
 	Sha256TreeHash               *string                           `json:"SHA256TreeHash,omitempty"`
-	SnsTopic                     *string                           `json:"SNSTopic,omitempty"`
+	SNSTopic                     *string                           `json:"SNSTopic,omitempty"`
 	SelectParameters             *SelectParameters                 `json:"SelectParameters,omitempty"`
 	StatusCode                   *StatusCodeEnum                   `json:"StatusCode,omitempty"`
 	StatusMessage                *string                           `json:"StatusMessage,omitempty"`
 	Tier                         *string                           `json:"Tier,omitempty"`
-	VaultArn                     *string                           `json:"VaultARN,omitempty"`
+	VaultARN                     *string                           `json:"VaultARN,omitempty"`
 }

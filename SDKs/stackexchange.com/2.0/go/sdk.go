@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -508,130 +509,6 @@ func (s *SDK) GetBadges(ctx context.Context, request operations.GetBadgesRequest
 	return res, nil
 }
 
-// GetBadgesIds - Gets the badges identified in id.
-//
-// Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
-//
-// Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
-//
-// This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
-//
-// For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
-//
-// rank is the default sort.
-//
-// {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
-//
-// This method returns a list of badges.
-func (s *SDK) GetBadgesIds(ctx context.Context, request operations.GetBadgesIdsRequest) (*operations.GetBadgesIdsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetBadgesIdsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetBadgesIdsRecipients - Returns recently awarded badges in the system, constrained to a certain set of badges.
-//
-// As these badges have been awarded, they will have the badge.user property set.
-//
-// {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
-//
-// This method returns a list of badges.
-func (s *SDK) GetBadgesIdsRecipients(ctx context.Context, request operations.GetBadgesIdsRecipientsRequest) (*operations.GetBadgesIdsRecipientsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}/recipients", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetBadgesIdsRecipientsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
 // GetBadgesName - Gets all explicitly named badges in the system.
 //
 // A named badged stands in opposition to a tag-based badge. These are referred to as general badges on the sites themselves.
@@ -777,6 +654,130 @@ func (s *SDK) GetBadgesTags(ctx context.Context, request operations.GetBadgesTag
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetBadgesTagsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetBadgesIds - Gets the badges identified in id.
+//
+// Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
+//
+// Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
+//
+// This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
+//
+// For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
+//
+// rank is the default sort.
+//
+// {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+//
+// This method returns a list of badges.
+func (s *SDK) GetBadgesIds(ctx context.Context, request operations.GetBadgesIdsRequest) (*operations.GetBadgesIdsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetBadgesIdsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetBadgesIdsRecipients - Returns recently awarded badges in the system, constrained to a certain set of badges.
+//
+// As these badges have been awarded, they will have the badge.user property set.
+//
+// {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+//
+// This method returns a list of badges.
+func (s *SDK) GetBadgesIdsRecipients(ctx context.Context, request operations.GetBadgesIdsRecipientsRequest) (*operations.GetBadgesIdsRecipientsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}/recipients", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetBadgesIdsRecipientsResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -3681,6 +3682,150 @@ func (s *SDK) GetQuestionsFeatured(ctx context.Context, request operations.GetQu
 	return res, nil
 }
 
+// GetQuestionsNoAnswers - Returns questions which have received no answers.
+//
+// Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
+//
+// This method corresponds roughly with the this site tab.
+//
+// To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+//
+// The sorts accepted by this method operate on the follow fields of the question object:
+//
+//   - activity - last_activity_date
+//
+//   - creation - creation_date
+//
+//   - votes - score
+//     activity is the default sort.
+//
+//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+//
+// This method returns a list of questions.
+func (s *SDK) GetQuestionsNoAnswers(ctx context.Context, request operations.GetQuestionsNoAnswersRequest) (*operations.GetQuestionsNoAnswersResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/questions/no-answers"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetQuestionsNoAnswersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetQuestionsUnanswered - Returns questions the site considers to be unanswered.
+//
+// Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
+//
+// To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+//
+// Compare with /questions/no-answers.
+//
+// This method corresponds roughly with the unanswered tab.
+//
+// The sorts accepted by this method operate on the follow fields of the question object:
+//
+//   - activity - last_activity_date
+//
+//   - creation - creation_date
+//
+//   - votes - score
+//     activity is the default sort.
+//
+//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+//
+// This method returns a list of questions.
+func (s *SDK) GetQuestionsUnanswered(ctx context.Context, request operations.GetQuestionsUnansweredRequest) (*operations.GetQuestionsUnansweredResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/questions/unanswered"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetQuestionsUnansweredResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
 // GetQuestionsIds - Returns the questions identified in {ids}.
 //
 // This is most useful for fetching fresh data when maintaining a cache of question ids, or polling for changes.
@@ -4061,150 +4206,6 @@ func (s *SDK) GetQuestionsIdsTimeline(ctx context.Context, request operations.Ge
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetQuestionsIdsTimelineResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetQuestionsNoAnswers - Returns questions which have received no answers.
-//
-// Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
-//
-// This method corresponds roughly with the this site tab.
-//
-// To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
-//
-// The sorts accepted by this method operate on the follow fields of the question object:
-//
-//   - activity - last_activity_date
-//
-//   - creation - creation_date
-//
-//   - votes - score
-//     activity is the default sort.
-//
-//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-//
-// This method returns a list of questions.
-func (s *SDK) GetQuestionsNoAnswers(ctx context.Context, request operations.GetQuestionsNoAnswersRequest) (*operations.GetQuestionsNoAnswersResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/questions/no-answers"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetQuestionsNoAnswersResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetQuestionsUnanswered - Returns questions the site considers to be unanswered.
-//
-// Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
-//
-// To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
-//
-// Compare with /questions/no-answers.
-//
-// This method corresponds roughly with the unanswered tab.
-//
-// The sorts accepted by this method operate on the follow fields of the question object:
-//
-//   - activity - last_activity_date
-//
-//   - creation - creation_date
-//
-//   - votes - score
-//     activity is the default sort.
-//
-//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-//
-// This method returns a list of questions.
-func (s *SDK) GetQuestionsUnanswered(ctx context.Context, request operations.GetQuestionsUnansweredRequest) (*operations.GetQuestionsUnansweredResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/questions/unanswered"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetQuestionsUnansweredResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -4981,118 +4982,6 @@ func (s *SDK) GetTagsSynonyms(ctx context.Context, request operations.GetTagsSyn
 	return res, nil
 }
 
-// GetTagsTagTopAnswerersPeriod - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
-//
-// This is a view onto the data presented on the tag info page on the sites.
-//
-// This method returns a list of tag score objects.
-func (s *SDK) GetTagsTagTopAnswerersPeriod(ctx context.Context, request operations.GetTagsTagTopAnswerersPeriodRequest) (*operations.GetTagsTagTopAnswerersPeriodResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-answerers/{period}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTagsTagTopAnswerersPeriodResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetTagsTagTopAskersPeriod - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
-//
-// This is a view onto the data presented on the tag info page on the sites.
-//
-// This method returns a list of tag score objects.
-func (s *SDK) GetTagsTagTopAskersPeriod(ctx context.Context, request operations.GetTagsTagTopAskersPeriodRequest) (*operations.GetTagsTagTopAskersPeriodResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-askers/{period}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTagsTagTopAskersPeriodResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
 // GetTagsTagsFaq - Returns the frequently asked questions for the given set of tags in {tags}.
 //
 // For a question to be returned, it must have all the tags in {tags} and be considered "frequently asked". The exact algorithm for determining whether a question is considered a FAQ is subject to change at any time.
@@ -5403,6 +5292,118 @@ func (s *SDK) GetTagsTagsWikis(ctx context.Context, request operations.GetTagsTa
 	return res, nil
 }
 
+// GetTagsTagTopAnswerersPeriod - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
+//
+// This is a view onto the data presented on the tag info page on the sites.
+//
+// This method returns a list of tag score objects.
+func (s *SDK) GetTagsTagTopAnswerersPeriod(ctx context.Context, request operations.GetTagsTagTopAnswerersPeriodRequest) (*operations.GetTagsTagTopAnswerersPeriodResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-answerers/{period}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTagsTagTopAnswerersPeriodResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetTagsTagTopAskersPeriod - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
+//
+// This is a view onto the data presented on the tag info page on the sites.
+//
+// This method returns a list of tag score objects.
+func (s *SDK) GetTagsTagTopAskersPeriod(ctx context.Context, request operations.GetTagsTagTopAskersPeriodRequest) (*operations.GetTagsTagTopAskersPeriodResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-askers/{period}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTagsTagTopAskersPeriodResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
 // GetUsers - Returns all users on a site.
 //
 // This method returns a list of users.
@@ -5472,371 +5473,27 @@ func (s *SDK) GetUsers(ctx context.Context, request operations.GetUsersRequest) 
 	return res, nil
 }
 
-// GetUsersIDInbox - Returns a user's inbox.
+// GetUsersModerators - Gets those users on a site who can exercise moderation powers.
 //
-// This method requires an access_token, with a scope containing "read_inbox".
+// Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
 //
-// This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
+// The sorts accepted by this method operate on the follow fields of the user object:
 //
-// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-//
-// This method returns a list of inbox items.
-func (s *SDK) GetUsersIDInbox(ctx context.Context, request operations.GetUsersIDInboxRequest) (*operations.GetUsersIDInboxResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDInboxResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDInboxUnread - Returns the unread items in a user's inbox.
-//
-// This method requires an access_token, with a scope containing "read_inbox".
-//
-// This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-//
-// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-//
-// This method returns a list of inbox items.
-func (s *SDK) GetUsersIDInboxUnread(ctx context.Context, request operations.GetUsersIDInboxUnreadRequest) (*operations.GetUsersIDInboxUnreadResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox/unread", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDInboxUnreadResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDNotifications - Returns a user's notifications.
-//
-// This method requires an access_token, with a scope containing "read_inbox".
-//
-// This method returns a list of notifications.
-func (s *SDK) GetUsersIDNotifications(ctx context.Context, request operations.GetUsersIDNotificationsRequest) (*operations.GetUsersIDNotificationsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDNotificationsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDNotificationsUnread - Returns a user's unread notifications.
-//
-// This method requires an access_token, with a scope containing "read_inbox".
-//
-// This method returns a list of notifications.
-func (s *SDK) GetUsersIDNotificationsUnread(ctx context.Context, request operations.GetUsersIDNotificationsUnreadRequest) (*operations.GetUsersIDNotificationsUnreadResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications/unread", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDNotificationsUnreadResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDPrivileges - Returns the privileges a user has.
-//
-// Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
-//
-// {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
-//
-// This method returns a list of privileges.
-func (s *SDK) GetUsersIDPrivileges(ctx context.Context, request operations.GetUsersIDPrivilegesRequest) (*operations.GetUsersIDPrivilegesResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/privileges", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDPrivilegesResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDReputationHistoryFull - Returns a user's full reputation history, including private events.
-//
-// This method requires an access_token, with a scope containing "private_info".
-//
-// This method returns a list of reputation_history.
-func (s *SDK) GetUsersIDReputationHistoryFull(ctx context.Context, request operations.GetUsersIDReputationHistoryFullRequest) (*operations.GetUsersIDReputationHistoryFullResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/reputation-history/full", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDReputationHistoryFullResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDTagsTagsTopAnswers - Returns the top 30 answers a user has posted in response to questions with the given tags.
-//
-// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
-//
-// The sorts accepted by this method operate on the follow fields of the answer object:
-//
-//   - activity - last_activity_date
+//   - reputation - reputation
 //
 //   - creation - creation_date
 //
-//   - votes - score
-//     activity is the default sort.
+//   - name - display_name
+//
+//   - modified - last_modified_date
+//     reputation is the default sort.
 //
 //     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 //
-// This method returns a list of answers.
-func (s *SDK) GetUsersIDTagsTagsTopAnswers(ctx context.Context, request operations.GetUsersIDTagsTagsTopAnswersRequest) (*operations.GetUsersIDTagsTagsTopAnswersResponse, error) {
+// This method returns a list of users.
+func (s *SDK) GetUsersModerators(ctx context.Context, request operations.GetUsersModeratorsRequest) (*operations.GetUsersModeratorsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-answers", request.PathParams)
+	url := strings.TrimSuffix(baseURL, "/") + "/users/moderators"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5855,7 +5512,7 @@ func (s *SDK) GetUsersIDTagsTagsTopAnswers(ctx context.Context, request operatio
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUsersIDTagsTagsTopAnswersResponse{
+	res := &operations.GetUsersModeratorsResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -5885,25 +5542,27 @@ func (s *SDK) GetUsersIDTagsTagsTopAnswers(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GetUsersIDTagsTagsTopQuestions - Returns the top 30 questions a user has asked with the given tags.
+// GetUsersModeratorsElected - Returns those users on a site who both have moderator powers, and were actually elected.
 //
-// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+// This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
 //
-// The sorts accepted by this method operate on the follow fields of the question object:
+// The sorts accepted by this method operate on the follow fields of the user object:
 //
-//   - activity - last_activity_date
+//   - reputation - reputation
 //
 //   - creation - creation_date
 //
-//   - votes - score
-//     activity is the default sort.
+//   - name - display_name
+//
+//   - modified - last_modified_date
+//     reputation is the default sort.
 //
 //     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 //
-// This method returns a list of questions.
-func (s *SDK) GetUsersIDTagsTagsTopQuestions(ctx context.Context, request operations.GetUsersIDTagsTagsTopQuestionsRequest) (*operations.GetUsersIDTagsTagsTopQuestionsResponse, error) {
+// This method returns a list of users.
+func (s *SDK) GetUsersModeratorsElected(ctx context.Context, request operations.GetUsersModeratorsElectedRequest) (*operations.GetUsersModeratorsElectedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-questions", request.PathParams)
+	url := strings.TrimSuffix(baseURL, "/") + "/users/moderators/elected"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5922,181 +5581,7 @@ func (s *SDK) GetUsersIDTagsTagsTopQuestions(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUsersIDTagsTagsTopQuestionsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDTopAnswerTags - Returns a single user's top tags by answer score.
-//
-// This a subset of the data returned on a user's tags tab.
-//
-// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-//
-// This method returns a list of top_tag objects.
-func (s *SDK) GetUsersIDTopAnswerTags(ctx context.Context, request operations.GetUsersIDTopAnswerTagsRequest) (*operations.GetUsersIDTopAnswerTagsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-answer-tags", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDTopAnswerTagsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDTopQuestionTags - Returns a single user's top tags by question score.
-//
-// This a subset of the data returned on a user's tags tab.
-//
-// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-//
-// This method returns a list of top_tag objects.
-func (s *SDK) GetUsersIDTopQuestionTags(ctx context.Context, request operations.GetUsersIDTopQuestionTagsRequest) (*operations.GetUsersIDTopQuestionTagsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-question-tags", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDTopQuestionTagsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 402:
-	case httpRes.StatusCode == 403:
-	case httpRes.StatusCode == 404:
-	case httpRes.StatusCode == 405:
-	case httpRes.StatusCode == 406:
-	case httpRes.StatusCode == 500:
-	case httpRes.StatusCode == 502:
-	case httpRes.StatusCode == 503:
-	}
-
-	return res, nil
-}
-
-// GetUsersIDWritePermissions - Returns the write permissions a user has via the api.
-//
-// The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
-//
-// This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
-//
-// This method returns a list of write_permissions.
-func (s *SDK) GetUsersIDWritePermissions(ctx context.Context, request operations.GetUsersIDWritePermissionsRequest) (*operations.GetUsersIDWritePermissionsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/write-permissions", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersIDWritePermissionsResponse{
+	res := &operations.GetUsersModeratorsElectedResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -7361,27 +6846,18 @@ func (s *SDK) GetUsersIdsTimeline(ctx context.Context, request operations.GetUse
 	return res, nil
 }
 
-// GetUsersModerators - Gets those users on a site who can exercise moderation powers.
+// GetUsersIDInbox - Returns a user's inbox.
 //
-// Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
+// This method requires an access_token, with a scope containing "read_inbox".
 //
-// The sorts accepted by this method operate on the follow fields of the user object:
+// This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
 //
-//   - reputation - reputation
+// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
 //
-//   - creation - creation_date
-//
-//   - name - display_name
-//
-//   - modified - last_modified_date
-//     reputation is the default sort.
-//
-//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-//
-// This method returns a list of users.
-func (s *SDK) GetUsersModerators(ctx context.Context, request operations.GetUsersModeratorsRequest) (*operations.GetUsersModeratorsResponse, error) {
+// This method returns a list of inbox items.
+func (s *SDK) GetUsersIDInbox(ctx context.Context, request operations.GetUsersIDInboxRequest) (*operations.GetUsersIDInboxResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/users/moderators"
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox", request.PathParams)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7400,7 +6876,7 @@ func (s *SDK) GetUsersModerators(ctx context.Context, request operations.GetUser
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUsersModeratorsResponse{
+	res := &operations.GetUsersIDInboxResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -7430,27 +6906,18 @@ func (s *SDK) GetUsersModerators(ctx context.Context, request operations.GetUser
 	return res, nil
 }
 
-// GetUsersModeratorsElected - Returns those users on a site who both have moderator powers, and were actually elected.
+// GetUsersIDInboxUnread - Returns the unread items in a user's inbox.
 //
-// This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
+// This method requires an access_token, with a scope containing "read_inbox".
 //
-// The sorts accepted by this method operate on the follow fields of the user object:
+// This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
 //
-//   - reputation - reputation
+// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
 //
-//   - creation - creation_date
-//
-//   - name - display_name
-//
-//   - modified - last_modified_date
-//     reputation is the default sort.
-//
-//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-//
-// This method returns a list of users.
-func (s *SDK) GetUsersModeratorsElected(ctx context.Context, request operations.GetUsersModeratorsElectedRequest) (*operations.GetUsersModeratorsElectedResponse, error) {
+// This method returns a list of inbox items.
+func (s *SDK) GetUsersIDInboxUnread(ctx context.Context, request operations.GetUsersIDInboxUnreadRequest) (*operations.GetUsersIDInboxUnreadResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/users/moderators/elected"
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox/unread", request.PathParams)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7469,7 +6936,541 @@ func (s *SDK) GetUsersModeratorsElected(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUsersModeratorsElectedResponse{
+	res := &operations.GetUsersIDInboxUnreadResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDNotifications - Returns a user's notifications.
+//
+// This method requires an access_token, with a scope containing "read_inbox".
+//
+// This method returns a list of notifications.
+func (s *SDK) GetUsersIDNotifications(ctx context.Context, request operations.GetUsersIDNotificationsRequest) (*operations.GetUsersIDNotificationsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDNotificationsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDNotificationsUnread - Returns a user's unread notifications.
+//
+// This method requires an access_token, with a scope containing "read_inbox".
+//
+// This method returns a list of notifications.
+func (s *SDK) GetUsersIDNotificationsUnread(ctx context.Context, request operations.GetUsersIDNotificationsUnreadRequest) (*operations.GetUsersIDNotificationsUnreadResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications/unread", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDNotificationsUnreadResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDPrivileges - Returns the privileges a user has.
+//
+// Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
+//
+// {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
+//
+// This method returns a list of privileges.
+func (s *SDK) GetUsersIDPrivileges(ctx context.Context, request operations.GetUsersIDPrivilegesRequest) (*operations.GetUsersIDPrivilegesResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/privileges", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDPrivilegesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDReputationHistoryFull - Returns a user's full reputation history, including private events.
+//
+// This method requires an access_token, with a scope containing "private_info".
+//
+// This method returns a list of reputation_history.
+func (s *SDK) GetUsersIDReputationHistoryFull(ctx context.Context, request operations.GetUsersIDReputationHistoryFullRequest) (*operations.GetUsersIDReputationHistoryFullResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/reputation-history/full", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDReputationHistoryFullResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDTagsTagsTopAnswers - Returns the top 30 answers a user has posted in response to questions with the given tags.
+//
+// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+//
+// The sorts accepted by this method operate on the follow fields of the answer object:
+//
+//   - activity - last_activity_date
+//
+//   - creation - creation_date
+//
+//   - votes - score
+//     activity is the default sort.
+//
+//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+//
+// This method returns a list of answers.
+func (s *SDK) GetUsersIDTagsTagsTopAnswers(ctx context.Context, request operations.GetUsersIDTagsTagsTopAnswersRequest) (*operations.GetUsersIDTagsTagsTopAnswersResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-answers", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDTagsTagsTopAnswersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDTagsTagsTopQuestions - Returns the top 30 questions a user has asked with the given tags.
+//
+// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+//
+// The sorts accepted by this method operate on the follow fields of the question object:
+//
+//   - activity - last_activity_date
+//
+//   - creation - creation_date
+//
+//   - votes - score
+//     activity is the default sort.
+//
+//     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+//
+// This method returns a list of questions.
+func (s *SDK) GetUsersIDTagsTagsTopQuestions(ctx context.Context, request operations.GetUsersIDTagsTagsTopQuestionsRequest) (*operations.GetUsersIDTagsTagsTopQuestionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-questions", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDTagsTagsTopQuestionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDTopAnswerTags - Returns a single user's top tags by answer score.
+//
+// This a subset of the data returned on a user's tags tab.
+//
+// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+//
+// This method returns a list of top_tag objects.
+func (s *SDK) GetUsersIDTopAnswerTags(ctx context.Context, request operations.GetUsersIDTopAnswerTagsRequest) (*operations.GetUsersIDTopAnswerTagsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-answer-tags", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDTopAnswerTagsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDTopQuestionTags - Returns a single user's top tags by question score.
+//
+// This a subset of the data returned on a user's tags tab.
+//
+// {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+//
+// This method returns a list of top_tag objects.
+func (s *SDK) GetUsersIDTopQuestionTags(ctx context.Context, request operations.GetUsersIDTopQuestionTagsRequest) (*operations.GetUsersIDTopQuestionTagsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-question-tags", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDTopQuestionTagsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 402:
+	case httpRes.StatusCode == 403:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 405:
+	case httpRes.StatusCode == 406:
+	case httpRes.StatusCode == 500:
+	case httpRes.StatusCode == 502:
+	case httpRes.StatusCode == 503:
+	}
+
+	return res, nil
+}
+
+// GetUsersIDWritePermissions - Returns the write permissions a user has via the api.
+//
+// The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
+//
+// This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
+//
+// This method returns a list of write_permissions.
+func (s *SDK) GetUsersIDWritePermissions(ctx context.Context, request operations.GetUsersIDWritePermissionsRequest) (*operations.GetUsersIDWritePermissionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/write-permissions", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsersIDWritePermissionsResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}

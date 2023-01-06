@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,26 +24,26 @@ func main() {
     
     req := operations.GetAssociationFilterRequest{
         QueryParams: operations.GetAssociationFilterQueryParams{
-            Datasource: "officiis",
-            Datastructure: "dolorem",
-            Datatype: "qui",
-            Direct: true,
-            Disease: "dolor",
-            Facets: true,
-            Fields: "ab",
-            Format: "nam",
-            From: 14.100000,
-            Pathway: "id",
-            ScorevalueMax: 66.099998,
-            ScorevalueMin: 34.200001,
-            ScorevalueTypes: "dolore",
-            Search: "occaecati",
-            Size: 15.100000,
-            Sort: "ipsum",
-            Target: "et",
-            TargetClass: "quia",
-            TherapeuticArea: "fugit",
-            Uniprotkw: "nulla",
+            Datasource: "quia",
+            Datastructure: "veritatis",
+            Datatype: "magnam",
+            Direct: false,
+            Disease: "et",
+            Facets: false,
+            Fields: "dolorem",
+            Format: "asperiores",
+            From: 83.099998,
+            Pathway: "sed",
+            ScorevalueMax: 62.099998,
+            ScorevalueMin: 36.200001,
+            ScorevalueTypes: "debitis",
+            Search: "quod",
+            Size: 92.199997,
+            Sort: "esse",
+            Target: "rerum",
+            TargetClass: "tenetur",
+            TherapeuticArea: "distinctio",
+            Uniprotkw: "quis",
         },
     }
     

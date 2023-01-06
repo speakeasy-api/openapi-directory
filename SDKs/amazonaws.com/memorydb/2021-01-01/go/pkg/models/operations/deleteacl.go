@@ -7,7 +7,7 @@ import (
 type DeleteAclxAmzTargetEnum string
 
 const (
-	DeleteAclxAmzTargetEnumAmazonMemoryDbDeleteACL DeleteAclxAmzTargetEnum = "AmazonMemoryDB.DeleteACL"
+	DeleteACLXAmzTargetEnumAmazonMemoryDbDeleteACL DeleteAclxAmzTargetEnum = "AmazonMemoryDB.DeleteACL"
 )
 
 type DeleteACLHeaders struct {

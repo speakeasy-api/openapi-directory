@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.DeleteBinIDRequest{
         PathParams: operations.DeleteBinIDPathParams{
-            ID: "temporibus",
+            ID: "totam",
         },
     }
     
-    res, err := s.Sdk.DeleteBinID(ctx, req)
+    res, err := s.DeleteBinID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

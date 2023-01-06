@@ -22,13 +22,13 @@ type CreateComputeEnvironmentRequestBodyComputeResources struct {
 	DesiredvCpus       *int64                              `json:"desiredvCpus,omitempty"`
 	Ec2Configuration   []shared.Ec2Configuration           `json:"ec2Configuration,omitempty"`
 	Ec2KeyPair         *string                             `json:"ec2KeyPair,omitempty"`
-	ImageID            *string                             `json:"imageId,omitempty"`
+	ImageID            map[string]interface{}              `json:"imageId,omitempty"`
 	InstanceRole       *string                             `json:"instanceRole,omitempty"`
 	InstanceTypes      []string                            `json:"instanceTypes,omitempty"`
 	LaunchTemplate     *shared.LaunchTemplateSpecification `json:"launchTemplate,omitempty"`
 	MaxvCpus           *int64                              `json:"maxvCpus,omitempty"`
 	MinvCpus           *int64                              `json:"minvCpus,omitempty"`
-	PlacementGroup     *string                             `json:"placementGroup,omitempty"`
+	PlacementGroup     map[string]interface{}              `json:"placementGroup,omitempty"`
 	SecurityGroupIds   []string                            `json:"securityGroupIds,omitempty"`
 	SpotIamFleetRole   *string                             `json:"spotIamFleetRole,omitempty"`
 	Subnets            []string                            `json:"subnets,omitempty"`

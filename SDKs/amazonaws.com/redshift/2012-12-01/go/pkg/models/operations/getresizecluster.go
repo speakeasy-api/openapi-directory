@@ -3,13 +3,13 @@ package operations
 type GetResizeClusterActionEnum string
 
 const (
-	GetResizeClusterActionEnumResizeCluster GetResizeClusterActionEnum = "ResizeCluster"
+	GETResizeClusterActionEnumResizeCluster GetResizeClusterActionEnum = "ResizeCluster"
 )
 
 type GetResizeClusterVersionEnum string
 
 const (
-	GetResizeClusterVersionEnumTwoThousandAndTwelve1201 GetResizeClusterVersionEnum = "2012-12-01"
+	GETResizeClusterVersionEnumTwoThousandAndTwelve1201 GetResizeClusterVersionEnum = "2012-12-01"
 )
 
 type GetResizeClusterQueryParams struct {

@@ -6,8 +6,8 @@ import (
 
 type SsmgrRequestBodyCertificateParameters struct {
 	FullName string `json:"FullName"`
-	Rroll    string `json:"RROLL"`
-	Year     string `json:"YEAR"`
+	RROLL    string `json:"RROLL"`
+	YEAR     string `json:"YEAR"`
 }
 
 type SsmgrRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Ssmgr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Ssmgr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Ssmgr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Ssmgr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Ssmgr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Ssmgr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ssmgr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Ssmgr404ApplicationJSON struct {

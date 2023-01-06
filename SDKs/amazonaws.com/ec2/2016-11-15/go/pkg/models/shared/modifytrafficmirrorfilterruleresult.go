@@ -1,5 +1,5 @@
 package shared
 
 type ModifyTrafficMirrorFilterRuleResult struct {
-	TrafficMirrorFilterRule *TrafficMirrorFilterRule
+	TrafficMirrorFilterRule map[string]interface{}
 }

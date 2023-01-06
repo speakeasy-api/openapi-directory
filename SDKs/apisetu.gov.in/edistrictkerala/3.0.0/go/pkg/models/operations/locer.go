@@ -83,7 +83,7 @@ type Locer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Locer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Locer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Locer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Locer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Locer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Locer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Locer404ApplicationJSON struct {

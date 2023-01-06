@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -42,7 +41,7 @@ func main() {
         },
     }
     
-    res, err := s.Sdk.GetAuth(ctx, req)
+    res, err := s.Auth.GetAuth(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,10 +55,20 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### auth
 
 * `GetAuth` - Request a JWT access token using your obono username and password.
+
+### beleg
+
+* `AddBeleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
+* `CreateAbschluss` - Generates an `Abschlussbeleg`.
+* `GetBeleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+* `GetBelege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
 * `GetBelegeBelegUUID` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+
+### export
+
 * `GetExportCsvRegistrierkassenRegistrierkasseUUIDBelege`
 * `GetExportDep131RegistrierkassenRegistrierkasseUUIDBelege`
 * `GetExportDep7RegistrierkassenRegistrierkasseUUIDBelege`
@@ -69,12 +78,14 @@ func main() {
 * `GetExportQrBelegeBelegUUID`
 * `GetExportThermalPrintBelegeBelegUUID`
 * `GetExportXlsRegistrierkassenRegistrierkasseUUIDBelege`
-* `AddBeleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
-* `CreateAbschluss` - Generates an `Abschlussbeleg`.
-* `GetBeleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
-* `GetBelege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
-* `GetDep` - Generates a DEP file.
+
+### monatsbelege
+
 * `GetMonatsbelege` - Returns a list of `Monatsbelege`.
+
+### registrierkasse
+
+* `GetDep` - Generates a DEP file.
 * `GetRegistrierkasse` - Returns information about a particular `Registrierkasse`.
 
 <!-- End SDK Available Operations -->

@@ -1,6 +1,6 @@
 package shared
 
 type GetTransitGatewayPrefixListReferencesResult struct {
-	NextToken                          *string
-	TransitGatewayPrefixListReferences []TransitGatewayPrefixListReference
+	NextToken                          map[string]interface{}
+	TransitGatewayPrefixListReferences map[string]interface{}
 }

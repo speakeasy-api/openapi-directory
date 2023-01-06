@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,31 +26,32 @@ func main() {
         Security: operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.MemcacheProjectsLocationsInstancesApplyParametersPathParams{
-            Name: "ullam",
+            Name: "et",
         },
         QueryParams: operations.MemcacheProjectsLocationsInstancesApplyParametersQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "laborum",
+            DollarXgafv: "1",
+            AccessToken: "nobis",
             Alt: "media",
-            Callback: "rerum",
-            Fields: "explicabo",
-            Key: "unde",
-            OauthToken: "ea",
-            PrettyPrint: true,
-            QuotaUser: "omnis",
-            UploadType: "voluptatem",
-            UploadProtocol: "et",
+            Callback: "animi",
+            Fields: "tempora",
+            Key: "maxime",
+            OauthToken: "aut",
+            PrettyPrint: false,
+            QuotaUser: "non",
+            UploadType: "eligendi",
+            UploadProtocol: "velit",
         },
         Request: &shared.ApplyParametersRequest{
             ApplyAll: true,
             NodeIds: []string{
-                "deleniti",
+                "blanditiis",
+                "amet",
             },
         },
     }

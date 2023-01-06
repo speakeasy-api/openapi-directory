@@ -1,6 +1,6 @@
 package shared
 
 type DescribeInstancesResult struct {
-	NextToken    *string
-	Reservations []Reservation
+	NextToken    map[string]interface{}
+	Reservations map[string]interface{}
 }

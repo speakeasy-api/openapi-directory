@@ -3,5 +3,5 @@ package shared
 // TagListMessage
 // <p/>
 type TagListMessage struct {
-	TagList []Tag
+	TagList []map[string]interface{}
 }

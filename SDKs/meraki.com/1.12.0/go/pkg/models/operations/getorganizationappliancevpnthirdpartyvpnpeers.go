@@ -11,5 +11,5 @@ type GetOrganizationApplianceVpnThirdPartyVpnPeersRequest struct {
 type GetOrganizationApplianceVpnThirdPartyVpnPeersResponse struct {
 	ContentType                                                           string
 	StatusCode                                                            int64
-	GetOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJSONObject map[string]interface{}
+	GetOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject map[string]interface{}
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,27 @@ func main() {
     
     req := operations.AcceptEulasRequest{
         PathParams: operations.AcceptEulasPathParams{
-            StudioID: "animi",
+            StudioID: "qui",
         },
         Headers: operations.AcceptEulasHeaders{
-            XAmzAlgorithm: "rerum",
-            XAmzClientToken: "sit",
-            XAmzContentSha256: "et",
-            XAmzCredential: "minima",
-            XAmzDate: "eos",
-            XAmzSecurityToken: "accusantium",
-            XAmzSignature: "minima",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "vel",
+            XAmzClientToken: "odio",
+            XAmzContentSha256: "ipsum",
+            XAmzCredential: "in",
+            XAmzDate: "dolorem",
+            XAmzSecurityToken: "neque",
+            XAmzSignature: "sint",
+            XAmzSignedHeaders: "non",
         },
         Request: operations.AcceptEulasRequestBody{
             EulaIds: []string{
-                "est",
+                "debitis",
+                "in",
             },
         },
     }
     
-    res, err := s.Sdk.AcceptEulas(ctx, req)
+    res, err := s.AcceptEulas(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -4,6 +4,6 @@ package shared
 //
 //	Information about metrics summaries.
 type MetricsSummary struct {
-	FindingsCount           *int64 `json:"FindingsCount,omitempty"`
-	MeteredLinesOfCodeCount *int64 `json:"MeteredLinesOfCodeCount,omitempty"`
+	FindingsCount           map[string]interface{} `json:"FindingsCount,omitempty"`
+	MeteredLinesOfCodeCount *int64                 `json:"MeteredLinesOfCodeCount,omitempty"`
 }

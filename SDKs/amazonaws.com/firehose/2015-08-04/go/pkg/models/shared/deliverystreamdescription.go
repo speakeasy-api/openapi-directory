@@ -8,7 +8,7 @@ import (
 // Contains information about a delivery stream.
 type DeliveryStreamDescription struct {
 	CreateTimestamp                       *time.Time                             `json:"CreateTimestamp,omitempty"`
-	DeliveryStreamArn                     string                                 `json:"DeliveryStreamARN"`
+	DeliveryStreamARN                     string                                 `json:"DeliveryStreamARN"`
 	DeliveryStreamEncryptionConfiguration *DeliveryStreamEncryptionConfiguration `json:"DeliveryStreamEncryptionConfiguration,omitempty"`
 	DeliveryStreamName                    string                                 `json:"DeliveryStreamName"`
 	DeliveryStreamStatus                  DeliveryStreamStatusEnum               `json:"DeliveryStreamStatus"`

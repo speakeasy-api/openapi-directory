@@ -3,13 +3,13 @@ package operations
 type PostDeleteLoginProfileActionEnum string
 
 const (
-	PostDeleteLoginProfileActionEnumDeleteLoginProfile PostDeleteLoginProfileActionEnum = "DeleteLoginProfile"
+	POSTDeleteLoginProfileActionEnumDeleteLoginProfile PostDeleteLoginProfileActionEnum = "DeleteLoginProfile"
 )
 
 type PostDeleteLoginProfileVersionEnum string
 
 const (
-	PostDeleteLoginProfileVersionEnumTwoThousandAndTen0508 PostDeleteLoginProfileVersionEnum = "2010-05-08"
+	POSTDeleteLoginProfileVersionEnumTwoThousandAndTen0508 PostDeleteLoginProfileVersionEnum = "2010-05-08"
 )
 
 type PostDeleteLoginProfileQueryParams struct {

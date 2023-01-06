@@ -36,8 +36,8 @@ type AppendTextUsingPostRequest struct {
 type AppendTextUsingPostResponse struct {
 	ContentType                                 string
 	StatusCode                                  int64
-	AppendTextUsingPost200ApplicationJSONObject *AppendTextUsingPost200ApplicationJSON
-	AppendTextUsingPost400ApplicationJSONObject *AppendTextUsingPost400ApplicationJSON
-	AppendTextUsingPost401ApplicationJSONObject *AppendTextUsingPost401ApplicationJSON
-	AppendTextUsingPost500ApplicationJSONObject *AppendTextUsingPost500ApplicationJSON
+	AppendTextUsingPOST200ApplicationJSONObject *AppendTextUsingPost200ApplicationJSON
+	AppendTextUsingPOST400ApplicationJSONObject *AppendTextUsingPost400ApplicationJSON
+	AppendTextUsingPOST401ApplicationJSONObject *AppendTextUsingPost401ApplicationJSON
+	AppendTextUsingPOST500ApplicationJSONObject *AppendTextUsingPost500ApplicationJSON
 }

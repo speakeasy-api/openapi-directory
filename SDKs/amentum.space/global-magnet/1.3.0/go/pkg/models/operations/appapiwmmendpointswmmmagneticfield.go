@@ -49,5 +49,5 @@ type AppAPIWmmEndpointsWmmMagneticFieldRequest struct {
 type AppAPIWmmEndpointsWmmMagneticFieldResponse struct {
 	ContentType                                                string
 	StatusCode                                                 int64
-	AppAPIWmmEndpointsWmmMagneticField200ApplicationJSONObject *AppAPIWmmEndpointsWmmMagneticField200ApplicationJSON
+	AppAPIWMMEndpointsWMMMagneticField200ApplicationJSONObject *AppAPIWmmEndpointsWmmMagneticField200ApplicationJSON
 }

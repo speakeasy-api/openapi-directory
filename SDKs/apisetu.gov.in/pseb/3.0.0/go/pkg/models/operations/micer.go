@@ -84,7 +84,7 @@ type Micer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Micer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Micer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Micer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Micer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Micer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Micer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Micer404ApplicationJSON struct {

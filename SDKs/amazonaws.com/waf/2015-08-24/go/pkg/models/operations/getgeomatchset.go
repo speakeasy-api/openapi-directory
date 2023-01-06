@@ -30,7 +30,7 @@ type GetGeoMatchSetResponse struct {
 	ContentType                 string
 	GetGeoMatchSetResponse      *shared.GetGeoMatchSetResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

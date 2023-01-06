@@ -18,7 +18,7 @@ type GetAPIV2ListFederationsRequest struct {
 
 type GetAPIV2ListFederationsResponse struct {
 	ContentType                                     string
+	StatusCode                                      int64
 	GetAPIV2ListFederations200ApplicationJSONObject *GetAPIV2ListFederations200ApplicationJSON
 	GetAPIV2ListFederations404ApplicationJSONObject *GetAPIV2ListFederations404ApplicationJSON
-	StatusCode                                      int64
 }

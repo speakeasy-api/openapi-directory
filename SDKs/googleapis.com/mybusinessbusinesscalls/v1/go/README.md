@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,23 +24,23 @@ func main() {
     
     req := operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest{
         PathParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams{
-            Parent: "doloremque",
+            Parent: "ut",
         },
         QueryParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "ipsa",
-            Alt: "media",
-            Callback: "dicta",
-            Fields: "beatae",
-            Filter: "nobis",
-            Key: "unde",
-            OauthToken: "libero",
-            PageSize: 5842434634942384727,
-            PageToken: "rerum",
-            PrettyPrint: false,
-            QuotaUser: "omnis",
-            UploadType: "enim",
-            UploadProtocol: "libero",
+            DollarXgafv: "2",
+            AccessToken: "atque",
+            Alt: "proto",
+            Callback: "in",
+            Fields: "et",
+            Filter: "dolore",
+            Key: "quia",
+            OauthToken: "laboriosam",
+            PageSize: 7111439703266160038,
+            PageToken: "delectus",
+            PrettyPrint: true,
+            QuotaUser: "quas",
+            UploadType: "quidem",
+            UploadProtocol: "eum",
         },
     }
     

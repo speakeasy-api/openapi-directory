@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,7 +34,7 @@ func main() {
     
     req := operations.DeleteSigninSigninIDRequest{
         PathParams: operations.DeleteSigninSigninIDPathParams{
-            SigninID: 4749040620526837782,
+            SigninID: 4469698529398220169,
         },
     }
     

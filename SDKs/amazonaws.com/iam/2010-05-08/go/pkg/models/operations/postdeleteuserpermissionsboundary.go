@@ -3,13 +3,13 @@ package operations
 type PostDeleteUserPermissionsBoundaryActionEnum string
 
 const (
-	PostDeleteUserPermissionsBoundaryActionEnumDeleteUserPermissionsBoundary PostDeleteUserPermissionsBoundaryActionEnum = "DeleteUserPermissionsBoundary"
+	POSTDeleteUserPermissionsBoundaryActionEnumDeleteUserPermissionsBoundary PostDeleteUserPermissionsBoundaryActionEnum = "DeleteUserPermissionsBoundary"
 )
 
 type PostDeleteUserPermissionsBoundaryVersionEnum string
 
 const (
-	PostDeleteUserPermissionsBoundaryVersionEnumTwoThousandAndTen0508 PostDeleteUserPermissionsBoundaryVersionEnum = "2010-05-08"
+	POSTDeleteUserPermissionsBoundaryVersionEnumTwoThousandAndTen0508 PostDeleteUserPermissionsBoundaryVersionEnum = "2010-05-08"
 )
 
 type PostDeleteUserPermissionsBoundaryQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateAssessmentReportEvidenceFolderRequest{
         PathParams: operations.AssociateAssessmentReportEvidenceFolderPathParams{
-            AssessmentID: "quo",
+            AssessmentID: "cum",
         },
         Headers: operations.AssociateAssessmentReportEvidenceFolderHeaders{
-            XAmzAlgorithm: "minus",
-            XAmzContentSha256: "facilis",
-            XAmzCredential: "facilis",
-            XAmzDate: "officia",
-            XAmzSecurityToken: "vel",
-            XAmzSignature: "magni",
-            XAmzSignedHeaders: "saepe",
+            XAmzAlgorithm: "hic",
+            XAmzContentSha256: "qui",
+            XAmzCredential: "cum",
+            XAmzDate: "facilis",
+            XAmzSecurityToken: "consequatur",
+            XAmzSignature: "molestiae",
+            XAmzSignedHeaders: "laudantium",
         },
         Request: operations.AssociateAssessmentReportEvidenceFolderRequestBody{
-            EvidenceFolderID: "ut",
+            EvidenceFolderID: "tempore",
         },
     }
     
-    res, err := s.Sdk.AssociateAssessmentReportEvidenceFolder(ctx, req)
+    res, err := s.AssociateAssessmentReportEvidenceFolder(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

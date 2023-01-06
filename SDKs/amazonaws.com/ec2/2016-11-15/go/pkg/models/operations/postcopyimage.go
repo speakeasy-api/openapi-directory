@@ -3,13 +3,13 @@ package operations
 type PostCopyImageActionEnum string
 
 const (
-	PostCopyImageActionEnumCopyImage PostCopyImageActionEnum = "CopyImage"
+	POSTCopyImageActionEnumCopyImage PostCopyImageActionEnum = "CopyImage"
 )
 
 type PostCopyImageVersionEnum string
 
 const (
-	PostCopyImageVersionEnumTwoThousandAndSixteen1115 PostCopyImageVersionEnum = "2016-11-15"
+	POSTCopyImageVersionEnumTwoThousandAndSixteen1115 PostCopyImageVersionEnum = "2016-11-15"
 )
 
 type PostCopyImageQueryParams struct {

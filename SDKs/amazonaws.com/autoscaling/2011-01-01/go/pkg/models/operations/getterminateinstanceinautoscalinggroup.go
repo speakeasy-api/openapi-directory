@@ -3,13 +3,13 @@ package operations
 type GetTerminateInstanceInAutoScalingGroupActionEnum string
 
 const (
-	GetTerminateInstanceInAutoScalingGroupActionEnumTerminateInstanceInAutoScalingGroup GetTerminateInstanceInAutoScalingGroupActionEnum = "TerminateInstanceInAutoScalingGroup"
+	GETTerminateInstanceInAutoScalingGroupActionEnumTerminateInstanceInAutoScalingGroup GetTerminateInstanceInAutoScalingGroupActionEnum = "TerminateInstanceInAutoScalingGroup"
 )
 
 type GetTerminateInstanceInAutoScalingGroupVersionEnum string
 
 const (
-	GetTerminateInstanceInAutoScalingGroupVersionEnumTwoThousandAndEleven0101 GetTerminateInstanceInAutoScalingGroupVersionEnum = "2011-01-01"
+	GETTerminateInstanceInAutoScalingGroupVersionEnumTwoThousandAndEleven0101 GetTerminateInstanceInAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
 type GetTerminateInstanceInAutoScalingGroupQueryParams struct {

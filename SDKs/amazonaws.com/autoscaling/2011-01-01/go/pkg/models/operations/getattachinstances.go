@@ -3,13 +3,13 @@ package operations
 type GetAttachInstancesActionEnum string
 
 const (
-	GetAttachInstancesActionEnumAttachInstances GetAttachInstancesActionEnum = "AttachInstances"
+	GETAttachInstancesActionEnumAttachInstances GetAttachInstancesActionEnum = "AttachInstances"
 )
 
 type GetAttachInstancesVersionEnum string
 
 const (
-	GetAttachInstancesVersionEnumTwoThousandAndEleven0101 GetAttachInstancesVersionEnum = "2011-01-01"
+	GETAttachInstancesVersionEnumTwoThousandAndEleven0101 GetAttachInstancesVersionEnum = "2011-01-01"
 )
 
 type GetAttachInstancesQueryParams struct {

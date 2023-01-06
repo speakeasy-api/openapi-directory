@@ -9,8 +9,8 @@ type SamplingRule struct {
 	Host          string            `json:"Host"`
 	Priority      int64             `json:"Priority"`
 	ReservoirSize int64             `json:"ReservoirSize"`
-	ResourceArn   string            `json:"ResourceARN"`
-	RuleArn       *string           `json:"RuleARN,omitempty"`
+	ResourceARN   string            `json:"ResourceARN"`
+	RuleARN       *string           `json:"RuleARN,omitempty"`
 	RuleName      *string           `json:"RuleName,omitempty"`
 	ServiceName   string            `json:"ServiceName"`
 	ServiceType   string            `json:"ServiceType"`

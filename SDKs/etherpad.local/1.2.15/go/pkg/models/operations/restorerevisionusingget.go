@@ -36,8 +36,8 @@ type RestoreRevisionUsingGetRequest struct {
 type RestoreRevisionUsingGetResponse struct {
 	ContentType                                     string
 	StatusCode                                      int64
-	RestoreRevisionUsingGet200ApplicationJSONObject *RestoreRevisionUsingGet200ApplicationJSON
-	RestoreRevisionUsingGet400ApplicationJSONObject *RestoreRevisionUsingGet400ApplicationJSON
-	RestoreRevisionUsingGet401ApplicationJSONObject *RestoreRevisionUsingGet401ApplicationJSON
-	RestoreRevisionUsingGet500ApplicationJSONObject *RestoreRevisionUsingGet500ApplicationJSON
+	RestoreRevisionUsingGET200ApplicationJSONObject *RestoreRevisionUsingGet200ApplicationJSON
+	RestoreRevisionUsingGET400ApplicationJSONObject *RestoreRevisionUsingGet400ApplicationJSON
+	RestoreRevisionUsingGET401ApplicationJSONObject *RestoreRevisionUsingGet401ApplicationJSON
+	RestoreRevisionUsingGET500ApplicationJSONObject *RestoreRevisionUsingGet500ApplicationJSON
 }

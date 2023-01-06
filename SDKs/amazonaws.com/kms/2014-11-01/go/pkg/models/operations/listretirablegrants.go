@@ -31,7 +31,7 @@ type ListRetirableGrantsResponse struct {
 	DependencyTimeoutException *interface{}
 	InvalidArnException        *interface{}
 	InvalidMarkerException     *interface{}
-	KmsInternalException       *interface{}
+	KMSInternalException       *interface{}
 	ListGrantsResponse         *shared.ListGrantsResponse
 	NotFoundException          *interface{}
 	StatusCode                 int64

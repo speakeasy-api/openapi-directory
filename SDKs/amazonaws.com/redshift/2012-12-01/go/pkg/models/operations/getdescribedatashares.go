@@ -3,13 +3,13 @@ package operations
 type GetDescribeDataSharesActionEnum string
 
 const (
-	GetDescribeDataSharesActionEnumDescribeDataShares GetDescribeDataSharesActionEnum = "DescribeDataShares"
+	GETDescribeDataSharesActionEnumDescribeDataShares GetDescribeDataSharesActionEnum = "DescribeDataShares"
 )
 
 type GetDescribeDataSharesVersionEnum string
 
 const (
-	GetDescribeDataSharesVersionEnumTwoThousandAndTwelve1201 GetDescribeDataSharesVersionEnum = "2012-12-01"
+	GETDescribeDataSharesVersionEnumTwoThousandAndTwelve1201 GetDescribeDataSharesVersionEnum = "2012-12-01"
 )
 
 type GetDescribeDataSharesQueryParams struct {

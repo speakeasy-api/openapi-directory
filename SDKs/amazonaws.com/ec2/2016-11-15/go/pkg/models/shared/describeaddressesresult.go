@@ -1,5 +1,5 @@
 package shared
 
 type DescribeAddressesResult struct {
-	Addresses []Address
+	Addresses map[string]interface{}
 }

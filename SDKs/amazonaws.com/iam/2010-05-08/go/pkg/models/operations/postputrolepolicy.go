@@ -3,13 +3,13 @@ package operations
 type PostPutRolePolicyActionEnum string
 
 const (
-	PostPutRolePolicyActionEnumPutRolePolicy PostPutRolePolicyActionEnum = "PutRolePolicy"
+	POSTPutRolePolicyActionEnumPutRolePolicy PostPutRolePolicyActionEnum = "PutRolePolicy"
 )
 
 type PostPutRolePolicyVersionEnum string
 
 const (
-	PostPutRolePolicyVersionEnumTwoThousandAndTen0508 PostPutRolePolicyVersionEnum = "2010-05-08"
+	POSTPutRolePolicyVersionEnumTwoThousandAndTen0508 PostPutRolePolicyVersionEnum = "2010-05-08"
 )
 
 type PostPutRolePolicyQueryParams struct {

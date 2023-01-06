@@ -1,6 +1,6 @@
 package shared
 
 type GetTransitGatewayRouteTableAssociationsResult struct {
-	Associations []TransitGatewayRouteTableAssociation
-	NextToken    *string
+	Associations map[string]interface{}
+	NextToken    map[string]interface{}
 }

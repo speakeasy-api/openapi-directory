@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -29,10 +28,10 @@ func main() {
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "unde",
+        Request: "aut",
     }
     
-    res, err := s.Sdk.PostTransfers(ctx, req)
+    res, err := s.General.PostTransfers(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,7 +45,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `PostTransfers` - Transfer funds.
 

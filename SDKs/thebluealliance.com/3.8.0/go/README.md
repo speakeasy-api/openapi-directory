@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -34,7 +33,7 @@ func main() {
         },
     }
     
-    res, err := s.Tba.GetStatus(ctx, req)
+    res, err := s.TBA.GetStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

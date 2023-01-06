@@ -30,7 +30,7 @@ type ListActivatedRulesInRuleGroupResponse struct {
 	ContentType                           string
 	ListActivatedRulesInRuleGroupResponse *shared.ListActivatedRulesInRuleGroupResponse
 	StatusCode                            int64
-	WafInternalErrorException             *interface{}
-	WafInvalidParameterException          *interface{}
-	WafNonexistentItemException           *interface{}
+	WAFInternalErrorException             *interface{}
+	WAFInvalidParameterException          *interface{}
+	WAFNonexistentItemException           *interface{}
 }

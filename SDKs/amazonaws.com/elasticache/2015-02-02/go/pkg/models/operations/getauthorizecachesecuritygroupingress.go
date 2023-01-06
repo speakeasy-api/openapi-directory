@@ -3,13 +3,13 @@ package operations
 type GetAuthorizeCacheSecurityGroupIngressActionEnum string
 
 const (
-	GetAuthorizeCacheSecurityGroupIngressActionEnumAuthorizeCacheSecurityGroupIngress GetAuthorizeCacheSecurityGroupIngressActionEnum = "AuthorizeCacheSecurityGroupIngress"
+	GETAuthorizeCacheSecurityGroupIngressActionEnumAuthorizeCacheSecurityGroupIngress GetAuthorizeCacheSecurityGroupIngressActionEnum = "AuthorizeCacheSecurityGroupIngress"
 )
 
 type GetAuthorizeCacheSecurityGroupIngressVersionEnum string
 
 const (
-	GetAuthorizeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202 GetAuthorizeCacheSecurityGroupIngressVersionEnum = "2015-02-02"
+	GETAuthorizeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202 GetAuthorizeCacheSecurityGroupIngressVersionEnum = "2015-02-02"
 )
 
 type GetAuthorizeCacheSecurityGroupIngressQueryParams struct {

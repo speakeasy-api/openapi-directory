@@ -35,7 +35,7 @@ type UpdateDeploymentGroupResponse struct {
 	DeploymentGroupAlreadyExistsException            *interface{}
 	DeploymentGroupDoesNotExistException             *interface{}
 	DeploymentGroupNameRequiredException             *interface{}
-	EcsServiceMappingLimitExceededException          *interface{}
+	ECSServiceMappingLimitExceededException          *interface{}
 	InvalidAlarmConfigException                      *interface{}
 	InvalidApplicationNameException                  *interface{}
 	InvalidAutoRollbackConfigException               *interface{}
@@ -46,7 +46,7 @@ type UpdateDeploymentGroupResponse struct {
 	InvalidDeploymentStyleException                  *interface{}
 	InvalidEc2TagCombinationException                *interface{}
 	InvalidEc2TagException                           *interface{}
-	InvalidEcsServiceException                       *interface{}
+	InvalidECSServiceException                       *interface{}
 	InvalidInputException                            *interface{}
 	InvalidLoadBalancerInfoException                 *interface{}
 	InvalidOnPremisesTagCombinationException         *interface{}

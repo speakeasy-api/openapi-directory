@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,21 +35,21 @@ func main() {
     req := operations.GetDecodeAuthorizationMessageRequest{
         QueryParams: operations.GetDecodeAuthorizationMessageQueryParams{
             Action: "DecodeAuthorizationMessage",
-            EncodedMessage: "nobis",
+            EncodedMessage: "saepe",
             Version: "2011-06-15",
         },
         Headers: operations.GetDecodeAuthorizationMessageHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "et",
-            XAmzCredential: "aut",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "laudantium",
-            XAmzSignature: "soluta",
+            XAmzAlgorithm: "dignissimos",
+            XAmzContentSha256: "rerum",
+            XAmzCredential: "et",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "occaecati",
+            XAmzSignature: "eum",
             XAmzSignedHeaders: "ut",
         },
     }
     
-    res, err := s.Sdk.GetDecodeAuthorizationMessage(ctx, req)
+    res, err := s.GetDecodeAuthorizationMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

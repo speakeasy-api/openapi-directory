@@ -7,8 +7,8 @@ import (
 type ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalScheduledConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteInternationalScheduledConsent5DataAuthorisation
@@ -55,9 +55,9 @@ type ObWriteInternationalScheduledConsent5DataInitiationDebtorAccount struct {
 type ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum string
 
 const (
-	ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
-	ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
-	ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
+	OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnumActual     ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Actual"
+	OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnumAgreed     ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Agreed"
+	OBWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnumIndicative ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
 // ObWriteInternationalScheduledConsent5DataInitiationExchangeRateInformation
@@ -80,8 +80,8 @@ type ObWriteInternationalScheduledConsent5DataInitiationInstructedAmount struct 
 type ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnum string
 
 const (
-	ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnumNormal ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnum = "Normal"
-	ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnum = "Urgent"
+	OBWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnumNormal ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnum = "Normal"
+	OBWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnumUrgent ObWriteInternationalScheduledConsent5DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
 // ObWriteInternationalScheduledConsent5DataInitiationRemittanceInformation
@@ -117,14 +117,14 @@ type ObWriteInternationalScheduledConsent5DataInitiation struct {
 type ObWriteInternationalScheduledConsent5DataPermissionEnum string
 
 const (
-	ObWriteInternationalScheduledConsent5DataPermissionEnumCreate ObWriteInternationalScheduledConsent5DataPermissionEnum = "Create"
+	OBWriteInternationalScheduledConsent5DataPermissionEnumCreate ObWriteInternationalScheduledConsent5DataPermissionEnum = "Create"
 )
 
 type ObWriteInternationalScheduledConsent5DataReadRefundAccountEnum string
 
 const (
-	ObWriteInternationalScheduledConsent5DataReadRefundAccountEnumNo  ObWriteInternationalScheduledConsent5DataReadRefundAccountEnum = "No"
-	ObWriteInternationalScheduledConsent5DataReadRefundAccountEnumYes ObWriteInternationalScheduledConsent5DataReadRefundAccountEnum = "Yes"
+	OBWriteInternationalScheduledConsent5DataReadRefundAccountEnumNo  ObWriteInternationalScheduledConsent5DataReadRefundAccountEnum = "No"
+	OBWriteInternationalScheduledConsent5DataReadRefundAccountEnumYes ObWriteInternationalScheduledConsent5DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteInternationalScheduledConsent5Data struct {
@@ -132,7 +132,7 @@ type ObWriteInternationalScheduledConsent5Data struct {
 	Initiation        ObWriteInternationalScheduledConsent5DataInitiation             `json:"Initiation"`
 	Permission        ObWriteInternationalScheduledConsent5DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount *ObWriteInternationalScheduledConsent5DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData    *ObscaSupportData1                                              `json:"SCASupportData,omitempty"`
+	SCASupportData    *ObscaSupportData1                                              `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteInternationalScheduledConsent5 struct {

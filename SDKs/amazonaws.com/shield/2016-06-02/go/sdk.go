@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -131,7 +132,7 @@ func (s *SDK) AssociateDrtLogBucket(ctx context.Context, request operations.Asso
 				return nil, err
 			}
 
-			res.AssociateDrtLogBucketResponse = out
+			res.AssociateDRTLogBucketResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -263,7 +264,7 @@ func (s *SDK) AssociateDrtRole(ctx context.Context, request operations.Associate
 				return nil, err
 			}
 
-			res.AssociateDrtRoleResponse = out
+			res.AssociateDRTRoleResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1275,7 +1276,7 @@ func (s *SDK) DescribeDrtAccess(ctx context.Context, request operations.Describe
 				return nil, err
 			}
 
-			res.DescribeDrtAccessResponse = out
+			res.DescribeDRTAccessResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1747,7 +1748,7 @@ func (s *SDK) DisassociateDrtLogBucket(ctx context.Context, request operations.D
 				return nil, err
 			}
 
-			res.DisassociateDrtLogBucketResponse = out
+			res.DisassociateDRTLogBucketResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -1859,7 +1860,7 @@ func (s *SDK) DisassociateDrtRole(ctx context.Context, request operations.Disass
 				return nil, err
 			}
 
-			res.DisassociateDrtRoleResponse = out
+			res.DisassociateDRTRoleResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

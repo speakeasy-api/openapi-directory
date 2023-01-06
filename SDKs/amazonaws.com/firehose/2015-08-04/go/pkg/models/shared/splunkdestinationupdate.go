@@ -4,10 +4,10 @@ package shared
 // Describes an update for a destination in Splunk.
 type SplunkDestinationUpdate struct {
 	CloudWatchLoggingOptions          *CloudWatchLoggingOptions `json:"CloudWatchLoggingOptions,omitempty"`
-	HecAcknowledgmentTimeoutInSeconds *int64                    `json:"HECAcknowledgmentTimeoutInSeconds,omitempty"`
-	HecEndpoint                       *string                   `json:"HECEndpoint,omitempty"`
-	HecEndpointType                   *HecEndpointTypeEnum      `json:"HECEndpointType,omitempty"`
-	HecToken                          *string                   `json:"HECToken,omitempty"`
+	HECAcknowledgmentTimeoutInSeconds *int64                    `json:"HECAcknowledgmentTimeoutInSeconds,omitempty"`
+	HECEndpoint                       *string                   `json:"HECEndpoint,omitempty"`
+	HECEndpointType                   *HecEndpointTypeEnum      `json:"HECEndpointType,omitempty"`
+	HECToken                          *string                   `json:"HECToken,omitempty"`
 	ProcessingConfiguration           *ProcessingConfiguration  `json:"ProcessingConfiguration,omitempty"`
 	RetryOptions                      *SplunkRetryOptions       `json:"RetryOptions,omitempty"`
 	S3BackupMode                      *SplunkS3BackupModeEnum   `json:"S3BackupMode,omitempty"`

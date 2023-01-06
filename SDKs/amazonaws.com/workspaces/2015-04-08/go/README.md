@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AssociateConnectionAliasRequest{
         Headers: operations.AssociateConnectionAliasHeaders{
-            XAmzAlgorithm: "earum",
+            XAmzAlgorithm: "voluptate",
             XAmzContentSha256: "itaque",
-            XAmzCredential: "optio",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "eos",
-            XAmzSignature: "deleniti",
-            XAmzSignedHeaders: "ut",
+            XAmzCredential: "harum",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "commodi",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "quasi",
             XAmzTarget: "WorkspacesService.AssociateConnectionAlias",
         },
         Request: shared.AssociateConnectionAliasRequest{
-            AliasID: "enim",
-            ResourceID: "quia",
+            AliasID: "praesentium",
+            ResourceID: "impedit",
         },
     }
     
-    res, err := s.Sdk.AssociateConnectionAlias(ctx, req)
+    res, err := s.AssociateConnectionAlias(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

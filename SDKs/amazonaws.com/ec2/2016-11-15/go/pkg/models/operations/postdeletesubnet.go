@@ -3,13 +3,13 @@ package operations
 type PostDeleteSubnetActionEnum string
 
 const (
-	PostDeleteSubnetActionEnumDeleteSubnet PostDeleteSubnetActionEnum = "DeleteSubnet"
+	POSTDeleteSubnetActionEnumDeleteSubnet PostDeleteSubnetActionEnum = "DeleteSubnet"
 )
 
 type PostDeleteSubnetVersionEnum string
 
 const (
-	PostDeleteSubnetVersionEnumTwoThousandAndSixteen1115 PostDeleteSubnetVersionEnum = "2016-11-15"
+	POSTDeleteSubnetVersionEnumTwoThousandAndSixteen1115 PostDeleteSubnetVersionEnum = "2016-11-15"
 )
 
 type PostDeleteSubnetQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,11 +34,11 @@ func main() {
     
     req := operations.ReadDependenciesV1EnCoreWebSmDependenciesPostRequest{
         Request: shared.UserRequestIn{
-            Text: "dignissimos",
+            Text: "quam",
         },
     }
     
-    res, err := s.Sdk.ReadDependenciesV1EnCoreWebSmDependenciesPost(ctx, req)
+    res, err := s.ReadDependenciesV1EnCoreWebSmDependenciesPost(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

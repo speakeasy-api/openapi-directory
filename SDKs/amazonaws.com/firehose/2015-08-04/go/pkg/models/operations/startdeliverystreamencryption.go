@@ -29,7 +29,7 @@ type StartDeliveryStreamEncryptionRequest struct {
 type StartDeliveryStreamEncryptionResponse struct {
 	ContentType                         string
 	InvalidArgumentException            *interface{}
-	InvalidKmsResourceException         *interface{}
+	InvalidKMSResourceException         *interface{}
 	LimitExceededException              *interface{}
 	ResourceInUseException              *interface{}
 	ResourceNotFoundException           *interface{}

@@ -3,18 +3,18 @@ package operations
 type GetDeleteSamlProviderActionEnum string
 
 const (
-	GetDeleteSamlProviderActionEnumDeleteSamlProvider GetDeleteSamlProviderActionEnum = "DeleteSAMLProvider"
+	GETDeleteSAMLProviderActionEnumDeleteSamlProvider GetDeleteSamlProviderActionEnum = "DeleteSAMLProvider"
 )
 
 type GetDeleteSamlProviderVersionEnum string
 
 const (
-	GetDeleteSamlProviderVersionEnumTwoThousandAndTen0508 GetDeleteSamlProviderVersionEnum = "2010-05-08"
+	GETDeleteSAMLProviderVersionEnumTwoThousandAndTen0508 GetDeleteSamlProviderVersionEnum = "2010-05-08"
 )
 
 type GetDeleteSamlProviderQueryParams struct {
 	Action          GetDeleteSamlProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SamlProviderArn string                           `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
+	SAMLProviderArn string                           `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
 	Version         GetDeleteSamlProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

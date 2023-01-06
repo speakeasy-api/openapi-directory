@@ -3,18 +3,18 @@ package operations
 type GetRebootDbInstanceActionEnum string
 
 const (
-	GetRebootDbInstanceActionEnumRebootDbInstance GetRebootDbInstanceActionEnum = "RebootDBInstance"
+	GETRebootDBInstanceActionEnumRebootDbInstance GetRebootDbInstanceActionEnum = "RebootDBInstance"
 )
 
 type GetRebootDbInstanceVersionEnum string
 
 const (
-	GetRebootDbInstanceVersionEnumTwoThousandAndThirteen0909 GetRebootDbInstanceVersionEnum = "2013-09-09"
+	GETRebootDBInstanceVersionEnumTwoThousandAndThirteen0909 GetRebootDbInstanceVersionEnum = "2013-09-09"
 )
 
 type GetRebootDbInstanceQueryParams struct {
 	Action               GetRebootDbInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	ForceFailover        *bool                          `queryParam:"style=form,explode=true,name=ForceFailover"`
 	Version              GetRebootDbInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

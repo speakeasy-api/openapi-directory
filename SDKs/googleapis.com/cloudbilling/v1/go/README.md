@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,28 +27,28 @@ func main() {
             Option1: &operations.CloudbillingBillingAccountsCreateSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.CloudbillingBillingAccountsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "dolore",
-            Alt: "media",
-            Callback: "debitis",
-            Fields: "laudantium",
-            Key: "eaque",
-            OauthToken: "molestiae",
-            PrettyPrint: true,
-            QuotaUser: "in",
-            UploadType: "ab",
-            UploadProtocol: "eum",
+            DollarXgafv: "1",
+            AccessToken: "quaerat",
+            Alt: "json",
+            Callback: "sed",
+            Fields: "aspernatur",
+            Key: "recusandae",
+            OauthToken: "ipsum",
+            PrettyPrint: false,
+            QuotaUser: "quia",
+            UploadType: "laborum",
+            UploadProtocol: "et",
         },
         Request: &shared.BillingAccountInput{
-            DisplayName: "magnam",
-            MasterBillingAccount: "est",
+            DisplayName: "rerum",
+            MasterBillingAccount: "aut",
         },
     }
     

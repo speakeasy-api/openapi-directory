@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1219,7 +1220,7 @@ func (s *SDK) CreateBgpPeer(ctx context.Context, request operations.CreateBgpPee
 				return nil, err
 			}
 
-			res.CreateBgpPeerResponse = out
+			res.CreateBGPPeerResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -2059,7 +2060,7 @@ func (s *SDK) DeleteBgpPeer(ctx context.Context, request operations.DeleteBgpPee
 				return nil, err
 			}
 
-			res.DeleteBgpPeerResponse = out
+			res.DeleteBGPPeerResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

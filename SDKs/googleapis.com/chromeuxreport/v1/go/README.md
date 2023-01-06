@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,27 +25,25 @@ func main() {
     req := operations.ChromeuxreportRecordsQueryRecordRequest{
         QueryParams: operations.ChromeuxreportRecordsQueryRecordQueryParams{
             DollarXgafv: "1",
-            AccessToken: "quia",
+            AccessToken: "quod",
             Alt: "json",
-            Callback: "et",
-            Fields: "itaque",
-            Key: "delectus",
-            OauthToken: "eos",
-            PrettyPrint: true,
-            QuotaUser: "placeat",
-            UploadType: "facere",
-            UploadProtocol: "aperiam",
+            Callback: "rerum",
+            Fields: "in",
+            Key: "quis",
+            OauthToken: "architecto",
+            PrettyPrint: false,
+            QuotaUser: "ipsa",
+            UploadType: "corporis",
+            UploadProtocol: "et",
         },
         Request: &shared.QueryRequest{
-            EffectiveConnectionType: "minus",
-            FormFactor: "ALL_FORM_FACTORS",
+            EffectiveConnectionType: "consequuntur",
+            FormFactor: "PHONE",
             Metrics: []string{
-                "omnis",
-                "voluptatum",
-                "voluptas",
+                "dignissimos",
             },
-            Origin: "rerum",
-            URL: "ut",
+            Origin: "modi",
+            URL: "rem",
         },
     }
     

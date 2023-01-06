@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,28 @@ func main() {
     
     req := operations.AcceptDirectConnectGatewayAssociationProposalRequest{
         Headers: operations.AcceptDirectConnectGatewayAssociationProposalHeaders{
-            XAmzAlgorithm: "autem",
-            XAmzContentSha256: "est",
-            XAmzCredential: "soluta",
-            XAmzDate: "laudantium",
-            XAmzSecurityToken: "quia",
-            XAmzSignature: "eaque",
-            XAmzSignedHeaders: "ex",
+            XAmzAlgorithm: "rerum",
+            XAmzContentSha256: "reiciendis",
+            XAmzCredential: "aut",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "saepe",
+            XAmzSignature: "ratione",
+            XAmzSignedHeaders: "autem",
             XAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
         },
         Request: shared.AcceptDirectConnectGatewayAssociationProposalRequest{
-            AssociatedGatewayOwnerAccount: "vel",
-            DirectConnectGatewayID: "sunt",
-            OverrideAllowedPrefixesToDirectConnectGateway: []shared.RouteFilterPrefix{
-                shared.RouteFilterPrefix{
-                    Cidr: "nulla",
-                },
-                shared.RouteFilterPrefix{
-                    Cidr: "ipsa",
-                },
+            AssociatedGatewayOwnerAccount: "tempore",
+            DirectConnectGatewayID: "veniam",
+            OverrideAllowedPrefixesToDirectConnectGateway: map[string]interface{}{
+                "corporis": "est",
+                "iure": "adipisci",
+                "est": "temporibus",
             },
-            ProposalID: "ipsum",
+            ProposalID: "consequatur",
         },
     }
     
-    res, err := s.Sdk.AcceptDirectConnectGatewayAssociationProposal(ctx, req)
+    res, err := s.AcceptDirectConnectGatewayAssociationProposal(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

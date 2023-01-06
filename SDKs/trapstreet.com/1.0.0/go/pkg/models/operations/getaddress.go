@@ -10,6 +10,6 @@ type GetAddressRequest struct {
 
 type GetAddressResponse struct {
 	ContentType                     string
-	GetAddress200ApplicationJSONAny *interface{}
 	StatusCode                      int64
+	GetAddress200ApplicationJSONAny *interface{}
 }

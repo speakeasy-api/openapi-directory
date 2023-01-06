@@ -24,9 +24,9 @@ const (
 	TaxSubtotalTaxCategoryEnumSalesToDesignatedArea TaxSubtotalTaxCategoryEnum = "sales_to_designated_area"
 	TaxSubtotalTaxCategoryEnumExemptionScheduleA    TaxSubtotalTaxCategoryEnum = "exemption_schedule_a"
 	TaxSubtotalTaxCategoryEnumExemptionScheduleB    TaxSubtotalTaxCategoryEnum = "exemption_schedule_b"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleCa   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_a"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleCb   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_b"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleCc   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_c"
+	TaxSubtotalTaxCategoryEnumExemptionScheduleCA   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_a"
+	TaxSubtotalTaxCategoryEnumExemptionScheduleCB   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_b"
+	TaxSubtotalTaxCategoryEnumExemptionScheduleCC   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_c"
 	TaxSubtotalTaxCategoryEnumExemptionServiceTax   TaxSubtotalTaxCategoryEnum = "exemption_service_tax"
 )
 

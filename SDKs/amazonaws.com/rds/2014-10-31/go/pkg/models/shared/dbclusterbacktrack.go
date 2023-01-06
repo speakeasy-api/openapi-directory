@@ -11,6 +11,6 @@ type DbClusterBacktrack struct {
 	BacktrackRequestCreationTime *time.Time
 	BacktrackTo                  *time.Time
 	BacktrackedFrom              *time.Time
-	DbClusterIdentifier          *string
+	DBClusterIdentifier          *string
 	Status                       *string
 }

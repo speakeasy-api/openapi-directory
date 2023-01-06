@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -64,8 +64,6 @@ func (s *Intent) AddMediaIntentHandling(ctx context.Context, request operations.
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []interface{}
@@ -115,8 +113,6 @@ func (s *Intent) PlayMediaIntentHandling(ctx context.Context, request operations
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []interface{}
@@ -166,8 +162,6 @@ func (s *Intent) UpdateMediaAffinityIntentHandling(ctx context.Context, request 
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []interface{}

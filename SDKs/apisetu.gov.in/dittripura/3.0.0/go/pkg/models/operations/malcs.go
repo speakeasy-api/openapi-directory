@@ -82,7 +82,7 @@ type Malcs404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Malcs404ApplicationJSONErrorDescriptionEnumNoRecordFound               Malcs404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Malcs404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Malcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Malcs404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Malcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Malcs404ApplicationJSON struct {

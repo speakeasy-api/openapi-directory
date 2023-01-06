@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,31 +27,31 @@ func main() {
             Option1: &operations.DeploymentmanagerDeploymentsCancelPreviewSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.DeploymentmanagerDeploymentsCancelPreviewPathParams{
-            Deployment: "velit",
-            Project: "voluptatem",
+            Deployment: "incidunt",
+            Project: "animi",
         },
         QueryParams: operations.DeploymentmanagerDeploymentsCancelPreviewQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "aut",
-            Alt: "json",
-            Callback: "facilis",
-            Fields: "alias",
-            Key: "voluptatibus",
-            OauthToken: "sunt",
+            DollarXgafv: "2",
+            AccessToken: "eum",
+            Alt: "proto",
+            Callback: "doloribus",
+            Fields: "officia",
+            Key: "culpa",
+            OauthToken: "non",
             PrettyPrint: true,
-            QuotaUser: "provident",
-            UploadType: "dicta",
-            UploadProtocol: "saepe",
+            QuotaUser: "facilis",
+            UploadType: "mollitia",
+            UploadProtocol: "commodi",
         },
         Request: &shared.DeploymentsCancelPreviewRequest{
-            Fingerprint: "in",
+            Fingerprint: "cum",
         },
     }
     

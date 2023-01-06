@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,27 +26,27 @@ func main() {
         Security: operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicySecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyPathParams{
-            Resource: "suscipit",
+            Resource: "repudiandae",
         },
         QueryParams: operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "ipsa",
-            Alt: "proto",
-            Callback: "tempora",
-            Fields: "minus",
-            Key: "numquam",
-            OauthToken: "eos",
-            OptionsRequestedPolicyVersion: 8562947669453034156,
+            DollarXgafv: "2",
+            AccessToken: "odit",
+            Alt: "media",
+            Callback: "laborum",
+            Fields: "placeat",
+            Key: "voluptas",
+            OauthToken: "voluptatem",
+            OptionsRequestedPolicyVersion: 7740189181484371622,
             PrettyPrint: true,
-            QuotaUser: "sed",
-            UploadType: "illo",
-            UploadProtocol: "dignissimos",
+            QuotaUser: "recusandae",
+            UploadType: "minima",
+            UploadProtocol: "est",
         },
     }
     

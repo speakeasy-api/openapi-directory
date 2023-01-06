@@ -3,13 +3,13 @@ package operations
 type GetBatchDeleteScheduledActionActionEnum string
 
 const (
-	GetBatchDeleteScheduledActionActionEnumBatchDeleteScheduledAction GetBatchDeleteScheduledActionActionEnum = "BatchDeleteScheduledAction"
+	GETBatchDeleteScheduledActionActionEnumBatchDeleteScheduledAction GetBatchDeleteScheduledActionActionEnum = "BatchDeleteScheduledAction"
 )
 
 type GetBatchDeleteScheduledActionVersionEnum string
 
 const (
-	GetBatchDeleteScheduledActionVersionEnumTwoThousandAndEleven0101 GetBatchDeleteScheduledActionVersionEnum = "2011-01-01"
+	GETBatchDeleteScheduledActionVersionEnumTwoThousandAndEleven0101 GetBatchDeleteScheduledActionVersionEnum = "2011-01-01"
 )
 
 type GetBatchDeleteScheduledActionQueryParams struct {

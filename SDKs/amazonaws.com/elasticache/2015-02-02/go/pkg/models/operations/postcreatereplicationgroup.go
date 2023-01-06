@@ -3,13 +3,13 @@ package operations
 type PostCreateReplicationGroupActionEnum string
 
 const (
-	PostCreateReplicationGroupActionEnumCreateReplicationGroup PostCreateReplicationGroupActionEnum = "CreateReplicationGroup"
+	POSTCreateReplicationGroupActionEnumCreateReplicationGroup PostCreateReplicationGroupActionEnum = "CreateReplicationGroup"
 )
 
 type PostCreateReplicationGroupVersionEnum string
 
 const (
-	PostCreateReplicationGroupVersionEnumTwoThousandAndFifteen0202 PostCreateReplicationGroupVersionEnum = "2015-02-02"
+	POSTCreateReplicationGroupVersionEnumTwoThousandAndFifteen0202 PostCreateReplicationGroupVersionEnum = "2015-02-02"
 )
 
 type PostCreateReplicationGroupQueryParams struct {

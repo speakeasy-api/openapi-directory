@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,27 +27,27 @@ func main() {
             Option1: &operations.DisplayvideoMediaDownloadSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.DisplayvideoMediaDownloadPathParams{
-            ResourceName: "vero",
+            ResourceName: "in",
         },
         QueryParams: operations.DisplayvideoMediaDownloadQueryParams{
             DollarXgafv: "1",
-            AccessToken: "debitis",
-            Alt: "media",
+            AccessToken: "quis",
+            Alt: "json",
             Callback: "ut",
-            Fields: "sed",
-            Key: "expedita",
-            OauthToken: "sunt",
+            Fields: "provident",
+            Key: "in",
+            OauthToken: "fuga",
             PrettyPrint: false,
-            QuotaUser: "unde",
-            UploadType: "maiores",
-            UploadProtocol: "cupiditate",
+            QuotaUser: "beatae",
+            UploadType: "et",
+            UploadProtocol: "sapiente",
         },
     }
     

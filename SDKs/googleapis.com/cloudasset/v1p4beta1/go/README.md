@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,44 +26,45 @@ func main() {
         Security: operations.CloudassetAnalyzeIamPolicySecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CloudassetAnalyzeIamPolicyPathParams{
-            Parent: "nam",
+            Parent: "itaque",
         },
         QueryParams: operations.CloudassetAnalyzeIamPolicyQueryParams{
             DollarXgafv: "1",
-            AccessToken: "quia",
-            Alt: "proto",
+            AccessToken: "aliquam",
+            Alt: "json",
             AnalysisQueryAccessSelectorPermissions: []string{
-                "eligendi",
-                "saepe",
-                "repellat",
+                "sint",
+                "earum",
+                "quia",
             },
             AnalysisQueryAccessSelectorRoles: []string{
-                "facere",
-                "vel",
+                "architecto",
+                "praesentium",
+                "et",
             },
-            AnalysisQueryIdentitySelectorIdentity: "numquam",
-            AnalysisQueryResourceSelectorFullResourceName: "eius",
-            Callback: "aut",
-            Fields: "voluptate",
-            Key: "ad",
-            OauthToken: "provident",
-            OptionsAnalyzeServiceAccountImpersonation: false,
-            OptionsExecutionTimeout: "omnis",
-            OptionsExpandGroups: true,
-            OptionsExpandResources: true,
+            AnalysisQueryIdentitySelectorIdentity: "magni",
+            AnalysisQueryResourceSelectorFullResourceName: "fuga",
+            Callback: "dolorum",
+            Fields: "rerum",
+            Key: "magnam",
+            OauthToken: "consectetur",
+            OptionsAnalyzeServiceAccountImpersonation: true,
+            OptionsExecutionTimeout: "placeat",
+            OptionsExpandGroups: false,
+            OptionsExpandResources: false,
             OptionsExpandRoles: false,
             OptionsOutputGroupEdges: true,
             OptionsOutputResourceEdges: true,
             PrettyPrint: true,
-            QuotaUser: "maiores",
-            UploadType: "reprehenderit",
-            UploadProtocol: "dolorum",
+            QuotaUser: "cum",
+            UploadType: "asperiores",
+            UploadProtocol: "veritatis",
         },
     }
     

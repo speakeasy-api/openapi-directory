@@ -5,8 +5,8 @@ import (
 )
 
 type SicrdRequestBodyCertificateParameters struct {
-	Certno string `json:"CERTNO"`
-	Dob    string `json:"DOB"`
+	CERTNO string `json:"CERTNO"`
+	DOB    string `json:"DOB"`
 }
 
 type SicrdRequestBodyFormatEnum string
@@ -82,7 +82,7 @@ type Sicrd404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Sicrd404ApplicationJSONErrorDescriptionEnumNoRecordFound               Sicrd404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Sicrd404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Sicrd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Sicrd404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Sicrd404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Sicrd404ApplicationJSON struct {

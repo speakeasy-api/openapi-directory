@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,7 +26,7 @@ func main() {
         Security: operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -36,42 +35,51 @@ func main() {
             Parent: "ut",
         },
         QueryParams: operations.BinaryauthorizationProjectsAttestorsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "qui",
-            Alt: "json",
-            AttestorID: "qui",
-            Callback: "earum",
-            Fields: "distinctio",
-            Key: "consequuntur",
-            OauthToken: "doloribus",
-            PrettyPrint: true,
-            QuotaUser: "repudiandae",
-            UploadType: "accusamus",
-            UploadProtocol: "mollitia",
+            DollarXgafv: "2",
+            AccessToken: "est",
+            Alt: "proto",
+            AttestorID: "voluptatum",
+            Callback: "qui",
+            Fields: "odit",
+            Key: "quas",
+            OauthToken: "nemo",
+            PrettyPrint: false,
+            QuotaUser: "sunt",
+            UploadType: "sint",
+            UploadProtocol: "accusantium",
         },
         Request: &shared.AttestorInput{
-            Description: "aperiam",
-            Etag: "dignissimos",
-            Name: "libero",
+            Description: "rem",
+            Etag: "quod",
+            Name: "quia",
             UserOwnedGrafeasNote: &shared.UserOwnedGrafeasNoteInput{
-                NoteReference: "aperiam",
+                NoteReference: "magni",
                 PublicKeys: []shared.AttestorPublicKey{
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "sed",
-                        Comment: "quos",
-                        ID: "aliquid",
+                        ASCIIArmoredPgpPublicKey: "veritatis",
+                        Comment: "ut",
+                        ID: "dicta",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "dolorem",
-                            SignatureAlgorithm: "ECDSA_P384_SHA384",
+                            PublicKeyPem: "iusto",
+                            SignatureAlgorithm: "ECDSA_P256_SHA256",
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "ipsam",
-                        Comment: "facilis",
-                        ID: "et",
+                        ASCIIArmoredPgpPublicKey: "dolores",
+                        Comment: "porro",
+                        ID: "aut",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "perspiciatis",
-                            SignatureAlgorithm: "ECDSA_P256_SHA256",
+                            PublicKeyPem: "et",
+                            SignatureAlgorithm: "RSA_SIGN_PSS_4096_SHA512",
+                        },
+                    },
+                    shared.AttestorPublicKey{
+                        ASCIIArmoredPgpPublicKey: "qui",
+                        Comment: "sint",
+                        ID: "doloribus",
+                        PkixPublicKey: &shared.PkixPublicKey{
+                            PublicKeyPem: "omnis",
+                            SignatureAlgorithm: "EC_SIGN_P521_SHA512",
                         },
                     },
                 },

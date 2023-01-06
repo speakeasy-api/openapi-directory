@@ -1,5 +1,5 @@
 package shared
 
 type DeleteClientVpnEndpointResult struct {
-	Status *ClientVpnEndpointStatus
+	Status map[string]interface{}
 }

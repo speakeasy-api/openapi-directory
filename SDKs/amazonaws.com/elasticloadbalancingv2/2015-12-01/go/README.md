@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,21 +35,21 @@ func main() {
     req := operations.GetDeleteListenerRequest{
         QueryParams: operations.GetDeleteListenerQueryParams{
             Action: "DeleteListener",
-            ListenerArn: "soluta",
+            ListenerArn: "in",
             Version: "2015-12-01",
         },
         Headers: operations.GetDeleteListenerHeaders{
-            XAmzAlgorithm: "ullam",
-            XAmzContentSha256: "et",
-            XAmzCredential: "rerum",
-            XAmzDate: "est",
-            XAmzSecurityToken: "neque",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "nobis",
+            XAmzAlgorithm: "asperiores",
+            XAmzContentSha256: "quo",
+            XAmzCredential: "ea",
+            XAmzDate: "soluta",
+            XAmzSecurityToken: "tempora",
+            XAmzSignature: "commodi",
+            XAmzSignedHeaders: "blanditiis",
         },
     }
     
-    res, err := s.Sdk.GetDeleteListener(ctx, req)
+    res, err := s.GetDeleteListener(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

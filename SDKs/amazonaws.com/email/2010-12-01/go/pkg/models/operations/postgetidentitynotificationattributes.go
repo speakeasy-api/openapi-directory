@@ -3,13 +3,13 @@ package operations
 type PostGetIdentityNotificationAttributesActionEnum string
 
 const (
-	PostGetIdentityNotificationAttributesActionEnumGetIdentityNotificationAttributes PostGetIdentityNotificationAttributesActionEnum = "GetIdentityNotificationAttributes"
+	POSTGetIdentityNotificationAttributesActionEnumGetIdentityNotificationAttributes PostGetIdentityNotificationAttributesActionEnum = "GetIdentityNotificationAttributes"
 )
 
 type PostGetIdentityNotificationAttributesVersionEnum string
 
 const (
-	PostGetIdentityNotificationAttributesVersionEnumTwoThousandAndTen1201 PostGetIdentityNotificationAttributesVersionEnum = "2010-12-01"
+	POSTGetIdentityNotificationAttributesVersionEnumTwoThousandAndTen1201 PostGetIdentityNotificationAttributesVersionEnum = "2010-12-01"
 )
 
 type PostGetIdentityNotificationAttributesQueryParams struct {

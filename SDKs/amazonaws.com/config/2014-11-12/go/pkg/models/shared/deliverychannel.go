@@ -8,5 +8,5 @@ type DeliveryChannel struct {
 	S3BucketName                     *string                           `json:"s3BucketName,omitempty"`
 	S3KeyPrefix                      *string                           `json:"s3KeyPrefix,omitempty"`
 	S3KmsKeyArn                      *string                           `json:"s3KmsKeyArn,omitempty"`
-	SnsTopicArn                      *string                           `json:"snsTopicARN,omitempty"`
+	SnsTopicARN                      *string                           `json:"snsTopicARN,omitempty"`
 }

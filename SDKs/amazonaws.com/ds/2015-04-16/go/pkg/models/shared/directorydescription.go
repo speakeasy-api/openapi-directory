@@ -8,7 +8,7 @@ import (
 // Contains information about an Directory Service directory.
 type DirectoryDescription struct {
 	AccessURL                        *string                              `json:"AccessUrl,omitempty"`
-	Alias                            *string                              `json:"Alias,omitempty"`
+	Alias                            map[string]interface{}               `json:"Alias,omitempty"`
 	ConnectSettings                  *DirectoryConnectSettingsDescription `json:"ConnectSettings,omitempty"`
 	Description                      *string                              `json:"Description,omitempty"`
 	DesiredNumberOfDomainControllers *int64                               `json:"DesiredNumberOfDomainControllers,omitempty"`

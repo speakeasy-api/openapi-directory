@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,44 +34,40 @@ func main() {
     
     req := operations.CreateEnvironmentEc2Request{
         Headers: operations.CreateEnvironmentEc2Headers{
-            XAmzAlgorithm: "animi",
-            XAmzContentSha256: "facere",
-            XAmzCredential: "consequatur",
-            XAmzDate: "ipsum",
-            XAmzSecurityToken: "hic",
-            XAmzSignature: "amet",
-            XAmzSignedHeaders: "quasi",
+            XAmzAlgorithm: "maxime",
+            XAmzContentSha256: "omnis",
+            XAmzCredential: "dolor",
+            XAmzDate: "non",
+            XAmzSecurityToken: "veniam",
+            XAmzSignature: "dolorem",
+            XAmzSignedHeaders: "minima",
             XAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
         },
         Request: shared.CreateEnvironmentEc2Request{
-            AutomaticStopTimeMinutes: 2683203673119178326,
-            ClientRequestToken: "eum",
-            ConnectionType: "CONNECT_SSH",
-            Description: "beatae",
+            AutomaticStopTimeMinutes: 8783871116342809002,
+            ClientRequestToken: "magni",
+            ConnectionType: "CONNECT_SSM",
+            Description: "omnis",
             DryRun: false,
-            ImageID: "est",
-            InstanceType: "a",
-            Name: "quia",
-            OwnerArn: "sit",
-            SubnetID: "quaerat",
+            ImageID: "unde",
+            InstanceType: "adipisci",
+            Name: "impedit",
+            OwnerArn: "tempora",
+            SubnetID: "aut",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "sunt",
-                    Value: "nobis",
+                    Key: "corrupti",
+                    Value: "animi",
                 },
                 shared.Tag{
-                    Key: "quasi",
-                    Value: "et",
-                },
-                shared.Tag{
-                    Key: "non",
-                    Value: "veniam",
+                    Key: "cum",
+                    Value: "occaecati",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateEnvironmentEc2(ctx, req)
+    res, err := s.CreateEnvironmentEc2(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

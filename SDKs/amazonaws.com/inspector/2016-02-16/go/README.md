@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,29 @@ func main() {
     
     req := operations.AddAttributesToFindingsRequest{
         Headers: operations.AddAttributesToFindingsHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "rem",
-            XAmzCredential: "iusto",
-            XAmzDate: "sed",
-            XAmzSecurityToken: "numquam",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "eveniet",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "necessitatibus",
+            XAmzCredential: "iure",
+            XAmzDate: "voluptate",
+            XAmzSecurityToken: "quaerat",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "ullam",
             XAmzTarget: "InspectorService.AddAttributesToFindings",
         },
         Request: shared.AddAttributesToFindingsRequest{
             Attributes: []shared.Attribute{
                 shared.Attribute{
-                    Key: "molestiae",
-                    Value: "veniam",
+                    Key: "nihil",
+                    Value: "magni",
                 },
             },
             FindingArns: []string{
-                "voluptatum",
-                "debitis",
-                "perspiciatis",
+                "excepturi",
             },
         },
     }
     
-    res, err := s.Sdk.AddAttributesToFindings(ctx, req)
+    res, err := s.AddAttributesToFindings(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

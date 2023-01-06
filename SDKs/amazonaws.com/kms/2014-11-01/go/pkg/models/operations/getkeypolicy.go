@@ -31,8 +31,8 @@ type GetKeyPolicyResponse struct {
 	DependencyTimeoutException *interface{}
 	GetKeyPolicyResponse       *shared.GetKeyPolicyResponse
 	InvalidArnException        *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64
 }

@@ -1,13 +1,9 @@
 package shared
 
-// LocationState
+// LocationStateInput
 // Contains a set of booleans that reflect the [state of a Location.](https://support.google.com/business/answer/3480862)
-type LocationState struct {
+type LocationStateInput struct {
 	CanDelete              *bool `json:"canDelete,omitempty"`
-	CanHaveFoodMenus       *bool `json:"canHaveFoodMenus,omitempty"`
-	CanModifyServiceList   *bool `json:"canModifyServiceList,omitempty"`
-	CanOperateHealthData   *bool `json:"canOperateHealthData,omitempty"`
-	CanOperateLodgingData  *bool `json:"canOperateLodgingData,omitempty"`
 	CanUpdate              *bool `json:"canUpdate,omitempty"`
 	HasPendingEdits        *bool `json:"hasPendingEdits,omitempty"`
 	HasPendingVerification *bool `json:"hasPendingVerification,omitempty"`
@@ -23,10 +19,14 @@ type LocationState struct {
 	NeedsReverification    *bool `json:"needsReverification,omitempty"`
 }
 
-// LocationStateInput
+// LocationState
 // Contains a set of booleans that reflect the [state of a Location.](https://support.google.com/business/answer/3480862)
-type LocationStateInput struct {
+type LocationState struct {
 	CanDelete              *bool `json:"canDelete,omitempty"`
+	CanHaveFoodMenus       *bool `json:"canHaveFoodMenus,omitempty"`
+	CanModifyServiceList   *bool `json:"canModifyServiceList,omitempty"`
+	CanOperateHealthData   *bool `json:"canOperateHealthData,omitempty"`
+	CanOperateLodgingData  *bool `json:"canOperateLodgingData,omitempty"`
 	CanUpdate              *bool `json:"canUpdate,omitempty"`
 	HasPendingEdits        *bool `json:"hasPendingEdits,omitempty"`
 	HasPendingVerification *bool `json:"hasPendingVerification,omitempty"`

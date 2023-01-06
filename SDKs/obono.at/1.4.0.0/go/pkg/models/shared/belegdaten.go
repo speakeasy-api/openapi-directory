@@ -30,6 +30,6 @@ type Belegdaten struct {
 	UnternehmenKopfzeile     *string                         `json:"Unternehmen-Kopfzeile,omitempty"`
 	UnternehmenName          *string                         `json:"Unternehmen-Name,omitempty"`
 	UnternehmenOrt           *string                         `json:"Unternehmen-Ort,omitempty"`
-	UnternehmenPlz           *string                         `json:"Unternehmen-PLZ,omitempty"`
+	UnternehmenPLZ           *string                         `json:"Unternehmen-PLZ,omitempty"`
 	Zahlungen                []Zahlung                       `json:"Zahlungen,omitempty"`
 }

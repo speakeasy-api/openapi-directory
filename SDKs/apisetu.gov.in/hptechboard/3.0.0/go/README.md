@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.DipcrSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.DipcrRequestBody{
             CertificateParameters: &operations.DipcrRequestBodyCertificateParameters{
-                FullName: "iste",
-                RollNo: "nulla",
+                FullName: "doloribus",
+                RollNo: "porro",
             },
-            ConsentArtifact: "autem",
+            ConsentArtifact: "est",
             Format: "pdf",
-            TxnID: "recusandae",
+            TxnID: "eum",
         },
     }
     
-    res, err := s.Sdk.Dipcr(ctx, req)
+    res, err := s.APIs.Dipcr(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Dipcr` - Diploma Certificate
 

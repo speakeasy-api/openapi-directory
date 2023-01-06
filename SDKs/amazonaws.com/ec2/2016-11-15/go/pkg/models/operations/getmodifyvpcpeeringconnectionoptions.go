@@ -11,7 +11,7 @@ type GetModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions struct
 type GetModifyVpcPeeringConnectionOptionsActionEnum string
 
 const (
-	GetModifyVpcPeeringConnectionOptionsActionEnumModifyVpcPeeringConnectionOptions GetModifyVpcPeeringConnectionOptionsActionEnum = "ModifyVpcPeeringConnectionOptions"
+	GETModifyVpcPeeringConnectionOptionsActionEnumModifyVpcPeeringConnectionOptions GetModifyVpcPeeringConnectionOptionsActionEnum = "ModifyVpcPeeringConnectionOptions"
 )
 
 // GetModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions
@@ -25,7 +25,7 @@ type GetModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions struc
 type GetModifyVpcPeeringConnectionOptionsVersionEnum string
 
 const (
-	GetModifyVpcPeeringConnectionOptionsVersionEnumTwoThousandAndSixteen1115 GetModifyVpcPeeringConnectionOptionsVersionEnum = "2016-11-15"
+	GETModifyVpcPeeringConnectionOptionsVersionEnumTwoThousandAndSixteen1115 GetModifyVpcPeeringConnectionOptionsVersionEnum = "2016-11-15"
 )
 
 type GetModifyVpcPeeringConnectionOptionsQueryParams struct {

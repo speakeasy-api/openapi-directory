@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTokenResponse struct {
-	IsSuccess *bool `json:"IsSuccess,omitempty"`
+	IsSuccess map[string]interface{} `json:"IsSuccess,omitempty"`
 }

@@ -30,7 +30,7 @@ type GetRuleResponse struct {
 	ContentType                 string
 	GetRuleResponse             *shared.GetRuleResponse
 	StatusCode                  int64
-	WafInternalErrorException   *interface{}
-	WafInvalidAccountException  *interface{}
-	WafNonexistentItemException *interface{}
+	WAFInternalErrorException   *interface{}
+	WAFInvalidAccountException  *interface{}
+	WAFNonexistentItemException *interface{}
 }

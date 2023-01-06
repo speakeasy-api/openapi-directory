@@ -3,8 +3,8 @@ package shared
 type HiTypeEnumEnum string
 
 const (
-	HiTypeEnumEnumOpConsultation   HiTypeEnumEnum = "OPConsultation"
-	HiTypeEnumEnumPrescription     HiTypeEnumEnum = "Prescription"
-	HiTypeEnumEnumDischargeSummary HiTypeEnumEnum = "DischargeSummary"
-	HiTypeEnumEnumDiagnosticReport HiTypeEnumEnum = "DiagnosticReport"
+	HITypeEnumEnumOpConsultation   HiTypeEnumEnum = "OPConsultation"
+	HITypeEnumEnumPrescription     HiTypeEnumEnum = "Prescription"
+	HITypeEnumEnumDischargeSummary HiTypeEnumEnum = "DischargeSummary"
+	HITypeEnumEnumDiagnosticReport HiTypeEnumEnum = "DiagnosticReport"
 )

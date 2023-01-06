@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,180 +24,173 @@ func main() {
     
     req := operations.CreateDomesticPaymentConsentsRequest{
         Security: operations.CreateDomesticPaymentConsentsSecurity{
-            TppoAuth2Security: shared.SchemeTppoAuth2Security{
+            TPPOAuth2Security: shared.SchemeTppoAuth2Security{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         Headers: operations.CreateDomesticPaymentConsentsHeaders{
-            Authorization: "eligendi",
-            XCustomerUserAgent: "provident",
-            XFapiAuthDate: "qui",
-            XFapiCustomerIPAddress: "consequatur",
-            XFapiInteractionID: "molestiae",
-            XIdempotencyKey: "eaque",
-            XJwsSignature: "accusamus",
+            Authorization: "libero",
+            XCustomerUserAgent: "nostrum",
+            XFapiAuthDate: "hic",
+            XFapiCustomerIPAddress: "nisi",
+            XFapiInteractionID: "et",
+            XIdempotencyKey: "explicabo",
+            XJwsSignature: "in",
         },
         Request: operations.CreateDomesticPaymentConsentsRequests{
-            ApplicationJosePlusJwe: []byte("nihil"),
-            ObWriteDomesticConsent4: &shared.ObWriteDomesticConsent4{
+            ApplicationJosePlusJwe: []byte("maiores"),
+            OBWriteDomesticConsent4: &shared.ObWriteDomesticConsent4{
                 Data: shared.ObWriteDomesticConsent4Data{
                     Authorisation: &shared.ObWriteDomesticConsent4DataAuthorisation{
                         AuthorisationType: "Any",
-                        CompletionDateTime: "1979-04-22T03:58:28Z",
+                        CompletionDateTime: "1987-09-01T03:23:02Z",
                     },
                     Initiation: shared.ObWriteDomesticConsent4DataInitiation{
                         CreditorAccount: shared.ObWriteDomesticConsent4DataInitiationCreditorAccount{
-                            Identification: "facere",
-                            Name: "nesciunt",
-                            SchemeName: "ullam",
-                            SecondaryIdentification: "placeat",
+                            Identification: "placeat",
+                            Name: "dolore",
+                            SchemeName: "quia",
+                            SecondaryIdentification: "mollitia",
                         },
                         CreditorPostalAddress: &shared.ObPostalAddress6{
                             AddressLine: []string{
-                                "sed",
-                                "consectetur",
-                                "corrupti",
+                                "repellendus",
                             },
-                            AddressType: "Residential",
-                            BuildingNumber: "exercitationem",
-                            Country: "assumenda",
-                            CountrySubDivision: "vel",
-                            Department: "hic",
-                            PostCode: "ullam",
-                            StreetName: "omnis",
-                            SubDepartment: "delectus",
-                            TownName: "tempora",
+                            AddressType: "Correspondence",
+                            BuildingNumber: "nesciunt",
+                            Country: "ex",
+                            CountrySubDivision: "qui",
+                            Department: "dolores",
+                            PostCode: "perferendis",
+                            StreetName: "ipsa",
+                            SubDepartment: "voluptate",
+                            TownName: "iste",
                         },
                         DebtorAccount: &shared.ObWriteDomesticConsent4DataInitiationDebtorAccount{
-                            Identification: "eveniet",
-                            Name: "consequatur",
-                            SchemeName: "qui",
-                            SecondaryIdentification: "nihil",
+                            Identification: "deleniti",
+                            Name: "labore",
+                            SchemeName: "non",
+                            SecondaryIdentification: "sequi",
                         },
-                        EndToEndIdentification: "rerum",
+                        EndToEndIdentification: "atque",
                         InstructedAmount: shared.ObWriteDomesticConsent4DataInitiationInstructedAmount{
-                            Amount: "minima",
-                            Currency: "qui",
+                            Amount: "cumque",
+                            Currency: "vero",
                         },
-                        InstructionIdentification: "quis",
-                        LocalInstrument: "ea",
+                        InstructionIdentification: "facilis",
+                        LocalInstrument: "veniam",
                         RemittanceInformation: &shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation{
-                            Reference: "expedita",
-                            Unstructured: "rerum",
+                            Reference: "maxime",
+                            Unstructured: "pariatur",
                         },
                         SupplementaryData: map[string]interface{}{
-                            "quidem": "vel",
-                            "laudantium": "officiis",
+                            "illum": "in",
+                            "amet": "quae",
+                            "qui": "ut",
                         },
                     },
-                    ReadRefundAccount: "Yes",
-                    ScaSupportData: &shared.ObscaSupportData1{
-                        AppliedAuthenticationApproach: "CA",
-                        ReferencePaymentOrderID: "dolores",
-                        RequestedScaExemptionType: "Kiosk",
+                    ReadRefundAccount: "No",
+                    SCASupportData: &shared.ObscaSupportData1{
+                        AppliedAuthenticationApproach: "SCA",
+                        ReferencePaymentOrderID: "minus",
+                        RequestedSCAExemptionType: "Parking",
                     },
                 },
                 Risk: shared.ObRisk1{
                     DeliveryAddress: &shared.ObRisk1DeliveryAddress{
                         AddressLine: []string{
-                            "a",
-                            "voluptas",
-                            "omnis",
+                            "nihil",
+                            "exercitationem",
+                            "iste",
                         },
-                        BuildingNumber: "laudantium",
-                        Country: "assumenda",
+                        BuildingNumber: "tenetur",
+                        Country: "ipsam",
                         CountrySubDivision: "dicta",
-                        PostCode: "omnis",
-                        StreetName: "nisi",
-                        TownName: "voluptatem",
+                        PostCode: "eaque",
+                        StreetName: "quod",
+                        TownName: "perferendis",
                     },
-                    MerchantCategoryCode: "aspernatur",
-                    MerchantCustomerIdentification: "iusto",
-                    PaymentContextCode: "PartyToParty",
+                    MerchantCategoryCode: "et",
+                    MerchantCustomerIdentification: "minus",
+                    PaymentContextCode: "EcommerceGoods",
                 },
             },
-            ObWriteDomesticConsent5: &shared.ObWriteDomesticConsent4{
+            OBWriteDomesticConsent5: &shared.ObWriteDomesticConsent4{
                 Data: shared.ObWriteDomesticConsent4Data{
                     Authorisation: &shared.ObWriteDomesticConsent4DataAuthorisation{
                         AuthorisationType: "Single",
-                        CompletionDateTime: "1991-02-20T04:42:38Z",
+                        CompletionDateTime: "2001-01-07T15:51:26Z",
                     },
                     Initiation: shared.ObWriteDomesticConsent4DataInitiation{
                         CreditorAccount: shared.ObWriteDomesticConsent4DataInitiationCreditorAccount{
-                            Identification: "autem",
-                            Name: "necessitatibus",
-                            SchemeName: "sunt",
-                            SecondaryIdentification: "dolor",
+                            Identification: "eveniet",
+                            Name: "voluptatem",
+                            SchemeName: "eaque",
+                            SecondaryIdentification: "corrupti",
                         },
                         CreditorPostalAddress: &shared.ObPostalAddress6{
                             AddressLine: []string{
-                                "et",
-                                "voluptatum",
-                                "quia",
+                                "quaerat",
                             },
-                            AddressType: "Statement",
-                            BuildingNumber: "quia",
-                            Country: "aut",
-                            CountrySubDivision: "cupiditate",
-                            Department: "dolores",
-                            PostCode: "amet",
-                            StreetName: "quia",
-                            SubDepartment: "beatae",
-                            TownName: "quidem",
+                            AddressType: "Postal",
+                            BuildingNumber: "officia",
+                            Country: "et",
+                            CountrySubDivision: "aut",
+                            Department: "dolorum",
+                            PostCode: "et",
+                            StreetName: "nihil",
+                            SubDepartment: "labore",
+                            TownName: "dolorem",
                         },
                         DebtorAccount: &shared.ObWriteDomesticConsent4DataInitiationDebtorAccount{
-                            Identification: "id",
-                            Name: "ratione",
-                            SchemeName: "inventore",
-                            SecondaryIdentification: "ratione",
+                            Identification: "nesciunt",
+                            Name: "sed",
+                            SchemeName: "consequatur",
+                            SecondaryIdentification: "voluptatem",
                         },
-                        EndToEndIdentification: "consequuntur",
+                        EndToEndIdentification: "ad",
                         InstructedAmount: shared.ObWriteDomesticConsent4DataInitiationInstructedAmount{
-                            Amount: "sequi",
-                            Currency: "velit",
+                            Amount: "et",
+                            Currency: "totam",
                         },
-                        InstructionIdentification: "autem",
-                        LocalInstrument: "est",
+                        InstructionIdentification: "optio",
+                        LocalInstrument: "aliquam",
                         RemittanceInformation: &shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation{
-                            Reference: "ullam",
-                            Unstructured: "enim",
+                            Reference: "autem",
+                            Unstructured: "distinctio",
                         },
                         SupplementaryData: map[string]interface{}{
-                            "quia": "harum",
-                            "dolores": "corporis",
-                            "sit": "saepe",
+                            "similique": "animi",
                         },
                     },
                     ReadRefundAccount: "Yes",
-                    ScaSupportData: &shared.ObscaSupportData1{
-                        AppliedAuthenticationApproach: "CA",
-                        ReferencePaymentOrderID: "aut",
-                        RequestedScaExemptionType: "Kiosk",
+                    SCASupportData: &shared.ObscaSupportData1{
+                        AppliedAuthenticationApproach: "SCA",
+                        ReferencePaymentOrderID: "aspernatur",
+                        RequestedSCAExemptionType: "Kiosk",
                     },
                 },
                 Risk: shared.ObRisk1{
                     DeliveryAddress: &shared.ObRisk1DeliveryAddress{
                         AddressLine: []string{
-                            "omnis",
-                            "expedita",
-                            "non",
+                            "explicabo",
                         },
-                        BuildingNumber: "expedita",
-                        Country: "quae",
-                        CountrySubDivision: "assumenda",
-                        PostCode: "asperiores",
-                        StreetName: "ut",
-                        TownName: "nesciunt",
+                        BuildingNumber: "veritatis",
+                        Country: "dolore",
+                        CountrySubDivision: "sequi",
+                        PostCode: "enim",
+                        StreetName: "quia",
+                        TownName: "perferendis",
                     },
-                    MerchantCategoryCode: "libero",
-                    MerchantCustomerIdentification: "voluptatibus",
-                    PaymentContextCode: "Other",
+                    MerchantCategoryCode: "et",
+                    MerchantCustomerIdentification: "cumque",
+                    PaymentContextCode: "PartyToParty",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateDomesticPaymentConsents(ctx, req)
+    res, err := s.DomesticPayments.CreateDomesticPaymentConsents(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -212,48 +204,69 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Domestic Payments
 
 * `CreateDomesticPaymentConsents` - Create Domestic Payment Consents
 * `CreateDomesticPayments` - Create Domestic Payments
-* `CreateDomesticScheduledPaymentConsents` - Create Domestic Scheduled Payment Consents
-* `CreateDomesticScheduledPayments` - Create Domestic Scheduled Payments
-* `CreateDomesticStandingOrderConsents` - Create Domestic Standing Order Consents
-* `CreateDomesticStandingOrders` - Create Domestic Standing Orders
-* `CreateFilePaymentConsents` - Create File Payment Consents
-* `CreateFilePaymentConsentsConsentIDFile` - Create File Payment Consents
-* `CreateFilePayments` - Create File Payments
-* `CreateInternationalPaymentConsents` - Create International Payment Consents
-* `CreateInternationalPayments` - Create International Payments
-* `CreateInternationalScheduledPaymentConsents` - Create International Scheduled Payment Consents
-* `CreateInternationalScheduledPayments` - Create International Scheduled Payments
-* `CreateInternationalStandingOrderConsents` - Create International Standing Order Consents
-* `CreateInternationalStandingOrders` - Create International Standing Orders
 * `GetDomesticPaymentConsentsConsentID` - Get Domestic Payment Consents
 * `GetDomesticPaymentConsentsConsentIDFundsConfirmation` - Get Domestic Payment Consents Funds Confirmation
 * `GetDomesticPaymentsDomesticPaymentID` - Get Domestic Payments
-* `GetDomesticPaymentsDomesticPaymentIDPaymentDetails` - Get Payment Details
+
+### Domestic Scheduled Payments
+
+* `CreateDomesticScheduledPaymentConsents` - Create Domestic Scheduled Payment Consents
+* `CreateDomesticScheduledPayments` - Create Domestic Scheduled Payments
 * `GetDomesticScheduledPaymentConsentsConsentID` - Get Domestic Scheduled Payment Consents
 * `GetDomesticScheduledPaymentsDomesticScheduledPaymentID` - Get Domestic Scheduled Payments
-* `GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetails` - Get Payment Details
+
+### Domestic Standing Orders
+
+* `CreateDomesticStandingOrderConsents` - Create Domestic Standing Order Consents
+* `CreateDomesticStandingOrders` - Create Domestic Standing Orders
 * `GetDomesticStandingOrderConsentsConsentID` - Get Domestic Standing Order Consents
 * `GetDomesticStandingOrdersDomesticStandingOrderID` - Get Domestic Standing Orders
-* `GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetails` - Get Payment Details
+
+### File Payments
+
+* `CreateFilePaymentConsents` - Create File Payment Consents
+* `CreateFilePaymentConsentsConsentIDFile` - Create File Payment Consents
+* `CreateFilePayments` - Create File Payments
 * `GetFilePaymentConsentsConsentID` - Get File Payment Consents
 * `GetFilePaymentConsentsConsentIDFile` - Get File Payment Consents
 * `GetFilePaymentsFilePaymentID` - Get File Payments
-* `GetFilePaymentsFilePaymentIDPaymentDetails` - Get Payment Details
 * `GetFilePaymentsFilePaymentIDReportFile` - Get File Payments
+
+### International Payments
+
+* `CreateInternationalPaymentConsents` - Create International Payment Consents
+* `CreateInternationalPayments` - Create International Payments
 * `GetInternationalPaymentConsentsConsentID` - Get International Payment Consents
 * `GetInternationalPaymentConsentsConsentIDFundsConfirmation` - Get International Payment Consents Funds Confirmation
 * `GetInternationalPaymentsInternationalPaymentID` - Get International Payments
-* `GetInternationalPaymentsInternationalPaymentIDPaymentDetails` - Get Payment Details
+
+### International Scheduled Payments
+
+* `CreateInternationalScheduledPaymentConsents` - Create International Scheduled Payment Consents
+* `CreateInternationalScheduledPayments` - Create International Scheduled Payments
 * `GetInternationalScheduledPaymentConsentsConsentID` - Get International Scheduled Payment Consents
 * `GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmation` - Get International Scheduled Payment Consents Funds Confirmation
 * `GetInternationalScheduledPaymentsInternationalScheduledPaymentID` - Get International Scheduled Payments
-* `GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetails` - Get Payment Details
+
+### International Standing Orders
+
+* `CreateInternationalStandingOrderConsents` - Create International Standing Order Consents
+* `CreateInternationalStandingOrders` - Create International Standing Orders
 * `GetInternationalStandingOrderConsentsConsentID` - Get International Standing Order Consents
 * `GetInternationalStandingOrdersInternationalStandingOrderPaymentID` - Get International Standing Orders
+
+### Payment Details
+
+* `GetDomesticPaymentsDomesticPaymentIDPaymentDetails` - Get Payment Details
+* `GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetails` - Get Payment Details
+* `GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetails` - Get Payment Details
+* `GetFilePaymentsFilePaymentIDPaymentDetails` - Get Payment Details
+* `GetInternationalPaymentsInternationalPaymentIDPaymentDetails` - Get Payment Details
+* `GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetails` - Get Payment Details
 * `GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetails` - Get Payment Details
 
 <!-- End SDK Available Operations -->

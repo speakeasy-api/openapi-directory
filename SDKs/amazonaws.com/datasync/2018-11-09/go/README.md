@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelTaskExecutionRequest{
         Headers: operations.CancelTaskExecutionHeaders{
-            XAmzAlgorithm: "iste",
-            XAmzContentSha256: "temporibus",
-            XAmzCredential: "explicabo",
-            XAmzDate: "eaque",
-            XAmzSecurityToken: "rem",
-            XAmzSignature: "explicabo",
-            XAmzSignedHeaders: "veritatis",
+            XAmzAlgorithm: "quaerat",
+            XAmzContentSha256: "earum",
+            XAmzCredential: "quas",
+            XAmzDate: "repellendus",
+            XAmzSecurityToken: "ut",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "quisquam",
             XAmzTarget: "FmrsService.CancelTaskExecution",
         },
         Request: shared.CancelTaskExecutionRequest{
-            TaskExecutionArn: "ut",
+            TaskExecutionArn: "voluptas",
         },
     }
     
-    res, err := s.Sdk.CancelTaskExecution(ctx, req)
+    res, err := s.CancelTaskExecution(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

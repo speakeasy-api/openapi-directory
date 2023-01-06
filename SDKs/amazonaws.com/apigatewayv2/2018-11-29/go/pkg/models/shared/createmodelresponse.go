@@ -1,9 +1,9 @@
 package shared
 
 type CreateModelResponse struct {
-	ContentType *string `json:"ContentType,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	ModelID     *string `json:"ModelId,omitempty"`
-	Name        *string `json:"Name,omitempty"`
-	Schema      *string `json:"Schema,omitempty"`
+	ContentType map[string]interface{} `json:"ContentType,omitempty"`
+	Description map[string]interface{} `json:"Description,omitempty"`
+	ModelID     map[string]interface{} `json:"ModelId,omitempty"`
+	Name        map[string]interface{} `json:"Name,omitempty"`
+	Schema      map[string]interface{} `json:"Schema,omitempty"`
 }

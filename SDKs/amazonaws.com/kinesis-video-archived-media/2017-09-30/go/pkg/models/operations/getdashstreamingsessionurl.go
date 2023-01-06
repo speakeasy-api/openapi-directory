@@ -24,33 +24,33 @@ type GetDashStreamingSessionURLRequestBodyDashFragmentSelector struct {
 type GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum string
 
 const (
-	GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnumAlways GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum = "ALWAYS"
-	GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnumNever  GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum = "NEVER"
+	GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnumAlways GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum = "ALWAYS"
+	GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnumNever  GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum = "NEVER"
 )
 
 type GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum string
 
 const (
-	GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumAlways GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "ALWAYS"
-	GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumNever  GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "NEVER"
+	GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumAlways GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "ALWAYS"
+	GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumNever  GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "NEVER"
 )
 
 type GetDashStreamingSessionURLRequestBodyPlaybackModeEnum string
 
 const (
-	GetDashStreamingSessionURLRequestBodyPlaybackModeEnumLive       GetDashStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE"
-	GetDashStreamingSessionURLRequestBodyPlaybackModeEnumLiveReplay GetDashStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE_REPLAY"
-	GetDashStreamingSessionURLRequestBodyPlaybackModeEnumOnDemand   GetDashStreamingSessionURLRequestBodyPlaybackModeEnum = "ON_DEMAND"
+	GetDASHStreamingSessionURLRequestBodyPlaybackModeEnumLive       GetDashStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE"
+	GetDASHStreamingSessionURLRequestBodyPlaybackModeEnumLiveReplay GetDashStreamingSessionURLRequestBodyPlaybackModeEnum = "LIVE_REPLAY"
+	GetDASHStreamingSessionURLRequestBodyPlaybackModeEnumOnDemand   GetDashStreamingSessionURLRequestBodyPlaybackModeEnum = "ON_DEMAND"
 )
 
 type GetDashStreamingSessionURLRequestBody struct {
-	DashFragmentSelector       *GetDashStreamingSessionURLRequestBodyDashFragmentSelector         `json:"DASHFragmentSelector,omitempty"`
+	DASHFragmentSelector       *GetDashStreamingSessionURLRequestBodyDashFragmentSelector         `json:"DASHFragmentSelector,omitempty"`
 	DisplayFragmentNumber      *GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum    `json:"DisplayFragmentNumber,omitempty"`
 	DisplayFragmentTimestamp   *GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum `json:"DisplayFragmentTimestamp,omitempty"`
 	Expires                    *int64                                                             `json:"Expires,omitempty"`
 	MaxManifestFragmentResults *int64                                                             `json:"MaxManifestFragmentResults,omitempty"`
 	PlaybackMode               *GetDashStreamingSessionURLRequestBodyPlaybackModeEnum             `json:"PlaybackMode,omitempty"`
-	StreamArn                  *string                                                            `json:"StreamARN,omitempty"`
+	StreamARN                  *string                                                            `json:"StreamARN,omitempty"`
 	StreamName                 *string                                                            `json:"StreamName,omitempty"`
 }
 
@@ -62,7 +62,7 @@ type GetDashStreamingSessionURLRequest struct {
 type GetDashStreamingSessionURLResponse struct {
 	ClientLimitExceededException        *interface{}
 	ContentType                         string
-	GetDashStreamingSessionURLOutput    *shared.GetDashStreamingSessionURLOutput
+	GetDASHStreamingSessionURLOutput    *shared.GetDashStreamingSessionURLOutput
 	InvalidArgumentException            *interface{}
 	InvalidCodecPrivateDataException    *interface{}
 	MissingCodecPrivateDataException    *interface{}

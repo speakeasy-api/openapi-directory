@@ -27,7 +27,7 @@ type RemoveTagsRequest struct {
 }
 
 type RemoveTagsResponse struct {
-	CloudTrailArnInvalidException         *interface{}
+	CloudTrailARNInvalidException         *interface{}
 	ContentType                           string
 	InvalidTagParameterException          *interface{}
 	InvalidTrailNameException             *interface{}

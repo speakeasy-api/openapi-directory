@@ -9,7 +9,7 @@ type ChangeDiscoverabilityRequest struct {
 }
 
 type ChangeDiscoverabilityResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ChangeDiscoverability200TextPlainObject *string
+	ContentType                             string
+	StatusCode                              int64
 }

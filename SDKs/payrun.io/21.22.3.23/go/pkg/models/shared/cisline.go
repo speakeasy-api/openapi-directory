@@ -23,14 +23,14 @@ const (
 type CisLineCisLineUomEnum string
 
 const (
-	CisLineCisLineUomEnumNotSet CisLineCisLineUomEnum = "NotSet"
-	CisLineCisLineUomEnumMinute CisLineCisLineUomEnum = "Minute"
-	CisLineCisLineUomEnumHour   CisLineCisLineUomEnum = "Hour"
-	CisLineCisLineUomEnumDay    CisLineCisLineUomEnum = "Day"
-	CisLineCisLineUomEnumWeek   CisLineCisLineUomEnum = "Week"
-	CisLineCisLineUomEnumMonth  CisLineCisLineUomEnum = "Month"
-	CisLineCisLineUomEnumYear   CisLineCisLineUomEnum = "Year"
-	CisLineCisLineUomEnumUnit   CisLineCisLineUomEnum = "Unit"
+	CisLineCisLineUOMEnumNotSet CisLineCisLineUomEnum = "NotSet"
+	CisLineCisLineUOMEnumMinute CisLineCisLineUomEnum = "Minute"
+	CisLineCisLineUOMEnumHour   CisLineCisLineUomEnum = "Hour"
+	CisLineCisLineUOMEnumDay    CisLineCisLineUomEnum = "Day"
+	CisLineCisLineUOMEnumWeek   CisLineCisLineUomEnum = "Week"
+	CisLineCisLineUOMEnumMonth  CisLineCisLineUomEnum = "Month"
+	CisLineCisLineUOMEnumYear   CisLineCisLineUomEnum = "Year"
+	CisLineCisLineUOMEnumUnit   CisLineCisLineUomEnum = "Unit"
 )
 
 type CisLineCisLine struct {
@@ -45,10 +45,10 @@ type CisLineCisLine struct {
 	TaxPeriod      *int32                          `json:"TaxPeriod,omitempty"`
 	TaxTreatment   *CisLineCisLineTaxTreatmentEnum `json:"TaxTreatment,omitempty"`
 	TaxYear        *int32                          `json:"TaxYear,omitempty"`
-	Uom            *CisLineCisLineUomEnum          `json:"UOM,omitempty"`
+	UOM            *CisLineCisLineUomEnum          `json:"UOM,omitempty"`
 	UnitRate       *float64                        `json:"UnitRate,omitempty"`
 	Units          *float64                        `json:"Units,omitempty"`
-	Vat            *float64                        `json:"VAT,omitempty"`
+	VAT            *float64                        `json:"VAT,omitempty"`
 }
 
 type CisLine struct {

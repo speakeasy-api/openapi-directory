@@ -3,13 +3,13 @@ package operations
 type PostRebootClusterActionEnum string
 
 const (
-	PostRebootClusterActionEnumRebootCluster PostRebootClusterActionEnum = "RebootCluster"
+	POSTRebootClusterActionEnumRebootCluster PostRebootClusterActionEnum = "RebootCluster"
 )
 
 type PostRebootClusterVersionEnum string
 
 const (
-	PostRebootClusterVersionEnumTwoThousandAndTwelve1201 PostRebootClusterVersionEnum = "2012-12-01"
+	POSTRebootClusterVersionEnumTwoThousandAndTwelve1201 PostRebootClusterVersionEnum = "2012-12-01"
 )
 
 type PostRebootClusterQueryParams struct {

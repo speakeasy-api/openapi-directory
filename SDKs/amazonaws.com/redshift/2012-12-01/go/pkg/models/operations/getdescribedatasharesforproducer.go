@@ -3,23 +3,23 @@ package operations
 type GetDescribeDataSharesForProducerActionEnum string
 
 const (
-	GetDescribeDataSharesForProducerActionEnumDescribeDataSharesForProducer GetDescribeDataSharesForProducerActionEnum = "DescribeDataSharesForProducer"
+	GETDescribeDataSharesForProducerActionEnumDescribeDataSharesForProducer GetDescribeDataSharesForProducerActionEnum = "DescribeDataSharesForProducer"
 )
 
 type GetDescribeDataSharesForProducerStatusEnum string
 
 const (
-	GetDescribeDataSharesForProducerStatusEnumActive               GetDescribeDataSharesForProducerStatusEnum = "ACTIVE"
-	GetDescribeDataSharesForProducerStatusEnumAuthorized           GetDescribeDataSharesForProducerStatusEnum = "AUTHORIZED"
-	GetDescribeDataSharesForProducerStatusEnumPendingAuthorization GetDescribeDataSharesForProducerStatusEnum = "PENDING_AUTHORIZATION"
-	GetDescribeDataSharesForProducerStatusEnumDeauthorized         GetDescribeDataSharesForProducerStatusEnum = "DEAUTHORIZED"
-	GetDescribeDataSharesForProducerStatusEnumRejected             GetDescribeDataSharesForProducerStatusEnum = "REJECTED"
+	GETDescribeDataSharesForProducerStatusEnumActive               GetDescribeDataSharesForProducerStatusEnum = "ACTIVE"
+	GETDescribeDataSharesForProducerStatusEnumAuthorized           GetDescribeDataSharesForProducerStatusEnum = "AUTHORIZED"
+	GETDescribeDataSharesForProducerStatusEnumPendingAuthorization GetDescribeDataSharesForProducerStatusEnum = "PENDING_AUTHORIZATION"
+	GETDescribeDataSharesForProducerStatusEnumDeauthorized         GetDescribeDataSharesForProducerStatusEnum = "DEAUTHORIZED"
+	GETDescribeDataSharesForProducerStatusEnumRejected             GetDescribeDataSharesForProducerStatusEnum = "REJECTED"
 )
 
 type GetDescribeDataSharesForProducerVersionEnum string
 
 const (
-	GetDescribeDataSharesForProducerVersionEnumTwoThousandAndTwelve1201 GetDescribeDataSharesForProducerVersionEnum = "2012-12-01"
+	GETDescribeDataSharesForProducerVersionEnumTwoThousandAndTwelve1201 GetDescribeDataSharesForProducerVersionEnum = "2012-12-01"
 )
 
 type GetDescribeDataSharesForProducerQueryParams struct {

@@ -30,7 +30,7 @@ type DeleteLoggingConfigurationResponse struct {
 	ContentType                        string
 	DeleteLoggingConfigurationResponse map[string]interface{}
 	StatusCode                         int64
-	WafInternalErrorException          *interface{}
-	WafNonexistentItemException        *interface{}
-	WafStaleDataException              *interface{}
+	WAFInternalErrorException          *interface{}
+	WAFNonexistentItemException        *interface{}
+	WAFStaleDataException              *interface{}
 }

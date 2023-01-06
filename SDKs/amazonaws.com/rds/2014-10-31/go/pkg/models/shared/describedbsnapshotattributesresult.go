@@ -1,5 +1,5 @@
 package shared
 
 type DescribeDbSnapshotAttributesResult struct {
-	DbSnapshotAttributesResult *DbSnapshotAttributesResult
+	DBSnapshotAttributesResult *DbSnapshotAttributesResult
 }

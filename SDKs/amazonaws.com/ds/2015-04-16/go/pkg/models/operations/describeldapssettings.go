@@ -7,7 +7,7 @@ import (
 type DescribeLdapsSettingsXAmzTargetEnum string
 
 const (
-	DescribeLdapsSettingsXAmzTargetEnumDirectoryService20150416DescribeLdapsSettings DescribeLdapsSettingsXAmzTargetEnum = "DirectoryService_20150416.DescribeLDAPSSettings"
+	DescribeLDAPSSettingsXAmzTargetEnumDirectoryService20150416DescribeLdapsSettings DescribeLdapsSettingsXAmzTargetEnum = "DirectoryService_20150416.DescribeLDAPSSettings"
 )
 
 type DescribeLdapsSettingsHeaders struct {
@@ -29,7 +29,7 @@ type DescribeLdapsSettingsRequest struct {
 type DescribeLdapsSettingsResponse struct {
 	ClientException                *interface{}
 	ContentType                    string
-	DescribeLdapsSettingsResult    *shared.DescribeLdapsSettingsResult
+	DescribeLDAPSSettingsResult    *shared.DescribeLdapsSettingsResult
 	DirectoryDoesNotExistException *interface{}
 	InvalidNextTokenException      *interface{}
 	InvalidParameterException      *interface{}

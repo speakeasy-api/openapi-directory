@@ -8,18 +8,10 @@ type TeamsListMembersLegacyPathParams struct {
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
-type TeamsListMembersLegacyRoleEnum string
-
-const (
-	TeamsListMembersLegacyRoleEnumMember     TeamsListMembersLegacyRoleEnum = "member"
-	TeamsListMembersLegacyRoleEnumMaintainer TeamsListMembersLegacyRoleEnum = "maintainer"
-	TeamsListMembersLegacyRoleEnumAll        TeamsListMembersLegacyRoleEnum = "all"
-)
-
 type TeamsListMembersLegacyQueryParams struct {
-	Page    *int64                          `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                          `queryParam:"style=form,explode=true,name=per_page"`
-	Role    *TeamsListMembersLegacyRoleEnum `queryParam:"style=form,explode=true,name=role"`
+	Page    *int64             `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64             `queryParam:"style=form,explode=true,name=per_page"`
+	Role    *shared.TeamIDEnum `queryParam:"style=form,explode=true,name=role"`
 }
 
 type TeamsListMembersLegacyRequest struct {

@@ -7,7 +7,7 @@ import (
 // Snapshot
 // Represents a copy of an entire Redis cluster as of the time when the snapshot was taken.
 type Snapshot struct {
-	Arn                         *string
+	ARN                         *string
 	AutoMinorVersionUpgrade     *bool
 	AutomaticFailover           *AutomaticFailoverStatusEnum
 	CacheClusterCreateTime      *time.Time
@@ -18,7 +18,7 @@ type Snapshot struct {
 	Engine                      *string
 	EngineVersion               *string
 	KmsKeyID                    *string
-	NodeSnapshots               []NodeSnapshot
+	NodeSnapshots               []map[string]interface{}
 	NumCacheNodes               *int64
 	NumNodeGroups               *int64
 	Port                        *int64

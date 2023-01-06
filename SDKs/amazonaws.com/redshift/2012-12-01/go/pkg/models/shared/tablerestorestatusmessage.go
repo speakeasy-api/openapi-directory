@@ -4,5 +4,5 @@ package shared
 // <p/>
 type TableRestoreStatusMessage struct {
 	Marker                    *string
-	TableRestoreStatusDetails []TableRestoreStatus
+	TableRestoreStatusDetails []map[string]interface{}
 }

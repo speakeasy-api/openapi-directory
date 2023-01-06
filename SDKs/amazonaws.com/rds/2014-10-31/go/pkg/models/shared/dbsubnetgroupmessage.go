@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeDBSubnetGroups</code> action.
 type DbSubnetGroupMessage struct {
-	DbSubnetGroups []DbSubnetGroup
+	DBSubnetGroups []map[string]interface{}
 	Marker         *string
 }

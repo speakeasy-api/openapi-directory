@@ -3,19 +3,19 @@ package operations
 type GetAuthorizeDbSecurityGroupIngressActionEnum string
 
 const (
-	GetAuthorizeDbSecurityGroupIngressActionEnumAuthorizeDbSecurityGroupIngress GetAuthorizeDbSecurityGroupIngressActionEnum = "AuthorizeDBSecurityGroupIngress"
+	GETAuthorizeDBSecurityGroupIngressActionEnumAuthorizeDbSecurityGroupIngress GetAuthorizeDbSecurityGroupIngressActionEnum = "AuthorizeDBSecurityGroupIngress"
 )
 
 type GetAuthorizeDbSecurityGroupIngressVersionEnum string
 
 const (
-	GetAuthorizeDbSecurityGroupIngressVersionEnumTwoThousandAndThirteen0909 GetAuthorizeDbSecurityGroupIngressVersionEnum = "2013-09-09"
+	GETAuthorizeDBSecurityGroupIngressVersionEnumTwoThousandAndThirteen0909 GetAuthorizeDbSecurityGroupIngressVersionEnum = "2013-09-09"
 )
 
 type GetAuthorizeDbSecurityGroupIngressQueryParams struct {
 	Action                  GetAuthorizeDbSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Cidrip                  *string                                       `queryParam:"style=form,explode=true,name=CIDRIP"`
-	DbSecurityGroupName     string                                        `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
+	CIDRIP                  *string                                       `queryParam:"style=form,explode=true,name=CIDRIP"`
+	DBSecurityGroupName     string                                        `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
 	Ec2SecurityGroupID      *string                                       `queryParam:"style=form,explode=true,name=EC2SecurityGroupId"`
 	Ec2SecurityGroupName    *string                                       `queryParam:"style=form,explode=true,name=EC2SecurityGroupName"`
 	Ec2SecurityGroupOwnerID *string                                       `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`

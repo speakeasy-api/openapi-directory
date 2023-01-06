@@ -5,7 +5,7 @@ import (
 )
 
 type ListTagsForResourcePathParams struct {
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceARN"`
+	ResourceARN string `pathParam:"style=simple,explode=false,name=resourceARN"`
 }
 
 type ListTagsForResourceHeaders struct {

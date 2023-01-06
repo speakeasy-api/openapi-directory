@@ -27,8 +27,8 @@ type GetStatsUsingGet500ApplicationJSON struct {
 type GetStatsUsingGetResponse struct {
 	ContentType                              string
 	StatusCode                               int64
-	GetStatsUsingGet200ApplicationJSONObject *GetStatsUsingGet200ApplicationJSON
-	GetStatsUsingGet400ApplicationJSONObject *GetStatsUsingGet400ApplicationJSON
-	GetStatsUsingGet401ApplicationJSONObject *GetStatsUsingGet401ApplicationJSON
-	GetStatsUsingGet500ApplicationJSONObject *GetStatsUsingGet500ApplicationJSON
+	GETStatsUsingGET200ApplicationJSONObject *GetStatsUsingGet200ApplicationJSON
+	GETStatsUsingGET400ApplicationJSONObject *GetStatsUsingGet400ApplicationJSON
+	GETStatsUsingGET401ApplicationJSONObject *GetStatsUsingGet401ApplicationJSON
+	GETStatsUsingGET500ApplicationJSONObject *GetStatsUsingGet500ApplicationJSON
 }

@@ -3,13 +3,13 @@ package operations
 type GetDeleteUsageLimitActionEnum string
 
 const (
-	GetDeleteUsageLimitActionEnumDeleteUsageLimit GetDeleteUsageLimitActionEnum = "DeleteUsageLimit"
+	GETDeleteUsageLimitActionEnumDeleteUsageLimit GetDeleteUsageLimitActionEnum = "DeleteUsageLimit"
 )
 
 type GetDeleteUsageLimitVersionEnum string
 
 const (
-	GetDeleteUsageLimitVersionEnumTwoThousandAndTwelve1201 GetDeleteUsageLimitVersionEnum = "2012-12-01"
+	GETDeleteUsageLimitVersionEnumTwoThousandAndTwelve1201 GetDeleteUsageLimitVersionEnum = "2012-12-01"
 )
 
 type GetDeleteUsageLimitQueryParams struct {

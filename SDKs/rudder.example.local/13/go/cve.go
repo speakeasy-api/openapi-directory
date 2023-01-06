@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -63,7 +63,7 @@ func (s *Cve) CheckCve(ctx context.Context) (*operations.CheckCveResponse, error
 				return nil, err
 			}
 
-			res.CheckCve200ApplicationJSONObject = out
+			res.CheckCVE200ApplicationJSONObject = out
 		}
 	}
 
@@ -145,7 +145,7 @@ func (s *Cve) GetCveCheckConfiguration(ctx context.Context) (*operations.GetCveC
 				return nil, err
 			}
 
-			res.GetCveCheckConfiguration200ApplicationJSONObject = out
+			res.GetCVECheckConfiguration200ApplicationJSONObject = out
 		}
 	}
 
@@ -193,7 +193,7 @@ func (s *Cve) GetCveList(ctx context.Context, request operations.GetCveListReque
 				return nil, err
 			}
 
-			res.GetCveList200ApplicationJSONObject = out
+			res.GetCVEList200ApplicationJSONObject = out
 		}
 	}
 
@@ -234,7 +234,7 @@ func (s *Cve) GetLastCveCheck(ctx context.Context) (*operations.GetLastCveCheckR
 				return nil, err
 			}
 
-			res.GetLastCveCheck200ApplicationJSONObject = out
+			res.GetLastCVECheck200ApplicationJSONObject = out
 		}
 	}
 
@@ -275,7 +275,7 @@ func (s *Cve) ReadCvEfromFs(ctx context.Context) (*operations.ReadCvEfromFsRespo
 				return nil, err
 			}
 
-			res.ReadCvEfromFs200ApplicationJSONObject = out
+			res.ReadCVEfromFS200ApplicationJSONObject = out
 		}
 	}
 
@@ -323,7 +323,7 @@ func (s *Cve) UpdateCve(ctx context.Context, request operations.UpdateCveRequest
 				return nil, err
 			}
 
-			res.UpdateCve200ApplicationJSONObject = out
+			res.UpdateCVE200ApplicationJSONObject = out
 		}
 	}
 
@@ -371,7 +371,7 @@ func (s *Cve) UpdateCveCheckConfiguration(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.UpdateCveCheckConfiguration200ApplicationJSONObject = out
+			res.UpdateCVECheckConfiguration200ApplicationJSONObject = out
 		}
 	}
 

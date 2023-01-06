@@ -1,24 +1,24 @@
 package shared
 
 type GetIntegrationResult struct {
-	APIGatewayManaged                      *bool                        `json:"ApiGatewayManaged,omitempty"`
-	ConnectionID                           *string                      `json:"ConnectionId,omitempty"`
-	ConnectionType                         *ConnectionTypeEnum          `json:"ConnectionType,omitempty"`
-	ContentHandlingStrategy                *ContentHandlingStrategyEnum `json:"ContentHandlingStrategy,omitempty"`
-	CredentialsArn                         *string                      `json:"CredentialsArn,omitempty"`
-	Description                            *string                      `json:"Description,omitempty"`
-	IntegrationID                          *string                      `json:"IntegrationId,omitempty"`
-	IntegrationMethod                      *string                      `json:"IntegrationMethod,omitempty"`
-	IntegrationResponseSelectionExpression *string                      `json:"IntegrationResponseSelectionExpression,omitempty"`
-	IntegrationSubtype                     *string                      `json:"IntegrationSubtype,omitempty"`
-	IntegrationType                        *IntegrationTypeEnum         `json:"IntegrationType,omitempty"`
-	IntegrationURI                         *string                      `json:"IntegrationUri,omitempty"`
-	PassthroughBehavior                    *PassthroughBehaviorEnum     `json:"PassthroughBehavior,omitempty"`
-	PayloadFormatVersion                   *string                      `json:"PayloadFormatVersion,omitempty"`
+	APIGatewayManaged                      map[string]interface{}       `json:"ApiGatewayManaged,omitempty"`
+	ConnectionID                           map[string]interface{}       `json:"ConnectionId,omitempty"`
+	ConnectionType                         map[string]interface{}       `json:"ConnectionType,omitempty"`
+	ContentHandlingStrategy                map[string]interface{}       `json:"ContentHandlingStrategy,omitempty"`
+	CredentialsArn                         map[string]interface{}       `json:"CredentialsArn,omitempty"`
+	Description                            map[string]interface{}       `json:"Description,omitempty"`
+	IntegrationID                          map[string]interface{}       `json:"IntegrationId,omitempty"`
+	IntegrationMethod                      map[string]interface{}       `json:"IntegrationMethod,omitempty"`
+	IntegrationResponseSelectionExpression map[string]interface{}       `json:"IntegrationResponseSelectionExpression,omitempty"`
+	IntegrationSubtype                     map[string]interface{}       `json:"IntegrationSubtype,omitempty"`
+	IntegrationType                        map[string]interface{}       `json:"IntegrationType,omitempty"`
+	IntegrationURI                         map[string]interface{}       `json:"IntegrationUri,omitempty"`
+	PassthroughBehavior                    map[string]interface{}       `json:"PassthroughBehavior,omitempty"`
+	PayloadFormatVersion                   map[string]interface{}       `json:"PayloadFormatVersion,omitempty"`
 	RequestParameters                      map[string]string            `json:"RequestParameters,omitempty"`
 	RequestTemplates                       map[string]string            `json:"RequestTemplates,omitempty"`
 	ResponseParameters                     map[string]map[string]string `json:"ResponseParameters,omitempty"`
-	TemplateSelectionExpression            *string                      `json:"TemplateSelectionExpression,omitempty"`
-	TimeoutInMillis                        *int64                       `json:"TimeoutInMillis,omitempty"`
-	TLSConfig                              *TLSConfig                   `json:"TlsConfig,omitempty"`
+	TemplateSelectionExpression            map[string]interface{}       `json:"TemplateSelectionExpression,omitempty"`
+	TimeoutInMillis                        map[string]interface{}       `json:"TimeoutInMillis,omitempty"`
+	TLSConfig                              map[string]interface{}       `json:"TlsConfig,omitempty"`
 }

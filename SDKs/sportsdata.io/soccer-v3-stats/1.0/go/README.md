@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -39,7 +38,7 @@ func main() {
         },
     }
     
-    res, err := s.Sdk.AreasCountries(ctx, req)
+    res, err := s.AreasCountries(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

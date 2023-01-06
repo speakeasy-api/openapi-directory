@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,58 +34,60 @@ func main() {
     
     req := operations.CreateCanaryRequest{
         Headers: operations.CreateCanaryHeaders{
-            XAmzAlgorithm: "totam",
-            XAmzContentSha256: "et",
-            XAmzCredential: "ea",
-            XAmzDate: "labore",
-            XAmzSecurityToken: "quasi",
-            XAmzSignature: "eaque",
-            XAmzSignedHeaders: "velit",
+            XAmzAlgorithm: "id",
+            XAmzContentSha256: "sequi",
+            XAmzCredential: "dicta",
+            XAmzDate: "quis",
+            XAmzSecurityToken: "molestiae",
+            XAmzSignature: "aliquam",
+            XAmzSignedHeaders: "quos",
         },
         Request: operations.CreateCanaryRequestBody{
-            ArtifactS3Location: "ullam",
+            ArtifactS3Location: "omnis",
             Code: operations.CreateCanaryRequestBodyCode{
-                Handler: "cum",
-                S3Bucket: "quibusdam",
-                S3Key: "magnam",
-                S3Version: "quisquam",
-                ZipFile: "est",
+                Handler: "illum",
+                S3Bucket: "repellat",
+                S3Key: "id",
+                S3Version: "blanditiis",
+                ZipFile: "possimus",
             },
-            ExecutionRoleArn: "necessitatibus",
-            FailureRetentionPeriodInDays: 1883586445759992609,
-            Name: "dolores",
+            ExecutionRoleArn: "eius",
+            FailureRetentionPeriodInDays: 6067213973756965288,
+            Name: "adipisci",
             RunConfig: &operations.CreateCanaryRequestBodyRunConfig{
-                ActiveTracing: true,
+                ActiveTracing: false,
                 EnvironmentVariables: map[string]string{
-                    "quia": "sit",
+                    "in": "fuga",
+                    "nemo": "dolore",
+                    "suscipit": "architecto",
                 },
-                MemoryInMb: 481029704797432436,
-                TimeoutInSeconds: 1255680169419955780,
+                MemoryInMB: 5845898850995843190,
+                TimeoutInSeconds: 5969817432109258462,
             },
-            RuntimeVersion: "possimus",
+            RuntimeVersion: "inventore",
             Schedule: operations.CreateCanaryRequestBodySchedule{
-                DurationInSeconds: 7670254550561242779,
-                Expression: "facere",
+                DurationInSeconds: 8297725858245467940,
+                Expression: "autem",
             },
-            SuccessRetentionPeriodInDays: 611493464268025959,
+            SuccessRetentionPeriodInDays: 8416882255818503945,
             Tags: map[string]string{
-                "hic": "praesentium",
-                "omnis": "qui",
+                "aut": "est",
+                "voluptatem": "magnam",
             },
             VpcConfig: &operations.CreateCanaryRequestBodyVpcConfig{
                 SecurityGroupIds: []string{
-                    "magni",
+                    "quos",
+                    "aspernatur",
+                    "veniam",
                 },
                 SubnetIds: []string{
-                    "nam",
-                    "quia",
-                    "cum",
+                    "harum",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateCanary(ctx, req)
+    res, err := s.CreateCanary(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

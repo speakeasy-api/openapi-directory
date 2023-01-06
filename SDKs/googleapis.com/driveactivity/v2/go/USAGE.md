@@ -1,0 +1,67 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.DriveactivityActivityQueryRequest{
+        Security: operations.DriveactivityActivityQuerySecurity{
+            Option1: &operations.DriveactivityActivityQuerySecurityOption1{
+                Oauth2: shared.SchemeOauth2{
+                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+                },
+                Oauth2c: shared.SchemeOauth2c{
+                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+                },
+            },
+        },
+        QueryParams: operations.DriveactivityActivityQueryQueryParams{
+            DollarXgafv: "1",
+            AccessToken: "tempora",
+            Alt: "media",
+            Callback: "cum",
+            Fields: "voluptatibus",
+            Key: "sed",
+            OauthToken: "ipsum",
+            PrettyPrint: false,
+            QuotaUser: "iusto",
+            UploadType: "et",
+            UploadProtocol: "eos",
+        },
+        Request: &shared.QueryDriveActivityRequest{
+            AncestorName: "qui",
+            ConsolidationStrategy: &shared.ConsolidationStrategy{
+                Legacy: map[string]interface{}{
+                    "adipisci": "facere",
+                    "perspiciatis": "porro",
+                    "ut": "hic",
+                },
+                None: map[string]interface{}{
+                    "vel": "non",
+                    "optio": "vel",
+                },
+            },
+            Filter: "quae",
+            ItemName: "ut",
+            PageSize: 3377410601554867222,
+            PageToken: "consequatur",
+        },
+    }
+    
+    res, err := s.Activity.DriveactivityActivityQuery(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.QueryDriveActivityResponse != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

@@ -1,5 +1,5 @@
 package shared
 
 type ResetAddressAttributeResult struct {
-	Address *AddressAttribute
+	Address map[string]interface{}
 }

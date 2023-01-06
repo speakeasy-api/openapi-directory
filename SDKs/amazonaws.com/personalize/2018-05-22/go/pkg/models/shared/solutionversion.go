@@ -12,8 +12,8 @@ type SolutionVersion struct {
 	EventType           *string           `json:"eventType,omitempty"`
 	FailureReason       *string           `json:"failureReason,omitempty"`
 	LastUpdatedDateTime *time.Time        `json:"lastUpdatedDateTime,omitempty"`
-	PerformAutoMl       *bool             `json:"performAutoML,omitempty"`
-	PerformHpo          *bool             `json:"performHPO,omitempty"`
+	PerformAutoML       *bool             `json:"performAutoML,omitempty"`
+	PerformHPO          *bool             `json:"performHPO,omitempty"`
 	RecipeArn           *string           `json:"recipeArn,omitempty"`
 	SolutionArn         *string           `json:"solutionArn,omitempty"`
 	SolutionConfig      *SolutionConfig   `json:"solutionConfig,omitempty"`
@@ -21,5 +21,5 @@ type SolutionVersion struct {
 	Status              *string           `json:"status,omitempty"`
 	TrainingHours       *float64          `json:"trainingHours,omitempty"`
 	TrainingMode        *TrainingModeEnum `json:"trainingMode,omitempty"`
-	TunedHpoParams      *TunedHpoParams   `json:"tunedHPOParams,omitempty"`
+	TunedHPOParams      *TunedHpoParams   `json:"tunedHPOParams,omitempty"`
 }

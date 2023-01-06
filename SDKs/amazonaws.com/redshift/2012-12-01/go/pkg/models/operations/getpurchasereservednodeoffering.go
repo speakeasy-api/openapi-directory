@@ -3,13 +3,13 @@ package operations
 type GetPurchaseReservedNodeOfferingActionEnum string
 
 const (
-	GetPurchaseReservedNodeOfferingActionEnumPurchaseReservedNodeOffering GetPurchaseReservedNodeOfferingActionEnum = "PurchaseReservedNodeOffering"
+	GETPurchaseReservedNodeOfferingActionEnumPurchaseReservedNodeOffering GetPurchaseReservedNodeOfferingActionEnum = "PurchaseReservedNodeOffering"
 )
 
 type GetPurchaseReservedNodeOfferingVersionEnum string
 
 const (
-	GetPurchaseReservedNodeOfferingVersionEnumTwoThousandAndTwelve1201 GetPurchaseReservedNodeOfferingVersionEnum = "2012-12-01"
+	GETPurchaseReservedNodeOfferingVersionEnumTwoThousandAndTwelve1201 GetPurchaseReservedNodeOfferingVersionEnum = "2012-12-01"
 )
 
 type GetPurchaseReservedNodeOfferingQueryParams struct {

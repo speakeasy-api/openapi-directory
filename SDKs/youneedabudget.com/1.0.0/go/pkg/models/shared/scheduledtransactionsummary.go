@@ -13,6 +13,7 @@ const (
 	ScheduledTransactionSummaryFlagColorEnumGreen  ScheduledTransactionSummaryFlagColorEnum = "green"
 	ScheduledTransactionSummaryFlagColorEnumBlue   ScheduledTransactionSummaryFlagColorEnum = "blue"
 	ScheduledTransactionSummaryFlagColorEnumPurple ScheduledTransactionSummaryFlagColorEnum = "purple"
+	ScheduledTransactionSummaryFlagColorEnumNull   ScheduledTransactionSummaryFlagColorEnum = "null"
 )
 
 type ScheduledTransactionSummaryFrequencyEnum string

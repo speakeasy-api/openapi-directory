@@ -1,5 +1,5 @@
 package shared
 
 type DescribeValidDbInstanceModificationsResult struct {
-	ValidDbInstanceModificationsMessage *ValidDbInstanceModificationsMessage
+	ValidDBInstanceModificationsMessage *ValidDbInstanceModificationsMessage
 }

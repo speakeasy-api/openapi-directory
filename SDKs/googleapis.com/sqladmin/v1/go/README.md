@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,29 +27,29 @@ func main() {
             Option1: &operations.SQLBackupRunsDeleteSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.SQLBackupRunsDeletePathParams{
-            ID: "exercitationem",
-            Instance: "eos",
-            Project: "eius",
+            ID: "consequatur",
+            Instance: "maiores",
+            Project: "iste",
         },
         QueryParams: operations.SQLBackupRunsDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "ipsam",
+            DollarXgafv: "1",
+            AccessToken: "quis",
             Alt: "media",
-            Callback: "at",
-            Fields: "quia",
-            Key: "qui",
-            OauthToken: "impedit",
-            PrettyPrint: false,
-            QuotaUser: "provident",
-            UploadType: "vel",
-            UploadProtocol: "amet",
+            Callback: "tempora",
+            Fields: "voluptatem",
+            Key: "accusamus",
+            OauthToken: "consequatur",
+            PrettyPrint: true,
+            QuotaUser: "minus",
+            UploadType: "labore",
+            UploadProtocol: "iure",
         },
     }
     

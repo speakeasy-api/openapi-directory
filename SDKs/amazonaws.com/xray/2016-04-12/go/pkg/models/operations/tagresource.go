@@ -15,7 +15,7 @@ type TagResourceHeaders struct {
 }
 
 type TagResourceRequestBody struct {
-	ResourceArn string       `json:"ResourceARN"`
+	ResourceARN string       `json:"ResourceARN"`
 	Tags        []shared.Tag `json:"Tags"`
 }
 

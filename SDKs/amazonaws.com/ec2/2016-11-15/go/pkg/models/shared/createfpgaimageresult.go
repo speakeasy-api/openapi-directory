@@ -1,6 +1,6 @@
 package shared
 
 type CreateFpgaImageResult struct {
-	FpgaImageGlobalID *string
-	FpgaImageID       *string
+	FpgaImageGlobalID map[string]interface{}
+	FpgaImageID       map[string]interface{}
 }

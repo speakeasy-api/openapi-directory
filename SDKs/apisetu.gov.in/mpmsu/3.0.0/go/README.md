@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.MicerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.MicerRequestBody{
             CertificateParameters: &operations.MicerRequestBodyCertificateParameters{
-                Appno: "eaque",
-                DateOfBirth: "nemo",
-                Enrolno: "corrupti",
-                Rollno: "sunt",
+                APPNO: "tempore",
+                DateOfBirth: "dolorem",
+                ENROLNO: "amet",
+                ROLLNO: "atque",
             },
-            ConsentArtifact: "ipsa",
+            ConsentArtifact: "quia",
             Format: "pdf",
-            TxnID: "eos",
+            TxnID: "voluptas",
         },
     }
     
-    res, err := s.Sdk.Micer(ctx, req)
+    res, err := s.APIs.Micer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Micer` - Migration Certificate
 * `Pvcer` - Provisional Certificate

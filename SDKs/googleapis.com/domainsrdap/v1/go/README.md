@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,20 +24,20 @@ func main() {
     
     req := operations.DomainsrdapAutnumGetRequest{
         PathParams: operations.DomainsrdapAutnumGetPathParams{
-            AutnumID: "aperiam",
+            AutnumID: "rerum",
         },
         QueryParams: operations.DomainsrdapAutnumGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "modi",
-            Alt: "media",
-            Callback: "ad",
-            Fields: "id",
-            Key: "accusamus",
-            OauthToken: "quasi",
+            AccessToken: "natus",
+            Alt: "proto",
+            Callback: "eos",
+            Fields: "quae",
+            Key: "ipsa",
+            OauthToken: "dignissimos",
             PrettyPrint: false,
-            QuotaUser: "deserunt",
-            UploadType: "quas",
-            UploadProtocol: "vero",
+            QuotaUser: "eveniet",
+            UploadType: "perspiciatis",
+            UploadProtocol: "iste",
         },
     }
     

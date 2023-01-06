@@ -8,14 +8,14 @@ type GetInvoicePdfByUUIDPathParams struct {
 	InvoiceUUID string `pathParam:"style=simple,explode=false,name=invoice_uuid"`
 }
 
-type GetInvoicePdfByUUIDRequest struct {
-	PathParams GetInvoicePdfByUUIDPathParams
-}
-
 type GetInvoicePdfByUUID401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetInvoicePdfByUUIDRequest struct {
+	PathParams GetInvoicePdfByUUIDPathParams
 }
 
 type GetInvoicePdfByUUIDResponse struct {

@@ -10,7 +10,7 @@ var PostV05CareContextsDiscoverServerList = []string{
 
 type PostV05CareContextsDiscoverHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
 }
 
 type PostV05CareContextsDiscoverRequests struct {

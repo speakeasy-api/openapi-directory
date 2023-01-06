@@ -1,7 +1,7 @@
 package operations
 
 type GetDrugByIDPathParams struct {
-	DrugID string `pathParam:"style=simple,explode=false,name=DRUG_ID"`
+	DRUGID string `pathParam:"style=simple,explode=false,name=DRUG_ID"`
 }
 
 type GetDrugByIDQueryParams struct {

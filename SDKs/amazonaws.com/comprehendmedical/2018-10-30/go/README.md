@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.DescribeEntitiesDetectionV2JobRequest{
         Headers: operations.DescribeEntitiesDetectionV2JobHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "soluta",
-            XAmzDate: "minima",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "accusamus",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "temporibus",
+            XAmzContentSha256: "explicabo",
+            XAmzCredential: "eaque",
+            XAmzDate: "rem",
+            XAmzSecurityToken: "explicabo",
+            XAmzSignature: "veritatis",
+            XAmzSignedHeaders: "ducimus",
             XAmzTarget: "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job",
         },
         Request: shared.DescribeEntitiesDetectionV2JobRequest{
-            JobID: "quod",
+            JobID: "incidunt",
         },
     }
     
-    res, err := s.Sdk.DescribeEntitiesDetectionV2Job(ctx, req)
+    res, err := s.DescribeEntitiesDetectionV2Job(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

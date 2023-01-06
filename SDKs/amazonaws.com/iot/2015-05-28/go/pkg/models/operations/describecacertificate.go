@@ -25,7 +25,7 @@ type DescribeCaCertificateRequest struct {
 
 type DescribeCaCertificateResponse struct {
 	ContentType                   string
-	DescribeCaCertificateResponse *shared.DescribeCaCertificateResponse
+	DescribeCACertificateResponse *shared.DescribeCaCertificateResponse
 	InternalFailureException      *interface{}
 	InvalidRequestException       *interface{}
 	ResourceNotFoundException     *interface{}

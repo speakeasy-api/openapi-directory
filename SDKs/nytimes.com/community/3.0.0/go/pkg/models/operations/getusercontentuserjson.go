@@ -114,6 +114,6 @@ type GetUserContentUserJSONRequest struct {
 
 type GetUserContentUserJSONResponse struct {
 	ContentType                                    string
-	GetUserContentUserJSON200ApplicationJSONObject *GetUserContentUserJSON200ApplicationJSON
+	GETUserContentUserJSON200ApplicationJSONObject *GetUserContentUserJSON200ApplicationJSON
 	StatusCode                                     int64
 }

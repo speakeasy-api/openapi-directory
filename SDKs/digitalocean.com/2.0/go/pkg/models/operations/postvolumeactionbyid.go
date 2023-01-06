@@ -13,30 +13,20 @@ type PostVolumeActionByIDQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
-type PostVolumeActionByIDRequestBody3TypeEnum string
-
-const (
-	PostVolumeActionByIDRequestBody3TypeEnumAttach PostVolumeActionByIDRequestBody3TypeEnum = "attach"
-	PostVolumeActionByIDRequestBody3TypeEnumDetach PostVolumeActionByIDRequestBody3TypeEnum = "detach"
-	PostVolumeActionByIDRequestBody3TypeEnumResize PostVolumeActionByIDRequestBody3TypeEnum = "resize"
-)
-
 type PostVolumeActionByIDRequestBody3 struct {
-	Region        *shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region,omitempty"`
-	SizeGigabytes int64                                                                                                                                    `json:"size_gigabytes"`
-	Type          PostVolumeActionByIDRequestBody3TypeEnum                                                                                                 `json:"type"`
-}
-
-type PostVolumeActionByIDRequest struct {
-	PathParams  PostVolumeActionByIDPathParams
-	QueryParams PostVolumeActionByIDQueryParams
-	Request     interface{} `request:"mediaType=application/json"`
+	SizeGigabytes int64 `json:"size_gigabytes"`
 }
 
 type PostVolumeActionByID401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type PostVolumeActionByIDRequest struct {
+	PathParams  PostVolumeActionByIDPathParams
+	QueryParams PostVolumeActionByIDQueryParams
+	Request     interface{} `request:"mediaType=application/json"`
 }
 
 type PostVolumeActionByIDResponse struct {

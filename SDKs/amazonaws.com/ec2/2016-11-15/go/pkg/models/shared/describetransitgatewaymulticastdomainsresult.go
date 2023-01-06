@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTransitGatewayMulticastDomainsResult struct {
-	NextToken                      *string
-	TransitGatewayMulticastDomains []TransitGatewayMulticastDomain
+	NextToken                      map[string]interface{}
+	TransitGatewayMulticastDomains map[string]interface{}
 }

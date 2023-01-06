@@ -3,13 +3,13 @@ package operations
 type PostCancelInstanceRefreshActionEnum string
 
 const (
-	PostCancelInstanceRefreshActionEnumCancelInstanceRefresh PostCancelInstanceRefreshActionEnum = "CancelInstanceRefresh"
+	POSTCancelInstanceRefreshActionEnumCancelInstanceRefresh PostCancelInstanceRefreshActionEnum = "CancelInstanceRefresh"
 )
 
 type PostCancelInstanceRefreshVersionEnum string
 
 const (
-	PostCancelInstanceRefreshVersionEnumTwoThousandAndEleven0101 PostCancelInstanceRefreshVersionEnum = "2011-01-01"
+	POSTCancelInstanceRefreshVersionEnumTwoThousandAndEleven0101 PostCancelInstanceRefreshVersionEnum = "2011-01-01"
 )
 
 type PostCancelInstanceRefreshQueryParams struct {

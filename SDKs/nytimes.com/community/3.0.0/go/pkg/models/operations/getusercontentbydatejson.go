@@ -64,6 +64,6 @@ type GetUserContentByDateJSONRequest struct {
 
 type GetUserContentByDateJSONResponse struct {
 	ContentType                                      string
-	GetUserContentByDateJSON200ApplicationJSONObject *GetUserContentByDateJSON200ApplicationJSON
+	GETUserContentByDateJSON200ApplicationJSONObject *GetUserContentByDateJSON200ApplicationJSON
 	StatusCode                                       int64
 }

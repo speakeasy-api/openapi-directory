@@ -56,11 +56,11 @@ type InvokeResponse struct {
 	Ec2AccessDeniedException             *interface{}
 	Ec2ThrottledException                *interface{}
 	Ec2UnexpectedException               *interface{}
-	EfsioException                       *interface{}
-	EfsMountConnectivityException        *interface{}
-	EfsMountFailureException             *interface{}
-	EfsMountTimeoutException             *interface{}
-	EniLimitReachedException             *interface{}
+	EFSIOException                       *interface{}
+	EFSMountConnectivityException        *interface{}
+	EFSMountFailureException             *interface{}
+	EFSMountTimeoutException             *interface{}
+	ENILimitReachedException             *interface{}
 	InvalidParameterValueException       *interface{}
 	InvalidRequestContentException       *interface{}
 	InvalidRuntimeException              *interface{}
@@ -68,10 +68,10 @@ type InvokeResponse struct {
 	InvalidSubnetIDException             *interface{}
 	InvalidZipFileException              *interface{}
 	InvocationResponse                   *shared.InvocationResponse
-	KmsAccessDeniedException             *interface{}
-	KmsDisabledException                 *interface{}
-	KmsInvalidStateException             *interface{}
-	KmsNotFoundException                 *interface{}
+	KMSAccessDeniedException             *interface{}
+	KMSDisabledException                 *interface{}
+	KMSInvalidStateException             *interface{}
+	KMSNotFoundException                 *interface{}
 	RequestTooLargeException             *interface{}
 	ResourceConflictException            *interface{}
 	ResourceNotFoundException            *interface{}

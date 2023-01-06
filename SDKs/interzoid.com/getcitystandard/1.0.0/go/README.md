@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetcitystandardRequest{
         QueryParams: operations.GetcitystandardQueryParams{
-            City: "molestiae",
-            License: "quia",
+            City: "reiciendis",
+            License: "ad",
         },
     }
     
-    res, err := s.Sdk.Getcitystandard(ctx, req)
+    res, err := s.CityDataStandardization.Getcitystandard(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### City Data Standardization
 
 * `Getcitystandard` - Gets a city name standard for US and international cities
 

@@ -3,20 +3,20 @@ package operations
 type GetUpdateSSHPublicKeyActionEnum string
 
 const (
-	GetUpdateSSHPublicKeyActionEnumUpdateSSHPublicKey GetUpdateSSHPublicKeyActionEnum = "UpdateSSHPublicKey"
+	GETUpdateSSHPublicKeyActionEnumUpdateSSHPublicKey GetUpdateSSHPublicKeyActionEnum = "UpdateSSHPublicKey"
 )
 
 type GetUpdateSSHPublicKeyStatusEnum string
 
 const (
-	GetUpdateSSHPublicKeyStatusEnumActive   GetUpdateSSHPublicKeyStatusEnum = "Active"
-	GetUpdateSSHPublicKeyStatusEnumInactive GetUpdateSSHPublicKeyStatusEnum = "Inactive"
+	GETUpdateSSHPublicKeyStatusEnumActive   GetUpdateSSHPublicKeyStatusEnum = "Active"
+	GETUpdateSSHPublicKeyStatusEnumInactive GetUpdateSSHPublicKeyStatusEnum = "Inactive"
 )
 
 type GetUpdateSSHPublicKeyVersionEnum string
 
 const (
-	GetUpdateSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetUpdateSSHPublicKeyVersionEnum = "2010-05-08"
+	GETUpdateSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetUpdateSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
 type GetUpdateSSHPublicKeyQueryParams struct {

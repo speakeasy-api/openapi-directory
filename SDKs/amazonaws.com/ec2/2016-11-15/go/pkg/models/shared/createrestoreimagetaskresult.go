@@ -1,5 +1,5 @@
 package shared
 
 type CreateRestoreImageTaskResult struct {
-	ImageID *string
+	ImageID map[string]interface{}
 }

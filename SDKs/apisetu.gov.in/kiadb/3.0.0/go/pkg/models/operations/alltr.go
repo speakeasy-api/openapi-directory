@@ -5,7 +5,7 @@ import (
 )
 
 type AlltrRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
 	RegNum   string `json:"RegNum"`
 	UID      string `json:"UID"`
@@ -84,7 +84,7 @@ type Alltr404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Alltr404ApplicationJSONErrorDescriptionEnumNoRecordFound               Alltr404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Alltr404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Alltr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Alltr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Alltr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Alltr404ApplicationJSON struct {

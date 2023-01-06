@@ -40,6 +40,6 @@ type GetAccountsAccountTradesRequest struct {
 
 type GetAccountsAccountTradesResponse struct {
 	ContentType                                       string
-	GetAccountsAccountTrades200ApplicationJSONObjects []GetAccountsAccountTrades200ApplicationJSON
 	StatusCode                                        int64
+	GetAccountsAccountTrades200ApplicationJSONObjects []GetAccountsAccountTrades200ApplicationJSON
 }

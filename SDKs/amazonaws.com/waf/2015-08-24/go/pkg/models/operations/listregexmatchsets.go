@@ -30,6 +30,6 @@ type ListRegexMatchSetsResponse struct {
 	ContentType                string
 	ListRegexMatchSetsResponse *shared.ListRegexMatchSetsResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

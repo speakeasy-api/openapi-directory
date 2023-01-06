@@ -21,19 +21,6 @@ const (
 	ConnectionProfileStateEnumFailed           ConnectionProfileStateEnum = "FAILED"
 )
 
-// ConnectionProfileInput
-// A connection profile definition.
-type ConnectionProfileInput struct {
-	Cloudsql    *CloudSQLConnectionProfileInput `json:"cloudsql,omitempty"`
-	DisplayName *string                         `json:"displayName,omitempty"`
-	Error       *Status                         `json:"error,omitempty"`
-	Labels      map[string]string               `json:"labels,omitempty"`
-	Mysql       *MySQLConnectionProfileInput    `json:"mysql,omitempty"`
-	Name        *string                         `json:"name,omitempty"`
-	Provider    *ConnectionProfileProviderEnum  `json:"provider,omitempty"`
-	State       *ConnectionProfileStateEnum     `json:"state,omitempty"`
-}
-
 // ConnectionProfile
 // A connection profile definition.
 type ConnectionProfile struct {
@@ -47,4 +34,17 @@ type ConnectionProfile struct {
 	Provider    *ConnectionProfileProviderEnum `json:"provider,omitempty"`
 	State       *ConnectionProfileStateEnum    `json:"state,omitempty"`
 	UpdateTime  *string                        `json:"updateTime,omitempty"`
+}
+
+// ConnectionProfileInput
+// A connection profile definition.
+type ConnectionProfileInput struct {
+	Cloudsql    *CloudSQLConnectionProfileInput `json:"cloudsql,omitempty"`
+	DisplayName *string                         `json:"displayName,omitempty"`
+	Error       *Status                         `json:"error,omitempty"`
+	Labels      map[string]string               `json:"labels,omitempty"`
+	Mysql       *MySQLConnectionProfileInput    `json:"mysql,omitempty"`
+	Name        *string                         `json:"name,omitempty"`
+	Provider    *ConnectionProfileProviderEnum  `json:"provider,omitempty"`
+	State       *ConnectionProfileStateEnum     `json:"state,omitempty"`
 }

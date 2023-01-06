@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,30 +34,30 @@ func main() {
     
     req := operations.InvokeEndpointRequest{
         PathParams: operations.InvokeEndpointPathParams{
-            EndpointName: "illo",
+            EndpointName: "officiis",
         },
         Headers: operations.InvokeEndpointHeaders{
-            Accept: "aut",
-            ContentType: "omnis",
-            XAmzAlgorithm: "eos",
-            XAmzContentSha256: "dolore",
-            XAmzCredential: "aut",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "ea",
-            XAmzSignature: "doloremque",
-            XAmzSignedHeaders: "sit",
-            XAmznSageMakerCustomAttributes: "aspernatur",
-            XAmznSageMakerInferenceID: "iste",
-            XAmznSageMakerTargetContainerHostname: "voluptatibus",
-            XAmznSageMakerTargetModel: "ea",
-            XAmznSageMakerTargetVariant: "tempora",
+            Accept: "placeat",
+            ContentType: "delectus",
+            XAmzAlgorithm: "harum",
+            XAmzContentSha256: "esse",
+            XAmzCredential: "ut",
+            XAmzDate: "autem",
+            XAmzSecurityToken: "deserunt",
+            XAmzSignature: "ut",
+            XAmzSignedHeaders: "in",
+            XAmznSageMakerCustomAttributes: "maiores",
+            XAmznSageMakerInferenceID: "iure",
+            XAmznSageMakerTargetContainerHostname: "qui",
+            XAmznSageMakerTargetModel: "expedita",
+            XAmznSageMakerTargetVariant: "cupiditate",
         },
         Request: operations.InvokeEndpointRequestBody{
-            Body: "quis",
+            Body: "aut",
         },
     }
     
-    res, err := s.Sdk.InvokeEndpoint(ctx, req)
+    res, err := s.InvokeEndpoint(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

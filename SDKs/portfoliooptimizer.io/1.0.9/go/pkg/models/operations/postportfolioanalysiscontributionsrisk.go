@@ -26,6 +26,6 @@ type PostPortfolioAnalysisContributionsRiskRequest struct {
 
 type PostPortfolioAnalysisContributionsRiskResponse struct {
 	ContentType                                                    string
-	PostPortfolioAnalysisContributionsRisk200ApplicationJSONObject *PostPortfolioAnalysisContributionsRisk200ApplicationJSON
 	StatusCode                                                     int64
+	PostPortfolioAnalysisContributionsRisk200ApplicationJSONObject *PostPortfolioAnalysisContributionsRisk200ApplicationJSON
 }

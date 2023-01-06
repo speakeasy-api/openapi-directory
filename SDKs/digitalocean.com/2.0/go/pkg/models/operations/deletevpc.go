@@ -8,14 +8,14 @@ type DeleteVpcPathParams struct {
 	VpcID string `pathParam:"style=simple,explode=false,name=vpc_id"`
 }
 
-type DeleteVpcRequest struct {
-	PathParams DeleteVpcPathParams
-}
-
 type DeleteVpc401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteVpcRequest struct {
+	PathParams DeleteVpcPathParams
 }
 
 type DeleteVpcResponse struct {

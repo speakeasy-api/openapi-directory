@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AssociateWebACLRequest{
         Headers: operations.AssociateWebACLHeaders{
-            XAmzAlgorithm: "eos",
-            XAmzContentSha256: "est",
-            XAmzCredential: "et",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "omnis",
-            XAmzSignature: "itaque",
-            XAmzSignedHeaders: "deleniti",
+            XAmzAlgorithm: "earum",
+            XAmzContentSha256: "eum",
+            XAmzCredential: "impedit",
+            XAmzDate: "est",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "facilis",
+            XAmzSignedHeaders: "ut",
             XAmzTarget: "AWSWAF_Regional_20161128.AssociateWebACL",
         },
         Request: shared.AssociateWebACLRequest{
-            ResourceArn: "quae",
-            WebACLID: "cupiditate",
+            ResourceArn: "voluptatibus",
+            WebACLID: "at",
         },
     }
     
-    res, err := s.Sdk.AssociateWebACL(ctx, req)
+    res, err := s.AssociateWebACL(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

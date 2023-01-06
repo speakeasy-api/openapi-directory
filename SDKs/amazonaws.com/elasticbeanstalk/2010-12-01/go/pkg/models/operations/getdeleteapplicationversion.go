@@ -3,13 +3,13 @@ package operations
 type GetDeleteApplicationVersionActionEnum string
 
 const (
-	GetDeleteApplicationVersionActionEnumDeleteApplicationVersion GetDeleteApplicationVersionActionEnum = "DeleteApplicationVersion"
+	GETDeleteApplicationVersionActionEnumDeleteApplicationVersion GetDeleteApplicationVersionActionEnum = "DeleteApplicationVersion"
 )
 
 type GetDeleteApplicationVersionVersionEnum string
 
 const (
-	GetDeleteApplicationVersionVersionEnumTwoThousandAndTen1201 GetDeleteApplicationVersionVersionEnum = "2010-12-01"
+	GETDeleteApplicationVersionVersionEnumTwoThousandAndTen1201 GetDeleteApplicationVersionVersionEnum = "2010-12-01"
 )
 
 type GetDeleteApplicationVersionQueryParams struct {

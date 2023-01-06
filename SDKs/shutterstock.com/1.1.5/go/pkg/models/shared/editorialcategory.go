@@ -1,0 +1,7 @@
+package shared
+
+// EditorialCategory
+// Name of an editorial category
+type EditorialCategory struct {
+	Name *string `json:"name,omitempty"`
+}

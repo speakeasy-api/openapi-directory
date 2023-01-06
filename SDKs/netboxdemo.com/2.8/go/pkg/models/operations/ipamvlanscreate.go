@@ -11,5 +11,5 @@ type IpamVlansCreateRequest struct {
 type IpamVlansCreateResponse struct {
 	ContentType string
 	StatusCode  int64
-	Vlan        *shared.Vlan
+	VLAN        *shared.Vlan
 }

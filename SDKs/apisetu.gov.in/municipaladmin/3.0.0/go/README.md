@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.KecerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.KecerRequestBody{
             CertificateParameters: &operations.KecerRequestBodyCertificateParameters{
-                DocumentNumber: "enim",
+                DocumentNumber: "placeat",
             },
-            ConsentArtifact: "quia",
+            ConsentArtifact: "possimus",
             Format: "pdf",
-            TxnID: "omnis",
+            TxnID: "totam",
         },
     }
     
-    res, err := s.Sdk.Kecer(ctx, req)
+    res, err := s.APIs.Kecer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Kecer` - Khatha Extract / Certificate
 * `Tapcn` - New Tap Connection

@@ -3,13 +3,13 @@ package operations
 type PostResetDbParameterGroupActionEnum string
 
 const (
-	PostResetDbParameterGroupActionEnumResetDbParameterGroup PostResetDbParameterGroupActionEnum = "ResetDBParameterGroup"
+	POSTResetDBParameterGroupActionEnumResetDbParameterGroup PostResetDbParameterGroupActionEnum = "ResetDBParameterGroup"
 )
 
 type PostResetDbParameterGroupVersionEnum string
 
 const (
-	PostResetDbParameterGroupVersionEnumTwoThousandAndFourteen1031 PostResetDbParameterGroupVersionEnum = "2014-10-31"
+	POSTResetDBParameterGroupVersionEnumTwoThousandAndFourteen1031 PostResetDbParameterGroupVersionEnum = "2014-10-31"
 )
 
 type PostResetDbParameterGroupQueryParams struct {

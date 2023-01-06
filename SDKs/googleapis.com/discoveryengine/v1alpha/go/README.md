@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,36 +26,36 @@ func main() {
         Security: operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams{
-            Parent: "hic",
+            Parent: "quia",
         },
         QueryParams: operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "sed",
-            Alt: "media",
-            Callback: "ut",
-            DocumentID: "perspiciatis",
-            Fields: "sunt",
-            Key: "qui",
-            OauthToken: "sit",
+            DollarXgafv: "2",
+            AccessToken: "laudantium",
+            Alt: "proto",
+            Callback: "veniam",
+            DocumentID: "voluptate",
+            Fields: "qui",
+            Key: "in",
+            OauthToken: "blanditiis",
             PrettyPrint: false,
-            QuotaUser: "est",
-            UploadType: "et",
-            UploadProtocol: "rerum",
+            QuotaUser: "et",
+            UploadType: "eveniet",
+            UploadProtocol: "aut",
         },
         Request: &shared.GoogleCloudDiscoveryengineV1alphaDocument{
-            ID: "odio",
-            JSONData: "et",
+            ID: "a",
+            JSONData: "assumenda",
             Name: "voluptas",
-            ParentDocumentID: "est",
-            SchemaID: "aut",
+            ParentDocumentID: "earum",
+            SchemaID: "inventore",
             StructData: map[string]interface{}{
-                "vero": "nostrum",
+                "sit": "aliquam",
             },
         },
     }

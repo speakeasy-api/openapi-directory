@@ -3,6 +3,6 @@ package shared
 type SslSupportMethodEnum string
 
 const (
-	SslSupportMethodEnumSniOnly SslSupportMethodEnum = "sni-only"
-	SslSupportMethodEnumVip     SslSupportMethodEnum = "vip"
+	SSLSupportMethodEnumSniOnly SslSupportMethodEnum = "sni-only"
+	SSLSupportMethodEnumVip     SslSupportMethodEnum = "vip"
 )

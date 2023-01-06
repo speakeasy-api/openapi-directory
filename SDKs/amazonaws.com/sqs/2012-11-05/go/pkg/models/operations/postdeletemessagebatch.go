@@ -3,13 +3,13 @@ package operations
 type PostDeleteMessageBatchActionEnum string
 
 const (
-	PostDeleteMessageBatchActionEnumDeleteMessageBatch PostDeleteMessageBatchActionEnum = "DeleteMessageBatch"
+	POSTDeleteMessageBatchActionEnumDeleteMessageBatch PostDeleteMessageBatchActionEnum = "DeleteMessageBatch"
 )
 
 type PostDeleteMessageBatchVersionEnum string
 
 const (
-	PostDeleteMessageBatchVersionEnumTwoThousandAndTwelve1105 PostDeleteMessageBatchVersionEnum = "2012-11-05"
+	POSTDeleteMessageBatchVersionEnumTwoThousandAndTwelve1105 PostDeleteMessageBatchVersionEnum = "2012-11-05"
 )
 
 type PostDeleteMessageBatchQueryParams struct {

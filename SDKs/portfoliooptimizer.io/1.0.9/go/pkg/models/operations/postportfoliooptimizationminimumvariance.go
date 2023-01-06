@@ -27,6 +27,6 @@ type PostPortfolioOptimizationMinimumVarianceRequest struct {
 
 type PostPortfolioOptimizationMinimumVarianceResponse struct {
 	ContentType                                                      string
-	PostPortfolioOptimizationMinimumVariance200ApplicationJSONObject *PostPortfolioOptimizationMinimumVariance200ApplicationJSON
 	StatusCode                                                       int64
+	PostPortfolioOptimizationMinimumVariance200ApplicationJSONObject *PostPortfolioOptimizationMinimumVariance200ApplicationJSON
 }

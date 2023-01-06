@@ -2,43 +2,25 @@ package operations
 
 import (
 	"openapi/pkg/models/shared"
-	"time"
 )
 
 type UpdateProjectPathParams struct {
 	ProjectID string `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
-type UpdateProjectRequestBodyEnvironmentEnum string
-
-const (
-	UpdateProjectRequestBodyEnvironmentEnumDevelopment UpdateProjectRequestBodyEnvironmentEnum = "Development"
-	UpdateProjectRequestBodyEnvironmentEnumStaging     UpdateProjectRequestBodyEnvironmentEnum = "Staging"
-	UpdateProjectRequestBodyEnvironmentEnumProduction  UpdateProjectRequestBodyEnvironmentEnum = "Production"
-)
-
 type UpdateProjectRequestBody struct {
-	CreatedAt   *time.Time                              `json:"created_at,omitempty"`
-	Description string                                  `json:"description"`
-	Environment UpdateProjectRequestBodyEnvironmentEnum `json:"environment"`
-	ID          *string                                 `json:"id,omitempty"`
-	IsDefault   bool                                    `json:"is_default"`
-	Name        string                                  `json:"name"`
-	OwnerID     *int64                                  `json:"owner_id,omitempty"`
-	OwnerUUID   *string                                 `json:"owner_uuid,omitempty"`
-	Purpose     string                                  `json:"purpose"`
-	UpdatedAt   *time.Time                              `json:"updated_at,omitempty"`
-}
-
-type UpdateProjectRequest struct {
-	PathParams UpdateProjectPathParams
-	Request    UpdateProjectRequestBody `request:"mediaType=application/json"`
+	IsDefault bool `json:"is_default"`
 }
 
 type UpdateProject401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateProjectRequest struct {
+	PathParams UpdateProjectPathParams
+	Request    UpdateProjectRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateProjectResponse struct {

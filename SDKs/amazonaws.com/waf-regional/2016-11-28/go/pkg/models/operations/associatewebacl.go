@@ -7,7 +7,7 @@ import (
 type AssociateWebAclxAmzTargetEnum string
 
 const (
-	AssociateWebAclxAmzTargetEnumAwswafRegional20161128AssociateWebACL AssociateWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.AssociateWebACL"
+	AssociateWebACLXAmzTargetEnumAwswafRegional20161128AssociateWebACL AssociateWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.AssociateWebACL"
 )
 
 type AssociateWebACLHeaders struct {
@@ -30,9 +30,9 @@ type AssociateWebACLResponse struct {
 	AssociateWebACLResponse       map[string]interface{}
 	ContentType                   string
 	StatusCode                    int64
-	WafInternalErrorException     *interface{}
-	WafInvalidAccountException    *interface{}
-	WafInvalidParameterException  *interface{}
-	WafNonexistentItemException   *interface{}
-	WafUnavailableEntityException *interface{}
+	WAFInternalErrorException     *interface{}
+	WAFInvalidAccountException    *interface{}
+	WAFInvalidParameterException  *interface{}
+	WAFNonexistentItemException   *interface{}
+	WAFUnavailableEntityException *interface{}
 }

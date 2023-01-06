@@ -32,7 +32,7 @@ type FailoverShardResponse struct {
 	ContentType                          string
 	FailoverShardResponse                *shared.FailoverShardResponse
 	InvalidClusterStateFault             *interface{}
-	InvalidKmsKeyFault                   *interface{}
+	InvalidKMSKeyFault                   *interface{}
 	InvalidParameterCombinationException *interface{}
 	InvalidParameterValueException       *interface{}
 	ShardNotFoundFault                   *interface{}

@@ -1,0 +1,8 @@
+package shared
+
+// CollectOnDelivery
+// Defer payment until package is delivered, instead of when it is ordered.
+type CollectOnDelivery struct {
+	PaymentAmount *PaymentAmount                    `json:"payment_amount,omitempty"`
+	PaymentType   *CollectOnDeliveryPaymentTypeEnum `json:"payment_type,omitempty"`
+}

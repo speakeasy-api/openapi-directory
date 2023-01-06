@@ -3,13 +3,13 @@ package operations
 type PostDeleteOpenIDConnectProviderActionEnum string
 
 const (
-	PostDeleteOpenIDConnectProviderActionEnumDeleteOpenIDConnectProvider PostDeleteOpenIDConnectProviderActionEnum = "DeleteOpenIDConnectProvider"
+	POSTDeleteOpenIDConnectProviderActionEnumDeleteOpenIDConnectProvider PostDeleteOpenIDConnectProviderActionEnum = "DeleteOpenIDConnectProvider"
 )
 
 type PostDeleteOpenIDConnectProviderVersionEnum string
 
 const (
-	PostDeleteOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 PostDeleteOpenIDConnectProviderVersionEnum = "2010-05-08"
+	POSTDeleteOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 PostDeleteOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
 type PostDeleteOpenIDConnectProviderQueryParams struct {

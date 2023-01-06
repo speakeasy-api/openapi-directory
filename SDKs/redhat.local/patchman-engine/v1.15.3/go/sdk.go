@@ -1,13 +1,14 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
 	"io"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -458,7 +459,7 @@ func (s *SDK) ExportSystemAdvisories(ctx context.Context, request operations.Exp
 				return nil, err
 			}
 
-			res.ControllersSystemAdvisoriesDbLookups = out
+			res.ControllersSystemAdvisoriesDBLookups = out
 		case utils.MatchContentType(contentType, `text/csv`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {

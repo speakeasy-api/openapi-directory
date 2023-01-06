@@ -11,6 +11,7 @@ const (
 	CategoryGoalTypeEnumTbd  CategoryGoalTypeEnum = "TBD"
 	CategoryGoalTypeEnumMf   CategoryGoalTypeEnum = "MF"
 	CategoryGoalTypeEnumNeed CategoryGoalTypeEnum = "NEED"
+	CategoryGoalTypeEnumNull CategoryGoalTypeEnum = "null"
 )
 
 type Category struct {

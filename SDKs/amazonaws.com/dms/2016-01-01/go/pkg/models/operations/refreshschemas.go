@@ -29,7 +29,7 @@ type RefreshSchemasRequest struct {
 type RefreshSchemasResponse struct {
 	ContentType                string
 	InvalidResourceStateFault  *interface{}
-	KmsKeyNotAccessibleFault   *interface{}
+	KMSKeyNotAccessibleFault   *interface{}
 	RefreshSchemasResponse     *shared.RefreshSchemasResponse
 	ResourceNotFoundFault      *interface{}
 	ResourceQuotaExceededFault *interface{}

@@ -11,6 +11,6 @@ type RepertoireCreaRequest struct {
 type RepertoireCreaResponse struct {
 	ContentType             string
 	Erreur                  *shared.Erreur
-	RepertoirEcreatereponse *shared.RepertoirEcreatereponse
+	REPERTOIREcreatereponse *shared.RepertoirEcreatereponse
 	StatusCode              int64
 }

@@ -9,7 +9,7 @@ type ForgetpaireddeviceRequest struct {
 }
 
 type ForgetpaireddeviceResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                          string
+	Forgetpaireddevice200TextPlainObject *string
+	StatusCode                           int64
 }

@@ -31,8 +31,8 @@ type DisableKeyRotationResponse struct {
 	DependencyTimeoutException    *interface{}
 	DisabledException             *interface{}
 	InvalidArnException           *interface{}
-	KmsInternalException          *interface{}
-	KmsInvalidStateException      *interface{}
+	KMSInternalException          *interface{}
+	KMSInvalidStateException      *interface{}
 	NotFoundException             *interface{}
 	StatusCode                    int64
 	UnsupportedOperationException *interface{}

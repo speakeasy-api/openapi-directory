@@ -7,7 +7,7 @@ import (
 type ListWebAcLsXAmzTargetEnum string
 
 const (
-	ListWebAcLsXAmzTargetEnumAwswafRegional20161128ListWebAcLs ListWebAcLsXAmzTargetEnum = "AWSWAF_Regional_20161128.ListWebACLs"
+	ListWebACLsXAmzTargetEnumAwswafRegional20161128ListWebAcLs ListWebAcLsXAmzTargetEnum = "AWSWAF_Regional_20161128.ListWebACLs"
 )
 
 type ListWebAcLsHeaders struct {
@@ -28,8 +28,8 @@ type ListWebAcLsRequest struct {
 
 type ListWebAcLsResponse struct {
 	ContentType                string
-	ListWebAcLsResponse        *shared.ListWebAcLsResponse
+	ListWebACLsResponse        *shared.ListWebAcLsResponse
 	StatusCode                 int64
-	WafInternalErrorException  *interface{}
-	WafInvalidAccountException *interface{}
+	WAFInternalErrorException  *interface{}
+	WAFInvalidAccountException *interface{}
 }

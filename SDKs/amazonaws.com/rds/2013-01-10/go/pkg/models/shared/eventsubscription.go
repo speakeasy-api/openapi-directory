@@ -4,10 +4,10 @@ type EventSubscription struct {
 	CustSubscriptionID       *string
 	CustomerAwsID            *string
 	Enabled                  *bool
-	EventCategoriesList      []string
+	EventCategoriesList      []map[string]interface{}
 	ID                       *string
 	SnsTopicArn              *string
-	SourceIdsList            []string
+	SourceIdsList            []map[string]interface{}
 	SourceType               *string
 	Status                   *string
 	SubscriptionCreationTime *string

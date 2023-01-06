@@ -3,13 +3,13 @@ package operations
 type GetDisableLoggingActionEnum string
 
 const (
-	GetDisableLoggingActionEnumDisableLogging GetDisableLoggingActionEnum = "DisableLogging"
+	GETDisableLoggingActionEnumDisableLogging GetDisableLoggingActionEnum = "DisableLogging"
 )
 
 type GetDisableLoggingVersionEnum string
 
 const (
-	GetDisableLoggingVersionEnumTwoThousandAndTwelve1201 GetDisableLoggingVersionEnum = "2012-12-01"
+	GETDisableLoggingVersionEnumTwoThousandAndTwelve1201 GetDisableLoggingVersionEnum = "2012-12-01"
 )
 
 type GetDisableLoggingQueryParams struct {

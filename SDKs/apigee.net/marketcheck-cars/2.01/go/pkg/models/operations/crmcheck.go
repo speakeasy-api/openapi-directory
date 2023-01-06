@@ -19,7 +19,7 @@ type CrmCheckRequest struct {
 }
 
 type CrmCheckResponse struct {
-	CrmResponse *shared.CrmResponse
+	CRMResponse *shared.CrmResponse
 	ContentType string
 	Error       *shared.Error
 	StatusCode  int64

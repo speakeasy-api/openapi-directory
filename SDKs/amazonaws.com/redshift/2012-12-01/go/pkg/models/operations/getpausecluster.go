@@ -3,13 +3,13 @@ package operations
 type GetPauseClusterActionEnum string
 
 const (
-	GetPauseClusterActionEnumPauseCluster GetPauseClusterActionEnum = "PauseCluster"
+	GETPauseClusterActionEnumPauseCluster GetPauseClusterActionEnum = "PauseCluster"
 )
 
 type GetPauseClusterVersionEnum string
 
 const (
-	GetPauseClusterVersionEnumTwoThousandAndTwelve1201 GetPauseClusterVersionEnum = "2012-12-01"
+	GETPauseClusterVersionEnumTwoThousandAndTwelve1201 GetPauseClusterVersionEnum = "2012-12-01"
 )
 
 type GetPauseClusterQueryParams struct {

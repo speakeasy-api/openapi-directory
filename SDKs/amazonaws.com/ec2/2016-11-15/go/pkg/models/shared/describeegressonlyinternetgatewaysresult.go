@@ -1,6 +1,6 @@
 package shared
 
 type DescribeEgressOnlyInternetGatewaysResult struct {
-	EgressOnlyInternetGateways []EgressOnlyInternetGateway
-	NextToken                  *string
+	EgressOnlyInternetGateways map[string]interface{}
+	NextToken                  map[string]interface{}
 }

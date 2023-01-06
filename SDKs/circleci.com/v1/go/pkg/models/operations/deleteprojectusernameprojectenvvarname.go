@@ -22,6 +22,6 @@ type DeleteProjectUsernameProjectEnvvarNameRequest struct {
 
 type DeleteProjectUsernameProjectEnvvarNameResponse struct {
 	ContentType                                                    string
-	DeleteProjectUsernameProjectEnvvarName200ApplicationJSONObject *DeleteProjectUsernameProjectEnvvarName200ApplicationJSON
 	StatusCode                                                     int64
+	DeleteProjectUsernameProjectEnvvarName200ApplicationJSONObject *DeleteProjectUsernameProjectEnvvarName200ApplicationJSON
 }

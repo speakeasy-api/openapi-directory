@@ -34,7 +34,7 @@ type ListCertificatesByCaResponse struct {
 	ContentType                  string
 	InternalFailureException     *interface{}
 	InvalidRequestException      *interface{}
-	ListCertificatesByCaResponse *shared.ListCertificatesByCaResponse
+	ListCertificatesByCAResponse *shared.ListCertificatesByCaResponse
 	ServiceUnavailableException  *interface{}
 	StatusCode                   int64
 	ThrottlingException          *interface{}

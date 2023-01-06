@@ -40,8 +40,8 @@ type GetHTMLUsingGetRequest struct {
 type GetHTMLUsingGetResponse struct {
 	ContentType                             string
 	StatusCode                              int64
-	GetHTMLUsingGet200ApplicationJSONObject *GetHTMLUsingGet200ApplicationJSON
-	GetHTMLUsingGet400ApplicationJSONObject *GetHTMLUsingGet400ApplicationJSON
-	GetHTMLUsingGet401ApplicationJSONObject *GetHTMLUsingGet401ApplicationJSON
-	GetHTMLUsingGet500ApplicationJSONObject *GetHTMLUsingGet500ApplicationJSON
+	GETHTMLUsingGET200ApplicationJSONObject *GetHTMLUsingGet200ApplicationJSON
+	GETHTMLUsingGET400ApplicationJSONObject *GetHTMLUsingGet400ApplicationJSON
+	GETHTMLUsingGET401ApplicationJSONObject *GetHTMLUsingGet401ApplicationJSON
+	GETHTMLUsingGET500ApplicationJSONObject *GetHTMLUsingGet500ApplicationJSON
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.AreasGetRequest{
         PathParams: operations.AreasGetPathParams{
-            Version: "quo",
+            Version: "minus",
         },
     }
     
-    res, err := s.Sdk.AreasGet(ctx, req)
+    res, err := s.Areas.AreasGet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -43,18 +42,30 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Areas
 
 * `AreasGet` - Returns list of areas
 * `GetVVersionAreasAreaIds` - Returns details of selected area
-* `GetVVersionReportsStartDateToEndDateReportType` - Gets the daily report.
-* `GetVVersionSitesSiteIds` - Get selected sites
+
+### Quality
+
 * `QualityGetDailyDataQualityForSite` - Get Site DailyQuality
 * `QualityGetOverallDataQualityForSites` - Get Site OverallQuality
+
+### Reports
+
 * `ReportsIndex` - Gets the daily report.
+* `GetVVersionReportsStartDateToEndDateReportType` - Gets the daily report.
+
+### SiteTypes
+
 * `SiteTypesGetSitesForPublicFacingAPI` - Returns the layer metadata for the LayerId specified.
 * `SiteTypesIndex` - Return list of site types
+
+### Sites
+
 * `SitesIndex` - Get a list of sites
+* `GetVVersionSitesSiteIds` - Get selected sites
 
 <!-- End SDK Available Operations -->
 

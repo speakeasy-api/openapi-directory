@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.ErcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.ErcerRequestBody{
             CertificateParameters: &operations.ErcerRequestBodyCertificateParameters{
-                FullName: "quibusdam",
-                Registration: "consectetur",
+                FullName: "est",
+                Registration: "sit",
             },
-            ConsentArtifact: "aperiam",
+            ConsentArtifact: "magni",
             Format: "pdf",
-            TxnID: "enim",
+            TxnID: "sed",
         },
     }
     
-    res, err := s.Sdk.Ercer(ctx, req)
+    res, err := s.APIs.Ercer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Ercer` - Registration Certificate of Establishment Employing Contract Labour
 * `Pfdaw` - Permission/ Certificate for Well

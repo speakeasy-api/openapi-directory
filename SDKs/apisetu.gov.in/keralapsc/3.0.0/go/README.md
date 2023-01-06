@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.OtcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.OtcerRequestBody{
             CertificateParameters: &operations.OtcerRequestBodyCertificateParameters{
-                Dob: "iste",
-                FullName: "molestiae",
-                UID: "ea",
+                DOB: "numquam",
+                FullName: "quod",
+                UID: "quisquam",
             },
-            ConsentArtifact: "non",
+            ConsentArtifact: "ex",
             Format: "pdf",
-            TxnID: "aliquam",
+            TxnID: "ea",
         },
     }
     
-    res, err := s.Sdk.Otcer(ctx, req)
+    res, err := s.APIs.Otcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Otcer` - OTV Certificate
 

@@ -3,10 +3,10 @@ package shared
 type JqStatusEnum string
 
 const (
-	JqStatusEnumCreating JqStatusEnum = "CREATING"
-	JqStatusEnumUpdating JqStatusEnum = "UPDATING"
-	JqStatusEnumDeleting JqStatusEnum = "DELETING"
-	JqStatusEnumDeleted  JqStatusEnum = "DELETED"
-	JqStatusEnumValid    JqStatusEnum = "VALID"
-	JqStatusEnumInvalid  JqStatusEnum = "INVALID"
+	JQStatusEnumCreating JqStatusEnum = "CREATING"
+	JQStatusEnumUpdating JqStatusEnum = "UPDATING"
+	JQStatusEnumDeleting JqStatusEnum = "DELETING"
+	JQStatusEnumDeleted  JqStatusEnum = "DELETED"
+	JQStatusEnumValid    JqStatusEnum = "VALID"
+	JQStatusEnumInvalid  JqStatusEnum = "INVALID"
 )

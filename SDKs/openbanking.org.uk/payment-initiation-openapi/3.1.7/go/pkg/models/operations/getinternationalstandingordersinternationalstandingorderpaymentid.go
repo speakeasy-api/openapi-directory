@@ -17,7 +17,7 @@ type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDHeaders st
 }
 
 type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDRequest struct {
@@ -30,7 +30,7 @@ type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDResponse s
 	Body                                       []byte
 	ContentType                                string
 	Headers                                    map[string][]string
-	ObErrorResponse1                           *shared.ObErrorResponse1
-	ObWriteInternationalStandingOrderResponse7 *shared.ObWriteInternationalStandingOrderResponse7
+	OBErrorResponse1                           *shared.ObErrorResponse1
+	OBWriteInternationalStandingOrderResponse7 *shared.ObWriteInternationalStandingOrderResponse7
 	StatusCode                                 int64
 }

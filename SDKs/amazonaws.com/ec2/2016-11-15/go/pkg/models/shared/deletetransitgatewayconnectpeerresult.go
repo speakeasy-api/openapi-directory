@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTransitGatewayConnectPeerResult struct {
-	TransitGatewayConnectPeer *TransitGatewayConnectPeer
+	TransitGatewayConnectPeer map[string]interface{}
 }

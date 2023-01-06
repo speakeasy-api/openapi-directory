@@ -8,13 +8,13 @@ type GetRemovePermissionPathParams struct {
 type GetRemovePermissionActionEnum string
 
 const (
-	GetRemovePermissionActionEnumRemovePermission GetRemovePermissionActionEnum = "RemovePermission"
+	GETRemovePermissionActionEnumRemovePermission GetRemovePermissionActionEnum = "RemovePermission"
 )
 
 type GetRemovePermissionVersionEnum string
 
 const (
-	GetRemovePermissionVersionEnumTwoThousandAndTwelve1105 GetRemovePermissionVersionEnum = "2012-11-05"
+	GETRemovePermissionVersionEnumTwoThousandAndTwelve1105 GetRemovePermissionVersionEnum = "2012-11-05"
 )
 
 type GetRemovePermissionQueryParams struct {

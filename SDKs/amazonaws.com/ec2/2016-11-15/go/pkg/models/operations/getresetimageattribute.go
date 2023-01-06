@@ -3,19 +3,19 @@ package operations
 type GetResetImageAttributeActionEnum string
 
 const (
-	GetResetImageAttributeActionEnumResetImageAttribute GetResetImageAttributeActionEnum = "ResetImageAttribute"
+	GETResetImageAttributeActionEnumResetImageAttribute GetResetImageAttributeActionEnum = "ResetImageAttribute"
 )
 
 type GetResetImageAttributeAttributeEnum string
 
 const (
-	GetResetImageAttributeAttributeEnumLaunchPermission GetResetImageAttributeAttributeEnum = "launchPermission"
+	GETResetImageAttributeAttributeEnumLaunchPermission GetResetImageAttributeAttributeEnum = "launchPermission"
 )
 
 type GetResetImageAttributeVersionEnum string
 
 const (
-	GetResetImageAttributeVersionEnumTwoThousandAndSixteen1115 GetResetImageAttributeVersionEnum = "2016-11-15"
+	GETResetImageAttributeVersionEnumTwoThousandAndSixteen1115 GetResetImageAttributeVersionEnum = "2016-11-15"
 )
 
 type GetResetImageAttributeQueryParams struct {

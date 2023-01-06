@@ -37,8 +37,8 @@ type CreateGroupPadUsingPostRequest struct {
 type CreateGroupPadUsingPostResponse struct {
 	ContentType                                     string
 	StatusCode                                      int64
-	CreateGroupPadUsingPost200ApplicationJSONObject *CreateGroupPadUsingPost200ApplicationJSON
-	CreateGroupPadUsingPost400ApplicationJSONObject *CreateGroupPadUsingPost400ApplicationJSON
-	CreateGroupPadUsingPost401ApplicationJSONObject *CreateGroupPadUsingPost401ApplicationJSON
-	CreateGroupPadUsingPost500ApplicationJSONObject *CreateGroupPadUsingPost500ApplicationJSON
+	CreateGroupPadUsingPOST200ApplicationJSONObject *CreateGroupPadUsingPost200ApplicationJSON
+	CreateGroupPadUsingPOST400ApplicationJSONObject *CreateGroupPadUsingPost400ApplicationJSON
+	CreateGroupPadUsingPOST401ApplicationJSONObject *CreateGroupPadUsingPost401ApplicationJSON
+	CreateGroupPadUsingPOST500ApplicationJSONObject *CreateGroupPadUsingPost500ApplicationJSON
 }

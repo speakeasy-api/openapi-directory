@@ -36,26 +36,6 @@ const (
 	PaymentCardPrepaidTypeEnumUnknown    PaymentCardPrepaidTypeEnum = "unknown"
 )
 
-// PaymentCardInput
-// A card's non-confidential details.
-type PaymentCardInput struct {
-	BillingAddress *Address                    `json:"billing_address,omitempty"`
-	Bin            *string                     `json:"bin,omitempty"`
-	CardBrand      *PaymentCardCardBrandEnum   `json:"card_brand,omitempty"`
-	CardType       *PaymentCardCardTypeEnum    `json:"card_type,omitempty"`
-	CardholderName *string                     `json:"cardholder_name,omitempty"`
-	CustomerID     *string                     `json:"customer_id,omitempty"`
-	Enabled        *bool                       `json:"enabled,omitempty"`
-	ExpMonth       *int64                      `json:"exp_month,omitempty"`
-	ExpYear        *int64                      `json:"exp_year,omitempty"`
-	Fingerprint    *string                     `json:"fingerprint,omitempty"`
-	Last4          *string                     `json:"last_4,omitempty"`
-	MerchantID     *string                     `json:"merchant_id,omitempty"`
-	PrepaidType    *PaymentCardPrepaidTypeEnum `json:"prepaid_type,omitempty"`
-	ReferenceID    *string                     `json:"reference_id,omitempty"`
-	Version        *string                     `json:"version,omitempty"`
-}
-
 // PaymentCard
 // A card's non-confidential details.
 type PaymentCard struct {
@@ -70,6 +50,26 @@ type PaymentCard struct {
 	ExpYear        *int64                      `json:"exp_year,omitempty"`
 	Fingerprint    *string                     `json:"fingerprint,omitempty"`
 	ID             *string                     `json:"id,omitempty"`
+	Last4          *string                     `json:"last_4,omitempty"`
+	MerchantID     *string                     `json:"merchant_id,omitempty"`
+	PrepaidType    *PaymentCardPrepaidTypeEnum `json:"prepaid_type,omitempty"`
+	ReferenceID    *string                     `json:"reference_id,omitempty"`
+	Version        *string                     `json:"version,omitempty"`
+}
+
+// PaymentCardInput
+// A card's non-confidential details.
+type PaymentCardInput struct {
+	BillingAddress *Address                    `json:"billing_address,omitempty"`
+	Bin            *string                     `json:"bin,omitempty"`
+	CardBrand      *PaymentCardCardBrandEnum   `json:"card_brand,omitempty"`
+	CardType       *PaymentCardCardTypeEnum    `json:"card_type,omitempty"`
+	CardholderName *string                     `json:"cardholder_name,omitempty"`
+	CustomerID     *string                     `json:"customer_id,omitempty"`
+	Enabled        *bool                       `json:"enabled,omitempty"`
+	ExpMonth       *int64                      `json:"exp_month,omitempty"`
+	ExpYear        *int64                      `json:"exp_year,omitempty"`
+	Fingerprint    *string                     `json:"fingerprint,omitempty"`
 	Last4          *string                     `json:"last_4,omitempty"`
 	MerchantID     *string                     `json:"merchant_id,omitempty"`
 	PrepaidType    *PaymentCardPrepaidTypeEnum `json:"prepaid_type,omitempty"`

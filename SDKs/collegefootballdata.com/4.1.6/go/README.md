@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,14 +34,14 @@ func main() {
     
     req := operations.GetLinesRequest{
         QueryParams: operations.GetLinesQueryParams{
-            Away: "blanditiis",
-            Conference: "voluptatem",
-            GameID: 1968362912832942364,
-            Home: "consequatur",
-            SeasonType: "voluptatem",
-            Team: "nam",
-            Week: 6118617986052237062,
-            Year: 2385020320511952434,
+            Away: "voluptas",
+            Conference: "quo",
+            GameID: 3904959679002859803,
+            Home: "quae",
+            SeasonType: "dolorem",
+            Team: "qui",
+            Week: 3664832120697581838,
+            Year: 3353722794698886839,
         },
     }
     

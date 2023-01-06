@@ -19,6 +19,6 @@ type GetDellSwitchSnmpConfigRequest struct {
 
 type GetDellSwitchSnmpConfigResponse struct {
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

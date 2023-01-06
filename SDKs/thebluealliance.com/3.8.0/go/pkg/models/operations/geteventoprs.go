@@ -24,7 +24,7 @@ type GetEventOpRsRequest struct {
 
 type GetEventOpRsResponse struct {
 	ContentType string
-	EventOpRs   *shared.EventOpRs
+	EventOPRs   *shared.EventOpRs
 	Headers     map[string][]string
 	StatusCode  int64
 }

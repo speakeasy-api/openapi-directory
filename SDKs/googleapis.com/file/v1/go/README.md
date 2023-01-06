@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,35 +26,35 @@ func main() {
         Security: operations.FileProjectsLocationsBackupsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.FileProjectsLocationsBackupsCreatePathParams{
-            Parent: "ipsam",
+            Parent: "neque",
         },
         QueryParams: operations.FileProjectsLocationsBackupsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "ipsam",
+            AccessToken: "laboriosam",
             Alt: "json",
-            BackupID: "tempora",
-            Callback: "pariatur",
-            Fields: "quisquam",
-            Key: "magnam",
-            OauthToken: "cum",
-            PrettyPrint: false,
-            QuotaUser: "ullam",
-            UploadType: "expedita",
-            UploadProtocol: "atque",
+            BackupID: "magnam",
+            Callback: "reiciendis",
+            Fields: "in",
+            Key: "voluptatum",
+            OauthToken: "et",
+            PrettyPrint: true,
+            QuotaUser: "quo",
+            UploadType: "autem",
+            UploadProtocol: "eos",
         },
         Request: &shared.BackupInput{
-            Description: "dolore",
+            Description: "voluptas",
             Labels: map[string]string{
-                "corporis": "quis",
+                "et": "ut",
             },
-            SourceFileShare: "sunt",
-            SourceInstance: "tenetur",
+            SourceFileShare: "impedit",
+            SourceInstance: "cupiditate",
         },
     }
     

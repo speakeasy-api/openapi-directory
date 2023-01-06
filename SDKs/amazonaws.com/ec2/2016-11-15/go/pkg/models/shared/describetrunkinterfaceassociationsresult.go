@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTrunkInterfaceAssociationsResult struct {
-	InterfaceAssociations []TrunkInterfaceAssociation
-	NextToken             *string
+	InterfaceAssociations map[string]interface{}
+	NextToken             map[string]interface{}
 }

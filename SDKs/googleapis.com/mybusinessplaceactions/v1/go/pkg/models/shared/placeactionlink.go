@@ -21,15 +21,6 @@ const (
 	PlaceActionLinkProviderTypeEnumAggregator3P            PlaceActionLinkProviderTypeEnum = "AGGREGATOR_3P"
 )
 
-// PlaceActionLinkInput
-// Represents a place action link and its attributes.
-type PlaceActionLinkInput struct {
-	IsPreferred     *bool                               `json:"isPreferred,omitempty"`
-	Name            *string                             `json:"name,omitempty"`
-	PlaceActionType *PlaceActionLinkPlaceActionTypeEnum `json:"placeActionType,omitempty"`
-	URI             *string                             `json:"uri,omitempty"`
-}
-
 // PlaceActionLink
 // Represents a place action link and its attributes.
 type PlaceActionLink struct {
@@ -40,5 +31,14 @@ type PlaceActionLink struct {
 	PlaceActionType *PlaceActionLinkPlaceActionTypeEnum `json:"placeActionType,omitempty"`
 	ProviderType    *PlaceActionLinkProviderTypeEnum    `json:"providerType,omitempty"`
 	UpdateTime      *string                             `json:"updateTime,omitempty"`
+	URI             *string                             `json:"uri,omitempty"`
+}
+
+// PlaceActionLinkInput
+// Represents a place action link and its attributes.
+type PlaceActionLinkInput struct {
+	IsPreferred     *bool                               `json:"isPreferred,omitempty"`
+	Name            *string                             `json:"name,omitempty"`
+	PlaceActionType *PlaceActionLinkPlaceActionTypeEnum `json:"placeActionType,omitempty"`
 	URI             *string                             `json:"uri,omitempty"`
 }

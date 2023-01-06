@@ -22,7 +22,7 @@ type GetCommunicationCostsTotalsByCandidateRequest struct {
 }
 
 type GetCommunicationCostsTotalsByCandidateResponse struct {
-	CcTotalsByCandidatePage *shared.CcTotalsByCandidatePage
+	CCTotalsByCandidatePage *shared.CcTotalsByCandidatePage
 	ContentType             string
 	StatusCode              int64
 }

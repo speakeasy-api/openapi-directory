@@ -1,9 +1,0 @@
-package shared
-
-type LambdaFunctionRecommendationFindingEnum string
-
-const (
-	LambdaFunctionRecommendationFindingEnumOptimized    LambdaFunctionRecommendationFindingEnum = "Optimized"
-	LambdaFunctionRecommendationFindingEnumNotOptimized LambdaFunctionRecommendationFindingEnum = "NotOptimized"
-	LambdaFunctionRecommendationFindingEnumUnavailable  LambdaFunctionRecommendationFindingEnum = "Unavailable"
-)

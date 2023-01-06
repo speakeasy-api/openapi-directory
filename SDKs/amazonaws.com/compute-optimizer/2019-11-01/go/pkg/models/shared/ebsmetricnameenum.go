@@ -3,8 +3,8 @@ package shared
 type EbsMetricNameEnum string
 
 const (
-	EbsMetricNameEnumVolumeReadOpsPerSecond    EbsMetricNameEnum = "VolumeReadOpsPerSecond"
-	EbsMetricNameEnumVolumeWriteOpsPerSecond   EbsMetricNameEnum = "VolumeWriteOpsPerSecond"
-	EbsMetricNameEnumVolumeReadBytesPerSecond  EbsMetricNameEnum = "VolumeReadBytesPerSecond"
-	EbsMetricNameEnumVolumeWriteBytesPerSecond EbsMetricNameEnum = "VolumeWriteBytesPerSecond"
+	EBSMetricNameEnumVolumeReadOpsPerSecond    EbsMetricNameEnum = "VolumeReadOpsPerSecond"
+	EBSMetricNameEnumVolumeWriteOpsPerSecond   EbsMetricNameEnum = "VolumeWriteOpsPerSecond"
+	EBSMetricNameEnumVolumeReadBytesPerSecond  EbsMetricNameEnum = "VolumeReadBytesPerSecond"
+	EBSMetricNameEnumVolumeWriteBytesPerSecond EbsMetricNameEnum = "VolumeWriteBytesPerSecond"
 )

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,18 +24,18 @@ func main() {
     
     req := operations.GetForecastRequest{
         QueryParams: operations.GetForecastQueryParams{
-            Alt: 61.099998,
-            Dt: "2008-12-17T22:14:22Z",
-            Lat: 87.199997,
-            Lng: 34.099998,
-            Ozone: 12.100000,
+            Alt: 41.200001,
+            Dt: "1972-06-23T23:14:18Z",
+            Lat: 52.200001,
+            Lng: 15.100000,
+            Ozone: 93.199997,
         },
         Headers: operations.GetForecastHeaders{
-            XAccessToken: "maxime",
+            XAccessToken: "accusamus",
         },
     }
     
-    res, err := s.Sdk.GetForecast(ctx, req)
+    res, err := s.GetForecast(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

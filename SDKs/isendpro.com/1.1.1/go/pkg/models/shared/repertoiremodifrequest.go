@@ -3,8 +3,8 @@ package shared
 type RepertoirEmodifrequestRepertoireEditEnum string
 
 const (
-	RepertoirEmodifrequestRepertoireEditEnumAdd RepertoirEmodifrequestRepertoireEditEnum = "add"
-	RepertoirEmodifrequestRepertoireEditEnumDel RepertoirEmodifrequestRepertoireEditEnum = "del"
+	REPERTOIREmodifrequestRepertoireEditEnumAdd RepertoirEmodifrequestRepertoireEditEnum = "add"
+	REPERTOIREmodifrequestRepertoireEditEnumDel RepertoirEmodifrequestRepertoireEditEnum = "del"
 )
 
 type RepertoirEmodifrequest struct {

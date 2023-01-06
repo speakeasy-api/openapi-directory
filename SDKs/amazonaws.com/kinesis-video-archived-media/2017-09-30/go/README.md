@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,28 +34,28 @@ func main() {
     
     req := operations.GetClipRequest{
         Headers: operations.GetClipHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "voluptate",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "quo",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "ipsum",
+            XAmzAlgorithm: "earum",
+            XAmzContentSha256: "quas",
+            XAmzCredential: "repellendus",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "quisquam",
+            XAmzSignedHeaders: "qui",
         },
         Request: operations.GetClipRequestBody{
             ClipFragmentSelector: operations.GetClipRequestBodyClipFragmentSelector{
-                FragmentSelectorType: "PRODUCER_TIMESTAMP",
+                FragmentSelectorType: "SERVER_TIMESTAMP",
                 TimestampRange: &shared.ClipTimestampRange{
-                    EndTimestamp: "1974-12-25T01:19:00Z",
-                    StartTimestamp: "2013-04-04T23:06:57Z",
+                    EndTimestamp: "2003-02-16T04:36:04Z",
+                    StartTimestamp: "1974-03-09T13:35:54Z",
                 },
             },
-            StreamArn: "soluta",
-            StreamName: "sunt",
+            StreamARN: "totam",
+            StreamName: "nemo",
         },
     }
     
-    res, err := s.Sdk.GetClip(ctx, req)
+    res, err := s.GetClip(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

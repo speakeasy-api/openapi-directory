@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,10 +24,10 @@ func main() {
     
     req := operations.CollectNowRequest{
         PathParams: operations.CollectNowPathParams{
-            DeviceID: 7495016280008294591,
+            DeviceID: 590388331340932509,
         },
         QueryParams: operations.CollectNowQueryParams{
-            MonitorClass: "aliquam",
+            MonitorClass: "ut",
         },
     }
     

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,30 +26,30 @@ func main() {
         Security: operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.OsconfigProjectsLocationsInstancesInventoriesListPathParams{
-            Parent: "consequuntur",
+            Parent: "saepe",
         },
         QueryParams: operations.OsconfigProjectsLocationsInstancesInventoriesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "ad",
-            Alt: "proto",
-            Callback: "sunt",
-            Fields: "saepe",
-            Filter: "maxime",
-            Key: "quibusdam",
-            OauthToken: "dignissimos",
-            PageSize: 1525743041726357796,
-            PageToken: "dolor",
+            DollarXgafv: "2",
+            AccessToken: "esse",
+            Alt: "media",
+            Callback: "dolor",
+            Fields: "deleniti",
+            Filter: "debitis",
+            Key: "assumenda",
+            OauthToken: "quos",
+            PageSize: 2868899680822707227,
+            PageToken: "voluptas",
             PrettyPrint: true,
-            QuotaUser: "impedit",
-            UploadType: "fuga",
-            UploadProtocol: "placeat",
-            View: "BASIC",
+            QuotaUser: "sapiente",
+            UploadType: "atque",
+            UploadProtocol: "quisquam",
+            View: "INVENTORY_VIEW_UNSPECIFIED",
         },
     }
     

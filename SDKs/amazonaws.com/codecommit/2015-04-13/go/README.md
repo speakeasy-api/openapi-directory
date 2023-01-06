@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AssociateApprovalRuleTemplateWithRepositoryRequest{
         Headers: operations.AssociateApprovalRuleTemplateWithRepositoryHeaders{
-            XAmzAlgorithm: "cum",
-            XAmzContentSha256: "a",
-            XAmzCredential: "quo",
-            XAmzDate: "delectus",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "ipsum",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "est",
+            XAmzContentSha256: "aut",
+            XAmzCredential: "dignissimos",
+            XAmzDate: "et",
+            XAmzSecurityToken: "alias",
+            XAmzSignature: "vitae",
+            XAmzSignedHeaders: "ipsum",
             XAmzTarget: "CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository",
         },
         Request: shared.AssociateApprovalRuleTemplateWithRepositoryInput{
-            ApprovalRuleTemplateName: "et",
-            RepositoryName: "cupiditate",
+            ApprovalRuleTemplateName: "magni",
+            RepositoryName: "expedita",
         },
     }
     
-    res, err := s.Sdk.AssociateApprovalRuleTemplateWithRepository(ctx, req)
+    res, err := s.AssociateApprovalRuleTemplateWithRepository(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

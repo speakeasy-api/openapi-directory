@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -395,7 +396,7 @@ func (s *SDK) ExportEbsVolumeRecommendations(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.ExportEbsVolumeRecommendationsResponse = out
+			res.ExportEBSVolumeRecommendationsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -923,7 +924,7 @@ func (s *SDK) GetEbsVolumeRecommendations(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.GetEbsVolumeRecommendationsResponse = out
+			res.GetEBSVolumeRecommendationsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {

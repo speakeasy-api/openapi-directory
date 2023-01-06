@@ -13,18 +13,18 @@ type GetCveListRequestBody struct {
 type GetCveList200ApplicationJSONActionEnum string
 
 const (
-	GetCveList200ApplicationJSONActionEnumGetCveList GetCveList200ApplicationJSONActionEnum = "getCVEList"
+	GetCVEList200ApplicationJSONActionEnumGetCveList GetCveList200ApplicationJSONActionEnum = "getCVEList"
 )
 
 type GetCveList200ApplicationJSONData struct {
-	CvEs []shared.CveDetails `json:"CVEs"`
+	CVEs []shared.CveDetails `json:"CVEs"`
 }
 
 type GetCveList200ApplicationJSONResultEnum string
 
 const (
-	GetCveList200ApplicationJSONResultEnumSuccess GetCveList200ApplicationJSONResultEnum = "success"
-	GetCveList200ApplicationJSONResultEnumError   GetCveList200ApplicationJSONResultEnum = "error"
+	GetCVEList200ApplicationJSONResultEnumSuccess GetCveList200ApplicationJSONResultEnum = "success"
+	GetCVEList200ApplicationJSONResultEnumError   GetCveList200ApplicationJSONResultEnum = "error"
 )
 
 type GetCveList200ApplicationJSON struct {
@@ -40,5 +40,5 @@ type GetCveListRequest struct {
 type GetCveListResponse struct {
 	ContentType                        string
 	StatusCode                         int64
-	GetCveList200ApplicationJSONObject *GetCveList200ApplicationJSON
+	GetCVEList200ApplicationJSONObject *GetCveList200ApplicationJSON
 }

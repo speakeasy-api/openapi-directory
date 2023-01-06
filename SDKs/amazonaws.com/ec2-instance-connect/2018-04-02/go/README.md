@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,24 @@ func main() {
     
     req := operations.SendSSHPublicKeyRequest{
         Headers: operations.SendSSHPublicKeyHeaders{
-            XAmzAlgorithm: "praesentium",
-            XAmzContentSha256: "voluptates",
-            XAmzCredential: "inventore",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "deleniti",
-            XAmzSignature: "facere",
-            XAmzSignedHeaders: "numquam",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "molestiae",
+            XAmzCredential: "pariatur",
+            XAmzDate: "quasi",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "enim",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "AWSEC2InstanceConnectService.SendSSHPublicKey",
         },
         Request: shared.SendSSHPublicKeyRequest{
-            AvailabilityZone: "explicabo",
-            InstanceID: "id",
-            InstanceOsUser: "blanditiis",
-            SSHPublicKey: "explicabo",
+            AvailabilityZone: "possimus",
+            InstanceID: "modi",
+            InstanceOSUser: "neque",
+            SSHPublicKey: "consequuntur",
         },
     }
     
-    res, err := s.Sdk.SendSSHPublicKey(ctx, req)
+    res, err := s.SendSSHPublicKey(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

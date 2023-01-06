@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,24 +25,24 @@ func main() {
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
         QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
             Alt: "json",
-            Fields: "officiis",
+            Fields: "soluta",
             FilterThirdPartyResources: true,
-            Key: "consectetur",
-            Locale: "numquam",
-            OauthToken: "deleniti",
-            PrettyPrint: false,
-            QuotaUser: "et",
+            Key: "quaerat",
+            Locale: "fugit",
+            OauthToken: "est",
+            PrettyPrint: true,
+            QuotaUser: "nemo",
             Rule: []string{
-                "totam",
-                "non",
+                "sed",
+                "qui",
             },
             Screenshot: true,
-            Snapshots: false,
+            Snapshots: true,
             Strategy: "desktop",
-            URL: "assumenda",
-            UserIP: "quis",
-            UtmCampaign: "earum",
-            UtmSource: "sapiente",
+            URL: "voluptatibus",
+            UserIP: "et",
+            UtmCampaign: "error",
+            UtmSource: "eveniet",
         },
     }
     

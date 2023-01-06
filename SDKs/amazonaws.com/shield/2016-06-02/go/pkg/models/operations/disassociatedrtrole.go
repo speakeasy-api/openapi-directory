@@ -3,7 +3,7 @@ package operations
 type DisassociateDrtRoleXAmzTargetEnum string
 
 const (
-	DisassociateDrtRoleXAmzTargetEnumAwsShield20160616DisassociateDrtRole DisassociateDrtRoleXAmzTargetEnum = "AWSShield_20160616.DisassociateDRTRole"
+	DisassociateDRTRoleXAmzTargetEnumAwsShield20160616DisassociateDrtRole DisassociateDrtRoleXAmzTargetEnum = "AWSShield_20160616.DisassociateDRTRole"
 )
 
 type DisassociateDrtRoleHeaders struct {
@@ -24,7 +24,7 @@ type DisassociateDrtRoleRequest struct {
 
 type DisassociateDrtRoleResponse struct {
 	ContentType                 string
-	DisassociateDrtRoleResponse map[string]interface{}
+	DisassociateDRTRoleResponse map[string]interface{}
 	InternalErrorException      *interface{}
 	InvalidOperationException   *interface{}
 	OptimisticLockException     *interface{}

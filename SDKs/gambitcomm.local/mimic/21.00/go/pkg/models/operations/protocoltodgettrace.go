@@ -13,7 +13,7 @@ type ProtocolTodGetTraceRequest struct {
 }
 
 type ProtocolTodGetTraceResponse struct {
-	ConfigTod   *shared.ConfigTod
+	ConfigTOD   *shared.ConfigTod
 	ContentType string
 	StatusCode  int64
 }

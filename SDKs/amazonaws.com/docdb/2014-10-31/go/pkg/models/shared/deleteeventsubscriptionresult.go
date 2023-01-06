@@ -1,5 +1,5 @@
 package shared
 
 type DeleteEventSubscriptionResult struct {
-	EventSubscription *EventSubscription
+	EventSubscription *EventSubscription1
 }

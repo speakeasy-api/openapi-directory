@@ -82,6 +82,6 @@ type PostNetworksRequest struct {
 
 type PostNetworksResponse struct {
 	ContentType                          string
-	PostNetworks201ApplicationJSONObject *PostNetworks201ApplicationJSON
 	StatusCode                           int64
+	PostNetworks201ApplicationJSONObject *PostNetworks201ApplicationJSON
 }

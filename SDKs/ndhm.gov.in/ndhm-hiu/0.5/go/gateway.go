@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -31,10 +31,10 @@ func NewGateway(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// GetV05Certs - Get certs for JWT verification
-func (s *Gateway) GetV05Certs(ctx context.Context) (*operations.GetV05CertsResponse, error) {
+// GetV05WellKnownOpenidConfiguration - Get openid configuration
+func (s *Gateway) GetV05WellKnownOpenidConfiguration(ctx context.Context) (*operations.GetV05WellKnownOpenidConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/certs"
+	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/.well-known/openid-configuration"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -51,7 +51,7 @@ func (s *Gateway) GetV05Certs(ctx context.Context) (*operations.GetV05CertsRespo
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetV05CertsResponse{
+	res := &operations.GetV05WellKnownOpenidConfigurationResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -59,12 +59,12 @@ func (s *Gateway) GetV05Certs(ctx context.Context) (*operations.GetV05CertsRespo
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Certs
+			var out *shared.OpenIDConfiguration
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Certs = out
+			res.OpenIDConfiguration = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -112,10 +112,10 @@ func (s *Gateway) GetV05Certs(ctx context.Context) (*operations.GetV05CertsRespo
 	return res, nil
 }
 
-// GetV05WellKnownOpenidConfiguration - Get openid configuration
-func (s *Gateway) GetV05WellKnownOpenidConfiguration(ctx context.Context) (*operations.GetV05WellKnownOpenidConfigurationResponse, error) {
+// GetV05Certs - Get certs for JWT verification
+func (s *Gateway) GetV05Certs(ctx context.Context) (*operations.GetV05CertsResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/.well-known/openid-configuration"
+	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/certs"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +132,7 @@ func (s *Gateway) GetV05WellKnownOpenidConfiguration(ctx context.Context) (*oper
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetV05WellKnownOpenidConfigurationResponse{
+	res := &operations.GetV05CertsResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}
@@ -140,12 +140,12 @@ func (s *Gateway) GetV05WellKnownOpenidConfiguration(ctx context.Context) (*oper
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.OpenIDConfiguration
+			var out *shared.Certs
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.OpenIDConfiguration = out
+			res.Certs = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {

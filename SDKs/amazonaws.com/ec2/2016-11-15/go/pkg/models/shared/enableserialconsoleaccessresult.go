@@ -1,5 +1,5 @@
 package shared
 
 type EnableSerialConsoleAccessResult struct {
-	SerialConsoleAccessEnabled *bool
+	SerialConsoleAccessEnabled map[string]interface{}
 }

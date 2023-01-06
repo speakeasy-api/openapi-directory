@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.DpcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.DpcerRequestBody{
             CertificateParameters: &operations.DpcerRequestBodyCertificateParameters{
-                FullName: "nesciunt",
-                UID: "vel",
-                CertNo: "quaerat",
+                FullName: "aut",
+                UID: "modi",
+                CertNo: "ex",
             },
-            ConsentArtifact: "qui",
+            ConsentArtifact: "voluptatibus",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "aut",
         },
     }
     
-    res, err := s.Sdk.Dpcer(ctx, req)
+    res, err := s.APIs.Dpcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Dpcer` - Dependency Certificate
 

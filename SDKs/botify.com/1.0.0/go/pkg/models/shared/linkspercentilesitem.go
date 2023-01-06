@@ -1,0 +1,10 @@
+package shared
+
+type LinksPercentilesItem struct {
+	Avg         int64 `json:"avg"`
+	ID          int64 `json:"id"`
+	Max         int64 `json:"max"`
+	MetricTotal int64 `json:"metric_total"`
+	Min         int64 `json:"min"`
+	URLTotal    int64 `json:"url_total"`
+}

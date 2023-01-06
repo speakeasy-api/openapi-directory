@@ -17,7 +17,7 @@ type GetDomesticStandingOrdersDomesticStandingOrderIDHeaders struct {
 }
 
 type GetDomesticStandingOrdersDomesticStandingOrderIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetDomesticStandingOrdersDomesticStandingOrderIDRequest struct {
@@ -30,7 +30,7 @@ type GetDomesticStandingOrdersDomesticStandingOrderIDResponse struct {
 	Body                                  []byte
 	ContentType                           string
 	Headers                               map[string][]string
-	ObErrorResponse1                      *shared.ObErrorResponse1
-	ObWriteDomesticStandingOrderResponse6 *shared.ObWriteDomesticStandingOrderResponse6
+	OBErrorResponse1                      *shared.ObErrorResponse1
+	OBWriteDomesticStandingOrderResponse6 *shared.ObWriteDomesticStandingOrderResponse6
 	StatusCode                            int64
 }

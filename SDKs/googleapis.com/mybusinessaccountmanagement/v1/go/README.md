@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,42 +25,43 @@ func main() {
     req := operations.MybusinessaccountmanagementAccountsCreateRequest{
         QueryParams: operations.MybusinessaccountmanagementAccountsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "animi",
-            Alt: "proto",
-            Callback: "adipisci",
-            Fields: "nam",
-            Key: "hic",
-            OauthToken: "quia",
+            AccessToken: "esse",
+            Alt: "json",
+            Callback: "consequatur",
+            Fields: "molestiae",
+            Key: "id",
+            OauthToken: "repudiandae",
             PrettyPrint: false,
-            QuotaUser: "dolor",
-            UploadType: "temporibus",
-            UploadProtocol: "quaerat",
+            QuotaUser: "ipsam",
+            UploadType: "pariatur",
+            UploadProtocol: "qui",
         },
         Request: &shared.AccountInput{
-            AccountName: "quo",
-            Name: "suscipit",
+            AccountName: "impedit",
+            Name: "consequatur",
             OrganizationInfo: &shared.OrganizationInfoInput{
                 Address: &shared.PostalAddress{
                     AddressLines: []string{
-                        "autem",
+                        "dolores",
+                        "molestias",
+                        "expedita",
                     },
-                    AdministrativeArea: "autem",
-                    LanguageCode: "ut",
-                    Locality: "quis",
-                    Organization: "alias",
-                    PostalCode: "enim",
+                    AdministrativeArea: "et",
+                    LanguageCode: "laboriosam",
+                    Locality: "neque",
+                    Organization: "voluptatibus",
+                    PostalCode: "velit",
                     Recipients: []string{
-                        "et",
-                        "temporibus",
+                        "cumque",
                     },
-                    RegionCode: "fugit",
-                    Revision: 347043070683153108,
-                    SortingCode: "officia",
-                    Sublocality: "illo",
+                    RegionCode: "provident",
+                    Revision: 6596552905933424119,
+                    SortingCode: "quia",
+                    Sublocality: "vel",
                 },
             },
-            PrimaryOwner: "consequuntur",
-            Type: "PERSONAL",
+            PrimaryOwner: "aperiam",
+            Type: "LOCATION_GROUP",
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type GetHitRequest struct {
-	HitID string `json:"HITId"`
+	HITID string `json:"HITId"`
 }

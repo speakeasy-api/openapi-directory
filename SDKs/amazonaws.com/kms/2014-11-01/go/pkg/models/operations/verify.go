@@ -32,9 +32,9 @@ type VerifyResponse struct {
 	DisabledException            *interface{}
 	InvalidGrantTokenException   *interface{}
 	InvalidKeyUsageException     *interface{}
-	KmsInternalException         *interface{}
-	KmsInvalidSignatureException *interface{}
-	KmsInvalidStateException     *interface{}
+	KMSInternalException         *interface{}
+	KMSInvalidSignatureException *interface{}
+	KMSInvalidStateException     *interface{}
 	KeyUnavailableException      *interface{}
 	NotFoundException            *interface{}
 	StatusCode                   int64

@@ -32,7 +32,6 @@ type GetProxyRequest struct {
 
 type GetProxyResponse struct {
 	ContentType                       string
-	Headers                           map[string][]string
 	StatusCode                        int64
 	GetProxy200ApplicationJSONAny     *interface{}
 	GetProxy401ApplicationJSONObject  *GetProxy401ApplicationJSON

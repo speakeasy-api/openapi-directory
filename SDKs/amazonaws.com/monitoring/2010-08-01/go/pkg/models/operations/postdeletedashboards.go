@@ -3,13 +3,13 @@ package operations
 type PostDeleteDashboardsActionEnum string
 
 const (
-	PostDeleteDashboardsActionEnumDeleteDashboards PostDeleteDashboardsActionEnum = "DeleteDashboards"
+	POSTDeleteDashboardsActionEnumDeleteDashboards PostDeleteDashboardsActionEnum = "DeleteDashboards"
 )
 
 type PostDeleteDashboardsVersionEnum string
 
 const (
-	PostDeleteDashboardsVersionEnumTwoThousandAndTen0801 PostDeleteDashboardsVersionEnum = "2010-08-01"
+	POSTDeleteDashboardsVersionEnumTwoThousandAndTen0801 PostDeleteDashboardsVersionEnum = "2010-08-01"
 )
 
 type PostDeleteDashboardsQueryParams struct {

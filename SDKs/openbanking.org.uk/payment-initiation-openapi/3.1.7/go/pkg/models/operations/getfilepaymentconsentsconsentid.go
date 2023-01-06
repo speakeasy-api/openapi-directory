@@ -17,7 +17,7 @@ type GetFilePaymentConsentsConsentIDHeaders struct {
 }
 
 type GetFilePaymentConsentsConsentIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetFilePaymentConsentsConsentIDRequest struct {
@@ -30,7 +30,7 @@ type GetFilePaymentConsentsConsentIDResponse struct {
 	Body                        []byte
 	ContentType                 string
 	Headers                     map[string][]string
-	ObErrorResponse1            *shared.ObErrorResponse1
-	ObWriteFileConsentResponse4 *shared.ObWriteFileConsentResponse4
+	OBErrorResponse1            *shared.ObErrorResponse1
+	OBWriteFileConsentResponse4 *shared.ObWriteFileConsentResponse4
 	StatusCode                  int64
 }

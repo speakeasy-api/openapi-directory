@@ -3,6 +3,6 @@ package shared
 type JqStateEnum string
 
 const (
-	JqStateEnumEnabled  JqStateEnum = "ENABLED"
-	JqStateEnumDisabled JqStateEnum = "DISABLED"
+	JQStateEnumEnabled  JqStateEnum = "ENABLED"
+	JQStateEnumDisabled JqStateEnum = "DISABLED"
 )

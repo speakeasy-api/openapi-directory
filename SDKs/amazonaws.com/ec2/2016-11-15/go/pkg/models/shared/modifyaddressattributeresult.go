@@ -1,5 +1,5 @@
 package shared
 
 type ModifyAddressAttributeResult struct {
-	Address *AddressAttribute
+	Address map[string]interface{}
 }

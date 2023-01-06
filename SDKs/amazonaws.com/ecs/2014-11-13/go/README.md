@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,46 +34,46 @@ func main() {
     
     req := operations.CreateCapacityProviderRequest{
         Headers: operations.CreateCapacityProviderHeaders{
-            XAmzAlgorithm: "quaerat",
-            XAmzContentSha256: "dolorem",
-            XAmzCredential: "deserunt",
-            XAmzDate: "assumenda",
-            XAmzSecurityToken: "labore",
-            XAmzSignature: "id",
-            XAmzSignedHeaders: "libero",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "est",
+            XAmzCredential: "ipsum",
+            XAmzDate: "quam",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "dolores",
             XAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
         },
         Request: shared.CreateCapacityProviderRequest{
             AutoScalingGroupProvider: shared.AutoScalingGroupProvider{
-                AutoScalingGroupArn: "amet",
+                AutoScalingGroupArn: "impedit",
                 ManagedScaling: &shared.ManagedScaling{
-                    InstanceWarmupPeriod: 8359258950322430183,
-                    MaximumScalingStepSize: 6824086522203587541,
-                    MinimumScalingStepSize: 8833386012590933595,
+                    InstanceWarmupPeriod: 3752781218885968701,
+                    MaximumScalingStepSize: 2991421044203248760,
+                    MinimumScalingStepSize: 5310393022320405575,
                     Status: "DISABLED",
-                    TargetCapacity: 7897556196251778201,
+                    TargetCapacity: 371208508841907247,
                 },
                 ManagedTerminationProtection: "DISABLED",
             },
-            Name: "ab",
+            Name: "quia",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "facilis",
-                    Value: "quis",
+                    Key: "ducimus",
+                    Value: "enim",
                 },
                 shared.Tag{
-                    Key: "sunt",
-                    Value: "quis",
+                    Key: "blanditiis",
+                    Value: "distinctio",
                 },
                 shared.Tag{
-                    Key: "qui",
-                    Value: "aut",
+                    Key: "delectus",
+                    Value: "rerum",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateCapacityProvider(ctx, req)
+    res, err := s.CreateCapacityProvider(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

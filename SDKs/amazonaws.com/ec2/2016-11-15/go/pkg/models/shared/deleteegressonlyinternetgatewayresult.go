@@ -1,5 +1,5 @@
 package shared
 
 type DeleteEgressOnlyInternetGatewayResult struct {
-	ReturnCode *bool
+	ReturnCode map[string]interface{}
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AssociateDomainRequest{
         Headers: operations.AssociateDomainHeaders{
-            XAmzAlgorithm: "suscipit",
-            XAmzContentSha256: "laudantium",
-            XAmzCredential: "in",
-            XAmzDate: "dicta",
-            XAmzSecurityToken: "dolorem",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "reiciendis",
+            XAmzAlgorithm: "labore",
+            XAmzContentSha256: "totam",
+            XAmzCredential: "eum",
+            XAmzDate: "laborum",
+            XAmzSecurityToken: "maxime",
+            XAmzSignature: "voluptatem",
+            XAmzSignedHeaders: "aut",
         },
         Request: operations.AssociateDomainRequestBody{
             AcmCertificateArn: "qui",
-            DisplayName: "fuga",
-            DomainName: "sed",
-            FleetArn: "sed",
+            DisplayName: "facere",
+            DomainName: "nulla",
+            FleetArn: "qui",
         },
     }
     
-    res, err := s.Sdk.AssociateDomain(ctx, req)
+    res, err := s.AssociateDomain(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

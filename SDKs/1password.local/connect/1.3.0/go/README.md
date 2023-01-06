@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,104 +22,24 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.CreateVaultItemRequest{
-        Security: operations.CreateVaultItemSecurity{
+    req := operations.GetAPIActivityRequest{
+        Security: operations.GetAPIActivitySecurity{
             ConnectToken: shared.SchemeConnectToken{
                 Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        PathParams: operations.CreateVaultItemPathParams{
-            VaultUUID: "sit",
-        },
-        Request: &shared.FullItemInput{
-            Category: "IDENTITY",
-            Favorite: true,
-            Fields: []shared.FieldInput{
-                shared.FieldInput{
-                    Generate: true,
-                    ID: "dolor",
-                    Label: "expedita",
-                    Purpose: "USERNAME",
-                    Recipe: &shared.GeneratorRecipe{
-                        CharacterSets: []shared.GeneratorRecipeCharacterSetsEnum{
-                            "LETTERS",
-                        },
-                        Length: 2661732831099943416,
-                    },
-                    Section: &shared.FieldSection{
-                        ID: "rerum",
-                    },
-                    Type: "URL",
-                    Value: "debitis",
-                },
-                shared.FieldInput{
-                    Generate: true,
-                    ID: "et",
-                    Label: "ut",
-                    Purpose: "PASSWORD",
-                    Recipe: &shared.GeneratorRecipe{
-                        CharacterSets: []shared.GeneratorRecipeCharacterSetsEnum{
-                            "LETTERS",
-                            "SYMBOLS",
-                        },
-                        Length: 3930927879439176946,
-                    },
-                    Section: &shared.FieldSection{
-                        ID: "totam",
-                    },
-                    Type: "TOTP",
-                    Value: "illum",
-                },
-            },
-            Files: []shared.FileInput{
-                shared.FileInput{
-                    Content: "vel",
-                    ID: "odio",
-                    Name: "dolore",
-                    Section: &shared.FileSection{
-                        ID: "id",
-                    },
-                    Size: 959367522974354090,
-                },
-            },
-            ID: "accusantium",
-            Sections: []shared.FullItemSections{
-                shared.FullItemSections{
-                    ID: "commodi",
-                    Label: "quis",
-                },
-                shared.FullItemSections{
-                    ID: "est",
-                    Label: "aut",
-                },
-                shared.FullItemSections{
-                    ID: "odit",
-                    Label: "non",
-                },
-            },
-            Tags: []string{
-                "omnis",
-            },
-            Title: "aut",
-            Urls: []shared.FullItemUrls{
-                shared.FullItemUrls{
-                    Href: "sed",
-                    Primary: false,
-                },
-            },
-            Vault: shared.FullItemVault{
-                ID: "autem",
-            },
-            Version: 8514850266767180993,
+        QueryParams: operations.GetAPIActivityQueryParams{
+            Limit: 2259404117704393152,
+            Offset: 6050128673802995827,
         },
     }
     
-    res, err := s.Sdk.CreateVaultItem(ctx, req)
+    res, err := s.Activity.GetAPIActivity(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.FullItem != nil {
+    if res.APIRequests != nil {
         // handle response
     }
 ```
@@ -129,23 +48,38 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Activity
+
+* `GetAPIActivity` - Retrieve a list of API Requests that have been made.
+
+### Files
+
+* `DownloadFileByID` - Get the content of a File
+* `GetDetailsOfFileByID` - Get the details of a File
+* `GetItemFiles` - Get all the files inside an Item
+
+### Health
+
+* `GetHeartbeat` - Ping the server for liveness
+* `GetServerHealth` - Get state of the server and its dependencies.
+
+### Items
 
 * `CreateVaultItem` - Create a new Item
 * `DeleteVaultItem` - Delete an Item
-* `DownloadFileByID` - Get the content of a File
-* `GetAPIActivity` - Retrieve a list of API Requests that have been made.
-* `GetDetailsOfFileByID` - Get the details of a File
-* `GetHeartbeat` - Ping the server for liveness
-* `GetItemFiles` - Get all the files inside an Item
-* `GetPrometheusMetrics` - Query server for exposed Prometheus metrics
-* `GetServerHealth` - Get state of the server and its dependencies.
-* `GetVaultByID` - Get Vault details and metadata
 * `GetVaultItemByID` - Get the details of an Item
 * `GetVaultItems` - Get all items for inside a Vault
-* `GetVaults` - Get all Vaults
 * `PatchVaultItem` - Update a subset of Item attributes
 * `UpdateVaultItem` - Update an Item
+
+### Metrics
+
+* `GetPrometheusMetrics` - Query server for exposed Prometheus metrics
+
+### Vaults
+
+* `GetVaultByID` - Get Vault details and metadata
+* `GetVaults` - Get all Vaults
 
 <!-- End SDK Available Operations -->
 

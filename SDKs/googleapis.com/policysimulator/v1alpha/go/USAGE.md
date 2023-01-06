@@ -1,0 +1,53 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest{
+        Security: operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity{
+            Oauth2: shared.SchemeOauth2{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+            Oauth2c: shared.SchemeOauth2c{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        },
+        PathParams: operations.PolicysimulatorProjectsLocationsReplaysOperationsListPathParams{
+            Name: "aut",
+        },
+        QueryParams: operations.PolicysimulatorProjectsLocationsReplaysOperationsListQueryParams{
+            DollarXgafv: "1",
+            AccessToken: "ut",
+            Alt: "proto",
+            Callback: "et",
+            Fields: "aperiam",
+            Filter: "est",
+            Key: "et",
+            OauthToken: "sapiente",
+            PageSize: 3440702978304187789,
+            PageToken: "perferendis",
+            PrettyPrint: false,
+            QuotaUser: "qui",
+            UploadType: "non",
+            UploadProtocol: "nobis",
+        },
+    }
+    
+    res, err := s.Projects.PolicysimulatorProjectsLocationsReplaysOperationsList(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.GoogleLongrunningListOperationsResponse != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

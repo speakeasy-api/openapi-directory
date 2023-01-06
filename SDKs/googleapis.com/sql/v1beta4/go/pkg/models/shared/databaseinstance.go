@@ -79,13 +79,15 @@ const (
 	DatabaseInstanceSuspensionReasonEnumKmsKeyIssue                    DatabaseInstanceSuspensionReasonEnum = "KMS_KEY_ISSUE"
 )
 
-// DatabaseInstanceInput
+// DatabaseInstance
 // A Cloud SQL instance resource.
-type DatabaseInstanceInput struct {
+type DatabaseInstance struct {
 	AvailableMaintenanceVersions []string                               `json:"availableMaintenanceVersions,omitempty"`
 	BackendType                  *DatabaseInstanceBackendTypeEnum       `json:"backendType,omitempty"`
 	ConnectionName               *string                                `json:"connectionName,omitempty"`
+	CreateTime                   *string                                `json:"createTime,omitempty"`
 	CurrentDiskSize              *string                                `json:"currentDiskSize,omitempty"`
+	DatabaseInstalledVersion     *string                                `json:"databaseInstalledVersion,omitempty"`
 	DatabaseVersion              *DatabaseInstanceDatabaseVersionEnum   `json:"databaseVersion,omitempty"`
 	DiskEncryptionConfiguration  *DiskEncryptionConfiguration           `json:"diskEncryptionConfiguration,omitempty"`
 	DiskEncryptionStatus         *DiskEncryptionStatus                  `json:"diskEncryptionStatus,omitempty"`
@@ -118,15 +120,13 @@ type DatabaseInstanceInput struct {
 	SuspensionReason             []DatabaseInstanceSuspensionReasonEnum `json:"suspensionReason,omitempty"`
 }
 
-// DatabaseInstance
+// DatabaseInstanceInput
 // A Cloud SQL instance resource.
-type DatabaseInstance struct {
+type DatabaseInstanceInput struct {
 	AvailableMaintenanceVersions []string                               `json:"availableMaintenanceVersions,omitempty"`
 	BackendType                  *DatabaseInstanceBackendTypeEnum       `json:"backendType,omitempty"`
 	ConnectionName               *string                                `json:"connectionName,omitempty"`
-	CreateTime                   *string                                `json:"createTime,omitempty"`
 	CurrentDiskSize              *string                                `json:"currentDiskSize,omitempty"`
-	DatabaseInstalledVersion     *string                                `json:"databaseInstalledVersion,omitempty"`
 	DatabaseVersion              *DatabaseInstanceDatabaseVersionEnum   `json:"databaseVersion,omitempty"`
 	DiskEncryptionConfiguration  *DiskEncryptionConfiguration           `json:"diskEncryptionConfiguration,omitempty"`
 	DiskEncryptionStatus         *DiskEncryptionStatus                  `json:"diskEncryptionStatus,omitempty"`

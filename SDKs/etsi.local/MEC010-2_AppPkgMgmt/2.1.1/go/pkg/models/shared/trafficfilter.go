@@ -1,12 +1,12 @@
 package shared
 
 type TrafficFilter struct {
-	DScp             *int64
+	DSCP             *int64
 	DstAddress       []string
 	DstPort          []string
 	DstTunnelPort    []string
 	Protocol         []string
-	QCi              *int64
+	QCI              *int64
 	SrcAddress       []string
 	SrcPort          []string
 	SrcTunnelAddress []string

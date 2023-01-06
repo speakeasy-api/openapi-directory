@@ -7,8 +7,8 @@ import (
 type ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnumAny    ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnumSingle ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteFileConsent3DataAuthorisationAuthorisationTypeEnumAny    ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteFileConsent3DataAuthorisationAuthorisationTypeEnumSingle ObWriteFileConsent3DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteFileConsent3DataAuthorisation
@@ -52,7 +52,7 @@ type ObWriteFileConsent3DataInitiation struct {
 type ObWriteFileConsent3Data struct {
 	Authorisation  *ObWriteFileConsent3DataAuthorisation `json:"Authorisation,omitempty"`
 	Initiation     ObWriteFileConsent3DataInitiation     `json:"Initiation"`
-	ScaSupportData *ObscaSupportData1                    `json:"SCASupportData,omitempty"`
+	SCASupportData *ObscaSupportData1                    `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteFileConsent3 struct {

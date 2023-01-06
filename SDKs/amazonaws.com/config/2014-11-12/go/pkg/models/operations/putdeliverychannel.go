@@ -32,7 +32,7 @@ type PutDeliveryChannelResponse struct {
 	InvalidDeliveryChannelNameException          *interface{}
 	InvalidS3KeyPrefixException                  *interface{}
 	InvalidS3KmsKeyArnException                  *interface{}
-	InvalidSnsTopicArnException                  *interface{}
+	InvalidSNSTopicARNException                  *interface{}
 	MaxNumberOfDeliveryChannelsExceededException *interface{}
 	NoAvailableConfigurationRecorderException    *interface{}
 	NoSuchBucketException                        *interface{}

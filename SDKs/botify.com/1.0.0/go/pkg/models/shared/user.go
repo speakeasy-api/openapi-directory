@@ -1,0 +1,17 @@
+package shared
+
+import (
+	"time"
+)
+
+type User struct {
+	CompanyName    *string    `json:"company_name,omitempty"`
+	DateJoined     *time.Time `json:"date_joined,omitempty"`
+	Email          *string    `json:"email,omitempty"`
+	FirstName      *string    `json:"first_name,omitempty"`
+	IsOrganization *string    `json:"is_organization,omitempty"`
+	LastName       *string    `json:"last_name,omitempty"`
+	Login          *string    `json:"login,omitempty"`
+	Status         *string    `json:"status,omitempty"`
+	URL            *string    `json:"url,omitempty"`
+}

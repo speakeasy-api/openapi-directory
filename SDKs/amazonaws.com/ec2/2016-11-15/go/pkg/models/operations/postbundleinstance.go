@@ -3,13 +3,13 @@ package operations
 type PostBundleInstanceActionEnum string
 
 const (
-	PostBundleInstanceActionEnumBundleInstance PostBundleInstanceActionEnum = "BundleInstance"
+	POSTBundleInstanceActionEnumBundleInstance PostBundleInstanceActionEnum = "BundleInstance"
 )
 
 type PostBundleInstanceVersionEnum string
 
 const (
-	PostBundleInstanceVersionEnumTwoThousandAndSixteen1115 PostBundleInstanceVersionEnum = "2016-11-15"
+	POSTBundleInstanceVersionEnumTwoThousandAndSixteen1115 PostBundleInstanceVersionEnum = "2016-11-15"
 )
 
 type PostBundleInstanceQueryParams struct {

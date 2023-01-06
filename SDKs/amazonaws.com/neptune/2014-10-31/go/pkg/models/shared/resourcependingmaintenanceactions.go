@@ -3,6 +3,6 @@ package shared
 // ResourcePendingMaintenanceActions
 // Describes the pending maintenance actions for a resource.
 type ResourcePendingMaintenanceActions struct {
-	PendingMaintenanceActionDetails []PendingMaintenanceAction
+	PendingMaintenanceActionDetails []map[string]interface{}
 	ResourceIdentifier              *string
 }

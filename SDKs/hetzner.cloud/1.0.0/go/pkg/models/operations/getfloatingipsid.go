@@ -60,6 +60,6 @@ type GetFloatingIpsIDRequest struct {
 
 type GetFloatingIpsIDResponse struct {
 	ContentType                              string
-	GetFloatingIpsID200ApplicationJSONObject *GetFloatingIpsID200ApplicationJSON
 	StatusCode                               int64
+	GetFloatingIpsID200ApplicationJSONObject *GetFloatingIpsID200ApplicationJSON
 }

@@ -30,6 +30,6 @@ type ListSQLInjectionMatchSetsResponse struct {
 	ContentType                       string
 	ListSQLInjectionMatchSetsResponse *shared.ListSQLInjectionMatchSetsResponse
 	StatusCode                        int64
-	WafInternalErrorException         *interface{}
-	WafInvalidAccountException        *interface{}
+	WAFInternalErrorException         *interface{}
+	WAFInvalidAccountException        *interface{}
 }

@@ -12,30 +12,30 @@ type InitiatePaymentPathParams struct {
 type InitiatePaymentHeaders struct {
 	ConsentID                         *string                   `header:"style=simple,explode=false,name=Consent-ID"`
 	Digest                            *string                   `header:"style=simple,explode=false,name=Digest"`
-	PsuAccept                         *string                   `header:"style=simple,explode=false,name=PSU-Accept"`
-	PsuAcceptCharset                  *string                   `header:"style=simple,explode=false,name=PSU-Accept-Charset"`
-	PsuAcceptEncoding                 *string                   `header:"style=simple,explode=false,name=PSU-Accept-Encoding"`
-	PsuAcceptLanguage                 *string                   `header:"style=simple,explode=false,name=PSU-Accept-Language"`
-	PsuCorporateID                    *string                   `header:"style=simple,explode=false,name=PSU-Corporate-ID"`
-	PsuCorporateIDType                *string                   `header:"style=simple,explode=false,name=PSU-Corporate-ID-Type"`
-	PsuDeviceID                       *string                   `header:"style=simple,explode=false,name=PSU-Device-ID"`
-	PsuGeoLocation                    *string                   `header:"style=simple,explode=false,name=PSU-Geo-Location"`
-	PsuHTTPMethod                     *shared.PsuHTTPMethodEnum `header:"style=simple,explode=false,name=PSU-Http-Method"`
-	PsuID                             *string                   `header:"style=simple,explode=false,name=PSU-ID"`
-	PsuIDType                         *string                   `header:"style=simple,explode=false,name=PSU-ID-Type"`
-	PsuIPAddress                      string                    `header:"style=simple,explode=false,name=PSU-IP-Address"`
-	PsuIPPort                         *string                   `header:"style=simple,explode=false,name=PSU-IP-Port"`
-	PsuUserAgent                      *string                   `header:"style=simple,explode=false,name=PSU-User-Agent"`
+	PSUAccept                         *string                   `header:"style=simple,explode=false,name=PSU-Accept"`
+	PSUAcceptCharset                  *string                   `header:"style=simple,explode=false,name=PSU-Accept-Charset"`
+	PSUAcceptEncoding                 *string                   `header:"style=simple,explode=false,name=PSU-Accept-Encoding"`
+	PSUAcceptLanguage                 *string                   `header:"style=simple,explode=false,name=PSU-Accept-Language"`
+	PSUCorporateID                    *string                   `header:"style=simple,explode=false,name=PSU-Corporate-ID"`
+	PSUCorporateIDType                *string                   `header:"style=simple,explode=false,name=PSU-Corporate-ID-Type"`
+	PSUDeviceID                       *string                   `header:"style=simple,explode=false,name=PSU-Device-ID"`
+	PSUGeoLocation                    *string                   `header:"style=simple,explode=false,name=PSU-Geo-Location"`
+	PSUHTTPMethod                     *shared.PsuHTTPMethodEnum `header:"style=simple,explode=false,name=PSU-Http-Method"`
+	PSUID                             *string                   `header:"style=simple,explode=false,name=PSU-ID"`
+	PSUIDType                         *string                   `header:"style=simple,explode=false,name=PSU-ID-Type"`
+	PSUIPAddress                      string                    `header:"style=simple,explode=false,name=PSU-IP-Address"`
+	PSUIPPort                         *string                   `header:"style=simple,explode=false,name=PSU-IP-Port"`
+	PSUUserAgent                      *string                   `header:"style=simple,explode=false,name=PSU-User-Agent"`
 	Signature                         *string                   `header:"style=simple,explode=false,name=Signature"`
-	TppBrandLoggingInformation        *string                   `header:"style=simple,explode=false,name=TPP-Brand-Logging-Information"`
-	TppExplicitAuthorisationPreferred *bool                     `header:"style=simple,explode=false,name=TPP-Explicit-Authorisation-Preferred"`
-	TppNokRedirectURI                 *string                   `header:"style=simple,explode=false,name=TPP-Nok-Redirect-URI"`
-	TppNotificationContentPreferred   *string                   `header:"style=simple,explode=false,name=TPP-Notification-Content-Preferred"`
-	TppNotificationURI                *string                   `header:"style=simple,explode=false,name=TPP-Notification-URI"`
-	TppRedirectPreferred              *bool                     `header:"style=simple,explode=false,name=TPP-Redirect-Preferred"`
-	TppRedirectURI                    *string                   `header:"style=simple,explode=false,name=TPP-Redirect-URI"`
-	TppRejectionNoFundsPreferred      *bool                     `header:"style=simple,explode=false,name=TPP-Rejection-NoFunds-Preferred"`
-	TppSignatureCertificate           *string                   `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
+	TPPBrandLoggingInformation        *string                   `header:"style=simple,explode=false,name=TPP-Brand-Logging-Information"`
+	TPPExplicitAuthorisationPreferred *bool                     `header:"style=simple,explode=false,name=TPP-Explicit-Authorisation-Preferred"`
+	TPPNokRedirectURI                 *string                   `header:"style=simple,explode=false,name=TPP-Nok-Redirect-URI"`
+	TPPNotificationContentPreferred   *string                   `header:"style=simple,explode=false,name=TPP-Notification-Content-Preferred"`
+	TPPNotificationURI                *string                   `header:"style=simple,explode=false,name=TPP-Notification-URI"`
+	TPPRedirectPreferred              *bool                     `header:"style=simple,explode=false,name=TPP-Redirect-Preferred"`
+	TPPRedirectURI                    *string                   `header:"style=simple,explode=false,name=TPP-Redirect-URI"`
+	TPPRejectionNoFundsPreferred      *bool                     `header:"style=simple,explode=false,name=TPP-Rejection-NoFunds-Preferred"`
+	TPPSignatureCertificate           *string                   `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	XRequestID                        string                    `header:"style=simple,explode=false,name=X-Request-ID"`
 }
 
@@ -58,18 +58,18 @@ type InitiatePaymentRequest struct {
 
 type InitiatePaymentResponse struct {
 	ContentType                        string
-	Error400NgPis                      *shared.Error400NgPis
-	Error400Pis                        *shared.Error400Pis
-	Error401NgPis                      *shared.Error401NgPis
-	Error401Pis                        *shared.Error401Pis
-	Error403NgPis                      *shared.Error403NgPis
-	Error403Pis                        *shared.Error403Pis
-	Error404NgPis                      *shared.Error404NgPis
-	Error404Pis                        *shared.Error404Pis
-	Error405NgPis                      *shared.Error405NgPis
-	Error405Pis                        *shared.Error405Pis
-	Error409NgPis                      *shared.Error409NgPis
-	Error409Pis                        *shared.Error409Pis
+	Error400NGPIS                      *shared.Error400NgPis
+	Error400PIS                        *shared.Error400Pis
+	Error401NGPIS                      *shared.Error401NgPis
+	Error401PIS                        *shared.Error401Pis
+	Error403NGPIS                      *shared.Error403NgPis
+	Error403PIS                        *shared.Error403Pis
+	Error404NGPIS                      *shared.Error404NgPis
+	Error404PIS                        *shared.Error404Pis
+	Error405NGPIS                      *shared.Error405NgPis
+	Error405PIS                        *shared.Error405Pis
+	Error409NGPIS                      *shared.Error409NgPis
+	Error409PIS                        *shared.Error409Pis
 	Headers                            map[string][]string
 	StatusCode                         int64
 	PaymentInitationRequestResponse201 *shared.PaymentInitationRequestResponse201

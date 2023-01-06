@@ -82,7 +82,7 @@ type Isoal404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Isoal404ApplicationJSONErrorDescriptionEnumNoRecordFound               Isoal404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Isoal404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Isoal404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Isoal404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Isoal404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Isoal404ApplicationJSON struct {

@@ -21,7 +21,7 @@ type TraceSummary struct {
 	InstanceIds            []InstanceIDDetail               `json:"InstanceIds,omitempty"`
 	IsPartial              *bool                            `json:"IsPartial,omitempty"`
 	MatchedEventTime       *time.Time                       `json:"MatchedEventTime,omitempty"`
-	ResourceArNs           []ResourceArnDetail              `json:"ResourceARNs,omitempty"`
+	ResourceARNs           []ResourceArnDetail              `json:"ResourceARNs,omitempty"`
 	ResponseTime           *float64                         `json:"ResponseTime,omitempty"`
 	ResponseTimeRootCauses []ResponseTimeRootCause          `json:"ResponseTimeRootCauses,omitempty"`
 	Revision               *int64                           `json:"Revision,omitempty"`

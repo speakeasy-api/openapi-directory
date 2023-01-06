@@ -3,13 +3,13 @@ package operations
 type PostDescribePendingMaintenanceActionsActionEnum string
 
 const (
-	PostDescribePendingMaintenanceActionsActionEnumDescribePendingMaintenanceActions PostDescribePendingMaintenanceActionsActionEnum = "DescribePendingMaintenanceActions"
+	POSTDescribePendingMaintenanceActionsActionEnumDescribePendingMaintenanceActions PostDescribePendingMaintenanceActionsActionEnum = "DescribePendingMaintenanceActions"
 )
 
 type PostDescribePendingMaintenanceActionsVersionEnum string
 
 const (
-	PostDescribePendingMaintenanceActionsVersionEnumTwoThousandAndFourteen1031 PostDescribePendingMaintenanceActionsVersionEnum = "2014-10-31"
+	POSTDescribePendingMaintenanceActionsVersionEnumTwoThousandAndFourteen1031 PostDescribePendingMaintenanceActionsVersionEnum = "2014-10-31"
 )
 
 type PostDescribePendingMaintenanceActionsQueryParams struct {

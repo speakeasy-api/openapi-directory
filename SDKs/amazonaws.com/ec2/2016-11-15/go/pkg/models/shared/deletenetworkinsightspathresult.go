@@ -1,5 +1,5 @@
 package shared
 
 type DeleteNetworkInsightsPathResult struct {
-	NetworkInsightsPathID *string
+	NetworkInsightsPathID map[string]interface{}
 }

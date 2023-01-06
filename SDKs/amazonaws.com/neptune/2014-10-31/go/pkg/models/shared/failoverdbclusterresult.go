@@ -1,5 +1,5 @@
 package shared
 
 type FailoverDbClusterResult struct {
-	DbCluster *DbCluster
+	DBCluster *DbCluster
 }

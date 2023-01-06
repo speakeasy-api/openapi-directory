@@ -87,6 +87,6 @@ type GetFloatingIpsRequest struct {
 
 type GetFloatingIpsResponse struct {
 	ContentType                            string
-	GetFloatingIps200ApplicationJSONObject *GetFloatingIps200ApplicationJSON
 	StatusCode                             int64
+	GetFloatingIps200ApplicationJSONObject *GetFloatingIps200ApplicationJSON
 }

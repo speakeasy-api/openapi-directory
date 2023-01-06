@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,27 +26,27 @@ func main() {
         Security: operations.DlpInfoTypesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.DlpInfoTypesListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "laborum",
-            Alt: "proto",
-            Callback: "temporibus",
-            Fields: "nemo",
-            Filter: "odio",
-            Key: "possimus",
-            LanguageCode: "aspernatur",
-            LocationID: "eaque",
-            OauthToken: "nostrum",
-            Parent: "qui",
-            PrettyPrint: false,
-            QuotaUser: "quas",
-            UploadType: "commodi",
-            UploadProtocol: "quas",
+            AccessToken: "qui",
+            Alt: "json",
+            Callback: "autem",
+            Fields: "alias",
+            Filter: "sit",
+            Key: "id",
+            LanguageCode: "error",
+            LocationID: "aut",
+            OauthToken: "et",
+            Parent: "voluptatem",
+            PrettyPrint: true,
+            QuotaUser: "ipsa",
+            UploadType: "sint",
+            UploadProtocol: "aliquam",
         },
     }
     

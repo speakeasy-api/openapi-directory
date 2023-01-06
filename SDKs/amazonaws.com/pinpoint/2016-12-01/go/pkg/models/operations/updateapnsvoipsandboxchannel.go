@@ -32,7 +32,7 @@ type UpdateApnsVoipSandboxChannelRequestBodyApnsVoipSandboxChannelRequest struct
 }
 
 type UpdateApnsVoipSandboxChannelRequestBody struct {
-	ApnsVoipSandboxChannelRequest UpdateApnsVoipSandboxChannelRequestBodyApnsVoipSandboxChannelRequest `json:"APNSVoipSandboxChannelRequest"`
+	APNSVoipSandboxChannelRequest UpdateApnsVoipSandboxChannelRequestBodyApnsVoipSandboxChannelRequest `json:"APNSVoipSandboxChannelRequest"`
 }
 
 type UpdateApnsVoipSandboxChannelRequest struct {

@@ -29,7 +29,7 @@ type CreateSmsTemplateRequestBodySmsTemplateRequest struct {
 }
 
 type CreateSmsTemplateRequestBody struct {
-	SmsTemplateRequest CreateSmsTemplateRequestBodySmsTemplateRequest `json:"SMSTemplateRequest"`
+	SMSTemplateRequest CreateSmsTemplateRequestBodySmsTemplateRequest `json:"SMSTemplateRequest"`
 }
 
 type CreateSmsTemplateRequest struct {

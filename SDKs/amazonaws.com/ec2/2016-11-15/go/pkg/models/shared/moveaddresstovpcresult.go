@@ -1,6 +1,6 @@
 package shared
 
 type MoveAddressToVpcResult struct {
-	AllocationID *string
-	Status       *StatusEnum
+	AllocationID map[string]interface{}
+	Status       map[string]interface{}
 }

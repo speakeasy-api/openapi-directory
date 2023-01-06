@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,36 +26,38 @@ func main() {
         Security: operations.FileProjectsLocationsBackupsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.FileProjectsLocationsBackupsCreatePathParams{
-            Parent: "est",
+            Parent: "corrupti",
         },
         QueryParams: operations.FileProjectsLocationsBackupsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "ut",
-            Alt: "media",
-            BackupID: "porro",
-            Callback: "excepturi",
-            Fields: "fugiat",
-            Key: "maxime",
-            OauthToken: "vero",
+            AccessToken: "sint",
+            Alt: "proto",
+            BackupID: "ducimus",
+            Callback: "debitis",
+            Fields: "ex",
+            Key: "nam",
+            OauthToken: "ex",
             PrettyPrint: false,
-            QuotaUser: "pariatur",
-            UploadType: "itaque",
-            UploadProtocol: "ipsum",
+            QuotaUser: "vero",
+            UploadType: "repellendus",
+            UploadProtocol: "qui",
         },
         Request: &shared.BackupInput{
-            Description: "velit",
-            KmsKeyName: "quisquam",
+            Description: "veniam",
+            KmsKeyName: "assumenda",
             Labels: map[string]string{
-                "occaecati": "fuga",
+                "eius": "nisi",
+                "aliquid": "fugiat",
+                "sit": "dignissimos",
             },
-            SourceFileShare: "modi",
-            SourceInstance: "illo",
+            SourceFileShare: "cumque",
+            SourceInstance: "sit",
         },
     }
     

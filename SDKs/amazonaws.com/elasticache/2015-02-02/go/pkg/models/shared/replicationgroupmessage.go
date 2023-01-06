@@ -4,5 +4,5 @@ package shared
 // Represents the output of a <code>DescribeReplicationGroups</code> operation.
 type ReplicationGroupMessage struct {
 	Marker            *string
-	ReplicationGroups []ReplicationGroup
+	ReplicationGroups []map[string]interface{}
 }

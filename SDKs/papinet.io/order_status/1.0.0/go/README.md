@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.GetOrdersRequest{
         QueryParams: operations.GetOrdersQueryParams{
-            Limit: "adipisci",
-            Offset: "illo",
+            Limit: "dolor",
+            Offset: "earum",
             OrderStatus: "Completed",
         },
     }
     
-    res, err := s.Sdk.GetOrders(ctx, req)
+    res, err := s.GetOrders(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

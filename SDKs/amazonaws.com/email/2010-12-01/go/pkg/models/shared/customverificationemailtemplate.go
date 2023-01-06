@@ -7,5 +7,5 @@ type CustomVerificationEmailTemplate struct {
 	FromEmailAddress      *string
 	SuccessRedirectionURL *string
 	TemplateName          *string
-	TemplateSubject       *string
+	TemplateSubject       map[string]interface{}
 }

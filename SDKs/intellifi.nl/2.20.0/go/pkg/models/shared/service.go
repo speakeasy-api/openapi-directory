@@ -1,10 +1,5 @@
 package shared
 
-type ServiceInput struct {
-	ConfigRequest  map[string]interface{} `json:"config_request,omitempty"`
-	RestartRequest *bool                  `json:"restart_request,omitempty"`
-}
-
 type Service struct {
 	BootCount      *int64                 `json:"boot_count,omitempty"`
 	Config         map[string]interface{} `json:"config,omitempty"`
@@ -16,4 +11,9 @@ type Service struct {
 	TimeUpdated    *string                `json:"time_updated,omitempty"`
 	URL            *string                `json:"url,omitempty"`
 	Version        *string                `json:"version,omitempty"`
+}
+
+type ServiceInput struct {
+	ConfigRequest  map[string]interface{} `json:"config_request,omitempty"`
+	RestartRequest *bool                  `json:"restart_request,omitempty"`
 }

@@ -3,6 +3,6 @@ package shared
 // CancelSpotFleetRequestsResponse
 // Contains the output of CancelSpotFleetRequests.
 type CancelSpotFleetRequestsResponse struct {
-	SuccessfulFleetRequests   []CancelSpotFleetRequestsSuccessItem
-	UnsuccessfulFleetRequests []CancelSpotFleetRequestsErrorItem
+	SuccessfulFleetRequests   map[string]interface{}
+	UnsuccessfulFleetRequests map[string]interface{}
 }

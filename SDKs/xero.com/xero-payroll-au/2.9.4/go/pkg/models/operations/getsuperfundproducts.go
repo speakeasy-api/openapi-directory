@@ -5,8 +5,8 @@ import (
 )
 
 type GetSuperfundProductsQueryParams struct {
-	Abn *string `queryParam:"style=form,explode=true,name=ABN"`
-	Usi *string `queryParam:"style=form,explode=true,name=USI"`
+	ABN *string `queryParam:"style=form,explode=true,name=ABN"`
+	USI *string `queryParam:"style=form,explode=true,name=USI"`
 }
 
 type GetSuperfundProductsHeaders struct {

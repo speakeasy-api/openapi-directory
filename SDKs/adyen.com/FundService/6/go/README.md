@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,10 +29,10 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "dolor",
+        Request: "dolores",
     }
     
-    res, err := s.Sdk.PostAccountHolderBalance(ctx, req)
+    res, err := s.General.PostAccountHolderBalance(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,7 +46,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `PostAccountHolderBalance` - Retrieve the balance(s) of an account holder.
 * `PostAccountHolderTransactionList` - Retrieve a list of transactions.

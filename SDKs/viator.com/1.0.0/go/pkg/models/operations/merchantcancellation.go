@@ -31,19 +31,7 @@ type MerchantCancellation200ApplicationJSONData struct {
 }
 
 type MerchantCancellation200ApplicationJSON struct {
-	Data             *MerchantCancellation200ApplicationJSONData `json:"data,omitempty"`
-	DateStamp        *string                                     `json:"dateStamp,omitempty"`
-	ErrorCodes       []string                                    `json:"errorCodes,omitempty"`
-	ErrorMessage     []interface{}                               `json:"errorMessage,omitempty"`
-	ErrorMessageText *string                                     `json:"errorMessageText,omitempty"`
-	ErrorName        *string                                     `json:"errorName,omitempty"`
-	ErrorReference   *string                                     `json:"errorReference,omitempty"`
-	ErrorType        *string                                     `json:"errorType,omitempty"`
-	ExtraInfo        map[string]interface{}                      `json:"extraInfo,omitempty"`
-	ExtraObject      map[string]interface{}                      `json:"extraObject,omitempty"`
-	Success          *bool                                       `json:"success,omitempty"`
-	TotalCount       *int64                                      `json:"totalCount,omitempty"`
-	Vmid             *string                                     `json:"vmid,omitempty"`
+	Data *MerchantCancellation200ApplicationJSONData `json:"data,omitempty"`
 }
 
 type MerchantCancellation400ApplicationJSONData struct {
@@ -54,19 +42,7 @@ type MerchantCancellation400ApplicationJSONData struct {
 }
 
 type MerchantCancellation400ApplicationJSON struct {
-	Data             *MerchantCancellation400ApplicationJSONData `json:"data,omitempty"`
-	DateStamp        *string                                     `json:"dateStamp,omitempty"`
-	ErrorCodes       []string                                    `json:"errorCodes,omitempty"`
-	ErrorMessage     []interface{}                               `json:"errorMessage,omitempty"`
-	ErrorMessageText *string                                     `json:"errorMessageText,omitempty"`
-	ErrorName        *string                                     `json:"errorName,omitempty"`
-	ErrorReference   *string                                     `json:"errorReference,omitempty"`
-	ErrorType        *string                                     `json:"errorType,omitempty"`
-	ExtraInfo        map[string]interface{}                      `json:"extraInfo,omitempty"`
-	ExtraObject      map[string]interface{}                      `json:"extraObject,omitempty"`
-	Success          *bool                                       `json:"success,omitempty"`
-	TotalCount       *int64                                      `json:"totalCount,omitempty"`
-	Vmid             *string                                     `json:"vmid,omitempty"`
+	Data *MerchantCancellation400ApplicationJSONData `json:"data,omitempty"`
 }
 
 type MerchantCancellationRequest struct {

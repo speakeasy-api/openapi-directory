@@ -4,6 +4,8 @@ type OrgMembershipPermissions struct {
 	CanCreateRepository bool `json:"can_create_repository"`
 }
 
+// OrgMembershipSimpleUser
+// Simple User
 type OrgMembershipSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

@@ -81,7 +81,7 @@ type Ugdcn404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Ugdcn404ApplicationJSONErrorDescriptionEnumNoRecordFound               Ugdcn404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Ugdcn404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Ugdcn404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Ugdcn404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ugdcn404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Ugdcn404ApplicationJSON struct {

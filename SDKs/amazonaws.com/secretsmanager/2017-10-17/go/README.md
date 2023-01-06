@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelRotateSecretRequest{
         Headers: operations.CancelRotateSecretHeaders{
-            XAmzAlgorithm: "dolorem",
-            XAmzContentSha256: "quos",
-            XAmzCredential: "deleniti",
-            XAmzDate: "commodi",
-            XAmzSecurityToken: "nobis",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "aspernatur",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "molestias",
+            XAmzCredential: "in",
+            XAmzDate: "ducimus",
+            XAmzSecurityToken: "provident",
+            XAmzSignature: "commodi",
+            XAmzSignedHeaders: "ut",
             XAmzTarget: "secretsmanager.CancelRotateSecret",
         },
         Request: shared.CancelRotateSecretRequest{
-            SecretID: "et",
+            SecretID: "dicta",
         },
     }
     
-    res, err := s.Sdk.CancelRotateSecret(ctx, req)
+    res, err := s.CancelRotateSecret(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

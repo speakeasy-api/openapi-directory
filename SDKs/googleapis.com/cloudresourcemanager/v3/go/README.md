@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,27 +27,27 @@ func main() {
             Option1: &operations.CloudresourcemanagerEffectiveTagsListSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.CloudresourcemanagerEffectiveTagsListQueryParams{
             DollarXgafv: "1",
-            AccessToken: "est",
+            AccessToken: "veritatis",
             Alt: "media",
-            Callback: "magnam",
-            Fields: "nihil",
-            Key: "sint",
-            OauthToken: "est",
-            PageSize: 1587585381886736164,
-            PageToken: "veritatis",
-            Parent: "quisquam",
-            PrettyPrint: false,
-            QuotaUser: "et",
-            UploadType: "autem",
-            UploadProtocol: "nisi",
+            Callback: "sunt",
+            Fields: "et",
+            Key: "quisquam",
+            OauthToken: "doloribus",
+            PageSize: 4393097444934014675,
+            PageToken: "sint",
+            Parent: "recusandae",
+            PrettyPrint: true,
+            QuotaUser: "voluptatem",
+            UploadType: "sapiente",
+            UploadProtocol: "dolores",
         },
     }
     

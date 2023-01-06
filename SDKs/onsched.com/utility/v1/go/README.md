@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -33,21 +32,12 @@ func main() {
 
     s := sdk.New(opts...)
     
-    req := operations.GetPlanIDRequest{
-        PathParams: operations.GetPlanIDPathParams{
-            PlanID: "voluptates",
-        },
-        QueryParams: operations.GetPlanIDQueryParams{
-            LocationID: "ea",
-        },
-    }
-    
-    res, err := s.Sdk.GetPlanID(ctx, req)
+    res, err := s.Health.GetUtilityV1HealthHeartbeat(ctx)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.GetUtilityV1HealthHeartbeat200ApplicationJSONString != nil {
         // handle response
     }
 ```
@@ -56,10 +46,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Health
+
+* `GetUtilityV1HealthHeartbeat`
+
+### StripePlans
 
 * `GetPlanID`
-* `GetUtilityV1HealthHeartbeat`
 
 <!-- End SDK Available Operations -->
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,32 +34,36 @@ func main() {
     
     req := operations.CreateDatabaseRequest{
         Headers: operations.CreateDatabaseHeaders{
-            XAmzAlgorithm: "saepe",
-            XAmzContentSha256: "dignissimos",
-            XAmzCredential: "laboriosam",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "natus",
-            XAmzSignature: "nesciunt",
-            XAmzSignedHeaders: "reiciendis",
+            XAmzAlgorithm: "consequatur",
+            XAmzContentSha256: "excepturi",
+            XAmzCredential: "ut",
+            XAmzDate: "ipsa",
+            XAmzSecurityToken: "sit",
+            XAmzSignature: "aliquid",
+            XAmzSignedHeaders: "eos",
             XAmzTarget: "Timestream_20181101.CreateDatabase",
         },
         Request: shared.CreateDatabaseRequest{
-            DatabaseName: "sit",
-            KmsKeyID: "explicabo",
+            DatabaseName: "fuga",
+            KmsKeyID: "soluta",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "quisquam",
-                    Value: "sapiente",
+                    Key: "vel",
+                    Value: "iusto",
                 },
                 shared.Tag{
-                    Key: "maxime",
-                    Value: "porro",
+                    Key: "voluptatum",
+                    Value: "illo",
+                },
+                shared.Tag{
+                    Key: "exercitationem",
+                    Value: "aut",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateDatabase(ctx, req)
+    res, err := s.CreateDatabase(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

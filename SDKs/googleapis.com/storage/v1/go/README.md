@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,26 +27,26 @@ func main() {
             Option1: &operations.StorageBucketAccessControlsDeleteSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         PathParams: operations.StorageBucketAccessControlsDeletePathParams{
-            Bucket: "debitis",
-            Entity: "asperiores",
+            Bucket: "sunt",
+            Entity: "minima",
         },
         QueryParams: operations.StorageBucketAccessControlsDeleteQueryParams{
             Alt: "json",
-            Fields: "in",
-            Key: "esse",
-            OauthToken: "et",
+            Fields: "asperiores",
+            Key: "repellendus",
+            OauthToken: "impedit",
             PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "alias",
-            UserIP: "repudiandae",
-            UserProject: "dolorem",
+            QuotaUser: "molestiae",
+            UploadType: "ipsa",
+            UserIP: "nihil",
+            UserProject: "recusandae",
         },
     }
     

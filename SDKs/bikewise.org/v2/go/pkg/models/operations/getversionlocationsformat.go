@@ -3,12 +3,12 @@ package operations
 type GetVersionLocationsFormatIncidentTypeEnum string
 
 const (
-	GetVersionLocationsFormatIncidentTypeEnumCrash               GetVersionLocationsFormatIncidentTypeEnum = "crash"
-	GetVersionLocationsFormatIncidentTypeEnumHazard              GetVersionLocationsFormatIncidentTypeEnum = "hazard"
-	GetVersionLocationsFormatIncidentTypeEnumTheft               GetVersionLocationsFormatIncidentTypeEnum = "theft"
-	GetVersionLocationsFormatIncidentTypeEnumUnconfirmed         GetVersionLocationsFormatIncidentTypeEnum = "unconfirmed"
-	GetVersionLocationsFormatIncidentTypeEnumInfrastructureIssue GetVersionLocationsFormatIncidentTypeEnum = "infrastructure_issue"
-	GetVersionLocationsFormatIncidentTypeEnumChopShop            GetVersionLocationsFormatIncidentTypeEnum = "chop_shop"
+	GETVersionLocationsFormatIncidentTypeEnumCrash               GetVersionLocationsFormatIncidentTypeEnum = "crash"
+	GETVersionLocationsFormatIncidentTypeEnumHazard              GetVersionLocationsFormatIncidentTypeEnum = "hazard"
+	GETVersionLocationsFormatIncidentTypeEnumTheft               GetVersionLocationsFormatIncidentTypeEnum = "theft"
+	GETVersionLocationsFormatIncidentTypeEnumUnconfirmed         GetVersionLocationsFormatIncidentTypeEnum = "unconfirmed"
+	GETVersionLocationsFormatIncidentTypeEnumInfrastructureIssue GetVersionLocationsFormatIncidentTypeEnum = "infrastructure_issue"
+	GETVersionLocationsFormatIncidentTypeEnumChopShop            GetVersionLocationsFormatIncidentTypeEnum = "chop_shop"
 )
 
 type GetVersionLocationsFormatQueryParams struct {

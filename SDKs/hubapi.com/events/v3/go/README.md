@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,16 +29,17 @@ func main() {
             },
         },
         QueryParams: operations.GetEventsV3EventsGetPageQueryParams{
-            After: "culpa",
-            Before: "libero",
-            EventType: "mollitia",
-            Limit: 7141689443649356981,
-            ObjectID: 1288557390006708125,
-            ObjectType: "culpa",
-            OccurredAfter: "1977-10-23T17:05:23Z",
-            OccurredBefore: "1976-06-03T21:08:46Z",
+            After: "esse",
+            Before: "quia",
+            EventType: "non",
+            Limit: 5080100845609098235,
+            ObjectID: 8723349048109278699,
+            ObjectType: "deserunt",
+            OccurredAfter: "2019-12-27T23:33:44Z",
+            OccurredBefore: "2015-03-11T00:35:51Z",
             Sort: []string{
                 "beatae",
+                "et",
             },
         },
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,30 +34,30 @@ func main() {
     
     req := operations.BatchAssociateClientDeviceWithCoreDeviceRequest{
         PathParams: operations.BatchAssociateClientDeviceWithCoreDevicePathParams{
-            CoreDeviceThingName: "tempore",
+            CoreDeviceThingName: "veniam",
         },
         Headers: operations.BatchAssociateClientDeviceWithCoreDeviceHeaders{
-            XAmzAlgorithm: "saepe",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "est",
-            XAmzDate: "odit",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "debitis",
-            XAmzSignedHeaders: "voluptates",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "animi",
+            XAmzDate: "atque",
+            XAmzSecurityToken: "omnis",
+            XAmzSignature: "unde",
+            XAmzSignedHeaders: "repellat",
         },
         Request: operations.BatchAssociateClientDeviceWithCoreDeviceRequestBody{
             Entries: []shared.AssociateClientDeviceWithCoreDeviceEntry{
                 shared.AssociateClientDeviceWithCoreDeviceEntry{
-                    ThingName: "odio",
+                    ThingName: "tempore",
                 },
                 shared.AssociateClientDeviceWithCoreDeviceEntry{
-                    ThingName: "molestiae",
+                    ThingName: "et",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.BatchAssociateClientDeviceWithCoreDevice(ctx, req)
+    res, err := s.BatchAssociateClientDeviceWithCoreDevice(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

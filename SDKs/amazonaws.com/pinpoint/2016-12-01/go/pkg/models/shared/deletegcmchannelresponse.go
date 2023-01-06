@@ -1,5 +1,5 @@
 package shared
 
 type DeleteGcmChannelResponse struct {
-	GcmChannelResponse GcmChannelResponse `json:"GCMChannelResponse"`
+	GCMChannelResponse GcmChannelResponse `json:"GCMChannelResponse"`
 }

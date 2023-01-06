@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -115,7 +115,7 @@ func (s *Contacts) ContactsPost(ctx context.Context, request operations.Contacts
 			}
 
 			out := string(data)
-			res.ContactsPost200ApplicationJSONString = &out
+			res.ContactsPOST200ApplicationJSONString = &out
 		case utils.MatchContentType(contentType, `text/plain`):
 			data, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -123,7 +123,7 @@ func (s *Contacts) ContactsPost(ctx context.Context, request operations.Contacts
 			}
 
 			out := string(data)
-			res.ContactsPost200TextPlainString = &out
+			res.ContactsPOST200TextPlainString = &out
 		}
 	}
 

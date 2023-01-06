@@ -7,24 +7,24 @@ import (
 type PvContractPvTypeEnum string
 
 const (
-	PvContractPvTypeEnumOriginal PvContractPvTypeEnum = "Original"
-	PvContractPvTypeEnumReprint  PvContractPvTypeEnum = "Reprint"
-	PvContractPvTypeEnumOther    PvContractPvTypeEnum = "Other"
+	PVContractPVTypeEnumOriginal PvContractPvTypeEnum = "Original"
+	PVContractPVTypeEnumReprint  PvContractPvTypeEnum = "Reprint"
+	PVContractPVTypeEnumOther    PvContractPvTypeEnum = "Other"
 )
 
 type PvContractServiceEnum string
 
 const (
-	PvContractServiceEnumNicoNicoDouga PvContractServiceEnum = "NicoNicoDouga"
-	PvContractServiceEnumYoutube       PvContractServiceEnum = "Youtube"
-	PvContractServiceEnumSoundCloud    PvContractServiceEnum = "SoundCloud"
-	PvContractServiceEnumVimeo         PvContractServiceEnum = "Vimeo"
-	PvContractServiceEnumPiapro        PvContractServiceEnum = "Piapro"
-	PvContractServiceEnumBilibili      PvContractServiceEnum = "Bilibili"
-	PvContractServiceEnumFile          PvContractServiceEnum = "File"
-	PvContractServiceEnumLocalFile     PvContractServiceEnum = "LocalFile"
-	PvContractServiceEnumCreofuga      PvContractServiceEnum = "Creofuga"
-	PvContractServiceEnumBandcamp      PvContractServiceEnum = "Bandcamp"
+	PVContractServiceEnumNicoNicoDouga PvContractServiceEnum = "NicoNicoDouga"
+	PVContractServiceEnumYoutube       PvContractServiceEnum = "Youtube"
+	PVContractServiceEnumSoundCloud    PvContractServiceEnum = "SoundCloud"
+	PVContractServiceEnumVimeo         PvContractServiceEnum = "Vimeo"
+	PVContractServiceEnumPiapro        PvContractServiceEnum = "Piapro"
+	PVContractServiceEnumBilibili      PvContractServiceEnum = "Bilibili"
+	PVContractServiceEnumFile          PvContractServiceEnum = "File"
+	PVContractServiceEnumLocalFile     PvContractServiceEnum = "LocalFile"
+	PVContractServiceEnumCreofuga      PvContractServiceEnum = "Creofuga"
+	PVContractServiceEnumBandcamp      PvContractServiceEnum = "Bandcamp"
 )
 
 type PvContract struct {

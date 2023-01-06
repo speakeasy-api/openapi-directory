@@ -1,11 +1,12 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -107,7 +108,7 @@ func (s *SDK) GetUserContentByDateJSON(ctx context.Context, request operations.G
 				return nil, err
 			}
 
-			res.GetUserContentByDateJSON200ApplicationJSONObject = out
+			res.GETUserContentByDateJSON200ApplicationJSONObject = out
 		}
 	}
 
@@ -147,7 +148,7 @@ func (s *SDK) GetUserContentRecentJSON(ctx context.Context, request operations.G
 				return nil, err
 			}
 
-			res.GetUserContentRecentJSON200ApplicationJSONObject = out
+			res.GETUserContentRecentJSON200ApplicationJSONObject = out
 		}
 	}
 
@@ -189,7 +190,7 @@ func (s *SDK) GetUserContentURLJSON(ctx context.Context, request operations.GetU
 				return nil, err
 			}
 
-			res.GetUserContentURLJSON200ApplicationJSONObject = out
+			res.GETUserContentURLJSON200ApplicationJSONObject = out
 		}
 	}
 
@@ -231,7 +232,7 @@ func (s *SDK) GetUserContentUserJSON(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.GetUserContentUserJSON200ApplicationJSONObject = out
+			res.GETUserContentUserJSON200ApplicationJSONObject = out
 		}
 	}
 

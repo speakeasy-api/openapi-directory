@@ -1,5 +1,5 @@
 package shared
 
 type TerminateInstancesResult struct {
-	TerminatingInstances []InstanceStateChange
+	TerminatingInstances map[string]interface{}
 }

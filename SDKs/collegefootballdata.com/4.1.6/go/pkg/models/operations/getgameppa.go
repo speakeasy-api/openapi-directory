@@ -19,6 +19,6 @@ type GetGamePpaRequest struct {
 
 type GetGamePpaResponse struct {
 	ContentType string
-	GamePpas    []shared.GamePpa
+	GamePPAS    []shared.GamePpa
 	StatusCode  int64
 }

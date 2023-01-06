@@ -36,8 +36,8 @@ type RendererFormattedStrings struct {
 	RuntimeSettingsFetchTime         *string `json:"runtimeSettingsFetchTime,omitempty"`
 	RuntimeSettingsNetworkThrottling *string `json:"runtimeSettingsNetworkThrottling,omitempty"`
 	RuntimeSettingsTitle             *string `json:"runtimeSettingsTitle,omitempty"`
-	RuntimeSettingsUa                *string `json:"runtimeSettingsUA,omitempty"`
-	RuntimeSettingsUaNetwork         *string `json:"runtimeSettingsUANetwork,omitempty"`
+	RuntimeSettingsUA                *string `json:"runtimeSettingsUA,omitempty"`
+	RuntimeSettingsUANetwork         *string `json:"runtimeSettingsUANetwork,omitempty"`
 	RuntimeSettingsURL               *string `json:"runtimeSettingsUrl,omitempty"`
 	RuntimeUnknown                   *string `json:"runtimeUnknown,omitempty"`
 	ScorescaleLabel                  *string `json:"scorescaleLabel,omitempty"`

@@ -1,6 +1,6 @@
 package shared
 
 type CreateNatGatewayResult struct {
-	ClientToken *string
-	NatGateway  *NatGateway
+	ClientToken map[string]interface{}
+	NatGateway  map[string]interface{}
 }

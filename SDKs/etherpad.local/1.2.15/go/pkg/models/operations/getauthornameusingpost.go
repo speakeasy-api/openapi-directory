@@ -46,8 +46,8 @@ type GetAuthorNameUsingPostRequest struct {
 type GetAuthorNameUsingPostResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	GetAuthorNameUsingPost200ApplicationJSONObject *GetAuthorNameUsingPost200ApplicationJSON
-	GetAuthorNameUsingPost400ApplicationJSONObject *GetAuthorNameUsingPost400ApplicationJSON
-	GetAuthorNameUsingPost401ApplicationJSONObject *GetAuthorNameUsingPost401ApplicationJSON
-	GetAuthorNameUsingPost500ApplicationJSONObject *GetAuthorNameUsingPost500ApplicationJSON
+	GetAuthorNameUsingPOST200ApplicationJSONObject *GetAuthorNameUsingPost200ApplicationJSON
+	GetAuthorNameUsingPOST400ApplicationJSONObject *GetAuthorNameUsingPost400ApplicationJSON
+	GetAuthorNameUsingPOST401ApplicationJSONObject *GetAuthorNameUsingPost401ApplicationJSON
+	GetAuthorNameUsingPOST500ApplicationJSONObject *GetAuthorNameUsingPost500ApplicationJSON
 }

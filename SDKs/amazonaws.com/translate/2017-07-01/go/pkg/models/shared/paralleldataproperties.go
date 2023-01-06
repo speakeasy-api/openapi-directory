@@ -9,7 +9,7 @@ import (
 type ParallelDataProperties struct {
 	Arn                       *string                 `json:"Arn,omitempty"`
 	CreatedAt                 *time.Time              `json:"CreatedAt,omitempty"`
-	Description               *string                 `json:"Description,omitempty"`
+	Description               map[string]interface{}  `json:"Description,omitempty"`
 	EncryptionKey             *EncryptionKey          `json:"EncryptionKey,omitempty"`
 	FailedRecordCount         *int64                  `json:"FailedRecordCount,omitempty"`
 	ImportedDataSize          *int64                  `json:"ImportedDataSize,omitempty"`

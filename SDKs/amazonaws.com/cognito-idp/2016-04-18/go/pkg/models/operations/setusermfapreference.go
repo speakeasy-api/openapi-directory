@@ -7,7 +7,7 @@ import (
 type SetUserMfaPreferenceXAmzTargetEnum string
 
 const (
-	SetUserMfaPreferenceXAmzTargetEnumAwsCognitoIdentityProviderServiceSetUserMfaPreference SetUserMfaPreferenceXAmzTargetEnum = "AWSCognitoIdentityProviderService.SetUserMFAPreference"
+	SetUserMFAPreferenceXAmzTargetEnumAwsCognitoIdentityProviderServiceSetUserMfaPreference SetUserMfaPreferenceXAmzTargetEnum = "AWSCognitoIdentityProviderService.SetUserMFAPreference"
 )
 
 type SetUserMfaPreferenceHeaders struct {
@@ -33,7 +33,7 @@ type SetUserMfaPreferenceResponse struct {
 	NotAuthorizedException         *interface{}
 	PasswordResetRequiredException *interface{}
 	ResourceNotFoundException      *interface{}
-	SetUserMfaPreferenceResponse   map[string]interface{}
+	SetUserMFAPreferenceResponse   map[string]interface{}
 	StatusCode                     int64
 	UserNotConfirmedException      *interface{}
 	UserNotFoundException          *interface{}

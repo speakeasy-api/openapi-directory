@@ -3,9 +3,9 @@ package shared
 // RealtimeLogConfig
 // A real-time log configuration.
 type RealtimeLogConfig struct {
-	Arn          string
+	ARN          string
 	EndPoints    []EndPoint
-	Fields       []string
+	Fields       []map[string]interface{}
 	Name         string
 	SamplingRate int64
 }

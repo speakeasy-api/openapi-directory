@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,17 +29,17 @@ func main() {
             },
         },
         PathParams: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams{
-            Destination: "nulla",
-            FromDate: "beatae",
-            Origin: "nobis",
-            ProductCode: "ZXB",
+            Destination: "id",
+            FromDate: "voluptates",
+            Origin: "ea",
+            ProductCode: "FCO",
         },
         Headers: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders{
-            Accept: "rerum",
+            Accept: "porro",
         },
     }
     
-    res, err := s.Sdk.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, req)
+    res, err := s.Cargo.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -54,17 +53,26 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Cargo
 
 * `CargoGetRouteFromDateProductCodeByOriginAndDestinationGet` - Retrieve all flights
 * `CargoShipmentTrackingByAwbPrefixAndAwbNumberGet` - Shipment Tracking
+
+### Offers
+
 * `OffersLoungesByLocationGet` - Lounges
 * `OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet` - Seat Maps
+
+### Operations
+
 * `OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet` - Flight Status at Arrival Airport
 * `OperationsFlightstatusByFlightNumberAndDateGet` - Flight Status
 * `OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet` - Flight Status at Departure Airport
 * `OperationsFlightstatusRouteDateByOriginAndDestinationGet` - Flight Status by Route
 * `OperationsSchedulesFromDateTimeByOriginAndDestinationGet` - Flight Schedules
+
+### Reference Data
+
 * `ReferencesAircraftByAircraftCodeGet` - Aircraft
 * `ReferencesAirlinesByAirlineCodeGet` - Airlines
 * `ReferencesAirportsByAirportCodeGet` - Airports

@@ -3,13 +3,13 @@ package operations
 type PostResumeProcessesActionEnum string
 
 const (
-	PostResumeProcessesActionEnumResumeProcesses PostResumeProcessesActionEnum = "ResumeProcesses"
+	POSTResumeProcessesActionEnumResumeProcesses PostResumeProcessesActionEnum = "ResumeProcesses"
 )
 
 type PostResumeProcessesVersionEnum string
 
 const (
-	PostResumeProcessesVersionEnumTwoThousandAndEleven0101 PostResumeProcessesVersionEnum = "2011-01-01"
+	POSTResumeProcessesVersionEnumTwoThousandAndEleven0101 PostResumeProcessesVersionEnum = "2011-01-01"
 )
 
 type PostResumeProcessesQueryParams struct {

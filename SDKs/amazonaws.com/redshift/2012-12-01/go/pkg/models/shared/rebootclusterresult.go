@@ -1,5 +1,5 @@
 package shared
 
 type RebootClusterResult struct {
-	Cluster *Cluster
+	Cluster *Cluster2
 }

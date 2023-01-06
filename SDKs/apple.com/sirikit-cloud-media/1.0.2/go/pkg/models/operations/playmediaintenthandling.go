@@ -19,7 +19,6 @@ type PlayMediaIntentHandlingRequest struct {
 
 type PlayMediaIntentHandlingResponse struct {
 	ContentType                                string
-	Headers                                    map[string][]string
 	PlayMediaIntentHandlingInvocationResponses []interface{}
 	StatusCode                                 int64
 }

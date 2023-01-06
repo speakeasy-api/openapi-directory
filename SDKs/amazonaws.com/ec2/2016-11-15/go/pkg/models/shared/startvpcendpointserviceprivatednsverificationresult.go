@@ -1,5 +1,5 @@
 package shared
 
 type StartVpcEndpointServicePrivateDNSVerificationResult struct {
-	ReturnValue *bool
+	ReturnValue map[string]interface{}
 }

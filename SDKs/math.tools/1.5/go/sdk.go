@@ -2,7 +2,8 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/internal/utils"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -21,7 +22,7 @@ type SDK struct {
 	NumberGeneration        *NumberGeneration
 	NumberSystemsConversion *NumberSystemsConversion
 	NumberOfTheDay          *NumberOfTheDay
-	Pi                      *Pi
+	PI                      *Pi
 	Prime                   *Prime
 	Spell                   *Spell
 
@@ -129,7 +130,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Pi = NewPi(
+	sdk.PI = NewPi(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

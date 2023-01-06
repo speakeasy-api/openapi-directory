@@ -1,5 +1,5 @@
 package shared
 
 type DeleteTransitGatewayPrefixListReferenceResult struct {
-	TransitGatewayPrefixListReference *TransitGatewayPrefixListReference
+	TransitGatewayPrefixListReference map[string]interface{}
 }

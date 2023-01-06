@@ -92,7 +92,7 @@ type GetOccupantsAddressesOutputFormatQueryParams struct {
 	MaxResults         *int64                                                   `queryParam:"style=form,explode=true,name=maxResults"`
 	MinScore           *int64                                                   `queryParam:"style=form,explode=true,name=minScore"`
 	NotLocalities      *string                                                  `queryParam:"style=form,explode=true,name=notLocalities"`
-	OutputSrs          *int64                                                   `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS          *int64                                                   `queryParam:"style=form,explode=true,name=outputSRS"`
 	ParcelPoint        *string                                                  `queryParam:"style=form,explode=true,name=parcelPoint"`
 	ProvinceCode       *string                                                  `queryParam:"style=form,explode=true,name=provinceCode"`
 	SetBack            *int64                                                   `queryParam:"style=form,explode=true,name=setBack"`

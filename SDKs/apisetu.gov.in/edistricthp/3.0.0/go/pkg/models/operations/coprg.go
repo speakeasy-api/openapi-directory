@@ -81,7 +81,7 @@ type Coprg404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Coprg404ApplicationJSONErrorDescriptionEnumNoRecordFound               Coprg404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Coprg404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Coprg404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Coprg404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Coprg404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Coprg404ApplicationJSON struct {

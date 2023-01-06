@@ -34,7 +34,7 @@ type GetMostsharedSectionTimePeriodJSONRequest struct {
 
 type GetMostsharedSectionTimePeriodJSONResponse struct {
 	ContentType                                                string
-	GetMostsharedSectionTimePeriodJSON200ApplicationJSONObject *GetMostsharedSectionTimePeriodJSON200ApplicationJSON
-	GetMostsharedSectionTimePeriodJSON400ApplicationJSONObject *GetMostsharedSectionTimePeriodJSON400ApplicationJSON
+	GETMostsharedSectionTimePeriodJSON200ApplicationJSONObject *GetMostsharedSectionTimePeriodJSON200ApplicationJSON
+	GETMostsharedSectionTimePeriodJSON400ApplicationJSONObject *GetMostsharedSectionTimePeriodJSON400ApplicationJSON
 	StatusCode                                                 int64
 }

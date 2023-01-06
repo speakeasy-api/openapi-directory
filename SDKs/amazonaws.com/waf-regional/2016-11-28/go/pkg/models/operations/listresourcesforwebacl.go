@@ -7,7 +7,7 @@ import (
 type ListResourcesForWebAclxAmzTargetEnum string
 
 const (
-	ListResourcesForWebAclxAmzTargetEnumAwswafRegional20161128ListResourcesForWebACL ListResourcesForWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.ListResourcesForWebACL"
+	ListResourcesForWebACLXAmzTargetEnumAwswafRegional20161128ListResourcesForWebACL ListResourcesForWebAclxAmzTargetEnum = "AWSWAF_Regional_20161128.ListResourcesForWebACL"
 )
 
 type ListResourcesForWebACLHeaders struct {
@@ -30,8 +30,8 @@ type ListResourcesForWebACLResponse struct {
 	ContentType                    string
 	ListResourcesForWebACLResponse *shared.ListResourcesForWebACLResponse
 	StatusCode                     int64
-	WafInternalErrorException      *interface{}
-	WafInvalidAccountException     *interface{}
-	WafInvalidParameterException   *interface{}
-	WafNonexistentItemException    *interface{}
+	WAFInternalErrorException      *interface{}
+	WAFInvalidAccountException     *interface{}
+	WAFInvalidParameterException   *interface{}
+	WAFNonexistentItemException    *interface{}
 }

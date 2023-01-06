@@ -22,7 +22,7 @@ type GetLatestBaseCurrencyRequest struct {
 
 type GetLatestBaseCurrencyResponse struct {
 	ContentType                                   string
+	StatusCode                                    int64
 	GetLatestBaseCurrency200ApplicationJSONObject *GetLatestBaseCurrency200ApplicationJSON
 	GetLatestBaseCurrency404ApplicationJSONObject *GetLatestBaseCurrency404ApplicationJSON
-	StatusCode                                    int64
 }

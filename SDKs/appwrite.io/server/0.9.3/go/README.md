@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,16 +24,16 @@ func main() {
     
     req := operations.AccountCreateRecoveryRequest{
         Security: operations.AccountCreateRecoverySecurity{
-            Jwt: shared.SchemeJwt{
+            JWT: shared.SchemeJwt{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             Project: shared.SchemeProject{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.AccountCreateRecoveryRequestBody{
-            Email: "quasi",
-            URL: "aliquid",
+            Email: "accusantium",
+            URL: "omnis",
         },
     }
     

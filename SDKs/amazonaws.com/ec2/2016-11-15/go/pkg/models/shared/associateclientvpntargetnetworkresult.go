@@ -1,6 +1,6 @@
 package shared
 
 type AssociateClientVpnTargetNetworkResult struct {
-	AssociationID *string
-	Status        *AssociationStatus
+	AssociationID map[string]interface{}
+	Status        map[string]interface{}
 }

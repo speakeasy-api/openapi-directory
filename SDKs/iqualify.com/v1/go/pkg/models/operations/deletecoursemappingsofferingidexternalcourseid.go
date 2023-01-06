@@ -15,7 +15,7 @@ type DeleteCourseMappingsOfferingIDExternalCourseIDRequest struct {
 
 type DeleteCourseMappingsOfferingIDExternalCourseIDResponse struct {
 	ContentType                                                             string
-	DeleteCourseMappingsOfferingIDExternalCourseID200ApplicationJSONStrings []string
 	Error                                                                   *shared.Error
 	StatusCode                                                              int64
+	DeleteCourseMappingsOfferingIDExternalCourseID200ApplicationJSONStrings []string
 }

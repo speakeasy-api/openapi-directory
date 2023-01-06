@@ -3,13 +3,13 @@ package operations
 type PostDeleteIdentityActionEnum string
 
 const (
-	PostDeleteIdentityActionEnumDeleteIdentity PostDeleteIdentityActionEnum = "DeleteIdentity"
+	POSTDeleteIdentityActionEnumDeleteIdentity PostDeleteIdentityActionEnum = "DeleteIdentity"
 )
 
 type PostDeleteIdentityVersionEnum string
 
 const (
-	PostDeleteIdentityVersionEnumTwoThousandAndTen1201 PostDeleteIdentityVersionEnum = "2010-12-01"
+	POSTDeleteIdentityVersionEnumTwoThousandAndTen1201 PostDeleteIdentityVersionEnum = "2010-12-01"
 )
 
 type PostDeleteIdentityQueryParams struct {

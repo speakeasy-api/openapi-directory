@@ -3,8 +3,8 @@ package shared
 type ObExternalRequestStatus1CodeEnum string
 
 const (
-	ObExternalRequestStatus1CodeEnumAuthorised            ObExternalRequestStatus1CodeEnum = "Authorised"
-	ObExternalRequestStatus1CodeEnumAwaitingAuthorisation ObExternalRequestStatus1CodeEnum = "AwaitingAuthorisation"
-	ObExternalRequestStatus1CodeEnumRejected              ObExternalRequestStatus1CodeEnum = "Rejected"
-	ObExternalRequestStatus1CodeEnumRevoked               ObExternalRequestStatus1CodeEnum = "Revoked"
+	OBExternalRequestStatus1CodeEnumAuthorised            ObExternalRequestStatus1CodeEnum = "Authorised"
+	OBExternalRequestStatus1CodeEnumAwaitingAuthorisation ObExternalRequestStatus1CodeEnum = "AwaitingAuthorisation"
+	OBExternalRequestStatus1CodeEnumRejected              ObExternalRequestStatus1CodeEnum = "Rejected"
+	OBExternalRequestStatus1CodeEnumRevoked               ObExternalRequestStatus1CodeEnum = "Revoked"
 )

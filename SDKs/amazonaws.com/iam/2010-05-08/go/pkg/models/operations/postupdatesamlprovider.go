@@ -3,13 +3,13 @@ package operations
 type PostUpdateSamlProviderActionEnum string
 
 const (
-	PostUpdateSamlProviderActionEnumUpdateSamlProvider PostUpdateSamlProviderActionEnum = "UpdateSAMLProvider"
+	POSTUpdateSAMLProviderActionEnumUpdateSamlProvider PostUpdateSamlProviderActionEnum = "UpdateSAMLProvider"
 )
 
 type PostUpdateSamlProviderVersionEnum string
 
 const (
-	PostUpdateSamlProviderVersionEnumTwoThousandAndTen0508 PostUpdateSamlProviderVersionEnum = "2010-05-08"
+	POSTUpdateSAMLProviderVersionEnumTwoThousandAndTen0508 PostUpdateSamlProviderVersionEnum = "2010-05-08"
 )
 
 type PostUpdateSamlProviderQueryParams struct {

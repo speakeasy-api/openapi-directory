@@ -49,7 +49,7 @@ type CreateFileSystemResponse struct {
 	BadRequest                     *interface{}
 	ContentType                    string
 	FileSystemAlreadyExists        *interface{}
-	FileSystemDescription          *shared.FileSystemDescription
+	FileSystemDescription          *shared.FileSystemDescription1
 	FileSystemLimitExceeded        *interface{}
 	InsufficientThroughputCapacity *interface{}
 	InternalServerError            *interface{}

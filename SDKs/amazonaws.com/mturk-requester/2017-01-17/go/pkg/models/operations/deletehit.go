@@ -7,7 +7,7 @@ import (
 type DeleteHitxAmzTargetEnum string
 
 const (
-	DeleteHitxAmzTargetEnumMTurkRequesterServiceV20170117DeleteHit DeleteHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.DeleteHIT"
+	DeleteHITXAmzTargetEnumMTurkRequesterServiceV20170117DeleteHit DeleteHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.DeleteHIT"
 )
 
 type DeleteHitHeaders struct {
@@ -28,7 +28,7 @@ type DeleteHitRequest struct {
 
 type DeleteHitResponse struct {
 	ContentType       string
-	DeleteHitResponse map[string]interface{}
+	DeleteHITResponse map[string]interface{}
 	RequestError      *interface{}
 	ServiceFault      *interface{}
 	StatusCode        int64

@@ -3,18 +3,18 @@ package operations
 type GetDescribeDbSubnetGroupsActionEnum string
 
 const (
-	GetDescribeDbSubnetGroupsActionEnumDescribeDbSubnetGroups GetDescribeDbSubnetGroupsActionEnum = "DescribeDBSubnetGroups"
+	GETDescribeDBSubnetGroupsActionEnumDescribeDbSubnetGroups GetDescribeDbSubnetGroupsActionEnum = "DescribeDBSubnetGroups"
 )
 
 type GetDescribeDbSubnetGroupsVersionEnum string
 
 const (
-	GetDescribeDbSubnetGroupsVersionEnumTwoThousandAndThirteen0110 GetDescribeDbSubnetGroupsVersionEnum = "2013-01-10"
+	GETDescribeDBSubnetGroupsVersionEnumTwoThousandAndThirteen0110 GetDescribeDbSubnetGroupsVersionEnum = "2013-01-10"
 )
 
 type GetDescribeDbSubnetGroupsQueryParams struct {
 	Action            GetDescribeDbSubnetGroupsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbSubnetGroupName *string                              `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
+	DBSubnetGroupName *string                              `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
 	Marker            *string                              `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords        *int64                               `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version           GetDescribeDbSubnetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`

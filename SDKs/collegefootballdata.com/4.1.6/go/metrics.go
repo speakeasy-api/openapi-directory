@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -66,7 +66,7 @@ func (s *Metrics) GetGamePpa(ctx context.Context, request operations.GetGamePpaR
 				return nil, err
 			}
 
-			res.GamePpas = out
+			res.GamePPAS = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -110,7 +110,7 @@ func (s *Metrics) GetPlayerGamePpa(ctx context.Context, request operations.GetPl
 				return nil, err
 			}
 
-			res.PlayerGamePpas = out
+			res.PlayerGamePPAS = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -154,7 +154,7 @@ func (s *Metrics) GetPlayerSeasonPpa(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.PlayerSeasonPpas = out
+			res.PlayerSeasonPPAS = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -242,7 +242,7 @@ func (s *Metrics) GetPregameWinProbabilities(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.PregameWps = out
+			res.PregameWPS = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -286,7 +286,7 @@ func (s *Metrics) GetTeamPpa(ctx context.Context, request operations.GetTeamPpaR
 				return nil, err
 			}
 
-			res.TeamPpas = out
+			res.TeamPPAS = out
 		}
 	case httpRes.StatusCode == 400:
 	}
@@ -330,7 +330,7 @@ func (s *Metrics) GetWinProbabilityData(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.PlayWps = out
+			res.PlayWPS = out
 		}
 	case httpRes.StatusCode == 400:
 	}

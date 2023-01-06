@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,28 +22,25 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.CreateMessengerAccountRequest{
-        Security: operations.CreateMessengerAccountSecurity{
+    req := operations.GetAllAccountsRequest{
+        Security: operations.GetAllAccountsSecurity{
             BearerAuth: &shared.SchemeBearerAuth{
                 Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        Request: operations.CreateMessengerAccountRequestBody{
-            AccessToken: "ut",
-            Applications: []string{
-                "doloremque",
-            },
-            ExternalID: "dicta",
-            Name: "aut",
+        QueryParams: operations.GetAllAccountsQueryParams{
+            PageNumber: 2490157273402513042,
+            PageSize: 3513062419350002252,
+            Provider: "whatsapp",
         },
     }
     
-    res, err := s.Sdk.CreateMessengerAccount(ctx, req)
+    res, err := s.Account.GetAllAccounts(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.MessengerAccountResponse != nil {
+    if res.GetAllAccounts200ApplicationJSONObject != nil {
         // handle response
     }
 ```
@@ -53,17 +49,29 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account
+
+* `GetAllAccounts` - Retrieve all accounts you own
+
+### Application
+
+* `LinkApplication` - Link application to an account
+* `UnliWithoutApplicationnkApplication` - Unlink application from an account
+
+### Facebook Messenger
 
 * `CreateMessengerAccount` - Create a Messenger account
 * `DeleteMessengerAccount` - Delete a Messenger account
-* `GetAllAccounts` - Retrieve all accounts you own
 * `GetMessengerAccount` - Retrieve a Messenger account
-* `GetVsmAccount` - Retrieve a Viber Service Message account
-* `GetWaAccount` - Retrieve a Whatsapp account
-* `LinkApplication` - Link application to an account
-* `UnliWithoutApplicationnkApplication` - Unlink application from an account
 * `UpdateMessengerAccount` - Update a Messenger account
+
+### Viber Service Message
+
+* `GetVsmAccount` - Retrieve a Viber Service Message account
+
+### WhatsApp
+
+* `GetWaAccount` - Retrieve a Whatsapp account
 
 <!-- End SDK Available Operations -->
 

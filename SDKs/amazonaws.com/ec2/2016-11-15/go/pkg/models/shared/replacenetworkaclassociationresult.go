@@ -1,5 +1,5 @@
 package shared
 
 type ReplaceNetworkACLAssociationResult struct {
-	NewAssociationID *string
+	NewAssociationID map[string]interface{}
 }

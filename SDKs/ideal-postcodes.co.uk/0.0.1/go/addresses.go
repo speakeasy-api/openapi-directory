@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -201,7 +201,7 @@ func (s *Addresses) UpdrnToAddress(ctx context.Context, request operations.Updrn
 				return nil, err
 			}
 
-			res.UdprnToAddressResponseSchema = out
+			res.UDPRNToAddressResponseSchema = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {

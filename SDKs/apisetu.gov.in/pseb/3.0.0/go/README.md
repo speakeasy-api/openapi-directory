@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.CemstSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.CemstRequestBody{
             CertificateParameters: &operations.CemstRequestBodyCertificateParameters{
-                FullName: "modi",
-                UID: "animi",
-                Rollno: "unde",
-                Year: "ullam",
+                FullName: "necessitatibus",
+                UID: "sint",
+                Rollno: "enim",
+                Year: "quia",
             },
-            ConsentArtifact: "assumenda",
+            ConsentArtifact: "voluptatem",
             Format: "pdf",
-            TxnID: "sequi",
+            TxnID: "dolorem",
         },
     }
     
-    res, err := s.Sdk.Cemst(ctx, req)
+    res, err := s.APIs.Cemst(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Cemst` - Class VIII Marksheet
 * `Cfmst` - Class V Marksheet

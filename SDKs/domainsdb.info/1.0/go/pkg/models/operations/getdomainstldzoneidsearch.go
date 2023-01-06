@@ -10,10 +10,10 @@ type GetDomainsTldZoneIDSearchPathParams struct {
 
 type GetDomainsTldZoneIDSearchQueryParams struct {
 	A       *string `queryParam:"style=form,explode=true,name=A"`
-	Cname   *string `queryParam:"style=form,explode=true,name=CNAME"`
-	Mx      *string `queryParam:"style=form,explode=true,name=MX"`
-	Ns      *string `queryParam:"style=form,explode=true,name=NS"`
-	Txt     *string `queryParam:"style=form,explode=true,name=TXT"`
+	CNAME   *string `queryParam:"style=form,explode=true,name=CNAME"`
+	MX      *string `queryParam:"style=form,explode=true,name=MX"`
+	NS      *string `queryParam:"style=form,explode=true,name=NS"`
+	TXT     *string `queryParam:"style=form,explode=true,name=TXT"`
 	APIKey  *string `queryParam:"style=form,explode=true,name=api_key"`
 	Country *string `queryParam:"style=form,explode=true,name=country"`
 	Date    *string `queryParam:"style=form,explode=true,name=date"`

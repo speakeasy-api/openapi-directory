@@ -30,7 +30,7 @@ type MoveReplicationTaskResponse struct {
 	AccessDeniedFault           *interface{}
 	ContentType                 string
 	InvalidResourceStateFault   *interface{}
-	KmsKeyNotAccessibleFault    *interface{}
+	KMSKeyNotAccessibleFault    *interface{}
 	MoveReplicationTaskResponse *shared.MoveReplicationTaskResponse
 	ResourceNotFoundFault       *interface{}
 	ResourceQuotaExceededFault  *interface{}

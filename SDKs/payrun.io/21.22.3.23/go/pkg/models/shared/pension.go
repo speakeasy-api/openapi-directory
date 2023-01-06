@@ -65,7 +65,7 @@ const (
 )
 
 type PensionPension struct {
-	AeCompatible                *bool                                  `json:"AECompatible,omitempty"`
+	AECompatible                *bool                                  `json:"AECompatible,omitempty"`
 	Code                        *string                                `json:"Code,omitempty"`
 	ContributionDeductionDay    *int32                                 `json:"ContributionDeductionDay,omitempty"`
 	EffectiveDate               *time.Time                             `json:"EffectiveDate,omitempty"`
@@ -91,7 +91,7 @@ type PensionPension struct {
 	SubGroup                    *string                                `json:"SubGroup,omitempty"`
 	TaxationMethod              *PensionPensionTaxationMethodEnum      `json:"TaxationMethod,omitempty"`
 	UpperThreshold              *float64                               `json:"UpperThreshold,omitempty"`
-	UseAeThresholds             *bool                                  `json:"UseAEThresholds,omitempty"`
+	UseAEThresholds             *bool                                  `json:"UseAEThresholds,omitempty"`
 }
 
 type Pension struct {

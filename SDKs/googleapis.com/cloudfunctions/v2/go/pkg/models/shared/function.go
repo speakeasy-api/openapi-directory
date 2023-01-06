@@ -1,5 +1,13 @@
 package shared
 
+type FunctionEnvironmentEnum string
+
+const (
+	FunctionEnvironmentEnumEnvironmentUnspecified FunctionEnvironmentEnum = "ENVIRONMENT_UNSPECIFIED"
+	FunctionEnvironmentEnumGen1                   FunctionEnvironmentEnum = "GEN_1"
+	FunctionEnvironmentEnumGen2                   FunctionEnvironmentEnum = "GEN_2"
+)
+
 type FunctionStateEnum string
 
 const (
@@ -11,13 +19,17 @@ const (
 	FunctionStateEnumUnknown          FunctionStateEnum = "UNKNOWN"
 )
 
-type FunctionEnvironmentEnum string
-
-const (
-	FunctionEnvironmentEnumEnvironmentUnspecified FunctionEnvironmentEnum = "ENVIRONMENT_UNSPECIFIED"
-	FunctionEnvironmentEnumGen1                   FunctionEnvironmentEnum = "GEN_1"
-	FunctionEnvironmentEnumGen2                   FunctionEnvironmentEnum = "GEN_2"
-)
+// FunctionInput
+// Describes a Cloud Function that contains user computation executed in response to an event. It encapsulates function and trigger configurations.
+type FunctionInput struct {
+	BuildConfig   *BuildConfigInput        `json:"buildConfig,omitempty"`
+	Description   *string                  `json:"description,omitempty"`
+	Environment   *FunctionEnvironmentEnum `json:"environment,omitempty"`
+	EventTrigger  *EventTriggerInput       `json:"eventTrigger,omitempty"`
+	Labels        map[string]string        `json:"labels,omitempty"`
+	Name          *string                  `json:"name,omitempty"`
+	ServiceConfig *ServiceConfigInput      `json:"serviceConfig,omitempty"`
+}
 
 // Function
 // Describes a Cloud Function that contains user computation executed in response to an event. It encapsulates function and trigger configurations.
@@ -32,16 +44,4 @@ type Function struct {
 	State         *FunctionStateEnum                   `json:"state,omitempty"`
 	StateMessages []GoogleCloudFunctionsV2StateMessage `json:"stateMessages,omitempty"`
 	UpdateTime    *string                              `json:"updateTime,omitempty"`
-}
-
-// FunctionInput
-// Describes a Cloud Function that contains user computation executed in response to an event. It encapsulates function and trigger configurations.
-type FunctionInput struct {
-	BuildConfig   *BuildConfigInput        `json:"buildConfig,omitempty"`
-	Description   *string                  `json:"description,omitempty"`
-	Environment   *FunctionEnvironmentEnum `json:"environment,omitempty"`
-	EventTrigger  *EventTriggerInput       `json:"eventTrigger,omitempty"`
-	Labels        map[string]string        `json:"labels,omitempty"`
-	Name          *string                  `json:"name,omitempty"`
-	ServiceConfig *ServiceConfigInput      `json:"serviceConfig,omitempty"`
 }

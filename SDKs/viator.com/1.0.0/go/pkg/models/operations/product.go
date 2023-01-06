@@ -4,20 +4,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductVoucherOptionEnum string
-
-const (
-	ProductVoucherOptionEnumVoucherPaperOnly ProductVoucherOptionEnum = "VOUCHER_PAPER_ONLY"
-	ProductVoucherOptionEnumVoucherE         ProductVoucherOptionEnum = "VOUCHER_E"
-)
-
 type ProductQueryParams struct {
-	Code                         *string                     `queryParam:"style=form,explode=true,name=code"`
-	CurrencyCode                 *string                     `queryParam:"style=form,explode=true,name=currencyCode"`
-	ExcludeTourGradeAvailability *bool                       `queryParam:"style=form,explode=true,name=excludeTourGradeAvailability"`
-	ShowUnavailable              *bool                       `queryParam:"style=form,explode=true,name=showUnavailable"`
-	SortOrder                    *shared.SortOrderReviewEnum `queryParam:"style=form,explode=true,name=sortOrder"`
-	VoucherOption                *ProductVoucherOptionEnum   `queryParam:"style=form,explode=true,name=voucherOption"`
+	Code                         *string                      `queryParam:"style=form,explode=true,name=code"`
+	CurrencyCode                 *string                      `queryParam:"style=form,explode=true,name=currencyCode"`
+	ExcludeTourGradeAvailability *bool                        `queryParam:"style=form,explode=true,name=excludeTourGradeAvailability"`
+	ShowUnavailable              *bool                        `queryParam:"style=form,explode=true,name=showUnavailable"`
+	SortOrder                    *shared.SortOrderReviewEnum  `queryParam:"style=form,explode=true,name=sortOrder"`
+	VoucherOption                *shared.SortOrderReviewEnum1 `queryParam:"style=form,explode=true,name=voucherOption"`
 }
 
 type ProductHeaders struct {
@@ -179,19 +172,7 @@ type Product200ApplicationJSONData struct {
 }
 
 type Product200ApplicationJSON struct {
-	Data             *Product200ApplicationJSONData `json:"data,omitempty"`
-	DateStamp        *string                        `json:"dateStamp,omitempty"`
-	ErrorCodes       []string                       `json:"errorCodes,omitempty"`
-	ErrorMessage     []interface{}                  `json:"errorMessage,omitempty"`
-	ErrorMessageText *string                        `json:"errorMessageText,omitempty"`
-	ErrorName        *string                        `json:"errorName,omitempty"`
-	ErrorReference   *string                        `json:"errorReference,omitempty"`
-	ErrorType        *string                        `json:"errorType,omitempty"`
-	ExtraInfo        map[string]interface{}         `json:"extraInfo,omitempty"`
-	ExtraObject      map[string]interface{}         `json:"extraObject,omitempty"`
-	Success          *bool                          `json:"success,omitempty"`
-	TotalCount       *int64                         `json:"totalCount,omitempty"`
-	Vmid             *string                        `json:"vmid,omitempty"`
+	Data *Product200ApplicationJSONData `json:"data,omitempty"`
 }
 
 type ProductRequest struct {

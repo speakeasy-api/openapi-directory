@@ -7,13 +7,13 @@ import (
 type GetGetAccountAuthorizationDetailsActionEnum string
 
 const (
-	GetGetAccountAuthorizationDetailsActionEnumGetAccountAuthorizationDetails GetGetAccountAuthorizationDetailsActionEnum = "GetAccountAuthorizationDetails"
+	GETGETAccountAuthorizationDetailsActionEnumGetAccountAuthorizationDetails GetGetAccountAuthorizationDetailsActionEnum = "GetAccountAuthorizationDetails"
 )
 
 type GetGetAccountAuthorizationDetailsVersionEnum string
 
 const (
-	GetGetAccountAuthorizationDetailsVersionEnumTwoThousandAndTen0508 GetGetAccountAuthorizationDetailsVersionEnum = "2010-05-08"
+	GETGETAccountAuthorizationDetailsVersionEnumTwoThousandAndTen0508 GetGetAccountAuthorizationDetailsVersionEnum = "2010-05-08"
 )
 
 type GetGetAccountAuthorizationDetailsQueryParams struct {

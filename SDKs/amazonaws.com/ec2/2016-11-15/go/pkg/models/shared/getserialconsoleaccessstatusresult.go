@@ -1,5 +1,5 @@
 package shared
 
 type GetSerialConsoleAccessStatusResult struct {
-	SerialConsoleAccessEnabled *bool
+	SerialConsoleAccessEnabled map[string]interface{}
 }

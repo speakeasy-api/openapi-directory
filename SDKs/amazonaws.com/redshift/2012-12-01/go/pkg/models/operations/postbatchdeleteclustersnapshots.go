@@ -3,13 +3,13 @@ package operations
 type PostBatchDeleteClusterSnapshotsActionEnum string
 
 const (
-	PostBatchDeleteClusterSnapshotsActionEnumBatchDeleteClusterSnapshots PostBatchDeleteClusterSnapshotsActionEnum = "BatchDeleteClusterSnapshots"
+	POSTBatchDeleteClusterSnapshotsActionEnumBatchDeleteClusterSnapshots PostBatchDeleteClusterSnapshotsActionEnum = "BatchDeleteClusterSnapshots"
 )
 
 type PostBatchDeleteClusterSnapshotsVersionEnum string
 
 const (
-	PostBatchDeleteClusterSnapshotsVersionEnumTwoThousandAndTwelve1201 PostBatchDeleteClusterSnapshotsVersionEnum = "2012-12-01"
+	POSTBatchDeleteClusterSnapshotsVersionEnumTwoThousandAndTwelve1201 PostBatchDeleteClusterSnapshotsVersionEnum = "2012-12-01"
 )
 
 type PostBatchDeleteClusterSnapshotsQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type PostModifyTargetGroupAttributesActionEnum string
 
 const (
-	PostModifyTargetGroupAttributesActionEnumModifyTargetGroupAttributes PostModifyTargetGroupAttributesActionEnum = "ModifyTargetGroupAttributes"
+	POSTModifyTargetGroupAttributesActionEnumModifyTargetGroupAttributes PostModifyTargetGroupAttributesActionEnum = "ModifyTargetGroupAttributes"
 )
 
 type PostModifyTargetGroupAttributesVersionEnum string
 
 const (
-	PostModifyTargetGroupAttributesVersionEnumTwoThousandAndFifteen1201 PostModifyTargetGroupAttributesVersionEnum = "2015-12-01"
+	POSTModifyTargetGroupAttributesVersionEnumTwoThousandAndFifteen1201 PostModifyTargetGroupAttributesVersionEnum = "2015-12-01"
 )
 
 type PostModifyTargetGroupAttributesQueryParams struct {

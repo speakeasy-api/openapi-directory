@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,34 +26,34 @@ func main() {
         Security: operations.SecuritycenterOrganizationsAssetsGroupSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.SecuritycenterOrganizationsAssetsGroupPathParams{
-            Parent: "maiores",
+            Parent: "accusamus",
         },
         QueryParams: operations.SecuritycenterOrganizationsAssetsGroupQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "aperiam",
             Alt: "proto",
-            Callback: "architecto",
-            Fields: "in",
-            Key: "rerum",
-            OauthToken: "numquam",
-            PrettyPrint: false,
-            QuotaUser: "maiores",
-            UploadType: "exercitationem",
-            UploadProtocol: "voluptatibus",
+            Callback: "id",
+            Fields: "rerum",
+            Key: "accusamus",
+            OauthToken: "eum",
+            PrettyPrint: true,
+            QuotaUser: "repudiandae",
+            UploadType: "ut",
+            UploadProtocol: "aut",
         },
         Request: &shared.GroupAssetsRequest{
-            CompareDuration: "non",
-            Filter: "quisquam",
-            GroupBy: "non",
-            PageSize: 6605198006308233273,
-            PageToken: "earum",
-            ReadTime: "consequuntur",
+            CompareDuration: "ducimus",
+            Filter: "sunt",
+            GroupBy: "sunt",
+            PageSize: 8223883550864745221,
+            PageToken: "minus",
+            ReadTime: "consectetur",
         },
     }
     

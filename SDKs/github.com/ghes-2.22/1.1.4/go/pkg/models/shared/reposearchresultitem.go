@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// RepoSearchResultItemLicenseSimple
+// License Simple
 type RepoSearchResultItemLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -13,6 +15,8 @@ type RepoSearchResultItemLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// RepoSearchResultItemSimpleUser
+// Simple User
 type RepoSearchResultItemSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

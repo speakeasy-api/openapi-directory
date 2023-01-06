@@ -3,13 +3,13 @@ package operations
 type PostSendBounceActionEnum string
 
 const (
-	PostSendBounceActionEnumSendBounce PostSendBounceActionEnum = "SendBounce"
+	POSTSendBounceActionEnumSendBounce PostSendBounceActionEnum = "SendBounce"
 )
 
 type PostSendBounceVersionEnum string
 
 const (
-	PostSendBounceVersionEnumTwoThousandAndTen1201 PostSendBounceVersionEnum = "2010-12-01"
+	POSTSendBounceVersionEnumTwoThousandAndTen1201 PostSendBounceVersionEnum = "2010-12-01"
 )
 
 type PostSendBounceQueryParams struct {

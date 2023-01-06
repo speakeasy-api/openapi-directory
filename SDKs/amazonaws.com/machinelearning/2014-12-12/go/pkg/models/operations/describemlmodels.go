@@ -12,7 +12,7 @@ type DescribeMlModelsQueryParams struct {
 type DescribeMlModelsXAmzTargetEnum string
 
 const (
-	DescribeMlModelsXAmzTargetEnumAmazonMl20141212DescribeMlModels DescribeMlModelsXAmzTargetEnum = "AmazonML_20141212.DescribeMLModels"
+	DescribeMLModelsXAmzTargetEnumAmazonMl20141212DescribeMlModels DescribeMlModelsXAmzTargetEnum = "AmazonML_20141212.DescribeMLModels"
 )
 
 type DescribeMlModelsHeaders struct {
@@ -34,7 +34,7 @@ type DescribeMlModelsRequest struct {
 
 type DescribeMlModelsResponse struct {
 	ContentType             string
-	DescribeMlModelsOutput  *shared.DescribeMlModelsOutput
+	DescribeMLModelsOutput  *shared.DescribeMlModelsOutput
 	InternalServerException *interface{}
 	InvalidInputException   *interface{}
 	StatusCode              int64

@@ -3,13 +3,13 @@ package operations
 type PostModifyDbClusterSnapshotAttributeActionEnum string
 
 const (
-	PostModifyDbClusterSnapshotAttributeActionEnumModifyDbClusterSnapshotAttribute PostModifyDbClusterSnapshotAttributeActionEnum = "ModifyDBClusterSnapshotAttribute"
+	POSTModifyDBClusterSnapshotAttributeActionEnumModifyDbClusterSnapshotAttribute PostModifyDbClusterSnapshotAttributeActionEnum = "ModifyDBClusterSnapshotAttribute"
 )
 
 type PostModifyDbClusterSnapshotAttributeVersionEnum string
 
 const (
-	PostModifyDbClusterSnapshotAttributeVersionEnumTwoThousandAndFourteen1031 PostModifyDbClusterSnapshotAttributeVersionEnum = "2014-10-31"
+	POSTModifyDBClusterSnapshotAttributeVersionEnumTwoThousandAndFourteen1031 PostModifyDbClusterSnapshotAttributeVersionEnum = "2014-10-31"
 )
 
 type PostModifyDbClusterSnapshotAttributeQueryParams struct {

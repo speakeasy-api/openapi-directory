@@ -10,7 +10,7 @@ type FunctionConfiguration struct {
 	CodeSize        *int64       `json:"CodeSize,omitempty"`
 	ConfigurationID *string      `json:"ConfigurationId,omitempty"`
 	Description     *string      `json:"Description,omitempty"`
-	FunctionArn     *string      `json:"FunctionARN,omitempty"`
+	FunctionARN     *string      `json:"FunctionARN,omitempty"`
 	FunctionName    *string      `json:"FunctionName,omitempty"`
 	Handler         *string      `json:"Handler,omitempty"`
 	LastModified    *time.Time   `json:"LastModified,omitempty"`

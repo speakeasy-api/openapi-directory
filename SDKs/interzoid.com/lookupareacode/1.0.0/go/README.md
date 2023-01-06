@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetareacodeRequest{
         QueryParams: operations.GetareacodeQueryParams{
-            Areacode: "exercitationem",
-            License: "inventore",
+            Areacode: "non",
+            License: "suscipit",
         },
     }
     
-    res, err := s.Sdk.Getareacode(ctx, req)
+    res, err := s.AreaCodeInformation.Getareacode(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Area Code Information
 
 * `Getareacode` - Gets telephone area code information
 

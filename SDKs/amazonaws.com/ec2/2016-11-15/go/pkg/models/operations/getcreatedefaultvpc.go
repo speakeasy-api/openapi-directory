@@ -3,13 +3,13 @@ package operations
 type GetCreateDefaultVpcActionEnum string
 
 const (
-	GetCreateDefaultVpcActionEnumCreateDefaultVpc GetCreateDefaultVpcActionEnum = "CreateDefaultVpc"
+	GETCreateDefaultVpcActionEnumCreateDefaultVpc GetCreateDefaultVpcActionEnum = "CreateDefaultVpc"
 )
 
 type GetCreateDefaultVpcVersionEnum string
 
 const (
-	GetCreateDefaultVpcVersionEnumTwoThousandAndSixteen1115 GetCreateDefaultVpcVersionEnum = "2016-11-15"
+	GETCreateDefaultVpcVersionEnumTwoThousandAndSixteen1115 GetCreateDefaultVpcVersionEnum = "2016-11-15"
 )
 
 type GetCreateDefaultVpcQueryParams struct {

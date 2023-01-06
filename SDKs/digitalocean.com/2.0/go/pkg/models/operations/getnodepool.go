@@ -9,14 +9,14 @@ type GetNodePoolPathParams struct {
 	NodePoolID string `pathParam:"style=simple,explode=false,name=node_pool_id"`
 }
 
-type GetNodePoolRequest struct {
-	PathParams GetNodePoolPathParams
-}
-
 type GetNodePool401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetNodePoolRequest struct {
+	PathParams GetNodePoolPathParams
 }
 
 type GetNodePoolResponse struct {

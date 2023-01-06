@@ -3,13 +3,13 @@ package operations
 type GetDescribeGlobalReplicationGroupsActionEnum string
 
 const (
-	GetDescribeGlobalReplicationGroupsActionEnumDescribeGlobalReplicationGroups GetDescribeGlobalReplicationGroupsActionEnum = "DescribeGlobalReplicationGroups"
+	GETDescribeGlobalReplicationGroupsActionEnumDescribeGlobalReplicationGroups GetDescribeGlobalReplicationGroupsActionEnum = "DescribeGlobalReplicationGroups"
 )
 
 type GetDescribeGlobalReplicationGroupsVersionEnum string
 
 const (
-	GetDescribeGlobalReplicationGroupsVersionEnumTwoThousandAndFifteen0202 GetDescribeGlobalReplicationGroupsVersionEnum = "2015-02-02"
+	GETDescribeGlobalReplicationGroupsVersionEnumTwoThousandAndFifteen0202 GetDescribeGlobalReplicationGroupsVersionEnum = "2015-02-02"
 )
 
 type GetDescribeGlobalReplicationGroupsQueryParams struct {

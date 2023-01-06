@@ -3,13 +3,13 @@ package operations
 type PostCreateVolumeActionEnum string
 
 const (
-	PostCreateVolumeActionEnumCreateVolume PostCreateVolumeActionEnum = "CreateVolume"
+	POSTCreateVolumeActionEnumCreateVolume PostCreateVolumeActionEnum = "CreateVolume"
 )
 
 type PostCreateVolumeVersionEnum string
 
 const (
-	PostCreateVolumeVersionEnumTwoThousandAndSixteen1115 PostCreateVolumeVersionEnum = "2016-11-15"
+	POSTCreateVolumeVersionEnumTwoThousandAndSixteen1115 PostCreateVolumeVersionEnum = "2016-11-15"
 )
 
 type PostCreateVolumeQueryParams struct {

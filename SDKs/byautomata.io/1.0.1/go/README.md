@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetContentproSearchRequest{
         QueryParams: operations.GetContentproSearchQueryParams{
-            Terms: "aliquam",
+            Terms: "saepe",
         },
     }
     
-    res, err := s.Sdk.GetContentproSearch(ctx, req)
+    res, err := s.ContentproSearch.GetContentproSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -43,12 +42,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### contentpro-search
 
 * `GetContentproSearch` - Send search terms to receive the most relevant articles and companies.
-* `GetSearch` - Send search terms to receive the most relevant companies along with text snippets.
-* `GetSimilar` - Send a company website to receive a list of companies related to them.
+
+### contentpro-similar-text
+
 * `PostContentproSimilarText` - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+
+### search
+
+* `GetSearch` - Send search terms to receive the most relevant companies along with text snippets.
+
+### similar
+
+* `GetSimilar` - Send a company website to receive a list of companies related to them.
 
 <!-- End SDK Available Operations -->
 

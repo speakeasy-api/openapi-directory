@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,37 +26,37 @@ func main() {
         Security: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams{
-            Parent: "porro",
+            Parent: "et",
         },
         QueryParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "json",
-            Callback: "et",
-            Fields: "totam",
-            HubID: "non",
-            Key: "sit",
-            OauthToken: "non",
+            DollarXgafv: "1",
+            AccessToken: "dolore",
+            Alt: "media",
+            Callback: "similique",
+            Fields: "tempore",
+            HubID: "sit",
+            Key: "dolore",
+            OauthToken: "libero",
             PrettyPrint: false,
-            QuotaUser: "est",
-            RequestID: "ut",
-            UploadType: "ducimus",
-            UploadProtocol: "odio",
+            QuotaUser: "distinctio",
+            RequestID: "aut",
+            UploadType: "exercitationem",
+            UploadProtocol: "quisquam",
         },
         Request: &shared.HubInput{
-            CreateTime: "quaerat",
-            Description: "iure",
+            CreateTime: "cum",
+            Description: "corrupti",
             Labels: map[string]string{
-                "distinctio": "quia",
+                "id": "ut",
             },
-            Name: "eveniet",
-            UpdateTime: "id",
+            Name: "totam",
+            UpdateTime: "quaerat",
         },
     }
     

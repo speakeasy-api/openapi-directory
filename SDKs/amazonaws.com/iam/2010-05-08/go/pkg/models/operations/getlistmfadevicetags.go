@@ -3,13 +3,13 @@ package operations
 type GetListMfaDeviceTagsActionEnum string
 
 const (
-	GetListMfaDeviceTagsActionEnumListMfaDeviceTags GetListMfaDeviceTagsActionEnum = "ListMFADeviceTags"
+	GETListMFADeviceTagsActionEnumListMfaDeviceTags GetListMfaDeviceTagsActionEnum = "ListMFADeviceTags"
 )
 
 type GetListMfaDeviceTagsVersionEnum string
 
 const (
-	GetListMfaDeviceTagsVersionEnumTwoThousandAndTen0508 GetListMfaDeviceTagsVersionEnum = "2010-05-08"
+	GETListMFADeviceTagsVersionEnumTwoThousandAndTen0508 GetListMfaDeviceTagsVersionEnum = "2010-05-08"
 )
 
 type GetListMfaDeviceTagsQueryParams struct {

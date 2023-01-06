@@ -17,7 +17,7 @@ type GetBatchPredictionOutput struct {
 	InvalidRecordCount          *int64            `json:"InvalidRecordCount,omitempty"`
 	LastUpdatedAt               *time.Time        `json:"LastUpdatedAt,omitempty"`
 	LogURI                      *string           `json:"LogUri,omitempty"`
-	MlModelID                   *string           `json:"MLModelId,omitempty"`
+	MLModelID                   *string           `json:"MLModelId,omitempty"`
 	Message                     *string           `json:"Message,omitempty"`
 	Name                        *string           `json:"Name,omitempty"`
 	OutputURI                   *string           `json:"OutputUri,omitempty"`

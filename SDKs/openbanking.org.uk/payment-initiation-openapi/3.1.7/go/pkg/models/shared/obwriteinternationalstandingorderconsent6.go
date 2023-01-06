@@ -7,8 +7,8 @@ import (
 type ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnumAny    ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnumSingle ObWriteInternationalStandingOrderConsent6DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteInternationalStandingOrderConsent6DataAuthorisation
@@ -85,14 +85,14 @@ type ObWriteInternationalStandingOrderConsent6DataInitiation struct {
 type ObWriteInternationalStandingOrderConsent6DataPermissionEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsent6DataPermissionEnumCreate ObWriteInternationalStandingOrderConsent6DataPermissionEnum = "Create"
+	OBWriteInternationalStandingOrderConsent6DataPermissionEnumCreate ObWriteInternationalStandingOrderConsent6DataPermissionEnum = "Create"
 )
 
 type ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum string
 
 const (
-	ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnumNo  ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum = "No"
-	ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnumYes ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum = "Yes"
+	OBWriteInternationalStandingOrderConsent6DataReadRefundAccountEnumNo  ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum = "No"
+	OBWriteInternationalStandingOrderConsent6DataReadRefundAccountEnumYes ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteInternationalStandingOrderConsent6Data struct {
@@ -100,7 +100,7 @@ type ObWriteInternationalStandingOrderConsent6Data struct {
 	Initiation        ObWriteInternationalStandingOrderConsent6DataInitiation             `json:"Initiation"`
 	Permission        ObWriteInternationalStandingOrderConsent6DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount *ObWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData    *ObscaSupportData1                                                  `json:"SCASupportData,omitempty"`
+	SCASupportData    *ObscaSupportData1                                                  `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteInternationalStandingOrderConsent6 struct {

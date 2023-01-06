@@ -29,8 +29,8 @@ type UpdateAliasRequest struct {
 type UpdateAliasResponse struct {
 	ContentType                string
 	DependencyTimeoutException *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	LimitExceededException     *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64

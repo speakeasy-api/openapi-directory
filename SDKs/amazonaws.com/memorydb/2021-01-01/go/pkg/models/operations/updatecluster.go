@@ -33,11 +33,11 @@ type UpdateClusterResponse struct {
 	ContentType                          string
 	InvalidACLStateFault                 *interface{}
 	InvalidClusterStateFault             *interface{}
-	InvalidKmsKeyFault                   *interface{}
+	InvalidKMSKeyFault                   *interface{}
 	InvalidNodeStateFault                *interface{}
 	InvalidParameterCombinationException *interface{}
 	InvalidParameterValueException       *interface{}
-	InvalidVpcNetworkStateFault          *interface{}
+	InvalidVPCNetworkStateFault          *interface{}
 	NoOperationFault                     *interface{}
 	NodeQuotaForClusterExceededFault     *interface{}
 	NodeQuotaForCustomerExceededFault    *interface{}

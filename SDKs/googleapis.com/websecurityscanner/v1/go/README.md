@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,67 +26,66 @@ func main() {
         Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "ipsum",
+            Parent: "laudantium",
         },
         QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "quia",
+            DollarXgafv: "2",
+            AccessToken: "illo",
             Alt: "json",
-            Callback: "nam",
-            Fields: "molestias",
-            Key: "molestias",
-            OauthToken: "eius",
-            PrettyPrint: true,
-            QuotaUser: "illo",
-            UploadType: "ut",
-            UploadProtocol: "rem",
+            Callback: "unde",
+            Fields: "at",
+            Key: "architecto",
+            OauthToken: "vitae",
+            PrettyPrint: false,
+            QuotaUser: "provident",
+            UploadType: "aut",
+            UploadProtocol: "fugit",
         },
         Request: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "ut",
-                    Password: "ipsa",
-                    Username: "non",
+                    LoginURL: "quia",
+                    Password: "a",
+                    Username: "dolorem",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "explicabo",
-                    Username: "sed",
+                    Password: "rerum",
+                    Username: "voluptatem",
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "non",
+                        TargetAudienceClientID: "facilis",
                     },
                 },
             },
             BlacklistPatterns: []string{
-                "et",
-                "qui",
-                "placeat",
+                "velit",
+                "ut",
             },
-            DisplayName: "et",
-            ExportToSecurityCommandCenter: "EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED",
+            DisplayName: "amet",
+            ExportToSecurityCommandCenter: "DISABLED",
             IgnoreHTTPStatusErrors: true,
-            ManagedScan: false,
-            MaxQPS: 5205230009469101348,
-            Name: "qui",
-            RiskLevel: "LOW",
+            ManagedScan: true,
+            MaxQPS: 4137322236744237846,
+            Name: "rerum",
+            RiskLevel: "RISK_LEVEL_UNSPECIFIED",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 1165905553304735879,
-                ScheduleTime: "nihil",
+                IntervalDurationDays: 713640259408744039,
+                ScheduleTime: "enim",
             },
             StartingUrls: []string{
-                "numquam",
-                "quaerat",
-                "eveniet",
+                "consequatur",
+                "aliquam",
+                "repudiandae",
             },
-            StaticIPScan: true,
-            UserAgent: "CHROME_LINUX",
+            StaticIPScan: false,
+            UserAgent: "SAFARI_IPHONE",
         },
     }
     

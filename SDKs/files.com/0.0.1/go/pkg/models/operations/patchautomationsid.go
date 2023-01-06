@@ -36,7 +36,7 @@ type PatchAutomationsIDRequestBody struct {
 	Destination            *string                                     `multipartForm:"name=destination"`
 	DestinationReplaceFrom *string                                     `multipartForm:"name=destination_replace_from"`
 	DestinationReplaceTo   *string                                     `multipartForm:"name=destination_replace_to"`
-	Destinations           []string                                    `multipartForm:"name=destinations"`
+	Destinations           []string                                    `multipartForm:"name=destinations,json"`
 	GroupIds               *string                                     `multipartForm:"name=group_ids"`
 	Interval               *string                                     `multipartForm:"name=interval"`
 	Path                   *string                                     `multipartForm:"name=path"`
@@ -44,7 +44,7 @@ type PatchAutomationsIDRequestBody struct {
 	Source                 *string                                     `multipartForm:"name=source"`
 	Trigger                *PatchAutomationsIDRequestBodyTriggerEnum   `multipartForm:"name=trigger"`
 	TriggerActionPath      *string                                     `multipartForm:"name=trigger_action_path"`
-	TriggerActions         []string                                    `multipartForm:"name=trigger_actions"`
+	TriggerActions         []string                                    `multipartForm:"name=trigger_actions,json"`
 	UserIds                *string                                     `multipartForm:"name=user_ids"`
 	Value                  map[string]interface{}                      `multipartForm:"name=value,json"`
 }

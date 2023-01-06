@@ -18,16 +18,6 @@ const (
 	NfsShareStorageTypeEnumHdd                    NfsShareStorageTypeEnum = "HDD"
 )
 
-// NfsShareInput
-// An NFS share.
-type NfsShareInput struct {
-	AllowedClients   []AllowedClientInput     `json:"allowedClients,omitempty"`
-	Labels           map[string]string        `json:"labels,omitempty"`
-	Name             *string                  `json:"name,omitempty"`
-	RequestedSizeGib *string                  `json:"requestedSizeGib,omitempty"`
-	StorageType      *NfsShareStorageTypeEnum `json:"storageType,omitempty"`
-}
-
 // NfsShare
 // An NFS share.
 type NfsShare struct {
@@ -40,4 +30,14 @@ type NfsShare struct {
 	State            *NfsShareStateEnum       `json:"state,omitempty"`
 	StorageType      *NfsShareStorageTypeEnum `json:"storageType,omitempty"`
 	Volume           *string                  `json:"volume,omitempty"`
+}
+
+// NfsShareInput
+// An NFS share.
+type NfsShareInput struct {
+	AllowedClients   []AllowedClientInput     `json:"allowedClients,omitempty"`
+	Labels           map[string]string        `json:"labels,omitempty"`
+	Name             *string                  `json:"name,omitempty"`
+	RequestedSizeGib *string                  `json:"requestedSizeGib,omitempty"`
+	StorageType      *NfsShareStorageTypeEnum `json:"storageType,omitempty"`
 }

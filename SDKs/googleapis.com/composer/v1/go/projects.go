@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 )
 
 type Projects struct {
@@ -120,6 +120,55 @@ func (s *Projects) ComposerProjectsLocationsEnvironmentsList(ctx context.Context
 	return res, nil
 }
 
+// ComposerProjectsLocationsEnvironmentsLoadSnapshot - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
+func (s *Projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotRequest) (*operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:loadSnapshot", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
 // ComposerProjectsLocationsEnvironmentsPatch - Update an environment.
 func (s *Projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsPatchRequest) (*operations.ComposerProjectsLocationsEnvironmentsPatchResponse, error) {
 	baseURL := s._serverURL
@@ -150,6 +199,55 @@ func (s *Projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Contex
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.ComposerProjectsLocationsEnvironmentsPatchResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// ComposerProjectsLocationsEnvironmentsSaveSnapshot - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
+func (s *Projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotRequest) (*operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:saveSnapshot", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse{
 		StatusCode:  int64(httpRes.StatusCode),
 		ContentType: contentType,
 	}

@@ -3,18 +3,18 @@ package operations
 type GetGetSamlProviderActionEnum string
 
 const (
-	GetGetSamlProviderActionEnumGetSamlProvider GetGetSamlProviderActionEnum = "GetSAMLProvider"
+	GETGETSAMLProviderActionEnumGetSamlProvider GetGetSamlProviderActionEnum = "GetSAMLProvider"
 )
 
 type GetGetSamlProviderVersionEnum string
 
 const (
-	GetGetSamlProviderVersionEnumTwoThousandAndTen0508 GetGetSamlProviderVersionEnum = "2010-05-08"
+	GETGETSAMLProviderVersionEnumTwoThousandAndTen0508 GetGetSamlProviderVersionEnum = "2010-05-08"
 )
 
 type GetGetSamlProviderQueryParams struct {
 	Action          GetGetSamlProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SamlProviderArn string                        `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
+	SAMLProviderArn string                        `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
 	Version         GetGetSamlProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

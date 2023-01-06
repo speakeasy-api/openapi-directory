@@ -39,8 +39,8 @@ type CreateGroupIfNotExistsForUsingGetRequest struct {
 type CreateGroupIfNotExistsForUsingGetResponse struct {
 	ContentType                                               string
 	StatusCode                                                int64
-	CreateGroupIfNotExistsForUsingGet200ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet200ApplicationJSON
-	CreateGroupIfNotExistsForUsingGet400ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet400ApplicationJSON
-	CreateGroupIfNotExistsForUsingGet401ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet401ApplicationJSON
-	CreateGroupIfNotExistsForUsingGet500ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet500ApplicationJSON
+	CreateGroupIfNotExistsForUsingGET200ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet200ApplicationJSON
+	CreateGroupIfNotExistsForUsingGET400ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet400ApplicationJSON
+	CreateGroupIfNotExistsForUsingGET401ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet401ApplicationJSON
+	CreateGroupIfNotExistsForUsingGET500ApplicationJSONObject *CreateGroupIfNotExistsForUsingGet500ApplicationJSON
 }

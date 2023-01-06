@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,26 +26,26 @@ func main() {
         Security: operations.GamesManagementAchievementsResetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.GamesManagementAchievementsResetPathParams{
-            AchievementID: "harum",
+            AchievementID: "maxime",
         },
         QueryParams: operations.GamesManagementAchievementsResetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "harum",
-            Alt: "media",
-            Callback: "reprehenderit",
-            Fields: "cupiditate",
-            Key: "sint",
-            OauthToken: "quibusdam",
+            AccessToken: "rerum",
+            Alt: "proto",
+            Callback: "non",
+            Fields: "ut",
+            Key: "necessitatibus",
+            OauthToken: "doloremque",
             PrettyPrint: true,
-            QuotaUser: "illum",
-            UploadType: "nihil",
-            UploadProtocol: "magni",
+            QuotaUser: "velit",
+            UploadType: "deleniti",
+            UploadProtocol: "qui",
         },
     }
     

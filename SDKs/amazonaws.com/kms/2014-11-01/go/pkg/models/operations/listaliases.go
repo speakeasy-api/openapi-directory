@@ -37,7 +37,7 @@ type ListAliasesResponse struct {
 	DependencyTimeoutException *interface{}
 	InvalidArnException        *interface{}
 	InvalidMarkerException     *interface{}
-	KmsInternalException       *interface{}
+	KMSInternalException       *interface{}
 	ListAliasesResponse        *shared.ListAliasesResponse
 	NotFoundException          *interface{}
 	StatusCode                 int64

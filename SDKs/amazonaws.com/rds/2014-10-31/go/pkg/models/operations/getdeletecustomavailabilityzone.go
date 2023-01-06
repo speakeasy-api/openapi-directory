@@ -3,13 +3,13 @@ package operations
 type GetDeleteCustomAvailabilityZoneActionEnum string
 
 const (
-	GetDeleteCustomAvailabilityZoneActionEnumDeleteCustomAvailabilityZone GetDeleteCustomAvailabilityZoneActionEnum = "DeleteCustomAvailabilityZone"
+	GETDeleteCustomAvailabilityZoneActionEnumDeleteCustomAvailabilityZone GetDeleteCustomAvailabilityZoneActionEnum = "DeleteCustomAvailabilityZone"
 )
 
 type GetDeleteCustomAvailabilityZoneVersionEnum string
 
 const (
-	GetDeleteCustomAvailabilityZoneVersionEnumTwoThousandAndFourteen1031 GetDeleteCustomAvailabilityZoneVersionEnum = "2014-10-31"
+	GETDeleteCustomAvailabilityZoneVersionEnumTwoThousandAndFourteen1031 GetDeleteCustomAvailabilityZoneVersionEnum = "2014-10-31"
 )
 
 type GetDeleteCustomAvailabilityZoneQueryParams struct {

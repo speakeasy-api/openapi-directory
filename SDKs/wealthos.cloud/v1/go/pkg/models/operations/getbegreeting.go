@@ -15,8 +15,8 @@ type GetBeGreetingRequest struct {
 type GetBeGreetingResponse struct {
 	ContentType                        string
 	StatusCode                         int64
-	GetBeGreeting200ApplicationJSONAny *interface{}
-	GetBeGreeting403ApplicationJSONAny *interface{}
-	GetBeGreeting429ApplicationJSONAny *interface{}
-	GetBeGreeting500ApplicationJSONAny *interface{}
+	GetBEGreeting200ApplicationJSONAny *interface{}
+	GetBEGreeting403ApplicationJSONAny *interface{}
+	GetBEGreeting429ApplicationJSONAny *interface{}
+	GetBEGreeting500ApplicationJSONAny *interface{}
 }

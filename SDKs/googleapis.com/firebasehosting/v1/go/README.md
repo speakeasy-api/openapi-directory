@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,23 +24,24 @@ func main() {
     
     req := operations.FirebasehostingOperationsCancelRequest{
         PathParams: operations.FirebasehostingOperationsCancelPathParams{
-            Name: "eligendi",
+            Name: "voluptatem",
         },
         QueryParams: operations.FirebasehostingOperationsCancelQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "dolor",
-            Alt: "json",
-            Callback: "corrupti",
-            Fields: "qui",
-            Key: "repellendus",
-            OauthToken: "dicta",
-            PrettyPrint: false,
-            QuotaUser: "ratione",
-            UploadType: "voluptates",
-            UploadProtocol: "fugiat",
+            DollarXgafv: "2",
+            AccessToken: "natus",
+            Alt: "media",
+            Callback: "veniam",
+            Fields: "deleniti",
+            Key: "officia",
+            OauthToken: "dolorem",
+            PrettyPrint: true,
+            QuotaUser: "adipisci",
+            UploadType: "maiores",
+            UploadProtocol: "molestiae",
         },
         Request: map[string]interface{}{
-            "quidem": "unde",
+            "ut": "id",
+            "facere": "architecto",
         },
     }
     

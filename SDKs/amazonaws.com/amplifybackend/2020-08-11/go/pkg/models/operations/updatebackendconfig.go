@@ -21,10 +21,10 @@ type UpdateBackendConfigHeaders struct {
 // UpdateBackendConfigRequestBodyLoginAuthConfig
 // The request object for this operation.
 type UpdateBackendConfigRequestBodyLoginAuthConfig struct {
-	AwsCognitoIdentityPoolID *string `json:"AwsCognitoIdentityPoolId,omitempty"`
-	AwsCognitoRegion         *string `json:"AwsCognitoRegion,omitempty"`
-	AwsUserPoolsID           *string `json:"AwsUserPoolsId,omitempty"`
-	AwsUserPoolsWebClientID  *string `json:"AwsUserPoolsWebClientId,omitempty"`
+	AwsCognitoIdentityPoolID map[string]interface{} `json:"AwsCognitoIdentityPoolId,omitempty"`
+	AwsCognitoRegion         map[string]interface{} `json:"AwsCognitoRegion,omitempty"`
+	AwsUserPoolsID           map[string]interface{} `json:"AwsUserPoolsId,omitempty"`
+	AwsUserPoolsWebClientID  map[string]interface{} `json:"AwsUserPoolsWebClientId,omitempty"`
 }
 
 type UpdateBackendConfigRequestBody struct {

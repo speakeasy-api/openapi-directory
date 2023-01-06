@@ -3,12 +3,12 @@ package shared
 type PendingModifiedValues struct {
 	AllocatedStorage      *int64
 	BackupRetentionPeriod *int64
-	DbInstanceClass       *string
-	DbInstanceIdentifier  *string
+	DBInstanceClass       *string
+	DBInstanceIdentifier  *string
 	EngineVersion         *string
 	Iops                  *int64
 	MasterUserPassword    *string
-	MultiAz               *bool
+	MultiAZ               *bool
 	Port                  *int64
 	StorageType           *string
 }

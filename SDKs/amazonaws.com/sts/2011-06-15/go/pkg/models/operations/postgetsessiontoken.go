@@ -3,13 +3,13 @@ package operations
 type PostGetSessionTokenActionEnum string
 
 const (
-	PostGetSessionTokenActionEnumGetSessionToken PostGetSessionTokenActionEnum = "GetSessionToken"
+	POSTGetSessionTokenActionEnumGetSessionToken PostGetSessionTokenActionEnum = "GetSessionToken"
 )
 
 type PostGetSessionTokenVersionEnum string
 
 const (
-	PostGetSessionTokenVersionEnumTwoThousandAndEleven0615 PostGetSessionTokenVersionEnum = "2011-06-15"
+	POSTGetSessionTokenVersionEnumTwoThousandAndEleven0615 PostGetSessionTokenVersionEnum = "2011-06-15"
 )
 
 type PostGetSessionTokenQueryParams struct {

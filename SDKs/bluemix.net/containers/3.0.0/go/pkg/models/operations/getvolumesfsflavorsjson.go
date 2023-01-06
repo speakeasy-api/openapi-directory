@@ -11,6 +11,6 @@ type GetVolumesFsFlavorsJSONRequest struct {
 
 type GetVolumesFsFlavorsJSONResponse struct {
 	ContentType                                       string
-	GetVolumesFsFlavorsJSON200ApplicationJSONIntegers []int64
 	StatusCode                                        int64
+	GetVolumesFsFlavorsJSON200ApplicationJSONIntegers []int64
 }

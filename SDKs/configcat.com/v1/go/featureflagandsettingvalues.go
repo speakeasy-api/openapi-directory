@@ -1,0 +1,386 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+)
+
+type FeatureFlagAndSettingValues struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewFeatureFlagAndSettingValues(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *FeatureFlagAndSettingValues {
+	return &FeatureFlagAndSettingValues{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// GetSettingValue - Get value
+// This endpoint returns the value of a Feature Flag or Setting
+// in a specified Environment identified by the `environmentId` parameter.
+//
+// The most important attributes in the response are the `value`, `rolloutRules` and `percentageRules`.
+// The `value` represents what the clients will get when the evaluation requests of our SDKs
+// are not matching to any of the defined Targeting or Percentage Rules, or when there are no additional rules to evaluate.
+//
+// The `rolloutRules` and `percentageRules` attributes are representing the current
+// Targeting and Percentage Rules configuration of the actual Feature Flag or Setting
+// in an **ordered** collection, which means the order of the returned rules is matching to the
+// evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
+func (s *FeatureFlagAndSettingValues) GetSettingValue(ctx context.Context, request operations.GetSettingValueRequest) (*operations.GetSettingValueResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetSettingValueResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/hal+json`):
+			var out *shared.SettingValueModelHaljson
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SettingValueModelHaljson = out
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SettingValueModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SettingValueModel = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// GetSettingValues - Get values
+// This endpoint returns the value of a specified Config's Feature Flags or Settings identified by the `configId` parameter
+// in a specified Environment identified by the `environmentId` parameter.
+//
+// The most important attributes in the response are the `value`, `rolloutRules` and `percentageRules`.
+// The `value` represents what the clients will get when the evaluation requests of our SDKs
+// are not matching to any of the defined Targeting or Percentage Rules, or when there are no additional rules to evaluate.
+//
+// The `rolloutRules` and `percentageRules` attributes are representing the current
+// Targeting and Percentage Rules configuration of the actual Feature Flag or Setting
+// in an **ordered** collection, which means the order of the returned rules is matching to the
+// evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
+func (s *FeatureFlagAndSettingValues) GetSettingValues(ctx context.Context, request operations.GetSettingValuesRequest) (*operations.GetSettingValuesResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}/values", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetSettingValuesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/hal+json`):
+			var out *shared.ConfigSettingValuesModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConfigSettingValuesModel = out
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ConfigSettingValuesModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConfigSettingValuesModel = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// ReplaceSettingValue - Replace value
+// This endpoint replaces the whole value of a Feature Flag or Setting in a specified Environment.
+//
+// Only the `value`, `rolloutRules` and `percentageRules` attributes are modifiable by this endpoint.
+//
+// **Important:** As this endpoint is doing a complete replace, it's important to set every other attribute that you don't
+// want to change in its original state. Not listing one means that it will reset.
+//
+// For example: We have the following resource.
+// ```
+//
+//	{
+//		"rolloutPercentageItems": [
+//			{
+//				"percentage": 30,
+//				"value": true
+//			},
+//			{
+//				"percentage": 70,
+//				"value": false
+//			}
+//		],
+//		"rolloutRules": [],
+//		"value": false
+//	}
+//
+// ```
+// If we send a replace request body as below:
+// ```
+//
+//	{
+//		"value": true
+//	}
+//
+// ```
+// Then besides that the default value is set to `true`, all the Percentage Rules are deleted.
+// So we get a response like this:
+// ```
+//
+//	{
+//		"rolloutPercentageItems": [],
+//		"rolloutRules": [],
+//		"value": true
+//	}
+//
+// ```
+func (s *FeatureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, request operations.ReplaceSettingValueRequest) (*operations.ReplaceSettingValueResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ReplaceSettingValueResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/hal+json`):
+			var out *shared.SettingValueModelHaljson
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SettingValueModelHaljson = out
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SettingValueModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SettingValueModel = out
+		}
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// UpdateSettingValue - Update value
+// This endpoint updates the value of a Feature Flag or Setting
+// with a collection of [JSON Patch](http://jsonpatch.com) operations in a specified Environment.
+//
+// Only the `value`, `rolloutRules` and `percentageRules` attributes are modifiable by this endpoint.
+//
+// The advantage of using JSON Patch is that you can describe individual update operations on a resource
+// without touching attributes that you don't want to change. It supports collection reordering, so it also
+// can be used for reordering the targeting rules of a Feature Flag or Setting.
+//
+// For example: We have the following resource.
+// ```
+//
+//	{
+//		"rolloutPercentageItems": [
+//			{
+//				"percentage": 30,
+//				"value": true
+//			},
+//			{
+//				"percentage": 70,
+//				"value": false
+//			}
+//		],
+//		"rolloutRules": [],
+//		"value": false
+//	}
+//
+// ```
+// If we send an update request body as below:
+// ```
+// [
+//
+//	{
+//		"op": "replace",
+//		"path": "/value",
+//		"value": true
+//	}
+//
+// ]
+// ```
+// Only the default value is going to be set to `true` and all the Percentage Rules are remaining unchanged.
+// So we get a response like this:
+// ```
+//
+//	{
+//		"rolloutPercentageItems": [
+//			{
+//				"percentage": 30,
+//				"value": true
+//			},
+//			{
+//				"percentage": 70,
+//				"value": false
+//			}
+//		],
+//		"rolloutRules": [],
+//		"value": true
+//	}
+//
+// ```
+func (s *FeatureFlagAndSettingValues) UpdateSettingValue(ctx context.Context, request operations.UpdateSettingValueRequest) (*operations.UpdateSettingValueResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateSettingValueResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/hal+json`):
+			var out *shared.SettingValueModelHaljson
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SettingValueModelHaljson = out
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SettingValueModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SettingValueModel = out
+		}
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}

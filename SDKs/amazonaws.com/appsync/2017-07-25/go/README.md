@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,27 +34,27 @@ func main() {
     
     req := operations.CreateAPICacheRequest{
         PathParams: operations.CreateAPICachePathParams{
-            APIID: "voluptatum",
+            APIID: "aut",
         },
         Headers: operations.CreateAPICacheHeaders{
-            XAmzAlgorithm: "rerum",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "aut",
-            XAmzDate: "tempore",
-            XAmzSecurityToken: "debitis",
-            XAmzSignature: "delectus",
-            XAmzSignedHeaders: "mollitia",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "qui",
+            XAmzCredential: "atque",
+            XAmzDate: "praesentium",
+            XAmzSecurityToken: "perferendis",
+            XAmzSignature: "ab",
+            XAmzSignedHeaders: "cumque",
         },
         Request: operations.CreateAPICacheRequestBody{
-            APICachingBehavior: "PER_RESOLVER_CACHING",
+            APICachingBehavior: "FULL_REQUEST_CACHING",
             AtRestEncryptionEnabled: false,
             TransitEncryptionEnabled: true,
-            TTL: 525582597159984763,
-            Type: "T2_MEDIUM",
+            TTL: 1541276666071085218,
+            Type: "SMALL",
         },
     }
     
-    res, err := s.Sdk.CreateAPICache(ctx, req)
+    res, err := s.CreateAPICache(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

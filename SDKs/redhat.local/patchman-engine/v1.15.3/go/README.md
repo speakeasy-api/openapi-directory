@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.LatestPackagePathParams{
-            PackageName: "non",
+            PackageName: "sit",
         },
     }
     
-    res, err := s.Sdk.LatestPackage(ctx, req)
+    res, err := s.LatestPackage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

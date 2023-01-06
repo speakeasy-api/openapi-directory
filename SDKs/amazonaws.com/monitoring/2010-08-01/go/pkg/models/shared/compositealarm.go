@@ -15,7 +15,7 @@ type CompositeAlarm struct {
 	AlarmName                          *string
 	AlarmRule                          *string
 	InsufficientDataActions            []string
-	OkActions                          []string
+	OKActions                          []string
 	StateReason                        *string
 	StateReasonData                    *string
 	StateUpdatedTimestamp              *time.Time

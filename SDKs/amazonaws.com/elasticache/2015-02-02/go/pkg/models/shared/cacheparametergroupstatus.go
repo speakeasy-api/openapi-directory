@@ -3,7 +3,7 @@ package shared
 // CacheParameterGroupStatus
 // Status of the cache parameter group.
 type CacheParameterGroupStatus struct {
-	CacheNodeIdsToReboot    []string
+	CacheNodeIdsToReboot    []map[string]interface{}
 	CacheParameterGroupName *string
 	ParameterApplyStatus    *string
 }

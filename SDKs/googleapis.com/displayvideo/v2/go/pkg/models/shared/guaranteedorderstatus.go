@@ -19,17 +19,17 @@ const (
 	GuaranteedOrderStatusEntityStatusEnumEntityStatusScheduledForDeletion GuaranteedOrderStatusEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
-// GuaranteedOrderStatusInput
-// The status settings of the guaranteed order.
-type GuaranteedOrderStatusInput struct {
-	EntityPauseReason *string                                `json:"entityPauseReason,omitempty"`
-	EntityStatus      *GuaranteedOrderStatusEntityStatusEnum `json:"entityStatus,omitempty"`
-}
-
 // GuaranteedOrderStatus
 // The status settings of the guaranteed order.
 type GuaranteedOrderStatus struct {
 	ConfigStatus      *GuaranteedOrderStatusConfigStatusEnum `json:"configStatus,omitempty"`
+	EntityPauseReason *string                                `json:"entityPauseReason,omitempty"`
+	EntityStatus      *GuaranteedOrderStatusEntityStatusEnum `json:"entityStatus,omitempty"`
+}
+
+// GuaranteedOrderStatusInput
+// The status settings of the guaranteed order.
+type GuaranteedOrderStatusInput struct {
 	EntityPauseReason *string                                `json:"entityPauseReason,omitempty"`
 	EntityStatus      *GuaranteedOrderStatusEntityStatusEnum `json:"entityStatus,omitempty"`
 }

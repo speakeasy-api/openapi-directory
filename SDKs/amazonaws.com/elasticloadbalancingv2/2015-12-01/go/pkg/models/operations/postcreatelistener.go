@@ -3,13 +3,13 @@ package operations
 type PostCreateListenerActionEnum string
 
 const (
-	PostCreateListenerActionEnumCreateListener PostCreateListenerActionEnum = "CreateListener"
+	POSTCreateListenerActionEnumCreateListener PostCreateListenerActionEnum = "CreateListener"
 )
 
 type PostCreateListenerVersionEnum string
 
 const (
-	PostCreateListenerVersionEnumTwoThousandAndFifteen1201 PostCreateListenerVersionEnum = "2015-12-01"
+	POSTCreateListenerVersionEnumTwoThousandAndFifteen1201 PostCreateListenerVersionEnum = "2015-12-01"
 )
 
 type PostCreateListenerQueryParams struct {

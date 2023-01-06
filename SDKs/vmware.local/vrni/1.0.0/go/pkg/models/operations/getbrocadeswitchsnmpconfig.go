@@ -19,6 +19,6 @@ type GetBrocadeSwitchSnmpConfigRequest struct {
 
 type GetBrocadeSwitchSnmpConfigResponse struct {
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

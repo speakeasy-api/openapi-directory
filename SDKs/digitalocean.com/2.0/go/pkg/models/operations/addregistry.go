@@ -8,14 +8,14 @@ type AddRegistryRequestBody struct {
 	ClusterUuids []string `json:"cluster_uuids,omitempty"`
 }
 
-type AddRegistryRequest struct {
-	Request *AddRegistryRequestBody `request:"mediaType=application/json"`
-}
-
 type AddRegistry401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type AddRegistryRequest struct {
+	Request *AddRegistryRequestBody `request:"mediaType=application/json"`
 }
 
 type AddRegistryResponse struct {

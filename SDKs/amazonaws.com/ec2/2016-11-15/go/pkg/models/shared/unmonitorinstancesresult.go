@@ -1,5 +1,5 @@
 package shared
 
 type UnmonitorInstancesResult struct {
-	InstanceMonitorings []InstanceMonitoring
+	InstanceMonitorings map[string]interface{}
 }

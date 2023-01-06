@@ -6,7 +6,7 @@ type ClusterSubnetGroup struct {
 	ClusterSubnetGroupName *string
 	Description            *string
 	SubnetGroupStatus      *string
-	Subnets                []Subnet
-	Tags                   []Tag
+	Subnets                []map[string]interface{}
+	Tags                   []map[string]interface{}
 	VpcID                  *string
 }

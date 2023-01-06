@@ -1,6 +1,6 @@
 package shared
 
 type DescribeDbLogFilesResponse struct {
-	DescribeDbLogFiles []DescribeDbLogFilesDetails
+	DescribeDBLogFiles []map[string]interface{}
 	Marker             *string
 }

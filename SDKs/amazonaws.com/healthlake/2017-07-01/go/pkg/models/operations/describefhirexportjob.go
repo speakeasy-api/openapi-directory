@@ -7,7 +7,7 @@ import (
 type DescribeFhirExportJobXAmzTargetEnum string
 
 const (
-	DescribeFhirExportJobXAmzTargetEnumHealthLakeDescribeFhirExportJob DescribeFhirExportJobXAmzTargetEnum = "HealthLake.DescribeFHIRExportJob"
+	DescribeFHIRExportJobXAmzTargetEnumHealthLakeDescribeFhirExportJob DescribeFhirExportJobXAmzTargetEnum = "HealthLake.DescribeFHIRExportJob"
 )
 
 type DescribeFhirExportJobHeaders struct {
@@ -28,7 +28,7 @@ type DescribeFhirExportJobRequest struct {
 
 type DescribeFhirExportJobResponse struct {
 	ContentType                   string
-	DescribeFhirExportJobResponse *shared.DescribeFhirExportJobResponse
+	DescribeFHIRExportJobResponse *shared.DescribeFhirExportJobResponse
 	InternalServerException       *interface{}
 	ResourceNotFoundException     *interface{}
 	StatusCode                    int64

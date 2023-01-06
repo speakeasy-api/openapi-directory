@@ -3,13 +3,13 @@ package operations
 type PostRebuildEnvironmentActionEnum string
 
 const (
-	PostRebuildEnvironmentActionEnumRebuildEnvironment PostRebuildEnvironmentActionEnum = "RebuildEnvironment"
+	POSTRebuildEnvironmentActionEnumRebuildEnvironment PostRebuildEnvironmentActionEnum = "RebuildEnvironment"
 )
 
 type PostRebuildEnvironmentVersionEnum string
 
 const (
-	PostRebuildEnvironmentVersionEnumTwoThousandAndTen1201 PostRebuildEnvironmentVersionEnum = "2010-12-01"
+	POSTRebuildEnvironmentVersionEnumTwoThousandAndTen1201 PostRebuildEnvironmentVersionEnum = "2010-12-01"
 )
 
 type PostRebuildEnvironmentQueryParams struct {

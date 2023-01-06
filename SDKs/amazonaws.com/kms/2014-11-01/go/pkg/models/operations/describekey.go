@@ -31,7 +31,7 @@ type DescribeKeyResponse struct {
 	DependencyTimeoutException *interface{}
 	DescribeKeyResponse        *shared.DescribeKeyResponse
 	InvalidArnException        *interface{}
-	KmsInternalException       *interface{}
+	KMSInternalException       *interface{}
 	NotFoundException          *interface{}
 	StatusCode                 int64
 }

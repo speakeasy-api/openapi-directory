@@ -13,7 +13,7 @@ type ScheduledUpdateGroupAction struct {
 	MaxSize              *int64
 	MinSize              *int64
 	Recurrence           *string
-	ScheduledActionArn   *string
+	ScheduledActionARN   *string
 	ScheduledActionName  *string
 	StartTime            *time.Time
 	Time                 *time.Time

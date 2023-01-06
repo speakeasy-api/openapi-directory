@@ -16,12 +16,12 @@ type CreateFilePaymentConsentsHeaders struct {
 
 type CreateFilePaymentConsentsRequests struct {
 	ApplicationJosePlusJwe []byte                      `request:"mediaType=application/jose+jwe"`
-	ObWriteFileConsent3    *shared.ObWriteFileConsent3 `request:"mediaType=application/json"`
-	ObWriteFileConsent4    *shared.ObWriteFileConsent3 `request:"mediaType=application/json"`
+	OBWriteFileConsent3    *shared.ObWriteFileConsent3 `request:"mediaType=application/json"`
+	OBWriteFileConsent4    *shared.ObWriteFileConsent3 `request:"mediaType=application/json"`
 }
 
 type CreateFilePaymentConsentsSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateFilePaymentConsentsRequest struct {
@@ -34,7 +34,7 @@ type CreateFilePaymentConsentsResponse struct {
 	Body                        []byte
 	ContentType                 string
 	Headers                     map[string][]string
-	ObErrorResponse1            *shared.ObErrorResponse1
-	ObWriteFileConsentResponse4 *shared.ObWriteFileConsentResponse4
+	OBErrorResponse1            *shared.ObErrorResponse1
+	OBWriteFileConsentResponse4 *shared.ObWriteFileConsentResponse4
 	StatusCode                  int64
 }

@@ -18,10 +18,10 @@ type CancellationReasonsRequest struct {
 }
 
 type CancellationReasonsResponse struct {
-	FourHundredAndOneUnauthorized         *shared.FourHundredAndOneUnauthorized
-	FourHundredAndSixNotAcceptable        *shared.FourHundredAndSixNotAcceptable
-	FiveHundredInternalServerError        *shared.FiveHundredInternalServerError
-	FiveHundredAndThreeServiceUnavailable *shared.FiveHundredAndThreeServiceUnavailable
+	FourHundredAndOneUNAUTHORIZED         *shared.FourHundredAndOneUnauthorized
+	FourHundredAndSixNOTACCEPTABLE        *shared.FourHundredAndSixNotAcceptable
+	FiveHundredINTERNALSERVERERROR        *shared.FiveHundredInternalServerError
+	FiveHundredAndThreeSERVICEUNAVAILABLE *shared.FiveHundredAndThreeServiceUnavailable
 	CancellationReasonsResponses          []shared.CancellationReasonsResponse
 	ContentType                           string
 	StatusCode                            int64

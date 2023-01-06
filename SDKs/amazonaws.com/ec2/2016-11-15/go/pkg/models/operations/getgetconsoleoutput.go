@@ -3,13 +3,13 @@ package operations
 type GetGetConsoleOutputActionEnum string
 
 const (
-	GetGetConsoleOutputActionEnumGetConsoleOutput GetGetConsoleOutputActionEnum = "GetConsoleOutput"
+	GETGETConsoleOutputActionEnumGetConsoleOutput GetGetConsoleOutputActionEnum = "GetConsoleOutput"
 )
 
 type GetGetConsoleOutputVersionEnum string
 
 const (
-	GetGetConsoleOutputVersionEnumTwoThousandAndSixteen1115 GetGetConsoleOutputVersionEnum = "2016-11-15"
+	GETGETConsoleOutputVersionEnumTwoThousandAndSixteen1115 GetGetConsoleOutputVersionEnum = "2016-11-15"
 )
 
 type GetGetConsoleOutputQueryParams struct {

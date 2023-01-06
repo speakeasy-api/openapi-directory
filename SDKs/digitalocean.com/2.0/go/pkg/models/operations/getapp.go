@@ -12,15 +12,15 @@ type GetAppQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 }
 
-type GetAppRequest struct {
-	PathParams  GetAppPathParams
-	QueryParams GetAppQueryParams
-}
-
 type GetApp401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetAppRequest struct {
+	PathParams  GetAppPathParams
+	QueryParams GetAppQueryParams
 }
 
 type GetAppResponse struct {

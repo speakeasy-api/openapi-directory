@@ -3,13 +3,13 @@ package operations
 type PostModifyCacheParameterGroupActionEnum string
 
 const (
-	PostModifyCacheParameterGroupActionEnumModifyCacheParameterGroup PostModifyCacheParameterGroupActionEnum = "ModifyCacheParameterGroup"
+	POSTModifyCacheParameterGroupActionEnumModifyCacheParameterGroup PostModifyCacheParameterGroupActionEnum = "ModifyCacheParameterGroup"
 )
 
 type PostModifyCacheParameterGroupVersionEnum string
 
 const (
-	PostModifyCacheParameterGroupVersionEnumTwoThousandAndFifteen0202 PostModifyCacheParameterGroupVersionEnum = "2015-02-02"
+	POSTModifyCacheParameterGroupVersionEnumTwoThousandAndFifteen0202 PostModifyCacheParameterGroupVersionEnum = "2015-02-02"
 )
 
 type PostModifyCacheParameterGroupQueryParams struct {

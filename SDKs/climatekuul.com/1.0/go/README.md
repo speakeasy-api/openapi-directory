@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,22 +24,22 @@ func main() {
     
     req := operations.AirtravelCoordinatesRequest{
         Headers: operations.AirtravelCoordinatesHeaders{
-            ContentType: "repellat",
+            ContentType: "aspernatur",
         },
         Request: &operations.AirtravelCoordinatesRequestBody{
-            APIKeyL1: "alias",
-            APIKeyL2: "rem",
-            DestinationAirportLatitude: 60.200001,
-            DestinationAirportLongitude: 75.199997,
-            NumberOfPassengers: 2666378789136499828,
-            OriginAirportLatitude: 14.200000,
-            OriginAirportLongitude: 76.199997,
-            TravelClass: "cumque",
-            TravelMode: "sunt",
+            APIKeyL1: "sint",
+            APIKeyL2: "veritatis",
+            DestinationAirportLatitude: 79.099998,
+            DestinationAirportLongitude: 85.199997,
+            NumberOfPassengers: 8548503948450162958,
+            OriginAirportLatitude: 17.200001,
+            OriginAirportLongitude: 61.099998,
+            TravelClass: "qui",
+            TravelMode: "consequuntur",
         },
     }
     
-    res, err := s.Sdk.AirtravelCoordinates(ctx, req)
+    res, err := s.AirtravelCoordinates.AirtravelCoordinates(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -54,34 +53,49 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AirtravelCoordinates
 
 * `AirtravelCoordinates` - airtravelCoordinates
-* `AirtravelMultileg` - airtravelMultileg
-* `ConfirmCarbonOffset` - confirmCarbonOffset
-* `ConfirmCarbonOffset1` - confirmCarbonOffset
-* `ConfirmCarbonOffset3` - confirmCarbonOffset
 * `ConfirmCarbonOffset4` - confirmCarbonOffset
-* `ConfirmCarbonOffset5` - confirmCarbonOffset
-* `ConfirmPayment` - confirmPayment
-* `ConfirmPayment1` - confirmPayment
-* `ConfirmPayment3` - confirmPayment
 * `ConfirmPayment4` - confirmPayment
-* `ConfirmPayment5` - confirmPayment
-* `ConfirmPaymentOfTransaction` - confirmTransaction
-* `ConfirmPaymentOfTransaction1` - confirmTransaction
-* `ConfirmPaymentOfTransaction3` - confirmTransaction
 * `ConfirmPaymentOfTransaction4` - confirmTransaction
-* `ConfirmPaymentOfTransaction5` - confirmTransaction
-* `ConfirmsPlanting` - confirmPlanting
-* `ConfirmsPlanting2` - confirmPlanting
-* `ConfirmsPlanting3` - confirmPlanting
 * `ConfirmsPlanting4` - confirmPlanting
-* `ConfirmsPlanting5` - confirmPlanting
+
+### EcommerceDelivery
+
+* `ConfirmCarbonOffset1` - confirmCarbonOffset
+* `ConfirmPayment1` - confirmPayment
+* `ConfirmPaymentOfTransaction1` - confirmTransaction
+* `ConfirmsPlanting2` - confirmPlanting
 * `EcommerceDelivery` - ecommerceDelivery
+
+### Request Api Key
+
 * `RequestAPIKey` - requestApiKey
+
+### RoadDistance
+
+* `ConfirmCarbonOffset5` - confirmCarbonOffset
+* `ConfirmPayment5` - confirmPayment
+* `ConfirmPaymentOfTransaction5` - confirmTransaction
+* `ConfirmsPlanting5` - confirmPlanting
 * `RoadDistance` - RoadDistance
+
+### UrbanDelivery
+
+* `ConfirmCarbonOffset` - confirmCarbonOffset
+* `ConfirmPayment` - confirmPayment
+* `ConfirmPaymentOfTransaction` - confirmTransaction
+* `ConfirmsPlanting` - confirmPlanting
 * `UrbanDelivery` - urbanDelivery
+
+### airtravelMultileg
+
+* `AirtravelMultileg` - airtravelMultileg
+* `ConfirmCarbonOffset3` - confirmCarbonOffset
+* `ConfirmPayment3` - confirmPayment
+* `ConfirmPaymentOfTransaction3` - confirmTransaction
+* `ConfirmsPlanting3` - confirmPlanting
 
 <!-- End SDK Available Operations -->
 

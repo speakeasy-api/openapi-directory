@@ -30,6 +30,6 @@ type PostAdminRequestsCountRequest struct {
 
 type PostAdminRequestsCountResponse struct {
 	ContentType                                    string
-	PostAdminRequestsCount200ApplicationJSONObject *PostAdminRequestsCount200ApplicationJSON
 	StatusCode                                     int64
+	PostAdminRequestsCount200ApplicationJSONObject *PostAdminRequestsCount200ApplicationJSON
 }

@@ -88,7 +88,7 @@ type UpdateFunctionConfigurationRequestBody struct {
 	FileSystemConfigs []shared.FileSystemConfig                               `json:"FileSystemConfigs,omitempty"`
 	Handler           *string                                                 `json:"Handler,omitempty"`
 	ImageConfig       *UpdateFunctionConfigurationRequestBodyImageConfig      `json:"ImageConfig,omitempty"`
-	KmsKeyArn         *string                                                 `json:"KMSKeyArn,omitempty"`
+	KMSKeyArn         *string                                                 `json:"KMSKeyArn,omitempty"`
 	Layers            []string                                                `json:"Layers,omitempty"`
 	MemorySize        *int64                                                  `json:"MemorySize,omitempty"`
 	RevisionID        *string                                                 `json:"RevisionId,omitempty"`

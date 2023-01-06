@@ -1,0 +1,16 @@
+package shared
+
+import (
+	"time"
+)
+
+type CsvExportStatus struct {
+	Area        *int64     `json:"area,omitempty"`
+	DateCreated *time.Time `json:"date_created,omitempty"`
+	JobID       *string    `json:"job_id,omitempty"`
+	JobStatus   *string    `json:"job_status,omitempty"`
+	JobURL      *string    `json:"job_url,omitempty"`
+	NbResults   *int64     `json:"nb_results,omitempty"`
+	Query       UrlsQuery  `json:"query"`
+	Results     *string    `json:"results,omitempty"`
+}

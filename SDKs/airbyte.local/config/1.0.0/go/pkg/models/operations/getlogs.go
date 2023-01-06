@@ -13,5 +13,5 @@ type GetLogsResponse struct {
 	InvalidInputExceptionInfo       *shared.InvalidInputExceptionInfo
 	NotFoundKnownExceptionInfo      *shared.NotFoundKnownExceptionInfo
 	StatusCode                      int64
-	GetLogs200TextPlainBinaryString []byte
+	GetLogs200TextPlainBinaryString *string
 }

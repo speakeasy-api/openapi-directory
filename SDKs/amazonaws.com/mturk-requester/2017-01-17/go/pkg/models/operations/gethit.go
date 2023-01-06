@@ -7,7 +7,7 @@ import (
 type GetHitxAmzTargetEnum string
 
 const (
-	GetHitxAmzTargetEnumMTurkRequesterServiceV20170117GetHit GetHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.GetHIT"
+	GetHITXAmzTargetEnumMTurkRequesterServiceV20170117GetHit GetHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.GetHIT"
 )
 
 type GetHitHeaders struct {
@@ -28,7 +28,7 @@ type GetHitRequest struct {
 
 type GetHitResponse struct {
 	ContentType    string
-	GetHitResponse *shared.GetHitResponse
+	GetHITResponse *shared.GetHitResponse
 	RequestError   *interface{}
 	ServiceFault   *interface{}
 	StatusCode     int64

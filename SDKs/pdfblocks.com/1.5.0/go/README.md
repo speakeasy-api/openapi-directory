@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,19 +35,19 @@ func main() {
     req := operations.AddImageWatermarkV1Request{
         Request: operations.AddImageWatermarkV1RequestBody{
             File: operations.AddImageWatermarkV1RequestBodyFile{
-                Content: []byte("itaque"),
-                File: "nesciunt",
+                Content: []byte("voluptatibus"),
+                File: "quidem",
             },
             Image: operations.AddImageWatermarkV1RequestBodyImage{
-                Content: []byte("optio"),
-                Image: "eos",
+                Content: []byte("exercitationem"),
+                Image: "et",
             },
-            Margin: 98.099998,
-            Transparency: 3868947486814090347,
+            Margin: 4.100000,
+            Transparency: 1344633955781589999,
         },
     }
     
-    res, err := s.Sdk.AddImageWatermarkV1(ctx, req)
+    res, err := s.AddImageWatermarkV1(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

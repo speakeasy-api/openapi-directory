@@ -5,9 +5,9 @@ import (
 )
 
 type HlipcRequestBodyCertificateParameters struct {
-	Inscode string `json:"INSCODE"`
-	Polno   string `json:"POLNO"`
-	Startdt string `json:"STARTDT"`
+	INSCODE string `json:"INSCODE"`
+	POLNO   string `json:"POLNO"`
+	STARTDT string `json:"STARTDT"`
 }
 
 type HlipcRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Hlipc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Hlipc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Hlipc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Hlipc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Hlipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Hlipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Hlipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Hlipc404ApplicationJSON struct {

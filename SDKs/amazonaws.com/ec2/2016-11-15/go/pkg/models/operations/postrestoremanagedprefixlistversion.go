@@ -3,13 +3,13 @@ package operations
 type PostRestoreManagedPrefixListVersionActionEnum string
 
 const (
-	PostRestoreManagedPrefixListVersionActionEnumRestoreManagedPrefixListVersion PostRestoreManagedPrefixListVersionActionEnum = "RestoreManagedPrefixListVersion"
+	POSTRestoreManagedPrefixListVersionActionEnumRestoreManagedPrefixListVersion PostRestoreManagedPrefixListVersionActionEnum = "RestoreManagedPrefixListVersion"
 )
 
 type PostRestoreManagedPrefixListVersionVersionEnum string
 
 const (
-	PostRestoreManagedPrefixListVersionVersionEnumTwoThousandAndSixteen1115 PostRestoreManagedPrefixListVersionVersionEnum = "2016-11-15"
+	POSTRestoreManagedPrefixListVersionVersionEnumTwoThousandAndSixteen1115 PostRestoreManagedPrefixListVersionVersionEnum = "2016-11-15"
 )
 
 type PostRestoreManagedPrefixListVersionQueryParams struct {

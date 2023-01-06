@@ -1,6 +1,6 @@
 package shared
 
 type BatchDeleteImageResponse struct {
-	Failures []ImageFailure    `json:"failures,omitempty"`
-	ImageIds []ImageIdentifier `json:"imageIds,omitempty"`
+	Failures map[string]interface{} `json:"failures,omitempty"`
+	ImageIds []ImageIdentifier      `json:"imageIds,omitempty"`
 }

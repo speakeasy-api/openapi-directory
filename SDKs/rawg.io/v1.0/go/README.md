@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.CreatorRolesListRequest{
         QueryParams: operations.CreatorRolesListQueryParams{
-            Page: 7348434050736803316,
-            PageSize: 8602515491234131430,
+            Page: 3457599076940366892,
+            PageSize: 7469295395638694155,
         },
     }
     
-    res, err := s.Sdk.CreatorRolesList(ctx, req)
+    res, err := s.CreatorRoles.CreatorRolesList(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,13 +43,22 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### creator-roles
 
 * `CreatorRolesList` - Get a list of creator positions (jobs).
+
+### creators
+
 * `CreatorsList` - Get a list of game creators.
 * `CreatorsRead` - Get details of the creator.
+
+### developers
+
 * `DevelopersList` - Get a list of game developers.
 * `DevelopersRead` - Get details of the developer.
+
+### games
+
 * `GamesAchievementsRead` - Get a list of game achievements.
 * `GamesAdditionsList` - Get a list of DLC's for the game, GOTY and other editions, companion apps, etc.
 * `GamesDevelopmentTeamList` - Get a list of individual creators that were part of the development team.
@@ -65,15 +73,30 @@ func main() {
 * `GamesSuggestedRead` - Get a list of visually similar games, available only for business and enterprise API users.
 * `GamesTwitchRead` - Get streams on Twitch associated with the game, available only for business and enterprise API users.
 * `GamesYoutubeRead` - Get videos from YouTube associated with the game, available only for business and enterprise API users.
+
+### genres
+
 * `GenresList` - Get a list of video game genres.
 * `GenresRead` - Get details of the genre.
+
+### platforms
+
 * `PlatformsList` - Get a list of video game platforms.
 * `PlatformsListsParentsList` - Get a list of parent platforms.
 * `PlatformsRead` - Get details of the platform.
+
+### publishers
+
 * `PublishersList` - Get a list of video game publishers.
 * `PublishersRead` - Get details of the publisher.
+
+### stores
+
 * `StoresList` - Get a list of video game storefronts.
 * `StoresRead` - Get details of the store.
+
+### tags
+
 * `TagsList` - Get a list of tags.
 * `TagsRead` - Get details of the tag.
 

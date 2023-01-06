@@ -31,8 +31,8 @@ type ListAllGroupsUsingPost500ApplicationJSON struct {
 type ListAllGroupsUsingPostResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	ListAllGroupsUsingPost200ApplicationJSONObject *ListAllGroupsUsingPost200ApplicationJSON
-	ListAllGroupsUsingPost400ApplicationJSONObject *ListAllGroupsUsingPost400ApplicationJSON
-	ListAllGroupsUsingPost401ApplicationJSONObject *ListAllGroupsUsingPost401ApplicationJSON
-	ListAllGroupsUsingPost500ApplicationJSONObject *ListAllGroupsUsingPost500ApplicationJSON
+	ListAllGroupsUsingPOST200ApplicationJSONObject *ListAllGroupsUsingPost200ApplicationJSON
+	ListAllGroupsUsingPOST400ApplicationJSONObject *ListAllGroupsUsingPost400ApplicationJSON
+	ListAllGroupsUsingPOST401ApplicationJSONObject *ListAllGroupsUsingPost401ApplicationJSON
+	ListAllGroupsUsingPOST500ApplicationJSONObject *ListAllGroupsUsingPost500ApplicationJSON
 }

@@ -55,7 +55,7 @@ type GetRouteRequest struct {
 
 type GetRouteResponse struct {
 	ContentType   string
-	GhError       *shared.GhError
+	GHError       *shared.GhError
 	Headers       map[string][]string
 	RouteResponse *shared.RouteResponse
 	StatusCode    int64

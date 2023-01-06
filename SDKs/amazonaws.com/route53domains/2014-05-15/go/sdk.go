@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -305,7 +306,7 @@ func (s *SDK) CheckDomainAvailability(ctx context.Context, request operations.Ch
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -377,7 +378,7 @@ func (s *SDK) CheckDomainTransferability(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -459,7 +460,7 @@ func (s *SDK) DeleteTagsForDomain(ctx context.Context, request operations.Delete
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -531,7 +532,7 @@ func (s *SDK) DisableDomainAutoRenew(ctx context.Context, request operations.Dis
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -613,7 +614,7 @@ func (s *SDK) DisableDomainTransferLock(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -633,7 +634,7 @@ func (s *SDK) DisableDomainTransferLock(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -705,7 +706,7 @@ func (s *SDK) EnableDomainAutoRenew(ctx context.Context, request operations.Enab
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -715,7 +716,7 @@ func (s *SDK) EnableDomainAutoRenew(ctx context.Context, request operations.Enab
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	}
 
@@ -797,7 +798,7 @@ func (s *SDK) EnableDomainTransferLock(ctx context.Context, request operations.E
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -817,7 +818,7 @@ func (s *SDK) EnableDomainTransferLock(ctx context.Context, request operations.E
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -899,7 +900,7 @@ func (s *SDK) GetContactReachabilityStatus(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -971,7 +972,7 @@ func (s *SDK) GetDomainDetail(ctx context.Context, request operations.GetDomainD
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -1043,7 +1044,7 @@ func (s *SDK) GetDomainSuggestions(ctx context.Context, request operations.GetDo
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -1315,7 +1316,7 @@ func (s *SDK) ListTagsForDomain(ctx context.Context, request operations.ListTags
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -1387,7 +1388,7 @@ func (s *SDK) RegisterDomain(ctx context.Context, request operations.RegisterDom
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1407,7 +1408,7 @@ func (s *SDK) RegisterDomain(ctx context.Context, request operations.RegisterDom
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1571,7 +1572,7 @@ func (s *SDK) RenewDomain(ctx context.Context, request operations.RenewDomainReq
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1591,7 +1592,7 @@ func (s *SDK) RenewDomain(ctx context.Context, request operations.RenewDomainReq
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -1683,7 +1684,7 @@ func (s *SDK) ResendContactReachabilityEmail(ctx context.Context, request operat
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -1755,7 +1756,7 @@ func (s *SDK) RetrieveDomainAuthCode(ctx context.Context, request operations.Ret
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -1827,7 +1828,7 @@ func (s *SDK) TransferDomain(ctx context.Context, request operations.TransferDom
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1847,7 +1848,7 @@ func (s *SDK) TransferDomain(ctx context.Context, request operations.TransferDom
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -2031,7 +2032,7 @@ func (s *SDK) UpdateDomainContact(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2051,7 +2052,7 @@ func (s *SDK) UpdateDomainContact(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -2133,7 +2134,7 @@ func (s *SDK) UpdateDomainContactPrivacy(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2153,7 +2154,7 @@ func (s *SDK) UpdateDomainContactPrivacy(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -2235,7 +2236,7 @@ func (s *SDK) UpdateDomainNameservers(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.TldRulesViolation = out
+			res.TLDRulesViolation = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -2255,7 +2256,7 @@ func (s *SDK) UpdateDomainNameservers(ctx context.Context, request operations.Up
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 
@@ -2337,7 +2338,7 @@ func (s *SDK) UpdateTagsForDomain(ctx context.Context, request operations.Update
 				return nil, err
 			}
 
-			res.UnsupportedTld = out
+			res.UnsupportedTLD = out
 		}
 	}
 

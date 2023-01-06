@@ -3,13 +3,13 @@ package operations
 type GetResetEbsDefaultKmsKeyIDActionEnum string
 
 const (
-	GetResetEbsDefaultKmsKeyIDActionEnumResetEbsDefaultKmsKeyID GetResetEbsDefaultKmsKeyIDActionEnum = "ResetEbsDefaultKmsKeyId"
+	GETResetEbsDefaultKmsKeyIDActionEnumResetEbsDefaultKmsKeyID GetResetEbsDefaultKmsKeyIDActionEnum = "ResetEbsDefaultKmsKeyId"
 )
 
 type GetResetEbsDefaultKmsKeyIDVersionEnum string
 
 const (
-	GetResetEbsDefaultKmsKeyIDVersionEnumTwoThousandAndSixteen1115 GetResetEbsDefaultKmsKeyIDVersionEnum = "2016-11-15"
+	GETResetEbsDefaultKmsKeyIDVersionEnumTwoThousandAndSixteen1115 GetResetEbsDefaultKmsKeyIDVersionEnum = "2016-11-15"
 )
 
 type GetResetEbsDefaultKmsKeyIDQueryParams struct {

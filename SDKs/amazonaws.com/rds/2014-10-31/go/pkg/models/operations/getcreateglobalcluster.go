@@ -3,13 +3,13 @@ package operations
 type GetCreateGlobalClusterActionEnum string
 
 const (
-	GetCreateGlobalClusterActionEnumCreateGlobalCluster GetCreateGlobalClusterActionEnum = "CreateGlobalCluster"
+	GETCreateGlobalClusterActionEnumCreateGlobalCluster GetCreateGlobalClusterActionEnum = "CreateGlobalCluster"
 )
 
 type GetCreateGlobalClusterVersionEnum string
 
 const (
-	GetCreateGlobalClusterVersionEnumTwoThousandAndFourteen1031 GetCreateGlobalClusterVersionEnum = "2014-10-31"
+	GETCreateGlobalClusterVersionEnumTwoThousandAndFourteen1031 GetCreateGlobalClusterVersionEnum = "2014-10-31"
 )
 
 type GetCreateGlobalClusterQueryParams struct {
@@ -19,7 +19,7 @@ type GetCreateGlobalClusterQueryParams struct {
 	Engine                    *string                           `queryParam:"style=form,explode=true,name=Engine"`
 	EngineVersion             *string                           `queryParam:"style=form,explode=true,name=EngineVersion"`
 	GlobalClusterIdentifier   *string                           `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`
-	SourceDbClusterIdentifier *string                           `queryParam:"style=form,explode=true,name=SourceDBClusterIdentifier"`
+	SourceDBClusterIdentifier *string                           `queryParam:"style=form,explode=true,name=SourceDBClusterIdentifier"`
 	StorageEncrypted          *bool                             `queryParam:"style=form,explode=true,name=StorageEncrypted"`
 	Version                   GetCreateGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

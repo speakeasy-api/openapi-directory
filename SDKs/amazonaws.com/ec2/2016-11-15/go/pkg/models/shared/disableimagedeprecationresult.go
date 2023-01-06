@@ -1,5 +1,5 @@
 package shared
 
 type DisableImageDeprecationResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

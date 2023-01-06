@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,25 +27,25 @@ func main() {
             Option1: &operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectQueryParams{
             DollarXgafv: "2",
-            AccessToken: "nostrum",
+            AccessToken: "quia",
             Alt: "proto",
-            Callback: "soluta",
-            Fields: "qui",
-            Key: "aut",
-            MonitoredResourceContainer: "vero",
-            OauthToken: "aspernatur",
+            Callback: "in",
+            Fields: "vero",
+            Key: "eligendi",
+            MonitoredResourceContainer: "qui",
+            OauthToken: "rerum",
             PrettyPrint: true,
-            QuotaUser: "enim",
-            UploadType: "est",
-            UploadProtocol: "maiores",
+            QuotaUser: "est",
+            UploadType: "placeat",
+            UploadProtocol: "pariatur",
         },
     }
     

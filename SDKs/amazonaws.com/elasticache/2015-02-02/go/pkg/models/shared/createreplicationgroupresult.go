@@ -1,5 +1,5 @@
 package shared
 
 type CreateReplicationGroupResult struct {
-	ReplicationGroup *ReplicationGroup
+	ReplicationGroup *ReplicationGroup1
 }

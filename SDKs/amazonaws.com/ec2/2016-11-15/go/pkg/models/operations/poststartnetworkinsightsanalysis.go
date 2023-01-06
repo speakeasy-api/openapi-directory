@@ -3,13 +3,13 @@ package operations
 type PostStartNetworkInsightsAnalysisActionEnum string
 
 const (
-	PostStartNetworkInsightsAnalysisActionEnumStartNetworkInsightsAnalysis PostStartNetworkInsightsAnalysisActionEnum = "StartNetworkInsightsAnalysis"
+	POSTStartNetworkInsightsAnalysisActionEnumStartNetworkInsightsAnalysis PostStartNetworkInsightsAnalysisActionEnum = "StartNetworkInsightsAnalysis"
 )
 
 type PostStartNetworkInsightsAnalysisVersionEnum string
 
 const (
-	PostStartNetworkInsightsAnalysisVersionEnumTwoThousandAndSixteen1115 PostStartNetworkInsightsAnalysisVersionEnum = "2016-11-15"
+	POSTStartNetworkInsightsAnalysisVersionEnumTwoThousandAndSixteen1115 PostStartNetworkInsightsAnalysisVersionEnum = "2016-11-15"
 )
 
 type PostStartNetworkInsightsAnalysisQueryParams struct {

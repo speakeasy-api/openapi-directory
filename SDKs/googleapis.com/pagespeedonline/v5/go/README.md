@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,34 @@ func main() {
         Security: operations.PagespeedonlinePagespeedapiRunpagespeedSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "qui",
-            Alt: "proto",
-            Callback: "ut",
-            CaptchaToken: "quisquam",
+            DollarXgafv: "1",
+            AccessToken: "eaque",
+            Alt: "media",
+            Callback: "labore",
+            CaptchaToken: "rerum",
             Category: []PagespeedonlinePagespeedapiRunpagespeedCategoryEnum{
-                "ACCESSIBILITY",
+                "SEO",
+                "SEO",
+                "BEST_PRACTICES",
             },
-            Fields: "sit",
+            Fields: "omnis",
             Key: "laudantium",
-            Locale: "esse",
-            OauthToken: "quia",
-            PrettyPrint: true,
-            QuotaUser: "quas",
-            Strategy: "MOBILE",
-            UploadType: "quia",
-            UploadProtocol: "praesentium",
-            URL: "ea",
-            UtmCampaign: "incidunt",
-            UtmSource: "et",
+            Locale: "rem",
+            OauthToken: "doloremque",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            Strategy: "DESKTOP",
+            UploadType: "sequi",
+            UploadProtocol: "magnam",
+            URL: "fugit",
+            UtmCampaign: "commodi",
+            UtmSource: "numquam",
         },
     }
     

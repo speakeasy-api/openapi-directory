@@ -3,13 +3,13 @@ package operations
 type PostSetRulePrioritiesActionEnum string
 
 const (
-	PostSetRulePrioritiesActionEnumSetRulePriorities PostSetRulePrioritiesActionEnum = "SetRulePriorities"
+	POSTSetRulePrioritiesActionEnumSetRulePriorities PostSetRulePrioritiesActionEnum = "SetRulePriorities"
 )
 
 type PostSetRulePrioritiesVersionEnum string
 
 const (
-	PostSetRulePrioritiesVersionEnumTwoThousandAndFifteen1201 PostSetRulePrioritiesVersionEnum = "2015-12-01"
+	POSTSetRulePrioritiesVersionEnumTwoThousandAndFifteen1201 PostSetRulePrioritiesVersionEnum = "2015-12-01"
 )
 
 type PostSetRulePrioritiesQueryParams struct {

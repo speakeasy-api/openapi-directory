@@ -15,7 +15,7 @@ type DescribeSignalingChannelHeaders struct {
 }
 
 type DescribeSignalingChannelRequestBody struct {
-	ChannelArn  *string `json:"ChannelARN,omitempty"`
+	ChannelARN  *string `json:"ChannelARN,omitempty"`
 	ChannelName *string `json:"ChannelName,omitempty"`
 }
 

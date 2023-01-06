@@ -1,0 +1,54 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    opts := []sdk.SDKOption{
+        sdk.WithSecurity(
+            shared.Security{
+                AdvSecurityToken: &shared.SchemeAdvSecurityToken{
+                    APIKey: "YOUR_API_KEY_HERE",
+                },
+            }
+        ),
+    }
+
+    s := sdk.New(opts...)
+    
+    req := operations.CompileRequest{
+        PathParams: operations.CompilePathParams{
+            TemplateToken: "voluptas",
+        },
+        QueryParams: operations.CompileQueryParams{
+            DocFileName: "rem",
+            DocURLExpiresIn: 439997442412761121,
+            LatexCompiler: "lualatex",
+            LatexRuns: 4317348671253960062,
+            MainFileName: "iusto",
+        },
+        Headers: operations.CompileHeaders{
+            ContentType: "ut",
+        },
+        Request: map[string]interface{}{
+            "accusantium": "quaerat",
+            "nobis": "enim",
+            "atque": "vero",
+        },
+    }
+    
+    res, err := s.PDFGeneration.Compile(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Compile200ApplicationJSONObject != nil {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

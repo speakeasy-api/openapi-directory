@@ -46,8 +46,8 @@ type ListSessionsOfGroupUsingGetRequest struct {
 type ListSessionsOfGroupUsingGetResponse struct {
 	ContentType                                         string
 	StatusCode                                          int64
-	ListSessionsOfGroupUsingGet200ApplicationJSONObject *ListSessionsOfGroupUsingGet200ApplicationJSON
-	ListSessionsOfGroupUsingGet400ApplicationJSONObject *ListSessionsOfGroupUsingGet400ApplicationJSON
-	ListSessionsOfGroupUsingGet401ApplicationJSONObject *ListSessionsOfGroupUsingGet401ApplicationJSON
-	ListSessionsOfGroupUsingGet500ApplicationJSONObject *ListSessionsOfGroupUsingGet500ApplicationJSON
+	ListSessionsOfGroupUsingGET200ApplicationJSONObject *ListSessionsOfGroupUsingGet200ApplicationJSON
+	ListSessionsOfGroupUsingGET400ApplicationJSONObject *ListSessionsOfGroupUsingGet400ApplicationJSON
+	ListSessionsOfGroupUsingGET401ApplicationJSONObject *ListSessionsOfGroupUsingGet401ApplicationJSON
+	ListSessionsOfGroupUsingGET500ApplicationJSONObject *ListSessionsOfGroupUsingGet500ApplicationJSON
 }

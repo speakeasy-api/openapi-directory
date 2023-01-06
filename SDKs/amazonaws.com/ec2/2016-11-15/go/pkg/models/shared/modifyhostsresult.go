@@ -1,6 +1,6 @@
 package shared
 
 type ModifyHostsResult struct {
-	Successful   []string
-	Unsuccessful []UnsuccessfulItem
+	Successful   map[string]interface{}
+	Unsuccessful map[string]interface{}
 }

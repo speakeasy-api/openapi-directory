@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,22 +34,22 @@ func main() {
     
     req := operations.AcceptDomainTransferFromAnotherAwsAccountRequest{
         Headers: operations.AcceptDomainTransferFromAnotherAwsAccountHeaders{
-            XAmzAlgorithm: "dolorem",
-            XAmzContentSha256: "beatae",
-            XAmzCredential: "at",
-            XAmzDate: "debitis",
-            XAmzSecurityToken: "optio",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "at",
+            XAmzAlgorithm: "sint",
+            XAmzContentSha256: "et",
+            XAmzCredential: "fuga",
+            XAmzDate: "distinctio",
+            XAmzSecurityToken: "quidem",
+            XAmzSignature: "reiciendis",
+            XAmzSignedHeaders: "laboriosam",
             XAmzTarget: "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount",
         },
         Request: shared.AcceptDomainTransferFromAnotherAwsAccountRequest{
-            DomainName: "ut",
-            Password: "cumque",
+            DomainName: "pariatur",
+            Password: "omnis",
         },
     }
     
-    res, err := s.Sdk.AcceptDomainTransferFromAnotherAwsAccount(ctx, req)
+    res, err := s.AcceptDomainTransferFromAnotherAwsAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

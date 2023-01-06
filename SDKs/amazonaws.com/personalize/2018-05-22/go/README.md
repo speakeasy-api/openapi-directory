@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,43 +34,43 @@ func main() {
     
     req := operations.CreateBatchInferenceJobRequest{
         Headers: operations.CreateBatchInferenceJobHeaders{
-            XAmzAlgorithm: "eos",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "autem",
-            XAmzDate: "deleniti",
-            XAmzSecurityToken: "impedit",
-            XAmzSignature: "asperiores",
-            XAmzSignedHeaders: "omnis",
+            XAmzAlgorithm: "ratione",
+            XAmzContentSha256: "est",
+            XAmzCredential: "sed",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "quae",
+            XAmzSignature: "officia",
+            XAmzSignedHeaders: "aperiam",
             XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
         },
         Request: shared.CreateBatchInferenceJobRequest{
             BatchInferenceJobConfig: &shared.BatchInferenceJobConfig{
                 ItemExplorationConfig: map[string]string{
-                    "ut": "aut",
-                    "explicabo": "sit",
+                    "impedit": "debitis",
+                    "quae": "rerum",
                 },
             },
-            FilterArn: "sed",
+            FilterArn: "ut",
             JobInput: shared.BatchInferenceJobInput{
                 S3DataSource: shared.S3DataConfig{
-                    KmsKeyArn: "est",
-                    Path: "sit",
+                    KmsKeyArn: "corrupti",
+                    Path: "excepturi",
                 },
             },
-            JobName: "magni",
+            JobName: "et",
             JobOutput: shared.BatchInferenceJobOutput{
                 S3DataDestination: shared.S3DataConfig{
-                    KmsKeyArn: "quis",
-                    Path: "sed",
+                    KmsKeyArn: "asperiores",
+                    Path: "fugit",
                 },
             },
-            NumResults: 1462040475686766967,
-            RoleArn: "sed",
-            SolutionVersionArn: "quaerat",
+            NumResults: 279167319541762584,
+            RoleArn: "ratione",
+            SolutionVersionArn: "voluptatem",
         },
     }
     
-    res, err := s.Sdk.CreateBatchInferenceJob(ctx, req)
+    res, err := s.CreateBatchInferenceJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

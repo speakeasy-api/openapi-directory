@@ -3,13 +3,13 @@ package operations
 type GetDescribeDomainsActionEnum string
 
 const (
-	GetDescribeDomainsActionEnumDescribeDomains GetDescribeDomainsActionEnum = "DescribeDomains"
+	GETDescribeDomainsActionEnumDescribeDomains GetDescribeDomainsActionEnum = "DescribeDomains"
 )
 
 type GetDescribeDomainsVersionEnum string
 
 const (
-	GetDescribeDomainsVersionEnumTwoThousandAndThirteen0101 GetDescribeDomainsVersionEnum = "2013-01-01"
+	GETDescribeDomainsVersionEnumTwoThousandAndThirteen0101 GetDescribeDomainsVersionEnum = "2013-01-01"
 )
 
 type GetDescribeDomainsQueryParams struct {

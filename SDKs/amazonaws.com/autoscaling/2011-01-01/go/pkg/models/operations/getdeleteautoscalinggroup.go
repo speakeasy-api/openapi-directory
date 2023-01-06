@@ -3,13 +3,13 @@ package operations
 type GetDeleteAutoScalingGroupActionEnum string
 
 const (
-	GetDeleteAutoScalingGroupActionEnumDeleteAutoScalingGroup GetDeleteAutoScalingGroupActionEnum = "DeleteAutoScalingGroup"
+	GETDeleteAutoScalingGroupActionEnumDeleteAutoScalingGroup GetDeleteAutoScalingGroupActionEnum = "DeleteAutoScalingGroup"
 )
 
 type GetDeleteAutoScalingGroupVersionEnum string
 
 const (
-	GetDeleteAutoScalingGroupVersionEnumTwoThousandAndEleven0101 GetDeleteAutoScalingGroupVersionEnum = "2011-01-01"
+	GETDeleteAutoScalingGroupVersionEnumTwoThousandAndEleven0101 GetDeleteAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
 type GetDeleteAutoScalingGroupQueryParams struct {

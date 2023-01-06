@@ -7,7 +7,7 @@ import (
 type GetUpdateDomainEndpointOptionsActionEnum string
 
 const (
-	GetUpdateDomainEndpointOptionsActionEnumUpdateDomainEndpointOptions GetUpdateDomainEndpointOptionsActionEnum = "UpdateDomainEndpointOptions"
+	GETUpdateDomainEndpointOptionsActionEnumUpdateDomainEndpointOptions GetUpdateDomainEndpointOptionsActionEnum = "UpdateDomainEndpointOptions"
 )
 
 // GetUpdateDomainEndpointOptionsDomainEndpointOptions
@@ -20,7 +20,7 @@ type GetUpdateDomainEndpointOptionsDomainEndpointOptions struct {
 type GetUpdateDomainEndpointOptionsVersionEnum string
 
 const (
-	GetUpdateDomainEndpointOptionsVersionEnumTwoThousandAndThirteen0101 GetUpdateDomainEndpointOptionsVersionEnum = "2013-01-01"
+	GETUpdateDomainEndpointOptionsVersionEnumTwoThousandAndThirteen0101 GetUpdateDomainEndpointOptionsVersionEnum = "2013-01-01"
 )
 
 type GetUpdateDomainEndpointOptionsQueryParams struct {

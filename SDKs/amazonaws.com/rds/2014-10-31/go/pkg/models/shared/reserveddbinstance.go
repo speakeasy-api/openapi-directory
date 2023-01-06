@@ -9,18 +9,18 @@ import (
 //	This data type is used as a response element in the <code>DescribeReservedDBInstances</code> and <code>PurchaseReservedDBInstancesOffering</code> actions.
 type ReservedDbInstance struct {
 	CurrencyCode                  *string
-	DbInstanceClass               *string
-	DbInstanceCount               *int64
+	DBInstanceClass               *string
+	DBInstanceCount               *int64
 	Duration                      *int64
 	FixedPrice                    *float64
 	LeaseID                       *string
-	MultiAz                       *bool
+	MultiAZ                       *bool
 	OfferingType                  *string
 	ProductDescription            *string
-	RecurringCharges              []RecurringCharge
-	ReservedDbInstanceArn         *string
-	ReservedDbInstanceID          *string
-	ReservedDbInstancesOfferingID *string
+	RecurringCharges              []map[string]interface{}
+	ReservedDBInstanceArn         *string
+	ReservedDBInstanceID          *string
+	ReservedDBInstancesOfferingID *string
 	StartTime                     *time.Time
 	State                         *string
 	UsagePrice                    *float64

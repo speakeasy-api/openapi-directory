@@ -2,5 +2,5 @@ package shared
 
 type OrderableDbInstanceOptionsMessage struct {
 	Marker                     *string
-	OrderableDbInstanceOptions []OrderableDbInstanceOption
+	OrderableDBInstanceOptions []map[string]interface{}
 }

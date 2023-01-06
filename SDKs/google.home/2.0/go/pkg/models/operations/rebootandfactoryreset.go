@@ -9,7 +9,7 @@ type RebootandFactoryResetRequest struct {
 }
 
 type RebootandFactoryResetResponse struct {
-	Body        []byte
-	ContentType string
-	StatusCode  int64
+	ContentType                             string
+	RebootandFactoryReset200TextPlainObject *string
+	StatusCode                              int64
 }

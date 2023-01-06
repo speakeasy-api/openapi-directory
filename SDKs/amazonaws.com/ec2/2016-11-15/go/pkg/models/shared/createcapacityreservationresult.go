@@ -1,5 +1,5 @@
 package shared
 
 type CreateCapacityReservationResult struct {
-	CapacityReservation *CapacityReservation
+	CapacityReservation map[string]interface{}
 }

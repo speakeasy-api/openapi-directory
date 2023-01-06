@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,23 +24,23 @@ func main() {
     
     req := operations.DrivelabelsLabelsGetRequest{
         PathParams: operations.DrivelabelsLabelsGetPathParams{
-            Name: "cum",
+            Name: "consequatur",
         },
         QueryParams: operations.DrivelabelsLabelsGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "provident",
-            Alt: "json",
-            Callback: "sit",
-            Fields: "esse",
-            Key: "ea",
-            LanguageCode: "et",
-            OauthToken: "est",
-            PrettyPrint: false,
-            QuotaUser: "culpa",
-            UploadType: "omnis",
-            UploadProtocol: "rerum",
-            UseAdminAccess: false,
-            View: "LABEL_VIEW_BASIC",
+            AccessToken: "dolorem",
+            Alt: "media",
+            Callback: "pariatur",
+            Fields: "consequuntur",
+            Key: "provident",
+            LanguageCode: "necessitatibus",
+            OauthToken: "cum",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            UploadType: "quia",
+            UploadProtocol: "magnam",
+            UseAdminAccess: true,
+            View: "LABEL_VIEW_FULL",
         },
     }
     

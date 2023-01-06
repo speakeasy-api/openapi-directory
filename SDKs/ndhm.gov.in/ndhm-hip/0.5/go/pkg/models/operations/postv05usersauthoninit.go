@@ -10,8 +10,8 @@ var PostV05UsersAuthOnInitServerList = []string{
 
 type PostV05UsersAuthOnInitHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
-	XHiuID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIUID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
 }
 
 type PostV05UsersAuthOnInitRequests struct {

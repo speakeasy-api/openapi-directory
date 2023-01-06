@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.IticrSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.IticrRequestBody{
             CertificateParameters: &operations.IticrRequestBodyCertificateParameters{
-                FullName: "enim",
-                Certno: "voluptas",
+                FullName: "necessitatibus",
+                Certno: "placeat",
             },
-            ConsentArtifact: "consequatur",
+            ConsentArtifact: "voluptatem",
             Format: "pdf",
-            TxnID: "suscipit",
+            TxnID: "quia",
         },
     }
     
-    res, err := s.Sdk.Iticr(ctx, req)
+    res, err := s.APIs.Iticr(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Iticr` - ITI Certificate
 

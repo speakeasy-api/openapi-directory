@@ -1,7 +1,7 @@
 package shared
 
 type TerminateClientVpnConnectionsResult struct {
-	ClientVpnEndpointID *string
-	ConnectionStatuses  []TerminateConnectionStatus
-	Username            *string
+	ClientVpnEndpointID map[string]interface{}
+	ConnectionStatuses  map[string]interface{}
+	Username            map[string]interface{}
 }

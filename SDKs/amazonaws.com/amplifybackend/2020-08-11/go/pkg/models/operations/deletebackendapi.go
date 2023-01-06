@@ -22,12 +22,12 @@ type DeleteBackendAPIHeaders struct {
 // DeleteBackendAPIRequestBodyResourceConfig
 // The resource config for the data model, configured as a part of the Amplify project.
 type DeleteBackendAPIRequestBodyResourceConfig struct {
-	AdditionalAuthTypes []shared.BackendAPIAuthType          `json:"AdditionalAuthTypes,omitempty"`
-	APIName             *string                              `json:"ApiName,omitempty"`
-	ConflictResolution  *shared.BackendAPIConflictResolution `json:"ConflictResolution,omitempty"`
-	DefaultAuthType     *shared.BackendAPIAuthType           `json:"DefaultAuthType,omitempty"`
-	Service             *string                              `json:"Service,omitempty"`
-	TransformSchema     *string                              `json:"TransformSchema,omitempty"`
+	AdditionalAuthTypes map[string]interface{} `json:"AdditionalAuthTypes,omitempty"`
+	APIName             map[string]interface{} `json:"ApiName,omitempty"`
+	ConflictResolution  map[string]interface{} `json:"ConflictResolution,omitempty"`
+	DefaultAuthType     map[string]interface{} `json:"DefaultAuthType,omitempty"`
+	Service             map[string]interface{} `json:"Service,omitempty"`
+	TransformSchema     map[string]interface{} `json:"TransformSchema,omitempty"`
 }
 
 type DeleteBackendAPIRequestBody struct {

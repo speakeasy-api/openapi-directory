@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,24 +26,24 @@ func main() {
         Security: operations.TrcerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.TrcerRequestBody{
             CertificateParameters: &operations.TrcerRequestBodyCertificateParameters{
-                Dob: "provident",
-                FullName: "voluptatem",
-                RegNo: "sunt",
+                DOB: "deleniti",
+                FullName: "ratione",
+                REGNO: "voluptas",
             },
-            ConsentArtifact: "quia",
+            ConsentArtifact: "quas",
             Format: "pdf",
-            TxnID: "nobis",
+            TxnID: "incidunt",
         },
     }
     
-    res, err := s.Sdk.Trcer(ctx, req)
+    res, err := s.APIs.Trcer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,7 +57,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Trcer` - Transfer Certificate
 

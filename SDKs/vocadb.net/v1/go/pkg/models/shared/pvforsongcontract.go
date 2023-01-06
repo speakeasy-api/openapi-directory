@@ -7,24 +7,24 @@ import (
 type PvForSongContractPvTypeEnum string
 
 const (
-	PvForSongContractPvTypeEnumOriginal PvForSongContractPvTypeEnum = "Original"
-	PvForSongContractPvTypeEnumReprint  PvForSongContractPvTypeEnum = "Reprint"
-	PvForSongContractPvTypeEnumOther    PvForSongContractPvTypeEnum = "Other"
+	PVForSongContractPVTypeEnumOriginal PvForSongContractPvTypeEnum = "Original"
+	PVForSongContractPVTypeEnumReprint  PvForSongContractPvTypeEnum = "Reprint"
+	PVForSongContractPVTypeEnumOther    PvForSongContractPvTypeEnum = "Other"
 )
 
 type PvForSongContractServiceEnum string
 
 const (
-	PvForSongContractServiceEnumNicoNicoDouga PvForSongContractServiceEnum = "NicoNicoDouga"
-	PvForSongContractServiceEnumYoutube       PvForSongContractServiceEnum = "Youtube"
-	PvForSongContractServiceEnumSoundCloud    PvForSongContractServiceEnum = "SoundCloud"
-	PvForSongContractServiceEnumVimeo         PvForSongContractServiceEnum = "Vimeo"
-	PvForSongContractServiceEnumPiapro        PvForSongContractServiceEnum = "Piapro"
-	PvForSongContractServiceEnumBilibili      PvForSongContractServiceEnum = "Bilibili"
-	PvForSongContractServiceEnumFile          PvForSongContractServiceEnum = "File"
-	PvForSongContractServiceEnumLocalFile     PvForSongContractServiceEnum = "LocalFile"
-	PvForSongContractServiceEnumCreofuga      PvForSongContractServiceEnum = "Creofuga"
-	PvForSongContractServiceEnumBandcamp      PvForSongContractServiceEnum = "Bandcamp"
+	PVForSongContractServiceEnumNicoNicoDouga PvForSongContractServiceEnum = "NicoNicoDouga"
+	PVForSongContractServiceEnumYoutube       PvForSongContractServiceEnum = "Youtube"
+	PVForSongContractServiceEnumSoundCloud    PvForSongContractServiceEnum = "SoundCloud"
+	PVForSongContractServiceEnumVimeo         PvForSongContractServiceEnum = "Vimeo"
+	PVForSongContractServiceEnumPiapro        PvForSongContractServiceEnum = "Piapro"
+	PVForSongContractServiceEnumBilibili      PvForSongContractServiceEnum = "Bilibili"
+	PVForSongContractServiceEnumFile          PvForSongContractServiceEnum = "File"
+	PVForSongContractServiceEnumLocalFile     PvForSongContractServiceEnum = "LocalFile"
+	PVForSongContractServiceEnumCreofuga      PvForSongContractServiceEnum = "Creofuga"
+	PVForSongContractServiceEnumBandcamp      PvForSongContractServiceEnum = "Bandcamp"
 )
 
 type PvForSongContract struct {

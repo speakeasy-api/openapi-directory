@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,35 +34,35 @@ func main() {
     
     req := operations.SearchRequest{
         QueryParams: operations.SearchQueryParams{
-            Cursor: "ut",
-            Expr: "hic",
-            Facet: "veniam",
+            Cursor: "aliquid",
+            Expr: "quo",
+            Facet: "quo",
             Format: "sdk",
-            Fq: "ut",
-            Highlight: "animi",
+            Fq: "illo",
+            Highlight: "enim",
             Partial: true,
             Pretty: "true",
-            Q: "unde",
-            QOptions: "repellat",
-            QParser: "lucene",
-            Return: "tempore",
-            Size: 4592009160050073480,
-            Sort: "quia",
-            Start: 884502240364205692,
-            Stats: "voluptates",
+            Q: "eum",
+            QOptions: "mollitia",
+            QParser: "simple",
+            Return: "inventore",
+            Size: 5324849402215173012,
+            Sort: "sint",
+            Start: 6739391682417389115,
+            Stats: "sed",
         },
         Headers: operations.SearchHeaders{
-            XAmzAlgorithm: "consequatur",
-            XAmzContentSha256: "explicabo",
-            XAmzCredential: "qui",
-            XAmzDate: "perferendis",
-            XAmzSecurityToken: "ipsum",
-            XAmzSignature: "autem",
-            XAmzSignedHeaders: "perferendis",
+            XAmzAlgorithm: "omnis",
+            XAmzContentSha256: "consectetur",
+            XAmzCredential: "ducimus",
+            XAmzDate: "consequatur",
+            XAmzSecurityToken: "non",
+            XAmzSignature: "vel",
+            XAmzSignedHeaders: "at",
         },
     }
     
-    res, err := s.Sdk.Search(ctx, req)
+    res, err := s.Search(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

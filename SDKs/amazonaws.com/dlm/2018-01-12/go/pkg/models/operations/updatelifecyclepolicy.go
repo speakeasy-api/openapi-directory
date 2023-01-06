@@ -27,7 +27,7 @@ type UpdateLifecyclePolicyRequestBodyPolicyDetails struct {
 	PolicyType        *shared.PolicyTypeValuesEnum        `json:"PolicyType,omitempty"`
 	ResourceLocations []shared.ResourceLocationValuesEnum `json:"ResourceLocations,omitempty"`
 	ResourceTypes     []shared.ResourceTypeValuesEnum     `json:"ResourceTypes,omitempty"`
-	Schedules         []shared.Schedule                   `json:"Schedules,omitempty"`
+	Schedules         []shared.Schedule1                  `json:"Schedules,omitempty"`
 	TargetTags        []shared.Tag                        `json:"TargetTags,omitempty"`
 }
 

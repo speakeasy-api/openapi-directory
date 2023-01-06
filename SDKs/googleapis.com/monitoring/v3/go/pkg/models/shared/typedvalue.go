@@ -1,7 +1,5 @@
 package shared
 
-// TypedValue
-// A single strongly-typed value.
 type TypedValue struct {
 	BoolValue         *bool         `json:"boolValue,omitempty"`
 	DistributionValue *Distribution `json:"distributionValue,omitempty"`

@@ -46,8 +46,8 @@ type GetSessionInfoUsingGetRequest struct {
 type GetSessionInfoUsingGetResponse struct {
 	ContentType                                    string
 	StatusCode                                     int64
-	GetSessionInfoUsingGet200ApplicationJSONObject *GetSessionInfoUsingGet200ApplicationJSON
-	GetSessionInfoUsingGet400ApplicationJSONObject *GetSessionInfoUsingGet400ApplicationJSON
-	GetSessionInfoUsingGet401ApplicationJSONObject *GetSessionInfoUsingGet401ApplicationJSON
-	GetSessionInfoUsingGet500ApplicationJSONObject *GetSessionInfoUsingGet500ApplicationJSON
+	GETSessionInfoUsingGET200ApplicationJSONObject *GetSessionInfoUsingGet200ApplicationJSON
+	GETSessionInfoUsingGET400ApplicationJSONObject *GetSessionInfoUsingGet400ApplicationJSON
+	GETSessionInfoUsingGET401ApplicationJSONObject *GetSessionInfoUsingGet401ApplicationJSON
+	GETSessionInfoUsingGET500ApplicationJSONObject *GetSessionInfoUsingGet500ApplicationJSON
 }

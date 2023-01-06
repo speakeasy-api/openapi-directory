@@ -3,20 +3,20 @@ package operations
 type GetDescribeDataSharesForConsumerActionEnum string
 
 const (
-	GetDescribeDataSharesForConsumerActionEnumDescribeDataSharesForConsumer GetDescribeDataSharesForConsumerActionEnum = "DescribeDataSharesForConsumer"
+	GETDescribeDataSharesForConsumerActionEnumDescribeDataSharesForConsumer GetDescribeDataSharesForConsumerActionEnum = "DescribeDataSharesForConsumer"
 )
 
 type GetDescribeDataSharesForConsumerStatusEnum string
 
 const (
-	GetDescribeDataSharesForConsumerStatusEnumActive    GetDescribeDataSharesForConsumerStatusEnum = "ACTIVE"
-	GetDescribeDataSharesForConsumerStatusEnumAvailable GetDescribeDataSharesForConsumerStatusEnum = "AVAILABLE"
+	GETDescribeDataSharesForConsumerStatusEnumActive    GetDescribeDataSharesForConsumerStatusEnum = "ACTIVE"
+	GETDescribeDataSharesForConsumerStatusEnumAvailable GetDescribeDataSharesForConsumerStatusEnum = "AVAILABLE"
 )
 
 type GetDescribeDataSharesForConsumerVersionEnum string
 
 const (
-	GetDescribeDataSharesForConsumerVersionEnumTwoThousandAndTwelve1201 GetDescribeDataSharesForConsumerVersionEnum = "2012-12-01"
+	GETDescribeDataSharesForConsumerVersionEnumTwoThousandAndTwelve1201 GetDescribeDataSharesForConsumerVersionEnum = "2012-12-01"
 )
 
 type GetDescribeDataSharesForConsumerQueryParams struct {

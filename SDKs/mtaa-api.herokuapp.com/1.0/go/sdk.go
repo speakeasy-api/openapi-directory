@@ -1,11 +1,9 @@
 package sdk
 
 import (
-	"context"
-	"fmt"
 	"net/http"
-	"openapi/internal/utils"
-	"openapi/pkg/models/operations"
+
+	"openapi/pkg/utils"
 )
 
 var ServerList = []string{
@@ -17,6 +15,12 @@ type HTTPClient interface {
 }
 
 type SDK struct {
+	DistrictsInRegion     *DistrictsInRegion
+	StreetsInAWard        *StreetsInAWard
+	TanzaniaRegions       *TanzaniaRegions
+	WardsInADistrict      *WardsInADistrict
+	NeighborhoodInAStreet *NeighborhoodInAStreet
+
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
 
@@ -67,169 +71,50 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.DistrictsInRegion = NewDistrictsInRegion(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.StreetsInAWard = NewStreetsInAWard(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.TanzaniaRegions = NewTanzaniaRegions(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.WardsInADistrict = NewWardsInADistrict(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.NeighborhoodInAStreet = NewNeighborhoodInAStreet(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	return sdk
-}
-
-// DistrictsInARegion - Returns all districts in region
-// Returns a post code and all districts in a specified region
-func (s *SDK) DistrictsInARegion(ctx context.Context, request operations.DistrictsInARegionRequest) (*operations.DistrictsInARegionResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DistrictsInARegionResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	case httpRes.StatusCode == 404:
-	}
-
-	return res, nil
-}
-
-// TanzaniaRegions - Returns all regions present in Tanzania
-// Fetches all regions present in Tanzania and then return a response as json
-func (s *SDK) TanzaniaRegions(ctx context.Context, request operations.TanzaniaRegionsRequest) (*operations.TanzaniaRegionsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.TanzaniaRegionsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	}
-
-	return res, nil
-}
-
-// WardsInADistrict - Returns all wards in a district
-// Returns all wards in a  specified district and district postcode
-func (s *SDK) WardsInADistrict(ctx context.Context, request operations.WardsInADistrictRequest) (*operations.WardsInADistrictResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.WardsInADistrictResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	case httpRes.StatusCode == 404:
-	}
-
-	return res, nil
-}
-
-// NeighborhoodInAStreet - Returns all neighborhood in a street
-// Returns all neighborhood in a specified street
-func (s *SDK) NeighborhoodInAStreet(ctx context.Context, request operations.NeighborhoodInAStreetRequest) (*operations.NeighborhoodInAStreetResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}/{ward}/{street}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.NeighborhoodInAStreetResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	case httpRes.StatusCode == 404:
-	}
-
-	return res, nil
-}
-
-// StreetsInAWard - Returns all streets in a ward
-// Returns all streets in a specified ward and ward postcode
-func (s *SDK) StreetsInAWard(ctx context.Context, request operations.StreetsInAWardRequest) (*operations.StreetsInAWardResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}/{ward}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.StreetsInAWardResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-	case httpRes.StatusCode == 404:
-	}
-
-	return res, nil
 }

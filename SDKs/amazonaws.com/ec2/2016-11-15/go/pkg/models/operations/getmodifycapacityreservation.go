@@ -7,20 +7,20 @@ import (
 type GetModifyCapacityReservationActionEnum string
 
 const (
-	GetModifyCapacityReservationActionEnumModifyCapacityReservation GetModifyCapacityReservationActionEnum = "ModifyCapacityReservation"
+	GETModifyCapacityReservationActionEnumModifyCapacityReservation GetModifyCapacityReservationActionEnum = "ModifyCapacityReservation"
 )
 
 type GetModifyCapacityReservationEndDateTypeEnum string
 
 const (
-	GetModifyCapacityReservationEndDateTypeEnumUnlimited GetModifyCapacityReservationEndDateTypeEnum = "unlimited"
-	GetModifyCapacityReservationEndDateTypeEnumLimited   GetModifyCapacityReservationEndDateTypeEnum = "limited"
+	GETModifyCapacityReservationEndDateTypeEnumUnlimited GetModifyCapacityReservationEndDateTypeEnum = "unlimited"
+	GETModifyCapacityReservationEndDateTypeEnumLimited   GetModifyCapacityReservationEndDateTypeEnum = "limited"
 )
 
 type GetModifyCapacityReservationVersionEnum string
 
 const (
-	GetModifyCapacityReservationVersionEnumTwoThousandAndSixteen1115 GetModifyCapacityReservationVersionEnum = "2016-11-15"
+	GETModifyCapacityReservationVersionEnumTwoThousandAndSixteen1115 GetModifyCapacityReservationVersionEnum = "2016-11-15"
 )
 
 type GetModifyCapacityReservationQueryParams struct {

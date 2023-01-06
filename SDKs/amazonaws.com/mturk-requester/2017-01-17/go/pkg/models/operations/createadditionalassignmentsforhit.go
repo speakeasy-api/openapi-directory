@@ -7,7 +7,7 @@ import (
 type CreateAdditionalAssignmentsForHitxAmzTargetEnum string
 
 const (
-	CreateAdditionalAssignmentsForHitxAmzTargetEnumMTurkRequesterServiceV20170117CreateAdditionalAssignmentsForHit CreateAdditionalAssignmentsForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT"
+	CreateAdditionalAssignmentsForHITXAmzTargetEnumMTurkRequesterServiceV20170117CreateAdditionalAssignmentsForHit CreateAdditionalAssignmentsForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT"
 )
 
 type CreateAdditionalAssignmentsForHitHeaders struct {
@@ -28,7 +28,7 @@ type CreateAdditionalAssignmentsForHitRequest struct {
 
 type CreateAdditionalAssignmentsForHitResponse struct {
 	ContentType                               string
-	CreateAdditionalAssignmentsForHitResponse map[string]interface{}
+	CreateAdditionalAssignmentsForHITResponse map[string]interface{}
 	RequestError                              *interface{}
 	ServiceFault                              *interface{}
 	StatusCode                                int64

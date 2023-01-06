@@ -3,13 +3,13 @@ package operations
 type PostCreateUserActionEnum string
 
 const (
-	PostCreateUserActionEnumCreateUser PostCreateUserActionEnum = "CreateUser"
+	POSTCreateUserActionEnumCreateUser PostCreateUserActionEnum = "CreateUser"
 )
 
 type PostCreateUserVersionEnum string
 
 const (
-	PostCreateUserVersionEnumTwoThousandAndTen0508 PostCreateUserVersionEnum = "2010-05-08"
+	POSTCreateUserVersionEnumTwoThousandAndTen0508 PostCreateUserVersionEnum = "2010-05-08"
 )
 
 type PostCreateUserQueryParams struct {

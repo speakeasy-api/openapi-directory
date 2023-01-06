@@ -13,7 +13,7 @@ type ProtocolSnmpv3GetConfigRequest struct {
 }
 
 type ProtocolSnmpv3GetConfigResponse struct {
-	ConfigSnmPv3 *shared.ConfigSnmPv3
+	ConfigSNMPv3 *shared.ConfigSnmPv3
 	ContentType  string
 	StatusCode   int64
 }

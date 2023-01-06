@@ -82,6 +82,6 @@ type GetFloatingIpsIDActionsRequest struct {
 
 type GetFloatingIpsIDActionsResponse struct {
 	ContentType                                     string
-	GetFloatingIpsIDActions200ApplicationJSONObject *GetFloatingIpsIDActions200ApplicationJSON
 	StatusCode                                      int64
+	GetFloatingIpsIDActions200ApplicationJSONObject *GetFloatingIpsIDActions200ApplicationJSON
 }

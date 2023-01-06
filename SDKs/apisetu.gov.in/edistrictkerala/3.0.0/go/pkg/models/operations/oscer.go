@@ -83,7 +83,7 @@ type Oscer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Oscer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Oscer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Oscer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Oscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Oscer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Oscer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Oscer404ApplicationJSON struct {

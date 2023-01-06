@@ -19,6 +19,6 @@ type PostFactorsResidualizationRequest struct {
 
 type PostFactorsResidualizationResponse struct {
 	ContentType                                        string
-	PostFactorsResidualization200ApplicationJSONObject *PostFactorsResidualization200ApplicationJSON
 	StatusCode                                         int64
+	PostFactorsResidualization200ApplicationJSONObject *PostFactorsResidualization200ApplicationJSON
 }

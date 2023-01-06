@@ -4,6 +4,6 @@ package shared
 // Describes CloudWatch logging option updates.
 type CloudWatchLoggingOptionUpdate struct {
 	CloudWatchLoggingOptionID string  `json:"CloudWatchLoggingOptionId"`
-	LogStreamArnUpdate        *string `json:"LogStreamARNUpdate,omitempty"`
-	RoleArnUpdate             *string `json:"RoleARNUpdate,omitempty"`
+	LogStreamARNUpdate        *string `json:"LogStreamARNUpdate,omitempty"`
+	RoleARNUpdate             *string `json:"RoleARNUpdate,omitempty"`
 }

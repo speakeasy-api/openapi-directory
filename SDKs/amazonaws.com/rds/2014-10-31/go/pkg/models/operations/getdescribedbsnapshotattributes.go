@@ -3,18 +3,18 @@ package operations
 type GetDescribeDbSnapshotAttributesActionEnum string
 
 const (
-	GetDescribeDbSnapshotAttributesActionEnumDescribeDbSnapshotAttributes GetDescribeDbSnapshotAttributesActionEnum = "DescribeDBSnapshotAttributes"
+	GETDescribeDBSnapshotAttributesActionEnumDescribeDbSnapshotAttributes GetDescribeDbSnapshotAttributesActionEnum = "DescribeDBSnapshotAttributes"
 )
 
 type GetDescribeDbSnapshotAttributesVersionEnum string
 
 const (
-	GetDescribeDbSnapshotAttributesVersionEnumTwoThousandAndFourteen1031 GetDescribeDbSnapshotAttributesVersionEnum = "2014-10-31"
+	GETDescribeDBSnapshotAttributesVersionEnumTwoThousandAndFourteen1031 GetDescribeDbSnapshotAttributesVersionEnum = "2014-10-31"
 )
 
 type GetDescribeDbSnapshotAttributesQueryParams struct {
 	Action               GetDescribeDbSnapshotAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbSnapshotIdentifier string                                     `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
+	DBSnapshotIdentifier string                                     `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Version              GetDescribeDbSnapshotAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

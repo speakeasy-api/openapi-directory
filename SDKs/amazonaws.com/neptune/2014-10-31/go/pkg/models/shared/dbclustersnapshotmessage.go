@@ -1,6 +1,6 @@
 package shared
 
 type DbClusterSnapshotMessage struct {
-	DbClusterSnapshots []DbClusterSnapshot
+	DBClusterSnapshots []map[string]interface{}
 	Marker             *string
 }

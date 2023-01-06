@@ -3,13 +3,13 @@ package operations
 type PostGetPredictiveScalingForecastActionEnum string
 
 const (
-	PostGetPredictiveScalingForecastActionEnumGetPredictiveScalingForecast PostGetPredictiveScalingForecastActionEnum = "GetPredictiveScalingForecast"
+	POSTGetPredictiveScalingForecastActionEnumGetPredictiveScalingForecast PostGetPredictiveScalingForecastActionEnum = "GetPredictiveScalingForecast"
 )
 
 type PostGetPredictiveScalingForecastVersionEnum string
 
 const (
-	PostGetPredictiveScalingForecastVersionEnumTwoThousandAndEleven0101 PostGetPredictiveScalingForecastVersionEnum = "2011-01-01"
+	POSTGetPredictiveScalingForecastVersionEnumTwoThousandAndEleven0101 PostGetPredictiveScalingForecastVersionEnum = "2011-01-01"
 )
 
 type PostGetPredictiveScalingForecastQueryParams struct {

@@ -13,5 +13,5 @@ type ConfigurationEvent struct {
 	EventResourceType    *ConfigurationEventResourceTypeEnum `json:"EventResourceType,omitempty"`
 	EventStatus          *ConfigurationEventStatusEnum       `json:"EventStatus,omitempty"`
 	EventTime            *time.Time                          `json:"EventTime,omitempty"`
-	MonitoredResourceArn *string                             `json:"MonitoredResourceARN,omitempty"`
+	MonitoredResourceARN *string                             `json:"MonitoredResourceARN,omitempty"`
 }

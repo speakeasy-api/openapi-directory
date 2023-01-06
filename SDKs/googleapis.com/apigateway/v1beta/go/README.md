@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,98 +26,97 @@ func main() {
         Security: operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams{
-            Parent: "illo",
+            Parent: "tempora",
         },
         QueryParams: operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "omnis",
-            Alt: "media",
-            APIConfigID: "incidunt",
-            Callback: "qui",
-            Fields: "occaecati",
-            Key: "exercitationem",
-            OauthToken: "et",
-            PrettyPrint: false,
-            QuotaUser: "nam",
-            UploadType: "maxime",
-            UploadProtocol: "ut",
+            AccessToken: "in",
+            Alt: "proto",
+            APIConfigID: "asperiores",
+            Callback: "explicabo",
+            Fields: "molestiae",
+            Key: "commodi",
+            OauthToken: "blanditiis",
+            PrettyPrint: true,
+            QuotaUser: "eaque",
+            UploadType: "sequi",
+            UploadProtocol: "quos",
         },
         Request: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "quod",
+            DisplayName: "unde",
             GatewayConfig: &shared.ApigatewayGatewayConfig{
                 BackendConfig: &shared.ApigatewayBackendConfig{
-                    GoogleServiceAccount: "velit",
+                    GoogleServiceAccount: "enim",
                 },
             },
-            GatewayServiceAccount: "est",
+            GatewayServiceAccount: "iusto",
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "omnis",
-                        Path: "est",
+                        Contents: "non",
+                        Path: "dignissimos",
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "molestias",
-                            Path: "voluptas",
+                            Contents: "omnis",
+                            Path: "rerum",
+                        },
+                        shared.ApigatewayAPIConfigFile{
+                            Contents: "saepe",
+                            Path: "quasi",
                         },
                     },
                 },
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "doloribus",
-                        Path: "aspernatur",
+                        Contents: "rerum",
+                        Path: "ratione",
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "debitis",
-                            Path: "optio",
+                            Contents: "quod",
+                            Path: "sint",
                         },
+                    },
+                },
+                shared.ApigatewayAPIConfigGrpcServiceDefinition{
+                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
+                        Contents: "deserunt",
+                        Path: "et",
+                    },
+                    Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "impedit",
-                            Path: "soluta",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "rerum",
-                            Path: "quae",
+                            Contents: "ad",
+                            Path: "aperiam",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "dolor": "voluptates",
+                "pariatur": "minima",
+                "rerum": "aut",
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "ut",
-                    Path: "nam",
+                    Contents: "facere",
+                    Path: "non",
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "quo",
-                    Path: "pariatur",
-                },
-                shared.ApigatewayAPIConfigFile{
-                    Contents: "qui",
-                    Path: "ipsum",
+                    Contents: "consectetur",
+                    Path: "eum",
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "quia",
-                        Path: "blanditiis",
-                    },
-                },
-                shared.ApigatewayAPIConfigOpenAPIDocument{
-                    Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "qui",
-                        Path: "facere",
+                        Contents: "inventore",
+                        Path: "est",
                     },
                 },
             },

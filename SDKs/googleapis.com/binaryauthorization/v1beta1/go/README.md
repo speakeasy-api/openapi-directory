@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,51 +26,42 @@ func main() {
         Security: operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.BinaryauthorizationProjectsAttestorsCreatePathParams{
-            Parent: "ad",
+            Parent: "sed",
         },
         QueryParams: operations.BinaryauthorizationProjectsAttestorsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "amet",
-            Alt: "proto",
-            AttestorID: "ad",
-            Callback: "quia",
-            Fields: "amet",
-            Key: "quos",
-            OauthToken: "et",
+            DollarXgafv: "1",
+            AccessToken: "labore",
+            Alt: "json",
+            AttestorID: "delectus",
+            Callback: "eos",
+            Fields: "et",
+            Key: "sunt",
+            OauthToken: "corporis",
             PrettyPrint: false,
-            QuotaUser: "est",
-            UploadType: "consequatur",
-            UploadProtocol: "est",
+            QuotaUser: "in",
+            UploadType: "est",
+            UploadProtocol: "et",
         },
         Request: &shared.AttestorInput{
-            Description: "animi",
-            Etag: "laudantium",
-            Name: "perspiciatis",
+            Description: "saepe",
+            Etag: "voluptatem",
+            Name: "corporis",
             UserOwnedDrydockNote: &shared.UserOwnedDrydockNoteInput{
-                NoteReference: "dolorem",
+                NoteReference: "et",
                 PublicKeys: []shared.AttestorPublicKey{
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "et",
-                        Comment: "sed",
-                        ID: "assumenda",
+                        ASCIIArmoredPgpPublicKey: "repellat",
+                        Comment: "ullam",
+                        ID: "rerum",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "porro",
-                            SignatureAlgorithm: "SIGNATURE_ALGORITHM_UNSPECIFIED",
-                        },
-                    },
-                    shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "velit",
-                        Comment: "officiis",
-                        ID: "soluta",
-                        PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "et",
-                            SignatureAlgorithm: "EC_SIGN_P521_SHA512",
+                            PublicKeyPem: "sint",
+                            SignatureAlgorithm: "EC_SIGN_P384_SHA384",
                         },
                     },
                 },

@@ -17,6 +17,8 @@ const (
 	StoryRequestStickerNameEnumPhoenixSpreadingLove StoryRequestStickerNameEnum = "phoenix_spreading_love"
 )
 
+// StoryRequestInput
+// A story represents an activity associated with an object in the Asana system.
 type StoryRequestInput struct {
 	HTMLText    *string                      `json:"html_text,omitempty"`
 	IsPinned    *bool                        `json:"is_pinned,omitempty"`

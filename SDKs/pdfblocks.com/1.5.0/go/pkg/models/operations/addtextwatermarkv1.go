@@ -40,5 +40,5 @@ type AddTextWatermarkV1Response struct {
 	ContentType                                           string
 	StatusCode                                            int64
 	AddTextWatermarkV1200ApplicationPdfBinaryString       []byte
-	AddTextWatermarkV14XxApplicationProblemPlusJSONObject *AddTextWatermarkV14XxApplicationProblemPlusJSON
+	AddTextWatermarkV14XXApplicationProblemPlusJSONObject *AddTextWatermarkV14XxApplicationProblemPlusJSON
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,41 +27,42 @@ func main() {
             Option1: &operations.DriveactivityActivityQuerySecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.DriveactivityActivityQueryQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "sunt",
-            Alt: "json",
-            Callback: "voluptas",
-            Fields: "eos",
-            Key: "deserunt",
-            OauthToken: "aperiam",
-            PrettyPrint: true,
-            QuotaUser: "adipisci",
-            UploadType: "porro",
-            UploadProtocol: "enim",
+            DollarXgafv: "1",
+            AccessToken: "tempora",
+            Alt: "media",
+            Callback: "cum",
+            Fields: "voluptatibus",
+            Key: "sed",
+            OauthToken: "ipsum",
+            PrettyPrint: false,
+            QuotaUser: "iusto",
+            UploadType: "et",
+            UploadProtocol: "eos",
         },
         Request: &shared.QueryDriveActivityRequest{
-            AncestorName: "pariatur",
+            AncestorName: "qui",
             ConsolidationStrategy: &shared.ConsolidationStrategy{
                 Legacy: map[string]interface{}{
-                    "veniam": "et",
+                    "adipisci": "facere",
+                    "perspiciatis": "porro",
+                    "ut": "hic",
                 },
                 None: map[string]interface{}{
-                    "consequatur": "sed",
-                    "unde": "et",
-                    "aut": "eveniet",
+                    "vel": "non",
+                    "optio": "vel",
                 },
             },
-            Filter: "eaque",
-            ItemName: "qui",
-            PageSize: 1123870035686130435,
-            PageToken: "officiis",
+            Filter: "quae",
+            ItemName: "ut",
+            PageSize: 3377410601554867222,
+            PageToken: "consequatur",
         },
     }
     

@@ -13,7 +13,7 @@ type CreateFundsConfirmationConsentsHeaders struct {
 }
 
 type CreateFundsConfirmationConsentsSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateFundsConfirmationConsentsRequest struct {
@@ -25,7 +25,7 @@ type CreateFundsConfirmationConsentsRequest struct {
 type CreateFundsConfirmationConsentsResponse struct {
 	ContentType                         string
 	Headers                             map[string][]string
-	ObErrorResponse1                    *shared.ObErrorResponse1
-	ObFundsConfirmationConsentResponse1 *shared.ObFundsConfirmationConsentResponse1
+	OBErrorResponse1                    *shared.ObErrorResponse1
+	OBFundsConfirmationConsentResponse1 *shared.ObFundsConfirmationConsentResponse1
 	StatusCode                          int64
 }

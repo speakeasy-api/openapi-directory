@@ -1,0 +1,8 @@
+package shared
+
+type Streams struct {
+	HlsMp3128URL     *string `json:"hls_mp3_128_url,omitempty"`
+	HlsOpus64URL     *string `json:"hls_opus_64_url,omitempty"`
+	HTTPMp3128URL    *string `json:"http_mp3_128_url,omitempty"`
+	PreviewMp3128URL *string `json:"preview_mp3_128_url,omitempty"`
+}

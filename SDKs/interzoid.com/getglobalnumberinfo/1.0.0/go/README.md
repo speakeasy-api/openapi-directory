@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetglobalnumberinfoRequest{
         QueryParams: operations.GetglobalnumberinfoQueryParams{
-            Intlnumber: "repellendus",
-            License: "eum",
+            Intlnumber: "sed",
+            License: "aperiam",
         },
     }
     
-    res, err := s.Sdk.Getglobalnumberinfo(ctx, req)
+    res, err := s.GlobalPhoneNumberInformation.Getglobalnumberinfo(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,7 +43,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Global Phone Number Information
 
 * `Getglobalnumberinfo` - Get demographic information for a global telephone number
 

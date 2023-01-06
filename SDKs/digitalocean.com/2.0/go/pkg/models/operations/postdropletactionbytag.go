@@ -8,15 +8,15 @@ type PostDropletActionByTagQueryParams struct {
 	TagName *string `queryParam:"style=form,explode=true,name=tag_name"`
 }
 
-type PostDropletActionByTagRequest struct {
-	QueryParams PostDropletActionByTagQueryParams
-	Request     *interface{} `request:"mediaType=application/json"`
-}
-
 type PostDropletActionByTag401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type PostDropletActionByTagRequest struct {
+	QueryParams PostDropletActionByTagQueryParams
+	Request     *interface{} `request:"mediaType=application/json"`
 }
 
 type PostDropletActionByTagResponse struct {

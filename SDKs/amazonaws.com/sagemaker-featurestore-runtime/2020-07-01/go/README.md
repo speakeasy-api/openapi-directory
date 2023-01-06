@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,40 +34,55 @@ func main() {
     
     req := operations.BatchGetRecordRequest{
         Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "voluptatibus",
-            XAmzContentSha256: "tempore",
-            XAmzCredential: "laudantium",
-            XAmzDate: "perferendis",
-            XAmzSecurityToken: "impedit",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "quia",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "ut",
+            XAmzDate: "quas",
+            XAmzSecurityToken: "magni",
+            XAmzSignature: "fuga",
+            XAmzSignedHeaders: "quaerat",
         },
         Request: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "dolore",
+                    FeatureGroupName: "voluptas",
                     FeatureNames: []string{
-                        "reiciendis",
+                        "facere",
+                        "sed",
+                        "accusantium",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "corrupti",
+                        "quam",
                     },
                 },
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "ex",
+                    FeatureGroupName: "quo",
                     FeatureNames: []string{
-                        "voluptas",
+                        "incidunt",
+                        "vel",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "doloribus",
-                        "est",
+                        "laudantium",
+                        "sed",
+                        "laborum",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "dolore",
+                    FeatureNames: []string{
+                        "qui",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "modi",
+                        "occaecati",
+                        "dolor",
                     },
                 },
             },
         },
     }
     
-    res, err := s.Sdk.BatchGetRecord(ctx, req)
+    res, err := s.BatchGetRecord(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelKeyDeletionRequest{
         Headers: operations.CancelKeyDeletionHeaders{
-            XAmzAlgorithm: "quis",
-            XAmzContentSha256: "consequatur",
-            XAmzCredential: "tenetur",
-            XAmzDate: "alias",
-            XAmzSecurityToken: "similique",
-            XAmzSignature: "iure",
-            XAmzSignedHeaders: "fugit",
+            XAmzAlgorithm: "voluptatem",
+            XAmzContentSha256: "rerum",
+            XAmzCredential: "reiciendis",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "saepe",
+            XAmzSignedHeaders: "ratione",
             XAmzTarget: "TrentService.CancelKeyDeletion",
         },
         Request: shared.CancelKeyDeletionRequest{
-            KeyID: "deleniti",
+            KeyID: "a",
         },
     }
     
-    res, err := s.Sdk.CancelKeyDeletion(ctx, req)
+    res, err := s.CancelKeyDeletion(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -33,7 +33,6 @@ type PatchProxyRequest struct {
 
 type PatchProxyResponse struct {
 	ContentType                         string
-	Headers                             map[string][]string
 	StatusCode                          int64
 	PatchProxy200ApplicationJSONAny     *interface{}
 	PatchProxy401ApplicationJSONObject  *PatchProxy401ApplicationJSON

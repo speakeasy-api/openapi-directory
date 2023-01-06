@@ -9,19 +9,10 @@ type ReposListForksPathParams struct {
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type ReposListForksSortEnum string
-
-const (
-	ReposListForksSortEnumNewest     ReposListForksSortEnum = "newest"
-	ReposListForksSortEnumOldest     ReposListForksSortEnum = "oldest"
-	ReposListForksSortEnumStargazers ReposListForksSortEnum = "stargazers"
-	ReposListForksSortEnumWatchers   ReposListForksSortEnum = "watchers"
-)
-
 type ReposListForksQueryParams struct {
-	Page    *int64                  `queryParam:"style=form,explode=true,name=page"`
-	PerPage *int64                  `queryParam:"style=form,explode=true,name=per_page"`
-	Sort    *ReposListForksSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	Page    *int64            `queryParam:"style=form,explode=true,name=page"`
+	PerPage *int64            `queryParam:"style=form,explode=true,name=per_page"`
+	Sort    *shared.RepoEnum1 `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type ReposListForksRequest struct {

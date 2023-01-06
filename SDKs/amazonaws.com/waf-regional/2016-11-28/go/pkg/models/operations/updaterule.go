@@ -30,13 +30,13 @@ type UpdateRuleResponse struct {
 	ContentType                      string
 	StatusCode                       int64
 	UpdateRuleResponse               *shared.UpdateRuleResponse
-	WafInternalErrorException        *interface{}
-	WafInvalidAccountException       *interface{}
-	WafInvalidOperationException     *interface{}
-	WafInvalidParameterException     *interface{}
-	WafLimitsExceededException       *interface{}
-	WafNonexistentContainerException *interface{}
-	WafNonexistentItemException      *interface{}
-	WafReferencedItemException       *interface{}
-	WafStaleDataException            *interface{}
+	WAFInternalErrorException        *interface{}
+	WAFInvalidAccountException       *interface{}
+	WAFInvalidOperationException     *interface{}
+	WAFInvalidParameterException     *interface{}
+	WAFLimitsExceededException       *interface{}
+	WAFNonexistentContainerException *interface{}
+	WAFNonexistentItemException      *interface{}
+	WAFReferencedItemException       *interface{}
+	WAFStaleDataException            *interface{}
 }

@@ -1,5 +1,5 @@
 package shared
 
 type GetHlsStreamingSessionURLOutput struct {
-	HlsStreamingSessionURL *string `json:"HLSStreamingSessionURL,omitempty"`
+	HLSStreamingSessionURL *string `json:"HLSStreamingSessionURL,omitempty"`
 }

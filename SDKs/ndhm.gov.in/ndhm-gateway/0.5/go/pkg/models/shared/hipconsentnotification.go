@@ -9,21 +9,13 @@ type HipConsentNotificationNotificationConsentDetailCareContexts struct {
 	PatientReference     string `json:"patientReference"`
 }
 
-type HipConsentNotificationNotificationConsentDetailConsentManager struct {
-	ID string `json:"id"`
-}
-
-type HipConsentNotificationNotificationConsentDetailHip struct {
-	ID string `json:"id"`
-}
-
 type HipConsentNotificationNotificationConsentDetail struct {
 	CareContexts   []HipConsentNotificationNotificationConsentDetailCareContexts `json:"careContexts"`
 	ConsentID      string                                                        `json:"consentId"`
-	ConsentManager HipConsentNotificationNotificationConsentDetailConsentManager `json:"consentManager"`
+	ConsentManager map[string]interface{}                                        `json:"consentManager"`
 	CreatedAt      time.Time                                                     `json:"createdAt"`
 	HiTypes        []HiTypeEnumEnum                                              `json:"hiTypes"`
-	Hip            HipConsentNotificationNotificationConsentDetailHip            `json:"hip"`
+	Hip            map[string]interface{}                                        `json:"hip"`
 	Patient        ConsentManagerPatientID                                       `json:"patient"`
 	Permission     Permission                                                    `json:"permission"`
 	Purpose        UsePurpose                                                    `json:"purpose"`

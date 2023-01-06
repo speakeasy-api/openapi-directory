@@ -15,6 +15,6 @@ type PostPortfolioOptimizationInverseVarianceWeightedRequest struct {
 
 type PostPortfolioOptimizationInverseVarianceWeightedResponse struct {
 	ContentType                                                              string
-	PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject *PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSON
 	StatusCode                                                               int64
+	PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject *PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJSON
 }

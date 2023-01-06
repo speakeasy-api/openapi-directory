@@ -3,13 +3,13 @@ package operations
 type PostCreateApplicationVersionActionEnum string
 
 const (
-	PostCreateApplicationVersionActionEnumCreateApplicationVersion PostCreateApplicationVersionActionEnum = "CreateApplicationVersion"
+	POSTCreateApplicationVersionActionEnumCreateApplicationVersion PostCreateApplicationVersionActionEnum = "CreateApplicationVersion"
 )
 
 type PostCreateApplicationVersionVersionEnum string
 
 const (
-	PostCreateApplicationVersionVersionEnumTwoThousandAndTen1201 PostCreateApplicationVersionVersionEnum = "2010-12-01"
+	POSTCreateApplicationVersionVersionEnumTwoThousandAndTen1201 PostCreateApplicationVersionVersionEnum = "2010-12-01"
 )
 
 type PostCreateApplicationVersionQueryParams struct {

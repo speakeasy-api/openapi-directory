@@ -11,6 +11,8 @@ const (
 	ReleaseAssetStateEnumOpen     ReleaseAssetStateEnum = "open"
 )
 
+// ReleaseAssetSimpleUser
+// Simple User
 type ReleaseAssetSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

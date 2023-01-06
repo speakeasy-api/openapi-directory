@@ -5,7 +5,7 @@ import (
 )
 
 type SkmstRequestBodyCertificateParameters struct {
-	Dob        string `json:"DOB"`
+	DOB        string `json:"DOB"`
 	FullName   string `json:"FullName"`
 	RollNumber string `json:"RollNumber"`
 	Sem        string `json:"Sem"`
@@ -85,7 +85,7 @@ type Skmst404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Skmst404ApplicationJSONErrorDescriptionEnumNoRecordFound               Skmst404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Skmst404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Skmst404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Skmst404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Skmst404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Skmst404ApplicationJSON struct {

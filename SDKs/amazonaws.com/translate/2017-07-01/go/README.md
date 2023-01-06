@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,35 @@ func main() {
     
     req := operations.CreateParallelDataRequest{
         Headers: operations.CreateParallelDataHeaders{
-            XAmzAlgorithm: "tempora",
-            XAmzContentSha256: "quaerat",
-            XAmzCredential: "vel",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "nisi",
-            XAmzSignature: "unde",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "cumque",
+            XAmzContentSha256: "odit",
+            XAmzCredential: "tempore",
+            XAmzDate: "maiores",
+            XAmzSecurityToken: "dignissimos",
+            XAmzSignature: "eaque",
+            XAmzSignedHeaders: "voluptatum",
             XAmzTarget: "AWSShineFrontendService_20170701.CreateParallelData",
         },
         Request: shared.CreateParallelDataRequest{
-            ClientToken: "eum",
-            Description: "quae",
+            ClientToken: "corporis",
+            Description: map[string]interface{}{
+                "autem": "qui",
+                "est": "est",
+                "consequatur": "quia",
+            },
             EncryptionKey: &shared.EncryptionKey{
-                ID: "distinctio",
+                ID: "ad",
                 Type: "KMS",
             },
-            Name: "sed",
+            Name: "quia",
             ParallelDataConfig: shared.ParallelDataConfig{
-                Format: "TMX",
-                S3URI: "autem",
+                Format: "TSV",
+                S3URI: "totam",
             },
         },
     }
     
-    res, err := s.Sdk.CreateParallelData(ctx, req)
+    res, err := s.CreateParallelData(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

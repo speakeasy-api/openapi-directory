@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,9 +24,9 @@ func main() {
     
     req := operations.AuthTokenRequest{
         Request: &shared.TokenRequest{
-            ClientID: "occaecati",
-            ClientSecret: "debitis",
-            GrantType: "et",
+            ClientID: "alias",
+            ClientSecret: "culpa",
+            GrantType: "omnis",
         },
     }
     
@@ -93,6 +92,7 @@ func main() {
 
 * `WebhooksFetchAll` - Fetch active webhooks
 * `WebhooksSubscribe` - Subscribe to message events
+* `WebhooksUnsubscribe` - Unsubscribe to message events
 
 <!-- End SDK Available Operations -->
 

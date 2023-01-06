@@ -268,15 +268,15 @@ type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTime
 type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum string
 
 const (
-	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnumUk GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum = "UK"
-	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnumEu GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum = "EU"
+	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnumUk GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum = "UK"
+	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnumEu GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum = "EU"
 )
 
 // GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrand
 // Brand
 type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrand struct {
 	TrademarkID      string                                                                                                `json:"TrademarkID"`
-	TrademarkIpoCode GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
+	TrademarkIPOCode GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum `json:"TrademarkIPOCode"`
 }
 
 // GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisationOrganisationName
@@ -288,8 +288,8 @@ type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisatio
 // GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisation
 // Parent organisation
 type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisation struct {
-	Bic              *string                                                                                                        `json:"BIC,omitempty"`
-	Lei              *string                                                                                                        `json:"LEI,omitempty"`
+	BIC              *string                                                                                                        `json:"BIC,omitempty"`
+	LEI              *string                                                                                                        `json:"LEI,omitempty"`
 	OrganisationName GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisationOrganisationName `json:"OrganisationName"`
 }
 
@@ -308,7 +308,7 @@ type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchPlannedBran
 }
 
 type GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranch struct {
-	AtmAtBranch                 bool                                                                                             `json:"ATMAtBranch"`
+	ATMAtBranch                 bool                                                                                             `json:"ATMAtBranch"`
 	AccessibilityTypes          *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum          `json:"AccessibilityTypes,omitempty"`
 	Address                     GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAddress                          `json:"Address"`
 	AlternatePhone              []GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAlternatePhone                 `json:"AlternatePhone,omitempty"`
@@ -380,7 +380,7 @@ type GetBranchesResponse struct {
 	FiveHundredAndThreeErrorObject                                   *GetBranches503ErrorObject
 	ContentType                                                      string
 	ErrorObject                                                      *GetBranchesErrorObject
-	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	Headers                                                          map[string][]string
 	StatusCode                                                       int64
+	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONObject *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSON
 }

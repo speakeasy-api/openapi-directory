@@ -27,6 +27,6 @@ type GetMostviewedSectionTimePeriodJSONRequest struct {
 
 type GetMostviewedSectionTimePeriodJSONResponse struct {
 	ContentType                                                string
-	GetMostviewedSectionTimePeriodJSON200ApplicationJSONObject *GetMostviewedSectionTimePeriodJSON200ApplicationJSON
+	GETMostviewedSectionTimePeriodJSON200ApplicationJSONObject *GetMostviewedSectionTimePeriodJSON200ApplicationJSON
 	StatusCode                                                 int64
 }

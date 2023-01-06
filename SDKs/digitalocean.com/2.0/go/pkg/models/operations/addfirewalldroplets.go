@@ -8,15 +8,15 @@ type AddFirewallDropletsPathParams struct {
 	FirewallID string `pathParam:"style=simple,explode=false,name=firewall_id"`
 }
 
-type AddFirewallDropletsRequest struct {
-	PathParams AddFirewallDropletsPathParams
-	Request    *interface{} `request:"mediaType=application/json"`
-}
-
 type AddFirewallDroplets401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type AddFirewallDropletsRequest struct {
+	PathParams AddFirewallDropletsPathParams
+	Request    *interface{} `request:"mediaType=application/json"`
 }
 
 type AddFirewallDropletsResponse struct {

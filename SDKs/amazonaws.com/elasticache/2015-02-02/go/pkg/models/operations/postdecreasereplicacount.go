@@ -3,13 +3,13 @@ package operations
 type PostDecreaseReplicaCountActionEnum string
 
 const (
-	PostDecreaseReplicaCountActionEnumDecreaseReplicaCount PostDecreaseReplicaCountActionEnum = "DecreaseReplicaCount"
+	POSTDecreaseReplicaCountActionEnumDecreaseReplicaCount PostDecreaseReplicaCountActionEnum = "DecreaseReplicaCount"
 )
 
 type PostDecreaseReplicaCountVersionEnum string
 
 const (
-	PostDecreaseReplicaCountVersionEnumTwoThousandAndFifteen0202 PostDecreaseReplicaCountVersionEnum = "2015-02-02"
+	POSTDecreaseReplicaCountVersionEnumTwoThousandAndFifteen0202 PostDecreaseReplicaCountVersionEnum = "2015-02-02"
 )
 
 type PostDecreaseReplicaCountQueryParams struct {

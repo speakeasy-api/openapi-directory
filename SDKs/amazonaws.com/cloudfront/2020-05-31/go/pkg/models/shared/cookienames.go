@@ -3,6 +3,6 @@ package shared
 // CookieNames
 // Contains a list of cookie names.
 type CookieNames struct {
-	Items    []string
+	Items    []map[string]interface{}
 	Quantity int64
 }

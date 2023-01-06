@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,22 +35,22 @@ func main() {
     req := operations.GetAddSourceIdentifierToSubscriptionRequest{
         QueryParams: operations.GetAddSourceIdentifierToSubscriptionQueryParams{
             Action: "AddSourceIdentifierToSubscription",
-            SourceIdentifier: "sequi",
-            SubscriptionName: "doloremque",
+            SourceIdentifier: "voluptatem",
+            SubscriptionName: "sit",
             Version: "2013-09-09",
         },
         Headers: operations.GetAddSourceIdentifierToSubscriptionHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "omnis",
-            XAmzCredential: "qui",
-            XAmzDate: "voluptate",
-            XAmzSecurityToken: "quia",
-            XAmzSignature: "numquam",
+            XAmzAlgorithm: "ea",
+            XAmzContentSha256: "quod",
+            XAmzCredential: "quia",
+            XAmzDate: "nisi",
+            XAmzSecurityToken: "sunt",
+            XAmzSignature: "magni",
             XAmzSignedHeaders: "voluptates",
         },
     }
     
-    res, err := s.Sdk.GetAddSourceIdentifierToSubscription(ctx, req)
+    res, err := s.GetAddSourceIdentifierToSubscription(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -77,9 +76,6 @@ func main() {
 * `GetDeleteEventSubscription`
 * `GetDeleteOptionGroup`
 * `GetDownloadDbLogFilePortion`
-* `GetModifyDbInstance`
-* `GetModifyDbSubnetGroup`
-* `GetModifyEventSubscription`
 * `GetPromoteReadReplica`
 * `GetRebootDbInstance`
 * `GetRemoveSourceIdentifierFromSubscription`

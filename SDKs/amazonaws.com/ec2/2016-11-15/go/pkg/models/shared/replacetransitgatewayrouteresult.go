@@ -1,5 +1,5 @@
 package shared
 
 type ReplaceTransitGatewayRouteResult struct {
-	Route *TransitGatewayRoute
+	Route map[string]interface{}
 }

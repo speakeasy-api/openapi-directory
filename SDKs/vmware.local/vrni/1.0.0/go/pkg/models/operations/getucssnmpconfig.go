@@ -19,6 +19,6 @@ type GetUcsSnmpConfigRequest struct {
 
 type GetUcsSnmpConfigResponse struct {
 	ContentType string
-	SnmpConfig  *shared.SnmpConfig
+	SNMPConfig  *shared.SnmpConfig
 	StatusCode  int64
 }

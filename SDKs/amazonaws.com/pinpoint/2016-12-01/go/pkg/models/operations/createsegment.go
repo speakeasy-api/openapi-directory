@@ -21,10 +21,10 @@ type CreateSegmentHeaders struct {
 // CreateSegmentRequestBodyWriteSegmentRequest
 // Specifies the configuration, dimension, and other settings for a segment. A WriteSegmentRequest object can include a Dimensions object or a SegmentGroups object, but not both.
 type CreateSegmentRequestBodyWriteSegmentRequest struct {
-	Dimensions    *shared.SegmentDimensions `json:"Dimensions,omitempty"`
-	Name          *string                   `json:"Name,omitempty"`
-	SegmentGroups *shared.SegmentGroupList  `json:"SegmentGroups,omitempty"`
-	Tags          map[string]string         `json:"tags,omitempty"`
+	Dimensions    *shared.SegmentDimensions1 `json:"Dimensions,omitempty"`
+	Name          *string                    `json:"Name,omitempty"`
+	SegmentGroups *shared.SegmentGroupList   `json:"SegmentGroups,omitempty"`
+	Tags          map[string]string          `json:"tags,omitempty"`
 }
 
 type CreateSegmentRequestBody struct {

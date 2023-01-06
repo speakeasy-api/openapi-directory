@@ -1,0 +1,8 @@
+package shared
+
+type PerformanceIndicatorFormulaOperatorNameEnum string
+
+const (
+	PerformanceIndicatorFormulaOperatorNameEnumMultiply PerformanceIndicatorFormulaOperatorNameEnum = "Multiply"
+	PerformanceIndicatorFormulaOperatorNameEnumDivide   PerformanceIndicatorFormulaOperatorNameEnum = "Divide"
+)

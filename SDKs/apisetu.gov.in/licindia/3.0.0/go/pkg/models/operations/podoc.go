@@ -5,9 +5,9 @@ import (
 )
 
 type PodocRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	PolDob   string `json:"PolDOB"`
+	PolDOB   string `json:"PolDOB"`
 	PolicyNo string `json:"PolicyNo"`
 }
 
@@ -84,7 +84,7 @@ type Podoc404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Podoc404ApplicationJSONErrorDescriptionEnumNoRecordFound               Podoc404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Podoc404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Podoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Podoc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Podoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Podoc404ApplicationJSON struct {

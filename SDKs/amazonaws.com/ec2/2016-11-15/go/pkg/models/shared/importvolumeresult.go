@@ -1,5 +1,5 @@
 package shared
 
 type ImportVolumeResult struct {
-	ConversionTask *ConversionTask
+	ConversionTask map[string]interface{}
 }

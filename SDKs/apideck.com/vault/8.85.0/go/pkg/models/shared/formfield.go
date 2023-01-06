@@ -5,6 +5,7 @@ type FormField struct {
 	CustomField       *bool         `json:"custom_field,omitempty"`
 	Description       *string       `json:"description,omitempty"`
 	Disabled          *bool         `json:"disabled,omitempty"`
+	Hidden            *bool         `json:"hidden,omitempty"`
 	ID                *string       `json:"id,omitempty"`
 	Label             *string       `json:"label,omitempty"`
 	Options           []interface{} `json:"options,omitempty"`

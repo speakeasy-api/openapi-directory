@@ -13,7 +13,7 @@ type CreateFundsConfirmationsHeaders struct {
 }
 
 type CreateFundsConfirmationsSecurity struct {
-	PsuoAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type CreateFundsConfirmationsRequest struct {
@@ -25,7 +25,7 @@ type CreateFundsConfirmationsRequest struct {
 type CreateFundsConfirmationsResponse struct {
 	ContentType                  string
 	Headers                      map[string][]string
-	ObErrorResponse1             *shared.ObErrorResponse1
-	ObFundsConfirmationResponse1 *shared.ObFundsConfirmationResponse1
+	OBErrorResponse1             *shared.ObErrorResponse1
+	OBFundsConfirmationResponse1 *shared.ObFundsConfirmationResponse1
 	StatusCode                   int64
 }

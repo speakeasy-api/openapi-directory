@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -51,7 +51,7 @@ func (s *Authentication) PostLogin(ctx context.Context, request operations.PostL
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s._defaultClient
+	client := s._securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

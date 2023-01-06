@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -79,8 +79,6 @@ func (s *Execute) DeleteProxy(ctx context.Context, request operations.DeleteProx
 			res.DeleteProxy401ApplicationJSONObject = out
 		}
 	default:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *interface{}
@@ -145,8 +143,6 @@ func (s *Execute) GetProxy(ctx context.Context, request operations.GetProxyReque
 			res.GetProxy401ApplicationJSONObject = out
 		}
 	default:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *interface{}
@@ -211,8 +207,6 @@ func (s *Execute) OptionsProxy(ctx context.Context, request operations.OptionsPr
 			res.OptionsProxy401ApplicationJSONObject = out
 		}
 	default:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *interface{}
@@ -284,8 +278,6 @@ func (s *Execute) PatchProxy(ctx context.Context, request operations.PatchProxyR
 			res.PatchProxy401ApplicationJSONObject = out
 		}
 	default:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *interface{}
@@ -357,8 +349,6 @@ func (s *Execute) PostProxy(ctx context.Context, request operations.PostProxyReq
 			res.PostProxy401ApplicationJSONObject = out
 		}
 	default:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *interface{}
@@ -430,8 +420,6 @@ func (s *Execute) PutProxy(ctx context.Context, request operations.PutProxyReque
 			res.PutProxy401ApplicationJSONObject = out
 		}
 	default:
-		res.Headers = httpRes.Header
-
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *interface{}

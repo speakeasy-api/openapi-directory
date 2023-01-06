@@ -1,6 +1,6 @@
 package shared
 
 type ListDomainsResult struct {
-	DomainNames []string
+	DomainNames []map[string]interface{}
 	NextToken   *string
 }

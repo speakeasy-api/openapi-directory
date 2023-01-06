@@ -3,6 +3,6 @@ package shared
 // ClustersMessage
 // Contains the output from the <a>DescribeClusters</a> action.
 type ClustersMessage struct {
-	Clusters []Cluster
+	Clusters []map[string]interface{}
 	Marker   *string
 }

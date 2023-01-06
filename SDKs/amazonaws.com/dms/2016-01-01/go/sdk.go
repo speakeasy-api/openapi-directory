@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -347,7 +348,7 @@ func (s *SDK) CreateEndpoint(ctx context.Context, request operations.CreateEndpo
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -499,7 +500,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.SnsInvalidTopicFault = out
+			res.SNSInvalidTopicFault = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -509,7 +510,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.SnsNoAuthorizationFault = out
+			res.SNSNoAuthorizationFault = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -519,7 +520,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.KmsAccessDeniedFault = out
+			res.KMSAccessDeniedFault = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -529,7 +530,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.KmsDisabledFault = out
+			res.KMSDisabledFault = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -539,7 +540,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.KmsInvalidStateFault = out
+			res.KMSInvalidStateFault = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -549,7 +550,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.KmsNotFoundFault = out
+			res.KMSNotFoundFault = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -559,7 +560,7 @@ func (s *SDK) CreateEventSubscription(ctx context.Context, request operations.Cr
 				return nil, err
 			}
 
-			res.KmsThrottlingFault = out
+			res.KMSThrottlingFault = out
 		}
 	}
 
@@ -711,7 +712,7 @@ func (s *SDK) CreateReplicationInstance(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	}
 
@@ -925,7 +926,7 @@ func (s *SDK) CreateReplicationTask(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3169,7 +3170,7 @@ func (s *SDK) ModifyEndpoint(ctx context.Context, request operations.ModifyEndpo
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3261,7 +3262,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.SnsInvalidTopicFault = out
+			res.SNSInvalidTopicFault = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -3271,7 +3272,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.SnsNoAuthorizationFault = out
+			res.SNSNoAuthorizationFault = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3281,7 +3282,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.KmsAccessDeniedFault = out
+			res.KMSAccessDeniedFault = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -3291,7 +3292,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.KmsDisabledFault = out
+			res.KMSDisabledFault = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -3301,7 +3302,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.KmsInvalidStateFault = out
+			res.KMSInvalidStateFault = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -3311,7 +3312,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.KmsNotFoundFault = out
+			res.KMSNotFoundFault = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -3321,7 +3322,7 @@ func (s *SDK) ModifyEventSubscription(ctx context.Context, request operations.Mo
 				return nil, err
 			}
 
-			res.KmsThrottlingFault = out
+			res.KMSThrottlingFault = out
 		}
 	}
 
@@ -3647,7 +3648,7 @@ func (s *SDK) ModifyReplicationTask(ctx context.Context, request operations.Modi
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	}
 
@@ -3739,7 +3740,7 @@ func (s *SDK) MoveReplicationTask(ctx context.Context, request operations.MoveRe
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -3903,7 +3904,7 @@ func (s *SDK) RefreshSchemas(ctx context.Context, request operations.RefreshSche
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {
@@ -4293,7 +4294,7 @@ func (s *SDK) StartReplicationTaskAssessmentRun(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.KmsAccessDeniedFault = out
+			res.KMSAccessDeniedFault = out
 		}
 	case httpRes.StatusCode == 484:
 		switch {
@@ -4303,7 +4304,7 @@ func (s *SDK) StartReplicationTaskAssessmentRun(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.KmsDisabledFault = out
+			res.KMSDisabledFault = out
 		}
 	case httpRes.StatusCode == 485:
 		switch {
@@ -4313,7 +4314,7 @@ func (s *SDK) StartReplicationTaskAssessmentRun(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.KmsFault = out
+			res.KMSFault = out
 		}
 	case httpRes.StatusCode == 486:
 		switch {
@@ -4323,7 +4324,7 @@ func (s *SDK) StartReplicationTaskAssessmentRun(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.KmsInvalidStateFault = out
+			res.KMSInvalidStateFault = out
 		}
 	case httpRes.StatusCode == 487:
 		switch {
@@ -4333,7 +4334,7 @@ func (s *SDK) StartReplicationTaskAssessmentRun(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.KmsNotFoundFault = out
+			res.KMSNotFoundFault = out
 		}
 	case httpRes.StatusCode == 488:
 		switch {
@@ -4343,7 +4344,7 @@ func (s *SDK) StartReplicationTaskAssessmentRun(ctx context.Context, request ope
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 489:
 		switch {
@@ -4527,7 +4528,7 @@ func (s *SDK) TestConnection(ctx context.Context, request operations.TestConnect
 				return nil, err
 			}
 
-			res.KmsKeyNotAccessibleFault = out
+			res.KMSKeyNotAccessibleFault = out
 		}
 	case httpRes.StatusCode == 483:
 		switch {

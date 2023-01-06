@@ -22,6 +22,6 @@ type GetSearchRequest struct {
 
 type GetSearchResponse struct {
 	ContentType                       string
-	GetSearch200ApplicationJSONObject *GetSearch200ApplicationJSON
 	StatusCode                        int64
+	GetSearch200ApplicationJSONObject *GetSearch200ApplicationJSON
 }

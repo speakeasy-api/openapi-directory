@@ -3,20 +3,20 @@ package operations
 type GetGetSSHPublicKeyActionEnum string
 
 const (
-	GetGetSSHPublicKeyActionEnumGetSSHPublicKey GetGetSSHPublicKeyActionEnum = "GetSSHPublicKey"
+	GETGETSSHPublicKeyActionEnumGetSSHPublicKey GetGetSSHPublicKeyActionEnum = "GetSSHPublicKey"
 )
 
 type GetGetSSHPublicKeyEncodingEnum string
 
 const (
-	GetGetSSHPublicKeyEncodingEnumSSH GetGetSSHPublicKeyEncodingEnum = "SSH"
-	GetGetSSHPublicKeyEncodingEnumPem GetGetSSHPublicKeyEncodingEnum = "PEM"
+	GETGETSSHPublicKeyEncodingEnumSSH GetGetSSHPublicKeyEncodingEnum = "SSH"
+	GETGETSSHPublicKeyEncodingEnumPem GetGetSSHPublicKeyEncodingEnum = "PEM"
 )
 
 type GetGetSSHPublicKeyVersionEnum string
 
 const (
-	GetGetSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetGetSSHPublicKeyVersionEnum = "2010-05-08"
+	GETGETSSHPublicKeyVersionEnumTwoThousandAndTen0508 GetGetSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
 type GetGetSSHPublicKeyQueryParams struct {

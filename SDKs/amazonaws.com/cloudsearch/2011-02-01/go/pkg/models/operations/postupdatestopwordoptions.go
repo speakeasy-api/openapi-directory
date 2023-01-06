@@ -3,13 +3,13 @@ package operations
 type PostUpdateStopwordOptionsActionEnum string
 
 const (
-	PostUpdateStopwordOptionsActionEnumUpdateStopwordOptions PostUpdateStopwordOptionsActionEnum = "UpdateStopwordOptions"
+	POSTUpdateStopwordOptionsActionEnumUpdateStopwordOptions PostUpdateStopwordOptionsActionEnum = "UpdateStopwordOptions"
 )
 
 type PostUpdateStopwordOptionsVersionEnum string
 
 const (
-	PostUpdateStopwordOptionsVersionEnumTwoThousandAndEleven0201 PostUpdateStopwordOptionsVersionEnum = "2011-02-01"
+	POSTUpdateStopwordOptionsVersionEnumTwoThousandAndEleven0201 PostUpdateStopwordOptionsVersionEnum = "2011-02-01"
 )
 
 type PostUpdateStopwordOptionsQueryParams struct {

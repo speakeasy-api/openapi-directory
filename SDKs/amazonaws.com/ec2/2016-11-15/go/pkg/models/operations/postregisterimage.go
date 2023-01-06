@@ -3,13 +3,13 @@ package operations
 type PostRegisterImageActionEnum string
 
 const (
-	PostRegisterImageActionEnumRegisterImage PostRegisterImageActionEnum = "RegisterImage"
+	POSTRegisterImageActionEnumRegisterImage PostRegisterImageActionEnum = "RegisterImage"
 )
 
 type PostRegisterImageVersionEnum string
 
 const (
-	PostRegisterImageVersionEnumTwoThousandAndSixteen1115 PostRegisterImageVersionEnum = "2016-11-15"
+	POSTRegisterImageVersionEnumTwoThousandAndSixteen1115 PostRegisterImageVersionEnum = "2016-11-15"
 )
 
 type PostRegisterImageQueryParams struct {

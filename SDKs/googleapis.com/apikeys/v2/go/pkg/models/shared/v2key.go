@@ -1,13 +1,5 @@
 package shared
 
-// V2KeyInput
-// The representation of a key managed by the API Keys API.
-type V2KeyInput struct {
-	Annotations  map[string]string `json:"annotations,omitempty"`
-	DisplayName  *string           `json:"displayName,omitempty"`
-	Restrictions *V2Restrictions   `json:"restrictions,omitempty"`
-}
-
 // V2Key
 // The representation of a key managed by the API Keys API.
 type V2Key struct {
@@ -21,4 +13,12 @@ type V2Key struct {
 	Restrictions *V2Restrictions   `json:"restrictions,omitempty"`
 	UID          *string           `json:"uid,omitempty"`
 	UpdateTime   *string           `json:"updateTime,omitempty"`
+}
+
+// V2KeyInput
+// The representation of a key managed by the API Keys API.
+type V2KeyInput struct {
+	Annotations  map[string]string `json:"annotations,omitempty"`
+	DisplayName  *string           `json:"displayName,omitempty"`
+	Restrictions *V2Restrictions   `json:"restrictions,omitempty"`
 }

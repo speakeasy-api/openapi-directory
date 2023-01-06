@@ -1,0 +1,44 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+    
+    req := operations.EpfscRequest{
+        Security: operations.EpfscSecurity{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            ClientID: shared.SchemeClientID{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        },
+        Request: &operations.EpfscRequestBody{
+            CertificateParameters: &operations.EpfscRequestBodyCertificateParameters{
+                DOB: "culpa",
+                FullName: "est",
+                SCNO: "soluta",
+            },
+            ConsentArtifact: "omnis",
+            Format: "pdf",
+            TxnID: "quidem",
+        },
+    }
+    
+    res, err := s.APIs.Epfsc(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+```
+<!-- End SDK Example Usage -->

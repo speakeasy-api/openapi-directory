@@ -12,9 +12,9 @@ type DbCluster struct {
 	ActivityStreamMode               *ActivityStreamModeEnum
 	ActivityStreamStatus             *ActivityStreamStatusEnum
 	AllocatedStorage                 *int64
-	AssociatedRoles                  []DbClusterRole
+	AssociatedRoles                  []map[string]interface{}
 	AutomaticRestartTime             *time.Time
-	AvailabilityZones                []string
+	AvailabilityZones                []map[string]interface{}
 	BacktrackConsumedChangeRecords   *int64
 	BacktrackWindow                  *int64
 	BackupRetentionPeriod            *int64
@@ -25,16 +25,16 @@ type DbCluster struct {
 	CopyTagsToSnapshot               *bool
 	CrossAccountClone                *bool
 	CustomEndpoints                  []string
-	DbClusterArn                     *string
-	DbClusterIdentifier              *string
-	DbClusterMembers                 []DbClusterMember
-	DbClusterOptionGroupMemberships  []DbClusterOptionGroupStatus
-	DbClusterParameterGroup          *string
-	DbSubnetGroup                    *string
+	DBClusterArn                     *string
+	DBClusterIdentifier              *string
+	DBClusterMembers                 []map[string]interface{}
+	DBClusterOptionGroupMemberships  []map[string]interface{}
+	DBClusterParameterGroup          *string
+	DBSubnetGroup                    *string
 	DatabaseName                     *string
 	DbClusterResourceID              *string
 	DeletionProtection               *bool
-	DomainMemberships                []DomainMembership
+	DomainMemberships                []map[string]interface{}
 	EarliestBacktrackTime            *time.Time
 	EarliestRestorableTime           *time.Time
 	EnabledCloudwatchLogsExports     []string
@@ -46,22 +46,22 @@ type DbCluster struct {
 	GlobalWriteForwardingStatus      *WriteForwardingStatusEnum
 	HostedZoneID                     *string
 	HTTPEndpointEnabled              *bool
-	IamDatabaseAuthenticationEnabled *bool
+	IAMDatabaseAuthenticationEnabled *bool
 	KmsKeyID                         *string
 	LatestRestorableTime             *time.Time
 	MasterUsername                   *string
-	MultiAz                          *bool
+	MultiAZ                          *bool
 	PendingModifiedValues            *ClusterPendingModifiedValues
 	PercentProgress                  *string
 	Port                             *int64
 	PreferredBackupWindow            *string
 	PreferredMaintenanceWindow       *string
-	ReadReplicaIdentifiers           []string
+	ReadReplicaIdentifiers           []map[string]interface{}
 	ReaderEndpoint                   *string
 	ReplicationSourceIdentifier      *string
 	ScalingConfigurationInfo         *ScalingConfigurationInfo
 	Status                           *string
 	StorageEncrypted                 *bool
-	TagList                          []Tag
-	VpcSecurityGroups                []VpcSecurityGroupMembership
+	TagList                          []map[string]interface{}
+	VpcSecurityGroups                []map[string]interface{}
 }

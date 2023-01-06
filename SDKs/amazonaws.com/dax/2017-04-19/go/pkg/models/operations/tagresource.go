@@ -29,7 +29,7 @@ type TagResourceRequest struct {
 type TagResourceResponse struct {
 	ClusterNotFoundFault                 *interface{}
 	ContentType                          string
-	InvalidArnFault                      *interface{}
+	InvalidARNFault                      *interface{}
 	InvalidClusterStateFault             *interface{}
 	InvalidParameterCombinationException *interface{}
 	InvalidParameterValueException       *interface{}

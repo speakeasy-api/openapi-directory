@@ -8,14 +8,6 @@ const (
 	SslConfigTypeEnumServerClient       SslConfigTypeEnum = "SERVER_CLIENT"
 )
 
-// SslConfigInput
-// SSL configuration information.
-type SslConfigInput struct {
-	CaCertificate     *string `json:"caCertificate,omitempty"`
-	ClientCertificate *string `json:"clientCertificate,omitempty"`
-	ClientKey         *string `json:"clientKey,omitempty"`
-}
-
 // SslConfig
 // SSL configuration information.
 type SslConfig struct {
@@ -23,4 +15,12 @@ type SslConfig struct {
 	ClientCertificate *string            `json:"clientCertificate,omitempty"`
 	ClientKey         *string            `json:"clientKey,omitempty"`
 	Type              *SslConfigTypeEnum `json:"type,omitempty"`
+}
+
+// SslConfigInput
+// SSL configuration information.
+type SslConfigInput struct {
+	CaCertificate     *string `json:"caCertificate,omitempty"`
+	ClientCertificate *string `json:"clientCertificate,omitempty"`
+	ClientKey         *string `json:"clientKey,omitempty"`
 }

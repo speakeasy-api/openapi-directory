@@ -30,6 +30,6 @@ type PostPortfolioConstructionMimickingRequest struct {
 
 type PostPortfolioConstructionMimickingResponse struct {
 	ContentType                                                string
-	PostPortfolioConstructionMimicking200ApplicationJSONObject *PostPortfolioConstructionMimicking200ApplicationJSON
 	StatusCode                                                 int64
+	PostPortfolioConstructionMimicking200ApplicationJSONObject *PostPortfolioConstructionMimicking200ApplicationJSON
 }

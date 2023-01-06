@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.LicerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.LicerRequestBody{
             CertificateParameters: &operations.LicerRequestBodyCertificateParameters{
-                Dob: "mollitia",
-                FullName: "iste",
-                Polid: "quis",
-                UID: "sit",
+                DOB: "esse",
+                FullName: "architecto",
+                POLID: "est",
+                UID: "aliquam",
             },
-            ConsentArtifact: "debitis",
+            ConsentArtifact: "aut",
             Format: "pdf",
-            TxnID: "veniam",
+            TxnID: "tempora",
         },
     }
     
-    res, err := s.Sdk.Licer(ctx, req)
+    res, err := s.APIs.Licer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Licer` - Insurance Policy - Life
 

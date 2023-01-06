@@ -1,5 +1,5 @@
 package shared
 
 type DescribeConversionTasksResult struct {
-	ConversionTasks []ConversionTask
+	ConversionTasks map[string]interface{}
 }

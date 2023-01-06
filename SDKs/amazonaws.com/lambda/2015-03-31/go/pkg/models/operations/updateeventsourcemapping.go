@@ -48,7 +48,7 @@ type UpdateEventSourceMappingRequest struct {
 
 type UpdateEventSourceMappingResponse struct {
 	ContentType                     string
-	EventSourceMappingConfiguration *shared.EventSourceMappingConfiguration
+	EventSourceMappingConfiguration *shared.EventSourceMappingConfiguration1
 	InvalidParameterValueException  *interface{}
 	ResourceConflictException       *interface{}
 	ResourceInUseException          *interface{}

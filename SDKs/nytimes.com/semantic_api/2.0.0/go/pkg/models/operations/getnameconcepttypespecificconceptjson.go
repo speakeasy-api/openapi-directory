@@ -52,6 +52,6 @@ type GetNameConceptTypeSpecificConceptJSONRequest struct {
 
 type GetNameConceptTypeSpecificConceptJSONResponse struct {
 	ContentType                                                   string
-	GetNameConceptTypeSpecificConceptJSON200ApplicationJSONObject *GetNameConceptTypeSpecificConceptJSON200ApplicationJSON
 	StatusCode                                                    int64
+	GetNameConceptTypeSpecificConceptJSON200ApplicationJSONObject *GetNameConceptTypeSpecificConceptJSON200ApplicationJSON
 }

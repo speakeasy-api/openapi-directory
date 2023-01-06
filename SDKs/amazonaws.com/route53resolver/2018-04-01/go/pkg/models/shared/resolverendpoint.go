@@ -7,7 +7,7 @@ type ResolverEndpoint struct {
 	CreationTime     *string                        `json:"CreationTime,omitempty"`
 	CreatorRequestID *string                        `json:"CreatorRequestId,omitempty"`
 	Direction        *ResolverEndpointDirectionEnum `json:"Direction,omitempty"`
-	HostVpcID        *string                        `json:"HostVPCId,omitempty"`
+	HostVPCID        *string                        `json:"HostVPCId,omitempty"`
 	ID               *string                        `json:"Id,omitempty"`
 	IPAddressCount   *int64                         `json:"IpAddressCount,omitempty"`
 	ModificationTime *string                        `json:"ModificationTime,omitempty"`

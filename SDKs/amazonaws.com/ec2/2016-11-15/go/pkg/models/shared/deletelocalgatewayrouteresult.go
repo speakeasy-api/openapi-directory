@@ -1,5 +1,5 @@
 package shared
 
 type DeleteLocalGatewayRouteResult struct {
-	Route *LocalGatewayRoute
+	Route map[string]interface{}
 }

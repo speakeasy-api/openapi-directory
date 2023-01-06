@@ -11,10 +11,6 @@ type ListAllDropletsQueryParams struct {
 	TagName *string `queryParam:"style=form,explode=true,name=tag_name"`
 }
 
-type ListAllDropletsRequest struct {
-	QueryParams ListAllDropletsQueryParams
-}
-
 type ListAllDroplets200ApplicationJSONDropletsImageDistributionEnum string
 
 const (
@@ -88,6 +84,13 @@ type ListAllDroplets200ApplicationJSONDropletsImage struct {
 	Type          *ListAllDroplets200ApplicationJSONDropletsImageTypeEnum         `json:"type,omitempty"`
 }
 
+// ListAllDroplets200ApplicationJSONDropletsKernel
+// **Note**: All Droplets created after March 2017 use internal kernels by default.
+// These Droplets will have this attribute set to `null`.
+//
+// The current [kernel](https://www.digitalocean.com/docs/droplets/how-to/kernel/)
+// for Droplets with externally managed kernels. This will initially be set to
+// the kernel of the base image when the Droplet is created.
 type ListAllDroplets200ApplicationJSONDropletsKernel struct {
 	ID      *int64  `json:"id,omitempty"`
 	Name    *string `json:"name,omitempty"`
@@ -121,11 +124,15 @@ type ListAllDroplets200ApplicationJSONDropletsNetworksV6 struct {
 	Type      *ListAllDroplets200ApplicationJSONDropletsNetworksV6TypeEnum `json:"type,omitempty"`
 }
 
+// ListAllDroplets200ApplicationJSONDropletsNetworks
+// The details of the network that are configured for the Droplet instance.  This is an object that contains keys for IPv4 and IPv6.  The value of each of these is an array that contains objects describing an individual IP resource allocated to the Droplet.  These will define attributes like the IP address, netmask, and gateway of the specific network depending on the type of network it is.
 type ListAllDroplets200ApplicationJSONDropletsNetworks struct {
 	V4 []ListAllDroplets200ApplicationJSONDropletsNetworksV4 `json:"v4,omitempty"`
 	V6 []ListAllDroplets200ApplicationJSONDropletsNetworksV6 `json:"v6,omitempty"`
 }
 
+// ListAllDroplets200ApplicationJSONDropletsNextBackupWindow
+// The details of the Droplet's backups feature, if backups are configured for the Droplet. This object contains keys for the start and end times of the window during which the backup will start.
 type ListAllDroplets200ApplicationJSONDropletsNextBackupWindow struct {
 	End   *time.Time `json:"end,omitempty"`
 	Start *time.Time `json:"start,omitempty"`
@@ -177,34 +184,18 @@ type ListAllDroplets200ApplicationJSONDroplets struct {
 	VpcUUID          *string                                                                                                      `json:"vpc_uuid,omitempty"`
 }
 
-type ListAllDroplets200ApplicationJSONLinksPages1 struct {
-	Last *string `json:"last,omitempty"`
-	Next *string `json:"next,omitempty"`
-}
-
-type ListAllDroplets200ApplicationJSONLinksPages2 struct {
-	First *string `json:"first,omitempty"`
-	Prev  *string `json:"prev,omitempty"`
-}
-
-type ListAllDroplets200ApplicationJSONLinks struct {
-	Pages *interface{} `json:"pages,omitempty"`
-}
-
-type ListAllDroplets200ApplicationJSONMeta struct {
-	Total int64 `json:"total"`
-}
-
 type ListAllDroplets200ApplicationJSON struct {
 	Droplets []ListAllDroplets200ApplicationJSONDroplets `json:"droplets,omitempty"`
-	Links    *ListAllDroplets200ApplicationJSONLinks     `json:"links,omitempty"`
-	Meta     ListAllDroplets200ApplicationJSONMeta       `json:"meta"`
 }
 
 type ListAllDroplets401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListAllDropletsRequest struct {
+	QueryParams ListAllDropletsQueryParams
 }
 
 type ListAllDropletsResponse struct {

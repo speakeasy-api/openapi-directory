@@ -1,5 +1,5 @@
 package shared
 
 type ExportClientVpnClientConfigurationResult struct {
-	ClientConfiguration *string
+	ClientConfiguration map[string]interface{}
 }

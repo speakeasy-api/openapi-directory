@@ -17,7 +17,7 @@ type GetV3SearchEventsQueryParams struct {
 
 type GetV3SearchEventsHeaders struct {
 	AcceptLanguage *string `header:"style=simple,explode=false,name=Accept-Language"`
-	GiCountryCode  *string `header:"style=simple,explode=false,name=GI-Country-Code"`
+	GICountryCode  *string `header:"style=simple,explode=false,name=GI-Country-Code"`
 }
 
 type GetV3SearchEventsRequest struct {

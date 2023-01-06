@@ -3,27 +3,27 @@ package operations
 type GetModifyInstancePlacementActionEnum string
 
 const (
-	GetModifyInstancePlacementActionEnumModifyInstancePlacement GetModifyInstancePlacementActionEnum = "ModifyInstancePlacement"
+	GETModifyInstancePlacementActionEnumModifyInstancePlacement GetModifyInstancePlacementActionEnum = "ModifyInstancePlacement"
 )
 
 type GetModifyInstancePlacementAffinityEnum string
 
 const (
-	GetModifyInstancePlacementAffinityEnumDefault GetModifyInstancePlacementAffinityEnum = "default"
-	GetModifyInstancePlacementAffinityEnumHost    GetModifyInstancePlacementAffinityEnum = "host"
+	GETModifyInstancePlacementAffinityEnumDefault GetModifyInstancePlacementAffinityEnum = "default"
+	GETModifyInstancePlacementAffinityEnumHost    GetModifyInstancePlacementAffinityEnum = "host"
 )
 
 type GetModifyInstancePlacementTenancyEnum string
 
 const (
-	GetModifyInstancePlacementTenancyEnumDedicated GetModifyInstancePlacementTenancyEnum = "dedicated"
-	GetModifyInstancePlacementTenancyEnumHost      GetModifyInstancePlacementTenancyEnum = "host"
+	GETModifyInstancePlacementTenancyEnumDedicated GetModifyInstancePlacementTenancyEnum = "dedicated"
+	GETModifyInstancePlacementTenancyEnumHost      GetModifyInstancePlacementTenancyEnum = "host"
 )
 
 type GetModifyInstancePlacementVersionEnum string
 
 const (
-	GetModifyInstancePlacementVersionEnumTwoThousandAndSixteen1115 GetModifyInstancePlacementVersionEnum = "2016-11-15"
+	GETModifyInstancePlacementVersionEnumTwoThousandAndSixteen1115 GetModifyInstancePlacementVersionEnum = "2016-11-15"
 )
 
 type GetModifyInstancePlacementQueryParams struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,10 +25,10 @@ func main() {
             shared.Security{
                 ClientID: shared.SchemeClientID{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 PlaidVersion: shared.SchemePlaidVersion{
                     APIKey: "YOUR_API_KEY_HERE",
-                }
+                },
                 Secret: shared.SchemeSecret{
                     APIKey: "YOUR_API_KEY_HERE",
                 },
@@ -41,17 +40,17 @@ func main() {
     
     req := operations.AccountsBalanceGetRequest{
         Request: shared.AccountsBalanceGetRequest{
-            AccessToken: "exercitationem",
-            ClientID: "est",
+            AccessToken: "blanditiis",
+            ClientID: "ut",
             Options: &shared.AccountsBalanceGetRequestOptions{
                 AccountIds: []string{
-                    "quos",
-                    "voluptate",
-                    "nihil",
+                    "est",
+                    "exercitationem",
+                    "similique",
                 },
-                MinLastUpdatedDatetime: "2008-07-30T05:03:55Z",
+                MinLastUpdatedDatetime: "2022-01-29T17:57:03Z",
             },
-            Secret: "autem",
+            Secret: "voluptates",
         },
     }
     

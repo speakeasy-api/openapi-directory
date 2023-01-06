@@ -3,10 +3,10 @@ package shared
 type OsPolicyResourceExecResourceExecInterpreterEnum string
 
 const (
-	OsPolicyResourceExecResourceExecInterpreterEnumInterpreterUnspecified OsPolicyResourceExecResourceExecInterpreterEnum = "INTERPRETER_UNSPECIFIED"
-	OsPolicyResourceExecResourceExecInterpreterEnumNone                   OsPolicyResourceExecResourceExecInterpreterEnum = "NONE"
-	OsPolicyResourceExecResourceExecInterpreterEnumShell                  OsPolicyResourceExecResourceExecInterpreterEnum = "SHELL"
-	OsPolicyResourceExecResourceExecInterpreterEnumPowershell             OsPolicyResourceExecResourceExecInterpreterEnum = "POWERSHELL"
+	OSPolicyResourceExecResourceExecInterpreterEnumInterpreterUnspecified OsPolicyResourceExecResourceExecInterpreterEnum = "INTERPRETER_UNSPECIFIED"
+	OSPolicyResourceExecResourceExecInterpreterEnumNone                   OsPolicyResourceExecResourceExecInterpreterEnum = "NONE"
+	OSPolicyResourceExecResourceExecInterpreterEnumShell                  OsPolicyResourceExecResourceExecInterpreterEnum = "SHELL"
+	OSPolicyResourceExecResourceExecInterpreterEnumPowershell             OsPolicyResourceExecResourceExecInterpreterEnum = "POWERSHELL"
 )
 
 // OsPolicyResourceExecResourceExec

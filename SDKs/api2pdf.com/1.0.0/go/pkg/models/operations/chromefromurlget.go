@@ -23,5 +23,5 @@ type ChromeFromURLGetResponse struct {
 	APIResponseSuccess                            *shared.APIResponseSuccess
 	ContentType                                   string
 	StatusCode                                    int64
-	ChromeFromURLGet200ApplicationPdfBinaryString []byte
+	ChromeFromURLGET200ApplicationPdfBinaryString []byte
 }

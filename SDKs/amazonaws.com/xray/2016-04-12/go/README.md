@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,26 +34,28 @@ func main() {
     
     req := operations.BatchGetTracesRequest{
         QueryParams: operations.BatchGetTracesQueryParams{
-            NextToken: "autem",
+            NextToken: "modi",
         },
         Headers: operations.BatchGetTracesHeaders{
-            XAmzAlgorithm: "aliquam",
-            XAmzContentSha256: "beatae",
-            XAmzCredential: "atque",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "facere",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "quod",
+            XAmzAlgorithm: "doloribus",
+            XAmzContentSha256: "dolorem",
+            XAmzCredential: "quis",
+            XAmzDate: "vel",
+            XAmzSecurityToken: "magni",
+            XAmzSignature: "architecto",
+            XAmzSignedHeaders: "est",
         },
         Request: operations.BatchGetTracesRequestBody{
-            NextToken: "tempore",
+            NextToken: "consectetur",
             TraceIds: []string{
-                "ullam",
+                "in",
+                "aperiam",
+                "possimus",
             },
         },
     }
     
-    res, err := s.Sdk.BatchGetTraces(ctx, req)
+    res, err := s.BatchGetTraces(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

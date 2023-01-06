@@ -81,7 +81,7 @@ const (
 // The employers' hmrc settings
 type EmployerEmployerHmrcSettings struct {
 	AccountingOfficeRef         *string                                         `json:"AccountingOfficeRef,omitempty"`
-	CotaxRef                    *string                                         `json:"COTAXRef,omitempty"`
+	COTAXRef                    *string                                         `json:"COTAXRef,omitempty"`
 	ContactEmail                *string                                         `json:"ContactEmail,omitempty"`
 	ContactFax                  *string                                         `json:"ContactFax,omitempty"`
 	ContactFirstName            *string                                         `json:"ContactFirstName,omitempty"`
@@ -89,7 +89,7 @@ type EmployerEmployerHmrcSettings struct {
 	ContactTelephone            *string                                         `json:"ContactTelephone,omitempty"`
 	EmploymentAllowanceOverride *float64                                        `json:"EmploymentAllowanceOverride,omitempty"`
 	Password                    *string                                         `json:"Password,omitempty"`
-	Sautr                       *string                                         `json:"SAUTR,omitempty"`
+	SAUTR                       *string                                         `json:"SAUTR,omitempty"`
 	Sender                      *EmployerEmployerHmrcSettingsSenderEnum         `json:"Sender,omitempty"`
 	SenderID                    *string                                         `json:"SenderId,omitempty"`
 	StateAidSector              *EmployerEmployerHmrcSettingsStateAidSectorEnum `json:"StateAidSector,omitempty"`

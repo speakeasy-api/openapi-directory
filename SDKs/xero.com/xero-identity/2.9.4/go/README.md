@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         PathParams: operations.DeleteConnectionPathParams{
-            ID: "in",
+            ID: "temporibus",
         },
     }
     
-    res, err := s.Sdk.DeleteConnection(ctx, req)
+    res, err := s.Identity.DeleteConnection(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### identity
 
 * `DeleteConnection` - Deletes a connection for this user (i.e. disconnect a tenant)
 * `GetConnections` - Retrieves the connections for this user

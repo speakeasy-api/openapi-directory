@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.CancelImageCreationRequest{
         Headers: operations.CancelImageCreationHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "quo",
-            XAmzCredential: "ea",
-            XAmzDate: "quis",
-            XAmzSecurityToken: "culpa",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "rem",
+            XAmzAlgorithm: "eum",
+            XAmzContentSha256: "hic",
+            XAmzCredential: "ut",
+            XAmzDate: "et",
+            XAmzSecurityToken: "odio",
+            XAmzSignature: "voluptate",
+            XAmzSignedHeaders: "velit",
         },
         Request: operations.CancelImageCreationRequestBody{
-            ClientToken: "non",
-            ImageBuildVersionArn: "aperiam",
+            ClientToken: "commodi",
+            ImageBuildVersionArn: "iste",
         },
     }
     
-    res, err := s.Sdk.CancelImageCreation(ctx, req)
+    res, err := s.CancelImageCreation(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

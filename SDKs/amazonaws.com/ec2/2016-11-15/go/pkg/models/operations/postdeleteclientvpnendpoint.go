@@ -3,13 +3,13 @@ package operations
 type PostDeleteClientVpnEndpointActionEnum string
 
 const (
-	PostDeleteClientVpnEndpointActionEnumDeleteClientVpnEndpoint PostDeleteClientVpnEndpointActionEnum = "DeleteClientVpnEndpoint"
+	POSTDeleteClientVpnEndpointActionEnumDeleteClientVpnEndpoint PostDeleteClientVpnEndpointActionEnum = "DeleteClientVpnEndpoint"
 )
 
 type PostDeleteClientVpnEndpointVersionEnum string
 
 const (
-	PostDeleteClientVpnEndpointVersionEnumTwoThousandAndSixteen1115 PostDeleteClientVpnEndpointVersionEnum = "2016-11-15"
+	POSTDeleteClientVpnEndpointVersionEnumTwoThousandAndSixteen1115 PostDeleteClientVpnEndpointVersionEnum = "2016-11-15"
 )
 
 type PostDeleteClientVpnEndpointQueryParams struct {

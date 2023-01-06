@@ -3,13 +3,13 @@ package operations
 type PostBuildSuggestersActionEnum string
 
 const (
-	PostBuildSuggestersActionEnumBuildSuggesters PostBuildSuggestersActionEnum = "BuildSuggesters"
+	POSTBuildSuggestersActionEnumBuildSuggesters PostBuildSuggestersActionEnum = "BuildSuggesters"
 )
 
 type PostBuildSuggestersVersionEnum string
 
 const (
-	PostBuildSuggestersVersionEnumTwoThousandAndThirteen0101 PostBuildSuggestersVersionEnum = "2013-01-01"
+	POSTBuildSuggestersVersionEnumTwoThousandAndThirteen0101 PostBuildSuggestersVersionEnum = "2013-01-01"
 )
 
 type PostBuildSuggestersQueryParams struct {

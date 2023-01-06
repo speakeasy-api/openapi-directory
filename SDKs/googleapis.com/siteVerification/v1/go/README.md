@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,22 +26,22 @@ func main() {
         Security: operations.SiteVerificationWebResourceDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.SiteVerificationWebResourceDeletePathParams{
-            ID: "maiores",
+            ID: "autem",
         },
         QueryParams: operations.SiteVerificationWebResourceDeleteQueryParams{
             Alt: "json",
-            Fields: "impedit",
-            Key: "modi",
-            OauthToken: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "voluptates",
-            UserIP: "esse",
+            Fields: "tempore",
+            Key: "labore",
+            OauthToken: "in",
+            PrettyPrint: false,
+            QuotaUser: "illo",
+            UserIP: "doloremque",
         },
     }
     

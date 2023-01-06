@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,93 +26,94 @@ func main() {
         Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "voluptas",
+            Parent: "non",
         },
         QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "rerum",
+            DollarXgafv: "1",
+            AccessToken: "qui",
             Alt: "media",
-            Callback: "maxime",
-            Fields: "rerum",
-            Key: "inventore",
-            OauthToken: "explicabo",
+            Callback: "molestiae",
+            Fields: "dolor",
+            Key: "et",
+            OauthToken: "voluptatum",
             PrettyPrint: false,
-            QuotaUser: "et",
-            UploadType: "soluta",
-            UploadProtocol: "ab",
+            QuotaUser: "enim",
+            UploadType: "commodi",
+            UploadProtocol: "placeat",
         },
         Request: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "ullam",
-                    Password: "illo",
-                    Username: "nostrum",
+                    LoginURL: "enim",
+                    Password: "sint",
+                    Username: "explicabo",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "esse",
-                    Username: "dolorem",
+                    Password: "dolorem",
+                    Username: "et",
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "odit",
+                        TargetAudienceClientID: "officia",
                     },
                 },
             },
             BlacklistPatterns: []string{
-                "voluptatum",
+                "qui",
+                "blanditiis",
+                "et",
             },
-            DisplayName: "tempore",
-            ExportToSecurityCommandCenter: "ENABLED",
-            IgnoreHTTPStatusErrors: false,
+            DisplayName: "possimus",
+            ExportToSecurityCommandCenter: "DISABLED",
+            IgnoreHTTPStatusErrors: true,
             LatestRun: &shared.ScanRun{
-                EndTime: "suscipit",
+                EndTime: "ut",
                 ErrorTrace: &shared.ScanRunErrorTrace{
-                    Code: "AUTHENTICATION_CONFIG_ISSUE",
-                    MostCommonHTTPErrorCode: 6560153558486064374,
+                    Code: "CODE_UNSPECIFIED",
+                    MostCommonHTTPErrorCode: 5525768098525541651,
                     ScanConfigError: &shared.ScanConfigError{
                         Code: "SCAN_ALREADY_RUNNING",
-                        FieldName: "voluptatum",
+                        FieldName: "beatae",
                     },
                 },
                 ExecutionState: "EXECUTION_STATE_UNSPECIFIED",
                 HasVulnerabilities: false,
-                Name: "quos",
-                ProgressPercent: 4657958053555222384,
-                ResultState: "ERROR",
-                StartTime: "commodi",
-                UrlsCrawledCount: "et",
-                UrlsTestedCount: "necessitatibus",
+                Name: "qui",
+                ProgressPercent: 1048624465529040988,
+                ResultState: "KILLED",
+                StartTime: "et",
+                UrlsCrawledCount: "exercitationem",
+                UrlsTestedCount: "omnis",
                 WarningTraces: []shared.ScanRunWarningTrace{
                     shared.ScanRunWarningTrace{
-                        Code: "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN",
+                        Code: "TOO_MANY_CRAWL_RESULTS",
                     },
                     shared.ScanRunWarningTrace{
-                        Code: "BLOCKED_BY_IAP",
+                        Code: "TOO_MANY_FUZZ_TASKS",
                     },
                 },
             },
-            ManagedScan: false,
-            MaxQPS: 6612788434572589531,
-            Name: "ratione",
-            RiskLevel: "RISK_LEVEL_UNSPECIFIED",
+            ManagedScan: true,
+            MaxQPS: 6824474744739544969,
+            Name: "molestiae",
+            RiskLevel: "LOW",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 6888007712442229941,
-                ScheduleTime: "itaque",
+                IntervalDurationDays: 478584291849094551,
+                ScheduleTime: "nesciunt",
             },
             StartingUrls: []string{
-                "earum",
-                "incidunt",
+                "consequatur",
             },
             StaticIPScan: false,
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
-                "CLOUD_RUN",
-                "TARGET_PLATFORM_UNSPECIFIED",
+                "APP_ENGINE",
+                "COMPUTE",
             },
             UserAgent: "CHROME_ANDROID",
         },

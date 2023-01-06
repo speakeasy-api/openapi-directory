@@ -1,5 +1,9 @@
 package shared
 
+type SchemeOauth2 struct {
+	Authorization string `security:"name=Authorization"`
+}
+
 type SchemeAPIKey struct {
 	APIKey string `security:"name=Authorization"`
 }
@@ -7,8 +11,4 @@ type SchemeAPIKey struct {
 type SchemeBasic struct {
 	Password string `security:"name=password"`
 	Username string `security:"name=username"`
-}
-
-type SchemeOauth2 struct {
-	Authorization string `security:"name=Authorization"`
 }

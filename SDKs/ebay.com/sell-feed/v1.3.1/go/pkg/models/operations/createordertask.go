@@ -5,7 +5,7 @@ import (
 )
 
 type CreateOrderTaskHeaders struct {
-	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	XEBAYCMARKETPLACEID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type CreateOrderTaskSecurity struct {

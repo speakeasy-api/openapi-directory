@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,15 +24,15 @@ func main() {
     
     req := operations.PostCompileRequest{
         QueryParams: operations.PostCompileQueryParams{
-            Explain: "non",
-            Instrument: true,
-            Metrics: false,
-            Pretty: false,
+            Explain: "neque",
+            Instrument: false,
+            Metrics: true,
+            Pretty: true,
         },
         Request: map[string]interface{}{
-            "et": "dolores",
-            "est": "quis",
-            "voluptas": "ut",
+            "necessitatibus": "et",
+            "nisi": "laboriosam",
+            "ut": "animi",
         },
     }
     

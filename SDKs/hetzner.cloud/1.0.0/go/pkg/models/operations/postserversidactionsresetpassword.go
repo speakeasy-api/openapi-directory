@@ -46,6 +46,6 @@ type PostServersIDActionsResetPasswordRequest struct {
 
 type PostServersIDActionsResetPasswordResponse struct {
 	ContentType                                               string
-	PostServersIDActionsResetPassword201ApplicationJSONObject *PostServersIDActionsResetPassword201ApplicationJSON
 	StatusCode                                                int64
+	PostServersIDActionsResetPassword201ApplicationJSONObject *PostServersIDActionsResetPassword201ApplicationJSON
 }

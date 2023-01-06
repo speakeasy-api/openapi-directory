@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,31 +34,25 @@ func main() {
     
     req := operations.CreateReplicationSetRequest{
         Headers: operations.CreateReplicationSetHeaders{
-            XAmzAlgorithm: "assumenda",
-            XAmzContentSha256: "incidunt",
-            XAmzCredential: "perspiciatis",
-            XAmzDate: "quia",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "ipsam",
-            XAmzSignedHeaders: "ad",
+            XAmzAlgorithm: "molestiae",
+            XAmzContentSha256: "molestias",
+            XAmzCredential: "magnam",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "nihil",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "recusandae",
         },
         Request: operations.CreateReplicationSetRequestBody{
-            ClientToken: "sint",
+            ClientToken: "error",
             Regions: map[string]shared.RegionMapInputValue{
-                "illum": shared.RegionMapInputValue{
-                    SseKmsKeyID: "error",
-                },
-                "cupiditate": shared.RegionMapInputValue{
-                    SseKmsKeyID: "sit",
-                },
-                "sapiente": shared.RegionMapInputValue{
-                    SseKmsKeyID: "et",
+                "et": shared.RegionMapInputValue{
+                    SseKmsKeyID: "ratione",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateReplicationSet(ctx, req)
+    res, err := s.CreateReplicationSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

@@ -3,13 +3,13 @@ package operations
 type PostRestoreDbInstanceToPointInTimeActionEnum string
 
 const (
-	PostRestoreDbInstanceToPointInTimeActionEnumRestoreDbInstanceToPointInTime PostRestoreDbInstanceToPointInTimeActionEnum = "RestoreDBInstanceToPointInTime"
+	POSTRestoreDBInstanceToPointInTimeActionEnumRestoreDbInstanceToPointInTime PostRestoreDbInstanceToPointInTimeActionEnum = "RestoreDBInstanceToPointInTime"
 )
 
 type PostRestoreDbInstanceToPointInTimeVersionEnum string
 
 const (
-	PostRestoreDbInstanceToPointInTimeVersionEnumTwoThousandAndFourteen1031 PostRestoreDbInstanceToPointInTimeVersionEnum = "2014-10-31"
+	POSTRestoreDBInstanceToPointInTimeVersionEnumTwoThousandAndFourteen1031 PostRestoreDbInstanceToPointInTimeVersionEnum = "2014-10-31"
 )
 
 type PostRestoreDbInstanceToPointInTimeQueryParams struct {

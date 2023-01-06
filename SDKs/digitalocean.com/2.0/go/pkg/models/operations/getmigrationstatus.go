@@ -8,10 +8,6 @@ type GetMigrationStatusPathParams struct {
 	DatabaseClusterUUID string `pathParam:"style=simple,explode=false,name=database_cluster_uuid"`
 }
 
-type GetMigrationStatusRequest struct {
-	PathParams GetMigrationStatusPathParams
-}
-
 type GetMigrationStatus200ApplicationJSON struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 	ID        *string `json:"id,omitempty"`
@@ -22,6 +18,10 @@ type GetMigrationStatus401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetMigrationStatusRequest struct {
+	PathParams GetMigrationStatusPathParams
 }
 
 type GetMigrationStatusResponse struct {

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -23,13 +22,15 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.GetResourcesCampaignsIDJSONRequest{
-        PathParams: operations.GetResourcesCampaignsIDJSONPathParams{
-            ID: 7387490049421462216,
+    req := operations.GetResourcesCampaignsJSONRequest{
+        QueryParams: operations.GetResourcesCampaignsJSONQueryParams{
+            Max: 7859331431641313360,
+            Offset: 5277894250208196585,
+            Sort: "ipsam",
         },
     }
     
-    res, err := s.Campaigns.GetResourcesCampaignsIDJSON(ctx, req)
+    res, err := s.Campaigns.GetResourcesCampaignsJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,30 +46,30 @@ func main() {
 
 ### campaigns
 
+* `GetResourcesCampaignsJSON` - Get Campaigns
 * `GetResourcesCampaignsIDJSON` - Get Campaign by ID
 * `GetResourcesCampaignsIDMediaJSON` - Get MediaItems by Campaign ID
 * `GetResourcesCampaignsIDSyndicateFormat` - Get MediaItems for Campaign
-* `GetResourcesCampaignsJSON` - Get Campaigns
 
 ### languages
 
-* `GetResourcesLanguagesIDJSON` - Get Language by ID
 * `GetResourcesLanguagesJSON` - Get Languages
+* `GetResourcesLanguagesIDJSON` - Get Language by ID
 
 ### media
 
+* `GetResourcesMediaJSON` - Get MediaItems
 * `GetResourcesMediaFeaturedJSON` - Get the list of featured content in the syndication system
+* `GetResourcesMediaMostPopularMediaFormat` - Get MediaItems by popularity
+* `GetResourcesMediaSearchResultsJSON` - Get MediaItems by search query
+* `GetResourcesMediaIDJSON` - Get MediaItem by ID
 * `GetResourcesMediaIDContent` - Get content for MediaItem
 * `GetResourcesMediaIDEmbedJSON` - Get embed code for MediaItem
-* `GetResourcesMediaIDJSON` - Get MediaItem by ID
 * `GetResourcesMediaIDPreviewJpg` - Get Tag by ID
 * `GetResourcesMediaIDRelatedMediaFormat` - Get related MediaItems by ID
 * `GetResourcesMediaIDSyndicateFormat` - Get syndicated content for MediaItem
 * `GetResourcesMediaIDThumbnailJpg` - Get JPG thumbnail for MediaItem
 * `GetResourcesMediaIDYoutubeMetaDataJSON` - Get Youtube metadata for MediaItem
-* `GetResourcesMediaJSON` - Get MediaItems
-* `GetResourcesMediaMostPopularMediaFormat` - Get MediaItems by popularity
-* `GetResourcesMediaSearchResultsJSON` - Get MediaItems by search query
 
 ### mediaTypes
 
@@ -80,19 +81,19 @@ func main() {
 
 ### sources
 
+* `GetResourcesSourcesJSON` - Get Sources
 * `GetResourcesSourcesIDJSON` - Get Source by ID
 * `GetResourcesSourcesIDSyndicateFormat` - Get MediaItems for Source
-* `GetResourcesSourcesJSON` - Get Sources
 
 ### tags
 
 * `GetResourcesTagsFormat` - Get Tags
+* `GetResourcesTagsTagLanguagesFormat` - Get TagLanguages
+* `GetResourcesTagsTagTypesFormat` - Get MediaItems for Tag
 * `GetResourcesTagsIDFormat` - Get Tag by ID
 * `GetResourcesTagsIDMediaFormat` - Get MediaItems for Tag
 * `GetResourcesTagsIDRelatedFormat` - Get related Tags by ID
 * `GetResourcesTagsIDSyndicateFormat` - Get MediaItems for Tag
-* `GetResourcesTagsTagLanguagesFormat` - Get TagLanguages
-* `GetResourcesTagsTagTypesFormat` - Get MediaItems for Tag
 
 ### userMediaLists
 

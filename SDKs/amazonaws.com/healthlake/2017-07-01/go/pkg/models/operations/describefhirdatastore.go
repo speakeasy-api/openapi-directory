@@ -7,7 +7,7 @@ import (
 type DescribeFhirDatastoreXAmzTargetEnum string
 
 const (
-	DescribeFhirDatastoreXAmzTargetEnumHealthLakeDescribeFhirDatastore DescribeFhirDatastoreXAmzTargetEnum = "HealthLake.DescribeFHIRDatastore"
+	DescribeFHIRDatastoreXAmzTargetEnumHealthLakeDescribeFhirDatastore DescribeFhirDatastoreXAmzTargetEnum = "HealthLake.DescribeFHIRDatastore"
 )
 
 type DescribeFhirDatastoreHeaders struct {
@@ -28,7 +28,7 @@ type DescribeFhirDatastoreRequest struct {
 
 type DescribeFhirDatastoreResponse struct {
 	ContentType                   string
-	DescribeFhirDatastoreResponse *shared.DescribeFhirDatastoreResponse
+	DescribeFHIRDatastoreResponse *shared.DescribeFhirDatastoreResponse
 	InternalServerException       *interface{}
 	ResourceNotFoundException     *interface{}
 	StatusCode                    int64

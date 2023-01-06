@@ -44,7 +44,7 @@ type UpdateResolverRequestBodyPipelineConfig struct {
 // <p>Describes a Sync configuration for a resolver.</p> <p>Contains information on which Conflict Detection as well as Resolution strategy should be performed when the resolver is invoked.</p>
 type UpdateResolverRequestBodySyncConfig struct {
 	ConflictDetection           *shared.ConflictDetectionTypeEnum   `json:"conflictDetection,omitempty"`
-	ConflictHandler             *shared.ConflictHandlerTypeEnum     `json:"conflictHandler,omitempty"`
+	ConflictHandler             map[string]interface{}              `json:"conflictHandler,omitempty"`
 	LambdaConflictHandlerConfig *shared.LambdaConflictHandlerConfig `json:"lambdaConflictHandlerConfig,omitempty"`
 }
 

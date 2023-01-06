@@ -3,13 +3,13 @@ package operations
 type PostImportVolumeActionEnum string
 
 const (
-	PostImportVolumeActionEnumImportVolume PostImportVolumeActionEnum = "ImportVolume"
+	POSTImportVolumeActionEnumImportVolume PostImportVolumeActionEnum = "ImportVolume"
 )
 
 type PostImportVolumeVersionEnum string
 
 const (
-	PostImportVolumeVersionEnumTwoThousandAndSixteen1115 PostImportVolumeVersionEnum = "2016-11-15"
+	POSTImportVolumeVersionEnumTwoThousandAndSixteen1115 PostImportVolumeVersionEnum = "2016-11-15"
 )
 
 type PostImportVolumeQueryParams struct {

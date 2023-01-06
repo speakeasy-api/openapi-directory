@@ -8,15 +8,13 @@ type ListKubernetesAssociatedResourcesPathParams struct {
 	ClusterID string `pathParam:"style=simple,explode=false,name=cluster_id"`
 }
 
-type ListKubernetesAssociatedResourcesRequest struct {
-	PathParams ListKubernetesAssociatedResourcesPathParams
-}
-
 type ListKubernetesAssociatedResources200ApplicationJSONLoadBalancers struct {
 	ID   *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
 }
 
+// ListKubernetesAssociatedResources200ApplicationJSON
+// An object containing the IDs of resources associated with a Kubernetes cluster.
 type ListKubernetesAssociatedResources200ApplicationJSON struct {
 	LoadBalancers   []ListKubernetesAssociatedResources200ApplicationJSONLoadBalancers                                                                                                    `json:"load_balancers,omitempty"`
 	VolumeSnapshots []shared.Onev21kubernetes1clusters1Percent7BclusterIDPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaPropertiesLoadBalancersItems `json:"volume_snapshots,omitempty"`
@@ -27,6 +25,10 @@ type ListKubernetesAssociatedResources401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type ListKubernetesAssociatedResourcesRequest struct {
+	PathParams ListKubernetesAssociatedResourcesPathParams
 }
 
 type ListKubernetesAssociatedResourcesResponse struct {

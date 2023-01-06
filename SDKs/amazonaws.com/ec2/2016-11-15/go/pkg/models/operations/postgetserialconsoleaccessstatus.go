@@ -3,13 +3,13 @@ package operations
 type PostGetSerialConsoleAccessStatusActionEnum string
 
 const (
-	PostGetSerialConsoleAccessStatusActionEnumGetSerialConsoleAccessStatus PostGetSerialConsoleAccessStatusActionEnum = "GetSerialConsoleAccessStatus"
+	POSTGetSerialConsoleAccessStatusActionEnumGetSerialConsoleAccessStatus PostGetSerialConsoleAccessStatusActionEnum = "GetSerialConsoleAccessStatus"
 )
 
 type PostGetSerialConsoleAccessStatusVersionEnum string
 
 const (
-	PostGetSerialConsoleAccessStatusVersionEnumTwoThousandAndSixteen1115 PostGetSerialConsoleAccessStatusVersionEnum = "2016-11-15"
+	POSTGetSerialConsoleAccessStatusVersionEnumTwoThousandAndSixteen1115 PostGetSerialConsoleAccessStatusVersionEnum = "2016-11-15"
 )
 
 type PostGetSerialConsoleAccessStatusQueryParams struct {

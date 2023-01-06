@@ -3,13 +3,13 @@ package operations
 type PostUpdatePartnerStatusActionEnum string
 
 const (
-	PostUpdatePartnerStatusActionEnumUpdatePartnerStatus PostUpdatePartnerStatusActionEnum = "UpdatePartnerStatus"
+	POSTUpdatePartnerStatusActionEnumUpdatePartnerStatus PostUpdatePartnerStatusActionEnum = "UpdatePartnerStatus"
 )
 
 type PostUpdatePartnerStatusVersionEnum string
 
 const (
-	PostUpdatePartnerStatusVersionEnumTwoThousandAndTwelve1201 PostUpdatePartnerStatusVersionEnum = "2012-12-01"
+	POSTUpdatePartnerStatusVersionEnumTwoThousandAndTwelve1201 PostUpdatePartnerStatusVersionEnum = "2012-12-01"
 )
 
 type PostUpdatePartnerStatusQueryParams struct {

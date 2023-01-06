@@ -32,8 +32,8 @@ type SignResponse struct {
 	DisabledException          *interface{}
 	InvalidGrantTokenException *interface{}
 	InvalidKeyUsageException   *interface{}
-	KmsInternalException       *interface{}
-	KmsInvalidStateException   *interface{}
+	KMSInternalException       *interface{}
+	KMSInvalidStateException   *interface{}
 	KeyUnavailableException    *interface{}
 	NotFoundException          *interface{}
 	SignResponse               *shared.SignResponse

@@ -3,13 +3,13 @@ package operations
 type PostRestartAppServerActionEnum string
 
 const (
-	PostRestartAppServerActionEnumRestartAppServer PostRestartAppServerActionEnum = "RestartAppServer"
+	POSTRestartAppServerActionEnumRestartAppServer PostRestartAppServerActionEnum = "RestartAppServer"
 )
 
 type PostRestartAppServerVersionEnum string
 
 const (
-	PostRestartAppServerVersionEnumTwoThousandAndTen1201 PostRestartAppServerVersionEnum = "2010-12-01"
+	POSTRestartAppServerVersionEnumTwoThousandAndTen1201 PostRestartAppServerVersionEnum = "2010-12-01"
 )
 
 type PostRestartAppServerQueryParams struct {

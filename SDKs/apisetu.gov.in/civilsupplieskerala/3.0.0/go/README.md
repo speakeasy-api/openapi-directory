@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.RatcrSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.RatcrRequestBody{
             CertificateParameters: &operations.RatcrRequestBodyCertificateParameters{
-                FullName: "animi",
-                UID: "et",
+                FullName: "accusamus",
+                UID: "occaecati",
             },
-            ConsentArtifact: "non",
+            ConsentArtifact: "rerum",
             Format: "pdf",
-            TxnID: "accusantium",
+            TxnID: "ut",
         },
     }
     
-    res, err := s.Sdk.Ratcr(ctx, req)
+    res, err := s.APIs.Ratcr(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Ratcr` - Ration Card
 

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,90 +34,89 @@ func main() {
     
     req := operations.BatchMeterUsageRequest{
         Headers: operations.BatchMeterUsageHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "veritatis",
-            XAmzDate: "dicta",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "mollitia",
-            XAmzSignedHeaders: "distinctio",
+            XAmzAlgorithm: "mollitia",
+            XAmzContentSha256: "minima",
+            XAmzCredential: "et",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "non",
+            XAmzSignature: "officia",
+            XAmzSignedHeaders: "quidem",
             XAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
         },
         Request: shared.BatchMeterUsageRequest{
-            ProductCode: "dolor",
+            ProductCode: "odit",
             UsageRecords: []shared.UsageRecord{
                 shared.UsageRecord{
-                    CustomerIdentifier: "veniam",
-                    Dimension: "ullam",
-                    Quantity: 7143517679490005021,
-                    Timestamp: "1986-11-05T09:23:19Z",
+                    CustomerIdentifier: "aperiam",
+                    Dimension: "omnis",
+                    Quantity: 8709626029223311392,
+                    Timestamp: "1975-10-23T09:49:22Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 5086685836834963172,
+                            AllocatedUsageQuantity: 984466220948338528,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "nisi",
-                                    Value: "consequatur",
+                                    Key: "autem",
+                                    Value: "ut",
                                 },
                                 shared.Tag{
-                                    Key: "fugiat",
-                                    Value: "tenetur",
-                                },
-                            },
-                        },
-                        shared.UsageAllocation{
-                            AllocatedUsageQuantity: 8093916486147727286,
-                            Tags: []shared.Tag{
-                                shared.Tag{
-                                    Key: "aspernatur",
-                                    Value: "dignissimos",
-                                },
-                            },
-                        },
-                        shared.UsageAllocation{
-                            AllocatedUsageQuantity: 7014153113816809001,
-                            Tags: []shared.Tag{
-                                shared.Tag{
-                                    Key: "saepe",
-                                    Value: "voluptas",
+                                    Key: "labore",
+                                    Value: "amet",
                                 },
                                 shared.Tag{
-                                    Key: "sunt",
-                                    Value: "optio",
+                                    Key: "in",
+                                    Value: "provident",
                                 },
                             },
                         },
                     },
                 },
                 shared.UsageRecord{
-                    CustomerIdentifier: "omnis",
-                    Dimension: "ut",
-                    Quantity: 8667532264838713382,
-                    Timestamp: "2022-10-20T06:10:36Z",
+                    CustomerIdentifier: "doloribus",
+                    Dimension: "ratione",
+                    Quantity: 8395307332568674012,
+                    Timestamp: "2002-07-24T23:48:49Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 1128063950629246547,
+                            AllocatedUsageQuantity: 26915580055560406,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "voluptatum",
-                                    Value: "alias",
-                                },
-                                shared.Tag{
-                                    Key: "consequatur",
-                                    Value: "eum",
-                                },
-                                shared.Tag{
-                                    Key: "nemo",
-                                    Value: "omnis",
+                                    Key: "odio",
+                                    Value: "eos",
                                 },
                             },
                         },
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 730903235187604438,
+                            AllocatedUsageQuantity: 4641840259416019331,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "omnis",
-                                    Value: "velit",
+                                    Key: "exercitationem",
+                                    Value: "debitis",
+                                },
+                                shared.Tag{
+                                    Key: "ut",
+                                    Value: "tenetur",
+                                },
+                                shared.Tag{
+                                    Key: "aspernatur",
+                                    Value: "minus",
+                                },
+                            },
+                        },
+                        shared.UsageAllocation{
+                            AllocatedUsageQuantity: 3028825199818953796,
+                            Tags: []shared.Tag{
+                                shared.Tag{
+                                    Key: "eum",
+                                    Value: "ducimus",
+                                },
+                                shared.Tag{
+                                    Key: "illo",
+                                    Value: "quas",
+                                },
+                                shared.Tag{
+                                    Key: "in",
+                                    Value: "ipsum",
                                 },
                             },
                         },
@@ -128,7 +126,7 @@ func main() {
         },
     }
     
-    res, err := s.Sdk.BatchMeterUsage(ctx, req)
+    res, err := s.BatchMeterUsage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

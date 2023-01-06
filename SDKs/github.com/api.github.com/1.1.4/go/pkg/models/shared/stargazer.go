@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// StargazerSimpleUser
+// Simple User
 type StargazerSimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`

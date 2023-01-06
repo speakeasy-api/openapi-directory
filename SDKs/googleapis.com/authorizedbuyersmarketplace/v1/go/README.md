@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,28 +26,28 @@ func main() {
         Security: operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListPathParams{
-            Parent: "quo",
+            Parent: "aspernatur",
         },
         QueryParams: operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListQueryParams{
             DollarXgafv: "1",
-            AccessToken: "totam",
-            Alt: "media",
-            Callback: "sunt",
-            Fields: "enim",
-            Key: "qui",
-            OauthToken: "deleniti",
-            PageSize: 5518598320821928085,
-            PageToken: "est",
-            PrettyPrint: true,
-            QuotaUser: "tenetur",
-            UploadType: "cumque",
-            UploadProtocol: "reprehenderit",
+            AccessToken: "id",
+            Alt: "json",
+            Callback: "facere",
+            Fields: "hic",
+            Key: "et",
+            OauthToken: "illo",
+            PageSize: 1910356192618522045,
+            PageToken: "consequatur",
+            PrettyPrint: false,
+            QuotaUser: "et",
+            UploadType: "sed",
+            UploadProtocol: "non",
         },
     }
     

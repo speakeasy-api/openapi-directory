@@ -8,23 +8,23 @@ type UpdateKubernetesClusterPathParams struct {
 	ClusterID string `pathParam:"style=simple,explode=false,name=cluster_id"`
 }
 
-type UpdateKubernetesClusterRequestBody struct {
-	AutoUpgrade       *bool                                                                                                                                           `json:"auto_upgrade,omitempty"`
-	MaintenancePolicy *shared.Onev21kubernetes1clustersGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesKubernetesClustersItemsPropertiesMaintenancePolicy `json:"maintenance_policy,omitempty"`
-	Name              string                                                                                                                                          `json:"name"`
-	SurgeUpgrade      *bool                                                                                                                                           `json:"surge_upgrade,omitempty"`
-	Tags              []string                                                                                                                                        `json:"tags,omitempty"`
-}
-
-type UpdateKubernetesClusterRequest struct {
-	PathParams UpdateKubernetesClusterPathParams
-	Request    UpdateKubernetesClusterRequestBody `request:"mediaType=application/json"`
+type UpdateKubernetesClusterRequestBodyInput struct {
+	AutoUpgrade       *bool                                                                                                                                                `json:"auto_upgrade,omitempty"`
+	MaintenancePolicy *shared.Onev21kubernetes1clustersGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesKubernetesClustersItemsPropertiesMaintenancePolicyInput `json:"maintenance_policy,omitempty"`
+	Name              string                                                                                                                                               `json:"name"`
+	SurgeUpgrade      *bool                                                                                                                                                `json:"surge_upgrade,omitempty"`
+	Tags              []string                                                                                                                                             `json:"tags,omitempty"`
 }
 
 type UpdateKubernetesCluster401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateKubernetesClusterRequest struct {
+	PathParams UpdateKubernetesClusterPathParams
+	Request    UpdateKubernetesClusterRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateKubernetesClusterResponse struct {

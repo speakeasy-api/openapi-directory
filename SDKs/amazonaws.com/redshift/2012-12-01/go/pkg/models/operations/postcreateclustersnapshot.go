@@ -3,13 +3,13 @@ package operations
 type PostCreateClusterSnapshotActionEnum string
 
 const (
-	PostCreateClusterSnapshotActionEnumCreateClusterSnapshot PostCreateClusterSnapshotActionEnum = "CreateClusterSnapshot"
+	POSTCreateClusterSnapshotActionEnumCreateClusterSnapshot PostCreateClusterSnapshotActionEnum = "CreateClusterSnapshot"
 )
 
 type PostCreateClusterSnapshotVersionEnum string
 
 const (
-	PostCreateClusterSnapshotVersionEnumTwoThousandAndTwelve1201 PostCreateClusterSnapshotVersionEnum = "2012-12-01"
+	POSTCreateClusterSnapshotVersionEnumTwoThousandAndTwelve1201 PostCreateClusterSnapshotVersionEnum = "2012-12-01"
 )
 
 type PostCreateClusterSnapshotQueryParams struct {

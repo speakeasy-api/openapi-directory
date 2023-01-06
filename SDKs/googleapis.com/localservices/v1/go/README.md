@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,32 +26,32 @@ func main() {
         Security: operations.LocalservicesAccountReportsSearchSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         QueryParams: operations.LocalservicesAccountReportsSearchQueryParams{
             DollarXgafv: "1",
-            AccessToken: "deserunt",
-            Alt: "proto",
-            Callback: "quae",
-            EndDateDay: 9166176680105154158,
-            EndDateMonth: 3700916382826329361,
-            EndDateYear: 7949325261697935127,
-            Fields: "qui",
-            Key: "iste",
-            OauthToken: "aperiam",
-            PageSize: 180525446025806699,
-            PageToken: "sed",
+            AccessToken: "enim",
+            Alt: "json",
+            Callback: "cumque",
+            EndDateDay: 3432839955366230088,
+            EndDateMonth: 770986986073861708,
+            EndDateYear: 2450390360383236322,
+            Fields: "nobis",
+            Key: "quo",
+            OauthToken: "et",
+            PageSize: 6011960963865065675,
+            PageToken: "voluptatum",
             PrettyPrint: true,
-            Query: "quis",
-            QuotaUser: "amet",
-            StartDateDay: 4461855726951911472,
-            StartDateMonth: 3498328393978279083,
-            StartDateYear: 4336138330598230696,
-            UploadType: "vitae",
-            UploadProtocol: "aperiam",
+            Query: "accusamus",
+            QuotaUser: "ipsum",
+            StartDateDay: 8386595300525764156,
+            StartDateMonth: 3520306321387089337,
+            StartDateYear: 4698341347543227594,
+            UploadType: "repellat",
+            UploadProtocol: "laboriosam",
         },
     }
     

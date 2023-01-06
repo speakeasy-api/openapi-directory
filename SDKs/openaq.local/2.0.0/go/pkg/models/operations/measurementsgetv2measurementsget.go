@@ -21,14 +21,14 @@ type MeasurementsGetV2MeasurementsGetQueryParams struct {
 	Location      []interface{}           `queryParam:"style=form,explode=true,name=location"`
 	LocationID    *int64                  `queryParam:"style=form,explode=true,name=location_id"`
 	Offset        *int64                  `queryParam:"style=form,explode=true,name=offset"`
-	OrderBy       *shared.MeasOrderEnum   `queryParam:"style=form,explode=true,name=order_by"`
+	OrderBy       map[string]interface{}  `queryParam:"style=form,explode=true,name=order_by"`
 	Page          *int64                  `queryParam:"style=form,explode=true,name=page"`
 	Parameter     []interface{}           `queryParam:"style=form,explode=true,name=parameter"`
 	ParameterID   *int64                  `queryParam:"style=form,explode=true,name=parameter_id"`
 	Project       *int64                  `queryParam:"style=form,explode=true,name=project"`
 	Radius        *int64                  `queryParam:"style=form,explode=true,name=radius"`
 	SensorType    *shared.SensorTypesEnum `queryParam:"style=form,explode=true,name=sensorType"`
-	Sort          *shared.SortEnum        `queryParam:"style=form,explode=true,name=sort"`
+	Sort          map[string]interface{}  `queryParam:"style=form,explode=true,name=sort"`
 	Unit          []string                `queryParam:"style=form,explode=true,name=unit"`
 	ValueFrom     *float64                `queryParam:"style=form,explode=true,name=value_from"`
 	ValueTo       *float64                `queryParam:"style=form,explode=true,name=value_to"`

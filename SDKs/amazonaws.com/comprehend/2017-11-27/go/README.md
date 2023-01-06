@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,25 +34,23 @@ func main() {
     
     req := operations.BatchDetectDominantLanguageRequest{
         Headers: operations.BatchDetectDominantLanguageHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "eum",
-            XAmzCredential: "vero",
-            XAmzDate: "totam",
-            XAmzSecurityToken: "odio",
-            XAmzSignature: "veritatis",
-            XAmzSignedHeaders: "fuga",
+            XAmzAlgorithm: "tempora",
+            XAmzContentSha256: "illum",
+            XAmzCredential: "quae",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "consectetur",
+            XAmzSignature: "voluptatibus",
+            XAmzSignedHeaders: "doloremque",
             XAmzTarget: "Comprehend_20171127.BatchDetectDominantLanguage",
         },
         Request: shared.BatchDetectDominantLanguageRequest{
             TextList: []string{
-                "consequatur",
-                "qui",
-                "numquam",
+                "iste",
             },
         },
     }
     
-    res, err := s.Sdk.BatchDetectDominantLanguage(ctx, req)
+    res, err := s.BatchDetectDominantLanguage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

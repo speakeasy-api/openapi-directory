@@ -1,6 +1,6 @@
 package shared
 
 type ListBudgetsForResourceOutput struct {
-	Budgets       []BudgetDetail `json:"Budgets,omitempty"`
-	NextPageToken *string        `json:"NextPageToken,omitempty"`
+	Budgets       map[string]interface{} `json:"Budgets,omitempty"`
+	NextPageToken *string                `json:"NextPageToken,omitempty"`
 }

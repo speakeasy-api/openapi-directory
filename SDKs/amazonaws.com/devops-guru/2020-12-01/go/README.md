@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,24 +34,24 @@ func main() {
     
     req := operations.AddNotificationChannelRequest{
         Headers: operations.AddNotificationChannelHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "quasi",
-            XAmzDate: "repellat",
-            XAmzSecurityToken: "rem",
-            XAmzSignature: "nisi",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "enim",
+            XAmzContentSha256: "iusto",
+            XAmzCredential: "dolor",
+            XAmzDate: "deleniti",
+            XAmzSecurityToken: "consectetur",
+            XAmzSignature: "dolores",
+            XAmzSignedHeaders: "voluptate",
         },
         Request: operations.AddNotificationChannelRequestBody{
             Config: operations.AddNotificationChannelRequestBodyConfig{
                 Sns: &shared.SnsChannelConfig{
-                    TopicArn: "et",
+                    TopicArn: "voluptatem",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.AddNotificationChannel(ctx, req)
+    res, err := s.AddNotificationChannel(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

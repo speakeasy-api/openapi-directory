@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,12 +24,12 @@ func main() {
     
     req := operations.GetAtmsRequest{
         Headers: operations.GetAtmsHeaders{
-            IfModifiedSince: "laudantium",
-            IfNoneMatch: "deserunt",
+            IfModifiedSince: "nam",
+            IfNoneMatch: "dolore",
         },
     }
     
-    res, err := s.Atm.GetAtms(ctx, req)
+    res, err := s.ATM.GetAtms(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

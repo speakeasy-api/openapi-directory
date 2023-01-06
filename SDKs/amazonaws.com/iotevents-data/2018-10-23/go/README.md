@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,39 +34,27 @@ func main() {
     
     req := operations.BatchAcknowledgeAlarmRequest{
         Headers: operations.BatchAcknowledgeAlarmHeaders{
-            XAmzAlgorithm: "alias",
-            XAmzContentSha256: "tempore",
-            XAmzCredential: "ipsum",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "error",
-            XAmzSignature: "reprehenderit",
-            XAmzSignedHeaders: "explicabo",
+            XAmzAlgorithm: "adipisci",
+            XAmzContentSha256: "suscipit",
+            XAmzCredential: "tempora",
+            XAmzDate: "illum",
+            XAmzSecurityToken: "quae",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "consectetur",
         },
         Request: operations.BatchAcknowledgeAlarmRequestBody{
             AcknowledgeActionRequests: []shared.AcknowledgeAlarmActionRequest{
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "eum",
-                    KeyValue: "recusandae",
-                    Note: "ratione",
-                    RequestID: "labore",
-                },
-                shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "necessitatibus",
-                    KeyValue: "saepe",
-                    Note: "libero",
-                    RequestID: "nobis",
-                },
-                shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "ut",
-                    KeyValue: "accusamus",
-                    Note: "qui",
-                    RequestID: "hic",
+                    AlarmModelName: "doloremque",
+                    KeyValue: "neque",
+                    Note: "sint",
+                    RequestID: "iste",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.BatchAcknowledgeAlarm(ctx, req)
+    res, err := s.BatchAcknowledgeAlarm(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

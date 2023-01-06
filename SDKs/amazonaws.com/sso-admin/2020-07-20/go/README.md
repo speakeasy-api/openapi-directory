@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,23 +34,23 @@ func main() {
     
     req := operations.AttachManagedPolicyToPermissionSetRequest{
         Headers: operations.AttachManagedPolicyToPermissionSetHeaders{
-            XAmzAlgorithm: "nobis",
-            XAmzContentSha256: "possimus",
-            XAmzCredential: "voluptate",
-            XAmzDate: "illum",
-            XAmzSecurityToken: "iusto",
-            XAmzSignature: "sunt",
-            XAmzSignedHeaders: "saepe",
+            XAmzAlgorithm: "est",
+            XAmzContentSha256: "in",
+            XAmzCredential: "corporis",
+            XAmzDate: "dolores",
+            XAmzSecurityToken: "perferendis",
+            XAmzSignature: "laboriosam",
+            XAmzSignedHeaders: "numquam",
             XAmzTarget: "SWBExternalService.AttachManagedPolicyToPermissionSet",
         },
         Request: shared.AttachManagedPolicyToPermissionSetRequest{
-            InstanceArn: "quod",
-            ManagedPolicyArn: "ducimus",
-            PermissionSetArn: "esse",
+            InstanceArn: "aperiam",
+            ManagedPolicyArn: "veniam",
+            PermissionSetArn: "velit",
         },
     }
     
-    res, err := s.Sdk.AttachManagedPolicyToPermissionSet(ctx, req)
+    res, err := s.AttachManagedPolicyToPermissionSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

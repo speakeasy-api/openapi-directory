@@ -1,5 +1,5 @@
 package shared
 
 type DeleteRecommenderConfigurationResponse struct {
-	RecommenderConfigurationResponse RecommenderConfigurationResponse `json:"RecommenderConfigurationResponse"`
+	RecommenderConfigurationResponse RecommenderConfigurationResponse1 `json:"RecommenderConfigurationResponse"`
 }

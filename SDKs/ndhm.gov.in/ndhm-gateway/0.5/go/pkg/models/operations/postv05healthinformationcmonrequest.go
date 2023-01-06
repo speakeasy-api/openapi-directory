@@ -6,12 +6,12 @@ import (
 
 type PostV05HealthInformationCmOnRequestHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHiuID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
+	XHIUID        string `header:"style=simple,explode=false,name=X-HIU-ID"`
 }
 
 type PostV05HealthInformationCmOnRequestRequests struct {
 	ApplicationXML                      []byte                                      `request:"mediaType=application/xml"`
-	HiuHealthInformationRequestResponse *shared.HiuHealthInformationRequestResponse `request:"mediaType=application/json"`
+	HIUHealthInformationRequestResponse *shared.HiuHealthInformationRequestResponse `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationCmOnRequestRequest struct {

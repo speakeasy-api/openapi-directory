@@ -1,5 +1,5 @@
 package shared
 
 type EventCategoriesMessage struct {
-	EventCategoriesMapList []EventCategoriesMap
+	EventCategoriesMapList []map[string]interface{}
 }

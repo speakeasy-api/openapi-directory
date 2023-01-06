@@ -36,8 +36,8 @@ type SetTextUsingPostRequest struct {
 type SetTextUsingPostResponse struct {
 	ContentType                              string
 	StatusCode                               int64
-	SetTextUsingPost200ApplicationJSONObject *SetTextUsingPost200ApplicationJSON
-	SetTextUsingPost400ApplicationJSONObject *SetTextUsingPost400ApplicationJSON
-	SetTextUsingPost401ApplicationJSONObject *SetTextUsingPost401ApplicationJSON
-	SetTextUsingPost500ApplicationJSONObject *SetTextUsingPost500ApplicationJSON
+	SetTextUsingPOST200ApplicationJSONObject *SetTextUsingPost200ApplicationJSON
+	SetTextUsingPOST400ApplicationJSONObject *SetTextUsingPost400ApplicationJSON
+	SetTextUsingPOST401ApplicationJSONObject *SetTextUsingPost401ApplicationJSON
+	SetTextUsingPOST500ApplicationJSONObject *SetTextUsingPost500ApplicationJSON
 }

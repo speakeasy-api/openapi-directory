@@ -1,5 +1,5 @@
 package shared
 
 type ModifyCapacityReservationResult struct {
-	Return *bool
+	Return map[string]interface{}
 }

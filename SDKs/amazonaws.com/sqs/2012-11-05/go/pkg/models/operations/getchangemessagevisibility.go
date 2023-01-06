@@ -8,13 +8,13 @@ type GetChangeMessageVisibilityPathParams struct {
 type GetChangeMessageVisibilityActionEnum string
 
 const (
-	GetChangeMessageVisibilityActionEnumChangeMessageVisibility GetChangeMessageVisibilityActionEnum = "ChangeMessageVisibility"
+	GETChangeMessageVisibilityActionEnumChangeMessageVisibility GetChangeMessageVisibilityActionEnum = "ChangeMessageVisibility"
 )
 
 type GetChangeMessageVisibilityVersionEnum string
 
 const (
-	GetChangeMessageVisibilityVersionEnumTwoThousandAndTwelve1105 GetChangeMessageVisibilityVersionEnum = "2012-11-05"
+	GETChangeMessageVisibilityVersionEnumTwoThousandAndTwelve1105 GetChangeMessageVisibilityVersionEnum = "2012-11-05"
 )
 
 type GetChangeMessageVisibilityQueryParams struct {

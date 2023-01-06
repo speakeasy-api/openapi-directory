@@ -3,13 +3,13 @@ package operations
 type PostGetClusterCredentialsActionEnum string
 
 const (
-	PostGetClusterCredentialsActionEnumGetClusterCredentials PostGetClusterCredentialsActionEnum = "GetClusterCredentials"
+	POSTGetClusterCredentialsActionEnumGetClusterCredentials PostGetClusterCredentialsActionEnum = "GetClusterCredentials"
 )
 
 type PostGetClusterCredentialsVersionEnum string
 
 const (
-	PostGetClusterCredentialsVersionEnumTwoThousandAndTwelve1201 PostGetClusterCredentialsVersionEnum = "2012-12-01"
+	POSTGetClusterCredentialsVersionEnumTwoThousandAndTwelve1201 PostGetClusterCredentialsVersionEnum = "2012-12-01"
 )
 
 type PostGetClusterCredentialsQueryParams struct {

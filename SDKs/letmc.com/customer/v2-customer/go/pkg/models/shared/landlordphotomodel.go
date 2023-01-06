@@ -15,6 +15,6 @@ const (
 type LandlordPhotoModel struct {
 	ETag      *string                          `json:"ETag,omitempty"`
 	FileName  *string                          `json:"FileName,omitempty"`
-	Oid       *string                          `json:"OID,omitempty"`
+	OID       *string                          `json:"OID,omitempty"`
 	PhotoType *LandlordPhotoModelPhotoTypeEnum `json:"PhotoType,omitempty"`
 }

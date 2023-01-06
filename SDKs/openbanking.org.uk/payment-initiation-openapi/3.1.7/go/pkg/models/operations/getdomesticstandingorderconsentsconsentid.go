@@ -17,7 +17,7 @@ type GetDomesticStandingOrderConsentsConsentIDHeaders struct {
 }
 
 type GetDomesticStandingOrderConsentsConsentIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type GetDomesticStandingOrderConsentsConsentIDRequest struct {
@@ -30,7 +30,7 @@ type GetDomesticStandingOrderConsentsConsentIDResponse struct {
 	Body                                         []byte
 	ContentType                                  string
 	Headers                                      map[string][]string
-	ObErrorResponse1                             *shared.ObErrorResponse1
-	ObWriteDomesticStandingOrderConsentResponse6 *shared.ObWriteDomesticStandingOrderConsentResponse6
+	OBErrorResponse1                             *shared.ObErrorResponse1
+	OBWriteDomesticStandingOrderConsentResponse6 *shared.ObWriteDomesticStandingOrderConsentResponse6
 	StatusCode                                   int64
 }

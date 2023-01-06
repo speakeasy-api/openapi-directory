@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,23 +26,23 @@ func main() {
         Security: operations.IncerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.IncerRequestBody{
             CertificateParameters: &operations.IncerRequestBodyCertificateParameters{
-                Appno: "possimus",
-                Certno: "autem",
+                APPNO: "rerum",
+                CERTNO: "voluptates",
             },
-            ConsentArtifact: "ipsum",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "aut",
+            TxnID: "eum",
         },
     }
     
-    res, err := s.Sdk.Incer(ctx, req)
+    res, err := s.APIs.Incer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,7 +56,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Incer` - Income Certificate
 * `Rmcer` - Marriage Certificate

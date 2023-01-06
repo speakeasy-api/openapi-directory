@@ -3,5 +3,5 @@ package shared
 // EventCategoriesMessage
 // <p/>
 type EventCategoriesMessage struct {
-	EventCategoriesMapList []EventCategoriesMap
+	EventCategoriesMapList []map[string]interface{}
 }

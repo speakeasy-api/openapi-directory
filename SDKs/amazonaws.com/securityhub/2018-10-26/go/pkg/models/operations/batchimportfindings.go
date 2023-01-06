@@ -15,7 +15,7 @@ type BatchImportFindingsHeaders struct {
 }
 
 type BatchImportFindingsRequestBody struct {
-	Findings []shared.AwsSecurityFinding `json:"Findings"`
+	Findings []shared.AwsSecurityFinding1 `json:"Findings"`
 }
 
 type BatchImportFindingsRequest struct {

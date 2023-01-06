@@ -21,7 +21,7 @@ type GetAPIVVersionMetalsBenchmarkSupportedRequest struct {
 type GetAPIVVersionMetalsBenchmarkSupportedResponse struct {
 	Body                                                            []byte
 	ContentType                                                     string
-	GetAPIVVersionMetalsBenchmarkSupported200ApplicationJSONStrings []string
 	ProblemDetails                                                  map[string]interface{}
 	StatusCode                                                      int64
+	GetAPIVVersionMetalsBenchmarkSupported200ApplicationJSONStrings []string
 }

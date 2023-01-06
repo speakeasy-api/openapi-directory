@@ -3,13 +3,13 @@ package operations
 type PostPutMetricAlarmActionEnum string
 
 const (
-	PostPutMetricAlarmActionEnumPutMetricAlarm PostPutMetricAlarmActionEnum = "PutMetricAlarm"
+	POSTPutMetricAlarmActionEnumPutMetricAlarm PostPutMetricAlarmActionEnum = "PutMetricAlarm"
 )
 
 type PostPutMetricAlarmVersionEnum string
 
 const (
-	PostPutMetricAlarmVersionEnumTwoThousandAndTen0801 PostPutMetricAlarmVersionEnum = "2010-08-01"
+	POSTPutMetricAlarmVersionEnumTwoThousandAndTen0801 PostPutMetricAlarmVersionEnum = "2010-08-01"
 )
 
 type PostPutMetricAlarmQueryParams struct {

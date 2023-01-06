@@ -1,5 +1,5 @@
 package shared
 
 type ImportApplicationUsageResult struct {
-	ImportID string `json:"importId"`
+	ImportID map[string]interface{} `json:"importId"`
 }

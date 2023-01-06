@@ -3,13 +3,13 @@ package operations
 type GetAcceptReservedNodeExchangeActionEnum string
 
 const (
-	GetAcceptReservedNodeExchangeActionEnumAcceptReservedNodeExchange GetAcceptReservedNodeExchangeActionEnum = "AcceptReservedNodeExchange"
+	GETAcceptReservedNodeExchangeActionEnumAcceptReservedNodeExchange GetAcceptReservedNodeExchangeActionEnum = "AcceptReservedNodeExchange"
 )
 
 type GetAcceptReservedNodeExchangeVersionEnum string
 
 const (
-	GetAcceptReservedNodeExchangeVersionEnumTwoThousandAndTwelve1201 GetAcceptReservedNodeExchangeVersionEnum = "2012-12-01"
+	GETAcceptReservedNodeExchangeVersionEnumTwoThousandAndTwelve1201 GetAcceptReservedNodeExchangeVersionEnum = "2012-12-01"
 )
 
 type GetAcceptReservedNodeExchangeQueryParams struct {

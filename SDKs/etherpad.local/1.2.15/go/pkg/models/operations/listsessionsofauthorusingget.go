@@ -46,8 +46,8 @@ type ListSessionsOfAuthorUsingGetRequest struct {
 type ListSessionsOfAuthorUsingGetResponse struct {
 	ContentType                                          string
 	StatusCode                                           int64
-	ListSessionsOfAuthorUsingGet200ApplicationJSONObject *ListSessionsOfAuthorUsingGet200ApplicationJSON
-	ListSessionsOfAuthorUsingGet400ApplicationJSONObject *ListSessionsOfAuthorUsingGet400ApplicationJSON
-	ListSessionsOfAuthorUsingGet401ApplicationJSONObject *ListSessionsOfAuthorUsingGet401ApplicationJSON
-	ListSessionsOfAuthorUsingGet500ApplicationJSONObject *ListSessionsOfAuthorUsingGet500ApplicationJSON
+	ListSessionsOfAuthorUsingGET200ApplicationJSONObject *ListSessionsOfAuthorUsingGet200ApplicationJSON
+	ListSessionsOfAuthorUsingGET400ApplicationJSONObject *ListSessionsOfAuthorUsingGet400ApplicationJSON
+	ListSessionsOfAuthorUsingGET401ApplicationJSONObject *ListSessionsOfAuthorUsingGet401ApplicationJSON
+	ListSessionsOfAuthorUsingGET500ApplicationJSONObject *ListSessionsOfAuthorUsingGet500ApplicationJSON
 }

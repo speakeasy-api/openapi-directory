@@ -3,13 +3,13 @@ package operations
 type GetCreateAppCookieStickinessPolicyActionEnum string
 
 const (
-	GetCreateAppCookieStickinessPolicyActionEnumCreateAppCookieStickinessPolicy GetCreateAppCookieStickinessPolicyActionEnum = "CreateAppCookieStickinessPolicy"
+	GETCreateAppCookieStickinessPolicyActionEnumCreateAppCookieStickinessPolicy GetCreateAppCookieStickinessPolicyActionEnum = "CreateAppCookieStickinessPolicy"
 )
 
 type GetCreateAppCookieStickinessPolicyVersionEnum string
 
 const (
-	GetCreateAppCookieStickinessPolicyVersionEnumTwoThousandAndTwelve0601 GetCreateAppCookieStickinessPolicyVersionEnum = "2012-06-01"
+	GETCreateAppCookieStickinessPolicyVersionEnumTwoThousandAndTwelve0601 GetCreateAppCookieStickinessPolicyVersionEnum = "2012-06-01"
 )
 
 type GetCreateAppCookieStickinessPolicyQueryParams struct {

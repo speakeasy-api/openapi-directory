@@ -72,6 +72,6 @@ type PostAdminRecordingsStop200ApplicationJSON struct {
 
 type PostAdminRecordingsStopResponse struct {
 	ContentType                                     string
-	PostAdminRecordingsStop200ApplicationJSONObject *PostAdminRecordingsStop200ApplicationJSON
 	StatusCode                                      int64
+	PostAdminRecordingsStop200ApplicationJSONObject *PostAdminRecordingsStop200ApplicationJSON
 }

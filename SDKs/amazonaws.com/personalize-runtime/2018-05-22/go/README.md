@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,35 +34,34 @@ func main() {
     
     req := operations.GetPersonalizedRankingRequest{
         Headers: operations.GetPersonalizedRankingHeaders{
-            XAmzAlgorithm: "magnam",
-            XAmzContentSha256: "a",
-            XAmzCredential: "et",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "dicta",
-            XAmzSignature: "in",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "odio",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "harum",
+            XAmzDate: "est",
+            XAmzSecurityToken: "sequi",
+            XAmzSignature: "iure",
+            XAmzSignedHeaders: "provident",
         },
         Request: operations.GetPersonalizedRankingRequestBody{
-            CampaignArn: "enim",
+            CampaignArn: "eum",
             Context: map[string]string{
-                "dolores": "quasi",
-                "recusandae": "numquam",
-                "numquam": "occaecati",
+                "quia": "repellendus",
             },
-            FilterArn: "aut",
+            FilterArn: "cupiditate",
             FilterValues: map[string]string{
-                "occaecati": "et",
-                "et": "non",
-                "molestias": "aut",
+                "molestiae": "nesciunt",
+                "consectetur": "iure",
+                "sit": "sit",
             },
             InputList: []string{
-                "consequuntur",
+                "est",
+                "at",
             },
-            UserID: "exercitationem",
+            UserID: "ut",
         },
     }
     
-    res, err := s.Sdk.GetPersonalizedRanking(ctx, req)
+    res, err := s.GetPersonalizedRanking(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

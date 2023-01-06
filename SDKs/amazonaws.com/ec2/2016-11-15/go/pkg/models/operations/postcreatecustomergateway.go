@@ -3,13 +3,13 @@ package operations
 type PostCreateCustomerGatewayActionEnum string
 
 const (
-	PostCreateCustomerGatewayActionEnumCreateCustomerGateway PostCreateCustomerGatewayActionEnum = "CreateCustomerGateway"
+	POSTCreateCustomerGatewayActionEnumCreateCustomerGateway PostCreateCustomerGatewayActionEnum = "CreateCustomerGateway"
 )
 
 type PostCreateCustomerGatewayVersionEnum string
 
 const (
-	PostCreateCustomerGatewayVersionEnumTwoThousandAndSixteen1115 PostCreateCustomerGatewayVersionEnum = "2016-11-15"
+	POSTCreateCustomerGatewayVersionEnumTwoThousandAndSixteen1115 PostCreateCustomerGatewayVersionEnum = "2016-11-15"
 )
 
 type PostCreateCustomerGatewayQueryParams struct {

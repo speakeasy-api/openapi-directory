@@ -25,6 +25,6 @@ type PostSSHKeysRequest struct {
 
 type PostSSHKeysResponse struct {
 	ContentType                         string
-	PostSSHKeys201ApplicationJSONObject *PostSSHKeys201ApplicationJSON
 	StatusCode                          int64
+	PostSSHKeys201ApplicationJSONObject *PostSSHKeys201ApplicationJSON
 }

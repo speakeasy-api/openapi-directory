@@ -3,13 +3,13 @@ package operations
 type GetDescribeAggregateIDFormatActionEnum string
 
 const (
-	GetDescribeAggregateIDFormatActionEnumDescribeAggregateIDFormat GetDescribeAggregateIDFormatActionEnum = "DescribeAggregateIdFormat"
+	GETDescribeAggregateIDFormatActionEnumDescribeAggregateIDFormat GetDescribeAggregateIDFormatActionEnum = "DescribeAggregateIdFormat"
 )
 
 type GetDescribeAggregateIDFormatVersionEnum string
 
 const (
-	GetDescribeAggregateIDFormatVersionEnumTwoThousandAndSixteen1115 GetDescribeAggregateIDFormatVersionEnum = "2016-11-15"
+	GETDescribeAggregateIDFormatVersionEnumTwoThousandAndSixteen1115 GetDescribeAggregateIDFormatVersionEnum = "2016-11-15"
 )
 
 type GetDescribeAggregateIDFormatQueryParams struct {

@@ -9,7 +9,6 @@ type GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParams struct {
 }
 
 type GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity struct {
-	Hapikey           *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
 	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
 	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
 }

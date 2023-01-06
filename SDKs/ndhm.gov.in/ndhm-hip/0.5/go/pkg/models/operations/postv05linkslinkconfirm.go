@@ -10,7 +10,7 @@ var PostV05LinksLinkConfirmServerList = []string{
 
 type PostV05LinksLinkConfirmHeaders struct {
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	XHipID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
+	XHIPID        string `header:"style=simple,explode=false,name=X-HIP-ID"`
 }
 
 type PostV05LinksLinkConfirmRequests struct {

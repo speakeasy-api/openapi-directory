@@ -3,13 +3,13 @@ package operations
 type PostDefineIndexFieldActionEnum string
 
 const (
-	PostDefineIndexFieldActionEnumDefineIndexField PostDefineIndexFieldActionEnum = "DefineIndexField"
+	POSTDefineIndexFieldActionEnumDefineIndexField PostDefineIndexFieldActionEnum = "DefineIndexField"
 )
 
 type PostDefineIndexFieldVersionEnum string
 
 const (
-	PostDefineIndexFieldVersionEnumTwoThousandAndEleven0201 PostDefineIndexFieldVersionEnum = "2011-02-01"
+	POSTDefineIndexFieldVersionEnumTwoThousandAndEleven0201 PostDefineIndexFieldVersionEnum = "2011-02-01"
 )
 
 type PostDefineIndexFieldQueryParams struct {

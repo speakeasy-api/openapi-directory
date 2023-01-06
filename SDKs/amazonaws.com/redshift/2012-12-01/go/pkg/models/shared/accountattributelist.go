@@ -1,5 +1,5 @@
 package shared
 
 type AccountAttributeList struct {
-	AccountAttributes []AccountAttribute
+	AccountAttributes []map[string]interface{}
 }

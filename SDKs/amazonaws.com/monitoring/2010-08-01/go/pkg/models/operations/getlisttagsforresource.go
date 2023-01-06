@@ -3,18 +3,18 @@ package operations
 type GetListTagsForResourceActionEnum string
 
 const (
-	GetListTagsForResourceActionEnumListTagsForResource GetListTagsForResourceActionEnum = "ListTagsForResource"
+	GETListTagsForResourceActionEnumListTagsForResource GetListTagsForResourceActionEnum = "ListTagsForResource"
 )
 
 type GetListTagsForResourceVersionEnum string
 
 const (
-	GetListTagsForResourceVersionEnumTwoThousandAndTen0801 GetListTagsForResourceVersionEnum = "2010-08-01"
+	GETListTagsForResourceVersionEnumTwoThousandAndTen0801 GetListTagsForResourceVersionEnum = "2010-08-01"
 )
 
 type GetListTagsForResourceQueryParams struct {
 	Action      GetListTagsForResourceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	ResourceArn string                            `queryParam:"style=form,explode=true,name=ResourceARN"`
+	ResourceARN string                            `queryParam:"style=form,explode=true,name=ResourceARN"`
 	Version     GetListTagsForResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

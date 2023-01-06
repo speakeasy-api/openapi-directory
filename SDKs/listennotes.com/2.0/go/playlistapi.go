@@ -1,0 +1,140 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type PlaylistAPI struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewPlaylistAPI(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *PlaylistAPI {
+	return &PlaylistAPI{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// GetPlaylistByID - Fetch a playlist's info and items (i.e., episodes or podcasts).
+// A playlist can be an episode list (i.e., all items are episodes) or a podcast list (i.e., all items are podcasts),
+// which is essentially the same as those created via listennotes.com/listen/.
+// This endpoint fetches a list of items (i.e., episodes or podcasts) in the playlist.
+// You can use the **last_pub_date_ms** parameter to do pagination and fetch more items.
+// A playlist can be **public** (discoverable on ListenNotes.com),
+// **unlisted** (accessible to anyone who knows the playlist id),
+// or **private** (accessible to its owner).
+// You can fetch all playlists created by you, and **public** / **unlisted** playlists created by others.
+func (s *PlaylistAPI) GetPlaylistByID(ctx context.Context, request operations.GetPlaylistByIDRequest) (*operations.GetPlaylistByIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPlaylistByIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PlaylistResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PlaylistResponse = out
+		}
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+	}
+
+	return res, nil
+}
+
+// GetPlaylists - Fetch a list of your playlists.
+// This endpoint returns same data as listennotes.com/listen under your account.
+// You can use the **page** parameter to do pagination and fetch more playlists.
+func (s *PlaylistAPI) GetPlaylists(ctx context.Context, request operations.GetPlaylistsRequest) (*operations.GetPlaylistsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/playlists"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPlaylistsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PlaylistsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PlaylistsResponse = out
+		}
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 429:
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+	}
+
+	return res, nil
+}

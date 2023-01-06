@@ -13,7 +13,7 @@ type ProtocolDhcpGetTraceRequest struct {
 }
 
 type ProtocolDhcpGetTraceResponse struct {
-	ConfigDhcp  *shared.ConfigDhcp
+	ConfigDHCP  *shared.ConfigDhcp
 	ContentType string
 	StatusCode  int64
 }

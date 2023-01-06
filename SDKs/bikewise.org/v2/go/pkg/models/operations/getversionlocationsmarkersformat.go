@@ -3,12 +3,12 @@ package operations
 type GetVersionLocationsMarkersFormatIncidentTypeEnum string
 
 const (
-	GetVersionLocationsMarkersFormatIncidentTypeEnumCrash               GetVersionLocationsMarkersFormatIncidentTypeEnum = "crash"
-	GetVersionLocationsMarkersFormatIncidentTypeEnumHazard              GetVersionLocationsMarkersFormatIncidentTypeEnum = "hazard"
-	GetVersionLocationsMarkersFormatIncidentTypeEnumTheft               GetVersionLocationsMarkersFormatIncidentTypeEnum = "theft"
-	GetVersionLocationsMarkersFormatIncidentTypeEnumUnconfirmed         GetVersionLocationsMarkersFormatIncidentTypeEnum = "unconfirmed"
-	GetVersionLocationsMarkersFormatIncidentTypeEnumInfrastructureIssue GetVersionLocationsMarkersFormatIncidentTypeEnum = "infrastructure_issue"
-	GetVersionLocationsMarkersFormatIncidentTypeEnumChopShop            GetVersionLocationsMarkersFormatIncidentTypeEnum = "chop_shop"
+	GETVersionLocationsMarkersFormatIncidentTypeEnumCrash               GetVersionLocationsMarkersFormatIncidentTypeEnum = "crash"
+	GETVersionLocationsMarkersFormatIncidentTypeEnumHazard              GetVersionLocationsMarkersFormatIncidentTypeEnum = "hazard"
+	GETVersionLocationsMarkersFormatIncidentTypeEnumTheft               GetVersionLocationsMarkersFormatIncidentTypeEnum = "theft"
+	GETVersionLocationsMarkersFormatIncidentTypeEnumUnconfirmed         GetVersionLocationsMarkersFormatIncidentTypeEnum = "unconfirmed"
+	GETVersionLocationsMarkersFormatIncidentTypeEnumInfrastructureIssue GetVersionLocationsMarkersFormatIncidentTypeEnum = "infrastructure_issue"
+	GETVersionLocationsMarkersFormatIncidentTypeEnumChopShop            GetVersionLocationsMarkersFormatIncidentTypeEnum = "chop_shop"
 )
 
 type GetVersionLocationsMarkersFormatQueryParams struct {

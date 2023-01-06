@@ -3,25 +3,25 @@ package operations
 type GetSetIdentityMailFromDomainActionEnum string
 
 const (
-	GetSetIdentityMailFromDomainActionEnumSetIdentityMailFromDomain GetSetIdentityMailFromDomainActionEnum = "SetIdentityMailFromDomain"
+	GETSetIdentityMailFromDomainActionEnumSetIdentityMailFromDomain GetSetIdentityMailFromDomainActionEnum = "SetIdentityMailFromDomain"
 )
 
 type GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum string
 
 const (
-	GetSetIdentityMailFromDomainBehaviorOnMxFailureEnumUseDefaultValue GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum = "UseDefaultValue"
-	GetSetIdentityMailFromDomainBehaviorOnMxFailureEnumRejectMessage   GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum = "RejectMessage"
+	GETSetIdentityMailFromDomainBehaviorOnMxFailureEnumUseDefaultValue GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum = "UseDefaultValue"
+	GETSetIdentityMailFromDomainBehaviorOnMxFailureEnumRejectMessage   GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum = "RejectMessage"
 )
 
 type GetSetIdentityMailFromDomainVersionEnum string
 
 const (
-	GetSetIdentityMailFromDomainVersionEnumTwoThousandAndTen1201 GetSetIdentityMailFromDomainVersionEnum = "2010-12-01"
+	GETSetIdentityMailFromDomainVersionEnumTwoThousandAndTen1201 GetSetIdentityMailFromDomainVersionEnum = "2010-12-01"
 )
 
 type GetSetIdentityMailFromDomainQueryParams struct {
 	Action              GetSetIdentityMailFromDomainActionEnum               `queryParam:"style=form,explode=true,name=Action"`
-	BehaviorOnMxFailure *GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum `queryParam:"style=form,explode=true,name=BehaviorOnMXFailure"`
+	BehaviorOnMXFailure *GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum `queryParam:"style=form,explode=true,name=BehaviorOnMXFailure"`
 	Identity            string                                               `queryParam:"style=form,explode=true,name=Identity"`
 	MailFromDomain      *string                                              `queryParam:"style=form,explode=true,name=MailFromDomain"`
 	Version             GetSetIdentityMailFromDomainVersionEnum              `queryParam:"style=form,explode=true,name=Version"`

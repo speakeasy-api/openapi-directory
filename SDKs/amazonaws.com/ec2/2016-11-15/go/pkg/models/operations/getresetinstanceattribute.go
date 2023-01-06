@@ -3,33 +3,33 @@ package operations
 type GetResetInstanceAttributeActionEnum string
 
 const (
-	GetResetInstanceAttributeActionEnumResetInstanceAttribute GetResetInstanceAttributeActionEnum = "ResetInstanceAttribute"
+	GETResetInstanceAttributeActionEnumResetInstanceAttribute GetResetInstanceAttributeActionEnum = "ResetInstanceAttribute"
 )
 
 type GetResetInstanceAttributeAttributeEnum string
 
 const (
-	GetResetInstanceAttributeAttributeEnumInstanceType                      GetResetInstanceAttributeAttributeEnum = "instanceType"
-	GetResetInstanceAttributeAttributeEnumKernel                            GetResetInstanceAttributeAttributeEnum = "kernel"
-	GetResetInstanceAttributeAttributeEnumRamdisk                           GetResetInstanceAttributeAttributeEnum = "ramdisk"
-	GetResetInstanceAttributeAttributeEnumUserData                          GetResetInstanceAttributeAttributeEnum = "userData"
-	GetResetInstanceAttributeAttributeEnumDisableAPITermination             GetResetInstanceAttributeAttributeEnum = "disableApiTermination"
-	GetResetInstanceAttributeAttributeEnumInstanceInitiatedShutdownBehavior GetResetInstanceAttributeAttributeEnum = "instanceInitiatedShutdownBehavior"
-	GetResetInstanceAttributeAttributeEnumRootDeviceName                    GetResetInstanceAttributeAttributeEnum = "rootDeviceName"
-	GetResetInstanceAttributeAttributeEnumBlockDeviceMapping                GetResetInstanceAttributeAttributeEnum = "blockDeviceMapping"
-	GetResetInstanceAttributeAttributeEnumProductCodes                      GetResetInstanceAttributeAttributeEnum = "productCodes"
-	GetResetInstanceAttributeAttributeEnumSourceDestCheck                   GetResetInstanceAttributeAttributeEnum = "sourceDestCheck"
-	GetResetInstanceAttributeAttributeEnumGroupSet                          GetResetInstanceAttributeAttributeEnum = "groupSet"
-	GetResetInstanceAttributeAttributeEnumEbsOptimized                      GetResetInstanceAttributeAttributeEnum = "ebsOptimized"
-	GetResetInstanceAttributeAttributeEnumSriovNetSupport                   GetResetInstanceAttributeAttributeEnum = "sriovNetSupport"
-	GetResetInstanceAttributeAttributeEnumEnaSupport                        GetResetInstanceAttributeAttributeEnum = "enaSupport"
-	GetResetInstanceAttributeAttributeEnumEnclaveOptions                    GetResetInstanceAttributeAttributeEnum = "enclaveOptions"
+	GETResetInstanceAttributeAttributeEnumInstanceType                      GetResetInstanceAttributeAttributeEnum = "instanceType"
+	GETResetInstanceAttributeAttributeEnumKernel                            GetResetInstanceAttributeAttributeEnum = "kernel"
+	GETResetInstanceAttributeAttributeEnumRamdisk                           GetResetInstanceAttributeAttributeEnum = "ramdisk"
+	GETResetInstanceAttributeAttributeEnumUserData                          GetResetInstanceAttributeAttributeEnum = "userData"
+	GETResetInstanceAttributeAttributeEnumDisableAPITermination             GetResetInstanceAttributeAttributeEnum = "disableApiTermination"
+	GETResetInstanceAttributeAttributeEnumInstanceInitiatedShutdownBehavior GetResetInstanceAttributeAttributeEnum = "instanceInitiatedShutdownBehavior"
+	GETResetInstanceAttributeAttributeEnumRootDeviceName                    GetResetInstanceAttributeAttributeEnum = "rootDeviceName"
+	GETResetInstanceAttributeAttributeEnumBlockDeviceMapping                GetResetInstanceAttributeAttributeEnum = "blockDeviceMapping"
+	GETResetInstanceAttributeAttributeEnumProductCodes                      GetResetInstanceAttributeAttributeEnum = "productCodes"
+	GETResetInstanceAttributeAttributeEnumSourceDestCheck                   GetResetInstanceAttributeAttributeEnum = "sourceDestCheck"
+	GETResetInstanceAttributeAttributeEnumGroupSet                          GetResetInstanceAttributeAttributeEnum = "groupSet"
+	GETResetInstanceAttributeAttributeEnumEbsOptimized                      GetResetInstanceAttributeAttributeEnum = "ebsOptimized"
+	GETResetInstanceAttributeAttributeEnumSriovNetSupport                   GetResetInstanceAttributeAttributeEnum = "sriovNetSupport"
+	GETResetInstanceAttributeAttributeEnumEnaSupport                        GetResetInstanceAttributeAttributeEnum = "enaSupport"
+	GETResetInstanceAttributeAttributeEnumEnclaveOptions                    GetResetInstanceAttributeAttributeEnum = "enclaveOptions"
 )
 
 type GetResetInstanceAttributeVersionEnum string
 
 const (
-	GetResetInstanceAttributeVersionEnumTwoThousandAndSixteen1115 GetResetInstanceAttributeVersionEnum = "2016-11-15"
+	GETResetInstanceAttributeVersionEnumTwoThousandAndSixteen1115 GetResetInstanceAttributeVersionEnum = "2016-11-15"
 )
 
 type GetResetInstanceAttributeQueryParams struct {

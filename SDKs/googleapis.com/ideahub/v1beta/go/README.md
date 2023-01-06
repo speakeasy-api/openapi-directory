@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,35 +24,32 @@ func main() {
     
     req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
         PathParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams{
-            Parent: "repellat",
+            Parent: "eos",
         },
         QueryParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "hic",
-            Alt: "json",
-            Callback: "molestiae",
-            Fields: "ratione",
-            Key: "voluptate",
-            OauthToken: "accusamus",
-            PrettyPrint: true,
-            QuotaUser: "exercitationem",
-            UploadType: "sed",
-            UploadProtocol: "velit",
+            DollarXgafv: "2",
+            AccessToken: "vel",
+            Alt: "media",
+            Callback: "id",
+            Fields: "aliquid",
+            Key: "et",
+            OauthToken: "possimus",
+            PrettyPrint: false,
+            QuotaUser: "vel",
+            UploadType: "est",
+            UploadProtocol: "minus",
         },
         Request: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
-                "modi",
-                "a",
                 "ea",
             },
-            Name: "nihil",
+            Name: "et",
             Topics: []string{
-                "quis",
-                "quos",
-                "repellendus",
+                "voluptatem",
+                "consequatur",
             },
-            Type: "TYPE_UNSPECIFIED",
-            URI: "reiciendis",
+            Type: "POST_DRAFTED",
+            URI: "reprehenderit",
         },
     }
     

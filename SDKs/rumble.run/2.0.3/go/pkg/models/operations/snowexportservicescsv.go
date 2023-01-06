@@ -15,5 +15,5 @@ type SnowExportServicesCsvRequest struct {
 type SnowExportServicesCsvResponse struct {
 	ContentType                                 string
 	StatusCode                                  int64
-	SnowExportServicesCsv200TextCsvBinaryString []byte
+	SnowExportServicesCSV200TextCSVBinaryString []byte
 }

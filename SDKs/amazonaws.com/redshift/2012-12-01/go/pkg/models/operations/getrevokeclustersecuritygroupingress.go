@@ -3,18 +3,18 @@ package operations
 type GetRevokeClusterSecurityGroupIngressActionEnum string
 
 const (
-	GetRevokeClusterSecurityGroupIngressActionEnumRevokeClusterSecurityGroupIngress GetRevokeClusterSecurityGroupIngressActionEnum = "RevokeClusterSecurityGroupIngress"
+	GETRevokeClusterSecurityGroupIngressActionEnumRevokeClusterSecurityGroupIngress GetRevokeClusterSecurityGroupIngressActionEnum = "RevokeClusterSecurityGroupIngress"
 )
 
 type GetRevokeClusterSecurityGroupIngressVersionEnum string
 
 const (
-	GetRevokeClusterSecurityGroupIngressVersionEnumTwoThousandAndTwelve1201 GetRevokeClusterSecurityGroupIngressVersionEnum = "2012-12-01"
+	GETRevokeClusterSecurityGroupIngressVersionEnumTwoThousandAndTwelve1201 GetRevokeClusterSecurityGroupIngressVersionEnum = "2012-12-01"
 )
 
 type GetRevokeClusterSecurityGroupIngressQueryParams struct {
 	Action                   GetRevokeClusterSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Cidrip                   *string                                         `queryParam:"style=form,explode=true,name=CIDRIP"`
+	CIDRIP                   *string                                         `queryParam:"style=form,explode=true,name=CIDRIP"`
 	ClusterSecurityGroupName string                                          `queryParam:"style=form,explode=true,name=ClusterSecurityGroupName"`
 	Ec2SecurityGroupName     *string                                         `queryParam:"style=form,explode=true,name=EC2SecurityGroupName"`
 	Ec2SecurityGroupOwnerID  *string                                         `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`

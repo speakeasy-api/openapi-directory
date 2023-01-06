@@ -1,0 +1,10 @@
+package shared
+
+type UseAsRegularPayload struct {
+	AllowOriginalFilePreview    *bool    `json:"allowOriginalFilePreview,omitempty"`
+	AllowReviewInManualEditor   *bool    `json:"allowReviewInManualEditor,omitempty"`
+	DisableInvitations          *bool    `json:"disableInvitations,omitempty"`
+	FromManualTranslationFileID *float64 `json:"fromManualTranslationFileId,omitempty"`
+	HideNumbers                 *bool    `json:"hideNumbers,omitempty"`
+	Recreate                    *bool    `json:"recreate,omitempty"`
+}

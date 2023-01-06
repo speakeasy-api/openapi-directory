@@ -51,9 +51,9 @@ type UpdateIntentRequestBodyIntentConfirmationSetting struct {
 // UpdateIntentRequestBodyKendraConfiguration
 // Provides configuration information for the AMAZON.KendraSearchIntent intent. When you use this intent, Amazon Lex searches the specified Amazon Kendra index and returns documents from the index that match the user's utterance.
 type UpdateIntentRequestBodyKendraConfiguration struct {
-	KendraIndex              *string `json:"kendraIndex,omitempty"`
-	QueryFilterString        *string `json:"queryFilterString,omitempty"`
-	QueryFilterStringEnabled *bool   `json:"queryFilterStringEnabled,omitempty"`
+	KendraIndex              *string                `json:"kendraIndex,omitempty"`
+	QueryFilterString        map[string]interface{} `json:"queryFilterString,omitempty"`
+	QueryFilterStringEnabled *bool                  `json:"queryFilterStringEnabled,omitempty"`
 }
 
 type UpdateIntentRequestBody struct {

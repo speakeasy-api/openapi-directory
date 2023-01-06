@@ -3,13 +3,13 @@ package operations
 type PostAssociateDataShareConsumerActionEnum string
 
 const (
-	PostAssociateDataShareConsumerActionEnumAssociateDataShareConsumer PostAssociateDataShareConsumerActionEnum = "AssociateDataShareConsumer"
+	POSTAssociateDataShareConsumerActionEnumAssociateDataShareConsumer PostAssociateDataShareConsumerActionEnum = "AssociateDataShareConsumer"
 )
 
 type PostAssociateDataShareConsumerVersionEnum string
 
 const (
-	PostAssociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 PostAssociateDataShareConsumerVersionEnum = "2012-12-01"
+	POSTAssociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 PostAssociateDataShareConsumerVersionEnum = "2012-12-01"
 )
 
 type PostAssociateDataShareConsumerQueryParams struct {

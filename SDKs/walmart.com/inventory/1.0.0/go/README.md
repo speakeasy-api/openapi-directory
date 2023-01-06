@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,19 +35,19 @@ func main() {
     
     req := operations.GetInventoryRequest{
         QueryParams: operations.GetInventoryQueryParams{
-            ShipNode: "excepturi",
-            Sku: "repellat",
+            ShipNode: "quisquam",
+            Sku: "rem",
         },
         Headers: operations.GetInventoryHeaders{
-            Authorization: "placeat",
-            WmConsumerChannelType: "neque",
-            WmQosCorrelationID: "autem",
-            WmSecAccessToken: "voluptas",
-            WmSvcName: "aut",
+            Authorization: "nemo",
+            WMCONSUMERCHANNELTYPE: "expedita",
+            WMQOSCORRELATIONID: "nulla",
+            WMSECACCESSTOKEN: "est",
+            WMSVCNAME: "possimus",
         },
     }
     
-    res, err := s.Sdk.GetInventory(ctx, req)
+    res, err := s.Inventory.GetInventory(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -62,7 +61,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Inventory
 
 * `GetInventory` - Inventory
 * `GetMultiNodeInventoryForAllSkuAndAllShipNodes` - Multiple Item Inventory for All Ship Nodes

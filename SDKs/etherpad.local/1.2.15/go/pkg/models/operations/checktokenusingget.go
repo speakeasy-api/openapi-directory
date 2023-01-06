@@ -27,8 +27,8 @@ type CheckTokenUsingGet500ApplicationJSON struct {
 type CheckTokenUsingGetResponse struct {
 	ContentType                                string
 	StatusCode                                 int64
-	CheckTokenUsingGet200ApplicationJSONObject *CheckTokenUsingGet200ApplicationJSON
-	CheckTokenUsingGet400ApplicationJSONObject *CheckTokenUsingGet400ApplicationJSON
-	CheckTokenUsingGet401ApplicationJSONObject *CheckTokenUsingGet401ApplicationJSON
-	CheckTokenUsingGet500ApplicationJSONObject *CheckTokenUsingGet500ApplicationJSON
+	CheckTokenUsingGET200ApplicationJSONObject *CheckTokenUsingGet200ApplicationJSON
+	CheckTokenUsingGET400ApplicationJSONObject *CheckTokenUsingGet400ApplicationJSON
+	CheckTokenUsingGET401ApplicationJSONObject *CheckTokenUsingGet401ApplicationJSON
+	CheckTokenUsingGET500ApplicationJSONObject *CheckTokenUsingGet500ApplicationJSON
 }

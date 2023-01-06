@@ -8,21 +8,21 @@ import (
 // <p>Contains the details of an Amazon Neptune DB cluster.</p> <p>This data type is used as a response element in the <a>DescribeDBClusters</a> action.</p>
 type DbCluster struct {
 	AllocatedStorage                 *int64
-	AssociatedRoles                  []DbClusterRole
+	AssociatedRoles                  []map[string]interface{}
 	AutomaticRestartTime             *time.Time
-	AvailabilityZones                []string
+	AvailabilityZones                []map[string]interface{}
 	BackupRetentionPeriod            *int64
 	CharacterSetName                 *string
 	CloneGroupID                     *string
 	ClusterCreateTime                *time.Time
 	CopyTagsToSnapshot               *bool
 	CrossAccountClone                *bool
-	DbClusterArn                     *string
-	DbClusterIdentifier              *string
-	DbClusterMembers                 []DbClusterMember
-	DbClusterOptionGroupMemberships  []DbClusterOptionGroupStatus
-	DbClusterParameterGroup          *string
-	DbSubnetGroup                    *string
+	DBClusterArn                     *string
+	DBClusterIdentifier              *string
+	DBClusterMembers                 []map[string]interface{}
+	DBClusterOptionGroupMemberships  []map[string]interface{}
+	DBClusterParameterGroup          *string
+	DBSubnetGroup                    *string
 	DatabaseName                     *string
 	DbClusterResourceID              *string
 	DeletionProtection               *bool
@@ -32,19 +32,19 @@ type DbCluster struct {
 	Engine                           *string
 	EngineVersion                    *string
 	HostedZoneID                     *string
-	IamDatabaseAuthenticationEnabled *bool
+	IAMDatabaseAuthenticationEnabled *bool
 	KmsKeyID                         *string
 	LatestRestorableTime             *time.Time
 	MasterUsername                   *string
-	MultiAz                          *bool
+	MultiAZ                          *bool
 	PercentProgress                  *string
 	Port                             *int64
 	PreferredBackupWindow            *string
 	PreferredMaintenanceWindow       *string
-	ReadReplicaIdentifiers           []string
+	ReadReplicaIdentifiers           []map[string]interface{}
 	ReaderEndpoint                   *string
 	ReplicationSourceIdentifier      *string
 	Status                           *string
 	StorageEncrypted                 *bool
-	VpcSecurityGroups                []VpcSecurityGroupMembership
+	VpcSecurityGroups                []map[string]interface{}
 }

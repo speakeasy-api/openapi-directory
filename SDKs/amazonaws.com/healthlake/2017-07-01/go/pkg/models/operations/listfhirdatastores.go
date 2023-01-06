@@ -12,7 +12,7 @@ type ListFhirDatastoresQueryParams struct {
 type ListFhirDatastoresXAmzTargetEnum string
 
 const (
-	ListFhirDatastoresXAmzTargetEnumHealthLakeListFhirDatastores ListFhirDatastoresXAmzTargetEnum = "HealthLake.ListFHIRDatastores"
+	ListFHIRDatastoresXAmzTargetEnumHealthLakeListFhirDatastores ListFhirDatastoresXAmzTargetEnum = "HealthLake.ListFHIRDatastores"
 )
 
 type ListFhirDatastoresHeaders struct {
@@ -35,7 +35,7 @@ type ListFhirDatastoresRequest struct {
 type ListFhirDatastoresResponse struct {
 	ContentType                string
 	InternalServerException    *interface{}
-	ListFhirDatastoresResponse *shared.ListFhirDatastoresResponse
+	ListFHIRDatastoresResponse *shared.ListFhirDatastoresResponse
 	StatusCode                 int64
 	ThrottlingException        *interface{}
 	ValidationException        *interface{}

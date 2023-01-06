@@ -25,5 +25,5 @@ type RemovePasswordV1Response struct {
 	ContentType                                         string
 	StatusCode                                          int64
 	RemovePasswordV1200ApplicationPdfBinaryString       []byte
-	RemovePasswordV14XxApplicationProblemPlusJSONObject *RemovePasswordV14XxApplicationProblemPlusJSON
+	RemovePasswordV14XXApplicationProblemPlusJSONObject *RemovePasswordV14XxApplicationProblemPlusJSON
 }

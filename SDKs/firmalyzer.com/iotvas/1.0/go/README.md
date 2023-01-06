@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,19 +29,19 @@ func main() {
             },
         },
         Request: shared.DeviceFeatures{
-            FtpBanner: "itaque",
-            Hostname: "voluptas",
-            HTTPResponse: "adipisci",
-            HTTPSResponse: "vel",
-            NicMac: "mollitia",
-            SnmpSysdescr: "est",
-            SnmpSysoid: "omnis",
-            TelnetBanner: "assumenda",
-            UpnpResponse: "temporibus",
+            FtpBanner: "laboriosam",
+            Hostname: "quia",
+            HTTPResponse: "sunt",
+            HTTPSResponse: "inventore",
+            NicMac: "nobis",
+            SnmpSysdescr: "eum",
+            SnmpSysoid: "perferendis",
+            TelnetBanner: "sapiente",
+            UpnpResponse: "similique",
         },
     }
     
-    res, err := s.Sdk.DetectDeviceDetectPost(ctx, req)
+    res, err := s.Device.DetectDeviceDetectPost(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,9 +55,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### device
 
 * `DetectDeviceDetectPost` - Detect iot device by service banners and mac address
+
+### firmware
+
 * `FirmwareAccountsFirmwareFirmwareHashAccountsGet` - Get default accounts and password hashes of a firmware
 * `FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet` - Get default OS configuration issues of a device firmware
 * `FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet` - Get expired digital certificates embedded in a device firmware

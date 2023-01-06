@@ -21,9 +21,9 @@ type UpdatePipelineHeaders struct {
 // UpdatePipelineRequestBodyContentConfig
 // The <code>PipelineOutputConfig</code> structure.
 type UpdatePipelineRequestBodyContentConfig struct {
-	Bucket       *string             `json:"Bucket,omitempty"`
-	Permissions  []shared.Permission `json:"Permissions,omitempty"`
-	StorageClass *string             `json:"StorageClass,omitempty"`
+	Bucket       *string                `json:"Bucket,omitempty"`
+	Permissions  map[string]interface{} `json:"Permissions,omitempty"`
+	StorageClass *string                `json:"StorageClass,omitempty"`
 }
 
 // UpdatePipelineRequestBodyNotifications

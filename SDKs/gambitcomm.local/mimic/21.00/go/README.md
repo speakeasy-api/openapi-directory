@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -36,13 +35,13 @@ func main() {
     
     req := operations.AccessAddRequest{
         PathParams: operations.AccessAddPathParams{
-            Agents: "quo",
-            Mask: "odit",
-            User: "ducimus",
+            Agents: "eius",
+            Mask: "earum",
+            User: "error",
         },
     }
     
-    res, err := s.Sdk.AccessAdd(ctx, req)
+    res, err := s.Access.AccessAdd(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,7 +55,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Access
 
 * `AccessAdd` - Adds/Overwrites the user entry in the access control database.
 * `AccessDel` - Clears a users entry from access control database.
@@ -69,8 +68,9 @@ func main() {
 * `AccessSave` - Saves current access control data in specified file.
 * `AccessSetAcldb` - Allows setting the name of the current access control database.
 * `AccessSetEnabled` - Allows the user to enable/disable the access control check.
-* `Add` - Add an entry to a table.
-* `AddDaemonTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
+
+### Agent
+
 * `AddIpalias` - Adds a new ipalias for the agent.
 * `AddTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 * `AgentRemove` - Remove the current agent.
@@ -82,79 +82,76 @@ func main() {
 * `AgentStorePersists` - This command can be used as a predicate to ascertain the persistence of a given variable.
 * `AgentStoreSet` - These commands allow the creation of a new variable, or changing an existing value.
 * `AgentStoreUnset` - Deletes a variable which is currently defined.
-* `CfgLoad` - Load the lab configuration file file.
-* `CfgNew` - Clear the lab configuration.
-* `CfgSave` - Save the lab configuration.
-* `CfgSaveas` - Save the lab configuration in file.
-* `DelDaemonTimerScript` - Remove a timer script from the execution list.
 * `DelIpalias` - Deletes an existing ipalias from the agent.
 * `DelTimerScript` - Remove a timer script from the execution list.
-* `EvalValue` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
 * `FromAdd` - Add a source address that the agent will accept messages from.
 * `FromDel` - delete a source address that the agent will accept messages from.
 * `FromList` - List the source addresses that the agent will accept messages from.
-* `GetActiveDataList` - The list of {agentnum {statistics}} for agents that are currently active and whose statistics have changed since the last invocation of this command.
-* `GetActiveList` - The list of {agentnum} that are currently active (running or paused).
 * `GetAgentState` - current running state of the agent
-* `GetCfgFileChanged` - This predicate indicates if the currently loaded agent configuration file has changed.
-* `GetCfgfile` - The currently loaded lab configuration file for the particular user.
 * `GetChanged` - has the agent value space changed?
-* `GetChangedConfigList` - The list of {agentnum} for which a configurable parameter changed.
-* `GetChangedStateList` - The list of {agentnum state} for which the state changed.
-* `GetClients` - The number of clients currently connected to the daemon.
 * `GetConfigChanged` - has the lab configuration changed?
-* `GetConfiguredList` - The list of {agentnum} that are currently configured.
-* `GetDaemonProtocols` - The set of protocols supported by the Simulator.
 * `GetDelay` - one-way transit delay in msec.
 * `GetDrops` - drop rate (every N-th PDU). 0 means no drops.
 * `GetHost` - host address of the agent.
-* `GetInfo` - Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
 * `GetInformTimeout` - timeout in seconds for retransmitting INFORM PDUs.
-* `GetInstances` - Display the MIB object instances for the specified object.
 * `GetInterface` - network interface card for the agent.
-* `GetInterfaces` - The set of network interfaces that can be used for simulations.
-* `GetLast` - The last configured agent instance.
-* `GetLog` - The current log file for the Simulator.
 * `GetMask` - subnet mask of the agent.
-* `GetMax` - The maximum number of agent instances.
-* `GetMib` - Return the MIB that defines the specified object.
 * `GetMibs` - set of MIBs, simulations and scenarios
-* `GetName` - Return the symbolic name of the specified object identifier.
-* `GetNetaddr` - The network address of the host where the MIMIC simulator is running.
-* `GetNetdev` - The default network device to be used for agent addresses.
 * `GetNumberStarts` - number of starts for the agent.
-* `GetObjects` - Display the MIB objects below the current position
-* `GetOid` - Return the numeric OID of the specified object.
 * `GetOiddir` - MIB directory of the agent.
 * `GetOwner` - owner of the agent.
 * `GetPdusize` - maximum PDU size.
 * `GetPort` - port number
 * `GetPrivdir` - private directory of the agent.
-* `GetProduct` - The product number that is licensed.
 * `GetProtocols` - protocols supported by agent
 * `GetReadCommunity` - read community string
-* `GetReturn` - The return mode.
 * `GetScen` - first scenario name
 * `GetSim` - first simulation name
 * `GetStarttime` - relative start time
-* `GetState` - Get the state of a MIB object object.
 * `GetStateChanged` - has the agent state changed?
 * `GetStatistics` - current statistics of the agent instance
 * `GetTrace` - SNMP PDU tracing
 * `GetValidate` - SNMP SET validation policy.
-* `GetValue` - Get a variable in the Value Space.
-* `GetVariables` - Display the variables for the specified instance instance for the specified MIB object object
-* `GetVersion` - The version of the MIMIC command interface.
 * `GetWriteCommunity` - write community string
 * `Halt` - Halt the current agent.
-* `ListDaemonTimerScripts` - List the timer scripts currently running along with the their intervals.
 * `ListIpaliases` - Lists all the additional ipaliases configured for the agent.
 * `ListTimerScripts` - List the timer scripts currently running along with the their intervals.
-* `MgetInfo` - Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
-* `MsetValue` - Set multiple variables in the Value Space.
-* `MunsetValue` - Unset multiple variables in the Value Space
 * `New` - Add an agent.
 * `PauseNow` - Pause the current agent.
+* `ProtocolGetConfig` - Returns the protocol's configuration.
+* `Reload` - Reload the current agent.
+* `Resume` - Resume the current agent.
+* `Save` - Save agent MIB values.
+* `SetDelay` - one-way transit delay in msec
+* `SetDrops` - drop rate (every N-th PDU)
+* `SetHost` - host address of the agent.
+* `SetInformTimeout` - timeout in seconds for retransmitting INFORM PDUs
+* `SetInterface` - network interface card for the agent
+* `SetMask` - subnet mask of the agent.
+* `SetMibs` - set of MIBs, simulations and scenarios
+* `SetOiddir` - MIB directory of the agent.
+* `SetOwner` - owner of the agent
+* `SetPdusize` - maximum PDU size
+* `SetPort` - port number
+* `SetPrivdir` - private directory of the agent.
+* `SetProtocols` - protocols supported by agent as a comma-separated list
+* `SetReadCommunity` - read community string
+* `SetStarttime` - relative start time
+* `SetTrace` - SNMP PDU tracing
+* `SetValidate` - SNMP SET validation policy
+* `SetWriteCommunity` - write community string
+* `Start` - Start the current agent.
+* `StartIpalias` - Starts an existing ipalias for the agent.
+* `StatusIpalias` - Returns the status (0=down, 1=up) of an existing ipalias for the agent.
+* `Stop` - Show the agent's primary IP address
+* `StopIpalias` - Stops an existing ipalias for the agent.
+* `TrapConfigAdd` - Add a trap destination to the set of destinations.
+* `TrapConfigDel` - Remove a trap destination from the set of destinations.
+* `TrapConfigList` - List the set of trap destinations for this agent instance.
+* `TrapList` - List the outstanding asynchronous traps for this agent instance.
+
+### COAP
+
 * `ProtocolCoapGetArgs` - Show the agent's COAP argument structure
 * `ProtocolCoapGetConfig` - Show the agent's COAP configuration
 * `ProtocolCoapGetStatistics` - Show the agent's COAP statistics
@@ -162,6 +159,9 @@ func main() {
 * `ProtocolCoapGetTrace` - Show the agent's COAP traffic tracing
 * `ProtocolCoapSetConfig` - Set the agent's COAP configuration
 * `ProtocolCoapSetTrace` - Set the agent's COAP traffic tracing
+
+### DHCP
+
 * `ProtocolDhcpGetArgs` - Show the agent's DHCP argument structure
 * `ProtocolDhcpGetConfig` - Show the agent's DHCP configuration
 * `ProtocolDhcpGetStatistics` - Show the agent's DHCP statistics
@@ -170,7 +170,51 @@ func main() {
 * `ProtocolDhcpParams` - Show the parameters configured by the server in its DHCP-OFFER message
 * `ProtocolDhcpSetConfig` - Set the agent's DHCP configuration
 * `ProtocolDhcpSetTrace` - Set the agent's DHCP traffic tracing
-* `ProtocolGetConfig` - Returns the protocol's configuration.
+
+### Daemon
+
+* `AddDaemonTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
+* `CfgLoad` - Load the lab configuration file file.
+* `CfgNew` - Clear the lab configuration.
+* `CfgSave` - Save the lab configuration.
+* `CfgSaveas` - Save the lab configuration in file.
+* `DelDaemonTimerScript` - Remove a timer script from the execution list.
+* `GetActiveDataList` - The list of {agentnum {statistics}} for agents that are currently active and whose statistics have changed since the last invocation of this command.
+* `GetActiveList` - The list of {agentnum} that are currently active (running or paused).
+* `GetCfgFileChanged` - This predicate indicates if the currently loaded agent configuration file has changed.
+* `GetCfgfile` - The currently loaded lab configuration file for the particular user.
+* `GetChangedConfigList` - The list of {agentnum} for which a configurable parameter changed.
+* `GetChangedStateList` - The list of {agentnum state} for which the state changed.
+* `GetClients` - The number of clients currently connected to the daemon.
+* `GetConfiguredList` - The list of {agentnum} that are currently configured.
+* `GetDaemonProtocols` - The set of protocols supported by the Simulator.
+* `GetInterfaces` - The set of network interfaces that can be used for simulations.
+* `GetLast` - The last configured agent instance.
+* `GetLog` - The current log file for the Simulator.
+* `GetMax` - The maximum number of agent instances.
+* `GetNetaddr` - The network address of the host where the MIMIC simulator is running.
+* `GetNetdev` - The default network device to be used for agent addresses.
+* `GetProduct` - The product number that is licensed.
+* `GetReturn` - The return mode.
+* `GetVersion` - The version of the MIMIC command interface.
+* `ListDaemonTimerScripts` - List the timer scripts currently running along with the their intervals.
+* `MgetInfo` - Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
+* `SetLog` - The current log file for the Simulator.
+* `SetNetdev` - The network address of the host where the MIMIC simulator is running.
+* `StartAllAgents` - Start MIMIC.
+* `StopAllAgents` - Stop MIMIC.
+* `StoreExists` - This command can be used as a predicate to ascertain the existence of a given variable.
+* `StoreGet` - Fetches the value associated with a variable.
+* `StoreList` - This command will return the list of variables in the said scope.
+* `StoreLreplace` - These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
+* `StorePersists` - This command can be used as a predicate to ascertain the persistence of a given variable.
+* `StoreSave` - This operation flushes all global objects which need to be made persistent to disk.
+* `StoreSet` - Set the variable store for the global storage
+* `StoreUnset` - Deletes a variable which is currently defined.
+* `Terminate` - Terminate the MIMIC daemon.
+
+### IPMI
+
 * `ProtocolIpmiGetArgs` - Show the agent's IPMI argument structure
 * `ProtocolIpmiGetAttr` - Show the outgoing message's attributes
 * `ProtocolIpmiGetConfig` - Show the agent's IPMI configuration
@@ -180,6 +224,9 @@ func main() {
 * `ProtocolIpmiSetAttr` - Set the outgoing message's attributes
 * `ProtocolIpmiSetConfig` - Set the agent's IPMI configuration
 * `ProtocolIpmiSetTrace` - Set the agent's IPMI traffic tracing
+
+### MQTT
+
 * `ProtocolMqttClientGetProtstate` - Show the agent's MQTT TCP connection state
 * `ProtocolMqttClientGetState` - Show the agent's MQTT state
 * `ProtocolMqttClientMessageCard` - Show the agent's current messages' cardinality
@@ -212,6 +259,9 @@ func main() {
 * `ProtocolMqttGetTrace` - Show the agent's MQTT traffic tracing
 * `ProtocolMqttSetConfig` - Set the agent's MQTT configuration
 * `ProtocolMqttSetTrace` - Set the agent's MQTT traffic tracing
+
+### NETFLOW
+
 * `ProtocolNetflowChangeAttr` - Change NETFLOW export attributes
 * `ProtocolNetflowChangeDfs` - Change NETFLOW data export interval
 * `ProtocolNetflowChangeTfs` - Change NETFLOW template export interval
@@ -228,6 +278,9 @@ func main() {
 * `ProtocolNetflowSetConfig` - Set the agent's NETFLOW configuration
 * `ProtocolNetflowSetFileName` - Swap NETFLOW configuration file
 * `ProtocolNetflowSetTrace` - Set the agent's NETFLOW traffic tracing
+
+### PROXY
+
 * `ProtocolProxyGetArgs` - Show the agent's PROXY argument structure
 * `ProtocolProxyGetConfig` - Show the agent's PROXY configuration
 * `ProtocolProxyGetStatistics` - Show the agent's PROXY statistics
@@ -241,6 +294,9 @@ func main() {
 * `ProtocolProxyPortStop` - Stop additional target
 * `ProtocolProxySetConfig` - Set the agent's PROXY configuration
 * `ProtocolProxySetTrace` - Set the agent's PROXY traffic tracing
+
+### SFLOW
+
 * `ProtocolSflowGetArgs` - Show the agent's SFLOW argument structure
 * `ProtocolSflowGetConfig` - Show the agent's SFLOW configuration
 * `ProtocolSflowGetStatistics` - Show the agent's SFLOW statistics
@@ -251,6 +307,9 @@ func main() {
 * `ProtocolSflowResume` - Resuming traffic
 * `ProtocolSflowSetConfig` - Set the agent's SFLOW configuration
 * `ProtocolSflowSetTrace` - Set the agent's SFLOW traffic tracing
+
+### SNMPTCP
+
 * `ProtocolSnmptcpGetArgs` - Show the agent's SNMPTCP argument structure
 * `ProtocolSnmptcpGetConfig` - Show the agent's SNMPTCP configuration
 * `ProtocolSnmptcpGetStatistics` - Show the agent's SNMPTCP statistics
@@ -262,6 +321,9 @@ func main() {
 * `ProtocolSnmptcpIpaliasList` - List all IP aliases on the agent and the simulator host
 * `ProtocolSnmptcpSetConfig` - Set the agent's SNMPTCP configuration
 * `ProtocolSnmptcpSetTrace` - Set the agent's SNMPTCP traffic tracing
+
+### SNMPv3
+
 * `ProtocolSnmpv3AccessAdd` - Adds a new access entry with the specified parameters.
 * `ProtocolSnmpv3AccessClear` - Clears all access entries.
 * `ProtocolSnmpv3AccessDel` - Deletes the specified access entry.
@@ -288,6 +350,9 @@ func main() {
 * `ProtocolSnmpv3ViewClear` - Clears all view entries.
 * `ProtocolSnmpv3ViewDel` - Deletes the specified view entry.
 * `ProtocolSnmpv3ViewList` - Returns the current view entries as an array of strings.
+
+### SSH
+
 * `ProtocolSSHGetArgs` - Show the agent's SSH argument structure
 * `ProtocolSSHGetConfig` - Show the agent's SSH configuration
 * `ProtocolSSHGetStatistics` - Show the agent's SSH statistics
@@ -299,6 +364,9 @@ func main() {
 * `ProtocolSSHIpaliasList` - List all IP aliases on the agent and the simulator host
 * `ProtocolSSHSetConfig` - Set the agent's SSH configuration
 * `ProtocolSSHSetTrace` - Set the agent's SSH traffic tracing
+
+### SYSLOG
+
 * `ProtocolSyslogGetArgs` - Show the agent's SYSLOG argument structure
 * `ProtocolSyslogGetAttr` - Show the outgoing message's attributes
 * `ProtocolSyslogGetConfig` - Show the agent's SYSLOG configuration
@@ -309,6 +377,9 @@ func main() {
 * `ProtocolSyslogSetAttr` - Set the outgoing message's attributes
 * `ProtocolSyslogSetConfig` - Set the agent's SYSLOG configuration
 * `ProtocolSyslogSetTrace` - Set the agent's SYSLOG traffic tracing
+
+### TELNET
+
 * `ProtocolTelnetConnectionLogon` - Changes the connection's current logon.
 * `ProtocolTelnetConnectionRequest` - Executes the command asynchronously .
 * `ProtocolTelnetConnectionSignal` - Triggers the asynchronous signal event with the specified signal name
@@ -329,6 +400,9 @@ func main() {
 * `ProtocolTelnetServerGetUsers` - Show the agent's TELNET users
 * `ProtocolTelnetSetConfig` - Set the agent's TELNET configuration
 * `ProtocolTelnetSetTrace` - Set the agent's TELNET traffic tracing
+
+### TFTP
+
 * `ProtocolTftpGetArgs` - Show the agent's TFTP argument structure
 * `ProtocolTftpGetConfig` - Show the agent's TFTP configuration
 * `ProtocolTftpGetStatistics` - Show the agent's TFTP statistics
@@ -343,6 +417,9 @@ func main() {
 * `ProtocolTftpSessionWrite` - Create a read session to upload srcfile to server
 * `ProtocolTftpSetConfig` - Set the agent's TFTP configuration
 * `ProtocolTftpSetTrace` - Set the agent's TFTP traffic tracing
+
+### TOD
+
 * `ProtocolTodGetArgs` - Show the agent's TOD argument structure
 * `ProtocolTodGetConfig` - Show the agent's TOD configuration
 * `ProtocolTodGetStatistics` - Show the agent's TOD statistics
@@ -351,6 +428,30 @@ func main() {
 * `ProtocolTodGettime` - Retrieve TOD time
 * `ProtocolTodSetConfig` - Set the agent's TOD configuration
 * `ProtocolTodSetTrace` - Set the agent's TOD traffic tracing
+
+### Valuespace
+
+* `Add` - Add an entry to a table.
+* `EvalValue` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
+* `GetInfo` - Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
+* `GetInstances` - Display the MIB object instances for the specified object.
+* `GetMib` - Return the MIB that defines the specified object.
+* `GetName` - Return the symbolic name of the specified object identifier.
+* `GetObjects` - Display the MIB objects below the current position
+* `GetOid` - Return the numeric OID of the specified object.
+* `GetState` - Get the state of a MIB object object.
+* `GetValue` - Get a variable in the Value Space.
+* `GetVariables` - Display the variables for the specified instance instance for the specified MIB object object
+* `MsetValue` - Set multiple variables in the Value Space.
+* `MunsetValue` - Unset multiple variables in the Value Space
+* `Remove` - Remove an entry from a table.
+* `SetState` - Set the state of a MIB object object
+* `SetValue` - Set a variable in the Value Space.
+* `SplitOid` - Split the numerical OID into the object OID and instance OID.
+* `UnsetValue` - Unset a variable in the Value Space in order to free its memory.
+
+### WEB
+
 * `ProtocolWebGetArgs` - Show the agent's WEB argument structure
 * `ProtocolWebGetConfig` - Show the agent's WEB configuration
 * `ProtocolWebGetStatistics` - Show the agent's WEB statistics
@@ -364,54 +465,6 @@ func main() {
 * `ProtocolWebPortStop` - Stop the agent's WEB port
 * `ProtocolWebSetConfig` - Set the agent's WEB configuration
 * `ProtocolWebSetTrace` - Set the agent's WEB traffic tracing
-* `Reload` - Reload the current agent.
-* `Remove` - Remove an entry from a table.
-* `Resume` - Resume the current agent.
-* `Save` - Save agent MIB values.
-* `SetDelay` - one-way transit delay in msec
-* `SetDrops` - drop rate (every N-th PDU)
-* `SetHost` - host address of the agent.
-* `SetInformTimeout` - timeout in seconds for retransmitting INFORM PDUs
-* `SetInterface` - network interface card for the agent
-* `SetLog` - The current log file for the Simulator.
-* `SetMask` - subnet mask of the agent.
-* `SetMibs` - set of MIBs, simulations and scenarios
-* `SetNetdev` - The network address of the host where the MIMIC simulator is running.
-* `SetOiddir` - MIB directory of the agent.
-* `SetOwner` - owner of the agent
-* `SetPdusize` - maximum PDU size
-* `SetPort` - port number
-* `SetPrivdir` - private directory of the agent.
-* `SetProtocols` - protocols supported by agent as a comma-separated list
-* `SetReadCommunity` - read community string
-* `SetStarttime` - relative start time
-* `SetState` - Set the state of a MIB object object
-* `SetTrace` - SNMP PDU tracing
-* `SetValidate` - SNMP SET validation policy
-* `SetValue` - Set a variable in the Value Space.
-* `SetWriteCommunity` - write community string
-* `SplitOid` - Split the numerical OID into the object OID and instance OID.
-* `Start` - Start the current agent.
-* `StartAllAgents` - Start MIMIC.
-* `StartIpalias` - Starts an existing ipalias for the agent.
-* `StatusIpalias` - Returns the status (0=down, 1=up) of an existing ipalias for the agent.
-* `Stop` - Show the agent's primary IP address
-* `StopAllAgents` - Stop MIMIC.
-* `StopIpalias` - Stops an existing ipalias for the agent.
-* `StoreExists` - This command can be used as a predicate to ascertain the existence of a given variable.
-* `StoreGet` - Fetches the value associated with a variable.
-* `StoreList` - This command will return the list of variables in the said scope.
-* `StoreLreplace` - These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
-* `StorePersists` - This command can be used as a predicate to ascertain the persistence of a given variable.
-* `StoreSave` - This operation flushes all global objects which need to be made persistent to disk.
-* `StoreSet` - Set the variable store for the global storage
-* `StoreUnset` - Deletes a variable which is currently defined.
-* `Terminate` - Terminate the MIMIC daemon.
-* `TrapConfigAdd` - Add a trap destination to the set of destinations.
-* `TrapConfigDel` - Remove a trap destination from the set of destinations.
-* `TrapConfigList` - List the set of trap destinations for this agent instance.
-* `TrapList` - List the outstanding asynchronous traps for this agent instance.
-* `UnsetValue` - Unset a variable in the Value Space in order to free its memory.
 
 <!-- End SDK Available Operations -->
 

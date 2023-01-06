@@ -5,9 +5,9 @@ import (
 )
 
 type GovidRequestBodyCertificateParameters struct {
-	Dob      string `json:"DOB"`
+	DOB      string `json:"DOB"`
 	FullName string `json:"FullName"`
-	Regno    string `json:"REGNO"`
+	REGNO    string `json:"REGNO"`
 }
 
 type GovidRequestBodyFormatEnum string
@@ -83,7 +83,7 @@ type Govid404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Govid404ApplicationJSONErrorDescriptionEnumNoRecordFound               Govid404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Govid404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Govid404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Govid404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Govid404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Govid404ApplicationJSON struct {

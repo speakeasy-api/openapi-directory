@@ -20,11 +20,11 @@ type PepOrderPathParams struct {
 type PepOrderRequestBody struct {
 	Aliases    *string `form:"name=Aliases"`
 	Country    *string `form:"name=Country"`
-	Dob        *string `form:"name=DOB"`
+	DOB        *string `form:"name=DOB"`
 	FamilyName *string `form:"name=FamilyName"`
 	Filters    *string `form:"name=Filters"`
 	GivenName  *string `form:"name=GivenName"`
-	Lei        *string `form:"name=LEI"`
+	LEI        *string `form:"name=LEI"`
 	Locale     *string `form:"name=Locale"`
 	Medialists *string `form:"name=Medialists"`
 	MiddleName *string `form:"name=MiddleName"`

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeTrafficMirrorFiltersResult struct {
-	NextToken            *string
-	TrafficMirrorFilters []TrafficMirrorFilter
+	NextToken            map[string]interface{}
+	TrafficMirrorFilters map[string]interface{}
 }

@@ -3,13 +3,13 @@ package shared
 // ImageAttribute
 // Describes an image attribute.
 type ImageAttribute struct {
-	BlockDeviceMappings []BlockDeviceMapping
-	BootMode            *AttributeValue
-	Description         *AttributeValue
-	ImageID             *string
-	KernelID            *AttributeValue
-	LaunchPermissions   []LaunchPermission
-	ProductCodes        []ProductCode
-	RamdiskID           *AttributeValue
-	SriovNetSupport     *AttributeValue
+	BlockDeviceMappings map[string]interface{}
+	BootMode            map[string]interface{}
+	Description         map[string]interface{}
+	ImageID             map[string]interface{}
+	KernelID            map[string]interface{}
+	LaunchPermissions   map[string]interface{}
+	ProductCodes        map[string]interface{}
+	RamdiskID           map[string]interface{}
+	SriovNetSupport     map[string]interface{}
 }

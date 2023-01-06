@@ -3,13 +3,13 @@ package operations
 type GetCreateLbCookieStickinessPolicyActionEnum string
 
 const (
-	GetCreateLbCookieStickinessPolicyActionEnumCreateLbCookieStickinessPolicy GetCreateLbCookieStickinessPolicyActionEnum = "CreateLBCookieStickinessPolicy"
+	GETCreateLBCookieStickinessPolicyActionEnumCreateLbCookieStickinessPolicy GetCreateLbCookieStickinessPolicyActionEnum = "CreateLBCookieStickinessPolicy"
 )
 
 type GetCreateLbCookieStickinessPolicyVersionEnum string
 
 const (
-	GetCreateLbCookieStickinessPolicyVersionEnumTwoThousandAndTwelve0601 GetCreateLbCookieStickinessPolicyVersionEnum = "2012-06-01"
+	GETCreateLBCookieStickinessPolicyVersionEnumTwoThousandAndTwelve0601 GetCreateLbCookieStickinessPolicyVersionEnum = "2012-06-01"
 )
 
 type GetCreateLbCookieStickinessPolicyQueryParams struct {

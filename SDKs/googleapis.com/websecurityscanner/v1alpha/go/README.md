@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,70 +26,68 @@ func main() {
         Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "aperiam",
+            Parent: "ratione",
         },
         QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "eius",
+            AccessToken: "harum",
             Alt: "media",
-            Callback: "rem",
-            Fields: "cupiditate",
-            Key: "omnis",
-            OauthToken: "velit",
+            Callback: "voluptatem",
+            Fields: "distinctio",
+            Key: "quia",
+            OauthToken: "dolor",
             PrettyPrint: false,
-            QuotaUser: "tempore",
-            UploadType: "repellendus",
-            UploadProtocol: "ipsa",
+            QuotaUser: "libero",
+            UploadType: "cumque",
+            UploadProtocol: "qui",
         },
         Request: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "quaerat",
-                    Password: "ut",
-                    Username: "qui",
+                    LoginURL: "perspiciatis",
+                    Password: "ducimus",
+                    Username: "fugit",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "vero",
-                    Username: "quia",
+                    Password: "accusantium",
+                    Username: "nihil",
                 },
             },
             BlacklistPatterns: []string{
-                "doloribus",
-                "vitae",
-                "quos",
+                "id",
             },
-            DisplayName: "et",
+            DisplayName: "eveniet",
             LatestRun: &shared.ScanRun{
-                EndTime: "quasi",
+                EndTime: "molestias",
                 ExecutionState: "FINISHED",
-                HasVulnerabilities: false,
-                Name: "id",
-                ProgressPercent: 2697806848195229402,
-                ResultState: "RESULT_STATE_UNSPECIFIED",
-                StartTime: "ea",
-                UrlsCrawledCount: "possimus",
-                UrlsTestedCount: "numquam",
+                HasVulnerabilities: true,
+                Name: "saepe",
+                ProgressPercent: 8706989857372772240,
+                ResultState: "SUCCESS",
+                StartTime: "earum",
+                UrlsCrawledCount: "neque",
+                UrlsTestedCount: "est",
             },
-            MaxQPS: 6954057250565448800,
-            Name: "veniam",
+            MaxQPS: 8873741180605172723,
+            Name: "praesentium",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 7230071004187882185,
-                ScheduleTime: "et",
+                IntervalDurationDays: 3800582984447144673,
+                ScheduleTime: "cum",
             },
             StartingUrls: []string{
-                "id",
-                "ipsum",
-                "sit",
+                "praesentium",
+                "molestias",
             },
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
+                "APP_ENGINE",
+                "COMPUTE",
                 "CLOUD_RUN",
-                "CLOUD_FUNCTIONS",
             },
             UserAgent: "CHROME_ANDROID",
         },

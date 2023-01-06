@@ -7,7 +7,7 @@ import (
 type CreateFhirDatastoreXAmzTargetEnum string
 
 const (
-	CreateFhirDatastoreXAmzTargetEnumHealthLakeCreateFhirDatastore CreateFhirDatastoreXAmzTargetEnum = "HealthLake.CreateFHIRDatastore"
+	CreateFHIRDatastoreXAmzTargetEnumHealthLakeCreateFhirDatastore CreateFhirDatastoreXAmzTargetEnum = "HealthLake.CreateFHIRDatastore"
 )
 
 type CreateFhirDatastoreHeaders struct {
@@ -29,7 +29,7 @@ type CreateFhirDatastoreRequest struct {
 type CreateFhirDatastoreResponse struct {
 	AccessDeniedException       *interface{}
 	ContentType                 string
-	CreateFhirDatastoreResponse *shared.CreateFhirDatastoreResponse
+	CreateFHIRDatastoreResponse *shared.CreateFhirDatastoreResponse
 	InternalServerException     *interface{}
 	StatusCode                  int64
 	ThrottlingException         *interface{}

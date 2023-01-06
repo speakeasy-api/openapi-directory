@@ -3,13 +3,13 @@ package operations
 type PostDescribeFpgaImageAttributeActionEnum string
 
 const (
-	PostDescribeFpgaImageAttributeActionEnumDescribeFpgaImageAttribute PostDescribeFpgaImageAttributeActionEnum = "DescribeFpgaImageAttribute"
+	POSTDescribeFpgaImageAttributeActionEnumDescribeFpgaImageAttribute PostDescribeFpgaImageAttributeActionEnum = "DescribeFpgaImageAttribute"
 )
 
 type PostDescribeFpgaImageAttributeVersionEnum string
 
 const (
-	PostDescribeFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 PostDescribeFpgaImageAttributeVersionEnum = "2016-11-15"
+	POSTDescribeFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 PostDescribeFpgaImageAttributeVersionEnum = "2016-11-15"
 )
 
 type PostDescribeFpgaImageAttributeQueryParams struct {

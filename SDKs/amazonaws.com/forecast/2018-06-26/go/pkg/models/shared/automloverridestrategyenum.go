@@ -3,5 +3,5 @@ package shared
 type AutoMlOverrideStrategyEnum string
 
 const (
-	AutoMlOverrideStrategyEnumLatencyOptimized AutoMlOverrideStrategyEnum = "LatencyOptimized"
+	AutoMLOverrideStrategyEnumLatencyOptimized AutoMlOverrideStrategyEnum = "LatencyOptimized"
 )

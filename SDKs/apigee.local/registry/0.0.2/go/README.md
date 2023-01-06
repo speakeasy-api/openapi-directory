@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,15 +24,15 @@ func main() {
     
     req := operations.RegistryCreateAPIRequest{
         PathParams: operations.RegistryCreateAPIPathParams{
-            Project: "ipsum",
+            Project: "sunt",
         },
         QueryParams: operations.RegistryCreateAPIQueryParams{
-            APIID: "rem",
+            APIID: "ratione",
         },
-        Request: "consequuntur",
+        Request: "est",
     }
     
-    res, err := s.Sdk.RegistryCreateAPI(ctx, req)
+    res, err := s.RegistryCreateAPI(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

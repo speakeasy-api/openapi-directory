@@ -1,5 +1,5 @@
 package shared
 
 type CreateNetworkACLResult struct {
-	NetworkACL *NetworkACL
+	NetworkACL map[string]interface{}
 }

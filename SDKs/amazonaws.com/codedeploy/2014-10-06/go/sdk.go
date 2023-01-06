@@ -1,12 +1,13 @@
 package sdk
 
 import (
+	"net/http"
+
 	"context"
 	"fmt"
-	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -1937,7 +1938,7 @@ func (s *SDK) CreateDeploymentGroup(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.InvalidEcsServiceException = out
+			res.InvalidECSServiceException = out
 		}
 	case httpRes.StatusCode == 509:
 		switch {
@@ -1957,7 +1958,7 @@ func (s *SDK) CreateDeploymentGroup(ctx context.Context, request operations.Crea
 				return nil, err
 			}
 
-			res.EcsServiceMappingLimitExceededException = out
+			res.ECSServiceMappingLimitExceededException = out
 		}
 	case httpRes.StatusCode == 511:
 		switch {
@@ -5725,7 +5726,7 @@ func (s *SDK) UpdateDeploymentGroup(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.InvalidEcsServiceException = out
+			res.InvalidECSServiceException = out
 		}
 	case httpRes.StatusCode == 508:
 		switch {
@@ -5745,7 +5746,7 @@ func (s *SDK) UpdateDeploymentGroup(ctx context.Context, request operations.Upda
 				return nil, err
 			}
 
-			res.EcsServiceMappingLimitExceededException = out
+			res.ECSServiceMappingLimitExceededException = out
 		}
 	case httpRes.StatusCode == 510:
 		switch {

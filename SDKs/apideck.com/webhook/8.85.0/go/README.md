@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -40,16 +39,16 @@ func main() {
             },
         },
         Headers: operations.WebhooksAddHeaders{
-            XApideckAppID: "quidem",
+            XApideckAppID: "nostrum",
         },
         Request: shared.CreateWebhookRequest{
-            DeliveryURL: "incidunt",
-            Description: "ratione",
+            DeliveryURL: "occaecati",
+            Description: "iste",
             Events: []shared.WebhookEventTypeEnum{
-                "crm.lead.updated",
+                "crm.opportunity.updated",
             },
             Status: "enabled",
-            UnifiedAPI: "transactional-email",
+            UnifiedAPI: "payroll",
         },
     }
     
@@ -69,14 +68,14 @@ func main() {
 
 ### Webhooks
 
-* `WebhooksAdd` - Create webhook
-* `WebhooksAll` - List webhooks
-* `WebhooksDelete` - Delete webhook
+* `WebhooksAdd` - Create webhook subscription
+* `WebhooksAll` - List webhook subscriptions
+* `WebhooksDelete` - Delete webhook subscription
 * `WebhooksExecute` - Execute a webhook
-* `WebhooksOne` - Get webhook
+* `WebhooksOne` - Get webhook subscription
 * `WebhooksResolve` - Resolve and Execute a connection webhook
 * `WebhooksShortExecute` - Execute a webhook
-* `WebhooksUpdate` - Update webhook
+* `WebhooksUpdate` - Update webhook subscription
 
 <!-- End SDK Available Operations -->
 

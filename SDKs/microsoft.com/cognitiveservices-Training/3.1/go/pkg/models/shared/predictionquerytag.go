@@ -1,0 +1,7 @@
+package shared
+
+type PredictionQueryTag struct {
+	ID           *string  `json:"id,omitempty"`
+	MaxThreshold *float32 `json:"maxThreshold,omitempty"`
+	MinThreshold *float32 `json:"minThreshold,omitempty"`
+}

@@ -3,26 +3,26 @@ package operations
 type GetCreateDbInstanceReadReplicaActionEnum string
 
 const (
-	GetCreateDbInstanceReadReplicaActionEnumCreateDbInstanceReadReplica GetCreateDbInstanceReadReplicaActionEnum = "CreateDBInstanceReadReplica"
+	GETCreateDBInstanceReadReplicaActionEnumCreateDbInstanceReadReplica GetCreateDbInstanceReadReplicaActionEnum = "CreateDBInstanceReadReplica"
 )
 
 type GetCreateDbInstanceReadReplicaVersionEnum string
 
 const (
-	GetCreateDbInstanceReadReplicaVersionEnumTwoThousandAndThirteen0110 GetCreateDbInstanceReadReplicaVersionEnum = "2013-01-10"
+	GETCreateDBInstanceReadReplicaVersionEnumTwoThousandAndThirteen0110 GetCreateDbInstanceReadReplicaVersionEnum = "2013-01-10"
 )
 
 type GetCreateDbInstanceReadReplicaQueryParams struct {
 	Action                     GetCreateDbInstanceReadReplicaActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoMinorVersionUpgrade    *bool                                     `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
 	AvailabilityZone           *string                                   `queryParam:"style=form,explode=true,name=AvailabilityZone"`
-	DbInstanceClass            *string                                   `queryParam:"style=form,explode=true,name=DBInstanceClass"`
-	DbInstanceIdentifier       string                                    `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
+	DBInstanceClass            *string                                   `queryParam:"style=form,explode=true,name=DBInstanceClass"`
+	DBInstanceIdentifier       string                                    `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Iops                       *int64                                    `queryParam:"style=form,explode=true,name=Iops"`
 	OptionGroupName            *string                                   `queryParam:"style=form,explode=true,name=OptionGroupName"`
 	Port                       *int64                                    `queryParam:"style=form,explode=true,name=Port"`
 	PubliclyAccessible         *bool                                     `queryParam:"style=form,explode=true,name=PubliclyAccessible"`
-	SourceDbInstanceIdentifier string                                    `queryParam:"style=form,explode=true,name=SourceDBInstanceIdentifier"`
+	SourceDBInstanceIdentifier string                                    `queryParam:"style=form,explode=true,name=SourceDBInstanceIdentifier"`
 	Version                    GetCreateDbInstanceReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

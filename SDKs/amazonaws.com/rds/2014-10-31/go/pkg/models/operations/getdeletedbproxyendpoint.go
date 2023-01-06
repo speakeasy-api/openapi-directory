@@ -3,18 +3,18 @@ package operations
 type GetDeleteDbProxyEndpointActionEnum string
 
 const (
-	GetDeleteDbProxyEndpointActionEnumDeleteDbProxyEndpoint GetDeleteDbProxyEndpointActionEnum = "DeleteDBProxyEndpoint"
+	GETDeleteDBProxyEndpointActionEnumDeleteDbProxyEndpoint GetDeleteDbProxyEndpointActionEnum = "DeleteDBProxyEndpoint"
 )
 
 type GetDeleteDbProxyEndpointVersionEnum string
 
 const (
-	GetDeleteDbProxyEndpointVersionEnumTwoThousandAndFourteen1031 GetDeleteDbProxyEndpointVersionEnum = "2014-10-31"
+	GETDeleteDBProxyEndpointVersionEnumTwoThousandAndFourteen1031 GetDeleteDbProxyEndpointVersionEnum = "2014-10-31"
 )
 
 type GetDeleteDbProxyEndpointQueryParams struct {
 	Action              GetDeleteDbProxyEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbProxyEndpointName string                              `queryParam:"style=form,explode=true,name=DBProxyEndpointName"`
+	DBProxyEndpointName string                              `queryParam:"style=form,explode=true,name=DBProxyEndpointName"`
 	Version             GetDeleteDbProxyEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

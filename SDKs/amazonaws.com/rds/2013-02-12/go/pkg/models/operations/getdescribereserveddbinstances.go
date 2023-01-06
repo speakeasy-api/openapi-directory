@@ -3,26 +3,26 @@ package operations
 type GetDescribeReservedDbInstancesActionEnum string
 
 const (
-	GetDescribeReservedDbInstancesActionEnumDescribeReservedDbInstances GetDescribeReservedDbInstancesActionEnum = "DescribeReservedDBInstances"
+	GETDescribeReservedDBInstancesActionEnumDescribeReservedDbInstances GetDescribeReservedDbInstancesActionEnum = "DescribeReservedDBInstances"
 )
 
 type GetDescribeReservedDbInstancesVersionEnum string
 
 const (
-	GetDescribeReservedDbInstancesVersionEnumTwoThousandAndThirteen0212 GetDescribeReservedDbInstancesVersionEnum = "2013-02-12"
+	GETDescribeReservedDBInstancesVersionEnumTwoThousandAndThirteen0212 GetDescribeReservedDbInstancesVersionEnum = "2013-02-12"
 )
 
 type GetDescribeReservedDbInstancesQueryParams struct {
 	Action                        GetDescribeReservedDbInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DbInstanceClass               *string                                   `queryParam:"style=form,explode=true,name=DBInstanceClass"`
+	DBInstanceClass               *string                                   `queryParam:"style=form,explode=true,name=DBInstanceClass"`
 	Duration                      *string                                   `queryParam:"style=form,explode=true,name=Duration"`
 	Marker                        *string                                   `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords                    *int64                                    `queryParam:"style=form,explode=true,name=MaxRecords"`
-	MultiAz                       *bool                                     `queryParam:"style=form,explode=true,name=MultiAZ"`
+	MultiAZ                       *bool                                     `queryParam:"style=form,explode=true,name=MultiAZ"`
 	OfferingType                  *string                                   `queryParam:"style=form,explode=true,name=OfferingType"`
 	ProductDescription            *string                                   `queryParam:"style=form,explode=true,name=ProductDescription"`
-	ReservedDbInstanceID          *string                                   `queryParam:"style=form,explode=true,name=ReservedDBInstanceId"`
-	ReservedDbInstancesOfferingID *string                                   `queryParam:"style=form,explode=true,name=ReservedDBInstancesOfferingId"`
+	ReservedDBInstanceID          *string                                   `queryParam:"style=form,explode=true,name=ReservedDBInstanceId"`
+	ReservedDBInstancesOfferingID *string                                   `queryParam:"style=form,explode=true,name=ReservedDBInstancesOfferingId"`
 	Version                       GetDescribeReservedDbInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }
 

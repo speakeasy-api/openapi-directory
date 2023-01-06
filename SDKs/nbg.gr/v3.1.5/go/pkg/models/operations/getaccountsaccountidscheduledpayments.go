@@ -29,8 +29,7 @@ type GetAccountsAccountIDScheduledPaymentsRequest struct {
 
 type GetAccountsAccountIDScheduledPaymentsResponse struct {
 	ContentType             string
-	Headers                 map[string][]string
-	ObErrorResponse1        *shared.ObErrorResponse1
-	ObReadScheduledPayment3 *shared.ObReadScheduledPayment3
+	OBErrorResponse1        *shared.ObErrorResponse1
+	OBReadScheduledPayment3 *shared.ObReadScheduledPayment3
 	StatusCode              int64
 }

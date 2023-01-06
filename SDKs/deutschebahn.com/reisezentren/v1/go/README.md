@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetReisezentrenRequest{
         QueryParams: operations.GetReisezentrenQueryParams{
-            Name: "laboriosam",
+            Name: "consequuntur",
         },
     }
     
-    res, err := s.Sdk.GetReisezentren(ctx, req)
+    res, err := s.GetReisezentren(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +45,9 @@ func main() {
 ### SDK SDK
 
 * `GetReisezentren` - Get all station infos
-* `GetReisezentrenID` - Get information about a specific station
 * `GetReisezentrenLocLatLon` - Get information about a station near a location
 * `GetReisezentrenLocLatLonDist` - Get stations in a given radius
+* `GetReisezentrenID` - Get information about a specific station
 
 <!-- End SDK Available Operations -->
 

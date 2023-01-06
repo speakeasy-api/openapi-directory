@@ -6,7 +6,7 @@ type Action struct {
 	CloudwatchAlarm  *CloudwatchAlarmAction  `json:"cloudwatchAlarm,omitempty"`
 	CloudwatchLogs   *CloudwatchLogsAction   `json:"cloudwatchLogs,omitempty"`
 	CloudwatchMetric *CloudwatchMetricAction `json:"cloudwatchMetric,omitempty"`
-	DynamoDb         *DynamoDbAction         `json:"dynamoDB,omitempty"`
+	DynamoDB         *DynamoDbAction         `json:"dynamoDB,omitempty"`
 	DynamoDBv2       *DynamoDBv2Action       `json:"dynamoDBv2,omitempty"`
 	Elasticsearch    *ElasticsearchAction    `json:"elasticsearch,omitempty"`
 	Firehose         *FirehoseAction         `json:"firehose,omitempty"`

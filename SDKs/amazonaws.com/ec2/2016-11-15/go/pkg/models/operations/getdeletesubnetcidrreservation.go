@@ -3,13 +3,13 @@ package operations
 type GetDeleteSubnetCidrReservationActionEnum string
 
 const (
-	GetDeleteSubnetCidrReservationActionEnumDeleteSubnetCidrReservation GetDeleteSubnetCidrReservationActionEnum = "DeleteSubnetCidrReservation"
+	GETDeleteSubnetCidrReservationActionEnumDeleteSubnetCidrReservation GetDeleteSubnetCidrReservationActionEnum = "DeleteSubnetCidrReservation"
 )
 
 type GetDeleteSubnetCidrReservationVersionEnum string
 
 const (
-	GetDeleteSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 GetDeleteSubnetCidrReservationVersionEnum = "2016-11-15"
+	GETDeleteSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 GetDeleteSubnetCidrReservationVersionEnum = "2016-11-15"
 )
 
 type GetDeleteSubnetCidrReservationQueryParams struct {

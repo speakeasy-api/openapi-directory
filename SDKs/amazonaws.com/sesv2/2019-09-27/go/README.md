@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,55 +34,49 @@ func main() {
     
     req := operations.CreateConfigurationSetRequest{
         Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "quis",
-            XAmzContentSha256: "nam",
-            XAmzCredential: "et",
-            XAmzDate: "saepe",
-            XAmzSecurityToken: "esse",
-            XAmzSignature: "facere",
-            XAmzSignedHeaders: "cumque",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "deleniti",
+            XAmzCredential: "minima",
+            XAmzDate: "rem",
+            XAmzSecurityToken: "omnis",
+            XAmzSignature: "eum",
+            XAmzSignedHeaders: "error",
         },
         Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "accusamus",
+            ConfigurationSetName: "magni",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "placeat",
-                TLSPolicy: "REQUIRE",
+                SendingPoolName: "sed",
+                TLSPolicy: "OPTIONAL",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "1990-03-08T19:09:06Z",
+                LastFreshStart: "1976-02-06T19:03:58Z",
                 ReputationMetricsEnabled: true,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
-                SendingEnabled: false,
+                SendingEnabled: true,
             },
             SuppressionOptions: &operations.CreateConfigurationSetRequestBodySuppressionOptions{
                 SuppressedReasons: []shared.SuppressionListReasonEnum{
-                    "BOUNCE",
-                    "BOUNCE",
                     "BOUNCE",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "possimus",
-                    Value: "ducimus",
+                    Key: "aliquid",
+                    Value: "ipsum",
                 },
                 shared.Tag{
-                    Key: "placeat",
-                    Value: "modi",
-                },
-                shared.Tag{
-                    Key: "amet",
-                    Value: "modi",
+                    Key: "saepe",
+                    Value: "ad",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "adipisci",
+                CustomRedirectDomain: "atque",
             },
         },
     }
     
-    res, err := s.Sdk.CreateConfigurationSet(ctx, req)
+    res, err := s.CreateConfigurationSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

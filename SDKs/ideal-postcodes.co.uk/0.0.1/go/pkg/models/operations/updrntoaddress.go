@@ -28,5 +28,5 @@ type UpdrnToAddressResponse struct {
 	ContentType                  string
 	ErrorResponseSchema          *shared.ErrorResponseSchema
 	StatusCode                   int64
-	UdprnToAddressResponseSchema *shared.UdprnToAddressResponseSchema
+	UDPRNToAddressResponseSchema *shared.UdprnToAddressResponseSchema
 }

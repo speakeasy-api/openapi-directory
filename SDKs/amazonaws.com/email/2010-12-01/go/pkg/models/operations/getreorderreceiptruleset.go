@@ -3,13 +3,13 @@ package operations
 type GetReorderReceiptRuleSetActionEnum string
 
 const (
-	GetReorderReceiptRuleSetActionEnumReorderReceiptRuleSet GetReorderReceiptRuleSetActionEnum = "ReorderReceiptRuleSet"
+	GETReorderReceiptRuleSetActionEnumReorderReceiptRuleSet GetReorderReceiptRuleSetActionEnum = "ReorderReceiptRuleSet"
 )
 
 type GetReorderReceiptRuleSetVersionEnum string
 
 const (
-	GetReorderReceiptRuleSetVersionEnumTwoThousandAndTen1201 GetReorderReceiptRuleSetVersionEnum = "2010-12-01"
+	GETReorderReceiptRuleSetVersionEnumTwoThousandAndTen1201 GetReorderReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
 type GetReorderReceiptRuleSetQueryParams struct {

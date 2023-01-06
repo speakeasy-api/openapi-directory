@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,34 +26,32 @@ func main() {
         Security: operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams{
-            Name: "ipsum",
+            Name: "mollitia",
         },
         QueryParams: operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "ut",
-            Alt: "media",
-            Callback: "voluptates",
-            Fields: "possimus",
-            Key: "ipsa",
-            OauthToken: "sint",
-            PrettyPrint: true,
-            QuotaUser: "exercitationem",
-            UploadType: "et",
-            UploadProtocol: "qui",
+            AccessToken: "provident",
+            Alt: "proto",
+            Callback: "magnam",
+            Fields: "facere",
+            Key: "odio",
+            OauthToken: "accusamus",
+            PrettyPrint: false,
+            QuotaUser: "autem",
+            UploadType: "enim",
+            UploadProtocol: "provident",
         },
         Request: &shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest{
-            Annotation: "ANNOTATION_UNSPECIFIED",
-            HashedAccountID: "quaerat",
+            Annotation: "FRAUDULENT",
+            HashedAccountID: "adipisci",
             Reasons: []shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum{
-                "INITIATED_TWO_FACTOR",
-                "INCORRECT_PASSWORD",
-                "REFUND_FRAUD",
+                "TRANSACTION_DECLINED",
             },
         },
     }

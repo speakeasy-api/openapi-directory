@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,15 +29,15 @@ func main() {
             },
         },
         PathParams: operations.CreateUsageChargePathParams{
-            RecurringApplicationChargeID: "omnis",
+            RecurringApplicationChargeID: "est",
         },
         Headers: operations.CreateUsageChargeHeaders{
-            XAppstoreUsageChargeToken: "ducimus",
+            XAppstoreUsageChargeToken: "at",
         },
         Request: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{
-                Description: "qui",
-                Point: 7166513718788633348,
+                Description: "sed",
+                Point: 4881243859244798930,
             },
         },
     }
@@ -80,8 +79,8 @@ func main() {
 
 ### script(deprecated)
 
-* `DeleteV1ScriptTagsScriptTagIDJSON` - スクリプトタグの削除
 * `CreateScriptTag` - スクリプトタグの作成
+* `DeleteV1ScriptTagsScriptTagIDJSON` - スクリプトタグの削除
 * `GetScriptTag` - スクリプトタグの取得
 * `GetScriptTags` - スクリプトタグの取得
 * `UpdateScriptTag` - スクリプトタグの更新

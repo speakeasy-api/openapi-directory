@@ -27,7 +27,7 @@ type DescribeJobRequest struct {
 
 type DescribeJobResponse struct {
 	ContentType                    string
-	GlacierJobDescription          *shared.GlacierJobDescription
+	GlacierJobDescription          *shared.GlacierJobDescription1
 	InvalidParameterValueException *interface{}
 	MissingParameterValueException *interface{}
 	ResourceNotFoundException      *interface{}

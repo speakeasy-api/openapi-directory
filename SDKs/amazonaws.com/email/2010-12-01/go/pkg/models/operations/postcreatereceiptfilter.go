@@ -3,13 +3,13 @@ package operations
 type PostCreateReceiptFilterActionEnum string
 
 const (
-	PostCreateReceiptFilterActionEnumCreateReceiptFilter PostCreateReceiptFilterActionEnum = "CreateReceiptFilter"
+	POSTCreateReceiptFilterActionEnumCreateReceiptFilter PostCreateReceiptFilterActionEnum = "CreateReceiptFilter"
 )
 
 type PostCreateReceiptFilterVersionEnum string
 
 const (
-	PostCreateReceiptFilterVersionEnumTwoThousandAndTen1201 PostCreateReceiptFilterVersionEnum = "2010-12-01"
+	POSTCreateReceiptFilterVersionEnumTwoThousandAndTen1201 PostCreateReceiptFilterVersionEnum = "2010-12-01"
 )
 
 type PostCreateReceiptFilterQueryParams struct {

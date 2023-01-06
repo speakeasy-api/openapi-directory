@@ -83,7 +83,7 @@ type Cmcer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Cmcer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Cmcer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Cmcer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Cmcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Cmcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Cmcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Cmcer404ApplicationJSON struct {

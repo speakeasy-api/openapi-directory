@@ -10,7 +10,7 @@ type GlobalCluster struct {
 	FailoverState           *FailoverState
 	GlobalClusterArn        *string
 	GlobalClusterIdentifier *string
-	GlobalClusterMembers    []GlobalClusterMember
+	GlobalClusterMembers    []map[string]interface{}
 	GlobalClusterResourceID *string
 	Status                  *string
 	StorageEncrypted        *bool

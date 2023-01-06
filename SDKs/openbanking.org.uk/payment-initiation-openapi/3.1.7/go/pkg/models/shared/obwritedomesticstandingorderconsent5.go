@@ -7,8 +7,8 @@ import (
 type ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum = "Any"
-	ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
+	OBWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnumAny    ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum = "Any"
+	OBWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnumSingle ObWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
 // ObWriteDomesticStandingOrderConsent5DataAuthorisation
@@ -77,14 +77,14 @@ type ObWriteDomesticStandingOrderConsent5DataInitiation struct {
 type ObWriteDomesticStandingOrderConsent5DataPermissionEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsent5DataPermissionEnumCreate ObWriteDomesticStandingOrderConsent5DataPermissionEnum = "Create"
+	OBWriteDomesticStandingOrderConsent5DataPermissionEnumCreate ObWriteDomesticStandingOrderConsent5DataPermissionEnum = "Create"
 )
 
 type ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum string
 
 const (
-	ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnumNo  ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum = "No"
-	ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnumYes ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum = "Yes"
+	OBWriteDomesticStandingOrderConsent5DataReadRefundAccountEnumNo  ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum = "No"
+	OBWriteDomesticStandingOrderConsent5DataReadRefundAccountEnumYes ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum = "Yes"
 )
 
 type ObWriteDomesticStandingOrderConsent5Data struct {
@@ -92,7 +92,7 @@ type ObWriteDomesticStandingOrderConsent5Data struct {
 	Initiation        ObWriteDomesticStandingOrderConsent5DataInitiation             `json:"Initiation"`
 	Permission        ObWriteDomesticStandingOrderConsent5DataPermissionEnum         `json:"Permission"`
 	ReadRefundAccount *ObWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum `json:"ReadRefundAccount,omitempty"`
-	ScaSupportData    *ObscaSupportData1                                             `json:"SCASupportData,omitempty"`
+	SCASupportData    *ObscaSupportData1                                             `json:"SCASupportData,omitempty"`
 }
 
 type ObWriteDomesticStandingOrderConsent5 struct {

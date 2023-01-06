@@ -8,14 +8,14 @@ type DeleteFirewallPathParams struct {
 	FirewallID string `pathParam:"style=simple,explode=false,name=firewall_id"`
 }
 
-type DeleteFirewallRequest struct {
-	PathParams DeleteFirewallPathParams
-}
-
 type DeleteFirewall401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteFirewallRequest struct {
+	PathParams DeleteFirewallPathParams
 }
 
 type DeleteFirewallResponse struct {

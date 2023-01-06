@@ -4,17 +4,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RestoreArchiveArchiveRestoreKindEnum string
-
-const (
-	RestoreArchiveArchiveRestoreKindEnumLatestArchive RestoreArchiveArchiveRestoreKindEnum = "latestArchive"
-	RestoreArchiveArchiveRestoreKindEnumLatestCommit  RestoreArchiveArchiveRestoreKindEnum = "latestCommit"
-	RestoreArchiveArchiveRestoreKindEnumArchiveID     RestoreArchiveArchiveRestoreKindEnum = "archive ID"
-)
-
 type RestoreArchivePathParams struct {
-	ArchiveKind        shared.ArchiveKindEnum               `pathParam:"style=simple,explode=false,name=archiveKind"`
-	ArchiveRestoreKind RestoreArchiveArchiveRestoreKindEnum `pathParam:"style=simple,explode=false,name=archiveRestoreKind"`
+	ArchiveKind        shared.ArchiveKindEnum  `pathParam:"style=simple,explode=false,name=archiveKind"`
+	ArchiveRestoreKind shared.ArchiveKindEnum1 `pathParam:"style=simple,explode=false,name=archiveRestoreKind"`
 }
 
 type RestoreArchive200ApplicationJSONActionEnum string

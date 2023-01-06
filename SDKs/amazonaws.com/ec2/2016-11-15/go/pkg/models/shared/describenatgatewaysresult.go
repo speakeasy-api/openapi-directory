@@ -1,6 +1,6 @@
 package shared
 
 type DescribeNatGatewaysResult struct {
-	NatGateways []NatGateway
-	NextToken   *string
+	NatGateways map[string]interface{}
+	NextToken   map[string]interface{}
 }

@@ -104,7 +104,7 @@ type CreateFunctionRequestBody struct {
 	FunctionName         string                                     `json:"FunctionName"`
 	Handler              *string                                    `json:"Handler,omitempty"`
 	ImageConfig          *CreateFunctionRequestBodyImageConfig      `json:"ImageConfig,omitempty"`
-	KmsKeyArn            *string                                    `json:"KMSKeyArn,omitempty"`
+	KMSKeyArn            *string                                    `json:"KMSKeyArn,omitempty"`
 	Layers               []string                                   `json:"Layers,omitempty"`
 	MemorySize           *int64                                     `json:"MemorySize,omitempty"`
 	PackageType          *CreateFunctionRequestBodyPackageTypeEnum  `json:"PackageType,omitempty"`

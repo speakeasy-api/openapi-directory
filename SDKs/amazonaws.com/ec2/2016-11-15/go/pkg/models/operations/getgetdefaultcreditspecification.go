@@ -3,22 +3,22 @@ package operations
 type GetGetDefaultCreditSpecificationActionEnum string
 
 const (
-	GetGetDefaultCreditSpecificationActionEnumGetDefaultCreditSpecification GetGetDefaultCreditSpecificationActionEnum = "GetDefaultCreditSpecification"
+	GETGETDefaultCreditSpecificationActionEnumGetDefaultCreditSpecification GetGetDefaultCreditSpecificationActionEnum = "GetDefaultCreditSpecification"
 )
 
 type GetGetDefaultCreditSpecificationInstanceFamilyEnum string
 
 const (
-	GetGetDefaultCreditSpecificationInstanceFamilyEnumT2  GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t2"
-	GetGetDefaultCreditSpecificationInstanceFamilyEnumT3  GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t3"
-	GetGetDefaultCreditSpecificationInstanceFamilyEnumT3a GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t3a"
-	GetGetDefaultCreditSpecificationInstanceFamilyEnumT4g GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t4g"
+	GETGETDefaultCreditSpecificationInstanceFamilyEnumT2  GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t2"
+	GETGETDefaultCreditSpecificationInstanceFamilyEnumT3  GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t3"
+	GETGETDefaultCreditSpecificationInstanceFamilyEnumT3a GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t3a"
+	GETGETDefaultCreditSpecificationInstanceFamilyEnumT4g GetGetDefaultCreditSpecificationInstanceFamilyEnum = "t4g"
 )
 
 type GetGetDefaultCreditSpecificationVersionEnum string
 
 const (
-	GetGetDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 GetGetDefaultCreditSpecificationVersionEnum = "2016-11-15"
+	GETGETDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 GetGetDefaultCreditSpecificationVersionEnum = "2016-11-15"
 )
 
 type GetGetDefaultCreditSpecificationQueryParams struct {

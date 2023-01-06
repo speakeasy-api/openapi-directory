@@ -12,7 +12,7 @@ type ListReviewableHiTsQueryParams struct {
 type ListReviewableHiTsXAmzTargetEnum string
 
 const (
-	ListReviewableHiTsXAmzTargetEnumMTurkRequesterServiceV20170117ListReviewableHiTs ListReviewableHiTsXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListReviewableHITs"
+	ListReviewableHITsXAmzTargetEnumMTurkRequesterServiceV20170117ListReviewableHiTs ListReviewableHiTsXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListReviewableHITs"
 )
 
 type ListReviewableHiTsHeaders struct {
@@ -34,7 +34,7 @@ type ListReviewableHiTsRequest struct {
 
 type ListReviewableHiTsResponse struct {
 	ContentType                string
-	ListReviewableHiTsResponse *shared.ListReviewableHiTsResponse
+	ListReviewableHITsResponse *shared.ListReviewableHiTsResponse
 	RequestError               *interface{}
 	ServiceFault               *interface{}
 	StatusCode                 int64

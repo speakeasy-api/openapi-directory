@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"openapi/internal/utils"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -28,47 +28,6 @@ func NewRoutingAPI(defaultClient, securityClient HTTPClient, serverURL, language
 		_sdkVersion:     sdkVersion,
 		_genVersion:     genVersion,
 	}
-}
-
-// GetRouteInfo - Coverage information
-// Use this to find out details about the supported vehicle profiles and features, or if you just need to ping the server.
-func (s *RoutingAPI) GetRouteInfo(ctx context.Context) (*operations.GetRouteInfoResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/route/info"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetRouteInfoResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.InfoResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.InfoResponse = out
-		}
-	}
-
-	return res, nil
 }
 
 // GetRoute - GET Route Endpoint
@@ -122,7 +81,7 @@ func (s *RoutingAPI) GetRoute(ctx context.Context, request operations.GetRouteRe
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -134,7 +93,7 @@ func (s *RoutingAPI) GetRoute(ctx context.Context, request operations.GetRouteRe
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 429:
 		res.Headers = httpRes.Header
@@ -146,7 +105,7 @@ func (s *RoutingAPI) GetRoute(ctx context.Context, request operations.GetRouteRe
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -158,7 +117,7 @@ func (s *RoutingAPI) GetRoute(ctx context.Context, request operations.GetRouteRe
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 501:
 		res.Headers = httpRes.Header
@@ -170,7 +129,48 @@ func (s *RoutingAPI) GetRoute(ctx context.Context, request operations.GetRouteRe
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRouteInfo - Coverage information
+// Use this to find out details about the supported vehicle profiles and features, or if you just need to ping the server.
+func (s *RoutingAPI) GetRouteInfo(ctx context.Context) (*operations.GetRouteInfoResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/route/info"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRouteInfoResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InfoResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InfoResponse = out
 		}
 	}
 
@@ -254,7 +254,7 @@ func (s *RoutingAPI) PostRoute(ctx context.Context, request operations.PostRoute
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 401:
 		res.Headers = httpRes.Header
@@ -266,7 +266,7 @@ func (s *RoutingAPI) PostRoute(ctx context.Context, request operations.PostRoute
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 429:
 		res.Headers = httpRes.Header
@@ -278,7 +278,7 @@ func (s *RoutingAPI) PostRoute(ctx context.Context, request operations.PostRoute
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 500:
 		res.Headers = httpRes.Header
@@ -290,7 +290,7 @@ func (s *RoutingAPI) PostRoute(ctx context.Context, request operations.PostRoute
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	case httpRes.StatusCode == 501:
 		res.Headers = httpRes.Header
@@ -302,7 +302,7 @@ func (s *RoutingAPI) PostRoute(ctx context.Context, request operations.PostRoute
 				return nil, err
 			}
 
-			res.GhError = out
+			res.GHError = out
 		}
 	}
 

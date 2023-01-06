@@ -3,13 +3,13 @@ package operations
 type GetAssociateTransitGatewayRouteTableActionEnum string
 
 const (
-	GetAssociateTransitGatewayRouteTableActionEnumAssociateTransitGatewayRouteTable GetAssociateTransitGatewayRouteTableActionEnum = "AssociateTransitGatewayRouteTable"
+	GETAssociateTransitGatewayRouteTableActionEnumAssociateTransitGatewayRouteTable GetAssociateTransitGatewayRouteTableActionEnum = "AssociateTransitGatewayRouteTable"
 )
 
 type GetAssociateTransitGatewayRouteTableVersionEnum string
 
 const (
-	GetAssociateTransitGatewayRouteTableVersionEnumTwoThousandAndSixteen1115 GetAssociateTransitGatewayRouteTableVersionEnum = "2016-11-15"
+	GETAssociateTransitGatewayRouteTableVersionEnumTwoThousandAndSixteen1115 GetAssociateTransitGatewayRouteTableVersionEnum = "2016-11-15"
 )
 
 type GetAssociateTransitGatewayRouteTableQueryParams struct {

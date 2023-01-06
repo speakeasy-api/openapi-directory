@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -28,184 +27,233 @@ func main() {
             Option1: &operations.GenomicsPipelinesRunSecurityOption1{
                 Oauth2: shared.SchemeOauth2{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
                 Oauth2c: shared.SchemeOauth2c{
                     Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                }
+                },
             },
         },
         QueryParams: operations.GenomicsPipelinesRunQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "soluta",
-            Alt: "json",
-            Callback: "sit",
-            Fields: "omnis",
-            Key: "facilis",
-            OauthToken: "distinctio",
-            PrettyPrint: false,
-            QuotaUser: "architecto",
-            UploadType: "et",
-            UploadProtocol: "assumenda",
+            DollarXgafv: "1",
+            AccessToken: "quos",
+            Alt: "proto",
+            Callback: "veniam",
+            Fields: "laboriosam",
+            Key: "deserunt",
+            OauthToken: "quibusdam",
+            PrettyPrint: true,
+            QuotaUser: "perspiciatis",
+            UploadType: "eos",
+            UploadProtocol: "nobis",
         },
         Request: &shared.RunPipelineRequest{
             Labels: map[string]string{
-                "odio": "doloribus",
+                "dolor": "odio",
             },
             Pipeline: &shared.Pipeline{
                 Actions: []shared.Action{
                     shared.Action{
                         Commands: []string{
-                            "ut",
-                            "hic",
+                            "adipisci",
+                            "deserunt",
                         },
                         Credentials: &shared.Secret{
-                            CipherText: "aspernatur",
-                            KeyName: "natus",
+                            CipherText: "iure",
+                            KeyName: "aut",
                         },
                         EncryptedEnvironment: &shared.Secret{
-                            CipherText: "nostrum",
-                            KeyName: "nisi",
+                            CipherText: "omnis",
+                            KeyName: "qui",
                         },
-                        Entrypoint: "molestiae",
+                        Entrypoint: "odio",
                         Environment: map[string]string{
-                            "et": "cumque",
+                            "minima": "dicta",
                         },
                         Flags: []shared.ActionFlagsEnum{
                             "BLOCK_EXTERNAL_NETWORK",
                         },
-                        ImageURI: "ut",
+                        ImageURI: "dolorem",
                         Labels: map[string]string{
-                            "ut": "voluptatum",
-                            "ipsum": "quae",
+                            "delectus": "dolore",
                         },
                         Mounts: []shared.Mount{
                             shared.Mount{
-                                Disk: "quia",
-                                Path: "non",
-                                ReadOnly: true,
-                            },
-                            shared.Mount{
-                                Disk: "repellendus",
-                                Path: "nemo",
+                                Disk: "aut",
+                                Path: "placeat",
                                 ReadOnly: false,
                             },
+                            shared.Mount{
+                                Disk: "est",
+                                Path: "ut",
+                                ReadOnly: true,
+                            },
                         },
-                        Name: "qui",
-                        PidNamespace: "dicta",
+                        Name: "odit",
+                        PidNamespace: "saepe",
                         PortMappings: map[string]int32{
-                            "est": 2896824219235230529,
+                            "maxime": 7997996156776222842,
                         },
-                        Timeout: "eveniet",
+                        Timeout: "aut",
+                    },
+                    shared.Action{
+                        Commands: []string{
+                            "fugit",
+                            "nostrum",
+                        },
+                        Credentials: &shared.Secret{
+                            CipherText: "quia",
+                            KeyName: "numquam",
+                        },
+                        EncryptedEnvironment: &shared.Secret{
+                            CipherText: "quia",
+                            KeyName: "molestiae",
+                        },
+                        Entrypoint: "assumenda",
+                        Environment: map[string]string{
+                            "quia": "sint",
+                        },
+                        Flags: []shared.ActionFlagsEnum{
+                            "DISABLE_IMAGE_PREFETCH",
+                            "ENABLE_FUSE",
+                            "ALWAYS_RUN",
+                        },
+                        ImageURI: "et",
+                        Labels: map[string]string{
+                            "dignissimos": "est",
+                        },
+                        Mounts: []shared.Mount{
+                            shared.Mount{
+                                Disk: "ut",
+                                Path: "quo",
+                                ReadOnly: false,
+                            },
+                            shared.Mount{
+                                Disk: "in",
+                                Path: "sint",
+                                ReadOnly: true,
+                            },
+                        },
+                        Name: "sapiente",
+                        PidNamespace: "harum",
+                        PortMappings: map[string]int32{
+                            "impedit": 374383637338744014,
+                        },
+                        Timeout: "nulla",
                     },
                 },
                 EncryptedEnvironment: &shared.Secret{
-                    CipherText: "et",
-                    KeyName: "nostrum",
+                    CipherText: "praesentium",
+                    KeyName: "nulla",
                 },
                 Environment: map[string]string{
-                    "non": "dolorem",
-                    "laboriosam": "ea",
-                    "omnis": "sunt",
+                    "blanditiis": "inventore",
+                    "voluptas": "rerum",
                 },
                 Resources: &shared.Resources{
-                    ProjectID: "et",
+                    ProjectID: "quibusdam",
                     Regions: []string{
-                        "et",
+                        "perspiciatis",
                     },
                     VirtualMachine: &shared.VirtualMachine{
                         Accelerators: []shared.Accelerator{
                             shared.Accelerator{
-                                Count: "nemo",
-                                Type: "deserunt",
+                                Count: "dolorem",
+                                Type: "quos",
+                            },
+                            shared.Accelerator{
+                                Count: "exercitationem",
+                                Type: "aliquam",
                             },
                         },
-                        BootDiskSizeGb: 2076279485001306565,
-                        BootImage: "maiores",
-                        CPUPlatform: "quos",
+                        BootDiskSizeGb: 2818138203026478916,
+                        BootImage: "quaerat",
+                        CPUPlatform: "atque",
                         Disks: []shared.Disk{
                             shared.Disk{
-                                Name: "et",
-                                SizeGb: 2418626545759797140,
-                                SourceImage: "illum",
-                                Type: "quis",
+                                Name: "architecto",
+                                SizeGb: 8074191434310262846,
+                                SourceImage: "quas",
+                                Type: "sed",
                             },
                         },
                         DockerCacheImages: []string{
-                            "numquam",
-                            "aliquam",
-                            "dignissimos",
+                            "ratione",
                         },
-                        EnableStackdriverMonitoring: true,
+                        EnableStackdriverMonitoring: false,
                         Labels: map[string]string{
-                            "ut": "sequi",
+                            "ipsam": "repellat",
+                            "consequuntur": "consectetur",
+                            "est": "pariatur",
                         },
-                        MachineType: "esse",
+                        MachineType: "sed",
                         Network: &shared.Network{
                             Name: "non",
-                            Subnetwork: "id",
+                            Subnetwork: "fuga",
                             UsePrivateAddress: false,
                         },
-                        NvidiaDriverVersion: "ipsa",
-                        Preemptible: false,
-                        Reservation: "dolorem",
+                        NvidiaDriverVersion: "eum",
+                        Preemptible: true,
+                        Reservation: "est",
                         ServiceAccount: &shared.ServiceAccount{
-                            Email: "a",
+                            Email: "in",
                             Scopes: []string{
-                                "amet",
+                                "vitae",
+                                "reprehenderit",
+                                "quia",
                             },
                         },
                         Volumes: []shared.Volume{
                             shared.Volume{
                                 ExistingDisk: &shared.ExistingDisk{
-                                    Disk: "natus",
+                                    Disk: "voluptatem",
                                 },
                                 NfsMount: &shared.NfsMount{
-                                    Target: "velit",
+                                    Target: "sit",
                                 },
                                 PersistentDisk: &shared.PersistentDisk{
-                                    SizeGb: 435428050689545107,
-                                    SourceImage: "alias",
-                                    Type: "excepturi",
-                                },
-                                Volume: "temporibus",
-                            },
-                            shared.Volume{
-                                ExistingDisk: &shared.ExistingDisk{
-                                    Disk: "ut",
-                                },
-                                NfsMount: &shared.NfsMount{
-                                    Target: "aliquam",
-                                },
-                                PersistentDisk: &shared.PersistentDisk{
-                                    SizeGb: 8603608382322563670,
-                                    SourceImage: "officiis",
-                                    Type: "voluptas",
+                                    SizeGb: 8220186604699685187,
+                                    SourceImage: "earum",
+                                    Type: "animi",
                                 },
                                 Volume: "aut",
                             },
                             shared.Volume{
                                 ExistingDisk: &shared.ExistingDisk{
-                                    Disk: "voluptatibus",
+                                    Disk: "ex",
                                 },
                                 NfsMount: &shared.NfsMount{
-                                    Target: "rerum",
+                                    Target: "et",
                                 },
                                 PersistentDisk: &shared.PersistentDisk{
-                                    SizeGb: 6103563391960606643,
-                                    SourceImage: "voluptatem",
-                                    Type: "in",
+                                    SizeGb: 6191106153869714010,
+                                    SourceImage: "non",
+                                    Type: "consequatur",
                                 },
-                                Volume: "praesentium",
+                                Volume: "cumque",
+                            },
+                            shared.Volume{
+                                ExistingDisk: &shared.ExistingDisk{
+                                    Disk: "autem",
+                                },
+                                NfsMount: &shared.NfsMount{
+                                    Target: "et",
+                                },
+                                PersistentDisk: &shared.PersistentDisk{
+                                    SizeGb: 2390235954540224131,
+                                    SourceImage: "iure",
+                                    Type: "exercitationem",
+                                },
+                                Volume: "molestiae",
                             },
                         },
                     },
                     Zones: []string{
-                        "perspiciatis",
+                        "deleniti",
                     },
                 },
-                Timeout: "consectetur",
+                Timeout: "vel",
             },
-            PubSubTopic: "voluptatibus",
+            PubSubTopic: "commodi",
         },
     }
     

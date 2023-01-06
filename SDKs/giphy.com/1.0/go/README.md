@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,7 +34,7 @@ func main() {
     
     req := operations.GetGifByIDRequest{
         PathParams: operations.GetGifByIDPathParams{
-            GifID: 6481606743659216426,
+            GifID: 4332238034963846039,
         },
     }
     

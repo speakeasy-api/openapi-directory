@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,25 +26,25 @@ func main() {
         Security: operations.SocerSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
-            }
+            },
             ClientID: shared.SchemeClientID{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         Request: &operations.SocerRequestBody{
             CertificateParameters: &operations.SocerRequestBodyCertificateParameters{
-                Appno: "assumenda",
-                DateOfBirth: "possimus",
-                Enrolno: "et",
-                TypOfCert: "atque",
+                APPNO: "quidem",
+                DateOfBirth: "quia",
+                ENROLNO: "voluptas",
+                TypOfCert: "laboriosam",
             },
-            ConsentArtifact: "vero",
+            ConsentArtifact: "earum",
             Format: "pdf",
-            TxnID: "aliquam",
+            TxnID: "est",
         },
     }
     
-    res, err := s.Sdk.Socer(ctx, req)
+    res, err := s.APIs.Socer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -59,7 +58,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `Socer` - Educational/ Exam Registration Certificate
 

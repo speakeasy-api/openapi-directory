@@ -1,5 +1,5 @@
 package shared
 
 type SetRiskConfigurationResponse struct {
-	RiskConfiguration RiskConfigurationType `json:"RiskConfiguration"`
+	RiskConfiguration RiskConfigurationType1 `json:"RiskConfiguration"`
 }

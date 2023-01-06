@@ -26,7 +26,7 @@ type RegisterJobDefinitionRequestBodyContainerProperties struct {
 	JobRoleArn                   *string                              `json:"jobRoleArn,omitempty"`
 	LinuxParameters              *shared.LinuxParameters              `json:"linuxParameters,omitempty"`
 	LogConfiguration             *shared.LogConfiguration             `json:"logConfiguration,omitempty"`
-	Memory                       *int64                               `json:"memory,omitempty"`
+	Memory                       map[string]interface{}               `json:"memory,omitempty"`
 	MountPoints                  []shared.MountPoint                  `json:"mountPoints,omitempty"`
 	NetworkConfiguration         *shared.NetworkConfiguration         `json:"networkConfiguration,omitempty"`
 	Privileged                   *bool                                `json:"privileged,omitempty"`
@@ -35,7 +35,7 @@ type RegisterJobDefinitionRequestBodyContainerProperties struct {
 	Secrets                      []shared.Secret                      `json:"secrets,omitempty"`
 	Ulimits                      []shared.Ulimit                      `json:"ulimits,omitempty"`
 	User                         *string                              `json:"user,omitempty"`
-	Vcpus                        *int64                               `json:"vcpus,omitempty"`
+	Vcpus                        map[string]interface{}               `json:"vcpus,omitempty"`
 	Volumes                      []shared.Volume                      `json:"volumes,omitempty"`
 }
 

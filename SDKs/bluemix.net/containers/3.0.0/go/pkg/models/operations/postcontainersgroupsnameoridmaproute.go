@@ -20,7 +20,7 @@ type PostContainersGroupsNameOrIDMaprouteRequest struct {
 }
 
 type PostContainersGroupsNameOrIDMaprouteResponse struct {
-	ContainersGroupsNameOrIDMaproutePostInfo *shared.ContainersGroupsNameOrIDMaproutePostInfo
+	ContainersGroupsNameOrIDMaproutePostInfo map[string]interface{}
 	ContentType                              string
 	StatusCode                               int64
 }

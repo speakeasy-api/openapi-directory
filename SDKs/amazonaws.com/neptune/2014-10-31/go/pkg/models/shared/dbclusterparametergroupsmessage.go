@@ -1,6 +1,6 @@
 package shared
 
 type DbClusterParameterGroupsMessage struct {
-	DbClusterParameterGroups []DbClusterParameterGroup
+	DBClusterParameterGroups []map[string]interface{}
 	Marker                   *string
 }

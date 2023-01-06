@@ -9,14 +9,14 @@ type DeleteConnectionPoolPathParams struct {
 	PoolName            string `pathParam:"style=simple,explode=false,name=pool_name"`
 }
 
-type DeleteConnectionPoolRequest struct {
-	PathParams DeleteConnectionPoolPathParams
-}
-
 type DeleteConnectionPool401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type DeleteConnectionPoolRequest struct {
+	PathParams DeleteConnectionPoolPathParams
 }
 
 type DeleteConnectionPoolResponse struct {

@@ -23,8 +23,8 @@ type CreateSamplingRuleRequestBodySamplingRule struct {
 	Host          *string           `json:"Host,omitempty"`
 	Priority      *int64            `json:"Priority,omitempty"`
 	ReservoirSize *int64            `json:"ReservoirSize,omitempty"`
-	ResourceArn   *string           `json:"ResourceARN,omitempty"`
-	RuleArn       *string           `json:"RuleARN,omitempty"`
+	ResourceARN   *string           `json:"ResourceARN,omitempty"`
+	RuleARN       *string           `json:"RuleARN,omitempty"`
 	RuleName      *string           `json:"RuleName,omitempty"`
 	ServiceName   *string           `json:"ServiceName,omitempty"`
 	ServiceType   *string           `json:"ServiceType,omitempty"`

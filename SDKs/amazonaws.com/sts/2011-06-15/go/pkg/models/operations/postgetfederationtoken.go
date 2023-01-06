@@ -3,13 +3,13 @@ package operations
 type PostGetFederationTokenActionEnum string
 
 const (
-	PostGetFederationTokenActionEnumGetFederationToken PostGetFederationTokenActionEnum = "GetFederationToken"
+	POSTGetFederationTokenActionEnumGetFederationToken PostGetFederationTokenActionEnum = "GetFederationToken"
 )
 
 type PostGetFederationTokenVersionEnum string
 
 const (
-	PostGetFederationTokenVersionEnumTwoThousandAndEleven0615 PostGetFederationTokenVersionEnum = "2011-06-15"
+	POSTGetFederationTokenVersionEnumTwoThousandAndEleven0615 PostGetFederationTokenVersionEnum = "2011-06-15"
 )
 
 type PostGetFederationTokenQueryParams struct {

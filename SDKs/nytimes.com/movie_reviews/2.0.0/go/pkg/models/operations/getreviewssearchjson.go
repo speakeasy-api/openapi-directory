@@ -34,6 +34,6 @@ type GetReviewsSearchJSONRequest struct {
 
 type GetReviewsSearchJSONResponse struct {
 	ContentType                                  string
-	GetReviewsSearchJSON200ApplicationJSONObject *GetReviewsSearchJSON200ApplicationJSON
 	StatusCode                                   int64
+	GetReviewsSearchJSON200ApplicationJSONObject *GetReviewsSearchJSON200ApplicationJSON
 }

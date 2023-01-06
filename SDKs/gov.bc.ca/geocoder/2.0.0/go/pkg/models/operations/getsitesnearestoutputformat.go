@@ -33,7 +33,7 @@ type GetSitesNearestOutputFormatQueryParams struct {
 	LocationDescriptor *GetSitesNearestOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	MaxDistance        *int64                                             `queryParam:"style=form,explode=true,name=maxDistance"`
 	OnlyCivic          *bool                                              `queryParam:"style=form,explode=true,name=onlyCivic"`
-	OutputSrs          *int64                                             `queryParam:"style=form,explode=true,name=outputSRS"`
+	OutputSRS          *int64                                             `queryParam:"style=form,explode=true,name=outputSRS"`
 	Point              string                                             `queryParam:"style=form,explode=true,name=point"`
 	SetBack            *int64                                             `queryParam:"style=form,explode=true,name=setBack"`
 }

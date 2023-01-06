@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+// TeamRepositoryLicenseSimple
+// License Simple
 type TeamRepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -13,6 +15,8 @@ type TeamRepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// TeamRepositorySimpleUser
+// Simple User
 type TeamRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -43,6 +47,8 @@ type TeamRepositoryPermissions struct {
 	Triage   *bool `json:"triage,omitempty"`
 }
 
+// TeamRepositoryRepositoryLicenseSimple
+// License Simple
 type TeamRepositoryRepositoryLicenseSimple struct {
 	HTMLURL *string `json:"html_url,omitempty"`
 	Key     string  `json:"key"`
@@ -52,6 +58,8 @@ type TeamRepositoryRepositoryLicenseSimple struct {
 	URL     string  `json:"url"`
 }
 
+// TeamRepositoryRepositorySimpleUser
+// Simple User
 type TeamRepositoryRepositorySimpleUser struct {
 	AvatarURL         string  `json:"avatar_url"`
 	EventsURL         string  `json:"events_url"`
@@ -192,6 +200,8 @@ type TeamRepositoryRepositoryTemplateRepository struct {
 	WatchersCount          *int64                                                 `json:"watchers_count,omitempty"`
 }
 
+// TeamRepositoryRepository
+// A git repository
 type TeamRepositoryRepository struct {
 	AllowMergeCommit       *bool                                       `json:"allow_merge_commit,omitempty"`
 	AllowRebaseMerge       *bool                                       `json:"allow_rebase_merge,omitempty"`

@@ -5,7 +5,7 @@ import (
 )
 
 type GetAeAssessmentFromEmployeePathParams struct {
-	AeAssessmentID string `pathParam:"style=simple,explode=false,name=AEAssessmentId"`
+	AEAssessmentID string `pathParam:"style=simple,explode=false,name=AEAssessmentId"`
 	EmployeeID     string `pathParam:"style=simple,explode=false,name=EmployeeId"`
 	EmployerID     string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
@@ -21,7 +21,7 @@ type GetAeAssessmentFromEmployeeRequest struct {
 }
 
 type GetAeAssessmentFromEmployeeResponse struct {
-	AeAssessment *shared.AeAssessment
+	AEAssessment *shared.AeAssessment
 	ContentType  string
 	ErrorModel   *shared.ErrorModel
 	StatusCode   int64

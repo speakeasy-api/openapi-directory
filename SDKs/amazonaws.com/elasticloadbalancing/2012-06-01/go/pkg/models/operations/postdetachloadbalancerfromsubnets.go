@@ -3,13 +3,13 @@ package operations
 type PostDetachLoadBalancerFromSubnetsActionEnum string
 
 const (
-	PostDetachLoadBalancerFromSubnetsActionEnumDetachLoadBalancerFromSubnets PostDetachLoadBalancerFromSubnetsActionEnum = "DetachLoadBalancerFromSubnets"
+	POSTDetachLoadBalancerFromSubnetsActionEnumDetachLoadBalancerFromSubnets PostDetachLoadBalancerFromSubnetsActionEnum = "DetachLoadBalancerFromSubnets"
 )
 
 type PostDetachLoadBalancerFromSubnetsVersionEnum string
 
 const (
-	PostDetachLoadBalancerFromSubnetsVersionEnumTwoThousandAndTwelve0601 PostDetachLoadBalancerFromSubnetsVersionEnum = "2012-06-01"
+	POSTDetachLoadBalancerFromSubnetsVersionEnumTwoThousandAndTwelve0601 PostDetachLoadBalancerFromSubnetsVersionEnum = "2012-06-01"
 )
 
 type PostDetachLoadBalancerFromSubnetsQueryParams struct {

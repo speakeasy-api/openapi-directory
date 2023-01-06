@@ -1,5 +1,5 @@
 package shared
 
 type ModifyVpnTunnelOptionsResult struct {
-	VpnConnection *VpnConnection
+	VpnConnection map[string]interface{}
 }

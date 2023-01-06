@@ -7,7 +7,7 @@ import (
 // BatchJobInstructionBatchJobInstructionDelete
 // The batch job instructions' instructions
 type BatchJobInstructionBatchJobInstructionDelete struct {
-	Delete []interface{} `json:"DELETE,omitempty"`
+	DELETE []interface{} `json:"DELETE,omitempty"`
 }
 
 type BatchJobInstructionBatchJobInstruction struct {

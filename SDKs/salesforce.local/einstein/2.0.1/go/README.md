@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GenerateTokenV2Request{
         Request: &operations.GenerateTokenV2RequestBody{
-            Assertion: "dolorem",
+            Assertion: "voluptatum",
             GrantType: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-            RefreshToken: "distinctio",
-            Scope: "error",
-            ValidFor: 8073439294806826991,
+            RefreshToken: "nulla",
+            Scope: "ut",
+            ValidFor: 4885611820145246548,
         },
     }
     

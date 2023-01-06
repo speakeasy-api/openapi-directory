@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,11 +29,11 @@ func main() {
             },
         },
         QueryParams: operations.GetSearchQueryParams{
-            Q: "dignissimos",
+            Q: "alias",
         },
     }
     
-    res, err := s.Sdk.GetSearch(ctx, req)
+    res, err := s.Rating.GetSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,7 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### rating
 
 * `GetSearch` - List all company ESG Ratings
 

@@ -1,6 +1,6 @@
 package shared
 
 type BatchDeleteClusterSnapshotsResult struct {
-	Errors    []SnapshotErrorMessage
-	Resources []string
+	Errors    []map[string]interface{}
+	Resources []map[string]interface{}
 }

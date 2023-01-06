@@ -30,6 +30,6 @@ type ListSizeConstraintSetsResponse struct {
 	ContentType                    string
 	ListSizeConstraintSetsResponse *shared.ListSizeConstraintSetsResponse
 	StatusCode                     int64
-	WafInternalErrorException      *interface{}
-	WafInvalidAccountException     *interface{}
+	WAFInternalErrorException      *interface{}
+	WAFInvalidAccountException     *interface{}
 }

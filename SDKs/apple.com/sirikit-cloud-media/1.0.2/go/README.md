@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,13 +24,13 @@ func main() {
     
     req := operations.ExtensionConfigurationRequest{
         Headers: operations.ExtensionConfigurationHeaders{
-            AcceptLanguage: "qui",
-            CacheControl: "nostrum",
-            IfNoneMatch: "modi",
-            RequestTimeout: 23.100000,
-            UserAgent: "fugiat",
-            XApplecloudextensionRetryCount: 6.100000,
-            XApplecloudextensionSessionID: "aut",
+            AcceptLanguage: "et",
+            CacheControl: "et",
+            IfNoneMatch: "sequi",
+            RequestTimeout: 33.200001,
+            UserAgent: "iusto",
+            XApplecloudextensionRetryCount: 61.099998,
+            XApplecloudextensionSessionID: "eos",
         },
     }
     

@@ -12,7 +12,7 @@ type ListReviewPolicyResultsForHitQueryParams struct {
 type ListReviewPolicyResultsForHitxAmzTargetEnum string
 
 const (
-	ListReviewPolicyResultsForHitxAmzTargetEnumMTurkRequesterServiceV20170117ListReviewPolicyResultsForHit ListReviewPolicyResultsForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.ListReviewPolicyResultsForHIT"
+	ListReviewPolicyResultsForHITXAmzTargetEnumMTurkRequesterServiceV20170117ListReviewPolicyResultsForHit ListReviewPolicyResultsForHitxAmzTargetEnum = "MTurkRequesterServiceV20170117.ListReviewPolicyResultsForHIT"
 )
 
 type ListReviewPolicyResultsForHitHeaders struct {
@@ -34,7 +34,7 @@ type ListReviewPolicyResultsForHitRequest struct {
 
 type ListReviewPolicyResultsForHitResponse struct {
 	ContentType                           string
-	ListReviewPolicyResultsForHitResponse *shared.ListReviewPolicyResultsForHitResponse
+	ListReviewPolicyResultsForHITResponse *shared.ListReviewPolicyResultsForHitResponse
 	RequestError                          *interface{}
 	ServiceFault                          *interface{}
 	StatusCode                            int64

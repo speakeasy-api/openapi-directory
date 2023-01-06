@@ -3,6 +3,6 @@ package shared
 type CsvFileCompressionEnum string
 
 const (
-	CsvFileCompressionEnumNone CsvFileCompressionEnum = "NONE"
-	CsvFileCompressionEnumGzip CsvFileCompressionEnum = "GZIP"
+	CSVFileCompressionEnumNone CsvFileCompressionEnum = "NONE"
+	CSVFileCompressionEnumGzip CsvFileCompressionEnum = "GZIP"
 )

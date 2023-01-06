@@ -8,14 +8,14 @@ type GetLoadBalancerPathParams struct {
 	LbID string `pathParam:"style=simple,explode=false,name=lb_id"`
 }
 
-type GetLoadBalancerRequest struct {
-	PathParams GetLoadBalancerPathParams
-}
-
 type GetLoadBalancer401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type GetLoadBalancerRequest struct {
+	PathParams GetLoadBalancerPathParams
 }
 
 type GetLoadBalancerResponse struct {

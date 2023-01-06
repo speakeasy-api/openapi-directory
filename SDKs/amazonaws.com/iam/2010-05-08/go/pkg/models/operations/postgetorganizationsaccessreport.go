@@ -3,13 +3,13 @@ package operations
 type PostGetOrganizationsAccessReportActionEnum string
 
 const (
-	PostGetOrganizationsAccessReportActionEnumGetOrganizationsAccessReport PostGetOrganizationsAccessReportActionEnum = "GetOrganizationsAccessReport"
+	POSTGetOrganizationsAccessReportActionEnumGetOrganizationsAccessReport PostGetOrganizationsAccessReportActionEnum = "GetOrganizationsAccessReport"
 )
 
 type PostGetOrganizationsAccessReportVersionEnum string
 
 const (
-	PostGetOrganizationsAccessReportVersionEnumTwoThousandAndTen0508 PostGetOrganizationsAccessReportVersionEnum = "2010-05-08"
+	POSTGetOrganizationsAccessReportVersionEnumTwoThousandAndTen0508 PostGetOrganizationsAccessReportVersionEnum = "2010-05-08"
 )
 
 type PostGetOrganizationsAccessReportQueryParams struct {

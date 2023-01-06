@@ -3,13 +3,13 @@ package operations
 type PostStopDbClusterActionEnum string
 
 const (
-	PostStopDbClusterActionEnumStopDbCluster PostStopDbClusterActionEnum = "StopDBCluster"
+	POSTStopDBClusterActionEnumStopDbCluster PostStopDbClusterActionEnum = "StopDBCluster"
 )
 
 type PostStopDbClusterVersionEnum string
 
 const (
-	PostStopDbClusterVersionEnumTwoThousandAndFourteen1031 PostStopDbClusterVersionEnum = "2014-10-31"
+	POSTStopDBClusterVersionEnumTwoThousandAndFourteen1031 PostStopDbClusterVersionEnum = "2014-10-31"
 )
 
 type PostStopDbClusterQueryParams struct {

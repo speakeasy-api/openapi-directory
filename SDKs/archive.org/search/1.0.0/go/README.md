@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -25,11 +24,11 @@ func main() {
     
     req := operations.GetSearchV1FieldsRequest{
         QueryParams: operations.GetSearchV1FieldsQueryParams{
-            Callback: "maiores",
+            Callback: "nobis",
         },
     }
     
-    res, err := s.Sdk.GetSearchV1Fields(ctx, req)
+    res, err := s.GetSearchV1Fields(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

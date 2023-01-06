@@ -1,5 +1,5 @@
 package shared
 
 type DeprovisionByoipCidrResult struct {
-	ByoipCidr *ByoipCidr
+	ByoipCidr map[string]interface{}
 }

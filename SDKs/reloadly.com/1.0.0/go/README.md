@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -26,14 +25,14 @@ func main() {
     req := operations.CreateANewQuestionRequest{
         Request: &operations.CreateANewQuestionRequestBody{
             Choices: []string{
-                "quisquam",
-                "voluptate",
+                "est",
+                "minus",
             },
-            Question: "doloribus",
+            Question: "consectetur",
         },
     }
     
-    res, err := s.Sdk.CreateANewQuestion(ctx, req)
+    res, err := s.CreateANewQuestion(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

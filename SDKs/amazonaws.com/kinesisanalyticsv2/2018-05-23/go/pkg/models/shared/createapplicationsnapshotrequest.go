@@ -1,6 +1,6 @@
 package shared
 
 type CreateApplicationSnapshotRequest struct {
-	ApplicationName string `json:"ApplicationName"`
-	SnapshotName    string `json:"SnapshotName"`
+	ApplicationName map[string]interface{} `json:"ApplicationName"`
+	SnapshotName    string                 `json:"SnapshotName"`
 }

@@ -30,13 +30,7 @@ type GetLocationsQueryParams struct {
 }
 
 type GetLocations200ApplicationJSON struct {
-	Count           *int64            `json:"count,omitempty"`
-	CountCurrent    *int64            `json:"count_current,omitempty"`
-	IsLimited       *bool             `json:"is_limited,omitempty"`
-	NextURL         *string           `json:"next_url,omitempty"`
-	QueryDurationMs *int64            `json:"query_duration_ms,omitempty"`
-	Results         []shared.Location `json:"results,omitempty"`
-	URL             *string           `json:"url,omitempty"`
+	Results []shared.Location `json:"results,omitempty"`
 }
 
 type GetLocationsRequest struct {

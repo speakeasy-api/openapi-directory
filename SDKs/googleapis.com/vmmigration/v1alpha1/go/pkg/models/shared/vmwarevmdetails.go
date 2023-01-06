@@ -17,9 +17,10 @@ const (
 	VmwareVMDetailsPowerStateEnumSuspended             VmwareVMDetailsPowerStateEnum = "SUSPENDED"
 )
 
-// VmwareVMDetailsInput
+// VmwareVMDetails
 // VmwareVmDetails describes a VM in vCenter.
-type VmwareVMDetailsInput struct {
+type VmwareVMDetails struct {
+	BootOption            *VmwareVMDetailsBootOptionEnum `json:"bootOption,omitempty"`
 	CommittedStorage      *string                        `json:"committedStorage,omitempty"`
 	CommittedStorageMb    *string                        `json:"committedStorageMb,omitempty"`
 	CPUCount              *int32                         `json:"cpuCount,omitempty"`
@@ -34,10 +35,9 @@ type VmwareVMDetailsInput struct {
 	VMID                  *string                        `json:"vmId,omitempty"`
 }
 
-// VmwareVMDetails
+// VmwareVMDetailsInput
 // VmwareVmDetails describes a VM in vCenter.
-type VmwareVMDetails struct {
-	BootOption            *VmwareVMDetailsBootOptionEnum `json:"bootOption,omitempty"`
+type VmwareVMDetailsInput struct {
 	CommittedStorage      *string                        `json:"committedStorage,omitempty"`
 	CommittedStorageMb    *string                        `json:"committedStorageMb,omitempty"`
 	CPUCount              *int32                         `json:"cpuCount,omitempty"`

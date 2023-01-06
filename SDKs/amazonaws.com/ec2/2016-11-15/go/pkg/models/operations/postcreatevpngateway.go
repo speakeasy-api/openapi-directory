@@ -3,13 +3,13 @@ package operations
 type PostCreateVpnGatewayActionEnum string
 
 const (
-	PostCreateVpnGatewayActionEnumCreateVpnGateway PostCreateVpnGatewayActionEnum = "CreateVpnGateway"
+	POSTCreateVpnGatewayActionEnumCreateVpnGateway PostCreateVpnGatewayActionEnum = "CreateVpnGateway"
 )
 
 type PostCreateVpnGatewayVersionEnum string
 
 const (
-	PostCreateVpnGatewayVersionEnumTwoThousandAndSixteen1115 PostCreateVpnGatewayVersionEnum = "2016-11-15"
+	POSTCreateVpnGatewayVersionEnumTwoThousandAndSixteen1115 PostCreateVpnGatewayVersionEnum = "2016-11-15"
 )
 
 type PostCreateVpnGatewayQueryParams struct {

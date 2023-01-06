@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -27,76 +26,79 @@ func main() {
         Security: operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            }
+            },
             Oauth2c: shared.SchemeOauth2c{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "quibusdam",
+            Parent: "sint",
         },
         QueryParams: operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "possimus",
-            Alt: "media",
-            Callback: "nihil",
-            ConnectionProfileID: "est",
-            Fields: "quos",
-            Key: "sint",
-            OauthToken: "facilis",
-            PrettyPrint: false,
-            QuotaUser: "ipsa",
-            RequestID: "officia",
-            UploadType: "in",
-            UploadProtocol: "nihil",
+            DollarXgafv: "1",
+            AccessToken: "soluta",
+            Alt: "json",
+            Callback: "sed",
+            ConnectionProfileID: "et",
+            Fields: "consequatur",
+            Key: "similique",
+            OauthToken: "eos",
+            PrettyPrint: true,
+            QuotaUser: "eos",
+            RequestID: "hic",
+            UploadType: "est",
+            UploadProtocol: "voluptas",
         },
         Request: &shared.ConnectionProfileInput{
-            DisplayName: "illo",
+            DisplayName: "repellendus",
             ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                Hostname: "quos",
-                Password: "facere",
-                Port: 9197929128000679882,
-                PrivateKey: "consequatur",
-                Username: "magnam",
+                Hostname: "non",
+                Password: "nemo",
+                Port: 1540774977486074912,
+                PrivateKey: "sit",
+                Username: "sint",
             },
             GcsProfile: &shared.GcsProfile{
-                BucketName: "aliquid",
-                RootPath: "in",
+                BucketName: "nemo",
+                RootPath: "necessitatibus",
             },
             Labels: map[string]string{
-                "vitae": "praesentium",
-                "dolorum": "fugit",
+                "voluptas": "tempore",
+                "ab": "et",
             },
             MysqlProfile: &shared.MysqlProfileInput{
-                Hostname: "molestiae",
-                Password: "quisquam",
-                Port: 4830508113816580991,
+                Hostname: "et",
+                Password: "sed",
+                Port: 1110722433774136700,
                 SslConfig: &shared.MysqlSslConfigInput{
-                    CaCertificate: "incidunt",
-                    ClientCertificate: "dolorum",
-                    ClientKey: "et",
+                    CaCertificate: "illum",
+                    ClientCertificate: "aperiam",
+                    ClientKey: "at",
                 },
-                Username: "accusamus",
+                Username: "quaerat",
             },
             NoConnectivity: map[string]interface{}{
-                "necessitatibus": "animi",
+                "tempore": "et",
+                "ullam": "suscipit",
             },
             OracleProfile: &shared.OracleProfile{
                 ConnectionAttributes: map[string]string{
-                    "rerum": "voluptas",
+                    "sed": "voluptates",
+                    "et": "fugiat",
+                    "at": "qui",
                 },
-                DatabaseService: "placeat",
-                Hostname: "non",
-                Password: "sit",
-                Port: 3924871608859186553,
-                Username: "est",
+                DatabaseService: "quia",
+                Hostname: "officia",
+                Password: "ut",
+                Port: 6022569335984936873,
+                Username: "labore",
             },
             PrivateConnectivity: &shared.PrivateConnectivity{
-                PrivateConnectionName: "rerum",
+                PrivateConnectionName: "cupiditate",
             },
             StaticServiceIPConnectivity: map[string]interface{}{
-                "error": "distinctio",
-                "veritatis": "quia",
+                "enim": "excepturi",
+                "quisquam": "sit",
             },
         },
     }

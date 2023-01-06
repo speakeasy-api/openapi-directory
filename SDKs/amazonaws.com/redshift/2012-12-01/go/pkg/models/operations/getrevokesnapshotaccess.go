@@ -3,13 +3,13 @@ package operations
 type GetRevokeSnapshotAccessActionEnum string
 
 const (
-	GetRevokeSnapshotAccessActionEnumRevokeSnapshotAccess GetRevokeSnapshotAccessActionEnum = "RevokeSnapshotAccess"
+	GETRevokeSnapshotAccessActionEnumRevokeSnapshotAccess GetRevokeSnapshotAccessActionEnum = "RevokeSnapshotAccess"
 )
 
 type GetRevokeSnapshotAccessVersionEnum string
 
 const (
-	GetRevokeSnapshotAccessVersionEnumTwoThousandAndTwelve1201 GetRevokeSnapshotAccessVersionEnum = "2012-12-01"
+	GETRevokeSnapshotAccessVersionEnumTwoThousandAndTwelve1201 GetRevokeSnapshotAccessVersionEnum = "2012-12-01"
 )
 
 type GetRevokeSnapshotAccessQueryParams struct {

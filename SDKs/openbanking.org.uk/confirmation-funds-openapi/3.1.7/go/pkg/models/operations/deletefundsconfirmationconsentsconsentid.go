@@ -17,7 +17,7 @@ type DeleteFundsConfirmationConsentsConsentIDHeaders struct {
 }
 
 type DeleteFundsConfirmationConsentsConsentIDSecurity struct {
-	TppoAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
 }
 
 type DeleteFundsConfirmationConsentsConsentIDRequest struct {
@@ -29,6 +29,6 @@ type DeleteFundsConfirmationConsentsConsentIDRequest struct {
 type DeleteFundsConfirmationConsentsConsentIDResponse struct {
 	ContentType      string
 	Headers          map[string][]string
-	ObErrorResponse1 *shared.ObErrorResponse1
+	OBErrorResponse1 *shared.ObErrorResponse1
 	StatusCode       int64
 }

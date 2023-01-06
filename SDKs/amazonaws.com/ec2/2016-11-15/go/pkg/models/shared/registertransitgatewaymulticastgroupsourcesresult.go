@@ -1,5 +1,5 @@
 package shared
 
 type RegisterTransitGatewayMulticastGroupSourcesResult struct {
-	RegisteredMulticastGroupSources *TransitGatewayMulticastRegisteredGroupSources
+	RegisteredMulticastGroupSources map[string]interface{}
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,21 +34,21 @@ func main() {
     
     req := operations.AcceptGrantRequest{
         Headers: operations.AcceptGrantHeaders{
-            XAmzAlgorithm: "quos",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "est",
-            XAmzDate: "qui",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "laborum",
-            XAmzSignedHeaders: "quis",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "fuga",
+            XAmzCredential: "sequi",
+            XAmzDate: "aliquid",
+            XAmzSecurityToken: "molestias",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "consequatur",
             XAmzTarget: "AWSLicenseManager.AcceptGrant",
         },
         Request: shared.AcceptGrantRequest{
-            GrantArn: "fugiat",
+            GrantArn: "et",
         },
     }
     
-    res, err := s.Sdk.AcceptGrant(ctx, req)
+    res, err := s.AcceptGrant(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

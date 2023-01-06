@@ -9,12 +9,6 @@ const (
 	CustomBiddingScriptStateEnumPending          CustomBiddingScriptStateEnum = "PENDING"
 )
 
-// CustomBiddingScriptInput
-// A single custom bidding script.
-type CustomBiddingScriptInput struct {
-	Script *CustomBiddingScriptRef `json:"script,omitempty"`
-}
-
 // CustomBiddingScript
 // A single custom bidding script.
 type CustomBiddingScript struct {
@@ -26,4 +20,10 @@ type CustomBiddingScript struct {
 	Name                     *string                       `json:"name,omitempty"`
 	Script                   *CustomBiddingScriptRef       `json:"script,omitempty"`
 	State                    *CustomBiddingScriptStateEnum `json:"state,omitempty"`
+}
+
+// CustomBiddingScriptInput
+// A single custom bidding script.
+type CustomBiddingScriptInput struct {
+	Script *CustomBiddingScriptRef `json:"script,omitempty"`
 }

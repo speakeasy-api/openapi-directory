@@ -5,5 +5,5 @@ package shared
 //	Contains the result of a successful invocation of the <code>DescribeReservedDBInstances</code> action.
 type ReservedDbInstanceMessage struct {
 	Marker              *string
-	ReservedDbInstances []ReservedDbInstance
+	ReservedDBInstances []map[string]interface{}
 }

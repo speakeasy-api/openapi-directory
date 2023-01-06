@@ -81,7 +81,7 @@ type Kecer404ApplicationJSONErrorDescriptionEnum string
 
 const (
 	Kecer404ApplicationJSONErrorDescriptionEnumNoRecordFound               Kecer404ApplicationJSONErrorDescriptionEnum = "No record found"
-	Kecer404ApplicationJSONErrorDescriptionEnumYourApiurlOrPathIsIncorrect Kecer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
+	Kecer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Kecer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
 type Kecer404ApplicationJSON struct {

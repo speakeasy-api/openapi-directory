@@ -9,17 +9,6 @@ const (
 	CompanyTermsStatusEnumTermsStatusStale       CompanyTermsStatusEnum = "TERMS_STATUS_STALE"
 )
 
-// CompanyInput
-// A reseller, vendor, or customer in the zero-touch reseller and customer APIs.
-type CompanyInput struct {
-	AdminEmails            []string                     `json:"adminEmails,omitempty"`
-	CompanyName            *string                      `json:"companyName,omitempty"`
-	GoogleWorkspaceAccount *GoogleWorkspaceAccountInput `json:"googleWorkspaceAccount,omitempty"`
-	LanguageCode           *string                      `json:"languageCode,omitempty"`
-	OwnerEmails            []string                     `json:"ownerEmails,omitempty"`
-	SkipWelcomeEmail       *bool                        `json:"skipWelcomeEmail,omitempty"`
-}
-
 // Company
 // A reseller, vendor, or customer in the zero-touch reseller and customer APIs.
 type Company struct {
@@ -32,4 +21,15 @@ type Company struct {
 	OwnerEmails            []string                `json:"ownerEmails,omitempty"`
 	SkipWelcomeEmail       *bool                   `json:"skipWelcomeEmail,omitempty"`
 	TermsStatus            *CompanyTermsStatusEnum `json:"termsStatus,omitempty"`
+}
+
+// CompanyInput
+// A reseller, vendor, or customer in the zero-touch reseller and customer APIs.
+type CompanyInput struct {
+	AdminEmails            []string                     `json:"adminEmails,omitempty"`
+	CompanyName            *string                      `json:"companyName,omitempty"`
+	GoogleWorkspaceAccount *GoogleWorkspaceAccountInput `json:"googleWorkspaceAccount,omitempty"`
+	LanguageCode           *string                      `json:"languageCode,omitempty"`
+	OwnerEmails            []string                     `json:"ownerEmails,omitempty"`
+	SkipWelcomeEmail       *bool                        `json:"skipWelcomeEmail,omitempty"`
 }

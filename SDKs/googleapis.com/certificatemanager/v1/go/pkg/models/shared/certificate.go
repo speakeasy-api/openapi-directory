@@ -7,17 +7,6 @@ const (
 	CertificateScopeEnumEdgeCache CertificateScopeEnum = "EDGE_CACHE"
 )
 
-// CertificateInput
-// Defines TLS certificate.
-type CertificateInput struct {
-	Description *string                  `json:"description,omitempty"`
-	Labels      map[string]string        `json:"labels,omitempty"`
-	Managed     *ManagedCertificateInput `json:"managed,omitempty"`
-	Name        *string                  `json:"name,omitempty"`
-	Scope       *CertificateScopeEnum    `json:"scope,omitempty"`
-	SelfManaged *SelfManagedCertificate  `json:"selfManaged,omitempty"`
-}
-
 // Certificate
 // Defines TLS certificate.
 type Certificate struct {
@@ -32,4 +21,15 @@ type Certificate struct {
 	Scope          *CertificateScopeEnum   `json:"scope,omitempty"`
 	SelfManaged    *SelfManagedCertificate `json:"selfManaged,omitempty"`
 	UpdateTime     *string                 `json:"updateTime,omitempty"`
+}
+
+// CertificateInput
+// Defines TLS certificate.
+type CertificateInput struct {
+	Description *string                  `json:"description,omitempty"`
+	Labels      map[string]string        `json:"labels,omitempty"`
+	Managed     *ManagedCertificateInput `json:"managed,omitempty"`
+	Name        *string                  `json:"name,omitempty"`
+	Scope       *CertificateScopeEnum    `json:"scope,omitempty"`
+	SelfManaged *SelfManagedCertificate  `json:"selfManaged,omitempty"`
 }

@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -35,38 +34,30 @@ func main() {
     
     req := operations.CreateSignalingChannelRequest{
         Headers: operations.CreateSignalingChannelHeaders{
-            XAmzAlgorithm: "vel",
-            XAmzContentSha256: "sunt",
-            XAmzCredential: "soluta",
-            XAmzDate: "alias",
-            XAmzSecurityToken: "aut",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "dolorum",
+            XAmzAlgorithm: "a",
+            XAmzContentSha256: "ullam",
+            XAmzCredential: "dolor",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "ducimus",
+            XAmzSignature: "in",
+            XAmzSignedHeaders: "enim",
         },
         Request: operations.CreateSignalingChannelRequestBody{
-            ChannelName: "nostrum",
+            ChannelName: "iusto",
             ChannelType: "SINGLE_MASTER",
             SingleMasterConfiguration: &operations.CreateSignalingChannelRequestBodySingleMasterConfiguration{
-                MessageTTLSeconds: 4412873106353383392,
+                MessageTTLSeconds: 7492940092278234709,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "doloribus",
-                    Value: "at",
-                },
-                shared.Tag{
-                    Key: "dolore",
-                    Value: "et",
-                },
-                shared.Tag{
-                    Key: "natus",
-                    Value: "corrupti",
+                    Key: "dolores",
+                    Value: "voluptate",
                 },
             },
         },
     }
     
-    res, err := s.Sdk.CreateSignalingChannel(ctx, req)
+    res, err := s.CreateSignalingChannel(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

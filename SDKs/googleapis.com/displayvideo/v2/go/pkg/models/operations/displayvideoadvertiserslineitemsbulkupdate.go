@@ -5,7 +5,7 @@ import (
 )
 
 type DisplayvideoAdvertisersLineItemsBulkUpdatePathParams struct {
-	AdvertisersID string `pathParam:"style=simple,explode=false,name=advertisersId"`
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 }
 
 type DisplayvideoAdvertisersLineItemsBulkUpdateQueryParams struct {

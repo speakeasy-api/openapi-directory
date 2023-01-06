@@ -3,13 +3,13 @@ package operations
 type GetDeleteVpcPeeringConnectionActionEnum string
 
 const (
-	GetDeleteVpcPeeringConnectionActionEnumDeleteVpcPeeringConnection GetDeleteVpcPeeringConnectionActionEnum = "DeleteVpcPeeringConnection"
+	GETDeleteVpcPeeringConnectionActionEnumDeleteVpcPeeringConnection GetDeleteVpcPeeringConnectionActionEnum = "DeleteVpcPeeringConnection"
 )
 
 type GetDeleteVpcPeeringConnectionVersionEnum string
 
 const (
-	GetDeleteVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 GetDeleteVpcPeeringConnectionVersionEnum = "2016-11-15"
+	GETDeleteVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 GetDeleteVpcPeeringConnectionVersionEnum = "2016-11-15"
 )
 
 type GetDeleteVpcPeeringConnectionQueryParams struct {

@@ -3,13 +3,13 @@ package operations
 type PostGetAccessKeyLastUsedActionEnum string
 
 const (
-	PostGetAccessKeyLastUsedActionEnumGetAccessKeyLastUsed PostGetAccessKeyLastUsedActionEnum = "GetAccessKeyLastUsed"
+	POSTGetAccessKeyLastUsedActionEnumGetAccessKeyLastUsed PostGetAccessKeyLastUsedActionEnum = "GetAccessKeyLastUsed"
 )
 
 type PostGetAccessKeyLastUsedVersionEnum string
 
 const (
-	PostGetAccessKeyLastUsedVersionEnumTwoThousandAndTen0508 PostGetAccessKeyLastUsedVersionEnum = "2010-05-08"
+	POSTGetAccessKeyLastUsedVersionEnumTwoThousandAndTen0508 PostGetAccessKeyLastUsedVersionEnum = "2010-05-08"
 )
 
 type PostGetAccessKeyLastUsedQueryParams struct {

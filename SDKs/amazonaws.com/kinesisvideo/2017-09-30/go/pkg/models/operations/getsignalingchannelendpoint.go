@@ -22,7 +22,7 @@ type GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfigurat
 }
 
 type GetSignalingChannelEndpointRequestBody struct {
-	ChannelArn                               string                                                                          `json:"ChannelARN"`
+	ChannelARN                               string                                                                          `json:"ChannelARN"`
 	SingleMasterChannelEndpointConfiguration *GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration `json:"SingleMasterChannelEndpointConfiguration,omitempty"`
 }
 

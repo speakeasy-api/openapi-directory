@@ -27,6 +27,6 @@ type PostContentproSimilarTextRequest struct {
 
 type PostContentproSimilarTextResponse struct {
 	ContentType                                       string
-	PostContentproSimilarText200ApplicationJSONObject *PostContentproSimilarText200ApplicationJSON
 	StatusCode                                        int64
+	PostContentproSimilarText200ApplicationJSONObject *PostContentproSimilarText200ApplicationJSON
 }

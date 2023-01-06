@@ -1,6 +1,6 @@
 package shared
 
 type DescribeDbProxyEndpointsResponse struct {
-	DbProxyEndpoints []DbProxyEndpoint
+	DBProxyEndpoints []DbProxyEndpoint
 	Marker           *string
 }

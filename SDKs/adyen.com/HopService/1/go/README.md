@@ -8,9 +8,8 @@ go get openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```go
 package main
 
@@ -30,10 +29,10 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "beatae",
+        Request: "illum",
     }
     
-    res, err := s.Sdk.PostGetOnboardingURL(ctx, req)
+    res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +46,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Hosted Onboarding Page
 
 * `PostGetOnboardingURL` - Get a link to a Adyen-hosted onboarding page.
+
+### PCI Compliance Questionnaire Page
+
 * `PostGetPciQuestionnaireURL` - Get a link to a PCI compliance questionnaire.
 
 <!-- End SDK Available Operations -->

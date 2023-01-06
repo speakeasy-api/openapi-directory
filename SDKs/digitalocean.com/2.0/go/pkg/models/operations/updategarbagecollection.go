@@ -14,11 +14,6 @@ type UpdateGarbageCollectionRequestBody struct {
 	Cancel *bool `json:"cancel,omitempty"`
 }
 
-type UpdateGarbageCollectionRequest struct {
-	PathParams UpdateGarbageCollectionPathParams
-	Request    UpdateGarbageCollectionRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateGarbageCollection200ApplicationJSONGarbageCollectionStatusEnum string
 
 const (
@@ -50,6 +45,11 @@ type UpdateGarbageCollection401ApplicationJSON struct {
 	ID        string  `json:"id"`
 	Message   string  `json:"message"`
 	RequestID *string `json:"request_id,omitempty"`
+}
+
+type UpdateGarbageCollectionRequest struct {
+	PathParams UpdateGarbageCollectionPathParams
+	Request    UpdateGarbageCollectionRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateGarbageCollectionResponse struct {

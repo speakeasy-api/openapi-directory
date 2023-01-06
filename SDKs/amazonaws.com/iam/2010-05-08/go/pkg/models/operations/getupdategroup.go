@@ -3,13 +3,13 @@ package operations
 type GetUpdateGroupActionEnum string
 
 const (
-	GetUpdateGroupActionEnumUpdateGroup GetUpdateGroupActionEnum = "UpdateGroup"
+	GETUpdateGroupActionEnumUpdateGroup GetUpdateGroupActionEnum = "UpdateGroup"
 )
 
 type GetUpdateGroupVersionEnum string
 
 const (
-	GetUpdateGroupVersionEnumTwoThousandAndTen0508 GetUpdateGroupVersionEnum = "2010-05-08"
+	GETUpdateGroupVersionEnumTwoThousandAndTen0508 GetUpdateGroupVersionEnum = "2010-05-08"
 )
 
 type GetUpdateGroupQueryParams struct {

@@ -7,7 +7,7 @@ import (
 type GetModifyTrafficMirrorFilterRuleActionEnum string
 
 const (
-	GetModifyTrafficMirrorFilterRuleActionEnumModifyTrafficMirrorFilterRule GetModifyTrafficMirrorFilterRuleActionEnum = "ModifyTrafficMirrorFilterRule"
+	GETModifyTrafficMirrorFilterRuleActionEnumModifyTrafficMirrorFilterRule GetModifyTrafficMirrorFilterRuleActionEnum = "ModifyTrafficMirrorFilterRule"
 )
 
 // GetModifyTrafficMirrorFilterRuleDestinationPortRange
@@ -20,8 +20,8 @@ type GetModifyTrafficMirrorFilterRuleDestinationPortRange struct {
 type GetModifyTrafficMirrorFilterRuleRuleActionEnum string
 
 const (
-	GetModifyTrafficMirrorFilterRuleRuleActionEnumAccept GetModifyTrafficMirrorFilterRuleRuleActionEnum = "accept"
-	GetModifyTrafficMirrorFilterRuleRuleActionEnumReject GetModifyTrafficMirrorFilterRuleRuleActionEnum = "reject"
+	GETModifyTrafficMirrorFilterRuleRuleActionEnumAccept GetModifyTrafficMirrorFilterRuleRuleActionEnum = "accept"
+	GETModifyTrafficMirrorFilterRuleRuleActionEnumReject GetModifyTrafficMirrorFilterRuleRuleActionEnum = "reject"
 )
 
 // GetModifyTrafficMirrorFilterRuleSourcePortRange
@@ -34,14 +34,14 @@ type GetModifyTrafficMirrorFilterRuleSourcePortRange struct {
 type GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum string
 
 const (
-	GetModifyTrafficMirrorFilterRuleTrafficDirectionEnumIngress GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum = "ingress"
-	GetModifyTrafficMirrorFilterRuleTrafficDirectionEnumEgress  GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum = "egress"
+	GETModifyTrafficMirrorFilterRuleTrafficDirectionEnumIngress GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum = "ingress"
+	GETModifyTrafficMirrorFilterRuleTrafficDirectionEnumEgress  GetModifyTrafficMirrorFilterRuleTrafficDirectionEnum = "egress"
 )
 
 type GetModifyTrafficMirrorFilterRuleVersionEnum string
 
 const (
-	GetModifyTrafficMirrorFilterRuleVersionEnumTwoThousandAndSixteen1115 GetModifyTrafficMirrorFilterRuleVersionEnum = "2016-11-15"
+	GETModifyTrafficMirrorFilterRuleVersionEnumTwoThousandAndSixteen1115 GetModifyTrafficMirrorFilterRuleVersionEnum = "2016-11-15"
 )
 
 type GetModifyTrafficMirrorFilterRuleQueryParams struct {

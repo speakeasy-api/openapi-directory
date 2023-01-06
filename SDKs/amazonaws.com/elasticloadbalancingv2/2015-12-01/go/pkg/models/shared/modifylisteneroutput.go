@@ -1,5 +1,5 @@
 package shared
 
 type ModifyListenerOutput struct {
-	Listeners []Listener
+	Listeners []Listener1
 }

@@ -18,6 +18,6 @@ type Payslip struct {
 	Tax                    *float64             `json:"Tax,omitempty"`
 	TaxLines               []TaxLine            `json:"TaxLines,omitempty"`
 	TimesheetEarningsLines []EarningsLine       `json:"TimesheetEarningsLines,omitempty"`
-	UpdatedDateUtc         *string              `json:"UpdatedDateUTC,omitempty"`
+	UpdatedDateUTC         *string              `json:"UpdatedDateUTC,omitempty"`
 	Wages                  *float64             `json:"Wages,omitempty"`
 }

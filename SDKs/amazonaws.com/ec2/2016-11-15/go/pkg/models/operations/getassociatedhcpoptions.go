@@ -3,13 +3,13 @@ package operations
 type GetAssociateDhcpOptionsActionEnum string
 
 const (
-	GetAssociateDhcpOptionsActionEnumAssociateDhcpOptions GetAssociateDhcpOptionsActionEnum = "AssociateDhcpOptions"
+	GETAssociateDhcpOptionsActionEnumAssociateDhcpOptions GetAssociateDhcpOptionsActionEnum = "AssociateDhcpOptions"
 )
 
 type GetAssociateDhcpOptionsVersionEnum string
 
 const (
-	GetAssociateDhcpOptionsVersionEnumTwoThousandAndSixteen1115 GetAssociateDhcpOptionsVersionEnum = "2016-11-15"
+	GETAssociateDhcpOptionsVersionEnumTwoThousandAndSixteen1115 GetAssociateDhcpOptionsVersionEnum = "2016-11-15"
 )
 
 type GetAssociateDhcpOptionsQueryParams struct {
