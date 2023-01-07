@@ -11,7 +11,7 @@ type PostPreviewOrderHeaders struct {
 
 type PostPreviewOrderRequest struct {
 	Headers PostPreviewOrderHeaders
-	Request shared.PostOrderPreviewRequestType1 `request:"mediaType=application/json"`
+	Request shared.PostOrderPreviewRequestType `request:"mediaType=application/json"`
 }
 
 type PostPreviewOrderResponse struct {

@@ -30,7 +30,7 @@ type GetOrdersBySubscriptionNumberRequest struct {
 
 type GetOrdersBySubscriptionNumberResponse struct {
 	ContentType       string
-	GetOrdersResponse *shared.GetOrdersResponse1
+	GetOrdersResponse *shared.GetOrdersResponse
 	Headers           map[string][]string
 	StatusCode        int64
 }

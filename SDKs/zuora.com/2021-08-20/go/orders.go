@@ -384,7 +384,7 @@ func (s *Orders) GetOrdersBySubscriptionNumber(ctx context.Context, request oper
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json; charset=utf-8`):
-			var out *shared.GetOrdersResponse1
+			var out *shared.GetOrdersResponse
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
