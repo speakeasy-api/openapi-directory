@@ -26,9 +26,9 @@ func main() {
     
     req := operations.BadWordFilterRequest{
         Request: &operations.BadWordFilterRequestBody{
-            Catalog: "quas",
-            CensorCharacter: "aspernatur",
-            Content: "voluptatem",
+            Catalog: "quisquam",
+            CensorCharacter: "quasi",
+            Content: "delectus",
             OutputCase: "camel",
         },
     }

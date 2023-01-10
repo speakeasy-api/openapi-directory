@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.CocerRequestBody{
             CertificateParameters: &operations.CocerRequestBodyCertificateParameters{
-                CertType: "dicta",
-                CompanyName: "optio",
-                RegNo: "aut",
-                Sector: "eum",
+                CertType: "expedita",
+                CompanyName: "eveniet",
+                RegNo: "et",
+                Sector: "nemo",
             },
-            ConsentArtifact: "error",
+            ConsentArtifact: "sed",
             Format: "pdf",
-            TxnID: "corrupti",
+            TxnID: "vel",
         },
     }
     

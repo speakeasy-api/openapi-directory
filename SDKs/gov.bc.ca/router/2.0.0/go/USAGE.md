@@ -26,15 +26,15 @@ func main() {
             OutputFormat: "kml",
         },
         QueryParams: operations.GetDirectionsOutputFormatQueryParams{
-            CorrectSide: true,
-            Criteria: "fastest",
-            Departure: "1975-06-27T08:22:02Z",
-            Disable: "eos",
+            CorrectSide: false,
+            Criteria: "shortest",
+            Departure: "2012-10-09T01:41:39Z",
+            Disable: "quia",
             DistanceUnit: "mi",
-            OutputSRS: 5076055979029686948,
-            Points: "exercitationem",
+            OutputSRS: 2629240772588096916,
+            Points: "distinctio",
             RoundTrip: false,
-            RouteDescription: "maiores",
+            RouteDescription: "nesciunt",
         },
     }
     

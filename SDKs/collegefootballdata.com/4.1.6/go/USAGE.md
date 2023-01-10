@@ -23,14 +23,14 @@ func main() {
     
     req := operations.GetLinesRequest{
         QueryParams: operations.GetLinesQueryParams{
-            Away: "voluptas",
-            Conference: "quo",
-            GameID: 3904959679002859803,
-            Home: "quae",
-            SeasonType: "dolorem",
-            Team: "qui",
-            Week: 3664832120697581838,
-            Year: 3353722794698886839,
+            Away: "quia",
+            Conference: "blanditiis",
+            GameID: 501002963790601971,
+            Home: "expedita",
+            SeasonType: "quo",
+            Team: "id",
+            Week: 319022383954109970,
+            Year: 3325329196161324374,
         },
     }
     

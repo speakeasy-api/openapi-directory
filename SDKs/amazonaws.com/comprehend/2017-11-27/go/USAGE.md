@@ -23,18 +23,18 @@ func main() {
     
     req := operations.BatchDetectDominantLanguageRequest{
         Headers: operations.BatchDetectDominantLanguageHeaders{
-            XAmzAlgorithm: "tempora",
-            XAmzContentSha256: "illum",
-            XAmzCredential: "quae",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "consectetur",
-            XAmzSignature: "voluptatibus",
-            XAmzSignedHeaders: "doloremque",
+            XAmzAlgorithm: "id",
+            XAmzContentSha256: "reprehenderit",
+            XAmzCredential: "sit",
+            XAmzDate: "at",
+            XAmzSecurityToken: "ex",
+            XAmzSignature: "doloribus",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "Comprehend_20171127.BatchDetectDominantLanguage",
         },
         Request: shared.BatchDetectDominantLanguageRequest{
             TextList: []string{
-                "iste",
+                "ea",
             },
         },
     }

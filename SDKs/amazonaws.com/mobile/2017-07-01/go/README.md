@@ -34,21 +34,21 @@ func main() {
     
     req := operations.CreateProjectRequest{
         QueryParams: operations.CreateProjectQueryParams{
-            Name: "explicabo",
-            Region: "id",
-            SnapshotID: "blanditiis",
+            Name: "magnam",
+            Region: "similique",
+            SnapshotID: "fuga",
         },
         Headers: operations.CreateProjectHeaders{
-            XAmzAlgorithm: "explicabo",
-            XAmzContentSha256: "voluptate",
-            XAmzCredential: "exercitationem",
-            XAmzDate: "et",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "odit",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "voluptatem",
+            XAmzContentSha256: "officia",
+            XAmzCredential: "iure",
+            XAmzDate: "at",
+            XAmzSecurityToken: "consequatur",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "nobis",
         },
         Request: operations.CreateProjectRequestBody{
-            Contents: "et",
+            Contents: "vero",
         },
     }
     

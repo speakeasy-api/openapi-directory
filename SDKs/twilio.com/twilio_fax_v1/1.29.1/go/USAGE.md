@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteFaxPathParams{
-            Sid: "debitis",
+            Sid: "aliquam",
         },
     }
     

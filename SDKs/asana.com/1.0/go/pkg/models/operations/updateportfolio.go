@@ -13,8 +13,8 @@ type UpdatePortfolioQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type UpdatePortfolioRequestBody struct {
-	Data *shared.PortfolioRequest `json:"data,omitempty"`
+type UpdatePortfolioRequestBodyInput struct {
+	Data *shared.PortfolioRequestInput `json:"data,omitempty"`
 }
 
 type UpdatePortfolio200ApplicationJSON struct {
@@ -24,7 +24,7 @@ type UpdatePortfolio200ApplicationJSON struct {
 type UpdatePortfolioRequest struct {
 	PathParams  UpdatePortfolioPathParams
 	QueryParams UpdatePortfolioQueryParams
-	Request     UpdatePortfolioRequestBody `request:"mediaType=application/json"`
+	Request     UpdatePortfolioRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdatePortfolioResponse struct {

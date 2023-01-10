@@ -14,6 +14,26 @@ type ListRegistryRepositoriesQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type ListRegistryRepositories200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListRegistryRepositories200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListRegistryRepositories200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListRegistryRepositories200ApplicationJSONMeta
+// Information about the response itself.
+type ListRegistryRepositories200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListRegistryRepositories200ApplicationJSONRepositoriesLatestTag struct {
 	CompressedSizeBytes *int64     `json:"compressed_size_bytes,omitempty"`
 	ManifestDigest      *string    `json:"manifest_digest,omitempty"`
@@ -32,6 +52,8 @@ type ListRegistryRepositories200ApplicationJSONRepositories struct {
 }
 
 type ListRegistryRepositories200ApplicationJSON struct {
+	Links        *ListRegistryRepositories200ApplicationJSONLinks         `json:"links,omitempty"`
+	Meta         ListRegistryRepositories200ApplicationJSONMeta           `json:"meta"`
 	Repositories []ListRegistryRepositories200ApplicationJSONRepositories `json:"repositories,omitempty"`
 }
 

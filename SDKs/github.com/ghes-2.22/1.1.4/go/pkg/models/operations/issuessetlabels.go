@@ -10,16 +10,16 @@ type IssuesSetLabelsPathParams struct {
 	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
-type IssuesSetLabelsRequestBody1Labels struct {
+type IssuesSetLabelsRequestBody1 struct {
+	Labels []string `json:"labels,omitempty"`
+}
+
+type IssuesSetLabelsRequestBody3Labels struct {
 	Name string `json:"name"`
 }
 
-type IssuesSetLabelsRequestBody1 struct {
-	Labels []IssuesSetLabelsRequestBody1Labels `json:"labels,omitempty"`
-}
-
 type IssuesSetLabelsRequestBody3 struct {
-	Labels []string `json:"labels,omitempty"`
+	Labels []IssuesSetLabelsRequestBody3Labels `json:"labels,omitempty"`
 }
 
 type IssuesSetLabelsRequestBody4 struct {

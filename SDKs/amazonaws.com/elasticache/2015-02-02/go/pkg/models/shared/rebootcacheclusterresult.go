@@ -1,5 +1,5 @@
 package shared
 
 type RebootCacheClusterResult struct {
-	CacheCluster *CacheCluster1
+	CacheCluster *CacheCluster
 }

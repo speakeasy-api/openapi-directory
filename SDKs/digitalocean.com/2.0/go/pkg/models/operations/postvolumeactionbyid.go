@@ -13,8 +13,18 @@ type PostVolumeActionByIDQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type PostVolumeActionByIDRequestBody3TypeEnum string
+
+const (
+	PostVolumeActionByIDRequestBody3TypeEnumAttach PostVolumeActionByIDRequestBody3TypeEnum = "attach"
+	PostVolumeActionByIDRequestBody3TypeEnumDetach PostVolumeActionByIDRequestBody3TypeEnum = "detach"
+	PostVolumeActionByIDRequestBody3TypeEnumResize PostVolumeActionByIDRequestBody3TypeEnum = "resize"
+)
+
 type PostVolumeActionByIDRequestBody3 struct {
-	SizeGigabytes int64 `json:"size_gigabytes"`
+	Region        *shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region,omitempty"`
+	SizeGigabytes int64                                                                                                                                    `json:"size_gigabytes"`
+	Type          PostVolumeActionByIDRequestBody3TypeEnum                                                                                                 `json:"type"`
 }
 
 type PostVolumeActionByID401ApplicationJSON struct {

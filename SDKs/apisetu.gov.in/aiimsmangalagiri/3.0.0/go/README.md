@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.LabrpRequestBody{
             CertificateParameters: &operations.LabrpRequestBodyCertificateParameters{
-                DOB: "totam",
-                FullName: "mollitia",
-                GENDER: "quo",
-                MobileNoRQ: "quos",
+                DOB: "incidunt",
+                FullName: "debitis",
+                GENDER: "qui",
+                MobileNoRQ: "culpa",
             },
-            ConsentArtifact: "beatae",
+            ConsentArtifact: "ea",
             Format: "pdf",
-            TxnID: "dolor",
+            TxnID: "non",
         },
     }
     

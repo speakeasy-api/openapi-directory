@@ -1,5 +1,5 @@
 package shared
 
 type UpdateServiceInstanceOutput struct {
-	ServiceInstance ServiceInstance1 `json:"serviceInstance"`
+	ServiceInstance ServiceInstance `json:"serviceInstance"`
 }

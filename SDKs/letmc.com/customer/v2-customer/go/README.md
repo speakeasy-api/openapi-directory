@@ -24,11 +24,11 @@ func main() {
     
     req := operations.BranchControllerGetBranchesRequest{
         PathParams: operations.BranchControllerGetBranchesPathParams{
-            ShortName: "ut",
+            ShortName: "fuga",
         },
         QueryParams: operations.BranchControllerGetBranchesQueryParams{
-            Count: 6819986047930640922,
-            Offset: 5235123056757608722,
+            Count: 4123162475481009482,
+            Offset: 4851542156958539991,
         },
     }
     

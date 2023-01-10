@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetAffectedGenomicModelsUsingGetRequest{
         PathParams: operations.GetAffectedGenomicModelsUsingGetPathParams{
-            TaxonID: "nulla",
+            TaxonID: "dolorem",
         },
     }
     

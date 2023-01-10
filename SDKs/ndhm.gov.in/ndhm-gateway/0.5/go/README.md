@@ -24,41 +24,37 @@ func main() {
     
     req := operations.PostV05CareContextsDiscoverRequest{
         Headers: operations.PostV05CareContextsDiscoverHeaders{
-            Authorization: "fugiat",
-            XHIPID: "deleniti",
+            Authorization: "qui",
+            XHIPID: "quo",
         },
         Request: operations.PostV05CareContextsDiscoverRequests{
             ApplicationXML: []byte("quia"),
             PatientDiscoveryRequest: &shared.PatientDiscoveryRequest{
                 Patient: shared.PatientDiscoveryRequestPatient{
-                    Gender: "O",
-                    ID: "architecto",
-                    Name: "architecto",
+                    Gender: "F",
+                    ID: "sed",
+                    Name: "consequatur",
                     UnverifiedIdentifiers: []shared.Identifier{
                         shared.Identifier{
                             Type: "MOBILE",
-                            Value: "quo",
-                        },
-                        shared.Identifier{
-                            Type: "NDHM_HEALTH_NUMBER",
-                            Value: "repellendus",
-                        },
-                        shared.Identifier{
-                            Type: "MOBILE",
-                            Value: "quia",
+                            Value: "quibusdam",
                         },
                     },
                     VerifiedIdentifiers: []shared.Identifier{
                         shared.Identifier{
                             Type: "MR",
-                            Value: "enim",
+                            Value: "sunt",
+                        },
+                        shared.Identifier{
+                            Type: "HEALTH_ID",
+                            Value: "eveniet",
                         },
                     },
-                    YearOfBirth: 8243275622332520901,
+                    YearOfBirth: 3323039620656045207,
                 },
-                RequestID: "est",
-                Timestamp: "2001-08-31T04:38:11Z",
-                TransactionID: "omnis",
+                RequestID: "vel",
+                Timestamp: "2017-02-17T07:04:38Z",
+                TransactionID: "architecto",
             },
         },
     }

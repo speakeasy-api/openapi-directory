@@ -11,19 +11,19 @@ type IssuesSetLabelsPathParams struct {
 }
 
 type IssuesSetLabelsRequestBody1 struct {
+	Labels []string `json:"labels,omitempty"`
+}
+
+type IssuesSetLabelsRequestBody3Labels struct {
 	Name string `json:"name"`
 }
 
 type IssuesSetLabelsRequestBody3 struct {
-	Labels []string `json:"labels,omitempty"`
+	Labels []IssuesSetLabelsRequestBody3Labels `json:"labels,omitempty"`
 }
 
-type IssuesSetLabelsRequestBody5Labels struct {
+type IssuesSetLabelsRequestBody4 struct {
 	Name string `json:"name"`
-}
-
-type IssuesSetLabelsRequestBody5 struct {
-	Labels []IssuesSetLabelsRequestBody5Labels `json:"labels,omitempty"`
 }
 
 type IssuesSetLabelsRequest struct {

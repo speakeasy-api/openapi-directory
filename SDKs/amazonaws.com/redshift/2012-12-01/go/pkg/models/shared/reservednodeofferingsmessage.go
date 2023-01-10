@@ -4,5 +4,5 @@ package shared
 // <p/>
 type ReservedNodeOfferingsMessage struct {
 	Marker                *string
-	ReservedNodeOfferings []map[string]interface{}
+	ReservedNodeOfferings []ReservedNodeOfferingList
 }

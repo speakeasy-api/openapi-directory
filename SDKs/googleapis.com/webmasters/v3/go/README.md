@@ -34,46 +34,61 @@ func main() {
             },
         },
         PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "sint",
+            SiteURL: "non",
         },
         QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
             Alt: "json",
-            Fields: "dolorem",
-            Key: "earum",
-            OauthToken: "recusandae",
+            Fields: "eos",
+            Key: "aut",
+            OauthToken: "dolores",
             PrettyPrint: true,
-            QuotaUser: "in",
-            UserIP: "ut",
+            QuotaUser: "beatae",
+            UserIP: "aliquid",
         },
         Request: &shared.SearchAnalyticsQueryRequest{
-            AggregationType: "reprehenderit",
-            DataState: "architecto",
+            AggregationType: "adipisci",
+            DataState: "nostrum",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "reiciendis",
-                            Expression: "asperiores",
-                            Operator: "dolorum",
-                        },
-                        shared.APIDimensionFilter{
-                            Dimension: "reiciendis",
-                            Expression: "quo",
-                            Operator: "magni",
+                            Dimension: "aut",
+                            Expression: "cumque",
+                            Operator: "et",
                         },
                     },
-                    GroupType: "dolores",
+                    GroupType: "atque",
+                },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "nobis",
+                            Expression: "doloribus",
+                            Operator: "veniam",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "rem",
+                            Expression: "pariatur",
+                            Operator: "totam",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "error",
+                            Expression: "et",
+                            Operator: "dolore",
+                        },
+                    },
+                    GroupType: "corporis",
                 },
             },
             Dimensions: []string{
-                "fugiat",
-                "aliquid",
+                "blanditiis",
+                "vitae",
             },
-            EndDate: "expedita",
-            RowLimit: 6718298119585506763,
-            SearchType: "fugit",
-            StartDate: "voluptates",
-            StartRow: 8112342789618834040,
+            EndDate: "ullam",
+            RowLimit: 5161140233781953582,
+            SearchType: "dolorem",
+            StartDate: "ea",
+            StartRow: 940405060983898307,
         },
     }
     

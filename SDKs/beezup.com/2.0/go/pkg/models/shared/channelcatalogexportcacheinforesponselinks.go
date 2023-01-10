@@ -1,6 +1,6 @@
 package shared
 
 type ChannelCatalogExportCacheInfoResponseLinks struct {
-	Clear map[string]interface{} `json:"clear,omitempty"`
-	Self  map[string]interface{} `json:"self"`
+	Clear *LinksClearChannelCatalogExportationCacheLink  `json:"clear,omitempty"`
+	Self  LinksGetChannelCatalogExportationCacheInfoLink `json:"self"`
 }

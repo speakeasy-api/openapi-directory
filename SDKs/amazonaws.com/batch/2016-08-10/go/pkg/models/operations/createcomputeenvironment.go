@@ -28,7 +28,7 @@ type CreateComputeEnvironmentRequestBodyComputeResources struct {
 	LaunchTemplate     *shared.LaunchTemplateSpecification `json:"launchTemplate,omitempty"`
 	MaxvCpus           *int64                              `json:"maxvCpus,omitempty"`
 	MinvCpus           *int64                              `json:"minvCpus,omitempty"`
-	PlacementGroup     map[string]interface{}              `json:"placementGroup,omitempty"`
+	PlacementGroup     *string                             `json:"placementGroup,omitempty"`
 	SecurityGroupIds   []string                            `json:"securityGroupIds,omitempty"`
 	SpotIamFleetRole   *string                             `json:"spotIamFleetRole,omitempty"`
 	Subnets            []string                            `json:"subnets,omitempty"`

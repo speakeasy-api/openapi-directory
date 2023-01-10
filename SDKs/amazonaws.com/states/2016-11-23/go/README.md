@@ -34,21 +34,21 @@ func main() {
     
     req := operations.CreateActivityRequest{
         Headers: operations.CreateActivityHeaders{
-            XAmzAlgorithm: "earum",
-            XAmzContentSha256: "est",
-            XAmzCredential: "error",
-            XAmzDate: "ipsa",
-            XAmzSecurityToken: "sint",
-            XAmzSignature: "saepe",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "laboriosam",
+            XAmzContentSha256: "totam",
+            XAmzCredential: "atque",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "quibusdam",
+            XAmzSignature: "dolorum",
+            XAmzSignedHeaders: "placeat",
             XAmzTarget: "AWSStepFunctions.CreateActivity",
         },
         Request: shared.CreateActivityInput{
-            Name: "neque",
+            Name: "laborum",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "ab",
-                    Value: "dolore",
+                    Key: "numquam",
+                    Value: "et",
                 },
             },
         },

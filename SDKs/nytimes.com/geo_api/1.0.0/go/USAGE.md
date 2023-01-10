@@ -23,18 +23,18 @@ func main() {
     
     req := operations.GetQueryJSONRequest{
         QueryParams: operations.GetQueryJSONQueryParams{
-            DateRange: "culpa",
-            Elevation: 3890080421283342007,
-            Facets: 227706880003303016,
-            Filter: "ab",
-            Latitude: "incidunt",
-            Limit: 3184538614141096155,
-            Longitude: "esse",
-            Name: "incidunt",
-            Offset: 263238491685024644,
-            Query: "nesciunt",
-            Sort: "sit",
-            Sw: "sequi",
+            DateRange: "odio",
+            Elevation: 5789498988459070385,
+            Facets: 1117297296707549895,
+            Filter: "cupiditate",
+            Latitude: "aut",
+            Limit: 341544842551870019,
+            Longitude: "repellendus",
+            Name: "soluta",
+            Offset: 2871197063775501498,
+            Query: "voluptate",
+            Sort: "impedit",
+            Sw: "velit",
         },
     }
     

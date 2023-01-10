@@ -6,7 +6,7 @@ type ElasticsearchDestinationDescription struct {
 	BufferingHints              *ElasticsearchBufferingHints          `json:"BufferingHints,omitempty"`
 	CloudWatchLoggingOptions    *CloudWatchLoggingOptions             `json:"CloudWatchLoggingOptions,omitempty"`
 	ClusterEndpoint             *string                               `json:"ClusterEndpoint,omitempty"`
-	DomainARN                   map[string]interface{}                `json:"DomainARN,omitempty"`
+	DomainARN                   *string                               `json:"DomainARN,omitempty"`
 	IndexName                   *string                               `json:"IndexName,omitempty"`
 	IndexRotationPeriod         *ElasticsearchIndexRotationPeriodEnum `json:"IndexRotationPeriod,omitempty"`
 	ProcessingConfiguration     *ProcessingConfiguration              `json:"ProcessingConfiguration,omitempty"`

@@ -1,0 +1,11 @@
+package shared
+
+// ValidUpgradeTargetList
+// The version of the database engine that an instance can be upgraded to.
+type ValidUpgradeTargetList struct {
+	AutoUpgrade           *bool
+	Description           *string
+	Engine                *string
+	EngineVersion         *string
+	IsMajorVersionUpgrade *bool
+}

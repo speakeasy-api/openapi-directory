@@ -23,16 +23,15 @@ func main() {
     
     req := operations.CreateAPIApplicationRequest{
         Request: operations.CreateAPIApplicationNewAPIApplication{
-            ApplicationName: "doloribus",
-            Enabled: false,
-            Expiry: "2004-04-17T06:57:06Z",
-            Ican: 7515335467021667958,
-            NumberOfPayeeApprovalsRequired: 257416497730283408,
-            NumberOfPaymentApprovalsRequired: 8491975279685254001,
+            ApplicationName: "repellat",
+            Enabled: true,
+            Expiry: "2007-02-05T03:26:50Z",
+            Ican: 4405335760754809355,
+            NumberOfPayeeApprovalsRequired: 620736082703045283,
+            NumberOfPaymentApprovalsRequired: 1823518455980936632,
             Permissions: []string{
-                "aspernatur",
-                "non",
-                "sint",
+                "dolores",
+                "perferendis",
             },
         },
     }

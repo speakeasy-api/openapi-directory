@@ -7,7 +7,7 @@ type AwsSecurityFindingFilters struct {
 	CompanyName                                    []StringFilter         `json:"CompanyName,omitempty"`
 	ComplianceStatus                               []StringFilter         `json:"ComplianceStatus,omitempty"`
 	Confidence                                     []NumberFilter         `json:"Confidence,omitempty"`
-	CreatedAt                                      []DateFilter1          `json:"CreatedAt,omitempty"`
+	CreatedAt                                      []DateFilter           `json:"CreatedAt,omitempty"`
 	Criticality                                    []NumberFilter         `json:"Criticality,omitempty"`
 	Description                                    []StringFilter         `json:"Description,omitempty"`
 	FindingProviderFieldsConfidence                []NumberFilter         `json:"FindingProviderFieldsConfidence,omitempty"`
@@ -17,11 +17,11 @@ type AwsSecurityFindingFilters struct {
 	FindingProviderFieldsSeverityLabel             []StringFilter         `json:"FindingProviderFieldsSeverityLabel,omitempty"`
 	FindingProviderFieldsSeverityOriginal          []StringFilter         `json:"FindingProviderFieldsSeverityOriginal,omitempty"`
 	FindingProviderFieldsTypes                     []StringFilter         `json:"FindingProviderFieldsTypes,omitempty"`
-	FirstObservedAt                                []DateFilter1          `json:"FirstObservedAt,omitempty"`
+	FirstObservedAt                                []DateFilter           `json:"FirstObservedAt,omitempty"`
 	GeneratorID                                    []StringFilter         `json:"GeneratorId,omitempty"`
 	ID                                             []StringFilter         `json:"Id,omitempty"`
 	Keyword                                        map[string]interface{} `json:"Keyword,omitempty"`
-	LastObservedAt                                 []DateFilter1          `json:"LastObservedAt,omitempty"`
+	LastObservedAt                                 []DateFilter           `json:"LastObservedAt,omitempty"`
 	MalwareName                                    []StringFilter         `json:"MalwareName,omitempty"`
 	MalwarePath                                    []StringFilter         `json:"MalwarePath,omitempty"`
 	MalwareState                                   []StringFilter         `json:"MalwareState,omitempty"`
@@ -38,14 +38,14 @@ type AwsSecurityFindingFilters struct {
 	NetworkSourceMac                               []StringFilter         `json:"NetworkSourceMac,omitempty"`
 	NetworkSourcePort                              []NumberFilter         `json:"NetworkSourcePort,omitempty"`
 	NoteText                                       []StringFilter         `json:"NoteText,omitempty"`
-	NoteUpdatedAt                                  []DateFilter1          `json:"NoteUpdatedAt,omitempty"`
+	NoteUpdatedAt                                  []DateFilter           `json:"NoteUpdatedAt,omitempty"`
 	NoteUpdatedBy                                  []StringFilter         `json:"NoteUpdatedBy,omitempty"`
-	ProcessLaunchedAt                              []DateFilter1          `json:"ProcessLaunchedAt,omitempty"`
+	ProcessLaunchedAt                              []DateFilter           `json:"ProcessLaunchedAt,omitempty"`
 	ProcessName                                    []StringFilter         `json:"ProcessName,omitempty"`
 	ProcessParentPid                               []NumberFilter         `json:"ProcessParentPid,omitempty"`
 	ProcessPath                                    []StringFilter         `json:"ProcessPath,omitempty"`
 	ProcessPid                                     []NumberFilter         `json:"ProcessPid,omitempty"`
-	ProcessTerminatedAt                            []DateFilter1          `json:"ProcessTerminatedAt,omitempty"`
+	ProcessTerminatedAt                            []DateFilter           `json:"ProcessTerminatedAt,omitempty"`
 	ProductArn                                     []StringFilter         `json:"ProductArn,omitempty"`
 	ProductFields                                  []MapFilter            `json:"ProductFields,omitempty"`
 	ProductName                                    []StringFilter         `json:"ProductName,omitempty"`
@@ -59,11 +59,11 @@ type AwsSecurityFindingFilters struct {
 	ResourceAwsEc2InstanceIPV4Addresses            []IPFilter             `json:"ResourceAwsEc2InstanceIpV4Addresses,omitempty"`
 	ResourceAwsEc2InstanceIPV6Addresses            []IPFilter             `json:"ResourceAwsEc2InstanceIpV6Addresses,omitempty"`
 	ResourceAwsEc2InstanceKeyName                  []StringFilter         `json:"ResourceAwsEc2InstanceKeyName,omitempty"`
-	ResourceAwsEc2InstanceLaunchedAt               []DateFilter1          `json:"ResourceAwsEc2InstanceLaunchedAt,omitempty"`
+	ResourceAwsEc2InstanceLaunchedAt               []DateFilter           `json:"ResourceAwsEc2InstanceLaunchedAt,omitempty"`
 	ResourceAwsEc2InstanceSubnetID                 []StringFilter         `json:"ResourceAwsEc2InstanceSubnetId,omitempty"`
 	ResourceAwsEc2InstanceType                     []StringFilter         `json:"ResourceAwsEc2InstanceType,omitempty"`
 	ResourceAwsEc2InstanceVpcID                    []StringFilter         `json:"ResourceAwsEc2InstanceVpcId,omitempty"`
-	ResourceAwsIamAccessKeyCreatedAt               []DateFilter1          `json:"ResourceAwsIamAccessKeyCreatedAt,omitempty"`
+	ResourceAwsIamAccessKeyCreatedAt               []DateFilter           `json:"ResourceAwsIamAccessKeyCreatedAt,omitempty"`
 	ResourceAwsIamAccessKeyPrincipalName           []StringFilter         `json:"ResourceAwsIamAccessKeyPrincipalName,omitempty"`
 	ResourceAwsIamAccessKeyStatus                  []StringFilter         `json:"ResourceAwsIamAccessKeyStatus,omitempty"`
 	ResourceAwsIamAccessKeyUserName                map[string]interface{} `json:"ResourceAwsIamAccessKeyUserName,omitempty"`
@@ -72,27 +72,27 @@ type AwsSecurityFindingFilters struct {
 	ResourceAwsS3BucketOwnerName                   []StringFilter         `json:"ResourceAwsS3BucketOwnerName,omitempty"`
 	ResourceContainerImageID                       []StringFilter         `json:"ResourceContainerImageId,omitempty"`
 	ResourceContainerImageName                     []StringFilter         `json:"ResourceContainerImageName,omitempty"`
-	ResourceContainerLaunchedAt                    []DateFilter1          `json:"ResourceContainerLaunchedAt,omitempty"`
+	ResourceContainerLaunchedAt                    []DateFilter           `json:"ResourceContainerLaunchedAt,omitempty"`
 	ResourceContainerName                          []StringFilter         `json:"ResourceContainerName,omitempty"`
 	ResourceDetailsOther                           []MapFilter            `json:"ResourceDetailsOther,omitempty"`
 	ResourceID                                     []StringFilter         `json:"ResourceId,omitempty"`
 	ResourcePartition                              []StringFilter         `json:"ResourcePartition,omitempty"`
 	ResourceRegion                                 []StringFilter         `json:"ResourceRegion,omitempty"`
 	ResourceTags                                   []MapFilter            `json:"ResourceTags,omitempty"`
-	ResourceType                                   []StringFilter1        `json:"ResourceType,omitempty"`
+	ResourceType                                   []StringFilter         `json:"ResourceType,omitempty"`
 	SeverityLabel                                  []StringFilter         `json:"SeverityLabel,omitempty"`
 	SeverityNormalized                             map[string]interface{} `json:"SeverityNormalized,omitempty"`
 	SeverityProduct                                map[string]interface{} `json:"SeverityProduct,omitempty"`
 	SourceURL                                      []StringFilter         `json:"SourceUrl,omitempty"`
 	ThreatIntelIndicatorCategory                   []StringFilter         `json:"ThreatIntelIndicatorCategory,omitempty"`
-	ThreatIntelIndicatorLastObservedAt             []DateFilter1          `json:"ThreatIntelIndicatorLastObservedAt,omitempty"`
+	ThreatIntelIndicatorLastObservedAt             []DateFilter           `json:"ThreatIntelIndicatorLastObservedAt,omitempty"`
 	ThreatIntelIndicatorSource                     []StringFilter         `json:"ThreatIntelIndicatorSource,omitempty"`
 	ThreatIntelIndicatorSourceURL                  []StringFilter         `json:"ThreatIntelIndicatorSourceUrl,omitempty"`
 	ThreatIntelIndicatorType                       []StringFilter         `json:"ThreatIntelIndicatorType,omitempty"`
 	ThreatIntelIndicatorValue                      []StringFilter         `json:"ThreatIntelIndicatorValue,omitempty"`
 	Title                                          []StringFilter         `json:"Title,omitempty"`
 	Type                                           []StringFilter         `json:"Type,omitempty"`
-	UpdatedAt                                      []DateFilter1          `json:"UpdatedAt,omitempty"`
+	UpdatedAt                                      []DateFilter           `json:"UpdatedAt,omitempty"`
 	UserDefinedFields                              []MapFilter            `json:"UserDefinedFields,omitempty"`
 	VerificationState                              []StringFilter         `json:"VerificationState,omitempty"`
 	WorkflowState                                  []StringFilter         `json:"WorkflowState,omitempty"`

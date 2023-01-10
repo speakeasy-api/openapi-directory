@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.BtcerRequestBody{
             CertificateParameters: &operations.BtcerRequestBodyCertificateParameters{
-                DATEOFBIRTH: "ullam",
-                REGNO: "eveniet",
+                DATEOFBIRTH: "pariatur",
+                REGNO: "vel",
             },
-            ConsentArtifact: "alias",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "dolorem",
+            TxnID: "animi",
         },
     }
     

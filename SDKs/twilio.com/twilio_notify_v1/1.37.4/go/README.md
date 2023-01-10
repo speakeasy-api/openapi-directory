@@ -30,18 +30,18 @@ func main() {
             },
         },
         PathParams: operations.CreateBindingPathParams{
-            ServiceSid: "alias",
+            ServiceSid: "velit",
         },
         Request: &operations.CreateBindingCreateBindingRequest{
-            Address: "sapiente",
-            BindingType: "apn",
-            CredentialSid: "tenetur",
-            Endpoint: "aut",
-            Identity: "animi",
-            NotificationProtocolVersion: "est",
+            Address: "nihil",
+            BindingType: "fcm",
+            CredentialSid: "voluptas",
+            Endpoint: "nesciunt",
+            Identity: "perferendis",
+            NotificationProtocolVersion: "incidunt",
             Tag: []string{
-                "distinctio",
-                "nihil",
+                "est",
+                "in",
             },
         },
     }

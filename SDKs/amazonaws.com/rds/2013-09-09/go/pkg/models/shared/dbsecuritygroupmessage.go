@@ -1,6 +1,6 @@
 package shared
 
 type DbSecurityGroupMessage struct {
-	DBSecurityGroups []map[string]interface{}
+	DBSecurityGroups []DbSecurityGroups
 	Marker           *string
 }

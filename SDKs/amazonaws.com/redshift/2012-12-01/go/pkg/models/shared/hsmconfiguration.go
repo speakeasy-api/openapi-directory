@@ -7,5 +7,5 @@ type HsmConfiguration struct {
 	HsmConfigurationIdentifier *string
 	HsmIPAddress               *string
 	HsmPartitionName           *string
-	Tags                       []map[string]interface{}
+	Tags                       []TagList
 }

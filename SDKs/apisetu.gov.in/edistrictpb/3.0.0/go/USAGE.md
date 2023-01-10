@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.BtcerRequestBody{
             CertificateParameters: &operations.BtcerRequestBodyCertificateParameters{
-                DOB: "saepe",
-                RegistrationID: "minus",
+                DOB: "tenetur",
+                RegistrationID: "non",
             },
-            ConsentArtifact: "inventore",
+            ConsentArtifact: "ut",
             Format: "pdf",
-            TxnID: "dolor",
+            TxnID: "doloribus",
         },
     }
     

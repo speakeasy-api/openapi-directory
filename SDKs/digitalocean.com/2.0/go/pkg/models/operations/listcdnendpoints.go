@@ -20,8 +20,30 @@ type ListCdnEndpoints200ApplicationJSONEndpoints struct {
 	TTL           *int64     `json:"ttl,omitempty"`
 }
 
+type ListCdnEndpoints200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListCdnEndpoints200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListCdnEndpoints200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListCdnEndpoints200ApplicationJSONMeta
+// Information about the response itself.
+type ListCdnEndpoints200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListCdnEndpoints200ApplicationJSON struct {
 	Endpoints []ListCdnEndpoints200ApplicationJSONEndpoints `json:"endpoints,omitempty"`
+	Links     *ListCdnEndpoints200ApplicationJSONLinks      `json:"links,omitempty"`
+	Meta      ListCdnEndpoints200ApplicationJSONMeta        `json:"meta"`
 }
 
 type ListCdnEndpoints401ApplicationJSON struct {

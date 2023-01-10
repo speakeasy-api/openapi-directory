@@ -30,7 +30,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteAPISpecificationPathParams{
-            ID: "tenetur",
+            ID: "esse",
         },
     }
     

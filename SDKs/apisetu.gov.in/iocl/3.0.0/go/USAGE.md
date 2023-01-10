@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.LpgsvRequestBody{
             CertificateParameters: &operations.LpgsvRequestBodyCertificateParameters{
-                UID: "enim",
+                UID: "ut",
             },
-            ConsentArtifact: "qui",
+            ConsentArtifact: "vel",
             Format: "pdf",
-            TxnID: "assumenda",
+            TxnID: "eligendi",
         },
     }
     

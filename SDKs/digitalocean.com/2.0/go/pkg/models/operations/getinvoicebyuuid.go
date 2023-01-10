@@ -22,8 +22,30 @@ type GetInvoiceByUUID200ApplicationJSONInvoiceItems struct {
 	StartTime        *string `json:"start_time,omitempty"`
 }
 
+type GetInvoiceByUUID200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type GetInvoiceByUUID200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type GetInvoiceByUUID200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// GetInvoiceByUUID200ApplicationJSONMeta
+// Information about the response itself.
+type GetInvoiceByUUID200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type GetInvoiceByUUID200ApplicationJSON struct {
 	InvoiceItems []GetInvoiceByUUID200ApplicationJSONInvoiceItems `json:"invoice_items,omitempty"`
+	Links        *GetInvoiceByUUID200ApplicationJSONLinks         `json:"links,omitempty"`
+	Meta         GetInvoiceByUUID200ApplicationJSONMeta           `json:"meta"`
 }
 
 type GetInvoiceByUUID401ApplicationJSON struct {

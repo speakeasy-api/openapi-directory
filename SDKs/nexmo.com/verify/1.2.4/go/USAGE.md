@@ -16,11 +16,11 @@ func main() {
             Format: "xml",
         },
         Request: shared.CheckRequest{
-            APIKey: "quae",
-            APISecret: "autem",
-            Code: "libero",
-            IPAddress: "quos",
-            RequestID: "cumque",
+            APIKey: "cum",
+            APISecret: "sed",
+            Code: "quibusdam",
+            IPAddress: "consequatur",
+            RequestID: "ab",
         },
     }
     

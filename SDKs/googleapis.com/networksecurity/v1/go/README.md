@@ -32,238 +32,125 @@ func main() {
             },
         },
         PathParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams{
-            Parent: "saepe",
+            Parent: "et",
         },
         QueryParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "et",
+            DollarXgafv: "1",
+            AccessToken: "minima",
             Alt: "media",
-            AuthorizationPolicyID: "quas",
-            Callback: "doloribus",
-            Fields: "qui",
-            Key: "aliquam",
-            OauthToken: "sequi",
-            PrettyPrint: true,
-            QuotaUser: "officia",
-            UploadType: "sint",
-            UploadProtocol: "et",
+            AuthorizationPolicyID: "dolor",
+            Callback: "explicabo",
+            Fields: "voluptates",
+            Key: "dolor",
+            OauthToken: "iure",
+            PrettyPrint: false,
+            QuotaUser: "at",
+            UploadType: "nostrum",
+            UploadProtocol: "quo",
         },
         Request: &shared.AuthorizationPolicyInput{
-            Action: "ACTION_UNSPECIFIED",
-            Description: "commodi",
+            Action: "ALLOW",
+            Description: "qui",
             Labels: map[string]string{
-                "temporibus": "aut",
-                "beatae": "aut",
+                "odio": "beatae",
+                "nobis": "totam",
+                "sunt": "adipisci",
             },
-            Name: "tempora",
+            Name: "ullam",
             Rules: []shared.Rule{
                 shared.Rule{
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "architecto",
+                                "eum",
+                                "sed",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "omnis",
+                                HeaderName: "eveniet",
                                 RegexMatch: "est",
                             },
                             Methods: []string{
-                                "beatae",
-                                "laboriosam",
-                            },
-                            Ports: []int64{
-                                7415710680596502931,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "ipsum",
-                                "asperiores",
-                                "deleniti",
-                            },
-                            Principals: []string{
-                                "cupiditate",
-                            },
-                        },
-                    },
-                },
-                shared.Rule{
-                    Destinations: []shared.Destination{
-                        shared.Destination{
-                            Hosts: []string{
-                                "dolore",
-                                "eos",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "autem",
-                                RegexMatch: "ut",
-                            },
-                            Methods: []string{
-                                "odio",
-                                "quia",
-                                "voluptas",
-                            },
-                            Ports: []int64{
-                                6128040509177040184,
-                                4551968008281478867,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "nulla",
-                                "quia",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "enim",
-                                RegexMatch: "cum",
-                            },
-                            Methods: []string{
-                                "veniam",
-                                "ipsum",
-                                "harum",
-                            },
-                            Ports: []int64{
-                                4371946014492395686,
-                                1464290273605482076,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "dolorem",
-                                "sunt",
-                                "molestiae",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "nam",
-                                RegexMatch: "eius",
-                            },
-                            Methods: []string{
-                                "ex",
-                            },
-                            Ports: []int64{
-                                7744083498162407862,
-                                3478255059356988526,
-                                8028515407834417809,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "maxime",
-                                "quod",
-                            },
-                            Principals: []string{
-                                "occaecati",
-                                "nisi",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "iste",
-                                "ducimus",
-                                "ipsam",
-                            },
-                            Principals: []string{
-                                "voluptas",
-                                "animi",
-                                "quos",
-                            },
-                        },
-                    },
-                },
-                shared.Rule{
-                    Destinations: []shared.Destination{
-                        shared.Destination{
-                            Hosts: []string{
-                                "labore",
-                                "voluptatem",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "id",
-                                RegexMatch: "labore",
-                            },
-                            Methods: []string{
-                                "iste",
-                                "quia",
-                                "fugiat",
-                            },
-                            Ports: []int64{
-                                559646147369155099,
-                                3006668431082548483,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "esse",
-                                "ex",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "magnam",
-                                RegexMatch: "aliquam",
-                            },
-                            Methods: []string{
-                                "vitae",
-                                "suscipit",
-                            },
-                            Ports: []int64{
-                                2484632256685155095,
-                                7341035035727093925,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "doloremque",
-                                "accusamus",
-                                "quo",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "veritatis",
-                                RegexMatch: "mollitia",
-                            },
-                            Methods: []string{
-                                "harum",
-                                "dolor",
-                            },
-                            Ports: []int64{
-                                1265033285511156307,
-                                6666991780916946900,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "quod",
-                                "delectus",
-                                "eius",
-                            },
-                            Principals: []string{
-                                "maiores",
-                                "fuga",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "in",
-                                "quae",
-                                "ipsum",
-                            },
-                            Principals: []string{
                                 "et",
-                                "ipsum",
+                                "ipsa",
+                                "assumenda",
+                            },
+                            Ports: []int64{
+                                4943689285477287669,
+                                3160307118056465289,
+                            },
+                        },
+                        shared.Destination{
+                            Hosts: []string{
+                                "id",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "cupiditate",
+                                RegexMatch: "dolorem",
+                            },
+                            Methods: []string{
+                                "esse",
+                                "ratione",
+                                "soluta",
+                            },
+                            Ports: []int64{
+                                3231685339067003690,
+                                5512569230175251860,
+                                8584494059737821751,
+                            },
+                        },
+                    },
+                    Sources: []shared.Source{
+                        shared.Source{
+                            IPBlocks: []string{
+                                "omnis",
+                            },
+                            Principals: []string{
+                                "accusamus",
+                                "atque",
+                                "et",
+                            },
+                        },
+                    },
+                },
+                shared.Rule{
+                    Destinations: []shared.Destination{
+                        shared.Destination{
+                            Hosts: []string{
+                                "ratione",
+                                "occaecati",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "et",
+                                RegexMatch: "neque",
+                            },
+                            Methods: []string{
+                                "ea",
+                            },
+                            Ports: []int64{
+                                4607326647308611294,
+                                6100199300792176061,
+                                3576388956540400177,
+                            },
+                        },
+                    },
+                    Sources: []shared.Source{
+                        shared.Source{
+                            IPBlocks: []string{
+                                "asperiores",
+                                "non",
+                            },
+                            Principals: []string{
+                                "ab",
                             },
                         },
                         shared.Source{
                             IPBlocks: []string{
-                                "autem",
-                                "laboriosam",
+                                "aut",
+                                "unde",
                             },
                             Principals: []string{
-                                "incidunt",
-                                "distinctio",
+                                "repellat",
+                                "sed",
                             },
                         },
                     },

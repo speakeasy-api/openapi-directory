@@ -30,10 +30,10 @@ func main() {
             },
         },
         Request: &operations.CreateCustomerProfileCreateCustomerProfileRequest{
-            Email: "sunt",
-            FriendlyName: "aliquam",
-            PolicySid: "id",
-            StatusCallback: "consequatur",
+            Email: "corrupti",
+            FriendlyName: "quod",
+            PolicySid: "earum",
+            StatusCallback: "nihil",
         },
     }
     

@@ -886,7 +886,7 @@ func (s *SDK) DescribeJob(ctx context.Context, request operations.DescribeJobReq
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.GlacierJobDescription1
+			var out *shared.GlacierJobDescription
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

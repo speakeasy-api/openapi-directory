@@ -15,9 +15,12 @@ const (
 // ImGroup200ApplicationJSON
 // Group object.
 type ImGroup200ApplicationJSON struct {
+	ID                *string                            `json:"id,omitempty"`
+	Name              *string                            `json:"name,omitempty"`
 	SearchByAccount   *bool                              `json:"search_by_account,omitempty"`
 	SearchByDomain    *bool                              `json:"search_by_domain,omitempty"`
 	SearchByMaAccount *bool                              `json:"search_by_ma_account,omitempty"`
+	TotalMembers      *int64                             `json:"total_members,omitempty"`
 	Type              *ImGroup200ApplicationJSONTypeEnum `json:"type,omitempty"`
 }
 

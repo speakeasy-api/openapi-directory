@@ -21,16 +21,16 @@ func main() {
             },
         },
         PathParams: operations.SiteVerificationWebResourceDeletePathParams{
-            ID: "autem",
+            ID: "rerum",
         },
         QueryParams: operations.SiteVerificationWebResourceDeleteQueryParams{
             Alt: "json",
-            Fields: "tempore",
-            Key: "labore",
-            OauthToken: "in",
-            PrettyPrint: false,
-            QuotaUser: "illo",
-            UserIP: "doloremque",
+            Fields: "quasi",
+            Key: "mollitia",
+            OauthToken: "ipsa",
+            PrettyPrint: true,
+            QuotaUser: "vitae",
+            UserIP: "omnis",
         },
     }
     

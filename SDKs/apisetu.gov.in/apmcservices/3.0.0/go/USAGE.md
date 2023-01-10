@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.ApmclRequestBody{
             CertificateParameters: &operations.ApmclRequestBodyCertificateParameters{
-                DocumentNumber: "fugiat",
+                DocumentNumber: "ut",
             },
-            ConsentArtifact: "tenetur",
+            ConsentArtifact: "officiis",
             Format: "pdf",
-            TxnID: "aliquam",
+            TxnID: "eum",
         },
     }
     

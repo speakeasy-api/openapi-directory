@@ -23,7 +23,7 @@ func main() {
     
     req := operations.GetApplicationsStatusRequest{
         QueryParams: operations.GetApplicationsStatusQueryParams{
-            Key: "necessitatibus",
+            Key: "magni",
         },
     }
     

@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                FullName: "id",
-                PolicyNumber: "quia",
+                FullName: "et",
+                PolicyNumber: "iure",
             },
-            ConsentArtifact: "dolor",
+            ConsentArtifact: "facilis",
             Format: "pdf",
-            TxnID: "non",
+            TxnID: "sit",
         },
     }
     

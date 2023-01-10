@@ -77,7 +77,7 @@ func (s *TrackingField) TrackingfieldCreate(ctx context.Context, request operati
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.TrackingfieldCreateTrackingField
+			var out *operations.TrackingfieldCreateTrackingField1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

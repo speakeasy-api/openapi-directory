@@ -21,16 +21,16 @@ func main() {
             },
         },
         PathParams: operations.AdexchangebuyerAccountsGetPathParams{
-            ID: 1906922739067287423,
+            ID: 1370564907374010457,
         },
         QueryParams: operations.AdexchangebuyerAccountsGetQueryParams{
             Alt: "json",
-            Fields: "eaque",
-            Key: "veritatis",
-            OauthToken: "id",
+            Fields: "ipsa",
+            Key: "aspernatur",
+            OauthToken: "nam",
             PrettyPrint: false,
-            QuotaUser: "inventore",
-            UserIP: "illo",
+            QuotaUser: "natus",
+            UserIP: "ipsam",
         },
     }
     

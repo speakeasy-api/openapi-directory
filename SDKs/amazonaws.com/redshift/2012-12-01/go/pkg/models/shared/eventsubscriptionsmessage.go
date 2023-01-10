@@ -3,6 +3,6 @@ package shared
 // EventSubscriptionsMessage
 // <p/>
 type EventSubscriptionsMessage struct {
-	EventSubscriptionsList []map[string]interface{}
+	EventSubscriptionsList []EventSubscriptionsList
 	Marker                 *string
 }

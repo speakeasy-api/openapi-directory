@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.ChcerRequestBody{
             CertificateParameters: &operations.ChcerRequestBodyCertificateParameters{
-                FullName: "eaque",
-                RefNo: "sed",
-                TokenNo: "ut",
+                FullName: "nam",
+                RefNo: "fugiat",
+                TokenNo: "qui",
             },
-            ConsentArtifact: "expedita",
+            ConsentArtifact: "nesciunt",
             Format: "pdf",
-            TxnID: "aliquam",
+            TxnID: "in",
         },
     }
     

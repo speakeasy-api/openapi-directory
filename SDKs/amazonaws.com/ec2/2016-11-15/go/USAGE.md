@@ -29,13 +29,13 @@ func main() {
             Version: "2016-11-15",
         },
         Headers: operations.GetAcceptTransitGatewayPeeringAttachmentHeaders{
-            XAmzAlgorithm: "fuga",
-            XAmzContentSha256: "sed",
-            XAmzCredential: "sed",
-            XAmzDate: "et",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "non",
-            XAmzSignedHeaders: "cupiditate",
+            XAmzAlgorithm: "assumenda",
+            XAmzContentSha256: "autem",
+            XAmzCredential: "ut",
+            XAmzDate: "labore",
+            XAmzSecurityToken: "amet",
+            XAmzSignature: "in",
+            XAmzSignedHeaders: "provident",
         },
     }
     

@@ -27,6 +27,8 @@ type DashboardCrc200ApplicationJSONCrcPortsUsage struct {
 
 type DashboardCrc200ApplicationJSON struct {
 	CrcPortsUsage []DashboardCrc200ApplicationJSONCrcPortsUsage `json:"crc_ports_usage,omitempty"`
+	From          *time.Time                                    `json:"from,omitempty"`
+	To            *time.Time                                    `json:"to,omitempty"`
 }
 
 type DashboardCrcRequest struct {

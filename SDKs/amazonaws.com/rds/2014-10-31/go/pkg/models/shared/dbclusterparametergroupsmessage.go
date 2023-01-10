@@ -3,6 +3,6 @@ package shared
 // DbClusterParameterGroupsMessage
 // <p/>
 type DbClusterParameterGroupsMessage struct {
-	DBClusterParameterGroups []map[string]interface{}
+	DBClusterParameterGroups []DbClusterParameterGroupList
 	Marker                   *string
 }

@@ -29,7 +29,7 @@ type GetDiseaseModelTaxonAssociationsRequest struct {
 }
 
 type GetDiseaseModelTaxonAssociationsResponse struct {
-	AssociationResults *shared.AssociationResults2
+	AssociationResults *shared.AssociationResults
 	ContentType        string
 	StatusCode         int64
 }

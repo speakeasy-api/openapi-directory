@@ -18,18 +18,16 @@ func main() {
             },
         },
         QueryParams: operations.FindListingRecommendationsQueryParams{
-            Filter: "quia",
-            Limit: "ea",
-            Offset: "minima",
+            Filter: "omnis",
+            Limit: "aliquam",
+            Offset: "provident",
         },
         Headers: operations.FindListingRecommendationsHeaders{
-            XEBAYCMARKETPLACEID: "animi",
+            XEBAYCMARKETPLACEID: "corporis",
         },
         Request: &shared.FindListingRecommendationRequest{
             ListingIds: []string{
-                "architecto",
-                "quia",
-                "voluptas",
+                "at",
             },
         },
     }

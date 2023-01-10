@@ -1,5 +1,5 @@
 package shared
 
 type DescribeApplicationVersionResponse struct {
-	ApplicationVersionDetail *ApplicationDetail2 `json:"ApplicationVersionDetail,omitempty"`
+	ApplicationVersionDetail *ApplicationDetail `json:"ApplicationVersionDetail,omitempty"`
 }

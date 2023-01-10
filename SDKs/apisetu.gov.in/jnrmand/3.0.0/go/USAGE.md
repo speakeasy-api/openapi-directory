@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.TrcerRequestBody{
             CertificateParameters: &operations.TrcerRequestBodyCertificateParameters{
-                DOB: "deleniti",
-                FullName: "ratione",
-                REGNO: "voluptas",
+                DOB: "nisi",
+                FullName: "et",
+                REGNO: "quos",
             },
-            ConsentArtifact: "quas",
+            ConsentArtifact: "sunt",
             Format: "pdf",
-            TxnID: "incidunt",
+            TxnID: "occaecati",
         },
     }
     

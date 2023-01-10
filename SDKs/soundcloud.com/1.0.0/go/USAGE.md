@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteLikesPlaylistsPlaylistIDPathParams{
-            PlaylistID: 6556169590266895662,
+            PlaylistID: 6745687628722363399,
         },
     }
     

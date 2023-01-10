@@ -33,7 +33,7 @@ func main() {
     s := sdk.New(opts...)
     
     req := operations.PostAssetsCorrelationMatrixRequest{
-        Request: "voluptate",
+        Request: "ut",
     }
     
     res, err := s.AssetsCorrelationMatrix.PostAssetsCorrelationMatrix(ctx, req)

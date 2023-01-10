@@ -18,18 +18,18 @@ func main() {
             },
         },
         QueryParams: operations.GetCmsV3DomainsGetPageQueryParams{
-            After: "non",
-            Archived: false,
-            CreatedAfter: "2010-06-10T21:00:40Z",
-            CreatedAt: "2014-07-10T09:12:30Z",
-            CreatedBefore: "1985-06-27T20:21:36Z",
-            Limit: 8829946588659094811,
+            After: "facilis",
+            Archived: true,
+            CreatedAfter: "1986-06-07T03:55:52Z",
+            CreatedAt: "1984-11-19T16:36:42Z",
+            CreatedBefore: "1999-01-08T19:20:15Z",
+            Limit: 4971810752955050478,
             Sort: []string{
-                "voluptas",
+                "nihil",
             },
-            UpdatedAfter: "2008-10-24T19:33:13Z",
-            UpdatedAt: "1970-05-27T13:21:49Z",
-            UpdatedBefore: "1990-01-26T13:39:56Z",
+            UpdatedAfter: "1974-11-10T11:52:43Z",
+            UpdatedAt: "1981-04-27T18:35:46Z",
+            UpdatedBefore: "2010-08-14T06:06:02Z",
         },
     }
     

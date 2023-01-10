@@ -9,19 +9,29 @@ type ListFloatingIPActionsPathParams struct {
 }
 
 type ListFloatingIPActions200ApplicationJSONLinksPages1 struct {
-	Prev *string `json:"prev,omitempty"`
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
 }
 
-type ListFloatingIPActions200ApplicationJSONLinksPages3 struct {
-	Next *string `json:"next,omitempty"`
+type ListFloatingIPActions200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
 }
 
 type ListFloatingIPActions200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
+// ListFloatingIPActions200ApplicationJSONMeta
+// Information about the response itself.
+type ListFloatingIPActions200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListFloatingIPActions200ApplicationJSON struct {
-	Links *ListFloatingIPActions200ApplicationJSONLinks `json:"links,omitempty"`
+	Actions []shared.Onev21actionsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesActionsItems `json:"actions,omitempty"`
+	Links   *ListFloatingIPActions200ApplicationJSONLinks                                                  `json:"links,omitempty"`
+	Meta    ListFloatingIPActions200ApplicationJSONMeta                                                    `json:"meta"`
 }
 
 type ListFloatingIPActions401ApplicationJSON struct {

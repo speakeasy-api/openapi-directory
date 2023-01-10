@@ -24,23 +24,23 @@ func main() {
     
     req := operations.PaymentsresellersubscriptionPartnersProductsListRequest{
         PathParams: operations.PaymentsresellersubscriptionPartnersProductsListPathParams{
-            Parent: "rerum",
+            Parent: "velit",
         },
         QueryParams: operations.PaymentsresellersubscriptionPartnersProductsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "totam",
-            Alt: "media",
-            Callback: "repellendus",
-            Fields: "non",
-            Filter: "minus",
-            Key: "provident",
-            OauthToken: "temporibus",
-            PageSize: 4602029307121648680,
-            PageToken: "magni",
+            AccessToken: "sint",
+            Alt: "json",
+            Callback: "fuga",
+            Fields: "modi",
+            Filter: "illo",
+            Key: "autem",
+            OauthToken: "dolores",
+            PageSize: 4740378950094471264,
+            PageToken: "blanditiis",
             PrettyPrint: true,
-            QuotaUser: "libero",
-            UploadType: "eos",
-            UploadProtocol: "rerum",
+            QuotaUser: "fuga",
+            UploadType: "alias",
+            UploadProtocol: "quas",
         },
     }
     

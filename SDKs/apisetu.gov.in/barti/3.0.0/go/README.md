@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CvcerRequestBody{
             CertificateParameters: &operations.CvcerRequestBodyCertificateParameters{
-                DOB: "alias",
-                VCNo: "consequatur",
+                DOB: "consequatur",
+                VCNo: "quo",
             },
-            ConsentArtifact: "eum",
+            ConsentArtifact: "deleniti",
             Format: "pdf",
-            TxnID: "omnis",
+            TxnID: "nemo",
         },
     }
     

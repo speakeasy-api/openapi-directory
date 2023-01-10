@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetContentproSearchRequest{
         QueryParams: operations.GetContentproSearchQueryParams{
-            Terms: "saepe",
+            Terms: "nisi",
         },
     }
     

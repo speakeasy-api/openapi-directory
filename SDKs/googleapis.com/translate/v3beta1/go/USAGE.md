@@ -21,62 +21,62 @@ func main() {
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "omnis",
+            Parent: "et",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
             DollarXgafv: "1",
-            AccessToken: "illum",
-            Alt: "json",
-            Callback: "nihil",
-            Fields: "voluptatem",
-            Key: "qui",
-            OauthToken: "et",
+            AccessToken: "deserunt",
+            Alt: "media",
+            Callback: "sit",
+            Fields: "recusandae",
+            Key: "et",
+            OauthToken: "quia",
             PrettyPrint: true,
-            QuotaUser: "dolore",
-            UploadType: "minima",
+            QuotaUser: "aut",
+            UploadType: "ut",
             UploadProtocol: "sed",
         },
         Request: &shared.BatchTranslateDocumentRequest{
             FormatConversions: map[string]string{
-                "quia": "ut",
-                "enim": "in",
-                "dolorum": "exercitationem",
+                "iure": "ad",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "porro": shared.TranslateTextGlossaryConfig{
-                    Glossary: "omnis",
-                    IgnoreCase: false,
-                },
-                "est": shared.TranslateTextGlossaryConfig{
-                    Glossary: "voluptas",
-                    IgnoreCase: true,
-                },
-                "cum": shared.TranslateTextGlossaryConfig{
-                    Glossary: "quis",
+                "omnis": shared.TranslateTextGlossaryConfig{
+                    Glossary: "nam",
                     IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
+                        InputURI: "deleniti",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
                         InputURI: "et",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "placeat",
                     },
                 },
             },
             Models: map[string]string{
-                "qui": "blanditiis",
-                "ut": "occaecati",
+                "ut": "beatae",
+                "perferendis": "ipsa",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "ut",
+                    OutputURIPrefix: "et",
                 },
             },
             SourceLanguageCode: "soluta",
             TargetLanguageCodes: []string{
-                "ut",
-                "consequatur",
-                "placeat",
+                "mollitia",
+                "qui",
+                "quasi",
             },
         },
     }

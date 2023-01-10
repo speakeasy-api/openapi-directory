@@ -32,18 +32,18 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherPurchasesCancelPathParams{
-            PackageName: "eligendi",
-            SubscriptionID: "quia",
-            Token: "minima",
+            PackageName: "eius",
+            SubscriptionID: "aut",
+            Token: "itaque",
         },
         QueryParams: operations.AndroidpublisherPurchasesCancelQueryParams{
             Alt: "json",
-            Fields: "corrupti",
-            Key: "ipsa",
-            OauthToken: "sint",
+            Fields: "qui",
+            Key: "earum",
+            OauthToken: "temporibus",
             PrettyPrint: false,
-            QuotaUser: "ab",
-            UserIP: "porro",
+            QuotaUser: "ullam",
+            UserIP: "et",
         },
     }
     

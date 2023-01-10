@@ -1,5 +1,5 @@
 package shared
 
 type StandardOfferLinks struct {
-	GetOffer map[string]interface{} `json:"getOffer,omitempty"`
+	GetOffer *LinksGetOfferLink `json:"getOffer,omitempty"`
 }

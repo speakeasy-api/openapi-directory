@@ -24,14 +24,14 @@ func main() {
     
     req := operations.AppDgetRequest{
         PathParams: operations.AppDgetPathParams{
-            AppDID: "veritatis",
+            AppDID: "ut",
         },
         QueryParams: operations.AppDgetQueryParams{
-            AllFields: "ut",
-            ExcludeDefault: "sed",
-            ExcludeFields: "est",
-            Fields: "qui",
-            Filter: "ad",
+            AllFields: "sit",
+            ExcludeDefault: "accusamus",
+            ExcludeFields: "beatae",
+            Fields: "rerum",
+            Filter: "aspernatur",
         },
     }
     

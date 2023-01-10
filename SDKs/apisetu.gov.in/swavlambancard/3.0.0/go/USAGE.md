@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.DpicrRequestBody{
             CertificateParameters: &operations.DpicrRequestBodyCertificateParameters{
-                CERTNO: "quo",
-                FullName: "aliquid",
+                CERTNO: "facere",
+                FullName: "facere",
             },
-            ConsentArtifact: "velit",
+            ConsentArtifact: "ut",
             Format: "pdf",
-            TxnID: "non",
+            TxnID: "assumenda",
         },
     }
     

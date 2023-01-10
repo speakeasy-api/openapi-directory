@@ -7,7 +7,7 @@ type MatchingBucket struct {
 	BucketName                      *string                      `json:"bucketName,omitempty"`
 	ClassifiableObjectCount         *int64                       `json:"classifiableObjectCount,omitempty"`
 	ClassifiableSizeInBytes         *int64                       `json:"classifiableSizeInBytes,omitempty"`
-	JobDetails                      *JobDetails1                 `json:"jobDetails,omitempty"`
+	JobDetails                      *JobDetails                  `json:"jobDetails,omitempty"`
 	ObjectCount                     *int64                       `json:"objectCount,omitempty"`
 	ObjectCountByEncryptionType     *ObjectCountByEncryptionType `json:"objectCountByEncryptionType,omitempty"`
 	SizeInBytes                     *int64                       `json:"sizeInBytes,omitempty"`

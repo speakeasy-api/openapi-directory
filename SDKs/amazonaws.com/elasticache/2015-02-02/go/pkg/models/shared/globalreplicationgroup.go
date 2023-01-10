@@ -10,10 +10,10 @@ type GlobalReplicationGroup struct {
 	ClusterEnabled                    *bool
 	Engine                            *string
 	EngineVersion                     *string
-	GlobalNodeGroups                  []map[string]interface{}
+	GlobalNodeGroups                  []GlobalNodeGroupList
 	GlobalReplicationGroupDescription *string
 	GlobalReplicationGroupID          *string
-	Members                           []map[string]interface{}
+	Members                           []GlobalReplicationGroupMemberList
 	Status                            *string
 	TransitEncryptionEnabled          *bool
 }

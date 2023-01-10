@@ -23,7 +23,7 @@ func main() {
     
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            Account: "praesentium",
+            Account: "at",
         },
     }
     

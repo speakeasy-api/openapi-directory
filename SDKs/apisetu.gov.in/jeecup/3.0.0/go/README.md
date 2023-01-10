@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.AdcrdRequestBody{
             CertificateParameters: &operations.AdcrdRequestBodyCertificateParameters{
-                ApplicationNo: "perspiciatis",
-                DOB: "dolorem",
-                ExamYear: "magni",
-                FullName: "sequi",
+                ApplicationNo: "natus",
+                DOB: "autem",
+                ExamYear: "incidunt",
+                FullName: "neque",
             },
-            ConsentArtifact: "non",
+            ConsentArtifact: "itaque",
             Format: "pdf",
-            TxnID: "recusandae",
+            TxnID: "saepe",
         },
     }
     

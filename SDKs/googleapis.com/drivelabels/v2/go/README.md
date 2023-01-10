@@ -24,23 +24,23 @@ func main() {
     
     req := operations.DrivelabelsLabelsGetRequest{
         PathParams: operations.DrivelabelsLabelsGetPathParams{
-            Name: "consequatur",
+            Name: "aspernatur",
         },
         QueryParams: operations.DrivelabelsLabelsGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "dolorem",
+            AccessToken: "dolor",
             Alt: "media",
-            Callback: "pariatur",
-            Fields: "consequuntur",
-            Key: "provident",
-            LanguageCode: "necessitatibus",
-            OauthToken: "cum",
+            Callback: "et",
+            Fields: "a",
+            Key: "quo",
+            LanguageCode: "vero",
+            OauthToken: "dolorem",
             PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "quia",
-            UploadProtocol: "magnam",
+            QuotaUser: "placeat",
+            UploadType: "hic",
+            UploadProtocol: "et",
             UseAdminAccess: true,
-            View: "LABEL_VIEW_FULL",
+            View: "LABEL_VIEW_BASIC",
         },
     }
     

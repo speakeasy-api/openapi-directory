@@ -7,7 +7,7 @@ import (
 // Snapshot
 // Describes a snapshot.
 type Snapshot struct {
-	AccountsWithRestoreAccess              []map[string]interface{}
+	AccountsWithRestoreAccess              []AccountsWithRestoreAccessList
 	ActualIncrementalBackupSizeInMegaBytes *float64
 	AvailabilityZone                       *string
 	BackupProgressInMegaBytes              *float64
@@ -38,7 +38,7 @@ type Snapshot struct {
 	SnapshotType                           *string
 	SourceRegion                           *string
 	Status                                 *string
-	Tags                                   []map[string]interface{}
+	Tags                                   []TagList
 	TotalBackupSizeInMegaBytes             *float64
 	VpcID                                  *string
 }

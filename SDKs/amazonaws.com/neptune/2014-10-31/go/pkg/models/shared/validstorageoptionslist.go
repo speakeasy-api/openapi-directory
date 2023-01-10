@@ -1,0 +1,10 @@
+package shared
+
+// ValidStorageOptionsList
+// <p>Information about valid modifications that you can make to your DB instance.</p> <p>Contains the result of a successful call to the <a>DescribeValidDBInstanceModifications</a> action.</p>
+type ValidStorageOptionsList struct {
+	IopsToStorageRatio []DoubleRangeList
+	ProvisionedIops    []RangeList
+	StorageSize        []RangeList
+	StorageType        *string
+}

@@ -23,37 +23,36 @@ func main() {
             },
         },
         PathParams: operations.DatastoreProjectsExportPathParams{
-            ProjectID: "eligendi",
+            ProjectID: "sint",
         },
         QueryParams: operations.DatastoreProjectsExportQueryParams{
             DollarXgafv: "2",
-            AccessToken: "omnis",
+            AccessToken: "odio",
             Alt: "proto",
-            Callback: "error",
-            Fields: "minus",
-            Key: "facilis",
-            OauthToken: "eum",
+            Callback: "reiciendis",
+            Fields: "velit",
+            Key: "non",
+            OauthToken: "in",
             PrettyPrint: false,
-            QuotaUser: "cumque",
-            UploadType: "aut",
-            UploadProtocol: "officiis",
+            QuotaUser: "omnis",
+            UploadType: "enim",
+            UploadProtocol: "aspernatur",
         },
         Request: &shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest{
             EntityFilter: &shared.GoogleDatastoreAdminV1beta1EntityFilter{
                 Kinds: []string{
-                    "omnis",
-                    "est",
+                    "blanditiis",
                 },
                 NamespaceIds: []string{
-                    "et",
+                    "voluptas",
+                    "perspiciatis",
                 },
             },
             Labels: map[string]string{
-                "rerum": "quo",
-                "repellendus": "saepe",
-                "omnis": "qui",
+                "explicabo": "ut",
+                "consequuntur": "tenetur",
             },
-            OutputURLPrefix: "eaque",
+            OutputURLPrefix: "eos",
         },
     }
     

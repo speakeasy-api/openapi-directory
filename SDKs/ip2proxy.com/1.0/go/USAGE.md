@@ -14,9 +14,9 @@ func main() {
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
             Format: "xml",
-            IP: "numquam",
-            Key: "doloribus",
-            Package: "assumenda",
+            IP: "illo",
+            Key: "repudiandae",
+            Package: "et",
         },
     }
     

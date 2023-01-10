@@ -30,7 +30,7 @@ func main() {
         },
         QueryParams: operations.SearchQueryParams{
             MatchMode: "regexp",
-            Query: "nam",
+            Query: "ullam",
         },
     }
     

@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.DrvlcRequestBody{
             CertificateParameters: &operations.DrvlcRequestBodyCertificateParameters{
-                DOB: "natus",
-                FullName: "eos",
-                Dlno: "iure",
+                DOB: "iste",
+                FullName: "quis",
+                Dlno: "sit",
             },
-            ConsentArtifact: "exercitationem",
-            Format: "xml",
-            TxnID: "voluptatibus",
+            ConsentArtifact: "debitis",
+            Format: "pdf",
+            TxnID: "veniam",
         },
     }
     

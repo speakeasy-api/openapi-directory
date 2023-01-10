@@ -49,7 +49,12 @@ type DashboardWebinarParticipantsQosParticipantQosListParticipantQosUserQosAsDev
 // DashboardWebinarParticipantsQosParticipantQosListParticipantQosUserQosQosObject
 // Quality of Service object.
 type DashboardWebinarParticipantsQosParticipantQosListParticipantQosUserQosQosObject struct {
+	AvgLoss    *string `json:"avg_loss,omitempty"`
+	Bitrate    *string `json:"bitrate,omitempty"`
 	FrameRate  *string `json:"frame_rate,omitempty"`
+	Jitter     *string `json:"jitter,omitempty"`
+	Latency    *string `json:"latency,omitempty"`
+	MaxLoss    *string `json:"max_loss,omitempty"`
 	Resolution *string `json:"resolution,omitempty"`
 }
 
@@ -148,7 +153,11 @@ type DashboardWebinarParticipantsQosParticipantQosListParticipantQos struct {
 // DashboardWebinarParticipantsQosParticipantQosList
 // Pagination object.
 type DashboardWebinarParticipantsQosParticipantQosList struct {
-	Participants []DashboardWebinarParticipantsQosParticipantQosListParticipantQos `json:"participants,omitempty"`
+	NextPageToken *string                                                           `json:"next_page_token,omitempty"`
+	PageCount     *int64                                                            `json:"page_count,omitempty"`
+	PageSize      *int64                                                            `json:"page_size,omitempty"`
+	Participants  []DashboardWebinarParticipantsQosParticipantQosListParticipantQos `json:"participants,omitempty"`
+	TotalRecords  *int64                                                            `json:"total_records,omitempty"`
 }
 
 type DashboardWebinarParticipantsQosRequest struct {

@@ -23,41 +23,51 @@ func main() {
     
     req := operations.CreateIdentityPoolRequest{
         Headers: operations.CreateIdentityPoolHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "sit",
-            XAmzCredential: "quo",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "reprehenderit",
-            XAmzSignature: "quod",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "vitae",
+            XAmzContentSha256: "vel",
+            XAmzCredential: "assumenda",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "ad",
+            XAmzSignature: "eum",
+            XAmzSignedHeaders: "voluptatem",
             XAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
         },
         Request: shared.CreateIdentityPoolInput{
-            AllowClassicFlow: true,
-            AllowUnauthenticatedIdentities: false,
+            AllowClassicFlow: false,
+            AllowUnauthenticatedIdentities: true,
             CognitoIdentityProviders: []shared.CognitoIdentityProvider{
                 shared.CognitoIdentityProvider{
-                    ClientID: "cupiditate",
-                    ProviderName: "sunt",
+                    ClientID: "consequatur",
+                    ProviderName: "non",
+                    ServerSideTokenCheck: true,
+                },
+                shared.CognitoIdentityProvider{
+                    ClientID: "cum",
+                    ProviderName: "eius",
                     ServerSideTokenCheck: false,
                 },
+                shared.CognitoIdentityProvider{
+                    ClientID: "nisi",
+                    ProviderName: "sit",
+                    ServerSideTokenCheck: true,
+                },
             },
-            DeveloperProviderName: "sed",
-            IdentityPoolName: "repellendus",
+            DeveloperProviderName: "rerum",
+            IdentityPoolName: "quisquam",
             IdentityPoolTags: map[string]string{
-                "nostrum": "non",
+                "itaque": "reiciendis",
+                "expedita": "itaque",
             },
             OpenIDConnectProviderARNs: []string{
-                "ipsa",
+                "voluptatum",
             },
             SamlProviderARNs: []string{
-                "sed",
-                "autem",
+                "modi",
+                "adipisci",
             },
             SupportedLoginProviders: map[string]string{
-                "vitae": "vel",
-                "assumenda": "corrupti",
-                "ad": "eum",
+                "tempora": "illum",
+                "quae": "aut",
             },
         },
     }

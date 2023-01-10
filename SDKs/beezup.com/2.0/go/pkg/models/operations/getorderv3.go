@@ -25,5 +25,5 @@ type GetOrderV3Response struct {
 	Headers                          map[string][]string
 	StatusCode                       int64
 	ErrorResponseMessage             *shared.ErrorResponseMessage
-	OrderWithLinks                   *shared.OrderWithLinks1
+	OrderWithLinks                   *shared.OrderWithLinks
 }

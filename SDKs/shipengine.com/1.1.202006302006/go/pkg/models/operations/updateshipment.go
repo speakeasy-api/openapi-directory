@@ -10,7 +10,7 @@ type UpdateShipmentPathParams struct {
 
 type UpdateShipmentRequest struct {
 	PathParams UpdateShipmentPathParams
-	Request    shared.UpdateShipmentRequestBody `request:"mediaType=application/json"`
+	Request    shared.UpdateShipmentRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateShipmentResponse struct {

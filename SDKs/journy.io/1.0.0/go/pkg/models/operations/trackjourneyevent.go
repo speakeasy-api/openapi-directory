@@ -30,10 +30,16 @@ type TrackJourneyEventRequestBody struct {
 	TriggeredAt    *string                                    `json:"triggeredAt,omitempty"`
 }
 
+type TrackJourneyEvent201ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
+}
+
 // TrackJourneyEvent201ApplicationJSON
 // The object was created
 type TrackJourneyEvent201ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                  `json:"message"`
+	Meta    TrackJourneyEvent201ApplicationJSONMeta `json:"meta"`
 }
 
 // TrackJourneyEvent400ApplicationJSONErrorsParameters
@@ -51,34 +57,65 @@ type TrackJourneyEvent400ApplicationJSONErrors struct {
 	Parameters *TrackJourneyEvent400ApplicationJSONErrorsParameters `json:"parameters,omitempty"`
 }
 
+type TrackJourneyEvent400ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
+}
+
 // TrackJourneyEvent400ApplicationJSON
 // Specify the fields and/ or parameters that had errors
 type TrackJourneyEvent400ApplicationJSON struct {
-	Errors TrackJourneyEvent400ApplicationJSONErrors `json:"errors"`
+	Errors  TrackJourneyEvent400ApplicationJSONErrors `json:"errors"`
+	Message string                                    `json:"message"`
+	Meta    TrackJourneyEvent400ApplicationJSONMeta   `json:"meta"`
+}
+
+type TrackJourneyEvent401ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // TrackJourneyEvent401ApplicationJSON
 // The error message should specify what cause the error
 type TrackJourneyEvent401ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                  `json:"message"`
+	Meta    TrackJourneyEvent401ApplicationJSONMeta `json:"meta"`
+}
+
+type TrackJourneyEvent403ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // TrackJourneyEvent403ApplicationJSON
 // The error message should specify what cause the error
 type TrackJourneyEvent403ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                  `json:"message"`
+	Meta    TrackJourneyEvent403ApplicationJSONMeta `json:"meta"`
+}
+
+type TrackJourneyEvent429ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // TrackJourneyEvent429ApplicationJSON
 // The error message should specify what cause the error
 type TrackJourneyEvent429ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                  `json:"message"`
+	Meta    TrackJourneyEvent429ApplicationJSONMeta `json:"meta"`
+}
+
+type TrackJourneyEvent500ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // TrackJourneyEvent500ApplicationJSON
 // The error message should specify what cause the error
 type TrackJourneyEvent500ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                  `json:"message"`
+	Meta    TrackJourneyEvent500ApplicationJSONMeta `json:"meta"`
 }
 
 type TrackJourneyEventRequest struct {

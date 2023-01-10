@@ -4,6 +4,21 @@ type AccountPlanCreatePathParams struct {
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
+// AccountPlanCreateApplicationJSONContact
+// Billing Contact object.
+type AccountPlanCreateApplicationJSONContact struct {
+	Address     string  `json:"address"`
+	Apt         *string `json:"apt,omitempty"`
+	City        string  `json:"city"`
+	Country     string  `json:"country"`
+	Email       string  `json:"email"`
+	FirstName   string  `json:"first_name"`
+	LastName    string  `json:"last_name"`
+	PhoneNumber string  `json:"phone_number"`
+	State       string  `json:"state"`
+	Zip         string  `json:"zip"`
+}
+
 // AccountPlanCreateApplicationJSONPlanAudio
 // Additional audio conferencing <a href="https://marketplace.zoom.us/docs/api-reference/other-references/plans#audio-conferencing-plans">plan type</a>.
 type AccountPlanCreateApplicationJSONPlanAudio struct {
@@ -77,6 +92,7 @@ type AccountPlanCreateApplicationJSONPlanZoomRooms struct {
 // AccountPlanCreateApplicationJSON
 // Account Plans object.
 type AccountPlanCreateApplicationJSON struct {
+	Contact           *AccountPlanCreateApplicationJSONContact           `json:"contact,omitempty"`
 	PlanAudio         *AccountPlanCreateApplicationJSONPlanAudio         `json:"plan_audio,omitempty"`
 	PlanBase          AccountPlanCreateApplicationJSONPlanBase           `json:"plan_base"`
 	PlanLargeMeeting  []AccountPlanCreateApplicationJSONPlanLargeMeeting `json:"plan_large_meeting,omitempty"`
@@ -85,6 +101,21 @@ type AccountPlanCreateApplicationJSON struct {
 	PlanRoomConnector *AccountPlanCreateApplicationJSONPlanRoomConnector `json:"plan_room_connector,omitempty"`
 	PlanWebinar       []AccountPlanCreateApplicationJSONPlanWebinar      `json:"plan_webinar,omitempty"`
 	PlanZoomRooms     *AccountPlanCreateApplicationJSONPlanZoomRooms     `json:"plan_zoom_rooms,omitempty"`
+}
+
+// AccountPlanCreateMultipartFormDataContact
+// Billing Contact object.
+type AccountPlanCreateMultipartFormDataContact struct {
+	Address     string  `json:"address"`
+	Apt         *string `json:"apt,omitempty"`
+	City        string  `json:"city"`
+	Country     string  `json:"country"`
+	Email       string  `json:"email"`
+	FirstName   string  `json:"first_name"`
+	LastName    string  `json:"last_name"`
+	PhoneNumber string  `json:"phone_number"`
+	State       string  `json:"state"`
+	Zip         string  `json:"zip"`
 }
 
 // AccountPlanCreateMultipartFormDataPlanAudio
@@ -160,6 +191,7 @@ type AccountPlanCreateMultipartFormDataPlanZoomRooms struct {
 // AccountPlanCreateMultipartFormData1
 // Account Plans object.
 type AccountPlanCreateMultipartFormData1 struct {
+	Contact           *AccountPlanCreateMultipartFormDataContact           `multipartForm:"name=contact,json"`
 	PlanAudio         *AccountPlanCreateMultipartFormDataPlanAudio         `multipartForm:"name=plan_audio,json"`
 	PlanBase          AccountPlanCreateMultipartFormDataPlanBase           `multipartForm:"name=plan_base,json"`
 	PlanLargeMeeting  []AccountPlanCreateMultipartFormDataPlanLargeMeeting `multipartForm:"name=plan_large_meeting,json"`

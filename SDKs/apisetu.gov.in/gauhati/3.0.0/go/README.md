@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.SocerRequestBody{
             CertificateParameters: &operations.SocerRequestBodyCertificateParameters{
-                APPLNO: "sapiente",
-                DOB: "consequatur",
-                FullName: "et",
-                SESSION: "voluptate",
+                APPLNO: "tempore",
+                DOB: "dignissimos",
+                FullName: "nihil",
+                SESSION: "enim",
             },
-            ConsentArtifact: "dolore",
+            ConsentArtifact: "excepturi",
             Format: "pdf",
-            TxnID: "quia",
+            TxnID: "voluptate",
         },
     }
     

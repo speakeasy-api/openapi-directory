@@ -23,16 +23,16 @@ func main() {
     
     req := operations.ActivateAnomalyDetectorRequest{
         Headers: operations.ActivateAnomalyDetectorHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "debitis",
-            XAmzCredential: "in",
-            XAmzDate: "at",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "quis",
-            XAmzSignedHeaders: "nisi",
+            XAmzAlgorithm: "aliquid",
+            XAmzContentSha256: "quasi",
+            XAmzCredential: "impedit",
+            XAmzDate: "tempora",
+            XAmzSecurityToken: "consequatur",
+            XAmzSignature: "eos",
+            XAmzSignedHeaders: "non",
         },
         Request: operations.ActivateAnomalyDetectorRequestBody{
-            AnomalyDetectorArn: "qui",
+            AnomalyDetectorArn: "nesciunt",
         },
     }
     

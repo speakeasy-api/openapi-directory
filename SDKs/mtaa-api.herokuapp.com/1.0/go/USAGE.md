@@ -13,8 +13,8 @@ func main() {
     
     req := operations.DistrictsInARegionRequest{
         PathParams: operations.DistrictsInARegionPathParams{
-            Country: "ut",
-            Region: "et",
+            Country: "et",
+            Region: "sequi",
         },
     }
     

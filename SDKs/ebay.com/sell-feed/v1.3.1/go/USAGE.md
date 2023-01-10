@@ -18,23 +18,21 @@ func main() {
             },
         },
         Headers: operations.CreateCustomerServiceMetricTaskHeaders{
-            AcceptLanguage: "molestias",
+            AcceptLanguage: "voluptas",
         },
         Request: shared.CreateServiceMetricsTaskRequest{
-            FeedType: "eius",
+            FeedType: "et",
             FilterCriteria: &shared.CustomerServiceMetricsFilterCriteria{
-                CustomerServiceMetricType: "totam",
-                EvaluationMarketplaceID: "voluptas",
+                CustomerServiceMetricType: "culpa",
+                EvaluationMarketplaceID: "odio",
                 ListingCategories: []string{
-                    "vel",
-                    "nemo",
-                    "est",
+                    "voluptas",
                 },
                 ShippingRegions: []string{
-                    "in",
+                    "corrupti",
                 },
             },
-            SchemaVersion: "velit",
+            SchemaVersion: "qui",
         },
     }
     

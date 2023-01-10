@@ -11,8 +11,8 @@ type CreateTeamQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateTeamRequestBody struct {
-	Data *shared.TeamRequest `json:"data,omitempty"`
+type CreateTeamRequestBodyInput struct {
+	Data *shared.TeamRequestInput `json:"data,omitempty"`
 }
 
 type CreateTeam201ApplicationJSON struct {
@@ -21,7 +21,7 @@ type CreateTeam201ApplicationJSON struct {
 
 type CreateTeamRequest struct {
 	QueryParams CreateTeamQueryParams
-	Request     CreateTeamRequestBody `request:"mediaType=application/json"`
+	Request     CreateTeamRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type CreateTeamResponse struct {

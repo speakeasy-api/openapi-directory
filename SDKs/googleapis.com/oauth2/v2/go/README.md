@@ -24,15 +24,15 @@ func main() {
     
     req := operations.Oauth2TokeninfoRequest{
         QueryParams: operations.Oauth2TokeninfoQueryParams{
-            AccessToken: "consequatur",
+            AccessToken: "iusto",
             Alt: "json",
-            Fields: "sapiente",
-            IDToken: "dolor",
-            Key: "voluptas",
-            OauthToken: "perspiciatis",
-            PrettyPrint: true,
-            QuotaUser: "iusto",
-            UserIP: "eius",
+            Fields: "repudiandae",
+            IDToken: "dignissimos",
+            Key: "consequatur",
+            OauthToken: "in",
+            PrettyPrint: false,
+            QuotaUser: "accusamus",
+            UserIP: "iste",
         },
     }
     

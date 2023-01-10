@@ -15,7 +15,10 @@ type DashboardIssueZoomRoomSecurity struct {
 }
 
 type DashboardIssueZoomRoom200ApplicationJSON struct {
-	ZoomRooms []interface{} `json:"zoom_rooms,omitempty"`
+	From         *time.Time    `json:"from,omitempty"`
+	To           *time.Time    `json:"to,omitempty"`
+	TotalRecords *int64        `json:"total_records,omitempty"`
+	ZoomRooms    []interface{} `json:"zoom_rooms,omitempty"`
 }
 
 type DashboardIssueZoomRoomRequest struct {

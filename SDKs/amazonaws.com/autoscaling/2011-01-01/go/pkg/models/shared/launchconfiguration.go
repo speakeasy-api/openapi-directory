@@ -13,7 +13,7 @@ type LaunchConfiguration struct {
 	ClassicLinkVPCSecurityGroups []string
 	CreatedTime                  time.Time
 	EbsOptimized                 *bool
-	IamInstanceProfile           map[string]interface{}
+	IamInstanceProfile           *string
 	ImageID                      string
 	InstanceMonitoring           *InstanceMonitoring
 	InstanceType                 string

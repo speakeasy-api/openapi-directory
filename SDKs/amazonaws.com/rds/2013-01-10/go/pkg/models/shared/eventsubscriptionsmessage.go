@@ -1,6 +1,6 @@
 package shared
 
 type EventSubscriptionsMessage struct {
-	EventSubscriptionsList []map[string]interface{}
+	EventSubscriptionsList []EventSubscriptionsList
 	Marker                 *string
 }

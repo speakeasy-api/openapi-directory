@@ -5,5 +5,6 @@ type ProjectLinks struct {
 	Glossaries  *Href `json:"glossaries,omitempty"`
 	Payment     *Href `json:"payment,omitempty"`
 	QuotePdf    *Href `json:"quote-pdf,omitempty"`
+	Self        *Href `json:"self,omitempty"`
 	Styleguides *Href `json:"styleguides,omitempty"`
 }

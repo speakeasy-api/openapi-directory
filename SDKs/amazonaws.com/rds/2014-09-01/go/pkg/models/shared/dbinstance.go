@@ -14,8 +14,8 @@ type DbInstance struct {
 	DBInstanceIdentifier                  *string
 	DBInstanceStatus                      *string
 	DBName                                *string
-	DBParameterGroups                     []map[string]interface{}
-	DBSecurityGroups                      []map[string]interface{}
+	DBParameterGroups                     []DbParameterGroupStatusList
+	DBSecurityGroups                      []DbSecurityGroupMembershipList
 	DBSubnetGroup                         *DbSubnetGroup
 	Endpoint                              *Endpoint
 	Engine                                *string
@@ -26,7 +26,7 @@ type DbInstance struct {
 	LicenseModel                          *string
 	MasterUsername                        *string
 	MultiAZ                               *bool
-	OptionGroupMemberships                []map[string]interface{}
+	OptionGroupMemberships                []OptionGroupMembershipList
 	PendingModifiedValues                 *PendingModifiedValues
 	PreferredBackupWindow                 *string
 	PreferredMaintenanceWindow            *string
@@ -34,8 +34,8 @@ type DbInstance struct {
 	ReadReplicaDBInstanceIdentifiers      []map[string]interface{}
 	ReadReplicaSourceDBInstanceIdentifier *string
 	SecondaryAvailabilityZone             *string
-	StatusInfos                           []map[string]interface{}
+	StatusInfos                           []DbInstanceStatusInfoList
 	StorageType                           *string
 	TdeCredentialArn                      *string
-	VpcSecurityGroups                     []map[string]interface{}
+	VpcSecurityGroups                     []VpcSecurityGroupMembershipList
 }

@@ -24,10 +24,10 @@ func main() {
     
     req := operations.GetV1VerificationResultRequest{
         QueryParams: operations.GetV1VerificationResultQueryParams{
-            Format: "xml",
-            Key: "dolorem",
-            Otp: "voluptatibus",
-            TranID: "provident",
+            Format: "json",
+            Key: "voluptatem",
+            Otp: "nam",
+            TranID: "eum",
         },
     }
     

@@ -12,7 +12,7 @@ type DbInstanceAutomatedBackup struct {
 	BackupRetentionPeriod                  *int64
 	DBInstanceArn                          *string
 	DBInstanceAutomatedBackupsArn          *string
-	DBInstanceAutomatedBackupsReplications []map[string]interface{}
+	DBInstanceAutomatedBackupsReplications []DbInstanceAutomatedBackupsReplicationList
 	DBInstanceIdentifier                   *string
 	DbiResourceID                          *string
 	Encrypted                              *bool

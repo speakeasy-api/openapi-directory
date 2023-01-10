@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetFindInteractionsRequest{
         QueryParams: operations.GetFindInteractionsQueryParams{
-            Format: "xml",
-            Query: "delectus",
+            Format: "jpg",
+            Query: "at",
         },
     }
     

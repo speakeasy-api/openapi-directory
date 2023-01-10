@@ -34,7 +34,7 @@ func main() {
     
     req := operations.DeleteCacheRequest{
         PathParams: operations.DeleteCachePathParams{
-            Key: "architecto",
+            Key: "enim",
         },
     }
     

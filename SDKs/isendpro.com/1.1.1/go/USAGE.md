@@ -13,8 +13,8 @@ func main() {
     
     req := operations.AddShortlinkRequest{
         Request: shared.ShortlinkRequest{
-            Keyid: "et",
-            Shortlink: "error",
+            Keyid: "minima",
+            Shortlink: "in",
         },
     }
     

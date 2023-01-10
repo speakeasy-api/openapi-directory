@@ -34,20 +34,20 @@ func main() {
     
     req := operations.AssociateFirewallPolicyRequest{
         Headers: operations.AssociateFirewallPolicyHeaders{
-            XAmzAlgorithm: "autem",
-            XAmzContentSha256: "sed",
-            XAmzCredential: "voluptas",
-            XAmzDate: "adipisci",
-            XAmzSecurityToken: "exercitationem",
-            XAmzSignature: "deserunt",
-            XAmzSignedHeaders: "ex",
+            XAmzAlgorithm: "est",
+            XAmzContentSha256: "et",
+            XAmzCredential: "et",
+            XAmzDate: "a",
+            XAmzSecurityToken: "quis",
+            XAmzSignature: "est",
+            XAmzSignedHeaders: "dolorum",
             XAmzTarget: "NetworkFirewall_20201112.AssociateFirewallPolicy",
         },
         Request: shared.AssociateFirewallPolicyRequest{
-            FirewallArn: "at",
-            FirewallName: "harum",
-            FirewallPolicyArn: "magnam",
-            UpdateToken: "earum",
+            FirewallArn: "veniam",
+            FirewallName: "est",
+            FirewallPolicyArn: "blanditiis",
+            UpdateToken: "aliquid",
         },
     }
     

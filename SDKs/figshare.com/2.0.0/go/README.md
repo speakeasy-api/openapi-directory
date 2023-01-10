@@ -29,7 +29,7 @@ func main() {
             },
         },
         QueryParams: operations.AccountArticleReportQueryParams{
-            GroupID: 2088293413783572767,
+            GroupID: 6497618476403101202,
         },
     }
     

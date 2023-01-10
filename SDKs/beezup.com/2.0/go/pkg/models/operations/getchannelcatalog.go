@@ -16,5 +16,5 @@ type GetChannelCatalogResponse struct {
 	BeezUPCommonErrorResponseMessage *shared.BeezUpCommonErrorResponseMessage
 	ContentType                      string
 	StatusCode                       int64
-	ChannelCatalog                   *shared.ChannelCatalog1
+	ChannelCatalog                   *shared.ChannelCatalog
 }

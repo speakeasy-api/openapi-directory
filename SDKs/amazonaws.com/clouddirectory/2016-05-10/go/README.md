@@ -34,38 +34,66 @@ func main() {
     
     req := operations.AddFacetToObjectRequest{
         Headers: operations.AddFacetToObjectHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "architecto",
-            XAmzCredential: "esse",
-            XAmzDate: "explicabo",
-            XAmzSecurityToken: "distinctio",
-            XAmzSignature: "dolore",
-            XAmzSignedHeaders: "non",
-            XAmzDataPartition: "accusantium",
+            XAmzAlgorithm: "doloremque",
+            XAmzContentSha256: "animi",
+            XAmzCredential: "exercitationem",
+            XAmzDate: "quia",
+            XAmzSecurityToken: "ut",
+            XAmzSignature: "hic",
+            XAmzSignedHeaders: "veniam",
+            XAmzDataPartition: "et",
         },
         Request: operations.AddFacetToObjectRequestBody{
             ObjectAttributeList: []shared.AttributeKeyAndValue{
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
-                        FacetName: "consequatur",
-                        Name: "doloremque",
-                        SchemaArn: "animi",
+                        FacetName: "animi",
+                        Name: "atque",
+                        SchemaArn: "omnis",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "exercitationem",
+                        BinaryValue: "unde",
                         BooleanValue: true,
-                        DatetimeValue: "1989-04-07T20:39:58Z",
-                        NumberValue: "hic",
-                        StringValue: "veniam",
+                        DatetimeValue: "2005-01-25T14:48:44Z",
+                        NumberValue: "et",
+                        StringValue: "quia",
+                    },
+                },
+                shared.AttributeKeyAndValue{
+                    Key: shared.AttributeKey{
+                        FacetName: "qui",
+                        Name: "voluptates",
+                        SchemaArn: "consequatur",
+                    },
+                    Value: shared.TypedAttributeValue{
+                        BinaryValue: "explicabo",
+                        BooleanValue: true,
+                        DatetimeValue: "1976-01-04T20:15:51Z",
+                        NumberValue: "ipsum",
+                        StringValue: "autem",
+                    },
+                },
+                shared.AttributeKeyAndValue{
+                    Key: shared.AttributeKey{
+                        FacetName: "perferendis",
+                        Name: "dolorem",
+                        SchemaArn: "odit",
+                    },
+                    Value: shared.TypedAttributeValue{
+                        BinaryValue: "maxime",
+                        BooleanValue: false,
+                        DatetimeValue: "2000-05-27T21:15:40Z",
+                        NumberValue: "dolore",
+                        StringValue: "est",
                     },
                 },
             },
             ObjectReference: operations.AddFacetToObjectRequestBodyObjectReference{
-                Selector: "et",
+                Selector: "velit",
             },
             SchemaFacet: operations.AddFacetToObjectRequestBodySchemaFacet{
-                FacetName: "ut",
-                SchemaArn: "animi",
+                FacetName: "eveniet",
+                SchemaArn: "nam",
             },
         },
     }

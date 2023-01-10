@@ -1,9 +1,9 @@
 package shared
 
 type OptionsList struct {
-	DBSecurityGroupMemberships  []map[string]interface{}
+	DBSecurityGroupMemberships  []DbSecurityGroupMembershipList
 	OptionDescription           *string
 	OptionName                  *string
 	Port                        *int64
-	VpcSecurityGroupMemberships []map[string]interface{}
+	VpcSecurityGroupMemberships []VpcSecurityGroupMembershipList
 }

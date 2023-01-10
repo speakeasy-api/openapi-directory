@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetweatherzipcodeRequest{
         QueryParams: operations.GetweatherzipcodeQueryParams{
-            License: "molestiae",
-            Zip: "quisquam",
+            License: "cupiditate",
+            Zip: "ut",
         },
     }
     

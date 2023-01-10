@@ -28,7 +28,7 @@ type GetSubstanceRoleAssociationsRequest struct {
 }
 
 type GetSubstanceRoleAssociationsResponse struct {
-	Associations []shared.Association4
+	Associations []shared.Association
 	ContentType  string
 	StatusCode   int64
 }

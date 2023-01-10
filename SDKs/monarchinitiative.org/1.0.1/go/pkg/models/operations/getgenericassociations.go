@@ -33,7 +33,7 @@ type GetGenericAssociationsRequest struct {
 }
 
 type GetGenericAssociationsResponse struct {
-	AssociationResults *shared.AssociationResults5
+	AssociationResults *shared.AssociationResults
 	ContentType        string
 	StatusCode         int64
 }

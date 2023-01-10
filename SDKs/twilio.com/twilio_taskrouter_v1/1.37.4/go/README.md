@@ -30,11 +30,11 @@ func main() {
             },
         },
         PathParams: operations.CreateActivityPathParams{
-            WorkspaceSid: "optio",
+            WorkspaceSid: "non",
         },
         Request: &operations.CreateActivityCreateActivityRequest{
             Available: false,
-            FriendlyName: "aliquam",
+            FriendlyName: "voluptas",
         },
     }
     

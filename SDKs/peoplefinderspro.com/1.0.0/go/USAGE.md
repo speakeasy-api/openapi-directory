@@ -13,22 +13,22 @@ func main() {
     
     req := operations.SearchRequest{
         Headers: operations.SearchHeaders{
-            GalaxyApName: "maxime",
-            GalaxyApPassword: "quo",
-            GalaxySearchType: "cum",
+            GalaxyApName: "nobis",
+            GalaxyApPassword: "quibusdam",
+            GalaxySearchType: "et",
         },
         Request: &operations.SearchRequestBody{
             Address: &operations.SearchRequestBodyAddress{
-                AddressLine1: "ducimus",
-                AddressLine2: "eos",
+                AddressLine1: "quia",
+                AddressLine2: "rem",
             },
-            Age: 32.200001,
-            Dob: "odio",
-            Email: "dolor",
-            FirstName: "labore",
-            LastName: "repellat",
-            MiddleName: "et",
-            PhoneNumber: "molestias",
+            Age: 50.099998,
+            Dob: "aut",
+            Email: "illum",
+            FirstName: "deleniti",
+            LastName: "eius",
+            MiddleName: "sed",
+            PhoneNumber: "eaque",
         },
     }
     

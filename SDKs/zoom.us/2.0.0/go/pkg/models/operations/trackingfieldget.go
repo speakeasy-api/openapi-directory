@@ -16,6 +16,7 @@ type TrackingfieldGetSecurity struct {
 // Tracking Field
 type TrackingfieldGetTrackingField struct {
 	Field             *string  `json:"field,omitempty"`
+	ID                *string  `json:"id,omitempty"`
 	RecommendedValues []string `json:"recommended_values,omitempty"`
 	Required          *bool    `json:"required,omitempty"`
 	Visible           *bool    `json:"visible,omitempty"`

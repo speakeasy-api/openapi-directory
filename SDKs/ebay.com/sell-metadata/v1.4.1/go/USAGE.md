@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.GetSalesTaxJurisdictionsPathParams{
-            CountryCode: "similique",
+            CountryCode: "modi",
         },
     }
     

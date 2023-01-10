@@ -22,6 +22,16 @@ type TrackingfieldCreateSecurity struct {
 	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
 }
 
+// TrackingfieldCreateTrackingField1
+// Tracking Field
+type TrackingfieldCreateTrackingField1 struct {
+	Field             *string  `json:"field,omitempty"`
+	ID                *string  `json:"id,omitempty"`
+	RecommendedValues []string `json:"recommended_values,omitempty"`
+	Required          *bool    `json:"required,omitempty"`
+	Visible           *bool    `json:"visible,omitempty"`
+}
+
 type TrackingfieldCreateRequest struct {
 	Request  TrackingfieldCreateRequests
 	Security TrackingfieldCreateSecurity
@@ -32,5 +42,5 @@ type TrackingfieldCreateResponse struct {
 	ContentType   string
 	Headers       map[string][]string
 	StatusCode    int64
-	TrackingField *TrackingfieldCreateTrackingField
+	TrackingField *TrackingfieldCreateTrackingField1
 }

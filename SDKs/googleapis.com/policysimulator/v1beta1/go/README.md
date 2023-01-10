@@ -32,160 +32,216 @@ func main() {
             },
         },
         PathParams: operations.PolicysimulatorProjectsLocationsReplaysCreatePathParams{
-            Parent: "deserunt",
+            Parent: "tenetur",
         },
         QueryParams: operations.PolicysimulatorProjectsLocationsReplaysCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "beatae",
-            Alt: "json",
-            Callback: "rerum",
-            Fields: "nihil",
-            Key: "animi",
-            OauthToken: "alias",
+            AccessToken: "est",
+            Alt: "proto",
+            Callback: "aut",
+            Fields: "rerum",
+            Key: "iure",
+            OauthToken: "explicabo",
             PrettyPrint: true,
-            QuotaUser: "saepe",
-            UploadType: "tenetur",
-            UploadProtocol: "facilis",
+            QuotaUser: "ducimus",
+            UploadType: "nisi",
+            UploadProtocol: "ut",
         },
         Request: &shared.GoogleCloudPolicysimulatorV1beta1ReplayInput{
             Config: &shared.GoogleCloudPolicysimulatorV1beta1ReplayConfig{
-                LogSource: "RECENT_ACCESSES",
+                LogSource: "LOG_SOURCE_UNSPECIFIED",
                 PolicyOverlay: map[string]shared.GoogleIamV1Policy{
-                    "deserunt": shared.GoogleIamV1Policy{
+                    "reiciendis": shared.GoogleIamV1Policy{
                         AuditConfigs: []shared.GoogleIamV1AuditConfig{
                             shared.GoogleIamV1AuditConfig{
                                 AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "ut",
-                                            "nam",
-                                        },
-                                        LogType: "ADMIN_READ",
-                                    },
-                                    shared.GoogleIamV1AuditLogConfig{
-                                        ExemptedMembers: []string{
-                                            "qui",
-                                            "quod",
                                         },
                                         LogType: "DATA_WRITE",
                                     },
                                 },
-                                Service: "mollitia",
-                            },
-                            shared.GoogleIamV1AuditConfig{
-                                AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
-                                    shared.GoogleIamV1AuditLogConfig{
-                                        ExemptedMembers: []string{
-                                            "ipsa",
-                                        },
-                                        LogType: "DATA_WRITE",
-                                    },
-                                    shared.GoogleIamV1AuditLogConfig{
-                                        ExemptedMembers: []string{
-                                            "suscipit",
-                                            "quaerat",
-                                            "quisquam",
-                                        },
-                                        LogType: "ADMIN_READ",
-                                    },
-                                },
-                                Service: "culpa",
+                                Service: "tempora",
                             },
                         },
                         Bindings: []shared.GoogleIamV1Binding{
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "est",
-                                    Expression: "consequatur",
-                                    Location: "delectus",
-                                    Title: "pariatur",
+                                    Description: "id",
+                                    Expression: "eos",
+                                    Location: "dolores",
+                                    Title: "aut",
                                 },
                                 Members: []string{
-                                    "illum",
-                                    "voluptas",
+                                    "ad",
+                                    "dicta",
+                                    "neque",
                                 },
-                                Role: "ea",
+                                Role: "facere",
+                            },
+                            shared.GoogleIamV1Binding{
+                                Condition: &shared.GoogleTypeExpr{
+                                    Description: "dicta",
+                                    Expression: "sed",
+                                    Location: "rerum",
+                                    Title: "consequatur",
+                                },
+                                Members: []string{
+                                    "quod",
+                                },
+                                Role: "deleniti",
+                            },
+                            shared.GoogleIamV1Binding{
+                                Condition: &shared.GoogleTypeExpr{
+                                    Description: "molestiae",
+                                    Expression: "perferendis",
+                                    Location: "qui",
+                                    Title: "nulla",
+                                },
+                                Members: []string{
+                                    "expedita",
+                                },
+                                Role: "tenetur",
                             },
                         },
-                        Etag: "velit",
-                        Version: 7876716416154225660,
+                        Etag: "omnis",
+                        Version: 5999729721690653849,
                     },
-                    "amet": shared.GoogleIamV1Policy{
+                    "quo": shared.GoogleIamV1Policy{
                         AuditConfigs: []shared.GoogleIamV1AuditConfig{
                             shared.GoogleIamV1AuditConfig{
                                 AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
-                                            "libero",
-                                            "recusandae",
-                                            "inventore",
+                                            "velit",
                                         },
-                                        LogType: "LOG_TYPE_UNSPECIFIED",
+                                        LogType: "ADMIN_READ",
+                                    },
+                                    shared.GoogleIamV1AuditLogConfig{
+                                        ExemptedMembers: []string{
+                                            "voluptas",
+                                            "aut",
+                                            "repellat",
+                                        },
+                                        LogType: "DATA_READ",
                                     },
                                 },
-                                Service: "dolor",
+                                Service: "eligendi",
                             },
                             shared.GoogleIamV1AuditConfig{
                                 AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
-                                            "et",
-                                            "assumenda",
+                                            "qui",
+                                            "nihil",
+                                        },
+                                        LogType: "ADMIN_READ",
+                                    },
+                                    shared.GoogleIamV1AuditLogConfig{
+                                        ExemptedMembers: []string{
+                                            "quo",
                                         },
                                         LogType: "LOG_TYPE_UNSPECIFIED",
                                     },
+                                    shared.GoogleIamV1AuditLogConfig{
+                                        ExemptedMembers: []string{
+                                            "earum",
+                                        },
+                                        LogType: "ADMIN_READ",
+                                    },
                                 },
-                                Service: "est",
+                                Service: "officia",
+                            },
+                            shared.GoogleIamV1AuditConfig{
+                                AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
+                                    shared.GoogleIamV1AuditLogConfig{
+                                        ExemptedMembers: []string{
+                                            "voluptas",
+                                            "et",
+                                            "sint",
+                                        },
+                                        LogType: "ADMIN_READ",
+                                    },
+                                    shared.GoogleIamV1AuditLogConfig{
+                                        ExemptedMembers: []string{
+                                            "totam",
+                                            "atque",
+                                            "ut",
+                                        },
+                                        LogType: "DATA_READ",
+                                    },
+                                    shared.GoogleIamV1AuditLogConfig{
+                                        ExemptedMembers: []string{
+                                            "ut",
+                                            "ad",
+                                        },
+                                        LogType: "DATA_WRITE",
+                                    },
+                                },
+                                Service: "molestias",
                             },
                         },
                         Bindings: []shared.GoogleIamV1Binding{
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "voluptas",
-                                    Expression: "voluptatibus",
-                                    Location: "nesciunt",
-                                    Title: "quasi",
+                                    Description: "impedit",
+                                    Expression: "deserunt",
+                                    Location: "vero",
+                                    Title: "error",
                                 },
                                 Members: []string{
-                                    "quam",
-                                    "labore",
-                                    "eveniet",
+                                    "beatae",
                                 },
-                                Role: "similique",
+                                Role: "qui",
                             },
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "quia",
-                                    Expression: "et",
-                                    Location: "exercitationem",
-                                    Title: "quod",
+                                    Description: "molestiae",
+                                    Expression: "deleniti",
+                                    Location: "suscipit",
+                                    Title: "aut",
                                 },
                                 Members: []string{
-                                    "magnam",
+                                    "labore",
+                                    "et",
                                 },
-                                Role: "iste",
+                                Role: "omnis",
+                            },
+                            shared.GoogleIamV1Binding{
+                                Condition: &shared.GoogleTypeExpr{
+                                    Description: "blanditiis",
+                                    Expression: "itaque",
+                                    Location: "doloremque",
+                                    Title: "est",
+                                },
+                                Members: []string{
+                                    "est",
+                                    "fuga",
+                                },
+                                Role: "inventore",
                             },
                         },
-                        Etag: "fuga",
-                        Version: 9159538837741665431,
+                        Etag: "impedit",
+                        Version: 4818883313715258669,
                     },
                 },
             },
             ResultsSummary: &shared.GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary{
-                DifferenceCount: 4812891310758310104,
-                ErrorCount: 3651553649710107286,
-                LogCount: 776958749886165584,
+                DifferenceCount: 8366996419462768188,
+                ErrorCount: 8473441131434798447,
+                LogCount: 9063643206236667702,
                 NewestDate: &shared.GoogleTypeDate{
-                    Day: 2972447337519991991,
-                    Month: 5344022812337031526,
-                    Year: 1726851175559612443,
+                    Day: 6678564548261309100,
+                    Month: 4344067411313220386,
+                    Year: 5948743529736996933,
                 },
                 OldestDate: &shared.GoogleTypeDate{
-                    Day: 1118524486210013976,
-                    Month: 4671388267200997225,
-                    Year: 1904814060164949035,
+                    Day: 7733308612172317981,
+                    Month: 6367668452330419632,
+                    Year: 7502313555217038947,
                 },
-                UnchangedCount: 6300662986209687778,
+                UnchangedCount: 3760236141729247733,
             },
         },
     }

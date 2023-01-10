@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeEvents</code> action.
 type EventsMessage struct {
-	Events []map[string]interface{}
+	Events []EventList
 	Marker *string
 }

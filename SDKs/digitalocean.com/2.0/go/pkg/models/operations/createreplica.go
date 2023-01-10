@@ -12,7 +12,7 @@ type CreateReplicaRequestBodyInput struct {
 	Name               string   `json:"name"`
 	PrivateNetworkUUID *string  `json:"private_network_uuid,omitempty"`
 	Region             *string  `json:"region,omitempty"`
-	Size               *string  `json:"size,omitempty"`
+	Size               string   `json:"size"`
 	Tags               []string `json:"tags,omitempty"`
 }
 

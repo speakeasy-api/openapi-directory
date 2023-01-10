@@ -75,7 +75,7 @@ func (s *Devices) DeviceCreate(ctx context.Context, request operations.DeviceCre
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.DeviceCreateTheH323SipDeviceObject
+			var out *operations.DeviceCreateTheH323SipDeviceObject1
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

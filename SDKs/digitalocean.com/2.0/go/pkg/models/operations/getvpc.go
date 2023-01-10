@@ -9,7 +9,7 @@ type GetVpcPathParams struct {
 }
 
 type GetVpc200ApplicationJSON struct {
-	Vpc *shared.Onev21vpcsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesVpcsItems1 `json:"vpc,omitempty"`
+	Vpc *shared.Onev21vpcsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesVpcsItems `json:"vpc,omitempty"`
 }
 
 type GetVpc401ApplicationJSON struct {

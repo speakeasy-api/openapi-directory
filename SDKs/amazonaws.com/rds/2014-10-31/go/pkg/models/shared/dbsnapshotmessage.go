@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeDBSnapshots</code> action.
 type DbSnapshotMessage struct {
-	DBSnapshots []map[string]interface{}
+	DBSnapshots []DbSnapshotList
 	Marker      *string
 }

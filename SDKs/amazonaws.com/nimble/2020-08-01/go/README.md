@@ -34,22 +34,22 @@ func main() {
     
     req := operations.AcceptEulasRequest{
         PathParams: operations.AcceptEulasPathParams{
-            StudioID: "qui",
+            StudioID: "asperiores",
         },
         Headers: operations.AcceptEulasHeaders{
-            XAmzAlgorithm: "vel",
-            XAmzClientToken: "odio",
-            XAmzContentSha256: "ipsum",
-            XAmzCredential: "in",
-            XAmzDate: "dolorem",
-            XAmzSecurityToken: "neque",
-            XAmzSignature: "sint",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "tempore",
+            XAmzClientToken: "tempore",
+            XAmzContentSha256: "assumenda",
+            XAmzCredential: "deleniti",
+            XAmzDate: "ea",
+            XAmzSecurityToken: "aut",
+            XAmzSignature: "dignissimos",
+            XAmzSignedHeaders: "voluptatem",
         },
         Request: operations.AcceptEulasRequestBody{
             EulaIds: []string{
-                "debitis",
-                "in",
+                "quo",
+                "atque",
             },
         },
     }

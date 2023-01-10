@@ -24,9 +24,9 @@ func main() {
     
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "iusto",
-            RepositoryID: 3192593213012958408,
-            RunnerGroupID: 6603543126000972647,
+            Org: "nesciunt",
+            RepositoryID: 7730506967756216044,
+            RunnerGroupID: 4427521111619747928,
         },
     }
     

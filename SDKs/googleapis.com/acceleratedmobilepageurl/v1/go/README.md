@@ -24,24 +24,22 @@ func main() {
     
     req := operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest{
         QueryParams: operations.AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "vero",
-            Alt: "json",
-            Callback: "maxime",
-            Fields: "est",
-            Key: "natus",
-            OauthToken: "possimus",
-            PrettyPrint: false,
-            QuotaUser: "recusandae",
-            UploadType: "saepe",
-            UploadProtocol: "dolorem",
+            DollarXgafv: "1",
+            AccessToken: "voluptatem",
+            Alt: "proto",
+            Callback: "dolores",
+            Fields: "quis",
+            Key: "facere",
+            OauthToken: "doloremque",
+            PrettyPrint: true,
+            QuotaUser: "aut",
+            UploadType: "reiciendis",
+            UploadProtocol: "cum",
         },
         Request: &shared.BatchGetAmpUrlsRequest{
             LookupStrategy: "IN_INDEX_DOC",
             Urls: []string{
-                "atque",
-                "maiores",
-                "beatae",
+                "sapiente",
             },
         },
     }

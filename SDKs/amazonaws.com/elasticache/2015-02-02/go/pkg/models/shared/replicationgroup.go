@@ -18,11 +18,11 @@ type ReplicationGroup struct {
 	Description                *string
 	GlobalReplicationGroupInfo *GlobalReplicationGroupInfo
 	KmsKeyID                   *string
-	LogDeliveryConfigurations  []map[string]interface{}
+	LogDeliveryConfigurations  []LogDeliveryConfigurationList
 	MemberClusters             []map[string]interface{}
 	MemberClustersOutpostArns  []map[string]interface{}
 	MultiAZ                    *MultiAzStatusEnum
-	NodeGroups                 []map[string]interface{}
+	NodeGroups                 []NodeGroupList
 	PendingModifiedValues      *ReplicationGroupPendingModifiedValues
 	ReplicationGroupCreateTime *time.Time
 	ReplicationGroupID         *string

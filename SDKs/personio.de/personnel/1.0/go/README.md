@@ -24,7 +24,7 @@ func main() {
     
     req := operations.DeleteCompanyAttendancesIDRequest{
         PathParams: operations.DeleteCompanyAttendancesIDPathParams{
-            ID: 7900740091320171094,
+            ID: 1969623670442928799,
         },
     }
     

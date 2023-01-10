@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.RdcerRequestBody{
             CertificateParameters: &operations.RdcerRequestBodyCertificateParameters{
-                FullName: "consectetur",
-                UID: "est",
-                FinalDocRegNo: "tempora",
+                FullName: "qui",
+                UID: "optio",
+                FinalDocRegNo: "et",
             },
-            ConsentArtifact: "totam",
+            ConsentArtifact: "assumenda",
             Format: "pdf",
-            TxnID: "blanditiis",
+            TxnID: "omnis",
         },
     }
     

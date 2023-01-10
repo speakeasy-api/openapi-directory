@@ -18,9 +18,9 @@ func main() {
             },
         },
         Request: &operations.AccountCreateRequestBody{
-            Email: "asperiores",
-            Name: "dicta",
-            Password: "sunt",
+            Email: "unde",
+            Name: "ullam",
+            Password: "assumenda",
         },
     }
     

@@ -24,22 +24,22 @@ func main() {
     
     req := operations.SafebrowsingEncodedFullHashesGetRequest{
         PathParams: operations.SafebrowsingEncodedFullHashesGetPathParams{
-            EncodedRequest: "tenetur",
+            EncodedRequest: "libero",
         },
         QueryParams: operations.SafebrowsingEncodedFullHashesGetQueryParams{
             DollarXgafv: "1",
-            AccessToken: "perferendis",
-            Alt: "json",
-            Callback: "et",
-            ClientID: "perferendis",
-            ClientVersion: "voluptates",
-            Fields: "ut",
-            Key: "aperiam",
-            OauthToken: "minima",
+            AccessToken: "quo",
+            Alt: "proto",
+            Callback: "deserunt",
+            ClientID: "amet",
+            ClientVersion: "numquam",
+            Fields: "tenetur",
+            Key: "sit",
+            OauthToken: "reiciendis",
             PrettyPrint: false,
-            QuotaUser: "quam",
-            UploadType: "consequatur",
-            UploadProtocol: "pariatur",
+            QuotaUser: "et",
+            UploadType: "unde",
+            UploadProtocol: "aut",
         },
     }
     

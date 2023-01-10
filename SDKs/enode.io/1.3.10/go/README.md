@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.ControlChargerChargingPathParams{
-            ChargerID: "blanditiis",
+            ChargerID: "ut",
         },
         Request: &operations.ControlChargerChargingRequestBody{
             Action: "START",

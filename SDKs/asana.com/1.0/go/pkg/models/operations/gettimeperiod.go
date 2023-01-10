@@ -14,7 +14,7 @@ type GetTimePeriodQueryParams struct {
 }
 
 type GetTimePeriod200ApplicationJSON struct {
-	Data map[string]interface{} `json:"data,omitempty"`
+	Data *shared.TimePeriodResponse `json:"data,omitempty"`
 }
 
 type GetTimePeriodRequest struct {

@@ -9,6 +9,6 @@ type UsageLimit struct {
 	FeatureType       *UsageLimitFeatureTypeEnum
 	LimitType         *UsageLimitLimitTypeEnum
 	Period            *UsageLimitPeriodEnum
-	Tags              []map[string]interface{}
+	Tags              []TagList
 	UsageLimitID      *string
 }

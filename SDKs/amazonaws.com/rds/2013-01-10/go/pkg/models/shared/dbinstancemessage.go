@@ -1,6 +1,6 @@
 package shared
 
 type DbInstanceMessage struct {
-	DBInstances []map[string]interface{}
+	DBInstances []DbInstanceList
 	Marker      *string
 }

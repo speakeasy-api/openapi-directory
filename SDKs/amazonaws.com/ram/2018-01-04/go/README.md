@@ -34,17 +34,17 @@ func main() {
     
     req := operations.AcceptResourceShareInvitationRequest{
         Headers: operations.AcceptResourceShareInvitationHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "amet",
-            XAmzCredential: "sunt",
-            XAmzDate: "non",
-            XAmzSecurityToken: "blanditiis",
-            XAmzSignature: "omnis",
-            XAmzSignedHeaders: "impedit",
+            XAmzAlgorithm: "quis",
+            XAmzContentSha256: "tempora",
+            XAmzCredential: "esse",
+            XAmzDate: "rerum",
+            XAmzSecurityToken: "tempora",
+            XAmzSignature: "culpa",
+            XAmzSignedHeaders: "deserunt",
         },
         Request: operations.AcceptResourceShareInvitationRequestBody{
-            ClientToken: "hic",
-            ResourceShareInvitationArn: "iusto",
+            ClientToken: "nihil",
+            ResourceShareInvitationArn: "aut",
         },
     }
     

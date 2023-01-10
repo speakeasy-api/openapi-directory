@@ -30,7 +30,7 @@ func main() {
             },
         },
         PathParams: operations.FetchMessagingCountryPathParams{
-            IsoCountry: "minima",
+            IsoCountry: "accusantium",
         },
     }
     

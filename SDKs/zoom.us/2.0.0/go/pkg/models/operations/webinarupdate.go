@@ -38,10 +38,97 @@ type WebinarUpdateApplicationJSONRecurrence struct {
 	WeeklyDays     *WebinarUpdateApplicationJSONRecurrenceWeeklyDaysEnum `json:"weekly_days,omitempty"`
 }
 
+// WebinarUpdateApplicationJSONSettingsAttendeesAndPanelistsReminderEmailNotification
+// Send reminder email to attendees and panelists.
+type WebinarUpdateApplicationJSONSettingsAttendeesAndPanelistsReminderEmailNotification struct {
+	Enable *bool  `json:"enable,omitempty"`
+	Type   *int64 `json:"type,omitempty"`
+}
+
+type WebinarUpdateApplicationJSONSettingsAudioEnum string
+
+const (
+	WebinarUpdateApplicationJSONSettingsAudioEnumBoth      WebinarUpdateApplicationJSONSettingsAudioEnum = "both"
+	WebinarUpdateApplicationJSONSettingsAudioEnumTelephony WebinarUpdateApplicationJSONSettingsAudioEnum = "telephony"
+	WebinarUpdateApplicationJSONSettingsAudioEnumVoip      WebinarUpdateApplicationJSONSettingsAudioEnum = "voip"
+)
+
+type WebinarUpdateApplicationJSONSettingsAutoRecordingEnum string
+
+const (
+	WebinarUpdateApplicationJSONSettingsAutoRecordingEnumLocal WebinarUpdateApplicationJSONSettingsAutoRecordingEnum = "local"
+	WebinarUpdateApplicationJSONSettingsAutoRecordingEnumCloud WebinarUpdateApplicationJSONSettingsAutoRecordingEnum = "cloud"
+	WebinarUpdateApplicationJSONSettingsAutoRecordingEnumNone  WebinarUpdateApplicationJSONSettingsAutoRecordingEnum = "none"
+)
+
+// WebinarUpdateApplicationJSONSettingsFollowUpAbsenteesEmailNotification
+// Send follow-up email to absentees.
+type WebinarUpdateApplicationJSONSettingsFollowUpAbsenteesEmailNotification struct {
+	Enable *bool  `json:"enable,omitempty"`
+	Type   *int64 `json:"type,omitempty"`
+}
+
+// WebinarUpdateApplicationJSONSettingsFollowUpAttendeesEmailNotification
+// Send follow-up email to attendees.
+type WebinarUpdateApplicationJSONSettingsFollowUpAttendeesEmailNotification struct {
+	Enable *bool  `json:"enable,omitempty"`
+	Type   *int64 `json:"type,omitempty"`
+}
+
+type WebinarUpdateApplicationJSONSettingsQuestionAndAnswerAnswerQuestionsEnum string
+
+const (
+	WebinarUpdateApplicationJSONSettingsQuestionAndAnswerAnswerQuestionsEnumOnly WebinarUpdateApplicationJSONSettingsQuestionAndAnswerAnswerQuestionsEnum = "only"
+	WebinarUpdateApplicationJSONSettingsQuestionAndAnswerAnswerQuestionsEnumAll  WebinarUpdateApplicationJSONSettingsQuestionAndAnswerAnswerQuestionsEnum = "all"
+)
+
+// WebinarUpdateApplicationJSONSettingsQuestionAndAnswer
+// [Q&A](https://support.zoom.us/hc/en-us/articles/203686015-Using-Q-A-as-the-webinar-host#:~:text=Overview,and%20upvote%20each%20other's%20questions.) for webinar.
+type WebinarUpdateApplicationJSONSettingsQuestionAndAnswer struct {
+	AllowAnonymousQuestions *bool                                                                     `json:"allow_anonymous_questions,omitempty"`
+	AnswerQuestions         *WebinarUpdateApplicationJSONSettingsQuestionAndAnswerAnswerQuestionsEnum `json:"answer_questions,omitempty"`
+	AttendeesCanComment     *bool                                                                     `json:"attendees_can_comment,omitempty"`
+	AttendeesCanUpvote      *bool                                                                     `json:"attendees_can_upvote,omitempty"`
+	Enable                  *bool                                                                     `json:"enable,omitempty"`
+}
+
 // WebinarUpdateApplicationJSONSettings
 // Webinar settings.
 type WebinarUpdateApplicationJSONSettings struct {
-	RegistrantsConfirmationEmail *bool `json:"registrants_confirmation_email,omitempty"`
+	AllowMultipleDevices                           *bool                                                                               `json:"allow_multiple_devices,omitempty"`
+	AlternativeHosts                               *string                                                                             `json:"alternative_hosts,omitempty"`
+	ApprovalType                                   *int64                                                                              `json:"approval_type,omitempty"`
+	AttendeesAndPanelistsReminderEmailNotification *WebinarUpdateApplicationJSONSettingsAttendeesAndPanelistsReminderEmailNotification `json:"attendees_and_panelists_reminder_email_notification,omitempty"`
+	Audio                                          *WebinarUpdateApplicationJSONSettingsAudioEnum                                      `json:"audio,omitempty"`
+	AuthenticationDomains                          *string                                                                             `json:"authentication_domains,omitempty"`
+	AuthenticationName                             *string                                                                             `json:"authentication_name,omitempty"`
+	AuthenticationOption                           *string                                                                             `json:"authentication_option,omitempty"`
+	AutoRecording                                  *WebinarUpdateApplicationJSONSettingsAutoRecordingEnum                              `json:"auto_recording,omitempty"`
+	CloseRegistration                              *bool                                                                               `json:"close_registration,omitempty"`
+	ContactEmail                                   *string                                                                             `json:"contact_email,omitempty"`
+	ContactName                                    *string                                                                             `json:"contact_name,omitempty"`
+	EmailLanguage                                  *string                                                                             `json:"email_language,omitempty"`
+	EnforceLogin                                   *bool                                                                               `json:"enforce_login,omitempty"`
+	EnforceLoginDomains                            *string                                                                             `json:"enforce_login_domains,omitempty"`
+	FollowUpAbsenteesEmailNotification             *WebinarUpdateApplicationJSONSettingsFollowUpAbsenteesEmailNotification             `json:"follow_up_absentees_email_notification,omitempty"`
+	FollowUpAttendeesEmailNotification             *WebinarUpdateApplicationJSONSettingsFollowUpAttendeesEmailNotification             `json:"follow_up_attendees_email_notification,omitempty"`
+	GlobalDialInCountries                          []string                                                                            `json:"global_dial_in_countries,omitempty"`
+	HdVideo                                        *bool                                                                               `json:"hd_video,omitempty"`
+	HostVideo                                      *bool                                                                               `json:"host_video,omitempty"`
+	MeetingAuthentication                          *bool                                                                               `json:"meeting_authentication,omitempty"`
+	NotifyRegistrants                              *bool                                                                               `json:"notify_registrants,omitempty"`
+	OnDemand                                       *bool                                                                               `json:"on_demand,omitempty"`
+	PanelistsInvitationEmailNotification           *bool                                                                               `json:"panelists_invitation_email_notification,omitempty"`
+	PanelistsVideo                                 *bool                                                                               `json:"panelists_video,omitempty"`
+	PostWebinarSurvey                              *bool                                                                               `json:"post_webinar_survey,omitempty"`
+	PracticeSession                                *bool                                                                               `json:"practice_session,omitempty"`
+	QuestionAndAnswer                              *WebinarUpdateApplicationJSONSettingsQuestionAndAnswer                              `json:"question_and_answer,omitempty"`
+	RegistrantsConfirmationEmail                   *bool                                                                               `json:"registrants_confirmation_email,omitempty"`
+	RegistrantsEmailNotification                   *bool                                                                               `json:"registrants_email_notification,omitempty"`
+	RegistrantsRestrictNumber                      *int64                                                                              `json:"registrants_restrict_number,omitempty"`
+	RegistrationType                               *int64                                                                              `json:"registration_type,omitempty"`
+	ShowShareButton                                *bool                                                                               `json:"show_share_button,omitempty"`
+	SurveyURL                                      *string                                                                             `json:"survey_url,omitempty"`
 }
 
 type WebinarUpdateApplicationJSONTrackingFields struct {
@@ -89,10 +176,97 @@ type WebinarUpdateMultipartFormDataRecurrence struct {
 	WeeklyDays     *WebinarUpdateMultipartFormDataRecurrenceWeeklyDaysEnum `json:"weekly_days,omitempty"`
 }
 
+// WebinarUpdateMultipartFormDataSettingsAttendeesAndPanelistsReminderEmailNotification
+// Send reminder email to attendees and panelists.
+type WebinarUpdateMultipartFormDataSettingsAttendeesAndPanelistsReminderEmailNotification struct {
+	Enable *bool  `json:"enable,omitempty"`
+	Type   *int64 `json:"type,omitempty"`
+}
+
+type WebinarUpdateMultipartFormDataSettingsAudioEnum string
+
+const (
+	WebinarUpdateMultipartFormDataSettingsAudioEnumBoth      WebinarUpdateMultipartFormDataSettingsAudioEnum = "both"
+	WebinarUpdateMultipartFormDataSettingsAudioEnumTelephony WebinarUpdateMultipartFormDataSettingsAudioEnum = "telephony"
+	WebinarUpdateMultipartFormDataSettingsAudioEnumVoip      WebinarUpdateMultipartFormDataSettingsAudioEnum = "voip"
+)
+
+type WebinarUpdateMultipartFormDataSettingsAutoRecordingEnum string
+
+const (
+	WebinarUpdateMultipartFormDataSettingsAutoRecordingEnumLocal WebinarUpdateMultipartFormDataSettingsAutoRecordingEnum = "local"
+	WebinarUpdateMultipartFormDataSettingsAutoRecordingEnumCloud WebinarUpdateMultipartFormDataSettingsAutoRecordingEnum = "cloud"
+	WebinarUpdateMultipartFormDataSettingsAutoRecordingEnumNone  WebinarUpdateMultipartFormDataSettingsAutoRecordingEnum = "none"
+)
+
+// WebinarUpdateMultipartFormDataSettingsFollowUpAbsenteesEmailNotification
+// Send follow-up email to absentees.
+type WebinarUpdateMultipartFormDataSettingsFollowUpAbsenteesEmailNotification struct {
+	Enable *bool  `json:"enable,omitempty"`
+	Type   *int64 `json:"type,omitempty"`
+}
+
+// WebinarUpdateMultipartFormDataSettingsFollowUpAttendeesEmailNotification
+// Send follow-up email to attendees.
+type WebinarUpdateMultipartFormDataSettingsFollowUpAttendeesEmailNotification struct {
+	Enable *bool  `json:"enable,omitempty"`
+	Type   *int64 `json:"type,omitempty"`
+}
+
+type WebinarUpdateMultipartFormDataSettingsQuestionAndAnswerAnswerQuestionsEnum string
+
+const (
+	WebinarUpdateMultipartFormDataSettingsQuestionAndAnswerAnswerQuestionsEnumOnly WebinarUpdateMultipartFormDataSettingsQuestionAndAnswerAnswerQuestionsEnum = "only"
+	WebinarUpdateMultipartFormDataSettingsQuestionAndAnswerAnswerQuestionsEnumAll  WebinarUpdateMultipartFormDataSettingsQuestionAndAnswerAnswerQuestionsEnum = "all"
+)
+
+// WebinarUpdateMultipartFormDataSettingsQuestionAndAnswer
+// [Q&A](https://support.zoom.us/hc/en-us/articles/203686015-Using-Q-A-as-the-webinar-host#:~:text=Overview,and%20upvote%20each%20other's%20questions.) for webinar.
+type WebinarUpdateMultipartFormDataSettingsQuestionAndAnswer struct {
+	AllowAnonymousQuestions *bool                                                                       `json:"allow_anonymous_questions,omitempty"`
+	AnswerQuestions         *WebinarUpdateMultipartFormDataSettingsQuestionAndAnswerAnswerQuestionsEnum `json:"answer_questions,omitempty"`
+	AttendeesCanComment     *bool                                                                       `json:"attendees_can_comment,omitempty"`
+	AttendeesCanUpvote      *bool                                                                       `json:"attendees_can_upvote,omitempty"`
+	Enable                  *bool                                                                       `json:"enable,omitempty"`
+}
+
 // WebinarUpdateMultipartFormDataSettings
 // Webinar settings.
 type WebinarUpdateMultipartFormDataSettings struct {
-	RegistrantsConfirmationEmail *bool `json:"registrants_confirmation_email,omitempty"`
+	AllowMultipleDevices                           *bool                                                                                 `json:"allow_multiple_devices,omitempty"`
+	AlternativeHosts                               *string                                                                               `json:"alternative_hosts,omitempty"`
+	ApprovalType                                   *int64                                                                                `json:"approval_type,omitempty"`
+	AttendeesAndPanelistsReminderEmailNotification *WebinarUpdateMultipartFormDataSettingsAttendeesAndPanelistsReminderEmailNotification `json:"attendees_and_panelists_reminder_email_notification,omitempty"`
+	Audio                                          *WebinarUpdateMultipartFormDataSettingsAudioEnum                                      `json:"audio,omitempty"`
+	AuthenticationDomains                          *string                                                                               `json:"authentication_domains,omitempty"`
+	AuthenticationName                             *string                                                                               `json:"authentication_name,omitempty"`
+	AuthenticationOption                           *string                                                                               `json:"authentication_option,omitempty"`
+	AutoRecording                                  *WebinarUpdateMultipartFormDataSettingsAutoRecordingEnum                              `json:"auto_recording,omitempty"`
+	CloseRegistration                              *bool                                                                                 `json:"close_registration,omitempty"`
+	ContactEmail                                   *string                                                                               `json:"contact_email,omitempty"`
+	ContactName                                    *string                                                                               `json:"contact_name,omitempty"`
+	EmailLanguage                                  *string                                                                               `json:"email_language,omitempty"`
+	EnforceLogin                                   *bool                                                                                 `json:"enforce_login,omitempty"`
+	EnforceLoginDomains                            *string                                                                               `json:"enforce_login_domains,omitempty"`
+	FollowUpAbsenteesEmailNotification             *WebinarUpdateMultipartFormDataSettingsFollowUpAbsenteesEmailNotification             `json:"follow_up_absentees_email_notification,omitempty"`
+	FollowUpAttendeesEmailNotification             *WebinarUpdateMultipartFormDataSettingsFollowUpAttendeesEmailNotification             `json:"follow_up_attendees_email_notification,omitempty"`
+	GlobalDialInCountries                          []string                                                                              `json:"global_dial_in_countries,omitempty"`
+	HdVideo                                        *bool                                                                                 `json:"hd_video,omitempty"`
+	HostVideo                                      *bool                                                                                 `json:"host_video,omitempty"`
+	MeetingAuthentication                          *bool                                                                                 `json:"meeting_authentication,omitempty"`
+	NotifyRegistrants                              *bool                                                                                 `json:"notify_registrants,omitempty"`
+	OnDemand                                       *bool                                                                                 `json:"on_demand,omitempty"`
+	PanelistsInvitationEmailNotification           *bool                                                                                 `json:"panelists_invitation_email_notification,omitempty"`
+	PanelistsVideo                                 *bool                                                                                 `json:"panelists_video,omitempty"`
+	PostWebinarSurvey                              *bool                                                                                 `json:"post_webinar_survey,omitempty"`
+	PracticeSession                                *bool                                                                                 `json:"practice_session,omitempty"`
+	QuestionAndAnswer                              *WebinarUpdateMultipartFormDataSettingsQuestionAndAnswer                              `json:"question_and_answer,omitempty"`
+	RegistrantsConfirmationEmail                   *bool                                                                                 `json:"registrants_confirmation_email,omitempty"`
+	RegistrantsEmailNotification                   *bool                                                                                 `json:"registrants_email_notification,omitempty"`
+	RegistrantsRestrictNumber                      *int64                                                                                `json:"registrants_restrict_number,omitempty"`
+	RegistrationType                               *int64                                                                                `json:"registration_type,omitempty"`
+	ShowShareButton                                *bool                                                                                 `json:"show_share_button,omitempty"`
+	SurveyURL                                      *string                                                                               `json:"survey_url,omitempty"`
 }
 
 type WebinarUpdateMultipartFormDataTrackingFields struct {

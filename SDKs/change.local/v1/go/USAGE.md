@@ -19,11 +19,11 @@ func main() {
             },
         },
         QueryParams: operations.GetAPIV1DonationsCarbonCalculateQueryParams{
-            DestinationAddress: 7.200000,
-            DistanceMi: 45.200001,
-            OriginAddress: 50.200001,
-            TransportationMethod: "truck",
-            WeightLb: 2.100000,
+            DestinationAddress: 90.199997,
+            DistanceMi: 69.199997,
+            OriginAddress: 7.100000,
+            TransportationMethod: "air",
+            WeightLb: 88.199997,
         },
     }
     

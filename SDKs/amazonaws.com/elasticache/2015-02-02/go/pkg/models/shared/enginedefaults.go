@@ -3,8 +3,8 @@ package shared
 // EngineDefaults
 // Represents the output of a <code>DescribeEngineDefaultParameters</code> operation.
 type EngineDefaults struct {
-	CacheNodeTypeSpecificParameters []map[string]interface{}
+	CacheNodeTypeSpecificParameters []CacheNodeTypeSpecificParametersList
 	CacheParameterGroupFamily       *string
 	Marker                          *string
-	Parameters                      []map[string]interface{}
+	Parameters                      []ParametersList
 }

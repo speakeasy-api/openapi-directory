@@ -24,8 +24,8 @@ func main() {
     
     req := operations.AnimateImageRequest{
         QueryParams: operations.AnimateImageQueryParams{
-            Type: "facilis",
-            URL: "id",
+            Type: "consectetur",
+            URL: "atque",
         },
     }
     

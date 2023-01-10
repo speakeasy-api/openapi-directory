@@ -23,23 +23,23 @@ func main() {
     
     req := operations.BookingAvailabilityRequest{
         Headers: operations.BookingAvailabilityHeaders{
-            AcceptLanguage: "nesciunt",
+            AcceptLanguage: "voluptatibus",
         },
         Request: &operations.BookingAvailabilityRequestBody{
             AgeBands: []BookingAvailabilityRequestBodyAgeBands{
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 6695214688624416934,
-                    Count: 6568604966124562721,
+                    BandID: 7735065507851103506,
+                    Count: 2820244019788108692,
                 },
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 7265257187948120886,
-                    Count: 6050388318473623238,
+                    BandID: 5482661834389127815,
+                    Count: 7003446529512789045,
                 },
             },
-            CurrencyCode: "sit",
-            Month: "tempora",
-            ProductCode: "minus",
-            Year: "architecto",
+            CurrencyCode: "sunt",
+            Month: "quas",
+            ProductCode: "et",
+            Year: "perspiciatis",
         },
     }
     

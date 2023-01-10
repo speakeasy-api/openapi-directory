@@ -23,13 +23,13 @@ func main() {
     
     req := operations.GetCreateDomainRequest{
         QueryParams: operations.GetCreateDomainQueryParams{
-            AWSAccessKeyID: "reiciendis",
+            AWSAccessKeyID: "dolorem",
             Action: "CreateDomain",
-            DomainName: "modi",
-            Signature: "cum",
-            SignatureMethod: "similique",
-            SignatureVersion: "voluptatibus",
-            Timestamp: "quisquam",
+            DomainName: "repellendus",
+            Signature: "magni",
+            SignatureMethod: "necessitatibus",
+            SignatureVersion: "provident",
+            Timestamp: "placeat",
             Version: "2009-04-15",
         },
     }

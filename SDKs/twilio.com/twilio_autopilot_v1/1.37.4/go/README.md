@@ -30,13 +30,13 @@ func main() {
             },
         },
         Request: &operations.CreateAssistantCreateAssistantRequest{
-            CallbackEvents: "est",
-            CallbackURL: "dolor",
-            Defaults: "consequuntur",
-            FriendlyName: "rerum",
+            CallbackEvents: "accusantium",
+            CallbackURL: "blanditiis",
+            Defaults: "itaque",
+            FriendlyName: "quo",
             LogQueries: true,
-            StyleSheet: "omnis",
-            UniqueName: "sapiente",
+            StyleSheet: "temporibus",
+            UniqueName: "ut",
         },
     }
     

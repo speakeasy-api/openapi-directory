@@ -11,10 +11,16 @@ type GetTrackingSnippet200ApplicationJSONData struct {
 	Snippet string `json:"snippet"`
 }
 
+type GetTrackingSnippet200ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
+}
+
 // GetTrackingSnippet200ApplicationJSON
 // The basic response containing the unique ID of the request and the response status
 type GetTrackingSnippet200ApplicationJSON struct {
 	Data GetTrackingSnippet200ApplicationJSONData `json:"data"`
+	Meta GetTrackingSnippet200ApplicationJSONMeta `json:"meta"`
 }
 
 // GetTrackingSnippet400ApplicationJSONErrorsParameters
@@ -32,34 +38,65 @@ type GetTrackingSnippet400ApplicationJSONErrors struct {
 	Parameters *GetTrackingSnippet400ApplicationJSONErrorsParameters `json:"parameters,omitempty"`
 }
 
+type GetTrackingSnippet400ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
+}
+
 // GetTrackingSnippet400ApplicationJSON
 // Specify the fields and/ or parameters that had errors
 type GetTrackingSnippet400ApplicationJSON struct {
-	Errors GetTrackingSnippet400ApplicationJSONErrors `json:"errors"`
+	Errors  GetTrackingSnippet400ApplicationJSONErrors `json:"errors"`
+	Message string                                     `json:"message"`
+	Meta    GetTrackingSnippet400ApplicationJSONMeta   `json:"meta"`
+}
+
+type GetTrackingSnippet401ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // GetTrackingSnippet401ApplicationJSON
 // The error message should specify what cause the error
 type GetTrackingSnippet401ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                   `json:"message"`
+	Meta    GetTrackingSnippet401ApplicationJSONMeta `json:"meta"`
+}
+
+type GetTrackingSnippet403ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // GetTrackingSnippet403ApplicationJSON
 // The error message should specify what cause the error
 type GetTrackingSnippet403ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                   `json:"message"`
+	Meta    GetTrackingSnippet403ApplicationJSONMeta `json:"meta"`
+}
+
+type GetTrackingSnippet404ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // GetTrackingSnippet404ApplicationJSON
 // The error message should specify what cause the error
 type GetTrackingSnippet404ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                   `json:"message"`
+	Meta    GetTrackingSnippet404ApplicationJSONMeta `json:"meta"`
+}
+
+type GetTrackingSnippet429ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
 }
 
 // GetTrackingSnippet429ApplicationJSON
 // The error message should specify what cause the error
 type GetTrackingSnippet429ApplicationJSON struct {
-	Message string `json:"message"`
+	Message string                                   `json:"message"`
+	Meta    GetTrackingSnippet429ApplicationJSONMeta `json:"meta"`
 }
 
 type GetTrackingSnippet500ApplicationJSONMeta struct {
@@ -68,9 +105,10 @@ type GetTrackingSnippet500ApplicationJSONMeta struct {
 }
 
 // GetTrackingSnippet500ApplicationJSON
-// The basic response containing the unique ID of the request and the response status
+// The error message should specify what cause the error
 type GetTrackingSnippet500ApplicationJSON struct {
-	Meta GetTrackingSnippet500ApplicationJSONMeta `json:"meta"`
+	Message string                                   `json:"message"`
+	Meta    GetTrackingSnippet500ApplicationJSONMeta `json:"meta"`
 }
 
 type GetTrackingSnippetRequest struct {

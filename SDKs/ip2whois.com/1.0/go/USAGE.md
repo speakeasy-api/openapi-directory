@@ -13,9 +13,9 @@ func main() {
     
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
-            Domain: "nam",
-            Format: "dolores",
-            Key: "sapiente",
+            Domain: "architecto",
+            Format: "iure",
+            Key: "vero",
         },
     }
     

@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.EscerRequestBody{
             CertificateParameters: &operations.EscerRequestBodyCertificateParameters{
-                DOB: "ut",
-                DOCID: "soluta",
-                FullName: "voluptatem",
+                DOB: "impedit",
+                DOCID: "molestiae",
+                FullName: "dolorem",
             },
-            ConsentArtifact: "adipisci",
+            ConsentArtifact: "eligendi",
             Format: "pdf",
-            TxnID: "cum",
+            TxnID: "minus",
         },
     }
     

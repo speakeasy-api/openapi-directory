@@ -8,7 +8,7 @@ type LogsLocation struct {
 	DeepLink          *string               `json:"deepLink,omitempty"`
 	GroupName         *string               `json:"groupName,omitempty"`
 	S3DeepLink        *string               `json:"s3DeepLink,omitempty"`
-	S3Logs            *S3LogsConfig1        `json:"s3Logs,omitempty"`
+	S3Logs            *S3LogsConfig         `json:"s3Logs,omitempty"`
 	S3LogsArn         *string               `json:"s3LogsArn,omitempty"`
 	StreamName        *string               `json:"streamName,omitempty"`
 }

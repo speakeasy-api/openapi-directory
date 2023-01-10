@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetcountrymatchRequest{
         QueryParams: operations.GetcountrymatchQueryParams{
-            Country: "cupiditate",
-            License: "maxime",
+            Country: "qui",
+            License: "tempora",
         },
     }
     

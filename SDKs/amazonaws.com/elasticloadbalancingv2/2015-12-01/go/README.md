@@ -35,17 +35,17 @@ func main() {
     req := operations.GetDeleteListenerRequest{
         QueryParams: operations.GetDeleteListenerQueryParams{
             Action: "DeleteListener",
-            ListenerArn: "in",
+            ListenerArn: "voluptate",
             Version: "2015-12-01",
         },
         Headers: operations.GetDeleteListenerHeaders{
-            XAmzAlgorithm: "asperiores",
-            XAmzContentSha256: "quo",
-            XAmzCredential: "ea",
-            XAmzDate: "soluta",
-            XAmzSecurityToken: "tempora",
-            XAmzSignature: "commodi",
-            XAmzSignedHeaders: "blanditiis",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "sed",
+            XAmzCredential: "voluptas",
+            XAmzDate: "adipisci",
+            XAmzSecurityToken: "exercitationem",
+            XAmzSignature: "deserunt",
+            XAmzSignedHeaders: "ex",
         },
     }
     

@@ -16,4 +16,8 @@ const (
 
 type TokenError struct {
 	AccountStatus *TokenErrorAccountStatusEnum `json:"account_status,omitempty"`
+	Code          *string                      `json:"code,omitempty"`
+	Help          *string                      `json:"help,omitempty"`
+	HTTPCode      *int32                       `json:"http_code,omitempty"`
+	Message       *string                      `json:"message,omitempty"`
 }

@@ -10,8 +10,30 @@ type ListAllDomains200ApplicationJSONDomainsOutput struct {
 	ZoneFile *string `json:"zone_file,omitempty"`
 }
 
+type ListAllDomains200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllDomains200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllDomains200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllDomains200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllDomains200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAllDomains200ApplicationJSONOutput struct {
 	Domains []ListAllDomains200ApplicationJSONDomainsOutput `json:"domains"`
+	Links   *ListAllDomains200ApplicationJSONLinks          `json:"links,omitempty"`
+	Meta    ListAllDomains200ApplicationJSONMeta            `json:"meta"`
 }
 
 type ListAllDomains401ApplicationJSON struct {

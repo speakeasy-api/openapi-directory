@@ -1,6 +1,6 @@
 package shared
 
-// EnumOptionRequest
+// EnumOptionRequestInput
 // Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
 //
 // You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
@@ -12,7 +12,10 @@ package shared
 // Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.
 //
 // An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.
-type EnumOptionRequest struct {
+type EnumOptionRequestInput struct {
+	Color        *string `json:"color,omitempty"`
+	Enabled      *bool   `json:"enabled,omitempty"`
 	InsertAfter  *string `json:"insert_after,omitempty"`
 	InsertBefore *string `json:"insert_before,omitempty"`
+	Name         *string `json:"name,omitempty"`
 }

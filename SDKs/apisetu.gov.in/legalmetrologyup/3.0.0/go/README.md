@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.DelcsRequestBody{
             CertificateParameters: &operations.DelcsRequestBodyCertificateParameters{
-                ApplicationNo: "illo",
-                LicenseNo: "optio",
+                ApplicationNo: "voluptas",
+                LicenseNo: "corrupti",
             },
-            ConsentArtifact: "reprehenderit",
+            ConsentArtifact: "recusandae",
             Format: "pdf",
-            TxnID: "commodi",
+            TxnID: "sit",
         },
     }
     

@@ -21,106 +21,92 @@ func main() {
             },
         },
         PathParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams{
-            Parent: "quia",
+            Parent: "enim",
         },
         QueryParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "nisi",
+            DollarXgafv: "1",
+            AccessToken: "voluptas",
             Alt: "json",
-            Callback: "doloremque",
-            Fields: "possimus",
-            Key: "officia",
-            OauthToken: "maxime",
-            PrettyPrint: false,
-            QuotaUser: "adipisci",
-            UploadType: "cumque",
-            UploadProtocol: "quo",
+            Callback: "et",
+            Fields: "id",
+            Key: "dolorem",
+            OauthToken: "sit",
+            PrettyPrint: true,
+            QuotaUser: "a",
+            UploadType: "nulla",
+            UploadProtocol: "blanditiis",
         },
         Request: &shared.GoogleCloudRecommendationengineV1beta1CatalogItem{
             CategoryHierarchies: []shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                     Categories: []string{
-                        "et",
-                        "facere",
-                    },
-                },
-                shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
-                    Categories: []string{
-                        "aut",
-                        "sit",
-                    },
-                },
-                shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
-                    Categories: []string{
-                        "officia",
+                        "corporis",
+                        "recusandae",
                     },
                 },
             },
-            Description: "est",
-            ID: "omnis",
+            Description: "delectus",
+            ID: "eos",
             ItemAttributes: &shared.GoogleCloudRecommendationengineV1beta1FeatureMap{
                 CategoricalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                    "sit": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "culpa": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "sed",
-                            "magnam",
-                            "dolor",
-                        },
-                    },
-                    "blanditiis": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                        Value: []string{
-                            "autem",
-                        },
-                    },
-                    "et": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                        Value: []string{
-                            "reprehenderit",
-                            "vel",
+                            "aut",
+                            "consequatur",
                         },
                     },
                 },
                 NumericalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                    "placeat": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "odio": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
-                            58.200001,
-                            66.199997,
+                            34.200001,
+                            40.200001,
                         },
                     },
                 },
             },
-            ItemGroupID: "repellendus",
-            LanguageCode: "magnam",
+            ItemGroupID: "iste",
+            LanguageCode: "et",
             ProductMetadata: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem{
-                AvailableQuantity: "soluta",
-                CanonicalProductURI: "aperiam",
+                AvailableQuantity: "et",
+                CanonicalProductURI: "laudantium",
                 Costs: map[string]float32{
-                    "voluptas": 52.099998,
-                    "ipsam": 14.200000,
+                    "similique": 77.199997,
                 },
-                CurrencyCode: "tempora",
+                CurrencyCode: "incidunt",
                 ExactPrice: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice{
-                    DisplayPrice: 81.099998,
-                    OriginalPrice: 4.200000,
+                    DisplayPrice: 27.200001,
+                    OriginalPrice: 64.099998,
                 },
                 Images: []shared.GoogleCloudRecommendationengineV1beta1Image{
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 1423209342964650157,
-                        URI: "sit",
-                        Width: 2729455759893167140,
+                        Height: 8942292800023669852,
+                        URI: "autem",
+                        Width: 5883357621257773236,
+                    },
+                    shared.GoogleCloudRecommendationengineV1beta1Image{
+                        Height: 478099075473941033,
+                        URI: "dolore",
+                        Width: 7587515172654034190,
+                    },
+                    shared.GoogleCloudRecommendationengineV1beta1Image{
+                        Height: 8043303013086071262,
+                        URI: "ipsa",
+                        Width: 1654514952870731982,
                     },
                 },
                 PriceRange: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange{
-                    Max: 30.200001,
-                    Min: 46.200001,
+                    Max: 75.199997,
+                    Min: 32.099998,
                 },
-                StockState: "PREORDER",
+                StockState: "IN_STOCK",
             },
             Tags: []string{
-                "pariatur",
-                "quas",
-                "autem",
+                "aut",
+                "reprehenderit",
+                "ea",
             },
-            Title: "officia",
+            Title: "dolorem",
         },
     }
     

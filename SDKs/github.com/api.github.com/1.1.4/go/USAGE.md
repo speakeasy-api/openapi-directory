@@ -13,9 +13,9 @@ func main() {
     
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "dolorem",
-            RepositoryID: 4152570933925469665,
-            RunnerGroupID: 8770402387887639586,
+            Org: "quas",
+            RepositoryID: 1032291537367353830,
+            RunnerGroupID: 1897604844250369910,
         },
     }
     

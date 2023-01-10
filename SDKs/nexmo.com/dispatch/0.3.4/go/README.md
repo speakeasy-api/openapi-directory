@@ -31,9 +31,8 @@ func main() {
         Request: shared.CreateWorkflow{
             Template: "failover",
             Workflow: []interface{}{
-                "vel",
-                "enim",
-                "labore",
+                "qui",
+                "ratione",
             },
         },
     }

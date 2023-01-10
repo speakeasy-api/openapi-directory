@@ -28,6 +28,9 @@ type GetCaptions404ApplicationProblemPlusJSON struct {
 // Problem details object returned on errors
 type GetCaptions405ApplicationProblemPlusJSON struct {
 	Detail *string `json:"detail,omitempty"`
+	Status *int64  `json:"status,omitempty"`
+	Title  *string `json:"title,omitempty"`
+	Type   *string `json:"type,omitempty"`
 }
 
 // GetCaptions406ApplicationProblemPlusJSON
@@ -36,6 +39,9 @@ type GetCaptions406ApplicationProblemPlusJSON struct {
 	AllowedValues []string `json:"allowed_values,omitempty"`
 	CurrentValue  *string  `json:"current_value,omitempty"`
 	Detail        *string  `json:"detail,omitempty"`
+	Status        *int64   `json:"status,omitempty"`
+	Title         *string  `json:"title,omitempty"`
+	Type          *string  `json:"type,omitempty"`
 }
 
 // GetCaptions409ApplicationProblemPlusJSON
@@ -44,6 +50,9 @@ type GetCaptions409ApplicationProblemPlusJSON struct {
 	AllowedValues []string `json:"allowed_values,omitempty"`
 	CurrentValue  *string  `json:"current_value,omitempty"`
 	Detail        *string  `json:"detail,omitempty"`
+	Status        *int64   `json:"status,omitempty"`
+	Title         *string  `json:"title,omitempty"`
+	Type          *string  `json:"type,omitempty"`
 }
 
 type GetCaptionsRequest struct {

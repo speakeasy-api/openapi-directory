@@ -5,5 +5,5 @@ package shared
 type DefaultClusterParameters struct {
 	Marker               *string
 	ParameterGroupFamily *string
-	Parameters           []map[string]interface{}
+	Parameters           []ParametersList
 }

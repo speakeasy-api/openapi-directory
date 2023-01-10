@@ -3,6 +3,6 @@ package shared
 // HsmConfigurationMessage
 // <p/>
 type HsmConfigurationMessage struct {
-	HsmConfigurations []map[string]interface{}
+	HsmConfigurations []HsmConfigurationList
 	Marker            *string
 }

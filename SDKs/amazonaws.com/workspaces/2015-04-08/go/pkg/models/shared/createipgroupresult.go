@@ -1,5 +1,5 @@
 package shared
 
 type CreateIPGroupResult struct {
-	GroupID map[string]interface{} `json:"GroupId,omitempty"`
+	GroupID *string `json:"GroupId,omitempty"`
 }

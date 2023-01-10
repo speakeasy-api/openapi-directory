@@ -1,0 +1,80 @@
+package shared
+
+import (
+	"time"
+)
+
+// DbInstanceList
+// <p>Contains the details of an Amazon RDS DB instance. </p> <p>This data type is used as a response element in the <code>DescribeDBInstances</code> action. </p>
+type DbInstanceList struct {
+	ActivityStreamEngineNativeAuditFieldsIncluded *bool
+	ActivityStreamKinesisStreamName               *string
+	ActivityStreamKmsKeyID                        *string
+	ActivityStreamMode                            *ActivityStreamModeEnum
+	ActivityStreamStatus                          *ActivityStreamStatusEnum
+	AllocatedStorage                              *int64
+	AssociatedRoles                               []DbInstanceRoles
+	AutoMinorVersionUpgrade                       *bool
+	AutomaticRestartTime                          *time.Time
+	AvailabilityZone                              *string
+	AwsBackupRecoveryPointArn                     *string
+	BackupRetentionPeriod                         *int64
+	CACertificateIdentifier                       *string
+	CharacterSetName                              *string
+	CopyTagsToSnapshot                            *bool
+	CustomerOwnedIPEnabled                        *bool
+	DBClusterIdentifier                           *string
+	DBInstanceArn                                 *string
+	DBInstanceAutomatedBackupsReplications        []DbInstanceAutomatedBackupsReplicationList
+	DBInstanceClass                               *string
+	DBInstanceIdentifier                          *string
+	DBInstanceStatus                              *string
+	DBName                                        *string
+	DBParameterGroups                             []DbParameterGroupStatusList
+	DBSecurityGroups                              []DbSecurityGroupMembershipList
+	DBSubnetGroup                                 *DbSubnetGroup
+	DbInstancePort                                *int64
+	DbiResourceID                                 *string
+	DeletionProtection                            *bool
+	DomainMemberships                             []DomainMembershipList
+	EnabledCloudwatchLogsExports                  []string
+	Endpoint                                      *Endpoint
+	Engine                                        *string
+	EngineVersion                                 *string
+	EnhancedMonitoringResourceArn                 *string
+	IAMDatabaseAuthenticationEnabled              *bool
+	InstanceCreateTime                            *time.Time
+	Iops                                          *int64
+	KmsKeyID                                      *string
+	LatestRestorableTime                          *time.Time
+	LicenseModel                                  *string
+	ListenerEndpoint                              *Endpoint
+	MasterUsername                                *string
+	MaxAllocatedStorage                           *int64
+	MonitoringInterval                            *int64
+	MonitoringRoleArn                             *string
+	MultiAZ                                       *bool
+	NcharCharacterSetName                         *string
+	OptionGroupMemberships                        []OptionGroupMembershipList
+	PendingModifiedValues                         *PendingModifiedValues
+	PerformanceInsightsEnabled                    *bool
+	PerformanceInsightsKMSKeyID                   *string
+	PerformanceInsightsRetentionPeriod            *int64
+	PreferredBackupWindow                         *string
+	PreferredMaintenanceWindow                    *string
+	ProcessorFeatures                             []ProcessorFeatureList
+	PromotionTier                                 *int64
+	PubliclyAccessible                            *bool
+	ReadReplicaDBClusterIdentifiers               []map[string]interface{}
+	ReadReplicaDBInstanceIdentifiers              []map[string]interface{}
+	ReadReplicaSourceDBInstanceIdentifier         *string
+	ReplicaMode                                   *ReplicaModeEnum
+	SecondaryAvailabilityZone                     *string
+	StatusInfos                                   []DbInstanceStatusInfoList
+	StorageEncrypted                              *bool
+	StorageType                                   *string
+	TagList                                       []TagList
+	TdeCredentialArn                              *string
+	Timezone                                      *string
+	VpcSecurityGroups                             []VpcSecurityGroupMembershipList
+}

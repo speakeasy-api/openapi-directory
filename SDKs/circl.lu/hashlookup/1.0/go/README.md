@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetLookupSha1Sha1Request{
         PathParams: operations.GetLookupSha1Sha1PathParams{
-            Sha1: "necessitatibus",
+            Sha1: "nisi",
         },
     }
     

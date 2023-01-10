@@ -13,11 +13,11 @@ func main() {
     
     req := operations.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUIDRequest{
         PathParams: operations.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUIDPathParams{
-            LogUUID: "molestiae",
-            PipelineUUID: "possimus",
-            RepoSlug: "voluptatum",
-            StepUUID: "facere",
-            Workspace: "accusamus",
+            LogUUID: "recusandae",
+            PipelineUUID: "et",
+            RepoSlug: "molestias",
+            StepUUID: "possimus",
+            Workspace: "earum",
         },
     }
     

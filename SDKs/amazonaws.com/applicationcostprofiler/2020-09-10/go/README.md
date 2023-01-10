@@ -34,16 +34,16 @@ func main() {
     
     req := operations.DeleteReportDefinitionRequest{
         PathParams: operations.DeleteReportDefinitionPathParams{
-            ReportID: "itaque",
+            ReportID: "voluptatem",
         },
         Headers: operations.DeleteReportDefinitionHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "qui",
-            XAmzDate: "modi",
-            XAmzSecurityToken: "omnis",
-            XAmzSignature: "corporis",
-            XAmzSignedHeaders: "quasi",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "maiores",
+            XAmzCredential: "est",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "ex",
+            XAmzSignedHeaders: "quo",
         },
     }
     

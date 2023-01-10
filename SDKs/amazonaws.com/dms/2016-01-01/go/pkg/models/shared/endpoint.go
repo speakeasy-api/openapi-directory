@@ -6,7 +6,7 @@ type Endpoint struct {
 	CertificateArn             *string                           `json:"CertificateArn,omitempty"`
 	DatabaseName               *string                           `json:"DatabaseName,omitempty"`
 	DmsTransferSettings        *DmsTransferSettings              `json:"DmsTransferSettings,omitempty"`
-	DocDbSettings              *DocDbSettings1                   `json:"DocDbSettings,omitempty"`
+	DocDbSettings              *DocDbSettings                    `json:"DocDbSettings,omitempty"`
 	DynamoDbSettings           *DynamoDbSettings                 `json:"DynamoDbSettings,omitempty"`
 	ElasticsearchSettings      *ElasticsearchSettings            `json:"ElasticsearchSettings,omitempty"`
 	EndpointArn                *string                           `json:"EndpointArn,omitempty"`
@@ -22,7 +22,7 @@ type Endpoint struct {
 	KinesisSettings            *KinesisSettings                  `json:"KinesisSettings,omitempty"`
 	KmsKeyID                   *string                           `json:"KmsKeyId,omitempty"`
 	MicrosoftSQLServerSettings *MicrosoftSQLServerSettings       `json:"MicrosoftSQLServerSettings,omitempty"`
-	MongoDbSettings            *MongoDbSettings1                 `json:"MongoDbSettings,omitempty"`
+	MongoDbSettings            *MongoDbSettings                  `json:"MongoDbSettings,omitempty"`
 	MySQLSettings              *MySQLSettings                    `json:"MySQLSettings,omitempty"`
 	NeptuneSettings            *NeptuneSettings                  `json:"NeptuneSettings,omitempty"`
 	OracleSettings             *OracleSettings                   `json:"OracleSettings,omitempty"`

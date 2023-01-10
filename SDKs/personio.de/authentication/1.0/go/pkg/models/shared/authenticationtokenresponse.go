@@ -5,5 +5,6 @@ type AuthenticationTokenResponseData struct {
 }
 
 type AuthenticationTokenResponse struct {
-	Data AuthenticationTokenResponseData `json:"data"`
+	Data    AuthenticationTokenResponseData `json:"data"`
+	Success bool                            `json:"success"`
 }

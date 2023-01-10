@@ -9,7 +9,7 @@ type UpdateAppPathParams struct {
 }
 
 type UpdateAppRequestBody struct {
-	Spec shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItemsPropertiesSpec3 `json:"spec"`
+	Spec shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItemsPropertiesSpec `json:"spec"`
 }
 
 type UpdateApp401ApplicationJSON struct {
@@ -29,5 +29,5 @@ type UpdateAppResponse struct {
 	StatusCode                                                int64
 	UpdateApp401ApplicationJSONObject                         *UpdateApp401ApplicationJSON
 	Onev211ClicksGetResponses401ContentApplication1jsonSchema *shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema
-	Onev21appsPostResponses200ContentApplication1jsonSchema   *shared.Onev21appsPostResponses200ContentApplication1jsonSchema1
+	Onev21appsPostResponses200ContentApplication1jsonSchema   *shared.Onev21appsPostResponses200ContentApplication1jsonSchema
 }

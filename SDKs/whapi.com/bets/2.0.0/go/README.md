@@ -24,16 +24,16 @@ func main() {
     
     req := operations.CashinRequest{
         PathParams: operations.CashinPathParams{
-            BetID: "molestiae",
+            BetID: "error",
         },
         QueryParams: operations.CashinQueryParams{
-            CashInValue: 99.099998,
-            CashinBetDelayID: "vel",
+            CashInValue: 63.200001,
+            CashinBetDelayID: "ut",
         },
         Headers: operations.CashinHeaders{
-            APIKey: "officia",
-            APISecret: "facere",
-            APITicket: "at",
+            APIKey: "necessitatibus",
+            APISecret: "aut",
+            APITicket: "cum",
         },
     }
     

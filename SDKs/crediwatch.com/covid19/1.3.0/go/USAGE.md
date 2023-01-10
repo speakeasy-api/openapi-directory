@@ -13,7 +13,7 @@ func main() {
     
     req := operations.StatusCallAPIV1StatusCallGetRequest{
         QueryParams: operations.StatusCallAPIV1StatusCallGetQueryParams{
-            Query: "tenetur",
+            Query: "provident",
         },
     }
     

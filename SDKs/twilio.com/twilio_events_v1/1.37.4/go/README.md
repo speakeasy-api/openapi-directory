@@ -30,9 +30,9 @@ func main() {
             },
         },
         Request: &operations.CreateSinkCreateSinkRequest{
-            Description: "molestiae",
-            SinkConfiguration: "dicta",
-            SinkType: "kinesis",
+            Description: "repellendus",
+            SinkConfiguration: "facere",
+            SinkType: "segment",
         },
     }
     

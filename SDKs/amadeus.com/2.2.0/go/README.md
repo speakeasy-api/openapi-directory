@@ -27,7 +27,7 @@ func main() {
             Adults: 4814861198247358488,
             Children: 4975249678507640420,
             CurrencyCode: "expedita",
-            DepartureDate: "1989-07-08",
+            DepartureDate: "1989-07-11",
             DestinationLocationCode: "qui",
             ExcludedAirlineCodes: "modi",
             IncludedAirlineCodes: "nihil",
@@ -36,7 +36,7 @@ func main() {
             MaxPrice: 4745905187492708501,
             NonStop: false,
             OriginLocationCode: "sit",
-            ReturnDate: "2001-11-10",
+            ReturnDate: "2001-11-13",
             TravelClass: "BUSINESS",
         },
     }

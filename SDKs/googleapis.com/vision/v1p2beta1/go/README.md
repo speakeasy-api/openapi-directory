@@ -34,107 +34,105 @@ func main() {
             },
         },
         QueryParams: operations.VisionFilesAnnotateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "sit",
+            DollarXgafv: "2",
+            AccessToken: "perspiciatis",
             Alt: "json",
-            Callback: "doloremque",
-            Fields: "aut",
-            Key: "in",
-            OauthToken: "sunt",
+            Callback: "quae",
+            Fields: "quo",
+            Key: "nobis",
+            OauthToken: "vitae",
             PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "ea",
-            UploadProtocol: "eveniet",
+            QuotaUser: "est",
+            UploadType: "explicabo",
+            UploadProtocol: "in",
         },
         Request: &shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest{
-            Parent: "qui",
+            Parent: "dicta",
             Requests: []shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 1097148276936863326,
-                            Model: "consequatur",
-                            Type: "IMAGE_PROPERTIES",
-                        },
-                        shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 7793704364488399491,
-                            Model: "doloremque",
+                            MaxResults: 5028166937415380028,
+                            Model: "voluptate",
                             Type: "OBJECT_LOCALIZATION",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
                             AspectRatios: []float32{
-                                23.200001,
+                                95.099998,
+                                47.200001,
                             },
                         },
                         LanguageHints: []string{
-                            "officia",
-                            "atque",
+                            "ut",
+                            "molestiae",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 44.099998,
-                                Longitude: 39.200001,
+                                Latitude: 56.200001,
+                                Longitude: 5.100000,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 43.200001,
-                                Longitude: 3.100000,
+                                Latitude: 64.099998,
+                                Longitude: 34.099998,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 71.099998,
-                                        Y: 83.199997,
+                                        X: 69.099998,
+                                        Y: 13.100000,
                                     },
                                     shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 17.200001,
-                                        Y: 59.099998,
+                                        X: 67.099998,
+                                        Y: 29.200001,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                        X: 41.099998,
+                                        Y: 82.199997,
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p2beta1Vertex{
                                     shared.GoogleCloudVisionV1p2beta1Vertex{
-                                        X: 1664478937018203628,
-                                        Y: 8391256688233226568,
+                                        X: 3181428753883207237,
+                                        Y: 3059598609751937721,
                                     },
                                     shared.GoogleCloudVisionV1p2beta1Vertex{
-                                        X: 8997849101297700852,
-                                        Y: 3981809433914354677,
+                                        X: 6736358041285325865,
+                                        Y: 3681302652654899017,
                                     },
                                 },
                             },
-                            Filter: "eos",
+                            Filter: "sed",
                             ProductCategories: []string{
-                                "rerum",
-                                "illum",
+                                "illo",
+                                "aliquam",
                             },
-                            ProductSet: "sunt",
+                            ProductSet: "culpa",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "reprehenderit",
-                                "ut",
+                                "fuga",
                                 "suscipit",
+                                "nulla",
                             },
-                            EnableTextDetectionConfidenceScore: false,
+                            EnableTextDetectionConfidenceScore: true,
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p2beta1WebDetectionParams{
                             IncludeGeoResults: true,
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "laboriosam",
+                        Content: "cumque",
                         GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "dolores",
+                            URI: "incidunt",
                         },
-                        MimeType: "totam",
+                        MimeType: "nostrum",
                     },
                     Pages: []int32{
-                        372452157611894385,
-                        4547094199366570460,
-                        6805473071622971373,
+                        4139992464823148597,
                     },
                 },
             },

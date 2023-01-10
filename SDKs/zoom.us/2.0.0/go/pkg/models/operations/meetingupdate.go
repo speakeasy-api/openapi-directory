@@ -38,10 +38,132 @@ type MeetingUpdateApplicationJSONRecurrence struct {
 	WeeklyDays     *MeetingUpdateApplicationJSONRecurrenceWeeklyDaysEnum `json:"weekly_days,omitempty"`
 }
 
+type MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum string
+
+const (
+	MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnumApprove MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum = "approve"
+	MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnumDeny    MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum = "deny"
+)
+
+// MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegions
+// Approve or block users from specific regions/countries from joining this meeting.
+type MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegions struct {
+	ApprovedList []string                                                                          `json:"approved_list,omitempty"`
+	DeniedList   []string                                                                          `json:"denied_list,omitempty"`
+	Enable       *bool                                                                             `json:"enable,omitempty"`
+	Method       *MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum `json:"method,omitempty"`
+}
+
+type MeetingUpdateApplicationJSONSettingsAudioEnum string
+
+const (
+	MeetingUpdateApplicationJSONSettingsAudioEnumBoth      MeetingUpdateApplicationJSONSettingsAudioEnum = "both"
+	MeetingUpdateApplicationJSONSettingsAudioEnumTelephony MeetingUpdateApplicationJSONSettingsAudioEnum = "telephony"
+	MeetingUpdateApplicationJSONSettingsAudioEnumVoip      MeetingUpdateApplicationJSONSettingsAudioEnum = "voip"
+)
+
+type MeetingUpdateApplicationJSONSettingsAuthenticationException struct {
+	Email *string `json:"email,omitempty"`
+	Name  *string `json:"name,omitempty"`
+}
+
+type MeetingUpdateApplicationJSONSettingsAutoRecordingEnum string
+
+const (
+	MeetingUpdateApplicationJSONSettingsAutoRecordingEnumLocal MeetingUpdateApplicationJSONSettingsAutoRecordingEnum = "local"
+	MeetingUpdateApplicationJSONSettingsAutoRecordingEnumCloud MeetingUpdateApplicationJSONSettingsAutoRecordingEnum = "cloud"
+	MeetingUpdateApplicationJSONSettingsAutoRecordingEnumNone  MeetingUpdateApplicationJSONSettingsAutoRecordingEnum = "none"
+)
+
+type MeetingUpdateApplicationJSONSettingsBreakoutRoomRooms struct {
+	Name         *string  `json:"name,omitempty"`
+	Participants []string `json:"participants,omitempty"`
+}
+
+// MeetingUpdateApplicationJSONSettingsBreakoutRoom
+// Setting to [pre-assign breakout rooms](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4).
+type MeetingUpdateApplicationJSONSettingsBreakoutRoom struct {
+	Enable *bool                                                   `json:"enable,omitempty"`
+	Rooms  []MeetingUpdateApplicationJSONSettingsBreakoutRoomRooms `json:"rooms,omitempty"`
+}
+
+type MeetingUpdateApplicationJSONSettingsCustomKeys struct {
+	Key   *string `json:"key,omitempty"`
+	Value *string `json:"value,omitempty"`
+}
+
+type MeetingUpdateApplicationJSONSettingsEncryptionTypeEnum string
+
+const (
+	MeetingUpdateApplicationJSONSettingsEncryptionTypeEnumEnhancedEncryption MeetingUpdateApplicationJSONSettingsEncryptionTypeEnum = "enhanced_encryption"
+	MeetingUpdateApplicationJSONSettingsEncryptionTypeEnumE2ee               MeetingUpdateApplicationJSONSettingsEncryptionTypeEnum = "e2ee"
+)
+
+type MeetingUpdateApplicationJSONSettingsGlobalDialInNumbersTypeEnum string
+
+const (
+	MeetingUpdateApplicationJSONSettingsGlobalDialInNumbersTypeEnumToll     MeetingUpdateApplicationJSONSettingsGlobalDialInNumbersTypeEnum = "toll"
+	MeetingUpdateApplicationJSONSettingsGlobalDialInNumbersTypeEnumTollfree MeetingUpdateApplicationJSONSettingsGlobalDialInNumbersTypeEnum = "tollfree"
+)
+
+type MeetingUpdateApplicationJSONSettingsGlobalDialInNumbers struct {
+	City        *string                                                          `json:"city,omitempty"`
+	Country     *string                                                          `json:"country,omitempty"`
+	CountryName *string                                                          `json:"country_name,omitempty"`
+	Number      *string                                                          `json:"number,omitempty"`
+	Type        *MeetingUpdateApplicationJSONSettingsGlobalDialInNumbersTypeEnum `json:"type,omitempty"`
+}
+
+type MeetingUpdateApplicationJSONSettingsLanguageInterpretationInterpreters struct {
+	Email     *string `json:"email,omitempty"`
+	Languages *string `json:"languages,omitempty"`
+}
+
+type MeetingUpdateApplicationJSONSettingsLanguageInterpretation struct {
+	Enable       *bool                                                                    `json:"enable,omitempty"`
+	Interpreters []MeetingUpdateApplicationJSONSettingsLanguageInterpretationInterpreters `json:"interpreters,omitempty"`
+}
+
 // MeetingUpdateApplicationJSONSettings
 // Meeting settings.
 type MeetingUpdateApplicationJSONSettings struct {
-	RegistrantsConfirmationEmail *bool `json:"registrants_confirmation_email,omitempty"`
+	AllowMultipleDevices               *bool                                                                   `json:"allow_multiple_devices,omitempty"`
+	AlternativeHosts                   *string                                                                 `json:"alternative_hosts,omitempty"`
+	AlternativeHostsEmailNotification  *bool                                                                   `json:"alternative_hosts_email_notification,omitempty"`
+	ApprovalType                       *int64                                                                  `json:"approval_type,omitempty"`
+	ApprovedOrDeniedCountriesOrRegions *MeetingUpdateApplicationJSONSettingsApprovedOrDeniedCountriesOrRegions `json:"approved_or_denied_countries_or_regions,omitempty"`
+	Audio                              *MeetingUpdateApplicationJSONSettingsAudioEnum                          `json:"audio,omitempty"`
+	AuthenticationDomains              *string                                                                 `json:"authentication_domains,omitempty"`
+	AuthenticationException            []MeetingUpdateApplicationJSONSettingsAuthenticationException           `json:"authentication_exception,omitempty"`
+	AuthenticationName                 *string                                                                 `json:"authentication_name,omitempty"`
+	AuthenticationOption               *string                                                                 `json:"authentication_option,omitempty"`
+	AutoRecording                      *MeetingUpdateApplicationJSONSettingsAutoRecordingEnum                  `json:"auto_recording,omitempty"`
+	BreakoutRoom                       *MeetingUpdateApplicationJSONSettingsBreakoutRoom                       `json:"breakout_room,omitempty"`
+	CloseRegistration                  *bool                                                                   `json:"close_registration,omitempty"`
+	CnMeeting                          *bool                                                                   `json:"cn_meeting,omitempty"`
+	ContactEmail                       *string                                                                 `json:"contact_email,omitempty"`
+	ContactName                        *string                                                                 `json:"contact_name,omitempty"`
+	CustomKeys                         []MeetingUpdateApplicationJSONSettingsCustomKeys                        `json:"custom_keys,omitempty"`
+	EncryptionType                     *MeetingUpdateApplicationJSONSettingsEncryptionTypeEnum                 `json:"encryption_type,omitempty"`
+	EnforceLogin                       *bool                                                                   `json:"enforce_login,omitempty"`
+	EnforceLoginDomains                *string                                                                 `json:"enforce_login_domains,omitempty"`
+	GlobalDialInCountries              []string                                                                `json:"global_dial_in_countries,omitempty"`
+	GlobalDialInNumbers                []MeetingUpdateApplicationJSONSettingsGlobalDialInNumbers               `json:"global_dial_in_numbers,omitempty"`
+	HostVideo                          *bool                                                                   `json:"host_video,omitempty"`
+	InMeeting                          *bool                                                                   `json:"in_meeting,omitempty"`
+	JbhTime                            *int64                                                                  `json:"jbh_time,omitempty"`
+	JoinBeforeHost                     *bool                                                                   `json:"join_before_host,omitempty"`
+	LanguageInterpretation             *MeetingUpdateApplicationJSONSettingsLanguageInterpretation             `json:"language_interpretation,omitempty"`
+	MeetingAuthentication              *bool                                                                   `json:"meeting_authentication,omitempty"`
+	MuteUponEntry                      *bool                                                                   `json:"mute_upon_entry,omitempty"`
+	ParticipantVideo                   *bool                                                                   `json:"participant_video,omitempty"`
+	RegistrantsConfirmationEmail       *bool                                                                   `json:"registrants_confirmation_email,omitempty"`
+	RegistrantsEmailNotification       *bool                                                                   `json:"registrants_email_notification,omitempty"`
+	RegistrationType                   *int64                                                                  `json:"registration_type,omitempty"`
+	ShowShareButton                    *bool                                                                   `json:"show_share_button,omitempty"`
+	UsePmi                             *bool                                                                   `json:"use_pmi,omitempty"`
+	WaitingRoom                        *bool                                                                   `json:"waiting_room,omitempty"`
+	Watermark                          *bool                                                                   `json:"watermark,omitempty"`
 }
 
 type MeetingUpdateApplicationJSONTrackingFields struct {
@@ -56,6 +178,7 @@ type MeetingUpdateApplicationJSON struct {
 	Duration       *int64                                       `json:"duration,omitempty"`
 	Password       *string                                      `json:"password,omitempty"`
 	Recurrence     *MeetingUpdateApplicationJSONRecurrence      `json:"recurrence,omitempty"`
+	ScheduleFor    *string                                      `json:"schedule_for,omitempty"`
 	Settings       *MeetingUpdateApplicationJSONSettings        `json:"settings,omitempty"`
 	StartTime      *time.Time                                   `json:"start_time,omitempty"`
 	TemplateID     *string                                      `json:"template_id,omitempty"`
@@ -90,10 +213,132 @@ type MeetingUpdateMultipartFormDataRecurrence struct {
 	WeeklyDays     *MeetingUpdateMultipartFormDataRecurrenceWeeklyDaysEnum `json:"weekly_days,omitempty"`
 }
 
+type MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum string
+
+const (
+	MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegionsMethodEnumApprove MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum = "approve"
+	MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegionsMethodEnumDeny    MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum = "deny"
+)
+
+// MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegions
+// Approve or block users from specific regions/countries from joining this meeting.
+type MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegions struct {
+	ApprovedList []string                                                                            `json:"approved_list,omitempty"`
+	DeniedList   []string                                                                            `json:"denied_list,omitempty"`
+	Enable       *bool                                                                               `json:"enable,omitempty"`
+	Method       *MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegionsMethodEnum `json:"method,omitempty"`
+}
+
+type MeetingUpdateMultipartFormDataSettingsAudioEnum string
+
+const (
+	MeetingUpdateMultipartFormDataSettingsAudioEnumBoth      MeetingUpdateMultipartFormDataSettingsAudioEnum = "both"
+	MeetingUpdateMultipartFormDataSettingsAudioEnumTelephony MeetingUpdateMultipartFormDataSettingsAudioEnum = "telephony"
+	MeetingUpdateMultipartFormDataSettingsAudioEnumVoip      MeetingUpdateMultipartFormDataSettingsAudioEnum = "voip"
+)
+
+type MeetingUpdateMultipartFormDataSettingsAuthenticationException struct {
+	Email *string `json:"email,omitempty"`
+	Name  *string `json:"name,omitempty"`
+}
+
+type MeetingUpdateMultipartFormDataSettingsAutoRecordingEnum string
+
+const (
+	MeetingUpdateMultipartFormDataSettingsAutoRecordingEnumLocal MeetingUpdateMultipartFormDataSettingsAutoRecordingEnum = "local"
+	MeetingUpdateMultipartFormDataSettingsAutoRecordingEnumCloud MeetingUpdateMultipartFormDataSettingsAutoRecordingEnum = "cloud"
+	MeetingUpdateMultipartFormDataSettingsAutoRecordingEnumNone  MeetingUpdateMultipartFormDataSettingsAutoRecordingEnum = "none"
+)
+
+type MeetingUpdateMultipartFormDataSettingsBreakoutRoomRooms struct {
+	Name         *string  `json:"name,omitempty"`
+	Participants []string `json:"participants,omitempty"`
+}
+
+// MeetingUpdateMultipartFormDataSettingsBreakoutRoom
+// Setting to [pre-assign breakout rooms](https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4).
+type MeetingUpdateMultipartFormDataSettingsBreakoutRoom struct {
+	Enable *bool                                                     `json:"enable,omitempty"`
+	Rooms  []MeetingUpdateMultipartFormDataSettingsBreakoutRoomRooms `json:"rooms,omitempty"`
+}
+
+type MeetingUpdateMultipartFormDataSettingsCustomKeys struct {
+	Key   *string `json:"key,omitempty"`
+	Value *string `json:"value,omitempty"`
+}
+
+type MeetingUpdateMultipartFormDataSettingsEncryptionTypeEnum string
+
+const (
+	MeetingUpdateMultipartFormDataSettingsEncryptionTypeEnumEnhancedEncryption MeetingUpdateMultipartFormDataSettingsEncryptionTypeEnum = "enhanced_encryption"
+	MeetingUpdateMultipartFormDataSettingsEncryptionTypeEnumE2ee               MeetingUpdateMultipartFormDataSettingsEncryptionTypeEnum = "e2ee"
+)
+
+type MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbersTypeEnum string
+
+const (
+	MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbersTypeEnumToll     MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbersTypeEnum = "toll"
+	MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbersTypeEnumTollfree MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbersTypeEnum = "tollfree"
+)
+
+type MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbers struct {
+	City        *string                                                            `json:"city,omitempty"`
+	Country     *string                                                            `json:"country,omitempty"`
+	CountryName *string                                                            `json:"country_name,omitempty"`
+	Number      *string                                                            `json:"number,omitempty"`
+	Type        *MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbersTypeEnum `json:"type,omitempty"`
+}
+
+type MeetingUpdateMultipartFormDataSettingsLanguageInterpretationInterpreters struct {
+	Email     *string `json:"email,omitempty"`
+	Languages *string `json:"languages,omitempty"`
+}
+
+type MeetingUpdateMultipartFormDataSettingsLanguageInterpretation struct {
+	Enable       *bool                                                                      `json:"enable,omitempty"`
+	Interpreters []MeetingUpdateMultipartFormDataSettingsLanguageInterpretationInterpreters `json:"interpreters,omitempty"`
+}
+
 // MeetingUpdateMultipartFormDataSettings
 // Meeting settings.
 type MeetingUpdateMultipartFormDataSettings struct {
-	RegistrantsConfirmationEmail *bool `json:"registrants_confirmation_email,omitempty"`
+	AllowMultipleDevices               *bool                                                                     `json:"allow_multiple_devices,omitempty"`
+	AlternativeHosts                   *string                                                                   `json:"alternative_hosts,omitempty"`
+	AlternativeHostsEmailNotification  *bool                                                                     `json:"alternative_hosts_email_notification,omitempty"`
+	ApprovalType                       *int64                                                                    `json:"approval_type,omitempty"`
+	ApprovedOrDeniedCountriesOrRegions *MeetingUpdateMultipartFormDataSettingsApprovedOrDeniedCountriesOrRegions `json:"approved_or_denied_countries_or_regions,omitempty"`
+	Audio                              *MeetingUpdateMultipartFormDataSettingsAudioEnum                          `json:"audio,omitempty"`
+	AuthenticationDomains              *string                                                                   `json:"authentication_domains,omitempty"`
+	AuthenticationException            []MeetingUpdateMultipartFormDataSettingsAuthenticationException           `json:"authentication_exception,omitempty"`
+	AuthenticationName                 *string                                                                   `json:"authentication_name,omitempty"`
+	AuthenticationOption               *string                                                                   `json:"authentication_option,omitempty"`
+	AutoRecording                      *MeetingUpdateMultipartFormDataSettingsAutoRecordingEnum                  `json:"auto_recording,omitempty"`
+	BreakoutRoom                       *MeetingUpdateMultipartFormDataSettingsBreakoutRoom                       `json:"breakout_room,omitempty"`
+	CloseRegistration                  *bool                                                                     `json:"close_registration,omitempty"`
+	CnMeeting                          *bool                                                                     `json:"cn_meeting,omitempty"`
+	ContactEmail                       *string                                                                   `json:"contact_email,omitempty"`
+	ContactName                        *string                                                                   `json:"contact_name,omitempty"`
+	CustomKeys                         []MeetingUpdateMultipartFormDataSettingsCustomKeys                        `json:"custom_keys,omitempty"`
+	EncryptionType                     *MeetingUpdateMultipartFormDataSettingsEncryptionTypeEnum                 `json:"encryption_type,omitempty"`
+	EnforceLogin                       *bool                                                                     `json:"enforce_login,omitempty"`
+	EnforceLoginDomains                *string                                                                   `json:"enforce_login_domains,omitempty"`
+	GlobalDialInCountries              []string                                                                  `json:"global_dial_in_countries,omitempty"`
+	GlobalDialInNumbers                []MeetingUpdateMultipartFormDataSettingsGlobalDialInNumbers               `json:"global_dial_in_numbers,omitempty"`
+	HostVideo                          *bool                                                                     `json:"host_video,omitempty"`
+	InMeeting                          *bool                                                                     `json:"in_meeting,omitempty"`
+	JbhTime                            *int64                                                                    `json:"jbh_time,omitempty"`
+	JoinBeforeHost                     *bool                                                                     `json:"join_before_host,omitempty"`
+	LanguageInterpretation             *MeetingUpdateMultipartFormDataSettingsLanguageInterpretation             `json:"language_interpretation,omitempty"`
+	MeetingAuthentication              *bool                                                                     `json:"meeting_authentication,omitempty"`
+	MuteUponEntry                      *bool                                                                     `json:"mute_upon_entry,omitempty"`
+	ParticipantVideo                   *bool                                                                     `json:"participant_video,omitempty"`
+	RegistrantsConfirmationEmail       *bool                                                                     `json:"registrants_confirmation_email,omitempty"`
+	RegistrantsEmailNotification       *bool                                                                     `json:"registrants_email_notification,omitempty"`
+	RegistrationType                   *int64                                                                    `json:"registration_type,omitempty"`
+	ShowShareButton                    *bool                                                                     `json:"show_share_button,omitempty"`
+	UsePmi                             *bool                                                                     `json:"use_pmi,omitempty"`
+	WaitingRoom                        *bool                                                                     `json:"waiting_room,omitempty"`
+	Watermark                          *bool                                                                     `json:"watermark,omitempty"`
 }
 
 type MeetingUpdateMultipartFormDataTrackingFields struct {
@@ -108,6 +353,7 @@ type MeetingUpdateMultipartFormData1 struct {
 	Duration       *int64                                         `multipartForm:"name=duration"`
 	Password       *string                                        `multipartForm:"name=password"`
 	Recurrence     *MeetingUpdateMultipartFormDataRecurrence      `multipartForm:"name=recurrence,json"`
+	ScheduleFor    *string                                        `multipartForm:"name=schedule_for"`
 	Settings       *MeetingUpdateMultipartFormDataSettings        `multipartForm:"name=settings,json"`
 	StartTime      *time.Time                                     `multipartForm:"name=start_time"`
 	TemplateID     *string                                        `multipartForm:"name=template_id"`

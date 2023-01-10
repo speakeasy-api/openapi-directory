@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.FindFormByFormNamePathParams{
-            FormName: "sint",
+            FormName: "assumenda",
         },
     }
     

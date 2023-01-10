@@ -31,17 +31,21 @@ func main() {
         Request: shared.BatchInputCallbackCompletionBatchRequest{
             Inputs: []shared.CallbackCompletionBatchRequest{
                 shared.CallbackCompletionBatchRequest{
-                    CallbackID: "ullam",
+                    CallbackID: "reprehenderit",
                     OutputFields: map[string]string{
-                        "libero": "autem",
+                        "quia": "recusandae",
                     },
                 },
                 shared.CallbackCompletionBatchRequest{
-                    CallbackID: "hic",
+                    CallbackID: "voluptas",
                     OutputFields: map[string]string{
-                        "nulla": "possimus",
-                        "et": "quia",
-                        "in": "consequatur",
+                        "fuga": "dolorem",
+                    },
+                },
+                shared.CallbackCompletionBatchRequest{
+                    CallbackID: "eveniet",
+                    OutputFields: map[string]string{
+                        "suscipit": "sequi",
                     },
                 },
             },

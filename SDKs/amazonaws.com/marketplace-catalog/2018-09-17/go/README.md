@@ -34,17 +34,17 @@ func main() {
     
     req := operations.CancelChangeSetRequest{
         QueryParams: operations.CancelChangeSetQueryParams{
-            Catalog: "ad",
+            Catalog: "error",
             ChangeSetID: "voluptatem",
         },
         Headers: operations.CancelChangeSetHeaders{
-            XAmzAlgorithm: "accusantium",
-            XAmzContentSha256: "et",
-            XAmzCredential: "sunt",
-            XAmzDate: "ratione",
-            XAmzSecurityToken: "quidem",
-            XAmzSignature: "exercitationem",
-            XAmzSignedHeaders: "iure",
+            XAmzAlgorithm: "quia",
+            XAmzContentSha256: "enim",
+            XAmzCredential: "aut",
+            XAmzDate: "impedit",
+            XAmzSecurityToken: "ratione",
+            XAmzSignature: "adipisci",
+            XAmzSignedHeaders: "eius",
         },
     }
     

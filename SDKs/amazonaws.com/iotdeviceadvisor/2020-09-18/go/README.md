@@ -34,30 +34,29 @@ func main() {
     
     req := operations.CreateSuiteDefinitionRequest{
         Headers: operations.CreateSuiteDefinitionHeaders{
-            XAmzAlgorithm: "optio",
-            XAmzContentSha256: "at",
-            XAmzCredential: "a",
-            XAmzDate: "rerum",
-            XAmzSecurityToken: "repudiandae",
-            XAmzSignature: "praesentium",
-            XAmzSignedHeaders: "tempora",
+            XAmzAlgorithm: "quia",
+            XAmzContentSha256: "cupiditate",
+            XAmzCredential: "sed",
+            XAmzDate: "maxime",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "consequatur",
+            XAmzSignedHeaders: "excepturi",
         },
         Request: operations.CreateSuiteDefinitionRequestBody{
             SuiteDefinitionConfiguration: &operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration{
-                DevicePermissionRoleArn: "est",
+                DevicePermissionRoleArn: "ut",
                 Devices: []shared.DeviceUnderTest{
                     shared.DeviceUnderTest{
-                        CertificateArn: "dignissimos",
-                        ThingArn: "et",
+                        CertificateArn: "sit",
+                        ThingArn: "aliquid",
                     },
                 },
-                IntendedForQualification: true,
-                RootGroup: "vitae",
-                SuiteDefinitionName: "ipsum",
+                IntendedForQualification: false,
+                RootGroup: "itaque",
+                SuiteDefinitionName: "fuga",
             },
             Tags: map[string]string{
-                "magni": "expedita",
-                "ea": "dolor",
+                "accusantium": "vel",
             },
         },
     }

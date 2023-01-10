@@ -23,60 +23,88 @@ func main() {
     
     req := operations.CreateGatewayRouteRequest{
         PathParams: operations.CreateGatewayRoutePathParams{
-            MeshName: "aut",
-            VirtualGatewayName: "repudiandae",
+            MeshName: "omnis",
+            VirtualGatewayName: "corporis",
         },
         QueryParams: operations.CreateGatewayRouteQueryParams{
-            MeshOwner: "voluptas",
+            MeshOwner: "quasi",
         },
         Headers: operations.CreateGatewayRouteHeaders{
-            XAmzAlgorithm: "eligendi",
-            XAmzContentSha256: "veniam",
-            XAmzCredential: "dolorem",
-            XAmzDate: "similique",
-            XAmzSecurityToken: "ad",
-            XAmzSignature: "ullam",
-            XAmzSignedHeaders: "dolor",
+            XAmzAlgorithm: "necessitatibus",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "minus",
+            XAmzDate: "sequi",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "quidem",
+            XAmzSignedHeaders: "iure",
         },
         Request: operations.CreateGatewayRouteRequestBody{
-            ClientToken: "molestiae",
-            GatewayRouteName: "numquam",
+            ClientToken: "consequatur",
+            GatewayRouteName: "occaecati",
             Spec: operations.CreateGatewayRouteRequestBodySpec{
                 GrpcRoute: &shared.GrpcGatewayRoute{
                     Action: shared.GrpcGatewayRouteAction{
                         Rewrite: &shared.GrpcGatewayRouteRewrite{
                             Hostname: &shared.GatewayRouteHostnameRewrite{
-                                DefaultTargetHostname: "ENABLED",
+                                DefaultTargetHostname: "DISABLED",
                             },
                         },
                         Target: shared.GatewayRouteTarget{
                             VirtualService: shared.GatewayRouteVirtualService{
-                                VirtualServiceName: "consequatur",
+                                VirtualServiceName: "repudiandae",
                             },
                         },
                     },
                     Match: shared.GrpcGatewayRouteMatch{
                         Hostname: &shared.GatewayRouteHostnameMatch{
-                            Exact: "dolores",
-                            Suffix: "et",
+                            Exact: "voluptas",
+                            Suffix: "eligendi",
                         },
                         Metadata: []shared.GrpcGatewayRouteMetadata{
                             shared.GrpcGatewayRouteMetadata{
+                                Invert: false,
+                                Match: &shared.GrpcMetadataMatchMethod{
+                                    Exact: "similique",
+                                    Prefix: "ad",
+                                    Range: &shared.MatchRange{
+                                        End: 4146470584718599470,
+                                        Start: 4854007963037812637,
+                                    },
+                                    Regex: "molestiae",
+                                    Suffix: "numquam",
+                                },
+                                Name: "aut",
+                            },
+                            shared.GrpcGatewayRouteMetadata{
                                 Invert: true,
                                 Match: &shared.GrpcMetadataMatchMethod{
-                                    Exact: "est",
-                                    Prefix: "neque",
+                                    Exact: "dolores",
+                                    Prefix: "et",
                                     Range: &shared.MatchRange{
-                                        End: 580104165684934573,
-                                        Start: 7373765891373584151,
+                                        End: 1596246021614689099,
+                                        Start: 5903985231896006729,
                                     },
-                                    Regex: "eius",
-                                    Suffix: "voluptatum",
+                                    Regex: "est",
+                                    Suffix: "neque",
                                 },
-                                Name: "rerum",
+                                Name: "explicabo",
+                            },
+                            shared.GrpcGatewayRouteMetadata{
+                                Invert: true,
+                                Match: &shared.GrpcMetadataMatchMethod{
+                                    Exact: "eius",
+                                    Prefix: "voluptatum",
+                                    Range: &shared.MatchRange{
+                                        End: 8758844135914746124,
+                                        Start: 285149591117881545,
+                                    },
+                                    Regex: "aut",
+                                    Suffix: "tempore",
+                                },
+                                Name: "debitis",
                             },
                         },
-                        ServiceName: "voluptas",
+                        ServiceName: "delectus",
                     },
                 },
                 Http2Route: &shared.HTTPGatewayRoute{
@@ -86,16 +114,16 @@ func main() {
                                 DefaultTargetHostname: "ENABLED",
                             },
                             Path: &shared.HTTPGatewayRoutePathRewrite{
-                                Exact: "tempore",
+                                Exact: "officiis",
                             },
                             Prefix: &shared.HTTPGatewayRoutePrefixRewrite{
                                 DefaultPrefix: "DISABLED",
-                                Value: "delectus",
+                                Value: "quae",
                             },
                         },
                         Target: shared.GatewayRouteTarget{
                             VirtualService: shared.GatewayRouteVirtualService{
-                                VirtualServiceName: "mollitia",
+                                VirtualServiceName: "repellat",
                             },
                         },
                     },
@@ -104,55 +132,43 @@ func main() {
                             shared.HTTPGatewayRouteHeader{
                                 Invert: false,
                                 Match: &shared.HeaderMatchMethod{
-                                    Exact: "quae",
-                                    Prefix: "repellat",
+                                    Exact: "magni",
+                                    Prefix: "voluptas",
                                     Range: &shared.MatchRange{
-                                        End: 1379718715816540355,
-                                        Start: 3240937335941730803,
-                                    },
-                                    Regex: "magni",
-                                    Suffix: "voluptas",
-                                },
-                                Name: "odio",
-                            },
-                            shared.HTTPGatewayRouteHeader{
-                                Invert: false,
-                                Match: &shared.HeaderMatchMethod{
-                                    Exact: "nostrum",
-                                    Prefix: "et",
-                                    Range: &shared.MatchRange{
-                                        End: 7051896623926270928,
-                                        Start: 4398689318643636665,
+                                        End: 2177477502781941350,
+                                        Start: 2063521942541683052,
                                     },
                                     Regex: "nostrum",
-                                    Suffix: "illum",
+                                    Suffix: "et",
                                 },
-                                Name: "aut",
+                                Name: "nemo",
+                            },
+                            shared.HTTPGatewayRouteHeader{
+                                Invert: true,
+                                Match: &shared.HeaderMatchMethod{
+                                    Exact: "nostrum",
+                                    Prefix: "illum",
+                                    Range: &shared.MatchRange{
+                                        End: 5846570952474056546,
+                                        Start: 6317657026515785697,
+                                    },
+                                    Regex: "minus",
+                                    Suffix: "facilis",
+                                },
+                                Name: "facilis",
                             },
                         },
                         Hostname: &shared.GatewayRouteHostnameMatch{
-                            Exact: "quo",
-                            Suffix: "minus",
+                            Exact: "officia",
+                            Suffix: "vel",
                         },
-                        Method: "TRACE",
+                        Method: "PATCH",
                         Path: &shared.HTTPPathMatch{
-                            Exact: "facilis",
-                            Regex: "officia",
+                            Exact: "saepe",
+                            Regex: "ut",
                         },
-                        Prefix: "vel",
+                        Prefix: "ut",
                         QueryParameters: []shared.HTTPQueryParameter{
-                            shared.HTTPQueryParameter{
-                                Match: &shared.QueryParameterMatch{
-                                    Exact: "saepe",
-                                },
-                                Name: "ut",
-                            },
-                            shared.HTTPQueryParameter{
-                                Match: &shared.QueryParameterMatch{
-                                    Exact: "ut",
-                                },
-                                Name: "distinctio",
-                            },
                             shared.HTTPQueryParameter{
                                 Match: &shared.QueryParameterMatch{
                                     Exact: "dolor",

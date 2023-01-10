@@ -23,88 +23,89 @@ func main() {
     
     req := operations.CreateConnectorRequest{
         Headers: operations.CreateConnectorHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "itaque",
-            XAmzCredential: "corrupti",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "quasi",
-            XAmzSignature: "repellat",
-            XAmzSignedHeaders: "rem",
+            XAmzAlgorithm: "totam",
+            XAmzContentSha256: "eum",
+            XAmzCredential: "laborum",
+            XAmzDate: "maxime",
+            XAmzSecurityToken: "voluptatem",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "qui",
         },
         Request: operations.CreateConnectorRequestBody{
             Capacity: operations.CreateConnectorRequestBodyCapacity{
                 AutoScaling: &shared.AutoScaling{
-                    MaxWorkerCount: 3889050278199328647,
-                    McuCount: 6462944876161564937,
-                    MinWorkerCount: 215513929021590008,
+                    MaxWorkerCount: 3504002613480678211,
+                    McuCount: 2500753354058343789,
+                    MinWorkerCount: 2787501642645844576,
                     ScaleInPolicy: &shared.ScaleInPolicy{
-                        CPUUtilizationPercentage: 7749074455957565415,
+                        CPUUtilizationPercentage: 7677299547891902014,
                     },
                     ScaleOutPolicy: &shared.ScaleOutPolicy{
-                        CPUUtilizationPercentage: 8985447707781711850,
+                        CPUUtilizationPercentage: 7105999358852640672,
                     },
                 },
                 ProvisionedCapacity: &shared.ProvisionedCapacity{
-                    McuCount: 4836017905699157242,
-                    WorkerCount: 2695647621612843151,
+                    McuCount: 3679840646143242248,
+                    WorkerCount: 3126614124520816277,
                 },
             },
             ConnectorConfiguration: map[string]string{
-                "eaque": "ex",
-                "cum": "vel",
-                "sunt": "dolor",
+                "molestiae": "voluptas",
             },
-            ConnectorDescription: "nulla",
-            ConnectorName: "ipsa",
+            ConnectorDescription: "officia",
+            ConnectorName: "cupiditate",
             KafkaCluster: operations.CreateConnectorRequestBodyKafkaCluster{
                 ApacheKafkaCluster: &shared.ApacheKafkaCluster{
-                    BootstrapServers: "ipsum",
+                    BootstrapServers: "in",
                     Vpc: shared.Vpc{
                         SecurityGroups: []string{
-                            "dolores",
+                            "ipsa",
+                            "nemo",
                         },
                         Subnets: []string{
-                            "perferendis",
+                            "quae",
+                            "odit",
+                            "expedita",
                         },
                     },
                 },
             },
             KafkaClusterClientAuthentication: operations.CreateConnectorRequestBodyKafkaClusterClientAuthentication{
-                AuthenticationType: "IAM",
+                AuthenticationType: "NONE",
             },
             KafkaClusterEncryptionInTransit: operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit{
                 EncryptionType: "TLS",
             },
-            KafkaConnectVersion: "dicta",
+            KafkaConnectVersion: "voluptate",
             LogDelivery: &operations.CreateConnectorRequestBodyLogDelivery{
                 WorkerLogDelivery: &shared.WorkerLogDelivery{
                     CloudWatchLogs: &shared.CloudWatchLogsLogDelivery{
                         Enabled: false,
-                        LogGroup: "pariatur",
+                        LogGroup: "harum",
                     },
                     Firehose: &shared.FirehoseLogDelivery{
-                        DeliveryStream: "nesciunt",
+                        DeliveryStream: "nulla",
                         Enabled: true,
                     },
                     S3: &shared.S3LogDelivery{
-                        Bucket: "dolores",
+                        Bucket: "corrupti",
                         Enabled: false,
-                        Prefix: "inventore",
+                        Prefix: "consectetur",
                     },
                 },
             },
             Plugins: []shared.Plugin{
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "ab",
-                        Revision: 89864496253521873,
+                        CustomPluginArn: "impedit",
+                        Revision: 8021751157946261264,
                     },
                 },
             },
-            ServiceExecutionRoleArn: "aliquam",
+            ServiceExecutionRoleArn: "doloribus",
             WorkerConfiguration: &operations.CreateConnectorRequestBodyWorkerConfiguration{
-                Revision: 7575525396911227881,
-                WorkerConfigurationArn: "et",
+                Revision: 5906068016607125469,
+                WorkerConfigurationArn: "quis",
             },
         },
     }

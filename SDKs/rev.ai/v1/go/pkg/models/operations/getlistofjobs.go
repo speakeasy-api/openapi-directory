@@ -13,6 +13,9 @@ type GetListOfJobsQueryParams struct {
 // Problem details object returned on errors
 type GetListOfJobs400ApplicationProblemPlusJSON struct {
 	Parameters map[string]interface{} `json:"parameters,omitempty"`
+	Status     *int64                 `json:"status,omitempty"`
+	Title      *string                `json:"title,omitempty"`
+	Type       *string                `json:"type,omitempty"`
 }
 
 type GetListOfJobsRequest struct {

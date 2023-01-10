@@ -1,5 +1,5 @@
 package shared
 
 type TestFailoverResult struct {
-	ReplicationGroup *ReplicationGroup3
+	ReplicationGroup *ReplicationGroup
 }

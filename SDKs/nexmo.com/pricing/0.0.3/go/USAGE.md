@@ -13,12 +13,12 @@ func main() {
     
     req := operations.RetrievePrefixPricingRequest{
         PathParams: operations.RetrievePrefixPricingPathParams{
-            Type: "sequi",
+            Type: "occaecati",
         },
         QueryParams: operations.RetrievePrefixPricingQueryParams{
-            APIKey: "ipsam",
-            APISecret: "omnis",
-            Prefix: "incidunt",
+            APIKey: "nihil",
+            APISecret: "qui",
+            Prefix: "dolore",
         },
     }
     

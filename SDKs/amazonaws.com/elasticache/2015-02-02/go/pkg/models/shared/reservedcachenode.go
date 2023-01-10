@@ -13,7 +13,7 @@ type ReservedCacheNode struct {
 	FixedPrice                   *float64
 	OfferingType                 *string
 	ProductDescription           *string
-	RecurringCharges             []map[string]interface{}
+	RecurringCharges             []RecurringChargeList
 	ReservationARN               *string
 	ReservedCacheNodeID          *string
 	ReservedCacheNodesOfferingID *string

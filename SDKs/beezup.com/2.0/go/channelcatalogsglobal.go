@@ -70,7 +70,7 @@ func (s *ChannelCatalogsGlobal) AddChannelCatalog(ctx context.Context, request o
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.LinksGetChannelCatalogLink
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -181,7 +181,7 @@ func (s *ChannelCatalogsGlobal) GetChannelCatalog(ctx context.Context, request o
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ChannelCatalog1
+			var out *shared.ChannelCatalog
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

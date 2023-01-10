@@ -4,6 +4,6 @@ package shared
 //
 //	Contains the result of a successful invocation of the <code>DescribeDBInstanceAutomatedBackups</code> action.
 type DbInstanceAutomatedBackupMessage struct {
-	DBInstanceAutomatedBackups []map[string]interface{}
+	DBInstanceAutomatedBackups []DbInstanceAutomatedBackupList
 	Marker                     *string
 }

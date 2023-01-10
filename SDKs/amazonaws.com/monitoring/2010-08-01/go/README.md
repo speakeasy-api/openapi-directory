@@ -36,20 +36,19 @@ func main() {
         QueryParams: operations.GetDeleteAlarmsQueryParams{
             Action: "DeleteAlarms",
             AlarmNames: []string{
-                "temporibus",
-                "nemo",
-                "ea",
+                "omnis",
+                "illum",
             },
             Version: "2010-08-01",
         },
         Headers: operations.GetDeleteAlarmsHeaders{
-            XAmzAlgorithm: "debitis",
-            XAmzContentSha256: "vitae",
-            XAmzCredential: "illo",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "aut",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "iusto",
+            XAmzAlgorithm: "dolores",
+            XAmzContentSha256: "harum",
+            XAmzCredential: "neque",
+            XAmzDate: "eligendi",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "fugiat",
         },
     }
     

@@ -34,24 +34,24 @@ func main() {
     
     req := operations.GetClipRequest{
         Headers: operations.GetClipHeaders{
-            XAmzAlgorithm: "earum",
-            XAmzContentSha256: "quas",
-            XAmzCredential: "repellendus",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "quisquam",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "ut",
+            XAmzContentSha256: "optio",
+            XAmzCredential: "ut",
+            XAmzDate: "velit",
+            XAmzSecurityToken: "velit",
+            XAmzSignature: "totam",
+            XAmzSignedHeaders: "doloribus",
         },
         Request: operations.GetClipRequestBody{
             ClipFragmentSelector: operations.GetClipRequestBodyClipFragmentSelector{
-                FragmentSelectorType: "SERVER_TIMESTAMP",
+                FragmentSelectorType: "PRODUCER_TIMESTAMP",
                 TimestampRange: &shared.ClipTimestampRange{
-                    EndTimestamp: "2003-02-16T04:36:04Z",
-                    StartTimestamp: "1974-03-09T13:35:54Z",
+                    EndTimestamp: "1995-01-31T08:02:00Z",
+                    StartTimestamp: "1979-11-06T16:29:01Z",
                 },
             },
-            StreamARN: "totam",
-            StreamName: "nemo",
+            StreamARN: "quae",
+            StreamName: "soluta",
         },
     }
     

@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetOauthV1AccessTokensTokenGetAccessTokenRequest{
         PathParams: operations.GetOauthV1AccessTokensTokenGetAccessTokenPathParams{
-            Token: "et",
+            Token: "veniam",
         },
     }
     

@@ -13,7 +13,7 @@ func main() {
     
     req := operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequest{
         Request: operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
-            Content: "magni",
+            Content: "ratione",
         },
     }
     

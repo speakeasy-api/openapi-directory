@@ -13,18 +13,18 @@ func main() {
     
     req := operations.CreateApplicationRequest{
         Request: &operations.CreateApplicationRequestBody{
-            AnswerMethod: "ut",
-            AnswerURL: "odit",
-            APIKey: "vel",
-            APISecret: "saepe",
-            EventMethod: "veritatis",
-            EventURL: "laudantium",
-            InboundMethod: "doloribus",
-            InboundURL: "adipisci",
-            Name: "est",
-            StatusMethod: "voluptatem",
-            StatusURL: "pariatur",
-            Type: "voice",
+            AnswerMethod: "culpa",
+            AnswerURL: "incidunt",
+            APIKey: "asperiores",
+            APISecret: "doloribus",
+            EventMethod: "excepturi",
+            EventURL: "enim",
+            InboundMethod: "consectetur",
+            InboundURL: "suscipit",
+            Name: "ut",
+            StatusMethod: "et",
+            StatusURL: "at",
+            Type: "messages",
         },
     }
     

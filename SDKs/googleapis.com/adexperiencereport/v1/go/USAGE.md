@@ -13,20 +13,20 @@ func main() {
     
     req := operations.AdexperiencereportSitesGetRequest{
         PathParams: operations.AdexperiencereportSitesGetPathParams{
-            Name: "omnis",
+            Name: "in",
         },
         QueryParams: operations.AdexperiencereportSitesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "repellendus",
+            AccessToken: "illum",
             Alt: "media",
-            Callback: "omnis",
-            Fields: "architecto",
-            Key: "ea",
-            OauthToken: "et",
+            Callback: "earum",
+            Fields: "temporibus",
+            Key: "earum",
+            OauthToken: "esse",
             PrettyPrint: false,
-            QuotaUser: "ullam",
-            UploadType: "ea",
-            UploadProtocol: "veritatis",
+            QuotaUser: "doloremque",
+            UploadType: "deserunt",
+            UploadProtocol: "maiores",
         },
     }
     

@@ -15,19 +15,29 @@ type ListRepositoryTagsQueryParams struct {
 }
 
 type ListRepositoryTags200ApplicationJSONLinksPages1 struct {
-	Prev *string `json:"prev,omitempty"`
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
 }
 
 type ListRepositoryTags200ApplicationJSONLinksPages2 struct {
-	Last *string `json:"last,omitempty"`
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
 }
 
 type ListRepositoryTags200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
+// ListRepositoryTags200ApplicationJSONMeta
+// Information about the response itself.
+type ListRepositoryTags200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListRepositoryTags200ApplicationJSON struct {
-	Links *ListRepositoryTags200ApplicationJSONLinks `json:"links,omitempty"`
+	Links *ListRepositoryTags200ApplicationJSONLinks                                                                                                             `json:"links,omitempty"`
+	Meta  ListRepositoryTags200ApplicationJSONMeta                                                                                                               `json:"meta"`
+	Tags  []shared.Onev21registry1Percent7BregistryNamePercent7DGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesRepositoriesItemsPropertiesLatestTag `json:"tags,omitempty"`
 }
 
 type ListRepositoryTags401ApplicationJSON struct {

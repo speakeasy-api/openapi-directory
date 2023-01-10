@@ -34,19 +34,21 @@ func main() {
     
     req := operations.CreateAppRequest{
         Headers: operations.CreateAppHeaders{
-            XAmzAlgorithm: "laboriosam",
-            XAmzContentSha256: "reprehenderit",
-            XAmzCredential: "non",
-            XAmzDate: "quis",
-            XAmzSecurityToken: "facilis",
-            XAmzSignature: "mollitia",
-            XAmzSignedHeaders: "sequi",
+            XAmzAlgorithm: "dolorum",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "voluptatum",
+            XAmzDate: "alias",
+            XAmzSecurityToken: "consequatur",
+            XAmzSignature: "eum",
+            XAmzSignedHeaders: "nemo",
         },
         Request: operations.CreateAppRequestBody{
             CreateApplicationRequest: operations.CreateAppRequestBodyCreateApplicationRequest{
-                Name: "maxime",
+                Name: "omnis",
                 Tags: map[string]string{
-                    "voluptas": "voluptatem",
+                    "reprehenderit": "omnis",
+                    "velit": "molestiae",
+                    "id": "quia",
                 },
             },
         },

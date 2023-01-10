@@ -34,7 +34,7 @@ func main() {
     
     req := operations.RetrieveAccountBalancesRequest{
         PathParams: operations.RetrieveAccountBalancesPathParams{
-            ID: "a",
+            ID: "sed",
         },
     }
     

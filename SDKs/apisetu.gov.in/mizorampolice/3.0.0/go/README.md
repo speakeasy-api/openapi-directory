@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                CARDNO: "harum",
-                FullName: "iusto",
+                CARDNO: "animi",
+                FullName: "et",
             },
-            ConsentArtifact: "corporis",
+            ConsentArtifact: "non",
             Format: "pdf",
-            TxnID: "dicta",
+            TxnID: "accusantium",
         },
     }
     

@@ -18,51 +18,54 @@ func main() {
             },
         },
         Headers: operations.CreateItemDraftHeaders{
-            ContentLanguage: "molestiae",
-            XEBAYCMARKETPLACEID: "praesentium",
+            ContentLanguage: "sit",
+            XEBAYCMARKETPLACEID: "voluptas",
         },
         Request: &shared.ItemDraft{
-            CategoryID: "quis",
+            CategoryID: "sint",
             Charity: &shared.Charity{
-                CharityID: "omnis",
-                DonationPercentage: "praesentium",
+                CharityID: "voluptate",
+                DonationPercentage: "aperiam",
             },
-            Condition: "illo",
-            Format: "omnis",
+            Condition: "aut",
+            Format: "unde",
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "iure",
-                    Value: "est",
+                    Currency: "dolorem",
+                    Value: "aspernatur",
                 },
                 AuctionStartPrice: &shared.Amount{
-                    Currency: "eaque",
-                    Value: "quas",
+                    Currency: "quia",
+                    Value: "autem",
                 },
                 Price: &shared.Amount{
-                    Currency: "suscipit",
-                    Value: "et",
+                    Currency: "facere",
+                    Value: "at",
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "officiis",
+                        Name: "qui",
                         Values: []string{
-                            "ut",
-                            "sapiente",
-                            "nulla",
+                            "modi",
+                        },
+                    },
+                    shared.Aspect{
+                        Name: "debitis",
+                        Values: []string{
+                            "fugiat",
+                            "perferendis",
                         },
                     },
                 },
-                Brand: "id",
-                Description: "et",
-                Epid: "voluptatem",
+                Brand: "soluta",
+                Description: "aut",
+                Epid: "nihil",
                 ImageUrls: []string{
-                    "optio",
-                    "nihil",
-                    "corrupti",
+                    "voluptates",
                 },
-                Title: "voluptatem",
+                Title: "quasi",
             },
         },
     }

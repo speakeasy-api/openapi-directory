@@ -25,20 +25,21 @@ func main() {
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
         QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
             Alt: "json",
-            Fields: "libero",
+            Fields: "nisi",
             FilterThirdPartyResources: true,
-            Key: "commodi",
-            Locale: "rerum",
-            OauthToken: "est",
-            PrettyPrint: true,
-            QuotaUser: "voluptatem",
+            Key: "facere",
+            Locale: "pariatur",
+            OauthToken: "voluptate",
+            PrettyPrint: false,
+            QuotaUser: "voluptatum",
             Rule: []string{
-                "repudiandae",
+                "quis",
+                "ab",
             },
             Screenshot: true,
             Strategy: "mobile",
-            URL: "a",
-            UserIP: "sint",
+            URL: "doloremque",
+            UserIP: "voluptas",
         },
     }
     

@@ -23,72 +23,71 @@ func main() {
     
     req := operations.CreateBudgetRequest{
         Headers: operations.CreateBudgetHeaders{
-            XAmzAlgorithm: "quae",
-            XAmzContentSha256: "id",
-            XAmzCredential: "eaque",
-            XAmzDate: "et",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "aliquid",
+            XAmzAlgorithm: "ea",
+            XAmzContentSha256: "ad",
+            XAmzCredential: "et",
+            XAmzDate: "nemo",
+            XAmzSecurityToken: "illo",
+            XAmzSignature: "animi",
+            XAmzSignedHeaders: "earum",
             XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
         },
         Request: shared.CreateBudgetRequest{
-            AccountID: "beatae",
+            AccountID: "vero",
             Budget: shared.Budget{
                 BudgetLimit: &shared.Spend{
-                    Amount: "tempore",
-                    Unit: "reprehenderit",
+                    Amount: "et",
+                    Unit: "quam",
                 },
-                BudgetName: "nostrum",
-                BudgetType: "RI_COVERAGE",
+                BudgetName: "iste",
+                BudgetType: "SAVINGS_PLANS_UTILIZATION",
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
-                        Amount: "necessitatibus",
-                        Unit: "illo",
+                        Amount: "eos",
+                        Unit: "aut",
                     },
                     ForecastedSpend: &shared.Spend{
-                        Amount: "aut",
-                        Unit: "quis",
+                        Amount: "ut",
+                        Unit: "enim",
                     },
                 },
                 CostFilters: map[string][]string{
-                    "ab": []string{
-                        "eveniet",
+                    "cupiditate": []string{
                         "id",
-                        "placeat",
-                    },
-                    "error": []string{
-                        "qui",
-                    },
-                    "ea": []string{
-                        "et",
-                        "nemo",
-                        "illo",
+                        "molestiae",
                     },
                 },
                 CostTypes: &shared.CostTypes{
-                    IncludeCredit: false,
+                    IncludeCredit: true,
                     IncludeDiscount: true,
                     IncludeOtherSubscription: false,
                     IncludeRecurring: false,
                     IncludeRefund: false,
                     IncludeSubscription: true,
-                    IncludeSupport: false,
+                    IncludeSupport: true,
                     IncludeTax: false,
-                    IncludeUpfront: false,
+                    IncludeUpfront: true,
                     UseAmortized: true,
                     UseBlended: true,
                 },
-                LastUpdatedTime: "1975-11-18T11:17:30Z",
+                LastUpdatedTime: "2020-04-14T04:17:49Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
-                    "cupiditate": shared.Spend{
-                        Amount: "aperiam",
-                        Unit: "id",
+                    "modi": shared.Spend{
+                        Amount: "dolor",
+                        Unit: "omnis",
+                    },
+                    "explicabo": shared.Spend{
+                        Amount: "voluptatum",
+                        Unit: "quia",
+                    },
+                    "perferendis": shared.Spend{
+                        Amount: "temporibus",
+                        Unit: "incidunt",
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "1998-02-23T08:29:03Z",
-                    Start: "1985-02-16T06:56:35Z",
+                    End: "1983-12-01T15:56:44Z",
+                    Start: "2006-01-19T06:53:53Z",
                 },
                 TimeUnit: "QUARTERLY",
             },
@@ -96,38 +95,15 @@ func main() {
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
                         ComparisonOperator: "EQUAL_TO",
-                        NotificationState: "ALARM",
-                        NotificationType: "ACTUAL",
-                        Threshold: 24.200001,
-                        ThresholdType: "PERCENTAGE",
-                    },
-                    Subscribers: []shared.Subscriber{
-                        shared.Subscriber{
-                            Address: "exercitationem",
-                            SubscriptionType: "SNS",
-                        },
-                    },
-                },
-                shared.NotificationWithSubscribers{
-                    Notification: shared.Notification{
-                        ComparisonOperator: "EQUAL_TO",
                         NotificationState: "OK",
                         NotificationType: "FORECASTED",
-                        Threshold: 61.099998,
-                        ThresholdType: "PERCENTAGE",
+                        Threshold: 7.100000,
+                        ThresholdType: "ABSOLUTE_VALUE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "perferendis",
+                            Address: "iste",
                             SubscriptionType: "EMAIL",
-                        },
-                        shared.Subscriber{
-                            Address: "incidunt",
-                            SubscriptionType: "EMAIL",
-                        },
-                        shared.Subscriber{
-                            Address: "velit",
-                            SubscriptionType: "SNS",
                         },
                     },
                 },

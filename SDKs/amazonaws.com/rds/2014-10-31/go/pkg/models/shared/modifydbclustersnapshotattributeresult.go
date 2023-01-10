@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDbClusterSnapshotAttributeResult struct {
-	DBClusterSnapshotAttributesResult *DbClusterSnapshotAttributesResult1
+	DBClusterSnapshotAttributesResult *DbClusterSnapshotAttributesResult
 }

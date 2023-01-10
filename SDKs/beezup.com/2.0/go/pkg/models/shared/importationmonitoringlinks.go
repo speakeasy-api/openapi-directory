@@ -3,14 +3,14 @@ package shared
 // ImportationMonitoringLinks
 // Applicable operations considering the state of the importation
 type ImportationMonitoringLinks struct {
-	ActivateAutoImport               map[string]interface{} `json:"activateAutoImport,omitempty"`
-	Cancel                           map[string]interface{} `json:"cancel,omitempty"`
-	CatalogColumns                   map[string]interface{} `json:"catalogColumns,omitempty"`
-	Commit                           map[string]interface{} `json:"commit,omitempty"`
-	CommitColumns                    map[string]interface{} `json:"commitColumns,omitempty"`
-	ConfigureRemainingCatalogColumns map[string]interface{} `json:"configureRemainingCatalogColumns,omitempty"`
-	CustomColumns                    map[string]interface{} `json:"customColumns,omitempty"`
-	ProductSamples                   map[string]interface{} `json:"productSamples,omitempty"`
-	Self                             map[string]interface{} `json:"self"`
-	TechnicalProgression             map[string]interface{} `json:"technicalProgression"`
+	ActivateAutoImport               *LinksImportationActivateAutoImportLink               `json:"activateAutoImport,omitempty"`
+	Cancel                           *LinksImportationCancelLink                           `json:"cancel,omitempty"`
+	CatalogColumns                   *LinksImportationGetDetectedCatalogColumnsLink        `json:"catalogColumns,omitempty"`
+	Commit                           *LinksImportationCommitLink                           `json:"commit,omitempty"`
+	CommitColumns                    *LinksImportationCommitColumnsLink                    `json:"commitColumns,omitempty"`
+	ConfigureRemainingCatalogColumns *LinksImportationConfigureRemainingCatalogColumnsLink `json:"configureRemainingCatalogColumns,omitempty"`
+	CustomColumns                    *LinksImportationGetCustomColumnsLink                 `json:"customColumns,omitempty"`
+	ProductSamples                   *LinksImportationGetProductSampleLink                 `json:"productSamples,omitempty"`
+	Self                             LinksImportationGetImportationMonitoringLink          `json:"self"`
+	TechnicalProgression             LinksImportationTechnicalProgressionLink              `json:"technicalProgression"`
 }

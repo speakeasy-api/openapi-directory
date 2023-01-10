@@ -35,20 +35,22 @@ func main() {
     req := operations.GetApplySecurityGroupsToLoadBalancerRequest{
         QueryParams: operations.GetApplySecurityGroupsToLoadBalancerQueryParams{
             Action: "ApplySecurityGroupsToLoadBalancer",
-            LoadBalancerName: "culpa",
+            LoadBalancerName: "molestias",
             SecurityGroups: []string{
-                "voluptas",
+                "fugiat",
+                "cumque",
+                "ad",
             },
             Version: "2012-06-01",
         },
         Headers: operations.GetApplySecurityGroupsToLoadBalancerHeaders{
-            XAmzAlgorithm: "veniam",
-            XAmzContentSha256: "architecto",
-            XAmzCredential: "molestias",
-            XAmzDate: "rerum",
-            XAmzSecurityToken: "quo",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "saepe",
+            XAmzAlgorithm: "officiis",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "atque",
+            XAmzDate: "ad",
+            XAmzSecurityToken: "ab",
+            XAmzSignature: "dolores",
+            XAmzSignedHeaders: "delectus",
         },
     }
     

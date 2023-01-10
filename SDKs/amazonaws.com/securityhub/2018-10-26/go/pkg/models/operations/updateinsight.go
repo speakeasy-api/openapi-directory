@@ -25,7 +25,7 @@ type UpdateInsightRequestBodyFilters struct {
 	CompanyName                                    []shared.StringFilter  `json:"CompanyName,omitempty"`
 	ComplianceStatus                               []shared.StringFilter  `json:"ComplianceStatus,omitempty"`
 	Confidence                                     []shared.NumberFilter  `json:"Confidence,omitempty"`
-	CreatedAt                                      []shared.DateFilter1   `json:"CreatedAt,omitempty"`
+	CreatedAt                                      []shared.DateFilter    `json:"CreatedAt,omitempty"`
 	Criticality                                    []shared.NumberFilter  `json:"Criticality,omitempty"`
 	Description                                    []shared.StringFilter  `json:"Description,omitempty"`
 	FindingProviderFieldsConfidence                []shared.NumberFilter  `json:"FindingProviderFieldsConfidence,omitempty"`
@@ -35,11 +35,11 @@ type UpdateInsightRequestBodyFilters struct {
 	FindingProviderFieldsSeverityLabel             []shared.StringFilter  `json:"FindingProviderFieldsSeverityLabel,omitempty"`
 	FindingProviderFieldsSeverityOriginal          []shared.StringFilter  `json:"FindingProviderFieldsSeverityOriginal,omitempty"`
 	FindingProviderFieldsTypes                     []shared.StringFilter  `json:"FindingProviderFieldsTypes,omitempty"`
-	FirstObservedAt                                []shared.DateFilter1   `json:"FirstObservedAt,omitempty"`
+	FirstObservedAt                                []shared.DateFilter    `json:"FirstObservedAt,omitempty"`
 	GeneratorID                                    []shared.StringFilter  `json:"GeneratorId,omitempty"`
 	ID                                             []shared.StringFilter  `json:"Id,omitempty"`
 	Keyword                                        map[string]interface{} `json:"Keyword,omitempty"`
-	LastObservedAt                                 []shared.DateFilter1   `json:"LastObservedAt,omitempty"`
+	LastObservedAt                                 []shared.DateFilter    `json:"LastObservedAt,omitempty"`
 	MalwareName                                    []shared.StringFilter  `json:"MalwareName,omitempty"`
 	MalwarePath                                    []shared.StringFilter  `json:"MalwarePath,omitempty"`
 	MalwareState                                   []shared.StringFilter  `json:"MalwareState,omitempty"`
@@ -56,14 +56,14 @@ type UpdateInsightRequestBodyFilters struct {
 	NetworkSourceMac                               []shared.StringFilter  `json:"NetworkSourceMac,omitempty"`
 	NetworkSourcePort                              []shared.NumberFilter  `json:"NetworkSourcePort,omitempty"`
 	NoteText                                       []shared.StringFilter  `json:"NoteText,omitempty"`
-	NoteUpdatedAt                                  []shared.DateFilter1   `json:"NoteUpdatedAt,omitempty"`
+	NoteUpdatedAt                                  []shared.DateFilter    `json:"NoteUpdatedAt,omitempty"`
 	NoteUpdatedBy                                  []shared.StringFilter  `json:"NoteUpdatedBy,omitempty"`
-	ProcessLaunchedAt                              []shared.DateFilter1   `json:"ProcessLaunchedAt,omitempty"`
+	ProcessLaunchedAt                              []shared.DateFilter    `json:"ProcessLaunchedAt,omitempty"`
 	ProcessName                                    []shared.StringFilter  `json:"ProcessName,omitempty"`
 	ProcessParentPid                               []shared.NumberFilter  `json:"ProcessParentPid,omitempty"`
 	ProcessPath                                    []shared.StringFilter  `json:"ProcessPath,omitempty"`
 	ProcessPid                                     []shared.NumberFilter  `json:"ProcessPid,omitempty"`
-	ProcessTerminatedAt                            []shared.DateFilter1   `json:"ProcessTerminatedAt,omitempty"`
+	ProcessTerminatedAt                            []shared.DateFilter    `json:"ProcessTerminatedAt,omitempty"`
 	ProductArn                                     []shared.StringFilter  `json:"ProductArn,omitempty"`
 	ProductFields                                  []shared.MapFilter     `json:"ProductFields,omitempty"`
 	ProductName                                    []shared.StringFilter  `json:"ProductName,omitempty"`
@@ -77,11 +77,11 @@ type UpdateInsightRequestBodyFilters struct {
 	ResourceAwsEc2InstanceIPV4Addresses            []shared.IPFilter      `json:"ResourceAwsEc2InstanceIpV4Addresses,omitempty"`
 	ResourceAwsEc2InstanceIPV6Addresses            []shared.IPFilter      `json:"ResourceAwsEc2InstanceIpV6Addresses,omitempty"`
 	ResourceAwsEc2InstanceKeyName                  []shared.StringFilter  `json:"ResourceAwsEc2InstanceKeyName,omitempty"`
-	ResourceAwsEc2InstanceLaunchedAt               []shared.DateFilter1   `json:"ResourceAwsEc2InstanceLaunchedAt,omitempty"`
+	ResourceAwsEc2InstanceLaunchedAt               []shared.DateFilter    `json:"ResourceAwsEc2InstanceLaunchedAt,omitempty"`
 	ResourceAwsEc2InstanceSubnetID                 []shared.StringFilter  `json:"ResourceAwsEc2InstanceSubnetId,omitempty"`
 	ResourceAwsEc2InstanceType                     []shared.StringFilter  `json:"ResourceAwsEc2InstanceType,omitempty"`
 	ResourceAwsEc2InstanceVpcID                    []shared.StringFilter  `json:"ResourceAwsEc2InstanceVpcId,omitempty"`
-	ResourceAwsIamAccessKeyCreatedAt               []shared.DateFilter1   `json:"ResourceAwsIamAccessKeyCreatedAt,omitempty"`
+	ResourceAwsIamAccessKeyCreatedAt               []shared.DateFilter    `json:"ResourceAwsIamAccessKeyCreatedAt,omitempty"`
 	ResourceAwsIamAccessKeyPrincipalName           []shared.StringFilter  `json:"ResourceAwsIamAccessKeyPrincipalName,omitempty"`
 	ResourceAwsIamAccessKeyStatus                  []shared.StringFilter  `json:"ResourceAwsIamAccessKeyStatus,omitempty"`
 	ResourceAwsIamAccessKeyUserName                map[string]interface{} `json:"ResourceAwsIamAccessKeyUserName,omitempty"`
@@ -90,10 +90,10 @@ type UpdateInsightRequestBodyFilters struct {
 	ResourceAwsS3BucketOwnerName                   []shared.StringFilter  `json:"ResourceAwsS3BucketOwnerName,omitempty"`
 	ResourceContainerImageID                       []shared.StringFilter  `json:"ResourceContainerImageId,omitempty"`
 	ResourceContainerImageName                     []shared.StringFilter  `json:"ResourceContainerImageName,omitempty"`
-	ResourceContainerLaunchedAt                    []shared.DateFilter1   `json:"ResourceContainerLaunchedAt,omitempty"`
+	ResourceContainerLaunchedAt                    []shared.DateFilter    `json:"ResourceContainerLaunchedAt,omitempty"`
 	ResourceContainerName                          []shared.StringFilter  `json:"ResourceContainerName,omitempty"`
 	ResourceDetailsOther                           []shared.MapFilter     `json:"ResourceDetailsOther,omitempty"`
-	ResourceID                                     []shared.StringFilter1 `json:"ResourceId,omitempty"`
+	ResourceID                                     []shared.StringFilter  `json:"ResourceId,omitempty"`
 	ResourcePartition                              []shared.StringFilter  `json:"ResourcePartition,omitempty"`
 	ResourceRegion                                 []shared.StringFilter  `json:"ResourceRegion,omitempty"`
 	ResourceTags                                   []shared.MapFilter     `json:"ResourceTags,omitempty"`
@@ -103,14 +103,14 @@ type UpdateInsightRequestBodyFilters struct {
 	SeverityProduct                                map[string]interface{} `json:"SeverityProduct,omitempty"`
 	SourceURL                                      []shared.StringFilter  `json:"SourceUrl,omitempty"`
 	ThreatIntelIndicatorCategory                   []shared.StringFilter  `json:"ThreatIntelIndicatorCategory,omitempty"`
-	ThreatIntelIndicatorLastObservedAt             []shared.DateFilter1   `json:"ThreatIntelIndicatorLastObservedAt,omitempty"`
+	ThreatIntelIndicatorLastObservedAt             []shared.DateFilter    `json:"ThreatIntelIndicatorLastObservedAt,omitempty"`
 	ThreatIntelIndicatorSource                     []shared.StringFilter  `json:"ThreatIntelIndicatorSource,omitempty"`
 	ThreatIntelIndicatorSourceURL                  []shared.StringFilter  `json:"ThreatIntelIndicatorSourceUrl,omitempty"`
 	ThreatIntelIndicatorType                       []shared.StringFilter  `json:"ThreatIntelIndicatorType,omitempty"`
 	ThreatIntelIndicatorValue                      []shared.StringFilter  `json:"ThreatIntelIndicatorValue,omitempty"`
 	Title                                          []shared.StringFilter  `json:"Title,omitempty"`
 	Type                                           []shared.StringFilter  `json:"Type,omitempty"`
-	UpdatedAt                                      []shared.DateFilter1   `json:"UpdatedAt,omitempty"`
+	UpdatedAt                                      []shared.DateFilter    `json:"UpdatedAt,omitempty"`
 	UserDefinedFields                              []shared.MapFilter     `json:"UserDefinedFields,omitempty"`
 	VerificationState                              []shared.StringFilter  `json:"VerificationState,omitempty"`
 	WorkflowState                                  []shared.StringFilter  `json:"WorkflowState,omitempty"`

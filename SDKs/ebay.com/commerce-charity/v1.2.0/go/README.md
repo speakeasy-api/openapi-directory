@@ -29,10 +29,10 @@ func main() {
             },
         },
         PathParams: operations.GetCharityOrgPathParams{
-            CharityOrgID: "doloribus",
+            CharityOrgID: "et",
         },
         Headers: operations.GetCharityOrgHeaders{
-            XEBAYCMARKETPLACEID: "ab",
+            XEBAYCMARKETPLACEID: "maxime",
         },
     }
     

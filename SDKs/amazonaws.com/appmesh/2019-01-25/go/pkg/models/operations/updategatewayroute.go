@@ -30,7 +30,7 @@ type UpdateGatewayRouteRequestBodySpec struct {
 	GrpcRoute  *shared.GrpcGatewayRoute `json:"grpcRoute,omitempty"`
 	Http2Route *shared.HTTPGatewayRoute `json:"http2Route,omitempty"`
 	HTTPRoute  *shared.HTTPGatewayRoute `json:"httpRoute,omitempty"`
-	Priority   map[string]interface{}   `json:"priority,omitempty"`
+	Priority   *int64                   `json:"priority,omitempty"`
 }
 
 type UpdateGatewayRouteRequestBody struct {

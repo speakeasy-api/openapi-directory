@@ -387,20 +387,26 @@ type WebinarCreate201ApplicationJSONTrackingFields struct {
 // WebinarCreate201ApplicationJSON
 // Webinar object.
 type WebinarCreate201ApplicationJSON struct {
-	Agenda         *string                                           `json:"agenda,omitempty"`
-	CreatedAt      *time.Time                                        `json:"created_at,omitempty"`
-	Duration       *int64                                            `json:"duration,omitempty"`
-	JoinURL        *string                                           `json:"join_url,omitempty"`
-	Occurrences    []WebinarCreate201ApplicationJSONOccurrences      `json:"occurrences,omitempty"`
-	Password       *string                                           `json:"password,omitempty"`
-	Recurrence     *WebinarCreate201ApplicationJSONRecurrenceWebinar `json:"recurrence,omitempty"`
-	Settings       *WebinarCreate201ApplicationJSONSettings          `json:"settings,omitempty"`
-	StartTime      *time.Time                                        `json:"start_time,omitempty"`
-	StartURL       *string                                           `json:"start_url,omitempty"`
-	Timezone       *string                                           `json:"timezone,omitempty"`
-	Topic          *string                                           `json:"topic,omitempty"`
-	TrackingFields []WebinarCreate201ApplicationJSONTrackingFields   `json:"tracking_fields,omitempty"`
-	Type           *int64                                            `json:"type,omitempty"`
+	Agenda                       *string                                           `json:"agenda,omitempty"`
+	CreatedAt                    *time.Time                                        `json:"created_at,omitempty"`
+	Duration                     *int64                                            `json:"duration,omitempty"`
+	HostEmail                    *string                                           `json:"host_email,omitempty"`
+	HostID                       *string                                           `json:"host_id,omitempty"`
+	ID                           *int64                                            `json:"id,omitempty"`
+	JoinURL                      *string                                           `json:"join_url,omitempty"`
+	Occurrences                  []WebinarCreate201ApplicationJSONOccurrences      `json:"occurrences,omitempty"`
+	Password                     *string                                           `json:"password,omitempty"`
+	Recurrence                   *WebinarCreate201ApplicationJSONRecurrenceWebinar `json:"recurrence,omitempty"`
+	RegistrantsConfirmationEmail *bool                                             `json:"registrants_confirmation_email,omitempty"`
+	Settings                     *WebinarCreate201ApplicationJSONSettings          `json:"settings,omitempty"`
+	StartTime                    *time.Time                                        `json:"start_time,omitempty"`
+	StartURL                     *string                                           `json:"start_url,omitempty"`
+	TemplateID                   *string                                           `json:"template_id,omitempty"`
+	Timezone                     *string                                           `json:"timezone,omitempty"`
+	Topic                        *string                                           `json:"topic,omitempty"`
+	TrackingFields               []WebinarCreate201ApplicationJSONTrackingFields   `json:"tracking_fields,omitempty"`
+	Type                         *int64                                            `json:"type,omitempty"`
+	UUID                         *string                                           `json:"uuid,omitempty"`
 }
 
 type WebinarCreateRequest struct {

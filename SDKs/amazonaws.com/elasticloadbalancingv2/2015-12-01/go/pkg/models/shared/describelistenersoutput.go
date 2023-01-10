@@ -1,6 +1,6 @@
 package shared
 
 type DescribeListenersOutput struct {
-	Listeners  []Listener1
+	Listeners  []Listener
 	NextMarker *string
 }

@@ -34,39 +34,39 @@ func main() {
     
     req := operations.CreateBatchInferenceJobRequest{
         Headers: operations.CreateBatchInferenceJobHeaders{
-            XAmzAlgorithm: "ratione",
-            XAmzContentSha256: "est",
-            XAmzCredential: "sed",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "quae",
-            XAmzSignature: "officia",
-            XAmzSignedHeaders: "aperiam",
+            XAmzAlgorithm: "aut",
+            XAmzContentSha256: "laborum",
+            XAmzCredential: "praesentium",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "ullam",
+            XAmzSignature: "aspernatur",
+            XAmzSignedHeaders: "laudantium",
             XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
         },
         Request: shared.CreateBatchInferenceJobRequest{
             BatchInferenceJobConfig: &shared.BatchInferenceJobConfig{
                 ItemExplorationConfig: map[string]string{
-                    "impedit": "debitis",
-                    "quae": "rerum",
+                    "doloribus": "rem",
+                    "sit": "aut",
                 },
             },
-            FilterArn: "ut",
+            FilterArn: "non",
             JobInput: shared.BatchInferenceJobInput{
                 S3DataSource: shared.S3DataConfig{
-                    KmsKeyArn: "corrupti",
-                    Path: "excepturi",
+                    KmsKeyArn: "quod",
+                    Path: "ut",
                 },
             },
-            JobName: "et",
+            JobName: "voluptas",
             JobOutput: shared.BatchInferenceJobOutput{
                 S3DataDestination: shared.S3DataConfig{
-                    KmsKeyArn: "asperiores",
-                    Path: "fugit",
+                    KmsKeyArn: "atque",
+                    Path: "et",
                 },
             },
-            NumResults: 279167319541762584,
-            RoleArn: "ratione",
-            SolutionVersionArn: "voluptatem",
+            NumResults: 7799152415069629267,
+            RoleArn: "ipsum",
+            SolutionVersionArn: "dolor",
         },
     }
     

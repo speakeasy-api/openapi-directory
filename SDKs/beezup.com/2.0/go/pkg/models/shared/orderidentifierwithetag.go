@@ -1,5 +1,8 @@
 package shared
 
 type OrderIdentifierWithETag struct {
-	Etag string `json:"etag"`
+	AccountID                int32  `json:"accountId"`
+	BeezUPOrderID            string `json:"beezUPOrderId"`
+	Etag                     string `json:"etag"`
+	MarketplaceTechnicalCode string `json:"marketplaceTechnicalCode"`
 }

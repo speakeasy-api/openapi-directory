@@ -23,18 +23,18 @@ func main() {
     
     req := operations.AssociateConnectionAliasRequest{
         Headers: operations.AssociateConnectionAliasHeaders{
-            XAmzAlgorithm: "voluptate",
-            XAmzContentSha256: "itaque",
-            XAmzCredential: "harum",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "commodi",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "quasi",
+            XAmzAlgorithm: "hic",
+            XAmzContentSha256: "quisquam",
+            XAmzCredential: "sit",
+            XAmzDate: "autem",
+            XAmzSecurityToken: "sed",
+            XAmzSignature: "itaque",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "WorkspacesService.AssociateConnectionAlias",
         },
         Request: shared.AssociateConnectionAliasRequest{
-            AliasID: "praesentium",
-            ResourceID: "impedit",
+            AliasID: "et",
+            ResourceID: "sequi",
         },
     }
     

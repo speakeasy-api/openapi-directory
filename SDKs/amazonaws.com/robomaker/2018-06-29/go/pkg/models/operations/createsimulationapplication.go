@@ -30,7 +30,7 @@ type CreateSimulationApplicationRequestBodyRenderingEngine struct {
 // CreateSimulationApplicationRequestBodyRobotSoftwareSuite
 // Information about a robot software suite (ROS distribution).
 type CreateSimulationApplicationRequestBodyRobotSoftwareSuite struct {
-	Name    map[string]interface{}                    `json:"name,omitempty"`
+	Name    *shared.RobotSoftwareSuiteTypeEnum        `json:"name,omitempty"`
 	Version *shared.RobotSoftwareSuiteVersionTypeEnum `json:"version,omitempty"`
 }
 

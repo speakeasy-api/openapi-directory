@@ -1,5 +1,20 @@
 package shared
 
 type DocumentInSearch struct {
-	SearchResultReason *string `json:"search_result_reason,omitempty"`
+	FileType             *string                `json:"file_type,omitempty"`
+	HasCustomPackage     *bool                  `json:"has_custom_package,omitempty"`
+	ID                   *int64                 `json:"id,omitempty"`
+	Links                *DocumentLinks         `json:"links,omitempty"`
+	ManualFiles          []ManualFile           `json:"manual_files,omitempty"`
+	Name                 *string                `json:"name,omitempty"`
+	ProjectID            *int64                 `json:"project_id,omitempty"`
+	ReviewInManualEditor *bool                  `json:"review_in_manual_editor,omitempty"`
+	Scheme               map[string]interface{} `json:"scheme,omitempty"`
+	SearchResultReason   *string                `json:"search_result_reason,omitempty"`
+	SearchScore          *float32               `json:"search_score,omitempty"`
+	SourceLanguage       *string                `json:"source_language,omitempty"`
+	Subject              *string                `json:"subject,omitempty"`
+	TargetLanguages      []string               `json:"target_languages,omitempty"`
+	UploadedAt           *int64                 `json:"uploaded_at,omitempty"`
+	WordCount            *int64                 `json:"word_count,omitempty"`
 }

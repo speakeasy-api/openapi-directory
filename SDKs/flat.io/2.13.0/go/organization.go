@@ -622,12 +622,12 @@ func (s *Organization) UpdateOrganizationUser(ctx context.Context, request opera
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.UpdateOrganizationUser200ApplicationJSON
+			var out *shared.UserDetailsAdmin
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.UpdateOrganizationUser200ApplicationJSONObject = out
+			res.UserDetailsAdmin = out
 		}
 	default:
 		switch {

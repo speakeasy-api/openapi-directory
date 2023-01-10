@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                Udf1: "ea",
-                Udf2: "doloremque",
+                Udf1: "sit",
+                Udf2: "aut",
             },
-            ConsentArtifact: "sit",
+            ConsentArtifact: "temporibus",
             Format: "pdf",
-            TxnID: "iste",
+            TxnID: "doloribus",
         },
     }
     

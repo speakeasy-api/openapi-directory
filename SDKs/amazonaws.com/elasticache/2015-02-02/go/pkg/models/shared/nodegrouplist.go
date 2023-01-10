@@ -4,7 +4,7 @@ package shared
 // Represents a collection of cache nodes in a replication group. One node in the node group is the read/write primary node. All the other nodes are read-only Replica nodes.
 type NodeGroupList struct {
 	NodeGroupID      *string
-	NodeGroupMembers []map[string]interface{}
+	NodeGroupMembers []NodeGroupMemberList
 	PrimaryEndpoint  *Endpoint
 	ReaderEndpoint   *Endpoint
 	Slots            *string

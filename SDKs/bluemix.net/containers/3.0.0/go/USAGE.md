@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetContainersMessagesRequest{
         Headers: operations.GetContainersMessagesHeaders{
-            XAuthProjectID: "veritatis",
-            XAuthToken: "hic",
+            XAuthProjectID: "amet",
+            XAuthToken: "eos",
         },
     }
     

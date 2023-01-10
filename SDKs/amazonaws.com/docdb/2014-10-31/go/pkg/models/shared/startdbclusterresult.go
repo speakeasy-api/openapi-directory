@@ -1,5 +1,5 @@
 package shared
 
 type StartDbClusterResult struct {
-	DBCluster *DbCluster1
+	DBCluster *DbCluster
 }

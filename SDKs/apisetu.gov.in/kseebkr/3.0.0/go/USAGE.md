@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.SscerRequestBody{
             CertificateParameters: &operations.SscerRequestBodyCertificateParameters{
-                DOB: "et",
-                FullName: "magni",
-                REGNO: "nemo",
-                UID: "ad",
+                DOB: "id",
+                FullName: "minima",
+                REGNO: "aut",
+                UID: "ea",
             },
-            ConsentArtifact: "sapiente",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "fuga",
+            TxnID: "enim",
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type CreateDbInstanceReadReplicaResult struct {
-	DBInstance *DbInstance1
+	DBInstance *DbInstance
 }

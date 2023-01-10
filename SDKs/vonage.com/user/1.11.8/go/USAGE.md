@@ -18,8 +18,8 @@ func main() {
             },
         },
         PathParams: operations.UserCtrlGetUserByIDPathParams{
-            AccountID: "delectus",
-            UserID: 6.200000,
+            AccountID: "autem",
+            UserID: 67.099998,
         },
     }
     

@@ -25,17 +25,17 @@ func main() {
     req := operations.WebfontsWebfontsListRequest{
         QueryParams: operations.WebfontsWebfontsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "soluta",
-            Alt: "proto",
-            Callback: "hic",
-            Fields: "recusandae",
-            Key: "earum",
-            OauthToken: "quidem",
+            AccessToken: "consequatur",
+            Alt: "json",
+            Callback: "at",
+            Fields: "omnis",
+            Key: "dolores",
+            OauthToken: "perferendis",
             PrettyPrint: false,
-            QuotaUser: "perspiciatis",
-            Sort: "DATE",
-            UploadType: "eveniet",
-            UploadProtocol: "iure",
+            QuotaUser: "debitis",
+            Sort: "STYLE",
+            UploadType: "doloribus",
+            UploadProtocol: "fugiat",
         },
     }
     

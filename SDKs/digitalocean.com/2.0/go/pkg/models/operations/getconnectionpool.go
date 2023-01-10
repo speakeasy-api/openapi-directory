@@ -10,7 +10,7 @@ type GetConnectionPoolPathParams struct {
 }
 
 type GetConnectionPool200ApplicationJSON struct {
-	Pool shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1poolsGetResponses200ContentApplication1jsonSchemaPropertiesPoolsItems `json:"pool"`
+	Pool shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1poolsGetResponses200ContentApplication1jsonSchemaPropertiesPoolsItems1 `json:"pool"`
 }
 
 type GetConnectionPool401ApplicationJSON struct {

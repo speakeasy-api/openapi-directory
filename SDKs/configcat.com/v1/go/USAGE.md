@@ -24,18 +24,18 @@ func main() {
     
     req := operations.GetAuditlogsRequest{
         PathParams: operations.GetAuditlogsPathParams{
-            ProductID: "quidem",
+            ProductID: "ea",
         },
         QueryParams: operations.GetAuditlogsQueryParams{
             AuditLogType: map[string]interface{}{
-                "sint": "dolorem",
-                "qui": "esse",
-                "et": "eum",
+                "dolor": "voluptatem",
+                "illo": "est",
+                "reprehenderit": "facilis",
             },
-            ConfigID: "quod",
-            EnvironmentID: "animi",
-            FromUtcDateTime: "1996-04-07T13:12:47Z",
-            ToUtcDateTime: "1985-09-19T09:58:13Z",
+            ConfigID: "aliquid",
+            EnvironmentID: "iure",
+            FromUtcDateTime: "2004-04-09T14:38:57Z",
+            ToUtcDateTime: "1997-12-25T03:44:42Z",
         },
     }
     

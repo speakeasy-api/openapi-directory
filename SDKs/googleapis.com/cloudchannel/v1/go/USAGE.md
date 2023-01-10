@@ -21,47 +21,48 @@ func main() {
             },
         },
         PathParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams{
-            Parent: "ut",
+            Parent: "a",
         },
         QueryParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "deleniti",
+            DollarXgafv: "1",
+            AccessToken: "aut",
             Alt: "media",
-            Callback: "enim",
+            Callback: "nihil",
             Fields: "qui",
-            Key: "explicabo",
-            OauthToken: "sunt",
-            PrettyPrint: true,
-            QuotaUser: "quod",
-            UploadType: "eum",
-            UploadProtocol: "recusandae",
+            Key: "molestiae",
+            OauthToken: "provident",
+            PrettyPrint: false,
+            QuotaUser: "assumenda",
+            UploadType: "dicta",
+            UploadProtocol: "ratione",
         },
         Request: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "expedita",
+                            Value: "ipsam",
                         },
                     },
                 },
                 ChannelPartnerGranularity: map[string]interface{}{
-                    "eligendi": "est",
-                    "similique": "architecto",
+                    "quibusdam": "voluptatem",
+                    "aut": "est",
+                    "sit": "ab",
                 },
                 ConditionalOverrides: []shared.GoogleCloudChannelV1ConditionalOverride{
                     shared.GoogleCloudChannelV1ConditionalOverride{
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "voluptatem",
+                                    Value: "quam",
                                 },
                             },
                         },
-                        RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                        RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "reiciendis",
+                                SkuGroup: "eos",
                             },
                         },
                     },
@@ -69,25 +70,25 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "et",
+                                    Value: "quo",
                                 },
                             },
                         },
-                        RebillingBasis: "COST_AT_LIST",
+                        RebillingBasis: "DIRECT_CUSTOMER_COST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "minima",
+                                SkuGroup: "quo",
                             },
                         },
                     },
                 },
                 EffectiveInvoiceMonth: &shared.GoogleTypeDate{
-                    Day: 8400191370363322538,
-                    Month: 1679234503331891236,
-                    Year: 922063643662310344,
+                    Day: 8375693332495693837,
+                    Month: 7568906015139679031,
+                    Year: 7567576333916807437,
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "qui",
+                    Entitlement: "nemo",
                 },
                 RebillingBasis: "COST_AT_LIST",
             },

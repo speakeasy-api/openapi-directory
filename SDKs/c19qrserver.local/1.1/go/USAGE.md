@@ -23,7 +23,7 @@ func main() {
     
     req := operations.DeleteSigninSigninIDRequest{
         PathParams: operations.DeleteSigninSigninIDPathParams{
-            SigninID: 4469698529398220169,
+            SigninID: 1213256779453366885,
         },
     }
     

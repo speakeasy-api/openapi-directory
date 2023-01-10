@@ -34,13 +34,13 @@ func main() {
     
     req := operations.DescribeRecommendationExportJobsRequest{
         Headers: operations.DescribeRecommendationExportJobsHeaders{
-            XAmzAlgorithm: "inventore",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "voluptates",
-            XAmzDate: "quisquam",
-            XAmzSecurityToken: "architecto",
-            XAmzSignature: "sunt",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "itaque",
+            XAmzContentSha256: "corrupti",
+            XAmzCredential: "voluptatem",
+            XAmzDate: "quasi",
+            XAmzSecurityToken: "repellat",
+            XAmzSignature: "rem",
+            XAmzSignedHeaders: "nisi",
             XAmzTarget: "ComputeOptimizerService.DescribeRecommendationExportJobs",
         },
         Request: shared.DescribeRecommendationExportJobsRequest{
@@ -48,32 +48,18 @@ func main() {
                 shared.JobFilter{
                     Name: "JobStatus",
                     Values: []string{
-                        "et",
-                        "ipsam",
-                    },
-                },
-                shared.JobFilter{
-                    Name: "JobStatus",
-                    Values: []string{
-                        "inventore",
-                        "impedit",
-                        "molestiae",
-                    },
-                },
-                shared.JobFilter{
-                    Name: "ResourceType",
-                    Values: []string{
-                        "consectetur",
-                        "repellendus",
-                        "molestias",
+                        "soluta",
+                        "laudantium",
                     },
                 },
             },
             JobIds: []string{
-                "quia",
+                "eaque",
+                "ex",
+                "cum",
             },
-            MaxResults: 6233872421368037055,
-            NextToken: "sit",
+            MaxResults: 7436471626629558277,
+            NextToken: "sunt",
         },
     }
     

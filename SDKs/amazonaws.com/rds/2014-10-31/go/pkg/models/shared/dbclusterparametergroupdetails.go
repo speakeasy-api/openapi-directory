@@ -4,5 +4,5 @@ package shared
 // Provides details about a DB cluster parameter group including the parameters in the DB cluster parameter group.
 type DbClusterParameterGroupDetails struct {
 	Marker     *string
-	Parameters []map[string]interface{}
+	Parameters []ParametersList
 }

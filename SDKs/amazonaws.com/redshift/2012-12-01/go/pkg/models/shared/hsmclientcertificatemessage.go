@@ -3,6 +3,6 @@ package shared
 // HsmClientCertificateMessage
 // <p/>
 type HsmClientCertificateMessage struct {
-	HsmClientCertificates []map[string]interface{}
+	HsmClientCertificates []HsmClientCertificateList
 	Marker                *string
 }

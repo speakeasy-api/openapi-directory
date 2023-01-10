@@ -33,6 +33,7 @@ const (
 // The H.323/SIP device object.
 type DeviceListH323SipDeviceListTheH323SipDeviceObject struct {
 	Encryption DeviceListH323SipDeviceListTheH323SipDeviceObjectEncryptionEnum `json:"encryption"`
+	ID         *string                                                         `json:"id,omitempty"`
 	IP         string                                                          `json:"ip"`
 	Name       string                                                          `json:"name"`
 	Protocol   DeviceListH323SipDeviceListTheH323SipDeviceObjectProtocolEnum   `json:"protocol"`
@@ -41,7 +42,12 @@ type DeviceListH323SipDeviceListTheH323SipDeviceObject struct {
 // DeviceListH323SipDeviceList
 // Pagination Object.
 type DeviceListH323SipDeviceList struct {
-	Devices []DeviceListH323SipDeviceListTheH323SipDeviceObject `json:"devices,omitempty"`
+	Devices       []DeviceListH323SipDeviceListTheH323SipDeviceObject `json:"devices,omitempty"`
+	NextPageToken *string                                             `json:"next_page_token,omitempty"`
+	PageCount     *int64                                              `json:"page_count,omitempty"`
+	PageNumber    *int64                                              `json:"page_number,omitempty"`
+	PageSize      *int64                                              `json:"page_size,omitempty"`
+	TotalRecords  *int64                                              `json:"total_records,omitempty"`
 }
 
 type DeviceListRequest struct {

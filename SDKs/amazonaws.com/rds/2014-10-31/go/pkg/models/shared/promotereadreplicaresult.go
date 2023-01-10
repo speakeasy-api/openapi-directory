@@ -1,5 +1,5 @@
 package shared
 
 type PromoteReadReplicaResult struct {
-	DBInstance *DbInstance1
+	DBInstance *DbInstance
 }

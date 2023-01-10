@@ -16,6 +16,8 @@ type ReportCloudRecordingSecurity struct {
 
 type ReportCloudRecording200ApplicationJSON struct {
 	CloudRecordingStorage []interface{} `json:"cloud_recording_storage,omitempty"`
+	From                  *time.Time    `json:"from,omitempty"`
+	To                    *time.Time    `json:"to,omitempty"`
 }
 
 type ReportCloudRecordingRequest struct {

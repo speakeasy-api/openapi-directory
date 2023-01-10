@@ -29,14 +29,24 @@ func main() {
             },
         },
         PathParams: operations.BulkCreateAdsByInventoryReferencePathParams{
-            CampaignID: "ducimus",
+            CampaignID: "maiores",
         },
         Request: shared.BulkCreateAdsByInventoryReferenceRequest{
             Requests: []shared.CreateAdsByInventoryReferenceRequest{
                 shared.CreateAdsByInventoryReferenceRequest{
-                    BidPercentage: "atque",
-                    InventoryReferenceID: "quaerat",
-                    InventoryReferenceType: "suscipit",
+                    BidPercentage: "dolor",
+                    InventoryReferenceID: "tempora",
+                    InventoryReferenceType: "et",
+                },
+                shared.CreateAdsByInventoryReferenceRequest{
+                    BidPercentage: "harum",
+                    InventoryReferenceID: "est",
+                    InventoryReferenceType: "quibusdam",
+                },
+                shared.CreateAdsByInventoryReferenceRequest{
+                    BidPercentage: "minima",
+                    InventoryReferenceID: "aspernatur",
+                    InventoryReferenceType: "a",
                 },
             },
         },

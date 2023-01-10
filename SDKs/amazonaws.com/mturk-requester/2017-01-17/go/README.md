@@ -34,18 +34,18 @@ func main() {
     
     req := operations.AcceptQualificationRequestRequest{
         Headers: operations.AcceptQualificationRequestHeaders{
-            XAmzAlgorithm: "necessitatibus",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "quod",
-            XAmzDate: "maxime",
-            XAmzSecurityToken: "minima",
-            XAmzSignature: "eligendi",
-            XAmzSignedHeaders: "dolorum",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "minus",
+            XAmzDate: "iste",
+            XAmzSecurityToken: "tempora",
+            XAmzSignature: "officia",
+            XAmzSignedHeaders: "ducimus",
             XAmzTarget: "MTurkRequesterServiceV20170117.AcceptQualificationRequest",
         },
         Request: shared.AcceptQualificationRequestRequest{
-            IntegerValue: 6448156504048960045,
-            QualificationRequestID: "nostrum",
+            IntegerValue: 8893427221521046744,
+            QualificationRequestID: "perferendis",
         },
     }
     

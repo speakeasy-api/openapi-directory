@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.RatcrRequestBody{
             CertificateParameters: &operations.RatcrRequestBodyCertificateParameters{
-                UID: "eos",
+                UID: "aut",
             },
-            ConsentArtifact: "accusantium",
+            ConsentArtifact: "fugiat",
             Format: "pdf",
-            TxnID: "qui",
+            TxnID: "odio",
         },
     }
     

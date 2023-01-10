@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.ImporterExporterCodeVerificationAPIPathParams{
-            Iec: "voluptate",
+            Iec: "accusamus",
         },
     }
     

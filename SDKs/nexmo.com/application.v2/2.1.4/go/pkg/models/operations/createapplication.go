@@ -1,12 +1,26 @@
 package operations
 
+import (
+	"openapi/pkg/models/shared"
+)
+
 type CreateApplication201ApplicationJSONKeys struct {
 	PrivateKey *string `json:"private_key,omitempty"`
 	PublicKey  *string `json:"public_key,omitempty"`
 }
 
+// CreateApplication201ApplicationJSONPrivacy
+// Application privacy config
+type CreateApplication201ApplicationJSONPrivacy struct {
+	ImproveAi *bool `json:"improve_ai,omitempty"`
+}
+
 type CreateApplication201ApplicationJSON struct {
-	Keys *CreateApplication201ApplicationJSONKeys `json:"keys,omitempty"`
+	Capabilities *shared.Capabilities                        `json:"capabilities,omitempty"`
+	ID           *string                                     `json:"id,omitempty"`
+	Keys         *CreateApplication201ApplicationJSONKeys    `json:"keys,omitempty"`
+	Name         *string                                     `json:"name,omitempty"`
+	Privacy      *CreateApplication201ApplicationJSONPrivacy `json:"privacy,omitempty"`
 }
 
 type CreateApplicationRequest struct {

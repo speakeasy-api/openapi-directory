@@ -1586,7 +1586,7 @@ func (s *Apps) UpdateApp(ctx context.Context, request operations.UpdateAppReques
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Onev21appsPostResponses200ContentApplication1jsonSchema1
+			var out *shared.Onev21appsPostResponses200ContentApplication1jsonSchema
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

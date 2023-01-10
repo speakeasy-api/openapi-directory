@@ -1,0 +1,11 @@
+package shared
+
+// GlobalClusterMemberList
+//
+//	A data structure with information about any primary and secondary clusters associated with an Aurora global database.
+type GlobalClusterMemberList struct {
+	DBClusterArn                *string
+	GlobalWriteForwardingStatus *WriteForwardingStatusEnum
+	IsWriter                    *bool
+	Readers                     []string
+}

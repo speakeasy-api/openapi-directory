@@ -27,7 +27,7 @@ func main() {
             Type: "vel",
         },
         Headers: operations.GetAPICardHeaders{
-            XAPIKey: "quas",
+            XAPIKey: "voluptatem",
         },
     }
     

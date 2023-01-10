@@ -18,7 +18,7 @@ func main() {
             },
         },
         QueryParams: operations.GetFactFodQueryParams{
-            Category: "laudantium",
+            Category: "et",
         },
     }
     

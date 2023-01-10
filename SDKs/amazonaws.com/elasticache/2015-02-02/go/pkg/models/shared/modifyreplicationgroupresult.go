@@ -1,5 +1,5 @@
 package shared
 
 type ModifyReplicationGroupResult struct {
-	ReplicationGroup *ReplicationGroup1
+	ReplicationGroup *ReplicationGroup
 }

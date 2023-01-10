@@ -1,0 +1,9 @@
+package shared
+
+// GlobalClusterMemberList
+// A data structure with information about any primary and secondary clusters associated with an Amazon DocumentDB global clusters.
+type GlobalClusterMemberList struct {
+	DBClusterArn *string
+	IsWriter     *bool
+	Readers      []string
+}

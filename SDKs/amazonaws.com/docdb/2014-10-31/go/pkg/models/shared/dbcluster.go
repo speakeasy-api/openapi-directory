@@ -7,13 +7,13 @@ import (
 // DbCluster
 // Detailed information about a cluster.
 type DbCluster struct {
-	AssociatedRoles              []map[string]interface{}
+	AssociatedRoles              []DbClusterRoles
 	AvailabilityZones            []map[string]interface{}
 	BackupRetentionPeriod        *int64
 	ClusterCreateTime            *time.Time
 	DBClusterArn                 *string
 	DBClusterIdentifier          *string
-	DBClusterMembers             []map[string]interface{}
+	DBClusterMembers             []DbClusterMemberList
 	DBClusterParameterGroup      *string
 	DBSubnetGroup                *string
 	DbClusterResourceID          *string
@@ -24,7 +24,7 @@ type DbCluster struct {
 	Engine                       *string
 	EngineVersion                *string
 	HostedZoneID                 *string
-	KmsKeyID                     map[string]interface{}
+	KmsKeyID                     *string
 	LatestRestorableTime         *time.Time
 	MasterUsername               *string
 	MultiAZ                      *bool
@@ -37,5 +37,5 @@ type DbCluster struct {
 	ReplicationSourceIdentifier  *string
 	Status                       *string
 	StorageEncrypted             *bool
-	VpcSecurityGroups            []map[string]interface{}
+	VpcSecurityGroups            []VpcSecurityGroupMembershipList
 }

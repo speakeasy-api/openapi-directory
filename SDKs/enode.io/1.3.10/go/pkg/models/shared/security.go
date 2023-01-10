@@ -1,9 +1,9 @@
 package shared
 
-type SchemeUserAccessToken struct {
+type SchemeClientAccessToken struct {
 	Authorization string `security:"name=Authorization"`
 }
 
-type SchemeClientAccessToken struct {
+type SchemeUserAccessToken struct {
 	Authorization string `security:"name=Authorization"`
 }

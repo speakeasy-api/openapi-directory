@@ -21,63 +21,61 @@ func main() {
             },
         },
         QueryParams: operations.CommentanalyzerCommentsAnalyzeQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "aut",
+            DollarXgafv: "2",
+            AccessToken: "cupiditate",
             Alt: "json",
-            Callback: "reiciendis",
-            Fields: "voluptas",
-            Key: "dolorem",
-            OauthToken: "rem",
+            Callback: "aliquid",
+            Fields: "et",
+            Key: "adipisci",
+            OauthToken: "et",
             PrettyPrint: false,
-            QuotaUser: "voluptatum",
-            UploadType: "veritatis",
-            UploadProtocol: "quisquam",
+            QuotaUser: "itaque",
+            UploadType: "illum",
+            UploadProtocol: "voluptas",
         },
         Request: &shared.AnalyzeCommentRequest{
-            ClientToken: "ducimus",
+            ClientToken: "a",
             Comment: &shared.TextEntry{
-                Text: "omnis",
-                Type: "HTML",
+                Text: "debitis",
+                Type: "PLAIN_TEXT",
             },
-            CommunityID: "fugit",
+            CommunityID: "molestiae",
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "hic",
-                        Type: "HTML",
+                        Text: "labore",
+                        Type: "PLAIN_TEXT",
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "quis",
-                        Type: "HTML",
+                        Text: "consectetur",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "facere",
+                        Text: "ipsam",
                         Type: "HTML",
                     },
                     shared.TextEntry{
-                        Text: "dolorem",
-                        Type: "HTML",
-                    },
-                    shared.TextEntry{
-                        Text: "quis",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: "cum",
+                        Type: "PLAIN_TEXT",
                     },
                 },
             },
             DoNotStore: true,
             Languages: []string{
-                "eius",
+                "repellat",
+                "excepturi",
+                "voluptatem",
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
-                "ipsa": shared.AttributeParameters{
-                    ScoreThreshold: 54.200001,
-                    ScoreType: "SCORE_TYPE_UNSPECIFIED",
+                "id": shared.AttributeParameters{
+                    ScoreThreshold: 28.200001,
+                    ScoreType: "RAW",
                 },
             },
-            SessionID: "consequatur",
-            SpanAnnotations: true,
+            SessionID: "consectetur",
+            SpanAnnotations: false,
         },
     }
     

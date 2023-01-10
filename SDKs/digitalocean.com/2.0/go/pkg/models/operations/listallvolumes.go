@@ -11,6 +11,26 @@ type ListAllVolumesQueryParams struct {
 	Region  *shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `queryParam:"style=form,explode=true,name=region"`
 }
 
+type ListAllVolumes200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllVolumes200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllVolumes200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllVolumes200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllVolumes200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 // ListAllVolumes200ApplicationJSONVolumesRegion
 // The region that the block storage volume is located in. When setting a region, the value should be the slug identifier for the region. When you query a block storage volume, the entire region object will be returned.
 type ListAllVolumes200ApplicationJSONVolumesRegion struct {
@@ -22,12 +42,21 @@ type ListAllVolumes200ApplicationJSONVolumesRegion struct {
 }
 
 type ListAllVolumes200ApplicationJSONVolumes struct {
+	CreatedAt       *string                                        `json:"created_at,omitempty"`
+	Description     *string                                        `json:"description,omitempty"`
+	DropletIds      []int64                                        `json:"droplet_ids,omitempty"`
 	FilesystemLabel *string                                        `json:"filesystem_label,omitempty"`
 	FilesystemType  *string                                        `json:"filesystem_type,omitempty"`
+	ID              *string                                        `json:"id,omitempty"`
+	Name            *string                                        `json:"name,omitempty"`
 	Region          *ListAllVolumes200ApplicationJSONVolumesRegion `json:"region,omitempty"`
+	SizeGigabytes   *int64                                         `json:"size_gigabytes,omitempty"`
+	Tags            []string                                       `json:"tags,omitempty"`
 }
 
 type ListAllVolumes200ApplicationJSON struct {
+	Links   *ListAllVolumes200ApplicationJSONLinks    `json:"links,omitempty"`
+	Meta    ListAllVolumes200ApplicationJSONMeta      `json:"meta"`
 	Volumes []ListAllVolumes200ApplicationJSONVolumes `json:"volumes"`
 }
 

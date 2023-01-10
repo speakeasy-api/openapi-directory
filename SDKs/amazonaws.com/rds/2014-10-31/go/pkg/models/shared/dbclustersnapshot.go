@@ -27,6 +27,6 @@ type DbClusterSnapshot struct {
 	SourceDBClusterSnapshotArn       *string
 	Status                           *string
 	StorageEncrypted                 *bool
-	TagList                          []map[string]interface{}
+	TagList                          []TagList
 	VpcID                            *string
 }

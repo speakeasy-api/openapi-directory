@@ -34,7 +34,7 @@ func main() {
     
     req := operations.AreasCountriesRequest{
         PathParams: operations.AreasCountriesPathParams{
-            Format: "json",
+            Format: "xml",
         },
     }
     

@@ -34,26 +34,38 @@ func main() {
     
     req := operations.AssociateEncryptionConfigRequest{
         PathParams: operations.AssociateEncryptionConfigPathParams{
-            Name: "dolore",
+            Name: "sint",
         },
         Headers: operations.AssociateEncryptionConfigHeaders{
-            XAmzAlgorithm: "repellat",
-            XAmzContentSha256: "velit",
-            XAmzCredential: "officia",
-            XAmzDate: "modi",
-            XAmzSecurityToken: "sunt",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "amet",
+            XAmzAlgorithm: "ratione",
+            XAmzContentSha256: "sed",
+            XAmzCredential: "placeat",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "ipsam",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "cum",
         },
         Request: operations.AssociateEncryptionConfigRequestBody{
-            ClientRequestToken: "et",
+            ClientRequestToken: "aut",
             EncryptionConfig: []shared.EncryptionConfig{
                 shared.EncryptionConfig{
-                    Provider: &shared.EncryptionConfigProvider{
-                        KeyArn: "qui",
+                    Provider: &shared.Provider{
+                        KeyArn: "dolore",
                     },
                     Resources: []string{
-                        "autem",
+                        "quis",
+                        "in",
+                        "velit",
+                    },
+                },
+                shared.EncryptionConfig{
+                    Provider: &shared.Provider{
+                        KeyArn: "eligendi",
+                    },
+                    Resources: []string{
+                        "quaerat",
+                        "dolorem",
+                        "deserunt",
                     },
                 },
             },

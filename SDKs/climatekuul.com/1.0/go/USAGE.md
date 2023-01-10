@@ -13,18 +13,18 @@ func main() {
     
     req := operations.AirtravelCoordinatesRequest{
         Headers: operations.AirtravelCoordinatesHeaders{
-            ContentType: "aspernatur",
+            ContentType: "et",
         },
         Request: &operations.AirtravelCoordinatesRequestBody{
-            APIKeyL1: "sint",
-            APIKeyL2: "veritatis",
-            DestinationAirportLatitude: 79.099998,
-            DestinationAirportLongitude: 85.199997,
-            NumberOfPassengers: 8548503948450162958,
-            OriginAirportLatitude: 17.200001,
-            OriginAirportLongitude: 61.099998,
-            TravelClass: "qui",
-            TravelMode: "consequuntur",
+            APIKeyL1: "laudantium",
+            APIKeyL2: "voluptatibus",
+            DestinationAirportLatitude: 16.200001,
+            DestinationAirportLongitude: 65.199997,
+            NumberOfPassengers: 5496595919472461343,
+            OriginAirportLatitude: 88.199997,
+            OriginAirportLongitude: 31.200001,
+            TravelClass: "necessitatibus",
+            TravelMode: "aspernatur",
         },
     }
     

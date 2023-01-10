@@ -35,18 +35,17 @@ func main() {
     req := operations.GetClassificationsRequest{
         QueryParams: operations.GetClassificationsQueryParams{
             Ids: []string{
-                "ducimus",
-                "repellendus",
+                "consequatur",
             },
-            IsCountry: "officia",
-            PageNumber: 4185144460247541412,
-            PageSize: 2557612462472925101,
-            Q: "sit",
+            IsCountry: "laboriosam",
+            PageNumber: 773736624494728175,
+            PageSize: 1546546415388482117,
+            Q: "placeat",
             Sort: []GetClassificationsSortEnum{
-                "created_at",
-                "created_at",
+                "value",
+                "updated_at",
             },
-            Type: "Genre",
+            Type: "AlternateFeedType",
         },
     }
     

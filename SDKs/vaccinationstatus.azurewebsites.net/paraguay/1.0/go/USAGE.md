@@ -13,12 +13,12 @@ func main() {
     
     req := operations.GetVaccineStatusRequest{
         Headers: operations.GetVaccineStatusHeaders{
-            Accept: "quasi",
-            Authorization: "minus",
-            ContentType: "dolorem",
+            Accept: "suscipit",
+            Authorization: "voluptas",
+            ContentType: "quis",
         },
         Request: shared.VaccineStatusRequest{
-            Documento: "accusamus",
+            Documento: "numquam",
         },
     }
     

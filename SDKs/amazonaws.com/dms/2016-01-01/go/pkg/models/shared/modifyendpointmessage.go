@@ -6,7 +6,7 @@ type ModifyEndpointMessage struct {
 	CertificateArn             *string                           `json:"CertificateArn,omitempty"`
 	DatabaseName               *string                           `json:"DatabaseName,omitempty"`
 	DmsTransferSettings        *DmsTransferSettings              `json:"DmsTransferSettings,omitempty"`
-	DocDbSettings              *DocDbSettings1                   `json:"DocDbSettings,omitempty"`
+	DocDbSettings              *DocDbSettings                    `json:"DocDbSettings,omitempty"`
 	DynamoDbSettings           *DynamoDbSettings                 `json:"DynamoDbSettings,omitempty"`
 	ElasticsearchSettings      *ElasticsearchSettings            `json:"ElasticsearchSettings,omitempty"`
 	EndpointArn                string                            `json:"EndpointArn"`

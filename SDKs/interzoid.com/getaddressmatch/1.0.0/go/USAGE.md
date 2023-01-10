@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetaddressmatchRequest{
         QueryParams: operations.GetaddressmatchQueryParams{
-            Address: "sit",
-            License: "totam",
+            Address: "ipsam",
+            License: "commodi",
         },
     }
     

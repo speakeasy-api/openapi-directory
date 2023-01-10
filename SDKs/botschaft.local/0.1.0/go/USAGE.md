@@ -13,7 +13,7 @@ func main() {
     
     req := operations.ConfigConfigGetRequest{
         Headers: operations.ConfigConfigGetHeaders{
-            Authorization: "quos",
+            Authorization: "ut",
         },
     }
     

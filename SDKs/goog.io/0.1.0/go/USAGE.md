@@ -23,7 +23,7 @@ func main() {
     
     req := operations.CrawlRequest{
         PathParams: operations.CrawlPathParams{
-            Query: "aperiam",
+            Query: "maiores",
         },
     }
     

@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetOrdersRequest{
         QueryParams: operations.GetOrdersQueryParams{
-            Limit: "dolor",
-            Offset: "earum",
-            OrderStatus: "Completed",
+            Limit: "ut",
+            Offset: "autem",
+            OrderStatus: "Cancelled",
         },
     }
     

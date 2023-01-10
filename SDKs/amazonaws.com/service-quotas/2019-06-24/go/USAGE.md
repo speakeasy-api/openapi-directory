@@ -23,17 +23,19 @@ func main() {
     
     req := operations.AssociateServiceQuotaTemplateRequest{
         Headers: operations.AssociateServiceQuotaTemplateHeaders{
-            XAmzAlgorithm: "cum",
-            XAmzContentSha256: "id",
-            XAmzCredential: "ab",
-            XAmzDate: "facere",
-            XAmzSecurityToken: "deserunt",
-            XAmzSignature: "illo",
-            XAmzSignedHeaders: "tempore",
+            XAmzAlgorithm: "dolore",
+            XAmzContentSha256: "eveniet",
+            XAmzCredential: "aut",
+            XAmzDate: "velit",
+            XAmzSecurityToken: "omnis",
+            XAmzSignature: "amet",
+            XAmzSignedHeaders: "numquam",
             XAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
         },
         Request: map[string]interface{}{
-            "quidem": "fuga",
+            "ex": "id",
+            "ea": "non",
+            "non": "quam",
         },
     }
     

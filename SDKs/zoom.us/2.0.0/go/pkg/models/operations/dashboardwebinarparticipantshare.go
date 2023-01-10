@@ -41,7 +41,11 @@ type DashboardWebinarParticipantShare200ApplicationJSONParticipants struct {
 // DashboardWebinarParticipantShare200ApplicationJSON
 // Pagination object.
 type DashboardWebinarParticipantShare200ApplicationJSON struct {
-	Participants []DashboardWebinarParticipantShare200ApplicationJSONParticipants `json:"participants,omitempty"`
+	NextPageToken *string                                                          `json:"next_page_token,omitempty"`
+	PageCount     *int64                                                           `json:"page_count,omitempty"`
+	PageSize      *int64                                                           `json:"page_size,omitempty"`
+	Participants  []DashboardWebinarParticipantShare200ApplicationJSONParticipants `json:"participants,omitempty"`
+	TotalRecords  *int64                                                           `json:"total_records,omitempty"`
 }
 
 type DashboardWebinarParticipantShareRequest struct {

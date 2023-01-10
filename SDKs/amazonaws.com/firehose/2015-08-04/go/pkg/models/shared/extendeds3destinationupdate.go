@@ -6,7 +6,7 @@ type ExtendedS3DestinationUpdate struct {
 	BucketARN                         *string                            `json:"BucketARN,omitempty"`
 	BufferingHints                    *BufferingHints                    `json:"BufferingHints,omitempty"`
 	CloudWatchLoggingOptions          *CloudWatchLoggingOptions          `json:"CloudWatchLoggingOptions,omitempty"`
-	CompressionFormat                 map[string]interface{}             `json:"CompressionFormat,omitempty"`
+	CompressionFormat                 *CompressionFormatEnum             `json:"CompressionFormat,omitempty"`
 	DataFormatConversionConfiguration *DataFormatConversionConfiguration `json:"DataFormatConversionConfiguration,omitempty"`
 	DynamicPartitioningConfiguration  *DynamicPartitioningConfiguration  `json:"DynamicPartitioningConfiguration,omitempty"`
 	EncryptionConfiguration           *EncryptionConfiguration           `json:"EncryptionConfiguration,omitempty"`

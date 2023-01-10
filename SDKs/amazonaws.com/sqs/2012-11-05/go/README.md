@@ -34,23 +34,23 @@ func main() {
     
     req := operations.GetChangeMessageVisibilityRequest{
         PathParams: operations.GetChangeMessageVisibilityPathParams{
-            AccountNumber: 6453386329510832785,
-            QueueName: "dolores",
+            AccountNumber: 4772934432398856168,
+            QueueName: "velit",
         },
         QueryParams: operations.GetChangeMessageVisibilityQueryParams{
             Action: "ChangeMessageVisibility",
-            ReceiptHandle: "voluptatibus",
+            ReceiptHandle: "nulla",
             Version: "2012-11-05",
-            VisibilityTimeout: 957516156830760386,
+            VisibilityTimeout: 1092410701567644413,
         },
         Headers: operations.GetChangeMessageVisibilityHeaders{
-            XAmzAlgorithm: "repudiandae",
-            XAmzContentSha256: "quo",
-            XAmzCredential: "omnis",
-            XAmzDate: "adipisci",
-            XAmzSecurityToken: "praesentium",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "ipsam",
+            XAmzAlgorithm: "qui",
+            XAmzContentSha256: "odit",
+            XAmzCredential: "tempora",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "dignissimos",
+            XAmzSignature: "velit",
+            XAmzSignedHeaders: "magnam",
         },
     }
     

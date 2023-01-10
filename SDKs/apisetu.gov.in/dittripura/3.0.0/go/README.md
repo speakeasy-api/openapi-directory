@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.ChcerRequestBody{
             CertificateParameters: &operations.ChcerRequestBodyCertificateParameters{
-                RefNo: "non",
-                TokenNo: "qui",
+                RefNo: "illo",
+                TokenNo: "eveniet",
             },
-            ConsentArtifact: "eum",
+            ConsentArtifact: "cumque",
             Format: "pdf",
-            TxnID: "magni",
+            TxnID: "eveniet",
         },
     }
     

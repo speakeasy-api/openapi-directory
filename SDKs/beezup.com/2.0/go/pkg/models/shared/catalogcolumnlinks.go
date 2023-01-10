@@ -1,5 +1,5 @@
 package shared
 
 type CatalogColumnLinks struct {
-	Rename map[string]interface{} `json:"rename,omitempty"`
+	Rename *LinksCatalogChangeCatalogColumnUserNameLink `json:"rename,omitempty"`
 }

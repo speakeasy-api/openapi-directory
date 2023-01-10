@@ -4,14 +4,32 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum string
+
+const (
+	CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnumCustom      CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum = "custom"
+	CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnumLetsEncrypt CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum = "lets_encrypt"
+)
+
 type CreateCertificatesRequestBodyLetSEncryptCertificateRequest struct {
-	DNSNames []string `json:"dns_names"`
+	DNSNames []string                                                            `json:"dns_names"`
+	Name     string                                                              `json:"name"`
+	Type     *CreateCertificatesRequestBodyLetSEncryptCertificateRequestTypeEnum `json:"type,omitempty"`
 }
 
+type CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum string
+
+const (
+	CreateCertificatesRequestBodyCustomCertificateRequestTypeEnumCustom      CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum = "custom"
+	CreateCertificatesRequestBodyCustomCertificateRequestTypeEnumLetsEncrypt CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum = "lets_encrypt"
+)
+
 type CreateCertificatesRequestBodyCustomCertificateRequest struct {
-	CertificateChain *string `json:"certificate_chain,omitempty"`
-	LeafCertificate  string  `json:"leaf_certificate"`
-	PrivateKey       string  `json:"private_key"`
+	CertificateChain *string                                                        `json:"certificate_chain,omitempty"`
+	LeafCertificate  string                                                         `json:"leaf_certificate"`
+	Name             string                                                         `json:"name"`
+	PrivateKey       string                                                         `json:"private_key"`
+	Type             *CreateCertificatesRequestBodyCustomCertificateRequestTypeEnum `json:"type,omitempty"`
 }
 
 type CreateCertificates201ApplicationJSON struct {

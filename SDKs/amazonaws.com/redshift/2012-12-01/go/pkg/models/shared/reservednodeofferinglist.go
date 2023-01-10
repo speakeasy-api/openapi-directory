@@ -1,0 +1,15 @@
+package shared
+
+// ReservedNodeOfferingList
+// Describes a reserved node offering.
+type ReservedNodeOfferingList struct {
+	CurrencyCode             *string
+	Duration                 *int64
+	FixedPrice               *float64
+	NodeType                 *string
+	OfferingType             *string
+	RecurringCharges         []RecurringChargeList
+	ReservedNodeOfferingID   *string
+	ReservedNodeOfferingType *ReservedNodeOfferingTypeEnum
+	UsagePrice               *float64
+}

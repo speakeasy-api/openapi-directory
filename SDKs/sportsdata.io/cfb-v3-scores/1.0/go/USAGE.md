@@ -23,7 +23,7 @@ func main() {
     
     req := operations.AreGamesInProgressRequest{
         PathParams: operations.AreGamesInProgressPathParams{
-            Format: "XML",
+            Format: "JSON",
         },
     }
     

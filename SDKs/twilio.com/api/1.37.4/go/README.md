@@ -30,7 +30,7 @@ func main() {
             },
         },
         Request: &operations.CreateAccountCreateAccountRequest{
-            FriendlyName: "sit",
+            FriendlyName: "rem",
         },
     }
     

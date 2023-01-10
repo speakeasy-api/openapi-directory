@@ -35,10 +35,10 @@ func main() {
     req := operations.GetMapVersionNumberCopyrightsFormatRequest{
         PathParams: operations.GetMapVersionNumberCopyrightsFormatPathParams{
             Format: "xml",
-            VersionNumber: 5692291641629560775,
+            VersionNumber: 1978044102552537505,
         },
         QueryParams: operations.GetMapVersionNumberCopyrightsFormatQueryParams{
-            Callback: "voluptatem",
+            Callback: "esse",
         },
     }
     

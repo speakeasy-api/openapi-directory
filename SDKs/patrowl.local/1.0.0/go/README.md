@@ -24,7 +24,7 @@ func main() {
     
     req := operations.CleanScanPageRequest{
         PathParams: operations.CleanScanPagePathParams{
-            ScanID: 8428131256813924473,
+            ScanID: 2378040459682270966,
         },
     }
     

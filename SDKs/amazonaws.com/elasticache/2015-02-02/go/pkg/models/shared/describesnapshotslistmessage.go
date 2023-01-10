@@ -4,5 +4,5 @@ package shared
 // Represents the output of a <code>DescribeSnapshots</code> operation.
 type DescribeSnapshotsListMessage struct {
 	Marker    *string
-	Snapshots []map[string]interface{}
+	Snapshots []SnapshotList
 }

@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.SkmstRequestBody{
             CertificateParameters: &operations.SkmstRequestBodyCertificateParameters{
-                Txt10thRollNo: "consequatur",
-                TxtCandidateAppSeq: "sequi",
-                TxtExamDate: "omnis",
+                Txt10thRollNo: "nostrum",
+                TxtCandidateAppSeq: "porro",
+                TxtExamDate: "et",
             },
-            ConsentArtifact: "quis",
+            ConsentArtifact: "maxime",
             Format: "pdf",
-            TxnID: "sapiente",
+            TxnID: "est",
         },
     }
     

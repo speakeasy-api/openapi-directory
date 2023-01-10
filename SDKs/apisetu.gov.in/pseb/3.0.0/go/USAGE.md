@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.CemstRequestBody{
             CertificateParameters: &operations.CemstRequestBodyCertificateParameters{
-                FullName: "necessitatibus",
-                UID: "sint",
-                Rollno: "enim",
-                Year: "quia",
+                FullName: "atque",
+                UID: "quo",
+                Rollno: "esse",
+                Year: "consequatur",
             },
-            ConsentArtifact: "voluptatem",
+            ConsentArtifact: "nostrum",
             Format: "pdf",
-            TxnID: "dolorem",
+            TxnID: "debitis",
         },
     }
     

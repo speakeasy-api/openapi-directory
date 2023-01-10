@@ -1,6 +1,6 @@
 package shared
 
 type DbParameterGroupsMessage struct {
-	DBParameterGroups []map[string]interface{}
+	DBParameterGroups []DbParameterGroupList
 	Marker            *string
 }

@@ -29,7 +29,7 @@ func main() {
             },
         },
         QueryParams: operations.DeleteRiddleQueryParams{
-            ID: "et",
+            ID: "ipsa",
         },
     }
     

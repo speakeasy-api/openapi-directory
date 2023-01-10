@@ -20,54 +20,6 @@ type UserSettingsUpdateQueryParams struct {
 	Option *UserSettingsUpdateOptionEnum `queryParam:"style=form,explode=true,name=option"`
 }
 
-type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum string
-
-const (
-	UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumEnhancedEncryption UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "enhanced_encryption"
-	UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumE2ee               UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "e2ee"
-)
-
-// UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement
-// Meeting/webinar [passcode requirements](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604).
-type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement struct {
-	ConsecutiveCharactersLength *int64 `json:"consecutive_characters_length,omitempty"`
-	HaveLetter                  *bool  `json:"have_letter,omitempty"`
-	HaveNumber                  *bool  `json:"have_number,omitempty"`
-	HaveSpecialCharacter        *bool  `json:"have_special_character,omitempty"`
-	HaveUpperAndLowerCharacters *bool  `json:"have_upper_and_lower_characters,omitempty"`
-	Length                      *int64 `json:"length,omitempty"`
-	OnlyAllowNumeric            *bool  `json:"only_allow_numeric,omitempty"`
-	WeakEnhanceDetection        *bool  `json:"weak_enhance_detection,omitempty"`
-}
-
-// UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings
-// Specify the settings to be applied if waiting room is enabled.
-type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings struct {
-	ParticipantsToPlaceInWaitingRoom            *int64  `json:"participants_to_place_in_waiting_room,omitempty"`
-	UsersWhoCanAdmitParticipantsFromWaitingRoom *int64  `json:"users_who_can_admit_participants_from_waiting_room,omitempty"`
-	WhitelistedDomainsForWaitingRoom            *string `json:"whitelisted_domains_for_waiting_room,omitempty"`
-}
-
-type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity struct {
-	AutoSecurity                       *bool                                                                                                     `json:"auto_security,omitempty"`
-	EmbedPasswordInJoinLink            *bool                                                                                                     `json:"embed_password_in_join_link,omitempty"`
-	EncryptionType                     *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum         `json:"encryption_type,omitempty"`
-	EndToEndEncryptedMeetings          *bool                                                                                                     `json:"end_to_end_encrypted_meetings,omitempty"`
-	MeetingPassword                    *bool                                                                                                     `json:"meeting_password,omitempty"`
-	MeetingPasswordRequirement         *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement `json:"meeting_password_requirement,omitempty"`
-	PhonePassword                      *bool                                                                                                     `json:"phone_password,omitempty"`
-	PmiPassword                        *bool                                                                                                     `json:"pmi_password,omitempty"`
-	RequirePasswordForScheduledMeeting *bool                                                                                                     `json:"require_password_for_scheduled_meeting,omitempty"`
-	RequirePasswordForScheduledWebinar *bool                                                                                                     `json:"require_password_for_scheduled_webinar,omitempty"`
-	WaitingRoom                        *bool                                                                                                     `json:"waiting_room,omitempty"`
-	WaitingRoomSettings                *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings        `json:"waiting_room_settings,omitempty"`
-	WebinarPassword                    *bool                                                                                                     `json:"webinar_password,omitempty"`
-}
-
-type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettings struct {
-	MeetingSecurity *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity `json:"meeting_security,omitempty"`
-}
-
 type UserSettingsUpdateApplicationJSONUserSettingsUserSettingsNotificationSettings struct {
 	AlternativeHostReminder *bool `json:"alternative_host_reminder,omitempty"`
 	CancelMeetingReminder   *bool `json:"cancel_meeting_reminder,omitempty"`
@@ -296,16 +248,16 @@ type UserSettingsUpdateApplicationJSONUserSettings struct {
 	Tsp               *UserSettingsUpdateApplicationJSONUserSettingsUserSettingsTspSettings                `json:"tsp,omitempty"`
 }
 
-type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum string
+type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum string
 
 const (
-	UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumEnhancedEncryption UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "enhanced_encryption"
-	UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumE2ee               UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "e2ee"
+	UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumEnhancedEncryption UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "enhanced_encryption"
+	UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumE2ee               UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "e2ee"
 )
 
-// UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement
+// UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement
 // Meeting/webinar [passcode requirements](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604).
-type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement struct {
+type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement struct {
 	ConsecutiveCharactersLength *int64 `json:"consecutive_characters_length,omitempty"`
 	HaveLetter                  *bool  `json:"have_letter,omitempty"`
 	HaveNumber                  *bool  `json:"have_number,omitempty"`
@@ -316,32 +268,32 @@ type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSec
 	WeakEnhanceDetection        *bool  `json:"weak_enhance_detection,omitempty"`
 }
 
-// UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings
+// UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings
 // Specify the settings to be applied if waiting room is enabled.
-type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings struct {
+type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings struct {
 	ParticipantsToPlaceInWaitingRoom            *int64  `json:"participants_to_place_in_waiting_room,omitempty"`
 	UsersWhoCanAdmitParticipantsFromWaitingRoom *int64  `json:"users_who_can_admit_participants_from_waiting_room,omitempty"`
 	WhitelistedDomainsForWaitingRoom            *string `json:"whitelisted_domains_for_waiting_room,omitempty"`
 }
 
-type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurity struct {
-	AutoSecurity                       *bool                                                                                                       `json:"auto_security,omitempty"`
-	EmbedPasswordInJoinLink            *bool                                                                                                       `json:"embed_password_in_join_link,omitempty"`
-	EncryptionType                     *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum         `json:"encryption_type,omitempty"`
-	EndToEndEncryptedMeetings          *bool                                                                                                       `json:"end_to_end_encrypted_meetings,omitempty"`
-	MeetingPassword                    *bool                                                                                                       `json:"meeting_password,omitempty"`
-	MeetingPasswordRequirement         *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement `json:"meeting_password_requirement,omitempty"`
-	PhonePassword                      *bool                                                                                                       `json:"phone_password,omitempty"`
-	PmiPassword                        *bool                                                                                                       `json:"pmi_password,omitempty"`
-	RequirePasswordForScheduledMeeting *bool                                                                                                       `json:"require_password_for_scheduled_meeting,omitempty"`
-	RequirePasswordForScheduledWebinar *bool                                                                                                       `json:"require_password_for_scheduled_webinar,omitempty"`
-	WaitingRoom                        *bool                                                                                                       `json:"waiting_room,omitempty"`
-	WaitingRoomSettings                *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings        `json:"waiting_room_settings,omitempty"`
-	WebinarPassword                    *bool                                                                                                       `json:"webinar_password,omitempty"`
+type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity struct {
+	AutoSecurity                       *bool                                                                                                     `json:"auto_security,omitempty"`
+	EmbedPasswordInJoinLink            *bool                                                                                                     `json:"embed_password_in_join_link,omitempty"`
+	EncryptionType                     *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum         `json:"encryption_type,omitempty"`
+	EndToEndEncryptedMeetings          *bool                                                                                                     `json:"end_to_end_encrypted_meetings,omitempty"`
+	MeetingPassword                    *bool                                                                                                     `json:"meeting_password,omitempty"`
+	MeetingPasswordRequirement         *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement `json:"meeting_password_requirement,omitempty"`
+	PhonePassword                      *bool                                                                                                     `json:"phone_password,omitempty"`
+	PmiPassword                        *bool                                                                                                     `json:"pmi_password,omitempty"`
+	RequirePasswordForScheduledMeeting *bool                                                                                                     `json:"require_password_for_scheduled_meeting,omitempty"`
+	RequirePasswordForScheduledWebinar *bool                                                                                                     `json:"require_password_for_scheduled_webinar,omitempty"`
+	WaitingRoom                        *bool                                                                                                     `json:"waiting_room,omitempty"`
+	WaitingRoomSettings                *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings        `json:"waiting_room_settings,omitempty"`
+	WebinarPassword                    *bool                                                                                                     `json:"webinar_password,omitempty"`
 }
 
-type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettings struct {
-	MeetingSecurity *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurity `multipartForm:"name=meeting_security,json"`
+type UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettings struct {
+	MeetingSecurity *UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity `json:"meeting_security,omitempty"`
 }
 
 type UserSettingsUpdateMultipartFormDataUserSettingsUserSettingsNotificationSettings struct {
@@ -570,6 +522,54 @@ type UserSettingsUpdateMultipartFormDataUserSettings struct {
 	ScheduleMeeting   *UserSettingsUpdateMultipartFormDataUserSettingsUserSettingsMeetingSettings1           `multipartForm:"name=schedule_meeting,json"`
 	Telephony         *UserSettingsUpdateMultipartFormDataUserSettingsTelephonyUpdateSettingsMeetingSettings `multipartForm:"name=telephony,json"`
 	Tsp               *UserSettingsUpdateMultipartFormDataUserSettingsUserSettingsTspSettings                `multipartForm:"name=tsp,json"`
+}
+
+type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum string
+
+const (
+	UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumEnhancedEncryption UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "enhanced_encryption"
+	UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumE2ee               UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "e2ee"
+)
+
+// UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement
+// Meeting/webinar [passcode requirements](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604).
+type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement struct {
+	ConsecutiveCharactersLength *int64 `json:"consecutive_characters_length,omitempty"`
+	HaveLetter                  *bool  `json:"have_letter,omitempty"`
+	HaveNumber                  *bool  `json:"have_number,omitempty"`
+	HaveSpecialCharacter        *bool  `json:"have_special_character,omitempty"`
+	HaveUpperAndLowerCharacters *bool  `json:"have_upper_and_lower_characters,omitempty"`
+	Length                      *int64 `json:"length,omitempty"`
+	OnlyAllowNumeric            *bool  `json:"only_allow_numeric,omitempty"`
+	WeakEnhanceDetection        *bool  `json:"weak_enhance_detection,omitempty"`
+}
+
+// UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings
+// Specify the settings to be applied if waiting room is enabled.
+type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings struct {
+	ParticipantsToPlaceInWaitingRoom            *int64  `json:"participants_to_place_in_waiting_room,omitempty"`
+	UsersWhoCanAdmitParticipantsFromWaitingRoom *int64  `json:"users_who_can_admit_participants_from_waiting_room,omitempty"`
+	WhitelistedDomainsForWaitingRoom            *string `json:"whitelisted_domains_for_waiting_room,omitempty"`
+}
+
+type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurity struct {
+	AutoSecurity                       *bool                                                                                                       `json:"auto_security,omitempty"`
+	EmbedPasswordInJoinLink            *bool                                                                                                       `json:"embed_password_in_join_link,omitempty"`
+	EncryptionType                     *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum         `json:"encryption_type,omitempty"`
+	EndToEndEncryptedMeetings          *bool                                                                                                       `json:"end_to_end_encrypted_meetings,omitempty"`
+	MeetingPassword                    *bool                                                                                                       `json:"meeting_password,omitempty"`
+	MeetingPasswordRequirement         *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement `json:"meeting_password_requirement,omitempty"`
+	PhonePassword                      *bool                                                                                                       `json:"phone_password,omitempty"`
+	PmiPassword                        *bool                                                                                                       `json:"pmi_password,omitempty"`
+	RequirePasswordForScheduledMeeting *bool                                                                                                       `json:"require_password_for_scheduled_meeting,omitempty"`
+	RequirePasswordForScheduledWebinar *bool                                                                                                       `json:"require_password_for_scheduled_webinar,omitempty"`
+	WaitingRoom                        *bool                                                                                                       `json:"waiting_room,omitempty"`
+	WaitingRoomSettings                *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings        `json:"waiting_room_settings,omitempty"`
+	WebinarPassword                    *bool                                                                                                       `json:"webinar_password,omitempty"`
+}
+
+type UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettings struct {
+	MeetingSecurity *UserSettingsUpdateMultipartFormDataMeetingWebinarSecuritySettingsMeetingSecurity `multipartForm:"name=meeting_security,json"`
 }
 
 type UserSettingsUpdateRequests struct {

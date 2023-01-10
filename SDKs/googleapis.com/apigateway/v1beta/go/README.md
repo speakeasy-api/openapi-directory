@@ -32,91 +32,101 @@ func main() {
             },
         },
         PathParams: operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams{
-            Parent: "tempora",
+            Parent: "similique",
         },
         QueryParams: operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "in",
-            Alt: "proto",
-            APIConfigID: "asperiores",
-            Callback: "explicabo",
-            Fields: "molestiae",
-            Key: "commodi",
-            OauthToken: "blanditiis",
+            AccessToken: "minus",
+            Alt: "media",
+            APIConfigID: "fuga",
+            Callback: "reiciendis",
+            Fields: "et",
+            Key: "repudiandae",
+            OauthToken: "minima",
             PrettyPrint: true,
-            QuotaUser: "eaque",
-            UploadType: "sequi",
-            UploadProtocol: "quos",
+            QuotaUser: "corporis",
+            UploadType: "iusto",
+            UploadProtocol: "qui",
         },
         Request: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "unde",
+            DisplayName: "quaerat",
             GatewayConfig: &shared.ApigatewayGatewayConfig{
                 BackendConfig: &shared.ApigatewayBackendConfig{
-                    GoogleServiceAccount: "enim",
+                    GoogleServiceAccount: "sed",
                 },
             },
-            GatewayServiceAccount: "iusto",
+            GatewayServiceAccount: "autem",
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "non",
-                        Path: "dignissimos",
-                    },
-                    Source: []shared.ApigatewayAPIConfigFile{
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "omnis",
-                            Path: "rerum",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "saepe",
-                            Path: "quasi",
-                        },
-                    },
-                },
-                shared.ApigatewayAPIConfigGrpcServiceDefinition{
-                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "rerum",
-                        Path: "ratione",
-                    },
-                    Source: []shared.ApigatewayAPIConfigFile{
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "quod",
-                            Path: "sint",
-                        },
-                    },
-                },
-                shared.ApigatewayAPIConfigGrpcServiceDefinition{
-                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "deserunt",
+                        Contents: "quia",
                         Path: "et",
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "ad",
-                            Path: "aperiam",
+                            Contents: "fugiat",
+                            Path: "consequatur",
+                        },
+                        shared.ApigatewayAPIConfigFile{
+                            Contents: "pariatur",
+                            Path: "et",
+                        },
+                        shared.ApigatewayAPIConfigFile{
+                            Contents: "voluptas",
+                            Path: "non",
+                        },
+                    },
+                },
+                shared.ApigatewayAPIConfigGrpcServiceDefinition{
+                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
+                        Contents: "minima",
+                        Path: "nihil",
+                    },
+                    Source: []shared.ApigatewayAPIConfigFile{
+                        shared.ApigatewayAPIConfigFile{
+                            Contents: "impedit",
+                            Path: "ipsum",
+                        },
+                    },
+                },
+                shared.ApigatewayAPIConfigGrpcServiceDefinition{
+                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
+                        Contents: "cum",
+                        Path: "similique",
+                    },
+                    Source: []shared.ApigatewayAPIConfigFile{
+                        shared.ApigatewayAPIConfigFile{
+                            Contents: "ab",
+                            Path: "ut",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "pariatur": "minima",
-                "rerum": "aut",
+                "asperiores": "natus",
+                "dolor": "harum",
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "facere",
-                    Path: "non",
+                    Contents: "nesciunt",
+                    Path: "porro",
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "consectetur",
-                    Path: "eum",
+                    Contents: "ut",
+                    Path: "quo",
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "inventore",
-                        Path: "est",
+                        Contents: "id",
+                        Path: "officiis",
+                    },
+                },
+                shared.ApigatewayAPIConfigOpenAPIDocument{
+                    Document: &shared.ApigatewayAPIConfigFile{
+                        Contents: "nulla",
+                        Path: "aut",
                     },
                 },
             },

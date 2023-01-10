@@ -23,16 +23,16 @@ func main() {
             },
         },
         PathParams: operations.PlusActivitiesGetPathParams{
-            ActivityID: "pariatur",
+            ActivityID: "aut",
         },
         QueryParams: operations.PlusActivitiesGetQueryParams{
             Alt: "json",
-            Fields: "sit",
-            Key: "est",
-            OauthToken: "aut",
+            Fields: "eligendi",
+            Key: "officiis",
+            OauthToken: "dolor",
             PrettyPrint: true,
-            QuotaUser: "nostrum",
-            UserIP: "sint",
+            QuotaUser: "corrupti",
+            UserIP: "qui",
         },
     }
     

@@ -27,8 +27,8 @@ func main() {
             OutputFormat: "xml",
         },
         QueryParams: operations.GetV1CategoryListOutputFormatQueryParams{
-            APIKey: "non",
-            Type: "tech",
+            APIKey: "natus",
+            Type: "incentive",
         },
     }
     

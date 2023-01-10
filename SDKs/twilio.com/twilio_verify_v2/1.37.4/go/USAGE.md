@@ -19,13 +19,13 @@ func main() {
             },
         },
         PathParams: operations.CreateAccessTokenPathParams{
-            ServiceSid: "voluptatem",
+            ServiceSid: "aut",
         },
         Request: &operations.CreateAccessTokenCreateAccessTokenRequest{
-            FactorFriendlyName: "totam",
+            FactorFriendlyName: "molestiae",
             FactorType: "push",
-            Identity: "recusandae",
-            TTL: 6934747622960329828,
+            Identity: "dicta",
+            TTL: 3891820843117366017,
         },
     }
     

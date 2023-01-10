@@ -29,7 +29,7 @@ func main() {
             },
         },
         QueryParams: operations.GetFoodBrandedBarcodePhpQueryParams{
-            Code: "nobis",
+            Code: "velit",
         },
     }
     

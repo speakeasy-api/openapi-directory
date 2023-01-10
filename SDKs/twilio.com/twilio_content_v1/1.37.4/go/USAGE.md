@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteContentPathParams{
-            Sid: "omnis",
+            Sid: "voluptatem",
         },
     }
     

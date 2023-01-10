@@ -19,12 +19,12 @@ func main() {
             },
         },
         Request: &operations.CreateMediaProcessorCreateMediaProcessorRequest{
-            Extension: "vel",
-            ExtensionContext: "sit",
-            ExtensionEnvironment: "est",
-            MaxDuration: 7956904005291636532,
-            StatusCallback: "rerum",
-            StatusCallbackMethod: "PATCH",
+            Extension: "repudiandae",
+            ExtensionContext: "placeat",
+            ExtensionEnvironment: "non",
+            MaxDuration: 7670321804354313239,
+            StatusCallback: "autem",
+            StatusCallbackMethod: "PUT",
         },
     }
     

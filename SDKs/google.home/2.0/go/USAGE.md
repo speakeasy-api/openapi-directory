@@ -24,7 +24,7 @@ func main() {
     req := operations.AccessibilityRequest{
         Request: shared.AccessibilityRequest{
             EndpointEnabled: false,
-            HotwordEnabled: false,
+            HotwordEnabled: true,
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type DeleteDbSnapshotResult struct {
-	DBSnapshot *DbSnapshot1
+	DBSnapshot *DbSnapshot
 }

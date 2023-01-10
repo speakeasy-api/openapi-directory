@@ -338,7 +338,7 @@ func (s *MarketplacesOrdersV3Order) GetOrderV3(ctx context.Context, request oper
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.OrderWithLinks1
+			var out *shared.OrderWithLinks
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

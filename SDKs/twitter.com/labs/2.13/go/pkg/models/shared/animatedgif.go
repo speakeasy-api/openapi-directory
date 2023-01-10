@@ -1,9 +1,17 @@
 package shared
 
+type AnimatedGifTypeEnum string
+
+const (
+	AnimatedGifTypeEnumAnimatedGif AnimatedGifTypeEnum = "animated_gif"
+)
+
 // AnimatedGif
 // This contains the list of the fields that are common to all media returned.
 type AnimatedGif struct {
-	Height   *int64  `json:"height,omitempty"`
-	MediaKey *string `json:"media_key,omitempty"`
-	Width    *int64  `json:"width,omitempty"`
+	Height          *int64               `json:"height,omitempty"`
+	MediaKey        *string              `json:"media_key,omitempty"`
+	PreviewImageURL *string              `json:"preview_image_url,omitempty"`
+	Type            *AnimatedGifTypeEnum `json:"type,omitempty"`
+	Width           *int64               `json:"width,omitempty"`
 }

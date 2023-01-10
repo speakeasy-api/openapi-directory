@@ -34,21 +34,22 @@ func main() {
     
     req := operations.BatchCheckLayerAvailabilityRequest{
         Headers: operations.BatchCheckLayerAvailabilityHeaders{
-            XAmzAlgorithm: "quia",
-            XAmzContentSha256: "et",
-            XAmzCredential: "est",
-            XAmzDate: "occaecati",
-            XAmzSecurityToken: "ex",
-            XAmzSignature: "voluptatem",
-            XAmzSignedHeaders: "quia",
+            XAmzAlgorithm: "debitis",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "tenetur",
+            XAmzDate: "aspernatur",
+            XAmzSecurityToken: "minus",
+            XAmzSignature: "molestiae",
+            XAmzSignedHeaders: "rerum",
             XAmzTarget: "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability",
         },
         Request: shared.BatchCheckLayerAvailabilityRequest{
             LayerDigests: []string{
-                "quae",
+                "illo",
+                "quas",
             },
-            RegistryID: "est",
-            RepositoryName: "ut",
+            RegistryID: "in",
+            RepositoryName: "ipsum",
         },
     }
     

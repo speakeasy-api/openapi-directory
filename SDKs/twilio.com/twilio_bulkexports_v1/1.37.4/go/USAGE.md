@@ -19,15 +19,15 @@ func main() {
             },
         },
         PathParams: operations.CreateExportCustomJobPathParams{
-            ResourceType: "nobis",
+            ResourceType: "ipsum",
         },
         Request: &operations.CreateExportCustomJobCreateExportCustomJobRequest{
-            Email: "repellendus",
-            EndDay: "qui",
-            FriendlyName: "et",
-            StartDay: "voluptatibus",
-            WebhookMethod: "voluptas",
-            WebhookURL: "repellat",
+            Email: "voluptatibus",
+            EndDay: "inventore",
+            FriendlyName: "quia",
+            StartDay: "et",
+            WebhookMethod: "velit",
+            WebhookURL: "iste",
         },
     }
     

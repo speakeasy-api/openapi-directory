@@ -8,7 +8,7 @@ import (
 // <p>Contains the details of an Amazon Neptune DB cluster.</p> <p>This data type is used as a response element in the <a>DescribeDBClusters</a> action.</p>
 type DbCluster struct {
 	AllocatedStorage                 *int64
-	AssociatedRoles                  []map[string]interface{}
+	AssociatedRoles                  []DbClusterRoles
 	AutomaticRestartTime             *time.Time
 	AvailabilityZones                []map[string]interface{}
 	BackupRetentionPeriod            *int64
@@ -19,8 +19,8 @@ type DbCluster struct {
 	CrossAccountClone                *bool
 	DBClusterArn                     *string
 	DBClusterIdentifier              *string
-	DBClusterMembers                 []map[string]interface{}
-	DBClusterOptionGroupMemberships  []map[string]interface{}
+	DBClusterMembers                 []DbClusterMemberList
+	DBClusterOptionGroupMemberships  []DbClusterOptionGroupMemberships
 	DBClusterParameterGroup          *string
 	DBSubnetGroup                    *string
 	DatabaseName                     *string
@@ -46,5 +46,5 @@ type DbCluster struct {
 	ReplicationSourceIdentifier      *string
 	Status                           *string
 	StorageEncrypted                 *bool
-	VpcSecurityGroups                []map[string]interface{}
+	VpcSecurityGroups                []VpcSecurityGroupMembershipList
 }

@@ -15,7 +15,7 @@ func main() {
         PathParams: operations.SendAnSmsPathParams{
             Format: "xml",
         },
-        Request: "et",
+        Request: "est",
     }
     
     res, err := s.SendAnSms(ctx, req)

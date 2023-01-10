@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDbSubnetGroupResult struct {
-	DBSubnetGroup *DbSubnetGroup1
+	DBSubnetGroup *DbSubnetGroup
 }

@@ -34,26 +34,26 @@ func main() {
     
     req := operations.CreateDatasetRequest{
         Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "minima",
-            XAmzDate: "at",
-            XAmzSecurityToken: "maiores",
-            XAmzSignature: "rem",
-            XAmzSignedHeaders: "aperiam",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "est",
+            XAmzCredential: "voluptates",
+            XAmzDate: "repellat",
+            XAmzSecurityToken: "eligendi",
+            XAmzSignature: "adipisci",
+            XAmzSignedHeaders: "sit",
             XAmzTarget: "AWSLookoutEquipmentFrontendService.CreateDataset",
         },
         Request: shared.CreateDatasetRequest{
-            ClientToken: "iste",
-            DatasetName: "at",
+            ClientToken: "atque",
+            DatasetName: "odio",
             DatasetSchema: shared.DatasetSchema{
-                InlineDataSchema: "accusantium",
+                InlineDataSchema: "quam",
             },
-            ServerSideKmsKeyID: "qui",
+            ServerSideKmsKeyID: "ut",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "illo",
-                    Value: "voluptas",
+                    Key: "voluptas",
+                    Value: "in",
                 },
             },
         },

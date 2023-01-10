@@ -1,5 +1,5 @@
 package shared
 
 type ModifySnapshotCopyRetentionPeriodResult struct {
-	Cluster *Cluster2
+	Cluster *Cluster
 }

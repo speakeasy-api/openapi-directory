@@ -1,5 +1,5 @@
 package shared
 
 type CreateMlTransformResponse struct {
-	TransformID map[string]interface{} `json:"TransformId,omitempty"`
+	TransformID *string `json:"TransformId,omitempty"`
 }

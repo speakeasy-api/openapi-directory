@@ -30,19 +30,19 @@ func main() {
             },
         },
         PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "eos",
+            ServiceSid: "nemo",
         },
         Headers: operations.CreateChannelHeaders{
-            XTwilioWebhookEnabled: "false",
+            XTwilioWebhookEnabled: "true",
         },
         Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "ut",
-            CreatedBy: "maiores",
-            DateCreated: "1989-03-09T19:12:40Z",
-            DateUpdated: "1980-12-24T21:03:57Z",
-            FriendlyName: "ipsum",
-            Type: "private",
-            UniqueName: "ut",
+            Attributes: "occaecati",
+            CreatedBy: "consequatur",
+            DateCreated: "2020-03-04T06:29:12Z",
+            DateUpdated: "1978-01-12T18:24:27Z",
+            FriendlyName: "fuga",
+            Type: "public",
+            UniqueName: "quis",
         },
     }
     

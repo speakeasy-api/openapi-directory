@@ -24,12 +24,12 @@ func main() {
     
     req := operations.TaxRatesByCountryCodeRequest{
         QueryParams: operations.TaxRatesByCountryCodeQueryParams{
-            CountryCode: "autem",
-            Date: "sed",
-            Domain: "corporis",
-            Filter: "sed",
-            ProductCodes: "numquam",
-            Province: "eveniet",
+            CountryCode: "animi",
+            Date: "tempora",
+            Domain: "enim",
+            Filter: "aperiam",
+            ProductCodes: "doloremque",
+            Province: "in",
             Zip: "quia",
         },
     }

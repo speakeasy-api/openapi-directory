@@ -8,8 +8,20 @@ type UpdateProjectPathParams struct {
 	ProjectID string `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
-type UpdateProjectRequestBody struct {
-	IsDefault bool `json:"is_default"`
+type UpdateProjectRequestBodyEnvironmentEnum string
+
+const (
+	UpdateProjectRequestBodyEnvironmentEnumDevelopment UpdateProjectRequestBodyEnvironmentEnum = "Development"
+	UpdateProjectRequestBodyEnvironmentEnumStaging     UpdateProjectRequestBodyEnvironmentEnum = "Staging"
+	UpdateProjectRequestBodyEnvironmentEnumProduction  UpdateProjectRequestBodyEnvironmentEnum = "Production"
+)
+
+type UpdateProjectRequestBodyInput struct {
+	Description string                                  `json:"description"`
+	Environment UpdateProjectRequestBodyEnvironmentEnum `json:"environment"`
+	IsDefault   bool                                    `json:"is_default"`
+	Name        string                                  `json:"name"`
+	Purpose     string                                  `json:"purpose"`
 }
 
 type UpdateProject401ApplicationJSON struct {
@@ -20,7 +32,7 @@ type UpdateProject401ApplicationJSON struct {
 
 type UpdateProjectRequest struct {
 	PathParams UpdateProjectPathParams
-	Request    UpdateProjectRequestBody `request:"mediaType=application/json"`
+	Request    UpdateProjectRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateProjectResponse struct {

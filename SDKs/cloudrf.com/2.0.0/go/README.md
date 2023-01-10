@@ -39,8 +39,8 @@ func main() {
             },
         },
         QueryParams: operations.InterferenceQueryParams{
-            Name: "omnis",
-            Network: "officia",
+            Name: "voluptas",
+            Network: "quam",
         },
     }
     

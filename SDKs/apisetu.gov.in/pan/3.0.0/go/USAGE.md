@@ -22,16 +22,16 @@ func main() {
         },
         Request: &operations.PancrRequestBody{
             CertificateParameters: &operations.PancrRequestBodyCertificateParameters{
-                DOB: "officia",
-                FullName: "qui",
-                GENDER: "odit",
-                PANFullName: "tempora",
-                UID: "voluptatem",
-                Panno: "dignissimos",
+                DOB: "sint",
+                FullName: "cumque",
+                GENDER: "ut",
+                PANFullName: "nam",
+                UID: "a",
+                Panno: "sed",
             },
-            ConsentArtifact: "velit",
-            Format: "pdf",
-            TxnID: "vitae",
+            ConsentArtifact: "sint",
+            Format: "xml",
+            TxnID: "impedit",
         },
     }
     

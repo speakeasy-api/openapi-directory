@@ -29,8 +29,8 @@ func main() {
             },
         },
         PathParams: operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams{
-            AppID: 2300325445861974853,
-            CardID: "ut",
+            AppID: 6434536896164192283,
+            CardID: "dicta",
         },
     }
     

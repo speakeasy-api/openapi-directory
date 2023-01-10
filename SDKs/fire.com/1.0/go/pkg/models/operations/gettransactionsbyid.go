@@ -48,6 +48,46 @@ type GetTransactionsByIDTransactionRelatedPartyRelatedPartyFireAccount struct {
 	Type    *GetTransactionsByIDTransactionRelatedPartyRelatedPartyFireAccountTypeEnum `json:"type,omitempty"`
 }
 
+type GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountAccount struct {
+	AccountNumber *string `json:"accountNumber,omitempty"`
+	Alias         *string `json:"alias,omitempty"`
+	Bic           *string `json:"bic,omitempty"`
+	Iban          *string `json:"iban,omitempty"`
+	ID            *int64  `json:"id,omitempty"`
+	Nsc           *string `json:"nsc,omitempty"`
+}
+
+type GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum string
+
+const (
+	GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnumExternalAccount GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum = "EXTERNAL_ACCOUNT"
+)
+
+type GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccount struct {
+	Account *GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountAccount  `json:"account,omitempty"`
+	Type    *GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum `json:"type,omitempty"`
+}
+
+type GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeAccount struct {
+	AccountNumber *string `json:"accountNumber,omitempty"`
+	Alias         *string `json:"alias,omitempty"`
+	Bic           *string `json:"bic,omitempty"`
+	Iban          *string `json:"iban,omitempty"`
+	ID            *int64  `json:"id,omitempty"`
+	Nsc           *string `json:"nsc,omitempty"`
+}
+
+type GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnum string
+
+const (
+	GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnumWithdrawalAccount GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnum = "WITHDRAWAL_ACCOUNT"
+)
+
+type GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayee struct {
+	Account *GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeAccount  `json:"account,omitempty"`
+	Type    *GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnum `json:"type,omitempty"`
+}
+
 type GetTransactionsByIDTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant struct {
 	AcquirerIDDe32      *string  `json:"acquirerIdDe32,omitempty"`
 	AdditionalAmtDe54   *string  `json:"additionalAmtDe54,omitempty"`
@@ -90,46 +130,6 @@ const (
 type GetTransactionsByIDTransactionRelatedPartyRelatedPartyCardPayment struct {
 	CardMerchant *GetTransactionsByIDTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant `json:"cardMerchant,omitempty"`
 	Type         *GetTransactionsByIDTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum     `json:"type,omitempty"`
-}
-
-type GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountAccount struct {
-	AccountNumber *string `json:"accountNumber,omitempty"`
-	Alias         *string `json:"alias,omitempty"`
-	Bic           *string `json:"bic,omitempty"`
-	Iban          *string `json:"iban,omitempty"`
-	ID            *int64  `json:"id,omitempty"`
-	Nsc           *string `json:"nsc,omitempty"`
-}
-
-type GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum string
-
-const (
-	GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnumExternalAccount GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum = "EXTERNAL_ACCOUNT"
-)
-
-type GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccount struct {
-	Account *GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountAccount  `json:"account,omitempty"`
-	Type    *GetTransactionsByIDTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum `json:"type,omitempty"`
-}
-
-type GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeAccount struct {
-	AccountNumber *string `json:"accountNumber,omitempty"`
-	Alias         *string `json:"alias,omitempty"`
-	Bic           *string `json:"bic,omitempty"`
-	Iban          *string `json:"iban,omitempty"`
-	ID            *int64  `json:"id,omitempty"`
-	Nsc           *string `json:"nsc,omitempty"`
-}
-
-type GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnum string
-
-const (
-	GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnumWithdrawalAccount GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnum = "WITHDRAWAL_ACCOUNT"
-)
-
-type GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayee struct {
-	Account *GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeAccount  `json:"account,omitempty"`
-	Type    *GetTransactionsByIDTransactionRelatedPartyRelatedPartyPayeeTypeEnum `json:"type,omitempty"`
 }
 
 type GetTransactionsByIDTransaction struct {

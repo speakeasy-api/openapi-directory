@@ -3,6 +3,6 @@ package shared
 // CertificateMessage
 // Data returned by the <b>DescribeCertificates</b> action.
 type CertificateMessage struct {
-	Certificates []map[string]interface{}
+	Certificates []CertificateList
 	Marker       *string
 }

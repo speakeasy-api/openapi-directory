@@ -219,7 +219,7 @@ func (s *Bioentity) GetCaseModelAssociations(ctx context.Context, request operat
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AssociationResults1
+			var out *shared.AssociationResults
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -526,7 +526,7 @@ func (s *Bioentity) GetDiseaseModelTaxonAssociations(ctx context.Context, reques
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AssociationResults2
+			var out *shared.AssociationResults
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -1556,7 +1556,7 @@ func (s *Bioentity) GetGenericAssociations(ctx context.Context, request operatio
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AssociationResults5
+			var out *shared.AssociationResults
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -1842,7 +1842,7 @@ func (s *Bioentity) GetGenotypeModelAssociations(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AssociationResults3
+			var out *shared.AssociationResults
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -2178,7 +2178,7 @@ func (s *Bioentity) GetModelGenotypeAssociations(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AssociationResults4
+			var out *shared.AssociationResults
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -2601,7 +2601,7 @@ func (s *Bioentity) GetPhenotypeGeneAssociations(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AssociationResults2
+			var out *shared.AssociationResults
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -3149,7 +3149,7 @@ func (s *Bioentity) GetSubstanceRoleAssociations(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.Association4
+			var out []shared.Association
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

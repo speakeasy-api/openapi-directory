@@ -34,18 +34,18 @@ func main() {
     
     req := operations.AssociateApprovalRuleTemplateWithRepositoryRequest{
         Headers: operations.AssociateApprovalRuleTemplateWithRepositoryHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "dignissimos",
-            XAmzDate: "et",
-            XAmzSecurityToken: "alias",
-            XAmzSignature: "vitae",
-            XAmzSignedHeaders: "ipsum",
+            XAmzAlgorithm: "omnis",
+            XAmzContentSha256: "ut",
+            XAmzCredential: "libero",
+            XAmzDate: "consequatur",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "sit",
+            XAmzSignedHeaders: "quasi",
             XAmzTarget: "CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository",
         },
         Request: shared.AssociateApprovalRuleTemplateWithRepositoryInput{
-            ApprovalRuleTemplateName: "magni",
-            RepositoryName: "expedita",
+            ApprovalRuleTemplateName: "voluptate",
+            RepositoryName: "ut",
         },
     }
     

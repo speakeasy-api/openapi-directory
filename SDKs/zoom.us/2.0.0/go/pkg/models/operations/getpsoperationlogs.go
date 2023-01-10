@@ -23,7 +23,9 @@ type GetPsOperationLogs200ApplicationJSONOperationLogs struct {
 // GetPsOperationLogs200ApplicationJSON
 // Pagination object.
 type GetPsOperationLogs200ApplicationJSON struct {
+	NextPageToken *string                                             `json:"next_page_token,omitempty"`
 	OperationLogs []GetPsOperationLogs200ApplicationJSONOperationLogs `json:"operation_logs,omitempty"`
+	PageSize      *int64                                              `json:"page_size,omitempty"`
 }
 
 type GetPsOperationLogsRequest struct {

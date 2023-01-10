@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                FullName: "est",
-                RROLL: "sequi",
-                Year: "doloremque",
+                FullName: "et",
+                RROLL: "eveniet",
+                Year: "ut",
             },
-            ConsentArtifact: "eius",
+            ConsentArtifact: "eos",
             Format: "pdf",
-            TxnID: "omnis",
+            TxnID: "porro",
         },
     }
     

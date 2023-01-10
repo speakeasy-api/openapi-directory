@@ -19,7 +19,8 @@ func main() {
         },
         Request: &shared.BoundariesQuery{
             Ids: []string{
-                "in",
+                "illo",
+                "minus",
             },
         },
     }

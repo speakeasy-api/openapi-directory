@@ -34,13 +34,13 @@ func main() {
     
     req := operations.CommunicationRequest{
         QueryParams: operations.CommunicationQueryParams{
-            All: false,
+            All: true,
         },
         Request: []shared.Post{
             shared.Post{
-                ID: "architecto",
-                Language: "ad",
-                Text: "nisi",
+                ID: "provident",
+                Language: "ut",
+                Text: "a",
             },
         },
     }

@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.HscerRequestBody{
             CertificateParameters: &operations.HscerRequestBodyCertificateParameters{
-                FullName: "quas",
-                RROLL: "exercitationem",
-                YEAR: "tempore",
+                FullName: "magnam",
+                RROLL: "nulla",
+                YEAR: "explicabo",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "incidunt",
             Format: "pdf",
-            TxnID: "magnam",
+            TxnID: "a",
         },
     }
     

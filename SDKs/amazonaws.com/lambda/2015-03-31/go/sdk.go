@@ -549,7 +549,7 @@ func (s *SDK) CreateEventSourceMapping(ctx context.Context, request operations.C
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration1
+			var out *shared.EventSourceMappingConfiguration
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -938,7 +938,7 @@ func (s *SDK) DeleteEventSourceMapping(ctx context.Context, request operations.D
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration1
+			var out *shared.EventSourceMappingConfiguration
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -1730,7 +1730,7 @@ func (s *SDK) GetEventSourceMapping(ctx context.Context, request operations.GetE
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration1
+			var out *shared.EventSourceMappingConfiguration
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -5140,7 +5140,7 @@ func (s *SDK) UpdateEventSourceMapping(ctx context.Context, request operations.U
 	case httpRes.StatusCode == 202:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.EventSourceMappingConfiguration1
+			var out *shared.EventSourceMappingConfiguration
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -5252,7 +5252,7 @@ func (s *SDK) UpdateFunctionCode(ctx context.Context, request operations.UpdateF
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.FunctionConfiguration2
+			var out *shared.FunctionConfiguration
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

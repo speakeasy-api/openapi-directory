@@ -40,7 +40,7 @@ type UpdateFunctionCodeResponse struct {
 	CodeStorageExceededException       *interface{}
 	CodeVerificationFailedException    *interface{}
 	ContentType                        string
-	FunctionConfiguration              *shared.FunctionConfiguration2
+	FunctionConfiguration              *shared.FunctionConfiguration
 	InvalidCodeSignatureException      *interface{}
 	InvalidParameterValueException     *interface{}
 	PreconditionFailedException        *interface{}

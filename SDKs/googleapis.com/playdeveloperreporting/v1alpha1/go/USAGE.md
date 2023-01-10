@@ -13,23 +13,23 @@ func main() {
     
     req := operations.PlaydeveloperreportingAnomaliesListRequest{
         PathParams: operations.PlaydeveloperreportingAnomaliesListPathParams{
-            Parent: "quas",
+            Parent: "nostrum",
         },
         QueryParams: operations.PlaydeveloperreportingAnomaliesListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "aperiam",
-            Alt: "json",
-            Callback: "nobis",
-            Fields: "impedit",
-            Filter: "rem",
-            Key: "vel",
-            OauthToken: "in",
-            PageSize: 5790576081560137153,
-            PageToken: "cumque",
+            DollarXgafv: "1",
+            AccessToken: "quo",
+            Alt: "proto",
+            Callback: "atque",
+            Fields: "aut",
+            Filter: "laborum",
+            Key: "deserunt",
+            OauthToken: "ullam",
+            PageSize: 7721199028839594214,
+            PageToken: "dolores",
             PrettyPrint: false,
-            QuotaUser: "et",
-            UploadType: "officiis",
-            UploadProtocol: "officiis",
+            QuotaUser: "cupiditate",
+            UploadType: "sit",
+            UploadProtocol: "est",
         },
     }
     

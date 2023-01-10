@@ -35,21 +35,22 @@ func main() {
     req := operations.ParseAddressRequest{
         Request: shared.ParseAddressRequestBody{
             Address: &shared.PartialAddress{
-                AddressLine1: "omnis",
-                AddressLine2: "ut",
-                AddressLine3: "non",
+                AddressLine1: "veritatis",
+                AddressLine2: "consequatur",
+                AddressLine3: "molestiae",
                 AddressResidentialIndicator: map[string]interface{}{
-                    "repellendus": "praesentium",
+                    "qui": "autem",
+                    "quia": "enim",
                 },
-                CityLocality: "placeat",
-                CompanyName: "sunt",
-                CountryCode: "molestiae",
-                Name: "velit",
-                Phone: "maiores",
-                PostalCode: "eos",
-                StateProvince: "voluptatum",
+                CityLocality: "quis",
+                CompanyName: "beatae",
+                CountryCode: "eos",
+                Name: "numquam",
+                Phone: "voluptate",
+                PostalCode: "tempora",
+                StateProvince: "id",
             },
-            Text: "expedita",
+            Text: "accusamus",
         },
     }
     

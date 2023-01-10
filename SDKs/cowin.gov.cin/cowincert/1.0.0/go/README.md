@@ -29,8 +29,8 @@ func main() {
             },
         },
         Request: shared.CertificateRequest{
-            BeneficiaryID: "accusantium",
-            Mobile: "ex",
+            BeneficiaryID: "et",
+            Mobile: "vitae",
         },
     }
     

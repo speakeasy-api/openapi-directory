@@ -23,30 +23,22 @@ func main() {
     
     req := operations.AddTagsRequest{
         Headers: operations.AddTagsHeaders{
-            XAmzAlgorithm: "quasi",
-            XAmzContentSha256: "quis",
-            XAmzCredential: "vitae",
-            XAmzDate: "nesciunt",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "consequuntur",
+            XAmzAlgorithm: "dolorem",
+            XAmzContentSha256: "facere",
+            XAmzCredential: "magnam",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "eum",
+            XAmzSignature: "facilis",
+            XAmzSignedHeaders: "perferendis",
             XAmzTarget: "AmazonML_20141212.AddTags",
         },
         Request: shared.AddTagsInput{
-            ResourceID: "magni",
-            ResourceType: "DataSource",
+            ResourceID: "ut",
+            ResourceType: "MLModel",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "quia",
-                    Value: "sit",
-                },
-                shared.Tag{
-                    Key: "qui",
-                    Value: "qui",
-                },
-                shared.Tag{
-                    Key: "assumenda",
-                    Value: "excepturi",
+                    Key: "ut",
+                    Value: "ut",
                 },
             },
         },

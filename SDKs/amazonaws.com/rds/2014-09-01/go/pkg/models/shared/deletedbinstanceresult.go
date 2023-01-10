@@ -1,5 +1,5 @@
 package shared
 
 type DeleteDbInstanceResult struct {
-	DBInstance *DbInstance1
+	DBInstance *DbInstance
 }

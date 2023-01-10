@@ -31,7 +31,12 @@ type ImGroupMembersGroupMemberListMembers struct {
 // ImGroupMembersGroupMemberList
 // Pagination Object.
 type ImGroupMembersGroupMemberList struct {
-	Members []ImGroupMembersGroupMemberListMembers `json:"members,omitempty"`
+	Members       []ImGroupMembersGroupMemberListMembers `json:"members,omitempty"`
+	NextPageToken *string                                `json:"next_page_token,omitempty"`
+	PageCount     *int64                                 `json:"page_count,omitempty"`
+	PageNumber    *int64                                 `json:"page_number,omitempty"`
+	PageSize      *int64                                 `json:"page_size,omitempty"`
+	TotalRecords  *int64                                 `json:"total_records,omitempty"`
 }
 
 type ImGroupMembersRequest struct {

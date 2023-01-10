@@ -29,7 +29,7 @@ func main() {
             },
         },
         Headers: operations.GetAllFacilitiesHeaders{
-            Accept: "text/csv",
+            Accept: "application/geo+json",
         },
     }
     

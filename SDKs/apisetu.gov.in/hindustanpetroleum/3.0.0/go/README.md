@@ -33,16 +33,16 @@ func main() {
         },
         Request: &operations.LpgsvRequestBody{
             CertificateParameters: &operations.LpgsvRequestBodyCertificateParameters{
-                DOB: "recusandae",
-                FullName: "incidunt",
-                GENDER: "delectus",
-                LPGID: "qui",
-                SVNo: "iste",
-                UID: "fuga",
+                DOB: "vel",
+                FullName: "et",
+                GENDER: "incidunt",
+                LPGID: "voluptas",
+                SVNo: "consequuntur",
+                UID: "quam",
             },
-            ConsentArtifact: "at",
+            ConsentArtifact: "harum",
             Format: "pdf",
-            TxnID: "magnam",
+            TxnID: "et",
         },
     }
     

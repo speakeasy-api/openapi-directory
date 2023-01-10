@@ -18,10 +18,10 @@ func main() {
             },
         },
         PathParams: operations.BaggageTripAndContactPathParams{
-            SearchID: "enim",
+            SearchID: "debitis",
         },
         Headers: operations.BaggageTripAndContactHeaders{
-            Accept: "cupiditate",
+            Accept: "ut",
         },
     }
     

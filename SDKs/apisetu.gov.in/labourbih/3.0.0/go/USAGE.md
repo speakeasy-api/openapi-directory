@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.AlimwRequestBody{
             CertificateParameters: &operations.AlimwRequestBodyCertificateParameters{
-                RefNo: "nam",
-                TokenNo: "eaque",
+                RefNo: "maxime",
+                TokenNo: "rerum",
             },
-            ConsentArtifact: "adipisci",
+            ConsentArtifact: "quisquam",
             Format: "pdf",
-            TxnID: "laborum",
+            TxnID: "nemo",
         },
     }
     

@@ -34,21 +34,22 @@ func main() {
     
     req := operations.BatchCheckLayerAvailabilityRequest{
         Headers: operations.BatchCheckLayerAvailabilityHeaders{
-            XAmzAlgorithm: "necessitatibus",
-            XAmzContentSha256: "in",
-            XAmzCredential: "possimus",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "dolorum",
-            XAmzSignature: "doloribus",
-            XAmzSignedHeaders: "saepe",
+            XAmzAlgorithm: "adipisci",
+            XAmzContentSha256: "dolorem",
+            XAmzCredential: "quas",
+            XAmzDate: "eum",
+            XAmzSecurityToken: "distinctio",
+            XAmzSignature: "nostrum",
+            XAmzSignedHeaders: "sed",
             XAmzTarget: "SpencerFrontendService.BatchCheckLayerAvailability",
         },
         Request: shared.BatchCheckLayerAvailabilityRequest{
             LayerDigests: []string{
-                "et",
+                "totam",
+                "sit",
             },
-            RegistryID: "ut",
-            RepositoryName: "asperiores",
+            RegistryID: "et",
+            RepositoryName: "et",
         },
     }
     

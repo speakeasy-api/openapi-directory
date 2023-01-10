@@ -13,8 +13,30 @@ type ListDropletKernelsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type ListDropletKernels200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListDropletKernels200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListDropletKernels200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListDropletKernels200ApplicationJSONMeta
+// Information about the response itself.
+type ListDropletKernels200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListDropletKernels200ApplicationJSON struct {
 	Kernels []shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesKernel `json:"kernels,omitempty"`
+	Links   *ListDropletKernels200ApplicationJSONLinks                                                                       `json:"links,omitempty"`
+	Meta    ListDropletKernels200ApplicationJSONMeta                                                                         `json:"meta"`
 }
 
 type ListDropletKernels401ApplicationJSON struct {

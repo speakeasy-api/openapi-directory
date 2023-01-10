@@ -24,14 +24,14 @@ func main() {
     
     req := operations.GetVaccineStatusRequest{
         Headers: operations.GetVaccineStatusHeaders{
-            Accept: "inventore",
-            Authorization: "sed",
-            ContentType: "voluptas",
-            CowinAPIKey: "iure",
+            Accept: "ea",
+            Authorization: "et",
+            ContentType: "aliquid",
+            CowinAPIKey: "quo",
         },
         Request: shared.VaccineStatusRequest{
-            BeneficiaryID: "dolores",
-            Mobile: "enim",
+            BeneficiaryID: "provident",
+            Mobile: "deleniti",
         },
     }
     

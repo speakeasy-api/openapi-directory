@@ -1,5 +1,8 @@
 package shared
 
 type Group struct {
-	Members []Reference `json:"members,omitempty"`
+	EntityID   *string         `json:"entity_id,omitempty"`
+	EntityType *EntityTypeEnum `json:"entity_type,omitempty"`
+	Members    []Reference     `json:"members,omitempty"`
+	Name       *string         `json:"name,omitempty"`
 }

@@ -15,19 +15,35 @@ type ListVpcMembersQueryParams struct {
 }
 
 type ListVpcMembers200ApplicationJSONLinksPages1 struct {
-	Prev *string `json:"prev,omitempty"`
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
 }
 
 type ListVpcMembers200ApplicationJSONLinksPages2 struct {
-	Next *string `json:"next,omitempty"`
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
 }
 
 type ListVpcMembers200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
+type ListVpcMembers200ApplicationJSONMembers struct {
+	CreatedAt *string `json:"created_at,omitempty"`
+	Name      *string `json:"name,omitempty"`
+	Urn       *string `json:"urn,omitempty"`
+}
+
+// ListVpcMembers200ApplicationJSONMeta
+// Information about the response itself.
+type ListVpcMembers200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListVpcMembers200ApplicationJSON struct {
-	Links *ListVpcMembers200ApplicationJSONLinks `json:"links,omitempty"`
+	Links   *ListVpcMembers200ApplicationJSONLinks    `json:"links,omitempty"`
+	Members []ListVpcMembers200ApplicationJSONMembers `json:"members,omitempty"`
+	Meta    ListVpcMembers200ApplicationJSONMeta      `json:"meta"`
 }
 
 type ListVpcMembers401ApplicationJSON struct {

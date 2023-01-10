@@ -26,8 +26,30 @@ type ListAllDomainRecords200ApplicationJSONDomainRecords struct {
 	Weight   *int64  `json:"weight,omitempty"`
 }
 
+type ListAllDomainRecords200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllDomainRecords200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllDomainRecords200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllDomainRecords200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllDomainRecords200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAllDomainRecords200ApplicationJSON struct {
 	DomainRecords []ListAllDomainRecords200ApplicationJSONDomainRecords `json:"domain_records,omitempty"`
+	Links         *ListAllDomainRecords200ApplicationJSONLinks          `json:"links,omitempty"`
+	Meta          ListAllDomainRecords200ApplicationJSONMeta            `json:"meta"`
 }
 
 type ListAllDomainRecords401ApplicationJSON struct {

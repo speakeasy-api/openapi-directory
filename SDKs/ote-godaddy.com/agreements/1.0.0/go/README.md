@@ -25,14 +25,12 @@ func main() {
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
             Keys: []string{
-                "et",
-                "placeat",
-                "dolorem",
+                "eius",
             },
         },
         Headers: operations.GetHeaders{
-            XMarketID: "repudiandae",
-            XPrivateLabelID: 8263951519878156532,
+            XMarketID: "rerum",
+            XPrivateLabelID: 731154817364490083,
         },
     }
     

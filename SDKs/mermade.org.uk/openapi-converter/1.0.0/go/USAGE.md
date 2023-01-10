@@ -13,8 +13,8 @@ func main() {
     
     req := operations.ConvertRequest{
         Request: &operations.ConvertRequestBody{
-            Filename: "laboriosam",
-            Source: "ab",
+            Filename: "labore",
+            Source: "nulla",
             Validate: "on",
         },
     }

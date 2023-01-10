@@ -25,24 +25,23 @@ func main() {
     req := operations.FindRequest{
         QueryParams: operations.FindQueryParams{
             ClassificationID: []interface{}{
-                "et",
-                "quidem",
+                "officia",
+                "vitae",
+                "qui",
             },
             ClassificationName: []interface{}{
-                "enim",
-                "magni",
-                "nobis",
+                "voluptas",
             },
-            ID: "repellat",
-            IncludeLicensedContent: "yes",
+            ID: "id",
+            IncludeLicensedContent: " no",
             IncludeSpellcheck: " no",
-            IncludeTest: " only",
-            Keyword: "debitis",
-            Locale: "non",
-            Page: "tempore",
-            Size: "temporibus",
-            Sort: "sed",
-            Source: " tmr",
+            IncludeTest: "yes",
+            Keyword: "tenetur",
+            Locale: "sed",
+            Page: "non",
+            Size: "saepe",
+            Sort: "eum",
+            Source: "ticketmaster",
         },
     }
     

@@ -11,5 +11,6 @@ type LinksChangeOrderLink struct {
 	Method                    *BeezUpCommonHTTPMethodEnum           `json:"method,omitempty"`
 	OperationID               *string                               `json:"operationId,omitempty"`
 	Parameters                map[string]BeezUpCommonLinkParameter3 `json:"parameters,omitempty"`
+	Rel                       *string                               `json:"rel,omitempty"`
 	URLTemplated              *bool                                 `json:"urlTemplated,omitempty"`
 }

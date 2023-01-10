@@ -23,37 +23,37 @@ func main() {
     
     req := operations.CountClosedWorkflowExecutionsRequest{
         Headers: operations.CountClosedWorkflowExecutionsHeaders{
-            XAmzAlgorithm: "nostrum",
-            XAmzContentSha256: "repudiandae",
-            XAmzCredential: "dicta",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "ea",
-            XAmzSignature: "delectus",
-            XAmzSignedHeaders: "nam",
+            XAmzAlgorithm: "illo",
+            XAmzContentSha256: "aut",
+            XAmzCredential: "omnis",
+            XAmzDate: "eos",
+            XAmzSecurityToken: "dolore",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "dolor",
             XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
         },
         Request: shared.CountClosedWorkflowExecutionsInput{
             CloseStatusFilter: &shared.CloseStatusFilter{
-                Status: "CONTINUED_AS_NEW",
+                Status: "COMPLETED",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2004-05-19T05:47:13Z",
-                OldestDate: "2003-11-01T03:28:06Z",
+                LatestDate: "1983-08-15T04:51:46Z",
+                OldestDate: "1997-06-05T21:11:32Z",
             },
-            Domain: "dicta",
+            Domain: "iste",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "laudantium",
+                WorkflowID: "voluptatibus",
             },
-            StartTimeFilter: &shared.CountClosedWorkflowExecutionsInputStartTimeFilter{
-                LatestDate: "1991-06-30T10:57:41Z",
-                OldestDate: "1971-09-30T18:40:33Z",
+            StartTimeFilter: &shared.ExecutionTimeFilter{
+                LatestDate: "1980-04-04T16:05:40Z",
+                OldestDate: "1983-07-12T21:04:12Z",
             },
             TagFilter: &shared.TagFilter{
-                Tag: "facilis",
+                Tag: "debitis",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "fugit",
-                Version: "aut",
+                Name: "quam",
+                Version: "excepturi",
             },
         },
     }

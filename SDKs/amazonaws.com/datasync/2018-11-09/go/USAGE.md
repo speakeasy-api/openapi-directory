@@ -23,17 +23,17 @@ func main() {
     
     req := operations.CancelTaskExecutionRequest{
         Headers: operations.CancelTaskExecutionHeaders{
-            XAmzAlgorithm: "quaerat",
-            XAmzContentSha256: "earum",
-            XAmzCredential: "quas",
-            XAmzDate: "repellendus",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "quisquam",
+            XAmzAlgorithm: "veniam",
+            XAmzContentSha256: "quidem",
+            XAmzCredential: "et",
+            XAmzDate: "nemo",
+            XAmzSecurityToken: "cumque",
+            XAmzSignature: "ipsam",
+            XAmzSignedHeaders: "consequatur",
             XAmzTarget: "FmrsService.CancelTaskExecution",
         },
         Request: shared.CancelTaskExecutionRequest{
-            TaskExecutionArn: "voluptas",
+            TaskExecutionArn: "ullam",
         },
     }
     

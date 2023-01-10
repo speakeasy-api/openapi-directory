@@ -10,7 +10,7 @@ type GetReplicaPathParams struct {
 }
 
 type GetReplica200ApplicationJSONOutput struct {
-	Replica *shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1replicasGetResponses200ContentApplication1jsonSchemaPropertiesReplicasItemsOutput1Output `json:"replica,omitempty"`
+	Replica *shared.Onev21databases1Percent7BdatabaseClusterUUIDPercent7D1replicasGetResponses200ContentApplication1jsonSchemaPropertiesReplicasItemsOutput `json:"replica,omitempty"`
 }
 
 type GetReplica401ApplicationJSON struct {

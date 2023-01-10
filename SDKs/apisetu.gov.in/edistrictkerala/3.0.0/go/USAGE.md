@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.CmcerRequestBody{
             CertificateParameters: &operations.CmcerRequestBodyCertificateParameters{
-                Aplno: "molestiae",
-                Certno: "tenetur",
-                Sccd: "nemo",
+                Aplno: "architecto",
+                Certno: "ea",
+                Sccd: "et",
             },
-            ConsentArtifact: "beatae",
+            ConsentArtifact: "soluta",
             Format: "pdf",
-            TxnID: "fuga",
+            TxnID: "ea",
         },
     }
     

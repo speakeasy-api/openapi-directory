@@ -36,7 +36,12 @@ type DashboardZoomRoomsZoomRoomListZoomRoom struct {
 // DashboardZoomRoomsZoomRoomList
 // Pagination Object.
 type DashboardZoomRoomsZoomRoomList struct {
-	ZoomRooms []DashboardZoomRoomsZoomRoomListZoomRoom `json:"zoom_rooms,omitempty"`
+	NextPageToken *string                                  `json:"next_page_token,omitempty"`
+	PageCount     *int64                                   `json:"page_count,omitempty"`
+	PageNumber    *int64                                   `json:"page_number,omitempty"`
+	PageSize      *int64                                   `json:"page_size,omitempty"`
+	TotalRecords  *int64                                   `json:"total_records,omitempty"`
+	ZoomRooms     []DashboardZoomRoomsZoomRoomListZoomRoom `json:"zoom_rooms,omitempty"`
 }
 
 type DashboardZoomRoomsRequest struct {

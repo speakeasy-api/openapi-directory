@@ -4,5 +4,5 @@ package shared
 // Represents the output of <a>DBClusterParameterGroup</a>.
 type DbClusterParameterGroupDetails struct {
 	Marker     *string
-	Parameters []map[string]interface{}
+	Parameters []ParametersList
 }

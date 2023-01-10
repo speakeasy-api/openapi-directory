@@ -1,6 +1,6 @@
 package shared
 
 type CertificateMessage struct {
-	Certificates []map[string]interface{}
+	Certificates []CertificateList
 	Marker       *string
 }

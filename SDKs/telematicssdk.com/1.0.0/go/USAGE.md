@@ -13,7 +13,7 @@ func main() {
     
     req := operations.TripsTripDetailsRequest{
         QueryParams: operations.TripsTripDetailsQueryParams{
-            TrackToken: "consequatur",
+            TrackToken: "eum",
         },
     }
     

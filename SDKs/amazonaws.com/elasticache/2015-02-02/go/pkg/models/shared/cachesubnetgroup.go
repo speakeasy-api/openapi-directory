@@ -6,6 +6,6 @@ type CacheSubnetGroup struct {
 	ARN                         *string
 	CacheSubnetGroupDescription *string
 	CacheSubnetGroupName        *string
-	Subnets                     []map[string]interface{}
+	Subnets                     []SubnetList
 	VpcID                       *string
 }

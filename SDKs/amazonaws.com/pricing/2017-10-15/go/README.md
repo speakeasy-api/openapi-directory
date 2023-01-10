@@ -34,24 +34,24 @@ func main() {
     
     req := operations.DescribeServicesRequest{
         QueryParams: operations.DescribeServicesQueryParams{
-            MaxResults: "non",
-            NextToken: "repudiandae",
+            MaxResults: "maiores",
+            NextToken: "nobis",
         },
         Headers: operations.DescribeServicesHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "pariatur",
-            XAmzCredential: "est",
-            XAmzDate: "commodi",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "quisquam",
+            XAmzAlgorithm: "quos",
+            XAmzContentSha256: "facilis",
+            XAmzCredential: "qui",
+            XAmzDate: "quis",
+            XAmzSecurityToken: "aut",
+            XAmzSignature: "est",
+            XAmzSignedHeaders: "ipsa",
             XAmzTarget: "AWSPriceListService.DescribeServices",
         },
         Request: shared.DescribeServicesRequest{
-            FormatVersion: "quia",
-            MaxResults: 2982585429028804684,
-            NextToken: "laboriosam",
-            ServiceCode: "hic",
+            FormatVersion: "eveniet",
+            MaxResults: 1787359646289181114,
+            NextToken: "vitae",
+            ServiceCode: "quos",
         },
     }
     

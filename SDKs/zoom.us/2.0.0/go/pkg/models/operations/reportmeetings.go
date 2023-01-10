@@ -50,7 +50,11 @@ type ReportMeetings200ApplicationJSON struct {
 	From          *time.Time                                 `json:"from,omitempty"`
 	Meetings      []ReportMeetings200ApplicationJSONMeetings `json:"meetings,omitempty"`
 	NextPageToken *string                                    `json:"next_page_token,omitempty"`
+	PageCount     *int64                                     `json:"page_count,omitempty"`
+	PageNumber    *int64                                     `json:"page_number,omitempty"`
+	PageSize      *int64                                     `json:"page_size,omitempty"`
 	To            *time.Time                                 `json:"to,omitempty"`
+	TotalRecords  *int64                                     `json:"total_records,omitempty"`
 }
 
 type ReportMeetingsRequest struct {

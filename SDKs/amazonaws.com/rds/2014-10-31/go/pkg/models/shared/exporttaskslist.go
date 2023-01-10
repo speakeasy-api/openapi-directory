@@ -1,0 +1,25 @@
+package shared
+
+import (
+	"time"
+)
+
+// ExportTasksList
+// <p>Contains the details of a snapshot export to Amazon S3. </p> <p>This data type is used as a response element in the <code>DescribeExportTasks</code> action. </p>
+type ExportTasksList struct {
+	ExportOnly             []string
+	ExportTaskIdentifier   *string
+	FailureCause           *string
+	IamRoleArn             *string
+	KmsKeyID               *string
+	PercentProgress        *int64
+	S3Bucket               *string
+	S3Prefix               *string
+	SnapshotTime           *time.Time
+	SourceArn              *string
+	Status                 *string
+	TaskEndTime            *time.Time
+	TaskStartTime          *time.Time
+	TotalExtractedDataInGB *int64
+	WarningMessage         *string
+}

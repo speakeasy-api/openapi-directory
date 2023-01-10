@@ -24,7 +24,7 @@ func main() {
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
             Format: "JSON",
-            Gameid: "earum",
+            Gameid: "quia",
         },
     }
     

@@ -13,8 +13,8 @@ func main() {
     
     req := operations.CreateGlobalRuleRequest{
         Request: shared.Rule{
-            Config: "iste",
-            Type: "COMPATIBILITY",
+            Config: "magnam",
+            Type: "VALIDITY",
         },
     }
     

@@ -1,6 +1,6 @@
 package shared
 
 type DescribeGlobalReplicationGroupsResult struct {
-	GlobalReplicationGroups []map[string]interface{}
+	GlobalReplicationGroups []GlobalReplicationGroupList
 	Marker                  *string
 }

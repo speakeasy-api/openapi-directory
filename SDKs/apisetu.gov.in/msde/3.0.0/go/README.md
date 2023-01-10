@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.IticrRequestBody{
             CertificateParameters: &operations.IticrRequestBodyCertificateParameters{
-                FullName: "necessitatibus",
-                Certno: "placeat",
+                FullName: "impedit",
+                Certno: "magni",
             },
-            ConsentArtifact: "voluptatem",
+            ConsentArtifact: "id",
             Format: "pdf",
-            TxnID: "quia",
+            TxnID: "fugiat",
         },
     }
     

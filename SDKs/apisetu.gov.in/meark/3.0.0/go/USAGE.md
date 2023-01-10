@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.AdcrdRequestBody{
             CertificateParameters: &operations.AdcrdRequestBodyCertificateParameters{
-                DOB: "laudantium",
-                PrnNo: "quas",
+                DOB: "explicabo",
+                PrnNo: "exercitationem",
                 RequestID: "ea",
             },
-            ConsentArtifact: "qui",
-            Format: "pdf",
-            TxnID: "sapiente",
+            ConsentArtifact: "quos",
+            Format: "xml",
+            TxnID: "officiis",
         },
     }
     

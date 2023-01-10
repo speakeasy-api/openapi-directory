@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.GetRenderPathParams{
-            ID: "quia",
+            ID: "voluptas",
         },
     }
     

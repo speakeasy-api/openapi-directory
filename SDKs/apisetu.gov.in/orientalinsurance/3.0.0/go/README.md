@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                INSCODE: "necessitatibus",
-                POLNO: "sequi",
-                STARTDT: "velit",
+                INSCODE: "minus",
+                POLNO: "consequatur",
+                STARTDT: "labore",
             },
-            ConsentArtifact: "nobis",
+            ConsentArtifact: "eveniet",
             Format: "pdf",
-            TxnID: "iusto",
+            TxnID: "quis",
         },
     }
     

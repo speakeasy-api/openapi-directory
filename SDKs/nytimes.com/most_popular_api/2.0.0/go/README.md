@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.GetMostemailedSectionTimePeriodJSONPathParams{
-            Section: "Automobiles",
+            Section: "Fashion & Style",
             TimePeriod: "30",
         },
     }

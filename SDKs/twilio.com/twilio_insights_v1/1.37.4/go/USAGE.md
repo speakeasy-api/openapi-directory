@@ -19,7 +19,7 @@ func main() {
             },
         },
         QueryParams: operations.FetchAccountSettingsQueryParams{
-            SubaccountSid: "voluptas",
+            SubaccountSid: "ad",
         },
     }
     

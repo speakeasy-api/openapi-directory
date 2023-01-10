@@ -6,6 +6,6 @@ type CacheSecurityGroup struct {
 	ARN                    *string
 	CacheSecurityGroupName *string
 	Description            *string
-	Ec2SecurityGroups      []map[string]interface{}
+	Ec2SecurityGroups      []Ec2SecurityGroupList
 	OwnerID                *string
 }

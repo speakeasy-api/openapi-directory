@@ -20,13 +20,13 @@ type DbInstance struct {
 	DBInstanceIdentifier                  *string
 	DBInstanceStatus                      *string
 	DBName                                *string
-	DBParameterGroups                     []map[string]interface{}
-	DBSecurityGroups                      []map[string]interface{}
+	DBParameterGroups                     []DbParameterGroupStatusList
+	DBSecurityGroups                      []DbSecurityGroupMembershipList
 	DBSubnetGroup                         *DbSubnetGroup
 	DbInstancePort                        *int64
 	DbiResourceID                         *string
 	DeletionProtection                    *bool
-	DomainMemberships                     []map[string]interface{}
+	DomainMemberships                     []DomainMembershipList
 	EnabledCloudwatchLogsExports          []string
 	Endpoint                              *Endpoint
 	Engine                                *string
@@ -42,7 +42,7 @@ type DbInstance struct {
 	MonitoringInterval                    *int64
 	MonitoringRoleArn                     *string
 	MultiAZ                               *bool
-	OptionGroupMemberships                []map[string]interface{}
+	OptionGroupMemberships                []OptionGroupMembershipList
 	PendingModifiedValues                 *PendingModifiedValues
 	PerformanceInsightsEnabled            *bool
 	PerformanceInsightsKMSKeyID           *string
@@ -54,10 +54,10 @@ type DbInstance struct {
 	ReadReplicaDBInstanceIdentifiers      []map[string]interface{}
 	ReadReplicaSourceDBInstanceIdentifier *string
 	SecondaryAvailabilityZone             *string
-	StatusInfos                           []map[string]interface{}
+	StatusInfos                           []DbInstanceStatusInfoList
 	StorageEncrypted                      *bool
 	StorageType                           *string
 	TdeCredentialArn                      *string
 	Timezone                              *string
-	VpcSecurityGroups                     []map[string]interface{}
+	VpcSecurityGroups                     []VpcSecurityGroupMembershipList
 }

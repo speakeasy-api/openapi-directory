@@ -46,5 +46,6 @@ type AbsencePeriodsResponseData struct {
 }
 
 type AbsencePeriodsResponse struct {
-	Data AbsencePeriodsResponseData `json:"data"`
+	Data    AbsencePeriodsResponseData `json:"data"`
+	Success bool                       `json:"success"`
 }

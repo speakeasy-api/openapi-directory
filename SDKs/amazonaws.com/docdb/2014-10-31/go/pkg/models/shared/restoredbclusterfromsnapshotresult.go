@@ -1,5 +1,5 @@
 package shared
 
 type RestoreDbClusterFromSnapshotResult struct {
-	DBCluster *DbCluster1
+	DBCluster *DbCluster
 }

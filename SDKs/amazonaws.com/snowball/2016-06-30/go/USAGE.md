@@ -23,17 +23,17 @@ func main() {
     
     req := operations.CancelClusterRequest{
         Headers: operations.CancelClusterHeaders{
-            XAmzAlgorithm: "quia",
-            XAmzContentSha256: "iste",
-            XAmzCredential: "deleniti",
-            XAmzDate: "libero",
-            XAmzSecurityToken: "saepe",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "corporis",
+            XAmzAlgorithm: "perferendis",
+            XAmzContentSha256: "consequatur",
+            XAmzCredential: "ut",
+            XAmzDate: "soluta",
+            XAmzSecurityToken: "voluptatem",
+            XAmzSignature: "adipisci",
+            XAmzSignedHeaders: "nobis",
             XAmzTarget: "AWSIESnowballJobManagementService.CancelCluster",
         },
         Request: shared.CancelClusterRequest{
-            ClusterID: "illum",
+            ClusterID: "necessitatibus",
         },
     }
     

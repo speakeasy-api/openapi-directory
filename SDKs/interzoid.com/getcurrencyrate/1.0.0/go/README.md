@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetcurrencyrateRequest{
         QueryParams: operations.GetcurrencyrateQueryParams{
-            License: "vero",
-            Symbol: "delectus",
+            License: "nobis",
+            Symbol: "mollitia",
         },
     }
     

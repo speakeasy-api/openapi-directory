@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.DgcerRequestBody{
             CertificateParameters: &operations.DgcerRequestBodyCertificateParameters{
-                DEGREE: "porro",
-                FullName: "eveniet",
-                RROLL: "sed",
+                DEGREE: "doloremque",
+                FullName: "deserunt",
+                RROLL: "quam",
             },
-            ConsentArtifact: "cum",
+            ConsentArtifact: "corporis",
             Format: "pdf",
-            TxnID: "quaerat",
+            TxnID: "qui",
         },
     }
     

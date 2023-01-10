@@ -6,5 +6,6 @@ type NewAttendancePeriodResponseData struct {
 }
 
 type NewAttendancePeriodResponse struct {
-	Data NewAttendancePeriodResponseData `json:"data"`
+	Data    NewAttendancePeriodResponseData `json:"data"`
+	Success bool                            `json:"success"`
 }

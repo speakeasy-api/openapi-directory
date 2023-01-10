@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDbInstanceResult struct {
-	DBInstance *DbInstance1
+	DBInstance *DbInstance
 }

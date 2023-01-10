@@ -18,11 +18,11 @@ func main() {
             },
         },
         PathParams: operations.GetCustomerServiceMetricPathParams{
-            CustomerServiceMetricType: "sed",
-            EvaluationType: "maxime",
+            CustomerServiceMetricType: "consequuntur",
+            EvaluationType: "sunt",
         },
         QueryParams: operations.GetCustomerServiceMetricQueryParams{
-            EvaluationMarketplaceID: "sint",
+            EvaluationMarketplaceID: "quo",
         },
     }
     

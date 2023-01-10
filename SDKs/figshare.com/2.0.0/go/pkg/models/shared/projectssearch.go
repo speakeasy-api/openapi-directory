@@ -1,5 +1,13 @@
 package shared
 
+type ProjectsSearchOrderEnum string
+
+const (
+	ProjectsSearchOrderEnumPublishedDate ProjectsSearchOrderEnum = "published_date"
+	ProjectsSearchOrderEnumModifiedDate  ProjectsSearchOrderEnum = "modified_date"
+	ProjectsSearchOrderEnumViews         ProjectsSearchOrderEnum = "views"
+)
+
 type ProjectsSearchOrderDirectionEnum string
 
 const (
@@ -13,6 +21,7 @@ type ProjectsSearch struct {
 	Limit          *int64                            `json:"limit,omitempty"`
 	ModifiedSince  *string                           `json:"modified_since,omitempty"`
 	Offset         *int64                            `json:"offset,omitempty"`
+	Order          *ProjectsSearchOrderEnum          `json:"order,omitempty"`
 	OrderDirection *ProjectsSearchOrderDirectionEnum `json:"order_direction,omitempty"`
 	Page           *int64                            `json:"page,omitempty"`
 	PageSize       *int64                            `json:"page_size,omitempty"`

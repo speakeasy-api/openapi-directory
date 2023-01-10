@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.IlpmtRequestBody{
             CertificateParameters: &operations.IlpmtRequestBodyCertificateParameters{
-                FullName: "in",
-                UID: "veritatis",
-                EILPAppID: "sed",
-                EILPContactNumber: "praesentium",
+                FullName: "saepe",
+                UID: "eius",
+                EILPAppID: "delectus",
+                EILPContactNumber: "sint",
             },
-            ConsentArtifact: "dolorum",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "iure",
+            TxnID: "molestiae",
         },
     }
     

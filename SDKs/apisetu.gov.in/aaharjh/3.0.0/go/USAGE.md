@@ -23,13 +23,13 @@ func main() {
         Request: &operations.RatcrRequestBody{
             CertificateParameters: &operations.RatcrRequestBodyCertificateParameters{
                 DOB: "enim",
-                FullName: "illo",
-                GENDER: "sapiente",
-                UID: "officia",
+                FullName: "eos",
+                GENDER: "adipisci",
+                UID: "eos",
             },
-            ConsentArtifact: "id",
+            ConsentArtifact: "est",
             Format: "pdf",
-            TxnID: "eum",
+            TxnID: "ipsum",
         },
     }
     

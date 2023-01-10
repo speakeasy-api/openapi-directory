@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                FullName: "quidem",
-                MembershipNo: "nulla",
+                FullName: "et",
+                MembershipNo: "rem",
             },
-            ConsentArtifact: "dolores",
+            ConsentArtifact: "suscipit",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "doloremque",
         },
     }
     

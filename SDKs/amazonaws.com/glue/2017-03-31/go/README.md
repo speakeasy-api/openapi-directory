@@ -34,293 +34,249 @@ func main() {
     
     req := operations.BatchCreatePartitionRequest{
         Headers: operations.BatchCreatePartitionHeaders{
-            XAmzAlgorithm: "asperiores",
-            XAmzContentSha256: "maxime",
-            XAmzCredential: "ratione",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "sit",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "sed",
+            XAmzAlgorithm: "molestias",
+            XAmzContentSha256: "dicta",
+            XAmzCredential: "voluptatum",
+            XAmzDate: "numquam",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "ducimus",
+            XAmzSignedHeaders: "ducimus",
             XAmzTarget: "AWSGlue.BatchCreatePartition",
         },
         Request: shared.BatchCreatePartitionRequest{
             CatalogID: "et",
-            DatabaseName: "consequatur",
+            DatabaseName: "nam",
             PartitionInputList: []shared.PartitionInput{
                 shared.PartitionInput{
-                    LastAccessTime: "1997-07-21T05:28:20Z",
-                    LastAnalyzedTime: "2006-05-10T12:05:18Z",
+                    LastAccessTime: "1996-06-10T05:46:33Z",
+                    LastAnalyzedTime: "2014-06-10T06:24:55Z",
                     Parameters: map[string]string{
-                        "placeat": "ipsam",
+                        "deserunt": "illo",
+                        "tempore": "velit",
                     },
                     StorageDescriptor: &shared.StorageDescriptor{
                         BucketColumns: []string{
-                            "facilis",
-                            "ipsa",
+                            "quidem",
                         },
                         Columns: []shared.Column{
                             shared.Column{
-                                Comment: "doloremque",
-                                Name: "minus",
+                                Comment: "officiis",
+                                Name: "veniam",
                                 Parameters: map[string]string{
-                                    "dolores": "quaerat",
+                                    "eius": "nobis",
+                                    "aliquam": "qui",
                                 },
-                                Type: "iste",
-                            },
-                            shared.Column{
-                                Comment: "harum",
-                                Name: "id",
-                                Parameters: map[string]string{
-                                    "quibusdam": "ullam",
-                                    "veniam": "expedita",
-                                    "error": "omnis",
-                                },
-                                Type: "aliquid",
+                                Type: "debitis",
                             },
                         },
                         Compressed: false,
-                        InputFormat: "dolore",
-                        Location: "commodi",
-                        NumberOfBuckets: 5035491284427618254,
-                        OutputFormat: "et",
+                        InputFormat: "consequatur",
+                        Location: "iusto",
+                        NumberOfBuckets: 8955101836556220093,
+                        OutputFormat: "iusto",
                         Parameters: map[string]string{
-                            "saepe": "sit",
-                            "esse": "voluptate",
-                            "tenetur": "exercitationem",
+                            "ut": "ut",
                         },
                         SchemaReference: &shared.SchemaReference{
                             SchemaID: &shared.SchemaID{
-                                RegistryName: "animi",
-                                SchemaArn: "facere",
-                                SchemaName: "consequatur",
+                                RegistryName: "expedita",
+                                SchemaArn: "repellendus",
+                                SchemaName: "commodi",
                             },
-                            SchemaVersionID: "ipsum",
-                            SchemaVersionNumber: 4716196713450287375,
+                            SchemaVersionID: "exercitationem",
+                            SchemaVersionNumber: 7459015832090057282,
                         },
                         SerdeInfo: &shared.SerDeInfo{
-                            Name: "amet",
+                            Name: "perferendis",
                             Parameters: map[string]string{
-                                "nostrum": "et",
-                                "eum": "aut",
+                                "autem": "dolore",
+                                "aliquam": "soluta",
                             },
-                            SerializationLibrary: "beatae",
+                            SerializationLibrary: "accusantium",
                         },
                         SkewedInfo: &shared.SkewedInfo{
                             SkewedColumnNames: []string{
-                                "est",
-                                "a",
-                                "quia",
+                                "aut",
+                                "accusamus",
                             },
                             SkewedColumnValueLocationMaps: map[string]string{
-                                "quaerat": "pariatur",
+                                "quisquam": "nihil",
                             },
                             SkewedColumnValues: []string{
-                                "nobis",
-                                "quasi",
+                                "deleniti",
                             },
                         },
                         SortColumns: []shared.Order{
                             shared.Order{
-                                Column: "non",
-                                SortOrder: 6267281124700323461,
+                                Column: "rem",
+                                SortOrder: 6277689859743485219,
                             },
                         },
                         StoredAsSubDirectories: false,
                     },
                     Values: []string{
-                        "eos",
-                        "quas",
+                        "magni",
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "1985-02-09T13:21:52Z",
-                    LastAnalyzedTime: "1972-10-26T02:41:50Z",
+                    LastAccessTime: "2010-12-14T23:38:35Z",
+                    LastAnalyzedTime: "2011-08-21T18:57:31Z",
                     Parameters: map[string]string{
-                        "deleniti": "eum",
-                        "ut": "dolorum",
+                        "quod": "corporis",
+                        "modi": "soluta",
+                        "odio": "expedita",
                     },
                     StorageDescriptor: &shared.StorageDescriptor{
                         BucketColumns: []string{
-                            "ab",
-                            "inventore",
+                            "ipsum",
+                            "saepe",
+                            "ad",
                         },
                         Columns: []shared.Column{
                             shared.Column{
-                                Comment: "voluptas",
-                                Name: "neque",
+                                Comment: "delectus",
+                                Name: "suscipit",
                                 Parameters: map[string]string{
-                                    "sit": "quibusdam",
-                                    "dolore": "ut",
-                                    "deserunt": "est",
+                                    "dolor": "ipsa",
+                                    "quos": "voluptas",
                                 },
-                                Type: "cupiditate",
-                            },
-                            shared.Column{
-                                Comment: "culpa",
-                                Name: "est",
-                                Parameters: map[string]string{
-                                    "qui": "doloribus",
-                                    "ad": "minus",
-                                    "sit": "est",
-                                },
-                                Type: "voluptas",
-                            },
-                            shared.Column{
-                                Comment: "quisquam",
-                                Name: "ipsum",
-                                Parameters: map[string]string{
-                                    "nihil": "error",
-                                    "sunt": "quia",
-                                },
-                                Type: "sed",
+                                Type: "laborum",
                             },
                         },
-                        Compressed: true,
-                        InputFormat: "quae",
-                        Location: "id",
-                        NumberOfBuckets: 8239657596927683099,
-                        OutputFormat: "et",
+                        Compressed: false,
+                        InputFormat: "iusto",
+                        Location: "et",
+                        NumberOfBuckets: 3667925934151297536,
+                        OutputFormat: "voluptas",
                         Parameters: map[string]string{
-                            "ea": "aliquid",
+                            "quia": "voluptas",
+                            "corporis": "omnis",
                         },
                         SchemaReference: &shared.SchemaReference{
                             SchemaID: &shared.SchemaID{
-                                RegistryName: "voluptate",
-                                SchemaArn: "beatae",
-                                SchemaName: "tempore",
+                                RegistryName: "dolores",
+                                SchemaArn: "expedita",
+                                SchemaName: "enim",
                             },
-                            SchemaVersionID: "reprehenderit",
-                            SchemaVersionNumber: 2038449797144002420,
+                            SchemaVersionID: "quo",
+                            SchemaVersionNumber: 515727864347354415,
                         },
                         SerdeInfo: &shared.SerDeInfo{
-                            Name: "velit",
+                            Name: "sequi",
                             Parameters: map[string]string{
-                                "illo": "aut",
-                                "quis": "quia",
+                                "illo": "enim",
+                                "et": "praesentium",
+                                "iste": "omnis",
                             },
-                            SerializationLibrary: "ab",
+                            SerializationLibrary: "odio",
                         },
                         SkewedInfo: &shared.SkewedInfo{
                             SkewedColumnNames: []string{
-                                "eveniet",
-                                "id",
+                                "adipisci",
+                                "quo",
+                                "rerum",
+                            },
+                            SkewedColumnValueLocationMaps: map[string]string{
+                                "suscipit": "fugit",
+                            },
+                            SkewedColumnValues: []string{
+                                "ullam",
+                                "vero",
+                            },
+                        },
+                        SortColumns: []shared.Order{
+                            shared.Order{
+                                Column: "et",
+                                SortOrder: 4855648594445967323,
+                            },
+                        },
+                        StoredAsSubDirectories: false,
+                    },
+                    Values: []string{
+                        "nobis",
+                        "sunt",
+                    },
+                },
+                shared.PartitionInput{
+                    LastAccessTime: "1971-09-25T18:10:01Z",
+                    LastAnalyzedTime: "1981-12-08T04:40:49Z",
+                    Parameters: map[string]string{
+                        "repellendus": "error",
+                    },
+                    StorageDescriptor: &shared.StorageDescriptor{
+                        BucketColumns: []string{
+                            "fugit",
+                        },
+                        Columns: []shared.Column{
+                            shared.Column{
+                                Comment: "dolores",
+                                Name: "aut",
+                                Parameters: map[string]string{
+                                    "nam": "molestias",
+                                    "et": "cumque",
+                                },
+                                Type: "aut",
+                            },
+                        },
+                        Compressed: false,
+                        InputFormat: "voluptatem",
+                        Location: "provident",
+                        NumberOfBuckets: 1615352566432714451,
+                        OutputFormat: "ullam",
+                        Parameters: map[string]string{
+                            "reprehenderit": "aut",
+                        },
+                        SchemaReference: &shared.SchemaReference{
+                            SchemaID: &shared.SchemaID{
+                                RegistryName: "possimus",
+                                SchemaArn: "voluptatibus",
+                                SchemaName: "magni",
+                            },
+                            SchemaVersionID: "reiciendis",
+                            SchemaVersionNumber: 2190221129833308991,
+                        },
+                        SerdeInfo: &shared.SerDeInfo{
+                            Name: "laboriosam",
+                            Parameters: map[string]string{
+                                "laudantium": "nam",
+                                "molestiae": "deserunt",
+                                "voluptates": "possimus",
+                            },
+                            SerializationLibrary: "et",
+                        },
+                        SkewedInfo: &shared.SkewedInfo{
+                            SkewedColumnNames: []string{
                                 "placeat",
                             },
                             SkewedColumnValueLocationMaps: map[string]string{
-                                "odio": "qui",
+                                "vero": "tempore",
+                                "rem": "cum",
+                                "ut": "inventore",
                             },
                             SkewedColumnValues: []string{
-                                "ad",
-                                "et",
+                                "aliquam",
+                                "ratione",
                             },
                         },
                         SortColumns: []shared.Order{
                             shared.Order{
-                                Column: "illo",
-                                SortOrder: 1408706972460457468,
+                                Column: "hic",
+                                SortOrder: 8404441515746634618,
                             },
                             shared.Order{
-                                Column: "earum",
-                                SortOrder: 1593157718086992465,
-                            },
-                            shared.Order{
-                                Column: "vero",
-                                SortOrder: 959559124305670872,
-                            },
-                        },
-                        StoredAsSubDirectories: true,
-                    },
-                    Values: []string{
-                        "architecto",
-                        "eos",
-                        "aut",
-                    },
-                },
-                shared.PartitionInput{
-                    LastAccessTime: "1990-06-22T10:15:32Z",
-                    LastAnalyzedTime: "1975-11-18T11:26:33Z",
-                    Parameters: map[string]string{
-                        "cupiditate": "aperiam",
-                    },
-                    StorageDescriptor: &shared.StorageDescriptor{
-                        BucketColumns: []string{
-                            "molestiae",
-                            "explicabo",
-                            "cumque",
-                        },
-                        Columns: []shared.Column{
-                            shared.Column{
-                                Comment: "et",
-                                Name: "sunt",
-                                Parameters: map[string]string{
-                                    "cum": "placeat",
-                                },
-                                Type: "ullam",
-                            },
-                            shared.Column{
-                                Comment: "minima",
-                                Name: "exercitationem",
-                                Parameters: map[string]string{
-                                    "unde": "modi",
-                                    "dolor": "omnis",
-                                },
-                                Type: "explicabo",
-                            },
-                        },
-                        Compressed: false,
-                        InputFormat: "quia",
-                        Location: "perferendis",
-                        NumberOfBuckets: 4216081296653578688,
-                        OutputFormat: "incidunt",
-                        Parameters: map[string]string{
-                            "velit": "voluptatem",
-                        },
-                        SchemaReference: &shared.SchemaReference{
-                            SchemaID: &shared.SchemaID{
-                                RegistryName: "maxime",
-                                SchemaArn: "omnis",
-                                SchemaName: "dolor",
-                            },
-                            SchemaVersionID: "non",
-                            SchemaVersionNumber: 1308406844759816204,
-                        },
-                        SerdeInfo: &shared.SerDeInfo{
-                            Name: "dolorem",
-                            Parameters: map[string]string{
-                                "sint": "iste",
-                            },
-                            SerializationLibrary: "magni",
-                        },
-                        SkewedInfo: &shared.SkewedInfo{
-                            SkewedColumnNames: []string{
-                                "omnis",
-                                "iste",
-                                "unde",
-                            },
-                            SkewedColumnValueLocationMaps: map[string]string{
-                                "impedit": "tempora",
-                                "aut": "omnis",
-                            },
-                            SkewedColumnValues: []string{
-                                "animi",
-                                "cum",
-                                "occaecati",
-                            },
-                        },
-                        SortColumns: []shared.Order{
-                            shared.Order{
-                                Column: "architecto",
-                                SortOrder: 9100209240926073616,
+                                Column: "qui",
+                                SortOrder: 4664529193248400784,
                             },
                         },
                         StoredAsSubDirectories: false,
                     },
                     Values: []string{
+                        "officia",
                         "dolore",
                     },
                 },
             },
-            TableName: "non",
+            TableName: "hic",
         },
     }
     

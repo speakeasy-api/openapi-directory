@@ -12,8 +12,14 @@ type GetPersonasQueryParams struct {
 	Page   *int64   `queryParam:"style=form,explode=true,name=page"`
 }
 
+type GetPersonas200ApplicationJSONLinks struct {
+	Self *shared.Link `json:"self,omitempty"`
+}
+
 type GetPersonas200ApplicationJSON struct {
-	Items []shared.Persona `json:"items,omitempty"`
+	Links *GetPersonas200ApplicationJSONLinks `json:"_links,omitempty"`
+	Meta  *shared.Pagination                  `json:"_meta,omitempty"`
+	Items []shared.Persona                    `json:"items,omitempty"`
 }
 
 type GetPersonasRequest struct {

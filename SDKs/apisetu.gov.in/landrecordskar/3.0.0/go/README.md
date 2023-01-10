@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.CncerRequestBody{
             CertificateParameters: &operations.CncerRequestBodyCertificateParameters{
-                DocumentNumber: "rerum",
+                DocumentNumber: "qui",
             },
-            ConsentArtifact: "iure",
+            ConsentArtifact: "quis",
             Format: "xml",
-            TxnID: "nam",
+            TxnID: "et",
         },
     }
     

@@ -30,7 +30,7 @@ func main() {
             },
         },
         Request: shared.RedactTransaction{
-            ID: "asperiores",
+            ID: "tenetur",
             Product: "verify",
             Type: "outbound",
         },

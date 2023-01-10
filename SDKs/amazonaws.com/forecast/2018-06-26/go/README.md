@@ -34,52 +34,48 @@ func main() {
     
     req := operations.CreateDatasetRequest{
         Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "similique",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "praesentium",
-            XAmzDate: "ipsa",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "rerum",
-            XAmzSignedHeaders: "iure",
+            XAmzAlgorithm: "voluptatem",
+            XAmzContentSha256: "quia",
+            XAmzCredential: "voluptas",
+            XAmzDate: "maxime",
+            XAmzSecurityToken: "error",
+            XAmzSignature: "exercitationem",
+            XAmzSignedHeaders: "quisquam",
             XAmzTarget: "AmazonForecast.CreateDataset",
         },
         Request: shared.CreateDatasetRequest{
-            DataFrequency: "dolore",
-            DatasetName: "doloribus",
-            DatasetType: "RELATED_TIME_SERIES",
-            Domain: "METRICS",
+            DataFrequency: "quaerat",
+            DatasetName: "earum",
+            DatasetType: "TARGET_TIME_SERIES",
+            Domain: "CUSTOM",
             EncryptionConfig: &shared.EncryptionConfig{
                 KMSKeyArn: "ut",
-                RoleArn: "sint",
+                RoleArn: "ut",
             },
             Schema: shared.Schema{
                 Attributes: []shared.SchemaAttribute{
                     shared.SchemaAttribute{
-                        AttributeName: "officia",
-                        AttributeType: "integer",
+                        AttributeName: "magni",
+                        AttributeType: "timestamp",
                     },
                     shared.SchemaAttribute{
-                        AttributeName: "sit",
+                        AttributeName: "quaerat",
+                        AttributeType: "timestamp",
+                    },
+                    shared.SchemaAttribute{
+                        AttributeName: "voluptas",
                         AttributeType: "float",
-                    },
-                    shared.SchemaAttribute{
-                        AttributeName: "earum",
-                        AttributeType: "integer",
                     },
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "et",
-                    Value: "alias",
+                    Key: "sed",
+                    Value: "accusantium",
                 },
                 shared.Tag{
-                    Key: "in",
-                    Value: "repellendus",
-                },
-                shared.Tag{
-                    Key: "repudiandae",
-                    Value: "sed",
+                    Key: "repellat",
+                    Value: "quam",
                 },
             },
         },

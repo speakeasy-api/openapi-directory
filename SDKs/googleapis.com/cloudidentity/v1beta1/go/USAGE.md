@@ -13,24 +13,24 @@ func main() {
     
     req := operations.CloudidentityCustomersUserinvitationsCancelRequest{
         PathParams: operations.CloudidentityCustomersUserinvitationsCancelPathParams{
-            Name: "quos",
+            Name: "dolor",
         },
         QueryParams: operations.CloudidentityCustomersUserinvitationsCancelQueryParams{
             DollarXgafv: "1",
-            AccessToken: "fugit",
-            Alt: "media",
-            Callback: "praesentium",
-            Fields: "est",
-            Key: "eius",
-            OauthToken: "nostrum",
+            AccessToken: "ut",
+            Alt: "proto",
+            Callback: "nobis",
+            Fields: "ut",
+            Key: "autem",
+            OauthToken: "praesentium",
             PrettyPrint: true,
-            QuotaUser: "tempora",
-            UploadType: "ut",
-            UploadProtocol: "deserunt",
+            QuotaUser: "est",
+            UploadType: "et",
+            UploadProtocol: "et",
         },
         Request: map[string]interface{}{
-            "provident": "magni",
-            "et": "consectetur",
+            "ex": "optio",
+            "perferendis": "vel",
         },
     }
     

@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.AgcerRequestBody{
             CertificateParameters: &operations.AgcerRequestBodyCertificateParameters{
-                Name: "beatae",
-                RefNo: "quae",
+                Name: "ullam",
+                RefNo: "est",
             },
-            ConsentArtifact: "ut",
+            ConsentArtifact: "eos",
             Format: "pdf",
-            TxnID: "maxime",
+            TxnID: "minus",
         },
     }
     

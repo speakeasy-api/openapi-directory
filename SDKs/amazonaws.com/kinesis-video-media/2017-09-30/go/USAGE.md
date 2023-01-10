@@ -23,23 +23,23 @@ func main() {
     
     req := operations.GetMediaRequest{
         Headers: operations.GetMediaHeaders{
-            XAmzAlgorithm: "eligendi",
-            XAmzContentSha256: "quo",
-            XAmzCredential: "et",
-            XAmzDate: "eligendi",
-            XAmzSecurityToken: "soluta",
-            XAmzSignature: "enim",
-            XAmzSignedHeaders: "commodi",
+            XAmzAlgorithm: "corporis",
+            XAmzContentSha256: "at",
+            XAmzCredential: "nostrum",
+            XAmzDate: "recusandae",
+            XAmzSecurityToken: "iste",
+            XAmzSignature: "at",
+            XAmzSignedHeaders: "qui",
         },
         Request: operations.GetMediaRequestBody{
             StartSelector: operations.GetMediaRequestBodyStartSelector{
-                AfterFragmentNumber: "quia",
-                ContinuationToken: "vel",
-                StartSelectorType: "NOW",
-                StartTimestamp: "1972-05-21T01:46:38Z",
+                AfterFragmentNumber: "fugit",
+                ContinuationToken: "repellat",
+                StartSelectorType: "PRODUCER_TIMESTAMP",
+                StartTimestamp: "2002-05-04T01:59:05Z",
             },
-            StreamARN: "laudantium",
-            StreamName: "corporis",
+            StreamARN: "omnis",
+            StreamName: "magni",
         },
     }
     

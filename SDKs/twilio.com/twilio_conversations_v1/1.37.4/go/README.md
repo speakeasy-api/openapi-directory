@@ -30,19 +30,19 @@ func main() {
             },
         },
         Request: &operations.CreateConfigurationAddressCreateConfigurationAddressRequest{
-            Address: "nisi",
-            AutoCreationConversationServiceSid: "doloribus",
+            Address: "eligendi",
+            AutoCreationConversationServiceSid: "autem",
             AutoCreationEnabled: false,
-            AutoCreationStudioFlowSid: "cum",
-            AutoCreationStudioRetryCount: 1660654173279779136,
+            AutoCreationStudioFlowSid: "exercitationem",
+            AutoCreationStudioRetryCount: 4393547049641346161,
             AutoCreationType: "webhook",
             AutoCreationWebhookFilters: []string{
-                "alias",
+                "sequi",
             },
             AutoCreationWebhookMethod: "GET",
-            AutoCreationWebhookURL: "deleniti",
-            FriendlyName: "quo",
-            Type: "sms",
+            AutoCreationWebhookURL: "occaecati",
+            FriendlyName: "officia",
+            Type: "gbm",
         },
     }
     

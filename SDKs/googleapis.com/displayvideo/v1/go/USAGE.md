@@ -21,22 +21,22 @@ func main() {
             },
         },
         PathParams: operations.DisplayvideoAdvertisersAssetsUploadPathParams{
-            AdvertiserID: "eveniet",
+            AdvertiserID: "fuga",
         },
         QueryParams: operations.DisplayvideoAdvertisersAssetsUploadQueryParams{
             DollarXgafv: "1",
-            AccessToken: "in",
-            Alt: "proto",
-            Callback: "sit",
+            AccessToken: "libero",
+            Alt: "json",
+            Callback: "quibusdam",
             Fields: "explicabo",
-            Key: "illo",
-            OauthToken: "et",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "iste",
-            UploadProtocol: "occaecati",
+            Key: "vel",
+            OauthToken: "earum",
+            PrettyPrint: true,
+            QuotaUser: "voluptatem",
+            UploadType: "assumenda",
+            UploadProtocol: "vitae",
         },
-        Request: []byte("voluptatem"),
+        Request: []byte("harum"),
     }
     
     res, err := s.Advertisers.DisplayvideoAdvertisersAssetsUpload(ctx, req)

@@ -23,36 +23,43 @@ func main() {
     
     req := operations.CreateAccessRequest{
         Headers: operations.CreateAccessHeaders{
-            XAmzAlgorithm: "doloribus",
-            XAmzContentSha256: "architecto",
-            XAmzCredential: "est",
-            XAmzDate: "beatae",
-            XAmzSecurityToken: "odio",
-            XAmzSignature: "blanditiis",
-            XAmzSignedHeaders: "voluptatem",
+            XAmzAlgorithm: "eos",
+            XAmzContentSha256: "modi",
+            XAmzCredential: "et",
+            XAmzDate: "culpa",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "quae",
+            XAmzSignedHeaders: "incidunt",
             XAmzTarget: "TransferService.CreateAccess",
         },
         Request: shared.CreateAccessRequest{
-            ExternalID: "eum",
-            HomeDirectory: "at",
+            ExternalID: "nam",
+            HomeDirectory: "optio",
             HomeDirectoryMappings: []shared.HomeDirectoryMapEntry{
                 shared.HomeDirectoryMapEntry{
-                    Entry: "dolore",
-                    Target: "voluptatem",
+                    Entry: "ratione",
+                    Target: "quaerat",
+                },
+                shared.HomeDirectoryMapEntry{
+                    Entry: "qui",
+                    Target: "modi",
+                },
+                shared.HomeDirectoryMapEntry{
+                    Entry: "cum",
+                    Target: "rem",
                 },
             },
-            HomeDirectoryType: "PATH",
-            Policy: "impedit",
+            HomeDirectoryType: "LOGICAL",
+            Policy: "cum",
             PosixProfile: &shared.PosixProfile{
-                Gid: 4594625245081249193,
+                Gid: 5917608095681824334,
                 SecondaryGids: []int64{
-                    7609203895733566797,
-                    5118155005328491642,
+                    7738685661617987022,
                 },
-                UID: 6153116969609004781,
+                UID: 3301601712436159733,
             },
-            Role: "ut",
-            ServerID: "possimus",
+            Role: "dolore",
+            ServerID: "placeat",
         },
     }
     

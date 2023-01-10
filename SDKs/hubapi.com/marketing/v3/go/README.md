@@ -29,36 +29,29 @@ func main() {
             },
         },
         PathParams: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams{
-            ExternalEventID: "amet",
-            SubscriberState: "consectetur",
+            ExternalEventID: "illum",
+            SubscriberState: "non",
         },
         QueryParams: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams{
-            ExternalAccountID: "doloremque",
+            ExternalAccountID: "omnis",
         },
         Request: shared.BatchInputMarketingEventSubscriber{
             Inputs: []shared.MarketingEventSubscriber{
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 1596208050830488021,
+                    InteractionDateTime: 6625460606341040745,
                     Properties: map[string]string{
-                        "harum": "ut",
+                        "repellendus": "quasi",
+                        "sequi": "illo",
                     },
-                    Vid: 7630631086049095972,
+                    Vid: 8018450455142408820,
                 },
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 5340899317600091008,
+                    InteractionDateTime: 3807802538545777848,
                     Properties: map[string]string{
-                        "sit": "voluptas",
-                        "sit": "et",
+                        "velit": "enim",
+                        "repellendus": "sed",
                     },
-                    Vid: 7215831375494083812,
-                },
-                shared.MarketingEventSubscriber{
-                    InteractionDateTime: 8602367534737535781,
-                    Properties: map[string]string{
-                        "impedit": "neque",
-                        "ipsam": "commodi",
-                    },
-                    Vid: 3732851331951527695,
+                    Vid: 558040594850452455,
                 },
             },
         },

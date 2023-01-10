@@ -19,10 +19,10 @@ func main() {
             },
         },
         PathParams: operations.CreateAssetPathParams{
-            ServiceSid: "esse",
+            ServiceSid: "similique",
         },
         Request: &operations.CreateAssetCreateAssetRequest{
-            FriendlyName: "ex",
+            FriendlyName: "omnis",
         },
     }
     

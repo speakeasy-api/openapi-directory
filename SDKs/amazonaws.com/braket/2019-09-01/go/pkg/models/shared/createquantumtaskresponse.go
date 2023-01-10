@@ -1,5 +1,5 @@
 package shared
 
 type CreateQuantumTaskResponse struct {
-	QuantumTaskArn map[string]interface{} `json:"quantumTaskArn"`
+	QuantumTaskArn string `json:"quantumTaskArn"`
 }

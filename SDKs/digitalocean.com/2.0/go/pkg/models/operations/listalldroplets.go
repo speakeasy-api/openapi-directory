@@ -184,8 +184,30 @@ type ListAllDroplets200ApplicationJSONDroplets struct {
 	VpcUUID          *string                                                                                                      `json:"vpc_uuid,omitempty"`
 }
 
+type ListAllDroplets200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllDroplets200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllDroplets200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllDroplets200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllDroplets200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAllDroplets200ApplicationJSON struct {
 	Droplets []ListAllDroplets200ApplicationJSONDroplets `json:"droplets,omitempty"`
+	Links    *ListAllDroplets200ApplicationJSONLinks     `json:"links,omitempty"`
+	Meta     ListAllDroplets200ApplicationJSONMeta       `json:"meta"`
 }
 
 type ListAllDroplets401ApplicationJSON struct {

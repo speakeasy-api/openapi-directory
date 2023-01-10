@@ -35,5 +35,6 @@ type EmployeesResponseData struct {
 }
 
 type EmployeesResponse struct {
-	Data []EmployeesResponseData `json:"data"`
+	Data    []EmployeesResponseData `json:"data"`
+	Success bool                    `json:"success"`
 }

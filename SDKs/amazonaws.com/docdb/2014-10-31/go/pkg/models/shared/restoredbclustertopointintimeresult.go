@@ -1,5 +1,5 @@
 package shared
 
 type RestoreDbClusterToPointInTimeResult struct {
-	DBCluster *DbCluster1
+	DBCluster *DbCluster
 }

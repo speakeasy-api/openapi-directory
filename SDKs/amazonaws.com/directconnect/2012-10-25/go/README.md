@@ -34,24 +34,27 @@ func main() {
     
     req := operations.AcceptDirectConnectGatewayAssociationProposalRequest{
         Headers: operations.AcceptDirectConnectGatewayAssociationProposalHeaders{
-            XAmzAlgorithm: "rerum",
-            XAmzContentSha256: "reiciendis",
-            XAmzCredential: "aut",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "saepe",
-            XAmzSignature: "ratione",
-            XAmzSignedHeaders: "autem",
+            XAmzAlgorithm: "eaque",
+            XAmzContentSha256: "nihil",
+            XAmzCredential: "labore",
+            XAmzDate: "minima",
+            XAmzSecurityToken: "iure",
+            XAmzSignature: "ipsam",
+            XAmzSignedHeaders: "quia",
             XAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
         },
         Request: shared.AcceptDirectConnectGatewayAssociationProposalRequest{
-            AssociatedGatewayOwnerAccount: "tempore",
-            DirectConnectGatewayID: "veniam",
-            OverrideAllowedPrefixesToDirectConnectGateway: map[string]interface{}{
-                "corporis": "est",
-                "iure": "adipisci",
-                "est": "temporibus",
+            AssociatedGatewayOwnerAccount: "dolor",
+            DirectConnectGatewayID: "nostrum",
+            OverrideAllowedPrefixesToDirectConnectGateway: []shared.RouteFilterPrefix{
+                shared.RouteFilterPrefix{
+                    Cidr: "ut",
+                },
+                shared.RouteFilterPrefix{
+                    Cidr: "neque",
+                },
             },
-            ProposalID: "consequatur",
+            ProposalID: "pariatur",
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type ModifyClusterMaintenanceResult struct {
-	Cluster *Cluster3
+	Cluster *Cluster
 }

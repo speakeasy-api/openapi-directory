@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.NbcerRequestBody{
             CertificateParameters: &operations.NbcerRequestBodyCertificateParameters{
-                RefNo: "omnis",
-                TokenNo: "eos",
+                RefNo: "aut",
+                TokenNo: "eveniet",
             },
-            ConsentArtifact: "dolore",
+            ConsentArtifact: "aut",
             Format: "pdf",
-            TxnID: "dolor",
+            TxnID: "rem",
         },
     }
     

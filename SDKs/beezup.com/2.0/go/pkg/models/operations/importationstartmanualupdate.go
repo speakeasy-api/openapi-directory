@@ -19,5 +19,5 @@ type ImportationStartManualUpdateResponse struct {
 	Headers                                      map[string][]string
 	StatusCode                                   int64
 	ImportAlreadyInProgressResponse              *shared.ImportAlreadyInProgressResponse
-	LinksImportationGetImportationMonitoringLink map[string]interface{}
+	LinksImportationGetImportationMonitoringLink *shared.LinksImportationGetImportationMonitoringLink
 }

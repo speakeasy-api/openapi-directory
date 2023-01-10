@@ -2,5 +2,5 @@ package shared
 
 type ScheduledActionsMessage struct {
 	Marker           *string
-	ScheduledActions []map[string]interface{}
+	ScheduledActions []ScheduledActionList
 }

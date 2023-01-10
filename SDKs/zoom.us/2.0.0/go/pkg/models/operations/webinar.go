@@ -144,6 +144,9 @@ type Webinar200ApplicationJSON struct {
 	Agenda         *string                                     `json:"agenda,omitempty"`
 	CreatedAt      *time.Time                                  `json:"created_at,omitempty"`
 	Duration       *int64                                      `json:"duration,omitempty"`
+	HostEmail      *string                                     `json:"host_email,omitempty"`
+	HostID         *string                                     `json:"host_id,omitempty"`
+	ID             *int64                                      `json:"id,omitempty"`
 	JoinURL        *string                                     `json:"join_url,omitempty"`
 	Occurrences    []Webinar200ApplicationJSONOccurrences      `json:"occurrences,omitempty"`
 	Password       *string                                     `json:"password,omitempty"`
@@ -155,6 +158,7 @@ type Webinar200ApplicationJSON struct {
 	Topic          *string                                     `json:"topic,omitempty"`
 	TrackingFields []Webinar200ApplicationJSONTrackingFields   `json:"tracking_fields,omitempty"`
 	Type           *int64                                      `json:"type,omitempty"`
+	UUID           *string                                     `json:"uuid,omitempty"`
 }
 
 type WebinarRequest struct {

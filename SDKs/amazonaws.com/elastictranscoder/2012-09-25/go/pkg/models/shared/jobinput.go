@@ -8,7 +8,7 @@ type JobInput struct {
 	DetectedProperties *DetectedProperties `json:"DetectedProperties,omitempty"`
 	Encryption         *Encryption         `json:"Encryption,omitempty"`
 	FrameRate          *string             `json:"FrameRate,omitempty"`
-	InputCaptions      *InputCaptions1     `json:"InputCaptions,omitempty"`
+	InputCaptions      *InputCaptions      `json:"InputCaptions,omitempty"`
 	Interlaced         *string             `json:"Interlaced,omitempty"`
 	Key                *string             `json:"Key,omitempty"`
 	Resolution         *string             `json:"Resolution,omitempty"`

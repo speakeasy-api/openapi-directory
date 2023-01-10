@@ -7,7 +7,7 @@ type AuthenticateCognitoActionConfig struct {
 	OnUnauthenticatedRequest         *AuthenticateCognitoActionConditionalBehaviorEnumEnum
 	Scope                            *string
 	SessionCookieName                *string
-	SessionTimeout                   map[string]interface{}
+	SessionTimeout                   *int64
 	UserPoolArn                      string
 	UserPoolClientID                 string
 	UserPoolDomain                   string

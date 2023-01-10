@@ -23,30 +23,35 @@ func main() {
     
     req := operations.CreateChangesetRequest{
         PathParams: operations.CreateChangesetPathParams{
-            DatasetID: "quos",
+            DatasetID: "voluptatem",
         },
         Headers: operations.CreateChangesetHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "explicabo",
-            XAmzCredential: "necessitatibus",
-            XAmzDate: "veniam",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "in",
-            XAmzSignedHeaders: "odit",
+            XAmzAlgorithm: "quidem",
+            XAmzContentSha256: "rerum",
+            XAmzCredential: "id",
+            XAmzDate: "facilis",
+            XAmzSecurityToken: "cum",
+            XAmzSignature: "occaecati",
+            XAmzSignedHeaders: "quia",
         },
         Request: operations.CreateChangesetRequestBody{
-            ChangeType: "MODIFY",
+            ChangeType: "REPLACE",
             FormatParams: map[string]string{
-                "tenetur": "esse",
+                "ducimus": "unde",
+                "nostrum": "illo",
+                "eos": "sit",
             },
-            FormatType: "XML",
+            FormatType: "PARQUET",
             SourceParams: map[string]string{
-                "id": "laboriosam",
-                "quam": "maiores",
+                "ut": "voluptatum",
+                "dolor": "sed",
+                "odio": "deserunt",
             },
             SourceType: "S3",
             Tags: map[string]string{
-                "aperiam": "repellendus",
+                "sequi": "iure",
+                "provident": "eum",
+                "repellat": "quia",
             },
         },
     }

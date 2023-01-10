@@ -13,14 +13,14 @@ func main() {
     
     req := operations.GetForecastRequest{
         QueryParams: operations.GetForecastQueryParams{
-            Alt: 41.200001,
-            Dt: "1972-06-23T23:14:18Z",
-            Lat: 52.200001,
-            Lng: 15.100000,
-            Ozone: 93.199997,
+            Alt: 15.200000,
+            Dt: "2004-08-16T00:16:18Z",
+            Lat: 10.200000,
+            Lng: 75.099998,
+            Ozone: 85.099998,
         },
         Headers: operations.GetForecastHeaders{
-            XAccessToken: "accusamus",
+            XAccessToken: "tempora",
         },
     }
     

@@ -1,5 +1,9 @@
 package operations
 
+import (
+	"openapi/pkg/models/shared"
+)
+
 type GetSpotByIDPathParams struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -10,6 +14,6 @@ type GetSpotByIDRequest struct {
 
 type GetSpotByIDResponse struct {
 	ContentType string
-	SpotGet     map[string]interface{}
+	SpotGet     *shared.SpotGet
 	StatusCode  int64
 }

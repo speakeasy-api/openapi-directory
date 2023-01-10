@@ -23,12 +23,12 @@ func main() {
     
     req := operations.CreateBankAccountRequest{
         Request: shared.BankAccountInput{
-            AccountNumber: "dolorum",
-            AccountNumberIban: "dolores",
-            Currency: "HRK",
-            Name: "ab",
+            AccountNumber: "temporibus",
+            AccountNumberIban: "aut",
+            Currency: "JPY",
+            Name: "odit",
             NeedQr: false,
-            Swift: "sit",
+            Swift: "nihil",
         },
     }
     

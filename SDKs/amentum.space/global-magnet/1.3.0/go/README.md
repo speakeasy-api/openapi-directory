@@ -24,10 +24,10 @@ func main() {
     
     req := operations.AppAPIWmmEndpointsWmmMagneticFieldRequest{
         QueryParams: operations.AppAPIWmmEndpointsWmmMagneticFieldQueryParams{
-            Altitude: 70.199997,
-            Latitude: 79.199997,
-            Longitude: 8.200000,
-            Year: 50.099998,
+            Altitude: 59.099998,
+            Latitude: 93.099998,
+            Longitude: 75.099998,
+            Year: 54.200001,
         },
     }
     

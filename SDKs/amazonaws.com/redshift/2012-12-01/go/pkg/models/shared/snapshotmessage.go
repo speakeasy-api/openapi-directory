@@ -4,5 +4,5 @@ package shared
 // Contains the output from the <a>DescribeClusterSnapshots</a> action.
 type SnapshotMessage struct {
 	Marker    *string
-	Snapshots []map[string]interface{}
+	Snapshots []SnapshotList
 }

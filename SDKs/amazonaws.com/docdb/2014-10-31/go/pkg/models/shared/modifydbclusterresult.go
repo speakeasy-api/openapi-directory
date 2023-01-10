@@ -1,5 +1,5 @@
 package shared
 
 type ModifyDbClusterResult struct {
-	DBCluster *DbCluster1
+	DBCluster *DbCluster
 }

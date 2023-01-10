@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.MrcerRequestBody{
             CertificateParameters: &operations.MrcerRequestBodyCertificateParameters{
-                CERTTYPE: "aspernatur",
-                FullName: "dignissimos",
-                RROLL: "inventore",
+                CERTTYPE: "et",
+                FullName: "neque",
+                RROLL: "autem",
             },
-            ConsentArtifact: "expedita",
+            ConsentArtifact: "optio",
             Format: "pdf",
-            TxnID: "voluptas",
+            TxnID: "blanditiis",
         },
     }
     

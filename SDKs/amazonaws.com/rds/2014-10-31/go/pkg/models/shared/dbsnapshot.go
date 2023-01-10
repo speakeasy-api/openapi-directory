@@ -26,14 +26,14 @@ type DbSnapshot struct {
 	OriginalSnapshotCreateTime       *time.Time
 	PercentProgress                  *int64
 	Port                             *int64
-	ProcessorFeatures                []map[string]interface{}
+	ProcessorFeatures                []ProcessorFeatureList
 	SnapshotCreateTime               *time.Time
 	SnapshotType                     *string
 	SourceDBSnapshotIdentifier       *string
 	SourceRegion                     *string
 	Status                           *string
 	StorageType                      *string
-	TagList                          []map[string]interface{}
+	TagList                          []TagList
 	TdeCredentialArn                 *string
 	Timezone                         *string
 	VpcID                            *string

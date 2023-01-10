@@ -11,7 +11,7 @@ type DescribeNotificationRuleResult struct {
 	DetailType            *DetailTypeEnum             `json:"DetailType,omitempty"`
 	EventTypes            []EventTypeSummary          `json:"EventTypes,omitempty"`
 	LastModifiedTimestamp *time.Time                  `json:"LastModifiedTimestamp,omitempty"`
-	Name                  map[string]interface{}      `json:"Name,omitempty"`
+	Name                  *string                     `json:"Name,omitempty"`
 	Resource              *string                     `json:"Resource,omitempty"`
 	Status                *NotificationRuleStatusEnum `json:"Status,omitempty"`
 	Tags                  map[string]string           `json:"Tags,omitempty"`

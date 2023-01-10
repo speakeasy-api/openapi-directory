@@ -4,5 +4,5 @@ package shared
 // Describes a WorkSpace modification.
 type ModificationState struct {
 	Resource *ModificationResourceEnumEnum `json:"Resource,omitempty"`
-	State    map[string]interface{}        `json:"State,omitempty"`
+	State    *ModificationStateEnumEnum    `json:"State,omitempty"`
 }

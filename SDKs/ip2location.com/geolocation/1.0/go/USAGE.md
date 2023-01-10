@@ -15,12 +15,13 @@ func main() {
         QueryParams: operations.GetQueryParams{
             Addon: []GetAddonEnum{
                 "city",
+                "region",
             },
-            Format: "xml",
-            IP: "delectus",
-            Key: "omnis",
-            Lang: "et",
-            Package: "WS9",
+            Format: "json",
+            IP: "voluptas",
+            Key: "sed",
+            Lang: "ms",
+            Package: "WS20",
         },
     }
     

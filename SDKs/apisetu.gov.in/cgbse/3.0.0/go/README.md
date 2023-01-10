@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.HscerRequestBody{
             CertificateParameters: &operations.HscerRequestBodyCertificateParameters{
-                FullName: "ipsa",
-                Examtype: "corrupti",
-                Rollno: "eveniet",
-                Year: "sequi",
+                FullName: "tempora",
+                Examtype: "neque",
+                Rollno: "commodi",
+                Year: "optio",
             },
-            ConsentArtifact: "vitae",
+            ConsentArtifact: "praesentium",
             Format: "pdf",
-            TxnID: "possimus",
+            TxnID: "iusto",
         },
     }
     

@@ -30,15 +30,14 @@ func main() {
             },
         },
         PathParams: operations.CreateMessageInteractionPathParams{
-            ParticipantSid: "qui",
-            ServiceSid: "quis",
-            SessionSid: "incidunt",
+            ParticipantSid: "sed",
+            ServiceSid: "esse",
+            SessionSid: "non",
         },
         Request: &operations.CreateMessageInteractionCreateMessageInteractionRequest{
-            Body: "odio",
+            Body: "ipsa",
             MediaURL: []string{
-                "ut",
-                "totam",
+                "repudiandae",
             },
         },
     }

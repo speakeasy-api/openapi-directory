@@ -34,7 +34,7 @@ type CreateOtaUpdateRequestBodyAwsJobExecutionsRolloutConfig struct {
 // CreateOtaUpdateRequestBodyAwsJobPresignedURLConfig
 // Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.
 type CreateOtaUpdateRequestBodyAwsJobPresignedURLConfig struct {
-	ExpiresInSec map[string]interface{} `json:"expiresInSec,omitempty"`
+	ExpiresInSec *int64 `json:"expiresInSec,omitempty"`
 }
 
 // CreateOtaUpdateRequestBodyAwsJobTimeoutConfig

@@ -20,19 +20,29 @@ type GetImagesListQueryParams struct {
 }
 
 type GetImagesList200ApplicationJSONLinksPages1 struct {
-	Prev *string `json:"prev,omitempty"`
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
 }
 
-type GetImagesList200ApplicationJSONLinksPages3 struct {
-	Next *string `json:"next,omitempty"`
+type GetImagesList200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
 }
 
 type GetImagesList200ApplicationJSONLinks struct {
 	Pages *interface{} `json:"pages,omitempty"`
 }
 
+// GetImagesList200ApplicationJSONMeta
+// Information about the response itself.
+type GetImagesList200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type GetImagesList200ApplicationJSON struct {
-	Links *GetImagesList200ApplicationJSONLinks `json:"links,omitempty"`
+	Images []shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImage `json:"images"`
+	Links  *GetImagesList200ApplicationJSONLinks                                                                           `json:"links,omitempty"`
+	Meta   GetImagesList200ApplicationJSONMeta                                                                             `json:"meta"`
 }
 
 type GetImagesList401ApplicationJSON struct {

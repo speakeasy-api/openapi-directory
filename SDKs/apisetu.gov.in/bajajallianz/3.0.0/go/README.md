@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                FullName: "sunt",
-                PolicyNumber: "optio",
+                FullName: "architecto",
+                PolicyNumber: "natus",
             },
-            ConsentArtifact: "omnis",
+            ConsentArtifact: "sint",
             Format: "pdf",
-            TxnID: "est",
+            TxnID: "repellat",
         },
     }
     

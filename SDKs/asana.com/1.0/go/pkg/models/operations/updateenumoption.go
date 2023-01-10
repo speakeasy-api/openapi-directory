@@ -13,8 +13,8 @@ type UpdateEnumOptionQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type UpdateEnumOptionRequestBody struct {
-	Data *shared.EnumOptionRequest `json:"data,omitempty"`
+type UpdateEnumOptionRequestBodyInput struct {
+	Data *shared.EnumOptionRequestInput `json:"data,omitempty"`
 }
 
 type UpdateEnumOption200ApplicationJSON struct {
@@ -24,7 +24,7 @@ type UpdateEnumOption200ApplicationJSON struct {
 type UpdateEnumOptionRequest struct {
 	PathParams  UpdateEnumOptionPathParams
 	QueryParams UpdateEnumOptionQueryParams
-	Request     *UpdateEnumOptionRequestBody `request:"mediaType=application/json"`
+	Request     *UpdateEnumOptionRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateEnumOptionResponse struct {

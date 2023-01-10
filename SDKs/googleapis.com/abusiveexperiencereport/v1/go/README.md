@@ -24,20 +24,20 @@ func main() {
     
     req := operations.AbusiveexperiencereportSitesGetRequest{
         PathParams: operations.AbusiveexperiencereportSitesGetPathParams{
-            Name: "tenetur",
+            Name: "rerum",
         },
         QueryParams: operations.AbusiveexperiencereportSitesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "aut",
-            Alt: "proto",
-            Callback: "fuga",
-            Fields: "ullam",
-            Key: "id",
-            OauthToken: "temporibus",
+            AccessToken: "quia",
+            Alt: "media",
+            Callback: "qui",
+            Fields: "hic",
+            Key: "eum",
+            OauthToken: "debitis",
             PrettyPrint: true,
-            QuotaUser: "eum",
-            UploadType: "aut",
-            UploadProtocol: "et",
+            QuotaUser: "cupiditate",
+            UploadType: "reiciendis",
+            UploadProtocol: "minus",
         },
     }
     

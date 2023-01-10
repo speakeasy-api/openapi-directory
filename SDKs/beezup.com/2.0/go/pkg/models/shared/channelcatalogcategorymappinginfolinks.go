@@ -1,5 +1,5 @@
 package shared
 
 type ChannelCatalogCategoryMappingInfoLinks struct {
-	ConfigureCategories map[string]interface{} `json:"configureCategories,omitempty"`
+	ConfigureCategories *LinksConfigureChannelCatalogCategoryLink `json:"configureCategories,omitempty"`
 }

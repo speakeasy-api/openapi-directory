@@ -197,10 +197,14 @@ type Meeting200ApplicationJSONTrackingFields struct {
 // Meeting object.
 type Meeting200ApplicationJSON struct {
 	Agenda            *string                                   `json:"agenda,omitempty"`
+	AssistantID       *string                                   `json:"assistant_id,omitempty"`
 	CreatedAt         *time.Time                                `json:"created_at,omitempty"`
 	Duration          *int64                                    `json:"duration,omitempty"`
 	EncryptedPassword *string                                   `json:"encrypted_password,omitempty"`
 	H323Password      *string                                   `json:"h323_password,omitempty"`
+	HostEmail         *string                                   `json:"host_email,omitempty"`
+	HostID            *string                                   `json:"host_id,omitempty"`
+	ID                *int64                                    `json:"id,omitempty"`
 	JoinURL           *string                                   `json:"join_url,omitempty"`
 	Occurrences       []Meeting200ApplicationJSONOccurrences    `json:"occurrences,omitempty"`
 	Password          *string                                   `json:"password,omitempty"`
@@ -214,6 +218,7 @@ type Meeting200ApplicationJSON struct {
 	Topic             *string                                   `json:"topic,omitempty"`
 	TrackingFields    []Meeting200ApplicationJSONTrackingFields `json:"tracking_fields,omitempty"`
 	Type              *int64                                    `json:"type,omitempty"`
+	UUID              *string                                   `json:"uuid,omitempty"`
 }
 
 type MeetingRequest struct {

@@ -22,15 +22,15 @@ func main() {
         },
         Request: &operations.DgcerRequestBody{
             CertificateParameters: &operations.DgcerRequestBodyCertificateParameters{
-                DOB: "quidem",
-                EnrollmentNo: "et",
-                FullName: "voluptates",
-                RollNo: "nemo",
-                UID: "inventore",
+                DOB: "asperiores",
+                EnrollmentNo: "illo",
+                FullName: "odit",
+                RollNo: "distinctio",
+                UID: "rerum",
             },
-            ConsentArtifact: "est",
+            ConsentArtifact: "dolore",
             Format: "pdf",
-            TxnID: "consequatur",
+            TxnID: "doloribus",
         },
     }
     

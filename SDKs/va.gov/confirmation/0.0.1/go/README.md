@@ -29,12 +29,12 @@ func main() {
             },
         },
         Request: shared.VeteranStatusRequest{
-            BirthDate: "minus",
-            FirstName: "ut",
-            Gender: "F",
-            LastName: "facilis",
-            MiddleName: "qui",
-            Ssn: "magni",
+            BirthDate: "autem",
+            FirstName: "doloribus",
+            Gender: "M",
+            LastName: "tempora",
+            MiddleName: "porro",
+            Ssn: "in",
         },
     }
     

@@ -78,6 +78,7 @@ type ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePools stru
 	MinNodes  *int64                                                                         `json:"min_nodes,omitempty"`
 	Name      string                                                                         `json:"name"`
 	Nodes     []ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsNodes  `json:"nodes,omitempty"`
+	Size      string                                                                         `json:"size"`
 	Tags      []string                                                                       `json:"tags,omitempty"`
 	Taints    []ListAllKubernetesClusters200ApplicationJSONKubernetesClustersNodePoolsTaints `json:"taints,omitempty"`
 }
@@ -122,8 +123,30 @@ type ListAllKubernetesClusters200ApplicationJSONKubernetesClusters struct {
 	VpcUUID           *string                                                                         `json:"vpc_uuid,omitempty"`
 }
 
+type ListAllKubernetesClusters200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllKubernetesClusters200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllKubernetesClusters200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllKubernetesClusters200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllKubernetesClusters200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAllKubernetesClusters200ApplicationJSON struct {
 	KubernetesClusters []ListAllKubernetesClusters200ApplicationJSONKubernetesClusters `json:"kubernetes_clusters,omitempty"`
+	Links              *ListAllKubernetesClusters200ApplicationJSONLinks               `json:"links,omitempty"`
+	Meta               ListAllKubernetesClusters200ApplicationJSONMeta                 `json:"meta"`
 }
 
 type ListAllKubernetesClusters401ApplicationJSON struct {

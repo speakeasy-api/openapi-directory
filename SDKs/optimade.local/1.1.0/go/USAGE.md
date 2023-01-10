@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetEntryInfoInfoEntryGetRequest{
         PathParams: operations.GetEntryInfoInfoEntryGetPathParams{
-            Entry: "tenetur",
+            Entry: "sunt",
         },
     }
     

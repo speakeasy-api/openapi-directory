@@ -23,7 +23,7 @@ func main() {
     
     req := operations.DeleteConsumerV1AppointmentsIDRequest{
         PathParams: operations.DeleteConsumerV1AppointmentsIDPathParams{
-            ID: "tempora",
+            ID: "sed",
         },
     }
     

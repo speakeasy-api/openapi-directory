@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.BrlcsRequestBody{
             CertificateParameters: &operations.BrlcsRequestBodyCertificateParameters{
-                CertificateNumber: "laboriosam",
+                CertificateNumber: "incidunt",
             },
-            ConsentArtifact: "non",
+            ConsentArtifact: "quos",
             Format: "pdf",
-            TxnID: "vel",
+            TxnID: "omnis",
         },
     }
     

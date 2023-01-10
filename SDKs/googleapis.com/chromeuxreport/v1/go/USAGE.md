@@ -13,26 +13,26 @@ func main() {
     
     req := operations.ChromeuxreportRecordsQueryRecordRequest{
         QueryParams: operations.ChromeuxreportRecordsQueryRecordQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "quod",
+            DollarXgafv: "2",
+            AccessToken: "alias",
             Alt: "json",
-            Callback: "rerum",
-            Fields: "in",
-            Key: "quis",
-            OauthToken: "architecto",
+            Callback: "officia",
+            Fields: "laborum",
+            Key: "ipsum",
+            OauthToken: "quod",
             PrettyPrint: false,
-            QuotaUser: "ipsa",
-            UploadType: "corporis",
-            UploadProtocol: "et",
+            QuotaUser: "optio",
+            UploadType: "praesentium",
+            UploadProtocol: "pariatur",
         },
         Request: &shared.QueryRequest{
-            EffectiveConnectionType: "consequuntur",
+            EffectiveConnectionType: "dolorem",
             FormFactor: "PHONE",
             Metrics: []string{
-                "dignissimos",
+                "reiciendis",
             },
-            Origin: "modi",
-            URL: "rem",
+            Origin: "explicabo",
+            URL: "illo",
         },
     }
     

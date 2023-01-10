@@ -18,15 +18,15 @@ func main() {
             },
         },
         PathParams: operations.CompanyAlternativeSearchPathParams{
-            Country: "quis",
+            Country: "quia",
         },
         Request: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "dolorem",
-            Name: "quis",
-            Number: "rerum",
-            Phone: "voluptatem",
-            URL: "occaecati",
-            Vat: "ut",
+            Address: "velit",
+            Name: "sed",
+            Number: "occaecati",
+            Phone: "quidem",
+            URL: "maxime",
+            Vat: "eos",
         },
     }
     

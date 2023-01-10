@@ -24,15 +24,15 @@ func main() {
     req := operations.AddImageWatermarkV1Request{
         Request: operations.AddImageWatermarkV1RequestBody{
             File: operations.AddImageWatermarkV1RequestBodyFile{
-                Content: []byte("voluptatibus"),
-                File: "quidem",
+                Content: []byte("sit"),
+                File: "deleniti",
             },
             Image: operations.AddImageWatermarkV1RequestBodyImage{
-                Content: []byte("exercitationem"),
-                Image: "et",
+                Content: []byte("ab"),
+                Image: "alias",
             },
-            Margin: 4.100000,
-            Transparency: 1344633955781589999,
+            Margin: 26.100000,
+            Transparency: 6777217586286325242,
         },
     }
     

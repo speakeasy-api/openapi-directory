@@ -13,5 +13,5 @@ type CreateStoreResponse struct {
 	ContentType                         string
 	StatusCode                          int64
 	ErrorResponseMessagePaymentRequired *shared.ErrorResponseMessagePaymentRequired
-	LinksGetStoreLink                   map[string]interface{}
+	LinksGetStoreLink                   *shared.LinksGetStoreLink
 }

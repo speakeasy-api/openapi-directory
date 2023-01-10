@@ -34,18 +34,18 @@ func main() {
     
     req := operations.CloseTunnelRequest{
         Headers: operations.CloseTunnelHeaders{
-            XAmzAlgorithm: "quaerat",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "et",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "ipsam",
-            XAmzSignedHeaders: "magni",
+            XAmzAlgorithm: "est",
+            XAmzContentSha256: "est",
+            XAmzCredential: "consequatur",
+            XAmzDate: "quia",
+            XAmzSecurityToken: "ad",
+            XAmzSignature: "nemo",
+            XAmzSignedHeaders: "quia",
             XAmzTarget: "IoTSecuredTunneling.CloseTunnel",
         },
         Request: shared.CloseTunnelRequest{
             Delete: true,
-            TunnelID: "impedit",
+            TunnelID: "dolores",
         },
     }
     

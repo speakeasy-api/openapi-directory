@@ -1,5 +1,9 @@
 package operations
 
+import (
+	"openapi/pkg/models/shared"
+)
+
 type UpdateThingRuntimeConfigurationPathParams struct {
 	ThingName string `pathParam:"style=simple,explode=false,name=ThingName"`
 }
@@ -17,7 +21,7 @@ type UpdateThingRuntimeConfigurationHeaders struct {
 // UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration
 // Configuration settings for running telemetry.
 type UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration struct {
-	Telemetry map[string]interface{} `json:"Telemetry,omitempty"`
+	Telemetry *shared.TelemetryEnum `json:"Telemetry,omitempty"`
 }
 
 type UpdateThingRuntimeConfigurationRequestBody struct {

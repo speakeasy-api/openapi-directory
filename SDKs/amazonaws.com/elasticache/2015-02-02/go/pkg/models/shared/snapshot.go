@@ -18,7 +18,7 @@ type Snapshot struct {
 	Engine                      *string
 	EngineVersion               *string
 	KmsKeyID                    *string
-	NodeSnapshots               []map[string]interface{}
+	NodeSnapshots               []NodeSnapshotList
 	NumCacheNodes               *int64
 	NumNodeGroups               *int64
 	Port                        *int64

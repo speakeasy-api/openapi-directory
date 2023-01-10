@@ -14,17 +14,10 @@ type UpdateInfrastructureConfigurationHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
-// UpdateInfrastructureConfigurationRequestBodyLoggingS3Logs
-// Amazon S3 logging configuration.
-type UpdateInfrastructureConfigurationRequestBodyLoggingS3Logs struct {
-	S3BucketName *string `json:"s3BucketName,omitempty"`
-	S3KeyPrefix  *string `json:"s3KeyPrefix,omitempty"`
-}
-
 // UpdateInfrastructureConfigurationRequestBodyLogging
 // Logging configuration defines where Image Builder uploads your logs.
 type UpdateInfrastructureConfigurationRequestBodyLogging struct {
-	S3Logs *UpdateInfrastructureConfigurationRequestBodyLoggingS3Logs `json:"s3Logs,omitempty"`
+	S3Logs *shared.S3Logs `json:"s3Logs,omitempty"`
 }
 
 type UpdateInfrastructureConfigurationRequestBody struct {

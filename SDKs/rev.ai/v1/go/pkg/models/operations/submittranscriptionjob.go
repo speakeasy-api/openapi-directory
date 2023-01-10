@@ -23,6 +23,9 @@ type SubmitTranscriptionJobRequests struct {
 // Problem details object returned on errors
 type SubmitTranscriptionJob400ApplicationProblemPlusJSON struct {
 	Parameters map[string]interface{} `json:"parameters,omitempty"`
+	Status     *int64                 `json:"status,omitempty"`
+	Title      *string                `json:"title,omitempty"`
+	Type       *string                `json:"type,omitempty"`
 }
 
 type SubmitTranscriptionJobRequest struct {

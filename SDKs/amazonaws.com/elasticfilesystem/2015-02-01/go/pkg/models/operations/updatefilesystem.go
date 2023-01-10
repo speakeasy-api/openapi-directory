@@ -39,7 +39,7 @@ type UpdateFileSystemRequest struct {
 type UpdateFileSystemResponse struct {
 	BadRequest                        *interface{}
 	ContentType                       string
-	FileSystemDescription             *shared.FileSystemDescription1
+	FileSystemDescription             *shared.FileSystemDescription
 	FileSystemNotFound                *interface{}
 	IncorrectFileSystemLifeCycleState *interface{}
 	InsufficientThroughputCapacity    *interface{}

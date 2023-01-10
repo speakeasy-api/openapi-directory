@@ -32,6 +32,7 @@ type UpdateTransaction struct {
 	Cleared         *UpdateTransactionClearedEnum   `json:"cleared,omitempty"`
 	Date            time.Time                       `json:"date"`
 	FlagColor       *UpdateTransactionFlagColorEnum `json:"flag_color,omitempty"`
+	ID              string                          `json:"id"`
 	ImportID        *string                         `json:"import_id,omitempty"`
 	Memo            *string                         `json:"memo,omitempty"`
 	PayeeID         *string                         `json:"payee_id,omitempty"`

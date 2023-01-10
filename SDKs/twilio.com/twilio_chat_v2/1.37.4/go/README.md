@@ -30,19 +30,19 @@ func main() {
             },
         },
         PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "voluptatem",
+            ServiceSid: "et",
         },
         Headers: operations.CreateChannelHeaders{
-            XTwilioWebhookEnabled: "false",
+            XTwilioWebhookEnabled: "true",
         },
         Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "perferendis",
-            CreatedBy: "velit",
-            DateCreated: "1997-12-18T00:02:12Z",
-            DateUpdated: "1992-09-30T16:24:15Z",
-            FriendlyName: "porro",
-            Type: "public",
-            UniqueName: "facere",
+            Attributes: "et",
+            CreatedBy: "aspernatur",
+            DateCreated: "1971-04-12T21:49:37Z",
+            DateUpdated: "2000-06-08T18:41:43Z",
+            FriendlyName: "deleniti",
+            Type: "private",
+            UniqueName: "assumenda",
         },
     }
     

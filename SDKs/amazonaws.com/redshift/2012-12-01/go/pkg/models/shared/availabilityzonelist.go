@@ -1,0 +1,8 @@
+package shared
+
+// AvailabilityZoneList
+// Describes an availability zone.
+type AvailabilityZoneList struct {
+	Name               *string
+	SupportedPlatforms []SupportedPlatformsList
+}

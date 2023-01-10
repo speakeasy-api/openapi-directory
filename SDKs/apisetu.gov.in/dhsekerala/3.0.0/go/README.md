@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                DOB: "et",
-                FullName: "consequatur",
-                Regno: "aliquam",
-                Type: "molestiae",
-                Year: "repellat",
+                DOB: "illo",
+                FullName: "id",
+                Regno: "est",
+                Type: "architecto",
+                Year: "officiis",
             },
-            ConsentArtifact: "ut",
+            ConsentArtifact: "deserunt",
             Format: "pdf",
-            TxnID: "deserunt",
+            TxnID: "est",
         },
     }
     

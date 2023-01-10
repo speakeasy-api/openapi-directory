@@ -18,13 +18,13 @@ func main() {
             },
         },
         QueryParams: operations.GetListsBestSellersHistoryJSONQueryParams{
-            AgeGroup: "exercitationem",
-            Author: "magni",
-            Contributor: "non",
-            Isbn: "laboriosam",
-            Price: "perspiciatis",
-            Publisher: "dolore",
-            Title: "odio",
+            AgeGroup: "deserunt",
+            Author: "et",
+            Contributor: "fugit",
+            Isbn: "aut",
+            Price: "beatae",
+            Publisher: "nihil",
+            Title: "numquam",
         },
     }
     

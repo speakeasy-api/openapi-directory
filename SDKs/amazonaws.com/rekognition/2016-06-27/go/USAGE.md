@@ -23,32 +23,32 @@ func main() {
     
     req := operations.CompareFacesRequest{
         Headers: operations.CompareFacesHeaders{
-            XAmzAlgorithm: "maiores",
-            XAmzContentSha256: "rerum",
-            XAmzCredential: "pariatur",
-            XAmzDate: "quia",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "non",
-            XAmzSignedHeaders: "incidunt",
+            XAmzAlgorithm: "dolorum",
+            XAmzContentSha256: "blanditiis",
+            XAmzCredential: "culpa",
+            XAmzDate: "est",
+            XAmzSecurityToken: "soluta",
+            XAmzSignature: "omnis",
+            XAmzSignedHeaders: "sint",
             XAmzTarget: "RekognitionService.CompareFaces",
         },
         Request: shared.CompareFacesRequest{
             QualityFilter: "NONE",
-            SimilarityThreshold: 6.200000,
+            SimilarityThreshold: 87.099998,
             SourceImage: shared.Image{
-                Bytes: "et",
+                Bytes: "labore",
                 S3Object: &shared.S3Object{
                     Bucket: "maxime",
-                    Name: "pariatur",
-                    Version: "amet",
+                    Name: "eaque",
+                    Version: "sed",
                 },
             },
             TargetImage: shared.Image{
-                Bytes: "cupiditate",
+                Bytes: "ut",
                 S3Object: &shared.S3Object{
-                    Bucket: "hic",
-                    Name: "reiciendis",
-                    Version: "voluptatem",
+                    Bucket: "expedita",
+                    Name: "modi",
+                    Version: "aliquam",
                 },
             },
         },

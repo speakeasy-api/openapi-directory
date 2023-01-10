@@ -9,7 +9,29 @@ type ListAllRegionsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type ListAllRegions200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllRegions200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllRegions200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllRegions200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllRegions200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAllRegions200ApplicationJSON struct {
+	Links   *ListAllRegions200ApplicationJSONLinks                                                                         `json:"links,omitempty"`
+	Meta    ListAllRegions200ApplicationJSONMeta                                                                           `json:"meta"`
 	Regions []shared.Onev21actionsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesActionsItemsPropertiesRegion `json:"regions"`
 }
 

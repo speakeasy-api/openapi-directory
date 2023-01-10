@@ -23,19 +23,18 @@ func main() {
     
     req := operations.BatchDeleteBuildsRequest{
         Headers: operations.BatchDeleteBuildsHeaders{
-            XAmzAlgorithm: "voluptates",
-            XAmzContentSha256: "quo",
-            XAmzCredential: "est",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "optio",
-            XAmzSignature: "at",
-            XAmzSignedHeaders: "a",
+            XAmzAlgorithm: "occaecati",
+            XAmzContentSha256: "veniam",
+            XAmzCredential: "sed",
+            XAmzDate: "sint",
+            XAmzSecurityToken: "laudantium",
+            XAmzSignature: "explicabo",
+            XAmzSignedHeaders: "maiores",
             XAmzTarget: "CodeBuild_20161006.BatchDeleteBuilds",
         },
         Request: shared.BatchDeleteBuildsInput{
             Ids: []string{
-                "praesentium",
-                "tempora",
+                "explicabo",
             },
         },
     }

@@ -13,7 +13,7 @@ type ReservedDbInstance struct {
 	MultiAZ                       *bool
 	OfferingType                  *string
 	ProductDescription            *string
-	RecurringCharges              []map[string]interface{}
+	RecurringCharges              []RecurringChargeList
 	ReservedDBInstanceID          *string
 	ReservedDBInstancesOfferingID *string
 	StartTime                     *time.Time

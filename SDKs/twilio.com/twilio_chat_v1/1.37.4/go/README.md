@@ -30,13 +30,13 @@ func main() {
             },
         },
         PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "et",
+            ServiceSid: "quis",
         },
         Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "dolore",
-            FriendlyName: "vero",
+            Attributes: "illo",
+            FriendlyName: "impedit",
             Type: "private",
-            UniqueName: "adipisci",
+            UniqueName: "temporibus",
         },
     }
     

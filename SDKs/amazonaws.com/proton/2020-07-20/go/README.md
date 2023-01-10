@@ -34,17 +34,17 @@ func main() {
     
     req := operations.AcceptEnvironmentAccountConnectionRequest{
         Headers: operations.AcceptEnvironmentAccountConnectionHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "atque",
-            XAmzCredential: "et",
-            XAmzDate: "aperiam",
-            XAmzSecurityToken: "beatae",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "possimus",
+            XAmzContentSha256: "ullam",
+            XAmzCredential: "eveniet",
+            XAmzDate: "alias",
+            XAmzSecurityToken: "tenetur",
+            XAmzSignature: "dolorem",
+            XAmzSignedHeaders: "porro",
             XAmzTarget: "AwsProton20200720.AcceptEnvironmentAccountConnection",
         },
         Request: shared.AcceptEnvironmentAccountConnectionInput{
-            ID: "corrupti",
+            ID: "sed",
         },
     }
     

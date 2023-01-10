@@ -1,5 +1,5 @@
 package shared
 
 type CreateAppResult struct {
-	App App1 `json:"app"`
+	App App `json:"app"`
 }

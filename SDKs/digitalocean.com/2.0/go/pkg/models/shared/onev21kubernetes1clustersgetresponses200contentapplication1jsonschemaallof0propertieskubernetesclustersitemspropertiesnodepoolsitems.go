@@ -21,6 +21,7 @@ type Onev21kubernetes1clustersGetResponses200ContentApplication1jsonSchemaAllOf0
 	MaxNodes  *int64                                                                                                                                       `json:"max_nodes,omitempty"`
 	MinNodes  *int64                                                                                                                                       `json:"min_nodes,omitempty"`
 	Name      string                                                                                                                                       `json:"name"`
+	Size      string                                                                                                                                       `json:"size"`
 	Tags      []string                                                                                                                                     `json:"tags,omitempty"`
 	Taints    []Onev21kubernetes1clustersGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesKubernetesClustersItemsPropertiesNodePoolsItemsTaints `json:"taints,omitempty"`
 }

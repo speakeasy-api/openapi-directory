@@ -13,11 +13,11 @@ func main() {
     
     req := operations.GenerateTokenV2Request{
         Request: &operations.GenerateTokenV2RequestBody{
-            Assertion: "voluptatum",
-            GrantType: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-            RefreshToken: "nulla",
-            Scope: "ut",
-            ValidFor: 4885611820145246548,
+            Assertion: "ut",
+            GrantType: "refresh_token",
+            RefreshToken: "quam",
+            Scope: "expedita",
+            ValidFor: 1157108088262976570,
         },
     }
     

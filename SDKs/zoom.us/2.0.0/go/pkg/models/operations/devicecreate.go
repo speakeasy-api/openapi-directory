@@ -37,6 +37,16 @@ type DeviceCreateSecurity struct {
 	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
 }
 
+// DeviceCreateTheH323SipDeviceObject1
+// The H.323/SIP device object.
+type DeviceCreateTheH323SipDeviceObject1 struct {
+	Encryption DeviceCreateTheH323SipDeviceObjectEncryptionEnum `json:"encryption"`
+	ID         *string                                          `json:"id,omitempty"`
+	IP         string                                           `json:"ip"`
+	Name       string                                           `json:"name"`
+	Protocol   DeviceCreateTheH323SipDeviceObjectProtocolEnum   `json:"protocol"`
+}
+
 type DeviceCreateRequest struct {
 	Request  DeviceCreateRequests
 	Security DeviceCreateSecurity
@@ -47,5 +57,5 @@ type DeviceCreateResponse struct {
 	ContentType            string
 	Headers                map[string][]string
 	StatusCode             int64
-	TheH323SIPDeviceObject *DeviceCreateTheH323SipDeviceObject
+	TheH323SIPDeviceObject *DeviceCreateTheH323SipDeviceObject1
 }

@@ -34,17 +34,17 @@ func main() {
     
     req := operations.AcceptSharedDirectoryRequest{
         Headers: operations.AcceptSharedDirectoryHeaders{
-            XAmzAlgorithm: "rerum",
-            XAmzContentSha256: "dicta",
-            XAmzCredential: "debitis",
-            XAmzDate: "voluptatum",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "dolorem",
+            XAmzAlgorithm: "quis",
+            XAmzContentSha256: "saepe",
+            XAmzCredential: "illo",
+            XAmzDate: "aliquam",
+            XAmzSecurityToken: "qui",
+            XAmzSignature: "quia",
+            XAmzSignedHeaders: "aperiam",
             XAmzTarget: "DirectoryService_20150416.AcceptSharedDirectory",
         },
         Request: shared.AcceptSharedDirectoryRequest{
-            SharedDirectoryID: "voluptate",
+            SharedDirectoryID: "voluptatem",
         },
     }
     

@@ -3,5 +3,5 @@ package shared
 // EventCategoriesMessage
 // Represents the output of <a>DescribeEventCategories</a>.
 type EventCategoriesMessage struct {
-	EventCategoriesMapList []map[string]interface{}
+	EventCategoriesMapList []EventCategoriesMapList
 }

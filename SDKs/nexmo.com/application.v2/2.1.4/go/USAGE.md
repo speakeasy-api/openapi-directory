@@ -23,7 +23,7 @@ func main() {
     s := sdk.New(opts...)
     
     req := operations.CreateApplicationRequest{
-        Request: "possimus",
+        Request: "autem",
     }
     
     res, err := s.CreateApplication(ctx, req)

@@ -1,5 +1,5 @@
 package shared
 
 type ModifyRuleOutput struct {
-	Rules []Rule1
+	Rules []Rule
 }

@@ -15,8 +15,11 @@ type Flow struct {
 	DestinationVMTags         []string             `json:"destination_vm_tags,omitempty"`
 	DestinationVnic           *Reference           `json:"destination_vnic,omitempty"`
 	DestinationVpc            *Reference           `json:"destination_vpc,omitempty"`
+	EntityID                  *string              `json:"entity_id,omitempty"`
+	EntityType                *EntityTypeEnum      `json:"entity_type,omitempty"`
 	FirewallAction            *FirewallActionEnum  `json:"firewall_action,omitempty"`
 	FlowTag                   []FlowTagEnum        `json:"flow_tag,omitempty"`
+	Name                      *string              `json:"name,omitempty"`
 	Port                      *PortRange           `json:"port,omitempty"`
 	Protocol                  *ProtocolEnum        `json:"protocol,omitempty"`
 	SourceCluster             *Reference           `json:"source_cluster,omitempty"`

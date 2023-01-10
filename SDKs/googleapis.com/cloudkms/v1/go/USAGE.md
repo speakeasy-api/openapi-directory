@@ -23,56 +23,34 @@ func main() {
             },
         },
         PathParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams{
-            Parent: "dignissimos",
+            Parent: "autem",
         },
         QueryParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "esse",
+            DollarXgafv: "1",
+            AccessToken: "aut",
             Alt: "proto",
-            Callback: "eum",
-            EkmConnectionID: "aspernatur",
-            Fields: "molestiae",
-            Key: "minima",
-            OauthToken: "modi",
-            PrettyPrint: true,
-            QuotaUser: "molestiae",
-            UploadType: "porro",
-            UploadProtocol: "provident",
+            Callback: "excepturi",
+            EkmConnectionID: "temporibus",
+            Fields: "eum",
+            Key: "qui",
+            OauthToken: "quidem",
+            PrettyPrint: false,
+            QuotaUser: "sint",
+            UploadType: "aliquam",
+            UploadProtocol: "fugit",
         },
         Request: &shared.EkmConnectionInput{
-            Etag: "sequi",
+            Etag: "consequatur",
             ServiceResolvers: []shared.ServiceResolverInput{
                 shared.ServiceResolverInput{
-                    EndpointFilter: "dolor",
-                    Hostname: "pariatur",
+                    EndpointFilter: "est",
+                    Hostname: "dolores",
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "sed",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "dolores",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "quae",
+                            RawDer: "sit",
                         },
                     },
-                    ServiceDirectoryService: "aut",
-                },
-                shared.ServiceResolverInput{
-                    EndpointFilter: "hic",
-                    Hostname: "reprehenderit",
-                    ServerCertificates: []shared.CertificateInput{
-                        shared.CertificateInput{
-                            RawDer: "nesciunt",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "quia",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "dolores",
-                        },
-                    },
-                    ServiceDirectoryService: "dicta",
+                    ServiceDirectoryService: "corrupti",
                 },
             },
         },

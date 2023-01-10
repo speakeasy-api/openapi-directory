@@ -68,7 +68,7 @@ func (s *CustomerStores) CreateStore(ctx context.Context, request operations.Cre
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.LinksGetStoreLink
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

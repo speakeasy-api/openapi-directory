@@ -13,8 +13,8 @@ func main() {
     
     req := operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest{
         PathParams: operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams{
-            Owner: "aut",
-            Repo: "saepe",
+            Owner: "molestiae",
+            Repo: "atque",
         },
     }
     

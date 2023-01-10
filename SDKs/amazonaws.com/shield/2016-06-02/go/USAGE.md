@@ -23,17 +23,17 @@ func main() {
     
     req := operations.AssociateDrtLogBucketRequest{
         Headers: operations.AssociateDrtLogBucketHeaders{
-            XAmzAlgorithm: "delectus",
-            XAmzContentSha256: "suscipit",
-            XAmzCredential: "architecto",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "quos",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "tempora",
+            XAmzContentSha256: "quas",
+            XAmzCredential: "exercitationem",
+            XAmzDate: "tempore",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "qui",
+            XAmzSignedHeaders: "magnam",
             XAmzTarget: "AWSShield_20160616.AssociateDRTLogBucket",
         },
         Request: shared.AssociateDrtLogBucketRequest{
-            LogBucket: "a",
+            LogBucket: "sequi",
         },
     }
     

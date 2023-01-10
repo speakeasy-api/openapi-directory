@@ -1,7 +1,7 @@
 package operations
 
 type PostProfileChangePasswordRequestBody struct {
-	Confpassword    string                 `json:"confpassword"`
+	Confpassword    map[string]interface{} `json:"confpassword"`
 	CurrentPassword map[string]interface{} `json:"current_password"`
 	Password        map[string]interface{} `json:"password"`
 }

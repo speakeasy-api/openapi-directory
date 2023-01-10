@@ -4,6 +4,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type CreateFirewallRequestBodyInboundRulesProtocolEnum string
+
+const (
+	CreateFirewallRequestBodyInboundRulesProtocolEnumTCP  CreateFirewallRequestBodyInboundRulesProtocolEnum = "tcp"
+	CreateFirewallRequestBodyInboundRulesProtocolEnumUDP  CreateFirewallRequestBodyInboundRulesProtocolEnum = "udp"
+	CreateFirewallRequestBodyInboundRulesProtocolEnumIcmp CreateFirewallRequestBodyInboundRulesProtocolEnum = "icmp"
+)
+
 type CreateFirewallRequestBodyInboundRulesSources struct {
 	Addresses        []string               `json:"addresses,omitempty"`
 	DropletIds       []int64                `json:"droplet_ids,omitempty"`
@@ -13,16 +21,31 @@ type CreateFirewallRequestBodyInboundRulesSources struct {
 }
 
 type CreateFirewallRequestBodyInboundRules struct {
-	Sources CreateFirewallRequestBodyInboundRulesSources `json:"sources"`
+	Ports    string                                            `json:"ports"`
+	Protocol CreateFirewallRequestBodyInboundRulesProtocolEnum `json:"protocol"`
+	Sources  CreateFirewallRequestBodyInboundRulesSources      `json:"sources"`
 }
+
+type CreateFirewallRequestBodyOutboundRulesProtocolEnum string
+
+const (
+	CreateFirewallRequestBodyOutboundRulesProtocolEnumTCP  CreateFirewallRequestBodyOutboundRulesProtocolEnum = "tcp"
+	CreateFirewallRequestBodyOutboundRulesProtocolEnumUDP  CreateFirewallRequestBodyOutboundRulesProtocolEnum = "udp"
+	CreateFirewallRequestBodyOutboundRulesProtocolEnumIcmp CreateFirewallRequestBodyOutboundRulesProtocolEnum = "icmp"
+)
 
 type CreateFirewallRequestBodyOutboundRules struct {
 	Destinations shared.Onev21droplets1Percent7BdropletIDPercent7D1firewallsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesFirewallsItemsAllOf1PropertiesInboundRulesItemsAllOf1PropertiesSourcesAllOf0 `json:"destinations"`
+	Ports        string                                                                                                                                                                                              `json:"ports"`
+	Protocol     CreateFirewallRequestBodyOutboundRulesProtocolEnum                                                                                                                                                  `json:"protocol"`
 }
 
-type CreateFirewallRequestBody struct {
+type CreateFirewallRequestBodyInput struct {
+	DropletIds    []int64                                  `json:"droplet_ids,omitempty"`
 	InboundRules  []CreateFirewallRequestBodyInboundRules  `json:"inbound_rules,omitempty"`
+	Name          string                                   `json:"name"`
 	OutboundRules []CreateFirewallRequestBodyOutboundRules `json:"outbound_rules,omitempty"`
+	Tags          map[string]interface{}                   `json:"tags,omitempty"`
 }
 
 type CreateFirewall401ApplicationJSON struct {
@@ -32,7 +55,7 @@ type CreateFirewall401ApplicationJSON struct {
 }
 
 type CreateFirewallRequest struct {
-	Request *CreateFirewallRequestBody `request:"mediaType=application/json"`
+	Request *CreateFirewallRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type CreateFirewallResponse struct {

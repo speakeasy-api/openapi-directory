@@ -35,18 +35,18 @@ func main() {
     req := operations.GetAcceptReservedNodeExchangeRequest{
         QueryParams: operations.GetAcceptReservedNodeExchangeQueryParams{
             Action: "AcceptReservedNodeExchange",
-            ReservedNodeID: "aut",
-            TargetReservedNodeOfferingID: "qui",
+            ReservedNodeID: "maxime",
+            TargetReservedNodeOfferingID: "ipsa",
             Version: "2012-12-01",
         },
         Headers: operations.GetAcceptReservedNodeExchangeHeaders{
-            XAmzAlgorithm: "at",
-            XAmzContentSha256: "soluta",
-            XAmzCredential: "qui",
-            XAmzDate: "ducimus",
-            XAmzSecurityToken: "facere",
-            XAmzSignature: "excepturi",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "autem",
+            XAmzContentSha256: "magni",
+            XAmzCredential: "recusandae",
+            XAmzDate: "et",
+            XAmzSecurityToken: "dolorem",
+            XAmzSignature: "saepe",
+            XAmzSignedHeaders: "minus",
         },
     }
     

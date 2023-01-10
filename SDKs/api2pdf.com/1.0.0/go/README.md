@@ -34,11 +34,11 @@ func main() {
     
     req := operations.ChromeFromHTMLPostRequest{
         Request: &shared.ChromeHTMLToPdfRequest{
-            FileName: "et",
-            HTML: "voluptatem",
+            FileName: "in",
+            HTML: "quia",
             InlinePdf: false,
             Options: &shared.ChromeAdvancedOptions{
-                Landscape: "soluta",
+                Landscape: "quia",
                 PrintBackground: true,
             },
         },

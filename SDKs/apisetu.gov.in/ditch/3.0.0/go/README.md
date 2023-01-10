@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.IncerRequestBody{
             CertificateParameters: &operations.IncerRequestBodyCertificateParameters{
-                APPNO: "rerum",
-                CERTNO: "voluptates",
+                APPNO: "error",
+                CERTNO: "nulla",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "quis",
             Format: "pdf",
-            TxnID: "eum",
+            TxnID: "ratione",
         },
     }
     

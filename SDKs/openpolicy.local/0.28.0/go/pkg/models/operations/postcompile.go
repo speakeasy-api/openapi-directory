@@ -11,6 +11,61 @@ type PostCompileQueryParams struct {
 	Pretty     *bool   `queryParam:"style=form,explode=true,name=pretty"`
 }
 
+type PostCompile200ApplicationJSONExplanationLocalsKey struct {
+	Type  *string `json:"type,omitempty"`
+	Value *string `json:"value,omitempty"`
+}
+
+type PostCompile200ApplicationJSONExplanationLocalsValue struct {
+	Type  *string `json:"type,omitempty"`
+	Value *string `json:"value,omitempty"`
+}
+
+type PostCompile200ApplicationJSONExplanationLocals struct {
+	Key   *PostCompile200ApplicationJSONExplanationLocalsKey   `json:"key,omitempty"`
+	Value *PostCompile200ApplicationJSONExplanationLocalsValue `json:"value,omitempty"`
+}
+
+type PostCompile200ApplicationJSONExplanationNodeTerms struct {
+	Type  *string `json:"type,omitempty"`
+	Value *string `json:"value,omitempty"`
+}
+
+// PostCompile200ApplicationJSONExplanationNode
+// The AST element associated with the evaluation step.
+// https://godoc.org/github.com/open-policy-agent/opa/ast - AST
+type PostCompile200ApplicationJSONExplanationNode struct {
+	Index *float64                                            `json:"index,omitempty"`
+	Terms []PostCompile200ApplicationJSONExplanationNodeTerms `json:"terms,omitempty"`
+}
+
+type PostCompile200ApplicationJSONExplanationOpEnum string
+
+const (
+	PostCompile200ApplicationJSONExplanationOpEnumEnter PostCompile200ApplicationJSONExplanationOpEnum = "enter"
+	PostCompile200ApplicationJSONExplanationOpEnumExit  PostCompile200ApplicationJSONExplanationOpEnum = "exit"
+	PostCompile200ApplicationJSONExplanationOpEnumEval  PostCompile200ApplicationJSONExplanationOpEnum = "eval"
+	PostCompile200ApplicationJSONExplanationOpEnumFail  PostCompile200ApplicationJSONExplanationOpEnum = "fail"
+	PostCompile200ApplicationJSONExplanationOpEnumRedo  PostCompile200ApplicationJSONExplanationOpEnum = "redo"
+)
+
+type PostCompile200ApplicationJSONExplanationTypeEnum string
+
+const (
+	PostCompile200ApplicationJSONExplanationTypeEnumExpr PostCompile200ApplicationJSONExplanationTypeEnum = "expr"
+	PostCompile200ApplicationJSONExplanationTypeEnumRule PostCompile200ApplicationJSONExplanationTypeEnum = "rule"
+	PostCompile200ApplicationJSONExplanationTypeEnumBody PostCompile200ApplicationJSONExplanationTypeEnum = "body"
+)
+
+type PostCompile200ApplicationJSONExplanation struct {
+	Locals   []PostCompile200ApplicationJSONExplanationLocals  `json:"locals,omitempty"`
+	Node     *PostCompile200ApplicationJSONExplanationNode     `json:"node,omitempty"`
+	Op       *PostCompile200ApplicationJSONExplanationOpEnum   `json:"op,omitempty"`
+	ParentID *float64                                          `json:"parent_id,omitempty"`
+	QueryID  *float64                                          `json:"query_id,omitempty"`
+	Type     *PostCompile200ApplicationJSONExplanationTypeEnum `json:"type,omitempty"`
+}
+
 type PostCompile200ApplicationJSONMetrics struct {
 	CounterServerQueryCacheHit                        *float64 `json:"counter_server_query_cache_hit,omitempty"`
 	TimerQueryCompileStageBuildComprehensionIndexNs   *float64 `json:"timer_query_compile_stage_build_comprehension_index_ns,omitempty"`
@@ -36,7 +91,9 @@ type PostCompile200ApplicationJSONMetrics struct {
 }
 
 type PostCompile200ApplicationJSON struct {
-	Metrics *PostCompile200ApplicationJSONMetrics `json:"metrics,omitempty"`
+	Explanation []PostCompile200ApplicationJSONExplanation `json:"explanation,omitempty"`
+	Metrics     *PostCompile200ApplicationJSONMetrics      `json:"metrics,omitempty"`
+	Result      []interface{}                              `json:"result,omitempty"`
 }
 
 type PostCompileRequest struct {

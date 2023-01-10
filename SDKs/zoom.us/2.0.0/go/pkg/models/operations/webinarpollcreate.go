@@ -37,6 +37,24 @@ type WebinarPollCreateSecurity struct {
 	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
 }
 
+type WebinarPollCreatePollStatusEnum string
+
+const (
+	WebinarPollCreatePollStatusEnumNotstart WebinarPollCreatePollStatusEnum = "notstart"
+	WebinarPollCreatePollStatusEnumStarted  WebinarPollCreatePollStatusEnum = "started"
+	WebinarPollCreatePollStatusEnumEnded    WebinarPollCreatePollStatusEnum = "ended"
+	WebinarPollCreatePollStatusEnumSharing  WebinarPollCreatePollStatusEnum = "sharing"
+)
+
+// WebinarPollCreatePoll2
+// Poll
+type WebinarPollCreatePoll2 struct {
+	ID        *string                          `json:"id,omitempty"`
+	Questions []WebinarPollCreatePollQuestions `json:"questions,omitempty"`
+	Status    *WebinarPollCreatePollStatusEnum `json:"status,omitempty"`
+	Title     *string                          `json:"title,omitempty"`
+}
+
 type WebinarPollCreateRequest struct {
 	PathParams WebinarPollCreatePathParams
 	Request    WebinarPollCreateRequests
@@ -47,6 +65,6 @@ type WebinarPollCreateResponse struct {
 	Body        []byte
 	ContentType string
 	Headers     map[string][]string
-	Poll        *WebinarPollCreatePoll
+	Poll        *WebinarPollCreatePoll2
 	StatusCode  int64
 }

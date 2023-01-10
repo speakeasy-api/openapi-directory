@@ -1,5 +1,5 @@
 package shared
 
 type GetBucketAccessKeysResult struct {
-	AccessKeys map[string]interface{} `json:"accessKeys,omitempty"`
+	AccessKeys []AccessKey `json:"accessKeys,omitempty"`
 }

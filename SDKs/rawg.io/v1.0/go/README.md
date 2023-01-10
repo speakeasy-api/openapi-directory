@@ -24,8 +24,8 @@ func main() {
     
     req := operations.CreatorRolesListRequest{
         QueryParams: operations.CreatorRolesListQueryParams{
-            Page: 3457599076940366892,
-            PageSize: 7469295395638694155,
+            Page: 6249034122277746123,
+            PageSize: 2509453817742034460,
         },
     }
     

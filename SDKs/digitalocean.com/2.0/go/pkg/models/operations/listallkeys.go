@@ -9,6 +9,26 @@ type ListAllKeysQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type ListAllKeys200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAllKeys200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAllKeys200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAllKeys200ApplicationJSONMeta
+// Information about the response itself.
+type ListAllKeys200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAllKeys200ApplicationJSONSSHKeys struct {
 	Fingerprint *string `json:"fingerprint,omitempty"`
 	ID          *int64  `json:"id,omitempty"`
@@ -17,6 +37,8 @@ type ListAllKeys200ApplicationJSONSSHKeys struct {
 }
 
 type ListAllKeys200ApplicationJSON struct {
+	Links   *ListAllKeys200ApplicationJSONLinks    `json:"links,omitempty"`
+	Meta    ListAllKeys200ApplicationJSONMeta      `json:"meta"`
 	SSHKeys []ListAllKeys200ApplicationJSONSSHKeys `json:"ssh_keys,omitempty"`
 }
 

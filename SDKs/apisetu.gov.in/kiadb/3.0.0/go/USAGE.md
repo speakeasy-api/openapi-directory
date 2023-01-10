@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.AlltrRequestBody{
             CertificateParameters: &operations.AlltrRequestBodyCertificateParameters{
-                DOB: "non",
-                FullName: "non",
-                RegNum: "quam",
-                UID: "est",
+                DOB: "et",
+                FullName: "tempore",
+                RegNum: "quis",
+                UID: "vitae",
             },
-            ConsentArtifact: "optio",
+            ConsentArtifact: "sunt",
             Format: "pdf",
-            TxnID: "nisi",
+            TxnID: "sit",
         },
     }
     

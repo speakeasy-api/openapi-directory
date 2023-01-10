@@ -13,8 +13,8 @@ func main() {
     
     req := operations.PostAuthRequest{
         QueryParams: operations.PostAuthQueryParams{
-            ClientID: "quis",
-            ClientSecret: "aperiam",
+            ClientID: "autem",
+            ClientSecret: "facilis",
         },
     }
     

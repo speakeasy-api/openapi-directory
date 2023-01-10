@@ -24,8 +24,8 @@ func main() {
     
     req := operations.ActionHelpRequest{
         PathParams: operations.ActionHelpPathParams{
-            ActionID: "reprehenderit",
-            ServiceID: "et",
+            ActionID: "eum",
+            ServiceID: "explicabo",
         },
     }
     

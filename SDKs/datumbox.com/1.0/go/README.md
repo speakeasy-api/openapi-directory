@@ -24,8 +24,8 @@ func main() {
     
     req := operations.AdultContentDetectionRequest{
         Request: &operations.AdultContentDetectionRequestBody{
-            APIKey: "dolorem",
-            Text: "saepe",
+            APIKey: "voluptatem",
+            Text: "laborum",
         },
     }
     

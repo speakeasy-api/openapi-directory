@@ -37,9 +37,9 @@ func main() {
     
     req := operations.BuyANumberRequest{
         Request: shared.NumberDetails{
-            Country: "est",
-            Msisdn: "quidem",
-            TargetAPIKey: "inventore",
+            Country: "repellendus",
+            Msisdn: "minima",
+            TargetAPIKey: "consequatur",
         },
     }
     

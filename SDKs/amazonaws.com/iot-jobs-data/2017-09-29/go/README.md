@@ -34,21 +34,21 @@ func main() {
     
     req := operations.DescribeJobExecutionRequest{
         PathParams: operations.DescribeJobExecutionPathParams{
-            JobID: "qui",
-            ThingName: "rem",
+            JobID: "aut",
+            ThingName: "adipisci",
         },
         QueryParams: operations.DescribeJobExecutionQueryParams{
-            ExecutionNumber: 3347108421516776634,
+            ExecutionNumber: 3214739643573370622,
             IncludeJobDocument: false,
         },
         Headers: operations.DescribeJobExecutionHeaders{
-            XAmzAlgorithm: "quo",
-            XAmzContentSha256: "id",
-            XAmzCredential: "illo",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "eum",
+            XAmzAlgorithm: "in",
+            XAmzContentSha256: "fuga",
+            XAmzCredential: "nemo",
+            XAmzDate: "dolore",
+            XAmzSecurityToken: "suscipit",
+            XAmzSignature: "architecto",
+            XAmzSignedHeaders: "ratione",
         },
     }
     

@@ -20,11 +20,21 @@ type DashboardClientFeedbackDetailSecurity struct {
 	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
 }
 
+type DashboardClientFeedbackDetail200ApplicationJSONClientFeedbackDetails struct {
+	Email           *string    `json:"email,omitempty"`
+	MeetingID       *string    `json:"meeting_id,omitempty"`
+	ParticipantName *string    `json:"participant_name,omitempty"`
+	Time            *time.Time `json:"time,omitempty"`
+}
+
 // DashboardClientFeedbackDetail200ApplicationJSON
 // Pagination object.
 type DashboardClientFeedbackDetail200ApplicationJSON struct {
-	From *time.Time `json:"from,omitempty"`
-	To   *time.Time `json:"to,omitempty"`
+	ClientFeedbackDetails []DashboardClientFeedbackDetail200ApplicationJSONClientFeedbackDetails `json:"client_feedback_details,omitempty"`
+	From                  *time.Time                                                             `json:"from,omitempty"`
+	NextPageToken         *string                                                                `json:"next_page_token,omitempty"`
+	PageSize              *int64                                                                 `json:"page_size,omitempty"`
+	To                    *time.Time                                                             `json:"to,omitempty"`
 }
 
 type DashboardClientFeedbackDetailRequest struct {

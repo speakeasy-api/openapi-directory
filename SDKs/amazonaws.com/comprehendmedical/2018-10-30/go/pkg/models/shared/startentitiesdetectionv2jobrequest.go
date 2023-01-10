@@ -3,7 +3,7 @@ package shared
 type StartEntitiesDetectionV2JobRequest struct {
 	ClientRequestToken *string          `json:"ClientRequestToken,omitempty"`
 	DataAccessRoleArn  string           `json:"DataAccessRoleArn"`
-	InputDataConfig    InputDataConfig1 `json:"InputDataConfig"`
+	InputDataConfig    InputDataConfig  `json:"InputDataConfig"`
 	JobName            *string          `json:"JobName,omitempty"`
 	KMSKey             *string          `json:"KMSKey,omitempty"`
 	LanguageCode       LanguageCodeEnum `json:"LanguageCode"`

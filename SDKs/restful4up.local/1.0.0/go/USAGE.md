@@ -12,7 +12,7 @@ func main() {
     s := sdk.New()
     
     req := operations.ApplyYaraRulesRequest{
-        Request: "est",
+        Request: "esse",
     }
     
     res, err := s.ApplyYaraRules(ctx, req)

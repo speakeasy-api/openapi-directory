@@ -8,8 +8,15 @@ type PostImageActionPathParams struct {
 	ImageID int64 `pathParam:"style=simple,explode=false,name=image_id"`
 }
 
+type PostImageActionRequestBody1TypeEnum string
+
+const (
+	PostImageActionRequestBody1TypeEnumConvert  PostImageActionRequestBody1TypeEnum = "convert"
+	PostImageActionRequestBody1TypeEnumTransfer PostImageActionRequestBody1TypeEnum = "transfer"
+)
+
 type PostImageActionRequestBody1 struct {
-	Region shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region"`
+	Type PostImageActionRequestBody1TypeEnum `json:"type"`
 }
 
 type PostImageActionRequestBody2TypeEnum string
@@ -20,7 +27,8 @@ const (
 )
 
 type PostImageActionRequestBody2 struct {
-	Type PostImageActionRequestBody2TypeEnum `json:"type"`
+	Region shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region"`
+	Type   PostImageActionRequestBody2TypeEnum                                                                                                     `json:"type"`
 }
 
 type PostImageAction401ApplicationJSON struct {

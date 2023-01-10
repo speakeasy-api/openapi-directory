@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetActionOrganizationActivityListRequest{
         QueryParams: operations.GetActionOrganizationActivityListQueryParams{
-            ID: "et",
+            ID: "voluptatem",
         },
     }
     

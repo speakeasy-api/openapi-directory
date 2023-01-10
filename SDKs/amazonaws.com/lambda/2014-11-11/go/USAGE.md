@@ -23,24 +23,23 @@ func main() {
     
     req := operations.AddEventSourceRequest{
         Headers: operations.AddEventSourceHeaders{
-            XAmzAlgorithm: "eum",
-            XAmzContentSha256: "quaerat",
-            XAmzCredential: "modi",
-            XAmzDate: "officiis",
-            XAmzSecurityToken: "doloremque",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "ipsum",
+            XAmzContentSha256: "omnis",
+            XAmzCredential: "error",
+            XAmzDate: "reprehenderit",
+            XAmzSecurityToken: "explicabo",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "eum",
         },
         Request: operations.AddEventSourceRequestBody{
-            BatchSize: 2536117404804311014,
-            EventSource: "praesentium",
+            BatchSize: 6380244943489637684,
+            EventSource: "ratione",
             FunctionName: "labore",
             Parameters: map[string]string{
-                "aut": "alias",
-                "impedit": "aperiam",
-                "voluptatem": "dolorum",
+                "saepe": "libero",
+                "nobis": "ut",
             },
-            Role: "iusto",
+            Role: "accusamus",
         },
     }
     

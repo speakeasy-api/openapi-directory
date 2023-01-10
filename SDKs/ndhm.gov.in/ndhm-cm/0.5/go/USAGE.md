@@ -13,64 +13,69 @@ func main() {
     
     req := operations.PostV05ConsentRequestsInitRequest{
         Headers: operations.PostV05ConsentRequestsInitHeaders{
-            Authorization: "omnis",
+            Authorization: "assumenda",
         },
         Request: operations.PostV05ConsentRequestsInitRequests{
-            ApplicationXML: []byte("officiis"),
+            ApplicationXML: []byte("ipsa"),
             ConsentRequest: &shared.ConsentRequest{
                 Consent: shared.ConsentRequestConsent{
                     CareContexts: []shared.CareContextDefinition{
                         shared.CareContextDefinition{
-                            CareContextReference: "harum",
-                            PatientReference: "dolore",
+                            CareContextReference: "debitis",
+                            PatientReference: "quia",
+                        },
+                        shared.CareContextDefinition{
+                            CareContextReference: "qui",
+                            PatientReference: "sit",
+                        },
+                        shared.CareContextDefinition{
+                            CareContextReference: "aut",
+                            PatientReference: "corrupti",
                         },
                     },
                     HiTypes: []shared.HiTypeEnumEnum{
-                        "DischargeSummary",
+                        "Prescription",
+                        "DiagnosticReport",
+                        "OPConsultation",
                     },
-                    Hip: map[string]interface{}{
-                        "voluptatem": "ut",
-                        "dolore": "eligendi",
-                        "quis": "esse",
+                    Hip: &shared.ConsentRequestConsentHip{
+                        ID: "quos",
                     },
-                    Hiu: map[string]interface{}{
-                        "fugit": "ullam",
-                        "reiciendis": "aut",
+                    Hiu: shared.ConsentRequestConsentHiu{
+                        ID: "non",
                     },
-                    Patient: map[string]interface{}{
-                        "perspiciatis": "incidunt",
-                        "ut": "excepturi",
-                        "sunt": "et",
+                    Patient: shared.ConsentRequestConsentPatient{
+                        ID: "culpa",
                     },
                     Permission: shared.Permission{
-                        AccessMode: "VIEW",
-                        DataEraseAt: "2019-02-03T05:07:07Z",
+                        AccessMode: "STORE",
+                        DataEraseAt: "1996-06-08T20:42:40Z",
                         DateRange: shared.PermissionDateRange{
-                            From: "1998-12-03T02:52:49Z",
-                            To: "2012-12-04T23:49:43Z",
+                            From: "1999-04-12T12:00:16Z",
+                            To: "2000-05-23T21:06:18Z",
                         },
                         Frequency: shared.PermissionFrequency{
-                            Repeats: 2461558090694216527,
-                            Unit: "WEEK",
-                            Value: 3238526225196230627,
+                            Repeats: 1023459084632939894,
+                            Unit: "MONTH",
+                            Value: 9095513636727418367,
                         },
                     },
                     Purpose: shared.UsePurpose{
-                        Code: "aliquid",
-                        RefURI: "eos",
-                        Text: "dolores",
+                        Code: "atque",
+                        RefURI: "quasi",
+                        Text: "voluptates",
                     },
                     Requester: shared.Requester{
                         Identifier: &shared.RequesterIdentifier{
-                            System: "consequuntur",
-                            Type: "expedita",
-                            Value: "quasi",
+                            System: "in",
+                            Type: "aut",
+                            Value: "nobis",
                         },
-                        Name: "eos",
+                        Name: "hic",
                     },
                 },
-                RequestID: "eius",
-                Timestamp: "1997-09-22T05:26:28Z",
+                RequestID: "dolores",
+                Timestamp: "2018-03-29T00:56:21Z",
             },
         },
     }

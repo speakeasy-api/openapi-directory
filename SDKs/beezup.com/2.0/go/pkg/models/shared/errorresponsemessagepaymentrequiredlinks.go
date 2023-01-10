@@ -1,5 +1,5 @@
 package shared
 
 type ErrorResponseMessagePaymentRequiredLinks struct {
-	Offer map[string]interface{} `json:"offer"`
+	Offer LinksGetOfferLink `json:"offer"`
 }

@@ -781,7 +781,7 @@ func (s *Story) StoryIDPut(ctx context.Context, request operations.StoryIDPutReq
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Story1
+			var out *shared.Story
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

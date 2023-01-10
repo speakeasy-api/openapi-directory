@@ -24,14 +24,14 @@ func main() {
     
     req := operations.AccountListNodeAgentSkusRequest{
         QueryParams: operations.AccountListNodeAgentSkusQueryParams{
-            DollarFilter: "suscipit",
-            APIVersion: "aut",
-            Maxresults: 7399819931934343852,
-            Timeout: 2948604740844354809,
+            DollarFilter: "ullam",
+            APIVersion: "molestiae",
+            Maxresults: 5455421402781199366,
+            Timeout: 5856774363804732947,
         },
         Headers: operations.AccountListNodeAgentSkusHeaders{
-            ClientRequestID: "officiis",
-            OcpDate: "explicabo",
+            ClientRequestID: "et",
+            OcpDate: "ab",
             ReturnClientRequestID: false,
         },
     }

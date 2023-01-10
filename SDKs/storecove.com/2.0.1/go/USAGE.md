@@ -23,9 +23,9 @@ func main() {
     
     req := operations.CreateAdministrationRequest{
         PathParams: operations.CreateAdministrationPathParams{
-            LegalEntityID: 4840830895169634114,
+            LegalEntityID: 1447709226612322949,
         },
-        Request: "nam",
+        Request: "nihil",
     }
     
     res, err := s.Administrations.CreateAdministration(ctx, req)

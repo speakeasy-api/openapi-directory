@@ -15,7 +15,10 @@ type WebinarPanelistsSecurity struct {
 // WebinarPanelistsPanelistListPanelists
 // Panelist base object.
 type WebinarPanelistsPanelistListPanelists struct {
-	ID *string `json:"id,omitempty"`
+	Email   *string `json:"email,omitempty"`
+	ID      *string `json:"id,omitempty"`
+	JoinURL *string `json:"join_url,omitempty"`
+	Name    *string `json:"name,omitempty"`
 }
 
 // WebinarPanelistsPanelistList

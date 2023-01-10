@@ -29,17 +29,16 @@ func main() {
     
     req := operations.AccountsBalanceGetRequest{
         Request: shared.AccountsBalanceGetRequest{
-            AccessToken: "blanditiis",
-            ClientID: "ut",
+            AccessToken: "cum",
+            ClientID: "unde",
             Options: &shared.AccountsBalanceGetRequestOptions{
                 AccountIds: []string{
-                    "est",
-                    "exercitationem",
-                    "similique",
+                    "possimus",
+                    "voluptate",
                 },
-                MinLastUpdatedDatetime: "2022-01-29T17:57:03Z",
+                MinLastUpdatedDatetime: "1974-05-29T19:38:19Z",
             },
-            Secret: "voluptates",
+            Secret: "quo",
         },
     }
     

@@ -23,19 +23,18 @@ func main() {
     
     req := operations.DescribeReportCreationRequest{
         Headers: operations.DescribeReportCreationHeaders{
-            XAmzAlgorithm: "nostrum",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "error",
-            XAmzDate: "excepturi",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "eveniet",
+            XAmzAlgorithm: "placeat",
+            XAmzContentSha256: "doloribus",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "pariatur",
+            XAmzSecurityToken: "sint",
+            XAmzSignature: "ipsam",
+            XAmzSignedHeaders: "qui",
             XAmzTarget: "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation",
         },
         Request: map[string]interface{}{
-            "sit": "nulla",
-            "veritatis": "inventore",
-            "quibusdam": "iure",
+            "dolores": "aut",
+            "est": "nobis",
         },
     }
     

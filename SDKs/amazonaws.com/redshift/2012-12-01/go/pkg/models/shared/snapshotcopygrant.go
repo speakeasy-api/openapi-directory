@@ -5,5 +5,5 @@ package shared
 type SnapshotCopyGrant struct {
 	KmsKeyID              *string
 	SnapshotCopyGrantName *string
-	Tags                  map[string]interface{}
+	Tags                  []TagList
 }

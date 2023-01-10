@@ -34,9 +34,9 @@ func main() {
     
     req := operations.GetTimestagsRequest{
         QueryParams: operations.GetTimestagsQueryParams{
-            Filter: "Geo",
-            Max: 386129215567178564,
-            Query: "veritatis",
+            Filter: "Per",
+            Max: 540949453915600111,
+            Query: "ex",
         },
     }
     

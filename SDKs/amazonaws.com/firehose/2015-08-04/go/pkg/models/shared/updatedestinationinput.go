@@ -1,13 +1,26 @@
 package shared
 
+// UpdateDestinationInputS3DestinationUpdate
+// [Deprecated] Describes an update for a destination in Amazon S3.
+type UpdateDestinationInputS3DestinationUpdate struct {
+	BucketARN                *string                   `json:"BucketARN,omitempty"`
+	BufferingHints           *BufferingHints           `json:"BufferingHints,omitempty"`
+	CloudWatchLoggingOptions *CloudWatchLoggingOptions `json:"CloudWatchLoggingOptions,omitempty"`
+	CompressionFormat        *CompressionFormatEnum    `json:"CompressionFormat,omitempty"`
+	EncryptionConfiguration  *EncryptionConfiguration  `json:"EncryptionConfiguration,omitempty"`
+	ErrorOutputPrefix        *string                   `json:"ErrorOutputPrefix,omitempty"`
+	Prefix                   *string                   `json:"Prefix,omitempty"`
+	RoleARN                  *string                   `json:"RoleARN,omitempty"`
+}
+
 type UpdateDestinationInput struct {
-	CurrentDeliveryStreamVersionID string                          `json:"CurrentDeliveryStreamVersionId"`
-	DeliveryStreamName             string                          `json:"DeliveryStreamName"`
-	DestinationID                  string                          `json:"DestinationId"`
-	ElasticsearchDestinationUpdate *ElasticsearchDestinationUpdate `json:"ElasticsearchDestinationUpdate,omitempty"`
-	ExtendedS3DestinationUpdate    *ExtendedS3DestinationUpdate    `json:"ExtendedS3DestinationUpdate,omitempty"`
-	HTTPEndpointDestinationUpdate  *HTTPEndpointDestinationUpdate  `json:"HttpEndpointDestinationUpdate,omitempty"`
-	RedshiftDestinationUpdate      *RedshiftDestinationUpdate      `json:"RedshiftDestinationUpdate,omitempty"`
-	S3DestinationUpdate            map[string]interface{}          `json:"S3DestinationUpdate,omitempty"`
-	SplunkDestinationUpdate        *SplunkDestinationUpdate        `json:"SplunkDestinationUpdate,omitempty"`
+	CurrentDeliveryStreamVersionID string                                     `json:"CurrentDeliveryStreamVersionId"`
+	DeliveryStreamName             string                                     `json:"DeliveryStreamName"`
+	DestinationID                  string                                     `json:"DestinationId"`
+	ElasticsearchDestinationUpdate *ElasticsearchDestinationUpdate            `json:"ElasticsearchDestinationUpdate,omitempty"`
+	ExtendedS3DestinationUpdate    *ExtendedS3DestinationUpdate               `json:"ExtendedS3DestinationUpdate,omitempty"`
+	HTTPEndpointDestinationUpdate  *HTTPEndpointDestinationUpdate             `json:"HttpEndpointDestinationUpdate,omitempty"`
+	RedshiftDestinationUpdate      *RedshiftDestinationUpdate                 `json:"RedshiftDestinationUpdate,omitempty"`
+	S3DestinationUpdate            *UpdateDestinationInputS3DestinationUpdate `json:"S3DestinationUpdate,omitempty"`
+	SplunkDestinationUpdate        *SplunkDestinationUpdate                   `json:"SplunkDestinationUpdate,omitempty"`
 }

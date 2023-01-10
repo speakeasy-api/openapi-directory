@@ -32,16 +32,16 @@ func main() {
             },
         },
         PathParams: operations.GroupsSettingsGroupsGetPathParams{
-            GroupUniqueID: "molestias",
+            GroupUniqueID: "sunt",
         },
         QueryParams: operations.GroupsSettingsGroupsGetQueryParams{
             Alt: "json",
-            Fields: "quia",
-            Key: "nihil",
-            OauthToken: "cum",
+            Fields: "aut",
+            Key: "vel",
+            OauthToken: "et",
             PrettyPrint: false,
-            QuotaUser: "delectus",
-            UserIP: "voluptatem",
+            QuotaUser: "maiores",
+            UserIP: "et",
         },
     }
     

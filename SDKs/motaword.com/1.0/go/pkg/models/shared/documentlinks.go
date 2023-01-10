@@ -8,5 +8,6 @@ type DocumentLinks struct {
 	PreviewPdf       *Href           `json:"preview-pdf,omitempty"`
 	PreviewPdfViewer *Href           `json:"preview-pdf-viewer,omitempty"`
 	Project          *Href           `json:"project,omitempty"`
+	Self             *Href           `json:"self,omitempty"`
 	Thumbnail        *Href           `json:"thumbnail,omitempty"`
 }

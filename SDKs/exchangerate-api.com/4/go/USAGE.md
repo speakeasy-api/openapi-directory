@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetLatestBaseCurrencyRequest{
         PathParams: operations.GetLatestBaseCurrencyPathParams{
-            BaseCurrency: "consequuntur",
+            BaseCurrency: "quo",
         },
     }
     

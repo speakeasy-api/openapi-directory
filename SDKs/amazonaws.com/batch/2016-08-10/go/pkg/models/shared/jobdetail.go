@@ -9,7 +9,7 @@ type JobDetail struct {
 	CreatedAt            *int64                   `json:"createdAt,omitempty"`
 	DependsOn            []JobDependency          `json:"dependsOn,omitempty"`
 	JobArn               *string                  `json:"jobArn,omitempty"`
-	JobDefinition        map[string]interface{}   `json:"jobDefinition"`
+	JobDefinition        string                   `json:"jobDefinition"`
 	JobID                string                   `json:"jobId"`
 	JobName              string                   `json:"jobName"`
 	JobQueue             string                   `json:"jobQueue"`

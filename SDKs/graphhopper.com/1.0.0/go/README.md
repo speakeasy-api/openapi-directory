@@ -36,44 +36,44 @@ func main() {
         Request: shared.ClusterRequest{
             Configuration: &shared.ClusterConfiguration{
                 Clustering: &shared.ClusterConfigurationClustering{
-                    MaxQuantity: 13.200000,
-                    MinQuantity: 49.200001,
-                    NumClusters: 56.200001,
+                    MaxQuantity: 59.099998,
+                    MinQuantity: 79.099998,
+                    NumClusters: 14.100000,
                 },
-                ResponseType: "qui",
+                ResponseType: "nesciunt",
                 Routing: &shared.ClusterConfigurationRouting{
-                    CostPerMeter: 44.099998,
-                    CostPerSecond: 58.099998,
-                    Profile: "minus",
+                    CostPerMeter: 84.099998,
+                    CostPerSecond: 47.200001,
+                    Profile: "voluptatem",
                 },
             },
             Customers: []shared.ClusterCustomer{
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 61.099998,
-                        Lon: 6.100000,
-                        StreetHint: "dignissimos",
+                        Lat: 43.200001,
+                        Lon: 96.199997,
+                        StreetHint: "quis",
+                    },
+                    ID: "laborum",
+                    Quantity: 43.099998,
+                },
+                shared.ClusterCustomer{
+                    Address: &shared.ClusterCustomerAddress{
+                        Lat: 32.099998,
+                        Lon: 7.200000,
+                        StreetHint: "atque",
+                    },
+                    ID: "quo",
+                    Quantity: 34.099998,
+                },
+                shared.ClusterCustomer{
+                    Address: &shared.ClusterCustomerAddress{
+                        Lat: 67.099998,
+                        Lon: 52.099998,
+                        StreetHint: "aut",
                     },
                     ID: "et",
-                    Quantity: 78.099998,
-                },
-                shared.ClusterCustomer{
-                    Address: &shared.ClusterCustomerAddress{
-                        Lat: 94.099998,
-                        Lon: 9.100000,
-                        StreetHint: "omnis",
-                    },
-                    ID: "delectus",
-                    Quantity: 46.200001,
-                },
-                shared.ClusterCustomer{
-                    Address: &shared.ClusterCustomerAddress{
-                        Lat: 5.100000,
-                        Lon: 23.100000,
-                        StreetHint: "beatae",
-                    },
-                    ID: "ex",
-                    Quantity: 95.099998,
+                    Quantity: 8.100000,
                 },
             },
         },

@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.TrcerRequestBody{
             CertificateParameters: &operations.TrcerRequestBodyCertificateParameters{
-                CERTNO: "quis",
-                DOB: "tempora",
-                FullName: "esse",
-                Session: "rerum",
+                CERTNO: "nemo",
+                DOB: "voluptatum",
+                FullName: "quibusdam",
+                Session: "eos",
             },
-            ConsentArtifact: "tempora",
+            ConsentArtifact: "quae",
             Format: "pdf",
-            TxnID: "deserunt",
+            TxnID: "libero",
         },
     }
     

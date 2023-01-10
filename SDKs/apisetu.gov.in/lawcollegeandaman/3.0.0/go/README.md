@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.TrcerRequestBody{
             CertificateParameters: &operations.TrcerRequestBodyCertificateParameters{
-                ADMNNO: "non",
-                FullName: "doloremque",
+                ADMNNO: "et",
+                FullName: "nostrum",
             },
-            ConsentArtifact: "qui",
+            ConsentArtifact: "sed",
             Format: "pdf",
-            TxnID: "natus",
+            TxnID: "molestias",
         },
     }
     

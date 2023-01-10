@@ -34,11 +34,11 @@ func main() {
     
     req := operations.GetV3AffiliatesSearchImagesRequest{
         QueryParams: operations.GetV3AffiliatesSearchImagesQueryParams{
-            Phrase: "qui",
-            Style: "photography",
+            Phrase: "vitae",
+            Style: "vector",
         },
         Headers: operations.GetV3AffiliatesSearchImagesHeaders{
-            AcceptLanguage: "in",
+            AcceptLanguage: "dolorum",
         },
     }
     

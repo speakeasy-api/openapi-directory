@@ -3,7 +3,7 @@ package shared
 // Rule
 // Information about a rule.
 type Rule struct {
-	Actions    []Action1
+	Actions    []Action
 	Conditions []RuleCondition
 	IsDefault  *bool
 	Priority   *string

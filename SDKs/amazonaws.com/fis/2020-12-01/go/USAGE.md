@@ -23,151 +23,97 @@ func main() {
     
     req := operations.CreateExperimentTemplateRequest{
         Headers: operations.CreateExperimentTemplateHeaders{
-            XAmzAlgorithm: "recusandae",
-            XAmzContentSha256: "nostrum",
-            XAmzCredential: "illum",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "quo",
-            XAmzSignature: "minus",
-            XAmzSignedHeaders: "facilis",
+            XAmzAlgorithm: "rem",
+            XAmzContentSha256: "perspiciatis",
+            XAmzCredential: "molestias",
+            XAmzDate: "repellendus",
+            XAmzSecurityToken: "doloremque",
+            XAmzSignature: "doloremque",
+            XAmzSignedHeaders: "consectetur",
         },
         Request: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
-                "officia": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "vel",
-                    Description: "magni",
+                "et": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "ut",
+                    Description: "eaque",
                     Parameters: map[string]string{
-                        "ut": "ut",
-                        "distinctio": "dolor",
-                        "nemo": "aut",
+                        "dolorem": "nulla",
+                        "nam": "velit",
                     },
                     StartAfter: []string{
-                        "in",
-                        "voluptatem",
-                        "velit",
+                        "culpa",
                     },
                     Targets: map[string]string{
-                        "est": "dignissimos",
-                        "hic": "accusantium",
-                        "dolores": "et",
+                        "qui": "impedit",
+                        "culpa": "voluptatibus",
+                        "consequuntur": "sapiente",
                     },
                 },
-                "quia": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "qui",
-                    Description: "sit",
+                "sint": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "et",
+                    Description: "fuga",
                     Parameters: map[string]string{
-                        "aperiam": "nulla",
+                        "quidem": "reiciendis",
                     },
                     StartAfter: []string{
-                        "qui",
-                        "ea",
+                        "quas",
+                        "pariatur",
+                        "omnis",
                     },
                     Targets: map[string]string{
-                        "eveniet": "reiciendis",
-                        "velit": "qui",
+                        "soluta": "qui",
+                        "aut": "et",
                     },
                 },
             },
-            ClientToken: "quam",
-            Description: "sequi",
-            RoleArn: "ut",
+            ClientToken: "omnis",
+            Description: "et",
+            RoleArn: "architecto",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "vel",
-                    Value: "reprehenderit",
-                },
-                shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "nesciunt",
-                    Value: "tenetur",
+                    Source: "dolorem",
+                    Value: "recusandae",
                 },
             },
             Tags: map[string]string{
-                "fuga": "dolor",
-                "enim": "animi",
+                "ut": "ab",
             },
             Targets: map[string]shared.CreateExperimentTemplateTargetInput{
-                "sit": shared.CreateExperimentTemplateTargetInput{
+                "ut": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "in",
-                            Values: []string{
-                                "id",
-                                "ea",
-                            },
-                        },
-                    },
-                    ResourceArns: []string{
-                        "pariatur",
-                        "id",
-                    },
-                    ResourceTags: map[string]string{
-                        "esse": "in",
-                        "amet": "consectetur",
-                    },
-                    ResourceType: "et",
-                    SelectionMode: "nesciunt",
-                },
-                "ab": shared.CreateExperimentTemplateTargetInput{
-                    Filters: []shared.ExperimentTemplateTargetInputFilter{
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "sapiente",
-                            Values: []string{
-                                "autem",
-                                "placeat",
-                                "velit",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "minus",
-                            Values: []string{
-                                "minus",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "voluptas",
+                            Path: "molestiae",
                             Values: []string{
                                 "aut",
+                                "sequi",
+                                "eum",
+                            },
+                        },
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "iusto",
+                            Values: []string{
+                                "sunt",
+                                "ea",
                                 "et",
                             },
                         },
-                    },
-                    ResourceArns: []string{
-                        "atque",
-                        "praesentium",
-                        "perferendis",
-                    },
-                    ResourceTags: map[string]string{
-                        "cumque": "minus",
-                    },
-                    ResourceType: "quo",
-                    SelectionMode: "enim",
-                },
-                "eaque": shared.CreateExperimentTemplateTargetInput{
-                    Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "maxime",
+                            Path: "officiis",
                             Values: []string{
-                                "qui",
-                                "ea",
-                                "porro",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "labore",
-                            Values: []string{
-                                "sint",
-                                "non",
+                                "delectus",
                             },
                         },
                     },
                     ResourceArns: []string{
-                        "omnis",
+                        "esse",
+                        "ut",
                     },
                     ResourceTags: map[string]string{
-                        "cum": "hic",
+                        "deserunt": "ut",
+                        "in": "maiores",
                     },
-                    ResourceType: "qui",
-                    SelectionMode: "cum",
+                    ResourceType: "iure",
+                    SelectionMode: "qui",
                 },
             },
         },

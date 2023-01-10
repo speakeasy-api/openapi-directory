@@ -34,62 +34,61 @@ func main() {
             },
         },
         QueryParams: operations.YoutubeAbuseReportsInsertQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "fugiat",
+            DollarXgafv: "2",
+            AccessToken: "dolores",
             Alt: "json",
-            Callback: "inventore",
-            Fields: "eos",
-            Key: "at",
-            OauthToken: "minus",
+            Callback: "nihil",
+            Fields: "dolorem",
+            Key: "a",
+            OauthToken: "dicta",
             Part: []string{
-                "sit",
-                "eveniet",
+                "consequatur",
             },
-            PrettyPrint: false,
-            QuotaUser: "in",
-            UploadType: "animi",
-            UploadProtocol: "illum",
+            PrettyPrint: true,
+            QuotaUser: "omnis",
+            UploadType: "doloremque",
+            UploadProtocol: "magnam",
         },
         Request: &shared.AbuseReport{
             AbuseTypes: []shared.AbuseType{
                 shared.AbuseType{
-                    ID: "minus",
+                    ID: "ea",
                 },
                 shared.AbuseType{
-                    ID: "autem",
+                    ID: "in",
                 },
                 shared.AbuseType{
                     ID: "et",
                 },
             },
-            Description: "dolore",
+            Description: "aut",
             RelatedEntities: []shared.RelatedEntity{
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "velit",
-                        TypeID: "explicabo",
-                        URL: "cum",
+                        ID: "qui",
+                        TypeID: "blanditiis",
+                        URL: "inventore",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "ut",
-                        TypeID: "non",
-                        URL: "expedita",
+                        ID: "minima",
+                        TypeID: "eum",
+                        URL: "dolorum",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "assumenda",
-                        TypeID: "atque",
-                        URL: "libero",
+                        ID: "quibusdam",
+                        TypeID: "est",
+                        URL: "sint",
                     },
                 },
             },
             Subject: &shared.Entity{
-                ID: "veniam",
-                TypeID: "vel",
-                URL: "quasi",
+                ID: "et",
+                TypeID: "aut",
+                URL: "repellendus",
             },
         },
     }

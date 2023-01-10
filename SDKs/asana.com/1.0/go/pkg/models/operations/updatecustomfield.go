@@ -13,8 +13,8 @@ type UpdateCustomFieldQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type UpdateCustomFieldRequestBody struct {
-	Data *shared.CustomFieldRequest `json:"data,omitempty"`
+type UpdateCustomFieldRequestBodyInput struct {
+	Data *shared.CustomFieldRequestInput `json:"data,omitempty"`
 }
 
 type UpdateCustomField200ApplicationJSON struct {
@@ -24,7 +24,7 @@ type UpdateCustomField200ApplicationJSON struct {
 type UpdateCustomFieldRequest struct {
 	PathParams  UpdateCustomFieldPathParams
 	QueryParams UpdateCustomFieldQueryParams
-	Request     *UpdateCustomFieldRequestBody `request:"mediaType=application/json"`
+	Request     *UpdateCustomFieldRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateCustomFieldResponse struct {

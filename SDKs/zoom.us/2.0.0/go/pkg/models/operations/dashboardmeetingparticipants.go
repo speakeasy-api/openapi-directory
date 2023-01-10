@@ -119,7 +119,11 @@ type DashboardMeetingParticipants200ApplicationJSONParticipants struct {
 // DashboardMeetingParticipants200ApplicationJSON
 // Pagination object.
 type DashboardMeetingParticipants200ApplicationJSON struct {
-	Participants []DashboardMeetingParticipants200ApplicationJSONParticipants `json:"participants,omitempty"`
+	NextPageToken *string                                                      `json:"next_page_token,omitempty"`
+	PageCount     *int64                                                       `json:"page_count,omitempty"`
+	PageSize      *int64                                                       `json:"page_size,omitempty"`
+	Participants  []DashboardMeetingParticipants200ApplicationJSONParticipants `json:"participants,omitempty"`
+	TotalRecords  *int64                                                       `json:"total_records,omitempty"`
 }
 
 type DashboardMeetingParticipantsRequest struct {

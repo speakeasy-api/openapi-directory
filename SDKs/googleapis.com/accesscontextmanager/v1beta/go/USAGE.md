@@ -21,20 +21,20 @@ func main() {
             },
         },
         PathParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams{
-            Parent: "cumque",
+            Parent: "nostrum",
         },
         QueryParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "ut",
-            Alt: "proto",
-            Callback: "voluptatum",
-            Fields: "temporibus",
-            Key: "voluptas",
-            OauthToken: "accusantium",
+            DollarXgafv: "2",
+            AccessToken: "est",
+            Alt: "media",
+            Callback: "omnis",
+            Fields: "exercitationem",
+            Key: "at",
+            OauthToken: "vitae",
             PrettyPrint: false,
-            QuotaUser: "aut",
-            UploadType: "rerum",
-            UploadProtocol: "quasi",
+            QuotaUser: "vel",
+            UploadType: "ab",
+            UploadProtocol: "provident",
         },
         Request: &shared.AccessLevel{
             Basic: &shared.BasicLevel{
@@ -43,22 +43,26 @@ func main() {
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "NONE",
-                                "BASIC",
                                 "BASIC",
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
                                 "UNENCRYPTED",
+                                "ENCRYPTION_UNSUPPORTED",
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "sed",
-                                    OsType: "DESKTOP_MAC",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: "aspernatur",
+                                    OsType: "OS_UNSPECIFIED",
+                                    RequireVerifiedChromeOs: true,
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "commodi",
-                                    OsType: "OS_UNSPECIFIED",
+                                    MinimumVersion: "unde",
+                                    OsType: "DESKTOP_MAC",
+                                    RequireVerifiedChromeOs: true,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "est",
+                                    OsType: "DESKTOP_MAC",
                                     RequireVerifiedChromeOs: true,
                                 },
                             },
@@ -67,78 +71,35 @@ func main() {
                             RequireScreenlock: true,
                         },
                         IPSubnetworks: []string{
-                            "et",
-                            "doloremque",
+                            "at",
+                            "repellendus",
                         },
                         Members: []string{
-                            "doloremque",
-                            "deserunt",
-                        },
-                        Negate: false,
-                        Regions: []string{
-                            "nostrum",
-                        },
-                        RequiredAccessLevels: []string{
-                            "praesentium",
-                        },
-                    },
-                    shared.Condition{
-                        DevicePolicy: &shared.DevicePolicy{
-                            AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "NONE",
-                            },
-                            AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "ENCRYPTED",
-                                "ENCRYPTION_UNSPECIFIED",
-                            },
-                            OsConstraints: []shared.OsConstraint{
-                                shared.OsConstraint{
-                                    MinimumVersion: "facere",
-                                    OsType: "ANDROID",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                                shared.OsConstraint{
-                                    MinimumVersion: "facilis",
-                                    OsType: "ANDROID",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                            },
-                            RequireAdminApproval: false,
-                            RequireCorpOwned: true,
-                            RequireScreenlock: true,
-                        },
-                        IPSubnetworks: []string{
-                            "nihil",
-                            "ut",
-                            "nostrum",
-                        },
-                        Members: []string{
-                            "et",
-                            "maxime",
-                            "quae",
+                            "sequi",
                         },
                         Negate: true,
                         Regions: []string{
-                            "eum",
-                            "placeat",
+                            "ipsam",
                         },
                         RequiredAccessLevels: []string{
-                            "magnam",
+                            "ut",
+                            "deleniti",
+                            "ea",
                         },
                     },
                 },
             },
             Custom: &shared.CustomLevel{
                 Expr: &shared.Expr{
-                    Description: "quas",
-                    Expression: "nemo",
-                    Location: "voluptatum",
-                    Title: "quibusdam",
+                    Description: "laborum",
+                    Expression: "eligendi",
+                    Location: "dolores",
+                    Title: "qui",
                 },
             },
-            Description: "eos",
-            Name: "quae",
-            Title: "sit",
+            Description: "ea",
+            Name: "nihil",
+            Title: "dolorem",
         },
     }
     

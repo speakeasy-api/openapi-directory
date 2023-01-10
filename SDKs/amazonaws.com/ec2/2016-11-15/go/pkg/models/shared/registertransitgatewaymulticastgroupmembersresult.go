@@ -1,5 +1,13 @@
 package shared
 
+// RegisterTransitGatewayMulticastGroupMembersResultRegisteredMulticastGroupMembers
+// Information about the registered transit gateway multicast group members.
+type RegisterTransitGatewayMulticastGroupMembersResultRegisteredMulticastGroupMembers struct {
+	GroupIPAddress                  map[string]interface{}
+	RegisteredNetworkInterfaceIds   map[string]interface{}
+	TransitGatewayMulticastDomainID map[string]interface{}
+}
+
 type RegisterTransitGatewayMulticastGroupMembersResult struct {
-	RegisteredMulticastGroupMembers map[string]interface{}
+	RegisteredMulticastGroupMembers *RegisterTransitGatewayMulticastGroupMembersResultRegisteredMulticastGroupMembers
 }

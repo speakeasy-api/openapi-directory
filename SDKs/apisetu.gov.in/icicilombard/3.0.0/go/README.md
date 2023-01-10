@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                InsuredDob: "sed",
-                PolicyNo: "consequatur",
+                InsuredDob: "ipsum",
+                PolicyNo: "perspiciatis",
             },
-            ConsentArtifact: "fuga",
+            ConsentArtifact: "cum",
             Format: "pdf",
-            TxnID: "aliquid",
+            TxnID: "dolorum",
         },
     }
     

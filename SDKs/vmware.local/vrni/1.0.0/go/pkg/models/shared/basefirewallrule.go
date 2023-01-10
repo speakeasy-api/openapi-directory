@@ -6,6 +6,9 @@ type BaseFirewallRule struct {
 	DestinationInversion *bool               `json:"destination_inversion,omitempty"`
 	Destinations         []Reference         `json:"destinations,omitempty"`
 	Disabled             *bool               `json:"disabled,omitempty"`
+	EntityID             *string             `json:"entity_id,omitempty"`
+	EntityType           *EntityTypeEnum     `json:"entity_type,omitempty"`
+	Name                 *string             `json:"name,omitempty"`
 	PortRanges           []PortRange         `json:"port_ranges,omitempty"`
 	RuleID               *string             `json:"rule_id,omitempty"`
 	SectionID            *string             `json:"section_id,omitempty"`

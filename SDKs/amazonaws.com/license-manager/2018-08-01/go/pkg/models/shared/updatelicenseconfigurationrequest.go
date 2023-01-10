@@ -9,5 +9,5 @@ type UpdateLicenseConfigurationRequest struct {
 	LicenseCountHardLimit      *bool                           `json:"LicenseCountHardLimit,omitempty"`
 	LicenseRules               []string                        `json:"LicenseRules,omitempty"`
 	Name                       *string                         `json:"Name,omitempty"`
-	ProductInformationList     []ProductInformation1           `json:"ProductInformationList,omitempty"`
+	ProductInformationList     []ProductInformation            `json:"ProductInformationList,omitempty"`
 }

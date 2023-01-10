@@ -16,54 +16,6 @@ type AccountSettingsQueryParams struct {
 	Option            *AccountSettingsOptionEnum `queryParam:"style=form,explode=true,name=option"`
 }
 
-type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum string
-
-const (
-	AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumEnhancedEncryption AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "enhanced_encryption"
-	AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumE2ee               AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "e2ee"
-)
-
-// AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement
-// Meeting/webinar [passcode requirements](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604).
-type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement struct {
-	ConsecutiveCharactersLength *int64 `json:"consecutive_characters_length,omitempty"`
-	HaveLetter                  *bool  `json:"have_letter,omitempty"`
-	HaveNumber                  *bool  `json:"have_number,omitempty"`
-	HaveSpecialCharacter        *bool  `json:"have_special_character,omitempty"`
-	HaveUpperAndLowerCharacters *bool  `json:"have_upper_and_lower_characters,omitempty"`
-	Length                      *int64 `json:"length,omitempty"`
-	OnlyAllowNumeric            *bool  `json:"only_allow_numeric,omitempty"`
-	WeakEnhanceDetection        *bool  `json:"weak_enhance_detection,omitempty"`
-}
-
-// AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings
-// Specify the settings to be applied if waiting room is enabled.
-type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings struct {
-	ParticipantsToPlaceInWaitingRoom            *int64  `json:"participants_to_place_in_waiting_room,omitempty"`
-	UsersWhoCanAdmitParticipantsFromWaitingRoom *int64  `json:"users_who_can_admit_participants_from_waiting_room,omitempty"`
-	WhitelistedDomainsForWaitingRoom            *string `json:"whitelisted_domains_for_waiting_room,omitempty"`
-}
-
-type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity struct {
-	AutoSecurity                       *bool                                                                                                     `json:"auto_security,omitempty"`
-	EmbedPasswordInJoinLink            *bool                                                                                                     `json:"embed_password_in_join_link,omitempty"`
-	EncryptionType                     *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum         `json:"encryption_type,omitempty"`
-	EndToEndEncryptedMeetings          *bool                                                                                                     `json:"end_to_end_encrypted_meetings,omitempty"`
-	MeetingPassword                    *bool                                                                                                     `json:"meeting_password,omitempty"`
-	MeetingPasswordRequirement         *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement `json:"meeting_password_requirement,omitempty"`
-	PhonePassword                      *bool                                                                                                     `json:"phone_password,omitempty"`
-	PmiPassword                        *bool                                                                                                     `json:"pmi_password,omitempty"`
-	RequirePasswordForScheduledMeeting *bool                                                                                                     `json:"require_password_for_scheduled_meeting,omitempty"`
-	RequirePasswordForScheduledWebinar *bool                                                                                                     `json:"require_password_for_scheduled_webinar,omitempty"`
-	WaitingRoom                        *bool                                                                                                     `json:"waiting_room,omitempty"`
-	WaitingRoomSettings                *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings        `json:"waiting_room_settings,omitempty"`
-	WebinarPassword                    *bool                                                                                                     `json:"webinar_password,omitempty"`
-}
-
-type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettings struct {
-	MeetingSecurity *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity `json:"meeting_security,omitempty"`
-}
-
 // AccountSettings200ApplicationJSONAccountSettingsEmailNotification
 // Account Settings: Notification.
 type AccountSettings200ApplicationJSONAccountSettingsEmailNotification struct {
@@ -401,36 +353,84 @@ type AccountSettings200ApplicationJSONAccountSettings struct {
 	ZoomRooms         *AccountSettings200ApplicationJSONAccountSettingsZoomRooms         `json:"zoom_rooms,omitempty"`
 }
 
-// AccountSettings200ApplicationJSON4PasswordRequirement
+// AccountSettings200ApplicationJSON3PasswordRequirement
 // This object refers to the [enhanced password rules](https://support.zoom.us/hc/en-us/articles/360034675592-Advanced-security-settings#h_bf8a25f6-9a66-447a-befd-f02ed3404f89) that allows Zoom account admins and owners to apply extra requiremets to the users' Zoom login password.
-type AccountSettings200ApplicationJSON4PasswordRequirement struct {
+type AccountSettings200ApplicationJSON3PasswordRequirement struct {
 	ConsecutiveCharactersLength *int64 `json:"consecutive_characters_length,omitempty"`
 	HaveSpecialCharacter        *bool  `json:"have_special_character,omitempty"`
 	MinimumPasswordLength       *int64 `json:"minimum_password_length,omitempty"`
 	WeakEnhanceDetection        *bool  `json:"weak_enhance_detection,omitempty"`
 }
 
-type AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnum string
+type AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnum string
 
 const (
-	AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnumAll   AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnum = "all"
-	AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnumGroup AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnum = "group"
-	AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnumRole  AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnum = "role"
-	AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnumNone  AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnum = "none"
+	AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnumAll   AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnum = "all"
+	AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnumGroup AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnum = "group"
+	AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnumRole  AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnum = "role"
+	AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnumNone  AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnum = "none"
 )
 
-// AccountSettings200ApplicationJSON4
+// AccountSettings200ApplicationJSON3
 // [Security settings](https://support.zoom.us/hc/en-us/articles/360034675592-Advanced-security-settings#h_bf8a25f6-9a66-447a-befd-f02ed3404f89) of an Account.
-type AccountSettings200ApplicationJSON4 struct {
+type AccountSettings200ApplicationJSON3 struct {
 	AdminChangeNamePic                   *bool                                                          `json:"admin_change_name_pic,omitempty"`
 	HideBillingInfo                      *bool                                                          `json:"hide_billing_info,omitempty"`
 	ImportPhotosFromDevices              *bool                                                          `json:"import_photos_from_devices,omitempty"`
-	PasswordRequirement                  *AccountSettings200ApplicationJSON4PasswordRequirement         `json:"password_requirement,omitempty"`
+	PasswordRequirement                  *AccountSettings200ApplicationJSON3PasswordRequirement         `json:"password_requirement,omitempty"`
 	SignAgainPeriodForInactivityOnClient *int64                                                         `json:"sign_again_period_for_inactivity_on_client,omitempty"`
 	SignAgainPeriodForInactivityOnWeb    *int64                                                         `json:"sign_again_period_for_inactivity_on_web,omitempty"`
-	SignInWithTwoFactorAuth              *AccountSettings200ApplicationJSON4SignInWithTwoFactorAuthEnum `json:"sign_in_with_two_factor_auth,omitempty"`
+	SignInWithTwoFactorAuth              *AccountSettings200ApplicationJSON3SignInWithTwoFactorAuthEnum `json:"sign_in_with_two_factor_auth,omitempty"`
 	SignInWithTwoFactorAuthGroups        []string                                                       `json:"sign_in_with_two_factor_auth_groups,omitempty"`
 	SignInWithTwoFactorAuthRoles         []string                                                       `json:"sign_in_with_two_factor_auth_roles,omitempty"`
+}
+
+type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum string
+
+const (
+	AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumEnhancedEncryption AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "enhanced_encryption"
+	AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnumE2ee               AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum = "e2ee"
+)
+
+// AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement
+// Meeting/webinar [passcode requirements](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604).
+type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement struct {
+	ConsecutiveCharactersLength *int64 `json:"consecutive_characters_length,omitempty"`
+	HaveLetter                  *bool  `json:"have_letter,omitempty"`
+	HaveNumber                  *bool  `json:"have_number,omitempty"`
+	HaveSpecialCharacter        *bool  `json:"have_special_character,omitempty"`
+	HaveUpperAndLowerCharacters *bool  `json:"have_upper_and_lower_characters,omitempty"`
+	Length                      *int64 `json:"length,omitempty"`
+	OnlyAllowNumeric            *bool  `json:"only_allow_numeric,omitempty"`
+	WeakEnhanceDetection        *bool  `json:"weak_enhance_detection,omitempty"`
+}
+
+// AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings
+// Specify the settings to be applied if waiting room is enabled.
+type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings struct {
+	ParticipantsToPlaceInWaitingRoom            *int64  `json:"participants_to_place_in_waiting_room,omitempty"`
+	UsersWhoCanAdmitParticipantsFromWaitingRoom *int64  `json:"users_who_can_admit_participants_from_waiting_room,omitempty"`
+	WhitelistedDomainsForWaitingRoom            *string `json:"whitelisted_domains_for_waiting_room,omitempty"`
+}
+
+type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity struct {
+	AutoSecurity                       *bool                                                                                                     `json:"auto_security,omitempty"`
+	EmbedPasswordInJoinLink            *bool                                                                                                     `json:"embed_password_in_join_link,omitempty"`
+	EncryptionType                     *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum         `json:"encryption_type,omitempty"`
+	EndToEndEncryptedMeetings          *bool                                                                                                     `json:"end_to_end_encrypted_meetings,omitempty"`
+	MeetingPassword                    *bool                                                                                                     `json:"meeting_password,omitempty"`
+	MeetingPasswordRequirement         *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityMeetingPasswordRequirement `json:"meeting_password_requirement,omitempty"`
+	PhonePassword                      *bool                                                                                                     `json:"phone_password,omitempty"`
+	PmiPassword                        *bool                                                                                                     `json:"pmi_password,omitempty"`
+	RequirePasswordForScheduledMeeting *bool                                                                                                     `json:"require_password_for_scheduled_meeting,omitempty"`
+	RequirePasswordForScheduledWebinar *bool                                                                                                     `json:"require_password_for_scheduled_webinar,omitempty"`
+	WaitingRoom                        *bool                                                                                                     `json:"waiting_room,omitempty"`
+	WaitingRoomSettings                *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityWaitingRoomSettings        `json:"waiting_room_settings,omitempty"`
+	WebinarPassword                    *bool                                                                                                     `json:"webinar_password,omitempty"`
+}
+
+type AccountSettings200ApplicationJSONMeetingWebinarSecuritySettings struct {
+	MeetingSecurity *AccountSettings200ApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurity `json:"meeting_security,omitempty"`
 }
 
 type AccountSettingsRequest struct {

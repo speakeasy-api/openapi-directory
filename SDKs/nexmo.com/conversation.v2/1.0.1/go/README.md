@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetUsersRequest{
         QueryParams: operations.GetUsersQueryParams{
-            Cursor: "quis",
-            Order: "asc",
-            PageSize: 5926975940776996037,
+            Cursor: "optio",
+            Order: "desc",
+            PageSize: 2776925417354444747,
         },
     }
     

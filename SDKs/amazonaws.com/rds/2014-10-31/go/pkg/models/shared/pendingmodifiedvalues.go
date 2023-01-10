@@ -18,6 +18,6 @@ type PendingModifiedValues struct {
 	MultiAZ                          *bool
 	PendingCloudwatchLogsExports     *PendingCloudwatchLogsExports
 	Port                             *int64
-	ProcessorFeatures                []map[string]interface{}
+	ProcessorFeatures                []ProcessorFeatureList
 	StorageType                      *string
 }

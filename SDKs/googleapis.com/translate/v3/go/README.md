@@ -32,60 +32,71 @@ func main() {
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "esse",
+            Parent: "assumenda",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "vero",
-            Alt: "proto",
-            Callback: "neque",
-            Fields: "ducimus",
-            Key: "consectetur",
-            OauthToken: "et",
+            DollarXgafv: "2",
+            AccessToken: "cumque",
+            Alt: "media",
+            Callback: "assumenda",
+            Fields: "voluptatem",
+            Key: "harum",
+            OauthToken: "natus",
             PrettyPrint: true,
-            QuotaUser: "esse",
-            UploadType: "incidunt",
-            UploadProtocol: "ex",
+            QuotaUser: "corporis",
+            UploadType: "asperiores",
+            UploadProtocol: "dignissimos",
         },
         Request: &shared.BatchTranslateDocumentRequest{
             FormatConversions: map[string]string{
-                "rerum": "aut",
-                "fugit": "nesciunt",
+                "mollitia": "iste",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "omnis": shared.TranslateTextGlossaryConfig{
-                    Glossary: "doloribus",
+                "a": shared.TranslateTextGlossaryConfig{
+                    Glossary: "sed",
                     IgnoreCase: false,
                 },
-                "rem": shared.TranslateTextGlossaryConfig{
-                    Glossary: "corporis",
+                "dignissimos": shared.TranslateTextGlossaryConfig{
+                    Glossary: "doloremque",
                     IgnoreCase: true,
                 },
-                "illum": shared.TranslateTextGlossaryConfig{
-                    Glossary: "magni",
+                "quia": shared.TranslateTextGlossaryConfig{
+                    Glossary: "quia",
                     IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "et",
+                        InputURI: "occaecati",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "ullam",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "quo",
                     },
                 },
             },
             Models: map[string]string{
-                "quasi": "voluptates",
+                "quia": "et",
+                "quos": "quae",
+                "est": "necessitatibus",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "quo",
+                    OutputURIPrefix: "velit",
                 },
             },
-            SourceLanguageCode: "odit",
+            SourceLanguageCode: "harum",
             TargetLanguageCodes: []string{
-                "aut",
-                "a",
-                "magni",
+                "ipsum",
+                "autem",
+                "cumque",
             },
         },
     }

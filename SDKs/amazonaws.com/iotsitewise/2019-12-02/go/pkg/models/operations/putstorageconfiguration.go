@@ -17,7 +17,7 @@ type PutStorageConfigurationHeaders struct {
 // PutStorageConfigurationRequestBodyMultiLayerStorage
 // Contains information about the storage destination.
 type PutStorageConfigurationRequestBodyMultiLayerStorage struct {
-	CustomerManagedS3Storage *shared.CustomerManagedS3Storage1 `json:"customerManagedS3Storage,omitempty"`
+	CustomerManagedS3Storage *shared.CustomerManagedS3Storage `json:"customerManagedS3Storage,omitempty"`
 }
 
 type PutStorageConfigurationRequestBodyStorageTypeEnum string

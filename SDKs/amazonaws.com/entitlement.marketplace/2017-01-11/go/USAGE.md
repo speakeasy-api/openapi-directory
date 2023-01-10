@@ -23,27 +23,25 @@ func main() {
     
     req := operations.GetEntitlementsRequest{
         Headers: operations.GetEntitlementsHeaders{
-            XAmzAlgorithm: "non",
-            XAmzContentSha256: "nam",
-            XAmzCredential: "beatae",
-            XAmzDate: "quae",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "magni",
-            XAmzSignedHeaders: "minus",
+            XAmzAlgorithm: "fugit",
+            XAmzContentSha256: "cumque",
+            XAmzCredential: "corporis",
+            XAmzDate: "adipisci",
+            XAmzSecurityToken: "aliquid",
+            XAmzSignature: "accusantium",
+            XAmzSignedHeaders: "exercitationem",
             XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
         },
         Request: shared.GetEntitlementsRequest{
             Filter: map[string][]string{
-                "neque": []string{
-                    "quia",
-                },
-                "repudiandae": []string{
-                    "autem",
+                "perspiciatis": []string{
+                    "inventore",
+                    "voluptatem",
                 },
             },
-            MaxResults: 2350280920086746644,
-            NextToken: "enim",
-            ProductCode: "ut",
+            MaxResults: 2441923158078746440,
+            NextToken: "ut",
+            ProductCode: "ullam",
         },
     }
     

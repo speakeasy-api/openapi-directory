@@ -7,7 +7,7 @@ import (
 // Interconnect
 // Information about an interconnect.
 type Interconnect struct {
-	AwsDevice            map[string]interface{}    `json:"awsDevice,omitempty"`
+	AwsDevice            *string                   `json:"awsDevice,omitempty"`
 	AwsDeviceV2          *string                   `json:"awsDeviceV2,omitempty"`
 	AwsLogicalDeviceID   *string                   `json:"awsLogicalDeviceId,omitempty"`
 	Bandwidth            *string                   `json:"bandwidth,omitempty"`

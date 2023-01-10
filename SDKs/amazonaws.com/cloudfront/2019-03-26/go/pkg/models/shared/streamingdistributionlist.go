@@ -4,7 +4,7 @@ package shared
 // A streaming distribution list.
 type StreamingDistributionList struct {
 	IsTruncated bool
-	Items       []map[string]interface{}
+	Items       []StreamingDistributionSummaryList
 	Marker      string
 	MaxItems    int64
 	NextMarker  *string

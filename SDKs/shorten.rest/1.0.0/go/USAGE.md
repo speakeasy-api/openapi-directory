@@ -18,38 +18,33 @@ func main() {
             },
         },
         QueryParams: operations.CreateAliasQueryParams{
-            AliasName: "ut",
-            DomainName: "quod",
+            AliasName: "et",
+            DomainName: "ea",
         },
         Request: shared.CreateAliasModel{
             Destinations: []shared.DestinationModel{
                 shared.DestinationModel{
-                    Country: "similique",
-                    Os: "veniam",
-                    URL: "aut",
+                    Country: "vel",
+                    Os: "quia",
+                    URL: "voluptas",
                 },
             },
             Metatags: []shared.MetaTagModel{
                 shared.MetaTagModel{
-                    Content: "voluptas",
-                    Name: "qui",
+                    Content: "non",
+                    Name: "ut",
                 },
                 shared.MetaTagModel{
-                    Content: "magnam",
-                    Name: "perspiciatis",
-                },
-                shared.MetaTagModel{
-                    Content: "eos",
-                    Name: "voluptatem",
+                    Content: "excepturi",
+                    Name: "cumque",
                 },
             },
             Snippets: []shared.SnippetModel{
                 shared.SnippetModel{
-                    ID: "illum",
+                    ID: "aspernatur",
                     Parameters: map[string]string{
-                        "sit": "voluptatem",
-                        "iusto": "animi",
-                        "corporis": "voluptatem",
+                        "unde": "adipisci",
+                        "aut": "porro",
                     },
                 },
             },

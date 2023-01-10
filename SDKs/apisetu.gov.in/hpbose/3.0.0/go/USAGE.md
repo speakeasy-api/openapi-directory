@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.HvcerRequestBody{
             CertificateParameters: &operations.HvcerRequestBodyCertificateParameters{
-                DOB: "et",
-                FullName: "enim",
-                ROLL: "saepe",
-                YOP: "dolores",
+                DOB: "tempora",
+                FullName: "sed",
+                ROLL: "recusandae",
+                YOP: "magnam",
             },
-            ConsentArtifact: "quasi",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "numquam",
+            TxnID: "labore",
         },
     }
     

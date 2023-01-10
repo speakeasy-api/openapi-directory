@@ -7,7 +7,7 @@ import (
 // ScalingPlan
 // Represents a scaling plan.
 type ScalingPlan struct {
-	ApplicationSource   ApplicationSource1        `json:"ApplicationSource"`
+	ApplicationSource   ApplicationSource         `json:"ApplicationSource"`
 	CreationTime        *time.Time                `json:"CreationTime,omitempty"`
 	ScalingInstructions []ScalingInstruction      `json:"ScalingInstructions"`
 	ScalingPlanName     string                    `json:"ScalingPlanName"`

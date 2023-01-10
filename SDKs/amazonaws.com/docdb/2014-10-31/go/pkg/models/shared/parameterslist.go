@@ -1,0 +1,16 @@
+package shared
+
+// ParametersList
+// Detailed information about an individual parameter.
+type ParametersList struct {
+	AllowedValues        *string
+	ApplyMethod          *ApplyMethodEnum
+	ApplyType            *string
+	DataType             *string
+	Description          *string
+	IsModifiable         *bool
+	MinimumEngineVersion *string
+	ParameterName        *string
+	ParameterValue       *string
+	Source               *string
+}

@@ -23,11 +23,11 @@ func main() {
     
     req := operations.AnalyticsRequest{
         QueryParams: operations.AnalyticsQueryParams{
-            End: "id",
-            GroupBy: "country",
-            Label: "nam",
-            Start: "voluptatem",
-            Subaccounts: "unde",
+            End: "autem",
+            GroupBy: "label",
+            Label: "a",
+            Start: "ut",
+            Subaccounts: "quia",
         },
     }
     

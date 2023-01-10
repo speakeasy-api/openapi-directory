@@ -4,8 +4,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDefaultProjectRequestBody struct {
-	IsDefault bool `json:"is_default"`
+type UpdateDefaultProjectRequestBodyEnvironmentEnum string
+
+const (
+	UpdateDefaultProjectRequestBodyEnvironmentEnumDevelopment UpdateDefaultProjectRequestBodyEnvironmentEnum = "Development"
+	UpdateDefaultProjectRequestBodyEnvironmentEnumStaging     UpdateDefaultProjectRequestBodyEnvironmentEnum = "Staging"
+	UpdateDefaultProjectRequestBodyEnvironmentEnumProduction  UpdateDefaultProjectRequestBodyEnvironmentEnum = "Production"
+)
+
+type UpdateDefaultProjectRequestBodyInput struct {
+	Description string                                         `json:"description"`
+	Environment UpdateDefaultProjectRequestBodyEnvironmentEnum `json:"environment"`
+	IsDefault   bool                                           `json:"is_default"`
+	Name        string                                         `json:"name"`
+	Purpose     string                                         `json:"purpose"`
 }
 
 type UpdateDefaultProject401ApplicationJSON struct {
@@ -15,7 +27,7 @@ type UpdateDefaultProject401ApplicationJSON struct {
 }
 
 type UpdateDefaultProjectRequest struct {
-	Request UpdateDefaultProjectRequestBody `request:"mediaType=application/json"`
+	Request UpdateDefaultProjectRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateDefaultProjectResponse struct {

@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.FetchAlertPathParams{
-            Sid: "numquam",
+            Sid: "illum",
         },
     }
     

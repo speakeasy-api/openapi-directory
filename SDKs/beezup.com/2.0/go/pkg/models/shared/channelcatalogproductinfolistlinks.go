@@ -1,6 +1,6 @@
 package shared
 
 type ChannelCatalogProductInfoListLinks struct {
-	Export map[string]interface{} `json:"export,omitempty"`
-	Self   map[string]interface{} `json:"self"`
+	Export *LinksExportChannelCatalogProductInfoListLink `json:"export,omitempty"`
+	Self   LinksGetChannelCatalogProductInfoListLink     `json:"self"`
 }

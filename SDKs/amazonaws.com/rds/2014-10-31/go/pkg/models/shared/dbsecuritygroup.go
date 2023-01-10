@@ -6,8 +6,8 @@ type DbSecurityGroup struct {
 	DBSecurityGroupArn         *string
 	DBSecurityGroupDescription *string
 	DBSecurityGroupName        *string
-	Ec2SecurityGroups          []map[string]interface{}
-	IPRanges                   []map[string]interface{}
+	Ec2SecurityGroups          []Ec2SecurityGroupList
+	IPRanges                   []IPRangeList
 	OwnerID                    *string
 	VpcID                      *string
 }

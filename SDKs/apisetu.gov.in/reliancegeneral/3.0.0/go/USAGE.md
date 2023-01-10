@@ -22,15 +22,15 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                DOB: "autem",
-                FullName: "laudantium",
-                GENDER: "consequatur",
-                PolicyNo: "delectus",
-                PolicyType: "qui",
+                DOB: "consequatur",
+                FullName: "dolorem",
+                GENDER: "facilis",
+                PolicyNo: "quam",
+                PolicyType: "similique",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "ut",
             Format: "pdf",
-            TxnID: "voluptatem",
+            TxnID: "eum",
         },
     }
     

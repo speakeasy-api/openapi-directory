@@ -23,34 +23,64 @@ func main() {
     
     req := operations.AddCustomAttributesRequest{
         Headers: operations.AddCustomAttributesHeaders{
-            XAmzAlgorithm: "voluptatem",
-            XAmzContentSha256: "optio",
-            XAmzCredential: "et",
-            XAmzDate: "consequatur",
-            XAmzSecurityToken: "saepe",
-            XAmzSignature: "consequatur",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "consectetur",
+            XAmzContentSha256: "voluptatibus",
+            XAmzCredential: "doloremque",
+            XAmzDate: "neque",
+            XAmzSecurityToken: "sint",
+            XAmzSignature: "iste",
+            XAmzSignedHeaders: "temporibus",
             XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
         },
         Request: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "DateTime",
+                    AttributeDataType: "Boolean",
                     DeveloperOnlyAttribute: false,
-                    Mutable: false,
-                    Name: "sit",
+                    Mutable: true,
+                    Name: "ducimus",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "est",
-                        MinValue: "rerum",
+                        MaxValue: "ut",
+                        MinValue: "incidunt",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "dolor",
-                        MinLength: "itaque",
+                        MaxLength: "voluptatem",
+                        MinLength: "voluptates",
+                    },
+                },
+                shared.SchemaAttributeType{
+                    AttributeDataType: "DateTime",
+                    DeveloperOnlyAttribute: true,
+                    Mutable: false,
+                    Name: "ut",
+                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
+                        MaxValue: "quaerat",
+                        MinValue: "ut",
+                    },
+                    Required: true,
+                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
+                        MaxLength: "vel",
+                        MinLength: "et",
+                    },
+                },
+                shared.SchemaAttributeType{
+                    AttributeDataType: "DateTime",
+                    DeveloperOnlyAttribute: false,
+                    Mutable: true,
+                    Name: "inventore",
+                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
+                        MaxValue: "impedit",
+                        MinValue: "molestiae",
+                    },
+                    Required: false,
+                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
+                        MaxLength: "dignissimos",
+                        MinLength: "consectetur",
                     },
                 },
             },
-            UserPoolID: "reiciendis",
+            UserPoolID: "repellendus",
         },
     }
     

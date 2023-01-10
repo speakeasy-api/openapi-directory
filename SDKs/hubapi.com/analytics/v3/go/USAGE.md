@@ -18,15 +18,15 @@ func main() {
             },
         },
         Request: shared.BehavioralEventHTTPCompletionRequest{
-            Email: "molestiae",
-            EventName: "assumenda",
-            ObjectID: "est",
-            OccurredAt: "2021-01-17T20:46:43Z",
+            Email: "omnis",
+            EventName: "consequatur",
+            ObjectID: "qui",
+            OccurredAt: "2005-12-23T00:20:18Z",
             Properties: map[string]string{
-                "nisi": "fugit",
-                "error": "exercitationem",
+                "qui": "voluptate",
+                "laboriosam": "est",
             },
-            Utk: "voluptatem",
+            Utk: "ipsam",
         },
     }
     

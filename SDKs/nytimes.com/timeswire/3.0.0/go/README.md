@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetContentJSONRequest{
         QueryParams: operations.GetContentJSONQueryParams{
-            URL: "in",
+            URL: "dolores",
         },
     }
     

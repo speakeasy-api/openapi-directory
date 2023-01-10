@@ -34,17 +34,17 @@ func main() {
     
     req := operations.CancelRotateSecretRequest{
         Headers: operations.CancelRotateSecretHeaders{
-            XAmzAlgorithm: "autem",
-            XAmzContentSha256: "molestias",
-            XAmzCredential: "in",
-            XAmzDate: "ducimus",
-            XAmzSecurityToken: "provident",
-            XAmzSignature: "commodi",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "dolorem",
+            XAmzContentSha256: "magni",
+            XAmzCredential: "sequi",
+            XAmzDate: "non",
+            XAmzSecurityToken: "a",
+            XAmzSignature: "recusandae",
+            XAmzSignedHeaders: "molestias",
             XAmzTarget: "secretsmanager.CancelRotateSecret",
         },
         Request: shared.CancelRotateSecretRequest{
-            SecretID: "dicta",
+            SecretID: "dolores",
         },
     }
     

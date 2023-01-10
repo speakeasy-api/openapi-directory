@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.LicerRequestBody{
             CertificateParameters: &operations.LicerRequestBodyCertificateParameters{
-                DOB: "sit",
-                FullName: "libero",
-                PolicyNo: "quia",
+                DOB: "qui",
+                FullName: "velit",
+                PolicyNo: "in",
             },
-            ConsentArtifact: "ipsa",
+            ConsentArtifact: "voluptatem",
             Format: "pdf",
-            TxnID: "quis",
+            TxnID: "accusamus",
         },
     }
     

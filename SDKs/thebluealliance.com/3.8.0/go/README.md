@@ -29,7 +29,7 @@ func main() {
             },
         },
         Headers: operations.GetStatusHeaders{
-            IfModifiedSince: "officia",
+            IfModifiedSince: "numquam",
         },
     }
     

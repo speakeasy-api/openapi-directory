@@ -34,36 +34,37 @@ func main() {
     
     req := operations.CreateAccessPointRequest{
         Headers: operations.CreateAccessPointHeaders{
-            XAmzAlgorithm: "accusantium",
-            XAmzContentSha256: "atque",
-            XAmzCredential: "amet",
-            XAmzDate: "nisi",
-            XAmzSecurityToken: "quidem",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "quo",
+            XAmzAlgorithm: "vero",
+            XAmzContentSha256: "debitis",
+            XAmzCredential: "vitae",
+            XAmzDate: "illo",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "aut",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateAccessPointRequestBody{
-            ClientToken: "vero",
-            FileSystemID: "alias",
+            ClientToken: "iusto",
+            FileSystemID: "necessitatibus",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
-                Gid: 4176709158896497836,
+                Gid: 9099396917438780945,
                 SecondaryGids: []int64{
-                    1958777829936408748,
+                    7393415062790344033,
+                    5573655011999427817,
                 },
-                UID: 5294730593135495901,
+                UID: 3450856630666814463,
             },
             RootDirectory: &operations.CreateAccessPointRequestBodyRootDirectory{
                 CreationInfo: &shared.CreationInfo{
-                    OwnerGid: 7470170325123997143,
-                    OwnerUID: 5712992115651289762,
-                    Permissions: "totam",
+                    OwnerGid: 2817162217093611776,
+                    OwnerUID: 2020632354827331984,
+                    Permissions: "magni",
                 },
-                Path: "aut",
+                Path: "nostrum",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "magni",
-                    Value: "necessitatibus",
+                    Key: "tenetur",
+                    Value: "numquam",
                 },
             },
         },

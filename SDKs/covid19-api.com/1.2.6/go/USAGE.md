@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetDailyReportAllCountriesRequest{
         QueryParams: operations.GetDailyReportAllCountriesQueryParams{
-            Date: "sed",
-            DateFormat: "YYYY-DD-MM",
+            Date: "ipsam",
+            DateFormat: "YYYY-MM-DD",
             Format: "xml",
         },
     }

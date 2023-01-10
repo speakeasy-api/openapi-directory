@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.LatestPackagePathParams{
-            PackageName: "sit",
+            PackageName: "dolorum",
         },
     }
     

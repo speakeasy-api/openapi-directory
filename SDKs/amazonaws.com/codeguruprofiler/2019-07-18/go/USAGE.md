@@ -23,16 +23,16 @@ func main() {
     
     req := operations.AddNotificationChannelsRequest{
         PathParams: operations.AddNotificationChannelsPathParams{
-            ProfilingGroupName: "rem",
+            ProfilingGroupName: "deleniti",
         },
         Headers: operations.AddNotificationChannelsHeaders{
-            XAmzAlgorithm: "autem",
-            XAmzContentSha256: "enim",
-            XAmzCredential: "quia",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "numquam",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "corporis",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "architecto",
+            XAmzDate: "et",
+            XAmzSecurityToken: "eum",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "totam",
         },
         Request: operations.AddNotificationChannelsRequestBody{
             Channels: []shared.Channel{
@@ -41,16 +41,8 @@ func main() {
                         "AnomalyDetection",
                         "AnomalyDetection",
                     },
-                    ID: "quia",
-                    URI: "aliquid",
-                },
-                shared.Channel{
-                    EventPublishers: []shared.EventPublisherEnum{
-                        "AnomalyDetection",
-                        "AnomalyDetection",
-                    },
-                    ID: "voluptate",
-                    URI: "est",
+                    ID: "explicabo",
+                    URI: "consequatur",
                 },
             },
         },

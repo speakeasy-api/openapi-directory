@@ -2,5 +2,5 @@ package shared
 
 type ListPlatformVersionsResult struct {
 	NextToken           *string
-	PlatformSummaryList []PlatformSummary1
+	PlatformSummaryList []PlatformSummary
 }

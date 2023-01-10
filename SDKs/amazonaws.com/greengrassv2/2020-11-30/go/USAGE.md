@@ -23,24 +23,27 @@ func main() {
     
     req := operations.BatchAssociateClientDeviceWithCoreDeviceRequest{
         PathParams: operations.BatchAssociateClientDeviceWithCoreDevicePathParams{
-            CoreDeviceThingName: "veniam",
+            CoreDeviceThingName: "libero",
         },
         Headers: operations.BatchAssociateClientDeviceWithCoreDeviceHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "animi",
-            XAmzDate: "atque",
-            XAmzSecurityToken: "omnis",
-            XAmzSignature: "unde",
-            XAmzSignedHeaders: "repellat",
+            XAmzAlgorithm: "saepe",
+            XAmzContentSha256: "et",
+            XAmzCredential: "corporis",
+            XAmzDate: "a",
+            XAmzSecurityToken: "illum",
+            XAmzSignature: "numquam",
+            XAmzSignedHeaders: "dolores",
         },
         Request: operations.BatchAssociateClientDeviceWithCoreDeviceRequestBody{
             Entries: []shared.AssociateClientDeviceWithCoreDeviceEntry{
                 shared.AssociateClientDeviceWithCoreDeviceEntry{
-                    ThingName: "tempore",
+                    ThingName: "voluptatibus",
                 },
                 shared.AssociateClientDeviceWithCoreDeviceEntry{
-                    ThingName: "et",
+                    ThingName: "sint",
+                },
+                shared.AssociateClientDeviceWithCoreDeviceEntry{
+                    ThingName: "expedita",
                 },
             },
         },

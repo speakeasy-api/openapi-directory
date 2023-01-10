@@ -23,26 +23,30 @@ func main() {
     
     req := operations.CreateOrderRequest{
         Headers: operations.CreateOrderHeaders{
-            XAmzAlgorithm: "quisquam",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "et",
-            XAmzDate: "voluptate",
-            XAmzSecurityToken: "omnis",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "natus",
+            XAmzAlgorithm: "adipisci",
+            XAmzContentSha256: "ipsum",
+            XAmzCredential: "placeat",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "sed",
+            XAmzSignedHeaders: "reprehenderit",
         },
         Request: operations.CreateOrderRequestBody{
             LineItems: []shared.LineItemRequest{
                 shared.LineItemRequest{
-                    CatalogItemID: "vitae",
-                    Quantity: 2009801317382749508,
+                    CatalogItemID: "atque",
+                    Quantity: 8567863616121245583,
                 },
                 shared.LineItemRequest{
-                    CatalogItemID: "voluptatem",
-                    Quantity: 866732565720837069,
+                    CatalogItemID: "quo",
+                    Quantity: 6900483483283279297,
+                },
+                shared.LineItemRequest{
+                    CatalogItemID: "perferendis",
+                    Quantity: 4098291302621142390,
                 },
             },
-            OutpostIdentifier: "expedita",
+            OutpostIdentifier: "assumenda",
             PaymentOption: "NO_UPFRONT",
             PaymentTerm: "THREE_YEARS",
         },

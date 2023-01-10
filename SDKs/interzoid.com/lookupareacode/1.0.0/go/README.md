@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetareacodeRequest{
         QueryParams: operations.GetareacodeQueryParams{
-            Areacode: "non",
-            License: "suscipit",
+            Areacode: "excepturi",
+            License: "rem",
         },
     }
     

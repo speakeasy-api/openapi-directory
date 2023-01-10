@@ -480,22 +480,26 @@ type MeetingCreate201ApplicationJSONTrackingFields struct {
 // MeetingCreate201ApplicationJSON
 // Meeting object
 type MeetingCreate201ApplicationJSON struct {
-	Agenda         *string                                         `json:"agenda,omitempty"`
-	CreatedAt      *time.Time                                      `json:"created_at,omitempty"`
-	Duration       *int64                                          `json:"duration,omitempty"`
-	H323Password   *string                                         `json:"h323_password,omitempty"`
-	JoinURL        *string                                         `json:"join_url,omitempty"`
-	Occurrences    []MeetingCreate201ApplicationJSONOccurrences    `json:"occurrences,omitempty"`
-	Password       *string                                         `json:"password,omitempty"`
-	Pmi            *int64                                          `json:"pmi,omitempty"`
-	Recurrence     *MeetingCreate201ApplicationJSONRecurrence      `json:"recurrence,omitempty"`
-	Settings       *MeetingCreate201ApplicationJSONSettings        `json:"settings,omitempty"`
-	StartTime      *time.Time                                      `json:"start_time,omitempty"`
-	StartURL       *string                                         `json:"start_url,omitempty"`
-	Timezone       *string                                         `json:"timezone,omitempty"`
-	Topic          *string                                         `json:"topic,omitempty"`
-	TrackingFields []MeetingCreate201ApplicationJSONTrackingFields `json:"tracking_fields,omitempty"`
-	Type           *int64                                          `json:"type,omitempty"`
+	Agenda          *string                                         `json:"agenda,omitempty"`
+	AssistantID     *string                                         `json:"assistant_id,omitempty"`
+	CreatedAt       *time.Time                                      `json:"created_at,omitempty"`
+	Duration        *int64                                          `json:"duration,omitempty"`
+	H323Password    *string                                         `json:"h323_password,omitempty"`
+	HostEmail       *string                                         `json:"host_email,omitempty"`
+	ID              *int64                                          `json:"id,omitempty"`
+	JoinURL         *string                                         `json:"join_url,omitempty"`
+	Occurrences     []MeetingCreate201ApplicationJSONOccurrences    `json:"occurrences,omitempty"`
+	Password        *string                                         `json:"password,omitempty"`
+	Pmi             *int64                                          `json:"pmi,omitempty"`
+	Recurrence      *MeetingCreate201ApplicationJSONRecurrence      `json:"recurrence,omitempty"`
+	RegistrationURL *string                                         `json:"registration_url,omitempty"`
+	Settings        *MeetingCreate201ApplicationJSONSettings        `json:"settings,omitempty"`
+	StartTime       *time.Time                                      `json:"start_time,omitempty"`
+	StartURL        *string                                         `json:"start_url,omitempty"`
+	Timezone        *string                                         `json:"timezone,omitempty"`
+	Topic           *string                                         `json:"topic,omitempty"`
+	TrackingFields  []MeetingCreate201ApplicationJSONTrackingFields `json:"tracking_fields,omitempty"`
+	Type            *int64                                          `json:"type,omitempty"`
 }
 
 type MeetingCreateRequest struct {

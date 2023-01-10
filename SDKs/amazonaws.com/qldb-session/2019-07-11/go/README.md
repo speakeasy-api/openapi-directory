@@ -34,51 +34,52 @@ func main() {
     
     req := operations.SendCommandRequest{
         Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "at",
-            XAmzCredential: "saepe",
-            XAmzDate: "id",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "quis",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "cum",
+            XAmzContentSha256: "repellat",
+            XAmzCredential: "quaerat",
+            XAmzDate: "velit",
+            XAmzSecurityToken: "magni",
+            XAmzSignature: "delectus",
+            XAmzSignedHeaders: "vel",
             XAmzTarget: "QLDBSession.SendCommand",
         },
         Request: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "similique": "neque",
-                "deserunt": "ab",
+                "nihil": "laudantium",
+                "magni": "vel",
             },
             CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "earum",
-                TransactionID: "omnis",
+                CommitDigest: "eaque",
+                TransactionID: "incidunt",
             },
             EndSession: map[string]interface{}{
-                "aliquid": "quia",
+                "magnam": "accusamus",
+                "occaecati": "rerum",
             },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "similique",
-                        IonText: "repudiandae",
+                        IonBinary: "ut",
+                        IonText: "consequatur",
                     },
                     shared.ValueHolder{
-                        IonBinary: "non",
-                        IonText: "harum",
+                        IonBinary: "sequi",
+                        IonText: "omnis",
                     },
                 },
-                Statement: "ipsa",
-                TransactionID: "rerum",
+                Statement: "quis",
+                TransactionID: "labore",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "nisi",
-                TransactionID: "maiores",
+                NextPageToken: "sapiente",
+                TransactionID: "accusamus",
             },
-            SessionToken: "non",
+            SessionToken: "velit",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "autem",
+                LedgerName: "amet",
             },
             StartTransaction: map[string]interface{}{
-                "quam": "amet",
+                "sunt": "molestias",
             },
         },
     }

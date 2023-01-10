@@ -48,7 +48,12 @@ type DashboardWebinarParticipantQosParticipantQosUserQosAsDeviceToCrc struct {
 // DashboardWebinarParticipantQosParticipantQosUserQosQosObject
 // Quality of Service object.
 type DashboardWebinarParticipantQosParticipantQosUserQosQosObject struct {
+	AvgLoss    *string `json:"avg_loss,omitempty"`
+	Bitrate    *string `json:"bitrate,omitempty"`
 	FrameRate  *string `json:"frame_rate,omitempty"`
+	Jitter     *string `json:"jitter,omitempty"`
+	Latency    *string `json:"latency,omitempty"`
+	MaxLoss    *string `json:"max_loss,omitempty"`
 	Resolution *string `json:"resolution,omitempty"`
 }
 

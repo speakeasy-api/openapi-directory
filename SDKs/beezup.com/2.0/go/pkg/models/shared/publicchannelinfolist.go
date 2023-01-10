@@ -1,7 +1,7 @@
 package shared
 
 type PublicChannelInfoListLinks struct {
-	Self map[string]interface{} `json:"self,omitempty"`
+	Self *LinksGetChannelsLink `json:"self,omitempty"`
 }
 
 type PublicChannelInfoList struct {

@@ -24,10 +24,10 @@ func main() {
     
     req := operations.CollectNowRequest{
         PathParams: operations.CollectNowPathParams{
-            DeviceID: 590388331340932509,
+            DeviceID: 617923154332301311,
         },
         QueryParams: operations.CollectNowQueryParams{
-            MonitorClass: "ut",
+            MonitorClass: "deserunt",
         },
     }
     

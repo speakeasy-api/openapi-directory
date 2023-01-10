@@ -10,8 +10,31 @@ type CreateDatabaseClusterRequestBodyBackupRestore struct {
 	DatabaseName    string     `json:"database_name"`
 }
 
-type CreateDatabaseClusterRequestBody struct {
-	BackupRestore *CreateDatabaseClusterRequestBodyBackupRestore `json:"backup_restore,omitempty"`
+type CreateDatabaseClusterRequestBodyEngineEnum string
+
+const (
+	CreateDatabaseClusterRequestBodyEngineEnumPg      CreateDatabaseClusterRequestBodyEngineEnum = "pg"
+	CreateDatabaseClusterRequestBodyEngineEnumMysql   CreateDatabaseClusterRequestBodyEngineEnum = "mysql"
+	CreateDatabaseClusterRequestBodyEngineEnumRedis   CreateDatabaseClusterRequestBodyEngineEnum = "redis"
+	CreateDatabaseClusterRequestBodyEngineEnumMongodb CreateDatabaseClusterRequestBodyEngineEnum = "mongodb"
+)
+
+type CreateDatabaseClusterRequestBodyMaintenanceWindowInput struct {
+	Day  string `json:"day"`
+	Hour string `json:"hour"`
+}
+
+type CreateDatabaseClusterRequestBodyInput struct {
+	BackupRestore      *CreateDatabaseClusterRequestBodyBackupRestore          `json:"backup_restore,omitempty"`
+	Engine             CreateDatabaseClusterRequestBodyEngineEnum              `json:"engine"`
+	MaintenanceWindow  *CreateDatabaseClusterRequestBodyMaintenanceWindowInput `json:"maintenance_window,omitempty"`
+	Name               string                                                  `json:"name"`
+	NumNodes           int64                                                   `json:"num_nodes"`
+	PrivateNetworkUUID *string                                                 `json:"private_network_uuid,omitempty"`
+	Region             string                                                  `json:"region"`
+	Size               string                                                  `json:"size"`
+	Tags               []string                                                `json:"tags,omitempty"`
+	Version            *string                                                 `json:"version,omitempty"`
 }
 
 type CreateDatabaseCluster201ApplicationJSON struct {
@@ -25,7 +48,7 @@ type CreateDatabaseCluster401ApplicationJSON struct {
 }
 
 type CreateDatabaseClusterRequest struct {
-	Request CreateDatabaseClusterRequestBody `request:"mediaType=application/json"`
+	Request CreateDatabaseClusterRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type CreateDatabaseClusterResponse struct {

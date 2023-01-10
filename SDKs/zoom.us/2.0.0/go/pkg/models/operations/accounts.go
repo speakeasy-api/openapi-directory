@@ -25,7 +25,12 @@ type AccountsAccountListAccounts struct {
 // AccountsAccountList
 // Account object in the account list.
 type AccountsAccountList struct {
-	Accounts []AccountsAccountListAccounts `json:"accounts,omitempty"`
+	Accounts      []AccountsAccountListAccounts `json:"accounts,omitempty"`
+	NextPageToken *string                       `json:"next_page_token,omitempty"`
+	PageCount     *int64                        `json:"page_count,omitempty"`
+	PageNumber    *int64                        `json:"page_number,omitempty"`
+	PageSize      *int64                        `json:"page_size,omitempty"`
+	TotalRecords  *int64                        `json:"total_records,omitempty"`
 }
 
 type AccountsRequest struct {

@@ -14,10 +14,9 @@ func main() {
     req := operations.CreateANewQuestionRequest{
         Request: &operations.CreateANewQuestionRequestBody{
             Choices: []string{
-                "est",
-                "minus",
+                "rerum",
             },
-            Question: "consectetur",
+            Question: "dolor",
         },
     }
     

@@ -5,8 +5,10 @@ import (
 )
 
 type CreateVpcRequestBody struct {
-	IPRange *string `json:"ip_range,omitempty"`
-	Region  string  `json:"region"`
+	Description *string `json:"description,omitempty"`
+	IPRange     *string `json:"ip_range,omitempty"`
+	Name        string  `json:"name"`
+	Region      string  `json:"region"`
 }
 
 type CreateVpc201ApplicationJSON struct {

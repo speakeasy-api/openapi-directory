@@ -23,8 +23,8 @@ func main() {
     
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
-            Format: "XML",
-            Gameid: "ea",
+            Format: "JSON",
+            Gameid: "qui",
         },
     }
     

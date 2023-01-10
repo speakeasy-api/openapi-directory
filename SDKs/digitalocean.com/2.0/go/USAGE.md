@@ -24,10 +24,9 @@ func main() {
     req := operations.InstallKubernetesRequest{
         Request: operations.InstallKubernetesRequestBody{
             AddonSlugs: []string{
-                "corrupti",
-                "quod",
+                "est",
             },
-            ClusterUUID: "voluptas",
+            ClusterUUID: "laudantium",
         },
     }
     

@@ -13,7 +13,7 @@ type CreateDeploymentRequestBody struct {
 }
 
 type CreateDeployment200ApplicationJSON struct {
-	Deployment *shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItems1 `json:"deployment,omitempty"`
+	Deployment *shared.Onev21apps1Percent7BappIDPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItems `json:"deployment,omitempty"`
 }
 
 type CreateDeployment401ApplicationJSON struct {

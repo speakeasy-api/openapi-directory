@@ -12,7 +12,7 @@ type DbCluster struct {
 	ActivityStreamMode               *ActivityStreamModeEnum
 	ActivityStreamStatus             *ActivityStreamStatusEnum
 	AllocatedStorage                 *int64
-	AssociatedRoles                  []map[string]interface{}
+	AssociatedRoles                  []DbClusterRoles
 	AutomaticRestartTime             *time.Time
 	AvailabilityZones                []map[string]interface{}
 	BacktrackConsumedChangeRecords   *int64
@@ -27,14 +27,14 @@ type DbCluster struct {
 	CustomEndpoints                  []string
 	DBClusterArn                     *string
 	DBClusterIdentifier              *string
-	DBClusterMembers                 []map[string]interface{}
-	DBClusterOptionGroupMemberships  []map[string]interface{}
+	DBClusterMembers                 []DbClusterMemberList
+	DBClusterOptionGroupMemberships  []DbClusterOptionGroupMemberships
 	DBClusterParameterGroup          *string
 	DBSubnetGroup                    *string
 	DatabaseName                     *string
 	DbClusterResourceID              *string
 	DeletionProtection               *bool
-	DomainMemberships                []map[string]interface{}
+	DomainMemberships                []DomainMembershipList
 	EarliestBacktrackTime            *time.Time
 	EarliestRestorableTime           *time.Time
 	EnabledCloudwatchLogsExports     []string
@@ -62,6 +62,6 @@ type DbCluster struct {
 	ScalingConfigurationInfo         *ScalingConfigurationInfo
 	Status                           *string
 	StorageEncrypted                 *bool
-	TagList                          []map[string]interface{}
-	VpcSecurityGroups                []map[string]interface{}
+	TagList                          []TagList
+	VpcSecurityGroups                []VpcSecurityGroupMembershipList
 }

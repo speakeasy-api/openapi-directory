@@ -23,18 +23,18 @@ func main() {
     
     req := operations.AcceptDomainTransferFromAnotherAwsAccountRequest{
         Headers: operations.AcceptDomainTransferFromAnotherAwsAccountHeaders{
-            XAmzAlgorithm: "sint",
-            XAmzContentSha256: "et",
-            XAmzCredential: "fuga",
-            XAmzDate: "distinctio",
-            XAmzSecurityToken: "quidem",
-            XAmzSignature: "reiciendis",
-            XAmzSignedHeaders: "laboriosam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "magni",
+            XAmzCredential: "quis",
+            XAmzDate: "sed",
+            XAmzSecurityToken: "ratione",
+            XAmzSignature: "sed",
+            XAmzSignedHeaders: "quaerat",
             XAmzTarget: "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount",
         },
         Request: shared.AcceptDomainTransferFromAnotherAwsAccountRequest{
-            DomainName: "pariatur",
-            Password: "omnis",
+            DomainName: "vel",
+            Password: "fuga",
         },
     }
     

@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetglobalnumberinfoRequest{
         QueryParams: operations.GetglobalnumberinfoQueryParams{
-            Intlnumber: "sed",
-            License: "aperiam",
+            Intlnumber: "et",
+            License: "perferendis",
         },
     }
     

@@ -22,16 +22,16 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                DOB: "ratione",
-                DocumentNumber: "sed",
-                FullName: "quaerat",
-                GENDER: "soluta",
-                PolicyNumber: "vel",
-                SearchDocument: "fuga",
+                DOB: "voluptatibus",
+                DocumentNumber: "quia",
+                FullName: "similique",
+                GENDER: "perspiciatis",
+                PolicyNumber: "ipsa",
+                SearchDocument: "tenetur",
             },
-            ConsentArtifact: "ut",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "nulla",
+            TxnID: "inventore",
         },
     }
     

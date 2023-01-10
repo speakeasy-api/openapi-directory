@@ -29,7 +29,7 @@ type AwsRdsDbInstanceDetails struct {
 	EngineVersion                         *string                            `json:"EngineVersion,omitempty"`
 	EnhancedMonitoringResourceArn         *string                            `json:"EnhancedMonitoringResourceArn,omitempty"`
 	IAMDatabaseAuthenticationEnabled      *bool                              `json:"IAMDatabaseAuthenticationEnabled,omitempty"`
-	InstanceCreateTime                    map[string]interface{}             `json:"InstanceCreateTime,omitempty"`
+	InstanceCreateTime                    *string                            `json:"InstanceCreateTime,omitempty"`
 	Iops                                  *int64                             `json:"Iops,omitempty"`
 	KmsKeyID                              *string                            `json:"KmsKeyId,omitempty"`
 	LatestRestorableTime                  *string                            `json:"LatestRestorableTime,omitempty"`

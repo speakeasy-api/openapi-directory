@@ -29,21 +29,13 @@ func main() {
             },
         },
         PathParams: operations.CreateCategoriesPathParams{
-            OrganizationUUID: "sequi",
+            OrganizationUUID: "alias",
         },
         Request: shared.CategoryRequest{
             Categories: []shared.CategoryDto{
                 shared.CategoryDto{
-                    Name: "provident",
-                    UUID: "numquam",
-                },
-                shared.CategoryDto{
-                    Name: "inventore",
-                    UUID: "harum",
-                },
-                shared.CategoryDto{
-                    Name: "est",
-                    UUID: "dolor",
+                    Name: "non",
+                    UUID: "exercitationem",
                 },
             },
         },

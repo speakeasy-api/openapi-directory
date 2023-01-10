@@ -18,13 +18,13 @@ func main() {
             },
         },
         Headers: operations.ImageOcrImageLinesWithLocationHeaders{
-            Language: "ipsam",
-            Preprocessing: "labore",
+            Language: "quasi",
+            Preprocessing: "tempore",
         },
         Request: operations.ImageOcrImageLinesWithLocationRequestBody{
             ImageFile: operations.ImageOcrImageLinesWithLocationRequestBodyImageFile{
-                Content: []byte("sed"),
-                ImageFile: "qui",
+                Content: []byte("consequatur"),
+                ImageFile: "quos",
             },
         },
     }

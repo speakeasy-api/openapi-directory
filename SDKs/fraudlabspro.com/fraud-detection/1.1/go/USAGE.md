@@ -13,11 +13,11 @@ func main() {
     
     req := operations.PostV1OrderFeedbackRequest{
         QueryParams: operations.PostV1OrderFeedbackQueryParams{
-            Action: "APPROVE",
-            Format: "json",
-            ID: "fugiat",
-            Key: "nihil",
-            Notes: "nulla",
+            Action: "REJECT_BLACKLIST",
+            Format: "xml",
+            ID: "blanditiis",
+            Key: "voluptatem",
+            Notes: "consequuntur",
         },
     }
     

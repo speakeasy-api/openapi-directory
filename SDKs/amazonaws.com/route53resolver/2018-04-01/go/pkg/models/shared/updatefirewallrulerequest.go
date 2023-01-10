@@ -1,7 +1,7 @@
 package shared
 
 type UpdateFirewallRuleRequest struct {
-	Action               map[string]interface{}    `json:"Action,omitempty"`
+	Action               *ActionEnum               `json:"Action,omitempty"`
 	BlockOverrideDNSType *BlockOverrideDNSTypeEnum `json:"BlockOverrideDnsType,omitempty"`
 	BlockOverrideDomain  *string                   `json:"BlockOverrideDomain,omitempty"`
 	BlockOverrideTTL     *int64                    `json:"BlockOverrideTtl,omitempty"`

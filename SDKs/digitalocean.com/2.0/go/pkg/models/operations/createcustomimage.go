@@ -5,9 +5,12 @@ import (
 )
 
 type CreateCustomImageRequestBody struct {
-	Region shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum `json:"region"`
-	Tags   []string                                                                                                                                `json:"tags,omitempty"`
-	URL    string                                                                                                                                  `json:"url"`
+	Description  *string                                                                                                                                  `json:"description,omitempty"`
+	Distribution *shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesDistributionEnum `json:"distribution,omitempty"`
+	Name         string                                                                                                                                   `json:"name"`
+	Region       shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum  `json:"region"`
+	Tags         []string                                                                                                                                 `json:"tags,omitempty"`
+	URL          string                                                                                                                                   `json:"url"`
 }
 
 type CreateCustomImage401ApplicationJSON struct {

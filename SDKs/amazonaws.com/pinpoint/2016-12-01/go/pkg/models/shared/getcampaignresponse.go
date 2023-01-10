@@ -1,5 +1,5 @@
 package shared
 
 type GetCampaignResponse struct {
-	CampaignResponse CampaignResponse1 `json:"CampaignResponse"`
+	CampaignResponse CampaignResponse `json:"CampaignResponse"`
 }

@@ -13,7 +13,7 @@ func main() {
     
     req := operations.CertificateActionRetrieveRequest{
         PathParams: operations.CertificateActionRetrievePathParams{
-            CertificateID: "sint",
+            CertificateID: "dolor",
         },
     }
     

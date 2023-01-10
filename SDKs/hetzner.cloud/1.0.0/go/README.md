@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetActionsRequest{
         QueryParams: operations.GetActionsQueryParams{
-            ID: 6442914223803503848,
-            Sort: "id:asc",
-            Status: "error",
+            ID: 8882134101877179010,
+            Sort: "status:asc",
+            Status: "success",
         },
     }
     

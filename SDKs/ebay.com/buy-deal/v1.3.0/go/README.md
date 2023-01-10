@@ -29,14 +29,14 @@ func main() {
             },
         },
         QueryParams: operations.GetDealItemsQueryParams{
-            CategoryIds: "hic",
-            Commissionable: "sunt",
-            DeliveryCountry: "eos",
-            Limit: "odio",
-            Offset: "fuga",
+            CategoryIds: "porro",
+            Commissionable: "et",
+            DeliveryCountry: "asperiores",
+            Limit: "quibusdam",
+            Offset: "sed",
         },
         Headers: operations.GetDealItemsHeaders{
-            XEBAYCMARKETPLACEID: "reprehenderit",
+            XEBAYCMARKETPLACEID: "sequi",
         },
     }
     

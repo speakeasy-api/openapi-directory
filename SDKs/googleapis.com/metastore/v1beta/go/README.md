@@ -32,44 +32,40 @@ func main() {
             },
         },
         PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "rerum",
+            Parent: "quia",
         },
         QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
+            DollarXgafv: "1",
+            AccessToken: "perspiciatis",
             Alt: "media",
-            Callback: "dolorum",
-            FederationID: "velit",
-            Fields: "dolor",
-            Key: "molestiae",
-            OauthToken: "consequatur",
-            PrettyPrint: true,
-            QuotaUser: "sit",
-            RequestID: "nesciunt",
-            UploadType: "esse",
-            UploadProtocol: "iste",
+            Callback: "laudantium",
+            FederationID: "eum",
+            Fields: "esse",
+            Key: "ex",
+            OauthToken: "magnam",
+            PrettyPrint: false,
+            QuotaUser: "fugiat",
+            RequestID: "vitae",
+            UploadType: "suscipit",
+            UploadProtocol: "in",
         },
         Request: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "ut": shared.BackendMetastore{
-                    MetastoreType: "BIGQUERY",
-                    Name: "mollitia",
-                },
-                "hic": shared.BackendMetastore{
-                    MetastoreType: "BIGQUERY",
-                    Name: "sed",
-                },
-                "quia": shared.BackendMetastore{
+                "praesentium": shared.BackendMetastore{
                     MetastoreType: "DATAPROC_METASTORE",
-                    Name: "perspiciatis",
+                    Name: "doloremque",
+                },
+                "accusamus": shared.BackendMetastore{
+                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
+                    Name: "veritatis",
                 },
             },
             Labels: map[string]string{
-                "qui": "sit",
-                "quia": "est",
+                "rerum": "harum",
+                "dolor": "sit",
             },
-            Name: "et",
-            Version: "rerum",
+            Name: "veniam",
+            Version: "vel",
         },
     }
     

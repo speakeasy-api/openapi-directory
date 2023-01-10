@@ -8,17 +8,17 @@ type PostAssetsVarianceRequestBody1 struct {
 	Assets []PostAssetsVarianceRequestBody1Assets `json:"assets"`
 }
 
-type PostAssetsVarianceRequestBody2Assets struct {
+type PostAssetsVarianceRequestBody2 struct {
+	Assets                 int64       `json:"assets"`
+	AssetsCovarianceMatrix [][]float64 `json:"assetsCovarianceMatrix"`
+}
+
+type PostAssetsVarianceRequestBody3Assets struct {
 	AssetVolatility float64 `json:"assetVolatility"`
 }
 
-type PostAssetsVarianceRequestBody2 struct {
-	Assets []PostAssetsVarianceRequestBody2Assets `json:"assets"`
-}
-
 type PostAssetsVarianceRequestBody3 struct {
-	Assets                 int64       `json:"assets"`
-	AssetsCovarianceMatrix [][]float64 `json:"assetsCovarianceMatrix"`
+	Assets []PostAssetsVarianceRequestBody3Assets `json:"assets"`
 }
 
 type PostAssetsVariance200ApplicationJSONAssets struct {

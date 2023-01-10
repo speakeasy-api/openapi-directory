@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                DOB: "velit",
-                Polno: "magni",
+                DOB: "praesentium",
+                Polno: "a",
             },
-            ConsentArtifact: "delectus",
+            ConsentArtifact: "consequatur",
             Format: "pdf",
-            TxnID: "quisquam",
+            TxnID: "qui",
         },
     }
     

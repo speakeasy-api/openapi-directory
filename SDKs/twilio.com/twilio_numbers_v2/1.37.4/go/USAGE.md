@@ -19,13 +19,13 @@ func main() {
             },
         },
         Request: &operations.CreateBundleCreateBundleRequest{
-            Email: "illo",
-            EndUserType: "business",
-            FriendlyName: "architecto",
-            IsoCountry: "veniam",
-            NumberType: "est",
-            RegulationSid: "est",
-            StatusCallback: "ea",
+            Email: "sed",
+            EndUserType: "individual",
+            FriendlyName: "maiores",
+            IsoCountry: "asperiores",
+            NumberType: "doloremque",
+            RegulationSid: "unde",
+            StatusCallback: "ducimus",
         },
     }
     

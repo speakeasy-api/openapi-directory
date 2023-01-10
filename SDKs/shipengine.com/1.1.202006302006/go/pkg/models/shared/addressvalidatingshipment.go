@@ -30,5 +30,6 @@ type AddressValidatingShipmentInput struct {
 	ShipDate           *time.Time                                                  `json:"ship_date,omitempty"`
 	ShipFrom           Address                                                     `json:"ship_from"`
 	ShipTo             Address                                                     `json:"ship_to"`
+	ValidateAddress    map[string]interface{}                                      `json:"validate_address,omitempty"`
 	WarehouseID        map[string]interface{}                                      `json:"warehouse_id,omitempty"`
 }

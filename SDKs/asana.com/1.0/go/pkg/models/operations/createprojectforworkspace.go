@@ -13,8 +13,8 @@ type CreateProjectForWorkspaceQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateProjectForWorkspaceRequestBody struct {
-	Data *shared.ProjectRequest `json:"data,omitempty"`
+type CreateProjectForWorkspaceRequestBodyInput struct {
+	Data *shared.ProjectRequestInput `json:"data,omitempty"`
 }
 
 type CreateProjectForWorkspace201ApplicationJSON struct {
@@ -24,7 +24,7 @@ type CreateProjectForWorkspace201ApplicationJSON struct {
 type CreateProjectForWorkspaceRequest struct {
 	PathParams  CreateProjectForWorkspacePathParams
 	QueryParams CreateProjectForWorkspaceQueryParams
-	Request     CreateProjectForWorkspaceRequestBody `request:"mediaType=application/json"`
+	Request     CreateProjectForWorkspaceRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type CreateProjectForWorkspaceResponse struct {

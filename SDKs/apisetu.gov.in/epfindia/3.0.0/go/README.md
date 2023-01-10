@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.EpfscRequestBody{
             CertificateParameters: &operations.EpfscRequestBodyCertificateParameters{
-                DOB: "culpa",
-                FullName: "est",
-                SCNO: "soluta",
+                DOB: "explicabo",
+                FullName: "repudiandae",
+                SCNO: "sapiente",
             },
-            ConsentArtifact: "omnis",
+            ConsentArtifact: "nesciunt",
             Format: "pdf",
-            TxnID: "quidem",
+            TxnID: "ab",
         },
     }
     

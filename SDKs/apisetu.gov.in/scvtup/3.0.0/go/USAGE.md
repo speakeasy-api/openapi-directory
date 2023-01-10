@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.SkcerRequestBody{
             CertificateParameters: &operations.SkcerRequestBodyCertificateParameters{
-                DOB: "voluptatibus",
-                FullName: "ea",
-                RollNumber: "tempora",
-                Session: "quis",
+                DOB: "sapiente",
+                FullName: "rerum",
+                RollNumber: "esse",
+                Session: "beatae",
             },
-            ConsentArtifact: "ullam",
+            ConsentArtifact: "quibusdam",
             Format: "pdf",
-            TxnID: "quam",
+            TxnID: "nulla",
         },
     }
     

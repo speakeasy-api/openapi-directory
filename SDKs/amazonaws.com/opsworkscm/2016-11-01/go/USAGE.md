@@ -23,32 +23,28 @@ func main() {
     
     req := operations.AssociateNodeRequest{
         Headers: operations.AssociateNodeHeaders{
-            XAmzAlgorithm: "perspiciatis",
-            XAmzContentSha256: "suscipit",
-            XAmzCredential: "inventore",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "soluta",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "ullam",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "rem",
+            XAmzCredential: "quas",
+            XAmzDate: "animi",
+            XAmzSecurityToken: "saepe",
+            XAmzSignature: "harum",
+            XAmzSignedHeaders: "animi",
             XAmzTarget: "OpsWorksCM_V2016_11_01.AssociateNode",
         },
         Request: shared.AssociateNodeRequest{
             EngineAttributes: []shared.EngineAttribute{
                 shared.EngineAttribute{
-                    Name: "est",
-                    Value: "neque",
+                    Name: "optio",
+                    Value: "amet",
                 },
                 shared.EngineAttribute{
-                    Name: "dolor",
-                    Value: "nobis",
-                },
-                shared.EngineAttribute{
-                    Name: "ipsam",
-                    Value: "sed",
+                    Name: "eaque",
+                    Value: "qui",
                 },
             },
-            NodeName: "nihil",
-            ServerName: "harum",
+            NodeName: "et",
+            ServerName: "ex",
         },
     }
     

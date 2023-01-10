@@ -34,39 +34,43 @@ func main() {
     
     req := operations.CreateConfigurationSetRequest{
         Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "in",
-            XAmzCredential: "ut",
-            XAmzDate: "sit",
-            XAmzSecurityToken: "fuga",
-            XAmzSignature: "eveniet",
-            XAmzSignedHeaders: "culpa",
+            XAmzAlgorithm: "dolor",
+            XAmzContentSha256: "sit",
+            XAmzCredential: "non",
+            XAmzDate: "sed",
+            XAmzSecurityToken: "cumque",
+            XAmzSignature: "architecto",
+            XAmzSignedHeaders: "accusantium",
         },
         Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "quisquam",
+            ConfigurationSetName: "non",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "repudiandae",
+                SendingPoolName: "et",
                 TLSPolicy: "REQUIRE",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2020-06-17T02:27:44Z",
-                ReputationMetricsEnabled: false,
+                LastFreshStart: "2018-10-08T08:06:52Z",
+                ReputationMetricsEnabled: true,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
                 SendingEnabled: true,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "enim",
-                    Value: "est",
+                    Key: "reiciendis",
+                    Value: "et",
                 },
                 shared.Tag{
-                    Key: "recusandae",
-                    Value: "neque",
+                    Key: "dolorem",
+                    Value: "minus",
+                },
+                shared.Tag{
+                    Key: "ea",
+                    Value: "quaerat",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "quia",
+                CustomRedirectDomain: "dolorem",
             },
         },
     }

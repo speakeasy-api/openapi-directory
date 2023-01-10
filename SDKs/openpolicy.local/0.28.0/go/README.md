@@ -24,15 +24,13 @@ func main() {
     
     req := operations.PostCompileRequest{
         QueryParams: operations.PostCompileQueryParams{
-            Explain: "neque",
-            Instrument: false,
-            Metrics: true,
+            Explain: "pariatur",
+            Instrument: true,
+            Metrics: false,
             Pretty: true,
         },
         Request: map[string]interface{}{
-            "necessitatibus": "et",
-            "nisi": "laboriosam",
-            "ut": "animi",
+            "nesciunt": "praesentium",
         },
     }
     

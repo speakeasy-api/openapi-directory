@@ -12,7 +12,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostJsontoxmlRequest{
-        Request: "natus",
+        Request: "laboriosam",
     }
     
     res, err := s.PostJsontoxml(ctx, req)

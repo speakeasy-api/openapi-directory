@@ -24,20 +24,20 @@ func main() {
     
     req := operations.DomainsrdapAutnumGetRequest{
         PathParams: operations.DomainsrdapAutnumGetPathParams{
-            AutnumID: "rerum",
+            AutnumID: "asperiores",
         },
         QueryParams: operations.DomainsrdapAutnumGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "natus",
-            Alt: "proto",
-            Callback: "eos",
-            Fields: "quae",
-            Key: "ipsa",
-            OauthToken: "dignissimos",
+            DollarXgafv: "1",
+            AccessToken: "debitis",
+            Alt: "json",
+            Callback: "esse",
+            Fields: "ad",
+            Key: "ea",
+            OauthToken: "sint",
             PrettyPrint: false,
-            QuotaUser: "eveniet",
-            UploadType: "perspiciatis",
-            UploadProtocol: "iste",
+            QuotaUser: "consequatur",
+            UploadType: "et",
+            UploadProtocol: "ipsa",
         },
     }
     

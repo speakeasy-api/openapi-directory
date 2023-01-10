@@ -1,5 +1,16 @@
 package operations
 
+type PostAdminRecordingsStartRequestBodyCaptureHeaders struct {
+	CaseInsensitive *bool `json:"caseInsensitive,omitempty"`
+}
+
+// PostAdminRecordingsStartRequestBodyExtractBodyCriteria
+// Criteria for extracting response bodies to a separate file instead of including it in the stub mapping
+type PostAdminRecordingsStartRequestBodyExtractBodyCriteria struct {
+	BinarySizeThreshold *string `json:"binarySizeThreshold,omitempty"`
+	TextSizeThreshold   *string `json:"textSizeThreshold,omitempty"`
+}
+
 // PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials
 // Pre-emptive basic auth credentials to match against
 type PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials struct {
@@ -21,8 +32,15 @@ type PostAdminRecordingsStartRequestBodyFilters struct {
 }
 
 type PostAdminRecordingsStartRequestBody struct {
-	Filters       *PostAdminRecordingsStartRequestBodyFilters `json:"filters,omitempty"`
-	TargetBaseURL *string                                     `json:"targetBaseUrl,omitempty"`
+	CaptureHeaders        map[string]PostAdminRecordingsStartRequestBodyCaptureHeaders `json:"captureHeaders,omitempty"`
+	ExtractBodyCriteria   *PostAdminRecordingsStartRequestBodyExtractBodyCriteria      `json:"extractBodyCriteria,omitempty"`
+	Filters               *PostAdminRecordingsStartRequestBodyFilters                  `json:"filters,omitempty"`
+	Persist               *bool                                                        `json:"persist,omitempty"`
+	RepeatsAsScenarios    *bool                                                        `json:"repeatsAsScenarios,omitempty"`
+	RequestBodyPattern    map[string]interface{}                                       `json:"requestBodyPattern,omitempty"`
+	TargetBaseURL         *string                                                      `json:"targetBaseUrl,omitempty"`
+	TransformerParameters map[string]interface{}                                       `json:"transformerParameters,omitempty"`
+	Transformers          []string                                                     `json:"transformers,omitempty"`
 }
 
 type PostAdminRecordingsStartRequest struct {

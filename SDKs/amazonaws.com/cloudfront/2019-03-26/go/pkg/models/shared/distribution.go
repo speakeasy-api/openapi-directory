@@ -9,7 +9,7 @@ import (
 type Distribution struct {
 	ARN                           string
 	ActiveTrustedSigners          ActiveTrustedSigners
-	AliasICPRecordals             []map[string]interface{}
+	AliasICPRecordals             []AliasIcpRecordals
 	DistributionConfig            DistributionConfig
 	DomainName                    string
 	ID                            string

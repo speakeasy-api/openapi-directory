@@ -30,10 +30,10 @@ func main() {
             },
         },
         PathParams: operations.CreateAlphaSenderPathParams{
-            ServiceSid: "dolor",
+            ServiceSid: "autem",
         },
         Request: &operations.CreateAlphaSenderCreateAlphaSenderRequest{
-            AlphaSender: "libero",
+            AlphaSender: "voluptas",
         },
     }
     

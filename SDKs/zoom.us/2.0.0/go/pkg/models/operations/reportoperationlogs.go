@@ -45,7 +45,9 @@ type ReportOperationLogs200ApplicationJSONOperationLogs struct {
 // ReportOperationLogs200ApplicationJSON
 // Pagination object.
 type ReportOperationLogs200ApplicationJSON struct {
+	NextPageToken *string                                              `json:"next_page_token,omitempty"`
 	OperationLogs []ReportOperationLogs200ApplicationJSONOperationLogs `json:"operation_logs,omitempty"`
+	PageSize      *int64                                               `json:"page_size,omitempty"`
 }
 
 type ReportOperationLogsRequest struct {

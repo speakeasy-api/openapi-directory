@@ -13,10 +13,10 @@ func main() {
     
     req := operations.GetActionNotificationExportResultsRequest{
         QueryParams: operations.GetActionNotificationExportResultsQueryParams{
-            ActionNotificationExportID: 3320498019983121158,
-            Cursor: "error",
-            PerPage: 3379169258196496349,
-            UserID: 1526989145207753327,
+            ActionNotificationExportID: 2966375377600891262,
+            Cursor: "aut",
+            PerPage: 5026721396665135782,
+            UserID: 8604752373465719830,
         },
     }
     

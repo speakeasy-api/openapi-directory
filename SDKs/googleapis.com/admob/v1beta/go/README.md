@@ -24,22 +24,22 @@ func main() {
     
     req := operations.AdmobAccountsAdSourcesListRequest{
         PathParams: operations.AdmobAccountsAdSourcesListPathParams{
-            Parent: "nesciunt",
+            Parent: "temporibus",
         },
         QueryParams: operations.AdmobAccountsAdSourcesListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "debitis",
-            Alt: "media",
-            Callback: "ut",
-            Fields: "sint",
-            Key: "optio",
-            OauthToken: "aut",
-            PageSize: 7147025795779270845,
-            PageToken: "corporis",
+            AccessToken: "tenetur",
+            Alt: "proto",
+            Callback: "officiis",
+            Fields: "optio",
+            Key: "tenetur",
+            OauthToken: "molestiae",
+            PageSize: 4341844419008172106,
+            PageToken: "sint",
             PrettyPrint: false,
-            QuotaUser: "eaque",
-            UploadType: "facilis",
-            UploadProtocol: "quidem",
+            QuotaUser: "exercitationem",
+            UploadType: "quia",
+            UploadProtocol: "est",
         },
     }
     

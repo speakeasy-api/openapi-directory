@@ -34,7 +34,7 @@ func main() {
     
     req := operations.DriverDetailsRequest{
         PathParams: operations.DriverDetailsPathParams{
-            Driverid: "sed",
+            Driverid: "tenetur",
             Format: "json",
         },
     }

@@ -316,7 +316,7 @@ func (s *ContainerGroups) PostContainersGroupsNameOrIDMaproute(ctx context.Conte
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.ContainersGroupsNameOrIDMaproutePostInfo
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -375,7 +375,7 @@ func (s *ContainerGroups) PostContainersGroupsNameOrIDUnmaproute(ctx context.Con
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.ContainersGroupsNameOrIDMaproutePostInfo
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

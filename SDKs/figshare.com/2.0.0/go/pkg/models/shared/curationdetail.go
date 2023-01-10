@@ -17,6 +17,7 @@ type CurationDetail struct {
 	CreatedDate   *string                   `json:"created_date,omitempty"`
 	GroupID       *int64                    `json:"group_id,omitempty"`
 	ID            *int64                    `json:"id,omitempty"`
+	Item          *ArticleComplete          `json:"item,omitempty"`
 	ModifiedDate  *string                   `json:"modified_date,omitempty"`
 	ReviewDate    *string                   `json:"review_date,omitempty"`
 	Status        *CurationDetailStatusEnum `json:"status,omitempty"`

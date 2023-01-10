@@ -24,11 +24,11 @@ func main() {
     
     req := operations.GetDomainsTldZoneIDDownloadRequest{
         PathParams: operations.GetDomainsTldZoneIDDownloadPathParams{
-            ZoneID: "dolorem",
+            ZoneID: "maxime",
         },
         QueryParams: operations.GetDomainsTldZoneIDDownloadQueryParams{
-            APIKey: "molestias",
-            Date: "dolor",
+            APIKey: "omnis",
+            Date: "voluptas",
         },
     }
     

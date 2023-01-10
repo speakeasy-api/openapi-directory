@@ -9,7 +9,7 @@ type GlobalCluster struct {
 	EngineVersion           *string
 	GlobalClusterArn        *string
 	GlobalClusterIdentifier *string
-	GlobalClusterMembers    []map[string]interface{}
+	GlobalClusterMembers    []GlobalClusterMemberList
 	GlobalClusterResourceID *string
 	Status                  *string
 	StorageEncrypted        *bool

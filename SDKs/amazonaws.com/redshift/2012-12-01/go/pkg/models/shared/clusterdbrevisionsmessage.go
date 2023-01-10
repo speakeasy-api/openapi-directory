@@ -1,6 +1,6 @@
 package shared
 
 type ClusterDbRevisionsMessage struct {
-	ClusterDbRevisions []map[string]interface{}
+	ClusterDbRevisions []ClusterDbRevisionsList
 	Marker             *string
 }

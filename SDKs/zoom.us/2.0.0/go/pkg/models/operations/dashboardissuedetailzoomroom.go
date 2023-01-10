@@ -20,11 +20,21 @@ type DashboardIssueDetailZoomRoomSecurity struct {
 	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
 }
 
+type DashboardIssueDetailZoomRoom200ApplicationJSONIssueDetails struct {
+	Issue *string    `json:"issue,omitempty"`
+	Time  *time.Time `json:"time,omitempty"`
+}
+
 // DashboardIssueDetailZoomRoom200ApplicationJSON
 // Pagination object.
 type DashboardIssueDetailZoomRoom200ApplicationJSON struct {
-	From *time.Time `json:"from,omitempty"`
-	To   *time.Time `json:"to,omitempty"`
+	From          *time.Time                                                   `json:"from,omitempty"`
+	IssueDetails  []DashboardIssueDetailZoomRoom200ApplicationJSONIssueDetails `json:"issue_details,omitempty"`
+	NextPageToken *string                                                      `json:"next_page_token,omitempty"`
+	PageCount     *int64                                                       `json:"page_count,omitempty"`
+	PageSize      *int64                                                       `json:"page_size,omitempty"`
+	To            *time.Time                                                   `json:"to,omitempty"`
+	TotalRecords  *int64                                                       `json:"total_records,omitempty"`
 }
 
 type DashboardIssueDetailZoomRoomRequest struct {

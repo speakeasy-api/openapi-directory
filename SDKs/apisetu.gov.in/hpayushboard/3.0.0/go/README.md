@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.PhcerRequestBody{
             CertificateParameters: &operations.PhcerRequestBodyCertificateParameters{
-                FullName: "a",
-                RegistrationNo: "et",
+                FullName: "ut",
+                RegistrationNo: "ut",
             },
-            ConsentArtifact: "omnis",
+            ConsentArtifact: "deleniti",
             Format: "pdf",
-            TxnID: "in",
+            TxnID: "quam",
         },
     }
     

@@ -1,6 +1,6 @@
 package shared
 
 type DeleteRemediationExceptionsRequest struct {
-	ConfigRuleName map[string]interface{}            `json:"ConfigRuleName"`
+	ConfigRuleName string                            `json:"ConfigRuleName"`
 	ResourceKeys   []RemediationExceptionResourceKey `json:"ResourceKeys"`
 }

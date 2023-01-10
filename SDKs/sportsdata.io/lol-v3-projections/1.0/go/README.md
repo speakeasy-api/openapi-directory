@@ -34,8 +34,8 @@ func main() {
     
     req := operations.DfsSlatesByDateRequest{
         PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "facere",
-            Format: "xml",
+            Date: "quae",
+            Format: "json",
         },
     }
     

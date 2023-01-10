@@ -34,16 +34,16 @@ func main() {
     
     req := operations.GetRawMessageContentRequest{
         PathParams: operations.GetRawMessageContentPathParams{
-            MessageID: "ipsa",
+            MessageID: "quibusdam",
         },
         Headers: operations.GetRawMessageContentHeaders{
-            XAmzAlgorithm: "nemo",
-            XAmzContentSha256: "reiciendis",
-            XAmzCredential: "quae",
-            XAmzDate: "odit",
-            XAmzSecurityToken: "expedita",
+            XAmzAlgorithm: "vero",
+            XAmzContentSha256: "ea",
+            XAmzCredential: "doloremque",
+            XAmzDate: "maxime",
+            XAmzSecurityToken: "aperiam",
             XAmzSignature: "ut",
-            XAmzSignedHeaders: "occaecati",
+            XAmzSignedHeaders: "illum",
         },
     }
     

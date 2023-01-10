@@ -4,7 +4,7 @@ package shared
 // A complex data type that includes the profile configurations specified for field-level encryption.
 type FieldLevelEncryptionConfig struct {
 	CallerReference          string
-	Comment                  map[string]interface{}
+	Comment                  *string
 	ContentTypeProfileConfig *ContentTypeProfileConfig
 	QueryArgProfileConfig    *QueryArgProfileConfig
 }

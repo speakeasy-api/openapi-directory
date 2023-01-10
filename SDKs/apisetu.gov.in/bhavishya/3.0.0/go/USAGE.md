@@ -22,15 +22,15 @@ func main() {
         },
         Request: &operations.PecerRequestBody{
             CertificateParameters: &operations.PecerRequestBodyCertificateParameters{
-                DOB: "sed",
-                FullName: "cumque",
-                GENDER: "architecto",
-                PAN: "accusantium",
-                PPO: "non",
+                DOB: "aliquid",
+                FullName: "consequuntur",
+                GENDER: "rerum",
+                PAN: "officiis",
+                PPO: "corporis",
             },
             ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "voluptas",
+            TxnID: "numquam",
         },
     }
     

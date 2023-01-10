@@ -24,16 +24,16 @@ func main() {
     
     req := operations.ApplicationGetRequest{
         PathParams: operations.ApplicationGetPathParams{
-            ApplicationID: "veritatis",
+            ApplicationID: "consequatur",
         },
         QueryParams: operations.ApplicationGetQueryParams{
-            APIVersion: "magnam",
-            Timeout: 4298916277474146673,
+            APIVersion: "non",
+            Timeout: 3633662150334051103,
         },
         Headers: operations.ApplicationGetHeaders{
-            ClientRequestID: "blanditiis",
-            OcpDate: "fuga",
-            ReturnClientRequestID: true,
+            ClientRequestID: "eligendi",
+            OcpDate: "vel",
+            ReturnClientRequestID: false,
         },
     }
     

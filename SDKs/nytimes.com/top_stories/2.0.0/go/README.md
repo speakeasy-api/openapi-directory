@@ -34,11 +34,11 @@ func main() {
     
     req := operations.GetSectionFormatRequest{
         PathParams: operations.GetSectionFormatPathParams{
-            Format: "jsonp",
-            Section: "magazine",
+            Format: "json",
+            Section: "national",
         },
         QueryParams: operations.GetSectionFormatQueryParams{
-            Callback: "provident",
+            Callback: "qui",
         },
     }
     

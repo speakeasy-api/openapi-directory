@@ -9,7 +9,7 @@ import (
 type ApplicationDetail struct {
 	ApplicationARN                                 string                                          `json:"ApplicationARN"`
 	ApplicationConfigurationDescription            *ApplicationConfigurationDescription            `json:"ApplicationConfigurationDescription,omitempty"`
-	ApplicationDescription                         map[string]interface{}                          `json:"ApplicationDescription,omitempty"`
+	ApplicationDescription                         *string                                         `json:"ApplicationDescription,omitempty"`
 	ApplicationMaintenanceConfigurationDescription *ApplicationMaintenanceConfigurationDescription `json:"ApplicationMaintenanceConfigurationDescription,omitempty"`
 	ApplicationMode                                *ApplicationModeEnum                            `json:"ApplicationMode,omitempty"`
 	ApplicationName                                string                                          `json:"ApplicationName"`

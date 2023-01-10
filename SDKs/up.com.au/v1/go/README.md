@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            PageSize: 9038996535892643596,
+            PageSize: 6338270451628053750,
         },
     }
     

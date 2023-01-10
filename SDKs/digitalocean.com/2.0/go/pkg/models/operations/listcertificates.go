@@ -36,8 +36,30 @@ type ListCertificates200ApplicationJSONCertificates struct {
 	Type            *ListCertificates200ApplicationJSONCertificatesTypeEnum  `json:"type,omitempty"`
 }
 
+type ListCertificates200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListCertificates200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListCertificates200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListCertificates200ApplicationJSONMeta
+// Information about the response itself.
+type ListCertificates200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListCertificates200ApplicationJSON struct {
 	Certificates []ListCertificates200ApplicationJSONCertificates `json:"certificates,omitempty"`
+	Links        *ListCertificates200ApplicationJSONLinks         `json:"links,omitempty"`
+	Meta         ListCertificates200ApplicationJSONMeta           `json:"meta"`
 }
 
 type ListCertificates401ApplicationJSON struct {

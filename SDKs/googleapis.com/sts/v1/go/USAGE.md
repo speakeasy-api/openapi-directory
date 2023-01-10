@@ -14,20 +14,20 @@ func main() {
     req := operations.StsIntrospectRequest{
         QueryParams: operations.StsIntrospectQueryParams{
             DollarXgafv: "2",
-            AccessToken: "non",
+            AccessToken: "est",
             Alt: "json",
-            Callback: "nihil",
-            Fields: "non",
-            Key: "necessitatibus",
-            OauthToken: "nemo",
+            Callback: "nostrum",
+            Fields: "ea",
+            Key: "omnis",
+            OauthToken: "quia",
             PrettyPrint: true,
-            QuotaUser: "harum",
-            UploadType: "aut",
-            UploadProtocol: "aperiam",
+            QuotaUser: "omnis",
+            UploadType: "soluta",
+            UploadProtocol: "sequi",
         },
         Request: &shared.GoogleIdentityStsV1IntrospectTokenRequest{
-            Token: "dignissimos",
-            TokenTypeHint: "expedita",
+            Token: "neque",
+            TokenTypeHint: "et",
         },
     }
     

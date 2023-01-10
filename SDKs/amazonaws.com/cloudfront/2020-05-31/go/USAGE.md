@@ -23,19 +23,19 @@ func main() {
     
     req := operations.AssociateAlias20200531Request{
         PathParams: operations.AssociateAlias20200531PathParams{
-            TargetDistributionID: "mollitia",
+            TargetDistributionID: "voluptas",
         },
         QueryParams: operations.AssociateAlias20200531QueryParams{
-            Alias: "ad",
+            Alias: "necessitatibus",
         },
         Headers: operations.AssociateAlias20200531Headers{
-            XAmzAlgorithm: "error",
-            XAmzContentSha256: "enim",
-            XAmzCredential: "necessitatibus",
-            XAmzDate: "non",
-            XAmzSecurityToken: "nam",
-            XAmzSignature: "in",
-            XAmzSignedHeaders: "eum",
+            XAmzAlgorithm: "iure",
+            XAmzContentSha256: "voluptate",
+            XAmzCredential: "quaerat",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "ullam",
+            XAmzSignature: "omnis",
+            XAmzSignedHeaders: "debitis",
         },
     }
     

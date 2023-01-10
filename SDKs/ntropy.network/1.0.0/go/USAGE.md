@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetABatchOfConsumerTransactionClassificationResultsRequest{
         PathParams: operations.GetABatchOfConsumerTransactionClassificationResultsPathParams{
-            ID: "velit",
+            ID: "quae",
         },
     }
     

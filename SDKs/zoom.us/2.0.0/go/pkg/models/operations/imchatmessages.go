@@ -15,12 +15,23 @@ type ImChatMessagesQueryParams struct {
 	To            time.Time `queryParam:"style=form,explode=true,name=to"`
 }
 
+type ImChatMessages200ApplicationJSONMessages struct {
+	Action     *string    `json:"action,omitempty"`
+	ActionTime *time.Time `json:"action_time,omitempty"`
+	DateTime   *time.Time `json:"date_time,omitempty"`
+	Message    *string    `json:"message,omitempty"`
+	Sender     *string    `json:"sender,omitempty"`
+}
+
 // ImChatMessages200ApplicationJSON
 // Pagination object.
 type ImChatMessages200ApplicationJSON struct {
-	From      *time.Time `json:"from,omitempty"`
-	SessionID *string    `json:"session_id,omitempty"`
-	To        *time.Time `json:"to,omitempty"`
+	From          *time.Time                                 `json:"from,omitempty"`
+	Messages      []ImChatMessages200ApplicationJSONMessages `json:"messages,omitempty"`
+	NextPageToken *string                                    `json:"next_page_token,omitempty"`
+	PageSize      *int64                                     `json:"page_size,omitempty"`
+	SessionID     *string                                    `json:"session_id,omitempty"`
+	To            *time.Time                                 `json:"to,omitempty"`
 }
 
 type ImChatMessagesRequest struct {

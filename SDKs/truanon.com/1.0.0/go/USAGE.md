@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetProfileRequest{
         QueryParams: operations.GetProfileQueryParams{
-            ID: "sit",
-            Service: "rerum",
+            ID: "et",
+            Service: "beatae",
         },
     }
     

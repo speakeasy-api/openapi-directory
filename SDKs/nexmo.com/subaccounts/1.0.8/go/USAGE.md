@@ -19,12 +19,12 @@ func main() {
             },
         },
         PathParams: operations.CreateSubAccountPathParams{
-            APIKey: "illum",
+            APIKey: "illo",
         },
         Request: shared.NewSubaccountRequest{
-            Name: "nemo",
-            Secret: "deserunt",
-            UsePrimaryAccountBalance: false,
+            Name: "deleniti",
+            Secret: "velit",
+            UsePrimaryAccountBalance: true,
         },
     }
     

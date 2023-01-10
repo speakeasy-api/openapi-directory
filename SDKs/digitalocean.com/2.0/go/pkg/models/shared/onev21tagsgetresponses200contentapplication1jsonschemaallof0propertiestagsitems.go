@@ -3,9 +3,11 @@ package shared
 // Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsResources
 // Tagged Resource Statistics include metadata regarding the resource type that has been tagged.
 type Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsResources struct {
+	Count           *int64                                                                                                    `json:"count,omitempty"`
 	Databases       *Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsPropertiesResourcesAllOf0 `json:"databases,omitempty"`
 	Droplets        *Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsPropertiesResourcesAllOf0 `json:"droplets,omitempty"`
 	Imgages         *Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsPropertiesResourcesAllOf0 `json:"imgages,omitempty"`
+	LastTaggedURI   *string                                                                                                   `json:"last_tagged_uri,omitempty"`
 	VolumeSnapshots *Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsPropertiesResourcesAllOf0 `json:"volume_snapshots,omitempty"`
 	Volumes         *Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsPropertiesResourcesAllOf0 `json:"volumes,omitempty"`
 }

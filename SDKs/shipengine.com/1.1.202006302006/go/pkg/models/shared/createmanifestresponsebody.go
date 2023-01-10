@@ -18,6 +18,7 @@ type CreateManifestResponseBody struct {
 	FormID           map[string]interface{}                     `json:"form_id"`
 	ManifestDownload CreateManifestResponseBodyManifestDownload `json:"manifest_download"`
 	ManifestID       map[string]interface{}                     `json:"manifest_id"`
+	Manifests        []Manifest                                 `json:"manifests,omitempty"`
 	ShipDate         time.Time                                  `json:"ship_date"`
 	Shipments        int32                                      `json:"shipments"`
 	SubmissionID     string                                     `json:"submission_id"`

@@ -26,7 +26,11 @@ type PastMeetingParticipants200ApplicationJSONParticipants struct {
 // PastMeetingParticipants200ApplicationJSON
 // Pagination object.
 type PastMeetingParticipants200ApplicationJSON struct {
-	Participants []PastMeetingParticipants200ApplicationJSONParticipants `json:"participants,omitempty"`
+	NextPageToken *string                                                 `json:"next_page_token,omitempty"`
+	PageCount     *int64                                                  `json:"page_count,omitempty"`
+	PageSize      *int64                                                  `json:"page_size,omitempty"`
+	Participants  []PastMeetingParticipants200ApplicationJSONParticipants `json:"participants,omitempty"`
+	TotalRecords  *int64                                                  `json:"total_records,omitempty"`
 }
 
 type PastMeetingParticipantsRequest struct {

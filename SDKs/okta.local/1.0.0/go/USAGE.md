@@ -13,9 +13,9 @@ func main() {
     
     req := operations.ClearUserSessionsRequest{
         PathParams: operations.ClearUserSessionsPathParams{
-            UserID: "aliquid",
+            UserID: "ut",
         },
-        Request: []byte("vitae"),
+        Request: []byte("consequuntur"),
     }
     
     res, err := s.ClearUserSessions(ctx, req)

@@ -4,5 +4,5 @@ package shared
 // Contains the output from the <a>DescribeOrderableClusterOptions</a> action.
 type OrderableClusterOptionsMessage struct {
 	Marker                  *string
-	OrderableClusterOptions []map[string]interface{}
+	OrderableClusterOptions []OrderableClusterOptionsList
 }

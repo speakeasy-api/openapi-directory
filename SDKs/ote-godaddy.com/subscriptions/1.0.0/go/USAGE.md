@@ -13,10 +13,10 @@ func main() {
     
     req := operations.CancelRequest{
         PathParams: operations.CancelPathParams{
-            SubscriptionID: "corrupti",
+            SubscriptionID: "consequuntur",
         },
         Headers: operations.CancelHeaders{
-            XShopperID: "sapiente",
+            XShopperID: "harum",
         },
     }
     

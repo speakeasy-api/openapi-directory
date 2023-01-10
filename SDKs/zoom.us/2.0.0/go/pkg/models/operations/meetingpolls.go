@@ -25,10 +25,21 @@ type MeetingPollsPollListPollQuestions struct {
 	Type    *MeetingPollsPollListPollQuestionsTypeEnum `json:"type,omitempty"`
 }
 
+type MeetingPollsPollListPollStatusEnum string
+
+const (
+	MeetingPollsPollListPollStatusEnumNotstart MeetingPollsPollListPollStatusEnum = "notstart"
+	MeetingPollsPollListPollStatusEnumStarted  MeetingPollsPollListPollStatusEnum = "started"
+	MeetingPollsPollListPollStatusEnumEnded    MeetingPollsPollListPollStatusEnum = "ended"
+	MeetingPollsPollListPollStatusEnumSharing  MeetingPollsPollListPollStatusEnum = "sharing"
+)
+
 // MeetingPollsPollListPoll
 // Poll
 type MeetingPollsPollListPoll struct {
+	ID        *string                             `json:"id,omitempty"`
 	Questions []MeetingPollsPollListPollQuestions `json:"questions,omitempty"`
+	Status    *MeetingPollsPollListPollStatusEnum `json:"status,omitempty"`
 	Title     *string                             `json:"title,omitempty"`
 }
 

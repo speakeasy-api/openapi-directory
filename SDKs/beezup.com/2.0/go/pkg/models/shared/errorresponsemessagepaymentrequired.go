@@ -1,5 +1,6 @@
 package shared
 
 type ErrorResponseMessagePaymentRequired struct {
-	Links ErrorResponseMessagePaymentRequiredLinks `json:"links"`
+	Errors []BeezUpCommonUserErrorMessage           `json:"errors"`
+	Links  ErrorResponseMessagePaymentRequiredLinks `json:"links"`
 }

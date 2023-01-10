@@ -23,7 +23,7 @@ func main() {
     
     req := operations.PreviewsReadRequest{
         PathParams: operations.PreviewsReadPathParams{
-            FileID: "et",
+            FileID: "a",
         },
     }
     

@@ -13,32 +13,34 @@ func main() {
     
     req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
         PathParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams{
-            Parent: "eos",
+            Parent: "at",
         },
         QueryParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "vel",
+            AccessToken: "et",
             Alt: "media",
-            Callback: "id",
-            Fields: "aliquid",
-            Key: "et",
-            OauthToken: "possimus",
+            Callback: "sint",
+            Fields: "vel",
+            Key: "culpa",
+            OauthToken: "fuga",
             PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "est",
-            UploadProtocol: "minus",
+            QuotaUser: "cumque",
+            UploadType: "debitis",
+            UploadProtocol: "optio",
         },
         Request: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
-                "ea",
+                "placeat",
+                "nihil",
             },
-            Name: "et",
+            Name: "quia",
             Topics: []string{
-                "voluptatem",
-                "consequatur",
+                "voluptas",
+                "impedit",
+                "earum",
             },
             Type: "POST_DRAFTED",
-            URI: "reprehenderit",
+            URI: "quia",
         },
     }
     

@@ -23,7 +23,7 @@ func main() {
     
     req := operations.PremiumNewsRequest{
         PathParams: operations.PremiumNewsPathParams{
-            Format: "xml",
+            Format: "json",
         },
     }
     

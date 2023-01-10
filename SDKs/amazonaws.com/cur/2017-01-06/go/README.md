@@ -34,17 +34,17 @@ func main() {
     
     req := operations.DeleteReportDefinitionRequest{
         Headers: operations.DeleteReportDefinitionHeaders{
-            XAmzAlgorithm: "dolor",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "ipsa",
-            XAmzDate: "ipsum",
-            XAmzSecurityToken: "ab",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "quo",
+            XAmzContentSha256: "et",
+            XAmzCredential: "eligendi",
+            XAmzDate: "soluta",
+            XAmzSecurityToken: "enim",
+            XAmzSignature: "commodi",
+            XAmzSignedHeaders: "quia",
             XAmzTarget: "AWSOrigamiServiceGatewayService.DeleteReportDefinition",
         },
         Request: shared.DeleteReportDefinitionRequest{
-            ReportName: "quas",
+            ReportName: "placeat",
         },
     }
     

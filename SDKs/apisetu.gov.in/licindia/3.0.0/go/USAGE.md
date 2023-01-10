@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.PodocRequestBody{
             CertificateParameters: &operations.PodocRequestBodyCertificateParameters{
-                DOB: "quidem",
-                FullName: "corporis",
-                PolDOB: "voluptas",
-                PolicyNo: "quasi",
+                DOB: "aut",
+                FullName: "alias",
+                PolDOB: "inventore",
+                PolicyNo: "est",
             },
-            ConsentArtifact: "nostrum",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "iusto",
+            TxnID: "dolor",
         },
     }
     

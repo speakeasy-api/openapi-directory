@@ -1,7 +1,7 @@
 package shared
 
 type RegisterTaskDefinitionRequest struct {
-	ContainerDefinitions    []ContainerDefinition1              `json:"containerDefinitions"`
+	ContainerDefinitions    []ContainerDefinition               `json:"containerDefinitions"`
 	CPU                     *string                             `json:"cpu,omitempty"`
 	EphemeralStorage        *EphemeralStorage                   `json:"ephemeralStorage,omitempty"`
 	ExecutionRoleArn        *string                             `json:"executionRoleArn,omitempty"`

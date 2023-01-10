@@ -34,13 +34,13 @@ func main() {
     
     req := operations.CreateAccountRequest{
         PathParams: operations.CreateAccountPathParams{
-            BudgetID: "repellat",
+            BudgetID: "quo",
         },
         Request: shared.SaveAccountWrapper{
             Account: shared.SaveAccount{
-                Balance: 2062512057044578664,
-                Name: "praesentium",
-                Type: "savings",
+                Balance: 1779878049279090778,
+                Name: "quos",
+                Type: "otherAsset",
             },
         },
     }

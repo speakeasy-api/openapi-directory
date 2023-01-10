@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                DOB: "qui",
-                FullName: "voluptate",
-                REGNNO: "quia",
-                UID: "numquam",
+                DOB: "quia",
+                FullName: "sint",
+                REGNNO: "autem",
+                UID: "similique",
             },
-            ConsentArtifact: "voluptates",
+            ConsentArtifact: "et",
             Format: "pdf",
-            TxnID: "iusto",
+            TxnID: "cum",
         },
     }
     

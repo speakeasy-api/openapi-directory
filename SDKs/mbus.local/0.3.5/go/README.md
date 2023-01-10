@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetRequest{
         PathParams: operations.GetPathParams{
-            Address: "ullam",
-            Baudrate: 3085496434280478611,
-            Device: "aperiam",
+            Address: "optio",
+            Baudrate: 8178495631525783111,
+            Device: "aut",
         },
     }
     

@@ -25,9 +25,9 @@ func main() {
     req := operations.GetCityRequest{
         QueryParams: operations.GetCityQueryParams{
             Format: "json",
-            Key: "nesciunt",
-            Lat: 89.199997,
-            Lng: 72.099998,
+            Key: "ex",
+            Lat: 12.200000,
+            Lng: 33.200001,
         },
     }
     

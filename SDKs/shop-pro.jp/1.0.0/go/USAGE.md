@@ -18,15 +18,15 @@ func main() {
             },
         },
         PathParams: operations.CreateUsageChargePathParams{
-            RecurringApplicationChargeID: "est",
+            RecurringApplicationChargeID: "a",
         },
         Headers: operations.CreateUsageChargeHeaders{
-            XAppstoreUsageChargeToken: "at",
+            XAppstoreUsageChargeToken: "eveniet",
         },
         Request: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{
-                Description: "sed",
-                Point: 4881243859244798930,
+                Description: "similique",
+                Point: 7913887709946499438,
             },
         },
     }

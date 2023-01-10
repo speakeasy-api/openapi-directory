@@ -20,7 +20,7 @@ type PostContainersGroupsNameOrIDUnmaprouteRequest struct {
 }
 
 type PostContainersGroupsNameOrIDUnmaprouteResponse struct {
-	ContainersGroupsNameOrIDMaproutePostInfo map[string]interface{}
+	ContainersGroupsNameOrIDMaproutePostInfo *shared.ContainersGroupsNameOrIDMaproutePostInfo
 	ContentType                              string
 	StatusCode                               int64
 }

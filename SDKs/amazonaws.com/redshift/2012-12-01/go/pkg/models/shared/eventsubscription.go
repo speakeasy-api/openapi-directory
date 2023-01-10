@@ -17,5 +17,5 @@ type EventSubscription struct {
 	SourceType               *string
 	Status                   *string
 	SubscriptionCreationTime *time.Time
-	Tags                     []map[string]interface{}
+	Tags                     []TagList
 }

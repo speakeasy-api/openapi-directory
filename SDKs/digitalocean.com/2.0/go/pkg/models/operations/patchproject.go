@@ -16,7 +16,7 @@ type PatchProject401ApplicationJSON struct {
 
 type PatchProjectRequest struct {
 	PathParams PatchProjectPathParams
-	Request    shared.Onev21projectsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesProjectsItems `request:"mediaType=application/json"`
+	Request    shared.Onev21projectsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesProjectsItemsInput `request:"mediaType=application/json"`
 }
 
 type PatchProjectResponse struct {

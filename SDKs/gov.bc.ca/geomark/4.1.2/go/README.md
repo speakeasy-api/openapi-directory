@@ -24,11 +24,11 @@ func main() {
     
     req := operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionRequest{
         PathParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionPathParams{
-            FileFormatExtension: "shp",
-            GeomarkID: "nihil",
+            FileFormatExtension: "shpz",
+            GeomarkID: "quia",
         },
         QueryParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionQueryParams{
-            Srid: 2293241265575495963,
+            Srid: 1068448084495713022,
         },
     }
     

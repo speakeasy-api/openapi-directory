@@ -13,10 +13,10 @@ func main() {
     
     req := operations.PostAuthOauthTokenRequest{
         Request: operations.PostAuthOauthTokenRequestBody{
-            ClientID: "ea",
-            ClientSecret: "labore",
-            GrantType: "quasi",
-            Scope: "eaque",
+            ClientID: "vel",
+            ClientSecret: "voluptates",
+            GrantType: "nesciunt",
+            Scope: "vel",
         },
     }
     

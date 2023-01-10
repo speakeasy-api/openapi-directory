@@ -21,63 +21,63 @@ func main() {
             },
         },
         QueryParams: operations.DoubleclickbidmanagerQueriesCreatequeryQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "esse",
-            Alt: "media",
+            DollarXgafv: "2",
+            AccessToken: "reprehenderit",
+            Alt: "proto",
             Asynchronous: true,
-            Callback: "vitae",
-            Fields: "consequuntur",
-            Key: "et",
-            OauthToken: "et",
-            PrettyPrint: false,
-            QuotaUser: "fugiat",
-            UploadType: "adipisci",
-            UploadProtocol: "quis",
+            Callback: "recusandae",
+            Fields: "soluta",
+            Key: "error",
+            OauthToken: "reprehenderit",
+            PrettyPrint: true,
+            QuotaUser: "aperiam",
+            UploadType: "temporibus",
+            UploadProtocol: "quisquam",
         },
         Request: &shared.Query{
-            Kind: "expedita",
+            Kind: "ab",
             Metadata: &shared.QueryMetadata{
-                DataRange: "PREVIOUS_QUARTER",
+                DataRange: "CURRENT_DAY",
                 Format: "EXCEL_CSV",
-                GoogleCloudStoragePathForLatestReport: "ut",
-                GoogleDrivePathForLatestReport: "facilis",
-                LatestReportRunTimeMs: "et",
-                Locale: "amet",
-                ReportCount: 7497250674156608171,
+                GoogleCloudStoragePathForLatestReport: "eum",
+                GoogleDrivePathForLatestReport: "soluta",
+                LatestReportRunTimeMs: "dolore",
+                Locale: "excepturi",
+                ReportCount: 272458188829119136,
                 Running: false,
-                SendNotification: false,
+                SendNotification: true,
                 ShareEmailAddress: []string{
-                    "optio",
-                    "voluptatum",
+                    "odit",
+                    "repudiandae",
                 },
-                Title: "ut",
+                Title: "aut",
             },
             Params: &shared.Parameters{
                 Filters: []shared.FilterPair{
                     shared.FilterPair{
-                        Type: "FILTER_TRUEVIEW_ZIPCODE",
-                        Value: "accusantium",
+                        Type: "FILTER_APP_URL",
+                        Value: "occaecati",
                     },
                     shared.FilterPair{
-                        Type: "FILTER_TRUEVIEW_AD",
-                        Value: "ducimus",
+                        Type: "FILTER_BUDGET_SEGMENT_BUDGET",
+                        Value: "voluptate",
                     },
                 },
                 GroupBys: []shared.ParametersGroupBysEnum{
-                    "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_MID_POINT",
-                    "FILTER_TRUEVIEW_DMA",
+                    "FILTER_YOUTUBE_AD_VIDEO",
+                    "FILTER_TRUEVIEW_INTEREST",
                 },
                 IncludeInviteData: true,
                 Metrics: []shared.ParametersMetricsEnum{
-                    "METRIC_WIN_LOSS_LINEITEM_AVAILABLE_REQUESTS",
-                    "METRIC_CUSTOM_FEE_1_ADVERTISER_CURRENCY",
+                    "METRIC_FEE6_PARTNER",
+                    "METRIC_ACTIVE_VIEW_PERCENT_IN_BACKGROUND",
                 },
                 Options: &shared.Options{
-                    IncludeOnlyTargetedUserLists: true,
+                    IncludeOnlyTargetedUserLists: false,
                     PathQueryOptions: &shared.PathQueryOptions{
                         ChannelGrouping: &shared.ChannelGrouping{
-                            FallbackName: "eos",
-                            Name: "dolor",
+                            FallbackName: "repellendus",
+                            Name: "alias",
                             Rules: []shared.Rule{
                                 shared.Rule{
                                     DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
@@ -85,108 +85,17 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_ELIGIBLE_COOKIES_ON_THIRD_PARTY_AUDIENCE_LIST_AND_INTEREST",
+                                                        Filter: "FILTER_CAMPAIGN_DAILY_FREQUENCY",
                                                         Match: "EXACT",
                                                         Values: []string{
-                                                            "ratione",
-                                                            "repudiandae",
-                                                            "velit",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_ACTIVE_VIEW_EXPECTED_VIEWABILITY",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
-                                                            "ipsa",
-                                                            "accusantium",
-                                                            "error",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_TRUEVIEW_INTEREST",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "aut",
-                                                            "minima",
-                                                            "unde",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_BUDGET_SEGMENT_TYPE",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "unde",
+                                                            "voluptas",
                                                         },
                                                     },
                                                 },
                                             },
                                         },
                                     },
-                                    Name: "voluptatem",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_PUBLISHER_PROPERTY_SECTION_ID",
-                                                        Match: "WILDCARD_EXPRESSION",
-                                                        Values: []string{
-                                                            "debitis",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_DATA_PROVIDER",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "aliquam",
-                                                            "quia",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_BUDGET_SEGMENT_TYPE",
-                                                        Match: "WILDCARD_EXPRESSION",
-                                                        Values: []string{
-                                                            "nihil",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_MID_POINT",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "impedit",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "cupiditate",
+                                    Name: "amet",
                                 },
                             },
                         },
@@ -195,69 +104,78 @@ func main() {
                                 EventFilters: []shared.EventFilter{
                                     shared.EventFilter{
                                         DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_GAM_LINE_ITEM_ID",
-                                            Match: "EXACT",
+                                            Filter: "FILTER_USER_LIST_THIRD_PARTY_NAME",
+                                            Match: "BEGINS_WITH",
                                             Values: []string{
-                                                "aut",
-                                                "itaque",
-                                                "praesentium",
+                                                "omnis",
+                                                "commodi",
+                                            },
+                                        },
+                                    },
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: "FILTER_SKIPPABLE_SUPPORT",
+                                            Match: "BEGINS_WITH",
+                                            Values: []string{
+                                                "nesciunt",
+                                                "dolores",
+                                                "impedit",
+                                            },
+                                        },
+                                    },
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: "FILTER_TRUEVIEW_REGION",
+                                            Match: "PARTIAL",
+                                            Values: []string{
+                                                "quas",
+                                            },
+                                        },
+                                    },
+                                },
+                                PathMatchPosition: "ANY",
+                            },
+                            shared.PathFilter{
+                                EventFilters: []shared.EventFilter{
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_COMPLETE",
+                                            Match: "PARTIAL",
+                                            Values: []string{
+                                                "sint",
+                                                "nihil",
+                                            },
+                                        },
+                                    },
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: "FILTER_VARIANT_NAME",
+                                            Match: "UNKNOWN",
+                                            Values: []string{
+                                                "in",
+                                                "cumque",
                                             },
                                         },
                                     },
                                 },
                                 PathMatchPosition: "LAST",
                             },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_YEAR",
-                                            Match: "WILDCARD_EXPRESSION",
-                                            Values: []string{
-                                                "similique",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_MRAID_SUPPORT",
-                                            Match: "EXACT",
-                                            Values: []string{
-                                                "voluptas",
-                                                "corrupti",
-                                                "sunt",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_YEAR",
-                                            Match: "BEGINS_WITH",
-                                            Values: []string{
-                                                "eos",
-                                                "omnis",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "FIRST",
-                            },
                         },
                     },
                 },
-                Type: "TYPE_TRUEVIEW",
+                Type: "TYPE_KEYWORD",
             },
-            QueryID: "deserunt",
-            ReportDataEndTimeMs: "maiores",
-            ReportDataStartTimeMs: "aspernatur",
+            QueryID: "nihil",
+            ReportDataEndTimeMs: "vel",
+            ReportDataStartTimeMs: "minima",
             Schedule: &shared.QuerySchedule{
-                EndTimeMs: "eos",
-                Frequency: "QUARTERLY",
-                NextRunMinuteOfDay: 3358088818695073581,
-                NextRunTimezoneCode: "perferendis",
-                StartTimeMs: "est",
+                EndTimeMs: "dolor",
+                Frequency: "YEARLY",
+                NextRunMinuteOfDay: 1221540791052924616,
+                NextRunTimezoneCode: "doloribus",
+                StartTimeMs: "veritatis",
             },
-            TimezoneCode: "enim",
+            TimezoneCode: "dolor",
         },
     }
     

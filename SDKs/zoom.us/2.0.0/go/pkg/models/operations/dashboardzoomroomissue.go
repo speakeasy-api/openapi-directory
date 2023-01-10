@@ -20,7 +20,10 @@ type DashboardZoomRoomIssue200ApplicationJSONIssues struct {
 }
 
 type DashboardZoomRoomIssue200ApplicationJSON struct {
-	Issues []DashboardZoomRoomIssue200ApplicationJSONIssues `json:"issues,omitempty"`
+	From         *time.Time                                       `json:"from,omitempty"`
+	Issues       []DashboardZoomRoomIssue200ApplicationJSONIssues `json:"issues,omitempty"`
+	To           *time.Time                                       `json:"to,omitempty"`
+	TotalRecords *int64                                           `json:"total_records,omitempty"`
 }
 
 type DashboardZoomRoomIssueRequest struct {

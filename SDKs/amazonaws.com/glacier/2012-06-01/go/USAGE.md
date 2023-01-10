@@ -23,18 +23,18 @@ func main() {
     
     req := operations.AbortMultipartUploadRequest{
         PathParams: operations.AbortMultipartUploadPathParams{
-            AccountID: "aut",
-            UploadID: "rerum",
-            VaultName: "nisi",
+            AccountID: "similique",
+            UploadID: "recusandae",
+            VaultName: "error",
         },
         Headers: operations.AbortMultipartUploadHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "quia",
-            XAmzCredential: "debitis",
-            XAmzDate: "harum",
-            XAmzSecurityToken: "vel",
-            XAmzSignature: "quo",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "hic",
+            XAmzContentSha256: "atque",
+            XAmzCredential: "rerum",
+            XAmzDate: "voluptates",
+            XAmzSecurityToken: "iste",
+            XAmzSignature: "reiciendis",
+            XAmzSignedHeaders: "ipsam",
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type UserListOfValuesResponseLinks struct {
-	Self map[string]interface{} `json:"self,omitempty"`
+	Self *LinksGetUserListOfValuesLink `json:"self,omitempty"`
 }

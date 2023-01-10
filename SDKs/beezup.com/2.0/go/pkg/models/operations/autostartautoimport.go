@@ -17,5 +17,5 @@ type AutoStartAutoImportResponse struct {
 	ContentType                                  string
 	Headers                                      map[string][]string
 	StatusCode                                   int64
-	LinksImportationGetImportationMonitoringLink map[string]interface{}
+	LinksImportationGetImportationMonitoringLink *shared.LinksImportationGetImportationMonitoringLink
 }

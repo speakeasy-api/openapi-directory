@@ -34,18 +34,18 @@ func main() {
     
     req := operations.AssociateKmsKeyRequest{
         Headers: operations.AssociateKmsKeyHeaders{
-            XAmzAlgorithm: "incidunt",
-            XAmzContentSha256: "neque",
-            XAmzCredential: "quo",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "ratione",
-            XAmzSignature: "tempora",
-            XAmzSignedHeaders: "cupiditate",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "vel",
+            XAmzCredential: "dolores",
+            XAmzDate: "iste",
+            XAmzSecurityToken: "ut",
+            XAmzSignature: "quia",
+            XAmzSignedHeaders: "dolorum",
             XAmzTarget: "Logs_20140328.AssociateKmsKey",
         },
         Request: shared.AssociateKmsKeyRequest{
-            KmsKeyID: "odit",
-            LogGroupName: "hic",
+            KmsKeyID: "ducimus",
+            LogGroupName: "ipsum",
         },
     }
     

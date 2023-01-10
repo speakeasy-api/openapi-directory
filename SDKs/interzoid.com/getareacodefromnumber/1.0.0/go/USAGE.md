@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetareacodefromnumberRequest{
         QueryParams: operations.GetareacodefromnumberQueryParams{
-            License: "sit",
-            Number: "repudiandae",
+            License: "aspernatur",
+            Number: "deleniti",
         },
     }
     

@@ -13,9 +13,9 @@ func main() {
     
     req := operations.GetV1EmailFreeRequest{
         QueryParams: operations.GetV1EmailFreeQueryParams{
-            Email: "fugiat",
+            Email: "sit",
             Format: "json",
-            Key: "dolores",
+            Key: "voluptatem",
         },
     }
     

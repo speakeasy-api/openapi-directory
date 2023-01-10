@@ -24,18 +24,18 @@ func main() {
     req := operations.GetCloneReceiptRuleSetRequest{
         QueryParams: operations.GetCloneReceiptRuleSetQueryParams{
             Action: "CloneReceiptRuleSet",
-            OriginalRuleSetName: "et",
-            RuleSetName: "vero",
+            OriginalRuleSetName: "in",
+            RuleSetName: "dolorem",
             Version: "2010-12-01",
         },
         Headers: operations.GetCloneReceiptRuleSetHeaders{
-            XAmzAlgorithm: "ex",
-            XAmzContentSha256: "magni",
-            XAmzCredential: "vero",
-            XAmzDate: "distinctio",
-            XAmzSecurityToken: "cumque",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "non",
+            XAmzAlgorithm: "sint",
+            XAmzContentSha256: "non",
+            XAmzCredential: "qui",
+            XAmzDate: "debitis",
+            XAmzSecurityToken: "in",
+            XAmzSignature: "dolore",
+            XAmzSignedHeaders: "quas",
         },
     }
     

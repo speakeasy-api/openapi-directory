@@ -1,6 +1,6 @@
 package shared
 
 type ExclusionFiltersResponseLinks struct {
-	Configure map[string]interface{} `json:"configure,omitempty"`
-	Self      map[string]interface{} `json:"self"`
+	Configure *LinksConfigureChannelCatalogExclusionFiltersLink `json:"configure,omitempty"`
+	Self      LinksGetChannelCatalogExclusionFiltersLink        `json:"self"`
 }

@@ -33,7 +33,7 @@ type GetModelGenotypeAssociationsRequest struct {
 }
 
 type GetModelGenotypeAssociationsResponse struct {
-	AssociationResults *shared.AssociationResults4
+	AssociationResults *shared.AssociationResults
 	ContentType        string
 	StatusCode         int64
 }

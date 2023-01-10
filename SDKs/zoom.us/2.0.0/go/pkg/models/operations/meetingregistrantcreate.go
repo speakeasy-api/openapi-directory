@@ -23,6 +23,7 @@ type MeetingRegistrantCreateApplicationJSONCustomQuestions struct {
 // Registrant base object.
 type MeetingRegistrantCreateApplicationJSON struct {
 	Address               *string                                                 `json:"address,omitempty"`
+	AutoApprove           *bool                                                   `json:"auto_approve,omitempty"`
 	City                  *string                                                 `json:"city,omitempty"`
 	Comments              *string                                                 `json:"comments,omitempty"`
 	Country               *string                                                 `json:"country,omitempty"`
@@ -31,6 +32,7 @@ type MeetingRegistrantCreateApplicationJSON struct {
 	FirstName             string                                                  `json:"first_name"`
 	Industry              *string                                                 `json:"industry,omitempty"`
 	JobTitle              *string                                                 `json:"job_title,omitempty"`
+	Language              *string                                                 `json:"language,omitempty"`
 	LastName              *string                                                 `json:"last_name,omitempty"`
 	NoOfEmployees         *string                                                 `json:"no_of_employees,omitempty"`
 	Org                   *string                                                 `json:"org,omitempty"`
@@ -52,6 +54,7 @@ type MeetingRegistrantCreateMultipartFormDataCustomQuestions struct {
 // Registrant base object.
 type MeetingRegistrantCreateMultipartFormData1 struct {
 	Address               *string                                                   `multipartForm:"name=address"`
+	AutoApprove           *bool                                                     `multipartForm:"name=auto_approve"`
 	City                  *string                                                   `multipartForm:"name=city"`
 	Comments              *string                                                   `multipartForm:"name=comments"`
 	Country               *string                                                   `multipartForm:"name=country"`
@@ -60,6 +63,7 @@ type MeetingRegistrantCreateMultipartFormData1 struct {
 	FirstName             string                                                    `multipartForm:"name=first_name"`
 	Industry              *string                                                   `multipartForm:"name=industry"`
 	JobTitle              *string                                                   `multipartForm:"name=job_title"`
+	Language              *string                                                   `multipartForm:"name=language"`
 	LastName              *string                                                   `multipartForm:"name=last_name"`
 	NoOfEmployees         *string                                                   `multipartForm:"name=no_of_employees"`
 	Org                   *string                                                   `multipartForm:"name=org"`

@@ -7,7 +7,7 @@ type RedshiftDestinationDescription struct {
 	ClusterJDBCURL           string                    `json:"ClusterJDBCURL"`
 	CopyCommand              CopyCommand               `json:"CopyCommand"`
 	ProcessingConfiguration  *ProcessingConfiguration  `json:"ProcessingConfiguration,omitempty"`
-	RetryOptions             *RedshiftRetryOptions1    `json:"RetryOptions,omitempty"`
+	RetryOptions             *RedshiftRetryOptions     `json:"RetryOptions,omitempty"`
 	RoleARN                  string                    `json:"RoleARN"`
 	S3BackupDescription      *S3DestinationDescription `json:"S3BackupDescription,omitempty"`
 	S3BackupMode             *RedshiftS3BackupModeEnum `json:"S3BackupMode,omitempty"`

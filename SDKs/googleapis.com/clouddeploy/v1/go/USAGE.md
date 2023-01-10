@@ -21,78 +21,77 @@ func main() {
             },
         },
         PathParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams{
-            Parent: "sed",
+            Parent: "in",
         },
         QueryParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "non",
-            Alt: "json",
-            Callback: "et",
-            DeliveryPipelineID: "recusandae",
-            Fields: "fugiat",
-            Key: "consequatur",
-            OauthToken: "pariatur",
-            PrettyPrint: false,
-            QuotaUser: "voluptas",
-            RequestID: "non",
-            UploadType: "minima",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "rerum",
+            Alt: "proto",
+            Callback: "vero",
+            DeliveryPipelineID: "et",
+            Fields: "dolor",
+            Key: "quibusdam",
+            OauthToken: "sit",
+            PrettyPrint: true,
+            QuotaUser: "eum",
+            RequestID: "natus",
+            UploadType: "ipsa",
+            UploadProtocol: "et",
             ValidateOnly: false,
         },
         Request: &shared.DeliveryPipelineInput{
             Annotations: map[string]string{
-                "ipsum": "cum",
-                "similique": "minima",
+                "sapiente": "iure",
             },
             Condition: &shared.PipelineCondition{
                 PipelineReadyCondition: &shared.PipelineReadyCondition{
                     Status: true,
-                    UpdateTime: "ut",
+                    UpdateTime: "omnis",
                 },
                 TargetsPresentCondition: &shared.TargetsPresentCondition{
                     MissingTargets: []string{
-                        "asperiores",
-                        "natus",
+                        "fugit",
                     },
-                    Status: false,
-                    UpdateTime: "harum",
+                    Status: true,
+                    UpdateTime: "inventore",
                 },
             },
-            Description: "voluptatem",
-            Etag: "nesciunt",
+            Description: "a",
+            Etag: "laboriosam",
             Labels: map[string]string{
-                "ut": "quo",
-                "commodi": "id",
-                "officiis": "nulla",
+                "voluptates": "laborum",
+                "eligendi": "est",
             },
-            Name: "aut",
+            Name: "inventore",
             SerialPipeline: &shared.SerialPipeline{
                 Stages: []shared.Stage{
                     shared.Stage{
                         Profiles: []string{
-                            "dolores",
+                            "sapiente",
                         },
                         Strategy: &shared.Strategy{
                             Standard: &shared.Standard{
                                 Verify: false,
                             },
                         },
-                        TargetID: "delectus",
+                        TargetID: "aliquam",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "non",
+                            "dolores",
+                            "vel",
+                            "cumque",
                         },
                         Strategy: &shared.Strategy{
                             Standard: &shared.Standard{
-                                Verify: false,
+                                Verify: true,
                             },
                         },
-                        TargetID: "ut",
+                        TargetID: "nihil",
                     },
                 },
             },
-            Suspended: false,
+            Suspended: true,
         },
     }
     

@@ -18,8 +18,8 @@ func main() {
             },
         },
         QueryParams: operations.GetAllAccountsQueryParams{
-            PageNumber: 2490157273402513042,
-            PageSize: 3513062419350002252,
+            PageNumber: 320452589942240589,
+            PageSize: 8077343311452570016,
             Provider: "whatsapp",
         },
     }

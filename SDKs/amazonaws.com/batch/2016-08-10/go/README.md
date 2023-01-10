@@ -34,17 +34,17 @@ func main() {
     
     req := operations.CancelJobRequest{
         Headers: operations.CancelJobHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "veniam",
-            XAmzCredential: "qui",
-            XAmzDate: "doloribus",
-            XAmzSecurityToken: "ad",
-            XAmzSignature: "minus",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "beatae",
+            XAmzContentSha256: "tempore",
+            XAmzCredential: "reprehenderit",
+            XAmzDate: "nostrum",
+            XAmzSecurityToken: "velit",
+            XAmzSignature: "necessitatibus",
+            XAmzSignedHeaders: "illo",
         },
         Request: operations.CancelJobRequestBody{
-            JobID: "est",
-            Reason: "voluptas",
+            JobID: "aut",
+            Reason: "quis",
         },
     }
     

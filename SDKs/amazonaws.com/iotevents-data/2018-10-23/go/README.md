@@ -34,21 +34,33 @@ func main() {
     
     req := operations.BatchAcknowledgeAlarmRequest{
         Headers: operations.BatchAcknowledgeAlarmHeaders{
-            XAmzAlgorithm: "adipisci",
-            XAmzContentSha256: "suscipit",
-            XAmzCredential: "tempora",
-            XAmzDate: "illum",
-            XAmzSecurityToken: "quae",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "consectetur",
+            XAmzAlgorithm: "maxime",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "asperiores",
+            XAmzDate: "provident",
+            XAmzSecurityToken: "doloribus",
+            XAmzSignature: "architecto",
+            XAmzSignedHeaders: "est",
         },
         Request: operations.BatchAcknowledgeAlarmRequestBody{
             AcknowledgeActionRequests: []shared.AcknowledgeAlarmActionRequest{
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "doloremque",
-                    KeyValue: "neque",
-                    Note: "sint",
-                    RequestID: "iste",
+                    AlarmModelName: "odio",
+                    KeyValue: "blanditiis",
+                    Note: "voluptatem",
+                    RequestID: "ea",
+                },
+                shared.AcknowledgeAlarmActionRequest{
+                    AlarmModelName: "eum",
+                    KeyValue: "at",
+                    Note: "fugit",
+                    RequestID: "dolore",
+                },
+                shared.AcknowledgeAlarmActionRequest{
+                    AlarmModelName: "voluptatem",
+                    KeyValue: "recusandae",
+                    Note: "impedit",
+                    RequestID: "odio",
                 },
             },
         },

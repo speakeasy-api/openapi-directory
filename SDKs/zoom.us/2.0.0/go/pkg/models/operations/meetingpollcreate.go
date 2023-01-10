@@ -37,6 +37,24 @@ type MeetingPollCreateSecurity struct {
 	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
 }
 
+type MeetingPollCreatePollStatusEnum string
+
+const (
+	MeetingPollCreatePollStatusEnumNotstart MeetingPollCreatePollStatusEnum = "notstart"
+	MeetingPollCreatePollStatusEnumStarted  MeetingPollCreatePollStatusEnum = "started"
+	MeetingPollCreatePollStatusEnumEnded    MeetingPollCreatePollStatusEnum = "ended"
+	MeetingPollCreatePollStatusEnumSharing  MeetingPollCreatePollStatusEnum = "sharing"
+)
+
+// MeetingPollCreatePoll2
+// Poll
+type MeetingPollCreatePoll2 struct {
+	ID        *string                          `json:"id,omitempty"`
+	Questions []MeetingPollCreatePollQuestions `json:"questions,omitempty"`
+	Status    *MeetingPollCreatePollStatusEnum `json:"status,omitempty"`
+	Title     *string                          `json:"title,omitempty"`
+}
+
 type MeetingPollCreateRequest struct {
 	PathParams MeetingPollCreatePathParams
 	Request    MeetingPollCreateRequests
@@ -47,6 +65,6 @@ type MeetingPollCreateResponse struct {
 	Body        []byte
 	ContentType string
 	Headers     map[string][]string
-	Poll        *MeetingPollCreatePoll
+	Poll        *MeetingPollCreatePoll2
 	StatusCode  int64
 }

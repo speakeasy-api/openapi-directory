@@ -14,8 +14,8 @@ type DbInstance struct {
 	DBInstanceIdentifier                  *string
 	DBInstanceStatus                      *string
 	DBName                                *string
-	DBParameterGroups                     []map[string]interface{}
-	DBSecurityGroups                      []map[string]interface{}
+	DBParameterGroups                     []DbParameterGroupStatusList
+	DBSecurityGroups                      []DbSecurityGroupMembershipList
 	DBSubnetGroup                         *DbSubnetGroup
 	Endpoint                              *Endpoint
 	Engine                                *string
@@ -34,5 +34,5 @@ type DbInstance struct {
 	ReadReplicaDBInstanceIdentifiers      []map[string]interface{}
 	ReadReplicaSourceDBInstanceIdentifier *string
 	SecondaryAvailabilityZone             *string
-	VpcSecurityGroups                     []map[string]interface{}
+	VpcSecurityGroups                     []VpcSecurityGroupMembershipList
 }

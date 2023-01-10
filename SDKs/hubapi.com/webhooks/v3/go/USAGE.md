@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteWebhooksV3AppIDSettingsClearPathParams{
-            AppID: 5756861921549140493,
+            AppID: 344940944949937928,
         },
     }
     

@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.LicerRequestBody{
             CertificateParameters: &operations.LicerRequestBodyCertificateParameters{
-                FullName: "dicta",
-                Udf1: "recusandae",
-                Udf2: "sint",
+                FullName: "ullam",
+                Udf1: "velit",
+                Udf2: "eos",
             },
-            ConsentArtifact: "inventore",
+            ConsentArtifact: "officiis",
             Format: "pdf",
-            TxnID: "voluptatibus",
+            TxnID: "nam",
         },
     }
     

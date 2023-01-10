@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.DipcrRequestBody{
             CertificateParameters: &operations.DipcrRequestBodyCertificateParameters{
-                FullName: "doloribus",
-                RollNo: "porro",
+                FullName: "consectetur",
+                RollNo: "quis",
             },
-            ConsentArtifact: "est",
+            ConsentArtifact: "unde",
             Format: "pdf",
-            TxnID: "eum",
+            TxnID: "accusantium",
         },
     }
     

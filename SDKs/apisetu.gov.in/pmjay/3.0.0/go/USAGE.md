@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.PmjayRequestBody{
             CertificateParameters: &operations.PmjayRequestBodyCertificateParameters{
-                DOB: "cupiditate",
-                FullName: "asperiores",
-                Udf1: "quasi",
-                Udf2: "eius",
+                DOB: "enim",
+                FullName: "aliquid",
+                Udf1: "et",
+                Udf2: "et",
             },
-            ConsentArtifact: "ea",
+            ConsentArtifact: "quia",
             Format: "pdf",
-            TxnID: "eligendi",
+            TxnID: "maiores",
         },
     }
     

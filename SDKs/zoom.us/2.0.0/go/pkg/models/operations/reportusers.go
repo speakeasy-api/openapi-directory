@@ -46,9 +46,16 @@ type ReportUsers200ApplicationJSONUsers struct {
 }
 
 type ReportUsers200ApplicationJSON struct {
+	From                *time.Time                           `json:"from,omitempty"`
+	NextPageToken       *string                              `json:"next_page_token,omitempty"`
+	PageCount           *int64                               `json:"page_count,omitempty"`
+	PageNumber          *int64                               `json:"page_number,omitempty"`
+	PageSize            *int64                               `json:"page_size,omitempty"`
+	To                  *time.Time                           `json:"to,omitempty"`
 	TotalMeetingMinutes *int64                               `json:"total_meeting_minutes,omitempty"`
 	TotalMeetings       *int64                               `json:"total_meetings,omitempty"`
 	TotalParticipants   *int64                               `json:"total_participants,omitempty"`
+	TotalRecords        *int64                               `json:"total_records,omitempty"`
 	Users               []ReportUsers200ApplicationJSONUsers `json:"users,omitempty"`
 }
 

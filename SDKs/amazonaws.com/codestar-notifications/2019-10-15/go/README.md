@@ -34,31 +34,40 @@ func main() {
     
     req := operations.CreateNotificationRuleRequest{
         Headers: operations.CreateNotificationRuleHeaders{
-            XAmzAlgorithm: "occaecati",
-            XAmzContentSha256: "maiores",
-            XAmzCredential: "rerum",
-            XAmzDate: "nobis",
-            XAmzSecurityToken: "libero",
-            XAmzSignature: "cumque",
-            XAmzSignedHeaders: "accusamus",
+            XAmzAlgorithm: "labore",
+            XAmzContentSha256: "est",
+            XAmzCredential: "quod",
+            XAmzDate: "et",
+            XAmzSecurityToken: "sit",
+            XAmzSignature: "quo",
+            XAmzSignedHeaders: "omnis",
         },
         Request: operations.CreateNotificationRuleRequestBody{
-            ClientRequestToken: "voluptates",
+            ClientRequestToken: "reprehenderit",
             DetailType: "BASIC",
             EventTypeIds: []string{
-                "quibusdam",
+                "veniam",
             },
-            Name: "minima",
-            Resource: "iusto",
-            Status: "ENABLED",
+            Name: "impedit",
+            Resource: "ex",
+            Status: "DISABLED",
             Tags: map[string]string{
-                "sed": "quo",
-                "animi": "et",
+                "sunt": "incidunt",
+                "sed": "repellendus",
+                "error": "nostrum",
             },
             Targets: []shared.Target{
                 shared.Target{
-                    TargetAddress: "est",
-                    TargetType: "quod",
+                    TargetAddress: "nihil",
+                    TargetType: "ipsa",
+                },
+                shared.Target{
+                    TargetAddress: "nihil",
+                    TargetType: "sed",
+                },
+                shared.Target{
+                    TargetAddress: "autem",
+                    TargetType: "consequatur",
                 },
             },
         },

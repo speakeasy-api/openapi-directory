@@ -19,16 +19,16 @@ func main() {
         },
         Request: shared.CredentialOptions{
             ACL: map[string]interface{}{
-                "et": "mollitia",
+                "voluptas": "iusto",
+                "rerum": "non",
             },
-            Cidrs: "et",
-            Global: true,
-            Name: "ut",
+            Cidrs: "possimus",
+            Global: false,
+            Name: "distinctio",
             Secret: map[string]interface{}{
-                "id": "dolores",
-                "sapiente": "deserunt",
+                "accusamus": "voluptatum",
             },
-            Type: "aws_access_secret",
+            Type: "miradore_api_key_v1",
         },
     }
     

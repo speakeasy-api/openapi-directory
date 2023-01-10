@@ -44,6 +44,7 @@ type MeetingRecordingRegistrantsRecordingRegistrationListRegistrants struct {
 	CustomQuestions       []MeetingRecordingRegistrantsRecordingRegistrationListRegistrantsCustomQuestions `json:"custom_questions,omitempty"`
 	Email                 string                                                                           `json:"email"`
 	FirstName             string                                                                           `json:"first_name"`
+	ID                    *string                                                                          `json:"id,omitempty"`
 	Industry              *string                                                                          `json:"industry,omitempty"`
 	JobTitle              *string                                                                          `json:"job_title,omitempty"`
 	LastName              *string                                                                          `json:"last_name,omitempty"`
@@ -59,7 +60,12 @@ type MeetingRecordingRegistrantsRecordingRegistrationListRegistrants struct {
 // MeetingRecordingRegistrantsRecordingRegistrationList
 // Pagination Object.
 type MeetingRecordingRegistrantsRecordingRegistrationList struct {
-	Registrants []MeetingRecordingRegistrantsRecordingRegistrationListRegistrants `json:"registrants,omitempty"`
+	NextPageToken *string                                                           `json:"next_page_token,omitempty"`
+	PageCount     *int64                                                            `json:"page_count,omitempty"`
+	PageNumber    *int64                                                            `json:"page_number,omitempty"`
+	PageSize      *int64                                                            `json:"page_size,omitempty"`
+	Registrants   []MeetingRecordingRegistrantsRecordingRegistrationListRegistrants `json:"registrants,omitempty"`
+	TotalRecords  *int64                                                            `json:"total_records,omitempty"`
 }
 
 type MeetingRecordingRegistrantsRequest struct {

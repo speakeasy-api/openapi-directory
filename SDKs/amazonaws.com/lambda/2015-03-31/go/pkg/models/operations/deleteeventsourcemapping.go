@@ -25,7 +25,7 @@ type DeleteEventSourceMappingRequest struct {
 
 type DeleteEventSourceMappingResponse struct {
 	ContentType                     string
-	EventSourceMappingConfiguration *shared.EventSourceMappingConfiguration1
+	EventSourceMappingConfiguration *shared.EventSourceMappingConfiguration
 	InvalidParameterValueException  *interface{}
 	ResourceInUseException          *interface{}
 	ResourceNotFoundException       *interface{}

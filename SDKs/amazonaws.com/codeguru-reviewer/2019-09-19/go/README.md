@@ -34,43 +34,41 @@ func main() {
     
     req := operations.AssociateRepositoryRequest{
         Headers: operations.AssociateRepositoryHeaders{
-            XAmzAlgorithm: "explicabo",
-            XAmzContentSha256: "omnis",
-            XAmzCredential: "ut",
-            XAmzDate: "libero",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "numquam",
+            XAmzDate: "et",
+            XAmzSecurityToken: "officiis",
+            XAmzSignature: "sequi",
+            XAmzSignedHeaders: "vel",
         },
         Request: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "quasi",
+            ClientRequestToken: "et",
             KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKmsKeyDetails{
                 EncryptionOption: "AWS_OWNED_CMK",
-                KMSKeyID: "voluptate",
+                KMSKeyID: "aliquid",
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "ut",
-                    Name: "deserunt",
-                    Owner: "sed",
+                    ConnectionArn: "autem",
+                    Name: "asperiores",
+                    Owner: "tempora",
                 },
                 CodeCommit: &shared.CodeCommitRepository{
-                    Name: "sint",
+                    Name: "voluptate",
                 },
                 GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
                     ConnectionArn: "est",
-                    Name: "est",
-                    Owner: "omnis",
+                    Name: "nostrum",
+                    Owner: "mollitia",
                 },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "reiciendis",
-                    Name: "ipsam",
+                    BucketName: "aut",
+                    Name: "recusandae",
                 },
             },
             Tags: map[string]string{
-                "et": "molestias",
-                "minus": "pariatur",
-                "voluptatum": "tenetur",
+                "quas": "repellendus",
             },
         },
     }

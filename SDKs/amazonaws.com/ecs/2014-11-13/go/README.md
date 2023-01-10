@@ -34,40 +34,36 @@ func main() {
     
     req := operations.CreateCapacityProviderRequest{
         Headers: operations.CreateCapacityProviderHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "est",
-            XAmzCredential: "ipsum",
-            XAmzDate: "quam",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "dolores",
+            XAmzAlgorithm: "praesentium",
+            XAmzContentSha256: "voluptates",
+            XAmzCredential: "inventore",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "deleniti",
+            XAmzSignature: "facere",
+            XAmzSignedHeaders: "numquam",
             XAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
         },
         Request: shared.CreateCapacityProviderRequest{
             AutoScalingGroupProvider: shared.AutoScalingGroupProvider{
-                AutoScalingGroupArn: "impedit",
+                AutoScalingGroupArn: "explicabo",
                 ManagedScaling: &shared.ManagedScaling{
-                    InstanceWarmupPeriod: 3752781218885968701,
-                    MaximumScalingStepSize: 2991421044203248760,
-                    MinimumScalingStepSize: 5310393022320405575,
+                    InstanceWarmupPeriod: 6635728551378606624,
+                    MaximumScalingStepSize: 5973617793068578508,
+                    MinimumScalingStepSize: 8160591596675653275,
                     Status: "DISABLED",
-                    TargetCapacity: 371208508841907247,
+                    TargetCapacity: 7028752311702887101,
                 },
-                ManagedTerminationProtection: "DISABLED",
+                ManagedTerminationProtection: "ENABLED",
             },
-            Name: "quia",
+            Name: "qui",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "ducimus",
-                    Value: "enim",
+                    Key: "qui",
+                    Value: "et",
                 },
                 shared.Tag{
-                    Key: "blanditiis",
-                    Value: "distinctio",
-                },
-                shared.Tag{
-                    Key: "delectus",
-                    Value: "rerum",
+                    Key: "aliquid",
+                    Value: "repellendus",
                 },
             },
         },

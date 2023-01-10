@@ -18,13 +18,13 @@ type CacheCluster struct {
 	CacheNodeType                      *string
 	CacheNodes                         []CacheNodeList
 	CacheParameterGroup                *CacheParameterGroupStatus
-	CacheSecurityGroups                []map[string]interface{}
+	CacheSecurityGroups                []CacheSecurityGroupMembershipList
 	CacheSubnetGroupName               *string
 	ClientDownloadLandingPage          *string
 	ConfigurationEndpoint              *Endpoint
 	Engine                             *string
 	EngineVersion                      *string
-	LogDeliveryConfigurations          []map[string]interface{}
+	LogDeliveryConfigurations          []LogDeliveryConfigurationList
 	NotificationConfiguration          *NotificationConfiguration
 	NumCacheNodes                      *int64
 	PendingModifiedValues              *PendingModifiedValues

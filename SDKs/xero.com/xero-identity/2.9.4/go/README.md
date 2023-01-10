@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteConnectionPathParams{
-            ID: "temporibus",
+            ID: "qui",
         },
     }
     

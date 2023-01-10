@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.LabrpRequestBody{
             CertificateParameters: &operations.LabrpRequestBodyCertificateParameters{
-                FullName: "commodi",
-                Reportdate: "ut",
-                Uhid: "aut",
+                FullName: "ipsum",
+                Reportdate: "rem",
+                Uhid: "consequuntur",
             },
-            ConsentArtifact: "explicabo",
+            ConsentArtifact: "aliquam",
             Format: "pdf",
-            TxnID: "sed",
+            TxnID: "fuga",
         },
     }
     

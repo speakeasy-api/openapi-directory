@@ -1,5 +1,5 @@
 package shared
 
 type IncreaseNodeGroupsInGlobalReplicationGroupResult struct {
-	GlobalReplicationGroup *GlobalReplicationGroup1
+	GlobalReplicationGroup *GlobalReplicationGroup
 }

@@ -24,47 +24,44 @@ func main() {
     
     req := operations.PatchAttractionRequest{
         PathParams: operations.PatchAttractionPathParams{
-            ID: "non",
+            ID: "laudantium",
         },
         Headers: operations.PatchAttractionHeaders{
-            TMPSCorrelationID: "ullam",
+            TMPSCorrelationID: "est",
         },
         Request: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "error",
-                    Op: "copy",
-                    Path: "doloremque",
+                    From: "blanditiis",
+                    Op: "add",
+                    Path: "totam",
                     Value: map[string]interface{}{
-                        "non": "et",
+                        "velit": "quo",
+                        "est": "et",
                     },
                 },
                 shared.Change{
-                    From: "sint",
-                    Op: "replace",
-                    Path: "repellat",
+                    From: "asperiores",
+                    Op: "remove",
+                    Path: "fuga",
                     Value: map[string]interface{}{
-                        "eos": "ut",
-                        "culpa": "nostrum",
-                        "error": "ratione",
+                        "blanditiis": "est",
                     },
                 },
                 shared.Change{
-                    From: "aliquam",
+                    From: "natus",
                     Op: "test",
-                    Path: "reprehenderit",
+                    Path: "quos",
                     Value: map[string]interface{}{
-                        "ut": "quisquam",
-                        "voluptatem": "eaque",
-                        "non": "sit",
+                        "labore": "quasi",
                     },
                 },
             },
-            RelatedEntityID: "id",
+            RelatedEntityID: "voluptatum",
             RelatedEntityType: "event",
-            Score: 96.099998,
-            Source: "totam",
-            VersionNumber: 721356596753963764,
+            Score: 72.099998,
+            Source: "animi",
+            VersionNumber: 7633959003780935022,
         },
     }
     

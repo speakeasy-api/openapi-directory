@@ -24,7 +24,7 @@ func main() {
     
     req := operations.CompareStationRequest{
         PathParams: operations.CompareStationPathParams{
-            StationName: "amet",
+            StationName: "et",
         },
     }
     

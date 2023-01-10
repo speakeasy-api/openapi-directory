@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.FetchPhoneNumberPathParams{
-            PhoneNumber: "quae",
+            PhoneNumber: "impedit",
         },
     }
     

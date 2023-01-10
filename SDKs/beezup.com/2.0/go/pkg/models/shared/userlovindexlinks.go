@@ -1,6 +1,6 @@
 package shared
 
 type UserLovIndexLinks struct {
-	Lists map[string]map[string]interface{} `json:"lists,omitempty"`
-	Self  map[string]interface{}            `json:"self,omitempty"`
+	Lists map[string]LinksGetUserListOfValuesLink `json:"lists,omitempty"`
+	Self  *LinksGetUserLovIndexLink               `json:"self,omitempty"`
 }

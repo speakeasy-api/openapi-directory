@@ -34,17 +34,17 @@ func main() {
     
     req := operations.CreateClusterRequest{
         Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "sint",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "in",
-            XAmzDate: "qui",
-            XAmzSecurityToken: "impedit",
-            XAmzSignature: "culpa",
-            XAmzSignedHeaders: "voluptatibus",
+            XAmzAlgorithm: "omnis",
+            XAmzContentSha256: "velit",
+            XAmzCredential: "commodi",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "aut",
+            XAmzSignature: "explicabo",
+            XAmzSignedHeaders: "sit",
         },
         Request: operations.CreateClusterRequestBody{
-            ClientToken: "consequuntur",
-            ClusterName: "sapiente",
+            ClientToken: "sed",
+            ClusterName: "est",
         },
     }
     

@@ -10,7 +10,7 @@ type AddSpotSetPathParams struct {
 
 type AddSpotSetRequest struct {
 	PathParams AddSpotSetPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
+	Request    shared.SpotSetCreateInput `request:"mediaType=application/json"`
 }
 
 type AddSpotSetResponse struct {

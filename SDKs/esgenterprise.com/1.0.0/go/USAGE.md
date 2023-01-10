@@ -18,7 +18,7 @@ func main() {
             },
         },
         QueryParams: operations.GetSearchQueryParams{
-            Q: "alias",
+            Q: "magnam",
         },
     }
     

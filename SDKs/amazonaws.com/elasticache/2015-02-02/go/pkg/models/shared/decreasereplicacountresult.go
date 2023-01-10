@@ -1,5 +1,5 @@
 package shared
 
 type DecreaseReplicaCountResult struct {
-	ReplicationGroup *ReplicationGroup1
+	ReplicationGroup *ReplicationGroup
 }

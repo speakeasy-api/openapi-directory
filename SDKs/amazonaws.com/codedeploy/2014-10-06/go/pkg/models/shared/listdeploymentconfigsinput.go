@@ -3,5 +3,5 @@ package shared
 // ListDeploymentConfigsInput
 // Represents the input of a <code>ListDeploymentConfigs</code> operation.
 type ListDeploymentConfigsInput struct {
-	NextToken map[string]interface{} `json:"nextToken,omitempty"`
+	NextToken *string `json:"nextToken,omitempty"`
 }

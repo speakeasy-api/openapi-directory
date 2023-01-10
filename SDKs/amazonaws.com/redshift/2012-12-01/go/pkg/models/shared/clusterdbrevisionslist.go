@@ -1,0 +1,14 @@
+package shared
+
+import (
+	"time"
+)
+
+// ClusterDbRevisionsList
+// Describes a <code>ClusterDbRevision</code>.
+type ClusterDbRevisionsList struct {
+	ClusterIdentifier           *string
+	CurrentDatabaseRevision     *string
+	DatabaseRevisionReleaseDate *time.Time
+	RevisionTargets             []RevisionTargetsList
+}

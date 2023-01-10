@@ -34,17 +34,17 @@ func main() {
             },
         },
         QueryParams: operations.AnalyticsreportingReportsBatchGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "illum",
+            DollarXgafv: "1",
+            AccessToken: "eveniet",
             Alt: "json",
-            Callback: "est",
-            Fields: "repellendus",
-            Key: "consequatur",
-            OauthToken: "laudantium",
-            PrettyPrint: false,
-            QuotaUser: "et",
-            UploadType: "repudiandae",
-            UploadProtocol: "ipsum",
+            Callback: "reiciendis",
+            Fields: "laudantium",
+            Key: "autem",
+            OauthToken: "quam",
+            PrettyPrint: true,
+            QuotaUser: "recusandae",
+            UploadType: "quisquam",
+            UploadProtocol: "quasi",
         },
         Request: &shared.GetReportsRequest{
             ReportRequests: []shared.ReportRequest{
@@ -53,2347 +53,165 @@ func main() {
                         Cohorts: []shared.Cohort{
                             shared.Cohort{
                                 DateRange: &shared.DateRange{
-                                    EndDate: "praesentium",
-                                    StartDate: "dolorum",
+                                    EndDate: "ipsum",
+                                    StartDate: "ducimus",
                                 },
-                                Name: "voluptatem",
+                                Name: "accusamus",
                                 Type: "UNSPECIFIED_COHORT_TYPE",
                             },
                         },
-                        LifetimeValue: true,
+                        LifetimeValue: false,
                     },
                     DateRanges: []shared.DateRange{
                         shared.DateRange{
-                            EndDate: "sapiente",
-                            StartDate: "et",
-                        },
-                        shared.DateRange{
-                            EndDate: "rem",
-                            StartDate: "suscipit",
-                        },
-                        shared.DateRange{
-                            EndDate: "voluptas",
-                            StartDate: "doloremque",
+                            EndDate: "est",
+                            StartDate: "voluptas",
                         },
                     },
                     DimensionFilterClauses: []shared.DimensionFilterClause{
                         shared.DimensionFilterClause{
                             Filters: []shared.DimensionFilter{
                                 shared.DimensionFilter{
-                                    CaseSensitive: true,
-                                    DimensionName: "voluptatem",
+                                    CaseSensitive: false,
+                                    DimensionName: "quis",
                                     Expressions: []string{
-                                        "laborum",
-                                        "et",
-                                        "reprehenderit",
+                                        "dolores",
+                                        "ipsam",
                                     },
-                                    Not: true,
+                                    Not: false,
                                     Operator: "NUMERIC_GREATER_THAN",
                                 },
                                 shared.DimensionFilter{
-                                    CaseSensitive: true,
-                                    DimensionName: "quo",
-                                    Expressions: []string{
-                                        "vel",
-                                        "rerum",
-                                        "eligendi",
-                                    },
-                                    Not: true,
-                                    Operator: "NUMERIC_EQUAL",
-                                },
-                                shared.DimensionFilter{
-                                    CaseSensitive: true,
-                                    DimensionName: "sunt",
-                                    Expressions: []string{
-                                        "delectus",
-                                        "quo",
-                                        "natus",
-                                    },
-                                    Not: false,
-                                    Operator: "NUMERIC_LESS_THAN",
-                                },
-                            },
-                            Operator: "OPERATOR_UNSPECIFIED",
-                        },
-                    },
-                    Dimensions: []shared.Dimension{
-                        shared.Dimension{
-                            HistogramBuckets: []string{
-                                "saepe",
-                                "et",
-                                "quas",
-                            },
-                            Name: "odio",
-                        },
-                        shared.Dimension{
-                            HistogramBuckets: []string{
-                                "earum",
-                                "nisi",
-                            },
-                            Name: "et",
-                        },
-                        shared.Dimension{
-                            HistogramBuckets: []string{
-                                "sunt",
-                            },
-                            Name: "occaecati",
-                        },
-                    },
-                    FiltersExpression: "occaecati",
-                    HideTotals: true,
-                    HideValueRanges: false,
-                    IncludeEmptyRows: true,
-                    MetricFilterClauses: []shared.MetricFilterClause{
-                        shared.MetricFilterClause{
-                            Filters: []shared.MetricFilter{
-                                shared.MetricFilter{
-                                    ComparisonValue: "nemo",
-                                    MetricName: "molestiae",
-                                    Not: false,
-                                    Operator: "GREATER_THAN",
-                                },
-                                shared.MetricFilter{
-                                    ComparisonValue: "aut",
-                                    MetricName: "et",
-                                    Not: false,
-                                    Operator: "OPERATOR_UNSPECIFIED",
-                                },
-                                shared.MetricFilter{
-                                    ComparisonValue: "et",
-                                    MetricName: "tempore",
-                                    Not: false,
-                                    Operator: "LESS_THAN",
-                                },
-                            },
-                            Operator: "OPERATOR_UNSPECIFIED",
-                        },
-                        shared.MetricFilterClause{
-                            Filters: []shared.MetricFilter{
-                                shared.MetricFilter{
-                                    ComparisonValue: "sit",
-                                    MetricName: "quis",
-                                    Not: false,
-                                    Operator: "IS_MISSING",
-                                },
-                            },
-                            Operator: "OPERATOR_UNSPECIFIED",
-                        },
-                    },
-                    Metrics: []shared.Metric{
-                        shared.Metric{
-                            Alias: "placeat",
-                            Expression: "quis",
-                            FormattingType: "METRIC_TYPE_UNSPECIFIED",
-                        },
-                        shared.Metric{
-                            Alias: "numquam",
-                            Expression: "non",
-                            FormattingType: "METRIC_TYPE_UNSPECIFIED",
-                        },
-                    },
-                    OrderBys: []shared.OrderBy{
-                        shared.OrderBy{
-                            FieldName: "id",
-                            OrderType: "SMART",
-                            SortOrder: "SORT_ORDER_UNSPECIFIED",
-                        },
-                    },
-                    PageSize: 1814978640069239714,
-                    PageToken: "et",
-                    Pivots: []shared.Pivot{
-                        shared.Pivot{
-                            DimensionFilterClauses: []shared.DimensionFilterClause{
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "et",
-                                            Expressions: []string{
-                                                "sed",
-                                                "quos",
-                                                "vel",
-                                            },
-                                            Not: false,
-                                            Operator: "BEGINS_WITH",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "molestiae",
-                                            Expressions: []string{
-                                                "qui",
-                                                "quis",
-                                                "culpa",
-                                            },
-                                            Not: false,
-                                            Operator: "IN_LIST",
-                                        },
-                                    },
-                                    Operator: "OPERATOR_UNSPECIFIED",
-                                },
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "molestias",
-                                            Expressions: []string{
-                                                "corrupti",
-                                                "recusandae",
-                                            },
-                                            Not: true,
-                                            Operator: "EXACT",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "alias",
-                                            Expressions: []string{
-                                                "est",
-                                            },
-                                            Not: true,
-                                            Operator: "NUMERIC_LESS_THAN",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "tempore",
-                                            Expressions: []string{
-                                                "odio",
-                                                "at",
-                                                "earum",
-                                            },
-                                            Not: true,
-                                            Operator: "BEGINS_WITH",
-                                        },
-                                    },
-                                    Operator: "OPERATOR_UNSPECIFIED",
-                                },
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "incidunt",
-                                            Expressions: []string{
-                                                "a",
-                                                "et",
-                                            },
-                                            Not: true,
-                                            Operator: "NUMERIC_LESS_THAN",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "totam",
-                                            Expressions: []string{
-                                                "quia",
-                                                "sint",
-                                                "autem",
-                                            },
-                                            Not: false,
-                                            Operator: "NUMERIC_EQUAL",
-                                        },
-                                    },
-                                    Operator: "OR",
-                                },
-                            },
-                            Dimensions: []shared.Dimension{
-                                shared.Dimension{
-                                    HistogramBuckets: []string{
-                                        "exercitationem",
-                                        "ea",
-                                        "quos",
-                                    },
-                                    Name: "deleniti",
-                                },
-                            },
-                            MaxGroupCount: 5146871061699696712,
-                            Metrics: []shared.Metric{
-                                shared.Metric{
-                                    Alias: "rerum",
-                                    Expression: "dolores",
-                                    FormattingType: "TIME",
-                                },
-                            },
-                            StartGroup: 1592166979501841607,
-                        },
-                        shared.Pivot{
-                            DimensionFilterClauses: []shared.DimensionFilterClause{
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "non",
-                                            Expressions: []string{
-                                                "accusantium",
-                                                "sapiente",
-                                                "iure",
-                                            },
-                                            Not: true,
-                                            Operator: "NUMERIC_EQUAL",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "ut",
-                                            Expressions: []string{
-                                                "in",
-                                                "tempora",
-                                                "molestiae",
-                                            },
-                                            Not: true,
-                                            Operator: "IN_LIST",
-                                        },
-                                    },
-                                    Operator: "AND",
-                                },
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "quis",
-                                            Expressions: []string{
-                                                "iste",
-                                                "ea",
-                                            },
-                                            Not: true,
-                                            Operator: "PARTIAL",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "magni",
-                                            Expressions: []string{
-                                                "eius",
-                                                "fugiat",
-                                                "ut",
-                                            },
-                                            Not: false,
-                                            Operator: "BEGINS_WITH",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "exercitationem",
-                                            Expressions: []string{
-                                                "voluptatem",
-                                                "porro",
-                                                "amet",
-                                            },
-                                            Not: false,
-                                            Operator: "ENDS_WITH",
-                                        },
-                                    },
-                                    Operator: "AND",
-                                },
-                            },
-                            Dimensions: []shared.Dimension{
-                                shared.Dimension{
-                                    HistogramBuckets: []string{
-                                        "quibusdam",
-                                        "cum",
-                                        "id",
-                                    },
-                                    Name: "repellendus",
-                                },
-                                shared.Dimension{
-                                    HistogramBuckets: []string{
-                                        "autem",
-                                        "ipsum",
-                                        "id",
-                                    },
-                                    Name: "aut",
-                                },
-                            },
-                            MaxGroupCount: 977918952990982802,
-                            Metrics: []shared.Metric{
-                                shared.Metric{
-                                    Alias: "magnam",
-                                    Expression: "aspernatur",
-                                    FormattingType: "METRIC_TYPE_UNSPECIFIED",
-                                },
-                            },
-                            StartGroup: 6194562792020924521,
-                        },
-                    },
-                    SamplingLevel: "SAMPLING_UNSPECIFIED",
-                    Segments: []shared.Segment{
-                        shared.Segment{
-                            DynamicSegment: &shared.DynamicSegment{
-                                Name: "pariatur",
-                                SessionSegment: &shared.SegmentDefinition{
-                                    SegmentFilters: []shared.SegmentFilter{
-                                        shared.SegmentFilter{
-                                            Not: true,
-                                            SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: true,
-                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "vel",
-                                                                            Expressions: []string{
-                                                                                "et",
-                                                                            },
-                                                                            MaxComparisonValue: "est",
-                                                                            MinComparisonValue: "quia",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quod",
-                                                                            MaxComparisonValue: "aut",
-                                                                            MetricName: "numquam",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "officiis",
-                                                                            Expressions: []string{
-                                                                                "ut",
-                                                                                "et",
-                                                                                "sit",
-                                                                            },
-                                                                            MaxComparisonValue: "esse",
-                                                                            MinComparisonValue: "eos",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "earum",
-                                                                            MaxComparisonValue: "dolores",
-                                                                            MetricName: "et",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "eligendi",
-                                                                            Expressions: []string{
-                                                                                "minus",
-                                                                                "minus",
-                                                                                "consequatur",
-                                                                            },
-                                                                            MaxComparisonValue: "labore",
-                                                                            MinComparisonValue: "eveniet",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quis",
-                                                                            MaxComparisonValue: "sint",
-                                                                            MetricName: "cumque",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "quis",
-                                                                            Expressions: []string{
-                                                                                "enim",
-                                                                                "minima",
-                                                                            },
-                                                                            MaxComparisonValue: "incidunt",
-                                                                            MinComparisonValue: "excepturi",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "similique",
-                                                                            MaxComparisonValue: "illum",
-                                                                            MetricName: "soluta",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "consequatur",
-                                                                            Expressions: []string{
-                                                                                "cupiditate",
-                                                                                "quas",
-                                                                            },
-                                                                            MaxComparisonValue: "autem",
-                                                                            MinComparisonValue: "natus",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "et",
-                                                                            MaxComparisonValue: "incidunt",
-                                                                            MetricName: "qui",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "et",
-                                                                            Expressions: []string{
-                                                                                "quia",
-                                                                                "et",
-                                                                                "maiores",
-                                                                            },
-                                                                            MaxComparisonValue: "qui",
-                                                                            MinComparisonValue: "velit",
-                                                                            Operator: "ENDS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "voluptatem",
-                                                                            MaxComparisonValue: "in",
-                                                                            MetricName: "accusamus",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "laboriosam",
-                                                                            Expressions: []string{
-                                                                                "facere",
-                                                                            },
-                                                                            MaxComparisonValue: "nihil",
-                                                                            MinComparisonValue: "repellendus",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "sunt",
-                                                                            MaxComparisonValue: "rerum",
-                                                                            MetricName: "qui",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "numquam",
-                                                                            Expressions: []string{
-                                                                                "enim",
-                                                                                "voluptates",
-                                                                            },
-                                                                            MaxComparisonValue: "dolore",
-                                                                            MinComparisonValue: "sunt",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "sequi",
-                                                                            MaxComparisonValue: "id",
-                                                                            MetricName: "nemo",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "IMMEDIATELY_PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "similique",
-                                                                            Expressions: []string{
-                                                                                "officia",
-                                                                                "eum",
-                                                                            },
-                                                                            MaxComparisonValue: "consequatur",
-                                                                            MinComparisonValue: "sit",
-                                                                            Operator: "REGEXP",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quaerat",
-                                                                            MaxComparisonValue: "ut",
-                                                                            MetricName: "molestiae",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "eos",
-                                                                            Expressions: []string{
-                                                                                "maiores",
-                                                                            },
-                                                                            MaxComparisonValue: "ipsam",
-                                                                            MinComparisonValue: "non",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "veritatis",
-                                                                            MaxComparisonValue: "aut",
-                                                                            MetricName: "eveniet",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "temporibus",
-                                                                            Expressions: []string{
-                                                                                "doloribus",
-                                                                                "sapiente",
-                                                                                "rerum",
-                                                                            },
-                                                                            MaxComparisonValue: "esse",
-                                                                            MinComparisonValue: "beatae",
-                                                                            Operator: "PARTIAL",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "iste",
-                                                                            MaxComparisonValue: "nulla",
-                                                                            MetricName: "autem",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "sapiente",
-                                                                            Expressions: []string{
-                                                                                "dolor",
-                                                                            },
-                                                                            MaxComparisonValue: "fugit",
-                                                                            MinComparisonValue: "et",
-                                                                            Operator: "PARTIAL",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "aliquam",
-                                                                            MaxComparisonValue: "reprehenderit",
-                                                                            MetricName: "excepturi",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "assumenda",
-                                                                            Expressions: []string{
-                                                                                "velit",
-                                                                                "eos",
-                                                                                "officiis",
-                                                                            },
-                                                                            MaxComparisonValue: "omnis",
-                                                                            MinComparisonValue: "nam",
-                                                                            Operator: "PARTIAL",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "fuga",
-                                                                            MaxComparisonValue: "dolorem",
-                                                                            MetricName: "et",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            SimpleSegment: &shared.SimpleSegment{
-                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "ab",
-                                                                    Expressions: []string{
-                                                                        "aut",
-                                                                    },
-                                                                    MaxComparisonValue: "impedit",
-                                                                    MinComparisonValue: "sint",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "quo",
-                                                                    MaxComparisonValue: "libero",
-                                                                    MetricName: "non",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.SegmentFilter{
-                                            Not: false,
-                                            SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: true,
-                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "nam",
-                                                                            Expressions: []string{
-                                                                                "cum",
-                                                                                "dolorum",
-                                                                                "illum",
-                                                                            },
-                                                                            MaxComparisonValue: "voluptatem",
-                                                                            MinComparisonValue: "ut",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "qui",
-                                                                            MaxComparisonValue: "sequi",
-                                                                            MetricName: "sunt",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "provident",
-                                                                            Expressions: []string{
-                                                                                "sunt",
-                                                                                "quia",
-                                                                            },
-                                                                            MaxComparisonValue: "voluptatibus",
-                                                                            MinComparisonValue: "nobis",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "expedita",
-                                                                            MaxComparisonValue: "fugit",
-                                                                            MetricName: "quia",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "molestiae",
-                                                                            Expressions: []string{
-                                                                                "non",
-                                                                            },
-                                                                            MaxComparisonValue: "doloremque",
-                                                                            MinComparisonValue: "aliquam",
-                                                                            Operator: "REGEXP",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "qui",
-                                                                            MaxComparisonValue: "aut",
-                                                                            MetricName: "quas",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "non",
-                                                                            Expressions: []string{
-                                                                                "voluptatem",
-                                                                                "officiis",
-                                                                            },
-                                                                            MaxComparisonValue: "in",
-                                                                            MinComparisonValue: "et",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "rerum",
-                                                                            MaxComparisonValue: "dicta",
-                                                                            MetricName: "velit",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "adipisci",
-                                                                            Expressions: []string{
-                                                                                "atque",
-                                                                                "aliquam",
-                                                                            },
-                                                                            MaxComparisonValue: "pariatur",
-                                                                            MinComparisonValue: "at",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quidem",
-                                                                            MaxComparisonValue: "fugit",
-                                                                            MetricName: "tempora",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "quia",
-                                                                            Expressions: []string{
-                                                                                "cupiditate",
-                                                                                "aut",
-                                                                            },
-                                                                            MaxComparisonValue: "nam",
-                                                                            MinComparisonValue: "nihil",
-                                                                            Operator: "OPERATOR_UNSPECIFIED",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "animi",
-                                                                            MaxComparisonValue: "cum",
-                                                                            MetricName: "voluptate",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "beatae",
-                                                                            Expressions: []string{
-                                                                                "similique",
-                                                                                "qui",
-                                                                            },
-                                                                            MaxComparisonValue: "id",
-                                                                            MinComparisonValue: "mollitia",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quis",
-                                                                            MaxComparisonValue: "sit",
-                                                                            MetricName: "debitis",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "voluptatem",
-                                                                            Expressions: []string{
-                                                                                "corrupti",
-                                                                                "est",
-                                                                            },
-                                                                            MaxComparisonValue: "vero",
-                                                                            MinComparisonValue: "autem",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "labore",
-                                                                            MaxComparisonValue: "suscipit",
-                                                                            MetricName: "quis",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "quam",
-                                                                            Expressions: []string{
-                                                                                "delectus",
-                                                                            },
-                                                                            MaxComparisonValue: "sapiente",
-                                                                            MinComparisonValue: "eos",
-                                                                            Operator: "ENDS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quia",
-                                                                            MaxComparisonValue: "nihil",
-                                                                            MetricName: "est",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "corporis",
-                                                                            Expressions: []string{
-                                                                                "sunt",
-                                                                                "aut",
-                                                                                "ut",
-                                                                            },
-                                                                            MaxComparisonValue: "quisquam",
-                                                                            MinComparisonValue: "eaque",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "corrupti",
-                                                                            MaxComparisonValue: "sunt",
-                                                                            MetricName: "ipsa",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "et",
-                                                                            Expressions: []string{
-                                                                                "vero",
-                                                                            },
-                                                                            MaxComparisonValue: "molestiae",
-                                                                            MinComparisonValue: "aliquam",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "dolor",
-                                                                            MaxComparisonValue: "placeat",
-                                                                            MetricName: "ut",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            SimpleSegment: &shared.SimpleSegment{
-                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "atque",
-                                                                    Expressions: []string{
-                                                                        "enim",
-                                                                        "quia",
-                                                                    },
-                                                                    MaxComparisonValue: "occaecati",
-                                                                    MinComparisonValue: "omnis",
-                                                                    Operator: "BEGINS_WITH",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "illo",
-                                                                    MaxComparisonValue: "ab",
-                                                                    MetricName: "distinctio",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "ipsum",
-                                                                    Expressions: []string{
-                                                                        "vitae",
-                                                                        "culpa",
-                                                                    },
-                                                                    MaxComparisonValue: "voluptatibus",
-                                                                    MinComparisonValue: "soluta",
-                                                                    Operator: "NUMERIC_BETWEEN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "et",
-                                                                    MaxComparisonValue: "error",
-                                                                    MetricName: "aut",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "SESSION",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "magnam",
-                                                                    Expressions: []string{
-                                                                        "maiores",
-                                                                    },
-                                                                    MaxComparisonValue: "laudantium",
-                                                                    MinComparisonValue: "quam",
-                                                                    Operator: "OPERATOR_UNSPECIFIED",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "beatae",
-                                                                    MaxComparisonValue: "facere",
-                                                                    MetricName: "placeat",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "SESSION",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "deleniti",
-                                                                    Expressions: []string{
-                                                                        "saepe",
-                                                                        "qui",
-                                                                    },
-                                                                    MaxComparisonValue: "est",
-                                                                    MinComparisonValue: "non",
-                                                                    Operator: "REGEXP",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "doloribus",
-                                                                    MaxComparisonValue: "reiciendis",
-                                                                    MetricName: "expedita",
-                                                                    Operator: "GREATER_THAN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "ea",
-                                                                    Expressions: []string{
-                                                                        "expedita",
-                                                                        "aut",
-                                                                        "non",
-                                                                    },
-                                                                    MaxComparisonValue: "necessitatibus",
-                                                                    MinComparisonValue: "reprehenderit",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "suscipit",
-                                                                    MaxComparisonValue: "dolores",
-                                                                    MetricName: "omnis",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "UNSPECIFIED_SCOPE",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "recusandae",
-                                                                    Expressions: []string{
-                                                                        "accusamus",
-                                                                        "culpa",
-                                                                        "consequatur",
-                                                                    },
-                                                                    MaxComparisonValue: "animi",
-                                                                    MinComparisonValue: "minima",
-                                                                    Operator: "ENDS_WITH",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "dicta",
-                                                                    MaxComparisonValue: "id",
-                                                                    MetricName: "vitae",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "nesciunt",
-                                                                    Expressions: []string{
-                                                                        "suscipit",
-                                                                        "labore",
-                                                                        "voluptatum",
-                                                                    },
-                                                                    MaxComparisonValue: "quisquam",
-                                                                    MinComparisonValue: "pariatur",
-                                                                    Operator: "EXACT",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "incidunt",
-                                                                    MaxComparisonValue: "sit",
-                                                                    MetricName: "voluptas",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                                UserSegment: &shared.SegmentDefinition{
-                                    SegmentFilters: []shared.SegmentFilter{
-                                        shared.SegmentFilter{
-                                            Not: true,
-                                            SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: true,
-                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "quo",
-                                                                            Expressions: []string{
-                                                                                "soluta",
-                                                                            },
-                                                                            MaxComparisonValue: "tempore",
-                                                                            MinComparisonValue: "vitae",
-                                                                            Operator: "NUMERIC_LESS_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "voluptatem",
-                                                                            MaxComparisonValue: "porro",
-                                                                            MetricName: "quo",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "et",
-                                                                            Expressions: []string{
-                                                                                "omnis",
-                                                                            },
-                                                                            MaxComparisonValue: "modi",
-                                                                            MinComparisonValue: "animi",
-                                                                            Operator: "IN_LIST",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "ullam",
-                                                                            MaxComparisonValue: "assumenda",
-                                                                            MetricName: "amet",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "necessitatibus",
-                                                                            Expressions: []string{
-                                                                                "eius",
-                                                                            },
-                                                                            MaxComparisonValue: "error",
-                                                                            MinComparisonValue: "aliquam",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "consequatur",
-                                                                            MaxComparisonValue: "laboriosam",
-                                                                            MetricName: "vero",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "voluptas",
-                                                                            Expressions: []string{
-                                                                                "delectus",
-                                                                            },
-                                                                            MaxComparisonValue: "soluta",
-                                                                            MinComparisonValue: "eveniet",
-                                                                            Operator: "ENDS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "sit",
-                                                                            MaxComparisonValue: "est",
-                                                                            MetricName: "quia",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "ipsam",
-                                                                            Expressions: []string{
-                                                                                "consequatur",
-                                                                            },
-                                                                            MaxComparisonValue: "praesentium",
-                                                                            MinComparisonValue: "enim",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "velit",
-                                                                            MaxComparisonValue: "sit",
-                                                                            MetricName: "non",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "qui",
-                                                                            Expressions: []string{
-                                                                                "et",
-                                                                                "minus",
-                                                                            },
-                                                                            MaxComparisonValue: "quibusdam",
-                                                                            MinComparisonValue: "distinctio",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "temporibus",
-                                                                            MaxComparisonValue: "aut",
-                                                                            MetricName: "tempore",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "recusandae",
-                                                                            Expressions: []string{
-                                                                                "molestias",
-                                                                                "possimus",
-                                                                                "earum",
-                                                                            },
-                                                                            MaxComparisonValue: "amet",
-                                                                            MinComparisonValue: "eos",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "minus",
-                                                                            MaxComparisonValue: "animi",
-                                                                            MetricName: "laudantium",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            SimpleSegment: &shared.SimpleSegment{
-                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "aut",
-                                                                    Expressions: []string{
-                                                                        "fugit",
-                                                                        "quaerat",
-                                                                    },
-                                                                    MaxComparisonValue: "exercitationem",
-                                                                    MinComparisonValue: "ut",
-                                                                    Operator: "EXACT",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "rerum",
-                                                                    MaxComparisonValue: "assumenda",
-                                                                    MetricName: "porro",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "UNSPECIFIED_SCOPE",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "quia",
-                                                                    Expressions: []string{
-                                                                        "sed",
-                                                                        "occaecati",
-                                                                    },
-                                                                    MaxComparisonValue: "quidem",
-                                                                    MinComparisonValue: "maxime",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "dignissimos",
-                                                                    MaxComparisonValue: "ullam",
-                                                                    MetricName: "nisi",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "id",
-                                                                    Expressions: []string{
-                                                                        "quia",
-                                                                    },
-                                                                    MaxComparisonValue: "et",
-                                                                    MinComparisonValue: "officiis",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "distinctio",
-                                                                    MaxComparisonValue: "aliquam",
-                                                                    MetricName: "illum",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "PRODUCT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "similique",
-                                                                    Expressions: []string{
-                                                                        "illo",
-                                                                        "minus",
-                                                                    },
-                                                                    MaxComparisonValue: "et",
-                                                                    MinComparisonValue: "laudantium",
-                                                                    Operator: "OPERATOR_UNSPECIFIED",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "expedita",
-                                                                    MaxComparisonValue: "omnis",
-                                                                    MetricName: "at",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "UNSPECIFIED_SCOPE",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "illum",
-                                                                    Expressions: []string{
-                                                                        "necessitatibus",
-                                                                        "aspernatur",
-                                                                    },
-                                                                    MaxComparisonValue: "quasi",
-                                                                    MinComparisonValue: "tempore",
-                                                                    Operator: "PARTIAL",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "quos",
-                                                                    MaxComparisonValue: "voluptas",
-                                                                    MetricName: "quam",
-                                                                    Operator: "GREATER_THAN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.SegmentFilter{
-                                            Not: true,
-                                            SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: false,
-                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "impedit",
-                                                                            Expressions: []string{
-                                                                                "dignissimos",
-                                                                            },
-                                                                            MaxComparisonValue: "dolor",
-                                                                            MinComparisonValue: "voluptatem",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "est",
-                                                                            MaxComparisonValue: "reprehenderit",
-                                                                            MetricName: "facilis",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "facilis",
-                                                                            Expressions: []string{
-                                                                                "nihil",
-                                                                                "sunt",
-                                                                                "et",
-                                                                            },
-                                                                            MaxComparisonValue: "vitae",
-                                                                            MinComparisonValue: "provident",
-                                                                            Operator: "NUMERIC_LESS_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "laborum",
-                                                                            MaxComparisonValue: "voluptas",
-                                                                            MetricName: "veniam",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "qui",
-                                                                            Expressions: []string{
-                                                                                "nihil",
-                                                                                "sit",
-                                                                                "est",
-                                                                            },
-                                                                            MaxComparisonValue: "praesentium",
-                                                                            MinComparisonValue: "sint",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "atque",
-                                                                            MaxComparisonValue: "iusto",
-                                                                            MetricName: "rem",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "amet",
-                                                                            Expressions: []string{
-                                                                                "est",
-                                                                                "eveniet",
-                                                                            },
-                                                                            MaxComparisonValue: "consequatur",
-                                                                            MinComparisonValue: "quia",
-                                                                            Operator: "PARTIAL",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "nesciunt",
-                                                                            MaxComparisonValue: "necessitatibus",
-                                                                            MetricName: "ipsa",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "quisquam",
-                                                                            Expressions: []string{
-                                                                                "saepe",
-                                                                                "quam",
-                                                                            },
-                                                                            MaxComparisonValue: "autem",
-                                                                            MinComparisonValue: "doloremque",
-                                                                            Operator: "OPERATOR_UNSPECIFIED",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "laudantium",
-                                                                            MaxComparisonValue: "maxime",
-                                                                            MetricName: "omnis",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "assumenda",
-                                                                            Expressions: []string{
-                                                                                "porro",
-                                                                            },
-                                                                            MaxComparisonValue: "et",
-                                                                            MinComparisonValue: "asperiores",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "sed",
-                                                                            MaxComparisonValue: "sequi",
-                                                                            MetricName: "modi",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "aliquid",
-                                                                            Expressions: []string{
-                                                                                "labore",
-                                                                                "totam",
-                                                                                "placeat",
-                                                                            },
-                                                                            MaxComparisonValue: "doloremque",
-                                                                            MinComparisonValue: "est",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "non",
-                                                                            MaxComparisonValue: "vel",
-                                                                            MetricName: "quia",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            SimpleSegment: &shared.SimpleSegment{
-                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "et",
-                                                                    Expressions: []string{
-                                                                        "officia",
-                                                                    },
-                                                                    MaxComparisonValue: "iusto",
-                                                                    MinComparisonValue: "et",
-                                                                    Operator: "NUMERIC_GREATER_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "enim",
-                                                                    MaxComparisonValue: "possimus",
-                                                                    MetricName: "illo",
-                                                                    Operator: "GREATER_THAN",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "temporibus",
-                                                                    Expressions: []string{
-                                                                        "corrupti",
-                                                                        "perferendis",
-                                                                        "dicta",
-                                                                    },
-                                                                    MaxComparisonValue: "id",
-                                                                    MinComparisonValue: "amet",
-                                                                    Operator: "PARTIAL",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "et",
-                                                                    MaxComparisonValue: "sapiente",
-                                                                    MetricName: "qui",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "dolor",
-                                                                    Expressions: []string{
-                                                                        "aliquam",
-                                                                    },
-                                                                    MaxComparisonValue: "ducimus",
-                                                                    MinComparisonValue: "enim",
-                                                                    Operator: "ENDS_WITH",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "impedit",
-                                                                    MaxComparisonValue: "est",
-                                                                    MetricName: "quo",
-                                                                    Operator: "GREATER_THAN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "vitae",
-                                                                    Expressions: []string{
-                                                                        "ut",
-                                                                        "voluptates",
-                                                                    },
-                                                                    MaxComparisonValue: "eos",
-                                                                    MinComparisonValue: "culpa",
-                                                                    Operator: "NUMERIC_BETWEEN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "ut",
-                                                                    MaxComparisonValue: "nobis",
-                                                                    MetricName: "non",
-                                                                    Operator: "GREATER_THAN",
-                                                                    Scope: "SESSION",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "distinctio",
-                                                                    Expressions: []string{
-                                                                        "consequatur",
-                                                                        "vel",
-                                                                        "nam",
-                                                                    },
-                                                                    MaxComparisonValue: "et",
-                                                                    MinComparisonValue: "error",
-                                                                    Operator: "ENDS_WITH",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "non",
-                                                                    MaxComparisonValue: "aut",
-                                                                    MetricName: "aut",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.SegmentFilter{
-                                            Not: false,
-                                            SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: true,
-                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "modi",
-                                                                            Expressions: []string{
-                                                                                "non",
-                                                                            },
-                                                                            MaxComparisonValue: "earum",
-                                                                            MinComparisonValue: "laborum",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quo",
-                                                                            MaxComparisonValue: "est",
-                                                                            MetricName: "sint",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "magni",
-                                                                            Expressions: []string{
-                                                                                "consectetur",
-                                                                                "voluptas",
-                                                                                "repellendus",
-                                                                            },
-                                                                            MaxComparisonValue: "eos",
-                                                                            MinComparisonValue: "quasi",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "suscipit",
-                                                                            MaxComparisonValue: "maxime",
-                                                                            MetricName: "ab",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "sunt",
-                                                                            Expressions: []string{
-                                                                                "corporis",
-                                                                                "dicta",
-                                                                                "sapiente",
-                                                                            },
-                                                                            MaxComparisonValue: "qui",
-                                                                            MinComparisonValue: "voluptatem",
-                                                                            Operator: "NUMERIC_LESS_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "voluptas",
-                                                                            MaxComparisonValue: "et",
-                                                                            MetricName: "culpa",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "corrupti",
-                                                                            Expressions: []string{
-                                                                                "quasi",
-                                                                            },
-                                                                            MaxComparisonValue: "odit",
-                                                                            MinComparisonValue: "sit",
-                                                                            Operator: "IN_LIST",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "sint",
-                                                                            MaxComparisonValue: "voluptate",
-                                                                            MetricName: "aperiam",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "autem",
-                                                                            Expressions: []string{
-                                                                                "at",
-                                                                                "quibusdam",
-                                                                            },
-                                                                            MaxComparisonValue: "qui",
-                                                                            MinComparisonValue: "nostrum",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "debitis",
-                                                                            MaxComparisonValue: "id",
-                                                                            MetricName: "fugiat",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "aliquid",
-                                                                            Expressions: []string{
-                                                                                "ut",
-                                                                            },
-                                                                            MaxComparisonValue: "dolor",
-                                                                            MinComparisonValue: "tempora",
-                                                                            Operator: "IN_LIST",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "harum",
-                                                                            MaxComparisonValue: "est",
-                                                                            MetricName: "quibusdam",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "repellat",
-                                                                            Expressions: []string{
-                                                                                "dolore",
-                                                                                "omnis",
-                                                                            },
-                                                                            MaxComparisonValue: "aliquam",
-                                                                            MinComparisonValue: "provident",
-                                                                            Operator: "NUMERIC_LESS_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "aut",
-                                                                            MaxComparisonValue: "at",
-                                                                            MetricName: "omnis",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "ut",
-                                                                            Expressions: []string{
-                                                                                "accusamus",
-                                                                                "beatae",
-                                                                            },
-                                                                            MaxComparisonValue: "rerum",
-                                                                            MinComparisonValue: "aspernatur",
-                                                                            Operator: "ENDS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "facilis",
-                                                                            MaxComparisonValue: "iure",
-                                                                            MetricName: "quo",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "ea",
-                                                                            Expressions: []string{
-                                                                                "ipsum",
-                                                                                "quae",
-                                                                                "minima",
-                                                                            },
-                                                                            MaxComparisonValue: "eaque",
-                                                                            MinComparisonValue: "consequatur",
-                                                                            Operator: "NUMERIC_LESS_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "officia",
-                                                                            MaxComparisonValue: "nihil",
-                                                                            MetricName: "qui",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "iste",
-                                                                            Expressions: []string{
-                                                                                "deleniti",
-                                                                            },
-                                                                            MaxComparisonValue: "sed",
-                                                                            MinComparisonValue: "dolor",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "nisi",
-                                                                            MaxComparisonValue: "rerum",
-                                                                            MetricName: "alias",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            SimpleSegment: &shared.SimpleSegment{
-                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "maxime",
-                                                                    Expressions: []string{
-                                                                        "neque",
-                                                                    },
-                                                                    MaxComparisonValue: "minus",
-                                                                    MinComparisonValue: "corrupti",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "quaerat",
-                                                                    MaxComparisonValue: "quasi",
-                                                                    MetricName: "quibusdam",
-                                                                    Operator: "EQUAL",
-                                                                    Scope: "UNSPECIFIED_SCOPE",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "nisi",
-                                                                    Expressions: []string{
-                                                                        "quos",
-                                                                        "et",
-                                                                        "repellat",
-                                                                    },
-                                                                    MaxComparisonValue: "alias",
-                                                                    MinComparisonValue: "rem",
-                                                                    Operator: "OPERATOR_UNSPECIFIED",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "sit",
-                                                                    MaxComparisonValue: "odit",
-                                                                    MetricName: "voluptatem",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "adipisci",
-                                                                    Expressions: []string{
-                                                                        "sunt",
-                                                                        "deleniti",
-                                                                    },
-                                                                    MaxComparisonValue: "qui",
-                                                                    MinComparisonValue: "et",
-                                                                    Operator: "REGEXP",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "animi",
-                                                                    MaxComparisonValue: "quidem",
-                                                                    MetricName: "dolorum",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "SESSION",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "nam",
-                                                                    Expressions: []string{
-                                                                        "explicabo",
-                                                                        "rem",
-                                                                    },
-                                                                    MaxComparisonValue: "et",
-                                                                    MinComparisonValue: "ipsa",
-                                                                    Operator: "PARTIAL",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "qui",
-                                                                    MaxComparisonValue: "quas",
-                                                                    MetricName: "qui",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "SESSION",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "nemo",
-                                                                    Expressions: []string{
-                                                                        "quibusdam",
-                                                                    },
-                                                                    MaxComparisonValue: "numquam",
-                                                                    MinComparisonValue: "modi",
-                                                                    Operator: "ENDS_WITH",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "est",
-                                                                    MaxComparisonValue: "et",
-                                                                    MetricName: "dolores",
-                                                                    Operator: "EQUAL",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "quasi",
-                                                                    Expressions: []string{
-                                                                        "consectetur",
-                                                                    },
-                                                                    MaxComparisonValue: "quas",
-                                                                    MinComparisonValue: "magni",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "molestiae",
-                                                                    MaxComparisonValue: "atque",
-                                                                    MetricName: "laboriosam",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "dolor",
-                                                                    Expressions: []string{
-                                                                        "est",
-                                                                        "praesentium",
-                                                                        "quam",
-                                                                    },
-                                                                    MaxComparisonValue: "sed",
-                                                                    MinComparisonValue: "iste",
-                                                                    Operator: "OPERATOR_UNSPECIFIED",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "in",
-                                                                    MaxComparisonValue: "laboriosam",
-                                                                    MetricName: "molestiae",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                            SegmentID: "accusantium",
-                        },
-                    },
-                    ViewID: "qui",
-                },
-                shared.ReportRequest{
-                    CohortGroup: &shared.CohortGroup{
-                        Cohorts: []shared.Cohort{
-                            shared.Cohort{
-                                DateRange: &shared.DateRange{
-                                    EndDate: "labore",
-                                    StartDate: "maiores",
-                                },
-                                Name: "voluptatem",
-                                Type: "FIRST_VISIT_DATE",
-                            },
-                            shared.Cohort{
-                                DateRange: &shared.DateRange{
-                                    EndDate: "rerum",
-                                    StartDate: "nesciunt",
-                                },
-                                Name: "quia",
-                                Type: "UNSPECIFIED_COHORT_TYPE",
-                            },
-                            shared.Cohort{
-                                DateRange: &shared.DateRange{
-                                    EndDate: "qui",
-                                    StartDate: "hic",
-                                },
-                                Name: "eum",
-                                Type: "FIRST_VISIT_DATE",
-                            },
-                        },
-                        LifetimeValue: true,
-                    },
-                    DateRanges: []shared.DateRange{
-                        shared.DateRange{
-                            EndDate: "reiciendis",
-                            StartDate: "minus",
-                        },
-                        shared.DateRange{
-                            EndDate: "excepturi",
-                            StartDate: "voluptatem",
-                        },
-                        shared.DateRange{
-                            EndDate: "magni",
-                            StartDate: "dolores",
-                        },
-                    },
-                    DimensionFilterClauses: []shared.DimensionFilterClause{
-                        shared.DimensionFilterClause{
-                            Filters: []shared.DimensionFilter{
-                                shared.DimensionFilter{
-                                    CaseSensitive: true,
-                                    DimensionName: "quibusdam",
-                                    Expressions: []string{
-                                        "reiciendis",
-                                        "cum",
-                                        "velit",
-                                    },
-                                    Not: true,
-                                    Operator: "EXACT",
-                                },
-                                shared.DimensionFilter{
                                     CaseSensitive: false,
-                                    DimensionName: "doloribus",
+                                    DimensionName: "aut",
                                     Expressions: []string{
-                                        "architecto",
-                                        "alias",
+                                        "qui",
+                                        "accusamus",
+                                        "sed",
                                     },
-                                    Not: false,
-                                    Operator: "BEGINS_WITH",
+                                    Not: true,
+                                    Operator: "ENDS_WITH",
                                 },
                             },
-                            Operator: "OPERATOR_UNSPECIFIED",
+                            Operator: "AND",
                         },
                         shared.DimensionFilterClause{
                             Filters: []shared.DimensionFilter{
-                                shared.DimensionFilter{
-                                    CaseSensitive: true,
-                                    DimensionName: "laborum",
-                                    Expressions: []string{
-                                        "ipsum",
-                                    },
-                                    Not: true,
-                                    Operator: "REGEXP",
-                                },
                                 shared.DimensionFilter{
                                     CaseSensitive: true,
                                     DimensionName: "laudantium",
                                     Expressions: []string{
-                                        "quo",
+                                        "qui",
+                                        "molestias",
                                     },
-                                    Not: true,
+                                    Not: false,
                                     Operator: "IN_LIST",
                                 },
                             },
                             Operator: "AND",
                         },
-                        shared.DimensionFilterClause{
-                            Filters: []shared.DimensionFilter{
-                                shared.DimensionFilter{
-                                    CaseSensitive: false,
-                                    DimensionName: "esse",
-                                    Expressions: []string{
-                                        "at",
-                                        "delectus",
-                                        "aut",
-                                    },
+                    },
+                    Dimensions: []shared.Dimension{
+                        shared.Dimension{
+                            HistogramBuckets: []string{
+                                "fugiat",
+                                "qui",
+                                "incidunt",
+                            },
+                            Name: "sed",
+                        },
+                        shared.Dimension{
+                            HistogramBuckets: []string{
+                                "et",
+                                "quis",
+                                "amet",
+                            },
+                            Name: "non",
+                        },
+                        shared.Dimension{
+                            HistogramBuckets: []string{
+                                "quo",
+                            },
+                            Name: "vel",
+                        },
+                    },
+                    FiltersExpression: "labore",
+                    HideTotals: false,
+                    HideValueRanges: false,
+                    IncludeEmptyRows: false,
+                    MetricFilterClauses: []shared.MetricFilterClause{
+                        shared.MetricFilterClause{
+                            Filters: []shared.MetricFilter{
+                                shared.MetricFilter{
+                                    ComparisonValue: "voluptatem",
+                                    MetricName: "ut",
+                                    Not: false,
+                                    Operator: "LESS_THAN",
+                                },
+                                shared.MetricFilter{
+                                    ComparisonValue: "neque",
+                                    MetricName: "qui",
                                     Not: true,
-                                    Operator: "OPERATOR_UNSPECIFIED",
+                                    Operator: "GREATER_THAN",
+                                },
+                            },
+                            Operator: "OPERATOR_UNSPECIFIED",
+                        },
+                        shared.MetricFilterClause{
+                            Filters: []shared.MetricFilter{
+                                shared.MetricFilter{
+                                    ComparisonValue: "eveniet",
+                                    MetricName: "sit",
+                                    Not: true,
+                                    Operator: "EQUAL",
+                                },
+                                shared.MetricFilter{
+                                    ComparisonValue: "pariatur",
+                                    MetricName: "nesciunt",
+                                    Not: false,
+                                    Operator: "EQUAL",
+                                },
+                                shared.MetricFilter{
+                                    ComparisonValue: "ducimus",
+                                    MetricName: "eos",
+                                    Not: false,
+                                    Operator: "EQUAL",
                                 },
                             },
                             Operator: "AND",
                         },
                     },
-                    Dimensions: []shared.Dimension{
-                        shared.Dimension{
-                            HistogramBuckets: []string{
-                                "et",
-                            },
-                            Name: "ratione",
-                        },
-                    },
-                    FiltersExpression: "at",
-                    HideTotals: true,
-                    HideValueRanges: false,
-                    IncludeEmptyRows: true,
-                    MetricFilterClauses: []shared.MetricFilterClause{
-                        shared.MetricFilterClause{
-                            Filters: []shared.MetricFilter{
-                                shared.MetricFilter{
-                                    ComparisonValue: "excepturi",
-                                    MetricName: "id",
-                                    Not: true,
-                                    Operator: "IS_MISSING",
-                                },
-                            },
-                            Operator: "OR",
-                        },
-                        shared.MetricFilterClause{
-                            Filters: []shared.MetricFilter{
-                                shared.MetricFilter{
-                                    ComparisonValue: "suscipit",
-                                    MetricName: "cupiditate",
-                                    Not: true,
-                                    Operator: "IS_MISSING",
-                                },
-                                shared.MetricFilter{
-                                    ComparisonValue: "nihil",
-                                    MetricName: "in",
-                                    Not: false,
-                                    Operator: "IS_MISSING",
-                                },
-                            },
-                            Operator: "OPERATOR_UNSPECIFIED",
-                        },
-                    },
                     Metrics: []shared.Metric{
                         shared.Metric{
-                            Alias: "sint",
-                            Expression: "autem",
-                            FormattingType: "FLOAT",
+                            Alias: "atque",
+                            Expression: "culpa",
+                            FormattingType: "METRIC_TYPE_UNSPECIFIED",
                         },
                         shared.Metric{
-                            Alias: "suscipit",
-                            Expression: "ipsam",
-                            FormattingType: "CURRENCY",
-                        },
-                        shared.Metric{
-                            Alias: "est",
-                            Expression: "dolores",
-                            FormattingType: "FLOAT",
+                            Alias: "maiores",
+                            Expression: "repellat",
+                            FormattingType: "TIME",
                         },
                     },
                     OrderBys: []shared.OrderBy{
                         shared.OrderBy{
-                            FieldName: "ex",
-                            OrderType: "DELTA",
-                            SortOrder: "ASCENDING",
+                            FieldName: "facere",
+                            OrderType: "SMART",
+                            SortOrder: "DESCENDING",
                         },
                         shared.OrderBy{
-                            FieldName: "optio",
+                            FieldName: "eos",
                             OrderType: "VALUE",
+                            SortOrder: "SORT_ORDER_UNSPECIFIED",
+                        },
+                        shared.OrderBy{
+                            FieldName: "odio",
+                            OrderType: "HISTOGRAM_BUCKET",
                             SortOrder: "DESCENDING",
                         },
                     },
-                    PageSize: 1874707870929859061,
-                    PageToken: "sunt",
+                    PageSize: 8943789610899836612,
+                    PageToken: "eos",
                     Pivots: []shared.Pivot{
                         shared.Pivot{
                             DimensionFilterClauses: []shared.DimensionFilterClause{
@@ -2401,159 +219,57 @@ func main() {
                                     Filters: []shared.DimensionFilter{
                                         shared.DimensionFilter{
                                             CaseSensitive: false,
-                                            DimensionName: "corporis",
+                                            DimensionName: "voluptatem",
                                             Expressions: []string{
-                                                "illum",
-                                                "enim",
-                                                "aut",
-                                            },
-                                            Not: false,
-                                            Operator: "NUMERIC_EQUAL",
-                                        },
-                                    },
-                                    Operator: "OPERATOR_UNSPECIFIED",
-                                },
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "omnis",
-                                            Expressions: []string{
-                                                "at",
-                                                "vitae",
-                                                "non",
-                                            },
-                                            Not: false,
-                                            Operator: "IN_LIST",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "placeat",
-                                            Expressions: []string{
-                                                "qui",
-                                            },
-                                            Not: false,
-                                            Operator: "REGEXP",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "deleniti",
-                                            Expressions: []string{
-                                                "aspernatur",
-                                                "dicta",
-                                                "veritatis",
+                                                "omnis",
+                                                "voluptatum",
                                             },
                                             Not: true,
-                                            Operator: "EXACT",
+                                            Operator: "PARTIAL",
                                         },
                                     },
                                     Operator: "OR",
-                                },
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "quia",
-                                            Expressions: []string{
-                                                "veritatis",
-                                            },
-                                            Not: true,
-                                            Operator: "NUMERIC_GREATER_THAN",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "repellendus",
-                                            Expressions: []string{
-                                                "sequi",
-                                            },
-                                            Not: true,
-                                            Operator: "ENDS_WITH",
-                                        },
-                                    },
-                                    Operator: "AND",
                                 },
                             },
                             Dimensions: []shared.Dimension{
                                 shared.Dimension{
                                     HistogramBuckets: []string{
-                                        "deleniti",
-                                        "ea",
-                                    },
-                                    Name: "laborum",
-                                },
-                                shared.Dimension{
-                                    HistogramBuckets: []string{
-                                        "dolores",
+                                        "aut",
                                         "qui",
+                                        "sed",
                                     },
-                                    Name: "ea",
+                                    Name: "quae",
                                 },
                                 shared.Dimension{
                                     HistogramBuckets: []string{
-                                        "dolorem",
-                                        "sint",
+                                        "aut",
                                     },
-                                    Name: "praesentium",
+                                    Name: "cum",
                                 },
                             },
-                            MaxGroupCount: 1025390314690018706,
+                            MaxGroupCount: 8835520332190525981,
                             Metrics: []shared.Metric{
                                 shared.Metric{
-                                    Alias: "nam",
-                                    Expression: "sint",
-                                    FormattingType: "TIME",
+                                    Alias: "sed",
+                                    Expression: "mollitia",
+                                    FormattingType: "FLOAT",
                                 },
                             },
-                            StartGroup: 1240933187850382646,
+                            StartGroup: 1612020807983605623,
                         },
                         shared.Pivot{
                             DimensionFilterClauses: []shared.DimensionFilterClause{
                                 shared.DimensionFilterClause{
                                     Filters: []shared.DimensionFilter{
                                         shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "dicta",
-                                            Expressions: []string{
-                                                "totam",
-                                                "cumque",
-                                                "cupiditate",
-                                            },
-                                            Not: true,
-                                            Operator: "OPERATOR_UNSPECIFIED",
-                                        },
-                                        shared.DimensionFilter{
-                                            CaseSensitive: true,
-                                            DimensionName: "omnis",
-                                            Expressions: []string{
-                                                "at",
-                                                "totam",
-                                            },
-                                            Not: true,
-                                            Operator: "REGEXP",
-                                        },
-                                        shared.DimensionFilter{
                                             CaseSensitive: false,
-                                            DimensionName: "excepturi",
+                                            DimensionName: "a",
                                             Expressions: []string{
-                                                "qui",
-                                            },
-                                            Not: true,
-                                            Operator: "PARTIAL",
-                                        },
-                                    },
-                                    Operator: "OPERATOR_UNSPECIFIED",
-                                },
-                                shared.DimensionFilterClause{
-                                    Filters: []shared.DimensionFilter{
-                                        shared.DimensionFilter{
-                                            CaseSensitive: false,
-                                            DimensionName: "est",
-                                            Expressions: []string{
-                                                "veniam",
-                                                "dignissimos",
+                                                "nemo",
+                                                "tenetur",
                                             },
                                             Not: false,
-                                            Operator: "BEGINS_WITH",
+                                            Operator: "NUMERIC_GREATER_THAN",
                                         },
                                     },
                                     Operator: "OR",
@@ -2564,69 +280,186 @@ func main() {
                                             CaseSensitive: false,
                                             DimensionName: "qui",
                                             Expressions: []string{
-                                                "in",
-                                                "pariatur",
+                                                "cum",
+                                                "explicabo",
                                             },
                                             Not: true,
-                                            Operator: "BEGINS_WITH",
+                                            Operator: "NUMERIC_EQUAL",
+                                        },
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "qui",
+                                            Expressions: []string{
+                                                "et",
+                                                "enim",
+                                                "dolorem",
+                                            },
+                                            Not: false,
+                                            Operator: "NUMERIC_LESS_THAN",
+                                        },
+                                        shared.DimensionFilter{
+                                            CaseSensitive: true,
+                                            DimensionName: "omnis",
+                                            Expressions: []string{
+                                                "quia",
+                                                "ea",
+                                                "mollitia",
+                                            },
+                                            Not: true,
+                                            Operator: "EXACT",
                                         },
                                     },
-                                    Operator: "OPERATOR_UNSPECIFIED",
+                                    Operator: "AND",
                                 },
                             },
                             Dimensions: []shared.Dimension{
                                 shared.Dimension{
                                     HistogramBuckets: []string{
-                                        "esse",
+                                        "voluptatem",
                                     },
-                                    Name: "non",
+                                    Name: "ducimus",
                                 },
                                 shared.Dimension{
                                     HistogramBuckets: []string{
-                                        "deserunt",
+                                        "voluptatum",
+                                        "doloremque",
                                     },
-                                    Name: "maiores",
+                                    Name: "dolores",
                                 },
                                 shared.Dimension{
                                     HistogramBuckets: []string{
-                                        "voluptas",
-                                        "mollitia",
+                                        "quo",
                                     },
-                                    Name: "fugit",
+                                    Name: "voluptatibus",
                                 },
                             },
-                            MaxGroupCount: 196952708654416386,
+                            MaxGroupCount: 2340557313826005771,
                             Metrics: []shared.Metric{
                                 shared.Metric{
-                                    Alias: "aut",
-                                    Expression: "quo",
-                                    FormattingType: "TIME",
-                                },
-                                shared.Metric{
-                                    Alias: "at",
-                                    Expression: "veritatis",
-                                    FormattingType: "INTEGER",
-                                },
-                                shared.Metric{
-                                    Alias: "amet",
-                                    Expression: "molestiae",
+                                    Alias: "et",
+                                    Expression: "eos",
                                     FormattingType: "FLOAT",
                                 },
                             },
-                            StartGroup: 4810246019628772601,
+                            StartGroup: 312681846893318873,
+                        },
+                        shared.Pivot{
+                            DimensionFilterClauses: []shared.DimensionFilterClause{
+                                shared.DimensionFilterClause{
+                                    Filters: []shared.DimensionFilter{
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "earum",
+                                            Expressions: []string{
+                                                "iste",
+                                            },
+                                            Not: false,
+                                            Operator: "IN_LIST",
+                                        },
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "voluptates",
+                                            Expressions: []string{
+                                                "et",
+                                            },
+                                            Not: false,
+                                            Operator: "PARTIAL",
+                                        },
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "labore",
+                                            Expressions: []string{
+                                                "est",
+                                                "ipsa",
+                                                "quae",
+                                            },
+                                            Not: false,
+                                            Operator: "IN_LIST",
+                                        },
+                                    },
+                                    Operator: "OR",
+                                },
+                                shared.DimensionFilterClause{
+                                    Filters: []shared.DimensionFilter{
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "libero",
+                                            Expressions: []string{
+                                                "minima",
+                                                "beatae",
+                                                "aliquid",
+                                            },
+                                            Not: false,
+                                            Operator: "EXACT",
+                                        },
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "provident",
+                                            Expressions: []string{
+                                                "voluptate",
+                                                "exercitationem",
+                                                "facere",
+                                            },
+                                            Not: false,
+                                            Operator: "NUMERIC_GREATER_THAN",
+                                        },
+                                    },
+                                    Operator: "AND",
+                                },
+                                shared.DimensionFilterClause{
+                                    Filters: []shared.DimensionFilter{
+                                        shared.DimensionFilter{
+                                            CaseSensitive: false,
+                                            DimensionName: "numquam",
+                                            Expressions: []string{
+                                                "natus",
+                                                "quasi",
+                                            },
+                                            Not: true,
+                                            Operator: "NUMERIC_LESS_THAN",
+                                        },
+                                    },
+                                    Operator: "OR",
+                                },
+                            },
+                            Dimensions: []shared.Dimension{
+                                shared.Dimension{
+                                    HistogramBuckets: []string{
+                                        "voluptatem",
+                                    },
+                                    Name: "dolorum",
+                                },
+                                shared.Dimension{
+                                    HistogramBuckets: []string{
+                                        "quo",
+                                        "iste",
+                                        "quae",
+                                    },
+                                    Name: "rerum",
+                                },
+                            },
+                            MaxGroupCount: 2401970533730926172,
+                            Metrics: []shared.Metric{
+                                shared.Metric{
+                                    Alias: "aut",
+                                    Expression: "magnam",
+                                    FormattingType: "INTEGER",
+                                },
+                            },
+                            StartGroup: 5561808368852659813,
                         },
                     },
                     SamplingLevel: "DEFAULT",
                     Segments: []shared.Segment{
                         shared.Segment{
                             DynamicSegment: &shared.DynamicSegment{
-                                Name: "expedita",
+                                Name: "error",
                                 SessionSegment: &shared.SegmentDefinition{
                                     SegmentFilters: []shared.SegmentFilter{
                                         shared.SegmentFilter{
                                             Not: false,
                                             SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: false,
+                                                FirstStepShouldMatchFirstHit: true,
                                                 SegmentSequenceSteps: []shared.SegmentSequenceStep{
                                                     shared.SegmentSequenceStep{
                                                         MatchType: "PRECEDES",
@@ -2635,22 +468,43 @@ func main() {
                                                                 SegmentFilterClauses: []shared.SegmentFilterClause{
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "id",
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "dignissimos",
                                                                             Expressions: []string{
-                                                                                "magni",
-                                                                                "minima",
-                                                                                "doloremque",
+                                                                                "tempora",
+                                                                                "assumenda",
+                                                                                "et",
                                                                             },
-                                                                            MaxComparisonValue: "iure",
-                                                                            MinComparisonValue: "maiores",
-                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                            MaxComparisonValue: "rerum",
+                                                                            MinComparisonValue: "similique",
+                                                                            Operator: "NUMERIC_LESS_THAN",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "itaque",
-                                                                            MaxComparisonValue: "minima",
-                                                                            MetricName: "molestiae",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            ComparisonValue: "perspiciatis",
+                                                                            MaxComparisonValue: "non",
+                                                                            MetricName: "fugiat",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "maxime",
+                                                                            Expressions: []string{
+                                                                                "aspernatur",
+                                                                                "dolores",
+                                                                            },
+                                                                            MaxComparisonValue: "sed",
+                                                                            MinComparisonValue: "placeat",
+                                                                            Operator: "REGEXP",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "praesentium",
+                                                                            MaxComparisonValue: "deleniti",
+                                                                            MetricName: "beatae",
+                                                                            Operator: "EQUAL",
                                                                             Scope: "SESSION",
                                                                         },
                                                                         Not: false,
@@ -2658,21 +512,418 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "voluptas",
+                                                                            DimensionName: "totam",
                                                                             Expressions: []string{
-                                                                                "vel",
-                                                                                "mollitia",
+                                                                                "adipisci",
+                                                                                "consequatur",
+                                                                                "necessitatibus",
                                                                             },
-                                                                            MaxComparisonValue: "est",
-                                                                            MinComparisonValue: "omnis",
+                                                                            MaxComparisonValue: "delectus",
+                                                                            MinComparisonValue: "eius",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "labore",
+                                                                            MaxComparisonValue: "illum",
+                                                                            MetricName: "et",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "quos",
+                                                                            Expressions: []string{
+                                                                                "doloremque",
+                                                                            },
+                                                                            MaxComparisonValue: "provident",
+                                                                            MinComparisonValue: "vero",
+                                                                            Operator: "ENDS_WITH",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "rem",
+                                                                            MaxComparisonValue: "quo",
+                                                                            MetricName: "amet",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "quo",
+                                                                            Expressions: []string{
+                                                                                "error",
+                                                                            },
+                                                                            MaxComparisonValue: "reiciendis",
+                                                                            MinComparisonValue: "corrupti",
+                                                                            Operator: "ENDS_WITH",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "cupiditate",
+                                                                            MaxComparisonValue: "qui",
+                                                                            MetricName: "pariatur",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "qui",
+                                                                    Expressions: []string{
+                                                                        "saepe",
+                                                                        "quis",
+                                                                    },
+                                                                    MaxComparisonValue: "quia",
+                                                                    MinComparisonValue: "dignissimos",
+                                                                    Operator: "ENDS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "sit",
+                                                                    MaxComparisonValue: "optio",
+                                                                    MetricName: "aut",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "PRODUCT",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "voluptas",
+                                                                    Expressions: []string{
+                                                                        "nobis",
+                                                                    },
+                                                                    MaxComparisonValue: "sequi",
+                                                                    MinComparisonValue: "soluta",
+                                                                    Operator: "REGEXP",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "provident",
+                                                                    MaxComparisonValue: "aut",
+                                                                    MetricName: "culpa",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.SegmentFilter{
+                                            Not: true,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: false,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "IMMEDIATELY_PRECEDES",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "possimus",
+                                                                            Expressions: []string{
+                                                                                "molestiae",
+                                                                                "alias",
+                                                                                "repellat",
+                                                                            },
+                                                                            MaxComparisonValue: "qui",
+                                                                            MinComparisonValue: "ullam",
+                                                                            Operator: "REGEXP",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "doloribus",
+                                                                            MaxComparisonValue: "dolorum",
+                                                                            MetricName: "nisi",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "dolorem",
+                                                                            Expressions: []string{
+                                                                                "enim",
+                                                                                "recusandae",
+                                                                            },
+                                                                            MaxComparisonValue: "nostrum",
+                                                                            MinComparisonValue: "et",
+                                                                            Operator: "ENDS_WITH",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "aliquam",
+                                                                            MaxComparisonValue: "numquam",
+                                                                            MetricName: "incidunt",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "repudiandae",
+                                                                            Expressions: []string{
+                                                                                "sint",
+                                                                            },
+                                                                            MaxComparisonValue: "facere",
+                                                                            MinComparisonValue: "assumenda",
                                                                             Operator: "IN_LIST",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "temporibus",
-                                                                            MaxComparisonValue: "pariatur",
-                                                                            MetricName: "tenetur",
+                                                                            ComparisonValue: "commodi",
+                                                                            MaxComparisonValue: "iste",
+                                                                            MetricName: "assumenda",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "officia",
+                                                                            Expressions: []string{
+                                                                                "ea",
+                                                                                "ullam",
+                                                                                "blanditiis",
+                                                                            },
+                                                                            MaxComparisonValue: "nobis",
+                                                                            MinComparisonValue: "excepturi",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "quia",
+                                                                            MaxComparisonValue: "necessitatibus",
+                                                                            MetricName: "est",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "eligendi",
+                                                                    Expressions: []string{
+                                                                        "ab",
+                                                                        "sint",
+                                                                    },
+                                                                    MaxComparisonValue: "ea",
+                                                                    MinComparisonValue: "ad",
+                                                                    Operator: "OPERATOR_UNSPECIFIED",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "soluta",
+                                                                    MaxComparisonValue: "praesentium",
+                                                                    MetricName: "consequatur",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "vel",
+                                                                    Expressions: []string{
+                                                                        "sed",
+                                                                        "consequatur",
+                                                                        "inventore",
+                                                                    },
+                                                                    MaxComparisonValue: "assumenda",
+                                                                    MinComparisonValue: "tempora",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "illo",
+                                                                    MaxComparisonValue: "nesciunt",
+                                                                    MetricName: "voluptatem",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "SESSION",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "quia",
+                                                                    Expressions: []string{
+                                                                        "enim",
+                                                                    },
+                                                                    MaxComparisonValue: "voluptates",
+                                                                    MinComparisonValue: "dolorem",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "nihil",
+                                                                    MaxComparisonValue: "cum",
+                                                                    MetricName: "ipsum",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "tempore",
+                                                                    Expressions: []string{
+                                                                        "et",
+                                                                        "omnis",
+                                                                    },
+                                                                    MaxComparisonValue: "quia",
+                                                                    MinComparisonValue: "et",
+                                                                    Operator: "NUMERIC_LESS_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "aut",
+                                                                    MaxComparisonValue: "quos",
+                                                                    MetricName: "vel",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                UserSegment: &shared.SegmentDefinition{
+                                    SegmentFilters: []shared.SegmentFilter{
+                                        shared.SegmentFilter{
+                                            Not: true,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: false,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "quos",
+                                                                            Expressions: []string{
+                                                                                "aut",
+                                                                                "dignissimos",
+                                                                            },
+                                                                            MaxComparisonValue: "fugit",
+                                                                            MinComparisonValue: "quo",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "officia",
+                                                                            MaxComparisonValue: "doloremque",
+                                                                            MetricName: "sunt",
                                                                             Operator: "GREATER_THAN",
                                                                             Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "sed",
+                                                                            Expressions: []string{
+                                                                                "et",
+                                                                                "unde",
+                                                                                "quo",
+                                                                            },
+                                                                            MaxComparisonValue: "amet",
+                                                                            MinComparisonValue: "sed",
+                                                                            Operator: "NUMERIC_GREATER_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "id",
+                                                                            MaxComparisonValue: "aut",
+                                                                            MetricName: "sunt",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "dolor",
+                                                                            Expressions: []string{
+                                                                                "sapiente",
+                                                                            },
+                                                                            MaxComparisonValue: "et",
+                                                                            MinComparisonValue: "saepe",
+                                                                            Operator: "OPERATOR_UNSPECIFIED",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "cum",
+                                                                            MaxComparisonValue: "corrupti",
+                                                                            MetricName: "et",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "PRODUCT",
                                                                         },
                                                                         Not: true,
                                                                     },
@@ -2689,41 +940,283 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "sint",
+                                                                    DimensionName: "excepturi",
                                                                     Expressions: []string{
-                                                                        "exercitationem",
-                                                                        "quia",
+                                                                        "sed",
+                                                                        "error",
+                                                                        "optio",
                                                                     },
-                                                                    MaxComparisonValue: "est",
-                                                                    MinComparisonValue: "fuga",
+                                                                    MaxComparisonValue: "accusantium",
+                                                                    MinComparisonValue: "voluptatem",
+                                                                    Operator: "PARTIAL",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "officia",
+                                                                    MaxComparisonValue: "corporis",
+                                                                    MetricName: "et",
+                                                                    Operator: "BETWEEN",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "officiis",
+                                                                    Expressions: []string{
+                                                                        "illo",
+                                                                        "quisquam",
+                                                                    },
+                                                                    MaxComparisonValue: "assumenda",
+                                                                    MinComparisonValue: "minus",
+                                                                    Operator: "PARTIAL",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "harum",
+                                                                    MaxComparisonValue: "ab",
+                                                                    MetricName: "odio",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "PRODUCT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "non",
+                                                                    Expressions: []string{
+                                                                        "libero",
+                                                                        "veritatis",
+                                                                    },
+                                                                    MaxComparisonValue: "sapiente",
+                                                                    MinComparisonValue: "ducimus",
+                                                                    Operator: "IN_LIST",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "dolore",
+                                                                    MaxComparisonValue: "explicabo",
+                                                                    MetricName: "suscipit",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "HIT",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "consequatur",
+                                                                    Expressions: []string{
+                                                                        "natus",
+                                                                        "velit",
+                                                                        "qui",
+                                                                    },
+                                                                    MaxComparisonValue: "excepturi",
+                                                                    MinComparisonValue: "ex",
                                                                     Operator: "REGEXP",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "ex",
-                                                                    MaxComparisonValue: "ex",
-                                                                    MetricName: "eius",
+                                                                    ComparisonValue: "ut",
+                                                                    MaxComparisonValue: "rerum",
+                                                                    MetricName: "commodi",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "HIT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "dolor",
+                                                                    Expressions: []string{
+                                                                        "ut",
+                                                                    },
+                                                                    MaxComparisonValue: "odit",
+                                                                    MinComparisonValue: "ea",
+                                                                    Operator: "BEGINS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "enim",
+                                                                    MaxComparisonValue: "cum",
+                                                                    MetricName: "et",
                                                                     Operator: "BETWEEN",
                                                                     Scope: "HIT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "optio",
+                                                                    Expressions: []string{
+                                                                        "saepe",
+                                                                        "optio",
+                                                                        "animi",
+                                                                    },
+                                                                    MaxComparisonValue: "libero",
+                                                                    MinComparisonValue: "ut",
+                                                                    Operator: "IN_LIST",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "illum",
+                                                                    MaxComparisonValue: "tempore",
+                                                                    MetricName: "eum",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "HIT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            SegmentID: "quasi",
+                        },
+                        shared.Segment{
+                            DynamicSegment: &shared.DynamicSegment{
+                                Name: "et",
+                                SessionSegment: &shared.SegmentDefinition{
+                                    SegmentFilters: []shared.SegmentFilter{
+                                        shared.SegmentFilter{
+                                            Not: false,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: true,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "PRECEDES",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "aut",
+                                                                            Expressions: []string{
+                                                                                "aliquam",
+                                                                            },
+                                                                            MaxComparisonValue: "saepe",
+                                                                            MinComparisonValue: "dolorem",
+                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "soluta",
+                                                                            MaxComparisonValue: "occaecati",
+                                                                            MetricName: "quia",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "qui",
+                                                                            Expressions: []string{
+                                                                                "sed",
+                                                                                "laborum",
+                                                                            },
+                                                                            MaxComparisonValue: "labore",
+                                                                            MinComparisonValue: "non",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "non",
+                                                                            MaxComparisonValue: "ullam",
+                                                                            MetricName: "repellendus",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "PRECEDES",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "voluptates",
+                                                                            Expressions: []string{
+                                                                                "temporibus",
+                                                                            },
+                                                                            MaxComparisonValue: "a",
+                                                                            MinComparisonValue: "cupiditate",
+                                                                            Operator: "EXACT",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "odit",
+                                                                            MaxComparisonValue: "facilis",
+                                                                            MetricName: "sit",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "itaque",
+                                                                    Expressions: []string{
+                                                                        "quis",
+                                                                        "quibusdam",
+                                                                    },
+                                                                    MaxComparisonValue: "quis",
+                                                                    MinComparisonValue: "qui",
+                                                                    Operator: "BEGINS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "dignissimos",
+                                                                    MaxComparisonValue: "officia",
+                                                                    MetricName: "officia",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "SESSION",
                                                                 },
                                                                 Not: false,
                                                             },
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: false,
-                                                                    DimensionName: "natus",
+                                                                    DimensionName: "illo",
                                                                     Expressions: []string{
-                                                                        "impedit",
+                                                                        "et",
+                                                                        "et",
                                                                     },
-                                                                    MaxComparisonValue: "molestiae",
-                                                                    MinComparisonValue: "temporibus",
-                                                                    Operator: "EXACT",
+                                                                    MaxComparisonValue: "vel",
+                                                                    MinComparisonValue: "vero",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "vitae",
-                                                                    MaxComparisonValue: "qui",
-                                                                    MetricName: "necessitatibus",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                    ComparisonValue: "ut",
+                                                                    MaxComparisonValue: "earum",
+                                                                    MetricName: "sint",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "USER",
                                                                 },
                                                                 Not: true,
                                                             },
@@ -2734,19 +1227,19 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "est",
+                                                                    DimensionName: "minima",
                                                                     Expressions: []string{
-                                                                        "quis",
+                                                                        "corrupti",
                                                                     },
-                                                                    MaxComparisonValue: "nisi",
-                                                                    MinComparisonValue: "sit",
-                                                                    Operator: "NUMERIC_BETWEEN",
+                                                                    MaxComparisonValue: "ipsa",
+                                                                    MinComparisonValue: "sint",
+                                                                    Operator: "BEGINS_WITH",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "qui",
-                                                                    MaxComparisonValue: "quae",
-                                                                    MetricName: "nemo",
-                                                                    Operator: "GREATER_THAN",
+                                                                    ComparisonValue: "ab",
+                                                                    MaxComparisonValue: "porro",
+                                                                    MetricName: "quis",
+                                                                    Operator: "LESS_THAN",
                                                                     Scope: "PRODUCT",
                                                                 },
                                                                 Not: false,
@@ -2754,23 +1247,23 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: false,
-                                                                    DimensionName: "consectetur",
+                                                                    DimensionName: "odio",
                                                                     Expressions: []string{
-                                                                        "odit",
-                                                                        "quo",
+                                                                        "velit",
+                                                                        "officiis",
                                                                     },
-                                                                    MaxComparisonValue: "nam",
-                                                                    MinComparisonValue: "et",
-                                                                    Operator: "ENDS_WITH",
+                                                                    MaxComparisonValue: "ullam",
+                                                                    MinComparisonValue: "quasi",
+                                                                    Operator: "OPERATOR_UNSPECIFIED",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "qui",
-                                                                    MaxComparisonValue: "sit",
-                                                                    MetricName: "et",
+                                                                    ComparisonValue: "sunt",
+                                                                    MaxComparisonValue: "soluta",
+                                                                    MetricName: "animi",
                                                                     Operator: "LESS_THAN",
-                                                                    Scope: "PRODUCT",
+                                                                    Scope: "HIT",
                                                                 },
-                                                                Not: false,
+                                                                Not: true,
                                                             },
                                                         },
                                                     },
@@ -2778,23 +1271,44 @@ func main() {
                                                         SegmentFilterClauses: []shared.SegmentFilterClause{
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "accusantium",
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "non",
                                                                     Expressions: []string{
-                                                                        "consequuntur",
+                                                                        "molestiae",
                                                                     },
-                                                                    MaxComparisonValue: "sed",
-                                                                    MinComparisonValue: "delectus",
-                                                                    Operator: "NUMERIC_BETWEEN",
+                                                                    MaxComparisonValue: "mollitia",
+                                                                    MinComparisonValue: "non",
+                                                                    Operator: "NUMERIC_LESS_THAN",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "expedita",
-                                                                    MaxComparisonValue: "necessitatibus",
-                                                                    MetricName: "eveniet",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "HIT",
+                                                                    ComparisonValue: "id",
+                                                                    MaxComparisonValue: "eos",
+                                                                    MetricName: "quia",
+                                                                    Operator: "BETWEEN",
+                                                                    Scope: "SESSION",
                                                                 },
-                                                                Not: false,
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "qui",
+                                                                    Expressions: []string{
+                                                                        "et",
+                                                                        "aut",
+                                                                    },
+                                                                    MaxComparisonValue: "ut",
+                                                                    MinComparisonValue: "voluptas",
+                                                                    Operator: "IN_LIST",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "molestias",
+                                                                    MaxComparisonValue: "odio",
+                                                                    MetricName: "quo",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "SESSION",
+                                                                },
+                                                                Not: true,
                                                             },
                                                         },
                                                     },
@@ -2807,31 +1321,30 @@ func main() {
                                                 FirstStepShouldMatchFirstHit: false,
                                                 SegmentSequenceSteps: []shared.SegmentSequenceStep{
                                                     shared.SegmentSequenceStep{
-                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        MatchType: "IMMEDIATELY_PRECEDES",
                                                         OrFiltersForSegment: []shared.OrFiltersForSegment{
                                                             shared.OrFiltersForSegment{
                                                                 SegmentFilterClauses: []shared.SegmentFilterClause{
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "et",
+                                                                            DimensionName: "maiores",
                                                                             Expressions: []string{
-                                                                                "ea",
                                                                                 "omnis",
                                                                                 "et",
                                                                             },
-                                                                            MaxComparisonValue: "ipsum",
-                                                                            MinComparisonValue: "quisquam",
-                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                            MaxComparisonValue: "vitae",
+                                                                            MinComparisonValue: "excepturi",
+                                                                            Operator: "EXACT",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "nostrum",
-                                                                            MaxComparisonValue: "vel",
-                                                                            MetricName: "quia",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "SESSION",
+                                                                            ComparisonValue: "voluptas",
+                                                                            MaxComparisonValue: "illo",
+                                                                            MetricName: "voluptate",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "PRODUCT",
                                                                         },
-                                                                        Not: false,
+                                                                        Not: true,
                                                                     },
                                                                 },
                                                             },
@@ -2840,87 +1353,545 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "occaecati",
+                                                                            DimensionName: "qui",
                                                                             Expressions: []string{
-                                                                                "in",
+                                                                                "et",
+                                                                                "maiores",
+                                                                                "sed",
                                                                             },
-                                                                            MaxComparisonValue: "doloribus",
-                                                                            MinComparisonValue: "eveniet",
+                                                                            MaxComparisonValue: "recusandae",
+                                                                            MinComparisonValue: "omnis",
                                                                             Operator: "BEGINS_WITH",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "reiciendis",
-                                                                            MaxComparisonValue: "laudantium",
-                                                                            MetricName: "autem",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "SESSION",
+                                                                            ComparisonValue: "tenetur",
+                                                                            MaxComparisonValue: "beatae",
+                                                                            MetricName: "ut",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "PRODUCT",
                                                                         },
-                                                                        Not: false,
+                                                                        Not: true,
                                                                     },
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "quasi",
+                                                                            DimensionName: "maxime",
                                                                             Expressions: []string{
-                                                                                "minima",
+                                                                                "neque",
+                                                                                "est",
                                                                             },
-                                                                            MaxComparisonValue: "ipsum",
-                                                                            MinComparisonValue: "ducimus",
-                                                                            Operator: "OPERATOR_UNSPECIFIED",
+                                                                            MaxComparisonValue: "ad",
+                                                                            MinComparisonValue: "quibusdam",
+                                                                            Operator: "BEGINS_WITH",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "iure",
-                                                                            MaxComparisonValue: "voluptatum",
-                                                                            MetricName: "et",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "quis",
-                                                                            Expressions: []string{
-                                                                                "dolores",
-                                                                                "ipsam",
-                                                                            },
-                                                                            MaxComparisonValue: "et",
-                                                                            MinComparisonValue: "corporis",
-                                                                            Operator: "ENDS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "aut",
-                                                                            MaxComparisonValue: "possimus",
-                                                                            MetricName: "qui",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                            ComparisonValue: "ea",
+                                                                            MaxComparisonValue: "ducimus",
+                                                                            MetricName: "quia",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "HIT",
                                                                         },
                                                                         Not: true,
                                                                     },
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "quisquam",
+                                                                            DimensionName: "quo",
                                                                             Expressions: []string{
-                                                                                "voluptatum",
+                                                                                "rerum",
+                                                                                "ipsam",
+                                                                                "quia",
                                                                             },
-                                                                            MaxComparisonValue: "laudantium",
-                                                                            MinComparisonValue: "perspiciatis",
-                                                                            Operator: "ENDS_WITH",
+                                                                            MaxComparisonValue: "voluptatibus",
+                                                                            MinComparisonValue: "sint",
+                                                                            Operator: "NUMERIC_BETWEEN",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "molestias",
-                                                                            MaxComparisonValue: "dolore",
-                                                                            MetricName: "voluptas",
-                                                                            Operator: "GREATER_THAN",
+                                                                            ComparisonValue: "sed",
+                                                                            MaxComparisonValue: "facere",
+                                                                            MetricName: "voluptate",
+                                                                            Operator: "EQUAL",
                                                                             Scope: "UNSPECIFIED_SCOPE",
                                                                         },
                                                                         Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "consequatur",
+                                                                            Expressions: []string{
+                                                                                "rerum",
+                                                                                "sed",
+                                                                            },
+                                                                            MaxComparisonValue: "consectetur",
+                                                                            MinComparisonValue: "similique",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "nesciunt",
+                                                                            MaxComparisonValue: "est",
+                                                                            MetricName: "possimus",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "similique",
+                                                                            Expressions: []string{
+                                                                                "sit",
+                                                                                "dolorem",
+                                                                            },
+                                                                            MaxComparisonValue: "doloremque",
+                                                                            MinComparisonValue: "aut",
+                                                                            Operator: "IN_LIST",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "a",
+                                                                            MaxComparisonValue: "aut",
+                                                                            MetricName: "illum",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "ratione",
+                                                                            Expressions: []string{
+                                                                                "ut",
+                                                                            },
+                                                                            MaxComparisonValue: "magni",
+                                                                            MinComparisonValue: "repellat",
+                                                                            Operator: "OPERATOR_UNSPECIFIED",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "animi",
+                                                                            MaxComparisonValue: "ut",
+                                                                            MetricName: "inventore",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "ut",
+                                                                    Expressions: []string{
+                                                                        "omnis",
+                                                                        "neque",
+                                                                    },
+                                                                    MaxComparisonValue: "quisquam",
+                                                                    MinComparisonValue: "maxime",
+                                                                    Operator: "EXACT",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "eaque",
+                                                                    MaxComparisonValue: "voluptatibus",
+                                                                    MetricName: "repellendus",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "molestias",
+                                                                    Expressions: []string{
+                                                                        "minus",
+                                                                    },
+                                                                    MaxComparisonValue: "recusandae",
+                                                                    MinComparisonValue: "ut",
+                                                                    Operator: "OPERATOR_UNSPECIFIED",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "eius",
+                                                                    MaxComparisonValue: "repellat",
+                                                                    MetricName: "sit",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "aliquid",
+                                                                    Expressions: []string{
+                                                                        "ut",
+                                                                    },
+                                                                    MaxComparisonValue: "dolorem",
+                                                                    MinComparisonValue: "fugiat",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "id",
+                                                                    MaxComparisonValue: "velit",
+                                                                    MetricName: "qui",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "PRODUCT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "quos",
+                                                                    Expressions: []string{
+                                                                        "et",
+                                                                        "quam",
+                                                                    },
+                                                                    MaxComparisonValue: "molestiae",
+                                                                    MinComparisonValue: "et",
+                                                                    Operator: "ENDS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "aut",
+                                                                    MaxComparisonValue: "nihil",
+                                                                    MetricName: "perspiciatis",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.SegmentFilter{
+                                            Not: false,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: true,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "blanditiis",
+                                                                            Expressions: []string{
+                                                                                "eaque",
+                                                                                "sequi",
+                                                                                "quos",
+                                                                            },
+                                                                            MaxComparisonValue: "unde",
+                                                                            MinComparisonValue: "enim",
+                                                                            Operator: "EXACT",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "quas",
+                                                                            MaxComparisonValue: "non",
+                                                                            MetricName: "dignissimos",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "quasi",
+                                                                            Expressions: []string{
+                                                                                "ratione",
+                                                                            },
+                                                                            MaxComparisonValue: "aliquam",
+                                                                            MinComparisonValue: "quod",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "deserunt",
+                                                                            MaxComparisonValue: "et",
+                                                                            MetricName: "magnam",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "rerum",
+                                                                            Expressions: []string{
+                                                                                "fugiat",
+                                                                                "facere",
+                                                                                "non",
+                                                                            },
+                                                                            MaxComparisonValue: "consectetur",
+                                                                            MinComparisonValue: "eum",
+                                                                            Operator: "REGEXP",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "inventore",
+                                                                            MaxComparisonValue: "est",
+                                                                            MetricName: "sunt",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "aut",
+                                                                            Expressions: []string{
+                                                                                "aut",
+                                                                            },
+                                                                            MaxComparisonValue: "reprehenderit",
+                                                                            MinComparisonValue: "laborum",
+                                                                            Operator: "IN_LIST",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "praesentium",
+                                                                            MaxComparisonValue: "non",
+                                                                            MetricName: "consectetur",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "consequatur",
+                                                                            Expressions: []string{
+                                                                                "vero",
+                                                                            },
+                                                                            MaxComparisonValue: "rem",
+                                                                            MinComparisonValue: "architecto",
+                                                                            Operator: "ENDS_WITH",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "aut",
+                                                                            MaxComparisonValue: "non",
+                                                                            MetricName: "praesentium",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "est",
+                                                                            Expressions: []string{
+                                                                                "tempore",
+                                                                                "autem",
+                                                                            },
+                                                                            MaxComparisonValue: "sunt",
+                                                                            MinComparisonValue: "consequuntur",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "dicta",
+                                                                            MaxComparisonValue: "asperiores",
+                                                                            MetricName: "saepe",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "PRECEDES",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "culpa",
+                                                                            Expressions: []string{
+                                                                                "error",
+                                                                            },
+                                                                            MaxComparisonValue: "non",
+                                                                            MinComparisonValue: "natus",
+                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "labore",
+                                                                            MaxComparisonValue: "consequatur",
+                                                                            MetricName: "quia",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "PRECEDES",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "modi",
+                                                                            Expressions: []string{
+                                                                                "dolorum",
+                                                                                "autem",
+                                                                            },
+                                                                            MaxComparisonValue: "consequatur",
+                                                                            MinComparisonValue: "minima",
+                                                                            Operator: "NUMERIC_GREATER_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "ad",
+                                                                            MaxComparisonValue: "corrupti",
+                                                                            MetricName: "non",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "provident",
+                                                                            Expressions: []string{
+                                                                                "voluptatum",
+                                                                                "aperiam",
+                                                                            },
+                                                                            MaxComparisonValue: "necessitatibus",
+                                                                            MinComparisonValue: "commodi",
+                                                                            Operator: "EXACT",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "nisi",
+                                                                            MaxComparisonValue: "nemo",
+                                                                            MetricName: "consequatur",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "consequatur",
+                                                                            Expressions: []string{
+                                                                                "tempora",
+                                                                            },
+                                                                            MaxComparisonValue: "ea",
+                                                                            MinComparisonValue: "tempora",
+                                                                            Operator: "NUMERIC_GREATER_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "assumenda",
+                                                                            MaxComparisonValue: "voluptatibus",
+                                                                            MetricName: "dolorem",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "necessitatibus",
+                                                                            Expressions: []string{
+                                                                                "iusto",
+                                                                                "ex",
+                                                                                "eum",
+                                                                            },
+                                                                            MaxComparisonValue: "commodi",
+                                                                            MinComparisonValue: "soluta",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "voluptatum",
+                                                                            MaxComparisonValue: "blanditiis",
+                                                                            MetricName: "velit",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "eaque",
+                                                                            Expressions: []string{
+                                                                                "expedita",
+                                                                                "quaerat",
+                                                                            },
+                                                                            MaxComparisonValue: "dignissimos",
+                                                                            MinComparisonValue: "doloremque",
+                                                                            Operator: "REGEXP",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "et",
+                                                                            MaxComparisonValue: "beatae",
+                                                                            MetricName: "occaecati",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "consequatur",
+                                                                            Expressions: []string{
+                                                                                "quasi",
+                                                                                "autem",
+                                                                            },
+                                                                            MaxComparisonValue: "corrupti",
+                                                                            MinComparisonValue: "ducimus",
+                                                                            Operator: "OPERATOR_UNSPECIFIED",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "aut",
+                                                                            MaxComparisonValue: "molestiae",
+                                                                            MetricName: "architecto",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: false,
                                                                     },
                                                                 },
                                                             },
@@ -2937,42 +1908,65 @@ func main() {
                                                                     CaseSensitive: false,
                                                                     DimensionName: "sed",
                                                                     Expressions: []string{
-                                                                        "et",
-                                                                        "quis",
-                                                                        "amet",
+                                                                        "est",
                                                                     },
-                                                                    MaxComparisonValue: "non",
-                                                                    MinComparisonValue: "et",
-                                                                    Operator: "NUMERIC_BETWEEN",
+                                                                    MaxComparisonValue: "at",
+                                                                    MinComparisonValue: "sed",
+                                                                    Operator: "REGEXP",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "vel",
-                                                                    MaxComparisonValue: "labore",
-                                                                    MetricName: "alias",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "SESSION",
+                                                                    ComparisonValue: "at",
+                                                                    MaxComparisonValue: "molestiae",
+                                                                    MetricName: "assumenda",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "PRODUCT",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "et",
+                                                                    Expressions: []string{
+                                                                        "occaecati",
+                                                                        "incidunt",
+                                                                        "est",
+                                                                    },
+                                                                    MaxComparisonValue: "fuga",
+                                                                    MinComparisonValue: "rerum",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "libero",
+                                                                    MaxComparisonValue: "eligendi",
+                                                                    MetricName: "id",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "PRODUCT",
                                                                 },
                                                                 Not: true,
                                                             },
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "voluptatem",
+                                                                    DimensionName: "omnis",
                                                                     Expressions: []string{
-                                                                        "aut",
-                                                                        "consequatur",
-                                                                        "neque",
+                                                                        "doloremque",
+                                                                        "quis",
                                                                     },
-                                                                    MaxComparisonValue: "qui",
-                                                                    MinComparisonValue: "molestiae",
-                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                    MaxComparisonValue: "iste",
+                                                                    MinComparisonValue: "molestias",
+                                                                    Operator: "NUMERIC_BETWEEN",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "quo",
-                                                                    MaxComparisonValue: "libero",
-                                                                    MetricName: "eveniet",
+                                                                    ComparisonValue: "aut",
+                                                                    MaxComparisonValue: "tenetur",
+                                                                    MetricName: "quo",
                                                                     Operator: "GREATER_THAN",
-                                                                    Scope: "USER",
+                                                                    Scope: "SESSION",
                                                                 },
                                                                 Not: true,
                                                             },
@@ -2983,41 +1977,41 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "ea",
+                                                                    DimensionName: "et",
                                                                     Expressions: []string{
-                                                                        "ducimus",
-                                                                        "eos",
+                                                                        "laborum",
+                                                                        "incidunt",
                                                                     },
-                                                                    MaxComparisonValue: "aut",
-                                                                    MinComparisonValue: "accusamus",
-                                                                    Operator: "NUMERIC_BETWEEN",
+                                                                    MaxComparisonValue: "rem",
+                                                                    MinComparisonValue: "explicabo",
+                                                                    Operator: "BEGINS_WITH",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "odit",
-                                                                    MaxComparisonValue: "atque",
-                                                                    MetricName: "culpa",
-                                                                    Operator: "EQUAL",
-                                                                    Scope: "HIT",
+                                                                    ComparisonValue: "quas",
+                                                                    MaxComparisonValue: "autem",
+                                                                    MetricName: "quae",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "USER",
                                                                 },
                                                                 Not: false,
                                                             },
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: false,
-                                                                    DimensionName: "laboriosam",
+                                                                    DimensionName: "qui",
                                                                     Expressions: []string{
-                                                                        "aliquam",
-                                                                        "libero",
+                                                                        "hic",
+                                                                        "et",
                                                                     },
-                                                                    MaxComparisonValue: "eos",
-                                                                    MinComparisonValue: "eveniet",
-                                                                    Operator: "IN_LIST",
+                                                                    MaxComparisonValue: "illo",
+                                                                    MinComparisonValue: "ut",
+                                                                    Operator: "OPERATOR_UNSPECIFIED",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "odio",
-                                                                    MaxComparisonValue: "eligendi",
-                                                                    MetricName: "officia",
-                                                                    Operator: "LESS_THAN",
+                                                                    ComparisonValue: "eum",
+                                                                    MaxComparisonValue: "et",
+                                                                    MetricName: "sed",
+                                                                    Operator: "BETWEEN",
                                                                     Scope: "HIT",
                                                                 },
                                                                 Not: true,
@@ -3025,21 +2019,21 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "quos",
+                                                                    DimensionName: "beatae",
                                                                     Expressions: []string{
-                                                                        "voluptatem",
-                                                                        "cumque",
+                                                                        "et",
+                                                                        "ipsam",
                                                                     },
-                                                                    MaxComparisonValue: "omnis",
-                                                                    MinComparisonValue: "voluptatum",
-                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                    MaxComparisonValue: "eos",
+                                                                    MinComparisonValue: "autem",
+                                                                    Operator: "REGEXP",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "eos",
-                                                                    MaxComparisonValue: "perferendis",
-                                                                    MetricName: "autem",
+                                                                    ComparisonValue: "vel",
+                                                                    MaxComparisonValue: "quo",
+                                                                    MetricName: "minus",
                                                                     Operator: "LESS_THAN",
-                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                    Scope: "SESSION",
                                                                 },
                                                                 Not: false,
                                                             },
@@ -3065,88 +2059,63 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "mollitia",
+                                                                            DimensionName: "ut",
                                                                             Expressions: []string{
-                                                                                "pariatur",
-                                                                                "rerum",
-                                                                                "deserunt",
+                                                                                "libero",
+                                                                                "quaerat",
                                                                             },
-                                                                            MaxComparisonValue: "blanditiis",
-                                                                            MinComparisonValue: "a",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "nemo",
-                                                                            MaxComparisonValue: "tenetur",
-                                                                            MetricName: "perferendis",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "vel",
-                                                                            Expressions: []string{
-                                                                                "explicabo",
-                                                                            },
-                                                                            MaxComparisonValue: "aut",
-                                                                            MinComparisonValue: "accusantium",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "qui",
-                                                                            MaxComparisonValue: "enim",
-                                                                            MetricName: "et",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "HIT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "saepe",
-                                                                            Expressions: []string{
-                                                                                "incidunt",
-                                                                                "quia",
-                                                                                "ea",
-                                                                            },
-                                                                            MaxComparisonValue: "mollitia",
+                                                                            MaxComparisonValue: "ut",
                                                                             MinComparisonValue: "sed",
-                                                                            Operator: "EXACT",
+                                                                            Operator: "IN_LIST",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "reiciendis",
-                                                                            MaxComparisonValue: "quis",
-                                                                            MetricName: "minima",
-                                                                            Operator: "BETWEEN",
-                                                                            Scope: "PRODUCT",
+                                                                            ComparisonValue: "nesciunt",
+                                                                            MaxComparisonValue: "incidunt",
+                                                                            MetricName: "hic",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "voluptas",
+                                                                            Expressions: []string{
+                                                                                "tenetur",
+                                                                                "blanditiis",
+                                                                            },
+                                                                            MaxComparisonValue: "cum",
+                                                                            MinComparisonValue: "illum",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "et",
+                                                                            MaxComparisonValue: "quia",
+                                                                            MetricName: "est",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
                                                                         },
                                                                         Not: true,
                                                                     },
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "doloremque",
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "autem",
                                                                             Expressions: []string{
-                                                                                "sit",
+                                                                                "ipsam",
+                                                                                "ut",
                                                                             },
-                                                                            MaxComparisonValue: "quo",
-                                                                            MinComparisonValue: "voluptatibus",
-                                                                            Operator: "EXACT",
+                                                                            MaxComparisonValue: "quod",
+                                                                            MinComparisonValue: "dolor",
+                                                                            Operator: "NUMERIC_GREATER_THAN",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "repellendus",
-                                                                            MaxComparisonValue: "et",
-                                                                            MetricName: "eos",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                            ComparisonValue: "voluptates",
+                                                                            MaxComparisonValue: "cupiditate",
+                                                                            MetricName: "sapiente",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "USER",
                                                                         },
                                                                         Not: false,
                                                                     },
@@ -3163,20 +2132,278 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: false,
-                                                                    DimensionName: "fugit",
+                                                                    DimensionName: "corporis",
                                                                     Expressions: []string{
-                                                                        "quis",
-                                                                        "et",
-                                                                        "inventore",
+                                                                        "voluptatem",
                                                                     },
-                                                                    MaxComparisonValue: "voluptates",
-                                                                    MinComparisonValue: "fugit",
+                                                                    MaxComparisonValue: "id",
+                                                                    MinComparisonValue: "corrupti",
+                                                                    Operator: "NUMERIC_LESS_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "quos",
+                                                                    MaxComparisonValue: "tempore",
+                                                                    MetricName: "quibusdam",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "SESSION",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "praesentium",
+                                                                    Expressions: []string{
+                                                                        "quae",
+                                                                    },
+                                                                    MaxComparisonValue: "est",
+                                                                    MinComparisonValue: "iusto",
+                                                                    Operator: "NUMERIC_LESS_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "et",
+                                                                    MaxComparisonValue: "dolor",
+                                                                    MetricName: "vero",
+                                                                    Operator: "BETWEEN",
+                                                                    Scope: "HIT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "vitae",
+                                                                    Expressions: []string{
+                                                                        "doloribus",
+                                                                        "in",
+                                                                        "et",
+                                                                    },
+                                                                    MaxComparisonValue: "quia",
+                                                                    MinComparisonValue: "eius",
+                                                                    Operator: "EXACT",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "et",
+                                                                    MaxComparisonValue: "quos",
+                                                                    MetricName: "ut",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "doloribus",
+                                                                    Expressions: []string{
+                                                                        "commodi",
+                                                                        "aspernatur",
+                                                                        "voluptates",
+                                                                    },
+                                                                    MaxComparisonValue: "praesentium",
+                                                                    MinComparisonValue: "quidem",
+                                                                    Operator: "NUMERIC_BETWEEN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "dicta",
+                                                                    MaxComparisonValue: "consequatur",
+                                                                    MetricName: "voluptatum",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "PRODUCT",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "sit",
+                                                                    Expressions: []string{
+                                                                        "sint",
+                                                                        "sapiente",
+                                                                    },
+                                                                    MaxComparisonValue: "alias",
+                                                                    MinComparisonValue: "minima",
                                                                     Operator: "BEGINS_WITH",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "pariatur",
-                                                                    MaxComparisonValue: "quia",
-                                                                    MetricName: "sunt",
+                                                                    ComparisonValue: "vel",
+                                                                    MaxComparisonValue: "voluptatem",
+                                                                    MetricName: "repellendus",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "SESSION",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            SegmentID: "soluta",
+                        },
+                        shared.Segment{
+                            DynamicSegment: &shared.DynamicSegment{
+                                Name: "eos",
+                                SessionSegment: &shared.SegmentDefinition{
+                                    SegmentFilters: []shared.SegmentFilter{
+                                        shared.SegmentFilter{
+                                            Not: true,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: false,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "enim",
+                                                                            Expressions: []string{
+                                                                                "laudantium",
+                                                                                "error",
+                                                                                "id",
+                                                                            },
+                                                                            MaxComparisonValue: "voluptates",
+                                                                            MinComparisonValue: "nihil",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "sit",
+                                                                            MaxComparisonValue: "ut",
+                                                                            MetricName: "quo",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "quam",
+                                                                            Expressions: []string{
+                                                                                "iure",
+                                                                            },
+                                                                            MaxComparisonValue: "dolores",
+                                                                            MinComparisonValue: "rerum",
+                                                                            Operator: "EXACT",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "maiores",
+                                                                            MaxComparisonValue: "qui",
+                                                                            MetricName: "dolorum",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "consectetur",
+                                                                            Expressions: []string{
+                                                                                "aspernatur",
+                                                                                "et",
+                                                                            },
+                                                                            MaxComparisonValue: "fuga",
+                                                                            MinComparisonValue: "autem",
+                                                                            Operator: "OPERATOR_UNSPECIFIED",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "autem",
+                                                                            MaxComparisonValue: "unde",
+                                                                            MetricName: "accusantium",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "quam",
+                                                                    Expressions: []string{
+                                                                        "eum",
+                                                                        "ut",
+                                                                    },
+                                                                    MaxComparisonValue: "dolorem",
+                                                                    MinComparisonValue: "nihil",
+                                                                    Operator: "BEGINS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "dolore",
+                                                                    MaxComparisonValue: "similique",
+                                                                    MetricName: "similique",
+                                                                    Operator: "BETWEEN",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "reprehenderit",
+                                                                    Expressions: []string{
+                                                                        "corrupti",
+                                                                        "occaecati",
+                                                                        "harum",
+                                                                    },
+                                                                    MaxComparisonValue: "aut",
+                                                                    MinComparisonValue: "sit",
+                                                                    Operator: "EXACT",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "omnis",
+                                                                    MaxComparisonValue: "omnis",
+                                                                    MetricName: "temporibus",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "SESSION",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "dolor",
+                                                                    Expressions: []string{
+                                                                        "quam",
+                                                                        "non",
+                                                                        "dolorum",
+                                                                    },
+                                                                    MaxComparisonValue: "iusto",
+                                                                    MinComparisonValue: "possimus",
+                                                                    Operator: "EXACT",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "est",
+                                                                    MaxComparisonValue: "similique",
+                                                                    MetricName: "placeat",
                                                                     Operator: "BETWEEN",
                                                                     Scope: "USER",
                                                                 },
@@ -3188,90 +2415,23 @@ func main() {
                                                         SegmentFilterClauses: []shared.SegmentFilterClause{
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "sint",
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "similique",
                                                                     Expressions: []string{
+                                                                        "quod",
+                                                                        "velit",
                                                                         "eos",
-                                                                        "officiis",
-                                                                        "id",
                                                                     },
-                                                                    MaxComparisonValue: "libero",
-                                                                    MinComparisonValue: "porro",
-                                                                    Operator: "BEGINS_WITH",
+                                                                    MaxComparisonValue: "atque",
+                                                                    MinComparisonValue: "tempore",
+                                                                    Operator: "PARTIAL",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "beatae",
-                                                                    MaxComparisonValue: "aliquid",
-                                                                    MetricName: "molestias",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "exercitationem",
-                                                                    Expressions: []string{
-                                                                        "rerum",
-                                                                        "suscipit",
-                                                                    },
-                                                                    MaxComparisonValue: "est",
-                                                                    MinComparisonValue: "aut",
-                                                                    Operator: "REGEXP",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "numquam",
-                                                                    MaxComparisonValue: "eum",
-                                                                    MetricName: "natus",
+                                                                    ComparisonValue: "rem",
+                                                                    MaxComparisonValue: "cumque",
+                                                                    MetricName: "corrupti",
                                                                     Operator: "BETWEEN",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "ducimus",
-                                                                    Expressions: []string{
-                                                                        "voluptatem",
-                                                                    },
-                                                                    MaxComparisonValue: "dolorum",
-                                                                    MinComparisonValue: "amet",
-                                                                    Operator: "OPERATOR_UNSPECIFIED",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "iste",
-                                                                    MaxComparisonValue: "quae",
-                                                                    MetricName: "rerum",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "eligendi",
-                                                                    Expressions: []string{
-                                                                        "praesentium",
-                                                                        "natus",
-                                                                        "error",
-                                                                    },
-                                                                    MaxComparisonValue: "fugiat",
-                                                                    MinComparisonValue: "aut",
-                                                                    Operator: "IN_LIST",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "aliquam",
-                                                                    MaxComparisonValue: "autem",
-                                                                    MetricName: "consequatur",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "PRODUCT",
+                                                                    Scope: "USER",
                                                                 },
                                                                 Not: false,
                                                             },
@@ -3283,31 +2443,78 @@ func main() {
                                         shared.SegmentFilter{
                                             Not: false,
                                             SequenceSegment: &shared.SequenceSegment{
-                                                FirstStepShouldMatchFirstHit: true,
+                                                FirstStepShouldMatchFirstHit: false,
                                                 SegmentSequenceSteps: []shared.SegmentSequenceStep{
                                                     shared.SegmentSequenceStep{
-                                                        MatchType: "IMMEDIATELY_PRECEDES",
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
                                                         OrFiltersForSegment: []shared.OrFiltersForSegment{
                                                             shared.OrFiltersForSegment{
                                                                 SegmentFilterClauses: []shared.SegmentFilterClause{
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "perspiciatis",
+                                                                            DimensionName: "debitis",
                                                                             Expressions: []string{
-                                                                                "fugiat",
-                                                                                "voluptatum",
+                                                                                "perspiciatis",
                                                                             },
-                                                                            MaxComparisonValue: "ullam",
-                                                                            MinComparisonValue: "corporis",
-                                                                            Operator: "REGEXP",
+                                                                            MaxComparisonValue: "non",
+                                                                            MinComparisonValue: "quo",
+                                                                            Operator: "ENDS_WITH",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "maxime",
-                                                                            MaxComparisonValue: "perspiciatis",
-                                                                            MetricName: "aspernatur",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "SESSION",
+                                                                            ComparisonValue: "dolores",
+                                                                            MaxComparisonValue: "debitis",
+                                                                            MetricName: "maxime",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "inventore",
+                                                                            Expressions: []string{
+                                                                                "reprehenderit",
+                                                                                "quasi",
+                                                                                "fuga",
+                                                                            },
+                                                                            MaxComparisonValue: "excepturi",
+                                                                            MinComparisonValue: "quia",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "totam",
+                                                                            MaxComparisonValue: "animi",
+                                                                            MetricName: "illum",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "iure",
+                                                                            Expressions: []string{
+                                                                                "itaque",
+                                                                                "aut",
+                                                                                "voluptate",
+                                                                            },
+                                                                            MaxComparisonValue: "vero",
+                                                                            MinComparisonValue: "mollitia",
+                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "placeat",
+                                                                            MaxComparisonValue: "est",
+                                                                            MetricName: "velit",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "HIT",
                                                                         },
                                                                         Not: false,
                                                                     },
@@ -3318,41 +2525,291 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "deleniti",
+                                                                            DimensionName: "porro",
                                                                             Expressions: []string{
-                                                                                "dolorem",
-                                                                                "vero",
-                                                                                "illum",
+                                                                                "inventore",
+                                                                                "illo",
+                                                                                "enim",
                                                                             },
-                                                                            MaxComparisonValue: "alias",
-                                                                            MinComparisonValue: "totam",
-                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                            MaxComparisonValue: "sit",
+                                                                            MinComparisonValue: "porro",
+                                                                            Operator: "PARTIAL",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "adipisci",
-                                                                            MaxComparisonValue: "consequatur",
-                                                                            MetricName: "necessitatibus",
-                                                                            Operator: "LESS_THAN",
+                                                                            ComparisonValue: "eos",
+                                                                            MaxComparisonValue: "dolore",
+                                                                            MetricName: "quia",
+                                                                            Operator: "EQUAL",
                                                                             Scope: "UNSPECIFIED_SCOPE",
                                                                         },
                                                                         Not: true,
                                                                     },
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "illum",
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "cupiditate",
                                                                             Expressions: []string{
-                                                                                "iste",
+                                                                                "mollitia",
                                                                             },
-                                                                            MaxComparisonValue: "delectus",
-                                                                            MinComparisonValue: "omnis",
+                                                                            MaxComparisonValue: "quia",
+                                                                            MinComparisonValue: "et",
+                                                                            Operator: "NUMERIC_GREATER_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "sint",
+                                                                            MaxComparisonValue: "autem",
+                                                                            MetricName: "dolor",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "dignissimos",
+                                                                            Expressions: []string{
+                                                                                "eligendi",
+                                                                                "incidunt",
+                                                                                "ut",
+                                                                            },
+                                                                            MaxComparisonValue: "veniam",
+                                                                            MinComparisonValue: "et",
                                                                             Operator: "BEGINS_WITH",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "repudiandae",
-                                                                            MaxComparisonValue: "quos",
-                                                                            MetricName: "odio",
-                                                                            Operator: "EQUAL",
+                                                                            ComparisonValue: "sapiente",
+                                                                            MaxComparisonValue: "vero",
+                                                                            MetricName: "autem",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "quod",
+                                                                    Expressions: []string{
+                                                                        "quod",
+                                                                    },
+                                                                    MaxComparisonValue: "blanditiis",
+                                                                    MinComparisonValue: "et",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "facere",
+                                                                    MaxComparisonValue: "et",
+                                                                    MetricName: "quis",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "error",
+                                                                    Expressions: []string{
+                                                                        "voluptate",
+                                                                    },
+                                                                    MaxComparisonValue: "est",
+                                                                    MinComparisonValue: "ullam",
+                                                                    Operator: "REGEXP",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "reiciendis",
+                                                                    MaxComparisonValue: "laborum",
+                                                                    MetricName: "suscipit",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "natus",
+                                                                    Expressions: []string{
+                                                                        "sunt",
+                                                                        "quam",
+                                                                        "nesciunt",
+                                                                    },
+                                                                    MaxComparisonValue: "esse",
+                                                                    MinComparisonValue: "quam",
+                                                                    Operator: "NUMERIC_BETWEEN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "autem",
+                                                                    MaxComparisonValue: "atque",
+                                                                    MetricName: "asperiores",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "in",
+                                                                    Expressions: []string{
+                                                                        "praesentium",
+                                                                    },
+                                                                    MaxComparisonValue: "harum",
+                                                                    MinComparisonValue: "nemo",
+                                                                    Operator: "ENDS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "ut",
+                                                                    MaxComparisonValue: "provident",
+                                                                    MetricName: "voluptas",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "vitae",
+                                                                    Expressions: []string{
+                                                                        "molestiae",
+                                                                    },
+                                                                    MaxComparisonValue: "aut",
+                                                                    MinComparisonValue: "qui",
+                                                                    Operator: "ENDS_WITH",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "est",
+                                                                    MaxComparisonValue: "quo",
+                                                                    MetricName: "nesciunt",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "officia",
+                                                                    Expressions: []string{
+                                                                        "esse",
+                                                                    },
+                                                                    MaxComparisonValue: "dolore",
+                                                                    MinComparisonValue: "est",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "ab",
+                                                                    MaxComparisonValue: "maiores",
+                                                                    MetricName: "quia",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "HIT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "rem",
+                                                                    Expressions: []string{
+                                                                        "quisquam",
+                                                                        "sunt",
+                                                                    },
+                                                                    MaxComparisonValue: "nam",
+                                                                    MinComparisonValue: "omnis",
+                                                                    Operator: "OPERATOR_UNSPECIFIED",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "cupiditate",
+                                                                    MaxComparisonValue: "omnis",
+                                                                    MetricName: "dolores",
+                                                                    Operator: "EQUAL",
+                                                                    Scope: "HIT",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                UserSegment: &shared.SegmentDefinition{
+                                    SegmentFilters: []shared.SegmentFilter{
+                                        shared.SegmentFilter{
+                                            Not: true,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: true,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "vel",
+                                                                            Expressions: []string{
+                                                                                "repudiandae",
+                                                                                "voluptas",
+                                                                                "omnis",
+                                                                            },
+                                                                            MaxComparisonValue: "eos",
+                                                                            MinComparisonValue: "repellat",
+                                                                            Operator: "IN_LIST",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "neque",
+                                                                            MaxComparisonValue: "aspernatur",
+                                                                            MetricName: "enim",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "est",
+                                                                            Expressions: []string{
+                                                                                "eos",
+                                                                                "atque",
+                                                                                "qui",
+                                                                            },
+                                                                            MaxComparisonValue: "cumque",
+                                                                            MinComparisonValue: "et",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "autem",
+                                                                            MaxComparisonValue: "ipsam",
+                                                                            MetricName: "nihil",
+                                                                            Operator: "GREATER_THAN",
                                                                             Scope: "HIT",
                                                                         },
                                                                         Not: true,
@@ -3360,140 +2817,42 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "rem",
+                                                                            DimensionName: "est",
                                                                             Expressions: []string{
-                                                                                "amet",
-                                                                                "et",
-                                                                                "et",
+                                                                                "corrupti",
+                                                                                "error",
                                                                             },
-                                                                            MaxComparisonValue: "placeat",
-                                                                            MinComparisonValue: "molestiae",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "et",
-                                                                            MaxComparisonValue: "error",
-                                                                            MetricName: "reiciendis",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "aut",
-                                                                            Expressions: []string{
-                                                                                "ab",
-                                                                                "voluptate",
-                                                                                "voluptates",
-                                                                            },
-                                                                            MaxComparisonValue: "rerum",
-                                                                            MinComparisonValue: "qui",
-                                                                            Operator: "EXACT",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "saepe",
-                                                                            MaxComparisonValue: "quis",
-                                                                            MetricName: "quia",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: false,
-                                                                            DimensionName: "aut",
-                                                                            Expressions: []string{
-                                                                                "modi",
-                                                                                "est",
-                                                                            },
-                                                                            MaxComparisonValue: "in",
-                                                                            MinComparisonValue: "voluptas",
-                                                                            Operator: "BEGINS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "nobis",
-                                                                            MaxComparisonValue: "sequi",
-                                                                            MetricName: "soluta",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "ut",
-                                                                            Expressions: []string{
-                                                                                "voluptatem",
-                                                                            },
-                                                                            MaxComparisonValue: "ullam",
-                                                                            MinComparisonValue: "vel",
+                                                                            MaxComparisonValue: "illum",
+                                                                            MinComparisonValue: "et",
                                                                             Operator: "NUMERIC_LESS_THAN",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "quidem",
-                                                                            MaxComparisonValue: "possimus",
-                                                                            MetricName: "recusandae",
-                                                                            Operator: "LESS_THAN",
+                                                                            ComparisonValue: "reiciendis",
+                                                                            MaxComparisonValue: "voluptate",
+                                                                            MetricName: "omnis",
+                                                                            Operator: "BETWEEN",
                                                                             Scope: "HIT",
                                                                         },
-                                                                        Not: true,
+                                                                        Not: false,
                                                                     },
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "ullam",
+                                                                            DimensionName: "nesciunt",
                                                                             Expressions: []string{
-                                                                                "doloribus",
-                                                                                "dolorum",
-                                                                                "nisi",
+                                                                                "non",
+                                                                                "et",
+                                                                                "debitis",
                                                                             },
-                                                                            MaxComparisonValue: "accusamus",
-                                                                            MinComparisonValue: "ipsam",
-                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                            MaxComparisonValue: "rerum",
+                                                                            MinComparisonValue: "necessitatibus",
+                                                                            Operator: "IN_LIST",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "perspiciatis",
-                                                                            MaxComparisonValue: "ut",
-                                                                            MetricName: "dolorem",
+                                                                            ComparisonValue: "cum",
+                                                                            MaxComparisonValue: "modi",
+                                                                            MetricName: "quis",
                                                                             Operator: "BETWEEN",
-                                                                            Scope: "USER",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "et",
-                                                                            Expressions: []string{
-                                                                                "aliquam",
-                                                                                "numquam",
-                                                                            },
-                                                                            MaxComparisonValue: "incidunt",
-                                                                            MinComparisonValue: "quia",
-                                                                            Operator: "NUMERIC_BETWEEN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "nulla",
-                                                                            MaxComparisonValue: "quia",
-                                                                            MetricName: "repudiandae",
-                                                                            Operator: "UNSPECIFIED_OPERATOR",
                                                                             Scope: "SESSION",
                                                                         },
                                                                         Not: true,
@@ -3503,47 +2862,161 @@ func main() {
                                                         },
                                                     },
                                                     shared.SegmentSequenceStep{
-                                                        MatchType: "IMMEDIATELY_PRECEDES",
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
                                                         OrFiltersForSegment: []shared.OrFiltersForSegment{
                                                             shared.OrFiltersForSegment{
                                                                 SegmentFilterClauses: []shared.SegmentFilterClause{
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: true,
-                                                                            DimensionName: "assumenda",
+                                                                            DimensionName: "sapiente",
                                                                             Expressions: []string{
-                                                                                "consequuntur",
-                                                                                "et",
+                                                                                "aut",
                                                                             },
-                                                                            MaxComparisonValue: "eum",
-                                                                            MinComparisonValue: "doloremque",
-                                                                            Operator: "REGEXP",
+                                                                            MaxComparisonValue: "non",
+                                                                            MinComparisonValue: "porro",
+                                                                            Operator: "NUMERIC_BETWEEN",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "sed",
-                                                                            MaxComparisonValue: "officia",
-                                                                            MetricName: "quisquam",
+                                                                            ComparisonValue: "magni",
+                                                                            MaxComparisonValue: "ab",
+                                                                            MetricName: "eligendi",
                                                                             Operator: "GREATER_THAN",
-                                                                            Scope: "HIT",
+                                                                            Scope: "SESSION",
                                                                         },
-                                                                        Not: false,
+                                                                        Not: true,
                                                                     },
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "excepturi",
+                                                                            DimensionName: "est",
                                                                             Expressions: []string{
-                                                                                "quia",
-                                                                                "necessitatibus",
+                                                                                "aut",
                                                                             },
-                                                                            MaxComparisonValue: "est",
-                                                                            MinComparisonValue: "vero",
+                                                                            MaxComparisonValue: "cumque",
+                                                                            MinComparisonValue: "tempora",
+                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "aut",
+                                                                            MaxComparisonValue: "corporis",
+                                                                            MetricName: "qui",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "aut",
+                                                                            Expressions: []string{
+                                                                                "dicta",
+                                                                                "est",
+                                                                            },
+                                                                            MaxComparisonValue: "aliquid",
+                                                                            MinComparisonValue: "voluptatum",
                                                                             Operator: "OPERATOR_UNSPECIFIED",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "omnis",
-                                                                            MaxComparisonValue: "provident",
-                                                                            MetricName: "voluptatem",
+                                                                            ComparisonValue: "odit",
+                                                                            MaxComparisonValue: "quas",
+                                                                            MetricName: "nemo",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "quod",
+                                                                            Expressions: []string{
+                                                                                "magni",
+                                                                                "enim",
+                                                                            },
+                                                                            MaxComparisonValue: "veritatis",
+                                                                            MinComparisonValue: "ut",
+                                                                            Operator: "IN_LIST",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "iusto",
+                                                                            MaxComparisonValue: "incidunt",
+                                                                            MetricName: "dolores",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "qui",
+                                                                            Expressions: []string{
+                                                                                "doloribus",
+                                                                            },
+                                                                            MaxComparisonValue: "omnis",
+                                                                            MinComparisonValue: "ut",
+                                                                            Operator: "IN_LIST",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "exercitationem",
+                                                                            MaxComparisonValue: "labore",
+                                                                            MetricName: "ipsa",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "PRODUCT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "corporis",
+                                                                            Expressions: []string{
+                                                                                "in",
+                                                                            },
+                                                                            MaxComparisonValue: "est",
+                                                                            MinComparisonValue: "et",
+                                                                            Operator: "BEGINS_WITH",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "voluptatem",
+                                                                            MaxComparisonValue: "corporis",
+                                                                            MetricName: "et",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "magni",
+                                                                            Expressions: []string{
+                                                                                "deleniti",
+                                                                                "esse",
+                                                                            },
+                                                                            MaxComparisonValue: "eum",
+                                                                            MinComparisonValue: "pariatur",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "autem",
+                                                                            MaxComparisonValue: "perferendis",
+                                                                            MetricName: "aperiam",
                                                                             Operator: "GREATER_THAN",
                                                                             Scope: "HIT",
                                                                         },
@@ -3562,42 +3035,111 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "ad",
+                                                                    DimensionName: "maxime",
                                                                     Expressions: []string{
-                                                                        "soluta",
+                                                                        "facere",
                                                                     },
-                                                                    MaxComparisonValue: "praesentium",
-                                                                    MinComparisonValue: "consequatur",
-                                                                    Operator: "IN_LIST",
+                                                                    MaxComparisonValue: "sed",
+                                                                    MinComparisonValue: "sit",
+                                                                    Operator: "REGEXP",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "deserunt",
-                                                                    MaxComparisonValue: "dolores",
-                                                                    MetricName: "rem",
-                                                                    Operator: "EQUAL",
+                                                                    ComparisonValue: "reiciendis",
+                                                                    MaxComparisonValue: "hic",
+                                                                    MetricName: "et",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
                                                                     Scope: "HIT",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "aut",
+                                                                    Expressions: []string{
+                                                                        "cupiditate",
+                                                                        "et",
+                                                                    },
+                                                                    MaxComparisonValue: "quasi",
+                                                                    MinComparisonValue: "dolores",
+                                                                    Operator: "REGEXP",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "officiis",
+                                                                    MaxComparisonValue: "cumque",
+                                                                    MetricName: "molestiae",
+                                                                    Operator: "UNSPECIFIED_OPERATOR",
+                                                                    Scope: "UNSPECIFIED_SCOPE",
+                                                                },
+                                                                Not: false,
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.OrFiltersForSegment{
+                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "id",
+                                                                    Expressions: []string{
+                                                                        "qui",
+                                                                        "voluptates",
+                                                                    },
+                                                                    MaxComparisonValue: "dolores",
+                                                                    MinComparisonValue: "ab",
+                                                                    Operator: "NUMERIC_GREATER_THAN",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "alias",
+                                                                    MaxComparisonValue: "deleniti",
+                                                                    MetricName: "quo",
+                                                                    Operator: "GREATER_THAN",
+                                                                    Scope: "USER",
+                                                                },
+                                                                Not: true,
+                                                            },
+                                                            shared.SegmentFilterClause{
+                                                                DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                    CaseSensitive: true,
+                                                                    DimensionName: "vero",
+                                                                    Expressions: []string{
+                                                                        "est",
+                                                                    },
+                                                                    MaxComparisonValue: "quam",
+                                                                    MinComparisonValue: "accusamus",
+                                                                    Operator: "PARTIAL",
+                                                                },
+                                                                MetricFilter: &shared.SegmentMetricFilter{
+                                                                    ComparisonValue: "iure",
+                                                                    MaxComparisonValue: "quisquam",
+                                                                    MetricName: "cumque",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "USER",
                                                                 },
                                                                 Not: true,
                                                             },
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: false,
-                                                                    DimensionName: "inventore",
+                                                                    DimensionName: "in",
                                                                     Expressions: []string{
-                                                                        "tempora",
-                                                                        "quas",
-                                                                        "illo",
+                                                                        "et",
+                                                                        "et",
                                                                     },
-                                                                    MaxComparisonValue: "nesciunt",
-                                                                    MinComparisonValue: "voluptatem",
-                                                                    Operator: "EXACT",
+                                                                    MaxComparisonValue: "labore",
+                                                                    MinComparisonValue: "sed",
+                                                                    Operator: "REGEXP",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "eius",
+                                                                    ComparisonValue: "sunt",
                                                                     MaxComparisonValue: "et",
-                                                                    MetricName: "deleniti",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "HIT",
+                                                                    MetricName: "molestias",
+                                                                    Operator: "BETWEEN",
+                                                                    Scope: "USER",
                                                                 },
                                                                 Not: false,
                                                             },
@@ -3619,102 +3161,40 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "excepturi",
+                                                                            DimensionName: "repellat",
                                                                             Expressions: []string{
-                                                                                "accusamus",
+                                                                                "autem",
+                                                                                "repellat",
                                                                             },
-                                                                            MaxComparisonValue: "et",
-                                                                            MinComparisonValue: "accusamus",
+                                                                            MaxComparisonValue: "libero",
+                                                                            MinComparisonValue: "ad",
                                                                             Operator: "REGEXP",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "aut",
+                                                                            ComparisonValue: "veritatis",
                                                                             MaxComparisonValue: "et",
-                                                                            MetricName: "omnis",
-                                                                            Operator: "GREATER_THAN",
+                                                                            MetricName: "ab",
+                                                                            Operator: "LESS_THAN",
                                                                             Scope: "UNSPECIFIED_SCOPE",
                                                                         },
                                                                         Not: false,
                                                                     },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "architecto",
+                                                                            DimensionName: "repudiandae",
                                                                             Expressions: []string{
-                                                                                "consectetur",
-                                                                                "autem",
+                                                                                "ut",
                                                                             },
-                                                                            MaxComparisonValue: "inventore",
-                                                                            MinComparisonValue: "quam",
-                                                                            Operator: "OPERATOR_UNSPECIFIED",
+                                                                            MaxComparisonValue: "explicabo",
+                                                                            MinComparisonValue: "recusandae",
+                                                                            Operator: "PARTIAL",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "architecto",
-                                                                            MaxComparisonValue: "aut",
-                                                                            MetricName: "autem",
-                                                                            Operator: "EQUAL",
-                                                                            Scope: "PRODUCT",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "fugit",
-                                                                            Expressions: []string{
-                                                                                "earum",
-                                                                                "officia",
-                                                                                "doloremque",
-                                                                            },
-                                                                            MaxComparisonValue: "sunt",
-                                                                            MinComparisonValue: "dignissimos",
-                                                                            Operator: "OPERATOR_UNSPECIFIED",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "ducimus",
+                                                                            ComparisonValue: "facilis",
                                                                             MaxComparisonValue: "sit",
-                                                                            MetricName: "praesentium",
-                                                                            Operator: "GREATER_THAN",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
-                                                                        },
-                                                                        Not: true,
-                                                                    },
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.SegmentSequenceStep{
-                                                        MatchType: "IMMEDIATELY_PRECEDES",
-                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
-                                                            shared.OrFiltersForSegment{
-                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "nihil",
-                                                                            Expressions: []string{
-                                                                                "aut",
-                                                                                "sunt",
-                                                                                "harum",
-                                                                            },
-                                                                            MaxComparisonValue: "atque",
-                                                                            MinComparisonValue: "nihil",
-                                                                            Operator: "ENDS_WITH",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "dolor",
-                                                                            MaxComparisonValue: "sunt",
-                                                                            MetricName: "sapiente",
-                                                                            Operator: "LESS_THAN",
+                                                                            MetricName: "hic",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
                                                                             Scope: "SESSION",
                                                                         },
                                                                         Not: false,
@@ -3722,41 +3202,45 @@ func main() {
                                                                     shared.SegmentFilterClause{
                                                                         DimensionFilter: &shared.SegmentDimensionFilter{
                                                                             CaseSensitive: false,
-                                                                            DimensionName: "corrupti",
+                                                                            DimensionName: "quis",
                                                                             Expressions: []string{
-                                                                                "omnis",
-                                                                            },
-                                                                            MaxComparisonValue: "tenetur",
-                                                                            MinComparisonValue: "qui",
-                                                                            Operator: "NUMERIC_GREATER_THAN",
-                                                                        },
-                                                                        MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "consequatur",
-                                                                            MaxComparisonValue: "officiis",
-                                                                            MetricName: "excepturi",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "SESSION",
-                                                                        },
-                                                                        Not: false,
-                                                                    },
-                                                                    shared.SegmentFilterClause{
-                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                            CaseSensitive: true,
-                                                                            DimensionName: "accusantium",
-                                                                            Expressions: []string{
-                                                                                "qui",
-                                                                                "officia",
+                                                                                "voluptatibus",
+                                                                                "ipsa",
                                                                             },
                                                                             MaxComparisonValue: "corporis",
                                                                             MinComparisonValue: "et",
                                                                             Operator: "PARTIAL",
                                                                         },
                                                                         MetricFilter: &shared.SegmentMetricFilter{
-                                                                            ComparisonValue: "expedita",
-                                                                            MaxComparisonValue: "sed",
-                                                                            MetricName: "voluptatibus",
-                                                                            Operator: "LESS_THAN",
-                                                                            Scope: "UNSPECIFIED_SCOPE",
+                                                                            ComparisonValue: "laboriosam",
+                                                                            MaxComparisonValue: "deserunt",
+                                                                            MetricName: "dignissimos",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "voluptas",
+                                                                            Expressions: []string{
+                                                                                "impedit",
+                                                                            },
+                                                                            MaxComparisonValue: "consequatur",
+                                                                            MinComparisonValue: "et",
+                                                                            Operator: "REGEXP",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "et",
+                                                                            MaxComparisonValue: "fugit",
+                                                                            MetricName: "aut",
+                                                                            Operator: "UNSPECIFIED_OPERATOR",
+                                                                            Scope: "HIT",
                                                                         },
                                                                         Not: true,
                                                                     },
@@ -3773,195 +3257,237 @@ func main() {
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: false,
-                                                                    DimensionName: "sed",
+                                                                    DimensionName: "ratione",
                                                                     Expressions: []string{
-                                                                        "ab",
-                                                                        "odio",
+                                                                        "exercitationem",
                                                                     },
-                                                                    MaxComparisonValue: "non",
-                                                                    MinComparisonValue: "quidem",
-                                                                    Operator: "IN_LIST",
+                                                                    MaxComparisonValue: "facilis",
+                                                                    MinComparisonValue: "ratione",
+                                                                    Operator: "OPERATOR_UNSPECIFIED",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "possimus",
-                                                                    MaxComparisonValue: "non",
-                                                                    MetricName: "id",
-                                                                    Operator: "EQUAL",
-                                                                    Scope: "SESSION",
+                                                                    ComparisonValue: "repellendus",
+                                                                    MaxComparisonValue: "atque",
+                                                                    MetricName: "repellat",
+                                                                    Operator: "LESS_THAN",
+                                                                    Scope: "PRODUCT",
                                                                 },
                                                                 Not: true,
                                                             },
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
                                                                     CaseSensitive: true,
-                                                                    DimensionName: "qui",
+                                                                    DimensionName: "sed",
                                                                     Expressions: []string{
-                                                                        "explicabo",
-                                                                        "suscipit",
+                                                                        "ut",
+                                                                        "accusantium",
+                                                                        "voluptas",
                                                                     },
-                                                                    MaxComparisonValue: "dolorem",
-                                                                    MinComparisonValue: "et",
-                                                                    Operator: "NUMERIC_LESS_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "consequatur",
-                                                                    MaxComparisonValue: "ratione",
-                                                                    MetricName: "consequatur",
-                                                                    Operator: "BETWEEN",
-                                                                    Scope: "PRODUCT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "excepturi",
-                                                                    Expressions: []string{
-                                                                        "maxime",
-                                                                    },
-                                                                    MaxComparisonValue: "ut",
-                                                                    MinComparisonValue: "rerum",
-                                                                    Operator: "EXACT",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "voluptatum",
-                                                                    MaxComparisonValue: "omnis",
-                                                                    MetricName: "sunt",
-                                                                    Operator: "LESS_THAN",
-                                                                    Scope: "SESSION",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                        },
-                                                    },
-                                                    shared.OrFiltersForSegment{
-                                                        SegmentFilterClauses: []shared.SegmentFilterClause{
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "ea",
-                                                                    Expressions: []string{
-                                                                        "enim",
-                                                                        "cum",
-                                                                        "et",
-                                                                    },
-                                                                    MaxComparisonValue: "quo",
-                                                                    MinComparisonValue: "voluptatum",
-                                                                    Operator: "NUMERIC_BETWEEN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "repudiandae",
-                                                                    MaxComparisonValue: "optio",
-                                                                    MetricName: "aut",
-                                                                    Operator: "EQUAL",
-                                                                    Scope: "PRODUCT",
-                                                                },
-                                                                Not: false,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: false,
-                                                                    DimensionName: "ut",
-                                                                    Expressions: []string{
-                                                                        "illum",
-                                                                        "tempore",
-                                                                    },
-                                                                    MaxComparisonValue: "eum",
-                                                                    MinComparisonValue: "dolorem",
+                                                                    MaxComparisonValue: "placeat",
+                                                                    MinComparisonValue: "temporibus",
                                                                     Operator: "BEGINS_WITH",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "sed",
-                                                                    MaxComparisonValue: "quasi",
-                                                                    MetricName: "et",
-                                                                    Operator: "EQUAL",
-                                                                    Scope: "HIT",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "nihil",
-                                                                    Expressions: []string{
-                                                                        "inventore",
-                                                                        "aut",
-                                                                    },
-                                                                    MaxComparisonValue: "aut",
-                                                                    MinComparisonValue: "quia",
-                                                                    Operator: "NUMERIC_GREATER_THAN",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "saepe",
-                                                                    MaxComparisonValue: "dolorem",
-                                                                    MetricName: "est",
-                                                                    Operator: "EQUAL",
+                                                                    ComparisonValue: "odio",
+                                                                    MaxComparisonValue: "et",
+                                                                    MetricName: "omnis",
+                                                                    Operator: "LESS_THAN",
                                                                     Scope: "USER",
                                                                 },
                                                                 Not: true,
                                                             },
                                                         },
                                                     },
+                                                },
+                                            },
+                                        },
+                                        shared.SegmentFilter{
+                                            Not: true,
+                                            SequenceSegment: &shared.SequenceSegment{
+                                                FirstStepShouldMatchFirstHit: true,
+                                                SegmentSequenceSteps: []shared.SegmentSequenceStep{
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "sint",
+                                                                            Expressions: []string{
+                                                                                "quia",
+                                                                            },
+                                                                            MaxComparisonValue: "est",
+                                                                            MinComparisonValue: "architecto",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "et",
+                                                                            MaxComparisonValue: "magni",
+                                                                            MetricName: "fuga",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "harum",
+                                                                            Expressions: []string{
+                                                                                "in",
+                                                                                "et",
+                                                                            },
+                                                                            MaxComparisonValue: "itaque",
+                                                                            MinComparisonValue: "cum",
+                                                                            Operator: "NUMERIC_LESS_THAN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "veritatis",
+                                                                            MaxComparisonValue: "voluptates",
+                                                                            MetricName: "molestias",
+                                                                            Operator: "EQUAL",
+                                                                            Scope: "USER",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    shared.SegmentSequenceStep{
+                                                        MatchType: "UNSPECIFIED_MATCH_TYPE",
+                                                        OrFiltersForSegment: []shared.OrFiltersForSegment{
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: true,
+                                                                            DimensionName: "necessitatibus",
+                                                                            Expressions: []string{
+                                                                                "quaerat",
+                                                                                "molestias",
+                                                                                "at",
+                                                                            },
+                                                                            MaxComparisonValue: "ut",
+                                                                            MinComparisonValue: "aliquid",
+                                                                            Operator: "IN_LIST",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "dignissimos",
+                                                                            MaxComparisonValue: "accusantium",
+                                                                            MetricName: "iure",
+                                                                            Operator: "BETWEEN",
+                                                                            Scope: "SESSION",
+                                                                        },
+                                                                        Not: false,
+                                                                    },
+                                                                },
+                                                            },
+                                                            shared.OrFiltersForSegment{
+                                                                SegmentFilterClauses: []shared.SegmentFilterClause{
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "voluptas",
+                                                                            Expressions: []string{
+                                                                                "nulla",
+                                                                                "natus",
+                                                                                "quis",
+                                                                            },
+                                                                            MaxComparisonValue: "eligendi",
+                                                                            MinComparisonValue: "quaerat",
+                                                                            Operator: "NUMERIC_BETWEEN",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "sed",
+                                                                            MaxComparisonValue: "aspernatur",
+                                                                            MetricName: "recusandae",
+                                                                            Operator: "GREATER_THAN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                    shared.SegmentFilterClause{
+                                                                        DimensionFilter: &shared.SegmentDimensionFilter{
+                                                                            CaseSensitive: false,
+                                                                            DimensionName: "et",
+                                                                            Expressions: []string{
+                                                                                "aut",
+                                                                                "rem",
+                                                                                "eligendi",
+                                                                            },
+                                                                            MaxComparisonValue: "et",
+                                                                            MinComparisonValue: "sequi",
+                                                                            Operator: "PARTIAL",
+                                                                        },
+                                                                        MetricFilter: &shared.SegmentMetricFilter{
+                                                                            ComparisonValue: "facilis",
+                                                                            MaxComparisonValue: "eligendi",
+                                                                            MetricName: "mollitia",
+                                                                            Operator: "LESS_THAN",
+                                                                            Scope: "HIT",
+                                                                        },
+                                                                        Not: true,
+                                                                    },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            SimpleSegment: &shared.SimpleSegment{
+                                                OrFiltersForSegment: []shared.OrFiltersForSegment{
                                                     shared.OrFiltersForSegment{
                                                         SegmentFilterClauses: []shared.SegmentFilterClause{
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "facere",
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "laborum",
                                                                     Expressions: []string{
-                                                                        "aut",
+                                                                        "repudiandae",
+                                                                        "est",
                                                                     },
-                                                                    MaxComparisonValue: "qui",
-                                                                    MinComparisonValue: "at",
-                                                                    Operator: "IN_LIST",
+                                                                    MaxComparisonValue: "quibusdam",
+                                                                    MinComparisonValue: "sed",
+                                                                    Operator: "ENDS_WITH",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "laborum",
-                                                                    MaxComparisonValue: "labore",
-                                                                    MetricName: "non",
-                                                                    Operator: "GREATER_THAN",
+                                                                    ComparisonValue: "omnis",
+                                                                    MaxComparisonValue: "voluptatem",
+                                                                    MetricName: "qui",
+                                                                    Operator: "EQUAL",
                                                                     Scope: "UNSPECIFIED_SCOPE",
                                                                 },
                                                                 Not: true,
                                                             },
                                                             shared.SegmentFilterClause{
                                                                 DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "a",
+                                                                    CaseSensitive: false,
+                                                                    DimensionName: "quo",
                                                                     Expressions: []string{
-                                                                        "porro",
+                                                                        "perferendis",
                                                                     },
-                                                                    MaxComparisonValue: "impedit",
-                                                                    MinComparisonValue: "soluta",
-                                                                    Operator: "OPERATOR_UNSPECIFIED",
-                                                                },
-                                                                MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "dolorem",
-                                                                    MaxComparisonValue: "voluptates",
-                                                                    MetricName: "ipsum",
-                                                                    Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "USER",
-                                                                },
-                                                                Not: true,
-                                                            },
-                                                            shared.SegmentFilterClause{
-                                                                DimensionFilter: &shared.SegmentDimensionFilter{
-                                                                    CaseSensitive: true,
-                                                                    DimensionName: "odit",
-                                                                    Expressions: []string{
-                                                                        "sit",
-                                                                        "doloremque",
-                                                                    },
-                                                                    MaxComparisonValue: "harum",
-                                                                    MinComparisonValue: "esse",
+                                                                    MaxComparisonValue: "modi",
+                                                                    MinComparisonValue: "quia",
                                                                     Operator: "NUMERIC_LESS_THAN",
                                                                 },
                                                                 MetricFilter: &shared.SegmentMetricFilter{
-                                                                    ComparisonValue: "voluptatem",
-                                                                    MaxComparisonValue: "facilis",
-                                                                    MetricName: "itaque",
+                                                                    ComparisonValue: "et",
+                                                                    MaxComparisonValue: "dolores",
+                                                                    MetricName: "officiis",
                                                                     Operator: "UNSPECIFIED_OPERATOR",
-                                                                    Scope: "SESSION",
+                                                                    Scope: "USER",
                                                                 },
                                                                 Not: false,
                                                             },
@@ -3973,13 +3499,13 @@ func main() {
                                     },
                                 },
                             },
-                            SegmentID: "quis",
+                            SegmentID: "voluptatem",
                         },
                     },
-                    ViewID: "qui",
+                    ViewID: "aperiam",
                 },
             },
-            UseResourceQuotas: false,
+            UseResourceQuotas: true,
         },
     }
     

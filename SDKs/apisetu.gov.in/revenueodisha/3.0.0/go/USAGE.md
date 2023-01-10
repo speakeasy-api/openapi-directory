@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.RdcerRequestBody{
             CertificateParameters: &operations.RdcerRequestBodyCertificateParameters{
-                DOB: "eos",
-                FullName: "error",
-                REGDNO: "illo",
-                UID: "veniam",
+                DOB: "ut",
+                FullName: "molestiae",
+                REGDNO: "rem",
+                UID: "totam",
             },
-            ConsentArtifact: "rerum",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "impedit",
+            TxnID: "eos",
         },
     }
     

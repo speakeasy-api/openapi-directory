@@ -24,7 +24,7 @@ func main() {
     
     req := operations.BalanceLookupRequest{
         QueryParams: operations.BalanceLookupQueryParams{
-            APIKey: "necessitatibus",
+            APIKey: "asperiores",
         },
     }
     

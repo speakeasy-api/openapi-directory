@@ -24,10 +24,10 @@ func main() {
     
     req := operations.GetAddWordRequest{
         QueryParams: operations.GetAddWordQueryParams{
-            Author: "velit",
-            Definition: "amet",
-            Related: "sapiente",
-            Word: "nisi",
+            Author: "recusandae",
+            Definition: "accusamus",
+            Related: "ut",
+            Word: "repellat",
         },
     }
     

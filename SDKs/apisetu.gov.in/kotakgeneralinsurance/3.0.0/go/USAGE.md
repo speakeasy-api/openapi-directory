@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                PolicyNo: "perspiciatis",
-                Val: "quasi",
-                Verification: "eos",
+                PolicyNo: "quis",
+                Val: "iusto",
+                Verification: "numquam",
             },
-            ConsentArtifact: "nesciunt",
+            ConsentArtifact: "non",
             Format: "pdf",
-            TxnID: "quos",
+            TxnID: "maiores",
         },
     }
     

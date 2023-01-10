@@ -13,12 +13,12 @@ func main() {
     
     req := operations.GetEventsRequest{
         QueryParams: operations.GetEventsQueryParams{
-            Company: "alias",
-            Deal: "deleniti",
-            Nexttoken: "nostrum",
-            Queryexecutionid: "voluptatem",
-            Site: "tempore",
-            Type: "clicks",
+            Company: "rerum",
+            Deal: "et",
+            Nexttoken: "libero",
+            Queryexecutionid: "culpa",
+            Site: "quia",
+            Type: "contacts",
         },
     }
     

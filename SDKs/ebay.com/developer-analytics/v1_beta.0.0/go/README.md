@@ -29,8 +29,8 @@ func main() {
             },
         },
         QueryParams: operations.GetRateLimitsQueryParams{
-            APIContext: "dolor",
-            APIName: "nisi",
+            APIContext: "placeat",
+            APIName: "doloremque",
         },
     }
     

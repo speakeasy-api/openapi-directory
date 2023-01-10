@@ -15,7 +15,7 @@ type CreateDeploymentGroupInput struct {
 	Ec2TagSet                        *Ec2TagSet                        `json:"ec2TagSet,omitempty"`
 	EcsServices                      []EcsService                      `json:"ecsServices,omitempty"`
 	LoadBalancerInfo                 *LoadBalancerInfo                 `json:"loadBalancerInfo,omitempty"`
-	OnPremisesInstanceTagFilters     []TagFilter1                      `json:"onPremisesInstanceTagFilters,omitempty"`
+	OnPremisesInstanceTagFilters     []TagFilter                       `json:"onPremisesInstanceTagFilters,omitempty"`
 	OnPremisesTagSet                 *OnPremisesTagSet                 `json:"onPremisesTagSet,omitempty"`
 	OutdatedInstancesStrategy        *OutdatedInstancesStrategyEnum    `json:"outdatedInstancesStrategy,omitempty"`
 	ServiceRoleArn                   string                            `json:"serviceRoleArn"`

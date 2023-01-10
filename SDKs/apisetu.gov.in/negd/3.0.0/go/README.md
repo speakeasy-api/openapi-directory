@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                FullName: "cupiditate",
-                Cardno: "magnam",
+                FullName: "repellendus",
+                Cardno: "possimus",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "autem",
             Format: "pdf",
-            TxnID: "cupiditate",
+            TxnID: "id",
         },
     }
     

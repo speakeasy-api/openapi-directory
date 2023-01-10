@@ -34,7 +34,7 @@ func main() {
     
     req := operations.DeleteKeysIDRequest{
         PathParams: operations.DeleteKeysIDPathParams{
-            ID: "laborum",
+            ID: "quo",
         },
     }
     

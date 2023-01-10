@@ -23,107 +23,109 @@ func main() {
             },
         },
         QueryParams: operations.VisionFilesAnnotateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "qui",
-            Alt: "json",
-            Callback: "quia",
-            Fields: "nihil",
-            Key: "a",
-            OauthToken: "ipsum",
+            DollarXgafv: "1",
+            AccessToken: "eius",
+            Alt: "proto",
+            Callback: "minus",
+            Fields: "esse",
+            Key: "autem",
+            OauthToken: "rerum",
             PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "molestiae",
-            UploadProtocol: "quos",
+            QuotaUser: "laboriosam",
+            UploadType: "sint",
+            UploadProtocol: "nisi",
         },
         Request: &shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest{
-            Parent: "magni",
+            Parent: "recusandae",
             Requests: []shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p1beta1Feature{
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 9054612188019787817,
-                            Model: "voluptas",
+                            MaxResults: 3971315781086113626,
+                            Model: "esse",
+                            Type: "CROP_HINTS",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 3280961666086257703,
+                            Model: "dolore",
+                            Type: "PRODUCT_SEARCH",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 2168295586647050175,
+                            Model: "reprehenderit",
                             Type: "LOGO_DETECTION",
-                        },
-                        shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 6279949479516132377,
-                            Model: "rerum",
-                            Type: "SAFE_SEARCH_DETECTION",
-                        },
-                        shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 2674223919223570006,
-                            Model: "aut",
-                            Type: "FACE_DETECTION",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p1beta1CropHintsParams{
                             AspectRatios: []float32{
-                                41.099998,
+                                33.200001,
+                                24.200001,
+                                19.200001,
                             },
                         },
                         LanguageHints: []string{
-                            "natus",
+                            "ducimus",
+                            "quam",
+                            "voluptas",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 51.200001,
-                                Longitude: 60.099998,
+                                Latitude: 66.099998,
+                                Longitude: 11.100000,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 0.200000,
-                                Longitude: 80.099998,
+                                Latitude: 97.099998,
+                                Longitude: 99.199997,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 94.199997,
-                                        Y: 71.099998,
-                                    },
-                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 58.099998,
-                                        Y: 53.099998,
+                                        X: 73.199997,
+                                        Y: 20.200001,
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 6285200166427849714,
-                                        Y: 1409038305879143013,
+                                        X: 4811534959094338657,
+                                        Y: 8138503825895719319,
                                     },
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 8961039413042777855,
-                                        Y: 7329385736035822789,
+                                        X: 3370215413715443786,
+                                        Y: 894693224882232375,
                                     },
                                 },
                             },
-                            Filter: "deserunt",
+                            Filter: "enim",
                             ProductCategories: []string{
-                                "fuga",
-                                "nostrum",
+                                "voluptatem",
+                                "et",
                             },
-                            ProductSet: "nulla",
+                            ProductSet: "quia",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "placeat",
+                                "omnis",
+                                "libero",
+                                "eum",
                             },
-                            EnableTextDetectionConfidenceScore: true,
+                            EnableTextDetectionConfidenceScore: false,
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
-                            IncludeGeoResults: true,
+                            IncludeGeoResults: false,
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
-                        Content: "dolores",
+                        Content: "est",
                         GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
-                            URI: "aut",
+                            URI: "soluta",
                         },
-                        MimeType: "fugiat",
+                        MimeType: "consequatur",
                     },
                     Pages: []int32{
-                        250075947926464361,
+                        888600988671988232,
                     },
                 },
             },

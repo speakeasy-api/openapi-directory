@@ -21,20 +21,20 @@ type CreateJourneyHeaders struct {
 // CreateJourneyRequestBodyWriteJourneyRequest
 // Specifies the configuration and other settings for a journey.
 type CreateJourneyRequestBodyWriteJourneyRequest struct {
-	Activities             map[string]shared.Activity1 `json:"Activities,omitempty"`
-	CreationDate           *string                     `json:"CreationDate,omitempty"`
-	LastModifiedDate       *string                     `json:"LastModifiedDate,omitempty"`
-	Limits                 *shared.JourneyLimits       `json:"Limits,omitempty"`
-	LocalTime              *bool                       `json:"LocalTime,omitempty"`
-	Name                   *string                     `json:"Name,omitempty"`
-	QuietTime              *shared.QuietTime           `json:"QuietTime,omitempty"`
-	RefreshFrequency       *string                     `json:"RefreshFrequency,omitempty"`
-	RefreshOnSegmentUpdate *bool                       `json:"RefreshOnSegmentUpdate,omitempty"`
-	Schedule               *shared.JourneySchedule     `json:"Schedule,omitempty"`
-	StartActivity          *string                     `json:"StartActivity,omitempty"`
-	StartCondition         *shared.StartCondition      `json:"StartCondition,omitempty"`
-	State                  *shared.StateEnum           `json:"State,omitempty"`
-	WaitForQuietTime       *bool                       `json:"WaitForQuietTime,omitempty"`
+	Activities             map[string]shared.Activity `json:"Activities,omitempty"`
+	CreationDate           *string                    `json:"CreationDate,omitempty"`
+	LastModifiedDate       *string                    `json:"LastModifiedDate,omitempty"`
+	Limits                 *shared.JourneyLimits      `json:"Limits,omitempty"`
+	LocalTime              *bool                      `json:"LocalTime,omitempty"`
+	Name                   *string                    `json:"Name,omitempty"`
+	QuietTime              *shared.QuietTime          `json:"QuietTime,omitempty"`
+	RefreshFrequency       *string                    `json:"RefreshFrequency,omitempty"`
+	RefreshOnSegmentUpdate *bool                      `json:"RefreshOnSegmentUpdate,omitempty"`
+	Schedule               *shared.JourneySchedule    `json:"Schedule,omitempty"`
+	StartActivity          *string                    `json:"StartActivity,omitempty"`
+	StartCondition         *shared.StartCondition     `json:"StartCondition,omitempty"`
+	State                  *shared.StateEnum          `json:"State,omitempty"`
+	WaitForQuietTime       *bool                      `json:"WaitForQuietTime,omitempty"`
 }
 
 type CreateJourneyRequestBody struct {

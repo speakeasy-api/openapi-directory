@@ -13,23 +13,23 @@ func main() {
     
     req := operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest{
         PathParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams{
-            Parent: "ut",
+            Parent: "alias",
         },
         QueryParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "atque",
-            Alt: "proto",
-            Callback: "in",
-            Fields: "et",
-            Filter: "dolore",
-            Key: "quia",
-            OauthToken: "laboriosam",
-            PageSize: 7111439703266160038,
-            PageToken: "delectus",
+            AccessToken: "ratione",
+            Alt: "media",
+            Callback: "non",
+            Fields: "corrupti",
+            Filter: "rerum",
+            Key: "assumenda",
+            OauthToken: "veritatis",
+            PageSize: 464811253189919483,
+            PageToken: "recusandae",
             PrettyPrint: true,
-            QuotaUser: "quas",
-            UploadType: "quidem",
-            UploadProtocol: "eum",
+            QuotaUser: "odit",
+            UploadType: "voluptatum",
+            UploadProtocol: "neque",
         },
     }
     

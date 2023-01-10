@@ -13,15 +13,15 @@ func main() {
     
     req := operations.FacetsRequest{
         QueryParams: operations.FacetsQueryParams{
-            Count: 5416590452329985500,
-            EndDate: "2013-07-03",
-            FacetFilters: "sunt",
-            SearchTerms: "et",
-            SortKeys: "spatial_area,,asc",
-            Source: "ADE",
-            Spatial: "blanditiis",
-            StartDate: "1973-03-20",
-            StartIndex: 1131641809401352413,
+            Count: 7648245904330072828,
+            EndDate: "2019-07-08",
+            FacetFilters: "eos",
+            SearchTerms: "facilis",
+            SortKeys: "updated,,desc",
+            Source: "NSIDC",
+            Spatial: "voluptatem",
+            StartDate: "2019-01-02",
+            StartIndex: 5945020423769330383,
         },
     }
     

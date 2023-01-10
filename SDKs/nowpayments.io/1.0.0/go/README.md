@@ -24,9 +24,9 @@ func main() {
     
     req := operations.ThreeGetEstimatedPriceRequest{
         QueryParams: operations.ThreeGetEstimatedPriceQueryParams{
-            Amount: "voluptates",
-            CurrencyFrom: "vero",
-            CurrencyTo: "voluptas",
+            Amount: "qui",
+            CurrencyFrom: "ullam",
+            CurrencyTo: "accusamus",
         },
     }
     

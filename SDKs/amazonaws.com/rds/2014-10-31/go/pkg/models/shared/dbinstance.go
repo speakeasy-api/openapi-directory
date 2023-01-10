@@ -13,7 +13,7 @@ type DbInstance struct {
 	ActivityStreamMode                            *ActivityStreamModeEnum
 	ActivityStreamStatus                          *ActivityStreamStatusEnum
 	AllocatedStorage                              *int64
-	AssociatedRoles                               []map[string]interface{}
+	AssociatedRoles                               []DbInstanceRoles
 	AutoMinorVersionUpgrade                       *bool
 	AutomaticRestartTime                          *time.Time
 	AvailabilityZone                              *string
@@ -25,18 +25,18 @@ type DbInstance struct {
 	CustomerOwnedIPEnabled                        *bool
 	DBClusterIdentifier                           *string
 	DBInstanceArn                                 *string
-	DBInstanceAutomatedBackupsReplications        []map[string]interface{}
+	DBInstanceAutomatedBackupsReplications        []DbInstanceAutomatedBackupsReplicationList
 	DBInstanceClass                               *string
 	DBInstanceIdentifier                          *string
 	DBInstanceStatus                              *string
 	DBName                                        *string
-	DBParameterGroups                             []map[string]interface{}
-	DBSecurityGroups                              []map[string]interface{}
+	DBParameterGroups                             []DbParameterGroupStatusList
+	DBSecurityGroups                              []DbSecurityGroupMembershipList
 	DBSubnetGroup                                 *DbSubnetGroup
 	DbInstancePort                                *int64
 	DbiResourceID                                 *string
 	DeletionProtection                            *bool
-	DomainMemberships                             []map[string]interface{}
+	DomainMemberships                             []DomainMembershipList
 	EnabledCloudwatchLogsExports                  []string
 	Endpoint                                      *Endpoint
 	Engine                                        *string
@@ -55,14 +55,14 @@ type DbInstance struct {
 	MonitoringRoleArn                             *string
 	MultiAZ                                       *bool
 	NcharCharacterSetName                         *string
-	OptionGroupMemberships                        []map[string]interface{}
+	OptionGroupMemberships                        []OptionGroupMembershipList
 	PendingModifiedValues                         *PendingModifiedValues
 	PerformanceInsightsEnabled                    *bool
 	PerformanceInsightsKMSKeyID                   *string
 	PerformanceInsightsRetentionPeriod            *int64
 	PreferredBackupWindow                         *string
 	PreferredMaintenanceWindow                    *string
-	ProcessorFeatures                             []map[string]interface{}
+	ProcessorFeatures                             []ProcessorFeatureList
 	PromotionTier                                 *int64
 	PubliclyAccessible                            *bool
 	ReadReplicaDBClusterIdentifiers               []map[string]interface{}
@@ -70,11 +70,11 @@ type DbInstance struct {
 	ReadReplicaSourceDBInstanceIdentifier         *string
 	ReplicaMode                                   *ReplicaModeEnum
 	SecondaryAvailabilityZone                     *string
-	StatusInfos                                   []map[string]interface{}
+	StatusInfos                                   []DbInstanceStatusInfoList
 	StorageEncrypted                              *bool
 	StorageType                                   *string
-	TagList                                       []map[string]interface{}
+	TagList                                       []TagList
 	TdeCredentialArn                              *string
 	Timezone                                      *string
-	VpcSecurityGroups                             []map[string]interface{}
+	VpcSecurityGroups                             []VpcSecurityGroupMembershipList
 }

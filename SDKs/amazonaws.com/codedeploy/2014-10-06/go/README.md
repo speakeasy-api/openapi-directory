@@ -34,23 +34,33 @@ func main() {
     
     req := operations.AddTagsToOnPremisesInstancesRequest{
         Headers: operations.AddTagsToOnPremisesInstancesHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "consequatur",
-            XAmzDate: "assumenda",
-            XAmzSecurityToken: "occaecati",
-            XAmzSignature: "veniam",
-            XAmzSignedHeaders: "sed",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "sed",
+            XAmzCredential: "sint",
+            XAmzDate: "est",
+            XAmzSecurityToken: "est",
+            XAmzSignature: "omnis",
+            XAmzSignedHeaders: "reiciendis",
             XAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
         },
         Request: shared.AddTagsToOnPremisesInstancesInput{
             InstanceNames: []string{
-                "explicabo",
+                "et",
+                "molestias",
+                "minus",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "ducimus",
-                    Value: "et",
+                    Key: "voluptatum",
+                    Value: "tenetur",
+                },
+                shared.Tag{
+                    Key: "rem",
+                    Value: "autem",
+                },
+                shared.Tag{
+                    Key: "enim",
+                    Value: "quia",
                 },
             },
         },

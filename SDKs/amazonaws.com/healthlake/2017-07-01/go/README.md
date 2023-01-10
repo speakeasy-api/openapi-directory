@@ -34,18 +34,18 @@ func main() {
     
     req := operations.CreateFhirDatastoreRequest{
         Headers: operations.CreateFhirDatastoreHeaders{
-            XAmzAlgorithm: "autem",
-            XAmzContentSha256: "perferendis",
-            XAmzCredential: "dolorem",
-            XAmzDate: "odit",
-            XAmzSecurityToken: "maxime",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "ipsa",
+            XAmzAlgorithm: "et",
+            XAmzContentSha256: "est",
+            XAmzCredential: "eos",
+            XAmzDate: "quas",
+            XAmzSecurityToken: "commodi",
+            XAmzSignature: "eum",
+            XAmzSignedHeaders: "ex",
             XAmzTarget: "HealthLake.CreateFHIRDatastore",
         },
         Request: shared.CreateFhirDatastoreRequest{
-            ClientToken: "est",
-            DatastoreName: "velit",
+            ClientToken: "deleniti",
+            DatastoreName: "quam",
             DatastoreTypeVersion: "R4",
             PreloadDataConfig: &shared.PreloadDataConfig{
                 PreloadDataType: "SYNTHEA",
@@ -53,17 +53,21 @@ func main() {
             SseConfiguration: &shared.SseConfiguration{
                 KmsEncryptionConfig: shared.KmsEncryptionConfig{
                     CmkType: "AWS_OWNED_KMS_KEY",
-                    KmsKeyID: "omnis",
+                    KmsKeyID: "molestiae",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "velit",
-                    Value: "illum",
+                    Key: "magnam",
+                    Value: "voluptatem",
                 },
                 shared.Tag{
-                    Key: "eum",
-                    Value: "quo",
+                    Key: "nihil",
+                    Value: "et",
+                },
+                shared.Tag{
+                    Key: "recusandae",
+                    Value: "error",
                 },
             },
         },

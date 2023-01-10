@@ -23,48 +23,26 @@ func main() {
     
     req := operations.BatchGetRecordRequest{
         Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "quia",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "ut",
-            XAmzDate: "quas",
-            XAmzSecurityToken: "magni",
-            XAmzSignature: "fuga",
-            XAmzSignedHeaders: "quaerat",
+            XAmzAlgorithm: "alias",
+            XAmzContentSha256: "reprehenderit",
+            XAmzCredential: "non",
+            XAmzDate: "quia",
+            XAmzSecurityToken: "sed",
+            XAmzSignature: "consequatur",
+            XAmzSignedHeaders: "fuga",
         },
         Request: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "voluptas",
+                    FeatureGroupName: "aliquid",
                     FeatureNames: []string{
-                        "facere",
-                        "sed",
-                        "accusantium",
+                        "unde",
+                        "ducimus",
+                        "ut",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "quam",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "quo",
-                    FeatureNames: []string{
-                        "incidunt",
-                        "vel",
-                    },
-                    RecordIdentifiersValueAsString: []string{
-                        "laudantium",
-                        "sed",
-                        "laborum",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "dolore",
-                    FeatureNames: []string{
-                        "qui",
-                    },
-                    RecordIdentifiersValueAsString: []string{
-                        "modi",
-                        "occaecati",
-                        "dolor",
+                        "quidem",
+                        "nulla",
                     },
                 },
             },

@@ -23,18 +23,18 @@ func main() {
     
     req := operations.CreateByteMatchSetRequest{
         Headers: operations.CreateByteMatchSetHeaders{
-            XAmzAlgorithm: "dolores",
-            XAmzContentSha256: "labore",
-            XAmzCredential: "cupiditate",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "cupiditate",
-            XAmzSignature: "odio",
-            XAmzSignedHeaders: "rerum",
+            XAmzAlgorithm: "nesciunt",
+            XAmzContentSha256: "velit",
+            XAmzCredential: "at",
+            XAmzDate: "repellat",
+            XAmzSecurityToken: "placeat",
+            XAmzSignature: "accusantium",
+            XAmzSignedHeaders: "sunt",
             XAmzTarget: "AWSWAF_20150824.CreateByteMatchSet",
         },
         Request: shared.CreateByteMatchSetRequest{
-            ChangeToken: "nostrum",
-            Name: "repellat",
+            ChangeToken: "et",
+            Name: "id",
         },
     }
     

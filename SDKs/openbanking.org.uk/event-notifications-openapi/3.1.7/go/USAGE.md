@@ -13,10 +13,10 @@ func main() {
     
     req := operations.CreateEventNotificationRequest{
         Headers: operations.CreateEventNotificationHeaders{
-            XFapiFinancialID: "autem",
-            XFapiInteractionID: "autem",
+            XFapiFinancialID: "possimus",
+            XFapiInteractionID: "consequatur",
         },
-        Request: "ex",
+        Request: "quia",
     }
     
     res, err := s.EventNotification.CreateEventNotification(ctx, req)

@@ -35,8 +35,8 @@ func main() {
     
     req := operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest{
         PathParams: operations.DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams{
-            Account: 4071281006781786767,
-            AnnouncementID: "autem",
+            Account: 5154430323399689181,
+            AnnouncementID: "blanditiis",
         },
     }
     

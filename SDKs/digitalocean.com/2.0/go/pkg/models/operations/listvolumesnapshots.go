@@ -13,7 +13,29 @@ type ListVolumeSnapshotsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type ListVolumeSnapshots200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListVolumeSnapshots200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListVolumeSnapshots200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListVolumeSnapshots200ApplicationJSONMeta
+// Information about the response itself.
+type ListVolumeSnapshots200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListVolumeSnapshots200ApplicationJSON struct {
+	Links     *ListVolumeSnapshots200ApplicationJSONLinks                                                        `json:"links,omitempty"`
+	Meta      ListVolumeSnapshots200ApplicationJSONMeta                                                          `json:"meta"`
 	Snapshots []shared.Onev21snapshotsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems `json:"snapshots,omitempty"`
 }
 

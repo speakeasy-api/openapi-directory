@@ -13,7 +13,7 @@ func main() {
     
     req := operations.AreasGetRequest{
         PathParams: operations.AreasGetPathParams{
-            Version: "minus",
+            Version: "est",
         },
     }
     

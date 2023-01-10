@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetcompanymatchRequest{
         QueryParams: operations.GetcompanymatchQueryParams{
-            Company: "ipsum",
-            License: "non",
+            Company: "qui",
+            License: "optio",
         },
     }
     

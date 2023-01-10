@@ -34,15 +34,15 @@ func main() {
     
     req := operations.GetCancelJobRequest{
         QueryParams: operations.GetCancelJobQueryParams{
-            APIVersion: "vero",
-            AWSAccessKeyID: "blanditiis",
+            APIVersion: "amet",
+            AWSAccessKeyID: "et",
             Action: "CancelJob",
-            JobID: "odio",
+            JobID: "voluptatem",
             Operation: "CancelJob",
-            Signature: "eligendi",
-            SignatureMethod: "animi",
-            SignatureVersion: "est",
-            Timestamp: "voluptas",
+            Signature: "natus",
+            SignatureMethod: "quasi",
+            SignatureVersion: "et",
+            Timestamp: "quod",
             Version: "2010-06-01",
         },
     }

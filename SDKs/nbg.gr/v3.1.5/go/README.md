@@ -32,14 +32,14 @@ func main() {
             },
         },
         PathParams: operations.DeleteAccountAccessConsentsConsentIDPathParams{
-            ConsentID: "numquam",
+            ConsentID: "optio",
         },
         Headers: operations.DeleteAccountAccessConsentsConsentIDHeaders{
-            SandboxID: "doloremque",
-            XCustomerUserAgent: "natus",
-            XFapiAuthDate: "ea",
-            XFapiCustomerIPAddress: "reprehenderit",
-            XFapiInteractionID: "blanditiis",
+            SandboxID: "veniam",
+            XCustomerUserAgent: "ratione",
+            XFapiAuthDate: "excepturi",
+            XFapiCustomerIPAddress: "veniam",
+            XFapiInteractionID: "quam",
         },
     }
     

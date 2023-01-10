@@ -1,5 +1,5 @@
 package shared
 
 type BillingPeriodListLinks struct {
-	Self map[string]interface{} `json:"self,omitempty"`
+	Self *LinksGetBillingPeriodsLink `json:"self,omitempty"`
 }

@@ -18,14 +18,14 @@ func main() {
             },
         },
         QueryParams: operations.GetListingViolationsQueryParams{
-            ComplianceType: "modi",
-            Filter: "consequuntur",
-            Limit: "quae",
-            ListingID: "asperiores",
-            Offset: "illo",
+            ComplianceType: "corporis",
+            Filter: "dicta",
+            Limit: "sapiente",
+            ListingID: "qui",
+            Offset: "voluptatem",
         },
         Headers: operations.GetListingViolationsHeaders{
-            XEBAYCMARKETPLACEID: "qui",
+            XEBAYCMARKETPLACEID: "odio",
         },
     }
     

@@ -1,5 +1,5 @@
 package shared
 
 type ChannelCatalogExportationHistoryLinks struct {
-	Self map[string]interface{} `json:"self,omitempty"`
+	Self *LinksGetChannelCatalogExportationHistoryLink `json:"self,omitempty"`
 }

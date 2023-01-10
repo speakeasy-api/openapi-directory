@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.SkcerRequestBody{
             CertificateParameters: &operations.SkcerRequestBodyCertificateParameters{
-                Coursename: "suscipit",
-                Personalno: "cupiditate",
-                Unit: "quia",
+                Coursename: "et",
+                Personalno: "reprehenderit",
+                Unit: "incidunt",
             },
-            ConsentArtifact: "facere",
+            ConsentArtifact: "odio",
             Format: "pdf",
-            TxnID: "rerum",
+            TxnID: "quo",
         },
     }
     

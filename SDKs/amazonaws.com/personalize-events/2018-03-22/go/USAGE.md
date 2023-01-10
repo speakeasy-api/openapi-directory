@@ -23,32 +23,46 @@ func main() {
     
     req := operations.PutEventsRequest{
         Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "quidem",
-            XAmzContentSha256: "rerum",
+            XAmzAlgorithm: "est",
+            XAmzContentSha256: "est",
             XAmzCredential: "id",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "cum",
-            XAmzSignature: "occaecati",
-            XAmzSignedHeaders: "quia",
+            XAmzDate: "voluptatem",
+            XAmzSecurityToken: "fuga",
+            XAmzSignature: "aperiam",
+            XAmzSignedHeaders: "facilis",
         },
         Request: operations.PutEventsRequestBody{
             EventList: []shared.Event{
                 shared.Event{
-                    EventID: "dicta",
-                    EventType: "ducimus",
-                    EventValue: 16.200001,
+                    EventID: "atque",
+                    EventType: "recusandae",
+                    EventValue: 44.099998,
                     Impression: []string{
-                        "eos",
+                        "atque",
+                        "iure",
+                        "qui",
                     },
-                    ItemID: "sit",
-                    Properties: "et",
-                    RecommendationID: "sed",
-                    SentAt: "1977-02-01T10:40:02Z",
+                    ItemID: "voluptas",
+                    Properties: "sunt",
+                    RecommendationID: "ratione",
+                    SentAt: "2013-10-16T12:18:45Z",
+                },
+                shared.Event{
+                    EventID: "excepturi",
+                    EventType: "vel",
+                    EventValue: 63.099998,
+                    Impression: []string{
+                        "sapiente",
+                    },
+                    ItemID: "officia",
+                    Properties: "id",
+                    RecommendationID: "voluptatibus",
+                    SentAt: "1995-07-10T23:45:54Z",
                 },
             },
-            SessionID: "voluptatum",
-            TrackingID: "dolor",
-            UserID: "sed",
+            SessionID: "dolor",
+            TrackingID: "itaque",
+            UserID: "veritatis",
         },
     }
     

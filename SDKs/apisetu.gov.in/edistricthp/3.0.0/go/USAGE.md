@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.AecmwRequestBody{
             CertificateParameters: &operations.AecmwRequestBodyCertificateParameters{
-                Udf1: "est",
+                Udf1: "distinctio",
             },
-            ConsentArtifact: "incidunt",
+            ConsentArtifact: "repellendus",
             Format: "pdf",
-            TxnID: "corrupti",
+            TxnID: "omnis",
         },
     }
     

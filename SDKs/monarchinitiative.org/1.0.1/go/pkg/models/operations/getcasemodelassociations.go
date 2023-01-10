@@ -28,7 +28,7 @@ type GetCaseModelAssociationsRequest struct {
 }
 
 type GetCaseModelAssociationsResponse struct {
-	AssociationResults *shared.AssociationResults1
+	AssociationResults *shared.AssociationResults
 	ContentType        string
 	StatusCode         int64
 }

@@ -8,7 +8,7 @@ type PlatformSummary struct {
 	PlatformArn                  *string
 	PlatformBranchLifecycleState *string
 	PlatformBranchName           *string
-	PlatformCategory             map[string]interface{}
+	PlatformCategory             *string
 	PlatformLifecycleState       *string
 	PlatformOwner                *string
 	PlatformStatus               *PlatformStatusEnum

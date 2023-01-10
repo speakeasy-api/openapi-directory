@@ -13,7 +13,7 @@ func main() {
     
     req := operations.ConnectRequest{
         Request: &operations.ConnectRequestBody{
-            Endpoint: "ipsa",
+            Endpoint: "iste",
         },
     }
     

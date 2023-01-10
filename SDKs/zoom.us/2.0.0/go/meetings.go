@@ -690,7 +690,7 @@ func (s *Meetings) MeetingPollCreate(ctx context.Context, request operations.Mee
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.MeetingPollCreatePoll
+			var out *operations.MeetingPollCreatePoll2
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

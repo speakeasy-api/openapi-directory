@@ -34,12 +34,12 @@ func main() {
             },
         },
         QueryParams: operations.AddressSearchQueryParams{
-            Filter: "amet",
-            Licensee: "eligendi",
-            Limit: 2863341056198605984,
-            Page: 5786436482557991478,
-            PostcodeOutward: "voluptatem",
-            Query: "fuga",
+            Filter: "ut",
+            Licensee: "vitae",
+            Limit: 196897373371338696,
+            Page: 9130205367074315387,
+            PostcodeOutward: "sed",
+            Query: "quod",
         },
     }
     

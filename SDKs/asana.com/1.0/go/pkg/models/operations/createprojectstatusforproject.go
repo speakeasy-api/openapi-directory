@@ -13,8 +13,8 @@ type CreateProjectStatusForProjectQueryParams struct {
 	OptPretty *bool    `queryParam:"style=form,explode=true,name=opt_pretty"`
 }
 
-type CreateProjectStatusForProjectRequestBody struct {
-	Data *shared.ProjectStatusRequest `json:"data,omitempty"`
+type CreateProjectStatusForProjectRequestBodyInput struct {
+	Data *shared.ProjectStatusRequestInput `json:"data,omitempty"`
 }
 
 type CreateProjectStatusForProject201ApplicationJSON struct {
@@ -24,7 +24,7 @@ type CreateProjectStatusForProject201ApplicationJSON struct {
 type CreateProjectStatusForProjectRequest struct {
 	PathParams  CreateProjectStatusForProjectPathParams
 	QueryParams CreateProjectStatusForProjectQueryParams
-	Request     CreateProjectStatusForProjectRequestBody `request:"mediaType=application/json"`
+	Request     CreateProjectStatusForProjectRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type CreateProjectStatusForProjectResponse struct {

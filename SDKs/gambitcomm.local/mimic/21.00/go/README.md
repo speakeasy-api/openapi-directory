@@ -35,9 +35,9 @@ func main() {
     
     req := operations.AccessAddRequest{
         PathParams: operations.AccessAddPathParams{
-            Agents: "eius",
-            Mask: "earum",
-            User: "error",
+            Agents: "quas",
+            Mask: "qui",
+            User: "ut",
         },
     }
     

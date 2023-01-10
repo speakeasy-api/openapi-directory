@@ -1,6 +1,6 @@
 package shared
 
 type DbEngineVersionMessage struct {
-	DBEngineVersions []map[string]interface{}
+	DBEngineVersions []DbEngineVersionList
 	Marker           *string
 }

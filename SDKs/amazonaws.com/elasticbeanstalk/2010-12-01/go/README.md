@@ -35,18 +35,18 @@ func main() {
     req := operations.GetAbortEnvironmentUpdateRequest{
         QueryParams: operations.GetAbortEnvironmentUpdateQueryParams{
             Action: "AbortEnvironmentUpdate",
-            EnvironmentID: "eos",
-            EnvironmentName: "et",
+            EnvironmentID: "voluptas",
+            EnvironmentName: "facilis",
             Version: "2010-12-01",
         },
         Headers: operations.GetAbortEnvironmentUpdateHeaders{
-            XAmzAlgorithm: "aspernatur",
-            XAmzContentSha256: "praesentium",
-            XAmzCredential: "porro",
-            XAmzDate: "nihil",
-            XAmzSecurityToken: "adipisci",
-            XAmzSignature: "consequatur",
-            XAmzSignedHeaders: "illum",
+            XAmzAlgorithm: "sunt",
+            XAmzContentSha256: "quis",
+            XAmzCredential: "qui",
+            XAmzDate: "aut",
+            XAmzSecurityToken: "temporibus",
+            XAmzSignature: "nemo",
+            XAmzSignedHeaders: "ea",
         },
     }
     

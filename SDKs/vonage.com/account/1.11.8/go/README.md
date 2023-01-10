@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.AccountCtrlGetAccountServicesByAccountIDPathParams{
-            AccountID: 68.099998,
+            AccountID: 72.099998,
         },
     }
     

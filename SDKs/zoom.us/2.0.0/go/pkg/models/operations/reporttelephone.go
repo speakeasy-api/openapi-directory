@@ -58,7 +58,13 @@ type ReportTelephone200ApplicationJSONTelephonyUsage struct {
 }
 
 type ReportTelephone200ApplicationJSON struct {
+	From           *time.Time                                        `json:"from,omitempty"`
+	NextPageToken  *int64                                            `json:"next_page_token,omitempty"`
+	PageCount      *int64                                            `json:"page_count,omitempty"`
+	PageSize       *int64                                            `json:"page_size,omitempty"`
 	TelephonyUsage []ReportTelephone200ApplicationJSONTelephonyUsage `json:"telephony_usage,omitempty"`
+	To             *time.Time                                        `json:"to,omitempty"`
+	TotalRecords   *int64                                            `json:"total_records,omitempty"`
 }
 
 type ReportTelephoneRequest struct {

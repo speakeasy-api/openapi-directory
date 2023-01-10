@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.GetBenefitsDocumentUploadDownloadPathParams{
-            ID: "tempora",
+            ID: "error",
         },
     }
     

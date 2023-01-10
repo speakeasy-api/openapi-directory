@@ -35,7 +35,12 @@ type WebinarsUserListWebinars struct {
 // WebinarsUserList
 // Pagination Object.
 type WebinarsUserList struct {
-	Webinars []WebinarsUserListWebinars `json:"webinars,omitempty"`
+	NextPageToken *string                    `json:"next_page_token,omitempty"`
+	PageCount     *int64                     `json:"page_count,omitempty"`
+	PageNumber    *int64                     `json:"page_number,omitempty"`
+	PageSize      *int64                     `json:"page_size,omitempty"`
+	TotalRecords  *int64                     `json:"total_records,omitempty"`
+	Webinars      []WebinarsUserListWebinars `json:"webinars,omitempty"`
 }
 
 type WebinarsRequest struct {

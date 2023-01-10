@@ -24,17 +24,17 @@ func main() {
     
     req := operations.GetAssociationBySubjectAndAssocTypeRequest{
         PathParams: operations.GetAssociationBySubjectAndAssocTypePathParams{
-            AssociationType: "ad",
+            AssociationType: "temporibus",
         },
         QueryParams: operations.GetAssociationBySubjectAndAssocTypeQueryParams{
-            Evidence: "iste",
-            ExcludeAutomaticAssertions: false,
-            Object: "rerum",
-            Rows: 3874511895358777271,
-            Start: 8220185515245473586,
-            Subject: "non",
-            UnselectEvidence: false,
-            UseCompactAssociations: true,
+            Evidence: "est",
+            ExcludeAutomaticAssertions: true,
+            Object: "quisquam",
+            Rows: 1089025540522894394,
+            Start: 7427260158299952114,
+            Subject: "et",
+            UnselectEvidence: true,
+            UseCompactAssociations: false,
         },
     }
     

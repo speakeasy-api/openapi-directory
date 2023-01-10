@@ -30,7 +30,7 @@ type DbInstance struct {
 	PreferredMaintenanceWindow   *string
 	PromotionTier                *int64
 	PubliclyAccessible           *bool
-	StatusInfos                  []map[string]interface{}
+	StatusInfos                  []DbInstanceStatusInfoList
 	StorageEncrypted             *bool
-	VpcSecurityGroups            []map[string]interface{}
+	VpcSecurityGroups            []VpcSecurityGroupMembershipList
 }

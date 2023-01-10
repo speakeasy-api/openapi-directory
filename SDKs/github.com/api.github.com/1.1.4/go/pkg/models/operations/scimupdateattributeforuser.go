@@ -18,16 +18,16 @@ const (
 )
 
 type ScimUpdateAttributeForUserRequestBodyOperationsValue1 struct {
-	Primary *bool   `json:"primary,omitempty"`
-	Value   *string `json:"value,omitempty"`
-}
-
-type ScimUpdateAttributeForUserRequestBodyOperationsValue3 struct {
 	Active     *bool   `json:"active,omitempty"`
 	ExternalID *string `json:"externalId,omitempty"`
 	FamilyName *string `json:"familyName,omitempty"`
 	GivenName  *string `json:"givenName,omitempty"`
 	UserName   *string `json:"userName,omitempty"`
+}
+
+type ScimUpdateAttributeForUserRequestBodyOperationsValue2 struct {
+	Primary *bool   `json:"primary,omitempty"`
+	Value   *string `json:"value,omitempty"`
 }
 
 type ScimUpdateAttributeForUserRequestBodyOperations struct {

@@ -34,18 +34,18 @@ func main() {
     
     req := operations.AcknowledgeJobRequest{
         Headers: operations.AcknowledgeJobHeaders{
-            XAmzAlgorithm: "nostrum",
-            XAmzContentSha256: "mollitia",
-            XAmzCredential: "aut",
-            XAmzDate: "recusandae",
-            XAmzSecurityToken: "asperiores",
-            XAmzSignature: "quas",
-            XAmzSignedHeaders: "repellendus",
+            XAmzAlgorithm: "qui",
+            XAmzContentSha256: "numquam",
+            XAmzCredential: "et",
+            XAmzDate: "ut",
+            XAmzSecurityToken: "soluta",
+            XAmzSignature: "minima",
+            XAmzSignedHeaders: "fugit",
             XAmzTarget: "CodePipeline_20150709.AcknowledgeJob",
         },
         Request: shared.AcknowledgeJobInput{
-            JobID: "corporis",
-            Nonce: "voluptas",
+            JobID: "et",
+            Nonce: "autem",
         },
     }
     

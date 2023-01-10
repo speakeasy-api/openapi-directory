@@ -7,6 +7,6 @@ type DbSubnetGroup struct {
 	DBSubnetGroupDescription *string
 	DBSubnetGroupName        *string
 	SubnetGroupStatus        *string
-	Subnets                  []map[string]interface{}
+	Subnets                  []SubnetList
 	VpcID                    *string
 }

@@ -1,0 +1,8 @@
+package shared
+
+// MinimumEngineVersionPerAllowedValueList
+// The minimum DB engine version required for each corresponding allowed value for an option setting.
+type MinimumEngineVersionPerAllowedValueList struct {
+	AllowedValue         *string
+	MinimumEngineVersion *string
+}

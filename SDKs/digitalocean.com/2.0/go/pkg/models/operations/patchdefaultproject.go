@@ -11,7 +11,7 @@ type PatchDefaultProject401ApplicationJSON struct {
 }
 
 type PatchDefaultProjectRequest struct {
-	Request shared.Onev21projectsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesProjectsItems `request:"mediaType=application/json"`
+	Request shared.Onev21projectsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesProjectsItemsInput `request:"mediaType=application/json"`
 }
 
 type PatchDefaultProjectResponse struct {

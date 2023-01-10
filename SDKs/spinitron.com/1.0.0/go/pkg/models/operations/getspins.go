@@ -16,8 +16,14 @@ type GetSpinsQueryParams struct {
 	Start      *time.Time `queryParam:"style=form,explode=true,name=start"`
 }
 
+type GetSpins200ApplicationJSONLinks struct {
+	Self *shared.Link `json:"self,omitempty"`
+}
+
 type GetSpins200ApplicationJSON struct {
-	Items []shared.Spin `json:"items,omitempty"`
+	Links *GetSpins200ApplicationJSONLinks `json:"_links,omitempty"`
+	Meta  *shared.Pagination               `json:"_meta,omitempty"`
+	Items []shared.Spin                    `json:"items,omitempty"`
 }
 
 type GetSpinsRequest struct {

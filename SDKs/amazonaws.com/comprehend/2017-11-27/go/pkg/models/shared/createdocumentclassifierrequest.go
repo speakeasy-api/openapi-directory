@@ -5,7 +5,7 @@ type CreateDocumentClassifierRequest struct {
 	DataAccessRoleArn      string                              `json:"DataAccessRoleArn"`
 	DocumentClassifierName string                              `json:"DocumentClassifierName"`
 	InputDataConfig        DocumentClassifierInputDataConfig   `json:"InputDataConfig"`
-	LanguageCode           map[string]interface{}              `json:"LanguageCode"`
+	LanguageCode           LanguageCodeEnum                    `json:"LanguageCode"`
 	Mode                   *DocumentClassifierModeEnum         `json:"Mode,omitempty"`
 	ModelKmsKeyID          *string                             `json:"ModelKmsKeyId,omitempty"`
 	OutputDataConfig       *DocumentClassifierOutputDataConfig `json:"OutputDataConfig,omitempty"`

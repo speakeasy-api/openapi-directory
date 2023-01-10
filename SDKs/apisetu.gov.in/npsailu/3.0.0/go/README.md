@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.NdcerRequestBody{
             CertificateParameters: &operations.NdcerRequestBodyCertificateParameters{
-                Appid: "et",
+                Appid: "earum",
             },
-            ConsentArtifact: "sequi",
+            ConsentArtifact: "dolores",
             Format: "pdf",
-            TxnID: "consequatur",
+            TxnID: "exercitationem",
         },
     }
     

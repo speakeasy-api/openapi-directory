@@ -57,133 +57,309 @@ type GetRecordsSecurity struct {
 	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-// GetRecords200ApplicationJSON1
-// Verify
-type GetRecords200ApplicationJSON1 struct {
-	ItemsCount *int64                    `json:"items_count,omitempty"`
-	Product    *shared.ProductVerifyEnum `json:"product,omitempty"`
-	Records    []shared.CsvVerify        `json:"records,omitempty"`
+type GetRecords200ApplicationJSON1LinksSelf struct {
+	Href *string `json:"href,omitempty"`
 }
 
+type GetRecords200ApplicationJSON1Links struct {
+	Self *GetRecords200ApplicationJSON1LinksSelf `json:"self,omitempty"`
+}
+
+type GetRecords200ApplicationJSON1DirectionEnum string
+
+const (
+	GetRecords200ApplicationJSON1DirectionEnumInbound  GetRecords200ApplicationJSON1DirectionEnum = "inbound"
+	GetRecords200ApplicationJSON1DirectionEnumOutbound GetRecords200ApplicationJSON1DirectionEnum = "outbound"
+)
+
+// GetRecords200ApplicationJSON1
+// SMS (Outbound)
+type GetRecords200ApplicationJSON1 struct {
+	Links            *GetRecords200ApplicationJSON1Links         `json:"_links,omitempty"`
+	AccountID        *string                                     `json:"account_id,omitempty"`
+	Currency         *string                                     `json:"currency,omitempty"`
+	Direction        *GetRecords200ApplicationJSON1DirectionEnum `json:"direction,omitempty"`
+	IdsNotFound      *string                                     `json:"ids_not_found,omitempty"`
+	IncludeMessage   *bool                                       `json:"include_message,omitempty"`
+	ItemsCount       *int64                                      `json:"items_count,omitempty"`
+	Price            *float64                                    `json:"price,omitempty"`
+	Product          *shared.ProductSmsEnum                      `json:"product,omitempty"`
+	ReceivedAt       *time.Time                                  `json:"received_at,omitempty"`
+	Records          []shared.JSONSmsOutboundWithBody            `json:"records,omitempty"`
+	RequestID        *string                                     `json:"request_id,omitempty"`
+	RequestStatus    *shared.RequestStatusEnum                   `json:"request_status,omitempty"`
+	ShowConcatenated *bool                                       `json:"show_concatenated,omitempty"`
+}
+
+type GetRecords200ApplicationJSON2LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
+
+type GetRecords200ApplicationJSON2Links struct {
+	Self *GetRecords200ApplicationJSON2LinksSelf `json:"self,omitempty"`
+}
+
+type GetRecords200ApplicationJSON2DirectionEnum string
+
+const (
+	GetRecords200ApplicationJSON2DirectionEnumInbound  GetRecords200ApplicationJSON2DirectionEnum = "inbound"
+	GetRecords200ApplicationJSON2DirectionEnumOutbound GetRecords200ApplicationJSON2DirectionEnum = "outbound"
+)
+
 // GetRecords200ApplicationJSON2
-// Conversations
+// SMS (Inbound)
 type GetRecords200ApplicationJSON2 struct {
-	ItemsCount *int64                           `json:"items_count,omitempty"`
-	Product    *shared.ProductConversationsEnum `json:"product,omitempty"`
-	Records    []shared.CsvConversations        `json:"records,omitempty"`
+	Links            *GetRecords200ApplicationJSON2Links         `json:"_links,omitempty"`
+	AccountID        *string                                     `json:"account_id,omitempty"`
+	Currency         *string                                     `json:"currency,omitempty"`
+	Direction        *GetRecords200ApplicationJSON2DirectionEnum `json:"direction,omitempty"`
+	IdsNotFound      *string                                     `json:"ids_not_found,omitempty"`
+	IncludeMessage   *bool                                       `json:"include_message,omitempty"`
+	ItemsCount       *int64                                      `json:"items_count,omitempty"`
+	Price            *float64                                    `json:"price,omitempty"`
+	Product          *shared.ProductSmsEnum                      `json:"product,omitempty"`
+	ReceivedAt       *time.Time                                  `json:"received_at,omitempty"`
+	Records          []shared.JSONSmsInboundWithBody             `json:"records,omitempty"`
+	RequestID        *string                                     `json:"request_id,omitempty"`
+	RequestStatus    *shared.RequestStatusEnum                   `json:"request_status,omitempty"`
+	ShowConcatenated *bool                                       `json:"show_concatenated,omitempty"`
+}
+
+type GetRecords200ApplicationJSON3LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
+
+type GetRecords200ApplicationJSON3Links struct {
+	Self *GetRecords200ApplicationJSON3LinksSelf `json:"self,omitempty"`
 }
 
 // GetRecords200ApplicationJSON3
-// WebSocket Call
+// Voice Call
 type GetRecords200ApplicationJSON3 struct {
-	ItemsCount *int64                       `json:"items_count,omitempty"`
-	Product    *shared.ProductWebsocketEnum `json:"product,omitempty"`
-	Records    []shared.CsvWebsockets       `json:"records,omitempty"`
+	Links         *GetRecords200ApplicationJSON3Links `json:"_links,omitempty"`
+	AccountID     *string                             `json:"account_id,omitempty"`
+	Currency      *string                             `json:"currency,omitempty"`
+	Direction     *shared.DirectionEnum               `json:"direction,omitempty"`
+	IdsNotFound   *string                             `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                              `json:"items_count,omitempty"`
+	Price         *float64                            `json:"price,omitempty"`
+	Product       *shared.ProductVoiceEnum            `json:"product,omitempty"`
+	ReceivedAt    *time.Time                          `json:"received_at,omitempty"`
+	Records       []shared.CsvVoice                   `json:"records,omitempty"`
+	RequestID     *string                             `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum           `json:"request_status,omitempty"`
 }
 
-type GetRecords200ApplicationJSON4DirectionEnum string
+type GetRecords200ApplicationJSON4LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
 
-const (
-	GetRecords200ApplicationJSON4DirectionEnumInbound  GetRecords200ApplicationJSON4DirectionEnum = "inbound"
-	GetRecords200ApplicationJSON4DirectionEnumOutbound GetRecords200ApplicationJSON4DirectionEnum = "outbound"
-)
+type GetRecords200ApplicationJSON4Links struct {
+	Self *GetRecords200ApplicationJSON4LinksSelf `json:"self,omitempty"`
+}
 
 // GetRecords200ApplicationJSON4
-// Messages (Inbound)
+// In App Voice
 type GetRecords200ApplicationJSON4 struct {
-	Direction        *GetRecords200ApplicationJSON4DirectionEnum `json:"direction,omitempty"`
-	IncludeMessage   *bool                                       `json:"include_message,omitempty"`
-	ItemsCount       *int64                                      `json:"items_count,omitempty"`
-	Product          *shared.ProductMessagesEnum                 `json:"product,omitempty"`
-	Records          []shared.CsvMessagesInbound                 `json:"records,omitempty"`
-	ShowConcatenated *bool                                       `json:"show_concatenated,omitempty"`
+	Links         *GetRecords200ApplicationJSON4Links `json:"_links,omitempty"`
+	AccountID     *string                             `json:"account_id,omitempty"`
+	Currency      *string                             `json:"currency,omitempty"`
+	IdsNotFound   *string                             `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                              `json:"items_count,omitempty"`
+	Price         *float64                            `json:"price,omitempty"`
+	Product       *shared.ProductInAppVoiceEnum       `json:"product,omitempty"`
+	ReceivedAt    *time.Time                          `json:"received_at,omitempty"`
+	Records       []shared.CsvInAppVoice              `json:"records,omitempty"`
+	RequestID     *string                             `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum           `json:"request_status,omitempty"`
+}
+
+type GetRecords200ApplicationJSON5LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
+
+type GetRecords200ApplicationJSON5Links struct {
+	Self *GetRecords200ApplicationJSON5LinksSelf `json:"self,omitempty"`
 }
 
 // GetRecords200ApplicationJSON5
-// Number Insight
+// WebSocket Call
 type GetRecords200ApplicationJSON5 struct {
-	ItemsCount *int64                `json:"items_count,omitempty"`
-	Product    *shared.ProductNiEnum `json:"product,omitempty"`
-	Records    []shared.CsvNi        `json:"records,omitempty"`
+	Links         *GetRecords200ApplicationJSON5Links `json:"_links,omitempty"`
+	AccountID     *string                             `json:"account_id,omitempty"`
+	Currency      *string                             `json:"currency,omitempty"`
+	IdsNotFound   *string                             `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                              `json:"items_count,omitempty"`
+	Price         *float64                            `json:"price,omitempty"`
+	Product       *shared.ProductWebsocketEnum        `json:"product,omitempty"`
+	ReceivedAt    *time.Time                          `json:"received_at,omitempty"`
+	Records       []shared.CsvWebsockets              `json:"records,omitempty"`
+	RequestID     *string                             `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum           `json:"request_status,omitempty"`
 }
 
-type GetRecords200ApplicationJSON6DirectionEnum string
+type GetRecords200ApplicationJSON6LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
 
-const (
-	GetRecords200ApplicationJSON6DirectionEnumInbound  GetRecords200ApplicationJSON6DirectionEnum = "inbound"
-	GetRecords200ApplicationJSON6DirectionEnumOutbound GetRecords200ApplicationJSON6DirectionEnum = "outbound"
-)
+type GetRecords200ApplicationJSON6Links struct {
+	Self *GetRecords200ApplicationJSON6LinksSelf `json:"self,omitempty"`
+}
 
 // GetRecords200ApplicationJSON6
-// Messages (Outbound)
+// Verify
 type GetRecords200ApplicationJSON6 struct {
-	Direction        *GetRecords200ApplicationJSON6DirectionEnum `json:"direction,omitempty"`
-	IncludeMessage   *bool                                       `json:"include_message,omitempty"`
-	ItemsCount       *int64                                      `json:"items_count,omitempty"`
-	Product          *shared.ProductMessagesEnum                 `json:"product,omitempty"`
-	Records          []shared.CsvMessagesOutbound                `json:"records,omitempty"`
-	ShowConcatenated *bool                                       `json:"show_concatenated,omitempty"`
+	Links         *GetRecords200ApplicationJSON6Links `json:"_links,omitempty"`
+	AccountID     *string                             `json:"account_id,omitempty"`
+	Currency      *string                             `json:"currency,omitempty"`
+	IdsNotFound   *string                             `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                              `json:"items_count,omitempty"`
+	Price         *float64                            `json:"price,omitempty"`
+	Product       *shared.ProductVerifyEnum           `json:"product,omitempty"`
+	ReceivedAt    *time.Time                          `json:"received_at,omitempty"`
+	Records       []shared.CsvVerify                  `json:"records,omitempty"`
+	RequestID     *string                             `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum           `json:"request_status,omitempty"`
+}
+
+type GetRecords200ApplicationJSON7LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
+
+type GetRecords200ApplicationJSON7Links struct {
+	Self *GetRecords200ApplicationJSON7LinksSelf `json:"self,omitempty"`
 }
 
 // GetRecords200ApplicationJSON7
-// In App Voice
+// Number Insight
 type GetRecords200ApplicationJSON7 struct {
-	ItemsCount *int64                        `json:"items_count,omitempty"`
-	Product    *shared.ProductInAppVoiceEnum `json:"product,omitempty"`
-	Records    []shared.CsvInAppVoice        `json:"records,omitempty"`
+	Links         *GetRecords200ApplicationJSON7Links `json:"_links,omitempty"`
+	AccountID     *string                             `json:"account_id,omitempty"`
+	Currency      *string                             `json:"currency,omitempty"`
+	IdsNotFound   *string                             `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                              `json:"items_count,omitempty"`
+	Price         *float64                            `json:"price,omitempty"`
+	Product       *shared.ProductNiEnum               `json:"product,omitempty"`
+	ReceivedAt    *time.Time                          `json:"received_at,omitempty"`
+	Records       []shared.CsvNi                      `json:"records,omitempty"`
+	RequestID     *string                             `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum           `json:"request_status,omitempty"`
 }
+
+type GetRecords200ApplicationJSON8LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
+
+type GetRecords200ApplicationJSON8Links struct {
+	Self *GetRecords200ApplicationJSON8LinksSelf `json:"self,omitempty"`
+}
+
+type GetRecords200ApplicationJSON8DirectionEnum string
+
+const (
+	GetRecords200ApplicationJSON8DirectionEnumInbound  GetRecords200ApplicationJSON8DirectionEnum = "inbound"
+	GetRecords200ApplicationJSON8DirectionEnumOutbound GetRecords200ApplicationJSON8DirectionEnum = "outbound"
+)
 
 // GetRecords200ApplicationJSON8
-// ASR
+// Messages (Outbound)
 type GetRecords200ApplicationJSON8 struct {
-	ItemsCount *int64                 `json:"items_count,omitempty"`
-	Product    *shared.ProductAsrEnum `json:"product,omitempty"`
-	Records    []shared.CsvAsr        `json:"records,omitempty"`
+	Links            *GetRecords200ApplicationJSON8Links         `json:"_links,omitempty"`
+	AccountID        *string                                     `json:"account_id,omitempty"`
+	Currency         *string                                     `json:"currency,omitempty"`
+	Direction        *GetRecords200ApplicationJSON8DirectionEnum `json:"direction,omitempty"`
+	IdsNotFound      *string                                     `json:"ids_not_found,omitempty"`
+	IncludeMessage   *bool                                       `json:"include_message,omitempty"`
+	ItemsCount       *int64                                      `json:"items_count,omitempty"`
+	Price            *float64                                    `json:"price,omitempty"`
+	Product          *shared.ProductMessagesEnum                 `json:"product,omitempty"`
+	ReceivedAt       *time.Time                                  `json:"received_at,omitempty"`
+	Records          []shared.CsvMessagesOutbound                `json:"records,omitempty"`
+	RequestID        *string                                     `json:"request_id,omitempty"`
+	RequestStatus    *shared.RequestStatusEnum                   `json:"request_status,omitempty"`
+	ShowConcatenated *bool                                       `json:"show_concatenated,omitempty"`
 }
+
+type GetRecords200ApplicationJSON9LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
+
+type GetRecords200ApplicationJSON9Links struct {
+	Self *GetRecords200ApplicationJSON9LinksSelf `json:"self,omitempty"`
+}
+
+type GetRecords200ApplicationJSON9DirectionEnum string
+
+const (
+	GetRecords200ApplicationJSON9DirectionEnumInbound  GetRecords200ApplicationJSON9DirectionEnum = "inbound"
+	GetRecords200ApplicationJSON9DirectionEnumOutbound GetRecords200ApplicationJSON9DirectionEnum = "outbound"
+)
 
 // GetRecords200ApplicationJSON9
-// Voice Call
+// Messages (Inbound)
 type GetRecords200ApplicationJSON9 struct {
-	Direction  *shared.DirectionEnum    `json:"direction,omitempty"`
-	ItemsCount *int64                   `json:"items_count,omitempty"`
-	Product    *shared.ProductVoiceEnum `json:"product,omitempty"`
-	Records    []shared.CsvVoice        `json:"records,omitempty"`
+	Links            *GetRecords200ApplicationJSON9Links         `json:"_links,omitempty"`
+	AccountID        *string                                     `json:"account_id,omitempty"`
+	Currency         *string                                     `json:"currency,omitempty"`
+	Direction        *GetRecords200ApplicationJSON9DirectionEnum `json:"direction,omitempty"`
+	IdsNotFound      *string                                     `json:"ids_not_found,omitempty"`
+	IncludeMessage   *bool                                       `json:"include_message,omitempty"`
+	ItemsCount       *int64                                      `json:"items_count,omitempty"`
+	Price            *float64                                    `json:"price,omitempty"`
+	Product          *shared.ProductMessagesEnum                 `json:"product,omitempty"`
+	ReceivedAt       *time.Time                                  `json:"received_at,omitempty"`
+	Records          []shared.CsvMessagesInbound                 `json:"records,omitempty"`
+	RequestID        *string                                     `json:"request_id,omitempty"`
+	RequestStatus    *shared.RequestStatusEnum                   `json:"request_status,omitempty"`
+	ShowConcatenated *bool                                       `json:"show_concatenated,omitempty"`
 }
 
-type GetRecords200ApplicationJSON10DirectionEnum string
+type GetRecords200ApplicationJSON10LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
 
-const (
-	GetRecords200ApplicationJSON10DirectionEnumInbound  GetRecords200ApplicationJSON10DirectionEnum = "inbound"
-	GetRecords200ApplicationJSON10DirectionEnumOutbound GetRecords200ApplicationJSON10DirectionEnum = "outbound"
-)
+type GetRecords200ApplicationJSON10Links struct {
+	Self *GetRecords200ApplicationJSON10LinksSelf `json:"self,omitempty"`
+}
 
 // GetRecords200ApplicationJSON10
-// SMS (Inbound)
+// ASR
 type GetRecords200ApplicationJSON10 struct {
-	Direction        *GetRecords200ApplicationJSON10DirectionEnum `json:"direction,omitempty"`
-	IncludeMessage   *bool                                        `json:"include_message,omitempty"`
-	ItemsCount       *int64                                       `json:"items_count,omitempty"`
-	Product          *shared.ProductSmsEnum                       `json:"product,omitempty"`
-	Records          []shared.JSONSmsInboundWithBody              `json:"records,omitempty"`
-	ShowConcatenated *bool                                        `json:"show_concatenated,omitempty"`
+	Links         *GetRecords200ApplicationJSON10Links `json:"_links,omitempty"`
+	AccountID     *string                              `json:"account_id,omitempty"`
+	Currency      *string                              `json:"currency,omitempty"`
+	IdsNotFound   *string                              `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                               `json:"items_count,omitempty"`
+	Price         *float64                             `json:"price,omitempty"`
+	Product       *shared.ProductAsrEnum               `json:"product,omitempty"`
+	ReceivedAt    *time.Time                           `json:"received_at,omitempty"`
+	Records       []shared.CsvAsr                      `json:"records,omitempty"`
+	RequestID     *string                              `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum            `json:"request_status,omitempty"`
 }
 
-type GetRecords200ApplicationJSON11DirectionEnum string
+type GetRecords200ApplicationJSON11LinksSelf struct {
+	Href *string `json:"href,omitempty"`
+}
 
-const (
-	GetRecords200ApplicationJSON11DirectionEnumInbound  GetRecords200ApplicationJSON11DirectionEnum = "inbound"
-	GetRecords200ApplicationJSON11DirectionEnumOutbound GetRecords200ApplicationJSON11DirectionEnum = "outbound"
-)
+type GetRecords200ApplicationJSON11Links struct {
+	Self *GetRecords200ApplicationJSON11LinksSelf `json:"self,omitempty"`
+}
 
 // GetRecords200ApplicationJSON11
-// SMS (Outbound)
+// Conversations
 type GetRecords200ApplicationJSON11 struct {
-	Direction        *GetRecords200ApplicationJSON11DirectionEnum `json:"direction,omitempty"`
-	IncludeMessage   *bool                                        `json:"include_message,omitempty"`
-	ItemsCount       *int64                                       `json:"items_count,omitempty"`
-	Product          *shared.ProductSmsEnum                       `json:"product,omitempty"`
-	Records          []shared.JSONSmsOutboundWithBody             `json:"records,omitempty"`
-	ShowConcatenated *bool                                        `json:"show_concatenated,omitempty"`
+	Links         *GetRecords200ApplicationJSON11Links `json:"_links,omitempty"`
+	AccountID     *string                              `json:"account_id,omitempty"`
+	Currency      *string                              `json:"currency,omitempty"`
+	IdsNotFound   *string                              `json:"ids_not_found,omitempty"`
+	ItemsCount    *int64                               `json:"items_count,omitempty"`
+	Price         *float64                             `json:"price,omitempty"`
+	Product       *shared.ProductConversationsEnum     `json:"product,omitempty"`
+	ReceivedAt    *time.Time                           `json:"received_at,omitempty"`
+	Records       []shared.CsvConversations            `json:"records,omitempty"`
+	RequestID     *string                              `json:"request_id,omitempty"`
+	RequestStatus *shared.RequestStatusEnum            `json:"request_status,omitempty"`
 }
 
 type GetRecordsRequest struct {

@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                DOB: "exercitationem",
-                FullName: "consequatur",
-                REGNO: "ut",
+                DOB: "quam",
+                FullName: "rerum",
+                REGNO: "dolores",
             },
-            ConsentArtifact: "dolores",
+            ConsentArtifact: "consequatur",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "culpa",
         },
     }
     

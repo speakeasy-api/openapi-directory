@@ -23,16 +23,16 @@ func main() {
     
     req := operations.DeleteConnectionRequest{
         PathParams: operations.DeleteConnectionPathParams{
-            ConnectionID: "explicabo",
+            ConnectionID: "magni",
         },
         Headers: operations.DeleteConnectionHeaders{
-            XAmzAlgorithm: "necessitatibus",
-            XAmzContentSha256: "veniam",
-            XAmzCredential: "qui",
-            XAmzDate: "in",
-            XAmzSecurityToken: "odit",
-            XAmzSignature: "molestias",
-            XAmzSignedHeaders: "corporis",
+            XAmzAlgorithm: "recusandae",
+            XAmzContentSha256: "illum",
+            XAmzCredential: "consequatur",
+            XAmzDate: "dolores",
+            XAmzSecurityToken: "hic",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "explicabo",
         },
     }
     

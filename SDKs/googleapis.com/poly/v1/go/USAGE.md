@@ -13,20 +13,20 @@ func main() {
     
     req := operations.PolyAssetsGetRequest{
         PathParams: operations.PolyAssetsGetPathParams{
-            Name: "quod",
+            Name: "autem",
         },
         QueryParams: operations.PolyAssetsGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "et",
-            Alt: "media",
-            Callback: "iusto",
-            Fields: "porro",
-            Key: "eos",
-            OauthToken: "veritatis",
+            DollarXgafv: "2",
+            AccessToken: "dolores",
+            Alt: "json",
+            Callback: "eum",
+            Fields: "facere",
+            Key: "vitae",
+            OauthToken: "pariatur",
             PrettyPrint: false,
-            QuotaUser: "possimus",
-            UploadType: "ut",
-            UploadProtocol: "vel",
+            QuotaUser: "aspernatur",
+            UploadType: "reiciendis",
+            UploadProtocol: "velit",
         },
     }
     

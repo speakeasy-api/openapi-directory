@@ -24,15 +24,15 @@ func main() {
     
     req := operations.OptCapProgramInPriceRequest{
         Headers: operations.OptCapProgramInPriceHeaders{
-            Authorization: "perspiciatis",
-            WMCONSUMERCHANNELTYPE: "sequi",
-            WMQOSCORRELATIONID: "ut",
-            WMSECACCESSTOKEN: "id",
-            WMSVCNAME: "voluptas",
+            Authorization: "harum",
+            WMCONSUMERCHANNELTYPE: "ad",
+            WMQOSCORRELATIONID: "aut",
+            WMSECACCESSTOKEN: "ut",
+            WMSVCNAME: "eius",
         },
         Request: operations.OptCapProgramInPriceRequestBody{
-            SubsidyEnrolled: false,
-            SubsidyPreference: true,
+            SubsidyEnrolled: true,
+            SubsidyPreference: false,
         },
     }
     

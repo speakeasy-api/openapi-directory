@@ -34,89 +34,75 @@ func main() {
             },
         },
         PathParams: operations.FormsFormsBatchUpdatePathParams{
-            FormID: "quo",
+            FormID: "excepturi",
         },
         QueryParams: operations.FormsFormsBatchUpdateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "ipsa",
+            DollarXgafv: "2",
+            AccessToken: "nam",
             Alt: "proto",
-            Callback: "sit",
-            Fields: "debitis",
-            Key: "sapiente",
-            OauthToken: "est",
-            PrettyPrint: false,
-            QuotaUser: "est",
-            UploadType: "dolor",
-            UploadProtocol: "libero",
+            Callback: "nam",
+            Fields: "eaque",
+            Key: "eos",
+            OauthToken: "voluptas",
+            PrettyPrint: true,
+            QuotaUser: "repudiandae",
+            UploadType: "tempora",
+            UploadProtocol: "iusto",
         },
         Request: &shared.BatchUpdateFormRequestInput{
-            IncludeFormInResponse: true,
+            IncludeFormInResponse: false,
             Requests: []shared.RequestInput{
                 shared.RequestInput{
                     CreateItem: &shared.CreateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "incidunt",
+                            Description: "culpa",
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "porro",
+                                    AltText: "illo",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 3630820796482480949,
+                                        Alignment: "RIGHT",
+                                        Width: 5957235253040447645,
                                     },
-                                    SourceURI: "quae",
+                                    SourceURI: "enim",
                                 },
                             },
-                            ItemID: "distinctio",
+                            ItemID: "sint",
                             PageBreakItem: map[string]interface{}{
-                                "omnis": "dolores",
-                                "architecto": "labore",
-                                "sit": "placeat",
+                                "totam": "numquam",
+                                "sunt": "placeat",
+                                "reprehenderit": "et",
                             },
                             QuestionGroupItem: &shared.QuestionGroupItemInput{
                                 Grid: &shared.GridInput{
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "et",
+                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
+                                                GoToSectionID: "possimus",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "laborum",
+                                                    AltText: "ipsa",
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 8014451700944505660,
+                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                                        Width: 5216207456531997314,
                                                     },
-                                                    SourceURI: "nihil",
+                                                    SourceURI: "facilis",
                                                 },
                                                 IsOther: false,
-                                                Value: "itaque",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "sit",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "esse",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 8244631715819070539,
-                                                    },
-                                                    SourceURI: "voluptates",
-                                                },
-                                                IsOther: true,
-                                                Value: "quis",
+                                                Value: "voluptatem",
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "RADIO",
+                                        Shuffle: true,
+                                        Type: "CHOICE_TYPE_UNSPECIFIED",
                                     },
                                     ShuffleQuestions: false,
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "repudiandae",
+                                    AltText: "incidunt",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 5287675374053131560,
+                                        Alignment: "CENTER",
+                                        Width: 5904184528855340306,
                                     },
-                                    SourceURI: "sit",
+                                    SourceURI: "quia",
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
@@ -124,234 +110,39 @@ func main() {
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
                                                     GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "corporis",
+                                                    GoToSectionID: "cum",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "ipsum",
+                                                        AltText: "exercitationem",
                                                         Properties: &shared.MediaProperties{
                                                             Alignment: "RIGHT",
-                                                            Width: 8911911697589176650,
+                                                            Width: 6763426041370573843,
                                                         },
-                                                        SourceURI: "provident",
+                                                        SourceURI: "rem",
                                                     },
                                                     IsOther: false,
-                                                    Value: "temporibus",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "incidunt",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "fugit",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 4066235596836583176,
-                                                        },
-                                                        SourceURI: "sunt",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "ab",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "ut",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "quaerat",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 1561017435673571789,
-                                                        },
-                                                        SourceURI: "dolorum",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "dolorem",
-                                                },
-                                            },
-                                            Shuffle: true,
-                                            Type: "RADIO",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "odio",
-                                            MaxFileSize: "dignissimos",
-                                            MaxFiles: 2023607408878162296,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PRESENTATION",
-                                                "VIDEO",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "deserunt",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "at",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "quaerat",
-                                                            URI: "ut",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "id",
-                                                            YoutubeURI: "voluptatem",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "qui",
-                                                            URI: "dolor",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "ipsa",
-                                                            YoutubeURI: "placeat",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "cumque",
-                                                            URI: "facilis",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "veniam",
-                                                            YoutubeURI: "minima",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "suscipit",
-                                            },
-                                            PointValue: 5002935656122311302,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "quae",
-                                                            URI: "et",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "similique",
-                                                            YoutubeURI: "molestiae",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "quia",
-                                                            URI: "at",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "voluptatibus",
-                                                            YoutubeURI: "repellendus",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "sequi",
-                                                            URI: "inventore",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "sit",
-                                                            YoutubeURI: "corporis",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "omnis",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "vel",
-                                                            URI: "nostrum",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "quis",
-                                                            YoutubeURI: "ut",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "molestiae",
-                                            },
-                                        },
-                                        QuestionID: "odio",
-                                        Required: false,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "et",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 4297911971083918044,
-                                            HighLabel: "ducimus",
-                                            Low: 5812092376282296392,
-                                            LowLabel: "adipisci",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: true,
-                                        },
-                                    },
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "sed",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "cum",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 2043501743664261460,
-                                                        },
-                                                        SourceURI: "consequatur",
-                                                    },
-                                                    IsOther: true,
-                                                    Value: "tempora",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "sed",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "dolor",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 6434467997201954437,
-                                                        },
-                                                        SourceURI: "est",
-                                                    },
-                                                    IsOther: true,
-                                                    Value: "ipsa",
+                                                    Value: "et",
                                                 },
                                             },
                                             Shuffle: false,
-                                            Type: "RADIO",
+                                            Type: "CHECKBOX",
                                         },
                                         DateQuestion: &shared.DateQuestion{
                                             IncludeTime: true,
                                             IncludeYear: false,
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "voluptatem",
-                                            MaxFileSize: "sit",
-                                            MaxFiles: 1884345172318855561,
+                                            FolderID: "qui",
+                                            MaxFileSize: "ipsum",
+                                            MaxFiles: 6209797462097021572,
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "ANY",
+                                                "FILE_TYPE_UNSPECIFIED",
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "eligendi",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "quia",
+                                                        Value: "dolorum",
                                                     },
                                                 },
                                             },
@@ -359,59 +150,69 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "enim",
-                                                            URI: "laudantium",
+                                                            DisplayText: "optio",
+                                                            URI: "est",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "occaecati",
-                                                            YoutubeURI: "aut",
+                                                            DisplayText: "doloribus",
+                                                            YoutubeURI: "voluptatem",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "fuga",
+                                                            URI: "occaecati",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "dolores",
+                                                            YoutubeURI: "dolores",
                                                         },
                                                     },
                                                 },
-                                                Text: "sit",
+                                                Text: "voluptatibus",
                                             },
-                                            PointValue: 6843381929732803078,
+                                            PointValue: 1666936004246765880,
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "qui",
-                                                            URI: "ullam",
+                                                            DisplayText: "quo",
+                                                            URI: "voluptatum",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "consequuntur",
-                                                            YoutubeURI: "aperiam",
+                                                            DisplayText: "autem",
+                                                            YoutubeURI: "dolorem",
                                                         },
                                                     },
                                                 },
-                                                Text: "accusamus",
+                                                Text: "ullam",
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "natus",
-                                                            URI: "consectetur",
+                                                            DisplayText: "est",
+                                                            URI: "assumenda",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "unde",
-                                                            YoutubeURI: "ut",
+                                                            DisplayText: "ducimus",
+                                                            YoutubeURI: "alias",
                                                         },
                                                     },
                                                 },
-                                                Text: "tempora",
+                                                Text: "quia",
                                             },
                                         },
-                                        QuestionID: "ut",
-                                        Required: true,
+                                        QuestionID: "nemo",
+                                        Required: false,
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "aspernatur",
+                                            Title: "molestiae",
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 2279341170733245843,
-                                            HighLabel: "quas",
-                                            Low: 6829211620401579544,
-                                            LowLabel: "saepe",
+                                            High: 3820748145283803134,
+                                            HighLabel: "eveniet",
+                                            Low: 7675516864857828933,
+                                            LowLabel: "velit",
                                         },
                                         TextQuestion: &shared.TextQuestion{
                                             Paragraph: true,
@@ -424,46 +225,40 @@ func main() {
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "nesciunt",
+                                                    GoToAction: "RESTART_FORM",
+                                                    GoToSectionID: "vitae",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "rem",
+                                                        AltText: "repellendus",
                                                         Properties: &shared.MediaProperties{
                                                             Alignment: "LEFT",
-                                                            Width: 4702586369876889904,
+                                                            Width: 8395489463148176251,
                                                         },
-                                                        SourceURI: "placeat",
+                                                        SourceURI: "dolorem",
                                                     },
-                                                    IsOther: true,
-                                                    Value: "odit",
+                                                    IsOther: false,
+                                                    Value: "quibusdam",
                                                 },
                                             },
                                             Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                            Type: "DROP_DOWN",
                                         },
                                         DateQuestion: &shared.DateQuestion{
                                             IncludeTime: false,
                                             IncludeYear: false,
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "dicta",
-                                            MaxFileSize: "nulla",
-                                            MaxFiles: 631905891670371020,
+                                            FolderID: "dolor",
+                                            MaxFileSize: "accusantium",
+                                            MaxFiles: 3817978110620240451,
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "SPREADSHEET",
+                                                "ANY",
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "modi",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "consequuntur",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "ducimus",
+                                                        Value: "temporibus",
                                                     },
                                                 },
                                             },
@@ -471,92 +266,644 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptas",
-                                                            URI: "facilis",
+                                                            DisplayText: "eaque",
+                                                            URI: "necessitatibus",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "nemo",
-                                                            YoutubeURI: "modi",
+                                                            DisplayText: "ut",
+                                                            YoutubeURI: "aliquam",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aspernatur",
-                                                            URI: "quasi",
+                                                            DisplayText: "illo",
+                                                            URI: "eveniet",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "necessitatibus",
-                                                            YoutubeURI: "sunt",
+                                                            DisplayText: "dolore",
+                                                            YoutubeURI: "assumenda",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "molestiae",
+                                                            URI: "accusantium",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "saepe",
+                                                            YoutubeURI: "harum",
                                                         },
                                                     },
                                                 },
-                                                Text: "officia",
+                                                Text: "ipsum",
                                             },
-                                            PointValue: 687191420613903797,
+                                            PointValue: 2915901289068470124,
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aut",
-                                                            URI: "nobis",
+                                                            DisplayText: "velit",
+                                                            URI: "aliquid",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "numquam",
-                                                            YoutubeURI: "autem",
+                                                            DisplayText: "nesciunt",
+                                                            YoutubeURI: "ipsum",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quod",
-                                                            URI: "aperiam",
+                                                            DisplayText: "enim",
+                                                            URI: "voluptatem",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quo",
-                                                            YoutubeURI: "accusantium",
+                                                            DisplayText: "sunt",
+                                                            YoutubeURI: "rerum",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "adipisci",
+                                                            URI: "nobis",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "quaerat",
+                                                            YoutubeURI: "itaque",
                                                         },
                                                     },
                                                 },
-                                                Text: "aperiam",
+                                                Text: "magni",
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quam",
-                                                            URI: "corrupti",
+                                                            DisplayText: "voluptatem",
+                                                            URI: "numquam",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "eius",
-                                                            YoutubeURI: "provident",
+                                                            DisplayText: "qui",
+                                                            YoutubeURI: "modi",
+                                                        },
+                                                    },
+                                                },
+                                                Text: "quo",
+                                            },
+                                        },
+                                        QuestionID: "qui",
+                                        Required: false,
+                                        RowQuestion: &shared.RowQuestion{
+                                            Title: "est",
+                                        },
+                                        ScaleQuestion: &shared.ScaleQuestion{
+                                            High: 5865443877907118803,
+                                            HighLabel: "odit",
+                                            Low: 1986826379788998642,
+                                            LowLabel: "nesciunt",
+                                        },
+                                        TextQuestion: &shared.TextQuestion{
+                                            Paragraph: true,
+                                        },
+                                        TimeQuestion: &shared.TimeQuestion{
+                                            Duration: true,
+                                        },
+                                    },
+                                    shared.QuestionInput{
+                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
+                                            Options: []shared.OptionInput{
+                                                shared.OptionInput{
+                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
+                                                    GoToSectionID: "odit",
+                                                    Image: &shared.ImageInput{
+                                                        AltText: "eaque",
+                                                        Properties: &shared.MediaProperties{
+                                                            Alignment: "CENTER",
+                                                            Width: 7990513867378522665,
+                                                        },
+                                                        SourceURI: "pariatur",
+                                                    },
+                                                    IsOther: false,
+                                                    Value: "occaecati",
+                                                },
+                                                shared.OptionInput{
+                                                    GoToAction: "SUBMIT_FORM",
+                                                    GoToSectionID: "magnam",
+                                                    Image: &shared.ImageInput{
+                                                        AltText: "officia",
+                                                        Properties: &shared.MediaProperties{
+                                                            Alignment: "CENTER",
+                                                            Width: 162448567943149512,
+                                                        },
+                                                        SourceURI: "nulla",
+                                                    },
+                                                    IsOther: true,
+                                                    Value: "mollitia",
+                                                },
+                                            },
+                                            Shuffle: false,
+                                            Type: "DROP_DOWN",
+                                        },
+                                        DateQuestion: &shared.DateQuestion{
+                                            IncludeTime: true,
+                                            IncludeYear: true,
+                                        },
+                                        FileUploadQuestion: &shared.FileUploadQuestion{
+                                            FolderID: "rerum",
+                                            MaxFileSize: "iusto",
+                                            MaxFiles: 6633480755866894140,
+                                            Types: []shared.FileUploadQuestionTypesEnum{
+                                                "DRAWING",
+                                            },
+                                        },
+                                        Grading: &shared.Grading{
+                                            CorrectAnswers: &shared.CorrectAnswers{
+                                                Answers: []shared.CorrectAnswer{
+                                                    shared.CorrectAnswer{
+                                                        Value: "sit",
+                                                    },
+                                                },
+                                            },
+                                            GeneralFeedback: &shared.Feedback{
+                                                Material: []shared.ExtraMaterial{
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "est",
+                                                            URI: "possimus",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "a",
+                                                            YoutubeURI: "quia",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "qui",
-                                                            URI: "alias",
+                                                            DisplayText: "illum",
+                                                            URI: "aut",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "odio",
+                                                            DisplayText: "non",
+                                                            YoutubeURI: "id",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "sit",
+                                                            URI: "autem",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "consequatur",
+                                                            YoutubeURI: "ex",
+                                                        },
+                                                    },
+                                                },
+                                                Text: "ut",
+                                            },
+                                            PointValue: 5480375390911046644,
+                                            WhenRight: &shared.Feedback{
+                                                Material: []shared.ExtraMaterial{
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "consequuntur",
+                                                            URI: "maxime",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "enim",
+                                                            YoutubeURI: "reprehenderit",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "pariatur",
+                                                            URI: "quidem",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "nesciunt",
+                                                            YoutubeURI: "voluptatum",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "voluptatem",
+                                                            URI: "quo",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "officia",
+                                                            YoutubeURI: "laborum",
+                                                        },
+                                                    },
+                                                },
+                                                Text: "molestiae",
+                                            },
+                                            WhenWrong: &shared.Feedback{
+                                                Material: []shared.ExtraMaterial{
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "et",
+                                                            URI: "sunt",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "eaque",
+                                                            YoutubeURI: "a",
+                                                        },
+                                                    },
+                                                },
+                                                Text: "eum",
+                                            },
+                                        },
+                                        QuestionID: "dolor",
+                                        Required: false,
+                                        RowQuestion: &shared.RowQuestion{
+                                            Title: "quibusdam",
+                                        },
+                                        ScaleQuestion: &shared.ScaleQuestion{
+                                            High: 5761866984619171230,
+                                            HighLabel: "qui",
+                                            Low: 5137159008829106321,
+                                            LowLabel: "illum",
+                                        },
+                                        TextQuestion: &shared.TextQuestion{
+                                            Paragraph: true,
+                                        },
+                                        TimeQuestion: &shared.TimeQuestion{
+                                            Duration: true,
+                                        },
+                                    },
+                                },
+                            },
+                            QuestionItem: &shared.QuestionItemInput{
+                                Image: &shared.ImageInput{
+                                    AltText: "voluptas",
+                                    Properties: &shared.MediaProperties{
+                                        Alignment: "RIGHT",
+                                        Width: 7246159010282780364,
+                                    },
+                                    SourceURI: "explicabo",
+                                },
+                                Question: &shared.QuestionInput{
+                                    ChoiceQuestion: &shared.ChoiceQuestionInput{
+                                        Options: []shared.OptionInput{
+                                            shared.OptionInput{
+                                                GoToAction: "RESTART_FORM",
+                                                GoToSectionID: "repudiandae",
+                                                Image: &shared.ImageInput{
+                                                    AltText: "aut",
+                                                    Properties: &shared.MediaProperties{
+                                                        Alignment: "RIGHT",
+                                                        Width: 1044388166266659590,
+                                                    },
+                                                    SourceURI: "est",
+                                                },
+                                                IsOther: false,
+                                                Value: "saepe",
+                                            },
+                                        },
+                                        Shuffle: false,
+                                        Type: "RADIO",
+                                    },
+                                    DateQuestion: &shared.DateQuestion{
+                                        IncludeTime: true,
+                                        IncludeYear: true,
+                                    },
+                                    FileUploadQuestion: &shared.FileUploadQuestion{
+                                        FolderID: "laudantium",
+                                        MaxFileSize: "voluptas",
+                                        MaxFiles: 5614125164593907723,
+                                        Types: []shared.FileUploadQuestionTypesEnum{
+                                            "SPREADSHEET",
+                                        },
+                                    },
+                                    Grading: &shared.Grading{
+                                        CorrectAnswers: &shared.CorrectAnswers{
+                                            Answers: []shared.CorrectAnswer{
+                                                shared.CorrectAnswer{
+                                                    Value: "aut",
+                                                },
+                                                shared.CorrectAnswer{
+                                                    Value: "corrupti",
+                                                },
+                                            },
+                                        },
+                                        GeneralFeedback: &shared.Feedback{
+                                            Material: []shared.ExtraMaterial{
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "quia",
+                                                        URI: "expedita",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "aliquam",
+                                                        YoutubeURI: "omnis",
+                                                    },
+                                                },
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "inventore",
+                                                        URI: "molestiae",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "provident",
+                                                        YoutubeURI: "omnis",
+                                                    },
+                                                },
+                                            },
+                                            Text: "in",
+                                        },
+                                        PointValue: 3226251313657051547,
+                                        WhenRight: &shared.Feedback{
+                                            Material: []shared.ExtraMaterial{
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "similique",
+                                                        URI: "vitae",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "et",
+                                                        YoutubeURI: "sed",
+                                                    },
+                                                },
+                                            },
+                                            Text: "et",
+                                        },
+                                        WhenWrong: &shared.Feedback{
+                                            Material: []shared.ExtraMaterial{
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "occaecati",
+                                                        URI: "sit",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "qui",
+                                                        YoutubeURI: "ab",
+                                                    },
+                                                },
+                                            },
+                                            Text: "molestiae",
+                                        },
+                                    },
+                                    QuestionID: "temporibus",
+                                    Required: false,
+                                    RowQuestion: &shared.RowQuestion{
+                                        Title: "est",
+                                    },
+                                    ScaleQuestion: &shared.ScaleQuestion{
+                                        High: 6870934446930668172,
+                                        HighLabel: "nihil",
+                                        Low: 4185226959274560889,
+                                        LowLabel: "et",
+                                    },
+                                    TextQuestion: &shared.TextQuestion{
+                                        Paragraph: false,
+                                    },
+                                    TimeQuestion: &shared.TimeQuestion{
+                                        Duration: true,
+                                    },
+                                },
+                            },
+                            TextItem: map[string]interface{}{
+                                "consequuntur": "harum",
+                            },
+                            Title: "quia",
+                            VideoItem: &shared.VideoItem{
+                                Caption: "et",
+                                Video: &shared.Video{
+                                    Properties: &shared.MediaProperties{
+                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                        Width: 2056511701185686311,
+                                    },
+                                    YoutubeURI: "molestiae",
+                                },
+                            },
+                        },
+                        Location: &shared.Location{
+                            Index: 4484629303885010162,
+                        },
+                    },
+                    DeleteItem: &shared.DeleteItemRequest{
+                        Location: &shared.Location{
+                            Index: 7549812975827625294,
+                        },
+                    },
+                    MoveItem: &shared.MoveItemRequest{
+                        NewLocation: &shared.Location{
+                            Index: 946926892329068097,
+                        },
+                        OriginalLocation: &shared.Location{
+                            Index: 786010621093031029,
+                        },
+                    },
+                    UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
+                        Info: &shared.InfoInput{
+                            Description: "iusto",
+                            Title: "cumque",
+                        },
+                        UpdateMask: "doloribus",
+                    },
+                    UpdateItem: &shared.UpdateItemRequestInput{
+                        Item: &shared.ItemInput{
+                            Description: "et",
+                            ImageItem: &shared.ImageItemInput{
+                                Image: &shared.ImageInput{
+                                    AltText: "excepturi",
+                                    Properties: &shared.MediaProperties{
+                                        Alignment: "LEFT",
+                                        Width: 3903123008775225897,
+                                    },
+                                    SourceURI: "quia",
+                                },
+                            },
+                            ItemID: "quibusdam",
+                            PageBreakItem: map[string]interface{}{
+                                "placeat": "itaque",
+                                "impedit": "placeat",
+                            },
+                            QuestionGroupItem: &shared.QuestionGroupItemInput{
+                                Grid: &shared.GridInput{
+                                    Columns: &shared.ChoiceQuestionInput{
+                                        Options: []shared.OptionInput{
+                                            shared.OptionInput{
+                                                GoToAction: "NEXT_SECTION",
+                                                GoToSectionID: "sapiente",
+                                                Image: &shared.ImageInput{
+                                                    AltText: "non",
+                                                    Properties: &shared.MediaProperties{
+                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                                        Width: 7367726222752759855,
+                                                    },
+                                                    SourceURI: "fuga",
+                                                },
+                                                IsOther: true,
+                                                Value: "itaque",
+                                            },
+                                            shared.OptionInput{
+                                                GoToAction: "NEXT_SECTION",
+                                                GoToSectionID: "ex",
+                                                Image: &shared.ImageInput{
+                                                    AltText: "nulla",
+                                                    Properties: &shared.MediaProperties{
+                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                                        Width: 4572307398381366198,
+                                                    },
+                                                    SourceURI: "voluptatem",
+                                                },
+                                                IsOther: false,
+                                                Value: "odit",
+                                            },
+                                        },
+                                        Shuffle: false,
+                                        Type: "CHOICE_TYPE_UNSPECIFIED",
+                                    },
+                                    ShuffleQuestions: true,
+                                },
+                                Image: &shared.ImageInput{
+                                    AltText: "qui",
+                                    Properties: &shared.MediaProperties{
+                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                        Width: 6962205432734655004,
+                                    },
+                                    SourceURI: "unde",
+                                },
+                                Questions: []shared.QuestionInput{
+                                    shared.QuestionInput{
+                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
+                                            Options: []shared.OptionInput{
+                                                shared.OptionInput{
+                                                    GoToAction: "RESTART_FORM",
+                                                    GoToSectionID: "consequuntur",
+                                                    Image: &shared.ImageInput{
+                                                        AltText: "et",
+                                                        Properties: &shared.MediaProperties{
+                                                            Alignment: "LEFT",
+                                                            Width: 8197701673791452827,
+                                                        },
+                                                        SourceURI: "et",
+                                                    },
+                                                    IsOther: false,
+                                                    Value: "ratione",
+                                                },
+                                                shared.OptionInput{
+                                                    GoToAction: "RESTART_FORM",
+                                                    GoToSectionID: "quaerat",
+                                                    Image: &shared.ImageInput{
+                                                        AltText: "architecto",
+                                                        Properties: &shared.MediaProperties{
+                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
+                                                            Width: 3587361837763582304,
+                                                        },
+                                                        SourceURI: "officiis",
+                                                    },
+                                                    IsOther: false,
+                                                    Value: "sed",
+                                                },
+                                            },
+                                            Shuffle: false,
+                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                        },
+                                        DateQuestion: &shared.DateQuestion{
+                                            IncludeTime: true,
+                                            IncludeYear: true,
+                                        },
+                                        FileUploadQuestion: &shared.FileUploadQuestion{
+                                            FolderID: "voluptate",
+                                            MaxFileSize: "quo",
+                                            MaxFiles: 2055354745482287093,
+                                            Types: []shared.FileUploadQuestionTypesEnum{
+                                                "DRAWING",
+                                                "PDF",
+                                            },
+                                        },
+                                        Grading: &shared.Grading{
+                                            CorrectAnswers: &shared.CorrectAnswers{
+                                                Answers: []shared.CorrectAnswer{
+                                                    shared.CorrectAnswer{
+                                                        Value: "exercitationem",
+                                                    },
+                                                    shared.CorrectAnswer{
+                                                        Value: "exercitationem",
+                                                    },
+                                                    shared.CorrectAnswer{
+                                                        Value: "est",
+                                                    },
+                                                },
+                                            },
+                                            GeneralFeedback: &shared.Feedback{
+                                                Material: []shared.ExtraMaterial{
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "nobis",
+                                                            URI: "sit",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "non",
+                                                            YoutubeURI: "commodi",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "deserunt",
+                                                            URI: "in",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "eos",
+                                                            YoutubeURI: "veritatis",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "vel",
+                                                            URI: "est",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "id",
+                                                            YoutubeURI: "aliquid",
+                                                        },
+                                                    },
+                                                },
+                                                Text: "et",
+                                            },
+                                            PointValue: 7410477207101213861,
+                                            WhenRight: &shared.Feedback{
+                                                Material: []shared.ExtraMaterial{
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "vel",
+                                                            URI: "est",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "minus",
                                                             YoutubeURI: "dolores",
                                                         },
                                                     },
                                                 },
-                                                Text: "fugiat",
+                                                Text: "ea",
+                                            },
+                                            WhenWrong: &shared.Feedback{
+                                                Material: []shared.ExtraMaterial{
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "nulla",
+                                                            URI: "voluptatem",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "consequatur",
+                                                            YoutubeURI: "nihil",
+                                                        },
+                                                    },
+                                                },
+                                                Text: "reprehenderit",
                                             },
                                         },
-                                        QuestionID: "tempora",
-                                        Required: false,
+                                        QuestionID: "et",
+                                        Required: true,
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "in",
+                                            Title: "quis",
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 1666153750274152179,
-                                            HighLabel: "reiciendis",
-                                            Low: 4258518424644989889,
-                                            LowLabel: "laudantium",
+                                            High: 8953467996875231721,
+                                            HighLabel: "incidunt",
+                                            Low: 9050574501002808175,
+                                            LowLabel: "et",
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: true,
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
                                             Duration: true,
@@ -568,63 +915,64 @@ func main() {
                                 Image: &shared.ImageInput{
                                     AltText: "qui",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 6715313884224218097,
+                                        Alignment: "CENTER",
+                                        Width: 1417670661413372909,
                                     },
-                                    SourceURI: "unde",
+                                    SourceURI: "et",
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "nihil",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "repellat",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 592679315148855932,
-                                                    },
-                                                    SourceURI: "enim",
-                                                },
-                                                IsOther: false,
-                                                Value: "non",
-                                            },
-                                            shared.OptionInput{
                                                 GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "eligendi",
+                                                GoToSectionID: "vero",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "odio",
+                                                    AltText: "quod",
                                                     Properties: &shared.MediaProperties{
                                                         Alignment: "CENTER",
-                                                        Width: 6262303426533235854,
+                                                        Width: 4897836300033647809,
                                                     },
-                                                    SourceURI: "modi",
+                                                    SourceURI: "vitae",
                                                 },
                                                 IsOther: true,
-                                                Value: "rem",
+                                                Value: "ipsa",
+                                            },
+                                            shared.OptionInput{
+                                                GoToAction: "NEXT_SECTION",
+                                                GoToSectionID: "deleniti",
+                                                Image: &shared.ImageInput{
+                                                    AltText: "et",
+                                                    Properties: &shared.MediaProperties{
+                                                        Alignment: "RIGHT",
+                                                        Width: 5325954453643726336,
+                                                    },
+                                                    SourceURI: "omnis",
+                                                },
+                                                IsOther: true,
+                                                Value: "voluptas",
                                             },
                                         },
                                         Shuffle: false,
                                         Type: "CHOICE_TYPE_UNSPECIFIED",
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: true,
+                                        IncludeTime: true,
+                                        IncludeYear: false,
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "iusto",
-                                        MaxFileSize: "quis",
-                                        MaxFiles: 3468532859112313402,
+                                        FolderID: "quisquam",
+                                        MaxFileSize: "deleniti",
+                                        MaxFiles: 5074577177741311407,
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "SPREADSHEET",
+                                            "PDF",
+                                            "DOCUMENT",
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "et",
+                                                    Value: "ea",
                                                 },
                                             },
                                         },
@@ -632,222 +980,215 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "commodi",
-                                                        URI: "dolores",
+                                                        DisplayText: "ipsum",
+                                                        URI: "qui",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "aut",
-                                                        YoutubeURI: "necessitatibus",
+                                                        DisplayText: "culpa",
+                                                        YoutubeURI: "fugit",
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "nesciunt",
-                                                        URI: "magni",
+                                                        DisplayText: "eaque",
+                                                        URI: "dolorem",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "non",
-                                                        YoutubeURI: "distinctio",
+                                                        DisplayText: "in",
+                                                        YoutubeURI: "voluptas",
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "minima",
-                                                        URI: "ut",
+                                                        DisplayText: "suscipit",
+                                                        URI: "hic",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "aperiam",
-                                                        YoutubeURI: "nisi",
-                                                    },
-                                                },
-                                            },
-                                            Text: "autem",
-                                        },
-                                        PointValue: 5771079949451887337,
-                                        WhenRight: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "mollitia",
-                                                        URI: "excepturi",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "est",
-                                                        YoutubeURI: "ut",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "ex",
-                                                        URI: "ad",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "assumenda",
+                                                        DisplayText: "qui",
                                                         YoutubeURI: "eaque",
                                                     },
                                                 },
                                             },
-                                            Text: "consequatur",
+                                            Text: "hic",
+                                        },
+                                        PointValue: 3496638185594162888,
+                                        WhenRight: &shared.Feedback{
+                                            Material: []shared.ExtraMaterial{
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "inventore",
+                                                        URI: "molestias",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "quisquam",
+                                                        YoutubeURI: "et",
+                                                    },
+                                                },
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "in",
+                                                        URI: "eveniet",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "excepturi",
+                                                        YoutubeURI: "ea",
+                                                    },
+                                                },
+                                            },
+                                            Text: "incidunt",
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "cupiditate",
-                                                        URI: "velit",
+                                                        DisplayText: "itaque",
+                                                        URI: "voluptatem",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "est",
-                                                        YoutubeURI: "in",
+                                                        DisplayText: "ut",
+                                                        YoutubeURI: "assumenda",
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "veritatis",
-                                                        URI: "sunt",
+                                                        DisplayText: "consequatur",
+                                                        URI: "voluptas",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "modi",
-                                                        YoutubeURI: "est",
+                                                        DisplayText: "ipsum",
+                                                        YoutubeURI: "perferendis",
                                                     },
                                                 },
                                             },
-                                            Text: "sit",
+                                            Text: "ipsa",
                                         },
                                     },
-                                    QuestionID: "cumque",
+                                    QuestionID: "ad",
                                     Required: false,
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "ipsum",
+                                        Title: "et",
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 1451091349492642453,
-                                        HighLabel: "temporibus",
-                                        Low: 6355424678358416363,
-                                        LowLabel: "dolorem",
+                                        High: 688601391891949515,
+                                        HighLabel: "deleniti",
+                                        Low: 366547234416597184,
+                                        LowLabel: "dignissimos",
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: true,
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: true,
+                                        Duration: false,
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
-                                "ducimus": "cupiditate",
+                                "dolores": "voluptatem",
+                                "sed": "quo",
+                                "et": "enim",
                             },
-                            Title: "consequatur",
+                            Title: "sunt",
                             VideoItem: &shared.VideoItem{
-                                Caption: "exercitationem",
+                                Caption: "vero",
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 658590805086506068,
+                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                        Width: 9044678696486910108,
                                     },
-                                    YoutubeURI: "culpa",
+                                    YoutubeURI: "qui",
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 8175015999967088442,
+                            Index: 6323061704059267708,
                         },
+                        UpdateMask: "voluptatum",
                     },
-                    DeleteItem: &shared.DeleteItemRequest{
-                        Location: &shared.Location{
-                            Index: 4318442819721475892,
+                    UpdateSettings: &shared.UpdateSettingsRequest{
+                        Settings: &shared.FormSettings{
+                            QuizSettings: &shared.QuizSettings{
+                                IsQuiz: false,
+                            },
                         },
+                        UpdateMask: "corporis",
                     },
-                    MoveItem: &shared.MoveItemRequest{
-                        NewLocation: &shared.Location{
-                            Index: 2050197845825300030,
-                        },
-                        OriginalLocation: &shared.Location{
-                            Index: 5940271303006253420,
-                        },
-                    },
-                    UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
-                        Info: &shared.InfoInput{
-                            Description: "quia",
-                            Title: "dolores",
-                        },
-                        UpdateMask: "illum",
-                    },
-                    UpdateItem: &shared.UpdateItemRequestInput{
+                },
+                shared.RequestInput{
+                    CreateItem: &shared.CreateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "distinctio",
+                            Description: "fugiat",
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "deserunt",
+                                    AltText: "dolor",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 9003303310241104653,
+                                        Alignment: "LEFT",
+                                        Width: 88593726215372726,
                                     },
-                                    SourceURI: "nemo",
+                                    SourceURI: "quo",
                                 },
                             },
-                            ItemID: "et",
+                            ItemID: "aliquid",
                             PageBreakItem: map[string]interface{}{
-                                "asperiores": "ratione",
-                                "ipsa": "blanditiis",
+                                "veniam": "hic",
+                                "id": "neque",
                             },
                             QuestionGroupItem: &shared.QuestionGroupItemInput{
                                 Grid: &shared.GridInput{
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "molestiae",
+                                                GoToAction: "RESTART_FORM",
+                                                GoToSectionID: "suscipit",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "provident",
+                                                    AltText: "dolores",
                                                     Properties: &shared.MediaProperties{
                                                         Alignment: "RIGHT",
-                                                        Width: 4615118447353420632,
+                                                        Width: 5180088980873498341,
                                                     },
-                                                    SourceURI: "necessitatibus",
+                                                    SourceURI: "non",
                                                 },
                                                 IsOther: true,
-                                                Value: "assumenda",
+                                                Value: "enim",
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "quo",
+                                                GoToAction: "RESTART_FORM",
+                                                GoToSectionID: "nihil",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "porro",
+                                                    AltText: "sit",
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 7367225356131983915,
+                                                        Alignment: "CENTER",
+                                                        Width: 6117250528098108154,
                                                     },
-                                                    SourceURI: "voluptatem",
+                                                    SourceURI: "est",
                                                 },
                                                 IsOther: true,
-                                                Value: "animi",
+                                                Value: "eius",
                                             },
                                             shared.OptionInput{
                                                 GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "blanditiis",
+                                                GoToSectionID: "non",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "vero",
+                                                    AltText: "et",
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 8923859297648267097,
+                                                        Alignment: "LEFT",
+                                                        Width: 7563239524073315732,
                                                     },
-                                                    SourceURI: "ea",
+                                                    SourceURI: "reprehenderit",
                                                 },
-                                                IsOther: false,
-                                                Value: "aut",
+                                                IsOther: true,
+                                                Value: "voluptatum",
                                             },
                                         },
                                         Shuffle: true,
-                                        Type: "RADIO",
+                                        Type: "CHECKBOX",
                                     },
                                     ShuffleQuestions: false,
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "doloribus",
+                                    AltText: "suscipit",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 2898747962963177434,
+                                        Alignment: "RIGHT",
+                                        Width: 5439376411238478891,
                                     },
                                     SourceURI: "quis",
                                 },
@@ -857,17 +1198,17 @@ func main() {
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
                                                     GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "voluptatem",
+                                                    GoToSectionID: "perferendis",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "minima",
+                                                        AltText: "nihil",
                                                         Properties: &shared.MediaProperties{
                                                             Alignment: "CENTER",
-                                                            Width: 2634828089961606880,
+                                                            Width: 7545576744530829002,
                                                         },
-                                                        SourceURI: "sunt",
+                                                        SourceURI: "sint",
                                                     },
                                                     IsOther: true,
-                                                    Value: "aliquam",
+                                                    Value: "cupiditate",
                                                 },
                                             },
                                             Shuffle: false,
@@ -878,19 +1219,18 @@ func main() {
                                             IncludeYear: false,
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "esse",
-                                            MaxFileSize: "sed",
-                                            MaxFiles: 880666548939974456,
+                                            FolderID: "illo",
+                                            MaxFileSize: "quos",
+                                            MaxFiles: 2899654982963752788,
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PDF",
-                                                "DRAWING",
+                                                "FILE_TYPE_UNSPECIFIED",
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "odio",
+                                                        Value: "aliquid",
                                                     },
                                                 },
                                             },
@@ -898,435 +1238,165 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "est",
-                                                            URI: "ipsam",
+                                                            DisplayText: "perspiciatis",
+                                                            URI: "vitae",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "molestiae",
-                                                            YoutubeURI: "ut",
+                                                            DisplayText: "praesentium",
+                                                            YoutubeURI: "dolorum",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "eos",
-                                                            URI: "vel",
+                                                            DisplayText: "fugit",
+                                                            URI: "molestiae",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "nihil",
-                                                            YoutubeURI: "qui",
+                                                            DisplayText: "quisquam",
+                                                            YoutubeURI: "soluta",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "incidunt",
+                                                            URI: "dolorum",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "et",
+                                                            YoutubeURI: "accusamus",
                                                         },
                                                     },
                                                 },
-                                                Text: "dignissimos",
+                                                Text: "asperiores",
                                             },
-                                            PointValue: 1008958498184798333,
+                                            PointValue: 4106289850966672887,
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "minus",
-                                                            URI: "nihil",
+                                                            DisplayText: "doloremque",
+                                                            URI: "rerum",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "et",
-                                                            YoutubeURI: "aut",
+                                                            DisplayText: "voluptas",
+                                                            YoutubeURI: "placeat",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "non",
+                                                            URI: "sit",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "quasi",
+                                                            YoutubeURI: "est",
                                                         },
                                                     },
                                                 },
-                                                Text: "totam",
+                                                Text: "rerum",
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "sit",
-                                                            URI: "ea",
+                                                            DisplayText: "error",
+                                                            URI: "distinctio",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "temporibus",
-                                                            YoutubeURI: "rerum",
+                                                            DisplayText: "veritatis",
+                                                            YoutubeURI: "quia",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "illum",
-                                                            URI: "ullam",
+                                                            DisplayText: "aut",
+                                                            URI: "sunt",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolorum",
-                                                            YoutubeURI: "repellat",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "qui",
-                                                            URI: "atque",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "nulla",
-                                                            YoutubeURI: "alias",
+                                                            DisplayText: "et",
+                                                            YoutubeURI: "voluptates",
                                                         },
                                                     },
                                                 },
-                                                Text: "qui",
+                                                Text: "quas",
                                             },
                                         },
-                                        QuestionID: "occaecati",
-                                        Required: true,
+                                        QuestionID: "laudantium",
+                                        Required: false,
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "est",
+                                            Title: "ut",
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 3974416258590992717,
-                                            HighLabel: "voluptates",
-                                            Low: 9000542554862430637,
-                                            LowLabel: "porro",
+                                            High: 3263690433409999503,
+                                            HighLabel: "voluptatum",
+                                            Low: 6361659954382257494,
+                                            LowLabel: "dolores",
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: true,
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
                                             Duration: false,
                                         },
                                     },
-                                },
-                            },
-                            QuestionItem: &shared.QuestionItemInput{
-                                Image: &shared.ImageInput{
-                                    AltText: "et",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 1123397320954655833,
-                                    },
-                                    SourceURI: "laboriosam",
-                                },
-                                Question: &shared.QuestionInput{
-                                    ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                        Options: []shared.OptionInput{
-                                            shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "aut",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "molestiae",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 1468685925352177134,
-                                                    },
-                                                    SourceURI: "blanditiis",
-                                                },
-                                                IsOther: false,
-                                                Value: "harum",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "inventore",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "et",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 3011449431901264882,
-                                                    },
-                                                    SourceURI: "illo",
-                                                },
-                                                IsOther: false,
-                                                Value: "dolorem",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "quas",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "nesciunt",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 1104134121406139527,
-                                                    },
-                                                    SourceURI: "iste",
-                                                },
-                                                IsOther: false,
-                                                Value: "ut",
-                                            },
-                                        },
-                                        Shuffle: true,
-                                        Type: "DROP_DOWN",
-                                    },
-                                    DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: true,
-                                    },
-                                    FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "aperiam",
-                                        MaxFileSize: "adipisci",
-                                        MaxFiles: 7682658908912769310,
-                                        Types: []shared.FileUploadQuestionTypesEnum{
-                                            "FILE_TYPE_UNSPECIFIED",
-                                        },
-                                    },
-                                    Grading: &shared.Grading{
-                                        CorrectAnswers: &shared.CorrectAnswers{
-                                            Answers: []shared.CorrectAnswer{
-                                                shared.CorrectAnswer{
-                                                    Value: "provident",
-                                                },
-                                                shared.CorrectAnswer{
-                                                    Value: "rerum",
-                                                },
-                                            },
-                                        },
-                                        GeneralFeedback: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "placeat",
-                                                        URI: "recusandae",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "et",
-                                                        YoutubeURI: "repudiandae",
-                                                    },
-                                                },
-                                            },
-                                            Text: "autem",
-                                        },
-                                        PointValue: 2942077215474613867,
-                                        WhenRight: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "numquam",
-                                                        URI: "repudiandae",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "sed",
-                                                        YoutubeURI: "non",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "iusto",
-                                                        URI: "ea",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "vel",
-                                                        YoutubeURI: "non",
-                                                    },
-                                                },
-                                            },
-                                            Text: "corrupti",
-                                        },
-                                        WhenWrong: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "error",
-                                                        URI: "enim",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "quis",
-                                                        YoutubeURI: "mollitia",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "odio",
-                                                        URI: "distinctio",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "omnis",
-                                                        YoutubeURI: "enim",
-                                                    },
-                                                },
-                                            },
-                                            Text: "hic",
-                                        },
-                                    },
-                                    QuestionID: "earum",
-                                    Required: false,
-                                    RowQuestion: &shared.RowQuestion{
-                                        Title: "temporibus",
-                                    },
-                                    ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 2200291720393842806,
-                                        HighLabel: "dignissimos",
-                                        Low: 4587433823586408886,
-                                        LowLabel: "dolorem",
-                                    },
-                                    TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
-                                    },
-                                    TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
-                                    },
-                                },
-                            },
-                            TextItem: map[string]interface{}{
-                                "quis": "corrupti",
-                                "impedit": "ipsum",
-                                "ex": "est",
-                            },
-                            Title: "voluptatem",
-                            VideoItem: &shared.VideoItem{
-                                Caption: "et",
-                                Video: &shared.Video{
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 9127535368733635777,
-                                    },
-                                    YoutubeURI: "natus",
-                                },
-                            },
-                        },
-                        Location: &shared.Location{
-                            Index: 2548457878720010381,
-                        },
-                        UpdateMask: "minus",
-                    },
-                    UpdateSettings: &shared.UpdateSettingsRequest{
-                        Settings: &shared.FormSettings{
-                            QuizSettings: &shared.QuizSettings{
-                                IsQuiz: false,
-                            },
-                        },
-                        UpdateMask: "harum",
-                    },
-                },
-                shared.RequestInput{
-                    CreateItem: &shared.CreateItemRequestInput{
-                        Item: &shared.ItemInput{
-                            Description: "autem",
-                            ImageItem: &shared.ImageItemInput{
-                                Image: &shared.ImageInput{
-                                    AltText: "recusandae",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 879668874296385114,
-                                    },
-                                    SourceURI: "eaque",
-                                },
-                            },
-                            ItemID: "quaerat",
-                            PageBreakItem: map[string]interface{}{
-                                "quasi": "praesentium",
-                            },
-                            QuestionGroupItem: &shared.QuestionGroupItemInput{
-                                Grid: &shared.GridInput{
-                                    Columns: &shared.ChoiceQuestionInput{
-                                        Options: []shared.OptionInput{
-                                            shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "qui",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "dicta",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 8594896889358178281,
-                                                    },
-                                                    SourceURI: "atque",
-                                                },
-                                                IsOther: false,
-                                                Value: "consequatur",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "culpa",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "et",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 5068595119456469239,
-                                                    },
-                                                    SourceURI: "et",
-                                                },
-                                                IsOther: false,
-                                                Value: "nisi",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "beatae",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "quaerat",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 7550036204190908704,
-                                                    },
-                                                    SourceURI: "laudantium",
-                                                },
-                                                IsOther: true,
-                                                Value: "doloribus",
-                                            },
-                                        },
-                                        Shuffle: true,
-                                        Type: "DROP_DOWN",
-                                    },
-                                    ShuffleQuestions: false,
-                                },
-                                Image: &shared.ImageInput{
-                                    AltText: "sint",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 6120400998384955720,
-                                    },
-                                    SourceURI: "laborum",
-                                },
-                                Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
                                                     GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "accusamus",
+                                                    GoToSectionID: "aut",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "voluptatum",
+                                                        AltText: "nihil",
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 4583001456234461531,
+                                                            Alignment: "LEFT",
+                                                            Width: 3103391951678280545,
                                                         },
-                                                        SourceURI: "consequatur",
+                                                        SourceURI: "voluptatibus",
                                                     },
                                                     IsOther: false,
-                                                    Value: "voluptatem",
+                                                    Value: "placeat",
                                                 },
                                                 shared.OptionInput{
                                                     GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "facere",
+                                                    GoToSectionID: "dicta",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "et",
+                                                        AltText: "saepe",
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 5978532359315575194,
+                                                            Alignment: "LEFT",
+                                                            Width: 4356673887652401753,
                                                         },
-                                                        SourceURI: "iusto",
+                                                        SourceURI: "ad",
                                                     },
                                                     IsOther: false,
-                                                    Value: "aspernatur",
+                                                    Value: "assumenda",
                                                 },
                                                 shared.OptionInput{
                                                     GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "qui",
+                                                    GoToSectionID: "necessitatibus",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "quo",
+                                                        AltText: "ipsam",
                                                         Properties: &shared.MediaProperties{
                                                             Alignment: "RIGHT",
-                                                            Width: 7846539339723018612,
+                                                            Width: 2856014996737323438,
                                                         },
-                                                        SourceURI: "veritatis",
+                                                        SourceURI: "minima",
                                                     },
                                                     IsOther: true,
-                                                    Value: "facere",
+                                                    Value: "et",
                                                 },
                                             },
                                             Shuffle: false,
                                             Type: "CHOICE_TYPE_UNSPECIFIED",
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: true,
-                                            IncludeYear: true,
+                                            IncludeTime: false,
+                                            IncludeYear: false,
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "odit",
-                                            MaxFileSize: "qui",
-                                            MaxFiles: 3534653403228930262,
+                                            FolderID: "ut",
+                                            MaxFileSize: "sapiente",
+                                            MaxFiles: 1514036909471249240,
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PRESENTATION",
                                                 "DOCUMENT",
                                             },
                                         },
@@ -1334,10 +1404,10 @@ func main() {
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "quaerat",
+                                                        Value: "consequuntur",
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "est",
+                                                        Value: "cumque",
                                                     },
                                                 },
                                             },
@@ -1345,836 +1415,158 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "debitis",
-                                                            URI: "nihil",
+                                                            DisplayText: "voluptatibus",
+                                                            URI: "dignissimos",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "possimus",
-                                                            YoutubeURI: "sunt",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "laborum",
-                                            },
-                                            PointValue: 911900236897932294,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "autem",
-                                                            URI: "ea",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "dolore",
-                                                            YoutubeURI: "velit",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "doloremque",
-                                                            URI: "non",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "fugiat",
-                                                            YoutubeURI: "laborum",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "animi",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "voluptatem",
-                                                            URI: "ut",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "rerum",
-                                                            YoutubeURI: "quaerat",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "nemo",
-                                            },
-                                        },
-                                        QuestionID: "quibusdam",
-                                        Required: true,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "dolorum",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 5961301090206738356,
-                                            HighLabel: "ipsa",
-                                            Low: 7244249552732261975,
-                                            LowLabel: "unde",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: true,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
-                                        },
-                                    },
-                                },
-                            },
-                            QuestionItem: &shared.QuestionItemInput{
-                                Image: &shared.ImageInput{
-                                    AltText: "illo",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 5214086191323758055,
-                                    },
-                                    SourceURI: "repellendus",
-                                },
-                                Question: &shared.QuestionInput{
-                                    ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                        Options: []shared.OptionInput{
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "ab",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "non",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 668163604386184861,
-                                                    },
-                                                    SourceURI: "dolorem",
-                                                },
-                                                IsOther: false,
-                                                Value: "itaque",
-                                            },
-                                        },
-                                        Shuffle: false,
-                                        Type: "CHECKBOX",
-                                    },
-                                    DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
-                                    },
-                                    FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "atque",
-                                        MaxFileSize: "et",
-                                        MaxFiles: 4647472136798671778,
-                                        Types: []shared.FileUploadQuestionTypesEnum{
-                                            "DRAWING",
-                                            "VIDEO",
-                                            "SPREADSHEET",
-                                        },
-                                    },
-                                    Grading: &shared.Grading{
-                                        CorrectAnswers: &shared.CorrectAnswers{
-                                            Answers: []shared.CorrectAnswer{
-                                                shared.CorrectAnswer{
-                                                    Value: "amet",
-                                                },
-                                                shared.CorrectAnswer{
-                                                    Value: "suscipit",
-                                                },
-                                                shared.CorrectAnswer{
-                                                    Value: "doloremque",
-                                                },
-                                            },
-                                        },
-                                        GeneralFeedback: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "quasi",
-                                                        URI: "aut",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "et",
-                                                        YoutubeURI: "unde",
-                                                    },
-                                                },
-                                            },
-                                            Text: "aperiam",
-                                        },
-                                        PointValue: 3910509906804393824,
-                                        WhenRight: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "hic",
-                                                        URI: "quidem",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "quis",
-                                                        YoutubeURI: "dolor",
-                                                    },
-                                                },
-                                            },
-                                            Text: "ut",
-                                        },
-                                        WhenWrong: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "ut",
-                                                        URI: "tenetur",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "ut",
-                                                        YoutubeURI: "est",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "voluptatem",
-                                                        URI: "repellendus",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "at",
-                                                        YoutubeURI: "autem",
-                                                    },
-                                                },
-                                            },
-                                            Text: "corporis",
-                                        },
-                                    },
-                                    QuestionID: "voluptatum",
-                                    Required: true,
-                                    RowQuestion: &shared.RowQuestion{
-                                        Title: "et",
-                                    },
-                                    ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 9107539606537357740,
-                                        HighLabel: "id",
-                                        Low: 6871135047302558994,
-                                        LowLabel: "dolore",
-                                    },
-                                    TextQuestion: &shared.TextQuestion{
-                                        Paragraph: true,
-                                    },
-                                    TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
-                                    },
-                                },
-                            },
-                            TextItem: map[string]interface{}{
-                                "minima": "possimus",
-                                "praesentium": "nihil",
-                            },
-                            Title: "iusto",
-                            VideoItem: &shared.VideoItem{
-                                Caption: "quisquam",
-                                Video: &shared.Video{
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 4706621266712107037,
-                                    },
-                                    YoutubeURI: "voluptates",
-                                },
-                            },
-                        },
-                        Location: &shared.Location{
-                            Index: 4516163747119219783,
-                        },
-                    },
-                    DeleteItem: &shared.DeleteItemRequest{
-                        Location: &shared.Location{
-                            Index: 2760021102166825170,
-                        },
-                    },
-                    MoveItem: &shared.MoveItemRequest{
-                        NewLocation: &shared.Location{
-                            Index: 5321302804771847654,
-                        },
-                        OriginalLocation: &shared.Location{
-                            Index: 268006812484760631,
-                        },
-                    },
-                    UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
-                        Info: &shared.InfoInput{
-                            Description: "soluta",
-                            Title: "assumenda",
-                        },
-                        UpdateMask: "aut",
-                    },
-                    UpdateItem: &shared.UpdateItemRequestInput{
-                        Item: &shared.ItemInput{
-                            Description: "autem",
-                            ImageItem: &shared.ImageItemInput{
-                                Image: &shared.ImageInput{
-                                    AltText: "laudantium",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 1425992158626304486,
-                                    },
-                                    SourceURI: "architecto",
-                                },
-                            },
-                            ItemID: "quasi",
-                            PageBreakItem: map[string]interface{}{
-                                "ut": "ut",
-                                "dolorum": "ea",
-                            },
-                            QuestionGroupItem: &shared.QuestionGroupItemInput{
-                                Grid: &shared.GridInput{
-                                    Columns: &shared.ChoiceQuestionInput{
-                                        Options: []shared.OptionInput{
-                                            shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "alias",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "autem",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 6959881770071366324,
-                                                    },
-                                                    SourceURI: "assumenda",
-                                                },
-                                                IsOther: false,
-                                                Value: "et",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "quia",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "voluptatum",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 246881247005364253,
-                                                    },
-                                                    SourceURI: "ducimus",
-                                                },
-                                                IsOther: true,
-                                                Value: "laboriosam",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "modi",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "dolores",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 3022471904391699674,
-                                                    },
-                                                    SourceURI: "eaque",
-                                                },
-                                                IsOther: false,
-                                                Value: "tempore",
-                                            },
-                                        },
-                                        Shuffle: true,
-                                        Type: "DROP_DOWN",
-                                    },
-                                    ShuffleQuestions: true,
-                                },
-                                Image: &shared.ImageInput{
-                                    AltText: "error",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 4395246744911652640,
-                                    },
-                                    SourceURI: "ducimus",
-                                },
-                                Questions: []shared.QuestionInput{
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "nulla",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "sint",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 5104456016565448762,
-                                                        },
-                                                        SourceURI: "rem",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "necessitatibus",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "eum",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "asperiores",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 3227356070076760218,
-                                                        },
-                                                        SourceURI: "odio",
-                                                    },
-                                                    IsOther: true,
-                                                    Value: "ad",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "sint",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "excepturi",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 173107187707484677,
-                                                        },
-                                                        SourceURI: "ipsa",
-                                                    },
-                                                    IsOther: true,
-                                                    Value: "minus",
-                                                },
-                                            },
-                                            Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: true,
-                                            IncludeYear: true,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "ullam",
-                                            MaxFileSize: "optio",
-                                            MaxFiles: 4281910046110631526,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "DRAWING",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "consectetur",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "minima",
-                                                            URI: "rerum",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "aut",
-                                                            YoutubeURI: "voluptas",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "dolorem",
-                                                            URI: "perspiciatis",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "dolorem",
-                                                            YoutubeURI: "laboriosam",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "ipsam",
-                                            },
-                                            PointValue: 5345214796347075057,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "quam",
-                                                            URI: "vero",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "dolorum",
-                                                            YoutubeURI: "pariatur",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "sed",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "temporibus",
-                                                            URI: "officia",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "aut",
-                                                            YoutubeURI: "corporis",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "corporis",
-                                                            URI: "eligendi",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "quo",
+                                                            DisplayText: "explicabo",
                                                             YoutubeURI: "qui",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "earum",
-                                                            URI: "consequatur",
+                                                            DisplayText: "illo",
+                                                            URI: "qui",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "aspernatur",
-                                                            YoutubeURI: "commodi",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "perferendis",
-                                            },
-                                        },
-                                        QuestionID: "fugiat",
-                                        Required: false,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "tempore",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 6844696964773683269,
-                                            HighLabel: "ut",
-                                            Low: 5017862106035123046,
-                                            LowLabel: "corporis",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
-                                        },
-                                    },
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "omnis",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "voluptatem",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 3326629396759772516,
-                                                        },
-                                                        SourceURI: "porro",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "dolore",
-                                                },
-                                            },
-                                            Shuffle: false,
-                                            Type: "RADIO",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: true,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "magnam",
-                                            MaxFileSize: "fuga",
-                                            MaxFiles: 6257490489374766035,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "FILE_TYPE_UNSPECIFIED",
-                                                "VIDEO",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "non",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "necessitatibus",
-                                                            URI: "ut",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "qui",
-                                                            YoutubeURI: "tenetur",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "occaecati",
-                                            },
-                                            PointValue: 1147785157744264551,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "officiis",
-                                                            URI: "quis",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "enim",
-                                                            YoutubeURI: "repudiandae",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "et",
-                                                            URI: "labore",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "commodi",
-                                                            YoutubeURI: "enim",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "rerum",
-                                                            URI: "cum",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "quo",
+                                                            DisplayText: "saepe",
                                                             YoutubeURI: "et",
                                                         },
                                                     },
-                                                },
-                                                Text: "sit",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "ipsam",
-                                                            URI: "ut",
+                                                            DisplayText: "est",
+                                                            URI: "cupiditate",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolores",
-                                                            YoutubeURI: "cum",
+                                                            DisplayText: "fugiat",
+                                                            YoutubeURI: "hic",
                                                         },
                                                     },
                                                 },
-                                                Text: "sed",
+                                                Text: "dolore",
                                             },
-                                        },
-                                        QuestionID: "iusto",
-                                        Required: false,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "magnam",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 5236450376235299714,
-                                            HighLabel: "accusamus",
-                                            Low: 5267402672884233298,
-                                            LowLabel: "corporis",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: true,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
-                                        },
-                                    },
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "repellat",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "libero",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 254687288976390973,
-                                                        },
-                                                        SourceURI: "itaque",
-                                                    },
-                                                    IsOther: true,
-                                                    Value: "enim",
-                                                },
-                                            },
-                                            Shuffle: true,
-                                            Type: "CHECKBOX",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: true,
-                                            IncludeYear: false,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "adipisci",
-                                            MaxFileSize: "laudantium",
-                                            MaxFiles: 3973700287072915749,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "SPREADSHEET",
-                                                "VIDEO",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "recusandae",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "soluta",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "error",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "voluptatum",
-                                                            URI: "aperiam",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "temporibus",
-                                                            YoutubeURI: "quisquam",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "ab",
-                                            },
-                                            PointValue: 337527056420911146,
+                                            PointValue: 761681772947384450,
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "eum",
-                                                            URI: "soluta",
+                                                            DisplayText: "cumque",
+                                                            URI: "at",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolore",
-                                                            YoutubeURI: "excepturi",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "animi",
-                                                            URI: "in",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "ex",
-                                                            YoutubeURI: "eum",
+                                                            DisplayText: "enim",
+                                                            YoutubeURI: "blanditiis",
                                                         },
                                                     },
                                                 },
-                                                Text: "odit",
+                                                Text: "nobis",
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aut",
-                                                            URI: "molestiae",
+                                                            DisplayText: "et",
+                                                            URI: "est",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "itaque",
-                                                            YoutubeURI: "occaecati",
+                                                            DisplayText: "voluptatum",
+                                                            YoutubeURI: "numquam",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "sapiente",
-                                                            URI: "voluptate",
+                                                            DisplayText: "accusamus",
+                                                            URI: "ipsum",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "harum",
-                                                            YoutubeURI: "cumque",
+                                                            DisplayText: "nulla",
+                                                            YoutubeURI: "beatae",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "quia",
+                                                            URI: "repellat",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "laboriosam",
+                                                            YoutubeURI: "id",
                                                         },
                                                     },
                                                 },
-                                                Text: "voluptas",
+                                                Text: "nesciunt",
                                             },
                                         },
-                                        QuestionID: "repellendus",
-                                        Required: true,
+                                        QuestionID: "et",
+                                        Required: false,
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "id",
+                                            Title: "rerum",
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 1738548481938466151,
-                                            HighLabel: "occaecati",
-                                            Low: 5096019015472726540,
-                                            LowLabel: "alias",
+                                            High: 7741424580029192409,
+                                            HighLabel: "maiores",
+                                            Low: 8928639399317573263,
+                                            LowLabel: "voluptatibus",
                                         },
                                         TextQuestion: &shared.TextQuestion{
                                             Paragraph: false,
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: true,
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "placeat",
+                                    AltText: "voluptas",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 3593090534609337542,
+                                        Alignment: "RIGHT",
+                                        Width: 7242125167972479197,
                                     },
-                                    SourceURI: "sit",
+                                    SourceURI: "ipsam",
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
                                                 GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "at",
+                                                GoToSectionID: "animi",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "et",
+                                                    AltText: "tempora",
                                                     Properties: &shared.MediaProperties{
                                                         Alignment: "LEFT",
-                                                        Width: 4098085473974544025,
+                                                        Width: 2502422371121148578,
                                                     },
-                                                    SourceURI: "nulla",
-                                                },
-                                                IsOther: true,
-                                                Value: "commodi",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "eligendi",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "laboriosam",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 6331676889764876026,
-                                                    },
-                                                    SourceURI: "impedit",
-                                                },
-                                                IsOther: true,
-                                                Value: "accusamus",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "quas",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "autem",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 5868474017902316615,
-                                                    },
-                                                    SourceURI: "debitis",
+                                                    SourceURI: "enim",
                                                 },
                                                 IsOther: false,
-                                                Value: "sint",
+                                                Value: "eligendi",
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: true,
+                                        Type: "CHECKBOX",
                                     },
                                     DateQuestion: &shared.DateQuestion{
                                         IncludeTime: true,
-                                        IncludeYear: false,
+                                        IncludeYear: true,
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "in",
-                                        MaxFileSize: "cumque",
-                                        MaxFiles: 1288883652997697435,
+                                        FolderID: "amet",
+                                        MaxFileSize: "iure",
+                                        MaxFiles: 8908933058541040043,
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "VIDEO",
+                                            "SPREADSHEET",
+                                            "FILE_TYPE_UNSPECIFIED",
+                                            "ANY",
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "minima",
-                                                },
-                                                shared.CorrectAnswer{
-                                                    Value: "dolor",
+                                                    Value: "vel",
                                                 },
                                             },
                                         },
@@ -2182,28 +1574,38 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "nemo",
-                                                        URI: "doloribus",
+                                                        DisplayText: "nulla",
+                                                        URI: "ut",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "veritatis",
-                                                        YoutubeURI: "dolor",
+                                                        DisplayText: "distinctio",
+                                                        YoutubeURI: "vero",
+                                                    },
+                                                },
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "odit",
+                                                        URI: "ullam",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "aperiam",
+                                                        YoutubeURI: "magnam",
                                                     },
                                                 },
                                             },
-                                            Text: "autem",
+                                            Text: "placeat",
                                         },
-                                        PointValue: 1687147051519508417,
+                                        PointValue: 2120445231226701489,
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "consequatur",
-                                                        URI: "quia",
+                                                        DisplayText: "id",
+                                                        URI: "molestias",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "aliquid",
-                                                        YoutubeURI: "quisquam",
+                                                        DisplayText: "qui",
+                                                        YoutubeURI: "est",
                                                     },
                                                 },
                                             },
@@ -2213,180 +1615,199 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "vero",
+                                                        DisplayText: "officia",
                                                         URI: "est",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "velit",
-                                                        YoutubeURI: "enim",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "optio",
-                                                        URI: "aut",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "laboriosam",
-                                                        YoutubeURI: "est",
+                                                        DisplayText: "quis",
+                                                        YoutubeURI: "atque",
                                                     },
                                                 },
                                             },
-                                            Text: "asperiores",
+                                            Text: "facilis",
                                         },
                                     },
-                                    QuestionID: "deleniti",
+                                    QuestionID: "dolor",
                                     Required: false,
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "sunt",
+                                        Title: "est",
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 393991222479720239,
-                                        HighLabel: "ut",
-                                        Low: 3055778637122387538,
-                                        LowLabel: "architecto",
+                                        High: 4711560240118737073,
+                                        HighLabel: "voluptates",
+                                        Low: 7230506922334944628,
+                                        LowLabel: "quae",
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: true,
+                                        Paragraph: false,
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: true,
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
-                                "maiores": "optio",
-                                "in": "occaecati",
+                                "qui": "voluptatem",
+                                "aliquam": "in",
+                                "voluptatem": "quidem",
                             },
-                            Title: "quis",
+                            Title: "enim",
                             VideoItem: &shared.VideoItem{
-                                Caption: "recusandae",
+                                Caption: "reiciendis",
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 3206623483201512443,
+                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                        Width: 889544995983468983,
                                     },
-                                    YoutubeURI: "minima",
+                                    YoutubeURI: "voluptatem",
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 2092346121893842034,
+                            Index: 2223047520548567431,
                         },
-                        UpdateMask: "laudantium",
                     },
-                    UpdateSettings: &shared.UpdateSettingsRequest{
-                        Settings: &shared.FormSettings{
-                            QuizSettings: &shared.QuizSettings{
-                                IsQuiz: true,
-                            },
+                    DeleteItem: &shared.DeleteItemRequest{
+                        Location: &shared.Location{
+                            Index: 3348966372786221659,
                         },
-                        UpdateMask: "animi",
                     },
-                },
-                shared.RequestInput{
-                    CreateItem: &shared.CreateItemRequestInput{
+                    MoveItem: &shared.MoveItemRequest{
+                        NewLocation: &shared.Location{
+                            Index: 2749871343573526204,
+                        },
+                        OriginalLocation: &shared.Location{
+                            Index: 4879057540074143363,
+                        },
+                    },
+                    UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
+                        Info: &shared.InfoInput{
+                            Description: "officiis",
+                            Title: "in",
+                        },
+                        UpdateMask: "pariatur",
+                    },
+                    UpdateItem: &shared.UpdateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "perferendis",
+                            Description: "ipsam",
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "itaque",
+                                    AltText: "voluptatibus",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 4287503374296563607,
+                                        Alignment: "CENTER",
+                                        Width: 8684346162108043215,
                                     },
-                                    SourceURI: "sint",
+                                    SourceURI: "rerum",
                                 },
                             },
-                            ItemID: "delectus",
+                            ItemID: "eos",
                             PageBreakItem: map[string]interface{}{
-                                "ut": "est",
+                                "nisi": "dolorum",
                             },
                             QuestionGroupItem: &shared.QuestionGroupItemInput{
                                 Grid: &shared.GridInput{
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "tempora",
+                                                GoToAction: "RESTART_FORM",
+                                                GoToSectionID: "molestiae",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "hic",
+                                                    AltText: "consequatur",
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 7337796208623104211,
+                                                        Alignment: "LEFT",
+                                                        Width: 7039557166284870016,
                                                     },
-                                                    SourceURI: "fuga",
+                                                    SourceURI: "nesciunt",
                                                 },
-                                                IsOther: false,
-                                                Value: "corrupti",
+                                                IsOther: true,
+                                                Value: "iste",
                                             },
                                         },
-                                        Shuffle: false,
+                                        Shuffle: true,
                                         Type: "CHECKBOX",
                                     },
                                     ShuffleQuestions: false,
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "deserunt",
+                                    AltText: "mollitia",
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 6190008357654128489,
+                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                        Width: 9142426412757149730,
                                     },
-                                    SourceURI: "voluptas",
+                                    SourceURI: "sed",
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "ut",
+                                                    GoToAction: "NEXT_SECTION",
+                                                    GoToSectionID: "sunt",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "possimus",
+                                                        AltText: "qui",
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 6949423696513698146,
+                                                            Alignment: "RIGHT",
+                                                            Width: 8170578607294733011,
                                                         },
-                                                        SourceURI: "consequatur",
+                                                        SourceURI: "est",
                                                     },
-                                                    IsOther: true,
-                                                    Value: "aliquid",
+                                                    IsOther: false,
+                                                    Value: "rerum",
                                                 },
                                                 shared.OptionInput{
                                                     GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "iure",
+                                                    GoToSectionID: "et",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "et",
+                                                        AltText: "voluptas",
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 3917651441298516601,
+                                                            Alignment: "CENTER",
+                                                            Width: 5105243335541987909,
                                                         },
-                                                        SourceURI: "saepe",
+                                                        SourceURI: "nostrum",
                                                     },
-                                                    IsOther: true,
-                                                    Value: "possimus",
+                                                    IsOther: false,
+                                                    Value: "nostrum",
+                                                },
+                                                shared.OptionInput{
+                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
+                                                    GoToSectionID: "eveniet",
+                                                    Image: &shared.ImageInput{
+                                                        AltText: "mollitia",
+                                                        Properties: &shared.MediaProperties{
+                                                            Alignment: "CENTER",
+                                                            Width: 3128172611915983385,
+                                                        },
+                                                        SourceURI: "aperiam",
+                                                    },
+                                                    IsOther: false,
+                                                    Value: "culpa",
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                            Shuffle: true,
+                                            Type: "DROP_DOWN",
                                         },
                                         DateQuestion: &shared.DateQuestion{
                                             IncludeTime: false,
-                                            IncludeYear: true,
+                                            IncludeYear: false,
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "et",
-                                            MaxFileSize: "et",
-                                            MaxFiles: 8706274537045256300,
+                                            FolderID: "error",
+                                            MaxFileSize: "magnam",
+                                            MaxFiles: 8276063308289136081,
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "SPREADSHEET",
+                                                "AUDIO",
+                                                "AUDIO",
+                                                "ANY",
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "consectetur",
+                                                        Value: "vero",
+                                                    },
+                                                    shared.CorrectAnswer{
+                                                        Value: "eligendi",
                                                     },
                                                 },
                                             },
@@ -2394,109 +1815,99 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "enim",
-                                                            URI: "enim",
+                                                            DisplayText: "rerum",
+                                                            URI: "aspernatur",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "nam",
-                                                            YoutubeURI: "ut",
+                                                            DisplayText: "est",
+                                                            YoutubeURI: "placeat",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "atque",
-                                                            URI: "adipisci",
+                                                            DisplayText: "pariatur",
+                                                            URI: "corrupti",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "similique",
-                                                            YoutubeURI: "omnis",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "nesciunt",
-                                                            URI: "non",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "reprehenderit",
-                                                            YoutubeURI: "aut",
+                                                            DisplayText: "cumque",
+                                                            YoutubeURI: "enim",
                                                         },
                                                     },
                                                 },
-                                                Text: "reprehenderit",
+                                                Text: "quisquam",
                                             },
-                                            PointValue: 8382549417488267366,
+                                            PointValue: 182088582836242343,
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dolor",
-                                                            URI: "voluptas",
+                                                            DisplayText: "ipsam",
+                                                            URI: "non",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "qui",
-                                                            YoutubeURI: "sequi",
+                                                            DisplayText: "sed",
+                                                            YoutubeURI: "reprehenderit",
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "magni",
-                                                            URI: "odit",
+                                                            DisplayText: "vero",
+                                                            URI: "facilis",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "et",
-                                                            YoutubeURI: "suscipit",
+                                                            DisplayText: "debitis",
+                                                            YoutubeURI: "animi",
                                                         },
                                                     },
                                                 },
-                                                Text: "corrupti",
+                                                Text: "ut",
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "harum",
-                                                            URI: "occaecati",
+                                                            DisplayText: "expedita",
+                                                            URI: "sunt",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quos",
+                                                            DisplayText: "animi",
+                                                            YoutubeURI: "unde",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "maiores",
+                                                            URI: "cupiditate",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "labore",
+                                                            YoutubeURI: "illo",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "laboriosam",
+                                                            URI: "laboriosam",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "necessitatibus",
                                                             YoutubeURI: "ut",
                                                         },
                                                     },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "id",
-                                                            URI: "asperiores",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "architecto",
-                                                            YoutubeURI: "omnis",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "quaerat",
-                                                            URI: "in",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "quae",
-                                                            YoutubeURI: "quas",
-                                                        },
-                                                    },
                                                 },
-                                                Text: "omnis",
+                                                Text: "veritatis",
                                             },
                                         },
-                                        QuestionID: "incidunt",
-                                        Required: false,
+                                        QuestionID: "suscipit",
+                                        Required: true,
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "molestiae",
+                                            Title: "pariatur",
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 8863528157143312908,
-                                            HighLabel: "voluptates",
-                                            Low: 6168228613146364733,
-                                            LowLabel: "odit",
+                                            High: 8546715417534629051,
+                                            HighLabel: "velit",
+                                            Low: 1563571726729279920,
+                                            LowLabel: "quia",
                                         },
                                         TextQuestion: &shared.TextQuestion{
                                             Paragraph: true,
@@ -2509,57 +1920,72 @@ func main() {
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "maiores",
+                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
+                                                    GoToSectionID: "odio",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "alias",
+                                                        AltText: "possimus",
                                                         Properties: &shared.MediaProperties{
                                                             Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 3515159222562670435,
+                                                            Width: 6097213320097576614,
                                                         },
-                                                        SourceURI: "a",
+                                                        SourceURI: "nostrum",
+                                                    },
+                                                    IsOther: false,
+                                                    Value: "ut",
+                                                },
+                                                shared.OptionInput{
+                                                    GoToAction: "SUBMIT_FORM",
+                                                    GoToSectionID: "commodi",
+                                                    Image: &shared.ImageInput{
+                                                        AltText: "quas",
+                                                        Properties: &shared.MediaProperties{
+                                                            Alignment: "LEFT",
+                                                            Width: 1600523615376828944,
+                                                        },
+                                                        SourceURI: "eaque",
                                                     },
                                                     IsOther: true,
-                                                    Value: "quo",
+                                                    Value: "nostrum",
                                                 },
                                                 shared.OptionInput{
                                                     GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "consectetur",
+                                                    GoToSectionID: "commodi",
                                                     Image: &shared.ImageInput{
-                                                        AltText: "corporis",
+                                                        AltText: "vel",
                                                         Properties: &shared.MediaProperties{
                                                             Alignment: "RIGHT",
-                                                            Width: 1059495043031655110,
+                                                            Width: 7074246751230988091,
                                                         },
-                                                        SourceURI: "quaerat",
+                                                        SourceURI: "provident",
                                                     },
-                                                    IsOther: true,
-                                                    Value: "non",
+                                                    IsOther: false,
+                                                    Value: "ab",
                                                 },
                                             },
-                                            Shuffle: true,
-                                            Type: "DROP_DOWN",
+                                            Shuffle: false,
+                                            Type: "CHECKBOX",
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: true,
+                                            IncludeTime: false,
                                             IncludeYear: false,
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "et",
-                                            MaxFileSize: "ut",
-                                            MaxFiles: 1161023893901157982,
+                                            FolderID: "amet",
+                                            MaxFileSize: "qui",
+                                            MaxFiles: 5386515303982219896,
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "DOCUMENT",
+                                                "FILE_TYPE_UNSPECIFIED",
+                                                "SPREADSHEET",
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "et",
+                                                        Value: "explicabo",
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "ducimus",
+                                                        Value: "autem",
                                                     },
                                                 },
                                             },
@@ -2567,89 +1993,69 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aspernatur",
-                                                            URI: "aut",
+                                                            DisplayText: "iste",
+                                                            URI: "accusantium",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolor",
-                                                            YoutubeURI: "voluptatem",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "et",
-                                                            URI: "a",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "quo",
-                                                            YoutubeURI: "vero",
+                                                            DisplayText: "similique",
+                                                            YoutubeURI: "corrupti",
                                                         },
                                                     },
                                                 },
-                                                Text: "dolorem",
+                                                Text: "quasi",
                                             },
-                                            PointValue: 1353409533170459717,
+                                            PointValue: 3522719736874828776,
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "hic",
-                                                            URI: "et",
+                                                            DisplayText: "omnis",
+                                                            URI: "ipsam",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "qui",
-                                                            YoutubeURI: "sed",
+                                                            DisplayText: "quis",
+                                                            YoutubeURI: "maiores",
+                                                        },
+                                                    },
+                                                    shared.ExtraMaterial{
+                                                        Link: &shared.TextLink{
+                                                            DisplayText: "fugiat",
+                                                            URI: "ut",
+                                                        },
+                                                        Video: &shared.VideoLink{
+                                                            DisplayText: "tenetur",
+                                                            YoutubeURI: "aspernatur",
                                                         },
                                                     },
                                                 },
-                                                Text: "est",
+                                                Text: "sit",
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "soluta",
-                                                            URI: "at",
+                                                            DisplayText: "quaerat",
+                                                            URI: "omnis",
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "et",
-                                                            YoutubeURI: "vitae",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "corrupti",
-                                                            URI: "ut",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "cupiditate",
-                                                            YoutubeURI: "sit",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "corporis",
-                                                            URI: "non",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "rerum",
-                                                            YoutubeURI: "quasi",
+                                                            DisplayText: "non",
+                                                            YoutubeURI: "quia",
                                                         },
                                                     },
                                                 },
-                                                Text: "sed",
+                                                Text: "ducimus",
                                             },
                                         },
-                                        QuestionID: "perspiciatis",
-                                        Required: false,
+                                        QuestionID: "sed",
+                                        Required: true,
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "officia",
+                                            Title: "nobis",
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 4644861563379839032,
-                                            HighLabel: "officia",
-                                            Low: 8919849979411473129,
-                                            LowLabel: "aut",
+                                            High: 3617057307217831165,
+                                            HighLabel: "quam",
+                                            Low: 5463472236838707364,
+                                            LowLabel: "ut",
                                         },
                                         TextQuestion: &shared.TextQuestion{
                                             Paragraph: false,
@@ -2662,914 +2068,201 @@ func main() {
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "molestiae",
+                                    AltText: "dolores",
                                     Properties: &shared.MediaProperties{
                                         Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 6889419941503769410,
+                                        Width: 7048387579217796344,
                                     },
-                                    SourceURI: "odit",
+                                    SourceURI: "vitae",
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "ut",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "id",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 5954847658887122489,
-                                                    },
-                                                    SourceURI: "harum",
-                                                },
-                                                IsOther: false,
-                                                Value: "aspernatur",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "eveniet",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "officiis",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 3541754826954132570,
-                                                    },
-                                                    SourceURI: "assumenda",
-                                                },
-                                                IsOther: false,
-                                                Value: "libero",
-                                            },
-                                            shared.OptionInput{
                                                 GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "consequuntur",
+                                                GoToSectionID: "est",
                                                 Image: &shared.ImageInput{
-                                                    AltText: "ea",
+                                                    AltText: "nulla",
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 321684065591043905,
+                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                                        Width: 1467499827457805916,
                                                     },
-                                                    SourceURI: "atque",
+                                                    SourceURI: "ut",
+                                                },
+                                                IsOther: true,
+                                                Value: "enim",
+                                            },
+                                            shared.OptionInput{
+                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
+                                                GoToSectionID: "a",
+                                                Image: &shared.ImageInput{
+                                                    AltText: "enim",
+                                                    Properties: &shared.MediaProperties{
+                                                        Alignment: "CENTER",
+                                                        Width: 6880590033955052934,
+                                                    },
+                                                    SourceURI: "aut",
                                                 },
                                                 IsOther: false,
-                                                Value: "consequuntur",
+                                                Value: "modi",
                                             },
                                         },
-                                        Shuffle: true,
-                                        Type: "RADIO",
+                                        Shuffle: false,
+                                        Type: "DROP_DOWN",
                                     },
                                     DateQuestion: &shared.DateQuestion{
                                         IncludeTime: false,
                                         IncludeYear: false,
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "necessitatibus",
-                                        MaxFileSize: "perspiciatis",
-                                        MaxFiles: 7474216361331592065,
+                                        FolderID: "et",
+                                        MaxFileSize: "sed",
+                                        MaxFiles: 7613510986129691238,
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "ANY",
-                                            "DOCUMENT",
+                                            "IMAGE",
+                                            "SPREADSHEET",
+                                            "AUDIO",
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "a",
+                                                    Value: "voluptatem",
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "eum",
+                                                    Value: "molestias",
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "debitis",
-                                                },
-                                            },
-                                        },
-                                        GeneralFeedback: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "quia",
-                                                        URI: "quia",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "et",
-                                                        YoutubeURI: "fugiat",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "dolorem",
-                                                        URI: "nihil",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "et",
-                                                        YoutubeURI: "dolorem",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "molestias",
-                                                        URI: "adipisci",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "esse",
-                                                        YoutubeURI: "inventore",
-                                                    },
-                                                },
-                                            },
-                                            Text: "velit",
-                                        },
-                                        PointValue: 7175246512155706163,
-                                        WhenRight: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "fuga",
-                                                        URI: "et",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "nobis",
-                                                        YoutubeURI: "odio",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "quasi",
-                                                        URI: "ea",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "asperiores",
-                                                        YoutubeURI: "distinctio",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "fugit",
-                                                        URI: "ipsa",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "odit",
-                                                        YoutubeURI: "officiis",
-                                                    },
-                                                },
-                                            },
-                                            Text: "sed",
-                                        },
-                                        WhenWrong: &shared.Feedback{
-                                            Material: []shared.ExtraMaterial{
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "quasi",
-                                                        URI: "alias",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "sequi",
-                                                        YoutubeURI: "dolore",
-                                                    },
-                                                },
-                                                shared.ExtraMaterial{
-                                                    Link: &shared.TextLink{
-                                                        DisplayText: "ut",
-                                                        URI: "aliquam",
-                                                    },
-                                                    Video: &shared.VideoLink{
-                                                        DisplayText: "est",
-                                                        YoutubeURI: "quis",
-                                                    },
-                                                },
-                                            },
-                                            Text: "aut",
-                                        },
-                                    },
-                                    QuestionID: "magni",
-                                    Required: false,
-                                    RowQuestion: &shared.RowQuestion{
-                                        Title: "et",
-                                    },
-                                    ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 7989566266070693398,
-                                        HighLabel: "aut",
-                                        Low: 3578839472490561508,
-                                        LowLabel: "nam",
-                                    },
-                                    TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
-                                    },
-                                    TimeQuestion: &shared.TimeQuestion{
-                                        Duration: true,
-                                    },
-                                },
-                            },
-                            TextItem: map[string]interface{}{
-                                "delectus": "libero",
-                            },
-                            Title: "alias",
-                            VideoItem: &shared.VideoItem{
-                                Caption: "rerum",
-                                Video: &shared.Video{
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 1429242156592359518,
-                                    },
-                                    YoutubeURI: "eaque",
-                                },
-                            },
-                        },
-                        Location: &shared.Location{
-                            Index: 1664562514961750333,
-                        },
-                    },
-                    DeleteItem: &shared.DeleteItemRequest{
-                        Location: &shared.Location{
-                            Index: 1416854397329128566,
-                        },
-                    },
-                    MoveItem: &shared.MoveItemRequest{
-                        NewLocation: &shared.Location{
-                            Index: 633191294028068721,
-                        },
-                        OriginalLocation: &shared.Location{
-                            Index: 1106445836439259671,
-                        },
-                    },
-                    UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
-                        Info: &shared.InfoInput{
-                            Description: "dolorum",
-                            Title: "quia",
-                        },
-                        UpdateMask: "fugiat",
-                    },
-                    UpdateItem: &shared.UpdateItemRequestInput{
-                        Item: &shared.ItemInput{
-                            Description: "est",
-                            ImageItem: &shared.ImageItemInput{
-                                Image: &shared.ImageInput{
-                                    AltText: "maxime",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 5261877718968934275,
-                                    },
-                                    SourceURI: "omnis",
-                                },
-                            },
-                            ItemID: "deleniti",
-                            PageBreakItem: map[string]interface{}{
-                                "veritatis": "ut",
-                            },
-                            QuestionGroupItem: &shared.QuestionGroupItemInput{
-                                Grid: &shared.GridInput{
-                                    Columns: &shared.ChoiceQuestionInput{
-                                        Options: []shared.OptionInput{
-                                            shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "laboriosam",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "velit",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 3847644765164323532,
-                                                    },
-                                                    SourceURI: "voluptatem",
-                                                },
-                                                IsOther: true,
-                                                Value: "voluptatem",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "tenetur",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "aspernatur",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 6968993539790339935,
-                                                    },
-                                                    SourceURI: "possimus",
-                                                },
-                                                IsOther: false,
-                                                Value: "dignissimos",
-                                            },
-                                            shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "placeat",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "illo",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 1944151082460247840,
-                                                    },
-                                                    SourceURI: "corrupti",
-                                                },
-                                                IsOther: true,
-                                                Value: "asperiores",
-                                            },
-                                        },
-                                        Shuffle: true,
-                                        Type: "CHECKBOX",
-                                    },
-                                    ShuffleQuestions: true,
-                                },
-                                Image: &shared.ImageInput{
-                                    AltText: "ipsa",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 4973066229511119308,
-                                    },
-                                    SourceURI: "cumque",
-                                },
-                                Questions: []shared.QuestionInput{
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "distinctio",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "tenetur",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 289690413690871532,
-                                                        },
-                                                        SourceURI: "aut",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "eum",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "officiis",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "sunt",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 5163603264569209191,
-                                                        },
-                                                        SourceURI: "voluptas",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "est",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "autem",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "est",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 9137982009395199675,
-                                                        },
-                                                        SourceURI: "placeat",
-                                                    },
-                                                    IsOther: true,
-                                                    Value: "alias",
-                                                },
-                                            },
-                                            Shuffle: true,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: true,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "consequatur",
-                                            MaxFileSize: "molestiae",
-                                            MaxFiles: 5836363067191062363,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "FILE_TYPE_UNSPECIFIED",
-                                                "AUDIO",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "unde",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "sed",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "et",
-                                                            URI: "rerum",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "ut",
-                                                            YoutubeURI: "aspernatur",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "impedit",
-                                                            URI: "eius",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "adipisci",
-                                                            YoutubeURI: "ducimus",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "assumenda",
-                                            },
-                                            PointValue: 7116118191347901698,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "ut",
-                                                            URI: "cumque",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "cupiditate",
-                                                            YoutubeURI: "voluptatem",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "vel",
-                                                            URI: "harum",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "id",
-                                                            YoutubeURI: "iste",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "tempore",
-                                                            URI: "ex",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "distinctio",
-                                                            YoutubeURI: "architecto",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "quibusdam",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "laboriosam",
-                                                            URI: "et",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "placeat",
-                                                            YoutubeURI: "qui",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "odio",
-                                            },
-                                        },
-                                        QuestionID: "aliquid",
-                                        Required: true,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "quas",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 8683637002828215879,
-                                            HighLabel: "et",
-                                            Low: 5573665413929073458,
-                                            LowLabel: "nemo",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: true,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
-                                        },
-                                    },
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "ut",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "asperiores",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 4588962380590594717,
-                                                        },
-                                                        SourceURI: "omnis",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "dicta",
-                                                },
-                                                shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "ut",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "et",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 2275211971830285298,
-                                                        },
-                                                        SourceURI: "asperiores",
-                                                    },
-                                                    IsOther: false,
-                                                    Value: "et",
-                                                },
-                                            },
-                                            Shuffle: false,
-                                            Type: "DROP_DOWN",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: true,
-                                            IncludeYear: false,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "ut",
-                                            MaxFileSize: "facere",
-                                            MaxFiles: 651801269327434472,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "AUDIO",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "voluptate",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "minima",
-                                                    },
-                                                    shared.CorrectAnswer{
-                                                        Value: "totam",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "incidunt",
-                                                            URI: "dolorem",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "quo",
-                                                            YoutubeURI: "culpa",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "ratione",
-                                            },
-                                            PointValue: 3485231417256697628,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "perferendis",
-                                                            URI: "possimus",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "nisi",
-                                                            YoutubeURI: "aliquam",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "sunt",
-                                                            URI: "sed",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "nihil",
-                                                            YoutubeURI: "sint",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "reiciendis",
-                                                            URI: "nostrum",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "ut",
-                                                            YoutubeURI: "atque",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "similique",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "inventore",
-                                                            URI: "recusandae",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "sint",
-                                                            YoutubeURI: "ex",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "laboriosam",
-                                            },
-                                        },
-                                        QuestionID: "est",
-                                        Required: false,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "placeat",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 6322450015257319138,
-                                            HighLabel: "magni",
-                                            Low: 7148379799823940905,
-                                            LowLabel: "accusantium",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: true,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
-                                        },
-                                    },
-                                    shared.QuestionInput{
-                                        ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                            Options: []shared.OptionInput{
-                                                shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "officiis",
-                                                    Image: &shared.ImageInput{
-                                                        AltText: "veniam",
-                                                        Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 5621261771286112477,
-                                                        },
-                                                        SourceURI: "ea",
-                                                    },
-                                                    IsOther: false,
                                                     Value: "dolorem",
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHECKBOX",
-                                        },
-                                        DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
-                                        },
-                                        FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "aut",
-                                            MaxFileSize: "maxime",
-                                            MaxFiles: 1795701770637866744,
-                                            Types: []shared.FileUploadQuestionTypesEnum{
-                                                "DOCUMENT",
-                                            },
-                                        },
-                                        Grading: &shared.Grading{
-                                            CorrectAnswers: &shared.CorrectAnswers{
-                                                Answers: []shared.CorrectAnswer{
-                                                    shared.CorrectAnswer{
-                                                        Value: "omnis",
-                                                    },
-                                                },
-                                            },
-                                            GeneralFeedback: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "reprehenderit",
-                                                            URI: "corrupti",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "et",
-                                                            YoutubeURI: "ad",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "ea",
-                                            },
-                                            PointValue: 6914012838756528487,
-                                            WhenRight: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "debitis",
-                                                            URI: "omnis",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "id",
-                                                            YoutubeURI: "dolores",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "ullam",
-                                            },
-                                            WhenWrong: &shared.Feedback{
-                                                Material: []shared.ExtraMaterial{
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "porro",
-                                                            URI: "dolor",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "pariatur",
-                                                            YoutubeURI: "pariatur",
-                                                        },
-                                                    },
-                                                    shared.ExtraMaterial{
-                                                        Link: &shared.TextLink{
-                                                            DisplayText: "voluptatem",
-                                                            URI: "itaque",
-                                                        },
-                                                        Video: &shared.VideoLink{
-                                                            DisplayText: "explicabo",
-                                                            YoutubeURI: "placeat",
-                                                        },
-                                                    },
-                                                },
-                                                Text: "quos",
-                                            },
-                                        },
-                                        QuestionID: "id",
-                                        Required: false,
-                                        RowQuestion: &shared.RowQuestion{
-                                            Title: "veniam",
-                                        },
-                                        ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 7896066356198397140,
-                                            HighLabel: "quae",
-                                            Low: 3159250917121709378,
-                                            LowLabel: "ut",
-                                        },
-                                        TextQuestion: &shared.TextQuestion{
-                                            Paragraph: true,
-                                        },
-                                        TimeQuestion: &shared.TimeQuestion{
-                                            Duration: true,
-                                        },
-                                    },
-                                },
-                            },
-                            QuestionItem: &shared.QuestionItemInput{
-                                Image: &shared.ImageInput{
-                                    AltText: "dolorum",
-                                    Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 5205447003474305335,
-                                    },
-                                    SourceURI: "quo",
-                                },
-                                Question: &shared.QuestionInput{
-                                    ChoiceQuestion: &shared.ChoiceQuestionInput{
-                                        Options: []shared.OptionInput{
-                                            shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "voluptatem",
-                                                Image: &shared.ImageInput{
-                                                    AltText: "et",
-                                                    Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 4699253386294682349,
-                                                    },
-                                                    SourceURI: "vel",
-                                                },
-                                                IsOther: false,
-                                                Value: "tenetur",
-                                            },
-                                        },
-                                        Shuffle: true,
-                                        Type: "CHECKBOX",
-                                    },
-                                    DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
-                                    },
-                                    FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "voluptate",
-                                        MaxFileSize: "et",
-                                        MaxFiles: 4184376927909698154,
-                                        Types: []shared.FileUploadQuestionTypesEnum{
-                                            "AUDIO",
-                                            "ANY",
-                                            "PDF",
-                                        },
-                                    },
-                                    Grading: &shared.Grading{
-                                        CorrectAnswers: &shared.CorrectAnswers{
-                                            Answers: []shared.CorrectAnswer{
-                                                shared.CorrectAnswer{
-                                                    Value: "et",
-                                                },
-                                                shared.CorrectAnswer{
-                                                    Value: "provident",
-                                                },
-                                            },
                                         },
                                         GeneralFeedback: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "consequuntur",
-                                                        URI: "nihil",
+                                                        DisplayText: "neque",
+                                                        URI: "ea",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "natus",
-                                                        YoutubeURI: "ut",
+                                                        DisplayText: "at",
+                                                        YoutubeURI: "aut",
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "fuga",
-                                                        URI: "quas",
+                                                        DisplayText: "dolores",
+                                                        URI: "omnis",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "at",
-                                                        YoutubeURI: "error",
+                                                        DisplayText: "minima",
+                                                        YoutubeURI: "non",
+                                                    },
+                                                },
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "expedita",
+                                                        URI: "quaerat",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "ex",
+                                                        YoutubeURI: "dicta",
                                                     },
                                                 },
                                             },
-                                            Text: "odit",
+                                            Text: "minus",
                                         },
-                                        PointValue: 2872417149627322778,
+                                        PointValue: 2643189024539766149,
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "ad",
-                                                        URI: "cupiditate",
+                                                        DisplayText: "et",
+                                                        URI: "unde",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "quia",
-                                                        YoutubeURI: "aut",
+                                                        DisplayText: "corrupti",
+                                                        YoutubeURI: "vitae",
+                                                    },
+                                                },
+                                                shared.ExtraMaterial{
+                                                    Link: &shared.TextLink{
+                                                        DisplayText: "sapiente",
+                                                        URI: "eos",
+                                                    },
+                                                    Video: &shared.VideoLink{
+                                                        DisplayText: "omnis",
+                                                        YoutubeURI: "sit",
                                                     },
                                                 },
                                             },
-                                            Text: "at",
+                                            Text: "aliquam",
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
                                                         DisplayText: "qui",
-                                                        URI: "rerum",
+                                                        URI: "aut",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "voluptas",
-                                                        YoutubeURI: "recusandae",
+                                                        DisplayText: "voluptates",
+                                                        YoutubeURI: "id",
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "ut",
-                                                        URI: "quis",
+                                                        DisplayText: "atque",
+                                                        URI: "velit",
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "culpa",
-                                                        YoutubeURI: "ipsa",
+                                                        DisplayText: "quo",
+                                                        YoutubeURI: "consectetur",
                                                     },
                                                 },
                                             },
-                                            Text: "iste",
+                                            Text: "qui",
                                         },
                                     },
-                                    QuestionID: "iste",
+                                    QuestionID: "quis",
                                     Required: false,
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "autem",
+                                        Title: "fugit",
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 6488115048459184192,
-                                        HighLabel: "sed",
-                                        Low: 1914903948005926446,
-                                        LowLabel: "consequatur",
+                                        High: 374777448867330334,
+                                        HighLabel: "alias",
+                                        Low: 5337615963840977653,
+                                        LowLabel: "delectus",
                                     },
                                     TextQuestion: &shared.TextQuestion{
                                         Paragraph: false,
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: true,
+                                        Duration: false,
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
-                                "nisi": "libero",
+                                "nostrum": "corporis",
                             },
-                            Title: "quae",
+                            Title: "itaque",
                             VideoItem: &shared.VideoItem{
-                                Caption: "voluptatem",
+                                Caption: "esse",
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 3721972092181065211,
+                                        Alignment: "ALIGNMENT_UNSPECIFIED",
+                                        Width: 4559575525210067934,
                                     },
-                                    YoutubeURI: "dolorem",
+                                    YoutubeURI: "omnis",
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 1771640771906141741,
+                            Index: 8988803565249739725,
                         },
-                        UpdateMask: "aspernatur",
+                        UpdateMask: "consequatur",
                     },
                     UpdateSettings: &shared.UpdateSettingsRequest{
                         Settings: &shared.FormSettings{
@@ -3577,13 +2270,13 @@ func main() {
                                 IsQuiz: false,
                             },
                         },
-                        UpdateMask: "quis",
+                        UpdateMask: "enim",
                     },
                 },
             },
             WriteControl: &shared.WriteControl{
-                RequiredRevisionID: "nobis",
-                TargetRevisionID: "exercitationem",
+                RequiredRevisionID: "nam",
+                TargetRevisionID: "eligendi",
             },
         },
     }

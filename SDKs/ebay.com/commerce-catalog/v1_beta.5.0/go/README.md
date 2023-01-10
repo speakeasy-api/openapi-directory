@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.GetProductPathParams{
-            Epid: "dicta",
+            Epid: "modi",
         },
     }
     

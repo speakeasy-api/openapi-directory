@@ -6,7 +6,7 @@ type ViewerCertificate struct {
 	ACMCertificateArn            *string
 	Certificate                  map[string]interface{}
 	CertificateSource            map[string]interface{}
-	CloudFrontDefaultCertificate map[string]interface{}
+	CloudFrontDefaultCertificate *bool
 	IAMCertificateID             *string
 	MinimumProtocolVersion       *MinimumProtocolVersionEnum
 	SSLSupportMethod             *SslSupportMethodEnum

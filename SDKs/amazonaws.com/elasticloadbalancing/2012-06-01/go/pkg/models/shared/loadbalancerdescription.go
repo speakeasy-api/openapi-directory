@@ -13,7 +13,7 @@ type LoadBalancerDescription struct {
 	CanonicalHostedZoneNameID *string
 	CreatedTime               *time.Time
 	DNSName                   *string
-	HealthCheck               *HealthCheck1
+	HealthCheck               *HealthCheck
 	Instances                 []Instance
 	ListenerDescriptions      []ListenerDescription
 	LoadBalancerName          *string

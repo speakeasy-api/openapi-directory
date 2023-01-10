@@ -22,5 +22,5 @@ type StoryIDPutResponse struct {
 	ContentType   string
 	StatusCode    int64
 	ProblemDetail *interface{}
-	Story         *shared.Story1
+	Story         *shared.Story
 }

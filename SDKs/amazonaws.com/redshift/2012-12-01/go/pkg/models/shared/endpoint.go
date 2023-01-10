@@ -5,5 +5,5 @@ package shared
 type Endpoint struct {
 	Address      *string
 	Port         *int64
-	VpcEndpoints []map[string]interface{}
+	VpcEndpoints []VpcEndpointsList
 }

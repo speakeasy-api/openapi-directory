@@ -108,7 +108,7 @@ func (s *Spots) GetSpotByID(ctx context.Context, request operations.GetSpotByIDR
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.SpotGet
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -148,7 +148,7 @@ func (s *Spots) GetSpotSetByID(ctx context.Context, request operations.GetSpotSe
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.SpotSet
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -188,7 +188,7 @@ func (s *Spots) GetSpotSetsByID(ctx context.Context, request operations.GetSpotS
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.SpotSet
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

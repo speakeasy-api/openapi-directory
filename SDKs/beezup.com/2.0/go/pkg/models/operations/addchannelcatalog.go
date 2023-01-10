@@ -13,5 +13,5 @@ type AddChannelCatalogResponse struct {
 	ContentType                      string
 	Headers                          map[string][]string
 	StatusCode                       int64
-	LinksGetChannelCatalogLink       map[string]interface{}
+	LinksGetChannelCatalogLink       *shared.LinksGetChannelCatalogLink
 }

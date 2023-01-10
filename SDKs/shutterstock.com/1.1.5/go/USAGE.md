@@ -18,24 +18,14 @@ func main() {
             },
         },
         PathParams: operations.AddTrackCollectionItemsPathParams{
-            ID: "exercitationem",
+            ID: "magni",
         },
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "1999-12-25T03:51:09Z",
-                    ID: "cum",
-                    MediaType: "quidem",
-                },
-                shared.CollectionItem{
-                    AddedTime: "2002-09-21T20:55:51Z",
-                    ID: "sed",
-                    MediaType: "voluptas",
-                },
-                shared.CollectionItem{
-                    AddedTime: "2007-08-08T10:10:28Z",
-                    ID: "provident",
-                    MediaType: "quos",
+                    AddedTime: "2013-04-29T22:32:07Z",
+                    ID: "ad",
+                    MediaType: "autem",
                 },
             },
         },

@@ -941,7 +941,7 @@ func (s *Webinars) WebinarPollCreate(ctx context.Context, request operations.Web
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.WebinarPollCreatePoll
+			var out *operations.WebinarPollCreatePoll2
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}

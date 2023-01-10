@@ -17,17 +17,17 @@ type Cluster struct {
 	ClusterIdentifier                      *string
 	ClusterNamespaceArn                    *string
 	ClusterNodes                           []ClusterNode
-	ClusterParameterGroups                 []map[string]interface{}
+	ClusterParameterGroups                 []ClusterParameterGroupStatusList
 	ClusterPublicKey                       *string
 	ClusterRevisionNumber                  *string
-	ClusterSecurityGroups                  []map[string]interface{}
+	ClusterSecurityGroups                  []ClusterSecurityGroupMembershipList
 	ClusterSnapshotCopyStatus              *ClusterSnapshotCopyStatus
 	ClusterStatus                          *string
 	ClusterSubnetGroupName                 *string
 	ClusterVersion                         *string
 	DBName                                 *string
 	DataTransferProgress                   *DataTransferProgress
-	DeferredMaintenanceWindows             []map[string]interface{}
+	DeferredMaintenanceWindows             []DeferredMaintenanceWindowsList
 	ElasticIPStatus                        *ElasticIPStatus
 	ElasticResizeNumberOfNodeOptions       *string
 	Encrypted                              *bool
@@ -36,7 +36,7 @@ type Cluster struct {
 	ExpectedNextSnapshotScheduleTime       *time.Time
 	ExpectedNextSnapshotScheduleTimeStatus *string
 	HsmStatus                              *HsmStatus
-	IamRoles                               []map[string]interface{}
+	IamRoles                               []ClusterIamRoleList
 	KmsKeyID                               *string
 	MaintenanceTrackName                   *string
 	ManualSnapshotRetentionPeriod          *int64
@@ -53,8 +53,8 @@ type Cluster struct {
 	RestoreStatus                          *RestoreStatus
 	SnapshotScheduleIdentifier             *string
 	SnapshotScheduleState                  *ScheduleStateEnum
-	Tags                                   []map[string]interface{}
+	Tags                                   []TagList
 	TotalStorageCapacityInMegaBytes        *int64
 	VpcID                                  *string
-	VpcSecurityGroups                      []map[string]interface{}
+	VpcSecurityGroups                      []VpcSecurityGroupMembershipList
 }

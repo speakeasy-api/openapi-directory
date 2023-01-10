@@ -9,6 +9,26 @@ type ListAlertPoliciesQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 }
 
+type ListAlertPolicies200ApplicationJSONLinksPages1 struct {
+	Last *string `json:"last,omitempty"`
+	Next *string `json:"next,omitempty"`
+}
+
+type ListAlertPolicies200ApplicationJSONLinksPages2 struct {
+	First *string `json:"first,omitempty"`
+	Prev  *string `json:"prev,omitempty"`
+}
+
+type ListAlertPolicies200ApplicationJSONLinks struct {
+	Pages *interface{} `json:"pages,omitempty"`
+}
+
+// ListAlertPolicies200ApplicationJSONMeta
+// Information about the response itself.
+type ListAlertPolicies200ApplicationJSONMeta struct {
+	Total int64 `json:"total"`
+}
+
 type ListAlertPolicies200ApplicationJSONPoliciesAlertsSlack struct {
 	Channel string `json:"channel"`
 	URL     string `json:"url"`
@@ -66,6 +86,8 @@ type ListAlertPolicies200ApplicationJSONPolicies struct {
 }
 
 type ListAlertPolicies200ApplicationJSON struct {
+	Links    *ListAlertPolicies200ApplicationJSONLinks     `json:"links,omitempty"`
+	Meta     ListAlertPolicies200ApplicationJSONMeta       `json:"meta"`
 	Policies []ListAlertPolicies200ApplicationJSONPolicies `json:"policies"`
 }
 

@@ -34,26 +34,25 @@ func main() {
     
     req := operations.AnalyzeDocumentRequest{
         Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "alias",
-            XAmzCredential: "aliquam",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "cumque",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "earum",
+            XAmzAlgorithm: "repellendus",
+            XAmzContentSha256: "corrupti",
+            XAmzCredential: "ex",
+            XAmzDate: "voluptatum",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "doloribus",
             XAmzTarget: "Textract.AnalyzeDocument",
         },
         Request: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "explicabo",
+                Bytes: "sunt",
                 S3Object: &shared.S3Object{
-                    Bucket: "id",
-                    Name: "aperiam",
-                    Version: "esse",
+                    Bucket: "et",
+                    Name: "ea",
+                    Version: "deserunt",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
-                "TABLES",
                 "TABLES",
                 "FORMS",
             },
@@ -61,11 +60,10 @@ func main() {
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
                         "FreeOfAdultContent",
-                        "FreeOfPersonallyIdentifiableInformation",
                     },
                 },
-                FlowDefinitionArn: "maxime",
-                HumanLoopName: "expedita",
+                FlowDefinitionArn: "magnam",
+                HumanLoopName: "dicta",
             },
         },
     }

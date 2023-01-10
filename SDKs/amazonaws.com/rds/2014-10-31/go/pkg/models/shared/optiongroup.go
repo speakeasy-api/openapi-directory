@@ -9,6 +9,6 @@ type OptionGroup struct {
 	OptionGroupArn                        *string
 	OptionGroupDescription                *string
 	OptionGroupName                       *string
-	Options                               []map[string]interface{}
+	Options                               []OptionsList
 	VpcID                                 *string
 }

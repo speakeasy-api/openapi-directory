@@ -1,5 +1,12 @@
 package shared
 
+type CreateCallRequestAnswerURLAnswerMethodEnum string
+
+const (
+	CreateCallRequestAnswerURLAnswerMethodEnumPost CreateCallRequestAnswerURLAnswerMethodEnum = "POST"
+	CreateCallRequestAnswerURLAnswerMethodEnumGet  CreateCallRequestAnswerURLAnswerMethodEnum = "GET"
+)
+
 type CreateCallRequestAnswerURLEventMethodEnum string
 
 const (
@@ -15,6 +22,8 @@ const (
 )
 
 type CreateCallRequestAnswerURL struct {
+	AnswerMethod     *CreateCallRequestAnswerURLAnswerMethodEnum     `json:"answer_method,omitempty"`
+	AnswerURL        []string                                        `json:"answer_url"`
 	EventMethod      *CreateCallRequestAnswerURLEventMethodEnum      `json:"event_method,omitempty"`
 	EventURL         []string                                        `json:"event_url,omitempty"`
 	From             EndpointPhoneFrom                               `json:"from"`

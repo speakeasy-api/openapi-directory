@@ -23,17 +23,17 @@ func main() {
     
     req := operations.AllocateStaticIPRequest{
         Headers: operations.AllocateStaticIPHeaders{
-            XAmzAlgorithm: "quae",
-            XAmzContentSha256: "natus",
-            XAmzCredential: "et",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "ipsum",
-            XAmzSignature: "asperiores",
-            XAmzSignedHeaders: "eligendi",
+            XAmzAlgorithm: "excepturi",
+            XAmzContentSha256: "quia",
+            XAmzCredential: "dolore",
+            XAmzDate: "sapiente",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "quis",
+            XAmzSignedHeaders: "dolor",
             XAmzTarget: "Lightsail_20161128.AllocateStaticIp",
         },
         Request: shared.AllocateStaticIPRequest{
-            StaticIPName: "sit",
+            StaticIPName: "doloremque",
         },
     }
     

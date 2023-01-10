@@ -32,17 +32,17 @@ func main() {
             },
         },
         PathParams: operations.StorageBucketAccessControlsDeletePathParams{
-            Bucket: "repudiandae",
-            Entity: "architecto",
+            Bucket: "reiciendis",
+            Entity: "nemo",
         },
         QueryParams: operations.StorageBucketAccessControlsDeleteQueryParams{
             Alt: "json",
-            Fields: "fuga",
-            Key: "in",
-            OauthToken: "ullam",
+            Fields: "ratione",
+            Key: "veniam",
+            OauthToken: "reiciendis",
             PrettyPrint: false,
-            QuotaUser: "necessitatibus",
-            UserIP: "voluptatum",
+            QuotaUser: "temporibus",
+            UserIP: "dolor",
         },
     }
     

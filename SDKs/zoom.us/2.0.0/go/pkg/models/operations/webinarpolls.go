@@ -25,10 +25,21 @@ type WebinarPollsPollListPollQuestions struct {
 	Type    *WebinarPollsPollListPollQuestionsTypeEnum `json:"type,omitempty"`
 }
 
+type WebinarPollsPollListPollStatusEnum string
+
+const (
+	WebinarPollsPollListPollStatusEnumNotstart WebinarPollsPollListPollStatusEnum = "notstart"
+	WebinarPollsPollListPollStatusEnumStarted  WebinarPollsPollListPollStatusEnum = "started"
+	WebinarPollsPollListPollStatusEnumEnded    WebinarPollsPollListPollStatusEnum = "ended"
+	WebinarPollsPollListPollStatusEnumSharing  WebinarPollsPollListPollStatusEnum = "sharing"
+)
+
 // WebinarPollsPollListPoll
 // Poll
 type WebinarPollsPollListPoll struct {
+	ID        *string                             `json:"id,omitempty"`
 	Questions []WebinarPollsPollListPollQuestions `json:"questions,omitempty"`
+	Status    *WebinarPollsPollListPollStatusEnum `json:"status,omitempty"`
 	Title     *string                             `json:"title,omitempty"`
 }
 

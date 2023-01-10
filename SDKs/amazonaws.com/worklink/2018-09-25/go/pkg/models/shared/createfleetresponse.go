@@ -1,5 +1,5 @@
 package shared
 
 type CreateFleetResponse struct {
-	FleetArn map[string]interface{} `json:"FleetArn,omitempty"`
+	FleetArn *string `json:"FleetArn,omitempty"`
 }
