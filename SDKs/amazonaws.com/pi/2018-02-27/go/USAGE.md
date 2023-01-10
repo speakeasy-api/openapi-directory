@@ -33,7 +33,7 @@ func main() {
             XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
         },
         Request: shared.DescribeDimensionKeysRequest{
-            EndTime: "1986-12-25T05:47:46Z",
+            EndTime: "1986-12-15T18:29:59Z",
             Filter: map[string]string{
                 "inventore": "est",
                 "nisi": "consequatur",
@@ -60,7 +60,7 @@ func main() {
             },
             PeriodInSeconds: 8056810507064755208,
             ServiceType: "RDS",
-            StartTime: "1976-11-13T17:32:31Z",
+            StartTime: "1976-11-04T06:14:44Z",
         },
     }
     

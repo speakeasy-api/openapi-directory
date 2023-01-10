@@ -41,7 +41,7 @@ func main() {
                     shared.Segment{
                         BookingClass: "molestiae",
                         Carrier: "occaecati",
-                        Departure: "2013-07-27T00:16:19Z",
+                        Departure: "2013-07-17T12:45:06Z",
                         Destination: "aut",
                         Distance: 56.200001,
                         FlightNumber: 5546392017063827085,
@@ -51,7 +51,7 @@ func main() {
                     shared.Segment{
                         BookingClass: "accusantium",
                         Carrier: "necessitatibus",
-                        Departure: "1986-08-14T14:02:13Z",
+                        Departure: "1986-08-05T02:31:00Z",
                         Destination: "assumenda",
                         Distance: 22.100000,
                         FlightNumber: 8049362476316004085,
@@ -61,7 +61,7 @@ func main() {
                     shared.Segment{
                         BookingClass: "voluptatem",
                         Carrier: "nemo",
-                        Departure: "2008-10-20T15:28:21Z",
+                        Departure: "2008-10-11T03:57:08Z",
                         Destination: "voluptatem",
                         Distance: 52.099998,
                         FlightNumber: 3781651038987718744,

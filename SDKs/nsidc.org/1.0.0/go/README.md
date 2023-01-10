@@ -25,13 +25,13 @@ func main() {
     req := operations.FacetsRequest{
         QueryParams: operations.FacetsQueryParams{
             Count: 7648245904330072828,
-            EndDate: "2019-07-08",
+            EndDate: "2019-06-29",
             FacetFilters: "eos",
             SearchTerms: "facilis",
             SortKeys: "updated,,desc",
             Source: "NSIDC",
             Spatial: "voluptatem",
-            StartDate: "2019-01-02",
+            StartDate: "2018-12-24",
             StartIndex: 5945020423769330383,
         },
     }

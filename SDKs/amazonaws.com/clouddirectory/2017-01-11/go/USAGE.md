@@ -43,7 +43,7 @@ func main() {
                     Value: shared.TypedAttributeValue{
                         BinaryValue: "molestiae",
                         BooleanValue: false,
-                        DatetimeValue: "2009-08-28T03:28:02Z",
+                        DatetimeValue: "2009-08-18T16:12:12Z",
                         NumberValue: "cum",
                         StringValue: "a",
                     },
@@ -57,7 +57,7 @@ func main() {
                     Value: shared.TypedAttributeValue{
                         BinaryValue: "ipsum",
                         BooleanValue: false,
-                        DatetimeValue: "1971-08-17T05:31:18Z",
+                        DatetimeValue: "1971-08-07T18:15:28Z",
                         NumberValue: "et",
                         StringValue: "cupiditate",
                     },

@@ -27,11 +27,11 @@ func main() {
             Version: "exercitationem",
         },
         QueryParams: operations.GetAPIVVersionCurrenciesHistoryQueryParams{
-            End: "2006-07-23T05:06:43Z",
+            End: "2006-07-13T17:38:01Z",
             Format: "xml",
             Interval: "voluptatum",
             Pairs: "neque",
-            Start: "2009-08-15T00:46:52Z",
+            Start: "2009-08-05T13:18:10Z",
             Token: "odit",
         },
     }

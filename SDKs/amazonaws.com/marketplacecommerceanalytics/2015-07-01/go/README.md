@@ -48,7 +48,7 @@ func main() {
                 "ipsum": "repudiandae",
                 "iusto": "quis",
             },
-            DataSetPublicationDate: "2013-05-24T19:31:18Z",
+            DataSetPublicationDate: "2013-05-15T08:13:46Z",
             DataSetType: "monthly_revenue_billing_and_revenue_data",
             DestinationS3BucketName: "sunt",
             DestinationS3Prefix: "laborum",

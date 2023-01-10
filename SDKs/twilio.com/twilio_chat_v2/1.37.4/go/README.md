@@ -38,8 +38,8 @@ func main() {
         Request: &operations.CreateChannelCreateChannelRequest{
             Attributes: "et",
             CreatedBy: "aspernatur",
-            DateCreated: "1971-04-12T21:49:37Z",
-            DateUpdated: "2000-06-08T18:41:43Z",
+            DateCreated: "1971-04-03T10:19:30Z",
+            DateUpdated: "2000-05-30T07:11:36Z",
             FriendlyName: "deleniti",
             Type: "private",
             UniqueName: "assumenda",

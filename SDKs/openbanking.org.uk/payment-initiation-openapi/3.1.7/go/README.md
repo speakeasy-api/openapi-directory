@@ -43,7 +43,7 @@ func main() {
                 Data: shared.ObWriteDomesticConsent4Data{
                     Authorisation: &shared.ObWriteDomesticConsent4DataAuthorisation{
                         AuthorisationType: "Any",
-                        CompletionDateTime: "2021-11-01T01:51:56Z",
+                        CompletionDateTime: "2021-10-22T15:23:01Z",
                     },
                     Initiation: shared.ObWriteDomesticConsent4DataInitiation{
                         CreditorAccount: shared.ObWriteDomesticConsent4DataInitiationCreditorAccount{
@@ -116,7 +116,7 @@ func main() {
                 Data: shared.ObWriteDomesticConsent4Data{
                     Authorisation: &shared.ObWriteDomesticConsent4DataAuthorisation{
                         AuthorisationType: "Any",
-                        CompletionDateTime: "2001-09-28T01:22:47Z",
+                        CompletionDateTime: "2001-09-18T13:53:52Z",
                     },
                     Initiation: shared.ObWriteDomesticConsent4DataInitiation{
                         CreditorAccount: shared.ObWriteDomesticConsent4DataInitiationCreditorAccount{

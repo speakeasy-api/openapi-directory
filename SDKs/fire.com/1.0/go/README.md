@@ -36,7 +36,7 @@ func main() {
         Request: operations.CreateAPIApplicationNewAPIApplication{
             ApplicationName: "repellat",
             Enabled: true,
-            Expiry: "2007-02-05T03:26:50Z",
+            Expiry: "2007-01-26T16:05:44Z",
             Ican: 4405335760754809355,
             NumberOfPayeeApprovalsRequired: 620736082703045283,
             NumberOfPaymentApprovalsRequired: 1823518455980936632,

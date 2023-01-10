@@ -45,7 +45,7 @@ func main() {
                     ItemID: "voluptas",
                     Properties: "sunt",
                     RecommendationID: "ratione",
-                    SentAt: "2013-10-16T12:18:45Z",
+                    SentAt: "2013-10-07T01:00:59Z",
                 },
                 shared.Event{
                     EventID: "excepturi",
@@ -57,7 +57,7 @@ func main() {
                     ItemID: "officia",
                     Properties: "id",
                     RecommendationID: "voluptatibus",
-                    SentAt: "1995-07-10T23:45:54Z",
+                    SentAt: "1995-07-01T12:28:08Z",
                 },
             },
             SessionID: "dolor",

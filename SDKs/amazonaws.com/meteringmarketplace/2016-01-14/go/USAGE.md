@@ -39,7 +39,7 @@ func main() {
                     CustomerIdentifier: "soluta",
                     Dimension: "alias",
                     Quantity: 3089778739814785022,
-                    Timestamp: "1984-05-01T04:44:56Z",
+                    Timestamp: "1984-04-21T17:27:21Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 4453435121235553912,

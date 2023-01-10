@@ -35,8 +35,8 @@ func main() {
             Limit: 7492293258674483729,
             ObjectID: 1927730073196289851,
             ObjectType: "et",
-            OccurredAfter: "2002-08-18T04:42:39Z",
-            OccurredBefore: "1973-12-10T01:51:21Z",
+            OccurredAfter: "2002-08-08T17:15:15Z",
+            OccurredBefore: "1973-11-30T14:23:57Z",
             Sort: []string{
                 "qui",
                 "eaque",

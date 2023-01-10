@@ -34,7 +34,7 @@ func main() {
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "2013-04-29T22:32:07Z",
+                    AddedTime: "2013-04-20T11:02:32Z",
                     ID: "ad",
                     MediaType: "autem",
                 },

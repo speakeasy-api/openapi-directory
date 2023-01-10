@@ -32,7 +32,7 @@ func main() {
             Email: "omnis",
             EventName: "consequatur",
             ObjectID: "qui",
-            OccurredAt: "2005-12-23T00:20:18Z",
+            OccurredAt: "2005-12-13T12:52:56Z",
             Properties: map[string]string{
                 "qui": "voluptate",
                 "laboriosam": "est",

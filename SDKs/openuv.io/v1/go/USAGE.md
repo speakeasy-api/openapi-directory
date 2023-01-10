@@ -14,7 +14,7 @@ func main() {
     req := operations.GetForecastRequest{
         QueryParams: operations.GetForecastQueryParams{
             Alt: 15.200000,
-            Dt: "2004-08-16T00:16:18Z",
+            Dt: "2004-08-06T12:47:17Z",
             Lat: 10.200000,
             Lng: 75.099998,
             Ozone: 85.099998,

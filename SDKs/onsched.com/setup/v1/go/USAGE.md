@@ -27,7 +27,7 @@ func main() {
             CalendarID: "eum",
             CustomerID: "similique",
             Email: "laborum",
-            EndDate: "2007-03-22T06:19:15Z",
+            EndDate: "2007-03-12T18:50:24Z",
             Lastname: "quasi",
             Limit: 6235266708457036196,
             LocationID: "est",
@@ -35,7 +35,7 @@ func main() {
             ResourceID: "nulla",
             ServiceAllocationID: "natus",
             ServiceID: "commodi",
-            StartDate: "1982-06-29T23:37:51Z",
+            StartDate: "1982-06-20T12:09:00Z",
             Status: "adipisci",
         },
     }

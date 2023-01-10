@@ -81,7 +81,7 @@ func main() {
                     UseAmortized: true,
                     UseBlended: true,
                 },
-                LastUpdatedTime: "2020-04-14T04:17:49Z",
+                LastUpdatedTime: "2020-04-04T17:02:02Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
                     "modi": shared.Spend{
                         Amount: "dolor",
@@ -97,8 +97,8 @@ func main() {
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "1983-12-01T15:56:44Z",
-                    Start: "2006-01-19T06:53:53Z",
+                    End: "1983-11-22T04:40:57Z",
+                    Start: "2006-01-09T19:38:06Z",
                 },
                 TimeUnit: "QUARTERLY",
             },

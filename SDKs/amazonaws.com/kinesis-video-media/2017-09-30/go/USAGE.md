@@ -36,7 +36,7 @@ func main() {
                 AfterFragmentNumber: "fugit",
                 ContinuationToken: "repellat",
                 StartSelectorType: "PRODUCER_TIMESTAMP",
-                StartTimestamp: "2002-05-04T01:59:05Z",
+                StartTimestamp: "2002-04-24T14:41:47Z",
             },
             StreamARN: "omnis",
             StreamName: "magni",

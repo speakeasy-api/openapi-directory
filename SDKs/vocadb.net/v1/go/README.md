@@ -24,7 +24,7 @@ func main() {
     
     req := operations.ActivityEntryAPIGetListRequest{
         QueryParams: operations.ActivityEntryAPIGetListQueryParams{
-            Before: "2001-01-08T12:29:54Z",
+            Before: "2000-12-30T00:58:45Z",
             EditEvent: "Updated",
             EntryFields: "MainPicture",
             EntryType: "Album",
@@ -32,7 +32,7 @@ func main() {
             GetTotalCount: true,
             Lang: "Default",
             MaxResults: 8152946618831078707,
-            Since: "2000-03-05T06:51:46Z",
+            Since: "2000-02-24T19:20:37Z",
             SortRule: "CreateDate",
             UserID: 1938043663830596226,
         },

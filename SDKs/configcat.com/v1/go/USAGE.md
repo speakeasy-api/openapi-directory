@@ -34,8 +34,8 @@ func main() {
             },
             ConfigID: "aliquid",
             EnvironmentID: "iure",
-            FromUtcDateTime: "2004-04-09T14:38:57Z",
-            ToUtcDateTime: "1997-12-25T03:44:42Z",
+            FromUtcDateTime: "2004-03-31T03:18:23Z",
+            ToUtcDateTime: "1997-12-15T16:24:08Z",
         },
     }
     

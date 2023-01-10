@@ -34,7 +34,7 @@ func main() {
         Request: operations.CreateSavingsPlanRequestBody{
             ClientToken: "dicta",
             Commitment: "tenetur",
-            PurchaseTime: "2000-01-18T13:27:19Z",
+            PurchaseTime: "2000-01-09T02:09:05Z",
             SavingsPlanOfferingID: "cupiditate",
             Tags: map[string]string{
                 "facere": "sequi",

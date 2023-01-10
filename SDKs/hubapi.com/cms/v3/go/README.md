@@ -31,16 +31,16 @@ func main() {
         QueryParams: operations.GetCmsV3DomainsGetPageQueryParams{
             After: "facilis",
             Archived: true,
-            CreatedAfter: "1986-06-07T03:55:52Z",
-            CreatedAt: "1984-11-19T16:36:42Z",
-            CreatedBefore: "1999-01-08T19:20:15Z",
+            CreatedAfter: "1986-05-28T16:28:29Z",
+            CreatedAt: "1984-11-10T05:09:19Z",
+            CreatedBefore: "1998-12-30T07:52:52Z",
             Limit: 4971810752955050478,
             Sort: []string{
                 "nihil",
             },
-            UpdatedAfter: "1974-11-10T11:52:43Z",
-            UpdatedAt: "1981-04-27T18:35:46Z",
-            UpdatedBefore: "2010-08-14T06:06:02Z",
+            UpdatedAfter: "1974-11-01T00:25:20Z",
+            UpdatedAt: "1981-04-18T07:08:23Z",
+            UpdatedBefore: "2010-08-04T18:38:39Z",
         },
     }
     

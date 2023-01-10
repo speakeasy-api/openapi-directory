@@ -137,7 +137,7 @@ func main() {
             CombinedServiceIndicator: false,
             FrequencyPerDay: 1511290573124094661,
             RecurringIndicator: false,
-            ValidUntil: "2001-04-06",
+            ValidUntil: "2001-03-28",
         },
     }
     

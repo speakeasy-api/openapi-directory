@@ -46,8 +46,8 @@ func main() {
             ClipFragmentSelector: operations.GetClipRequestBodyClipFragmentSelector{
                 FragmentSelectorType: "PRODUCER_TIMESTAMP",
                 TimestampRange: &shared.ClipTimestampRange{
-                    EndTimestamp: "1995-01-31T08:02:00Z",
-                    StartTimestamp: "1979-11-06T16:29:01Z",
+                    EndTimestamp: "1995-01-21T20:44:43Z",
+                    StartTimestamp: "1979-10-28T05:11:44Z",
                 },
             },
             StreamARN: "quae",

@@ -27,8 +27,8 @@ func main() {
         Request: &operations.CreateChannelCreateChannelRequest{
             Attributes: "occaecati",
             CreatedBy: "consequatur",
-            DateCreated: "2020-03-04T06:29:12Z",
-            DateUpdated: "1978-01-12T18:24:27Z",
+            DateCreated: "2020-02-23T18:59:01Z",
+            DateUpdated: "1978-01-03T06:54:16Z",
             FriendlyName: "fuga",
             Type: "public",
             UniqueName: "quis",
