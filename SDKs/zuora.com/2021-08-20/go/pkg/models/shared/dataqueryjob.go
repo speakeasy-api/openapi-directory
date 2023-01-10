@@ -1,5 +1,9 @@
 package shared
 
+import (
+	"time"
+)
+
 type DataQueryJobQueryStatusEnum string
 
 const (
@@ -14,8 +18,13 @@ const (
 // DataQueryJob
 // A data query job.
 type DataQueryJob struct {
-	DataFile       *string                      `json:"dataFile,omitempty"`
-	OutputRows     *int64                       `json:"outputRows,omitempty"`
-	ProcessingTime *int64                       `json:"processingTime,omitempty"`
-	QueryStatus    *DataQueryJobQueryStatusEnum `json:"queryStatus,omitempty"`
+	CreatedBy        *string                      `json:"createdBy,omitempty"`
+	DataFile         *string                      `json:"dataFile,omitempty"`
+	ID               *string                      `json:"id,omitempty"`
+	OutputRows       *int64                       `json:"outputRows,omitempty"`
+	ProcessingTime   *int64                       `json:"processingTime,omitempty"`
+	Query            *string                      `json:"query,omitempty"`
+	QueryStatus      *DataQueryJobQueryStatusEnum `json:"queryStatus,omitempty"`
+	RemainingRetries *int64                       `json:"remainingRetries,omitempty"`
+	UpdatedOn        *time.Time                   `json:"updatedOn,omitempty"`
 }

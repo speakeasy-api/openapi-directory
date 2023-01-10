@@ -36,6 +36,7 @@ type PostOrderLineItemUpdateType struct {
 	CustomFields                    map[string]interface{}                    `json:"customFields,omitempty"`
 	DeferredRevenueAccountingCode   *string                                   `json:"deferredRevenueAccountingCode,omitempty"`
 	Description                     *string                                   `json:"description,omitempty"`
+	ID                              string                                    `json:"id"`
 	ItemName                        *string                                   `json:"itemName,omitempty"`
 	ItemNumber                      *string                                   `json:"itemNumber,omitempty"`
 	ItemState                       *PostOrderLineItemUpdateTypeItemStateEnum `json:"itemState,omitempty"`

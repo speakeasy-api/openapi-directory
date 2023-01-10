@@ -10,6 +10,11 @@ type JobResultRamps struct {
 	SubscriptionNumber *string `json:"subscriptionNumber,omitempty"`
 }
 
+type JobResultReasons struct {
+	Code    *string `json:"code,omitempty"`
+	Message *string `json:"message,omitempty"`
+}
+
 type JobResultStatusEnum string
 
 const (
@@ -48,9 +53,12 @@ type JobResult struct {
 	PaidAmount          *string                   `json:"paidAmount,omitempty"`
 	PaymentID           *string                   `json:"paymentId,omitempty"`
 	PaymentNumber       *string                   `json:"paymentNumber,omitempty"`
+	ProcessID           *string                   `json:"processId,omitempty"`
 	Ramps               []JobResultRamps          `json:"ramps,omitempty"`
+	Reasons             []JobResultReasons        `json:"reasons,omitempty"`
 	Status              *JobResultStatusEnum      `json:"status,omitempty"`
 	SubscriptionIds     []string                  `json:"subscriptionIds,omitempty"`
 	SubscriptionNumbers []string                  `json:"subscriptionNumbers,omitempty"`
 	Subscriptions       []JobResultSubscriptions  `json:"subscriptions,omitempty"`
+	Success             *bool                     `json:"success,omitempty"`
 }

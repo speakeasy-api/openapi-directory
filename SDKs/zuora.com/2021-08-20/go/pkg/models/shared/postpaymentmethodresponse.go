@@ -8,6 +8,8 @@ type PostPaymentMethodResponseReasons struct {
 }
 
 type PostPaymentMethodResponse struct {
-	ID      *string                            `json:"id,omitempty"`
-	Reasons []PostPaymentMethodResponseReasons `json:"reasons,omitempty"`
+	ID        *string                            `json:"id,omitempty"`
+	ProcessID *string                            `json:"processId,omitempty"`
+	Reasons   []PostPaymentMethodResponseReasons `json:"reasons,omitempty"`
+	Success   *bool                              `json:"success,omitempty"`
 }

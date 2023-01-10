@@ -7,6 +7,7 @@ type GetRampByRampNumberResponseTypeReasons struct {
 
 type GetRampByRampNumberResponseType struct {
 	ProcessID *string                                  `json:"processId,omitempty"`
+	Ramp      *RampResponse                            `json:"ramp,omitempty"`
 	Reasons   []GetRampByRampNumberResponseTypeReasons `json:"reasons,omitempty"`
 	Success   *bool                                    `json:"success,omitempty"`
 }

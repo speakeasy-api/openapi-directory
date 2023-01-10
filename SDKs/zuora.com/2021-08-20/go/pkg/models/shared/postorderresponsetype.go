@@ -10,6 +10,11 @@ type PostOrderResponseTypeRamps struct {
 	SubscriptionNumber *string `json:"subscriptionNumber,omitempty"`
 }
 
+type PostOrderResponseTypeReasons struct {
+	Code    *string `json:"code,omitempty"`
+	Message *string `json:"message,omitempty"`
+}
+
 type PostOrderResponseTypeStatusEnum string
 
 const (
@@ -46,9 +51,12 @@ type PostOrderResponseType struct {
 	PaidAmount          *string                               `json:"paidAmount,omitempty"`
 	PaymentID           *string                               `json:"paymentId,omitempty"`
 	PaymentNumber       *string                               `json:"paymentNumber,omitempty"`
+	ProcessID           *string                               `json:"processId,omitempty"`
 	Ramps               []PostOrderResponseTypeRamps          `json:"ramps,omitempty"`
+	Reasons             []PostOrderResponseTypeReasons        `json:"reasons,omitempty"`
 	Status              *PostOrderResponseTypeStatusEnum      `json:"status,omitempty"`
 	SubscriptionIds     []string                              `json:"subscriptionIds,omitempty"`
 	SubscriptionNumbers []string                              `json:"subscriptionNumbers,omitempty"`
 	Subscriptions       []PostOrderResponseTypeSubscriptions  `json:"subscriptions,omitempty"`
+	Success             *bool                                 `json:"success,omitempty"`
 }

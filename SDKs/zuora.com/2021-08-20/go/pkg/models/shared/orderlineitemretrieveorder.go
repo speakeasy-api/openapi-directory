@@ -30,12 +30,15 @@ const (
 
 type OrderLineItemRetrieveOrder struct {
 	UOM                             *string                                  `json:"UOM,omitempty"`
+	Amount                          *float64                                 `json:"amount,omitempty"`
 	AmountPerUnit                   *float64                                 `json:"amountPerUnit,omitempty"`
 	BillTargetDate                  *time.Time                               `json:"billTargetDate,omitempty"`
 	CustomFields                    map[string]interface{}                   `json:"customFields,omitempty"`
 	DeferredRevenueAccountingCode   *string                                  `json:"deferredRevenueAccountingCode,omitempty"`
 	Description                     *string                                  `json:"description,omitempty"`
+	ID                              *string                                  `json:"id,omitempty"`
 	ItemName                        *string                                  `json:"itemName,omitempty"`
+	ItemNumber                      *string                                  `json:"itemNumber,omitempty"`
 	ItemState                       *OrderLineItemRetrieveOrderItemStateEnum `json:"itemState,omitempty"`
 	ItemType                        *OrderLineItemRetrieveOrderItemTypeEnum  `json:"itemType,omitempty"`
 	ListPricePerUnit                *float64                                 `json:"listPricePerUnit,omitempty"`

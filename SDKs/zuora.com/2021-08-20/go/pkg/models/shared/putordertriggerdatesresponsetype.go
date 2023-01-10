@@ -1,5 +1,10 @@
 package shared
 
+type PutOrderTriggerDatesResponseTypeReasons struct {
+	Code    *string `json:"code,omitempty"`
+	Message *string `json:"message,omitempty"`
+}
+
 type PutOrderTriggerDatesResponseTypeStatusEnum string
 
 const (
@@ -23,6 +28,9 @@ type PutOrderTriggerDatesResponseTypeSubscriptions struct {
 type PutOrderTriggerDatesResponseType struct {
 	AccountNumber *string                                         `json:"accountNumber,omitempty"`
 	OrderNumber   *string                                         `json:"orderNumber,omitempty"`
+	ProcessID     *string                                         `json:"processId,omitempty"`
+	Reasons       []PutOrderTriggerDatesResponseTypeReasons       `json:"reasons,omitempty"`
 	Status        *PutOrderTriggerDatesResponseTypeStatusEnum     `json:"status,omitempty"`
 	Subscriptions []PutOrderTriggerDatesResponseTypeSubscriptions `json:"subscriptions,omitempty"`
+	Success       *bool                                           `json:"success,omitempty"`
 }

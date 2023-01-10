@@ -6,7 +6,8 @@ type GetRampMetricsBySubscriptionKeyResponseTypeReasons struct {
 }
 
 type GetRampMetricsBySubscriptionKeyResponseType struct {
-	ProcessID *string                                              `json:"processId,omitempty"`
-	Reasons   []GetRampMetricsBySubscriptionKeyResponseTypeReasons `json:"reasons,omitempty"`
-	Success   *bool                                                `json:"success,omitempty"`
+	ProcessID   *string                                              `json:"processId,omitempty"`
+	RampMetrics *RampMetrics                                         `json:"rampMetrics,omitempty"`
+	Reasons     []GetRampMetricsBySubscriptionKeyResponseTypeReasons `json:"reasons,omitempty"`
+	Success     *bool                                                `json:"success,omitempty"`
 }
