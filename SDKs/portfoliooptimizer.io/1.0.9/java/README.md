@@ -34,7 +34,7 @@ public class Application {
             SDK sdk = builder.build();
 
             PostAssetsCorrelationMatrixRequest req = new PostAssetsCorrelationMatrixRequest() {{
-                request = "facilis";
+                request = "sit";
             }};
 
             PostAssetsCorrelationMatrixResponse res = sdk.assetsCorrelationMatrix.postAssetsCorrelationMatrix(req);

@@ -19,10 +19,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetOrderPathParams() {{
-                    orderId = "voluptas";
+                    orderId = "sit";
                 }};
                 queryParams = new GetOrderQueryParams() {{
-                    fieldGroups = "ut";
+                    fieldGroups = "voluptas";
                 }};
             }};
 

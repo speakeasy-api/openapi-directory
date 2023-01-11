@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetPayoutPathParams() {{
-                    payoutId = "quo";
+                    payoutId = "sit";
                 }};
             }};
 

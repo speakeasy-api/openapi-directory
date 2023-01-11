@@ -22,16 +22,16 @@ public class Application {
 
             DeleteLexiconRequest req = new DeleteLexiconRequest() {{
                 pathParams = new DeleteLexiconPathParams() {{
-                    lexiconName = "nemo";
+                    lexiconName = "sit";
                 }};
                 headers = new DeleteLexiconHeaders() {{
-                    xAmzAlgorithm = "quia";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "sint";
-                    xAmzDate = "distinctio";
-                    xAmzSecurityToken = "maiores";
-                    xAmzSignature = "exercitationem";
-                    xAmzSignedHeaders = "sunt";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

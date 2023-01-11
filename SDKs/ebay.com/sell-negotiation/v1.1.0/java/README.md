@@ -32,11 +32,11 @@ public class Application {
                     }};
                 }};
                 queryParams = new FindEligibleItemsQueryParams() {{
-                    limit = "non";
-                    offset = "non";
+                    limit = "sit";
+                    offset = "voluptas";
                 }};
                 headers = new FindEligibleItemsHeaders() {{
-                    xEBAYCMARKETPLACEID = "nam";
+                    xEBAYCMARKETPLACEID = "culpa";
                 }};
             }};
 

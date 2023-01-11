@@ -14,8 +14,8 @@ public class Application {
 
             GetfullnamematchRequest req = new GetfullnamematchRequest() {{
                 queryParams = new GetfullnamematchQueryParams() {{
-                    fullname = "explicabo";
-                    license = "eos";
+                    fullname = "sit";
+                    license = "voluptas";
                 }};
             }};
 

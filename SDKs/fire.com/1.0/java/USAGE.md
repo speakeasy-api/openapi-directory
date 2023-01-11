@@ -22,16 +22,15 @@ public class Application {
 
             CreateApiApplicationRequest req = new CreateApiApplicationRequest() {{
                 request = new CreateApiApplicationNewApiApplication() {{
-                    applicationName = "eum";
-                    enabled = true;
-                    expiry = "1973-08-29T09:00:45Z";
-                    ican = 3921169290827299935;
-                    numberOfPayeeApprovalsRequired = 6167316338759183977;
-                    numberOfPaymentApprovalsRequired = 2826820190694642039;
+                    applicationName = "sit";
+                    enabled = false;
+                    expiry = "1978-05-13T03:50:47Z";
+                    ican = 501233450539197794;
+                    numberOfPayeeApprovalsRequired = 3390393562759376202;
+                    numberOfPaymentApprovalsRequired = 2669985732393126063;
                     permissions = new String[]() {{
-                        add("quaerat"),
-                        add("ea"),
-                        add("et"),
+                        add("voluptas"),
+                        add("fugit"),
                     }};
                 }};
             }};

@@ -27,7 +27,7 @@ public class Application {
 
             GetLatestBaseCurrencyRequest req = new GetLatestBaseCurrencyRequest() {{
                 pathParams = new GetLatestBaseCurrencyPathParams() {{
-                    baseCurrency = "id";
+                    baseCurrency = "sit";
                 }};
             }};
 

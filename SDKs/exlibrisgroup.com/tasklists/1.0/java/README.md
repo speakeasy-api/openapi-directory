@@ -35,13 +35,13 @@ public class Application {
 
             GetAlmawsV1TaskListsRsLendingRequestsRequest req = new GetAlmawsV1TaskListsRsLendingRequestsRequest() {{
                 queryParams = new GetAlmawsV1TaskListsRsLendingRequestsQueryParams() {{
-                    library = "autem";
-                    partner = "hic";
-                    printed = "voluptatem";
-                    reported = "omnis";
-                    requestedFormat = "libero";
-                    status = "qui";
-                    suppliedFormat = "omnis";
+                    library = "sit";
+                    partner = "voluptas";
+                    printed = "culpa";
+                    reported = "expedita";
+                    requestedFormat = "consequuntur";
+                    status = "dolor";
+                    suppliedFormat = "expedita";
                 }};
             }};
 

@@ -25,9 +25,9 @@ public class Application {
 
             BuyANumberRequest req = new BuyANumberRequest() {{
                 request = new NumberDetails() {{
-                    country = "id";
-                    msisdn = "similique";
-                    targetApiKey = "voluptatum";
+                    country = "sit";
+                    msisdn = "voluptas";
+                    targetApiKey = "culpa";
                 }};
             }};
 

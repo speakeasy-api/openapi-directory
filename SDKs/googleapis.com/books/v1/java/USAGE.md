@@ -22,22 +22,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new BooksBookshelvesGetPathParams() {{
-                    shelf = "quia";
-                    userId = "laboriosam";
+                    shelf = "sit";
+                    userId = "voluptas";
                 }};
                 queryParams = new BooksBookshelvesGetQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "media";
-                    callback = "est";
-                    fields = "incidunt";
-                    key = "aut";
-                    oauthToken = "corrupti";
-                    prettyPrint = true;
-                    quotaUser = "tenetur";
-                    source = "nemo";
-                    uploadType = "beatae";
-                    uploadProtocol = "iste";
+                    accessToken = "expedita";
+                    alt = "proto";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    source = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

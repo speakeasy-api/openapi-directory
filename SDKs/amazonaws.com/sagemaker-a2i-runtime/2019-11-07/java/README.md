@@ -35,16 +35,16 @@ public class Application {
 
             DeleteHumanLoopRequest req = new DeleteHumanLoopRequest() {{
                 pathParams = new DeleteHumanLoopPathParams() {{
-                    humanLoopName = "exercitationem";
+                    humanLoopName = "sit";
                 }};
                 headers = new DeleteHumanLoopHeaders() {{
-                    xAmzAlgorithm = "hic";
-                    xAmzContentSha256 = "doloribus";
-                    xAmzCredential = "porro";
-                    xAmzDate = "est";
-                    xAmzSecurityToken = "deserunt";
-                    xAmzSignature = "eum";
-                    xAmzSignedHeaders = "sit";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

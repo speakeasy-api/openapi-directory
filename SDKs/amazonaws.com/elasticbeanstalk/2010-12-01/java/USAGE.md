@@ -24,17 +24,17 @@ public class Application {
                 queryParams = new GetAbortEnvironmentUpdateQueryParams() {{
                     action = "AbortEnvironmentUpdate";
                     environmentId = "voluptas";
-                    environmentName = "facilis";
+                    environmentName = "culpa";
                     version = "2010-12-01";
                 }};
                 headers = new GetAbortEnvironmentUpdateHeaders() {{
-                    xAmzAlgorithm = "sunt";
-                    xAmzContentSha256 = "quis";
-                    xAmzCredential = "qui";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "temporibus";
-                    xAmzSignature = "nemo";
-                    xAmzSignedHeaders = "ea";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

@@ -19,10 +19,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new ControlChargerChargingPathParams() {{
-                    chargerId = "iusto";
+                    chargerId = "sit";
                 }};
                 request = new ControlChargerChargingRequestBody() {{
-                    action = "STOP";
+                    action = "START";
                 }};
             }};
 

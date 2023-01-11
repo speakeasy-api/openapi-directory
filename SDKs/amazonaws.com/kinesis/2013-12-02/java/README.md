@@ -35,19 +35,19 @@ public class Application {
 
             AddTagsToStreamRequest req = new AddTagsToStreamRequest() {{
                 headers = new AddTagsToStreamHeaders() {{
-                    xAmzAlgorithm = "vel";
-                    xAmzContentSha256 = "magni";
-                    xAmzCredential = "architecto";
-                    xAmzDate = "est";
-                    xAmzSecurityToken = "consectetur";
-                    xAmzSignature = "dolores";
-                    xAmzSignedHeaders = "in";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Kinesis_20131202.AddTagsToStream";
                 }};
                 request = new AddTagsToStreamInput() {{
-                    streamName = "possimus";
+                    streamName = "fugit";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("animi", "nesciunt");
+                        put("nihil", "rerum");
                     }};
                 }};
             }};

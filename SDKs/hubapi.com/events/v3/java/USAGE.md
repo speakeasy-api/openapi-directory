@@ -19,18 +19,16 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetEventsV3EventsGetPageQueryParams() {{
-                    after = "neque";
-                    before = "qui";
-                    eventType = "error";
-                    limit = 2852301075646764818;
-                    objectId = 4005782589587790576;
-                    objectType = "ab";
-                    occurredAfter = "1996-01-08T07:45:13Z";
-                    occurredBefore = "1972-05-28T14:45:14Z";
+                    after = "sit";
+                    before = "voluptas";
+                    eventType = "culpa";
+                    limit = 501233450539197794;
+                    objectId = 3390393562759376202;
+                    objectType = "dolor";
+                    occurredAfter = "2009-11-26T21:53:53Z";
+                    occurredBefore = "1978-05-28T16:08:43Z";
                     sort = new String[]() {{
                         add("et"),
-                        add("aliquid"),
-                        add("sunt"),
                     }};
                 }};
             }};

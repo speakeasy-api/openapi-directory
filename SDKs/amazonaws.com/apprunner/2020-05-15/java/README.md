@@ -35,19 +35,19 @@ public class Application {
 
             AssociateCustomDomainRequest req = new AssociateCustomDomainRequest() {{
                 headers = new AssociateCustomDomainHeaders() {{
-                    xAmzAlgorithm = "pariatur";
-                    xAmzContentSha256 = "id";
-                    xAmzCredential = "voluptatem";
-                    xAmzDate = "esse";
-                    xAmzSecurityToken = "in";
-                    xAmzSignature = "amet";
-                    xAmzSignedHeaders = "consectetur";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AppRunner.AssociateCustomDomain";
                 }};
                 request = new AssociateCustomDomainRequest() {{
-                    domainName = "nesciunt";
+                    domainName = "fugit";
                     enableWWWSubdomain = false;
-                    serviceArn = "aut";
+                    serviceArn = "nihil";
                 }};
             }};
 

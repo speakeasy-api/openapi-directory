@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetFoodBrandedBarcodePhpQueryParams() {{
-                    code = "velit";
+                    code = "sit";
                 }};
             }};
 

@@ -24,39 +24,38 @@ public class Application {
                     }};
                 }};
                 pathParams = new JobsProjectsClientEventsCreatePathParams() {{
-                    parent = "mollitia";
+                    parent = "sit";
                 }};
                 queryParams = new JobsProjectsClientEventsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "commodi";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "occaecati";
-                    fields = "qui";
-                    key = "rerum";
-                    oauthToken = "eos";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "est";
-                    uploadType = "cupiditate";
-                    uploadProtocol = "quas";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new CreateClientEventRequest() {{
                     clientEvent = new ClientEvent() {{
-                        createTime = "laborum";
-                        eventId = "vel";
+                        createTime = "dicta";
+                        eventId = "debitis";
                         extraInfo = new java.util.HashMap<String, String>() {{
-                            put("omnis", "est");
-                            put("ut", "rerum");
+                            put("et", "ut");
                         }};
                         jobEvent = new JobEvent() {{
                             jobs = new String[]() {{
-                                add("sit"),
-                                add("praesentium"),
-                                add("at"),
+                                add("et"),
+                                add("voluptate"),
+                                add("iste"),
                             }};
-                            type = "JOB_EVENT_TYPE_UNSPECIFIED";
+                            type = "APPLICATION_COMPANY_SUBMIT";
                         }};
-                        parentEventId = "voluptatem";
-                        requestId = "accusantium";
+                        parentEventId = "totam";
+                        requestId = "dolores";
                     }};
                 }};
             }};

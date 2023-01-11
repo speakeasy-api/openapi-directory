@@ -35,46 +35,59 @@ public class Application {
 
             PutEventsRequest req = new PutEventsRequest() {{
                 headers = new PutEventsHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "id";
-                    xAmzDate = "voluptatem";
-                    xAmzSecurityToken = "fuga";
-                    xAmzSignature = "aperiam";
-                    xAmzSignedHeaders = "facilis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new PutEventsRequestBody() {{
                     eventList = new openapisdk.models.shared.Event[]() {{
                         add(new Event() {{
-                            eventId = "atque";
-                            eventType = "recusandae";
-                            eventValue = 44.099998;
+                            eventId = "fugit";
+                            eventType = "et";
+                            eventValue = 68.199997;
                             impression = new String[]() {{
-                                add("atque"),
-                                add("iure"),
-                                add("qui"),
+                                add("debitis"),
+                                add("voluptatum"),
+                                add("et"),
                             }};
-                            itemId = "voluptas";
-                            properties = "sunt";
-                            recommendationId = "ratione";
-                            sentAt = "2013-10-07T01:00:59Z";
+                            itemId = "ut";
+                            properties = "dolorem";
+                            recommendationId = "et";
+                            sentAt = "1998-09-30T11:01:25Z";
                         }}),
                         add(new Event() {{
-                            eventId = "excepturi";
-                            eventType = "vel";
-                            eventValue = 63.099998;
+                            eventId = "vitae";
+                            eventType = "totam";
+                            eventValue = 80.199997;
                             impression = new String[]() {{
-                                add("sapiente"),
+                                add("vel"),
                             }};
-                            itemId = "officia";
-                            properties = "id";
-                            recommendationId = "voluptatibus";
-                            sentAt = "1995-07-01T12:28:08Z";
+                            itemId = "odio";
+                            properties = "dolore";
+                            recommendationId = "id";
+                            sentAt = "2015-12-03T16:44:03Z";
+                        }}),
+                        add(new Event() {{
+                            eventId = "accusantium";
+                            eventType = "totam";
+                            eventValue = 64.099998;
+                            impression = new String[]() {{
+                                add("aut"),
+                                add("odit"),
+                            }};
+                            itemId = "non";
+                            properties = "voluptas";
+                            recommendationId = "omnis";
+                            sentAt = "2015-03-08T17:52:36Z";
                         }}),
                     }};
-                    sessionId = "dolor";
-                    trackingId = "itaque";
-                    userId = "veritatis";
+                    sessionId = "illo";
+                    trackingId = "sed";
+                    userId = "officiis";
                 }};
             }};
 

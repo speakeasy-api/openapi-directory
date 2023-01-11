@@ -22,18 +22,18 @@ public class Application {
 
             AssociateWebAclRequest req = new AssociateWebAclRequest() {{
                 headers = new AssociateWebAclHeaders() {{
-                    xAmzAlgorithm = "consequatur";
-                    xAmzContentSha256 = "modi";
-                    xAmzCredential = "consequatur";
-                    xAmzDate = "quia";
-                    xAmzSecurityToken = "eaque";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "assumenda";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSWAF_Regional_20161128.AssociateWebACL";
                 }};
                 request = new AssociateWebAclRequest() {{
-                    resourceArn = "perspiciatis";
-                    webACLId = "quia";
+                    resourceArn = "fugit";
+                    webACLId = "et";
                 }};
             }};
 

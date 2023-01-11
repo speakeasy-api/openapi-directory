@@ -35,8 +35,8 @@ public class Application {
                     }};
                 }};
                 request = new AccountCreateRecoveryRequestBody() {{
-                    email = "amet";
-                    url = "sequi";
+                    email = "sit";
+                    url = "voluptas";
                 }};
             }};
 

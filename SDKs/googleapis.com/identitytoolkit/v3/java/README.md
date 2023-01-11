@@ -36,32 +36,34 @@ public class Application {
                 }};
                 queryParams = new IdentitytoolkitRelyingpartyCreateAuthUriQueryParams() {{
                     alt = "json";
-                    fields = "aut";
-                    key = "ab";
-                    oauthToken = "repellendus";
-                    prettyPrint = false;
-                    quotaUser = "consequatur";
-                    userIp = "numquam";
+                    fields = "voluptas";
+                    key = "culpa";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "dolor";
+                    userIp = "expedita";
                 }};
                 request = new IdentitytoolkitRelyingpartyCreateAuthUriRequest() {{
-                    appId = "saepe";
-                    authFlowType = "consequatur";
-                    clientId = "veniam";
-                    context = "non";
-                    continueUri = "aut";
+                    appId = "voluptas";
+                    authFlowType = "fugit";
+                    clientId = "et";
+                    context = "nihil";
+                    continueUri = "rerum";
                     customParameter = new java.util.HashMap<String, String>() {{
-                        put("at", "impedit");
+                        put("debitis", "voluptatum");
+                        put("et", "ut");
+                        put("dolorem", "et");
                     }};
-                    hostedDomain = "molestiae";
-                    identifier = "veniam";
-                    oauthConsumerKey = "repellendus";
-                    oauthScope = "molestiae";
-                    openidRealm = "magnam";
-                    otaApp = "cum";
-                    providerId = "molestiae";
-                    sessionId = "fuga";
-                    tenantId = "quas";
-                    tenantProjectNumber = "quia";
+                    hostedDomain = "voluptate";
+                    identifier = "iste";
+                    oauthConsumerKey = "vitae";
+                    oauthScope = "totam";
+                    openidRealm = "dolores";
+                    otaApp = "illum";
+                    providerId = "debitis";
+                    sessionId = "vel";
+                    tenantId = "odio";
+                    tenantProjectNumber = "dolore";
                 }};
             }};
 

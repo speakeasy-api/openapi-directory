@@ -20,13 +20,13 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateChannelPathParams() {{
-                    serviceSid = "quam";
+                    serviceSid = "sit";
                 }};
                 request = new CreateChannelCreateChannelRequest() {{
-                    attributes = "maiores";
-                    friendlyName = "totam";
+                    attributes = "voluptas";
+                    friendlyName = "culpa";
                     type = "public";
-                    uniqueName = "aperiam";
+                    uniqueName = "consequuntur";
                 }};
             }};
 

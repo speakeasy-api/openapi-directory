@@ -22,20 +22,20 @@ public class Application {
 
             AssociateFirewallPolicyRequest req = new AssociateFirewallPolicyRequest() {{
                 headers = new AssociateFirewallPolicyHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "et";
-                    xAmzCredential = "et";
-                    xAmzDate = "a";
-                    xAmzSecurityToken = "quis";
-                    xAmzSignature = "est";
-                    xAmzSignedHeaders = "dolorum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "NetworkFirewall_20201112.AssociateFirewallPolicy";
                 }};
                 request = new AssociateFirewallPolicyRequest() {{
-                    firewallArn = "veniam";
-                    firewallName = "est";
-                    firewallPolicyArn = "blanditiis";
-                    updateToken = "aliquid";
+                    firewallArn = "fugit";
+                    firewallName = "et";
+                    firewallPolicyArn = "nihil";
+                    updateToken = "rerum";
                 }};
             }};
 

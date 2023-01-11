@@ -38,292 +38,226 @@ public class Application {
                 }};
                 queryParams = new GenomicsPipelinesRunQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dolores";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "nam";
-                    fields = "quo";
-                    key = "pariatur";
-                    oauthToken = "qui";
-                    prettyPrint = false;
-                    quotaUser = "voluptatem";
-                    uploadType = "quia";
-                    uploadProtocol = "blanditiis";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new RunPipelineRequest() {{
                     labels = new java.util.HashMap<String, String>() {{
-                        put("facere", "est");
-                        put("necessitatibus", "at");
+                        put("dicta", "debitis");
+                        put("voluptatum", "et");
+                        put("ut", "dolorem");
                     }};
                     pipeline = new Pipeline() {{
                         actions = new openapisdk.models.shared.Action[]() {{
                             add(new Action() {{
                                 commands = new String[]() {{
-                                    add("sunt"),
-                                    add("ut"),
-                                    add("et"),
+                                    add("iste"),
                                 }};
                                 credentials = new Secret() {{
-                                    cipherText = "sed";
-                                    keyName = "veritatis";
+                                    cipherText = "vitae";
+                                    keyName = "totam";
                                 }};
                                 encryptedEnvironment = new Secret() {{
-                                    cipherText = "omnis";
-                                    keyName = "natus";
+                                    cipherText = "dolores";
+                                    keyName = "illum";
                                 }};
-                                entrypoint = "voluptates";
+                                entrypoint = "debitis";
                                 environment = new java.util.HashMap<String, String>() {{
-                                    put("vitae", "voluptatum");
+                                    put("odio", "dolore");
+                                    put("id", "aspernatur");
                                 }};
                                 flags = new openapisdk.models.shared.ActionFlagsEnum[]() {{
                                     add("PUBLISH_EXPOSED_PORTS"),
+                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
+                                    add("BLOCK_EXTERNAL_NETWORK"),
                                 }};
-                                imageUri = "non";
+                                imageUri = "est";
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("ut", "esse");
-                                    put("quisquam", "quae");
-                                    put("eum", "qui");
+                                    put("odit", "non");
+                                    put("voluptas", "omnis");
+                                    put("aut", "illo");
                                 }};
                                 mounts = new openapisdk.models.shared.Mount[]() {{
                                     add(new Mount() {{
-                                        disk = "vel";
-                                        path = "minima";
+                                        disk = "officiis";
+                                        path = "autem";
                                         readOnly = true;
                                     }}),
                                     add(new Mount() {{
-                                        disk = "qui";
-                                        path = "dolor";
-                                        readOnly = true;
+                                        disk = "nobis";
+                                        path = "odio";
+                                        readOnly = false;
                                     }}),
                                     add(new Mount() {{
-                                        disk = "asperiores";
-                                        path = "minima";
-                                        readOnly = true;
+                                        disk = "recusandae";
+                                        path = "at";
+                                        readOnly = false;
                                     }}),
                                 }};
-                                name = "vitae";
+                                name = "eveniet";
+                                pidNamespace = "modi";
+                                portMappings = new java.util.HashMap<String, Integer>() {{
+                                    put("inventore", 7847956203786849690);
+                                }};
+                                timeout = "exercitationem";
+                            }}),
+                            add(new Action() {{
+                                commands = new String[]() {{
+                                    add("reprehenderit"),
+                                    add("tempore"),
+                                    add("maiores"),
+                                }};
+                                credentials = new Secret() {{
+                                    cipherText = "incidunt";
+                                    keyName = "dolor";
+                                }};
+                                encryptedEnvironment = new Secret() {{
+                                    cipherText = "beatae";
+                                    keyName = "veritatis";
+                                }};
+                                entrypoint = "in";
+                                environment = new java.util.HashMap<String, String>() {{
+                                    put("omnis", "ipsum");
+                                    put("ex", "dolores");
+                                    put("placeat", "vel");
+                                }};
+                                flags = new openapisdk.models.shared.ActionFlagsEnum[]() {{
+                                    add("ENABLE_FUSE"),
+                                    add("ENABLE_FUSE"),
+                                    add("ALWAYS_RUN"),
+                                }};
+                                imageUri = "reprehenderit";
+                                labels = new java.util.HashMap<String, String>() {{
+                                    put("qui", "unde");
+                                }};
+                                mounts = new openapisdk.models.shared.Mount[]() {{
+                                    add(new Mount() {{
+                                        disk = "autem";
+                                        path = "qui";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "itaque";
+                                        path = "ab";
+                                        readOnly = false;
+                                    }}),
+                                }};
+                                name = "ullam";
                                 pidNamespace = "et";
                                 portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("quam", 7872216776153390303);
-                                    put("dignissimos", 4784334419680219104);
+                                    put("esse", 5902760509050140210);
+                                    put("quam", 3604381780091280195);
+                                    put("cumque", 3331863358128628835);
                                 }};
-                                timeout = "sint";
-                            }}),
-                            add(new Action() {{
-                                commands = new String[]() {{
-                                    add("ducimus"),
-                                    add("quo"),
-                                }};
-                                credentials = new Secret() {{
-                                    cipherText = "labore";
-                                    keyName = "recusandae";
-                                }};
-                                encryptedEnvironment = new Secret() {{
-                                    cipherText = "doloribus";
-                                    keyName = "blanditiis";
-                                }};
-                                entrypoint = "labore";
-                                environment = new java.util.HashMap<String, String>() {{
-                                    put("natus", "optio");
-                                    put("praesentium", "minima");
-                                    put("accusantium", "in");
-                                }};
-                                flags = new openapisdk.models.shared.ActionFlagsEnum[]() {{
-                                    add("DISABLE_IMAGE_PREFETCH"),
-                                }};
-                                imageUri = "veniam";
-                                labels = new java.util.HashMap<String, String>() {{
-                                    put("ut", "laboriosam");
-                                    put("corrupti", "labore");
-                                }};
-                                mounts = new openapisdk.models.shared.Mount[]() {{
-                                    add(new Mount() {{
-                                        disk = "similique";
-                                        path = "aliquam";
-                                        readOnly = false;
-                                    }}),
-                                    add(new Mount() {{
-                                        disk = "hic";
-                                        path = "aliquid";
-                                        readOnly = false;
-                                    }}),
-                                }};
-                                name = "praesentium";
-                                pidNamespace = "voluptates";
-                                portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("non", 2936880191145408633);
-                                    put("qui", 328344613669990564);
-                                    put("suscipit", 4092613525228031887);
-                                }};
-                                timeout = "quia";
-                            }}),
-                            add(new Action() {{
-                                commands = new String[]() {{
-                                    add("aut"),
-                                    add("molestiae"),
-                                }};
-                                credentials = new Secret() {{
-                                    cipherText = "quod";
-                                    keyName = "voluptatum";
-                                }};
-                                encryptedEnvironment = new Secret() {{
-                                    cipherText = "quos";
-                                    keyName = "laboriosam";
-                                }};
-                                entrypoint = "incidunt";
-                                environment = new java.util.HashMap<String, String>() {{
-                                    put("explicabo", "fuga");
-                                }};
-                                flags = new openapisdk.models.shared.ActionFlagsEnum[]() {{
-                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
-                                    add("DISABLE_IMAGE_PREFETCH"),
-                                    add("DISABLE_IMAGE_PREFETCH"),
-                                }};
-                                imageUri = "libero";
-                                labels = new java.util.HashMap<String, String>() {{
-                                    put("quibusdam", "explicabo");
-                                }};
-                                mounts = new openapisdk.models.shared.Mount[]() {{
-                                    add(new Mount() {{
-                                        disk = "earum";
-                                        path = "maiores";
-                                        readOnly = false;
-                                    }}),
-                                    add(new Mount() {{
-                                        disk = "assumenda";
-                                        path = "vitae";
-                                        readOnly = true;
-                                    }}),
-                                }};
-                                name = "ab";
-                                pidNamespace = "illum";
-                                portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("quas", 1335585147275884753);
-                                    put("adipisci", 2298370415996819700);
-                                    put("corrupti", 1962075970272724558);
-                                }};
-                                timeout = "dolorem";
+                                timeout = "sunt";
                             }}),
                         }};
                         encryptedEnvironment = new Secret() {{
-                            cipherText = "omnis";
-                            keyName = "qui";
+                            cipherText = "voluptates";
+                            keyName = "magni";
                         }};
                         environment = new java.util.HashMap<String, String>() {{
-                            put("possimus", "rerum");
-                            put("odio", "aut");
-                            put("asperiores", "ea");
+                            put("optio", "qui");
+                            put("earum", "illo");
+                            put("omnis", "ut");
                         }};
                         resources = new Resources() {{
-                            projectId = "quam";
+                            projectId = "consequatur";
                             regions = new String[]() {{
-                                add("consequatur"),
+                                add("commodi"),
+                                add("error"),
                             }};
                             virtualMachine = new VirtualMachine() {{
                                 accelerators = new openapisdk.models.shared.Accelerator[]() {{
                                     add(new Accelerator() {{
-                                        count = "natus";
-                                        type = "corrupti";
+                                        count = "consectetur";
+                                        type = "nostrum";
                                     }}),
                                 }};
-                                bootDiskSizeGb = 8664471317048760158;
-                                bootImage = "ad";
-                                cpuPlatform = "non";
+                                bootDiskSizeGb = 950400323440343118;
+                                bootImage = "laboriosam";
+                                cpuPlatform = "sed";
                                 disks = new openapisdk.models.shared.Disk[]() {{
                                     add(new Disk() {{
-                                        name = "nihil";
-                                        sizeGb = 5988256179519555850;
-                                        sourceImage = "dolore";
-                                        type = "asperiores";
-                                    }}),
-                                    add(new Disk() {{
-                                        name = "labore";
-                                        sizeGb = 734095770428926531;
-                                        sourceImage = "ipsum";
-                                        type = "quos";
-                                    }}),
-                                    add(new Disk() {{
-                                        name = "molestiae";
-                                        sizeGb = 7731919111569318016;
-                                        sourceImage = "voluptatum";
-                                        type = "et";
+                                        name = "soluta";
+                                        sizeGb = 7540276489530073149;
+                                        sourceImage = "quas";
+                                        type = "consequuntur";
                                     }}),
                                 }};
                                 dockerCacheImages = new String[]() {{
-                                    add("deleniti"),
+                                    add("autem"),
                                 }};
                                 enableStackdriverMonitoring = true;
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("provident", "velit");
-                                    put("illo", "ut");
-                                    put("sed", "repudiandae");
+                                    put("doloremque", "perferendis");
+                                    put("atque", "ratione");
                                 }};
-                                machineType = "expedita";
+                                machineType = "quisquam";
                                 network = new Network() {{
-                                    name = "fugit";
-                                    subnetwork = "quae";
+                                    name = "explicabo";
+                                    subnetwork = "ea";
                                     usePrivateAddress = true;
                                 }};
-                                nvidiaDriverVersion = "et";
+                                nvidiaDriverVersion = "eum";
                                 preemptible = false;
-                                reservation = "id";
+                                reservation = "et";
                                 serviceAccount = new ServiceAccount() {{
                                     email = "rerum";
                                     scopes = new String[]() {{
-                                        add("nemo"),
+                                        add("quis"),
+                                        add("cumque"),
+                                        add("minima"),
                                     }};
                                 }};
                                 volumes = new openapisdk.models.shared.Volume[]() {{
                                     add(new Volume() {{
                                         existingDisk = new ExistingDisk() {{
-                                            disk = "quasi";
+                                            disk = "est";
                                         }};
                                         nfsMount = new NfsMount() {{
-                                            target = "enim";
+                                            target = "quis";
                                         }};
                                         persistentDisk = new PersistentDisk() {{
-                                            sizeGb = 5030877786238265042;
-                                            sourceImage = "at";
-                                            type = "sit";
+                                            sizeGb = 7478610059307147871;
+                                            sourceImage = "labore";
+                                            type = "et";
                                         }};
-                                        volume = "culpa";
+                                        volume = "impedit";
                                     }}),
                                     add(new Volume() {{
                                         existingDisk = new ExistingDisk() {{
-                                            disk = "ut";
+                                            disk = "ad";
                                         }};
                                         nfsMount = new NfsMount() {{
-                                            target = "facilis";
+                                            target = "expedita";
                                         }};
                                         persistentDisk = new PersistentDisk() {{
-                                            sizeGb = 6444745865739105985;
-                                            sourceImage = "tempore";
-                                            type = "dolorem";
-                                        }};
-                                        volume = "nihil";
-                                    }}),
-                                    add(new Volume() {{
-                                        existingDisk = new ExistingDisk() {{
-                                            disk = "odio";
-                                        }};
-                                        nfsMount = new NfsMount() {{
-                                            target = "voluptatem";
-                                        }};
-                                        persistentDisk = new PersistentDisk() {{
-                                            sizeGb = 7033672475303882764;
-                                            sourceImage = "ipsam";
+                                            sizeGb = 4540487686588600123;
+                                            sourceImage = "qui";
                                             type = "modi";
                                         }};
-                                        volume = "eum";
+                                        volume = "nihil";
                                     }}),
                                 }};
                             }};
                             zones = new String[]() {{
-                                add("id"),
+                                add("deserunt"),
+                                add("eaque"),
+                                add("sunt"),
                             }};
                         }};
-                        timeout = "qui";
+                        timeout = "sit";
                     }};
-                    pubSubTopic = "culpa";
+                    pubSubTopic = "autem";
                 }};
             }};
 

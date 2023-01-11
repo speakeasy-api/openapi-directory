@@ -14,9 +14,9 @@ public class Application {
 
             GetfullnameparsedmatchRequest req = new GetfullnameparsedmatchRequest() {{
                 queryParams = new GetfullnameparsedmatchQueryParams() {{
-                    firstname = "et";
-                    lastname = "facilis";
-                    license = "iure";
+                    firstname = "sit";
+                    lastname = "voluptas";
+                    license = "culpa";
                 }};
             }};
 

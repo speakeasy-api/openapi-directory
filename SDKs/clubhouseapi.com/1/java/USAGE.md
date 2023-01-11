@@ -14,7 +14,7 @@ public class Application {
 
             GetCheckForUpdateRequest req = new GetCheckForUpdateRequest() {{
                 queryParams = new GetCheckForUpdateQueryParams() {{
-                    isTestflight = 7806412736464655250;
+                    isTestflight = 8717895732742165505;
                 }};
             }};
 

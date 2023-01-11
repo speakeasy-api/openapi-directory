@@ -35,7 +35,7 @@ public class Application {
 
             AreGamesInProgressRequest req = new AreGamesInProgressRequest() {{
                 pathParams = new AreGamesInProgressPathParams() {{
-                    format = "JSON";
+                    format = "XML";
                 }};
             }};
 

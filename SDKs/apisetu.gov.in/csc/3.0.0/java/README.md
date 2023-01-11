@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new SkcerRequestBody() {{
                     certificateParameters = new SkcerRequestBodyCertificateParameters() {{
-                        fullName = "odit";
-                        certificateType = "eum";
-                        username = "placeat";
+                        fullName = "sit";
+                        certificateType = "voluptas";
+                        username = "culpa";
                     }};
-                    consentArtifact = "illo";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "quas";
+                    txnId = "dolor";
                 }};
             }};
 

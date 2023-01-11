@@ -35,28 +35,28 @@ public class Application {
 
             AssociateFirewallRuleGroupRequest req = new AssociateFirewallRuleGroupRequest() {{
                 headers = new AssociateFirewallRuleGroupHeaders() {{
-                    xAmzAlgorithm = "ut";
-                    xAmzContentSha256 = "non";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "numquam";
-                    xAmzSecurityToken = "quia";
-                    xAmzSignature = "fugiat";
-                    xAmzSignedHeaders = "laboriosam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Route53Resolver.AssociateFirewallRuleGroup";
                 }};
                 request = new AssociateFirewallRuleGroupRequest() {{
-                    creatorRequestId = "nam";
-                    firewallRuleGroupId = "delectus";
+                    creatorRequestId = "fugit";
+                    firewallRuleGroupId = "et";
                     mutationProtection = "ENABLED";
-                    name = "incidunt";
-                    priority = 7383927136453695366;
+                    name = "rerum";
+                    priority = 7837839688282259259;
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "iste";
-                            value = "fuga";
+                            key = "voluptatum";
+                            value = "et";
                         }}),
                     }};
-                    vpcId = "at";
+                    vpcId = "ut";
                 }};
             }};
 

@@ -27,7 +27,7 @@ public class Application {
 
             DeleteBinIdRequest req = new DeleteBinIdRequest() {{
                 pathParams = new DeleteBinIdPathParams() {{
-                    id = "minus";
+                    id = "sit";
                 }};
             }};
 

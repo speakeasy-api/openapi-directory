@@ -19,13 +19,13 @@ public class Application {
                     }};
                 }};
                 pathParams = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams() {{
-                    destination = "rerum";
-                    fromDate = "perspiciatis";
-                    origin = "voluptatem";
-                    productCode = "FAN";
+                    destination = "sit";
+                    fromDate = "voluptas";
+                    origin = "culpa";
+                    productCode = "FUN";
                 }};
                 headers = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders() {{
-                    accept = "id";
+                    accept = "consequuntur";
                 }};
             }};
 

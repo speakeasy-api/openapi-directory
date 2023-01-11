@@ -35,52 +35,55 @@ public class Application {
 
             SendCommandRequest req = new SendCommandRequest() {{
                 headers = new SendCommandHeaders() {{
-                    xAmzAlgorithm = "cum";
-                    xAmzContentSha256 = "repellat";
-                    xAmzCredential = "quaerat";
-                    xAmzDate = "velit";
-                    xAmzSecurityToken = "magni";
-                    xAmzSignature = "delectus";
-                    xAmzSignedHeaders = "vel";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "QLDBSession.SendCommand";
                 }};
                 request = new SendCommandRequest() {{
                     abortTransaction = new java.util.HashMap<String, Object>() {{
-                        put("nihil", "laudantium");
-                        put("magni", "vel");
+                        put("et", "nihil");
                     }};
                     commitTransaction = new CommitTransactionRequest() {{
-                        commitDigest = "eaque";
-                        transactionId = "incidunt";
+                        commitDigest = "rerum";
+                        transactionId = "dicta";
                     }};
                     endSession = new java.util.HashMap<String, Object>() {{
-                        put("magnam", "accusamus");
-                        put("occaecati", "rerum");
+                        put("voluptatum", "et");
                     }};
                     executeStatement = new ExecuteStatementRequest() {{
                         parameters = new openapisdk.models.shared.ValueHolder[]() {{
                             add(new ValueHolder() {{
-                                ionBinary = "ut";
-                                ionText = "consequatur";
+                                ionBinary = "dolorem";
+                                ionText = "et";
                             }}),
                             add(new ValueHolder() {{
-                                ionBinary = "sequi";
-                                ionText = "omnis";
+                                ionBinary = "voluptate";
+                                ionText = "iste";
+                            }}),
+                            add(new ValueHolder() {{
+                                ionBinary = "vitae";
+                                ionText = "totam";
                             }}),
                         }};
-                        statement = "quis";
-                        transactionId = "labore";
+                        statement = "dolores";
+                        transactionId = "illum";
                     }};
                     fetchPage = new FetchPageRequest() {{
-                        nextPageToken = "sapiente";
-                        transactionId = "accusamus";
+                        nextPageToken = "debitis";
+                        transactionId = "vel";
                     }};
-                    sessionToken = "velit";
+                    sessionToken = "odio";
                     startSession = new StartSessionRequest() {{
-                        ledgerName = "amet";
+                        ledgerName = "dolore";
                     }};
                     startTransaction = new java.util.HashMap<String, Object>() {{
-                        put("sunt", "molestias");
+                        put("aspernatur", "accusantium");
+                        put("totam", "commodi");
                     }};
                 }};
             }};

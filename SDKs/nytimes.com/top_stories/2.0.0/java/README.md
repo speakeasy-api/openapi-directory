@@ -36,10 +36,10 @@ public class Application {
             GetSectionFormatRequest req = new GetSectionFormatRequest() {{
                 pathParams = new GetSectionFormatPathParams() {{
                     format = "json";
-                    section = "fashion";
+                    section = "travel";
                 }};
                 queryParams = new GetSectionFormatQueryParams() {{
-                    callback = "iure";
+                    callback = "culpa";
                 }};
             }};
 

@@ -41,15 +41,16 @@ public class Application {
 
             AccountsBalanceGetRequest req = new AccountsBalanceGetRequest() {{
                 request = new AccountsBalanceGetRequest() {{
-                    accessToken = "provident";
-                    clientId = "eum";
+                    accessToken = "sit";
+                    clientId = "voluptas";
                     options = new AccountsBalanceGetRequestOptions() {{
                         accountIds = new String[]() {{
-                            add("dolore"),
+                            add("expedita"),
+                            add("consequuntur"),
                         }};
-                        minLastUpdatedDatetime = "1988-11-19T07:30:18Z";
+                        minLastUpdatedDatetime = "2003-04-20T23:11:44Z";
                     }};
-                    secret = "ea";
+                    secret = "expedita";
                 }};
             }};
 

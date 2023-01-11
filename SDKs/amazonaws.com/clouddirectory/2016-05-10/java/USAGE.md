@@ -22,66 +22,38 @@ public class Application {
 
             AddFacetToObjectRequest req = new AddFacetToObjectRequest() {{
                 headers = new AddFacetToObjectHeaders() {{
-                    xAmzAlgorithm = "doloremque";
-                    xAmzContentSha256 = "animi";
-                    xAmzCredential = "exercitationem";
-                    xAmzDate = "quia";
-                    xAmzSecurityToken = "ut";
-                    xAmzSignature = "hic";
-                    xAmzSignedHeaders = "veniam";
-                    xAmzDataPartition = "et";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
+                    xAmzDataPartition = "voluptas";
                 }};
                 request = new AddFacetToObjectRequestBody() {{
                     objectAttributeList = new openapisdk.models.shared.AttributeKeyAndValue[]() {{
                         add(new AttributeKeyAndValue() {{
                             key = new AttributeKey() {{
-                                facetName = "animi";
-                                name = "atque";
-                                schemaArn = "omnis";
+                                facetName = "et";
+                                name = "nihil";
+                                schemaArn = "rerum";
                             }};
                             value = new TypedAttributeValue() {{
-                                binaryValue = "unde";
+                                binaryValue = "dicta";
                                 booleanValue = true;
-                                datetimeValue = "2005-01-16T03:32:55Z";
+                                datetimeValue = "1981-07-21T06:30:48Z";
                                 numberValue = "et";
-                                stringValue = "quia";
-                            }};
-                        }}),
-                        add(new AttributeKeyAndValue() {{
-                            key = new AttributeKey() {{
-                                facetName = "qui";
-                                name = "voluptates";
-                                schemaArn = "consequatur";
-                            }};
-                            value = new TypedAttributeValue() {{
-                                binaryValue = "explicabo";
-                                booleanValue = true;
-                                datetimeValue = "1975-12-26T09:00:02Z";
-                                numberValue = "ipsum";
-                                stringValue = "autem";
-                            }};
-                        }}),
-                        add(new AttributeKeyAndValue() {{
-                            key = new AttributeKey() {{
-                                facetName = "perferendis";
-                                name = "dolorem";
-                                schemaArn = "odit";
-                            }};
-                            value = new TypedAttributeValue() {{
-                                binaryValue = "maxime";
-                                booleanValue = false;
-                                datetimeValue = "2000-05-18T09:59:51Z";
-                                numberValue = "dolore";
-                                stringValue = "est";
+                                stringValue = "ut";
                             }};
                         }}),
                     }};
                     objectReference = new AddFacetToObjectRequestBodyObjectReference() {{
-                        selector = "velit";
+                        selector = "dolorem";
                     }};
                     schemaFacet = new AddFacetToObjectRequestBodySchemaFacet() {{
-                        facetName = "eveniet";
-                        schemaArn = "nam";
+                        facetName = "et";
+                        schemaArn = "voluptate";
                     }};
                 }};
             }};

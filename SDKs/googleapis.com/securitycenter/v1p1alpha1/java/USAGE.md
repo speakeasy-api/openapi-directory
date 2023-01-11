@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new SecuritycenterOrganizationsOperationsCancelPathParams() {{
-                    name = "ut";
+                    name = "sit";
                 }};
                 queryParams = new SecuritycenterOrganizationsOperationsCancelQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "pariatur";
-                    alt = "json";
-                    callback = "cumque";
-                    fields = "laboriosam";
-                    key = "sed";
-                    oauthToken = "blanditiis";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "voluptatum";
-                    uploadType = "exercitationem";
-                    uploadProtocol = "inventore";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

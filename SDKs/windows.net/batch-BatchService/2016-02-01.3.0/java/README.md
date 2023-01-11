@@ -27,15 +27,15 @@ public class Application {
 
             AccountListNodeAgentSkusRequest req = new AccountListNodeAgentSkusRequest() {{
                 queryParams = new AccountListNodeAgentSkusQueryParams() {{
-                    dollarFilter = "ut";
-                    apiVersion = "distinctio";
-                    maxresults = 4847131419117704030;
-                    timeout = 3851454988591520387;
+                    dollarFilter = "sit";
+                    apiVersion = "voluptas";
+                    maxresults = 6050128673802995827;
+                    timeout = 501233450539197794;
                 }};
                 headers = new AccountListNodeAgentSkusHeaders() {{
-                    clientRequestId = "aut";
-                    ocpDate = "reiciendis";
-                    returnClientRequestId = false;
+                    clientRequestId = "consequuntur";
+                    ocpDate = "dolor";
+                    returnClientRequestId = true;
                 }};
             }};
 

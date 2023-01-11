@@ -14,14 +14,15 @@ public class Application {
 
             PostCompileRequest req = new PostCompileRequest() {{
                 queryParams = new PostCompileQueryParams() {{
-                    explain = "aut";
+                    explain = "sit";
                     instrument = false;
-                    metrics = false;
-                    pretty = true;
+                    metrics = true;
+                    pretty = false;
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("consequatur", "consequatur");
-                    put("ea", "deserunt");
+                    put("dolor", "expedita");
+                    put("voluptas", "fugit");
+                    put("et", "nihil");
                 }};
             }};
 

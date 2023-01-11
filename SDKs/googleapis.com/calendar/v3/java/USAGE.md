@@ -22,17 +22,17 @@ public class Application {
                     }};
                 }};
                 pathParams = new CalendarAclDeletePathParams() {{
-                    calendarId = "accusantium";
-                    ruleId = "minima";
+                    calendarId = "sit";
+                    ruleId = "voluptas";
                 }};
                 queryParams = new CalendarAclDeleteQueryParams() {{
                     alt = "json";
-                    fields = "consectetur";
-                    key = "est";
-                    oauthToken = "tempora";
-                    prettyPrint = false;
-                    quotaUser = "dolorum";
-                    userIp = "blanditiis";
+                    fields = "expedita";
+                    key = "consequuntur";
+                    oauthToken = "dolor";
+                    prettyPrint = true;
+                    quotaUser = "voluptas";
+                    userIp = "fugit";
                 }};
             }};
 

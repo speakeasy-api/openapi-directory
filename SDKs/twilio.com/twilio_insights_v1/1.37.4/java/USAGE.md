@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new FetchAccountSettingsQueryParams() {{
-                    subaccountSid = "laboriosam";
+                    subaccountSid = "sit";
                 }};
             }};
 

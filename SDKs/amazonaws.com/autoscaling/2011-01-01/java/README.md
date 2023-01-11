@@ -36,21 +36,21 @@ public class Application {
             GetAttachInstancesRequest req = new GetAttachInstancesRequest() {{
                 queryParams = new GetAttachInstancesQueryParams() {{
                     action = "AttachInstances";
-                    autoScalingGroupName = "eum";
+                    autoScalingGroupName = "voluptas";
                     instanceIds = new String[]() {{
-                        add("ut"),
-                        add("similique"),
+                        add("expedita"),
+                        add("consequuntur"),
                     }};
                     version = "2011-01-01";
                 }};
                 headers = new GetAttachInstancesHeaders() {{
-                    xAmzAlgorithm = "praesentium";
-                    xAmzContentSha256 = "ipsa";
-                    xAmzCredential = "ipsa";
-                    xAmzDate = "rerum";
-                    xAmzSecurityToken = "iure";
-                    xAmzSignature = "rem";
-                    xAmzSignedHeaders = "dolore";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "fugit";
+                    xAmzDate = "et";
+                    xAmzSecurityToken = "nihil";
+                    xAmzSignature = "rerum";
+                    xAmzSignedHeaders = "dicta";
                 }};
             }};
 

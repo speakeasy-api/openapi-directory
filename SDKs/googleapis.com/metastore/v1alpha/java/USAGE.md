@@ -22,40 +22,36 @@ public class Application {
                     }};
                 }};
                 pathParams = new MetastoreProjectsLocationsFederationsCreatePathParams() {{
-                    parent = "ipsa";
+                    parent = "sit";
                 }};
                 queryParams = new MetastoreProjectsLocationsFederationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "error";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "iste";
-                    federationId = "aliquid";
-                    fields = "consequatur";
-                    key = "aut";
-                    oauthToken = "minima";
+                    callback = "consequuntur";
+                    federationId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "dolor";
-                    requestId = "ut";
-                    uploadType = "aliquam";
-                    uploadProtocol = "unde";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new FederationInput() {{
                     backendMetastores = new java.util.HashMap<String, openapisdk.models.shared.BackendMetastore>() {{
-                        put("unde", new BackendMetastore() {{
-                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
-                            name = "dolorum";
-                        }});
-                        put("reiciendis", new BackendMetastore() {{
-                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
-                            name = "debitis";
+                        put("et", new BackendMetastore() {{
+                            metastoreType = "DATAPROC_METASTORE";
+                            name = "dolorem";
                         }});
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("illo", "qui");
-                        put("vel", "aliquam");
+                        put("voluptate", "iste");
+                        put("vitae", "totam");
                     }};
-                    name = "quia";
-                    version = "necessitatibus";
+                    name = "dolores";
+                    version = "illum";
                 }};
             }};
 

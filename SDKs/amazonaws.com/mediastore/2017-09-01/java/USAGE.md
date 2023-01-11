@@ -22,29 +22,21 @@ public class Application {
 
             CreateContainerRequest req = new CreateContainerRequest() {{
                 headers = new CreateContainerHeaders() {{
-                    xAmzAlgorithm = "magnam";
-                    xAmzContentSha256 = "veniam";
-                    xAmzCredential = "dolores";
-                    xAmzDate = "rerum";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "voluptatem";
-                    xAmzSignedHeaders = "voluptatem";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "MediaStore_20170901.CreateContainer";
                 }};
                 request = new CreateContainerInput() {{
-                    containerName = "est";
+                    containerName = "fugit";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "et";
-                            value = "ea";
-                        }}),
-                        add(new Tag() {{
-                            key = "voluptas";
-                            value = "velit";
-                        }}),
-                        add(new Tag() {{
-                            key = "ipsa";
-                            value = "in";
+                            key = "nihil";
+                            value = "rerum";
                         }}),
                     }};
                 }};

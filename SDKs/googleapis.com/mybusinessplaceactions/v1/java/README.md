@@ -27,26 +27,26 @@ public class Application {
 
             MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest req = new MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest() {{
                 pathParams = new MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams() {{
-                    parent = "et";
+                    parent = "sit";
                 }};
                 queryParams = new MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "veniam";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "culpa";
-                    fields = "deleniti";
-                    key = "iste";
-                    oauthToken = "corrupti";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "omnis";
-                    uploadType = "autem";
-                    uploadProtocol = "velit";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new PlaceActionLinkInput() {{
                     isPreferred = false;
-                    name = "omnis";
-                    placeActionType = "ONLINE_APPOINTMENT";
-                    uri = "repudiandae";
+                    name = "debitis";
+                    placeActionType = "PLACE_ACTION_TYPE_UNSPECIFIED";
+                    uri = "et";
                 }};
             }};
 

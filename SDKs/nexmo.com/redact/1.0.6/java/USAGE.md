@@ -20,8 +20,8 @@ public class Application {
                     }};
                 }};
                 request = new RedactTransaction() {{
-                    id = "ducimus";
-                    product = "verify";
+                    id = "sit";
+                    product = "sms";
                     type = "outbound";
                 }};
             }};

@@ -22,20 +22,20 @@ public class Application {
 
             DeleteScalingPolicyRequest req = new DeleteScalingPolicyRequest() {{
                 headers = new DeleteScalingPolicyHeaders() {{
-                    xAmzAlgorithm = "vitae";
-                    xAmzContentSha256 = "fugit";
-                    xAmzCredential = "non";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "autem";
-                    xAmzSignature = "dolores";
-                    xAmzSignedHeaders = "aperiam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AnyScaleFrontendService.DeleteScalingPolicy";
                 }};
                 request = new DeleteScalingPolicyRequest() {{
-                    policyName = "culpa";
-                    resourceId = "quaerat";
-                    scalableDimension = "rds:cluster:ReadReplicaCount";
-                    serviceNamespace = "custom-resource";
+                    policyName = "fugit";
+                    resourceId = "et";
+                    scalableDimension = "comprehend:entity-recognizer-endpoint:DesiredInferenceUnits";
+                    serviceNamespace = "elasticmapreduce";
                 }};
             }};
 

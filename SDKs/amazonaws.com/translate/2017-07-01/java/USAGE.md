@@ -22,26 +22,26 @@ public class Application {
 
             CreateParallelDataRequest req = new CreateParallelDataRequest() {{
                 headers = new CreateParallelDataHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "sapiente";
-                    xAmzDate = "laborum";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "accusamus";
-                    xAmzSignedHeaders = "pariatur";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSShineFrontendService_20170701.CreateParallelData";
                 }};
                 request = new CreateParallelDataRequest() {{
-                    clientToken = "eos";
-                    description = "ut";
+                    clientToken = "fugit";
+                    description = "et";
                     encryptionKey = new EncryptionKey() {{
-                        id = "animi";
+                        id = "nihil";
                         type = "KMS";
                     }};
-                    name = "eum";
+                    name = "dicta";
                     parallelDataConfig = new ParallelDataConfig() {{
-                        format = "TMX";
-                        s3Uri = "maiores";
+                        format = "TSV";
+                        s3Uri = "voluptatum";
                     }};
                 }};
             }};

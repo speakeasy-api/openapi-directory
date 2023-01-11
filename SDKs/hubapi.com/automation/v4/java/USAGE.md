@@ -21,17 +21,10 @@ public class Application {
                 request = new BatchInputCallbackCompletionBatchRequest() {{
                     inputs = new openapisdk.models.shared.CallbackCompletionBatchRequest[]() {{
                         add(new CallbackCompletionBatchRequest() {{
-                            callbackId = "quas";
+                            callbackId = "voluptas";
                             outputFields = new java.util.HashMap<String, String>() {{
-                                put("et", "qui");
-                                put("dolor", "modi");
-                                put("sint", "nesciunt");
-                            }};
-                        }}),
-                        add(new CallbackCompletionBatchRequest() {{
-                            callbackId = "autem";
-                            outputFields = new java.util.HashMap<String, String>() {{
-                                put("voluptatum", "harum");
+                                put("expedita", "consequuntur");
+                                put("dolor", "expedita");
                             }};
                         }}),
                     }};

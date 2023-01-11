@@ -24,20 +24,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new DisplayvideoMediaDownloadPathParams() {{
-                    resourceName = "consequuntur";
+                    resourceName = "sit";
                 }};
                 queryParams = new DisplayvideoMediaDownloadQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "voluptatem";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "eum";
-                    fields = "explicabo";
-                    key = "rem";
-                    oauthToken = "et";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "qui";
-                    uploadProtocol = "quas";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

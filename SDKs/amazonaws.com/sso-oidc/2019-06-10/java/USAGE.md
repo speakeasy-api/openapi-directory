@@ -22,24 +22,24 @@ public class Application {
 
             CreateTokenRequest req = new CreateTokenRequest() {{
                 headers = new CreateTokenHeaders() {{
-                    xAmzAlgorithm = "enim";
-                    xAmzContentSha256 = "quia";
-                    xAmzCredential = "voluptatem";
-                    xAmzDate = "suscipit";
-                    xAmzSecurityToken = "dolorem";
-                    xAmzSignature = "beatae";
-                    xAmzSignedHeaders = "at";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateTokenRequestBody() {{
-                    clientId = "debitis";
-                    clientSecret = "optio";
-                    code = "ut";
-                    deviceCode = "at";
-                    grantType = "sed";
-                    redirectUri = "ut";
-                    refreshToken = "cumque";
+                    clientId = "voluptas";
+                    clientSecret = "fugit";
+                    code = "et";
+                    deviceCode = "nihil";
+                    grantType = "rerum";
+                    redirectUri = "dicta";
+                    refreshToken = "debitis";
                     scope = new String[]() {{
-                        add("quibusdam"),
+                        add("et"),
                     }};
                 }};
             }};

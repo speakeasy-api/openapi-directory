@@ -22,22 +22,21 @@ public class Application {
 
             BatchCheckLayerAvailabilityRequest req = new BatchCheckLayerAvailabilityRequest() {{
                 headers = new BatchCheckLayerAvailabilityHeaders() {{
-                    xAmzAlgorithm = "adipisci";
-                    xAmzContentSha256 = "dolorem";
-                    xAmzCredential = "quas";
-                    xAmzDate = "eum";
-                    xAmzSecurityToken = "distinctio";
-                    xAmzSignature = "nostrum";
-                    xAmzSignedHeaders = "sed";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "SpencerFrontendService.BatchCheckLayerAvailability";
                 }};
                 request = new BatchCheckLayerAvailabilityRequest() {{
                     layerDigests = new String[]() {{
-                        add("totam"),
-                        add("sit"),
+                        add("et"),
                     }};
-                    registryId = "et";
-                    repositoryName = "et";
+                    registryId = "nihil";
+                    repositoryName = "rerum";
                 }};
             }};
 

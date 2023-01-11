@@ -23,11 +23,11 @@ public class Application {
                 }};
                 request = new AecmwRequestBody() {{
                     certificateParameters = new AecmwRequestBodyCertificateParameters() {{
-                        udf1 = "distinctio";
+                        udf1 = "sit";
                     }};
-                    consentArtifact = "repellendus";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "omnis";
+                    txnId = "expedita";
                 }};
             }};
 

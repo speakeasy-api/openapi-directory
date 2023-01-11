@@ -27,8 +27,8 @@ public class Application {
 
             GetstateabbreviationRequest req = new GetstateabbreviationRequest() {{
                 queryParams = new GetstateabbreviationQueryParams() {{
-                    license = "corrupti";
-                    state = "esse";
+                    license = "sit";
+                    state = "voluptas";
                 }};
             }};
 

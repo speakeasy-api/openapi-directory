@@ -14,64 +14,65 @@ public class Application {
 
             PostV05ConsentRequestsInitRequest req = new PostV05ConsentRequestsInitRequest() {{
                 headers = new PostV05ConsentRequestsInitHeaders() {{
-                    authorization = "at";
+                    authorization = "sit";
                 }};
                 request = new PostV05ConsentRequestsInitRequests() {{
-                    applicationXML = "distinctio".getBytes();
+                    applicationXML = "voluptas".getBytes();
                     consentRequest = new ConsentRequest() {{
                         consent = new ConsentRequestConsent() {{
                             careContexts = new openapisdk.models.shared.CareContextDefinition[]() {{
                                 add(new CareContextDefinition() {{
-                                    careContextReference = "dolores";
-                                    patientReference = "aut";
+                                    careContextReference = "expedita";
+                                    patientReference = "consequuntur";
                                 }}),
                                 add(new CareContextDefinition() {{
-                                    careContextReference = "asperiores";
-                                    patientReference = "qui";
+                                    careContextReference = "dolor";
+                                    patientReference = "expedita";
                                 }}),
                             }};
                             hiTypes = new openapisdk.models.shared.HiTypeEnumEnum[]() {{
                                 add("OPConsultation"),
-                                add("Prescription"),
+                                add("OPConsultation"),
+                                add("OPConsultation"),
                             }};
                             hip = new ConsentRequestConsentHip() {{
-                                id = "sunt";
+                                id = "rerum";
                             }};
                             hiu = new ConsentRequestConsentHiu() {{
-                                id = "corporis";
+                                id = "dicta";
                             }};
                             patient = new ConsentRequestConsentPatient() {{
-                                id = "cupiditate";
+                                id = "debitis";
                             }};
                             permission = new Permission() {{
-                                accessMode = "STREAM";
-                                dataEraseAt = "1992-05-19T13:25:30Z";
+                                accessMode = "VIEW";
+                                dataEraseAt = "2005-09-27T09:17:54Z";
                                 dateRange = new PermissionDateRange() {{
-                                    from = "1985-10-15T05:05:36Z";
-                                    to = "1992-12-10T10:45:58Z";
+                                    from = "1970-04-14T21:44:49Z";
+                                    to = "2021-10-23T13:19:10Z";
                                 }};
                                 frequency = new PermissionFrequency() {{
-                                    repeats = 4746888211219605305;
-                                    unit = "MONTH";
-                                    value = 4865214569509404234;
+                                    repeats = 7259475919510918339;
+                                    unit = "YEAR";
+                                    value = 3287288577352441706;
                                 }};
                             }};
                             purpose = new UsePurpose() {{
-                                code = "deleniti";
-                                refUri = "tempora";
-                                text = "ut";
+                                code = "vitae";
+                                refUri = "totam";
+                                text = "dolores";
                             }};
                             requester = new Requester() {{
                                 identifier = new RequesterIdentifier() {{
-                                    system = "consequatur";
-                                    type = "molestiae";
-                                    value = "quisquam";
+                                    system = "illum";
+                                    type = "debitis";
+                                    value = "vel";
                                 }};
-                                name = "aliquid";
+                                name = "odio";
                             }};
                         }};
-                        requestId = "quia";
-                        timestamp = "1976-06-02T21:23:01Z";
+                        requestId = "dolore";
+                        timestamp = "1993-03-23T22:53:08Z";
                     }};
                 }};
             }};

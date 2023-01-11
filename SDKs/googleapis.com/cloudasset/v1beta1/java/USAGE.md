@@ -22,26 +22,28 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetProjectsBatchGetAssetsHistoryPathParams() {{
-                    parent = "ut";
+                    parent = "sit";
                 }};
                 queryParams = new CloudassetProjectsBatchGetAssetsHistoryQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "nulla";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
                     assetNames = new String[]() {{
-                        add("fugiat"),
+                        add("dolor"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
-                    callback = "laboriosam";
-                    contentType = "RESOURCE";
-                    fields = "nam";
-                    key = "delectus";
-                    oauthToken = "recusandae";
-                    prettyPrint = false;
-                    quotaUser = "delectus";
-                    readTimeWindowEndTime = "qui";
-                    readTimeWindowStartTime = "iste";
-                    uploadType = "fuga";
-                    uploadProtocol = "at";
+                    callback = "fugit";
+                    contentType = "CONTENT_TYPE_UNSPECIFIED";
+                    fields = "nihil";
+                    key = "rerum";
+                    oauthToken = "dicta";
+                    prettyPrint = true;
+                    quotaUser = "voluptatum";
+                    readTimeWindowEndTime = "et";
+                    readTimeWindowStartTime = "ut";
+                    uploadType = "dolorem";
+                    uploadProtocol = "et";
                 }};
             }};
 

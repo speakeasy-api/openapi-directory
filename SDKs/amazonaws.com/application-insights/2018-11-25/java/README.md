@@ -35,28 +35,32 @@ public class Application {
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
                 headers = new CreateApplicationHeaders() {{
-                    xAmzAlgorithm = "laudantium";
-                    xAmzContentSha256 = "odio";
-                    xAmzCredential = "deserunt";
-                    xAmzDate = "qui";
-                    xAmzSecurityToken = "inventore";
-                    xAmzSignature = "omnis";
-                    xAmzSignedHeaders = "veritatis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "EC2WindowsBarleyService.CreateApplication";
                 }};
                 request = new CreateApplicationRequest() {{
-                    cweMonitorEnabled = false;
-                    opsCenterEnabled = true;
-                    opsItemSNSTopicArn = "vitae";
-                    resourceGroupName = "quia";
+                    cweMonitorEnabled = true;
+                    opsCenterEnabled = false;
+                    opsItemSNSTopicArn = "nihil";
+                    resourceGroupName = "rerum";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "adipisci";
-                            value = "cupiditate";
+                            key = "debitis";
+                            value = "voluptatum";
                         }}),
                         add(new Tag() {{
-                            key = "similique";
-                            value = "omnis";
+                            key = "et";
+                            value = "ut";
+                        }}),
+                        add(new Tag() {{
+                            key = "dolorem";
+                            value = "et";
                         }}),
                     }};
                 }};

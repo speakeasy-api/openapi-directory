@@ -27,8 +27,8 @@ public class Application {
 
             GetBng2latlongEastingNorthingRequest req = new GetBng2latlongEastingNorthingRequest() {{
                 pathParams = new GetBng2latlongEastingNorthingPathParams() {{
-                    easting = 1920024619338991082;
-                    northing = 9004954358869665939;
+                    easting = 8717895732742165505;
+                    northing = 2259404117704393152;
                 }};
             }};
 

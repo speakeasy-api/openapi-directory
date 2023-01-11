@@ -32,9 +32,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteWorkspaceIdMembersMemberIdActivitiesIdPathParams() {{
-                    id = "nesciunt";
-                    memberId = "rerum";
-                    workspaceId = "tempora";
+                    id = "sit";
+                    memberId = "voluptas";
+                    workspaceId = "culpa";
                 }};
             }};
 

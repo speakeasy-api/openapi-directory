@@ -35,22 +35,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new RunNamespacesAuthorizeddomainsListPathParams() {{
-                    parent = "ut";
+                    parent = "sit";
                 }};
                 queryParams = new RunNamespacesAuthorizeddomainsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "molestiae";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "porro";
-                    fields = "aut";
-                    key = "enim";
-                    oauthToken = "iusto";
-                    pageSize = 5267949312635929379;
-                    pageToken = "doloribus";
-                    prettyPrint = false;
-                    quotaUser = "excepturi";
-                    uploadType = "id";
-                    uploadProtocol = "quo";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    pageSize = 8274930044578894929;
+                    pageToken = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

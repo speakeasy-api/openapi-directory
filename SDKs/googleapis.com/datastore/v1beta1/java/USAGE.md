@@ -24,35 +24,40 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatastoreProjectsExportPathParams() {{
-                    projectId = "corrupti";
+                    projectId = "sit";
                 }};
                 queryParams = new DatastoreProjectsExportQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "corporis";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "quisquam";
-                    fields = "quibusdam";
-                    key = "saepe";
-                    oauthToken = "quam";
-                    prettyPrint = false;
-                    quotaUser = "doloremque";
-                    uploadType = "est";
-                    uploadProtocol = "laudantium";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleDatastoreAdminV1beta1ExportEntitiesRequest() {{
                     entityFilter = new GoogleDatastoreAdminV1beta1EntityFilter() {{
                         kinds = new String[]() {{
-                            add("omnis"),
+                            add("debitis"),
+                            add("voluptatum"),
+                            add("et"),
                         }};
                         namespaceIds = new String[]() {{
-                            add("est"),
+                            add("dolorem"),
+                            add("et"),
+                            add("voluptate"),
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("rem", "dolorem");
-                        put("assumenda", "laudantium");
+                        put("vitae", "totam");
+                        put("dolores", "illum");
+                        put("debitis", "vel");
                     }};
-                    outputUrlPrefix = "porro";
+                    outputUrlPrefix = "odio";
                 }};
             }};
 

@@ -37,20 +37,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new ResellerCustomersGetPathParams() {{
-                    customerId = "similique";
+                    customerId = "sit";
                 }};
                 queryParams = new ResellerCustomersGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "et";
-                    alt = "proto";
-                    callback = "et";
-                    fields = "placeat";
-                    key = "occaecati";
-                    oauthToken = "sit";
-                    prettyPrint = false;
-                    quotaUser = "ab";
-                    uploadType = "molestiae";
-                    uploadProtocol = "temporibus";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

@@ -22,24 +22,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsconfigProjectsLocationsInstancesInventoriesListPathParams() {{
-                    parent = "veritatis";
+                    parent = "sit";
                 }};
                 queryParams = new OsconfigProjectsLocationsInstancesInventoriesListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ad";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "laboriosam";
-                    fields = "velit";
-                    filter = "ea";
-                    key = "quidem";
-                    oauthToken = "voluptatem";
-                    pageSize = 7270269003882431402;
-                    pageToken = "voluptatem";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
                     prettyPrint = true;
-                    quotaUser = "tenetur";
-                    uploadType = "aspernatur";
-                    uploadProtocol = "officiis";
-                    view = "FULL";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
+                    view = "INVENTORY_VIEW_UNSPECIFIED";
                 }};
             }};
 

@@ -22,7 +22,7 @@ public class Application {
 
             GetGifByIdRequest req = new GetGifByIdRequest() {{
                 pathParams = new GetGifByIdPathParams() {{
-                    gifId = 5167835839957148740;
+                    gifId = 8717895732742165505;
                 }};
             }};
 

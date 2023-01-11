@@ -24,28 +24,28 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudresourcemanagerLiensCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "perferendis";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "adipisci";
-                    fields = "quos";
-                    key = "odit";
-                    oauthToken = "neque";
-                    prettyPrint = false;
-                    quotaUser = "expedita";
-                    uploadType = "veniam";
-                    uploadProtocol = "quos";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new Lien() {{
-                    createTime = "natus";
-                    name = "porro";
-                    origin = "dolorem";
-                    parent = "earum";
-                    reason = "itaque";
+                    createTime = "rerum";
+                    name = "dicta";
+                    origin = "debitis";
+                    parent = "voluptatum";
+                    reason = "et";
                     restrictions = new String[]() {{
-                        add("voluptas"),
-                        add("eos"),
-                        add("deleniti"),
+                        add("dolorem"),
+                        add("et"),
+                        add("voluptate"),
                     }};
                 }};
             }};

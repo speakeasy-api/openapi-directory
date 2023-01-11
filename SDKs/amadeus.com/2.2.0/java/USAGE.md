@@ -14,20 +14,20 @@ public class Application {
 
             GetFlightOffersRequest req = new GetFlightOffersRequest() {{
                 queryParams = new GetFlightOffersQueryParams() {{
-                    adults = 4814861198247358488;
-                    children = 4975249678507640420;
-                    currencyCode = "expedita";
-                    departureDate = "1989-07-02";
-                    destinationLocationCode = "qui";
-                    excludedAirlineCodes = "modi";
-                    includedAirlineCodes = "nihil";
-                    infants = 1011676084465510524;
-                    max = 8764227983217623240;
-                    maxPrice = 4745905187492708501;
-                    nonStop = false;
-                    originLocationCode = "sit";
-                    returnDate = "2001-11-04";
-                    travelClass = "BUSINESS";
+                    adults = 8717895732742165505;
+                    children = 2259404117704393152;
+                    currencyCode = "culpa";
+                    departureDate = "2019-04-21";
+                    destinationLocationCode = "consequuntur";
+                    excludedAirlineCodes = "dolor";
+                    includedAirlineCodes = "expedita";
+                    infants = 6044372234677422456;
+                    max = 8274930044578894929;
+                    maxPrice = 1543572285742637646;
+                    nonStop = true;
+                    originLocationCode = "rerum";
+                    returnDate = "2004-06-02";
+                    travelClass = "ECONOMY";
                 }};
             }};
 

@@ -27,8 +27,8 @@ public class Application {
 
             ActivityCheckRepoIsStarredByAuthenticatedUserRequest req = new ActivityCheckRepoIsStarredByAuthenticatedUserRequest() {{
                 pathParams = new ActivityCheckRepoIsStarredByAuthenticatedUserPathParams() {{
-                    owner = "distinctio";
-                    repo = "in";
+                    owner = "sit";
+                    repo = "voluptas";
                 }};
             }};
 

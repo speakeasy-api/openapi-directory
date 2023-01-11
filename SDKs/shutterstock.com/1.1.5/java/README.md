@@ -32,24 +32,14 @@ public class Application {
                     }};
                 }};
                 pathParams = new AddTrackCollectionItemsPathParams() {{
-                    id = "aperiam";
+                    id = "sit";
                 }};
                 request = new CollectionItemRequest() {{
                     items = new openapisdk.models.shared.CollectionItem[]() {{
                         add(new CollectionItem() {{
-                            addedTime = "1986-05-01T11:09:06Z";
-                            id = "mollitia";
-                            mediaType = "inventore";
-                        }}),
-                        add(new CollectionItem() {{
-                            addedTime = "2003-06-01T10:32:51Z";
-                            id = "ipsa";
-                            mediaType = "animi";
-                        }}),
-                        add(new CollectionItem() {{
-                            addedTime = "2003-10-08T07:22:52Z";
-                            id = "aliquam";
-                            mediaType = "fuga";
+                            addedTime = "1978-05-13T03:50:47Z";
+                            id = "expedita";
+                            mediaType = "consequuntur";
                         }}),
                     }};
                 }};

@@ -22,18 +22,18 @@ public class Application {
 
             AssociateFleetRequest req = new AssociateFleetRequest() {{
                 headers = new AssociateFleetHeaders() {{
-                    xAmzAlgorithm = "sapiente";
-                    xAmzContentSha256 = "ipsam";
-                    xAmzCredential = "autem";
-                    xAmzDate = "placeat";
-                    xAmzSecurityToken = "velit";
-                    xAmzSignature = "minus";
-                    xAmzSignedHeaders = "praesentium";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "PhotonAdminProxyService.AssociateFleet";
                 }};
                 request = new AssociateFleetRequest() {{
-                    fleetName = "voluptas";
-                    stackName = "consequatur";
+                    fleetName = "fugit";
+                    stackName = "et";
                 }};
             }};
 

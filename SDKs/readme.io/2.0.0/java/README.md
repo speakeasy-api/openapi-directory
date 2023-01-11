@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteApiSpecificationPathParams() {{
-                    id = "officiis";
+                    id = "sit";
                 }};
             }};
 

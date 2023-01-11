@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new DrvlcRequestBody() {{
                     certificateParameters = new DrvlcRequestBodyCertificateParameters() {{
-                        dob = "aut";
-                        fullName = "aut";
-                        uid = "consectetur";
-                        dlno = "autem";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        uid = "culpa";
+                        dlno = "expedita";
                     }};
-                    consentArtifact = "eos";
+                    consentArtifact = "consequuntur";
                     format = "xml";
-                    txnId = "debitis";
+                    txnId = "expedita";
                 }};
             }};
 

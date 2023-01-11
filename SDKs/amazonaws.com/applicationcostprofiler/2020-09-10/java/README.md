@@ -35,16 +35,16 @@ public class Application {
 
             DeleteReportDefinitionRequest req = new DeleteReportDefinitionRequest() {{
                 pathParams = new DeleteReportDefinitionPathParams() {{
-                    reportId = "voluptatem";
+                    reportId = "sit";
                 }};
                 headers = new DeleteReportDefinitionHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "maiores";
-                    xAmzCredential = "est";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "qui";
-                    xAmzSignature = "ex";
-                    xAmzSignedHeaders = "quo";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

@@ -20,9 +20,9 @@ public class Application {
                     }};
                 }};
                 request = new CreateEsimProfileCreateEsimProfileRequest() {{
-                    callbackMethod = "POST";
-                    callbackUrl = "quas";
-                    eid = "nesciunt";
+                    callbackMethod = "HEAD";
+                    callbackUrl = "voluptas";
+                    eid = "culpa";
                 }};
             }};
 

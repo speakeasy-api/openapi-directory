@@ -22,18 +22,18 @@ public class Application {
 
             CloseTunnelRequest req = new CloseTunnelRequest() {{
                 headers = new CloseTunnelHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "consequatur";
-                    xAmzDate = "quia";
-                    xAmzSecurityToken = "ad";
-                    xAmzSignature = "nemo";
-                    xAmzSignedHeaders = "quia";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "IoTSecuredTunneling.CloseTunnel";
                 }};
                 request = new CloseTunnelRequest() {{
                     delete = true;
-                    tunnelId = "dolores";
+                    tunnelId = "et";
                 }};
             }};
 

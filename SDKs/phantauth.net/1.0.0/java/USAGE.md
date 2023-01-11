@@ -14,7 +14,7 @@ public class Application {
 
             GetClientClientIdRequest req = new GetClientClientIdRequest() {{
                 pathParams = new GetClientClientIdPathParams() {{
-                    clientId = "sed";
+                    clientId = "sit";
                 }};
             }};
 

@@ -35,65 +35,66 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "qui";
+                    parent = "sit";
                 }};
                 queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "voluptatum";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "sed";
-                    fields = "nihil";
-                    key = "totam";
-                    oauthToken = "assumenda";
-                    prettyPrint = false;
-                    quotaUser = "omnis";
-                    uploadType = "enim";
-                    uploadProtocol = "et";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "fuga";
-                            password = "accusantium";
-                            username = "sit";
+                            loginUrl = "dicta";
+                            password = "debitis";
+                            username = "voluptatum";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "autem";
-                            username = "odio";
+                            password = "et";
+                            username = "ut";
                         }};
                     }};
                     blacklistPatterns = new String[]() {{
-                        add("adipisci"),
-                        add("incidunt"),
+                        add("et"),
+                        add("voluptate"),
+                        add("iste"),
                     }};
-                    displayName = "veniam";
+                    displayName = "vitae";
                     latestRun = new ScanRun() {{
-                        endTime = "rerum";
-                        executionState = "FINISHED";
-                        hasVulnerabilities = true;
-                        name = "hic";
-                        progressPercent = 5624870784759078862;
-                        resultState = "ERROR";
-                        startTime = "deserunt";
-                        urlsCrawledCount = "quia";
-                        urlsTestedCount = "officia";
+                        endTime = "totam";
+                        executionState = "EXECUTION_STATE_UNSPECIFIED";
+                        hasVulnerabilities = false;
+                        name = "debitis";
+                        progressPercent = 3706853784096366226;
+                        resultState = "RESULT_STATE_UNSPECIFIED";
+                        startTime = "dolore";
+                        urlsCrawledCount = "id";
+                        urlsTestedCount = "aspernatur";
                     }};
-                    maxQps = 175858308072815707;
-                    name = "aut";
+                    maxQps = 2914295034816259174;
+                    name = "totam";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 3180858640753924665;
-                        scheduleTime = "quidem";
+                        intervalDurationDays = 6745438398739480977;
+                        scheduleTime = "quis";
                     }};
                     startingUrls = new String[]() {{
-                        add("quaerat"),
-                        add("sequi"),
+                        add("aut"),
+                        add("odit"),
                     }};
                     targetPlatforms = new openapisdk.models.shared.ScanConfigTargetPlatformsEnum[]() {{
                         add("CLOUD_FUNCTIONS"),
+                        add("COMPUTE"),
                         add("CLOUD_FUNCTIONS"),
-                        add("CLOUD_RUN"),
                     }};
-                    userAgent = "CHROME_LINUX";
+                    userAgent = "USER_AGENT_UNSPECIFIED";
                 }};
             }};
 

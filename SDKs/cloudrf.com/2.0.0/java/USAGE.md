@@ -27,8 +27,8 @@ public class Application {
                     }};
                 }};
                 queryParams = new InterferenceQueryParams() {{
-                    name = "voluptas";
-                    network = "quam";
+                    name = "sit";
+                    network = "voluptas";
                 }};
             }};
 

@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new CripcRequestBody() {{
                     certificateParameters = new CripcRequestBodyCertificateParameters() {{
-                        inscode = "minus";
-                        polno = "consequatur";
-                        startdt = "labore";
+                        inscode = "sit";
+                        polno = "voluptas";
+                        startdt = "culpa";
                     }};
-                    consentArtifact = "eveniet";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "quis";
+                    txnId = "dolor";
                 }};
             }};
 

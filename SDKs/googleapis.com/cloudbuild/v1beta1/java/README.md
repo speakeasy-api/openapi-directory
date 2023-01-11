@@ -35,24 +35,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudbuildProjectsLocationsOperationsCancelPathParams() {{
-                    name = "voluptates";
+                    name = "sit";
                 }};
                 queryParams = new CloudbuildProjectsLocationsOperationsCancelQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "alias";
-                    alt = "json";
-                    callback = "cupiditate";
-                    fields = "vero";
-                    key = "in";
-                    oauthToken = "libero";
-                    prettyPrint = false;
-                    quotaUser = "voluptatem";
-                    uploadType = "inventore";
-                    uploadProtocol = "voluptas";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("dicta", "inventore");
-                    put("eum", "nesciunt");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

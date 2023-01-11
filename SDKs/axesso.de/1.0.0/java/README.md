@@ -27,10 +27,10 @@ public class Application {
 
             KeywordSearchRequest req = new KeywordSearchRequest() {{
                 queryParams = new KeywordSearchQueryParams() {{
-                    domainCode = "aut";
-                    keyword = "velit";
-                    numberOfProducts = 8628636448964422193;
-                    sortBy = "non";
+                    domainCode = "sit";
+                    keyword = "voluptas";
+                    numberOfProducts = 6050128673802995827;
+                    sortBy = "expedita";
                 }};
             }};
 

@@ -22,23 +22,23 @@ public class Application {
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
                 headers = new CreateApplicationHeaders() {{
-                    xAmzAlgorithm = "vel";
-                    xAmzContentSha256 = "tempora";
-                    xAmzCredential = "atque";
-                    xAmzDate = "repellendus";
-                    xAmzSecurityToken = "ut";
-                    xAmzSignature = "possimus";
-                    xAmzSignedHeaders = "cumque";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateApplicationRequestBody() {{
-                    applicationDescription = "odit";
-                    applicationName = "tempore";
-                    clientToken = "maiores";
-                    roleArn = "dignissimos";
+                    applicationDescription = "voluptas";
+                    applicationName = "fugit";
+                    clientToken = "et";
+                    roleArn = "nihil";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("voluptatum", "neque");
-                        put("corporis", "quas");
-                        put("autem", "qui");
+                        put("dicta", "debitis");
+                        put("voluptatum", "et");
+                        put("ut", "dolorem");
                     }};
                 }};
             }};

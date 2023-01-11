@@ -36,11 +36,11 @@ public class Application {
                 }};
                 request = new EtcerRequestBody() {{
                     certificateParameters = new EtcerRequestBodyCertificateParameters() {{
-                        uniqueCode = "incidunt";
+                        uniqueCode = "sit";
                     }};
-                    consentArtifact = "qui";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "reprehenderit";
+                    txnId = "expedita";
                 }};
             }};
 

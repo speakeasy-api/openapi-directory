@@ -14,9 +14,9 @@ public class Application {
 
             ThreeGetEstimatedPriceRequest req = new ThreeGetEstimatedPriceRequest() {{
                 queryParams = new ThreeGetEstimatedPriceQueryParams() {{
-                    amount = "non";
-                    currencyFrom = "est";
-                    currencyTo = "alias";
+                    amount = "sit";
+                    currencyFrom = "voluptas";
+                    currencyTo = "culpa";
                 }};
             }};
 

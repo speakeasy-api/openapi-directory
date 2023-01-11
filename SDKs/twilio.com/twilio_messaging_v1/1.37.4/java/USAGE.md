@@ -20,10 +20,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateAlphaSenderPathParams() {{
-                    serviceSid = "sed";
+                    serviceSid = "sit";
                 }};
                 request = new CreateAlphaSenderCreateAlphaSenderRequest() {{
-                    alphaSender = "voluptates";
+                    alphaSender = "voluptas";
                 }};
             }};
 

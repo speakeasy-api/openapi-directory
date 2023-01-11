@@ -27,10 +27,10 @@ public class Application {
 
             CollectNowRequest req = new CollectNowRequest() {{
                 pathParams = new CollectNowPathParams() {{
-                    deviceId = 4671696214766305422;
+                    deviceId = 8717895732742165505;
                 }};
                 queryParams = new CollectNowQueryParams() {{
-                    monitorClass = "laborum";
+                    monitorClass = "voluptas";
                 }};
             }};
 

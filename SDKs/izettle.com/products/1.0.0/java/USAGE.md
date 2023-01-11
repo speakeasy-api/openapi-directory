@@ -19,17 +19,13 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateCategoriesPathParams() {{
-                    organizationUuid = "ullam";
+                    organizationUuid = "sit";
                 }};
                 request = new CategoryRequest() {{
                     categories = new openapisdk.models.shared.CategoryDto[]() {{
                         add(new CategoryDto() {{
-                            name = "modi";
-                            uuid = "dolorem";
-                        }}),
-                        add(new CategoryDto() {{
-                            name = "deserunt";
-                            uuid = "esse";
+                            name = "culpa";
+                            uuid = "expedita";
                         }}),
                     }};
                 }};

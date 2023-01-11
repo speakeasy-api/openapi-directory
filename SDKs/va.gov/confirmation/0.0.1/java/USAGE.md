@@ -19,12 +19,12 @@ public class Application {
                     }};
                 }};
                 request = new VeteranStatusRequest() {{
-                    birthDate = "ipsa";
-                    firstName = "repellat";
-                    gender = "M";
-                    lastName = "asperiores";
-                    middleName = "voluptatem";
-                    ssn = "hic";
+                    birthDate = "sit";
+                    firstName = "voluptas";
+                    gender = "F";
+                    lastName = "expedita";
+                    middleName = "consequuntur";
+                    ssn = "dolor";
                 }};
             }};
 

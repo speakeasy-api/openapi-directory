@@ -14,10 +14,10 @@ public class Application {
 
             GetCountriesRequest req = new GetCountriesRequest() {{
                 queryParams = new GetCountriesQueryParams() {{
-                    marketId = "maxime";
+                    marketId = "sit";
                     order = "ascending";
-                    regionName = "nihil";
-                    regionTypeId = 7342218420644743213;
+                    regionName = "culpa";
+                    regionTypeId = 501233450539197794;
                     sort = "label";
                 }};
             }};

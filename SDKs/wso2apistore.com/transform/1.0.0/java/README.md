@@ -26,7 +26,7 @@ public class Application {
             SDK sdk = builder.build();
 
             PostJsontoxmlRequest req = new PostJsontoxmlRequest() {{
-                request = "fugit";
+                request = "sit";
             }};
 
             PostJsontoxmlResponse res = sdk.postJsontoxml(req);

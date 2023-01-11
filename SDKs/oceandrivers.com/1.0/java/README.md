@@ -27,7 +27,7 @@ public class Application {
 
             CompareStationRequest req = new CompareStationRequest() {{
                 pathParams = new CompareStationPathParams() {{
-                    stationName = "sunt";
+                    stationName = "sit";
                 }};
             }};
 

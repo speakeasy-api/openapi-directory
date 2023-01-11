@@ -14,9 +14,9 @@ public class Application {
 
             AuthTokenRequest req = new AuthTokenRequest() {{
                 request = new TokenRequest() {{
-                    clientId = "ipsa";
-                    clientSecret = "expedita";
-                    grantType = "doloremque";
+                    clientId = "sit";
+                    clientSecret = "voluptas";
+                    grantType = "culpa";
                 }};
             }};
 

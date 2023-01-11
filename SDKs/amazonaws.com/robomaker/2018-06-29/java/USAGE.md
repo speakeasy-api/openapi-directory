@@ -22,19 +22,19 @@ public class Application {
 
             BatchDeleteWorldsRequest req = new BatchDeleteWorldsRequest() {{
                 headers = new BatchDeleteWorldsHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "ea";
-                    xAmzCredential = "sapiente";
-                    xAmzDate = "consequatur";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "voluptate";
-                    xAmzSignedHeaders = "dolore";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new BatchDeleteWorldsRequestBody() {{
                     worlds = new String[]() {{
-                        add("quia"),
-                        add("eum"),
-                        add("iure"),
+                        add("fugit"),
+                        add("et"),
+                        add("nihil"),
                     }};
                 }};
             }};

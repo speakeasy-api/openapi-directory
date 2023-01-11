@@ -22,7 +22,7 @@ public class Application {
 
             GetCriticsResourceTypeJsonRequest req = new GetCriticsResourceTypeJsonRequest() {{
                 pathParams = new GetCriticsResourceTypeJsonPathParams() {{
-                    resourceType = "autem";
+                    resourceType = "sit";
                 }};
             }};
 

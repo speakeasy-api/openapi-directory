@@ -22,14 +22,14 @@ public class Application {
 
             MergeTemplateRequest req = new MergeTemplateRequest() {{
                 queryParams = new MergeTemplateQueryParams() {{
-                    format = "html";
-                    name = "ipsum";
+                    format = "zip";
+                    name = "voluptas";
                     output = "url";
-                    templateId = 7292993857540947547;
+                    templateId = 501233450539197794;
                 }};
                 request = new Data() {{
-                    id = 2699131118857212871;
-                    name = "quasi";
+                    id = 3390393562759376202;
+                    name = "dolor";
                 }};
             }};
 

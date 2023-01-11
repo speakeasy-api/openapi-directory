@@ -35,19 +35,19 @@ public class Application {
 
             AcceptCertificateTransferRequest req = new AcceptCertificateTransferRequest() {{
                 pathParams = new AcceptCertificateTransferPathParams() {{
-                    certificateId = "quis";
+                    certificateId = "sit";
                 }};
                 queryParams = new AcceptCertificateTransferQueryParams() {{
                     setAsActive = false;
                 }};
                 headers = new AcceptCertificateTransferHeaders() {{
-                    xAmzAlgorithm = "fugit";
-                    xAmzContentSha256 = "aut";
-                    xAmzCredential = "id";
-                    xAmzDate = "sequi";
-                    xAmzSecurityToken = "dicta";
-                    xAmzSignature = "quis";
-                    xAmzSignedHeaders = "molestiae";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
             }};
 

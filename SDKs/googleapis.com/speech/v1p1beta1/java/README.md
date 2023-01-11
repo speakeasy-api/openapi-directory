@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new SpeechOperationsGetPathParams() {{
-                    name = "libero";
+                    name = "sit";
                 }};
                 queryParams = new SpeechOperationsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ea";
-                    alt = "json";
-                    callback = "non";
-                    fields = "necessitatibus";
-                    key = "dolorem";
-                    oauthToken = "quidem";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "accusamus";
-                    uploadType = "veritatis";
-                    uploadProtocol = "quam";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

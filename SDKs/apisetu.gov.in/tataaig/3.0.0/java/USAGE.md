@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new PodocRequestBody() {{
                     certificateParameters = new PodocRequestBodyCertificateParameters() {{
-                        fullName = "at";
-                        policyNumber = "fuga";
+                        fullName = "sit";
+                        policyNumber = "voluptas";
                     }};
-                    consentArtifact = "dolorem";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "voluptatem";
+                    txnId = "consequuntur";
                 }};
             }};
 

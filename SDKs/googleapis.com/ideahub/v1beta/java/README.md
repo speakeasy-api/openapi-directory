@@ -27,33 +27,35 @@ public class Application {
 
             IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest req = new IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest() {{
                 pathParams = new IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams() {{
-                    parent = "quia";
+                    parent = "sit";
                 }};
                 queryParams = new IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "omnis";
-                    alt = "json";
-                    callback = "perspiciatis";
-                    fields = "beatae";
-                    key = "laborum";
-                    oauthToken = "corporis";
-                    prettyPrint = false;
-                    quotaUser = "ipsa";
-                    uploadType = "pariatur";
-                    uploadProtocol = "beatae";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleSearchIdeahubV1betaIdeaActivity() {{
                     ideas = new String[]() {{
-                        add("amet"),
+                        add("debitis"),
+                        add("voluptatum"),
+                        add("et"),
                     }};
-                    name = "quis";
+                    name = "ut";
                     topics = new String[]() {{
-                        add("est"),
-                        add("iure"),
-                        add("eligendi"),
+                        add("et"),
+                        add("voluptate"),
+                        add("iste"),
                     }};
                     type = "POST_DELETED";
-                    uri = "aperiam";
+                    uri = "totam";
                 }};
             }};
 

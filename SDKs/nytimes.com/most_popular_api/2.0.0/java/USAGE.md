@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetMostemailedSectionTimePeriodJsonPathParams() {{
-                    section = "NYT Now";
+                    section = "Opinion";
                     timePeriod = "1";
                 }};
             }};

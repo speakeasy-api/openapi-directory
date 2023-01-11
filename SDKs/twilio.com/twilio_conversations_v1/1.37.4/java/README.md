@@ -33,20 +33,20 @@ public class Application {
                     }};
                 }};
                 request = new CreateConfigurationAddressCreateConfigurationAddressRequest() {{
-                    address = "ex";
-                    autoCreationConversationServiceSid = "iure";
-                    autoCreationEnabled = false;
-                    autoCreationStudioFlowSid = "quos";
-                    autoCreationStudioRetryCount = 6531361177861028646;
-                    autoCreationType = "default";
+                    address = "sit";
+                    autoCreationConversationServiceSid = "voluptas";
+                    autoCreationEnabled = true;
+                    autoCreationStudioFlowSid = "expedita";
+                    autoCreationStudioRetryCount = 3390393562759376202;
+                    autoCreationType = "studio";
                     autoCreationWebhookFilters = new String[]() {{
-                        add("veniam"),
-                        add("qui"),
+                        add("voluptas"),
+                        add("fugit"),
                     }};
-                    autoCreationWebhookMethod = "POST";
-                    autoCreationWebhookUrl = "odit";
-                    friendlyName = "molestias";
-                    type = "sms";
+                    autoCreationWebhookMethod = "GET";
+                    autoCreationWebhookUrl = "nihil";
+                    friendlyName = "rerum";
+                    type = "gbm";
                 }};
             }};
 

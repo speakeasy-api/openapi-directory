@@ -23,17 +23,17 @@ public class Application {
             GetClassificationsRequest req = new GetClassificationsRequest() {{
                 queryParams = new GetClassificationsQueryParams() {{
                     ids = new String[]() {{
-                        add("consequatur"),
+                        add("voluptas"),
                     }};
-                    isCountry = "laboriosam";
-                    pageNumber = 773736624494728175;
-                    pageSize = 1546546415388482117;
-                    q = "placeat";
+                    isCountry = "culpa";
+                    pageNumber = 501233450539197794;
+                    pageSize = 3390393562759376202;
+                    q = "dolor";
                     sort = new openapisdk.models.operations.GetClassificationsSortEnum[]() {{
                         add("value"),
-                        add("updated_at"),
+                        add("created_at"),
                     }};
-                    type = "AlternateFeedType";
+                    type = "Language";
                 }};
             }};
 

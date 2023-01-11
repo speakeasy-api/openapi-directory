@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetUserContentByDateJsonQueryParams() {{
-                    date = "dolores";
+                    date = "sit";
                 }};
             }};
 

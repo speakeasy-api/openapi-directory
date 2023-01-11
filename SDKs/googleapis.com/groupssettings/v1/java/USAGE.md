@@ -22,16 +22,16 @@ public class Application {
                     }};
                 }};
                 pathParams = new GroupsSettingsGroupsGetPathParams() {{
-                    groupUniqueId = "eum";
+                    groupUniqueId = "sit";
                 }};
                 queryParams = new GroupsSettingsGroupsGetQueryParams() {{
-                    alt = "json";
-                    fields = "eos";
-                    key = "eaque";
-                    oauthToken = "eligendi";
-                    prettyPrint = true;
-                    quotaUser = "repellat";
-                    userIp = "ea";
+                    alt = "atom";
+                    fields = "culpa";
+                    key = "expedita";
+                    oauthToken = "consequuntur";
+                    prettyPrint = false;
+                    quotaUser = "expedita";
+                    userIp = "voluptas";
                 }};
             }};
 

@@ -36,11 +36,11 @@ public class Application {
                 }};
                 request = new ApmclRequestBody() {{
                     certificateParameters = new ApmclRequestBodyCertificateParameters() {{
-                        documentNumber = "ut";
+                        documentNumber = "sit";
                     }};
-                    consentArtifact = "officiis";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "eum";
+                    txnId = "expedita";
                 }};
             }};
 

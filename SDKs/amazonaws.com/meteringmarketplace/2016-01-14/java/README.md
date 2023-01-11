@@ -35,38 +35,38 @@ public class Application {
 
             BatchMeterUsageRequest req = new BatchMeterUsageRequest() {{
                 headers = new BatchMeterUsageHeaders() {{
-                    xAmzAlgorithm = "nihil";
-                    xAmzContentSha256 = "dolorem";
-                    xAmzCredential = "impedit";
-                    xAmzDate = "laboriosam";
-                    xAmzSecurityToken = "iste";
-                    xAmzSignature = "soluta";
-                    xAmzSignedHeaders = "ut";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSMPMeteringService.BatchMeterUsage";
                 }};
                 request = new BatchMeterUsageRequest() {{
-                    productCode = "vel";
+                    productCode = "fugit";
                     usageRecords = new openapisdk.models.shared.UsageRecord[]() {{
                         add(new UsageRecord() {{
-                            customerIdentifier = "soluta";
-                            dimension = "alias";
-                            quantity = 3089778739814785022;
-                            timestamp = "1984-04-21T17:27:21Z";
+                            customerIdentifier = "nihil";
+                            dimension = "rerum";
+                            quantity = 7837839688282259259;
+                            timestamp = "2004-06-02T10:14:12Z";
                             usageAllocations = new openapisdk.models.shared.UsageAllocation[]() {{
                                 add(new UsageAllocation() {{
-                                    allocatedUsageQuantity = 4453435121235553912;
+                                    allocatedUsageQuantity = 2339563716805116249;
                                     tags = new openapisdk.models.shared.Tag[]() {{
                                         add(new Tag() {{
-                                            key = "dolore";
-                                            value = "quidem";
-                                        }}),
-                                        add(new Tag() {{
-                                            key = "doloribus";
-                                            value = "at";
-                                        }}),
-                                        add(new Tag() {{
-                                            key = "dolore";
+                                            key = "dolorem";
                                             value = "et";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "voluptate";
+                                            value = "iste";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "vitae";
+                                            value = "totam";
                                         }}),
                                     }};
                                 }}),

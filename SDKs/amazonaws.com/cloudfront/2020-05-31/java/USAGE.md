@@ -22,19 +22,19 @@ public class Application {
 
             AssociateAlias20200531Request req = new AssociateAlias20200531Request() {{
                 pathParams = new AssociateAlias20200531PathParams() {{
-                    targetDistributionId = "voluptas";
+                    targetDistributionId = "sit";
                 }};
                 queryParams = new AssociateAlias20200531QueryParams() {{
-                    alias = "necessitatibus";
+                    alias = "voluptas";
                 }};
                 headers = new AssociateAlias20200531Headers() {{
-                    xAmzAlgorithm = "iure";
-                    xAmzContentSha256 = "voluptate";
-                    xAmzCredential = "quaerat";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "ullam";
-                    xAmzSignature = "omnis";
-                    xAmzSignedHeaders = "debitis";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
             }};
 

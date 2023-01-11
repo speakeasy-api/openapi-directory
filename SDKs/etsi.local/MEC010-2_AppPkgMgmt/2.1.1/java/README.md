@@ -27,14 +27,14 @@ public class Application {
 
             AppDgetRequest req = new AppDgetRequest() {{
                 pathParams = new AppDgetPathParams() {{
-                    appDId = "ut";
+                    appDId = "sit";
                 }};
                 queryParams = new AppDgetQueryParams() {{
-                    allFields = "non";
-                    excludeDefault = "nihil";
-                    excludeFields = "laborum";
-                    fields = "recusandae";
-                    filter = "nihil";
+                    allFields = "voluptas";
+                    excludeDefault = "culpa";
+                    excludeFields = "expedita";
+                    fields = "consequuntur";
+                    filter = "dolor";
                 }};
             }};
 

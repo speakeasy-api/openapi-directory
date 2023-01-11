@@ -33,10 +33,10 @@ public class Application {
                     }};
                 }};
                 request = new CreateCustomerProfileCreateCustomerProfileRequest() {{
-                    email = "asperiores";
-                    friendlyName = "quaerat";
-                    policySid = "hic";
-                    statusCallback = "quo";
+                    email = "sit";
+                    friendlyName = "voluptas";
+                    policySid = "culpa";
+                    statusCallback = "expedita";
                 }};
             }};
 

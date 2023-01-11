@@ -22,89 +22,102 @@ public class Application {
 
             CreateConnectorRequest req = new CreateConnectorRequest() {{
                 headers = new CreateConnectorHeaders() {{
-                    xAmzAlgorithm = "totam";
-                    xAmzContentSha256 = "eum";
-                    xAmzCredential = "laborum";
-                    xAmzDate = "maxime";
-                    xAmzSecurityToken = "voluptatem";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateConnectorRequestBody() {{
                     capacity = new CreateConnectorRequestBodyCapacity() {{
                         autoScaling = new AutoScaling() {{
-                            maxWorkerCount = 3504002613480678211;
-                            mcuCount = 2500753354058343789;
-                            minWorkerCount = 2787501642645844576;
+                            maxWorkerCount = 6044372234677422456;
+                            mcuCount = 8274930044578894929;
+                            minWorkerCount = 1543572285742637646;
                             scaleInPolicy = new ScaleInPolicy() {{
-                                cpuUtilizationPercentage = 7677299547891902014;
+                                cpuUtilizationPercentage = 2661732831099943416;
                             }};
                             scaleOutPolicy = new ScaleOutPolicy() {{
-                                cpuUtilizationPercentage = 7105999358852640672;
+                                cpuUtilizationPercentage = 8325060299420976708;
                             }};
                         }};
                         provisionedCapacity = new ProvisionedCapacity() {{
-                            mcuCount = 3679840646143242248;
-                            workerCount = 3126614124520816277;
+                            mcuCount = 7837839688282259259;
+                            workerCount = 2518412263346885298;
                         }};
                     }};
                     connectorConfiguration = new java.util.HashMap<String, String>() {{
-                        put("molestiae", "voluptas");
+                        put("et", "ut");
                     }};
-                    connectorDescription = "officia";
-                    connectorName = "cupiditate";
+                    connectorDescription = "dolorem";
+                    connectorName = "et";
                     kafkaCluster = new CreateConnectorRequestBodyKafkaCluster() {{
                         apacheKafkaCluster = new ApacheKafkaCluster() {{
-                            bootstrapServers = "in";
+                            bootstrapServers = "voluptate";
                             vpc = new Vpc() {{
                                 securityGroups = new String[]() {{
-                                    add("ipsa"),
-                                    add("nemo"),
+                                    add("vitae"),
+                                    add("totam"),
+                                    add("dolores"),
                                 }};
                                 subnets = new String[]() {{
-                                    add("quae"),
-                                    add("odit"),
-                                    add("expedita"),
+                                    add("debitis"),
+                                    add("vel"),
+                                    add("odio"),
                                 }};
                             }};
                         }};
                     }};
                     kafkaClusterClientAuthentication = new CreateConnectorRequestBodyKafkaClusterClientAuthentication() {{
-                        authenticationType = "NONE";
+                        authenticationType = "IAM";
                     }};
                     kafkaClusterEncryptionInTransit = new CreateConnectorRequestBodyKafkaClusterEncryptionInTransit() {{
-                        encryptionType = "TLS";
+                        encryptionType = "PLAINTEXT";
                     }};
-                    kafkaConnectVersion = "voluptate";
+                    kafkaConnectVersion = "aspernatur";
                     logDelivery = new CreateConnectorRequestBodyLogDelivery() {{
                         workerLogDelivery = new WorkerLogDelivery() {{
                             cloudWatchLogs = new CloudWatchLogsLogDelivery() {{
-                                enabled = false;
-                                logGroup = "harum";
+                                enabled = true;
+                                logGroup = "totam";
                             }};
                             firehose = new FirehoseLogDelivery() {{
-                                deliveryStream = "nulla";
+                                deliveryStream = "commodi";
                                 enabled = true;
                             }};
                             s3 = new S3LogDelivery() {{
-                                bucket = "corrupti";
-                                enabled = false;
-                                prefix = "consectetur";
+                                bucket = "est";
+                                enabled = true;
+                                prefix = "odit";
                             }};
                         }};
                     }};
                     plugins = new openapisdk.models.shared.Plugin[]() {{
                         add(new Plugin() {{
                             customPlugin = new CustomPlugin() {{
-                                customPluginArn = "impedit";
-                                revision = 8021751157946261264;
+                                customPluginArn = "voluptas";
+                                revision = 4778690082005258714;
+                            }};
+                        }}),
+                        add(new Plugin() {{
+                            customPlugin = new CustomPlugin() {{
+                                customPluginArn = "aut";
+                                revision = 6972732843819909978;
+                            }};
+                        }}),
+                        add(new Plugin() {{
+                            customPlugin = new CustomPlugin() {{
+                                customPluginArn = "sed";
+                                revision = 7845762441295307478;
                             }};
                         }}),
                     }};
-                    serviceExecutionRoleArn = "doloribus";
+                    serviceExecutionRoleArn = "autem";
                     workerConfiguration = new CreateConnectorRequestBodyWorkerConfiguration() {{
-                        revision = 5906068016607125469;
-                        workerConfigurationArn = "quis";
+                        revision = 8514850266767180993;
+                        workerConfigurationArn = "nobis";
                     }};
                 }};
             }};

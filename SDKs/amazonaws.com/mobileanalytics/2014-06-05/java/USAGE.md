@@ -22,57 +22,34 @@ public class Application {
 
             PutEventsRequest req = new PutEventsRequest() {{
                 headers = new PutEventsHeaders() {{
-                    xAmzAlgorithm = "aperiam";
-                    xAmzContentSha256 = "enim";
-                    xAmzCredential = "sequi";
-                    xAmzDate = "laborum";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "aliquid";
-                    xAmzSignedHeaders = "maiores";
-                    xAmzClientContext = "velit";
-                    xAmzClientContextEncoding = "modi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
+                    xAmzClientContext = "voluptas";
+                    xAmzClientContextEncoding = "fugit";
                 }};
                 request = new PutEventsRequestBody() {{
                     events = new openapisdk.models.shared.Event[]() {{
                         add(new Event() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("doloremque", "cum");
-                                put("necessitatibus", "illum");
-                                put("enim", "aspernatur");
+                                put("rerum", "dicta");
                             }};
-                            eventType = "ratione";
+                            eventType = "debitis";
                             metrics = new java.util.HashMap<String, Double>() {{
-                                put("omnis", 1.100000);
-                                put("omnis", 40.200001);
+                                put("et", 11.100000);
                             }};
                             session = new Session() {{
-                                duration = 164162024630061234;
-                                id = "voluptatibus";
-                                startTimestamp = "enim";
-                                stopTimestamp = "in";
+                                duration = 7259475919510918339;
+                                id = "voluptate";
+                                startTimestamp = "iste";
+                                stopTimestamp = "vitae";
                             }};
-                            timestamp = "reiciendis";
-                            version = "rerum";
-                        }}),
-                        add(new Event() {{
-                            attributes = new java.util.HashMap<String, String>() {{
-                                put("perspiciatis", "fugit");
-                                put("asperiores", "fugit");
-                                put("in", "ex");
-                            }};
-                            eventType = "saepe";
-                            metrics = new java.util.HashMap<String, Double>() {{
-                                put("nulla", 19.200001);
-                                put("aliquid", 33.099998);
-                            }};
-                            session = new Session() {{
-                                duration = 273263606341302306;
-                                id = "fugit";
-                                startTimestamp = "qui";
-                                stopTimestamp = "natus";
-                            }};
-                            timestamp = "molestiae";
-                            version = "odit";
+                            timestamp = "totam";
+                            version = "dolores";
                         }}),
                     }};
                 }};

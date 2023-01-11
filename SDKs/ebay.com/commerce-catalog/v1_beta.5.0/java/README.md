@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetProductPathParams() {{
-                    epid = "dicta";
+                    epid = "sit";
                 }};
             }};
 

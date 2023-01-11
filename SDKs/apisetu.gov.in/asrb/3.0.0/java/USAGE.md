@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new MrcerRequestBody() {{
                     certificateParameters = new MrcerRequestBodyCertificateParameters() {{
-                        certTYPE = "et";
-                        fullName = "neque";
-                        rroll = "autem";
+                        certTYPE = "sit";
+                        fullName = "voluptas";
+                        rroll = "culpa";
                     }};
-                    consentArtifact = "optio";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "blanditiis";
+                    txnId = "dolor";
                 }};
             }};
 

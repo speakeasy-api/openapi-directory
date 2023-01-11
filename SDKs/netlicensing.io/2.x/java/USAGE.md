@@ -21,19 +21,19 @@ public class Application {
                 }};
                 request = new CreateLicenseRequestBody() {{
                     active = false;
-                    currency = "impedit";
-                    hidden = false;
-                    licenseTemplateNumber = "voluptatibus";
-                    licenseeNumber = "porro";
-                    name = "molestias";
-                    number = "consequatur";
+                    currency = "voluptas";
+                    hidden = true;
+                    licenseTemplateNumber = "expedita";
+                    licenseeNumber = "consequuntur";
+                    name = "dolor";
+                    number = "expedita";
                     parentfeature = "voluptas";
-                    price = 42.099998;
-                    quantity = "reprehenderit";
-                    startDate = "2018-03-31T02:02:22Z";
-                    timeVolume = "sed";
-                    timeVolumePeriod = "amet";
-                    usedQuantity = "unde";
+                    price = 88.099998;
+                    quantity = "nihil";
+                    startDate = "2004-06-02T10:14:12Z";
+                    timeVolume = "voluptatum";
+                    timeVolumePeriod = "et";
+                    usedQuantity = "ut";
                 }};
             }};
 

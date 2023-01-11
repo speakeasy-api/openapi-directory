@@ -35,25 +35,19 @@ public class Application {
 
             CreateReplicationSetRequest req = new CreateReplicationSetRequest() {{
                 headers = new CreateReplicationSetHeaders() {{
-                    xAmzAlgorithm = "non";
-                    xAmzContentSha256 = "totam";
-                    xAmzCredential = "similique";
-                    xAmzDate = "sunt";
-                    xAmzSecurityToken = "aut";
-                    xAmzSignature = "quis";
-                    xAmzSignedHeaders = "quis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateReplicationSetRequestBody() {{
-                    clientToken = "amet";
+                    clientToken = "voluptas";
                     regions = new java.util.HashMap<String, openapisdk.models.shared.RegionMapInputValue>() {{
-                        put("totam", new RegionMapInputValue() {{
-                            sseKmsKeyId = "perspiciatis";
-                        }});
-                        put("cupiditate", new RegionMapInputValue() {{
-                            sseKmsKeyId = "asperiores";
-                        }});
-                        put("quasi", new RegionMapInputValue() {{
-                            sseKmsKeyId = "eius";
+                        put("et", new RegionMapInputValue() {{
+                            sseKmsKeyId = "nihil";
                         }});
                     }};
                 }};

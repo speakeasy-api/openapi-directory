@@ -27,7 +27,7 @@ public class Application {
 
             GetFeaturesFeatureIdRequest req = new GetFeaturesFeatureIdRequest() {{
                 pathParams = new GetFeaturesFeatureIdPathParams() {{
-                    featureId = 594815894214185495;
+                    featureId = 8717895732742165505;
                 }};
             }};
 

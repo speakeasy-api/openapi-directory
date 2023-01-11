@@ -36,15 +36,15 @@ public class Application {
                 }};
                 request = new VochseRequestBody() {{
                     certificateParameters = new VochseRequestBodyCertificateParameters() {{
-                        dob = "corporis";
-                        fullName = "voluptates";
-                        regno = "quaerat";
-                        year = "aperiam";
-                        type = "et";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        regno = "culpa";
+                        year = "expedita";
+                        type = "consequuntur";
                     }};
-                    consentArtifact = "nisi";
+                    consentArtifact = "dolor";
                     format = "pdf";
-                    txnId = "quo";
+                    txnId = "voluptas";
                 }};
             }};
 

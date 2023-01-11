@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetAssetPathParams() {{
-                    assetId = "voluptatum";
+                    assetId = "sit";
                 }};
                 queryParams = new GetAssetQueryParams() {{
                     aliases = false;

@@ -35,17 +35,17 @@ public class Application {
 
             AssociateAdminAccountRequest req = new AssociateAdminAccountRequest() {{
                 headers = new AssociateAdminAccountHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "cupiditate";
-                    xAmzCredential = "aut";
-                    xAmzDate = "id";
-                    xAmzSecurityToken = "suscipit";
-                    xAmzSignature = "dicta";
-                    xAmzSignedHeaders = "laboriosam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSFMS_20180101.AssociateAdminAccount";
                 }};
                 request = new AssociateAdminAccountRequest() {{
-                    adminAccount = "architecto";
+                    adminAccount = "fugit";
                 }};
             }};
 

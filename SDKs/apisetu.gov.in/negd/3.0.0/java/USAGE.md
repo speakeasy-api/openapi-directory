@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new GovidRequestBody() {{
                     certificateParameters = new GovidRequestBodyCertificateParameters() {{
-                        fullName = "repellendus";
-                        cardno = "possimus";
+                        fullName = "sit";
+                        cardno = "voluptas";
                     }};
-                    consentArtifact = "autem";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "id";
+                    txnId = "consequuntur";
                 }};
             }};
 

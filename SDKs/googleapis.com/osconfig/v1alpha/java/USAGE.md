@@ -22,23 +22,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListPathParams() {{
-                    parent = "possimus";
+                    parent = "sit";
                 }};
                 queryParams = new OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dignissimos";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "placeat";
-                    fields = "illo";
-                    filter = "recusandae";
-                    key = "dolor";
-                    oauthToken = "corrupti";
-                    pageSize = 6565798491263222334;
-                    pageToken = "asperiores";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
                     prettyPrint = true;
-                    quotaUser = "quam";
-                    uploadType = "omnis";
-                    uploadProtocol = "ipsa";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

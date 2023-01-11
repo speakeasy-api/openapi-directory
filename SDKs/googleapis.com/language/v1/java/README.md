@@ -37,24 +37,24 @@ public class Application {
                     }};
                 }};
                 queryParams = new LanguageDocumentsAnalyzeEntitiesQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "perspiciatis";
-                    alt = "proto";
-                    callback = "aut";
-                    fields = "voluptatem";
-                    key = "non";
-                    oauthToken = "qui";
-                    prettyPrint = false;
-                    quotaUser = "ducimus";
-                    uploadType = "eos";
-                    uploadProtocol = "eos";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new AnalyzeEntitiesRequest() {{
                     document = new Document() {{
-                        content = "natus";
-                        gcsContentUri = "qui";
-                        language = "alias";
-                        type = "PLAIN_TEXT";
+                        content = "rerum";
+                        gcsContentUri = "dicta";
+                        language = "debitis";
+                        type = "TYPE_UNSPECIFIED";
                     }};
                     encodingType = "UTF16";
                 }};

@@ -27,7 +27,7 @@ public class Application {
 
             ConfigConfigGetRequest req = new ConfigConfigGetRequest() {{
                 headers = new ConfigConfigGetHeaders() {{
-                    authorization = "ut";
+                    authorization = "sit";
                 }};
             }};
 

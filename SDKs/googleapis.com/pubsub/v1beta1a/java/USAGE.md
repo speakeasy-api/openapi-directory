@@ -24,24 +24,25 @@ public class Application {
                     }};
                 }};
                 queryParams = new PubsubSubscriptionsAcknowledgeQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "aut";
-                    alt = "proto";
-                    callback = "consequuntur";
-                    fields = "repellat";
-                    key = "consequatur";
-                    oauthToken = "iusto";
-                    prettyPrint = false;
-                    quotaUser = "eveniet";
-                    uploadType = "quia";
-                    uploadProtocol = "accusantium";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new AcknowledgeRequest() {{
                     ackId = new String[]() {{
-                        add("et"),
-                        add("recusandae"),
+                        add("dicta"),
+                        add("debitis"),
+                        add("voluptatum"),
                     }};
-                    subscription = "voluptatibus";
+                    subscription = "et";
                 }};
             }};
 

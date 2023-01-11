@@ -14,27 +14,26 @@ public class Application {
 
             ChromeuxreportRecordsQueryRecordRequest req = new ChromeuxreportRecordsQueryRecordRequest() {{
                 queryParams = new ChromeuxreportRecordsQueryRecordQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "eum";
-                    alt = "json";
-                    callback = "sed";
-                    fields = "expedita";
-                    key = "maxime";
-                    oauthToken = "eos";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "autem";
-                    uploadType = "deleniti";
-                    uploadProtocol = "impedit";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new QueryRequest() {{
-                    effectiveConnectionType = "asperiores";
-                    formFactor = "DESKTOP";
+                    effectiveConnectionType = "rerum";
+                    formFactor = "TABLET";
                     metrics = new String[]() {{
-                        add("commodi"),
-                        add("ut"),
+                        add("voluptatum"),
                     }};
-                    origin = "aut";
-                    url = "explicabo";
+                    origin = "et";
+                    url = "ut";
                 }};
             }};
 

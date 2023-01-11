@@ -35,20 +35,19 @@ public class Application {
 
             AssociateLensesRequest req = new AssociateLensesRequest() {{
                 pathParams = new AssociateLensesPathParams() {{
-                    workloadId = "unde";
+                    workloadId = "sit";
                 }};
                 headers = new AssociateLensesHeaders() {{
-                    xAmzAlgorithm = "ipsam";
-                    xAmzContentSha256 = "ad";
-                    xAmzCredential = "sint";
-                    xAmzDate = "dolores";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "error";
-                    xAmzSignedHeaders = "cupiditate";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AssociateLensesRequestBody() {{
                     lensAliases = new String[]() {{
-                        add("sapiente"),
                         add("et"),
                     }};
                 }};

@@ -37,25 +37,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasestorageProjectsBucketsAddFirebasePathParams() {{
-                    bucket = "tenetur";
+                    bucket = "sit";
                 }};
                 queryParams = new FirebasestorageProjectsBucketsAddFirebaseQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "excepturi";
-                    alt = "proto";
-                    callback = "ut";
-                    fields = "magni";
-                    key = "asperiores";
-                    oauthToken = "eum";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "mollitia";
-                    uploadType = "tenetur";
-                    uploadProtocol = "sit";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("earum", "eveniet");
-                    put("sed", "a");
-                    put("voluptatem", "aut");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

@@ -14,11 +14,11 @@ public class Application {
 
             BranchControllerGetBranchesRequest req = new BranchControllerGetBranchesRequest() {{
                 pathParams = new BranchControllerGetBranchesPathParams() {{
-                    shortName = "non";
+                    shortName = "sit";
                 }};
                 queryParams = new BranchControllerGetBranchesQueryParams() {{
-                    count = 4584259282962304836;
-                    offset = 6522010878451485155;
+                    count = 2259404117704393152;
+                    offset = 6050128673802995827;
                 }};
             }};
 

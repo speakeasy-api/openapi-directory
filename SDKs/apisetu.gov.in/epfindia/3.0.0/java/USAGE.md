@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new EpfscRequestBody() {{
                     certificateParameters = new EpfscRequestBodyCertificateParameters() {{
-                        dob = "explicabo";
-                        fullName = "repudiandae";
-                        scno = "sapiente";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        scno = "culpa";
                     }};
-                    consentArtifact = "nesciunt";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "ab";
+                    txnId = "dolor";
                 }};
             }};
 

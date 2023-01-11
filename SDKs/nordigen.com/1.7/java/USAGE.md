@@ -22,7 +22,7 @@ public class Application {
 
             RetrieveAccountBalancesRequest req = new RetrieveAccountBalancesRequest() {{
                 pathParams = new RetrieveAccountBalancesPathParams() {{
-                    id = "rerum";
+                    id = "sit";
                 }};
             }};
 

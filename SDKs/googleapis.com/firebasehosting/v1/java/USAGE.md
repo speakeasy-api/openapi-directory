@@ -14,25 +14,25 @@ public class Application {
 
             FirebasehostingOperationsCancelRequest req = new FirebasehostingOperationsCancelRequest() {{
                 pathParams = new FirebasehostingOperationsCancelPathParams() {{
-                    name = "laudantium";
+                    name = "sit";
                 }};
                 queryParams = new FirebasehostingOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "iste";
-                    alt = "proto";
-                    callback = "vel";
-                    fields = "non";
-                    key = "cumque";
-                    oauthToken = "incidunt";
-                    prettyPrint = false;
-                    quotaUser = "eum";
-                    uploadType = "rem";
-                    uploadProtocol = "fuga";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("reprehenderit", "debitis");
-                    put("iste", "voluptatum");
-                    put("numquam", "accusamus");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

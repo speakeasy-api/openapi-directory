@@ -35,18 +35,18 @@ public class Application {
 
             AbortMultipartUploadRequest req = new AbortMultipartUploadRequest() {{
                 pathParams = new AbortMultipartUploadPathParams() {{
-                    accountId = "similique";
-                    uploadId = "recusandae";
-                    vaultName = "error";
+                    accountId = "sit";
+                    uploadId = "voluptas";
+                    vaultName = "culpa";
                 }};
                 headers = new AbortMultipartUploadHeaders() {{
-                    xAmzAlgorithm = "hic";
-                    xAmzContentSha256 = "atque";
-                    xAmzCredential = "rerum";
-                    xAmzDate = "voluptates";
-                    xAmzSecurityToken = "iste";
-                    xAmzSignature = "reiciendis";
-                    xAmzSignedHeaders = "ipsam";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
             }};
 

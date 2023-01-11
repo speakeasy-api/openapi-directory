@@ -27,15 +27,15 @@ public class Application {
 
             GetBestPodcastsRequest req = new GetBestPodcastsRequest() {{
                 queryParams = new GetBestPodcastsQueryParams() {{
-                    genreId = "est";
-                    language = "ducimus";
-                    page = 8623164225002686073;
-                    publisherRegion = "minus";
-                    region = "quasi";
-                    safeMode = 3451236887729777416;
+                    genreId = "sit";
+                    language = "voluptas";
+                    page = 6050128673802995827;
+                    publisherRegion = "expedita";
+                    region = "consequuntur";
+                    safeMode = 2669985732393126063;
                 }};
                 headers = new GetBestPodcastsHeaders() {{
-                    xListenAPIKey = "id";
+                    xListenAPIKey = "expedita";
                 }};
             }};
 

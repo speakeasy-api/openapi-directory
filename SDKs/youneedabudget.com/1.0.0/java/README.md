@@ -35,13 +35,13 @@ public class Application {
 
             CreateAccountRequest req = new CreateAccountRequest() {{
                 pathParams = new CreateAccountPathParams() {{
-                    budgetId = "aut";
+                    budgetId = "sit";
                 }};
                 request = new SaveAccountWrapper() {{
                     account = new SaveAccount() {{
-                        balance = 354437709630325889;
-                        name = "minima";
-                        type = "otherAsset";
+                        balance = 2259404117704393152;
+                        name = "culpa";
+                        type = "lineOfCredit";
                     }};
                 }};
             }};

@@ -22,29 +22,32 @@ public class Application {
                     }};
                 }};
                 pathParams = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams() {{
-                    name = "sed";
+                    name = "sit";
                 }};
                 queryParams = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "molestiae";
-                    alt = "json";
-                    callback = "provident";
-                    fields = "et";
-                    key = "autem";
-                    oauthToken = "at";
-                    prettyPrint = false;
-                    quotaUser = "distinctio";
-                    uploadType = "aliquam";
-                    uploadProtocol = "qui";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GenerateAccessTokenRequest() {{
                     delegates = new String[]() {{
-                        add("in"),
-                        add("harum"),
+                        add("debitis"),
+                        add("voluptatum"),
+                        add("et"),
                     }};
-                    lifetime = "veniam";
+                    lifetime = "ut";
                     scope = new String[]() {{
-                        add("quam"),
+                        add("et"),
+                        add("voluptate"),
+                        add("iste"),
                     }};
                 }};
             }};

@@ -37,136 +37,87 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudtraceProjectsPatchTracesPathParams() {{
-                    projectId = "aut";
+                    projectId = "sit";
                 }};
                 queryParams = new CloudtraceProjectsPatchTracesQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "error";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "sit";
-                    fields = "maxime";
-                    key = "est";
-                    oauthToken = "natus";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "sed";
-                    uploadType = "recusandae";
-                    uploadProtocol = "saepe";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new Traces() {{
                     traces = new openapisdk.models.shared.Trace[]() {{
                         add(new Trace() {{
-                            projectId = "consequatur";
+                            projectId = "debitis";
                             spans = new openapisdk.models.shared.TraceSpan[]() {{
                                 add(new TraceSpan() {{
-                                    endTime = "atque";
-                                    kind = "SPAN_KIND_UNSPECIFIED";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("ab", "exercitationem");
-                                        put("rerum", "placeat");
-                                        put("doloremque", "pariatur");
-                                    }};
-                                    name = "facilis";
-                                    parentSpanId = "consequatur";
-                                    spanId = "sit";
-                                    startTime = "aut";
-                                }}),
-                                add(new TraceSpan() {{
-                                    endTime = "illum";
-                                    kind = "RPC_SERVER";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("nemo", "qui");
-                                    }};
-                                    name = "aut";
-                                    parentSpanId = "voluptatum";
-                                    spanId = "enim";
-                                    startTime = "eos";
-                                }}),
-                                add(new TraceSpan() {{
-                                    endTime = "adipisci";
-                                    kind = "RPC_SERVER";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("nesciunt", "ipsum");
-                                        put("magni", "exercitationem");
-                                        put("voluptatem", "debitis");
-                                    }};
-                                    name = "non";
-                                    parentSpanId = "aut";
-                                    spanId = "dicta";
-                                    startTime = "qui";
-                                }}),
-                            }};
-                            traceId = "architecto";
-                        }}),
-                        add(new Trace() {{
-                            projectId = "dolore";
-                            spans = new openapisdk.models.shared.TraceSpan[]() {{
-                                add(new TraceSpan() {{
-                                    endTime = "laborum";
-                                    kind = "RPC_SERVER";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("ex", "qui");
-                                        put("incidunt", "debitis");
-                                    }};
-                                    name = "qui";
-                                    parentSpanId = "culpa";
-                                    spanId = "ea";
-                                    startTime = "totam";
-                                }}),
-                                add(new TraceSpan() {{
-                                    endTime = "non";
+                                    endTime = "et";
                                     kind = "RPC_CLIENT";
                                     labels = new java.util.HashMap<String, String>() {{
-                                        put("repudiandae", "beatae");
+                                        put("et", "voluptate");
+                                        put("iste", "vitae");
+                                        put("totam", "dolores");
                                     }};
-                                    name = "dolorem";
+                                    name = "illum";
+                                    parentSpanId = "debitis";
+                                    spanId = "vel";
+                                    startTime = "odio";
+                                }}),
+                            }};
+                            traceId = "dolore";
+                        }}),
+                        add(new Trace() {{
+                            projectId = "id";
+                            spans = new openapisdk.models.shared.TraceSpan[]() {{
+                                add(new TraceSpan() {{
+                                    endTime = "accusantium";
+                                    kind = "RPC_CLIENT";
+                                    labels = new java.util.HashMap<String, String>() {{
+                                        put("quis", "est");
+                                        put("aut", "odit");
+                                    }};
+                                    name = "non";
                                     parentSpanId = "voluptas";
-                                    spanId = "dolores";
-                                    startTime = "quam";
+                                    spanId = "omnis";
+                                    startTime = "aut";
+                                }}),
+                            }};
+                            traceId = "illo";
+                        }}),
+                        add(new Trace() {{
+                            projectId = "sed";
+                            spans = new openapisdk.models.shared.TraceSpan[]() {{
+                                add(new TraceSpan() {{
+                                    endTime = "autem";
+                                    kind = "SPAN_KIND_UNSPECIFIED";
+                                    labels = new java.util.HashMap<String, String>() {{
+                                        put("odio", "qui");
+                                    }};
+                                    name = "recusandae";
+                                    parentSpanId = "at";
+                                    spanId = "ipsum";
+                                    startTime = "eveniet";
                                 }}),
                                 add(new TraceSpan() {{
                                     endTime = "modi";
-                                    kind = "RPC_CLIENT";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("earum", "asperiores");
-                                        put("illo", "odit");
-                                    }};
-                                    name = "distinctio";
-                                    parentSpanId = "rerum";
-                                    spanId = "dolore";
-                                    startTime = "corporis";
-                                }}),
-                            }};
-                            traceId = "doloribus";
-                        }}),
-                        add(new Trace() {{
-                            projectId = "ut";
-                            spans = new openapisdk.models.shared.TraceSpan[]() {{
-                                add(new TraceSpan() {{
-                                    endTime = "explicabo";
                                     kind = "SPAN_KIND_UNSPECIFIED";
                                     labels = new java.util.HashMap<String, String>() {{
-                                        put("neque", "autem");
+                                        put("ut", "exercitationem");
                                     }};
-                                    name = "optio";
-                                    parentSpanId = "et";
-                                    spanId = "blanditiis";
-                                    startTime = "architecto";
-                                }}),
-                                add(new TraceSpan() {{
-                                    endTime = "natus";
-                                    kind = "SPAN_KIND_UNSPECIFIED";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("repellat", "et");
-                                        put("accusamus", "est");
-                                        put("et", "sit");
-                                    }};
-                                    name = "architecto";
-                                    parentSpanId = "consequatur";
-                                    spanId = "quo";
-                                    startTime = "deleniti";
+                                    name = "aut";
+                                    parentSpanId = "reprehenderit";
+                                    spanId = "tempore";
+                                    startTime = "maiores";
                                 }}),
                             }};
-                            traceId = "perferendis";
+                            traceId = "incidunt";
                         }}),
                     }};
                 }};

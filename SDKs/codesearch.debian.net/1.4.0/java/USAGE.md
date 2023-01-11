@@ -19,8 +19,8 @@ public class Application {
                     }};
                 }};
                 queryParams = new SearchQueryParams() {{
-                    matchMode = "regexp";
-                    query = "ullam";
+                    matchMode = "literal";
+                    query = "voluptas";
                 }};
             }};
 

@@ -27,18 +27,18 @@ public class Application {
 
             WebfontsWebfontsListRequest req = new WebfontsWebfontsListRequest() {{
                 queryParams = new WebfontsWebfontsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "omnis";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "est";
-                    fields = "aut";
-                    key = "similique";
-                    oauthToken = "quibusdam";
-                    prettyPrint = false;
-                    quotaUser = "magnam";
-                    sort = "STYLE";
-                    uploadType = "animi";
-                    uploadProtocol = "veniam";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    sort = "SORT_UNDEFINED";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

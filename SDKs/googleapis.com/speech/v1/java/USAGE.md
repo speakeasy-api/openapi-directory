@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new SpeechOperationsGetPathParams() {{
-                    name = "autem";
+                    name = "sit";
                 }};
                 queryParams = new SpeechOperationsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "tenetur";
-                    alt = "json";
-                    callback = "qui";
-                    fields = "est";
-                    key = "est";
-                    oauthToken = "mollitia";
-                    prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "soluta";
-                    uploadProtocol = "deleniti";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

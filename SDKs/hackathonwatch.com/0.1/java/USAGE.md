@@ -14,7 +14,7 @@ public class Application {
 
             GetHackathonsIdFormatRequest req = new GetHackathonsIdFormatRequest() {{
                 pathParams = new GetHackathonsIdFormatPathParams() {{
-                    id = 1702153942735043661;
+                    id = 8717895732742165505;
                 }};
             }};
 

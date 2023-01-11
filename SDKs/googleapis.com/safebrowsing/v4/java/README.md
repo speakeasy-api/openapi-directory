@@ -27,22 +27,22 @@ public class Application {
 
             SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest() {{
                 pathParams = new SafebrowsingEncodedFullHashesGetPathParams() {{
-                    encodedRequest = "et";
+                    encodedRequest = "sit";
                 }};
                 queryParams = new SafebrowsingEncodedFullHashesGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "neque";
-                    alt = "json";
-                    callback = "velit";
-                    clientId = "magnam";
-                    clientVersion = "cumque";
-                    fields = "provident";
-                    key = "ipsum";
-                    oauthToken = "quia";
-                    prettyPrint = false;
-                    quotaUser = "aperiam";
-                    uploadType = "delectus";
-                    uploadProtocol = "ut";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    clientId = "dolor";
+                    clientVersion = "expedita";
+                    fields = "voluptas";
+                    key = "fugit";
+                    oauthToken = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

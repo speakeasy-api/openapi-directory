@@ -22,20 +22,20 @@ public class Application {
 
             CloneBackendRequest req = new CloneBackendRequest() {{
                 pathParams = new CloneBackendPathParams() {{
-                    appId = "laboriosam";
-                    backendEnvironmentName = "velit";
+                    appId = "sit";
+                    backendEnvironmentName = "voluptas";
                 }};
                 headers = new CloneBackendHeaders() {{
-                    xAmzAlgorithm = "ea";
-                    xAmzContentSha256 = "tempore";
-                    xAmzCredential = "fugit";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "tempora";
-                    xAmzSignature = "aliquid";
-                    xAmzSignedHeaders = "mollitia";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
                 request = new CloneBackendRequestBody() {{
-                    targetEnvironmentName = "non";
+                    targetEnvironmentName = "et";
                 }};
             }};
 

@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new MicerRequestBody() {{
                     certificateParameters = new MicerRequestBodyCertificateParameters() {{
-                        appno = "sapiente";
-                        dateOfBirth = "iure";
-                        enrolno = "assumenda";
-                        rollno = "dolore";
+                        appno = "sit";
+                        dateOfBirth = "voluptas";
+                        enrolno = "culpa";
+                        rollno = "expedita";
                     }};
-                    consentArtifact = "nobis";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "qui";
+                    txnId = "expedita";
                 }};
             }};
 

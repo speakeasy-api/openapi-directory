@@ -27,10 +27,10 @@ public class Application {
 
             PostAuthOauthTokenRequest req = new PostAuthOauthTokenRequest() {{
                 request = new PostAuthOauthTokenRequestBody() {{
-                    clientId = "vel";
-                    clientSecret = "voluptates";
-                    grantType = "nesciunt";
-                    scope = "vel";
+                    clientId = "sit";
+                    clientSecret = "voluptas";
+                    grantType = "culpa";
+                    scope = "expedita";
                 }};
             }};
 

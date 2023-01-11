@@ -25,86 +25,86 @@ public class Application {
                 }};
                 queryParams = new VisionFilesAnnotateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "fugiat";
-                    alt = "json";
-                    callback = "eos";
-                    fields = "delectus";
-                    key = "excepturi";
-                    oauthToken = "esse";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "in";
-                    uploadType = "neque";
-                    uploadProtocol = "recusandae";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest() {{
-                    parent = "nulla";
+                    parent = "rerum";
                     requests = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest[]() {{
                         add(new GoogleCloudVisionV1p2beta1AnnotateFileRequest() {{
                             features = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1Feature[]() {{
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
-                                    maxResults = 5121381830605284992;
-                                    model = "quas";
-                                    type = "LABEL_DETECTION";
+                                    maxResults = 5617773211005988520;
+                                    model = "et";
+                                    type = "TYPE_UNSPECIFIED";
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
                                 cropHintsParams = new GoogleCloudVisionV1p2beta1CropHintsParams() {{
                                     aspectRatios = new Float[]() {{
-                                        add(58.200001),
-                                        add(72.099998),
-                                        add(19.200001),
+                                        add(50.099998),
+                                        add(15.100000),
+                                        add(66.099998),
                                     }};
                                 }};
                                 languageHints = new String[]() {{
-                                    add("cupiditate"),
-                                    add("eaque"),
-                                    add("ullam"),
+                                    add("debitis"),
+                                    add("vel"),
+                                    add("odio"),
                                 }};
                                 latLongRect = new GoogleCloudVisionV1p2beta1LatLongRect() {{
                                     maxLatLng = new LatLng() {{
-                                        latitude = 23.200001;
-                                        longitude = 65.099998;
+                                        latitude = 91.099998;
+                                        longitude = 57.099998;
                                     }};
                                     minLatLng = new LatLng() {{
-                                        latitude = 80.099998;
-                                        longitude = 89.099998;
+                                        latitude = 45.099998;
+                                        longitude = 78.199997;
                                     }};
                                 }};
                                 productSearchParams = new GoogleCloudVisionV1p2beta1ProductSearchParams() {{
                                     boundingPoly = new GoogleCloudVisionV1p2beta1BoundingPoly() {{
                                         normalizedVertices = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1NormalizedVertex[]() {{
                                             add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
-                                                x = 20.200001;
-                                                y = 21.200001;
+                                                x = 10.200000;
+                                                y = 14.200000;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
+                                                x = 44.099998;
+                                                y = 78.199997;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
+                                                x = 87.099998;
+                                                y = 0.100000;
                                             }}),
                                         }};
                                         vertices = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1Vertex[]() {{
                                             add(new GoogleCloudVisionV1p2beta1Vertex() {{
-                                                x = 4353602771421535085;
-                                                y = 5799121225458936603;
-                                            }}),
-                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
-                                                x = 1727608745918787044;
-                                                y = 3695476974402256423;
-                                            }}),
-                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
-                                                x = 7202512563447213470;
-                                                y = 7901536767093378273;
+                                                x = 388440063886460141;
+                                                y = 7561811714888168464;
                                             }}),
                                         }};
                                     }};
-                                    filter = "ea";
+                                    filter = "ipsum";
                                     productCategories = new String[]() {{
-                                        add("veritatis"),
-                                        add("earum"),
+                                        add("modi"),
+                                        add("sint"),
                                     }};
-                                    productSet = "est";
+                                    productSet = "inventore";
                                 }};
                                 textDetectionParams = new GoogleCloudVisionV1p2beta1TextDetectionParams() {{
                                     advancedOcrOptions = new String[]() {{
-                                        add("consectetur"),
-                                        add("optio"),
-                                        add("fugit"),
+                                        add("exercitationem"),
+                                        add("aut"),
+                                        add("reprehenderit"),
                                     }};
                                     enableTextDetectionConfidenceScore = false;
                                 }};
@@ -113,84 +113,83 @@ public class Application {
                                 }};
                             }};
                             inputConfig = new GoogleCloudVisionV1p2beta1InputConfig() {{
-                                content = "soluta";
+                                content = "incidunt";
                                 gcsSource = new GoogleCloudVisionV1p2beta1GcsSource() {{
-                                    uri = "aut";
+                                    uri = "dolor";
                                 }};
-                                mimeType = "eum";
+                                mimeType = "beatae";
                             }};
                             pages = new Integer[]() {{
-                                add(8218049332550619072),
-                                add(6872626749368897404),
-                                add(446974519540144749),
+                                add(2671030200101705776),
+                                add(3508963237347473586),
                             }};
                         }}),
                         add(new GoogleCloudVisionV1p2beta1AnnotateFileRequest() {{
                             features = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1Feature[]() {{
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
-                                    maxResults = 4577497519039366537;
-                                    model = "quis";
-                                    type = "LANDMARK_DETECTION";
+                                    maxResults = 4564823113789767141;
+                                    model = "ex";
+                                    type = "SAFE_SEARCH_DETECTION";
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
-                                    maxResults = 3369478194431150772;
-                                    model = "laudantium";
-                                    type = "FACE_DETECTION";
-                                }}),
-                                add(new GoogleCloudVisionV1p2beta1Feature() {{
-                                    maxResults = 381604056397610963;
-                                    model = "consequuntur";
-                                    type = "CROP_HINTS";
+                                    maxResults = 3983722386484812742;
+                                    model = "vel";
+                                    type = "PRODUCT_SEARCH";
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
                                 cropHintsParams = new GoogleCloudVisionV1p2beta1CropHintsParams() {{
                                     aspectRatios = new Float[]() {{
-                                        add(31.100000),
-                                        add(23.200001),
-                                        add(13.100000),
+                                        add(84.199997),
+                                        add(23.100000),
                                     }};
                                 }};
                                 languageHints = new String[]() {{
-                                    add("vero"),
-                                    add("quia"),
+                                    add("unde"),
                                 }};
                                 latLongRect = new GoogleCloudVisionV1p2beta1LatLongRect() {{
                                     maxLatLng = new LatLng() {{
-                                        latitude = 27.100000;
-                                        longitude = 70.099998;
+                                        latitude = 31.100000;
+                                        longitude = 13.100000;
                                     }};
                                     minLatLng = new LatLng() {{
-                                        latitude = 67.199997;
-                                        longitude = 94.099998;
+                                        latitude = 26.100000;
+                                        longitude = 90.099998;
                                     }};
                                 }};
                                 productSearchParams = new GoogleCloudVisionV1p2beta1ProductSearchParams() {{
                                     boundingPoly = new GoogleCloudVisionV1p2beta1BoundingPoly() {{
                                         normalizedVertices = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1NormalizedVertex[]() {{
                                             add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
-                                                x = 79.099998;
-                                                y = 0.200000;
+                                                x = 40.099998;
+                                                y = 28.100000;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
+                                                x = 29.100000;
+                                                y = 90.199997;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
+                                                x = 31.200001;
+                                                y = 9.200000;
                                             }}),
                                         }};
                                         vertices = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1Vertex[]() {{
                                             add(new GoogleCloudVisionV1p2beta1Vertex() {{
-                                                x = 8279165169592762484;
-                                                y = 3979550748621857756;
+                                                x = 7862762095958642309;
+                                                y = 4391202566038595699;
                                             }}),
                                         }};
                                     }};
-                                    filter = "rerum";
+                                    filter = "omnis";
                                     productCategories = new String[]() {{
-                                        add("aperiam"),
+                                        add("consequatur"),
+                                        add("dolor"),
                                     }};
-                                    productSet = "doloremque";
+                                    productSet = "commodi";
                                 }};
                                 textDetectionParams = new GoogleCloudVisionV1p2beta1TextDetectionParams() {{
                                     advancedOcrOptions = new String[]() {{
-                                        add("laudantium"),
-                                        add("qui"),
-                                        add("ipsam"),
+                                        add("reprehenderit"),
                                     }};
                                     enableTextDetectionConfidenceScore = false;
                                 }};
@@ -199,15 +198,84 @@ public class Application {
                                 }};
                             }};
                             inputConfig = new GoogleCloudVisionV1p2beta1InputConfig() {{
-                                content = "est";
+                                content = "ut";
                                 gcsSource = new GoogleCloudVisionV1p2beta1GcsSource() {{
-                                    uri = "rem";
+                                    uri = "laboriosam";
                                 }};
-                                mimeType = "dolor";
+                                mimeType = "sed";
                             }};
                             pages = new Integer[]() {{
-                                add(669794309013279766),
-                                add(2716950910023671871),
+                                add(1836598054518427835),
+                            }};
+                        }}),
+                        add(new GoogleCloudVisionV1p2beta1AnnotateFileRequest() {{
+                            features = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1Feature[]() {{
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 7638413271565042464;
+                                    model = "consequuntur";
+                                    type = "LANDMARK_DETECTION";
+                                }}),
+                            }};
+                            imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
+                                cropHintsParams = new GoogleCloudVisionV1p2beta1CropHintsParams() {{
+                                    aspectRatios = new Float[]() {{
+                                        add(35.200001),
+                                    }};
+                                }};
+                                languageHints = new String[]() {{
+                                    add("perferendis"),
+                                }};
+                                latLongRect = new GoogleCloudVisionV1p2beta1LatLongRect() {{
+                                    maxLatLng = new LatLng() {{
+                                        latitude = 26.200001;
+                                        longitude = 87.099998;
+                                    }};
+                                    minLatLng = new LatLng() {{
+                                        latitude = 42.099998;
+                                        longitude = 15.200000;
+                                    }};
+                                }};
+                                productSearchParams = new GoogleCloudVisionV1p2beta1ProductSearchParams() {{
+                                    boundingPoly = new GoogleCloudVisionV1p2beta1BoundingPoly() {{
+                                        normalizedVertices = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1NormalizedVertex[]() {{
+                                            add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
+                                                x = 50.099998;
+                                                y = 9.200000;
+                                            }}),
+                                        }};
+                                        vertices = new openapisdk.models.shared.GoogleCloudVisionV1p2beta1Vertex[]() {{
+                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
+                                                x = 2333048574390956331;
+                                                y = 9205243623417456715;
+                                            }}),
+                                        }};
+                                    }};
+                                    filter = "quis";
+                                    productCategories = new String[]() {{
+                                        add("labore"),
+                                    }};
+                                    productSet = "et";
+                                }};
+                                textDetectionParams = new GoogleCloudVisionV1p2beta1TextDetectionParams() {{
+                                    advancedOcrOptions = new String[]() {{
+                                        add("ad"),
+                                        add("expedita"),
+                                    }};
+                                    enableTextDetectionConfidenceScore = true;
+                                }};
+                                webDetectionParams = new GoogleCloudVisionV1p2beta1WebDetectionParams() {{
+                                    includeGeoResults = true;
+                                }};
+                            }};
+                            inputConfig = new GoogleCloudVisionV1p2beta1InputConfig() {{
+                                content = "modi";
+                                gcsSource = new GoogleCloudVisionV1p2beta1GcsSource() {{
+                                    uri = "nihil";
+                                }};
+                                mimeType = "tempora";
+                            }};
+                            pages = new Integer[]() {{
+                                add(4745905187492708501),
                             }};
                         }}),
                     }};

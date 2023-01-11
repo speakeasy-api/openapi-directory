@@ -19,14 +19,14 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetDealItemsQueryParams() {{
-                    categoryIds = "expedita";
+                    categoryIds = "sit";
                     commissionable = "voluptas";
-                    deliveryCountry = "fugit";
-                    limit = "et";
-                    offset = "nihil";
+                    deliveryCountry = "culpa";
+                    limit = "expedita";
+                    offset = "consequuntur";
                 }};
                 headers = new GetDealItemsHeaders() {{
-                    xEBAYCMARKETPLACEID = "rerum";
+                    xEBAYCMARKETPLACEID = "dolor";
                 }};
             }};
 

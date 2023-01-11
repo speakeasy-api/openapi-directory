@@ -14,8 +14,8 @@ public class Application {
 
             GetDailyReportAllCountriesRequest req = new GetDailyReportAllCountriesRequest() {{
                 queryParams = new GetDailyReportAllCountriesQueryParams() {{
-                    date = "ipsam";
-                    dateFormat = "YYYY-MM-DD";
+                    date = "sit";
+                    dateFormat = "DD-MM-YYYY";
                     format = "xml";
                 }};
             }};

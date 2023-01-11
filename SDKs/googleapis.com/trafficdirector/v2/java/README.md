@@ -36,50 +36,53 @@ public class Application {
                 }};
                 queryParams = new TrafficdirectorDiscoveryClientStatusQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quis";
-                    alt = "json";
-                    callback = "aut";
-                    fields = "blanditiis";
-                    key = "omnis";
-                    oauthToken = "sequi";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "modi";
-                    uploadType = "deleniti";
-                    uploadProtocol = "ipsam";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new ClientStatusRequest() {{
                     nodeMatchers = new openapisdk.models.shared.NodeMatcher[]() {{
                         add(new NodeMatcher() {{
                             nodeId = new StringMatcher() {{
-                                exact = "voluptatem";
+                                exact = "dicta";
                                 ignoreCase = true;
-                                prefix = "in";
-                                regex = "in";
+                                prefix = "voluptatum";
+                                regex = "et";
                                 safeRegex = new RegexMatcher() {{
                                     googleRe2 = new GoogleRe2() {{
-                                        maxProgramSize = 4729097419352513109;
+                                        maxProgramSize = 7144924247938981575;
                                     }};
-                                    regex = "adipisci";
+                                    regex = "dolorem";
                                 }};
-                                suffix = "consequatur";
+                                suffix = "et";
                             }};
                             nodeMetadatas = new openapisdk.models.shared.StructMatcher[]() {{
                                 add(new StructMatcher() {{
                                     path = new openapisdk.models.shared.PathSegment[]() {{
                                         add(new PathSegment() {{
-                                            key = "illo";
+                                            key = "vitae";
                                         }}),
                                         add(new PathSegment() {{
-                                            key = "tenetur";
+                                            key = "totam";
+                                        }}),
+                                        add(new PathSegment() {{
+                                            key = "dolores";
                                         }}),
                                     }};
                                     value = new ValueMatcher() {{
                                         boolMatch = false;
                                         doubleMatch = new DoubleMatcher() {{
-                                            exact = 16.100000;
+                                            exact = 86.099998;
                                             range = new DoubleRange() {{
-                                                end = 46.099998;
-                                                start = 70.099998;
+                                                end = 20.200001;
+                                                start = 12.200000;
                                             }};
                                         }};
                                         listMatch = new ListMatcher() {{
@@ -88,62 +91,23 @@ public class Application {
                                             }};
                                         }};
                                         nullMatch = new java.util.HashMap<String, Object>() {{
-                                            put("maiores", "sed");
-                                            put("nisi", "nam");
-                                            put("et", "aperiam");
+                                            put("totam", "commodi");
+                                            put("quis", "est");
+                                            put("aut", "odit");
                                         }};
-                                        presentMatch = false;
+                                        presentMatch = true;
                                         stringMatch = new StringMatcher() {{
-                                            exact = "corporis";
-                                            ignoreCase = false;
-                                            prefix = "iste";
-                                            regex = "aut";
-                                            safeRegex = new RegexMatcher() {{
-                                                googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 8134347427207786810;
-                                                }};
-                                                regex = "aspernatur";
-                                            }};
-                                            suffix = "aut";
-                                        }};
-                                    }};
-                                }}),
-                                add(new StructMatcher() {{
-                                    path = new openapisdk.models.shared.PathSegment[]() {{
-                                        add(new PathSegment() {{
-                                            key = "at";
-                                        }}),
-                                    }};
-                                    value = new ValueMatcher() {{
-                                        boolMatch = true;
-                                        doubleMatch = new DoubleMatcher() {{
-                                            exact = 62.099998;
-                                            range = new DoubleRange() {{
-                                                end = 6.200000;
-                                                start = 95.099998;
-                                            }};
-                                        }};
-                                        listMatch = new ListMatcher() {{
-                                            oneOf = new ValueMatcher() {{
-                                            
-                                            }};
-                                        }};
-                                        nullMatch = new java.util.HashMap<String, Object>() {{
-                                            put("consequatur", "fugit");
-                                        }};
-                                        presentMatch = false;
-                                        stringMatch = new StringMatcher() {{
-                                            exact = "id";
+                                            exact = "voluptas";
                                             ignoreCase = true;
-                                            prefix = "alias";
-                                            regex = "repudiandae";
+                                            prefix = "aut";
+                                            regex = "illo";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 275787588869259325;
+                                                    maxProgramSize = 5558237345453186302;
                                                 }};
-                                                regex = "harum";
+                                                regex = "officiis";
                                             }};
-                                            suffix = "aut";
+                                            suffix = "autem";
                                         }};
                                     }};
                                 }}),
@@ -151,35 +115,35 @@ public class Application {
                         }}),
                         add(new NodeMatcher() {{
                             nodeId = new StringMatcher() {{
-                                exact = "enim";
+                                exact = "consectetur";
                                 ignoreCase = false;
-                                prefix = "explicabo";
-                                regex = "rerum";
+                                prefix = "odio";
+                                regex = "qui";
                                 safeRegex = new RegexMatcher() {{
                                     googleRe2 = new GoogleRe2() {{
-                                        maxProgramSize = 3627120516043648871;
+                                        maxProgramSize = 388440063886460141;
                                     }};
-                                    regex = "praesentium";
+                                    regex = "at";
                                 }};
-                                suffix = "temporibus";
+                                suffix = "ipsum";
                             }};
                             nodeMetadatas = new openapisdk.models.shared.StructMatcher[]() {{
                                 add(new StructMatcher() {{
                                     path = new openapisdk.models.shared.PathSegment[]() {{
                                         add(new PathSegment() {{
-                                            key = "quidem";
+                                            key = "sint";
                                         }}),
                                         add(new PathSegment() {{
-                                            key = "delectus";
+                                            key = "inventore";
                                         }}),
                                     }};
                                     value = new ValueMatcher() {{
                                         boolMatch = true;
                                         doubleMatch = new DoubleMatcher() {{
-                                            exact = 98.099998;
+                                            exact = 56.099998;
                                             range = new DoubleRange() {{
-                                                end = 41.099998;
-                                                start = 59.099998;
+                                                end = 30.200001;
+                                                start = 97.099998;
                                             }};
                                         }};
                                         listMatch = new ListMatcher() {{
@@ -188,19 +152,164 @@ public class Application {
                                             }};
                                         }};
                                         nullMatch = new java.util.HashMap<String, Object>() {{
-                                            put("optio", "voluptates");
+                                            put("beatae", "veritatis");
+                                            put("in", "et");
                                         }};
                                         presentMatch = false;
                                         stringMatch = new StringMatcher() {{
-                                            exact = "quas";
-                                            ignoreCase = false;
-                                            prefix = "sint";
-                                            regex = "sunt";
+                                            exact = "ipsum";
+                                            ignoreCase = true;
+                                            prefix = "dolores";
+                                            regex = "placeat";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 2510571391511749064;
+                                                    maxProgramSize = 2118716725206170867;
                                                 }};
-                                                regex = "placeat";
+                                                regex = "rerum";
+                                            }};
+                                            suffix = "mollitia";
+                                        }};
+                                    }};
+                                }}),
+                                add(new StructMatcher() {{
+                                    path = new openapisdk.models.shared.PathSegment[]() {{
+                                        add(new PathSegment() {{
+                                            key = "quam";
+                                        }}),
+                                        add(new PathSegment() {{
+                                            key = "reprehenderit";
+                                        }}),
+                                    }};
+                                    value = new ValueMatcher() {{
+                                        boolMatch = true;
+                                        doubleMatch = new DoubleMatcher() {{
+                                            exact = 78.099998;
+                                            range = new DoubleRange() {{
+                                                end = 31.100000;
+                                                start = 13.100000;
+                                            }};
+                                        }};
+                                        listMatch = new ListMatcher() {{
+                                            oneOf = new ValueMatcher() {{
+                                            
+                                            }};
+                                        }};
+                                        nullMatch = new java.util.HashMap<String, Object>() {{
+                                            put("ab", "neque");
+                                            put("ullam", "et");
+                                            put("accusantium", "esse");
+                                        }};
+                                        presentMatch = true;
+                                        stringMatch = new StringMatcher() {{
+                                            exact = "quam";
+                                            ignoreCase = false;
+                                            prefix = "cumque";
+                                            regex = "soluta";
+                                            safeRegex = new RegexMatcher() {{
+                                                googleRe2 = new GoogleRe2() {{
+                                                    maxProgramSize = 759605945513541974;
+                                                }};
+                                                regex = "voluptates";
+                                            }};
+                                            suffix = "magni";
+                                        }};
+                                    }};
+                                }}),
+                            }};
+                        }}),
+                        add(new NodeMatcher() {{
+                            nodeId = new StringMatcher() {{
+                                exact = "et";
+                                ignoreCase = true;
+                                prefix = "qui";
+                                regex = "earum";
+                                safeRegex = new RegexMatcher() {{
+                                    googleRe2 = new GoogleRe2() {{
+                                        maxProgramSize = 4391202566038595699;
+                                    }};
+                                    regex = "omnis";
+                                }};
+                                suffix = "ut";
+                            }};
+                            nodeMetadatas = new openapisdk.models.shared.StructMatcher[]() {{
+                                add(new StructMatcher() {{
+                                    path = new openapisdk.models.shared.PathSegment[]() {{
+                                        add(new PathSegment() {{
+                                            key = "commodi";
+                                        }}),
+                                        add(new PathSegment() {{
+                                            key = "error";
+                                        }}),
+                                    }};
+                                    value = new ValueMatcher() {{
+                                        boolMatch = false;
+                                        doubleMatch = new DoubleMatcher() {{
+                                            exact = 3.200000;
+                                            range = new DoubleRange() {{
+                                                end = 19.100000;
+                                                start = 80.199997;
+                                            }};
+                                        }};
+                                        listMatch = new ListMatcher() {{
+                                            oneOf = new ValueMatcher() {{
+                                            
+                                            }};
+                                        }};
+                                        nullMatch = new java.util.HashMap<String, Object>() {{
+                                            put("aut", "quas");
+                                        }};
+                                        presentMatch = true;
+                                        stringMatch = new StringMatcher() {{
+                                            exact = "laudantium";
+                                            ignoreCase = true;
+                                            prefix = "ipsa";
+                                            regex = "expedita";
+                                            safeRegex = new RegexMatcher() {{
+                                                googleRe2 = new GoogleRe2() {{
+                                                    maxProgramSize = 8204648627352676445;
+                                                }};
+                                                regex = "perferendis";
+                                            }};
+                                            suffix = "atque";
+                                        }};
+                                    }};
+                                }}),
+                                add(new StructMatcher() {{
+                                    path = new openapisdk.models.shared.PathSegment[]() {{
+                                        add(new PathSegment() {{
+                                            key = "quisquam";
+                                        }}),
+                                    }};
+                                    value = new ValueMatcher() {{
+                                        boolMatch = false;
+                                        doubleMatch = new DoubleMatcher() {{
+                                            exact = 42.099998;
+                                            range = new DoubleRange() {{
+                                                end = 15.200000;
+                                                start = 66.099998;
+                                            }};
+                                        }};
+                                        listMatch = new ListMatcher() {{
+                                            oneOf = new ValueMatcher() {{
+                                            
+                                            }};
+                                        }};
+                                        nullMatch = new java.util.HashMap<String, Object>() {{
+                                            put("quis", "cumque");
+                                            put("minima", "necessitatibus");
+                                            put("est", "quis");
+                                        }};
+                                        presentMatch = true;
+                                        stringMatch = new StringMatcher() {{
+                                            exact = "labore";
+                                            ignoreCase = false;
+                                            prefix = "impedit";
+                                            regex = "ad";
+                                            safeRegex = new RegexMatcher() {{
+                                                googleRe2 = new GoogleRe2() {{
+                                                    maxProgramSize = 8953538234431013647;
+                                                }};
+                                                regex = "vel";
                                             }};
                                             suffix = "qui";
                                         }};
@@ -209,58 +318,19 @@ public class Application {
                                 add(new StructMatcher() {{
                                     path = new openapisdk.models.shared.PathSegment[]() {{
                                         add(new PathSegment() {{
-                                            key = "aut";
+                                            key = "nihil";
                                         }}),
                                         add(new PathSegment() {{
-                                            key = "perferendis";
-                                        }}),
-                                    }};
-                                    value = new ValueMatcher() {{
-                                        boolMatch = false;
-                                        doubleMatch = new DoubleMatcher() {{
-                                            exact = 30.200001;
-                                            range = new DoubleRange() {{
-                                                end = 37.099998;
-                                                start = 25.100000;
-                                            }};
-                                        }};
-                                        listMatch = new ListMatcher() {{
-                                            oneOf = new ValueMatcher() {{
-                                            
-                                            }};
-                                        }};
-                                        nullMatch = new java.util.HashMap<String, Object>() {{
-                                            put("omnis", "rerum");
-                                        }};
-                                        presentMatch = true;
-                                        stringMatch = new StringMatcher() {{
-                                            exact = "repudiandae";
-                                            ignoreCase = false;
-                                            prefix = "aut";
-                                            regex = "nostrum";
-                                            safeRegex = new RegexMatcher() {{
-                                                googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 5708324130846447037;
-                                                }};
-                                                regex = "fuga";
-                                            }};
-                                            suffix = "assumenda";
-                                        }};
-                                    }};
-                                }}),
-                                add(new StructMatcher() {{
-                                    path = new openapisdk.models.shared.PathSegment[]() {{
-                                        add(new PathSegment() {{
-                                            key = "magnam";
+                                            key = "tempora";
                                         }}),
                                     }};
                                     value = new ValueMatcher() {{
                                         boolMatch = true;
                                         doubleMatch = new DoubleMatcher() {{
-                                            exact = 50.099998;
+                                            exact = 59.099998;
                                             range = new DoubleRange() {{
-                                                end = 24.100000;
-                                                start = 82.199997;
+                                                end = 68.099998;
+                                                start = 66.099998;
                                             }};
                                         }};
                                         listMatch = new ListMatcher() {{
@@ -269,21 +339,22 @@ public class Application {
                                             }};
                                         }};
                                         nullMatch = new java.util.HashMap<String, Object>() {{
-                                            put("et", "eaque");
+                                            put("placeat", "qui");
+                                            put("nisi", "quis");
                                         }};
                                         presentMatch = false;
                                         stringMatch = new StringMatcher() {{
-                                            exact = "voluptatem";
-                                            ignoreCase = false;
-                                            prefix = "qui";
-                                            regex = "laboriosam";
+                                            exact = "porro";
+                                            ignoreCase = true;
+                                            prefix = "et";
+                                            regex = "accusamus";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 2371724776320130943;
+                                                    maxProgramSize = 7953274849279451463;
                                                 }};
-                                                regex = "repellendus";
+                                                regex = "laborum";
                                             }};
-                                            suffix = "tempore";
+                                            suffix = "rerum";
                                         }};
                                     }};
                                 }}),

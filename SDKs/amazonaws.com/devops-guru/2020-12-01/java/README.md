@@ -35,18 +35,18 @@ public class Application {
 
             AddNotificationChannelRequest req = new AddNotificationChannelRequest() {{
                 headers = new AddNotificationChannelHeaders() {{
-                    xAmzAlgorithm = "aut";
-                    xAmzContentSha256 = "voluptate";
-                    xAmzCredential = "a";
-                    xAmzDate = "consequatur";
-                    xAmzSecurityToken = "dolore";
-                    xAmzSignature = "assumenda";
-                    xAmzSignedHeaders = "rerum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AddNotificationChannelRequestBody() {{
                     config = new AddNotificationChannelRequestBodyConfig() {{
                         sns = new SnsChannelConfig() {{
-                            topicArn = "non";
+                            topicArn = "voluptas";
                         }};
                     }};
                 }};

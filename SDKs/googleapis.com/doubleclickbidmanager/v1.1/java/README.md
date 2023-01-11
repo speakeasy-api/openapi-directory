@@ -35,68 +35,59 @@ public class Application {
                     }};
                 }};
                 queryParams = new DoubleclickbidmanagerQueriesCreatequeryQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "aut";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
                     asynchronous = false;
-                    callback = "dolorem";
-                    fields = "illo";
-                    key = "sunt";
-                    oauthToken = "in";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "commodi";
-                    uploadType = "deleniti";
-                    uploadProtocol = "incidunt";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new Query() {{
-                    kind = "dolorum";
+                    kind = "dicta";
                     metadata = new QueryMetadata() {{
-                        dataRange = "WEEK_TO_DATE";
-                        format = "EXCEL_CSV";
-                        googleCloudStoragePathForLatestReport = "sed";
-                        googleDrivePathForLatestReport = "tempora";
-                        latestReportRunTimeMs = "distinctio";
-                        locale = "occaecati";
-                        reportCount = 7630801898266405980;
-                        running = false;
+                        dataRange = "PREVIOUS_HALF_MONTH";
+                        format = "CSV";
+                        googleCloudStoragePathForLatestReport = "et";
+                        googleDrivePathForLatestReport = "ut";
+                        latestReportRunTimeMs = "dolorem";
+                        locale = "et";
+                        reportCount = 7373105480197164748;
+                        running = true;
                         sendNotification = true;
                         shareEmailAddress = new String[]() {{
-                            add("veritatis"),
-                            add("et"),
-                            add("sunt"),
+                            add("dolores"),
+                            add("illum"),
+                            add("debitis"),
                         }};
-                        title = "et";
+                        title = "vel";
                     }};
                     params = new Parameters() {{
                         filters = new openapisdk.models.shared.FilterPair[]() {{
                             add(new FilterPair() {{
-                                type = "FILTER_LINE_ITEM_PACING_PERCENTAGE";
-                                value = "ex";
-                            }}),
-                            add(new FilterPair() {{
-                                type = "FILTER_MEDIA_PLAN";
-                                value = "recusandae";
-                            }}),
-                            add(new FilterPair() {{
-                                type = "FILTER_REWARDED";
-                                value = "voluptatem";
+                                type = "FILTER_CHANNEL_GROUPING";
+                                value = "id";
                             }}),
                         }};
                         groupBys = new openapisdk.models.shared.ParametersGroupBysEnum[]() {{
-                            add("FILTER_INSERTION_ORDER"),
-                            add("FILTER_AUDIENCE_NAME"),
-                            add("FILTER_EXCHANGE"),
+                            add("FILTER_EXTENSION_TYPE"),
                         }};
                         includeInviteData = false;
                         metrics = new openapisdk.models.shared.ParametersMetricsEnum[]() {{
-                            add("METRIC_CM360_POST_CLICK_REVENUE_CROSS_ENVIRONMENT"),
+                            add("METRIC_MEDIA_COST_ADVERTISER"),
+                            add("METRIC_PLATFORM_FEE_USD"),
                         }};
                         options = new Options() {{
-                            includeOnlyTargetedUserLists = false;
+                            includeOnlyTargetedUserLists = true;
                             pathQueryOptions = new PathQueryOptions() {{
                                 channelGrouping = new ChannelGrouping() {{
-                                    fallbackName = "hic";
-                                    name = "laboriosam";
+                                    fallbackName = "odit";
+                                    name = "non";
                                     rules = new openapisdk.models.shared.Rule[]() {{
                                         add(new Rule() {{
                                             disjunctiveMatchStatements = new openapisdk.models.shared.DisjunctiveMatchStatement[]() {{
@@ -104,30 +95,11 @@ public class Application {
                                                     eventFilters = new openapisdk.models.shared.EventFilter[]() {{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_GMAIL_AGE";
+                                                                filter = "FILTER_TARGETED_DATA_PROVIDERS";
                                                                 match = "BEGINS_WITH";
                                                                 values = new String[]() {{
-                                                                    add("debitis"),
-                                                                    add("id"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_COUNTRY_ID";
-                                                                match = "EXACT";
-                                                                values = new String[]() {{
-                                                                    add("velit"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_PUBLISHER_TRAFFIC_SOURCE";
-                                                                match = "UNKNOWN";
-                                                                values = new String[]() {{
-                                                                    add("molestiae"),
-                                                                    add("tempore"),
+                                                                    add("autem"),
+                                                                    add("consectetur"),
                                                                 }};
                                                             }};
                                                         }}),
@@ -137,69 +109,19 @@ public class Application {
                                                     eventFilters = new openapisdk.models.shared.EventFilter[]() {{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_TRUEVIEW_DMA";
-                                                                match = "UNKNOWN";
-                                                                values = new String[]() {{
-                                                                    add("non"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_TRUEVIEW_IAR_ZIPCODE";
-                                                                match = "EXACT";
-                                                                values = new String[]() {{
-                                                                    add("nihil"),
-                                                                    add("enim"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            name = "quis";
-                                        }}),
-                                        add(new Rule() {{
-                                            disjunctiveMatchStatements = new openapisdk.models.shared.DisjunctiveMatchStatement[]() {{
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new openapisdk.models.shared.EventFilter[]() {{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_ACTIVE_VIEW_EXPECTED_VIEWABILITY";
-                                                                match = "EXACT";
-                                                                values = new String[]() {{
-                                                                    add("et"),
-                                                                    add("sequi"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_INVENTORY_RATE_TYPE";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]() {{
-                                                                    add("adipisci"),
-                                                                    add("sit"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new openapisdk.models.shared.EventFilter[]() {{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_LINE_ITEM_TYPE";
+                                                                filter = "FILTER_TRUEVIEW_AD_TYPE_NAME";
                                                                 match = "PARTIAL";
                                                                 values = new String[]() {{
-                                                                    add("consequatur"),
+                                                                    add("at"),
+                                                                    add("ipsum"),
+                                                                    add("eveniet"),
                                                                 }};
                                                             }};
                                                         }}),
                                                     }};
                                                 }}),
                                             }};
-                                            name = "et";
+                                            name = "modi";
                                         }}),
                                     }};
                                 }};
@@ -208,20 +130,12 @@ public class Application {
                                         eventFilters = new openapisdk.models.shared.EventFilter[]() {{
                                             add(new EventFilter() {{
                                                 dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "FILTER_AUDIO_FEED_TYPE_NAME";
-                                                    match = "UNKNOWN";
+                                                    filter = "FILTER_DAY_OF_WEEK";
+                                                    match = "EXACT";
                                                     values = new String[]() {{
-                                                        add("sint"),
-                                                        add("quis"),
-                                                    }};
-                                                }};
-                                            }}),
-                                            add(new EventFilter() {{
-                                                dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "FILTER_LINE_ITEM_LIFETIME_FREQUENCY";
-                                                    match = "PARTIAL";
-                                                    values = new String[]() {{
-                                                        add("quidem"),
+                                                        add("reprehenderit"),
+                                                        add("tempore"),
+                                                        add("maiores"),
                                                     }};
                                                 }};
                                             }}),
@@ -231,19 +145,19 @@ public class Application {
                                 }};
                             }};
                         }};
-                        type = "TYPE_PATH_ATTRIBUTION";
+                        type = "TYPE_PETRA_NIELSEN_ONLINE_GLOBAL_MARKET";
                     }};
-                    queryId = "ut";
-                    reportDataEndTimeMs = "cumque";
-                    reportDataStartTimeMs = "dolor";
+                    queryId = "beatae";
+                    reportDataEndTimeMs = "veritatis";
+                    reportDataStartTimeMs = "in";
                     schedule = new QuerySchedule() {{
-                        endTimeMs = "magni";
-                        frequency = "QUARTERLY";
-                        nextRunMinuteOfDay = 3962649315398329850;
-                        nextRunTimezoneCode = "officiis";
-                        startTimeMs = "quo";
+                        endTimeMs = "et";
+                        frequency = "WEEKLY";
+                        nextRunMinuteOfDay = 4564823113789767141;
+                        nextRunTimezoneCode = "ex";
+                        startTimeMs = "dolores";
                     }};
-                    timezoneCode = "aut";
+                    timezoneCode = "placeat";
                 }};
             }};
 

@@ -30,8 +30,8 @@ public class Application {
                     outputFormat = "json";
                 }};
                 queryParams = new GetV1CategoryListOutputFormatQueryParams() {{
-                    apiKey = "adipisci";
-                    type = "regulation";
+                    apiKey = "voluptas";
+                    type = "user";
                 }};
             }};
 

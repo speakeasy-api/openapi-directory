@@ -35,26 +35,26 @@ public class Application {
 
             InvokeEndpointRequest req = new InvokeEndpointRequest() {{
                 pathParams = new InvokeEndpointPathParams() {{
-                    endpointName = "dolores";
+                    endpointName = "sit";
                 }};
                 headers = new InvokeEndpointHeaders() {{
-                    accept = "quasi";
-                    contentType = "recusandae";
-                    xAmzAlgorithm = "numquam";
-                    xAmzContentSha256 = "numquam";
-                    xAmzCredential = "occaecati";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "est";
-                    xAmzSignature = "occaecati";
+                    accept = "voluptas";
+                    contentType = "culpa";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
                     xAmzSignedHeaders = "et";
-                    xAmznSageMakerCustomAttributes = "et";
-                    xAmznSageMakerInferenceId = "non";
-                    xAmznSageMakerTargetContainerHostname = "molestias";
-                    xAmznSageMakerTargetModel = "aut";
-                    xAmznSageMakerTargetVariant = "qui";
+                    xAmznSageMakerCustomAttributes = "nihil";
+                    xAmznSageMakerInferenceId = "rerum";
+                    xAmznSageMakerTargetContainerHostname = "dicta";
+                    xAmznSageMakerTargetModel = "debitis";
+                    xAmznSageMakerTargetVariant = "voluptatum";
                 }};
                 request = new InvokeEndpointRequestBody() {{
-                    body = "consequuntur";
+                    body = "et";
                 }};
             }};
 

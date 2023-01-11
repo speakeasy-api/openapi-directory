@@ -35,21 +35,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new ServicebrokerGetIamPolicyPathParams() {{
-                    resource = "dolores";
+                    resource = "sit";
                 }};
                 queryParams = new ServicebrokerGetIamPolicyQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "inventore";
-                    alt = "proto";
-                    callback = "ipsum";
-                    fields = "consequatur";
-                    key = "ut";
-                    oauthToken = "quibusdam";
-                    optionsRequestedPolicyVersion = 8552018676448470401;
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    optionsRequestedPolicyVersion = 8274930044578894929;
                     prettyPrint = false;
-                    quotaUser = "et";
-                    uploadType = "nobis";
-                    uploadProtocol = "quia";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

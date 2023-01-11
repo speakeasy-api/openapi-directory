@@ -22,202 +22,333 @@ public class Application {
                     }};
                 }};
                 pathParams = new GkehubProjectsLocationsFeaturesCreatePathParams() {{
-                    parent = "provident";
+                    parent = "sit";
                 }};
                 queryParams = new GkehubProjectsLocationsFeaturesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "vero";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "sapiente";
-                    featureId = "et";
-                    fields = "aut";
-                    key = "rerum";
-                    oauthToken = "sunt";
-                    prettyPrint = true;
-                    quotaUser = "incidunt";
-                    requestId = "provident";
-                    uploadType = "voluptas";
-                    uploadProtocol = "assumenda";
+                    callback = "consequuntur";
+                    featureId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new FeatureInput() {{
                     labels = new java.util.HashMap<String, String>() {{
-                        put("nemo", "ut");
+                        put("et", "ut");
                     }};
                     membershipSpecs = new java.util.HashMap<String, openapisdk.models.shared.MembershipFeatureSpecInput>() {{
-                        put("voluptatem", new MembershipFeatureSpecInput() {{
+                        put("et", new MembershipFeatureSpecInput() {{
                             anthosobservability = new AnthosObservabilityMembershipSpec() {{
-                                doNotOptimizeMetrics = true;
-                                enableStackdriverOnApplications = false;
-                                version = "mollitia";
+                                doNotOptimizeMetrics = false;
+                                enableStackdriverOnApplications = true;
+                                version = "vitae";
                             }};
                             cloudbuild = new CloudBuildMembershipSpec() {{
-                                securityPolicy = "SECURITY_POLICY_UNSPECIFIED";
-                                version = "est";
+                                securityPolicy = "PRIVILEGED";
+                                version = "dolores";
                             }};
                             configmanagement = new ConfigManagementMembershipSpec() {{
                                 binauthz = new ConfigManagementBinauthzConfig() {{
                                     enabled = false;
                                 }};
                                 configSync = new ConfigManagementConfigSync() {{
-                                    allowVerticalScale = false;
+                                    allowVerticalScale = true;
                                     enabled = false;
                                     git = new ConfigManagementGitConfig() {{
-                                        gcpServiceAccountEmail = "quo";
-                                        httpsProxy = "voluptatem";
-                                        policyDir = "totam";
-                                        secretType = "assumenda";
-                                        syncBranch = "temporibus";
-                                        syncRepo = "enim";
-                                        syncRev = "ipsam";
-                                        syncWaitSecs = "id";
+                                        gcpServiceAccountEmail = "odio";
+                                        httpsProxy = "dolore";
+                                        policyDir = "id";
+                                        secretType = "aspernatur";
+                                        syncBranch = "accusantium";
+                                        syncRepo = "totam";
+                                        syncRev = "commodi";
+                                        syncWaitSecs = "quis";
                                     }};
                                     oci = new ConfigManagementOciConfig() {{
-                                        gcpServiceAccountEmail = "autem";
-                                        policyDir = "vitae";
-                                        secretType = "dolore";
-                                        syncRepo = "quas";
-                                        syncWaitSecs = "et";
+                                        gcpServiceAccountEmail = "est";
+                                        policyDir = "aut";
+                                        secretType = "odit";
+                                        syncRepo = "non";
+                                        syncWaitSecs = "voluptas";
                                     }};
                                     preventDrift = true;
-                                    sourceFormat = "deserunt";
+                                    sourceFormat = "aut";
                                 }};
                                 hierarchyController = new ConfigManagementHierarchyControllerConfig() {{
-                                    enableHierarchicalResourceQuota = false;
+                                    enableHierarchicalResourceQuota = true;
                                     enablePodTreeLabels = false;
                                     enabled = false;
                                 }};
                                 policyController = new ConfigManagementPolicyController() {{
-                                    auditIntervalSeconds = "architecto";
+                                    auditIntervalSeconds = "autem";
                                     enabled = true;
                                     exemptableNamespaces = new String[]() {{
-                                        add("debitis"),
-                                        add("sunt"),
-                                        add("ipsum"),
+                                        add("odio"),
                                     }};
                                     logDeniesEnabled = false;
                                     monitoring = new ConfigManagementPolicyControllerMonitoring() {{
                                         backends = new openapisdk.models.shared.ConfigManagementPolicyControllerMonitoringBackendsEnum[]() {{
                                             add("PROMETHEUS"),
                                             add("MONITORING_BACKEND_UNSPECIFIED"),
+                                            add("PROMETHEUS"),
                                         }};
                                     }};
                                     mutationEnabled = false;
                                     referentialRulesEnabled = true;
-                                    templateLibraryInstalled = false;
+                                    templateLibraryInstalled = true;
                                 }};
-                                version = "aut";
+                                version = "ut";
                             }};
-                            fleetInherited = true;
+                            fleetInherited = false;
                             fleetobservability = new java.util.HashMap<String, Object>() {{
-                                put("beatae", "tenetur");
+                                put("reprehenderit", "tempore");
+                                put("maiores", "incidunt");
+                                put("dolor", "beatae");
                             }};
                             identityservice = new IdentityServiceMembershipSpecInput() {{
                                 authMethods = new openapisdk.models.shared.IdentityServiceAuthMethodInput[]() {{
                                     add(new IdentityServiceAuthMethodInput() {{
                                         azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "voluptatum";
-                                            clientSecret = "aut";
-                                            kubectlRedirectUri = "possimus";
-                                            tenant = "maxime";
-                                        }};
-                                        googleConfig = new IdentityServiceGoogleConfig() {{
-                                            disable = false;
-                                        }};
-                                        name = "possimus";
-                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "ea";
-                                            clientId = "temporibus";
-                                            clientSecret = "perspiciatis";
-                                            deployCloudConsoleProxy = false;
-                                            enableAccessToken = true;
-                                            extraParams = "natus";
-                                            groupPrefix = "fugit";
-                                            groupsClaim = "qui";
-                                            issuerUri = "aut";
-                                            kubectlRedirectUri = "et";
-                                            scopes = "ullam";
-                                            userClaim = "eveniet";
-                                            userPrefix = "porro";
-                                        }};
-                                        proxy = "sit";
-                                    }}),
-                                    add(new IdentityServiceAuthMethodInput() {{
-                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "modi";
-                                            clientSecret = "est";
-                                            kubectlRedirectUri = "placeat";
-                                            tenant = "cum";
-                                        }};
-                                        googleConfig = new IdentityServiceGoogleConfig() {{
-                                            disable = false;
-                                        }};
-                                        name = "qui";
-                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "at";
-                                            clientId = "ex";
-                                            clientSecret = "fugiat";
-                                            deployCloudConsoleProxy = true;
-                                            enableAccessToken = false;
-                                            extraParams = "exercitationem";
-                                            groupPrefix = "repudiandae";
-                                            groupsClaim = "possimus";
-                                            issuerUri = "rerum";
-                                            kubectlRedirectUri = "iusto";
-                                            scopes = "architecto";
-                                            userClaim = "eaque";
-                                            userPrefix = "debitis";
-                                        }};
-                                        proxy = "vel";
-                                    }}),
-                                    add(new IdentityServiceAuthMethodInput() {{
-                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "ullam";
-                                            clientSecret = "ut";
-                                            kubectlRedirectUri = "numquam";
-                                            tenant = "saepe";
+                                            clientId = "in";
+                                            clientSecret = "et";
+                                            kubectlRedirectUri = "omnis";
+                                            tenant = "ipsum";
                                         }};
                                         googleConfig = new IdentityServiceGoogleConfig() {{
                                             disable = true;
                                         }};
                                         name = "dolores";
                                         oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "culpa";
-                                            clientId = "ullam";
-                                            clientSecret = "corrupti";
+                                            certificateAuthorityData = "placeat";
+                                            clientId = "vel";
+                                            clientSecret = "rerum";
                                             deployCloudConsoleProxy = true;
-                                            enableAccessToken = false;
-                                            extraParams = "quasi";
-                                            groupPrefix = "nesciunt";
-                                            groupsClaim = "ex";
-                                            issuerUri = "odit";
-                                            kubectlRedirectUri = "earum";
-                                            scopes = "ipsam";
-                                            userClaim = "minima";
-                                            userPrefix = "nostrum";
+                                            enableAccessToken = true;
+                                            extraParams = "quam";
+                                            groupPrefix = "reprehenderit";
+                                            groupsClaim = "qui";
+                                            issuerUri = "qui";
+                                            kubectlRedirectUri = "unde";
+                                            scopes = "in";
+                                            userClaim = "autem";
+                                            userPrefix = "qui";
                                         }};
-                                        proxy = "voluptatem";
+                                        proxy = "ut";
+                                    }}),
+                                    add(new IdentityServiceAuthMethodInput() {{
+                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
+                                            clientId = "itaque";
+                                            clientSecret = "ab";
+                                            kubectlRedirectUri = "neque";
+                                            tenant = "ullam";
+                                        }};
+                                        googleConfig = new IdentityServiceGoogleConfig() {{
+                                            disable = true;
+                                        }};
+                                        name = "accusantium";
+                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
+                                            certificateAuthorityData = "esse";
+                                            clientId = "architecto";
+                                            clientSecret = "quam";
+                                            deployCloudConsoleProxy = false;
+                                            enableAccessToken = false;
+                                            extraParams = "soluta";
+                                            groupPrefix = "sunt";
+                                            groupsClaim = "voluptates";
+                                            issuerUri = "magni";
+                                            kubectlRedirectUri = "et";
+                                            scopes = "optio";
+                                            userClaim = "qui";
+                                            userPrefix = "earum";
+                                        }};
+                                        proxy = "illo";
                                     }}),
                                 }};
                             }};
                             mesh = new ServiceMeshMembershipSpec() {{
                                 controlPlane = "AUTOMATIC";
-                                defaultChannel = "RAPID";
-                                management = "MANAGEMENT_UNSPECIFIED";
+                                defaultChannel = "REGULAR";
+                                management = "MANAGEMENT_MANUAL";
                             }};
                             policycontroller = new PolicyControllerMembershipSpec() {{
                                 policyControllerHubConfig = new PolicyControllerHubConfig() {{
-                                    auditIntervalSeconds = "soluta";
+                                    auditIntervalSeconds = "dolor";
                                     exemptableNamespaces = new String[]() {{
-                                        add("dolores"),
-                                        add("consequatur"),
+                                        add("error"),
+                                        add("reprehenderit"),
                                     }};
                                     installSpec = "INSTALL_SPEC_SUSPENDED";
-                                    logDeniesEnabled = false;
+                                    logDeniesEnabled = true;
                                     monitoring = new PolicyControllerMonitoringConfig() {{
                                         backends = new openapisdk.models.shared.PolicyControllerMonitoringConfigBackendsEnum[]() {{
-                                            add("MONITORING_BACKEND_UNSPECIFIED"),
                                             add("CLOUD_MONITORING"),
-                                            add("PROMETHEUS"),
+                                        }};
+                                    }};
+                                    mutationEnabled = true;
+                                    referentialRulesEnabled = false;
+                                    templateLibraryConfig = new PolicyControllerTemplateLibraryConfig() {{
+                                        included = true;
+                                    }};
+                                }};
+                                version = "aut";
+                            }};
+                            workloadcertificate = new MembershipSpec() {{
+                                certificateManagement = "ENABLED";
+                            }};
+                        }});
+                        put("consequuntur", new MembershipFeatureSpecInput() {{
+                            anthosobservability = new AnthosObservabilityMembershipSpec() {{
+                                doNotOptimizeMetrics = false;
+                                enableStackdriverOnApplications = true;
+                                version = "ipsa";
+                            }};
+                            cloudbuild = new CloudBuildMembershipSpec() {{
+                                securityPolicy = "NON_PRIVILEGED";
+                                version = "doloremque";
+                            }};
+                            configmanagement = new ConfigManagementMembershipSpec() {{
+                                binauthz = new ConfigManagementBinauthzConfig() {{
+                                    enabled = true;
+                                }};
+                                configSync = new ConfigManagementConfigSync() {{
+                                    allowVerticalScale = false;
+                                    enabled = true;
+                                    git = new ConfigManagementGitConfig() {{
+                                        gcpServiceAccountEmail = "quisquam";
+                                        httpsProxy = "explicabo";
+                                        policyDir = "ea";
+                                        secretType = "maxime";
+                                        syncBranch = "eum";
+                                        syncRepo = "perferendis";
+                                        syncRev = "et";
+                                        syncWaitSecs = "rerum";
+                                    }};
+                                    oci = new ConfigManagementOciConfig() {{
+                                        gcpServiceAccountEmail = "reiciendis";
+                                        policyDir = "quis";
+                                        secretType = "cumque";
+                                        syncRepo = "minima";
+                                        syncWaitSecs = "necessitatibus";
+                                    }};
+                                    preventDrift = true;
+                                    sourceFormat = "quis";
+                                }};
+                                hierarchyController = new ConfigManagementHierarchyControllerConfig() {{
+                                    enableHierarchicalResourceQuota = true;
+                                    enablePodTreeLabels = false;
+                                    enabled = false;
+                                }};
+                                policyController = new ConfigManagementPolicyController() {{
+                                    auditIntervalSeconds = "impedit";
+                                    enabled = true;
+                                    exemptableNamespaces = new String[]() {{
+                                        add("vel"),
+                                        add("qui"),
+                                    }};
+                                    logDeniesEnabled = false;
+                                    monitoring = new ConfigManagementPolicyControllerMonitoring() {{
+                                        backends = new openapisdk.models.shared.ConfigManagementPolicyControllerMonitoringBackendsEnum[]() {{
+                                            add("CLOUD_MONITORING"),
+                                        }};
+                                    }};
+                                    mutationEnabled = true;
+                                    referentialRulesEnabled = false;
+                                    templateLibraryInstalled = false;
+                                }};
+                                version = "sit";
+                            }};
+                            fleetInherited = false;
+                            fleetobservability = new java.util.HashMap<String, Object>() {{
+                                put("vel", "vel");
+                                put("placeat", "qui");
+                                put("nisi", "quis");
+                            }};
+                            identityservice = new IdentityServiceMembershipSpecInput() {{
+                                authMethods = new openapisdk.models.shared.IdentityServiceAuthMethodInput[]() {{
+                                    add(new IdentityServiceAuthMethodInput() {{
+                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
+                                            clientId = "porro";
+                                            clientSecret = "rerum";
+                                            kubectlRedirectUri = "et";
+                                            tenant = "accusamus";
+                                        }};
+                                        googleConfig = new IdentityServiceGoogleConfig() {{
+                                            disable = true;
+                                        }};
+                                        name = "laborum";
+                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
+                                            certificateAuthorityData = "rerum";
+                                            clientId = "ut";
+                                            clientSecret = "laborum";
+                                            deployCloudConsoleProxy = false;
+                                            enableAccessToken = false;
+                                            extraParams = "minus";
+                                            groupPrefix = "soluta";
+                                            groupsClaim = "aperiam";
+                                            issuerUri = "consequuntur";
+                                            kubectlRedirectUri = "excepturi";
+                                            scopes = "mollitia";
+                                            userClaim = "inventore";
+                                            userPrefix = "delectus";
+                                        }};
+                                        proxy = "ipsa";
+                                    }}),
+                                    add(new IdentityServiceAuthMethodInput() {{
+                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
+                                            clientId = "animi";
+                                            clientSecret = "animi";
+                                            kubectlRedirectUri = "ut";
+                                            tenant = "aliquam";
+                                        }};
+                                        googleConfig = new IdentityServiceGoogleConfig() {{
+                                            disable = false;
+                                        }};
+                                        name = "sed";
+                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
+                                            certificateAuthorityData = "sed";
+                                            clientId = "et";
+                                            clientSecret = "consequuntur";
+                                            deployCloudConsoleProxy = false;
+                                            enableAccessToken = true;
+                                            extraParams = "provident";
+                                            groupPrefix = "molestiae";
+                                            groupsClaim = "pariatur";
+                                            issuerUri = "quasi";
+                                            kubectlRedirectUri = "corrupti";
+                                            scopes = "enim";
+                                            userClaim = "qui";
+                                            userPrefix = "sit";
+                                        }};
+                                        proxy = "possimus";
+                                    }}),
+                                }};
+                            }};
+                            mesh = new ServiceMeshMembershipSpec() {{
+                                controlPlane = "AUTOMATIC";
+                                defaultChannel = "REGULAR";
+                                management = "MANAGEMENT_MANUAL";
+                            }};
+                            policycontroller = new PolicyControllerMembershipSpec() {{
+                                policyControllerHubConfig = new PolicyControllerHubConfig() {{
+                                    auditIntervalSeconds = "quia";
+                                    exemptableNamespaces = new String[]() {{
+                                        add("est"),
+                                        add("occaecati"),
+                                    }};
+                                    installSpec = "INSTALL_SPEC_NOT_INSTALLED";
+                                    logDeniesEnabled = true;
+                                    monitoring = new PolicyControllerMonitoringConfig() {{
+                                        backends = new openapisdk.models.shared.PolicyControllerMonitoringConfigBackendsEnum[]() {{
+                                            add("CLOUD_MONITORING"),
+                                            add("MONITORING_BACKEND_UNSPECIFIED"),
+                                            add("MONITORING_BACKEND_UNSPECIFIED"),
                                         }};
                                     }};
                                     mutationEnabled = false;
@@ -226,21 +357,21 @@ public class Application {
                                         included = true;
                                     }};
                                 }};
-                                version = "accusamus";
+                                version = "in";
                             }};
                             workloadcertificate = new MembershipSpec() {{
                                 certificateManagement = "ENABLED";
                             }};
                         }});
-                        put("sint", new MembershipFeatureSpecInput() {{
+                        put("voluptatem", new MembershipFeatureSpecInput() {{
                             anthosobservability = new AnthosObservabilityMembershipSpec() {{
-                                doNotOptimizeMetrics = false;
-                                enableStackdriverOnApplications = false;
-                                version = "a";
+                                doNotOptimizeMetrics = true;
+                                enableStackdriverOnApplications = true;
+                                version = "saepe";
                             }};
                             cloudbuild = new CloudBuildMembershipSpec() {{
                                 securityPolicy = "NON_PRIVILEGED";
-                                version = "velit";
+                                version = "earum";
                             }};
                             configmanagement = new ConfigManagementMembershipSpec() {{
                                 binauthz = new ConfigManagementBinauthzConfig() {{
@@ -250,300 +381,143 @@ public class Application {
                                     allowVerticalScale = true;
                                     enabled = true;
                                     git = new ConfigManagementGitConfig() {{
-                                        gcpServiceAccountEmail = "illo";
-                                        httpsProxy = "sit";
-                                        policyDir = "enim";
-                                        secretType = "libero";
-                                        syncBranch = "dolor";
-                                        syncRepo = "commodi";
-                                        syncRev = "suscipit";
-                                        syncWaitSecs = "amet";
+                                        gcpServiceAccountEmail = "et";
+                                        httpsProxy = "est";
+                                        policyDir = "ipsum";
+                                        secretType = "quam";
+                                        syncBranch = "voluptas";
+                                        syncRepo = "nihil";
+                                        syncRev = "dolores";
+                                        syncWaitSecs = "suscipit";
                                     }};
                                     oci = new ConfigManagementOciConfig() {{
-                                        gcpServiceAccountEmail = "aut";
-                                        policyDir = "ea";
-                                        secretType = "earum";
-                                        syncRepo = "error";
-                                        syncWaitSecs = "veniam";
+                                        gcpServiceAccountEmail = "impedit";
+                                        policyDir = "non";
+                                        secretType = "magnam";
+                                        syncRepo = "ut";
+                                        syncWaitSecs = "possimus";
                                     }};
-                                    preventDrift = false;
-                                    sourceFormat = "modi";
+                                    preventDrift = true;
+                                    sourceFormat = "qui";
                                 }};
                                 hierarchyController = new ConfigManagementHierarchyControllerConfig() {{
-                                    enableHierarchicalResourceQuota = true;
+                                    enableHierarchicalResourceQuota = false;
                                     enablePodTreeLabels = false;
                                     enabled = false;
                                 }};
                                 policyController = new ConfigManagementPolicyController() {{
-                                    auditIntervalSeconds = "nam";
-                                    enabled = false;
+                                    auditIntervalSeconds = "enim";
+                                    enabled = true;
                                     exemptableNamespaces = new String[]() {{
-                                        add("est"),
+                                        add("delectus"),
                                     }};
                                     logDeniesEnabled = true;
                                     monitoring = new ConfigManagementPolicyControllerMonitoring() {{
                                         backends = new openapisdk.models.shared.ConfigManagementPolicyControllerMonitoringBackendsEnum[]() {{
                                             add("MONITORING_BACKEND_UNSPECIFIED"),
+                                            add("MONITORING_BACKEND_UNSPECIFIED"),
                                         }};
                                     }};
-                                    mutationEnabled = true;
+                                    mutationEnabled = false;
                                     referentialRulesEnabled = true;
                                     templateLibraryInstalled = false;
                                 }};
-                                version = "sint";
+                                version = "voluptas";
                             }};
-                            fleetInherited = true;
+                            fleetInherited = false;
                             fleetobservability = new java.util.HashMap<String, Object>() {{
-                                put("est", "aut");
+                                put("a", "qui");
+                                put("excepturi", "autem");
+                                put("corporis", "dicta");
                             }};
                             identityservice = new IdentityServiceMembershipSpecInput() {{
                                 authMethods = new openapisdk.models.shared.IdentityServiceAuthMethodInput[]() {{
                                     add(new IdentityServiceAuthMethodInput() {{
                                         azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "dignissimos";
-                                            clientSecret = "et";
-                                            kubectlRedirectUri = "sed";
-                                            tenant = "omnis";
-                                        }};
-                                        googleConfig = new IdentityServiceGoogleConfig() {{
-                                            disable = true;
-                                        }};
-                                        name = "voluptas";
-                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "esse";
-                                            clientId = "soluta";
-                                            clientSecret = "et";
-                                            deployCloudConsoleProxy = true;
-                                            enableAccessToken = true;
-                                            extraParams = "debitis";
-                                            groupPrefix = "est";
-                                            groupsClaim = "dolorum";
-                                            issuerUri = "aperiam";
-                                            kubectlRedirectUri = "velit";
-                                            scopes = "magni";
-                                            userClaim = "facilis";
-                                            userPrefix = "dolorem";
-                                        }};
-                                        proxy = "eligendi";
-                                    }}),
-                                    add(new IdentityServiceAuthMethodInput() {{
-                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "alias";
-                                            clientSecret = "non";
-                                            kubectlRedirectUri = "itaque";
-                                            tenant = "iusto";
+                                            clientId = "doloremque";
+                                            clientSecret = "quae";
+                                            kubectlRedirectUri = "nisi";
+                                            tenant = "recusandae";
                                         }};
                                         googleConfig = new IdentityServiceGoogleConfig() {{
                                             disable = false;
                                         }};
-                                        name = "eligendi";
+                                        name = "minus";
                                         oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "in";
-                                            clientId = "qui";
-                                            clientSecret = "repellendus";
-                                            deployCloudConsoleProxy = false;
+                                            certificateAuthorityData = "et";
+                                            clientId = "rerum";
+                                            clientSecret = "ut";
+                                            deployCloudConsoleProxy = true;
                                             enableAccessToken = false;
-                                            extraParams = "necessitatibus";
-                                            groupPrefix = "sequi";
-                                            groupsClaim = "et";
-                                            issuerUri = "pariatur";
-                                            kubectlRedirectUri = "qui";
-                                            scopes = "aut";
-                                            userClaim = "est";
-                                            userPrefix = "nulla";
+                                            extraParams = "et";
+                                            groupPrefix = "reiciendis";
+                                            groupsClaim = "aspernatur";
+                                            issuerUri = "praesentium";
+                                            kubectlRedirectUri = "porro";
+                                            scopes = "nihil";
+                                            userClaim = "adipisci";
+                                            userPrefix = "consequatur";
                                         }};
-                                        proxy = "similique";
+                                        proxy = "illum";
+                                    }}),
+                                    add(new IdentityServiceAuthMethodInput() {{
+                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
+                                            clientId = "accusantium";
+                                            clientSecret = "atque";
+                                            kubectlRedirectUri = "amet";
+                                            tenant = "nisi";
+                                        }};
+                                        googleConfig = new IdentityServiceGoogleConfig() {{
+                                            disable = true;
+                                        }};
+                                        name = "est";
+                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
+                                            certificateAuthorityData = "quo";
+                                            clientId = "vero";
+                                            clientSecret = "alias";
+                                            deployCloudConsoleProxy = false;
+                                            enableAccessToken = true;
+                                            extraParams = "eius";
+                                            groupPrefix = "repellat";
+                                            groupsClaim = "beatae";
+                                            issuerUri = "omnis";
+                                            kubectlRedirectUri = "totam";
+                                            scopes = "aut";
+                                            userClaim = "et";
+                                            userPrefix = "magni";
+                                        }};
+                                        proxy = "necessitatibus";
                                     }}),
                                 }};
                             }};
                             mesh = new ServiceMeshMembershipSpec() {{
-                                controlPlane = "MANUAL";
-                                defaultChannel = "CHANNEL_UNSPECIFIED";
-                                management = "MANAGEMENT_MANUAL";
+                                controlPlane = "AUTOMATIC";
+                                defaultChannel = "REGULAR";
+                                management = "MANAGEMENT_UNSPECIFIED";
                             }};
                             policycontroller = new PolicyControllerMembershipSpec() {{
                                 policyControllerHubConfig = new PolicyControllerHubConfig() {{
-                                    auditIntervalSeconds = "repellendus";
+                                    auditIntervalSeconds = "voluptas";
                                     exemptableNamespaces = new String[]() {{
-                                        add("necessitatibus"),
-                                        add("sed"),
+                                        add("veniam"),
+                                        add("architecto"),
                                     }};
-                                    installSpec = "INSTALL_SPEC_NOT_INSTALLED";
+                                    installSpec = "INSTALL_SPEC_SUSPENDED";
                                     logDeniesEnabled = false;
                                     monitoring = new PolicyControllerMonitoringConfig() {{
                                         backends = new openapisdk.models.shared.PolicyControllerMonitoringConfigBackendsEnum[]() {{
                                             add("MONITORING_BACKEND_UNSPECIFIED"),
-                                            add("MONITORING_BACKEND_UNSPECIFIED"),
-                                        }};
-                                    }};
-                                    mutationEnabled = false;
-                                    referentialRulesEnabled = true;
-                                    templateLibraryConfig = new PolicyControllerTemplateLibraryConfig() {{
-                                        included = false;
-                                    }};
-                                }};
-                                version = "expedita";
-                            }};
-                            workloadcertificate = new MembershipSpec() {{
-                                certificateManagement = "CERTIFICATE_MANAGEMENT_UNSPECIFIED";
-                            }};
-                        }});
-                        put("voluptatem", new MembershipFeatureSpecInput() {{
-                            anthosobservability = new AnthosObservabilityMembershipSpec() {{
-                                doNotOptimizeMetrics = false;
-                                enableStackdriverOnApplications = true;
-                                version = "nesciunt";
-                            }};
-                            cloudbuild = new CloudBuildMembershipSpec() {{
-                                securityPolicy = "PRIVILEGED";
-                                version = "ducimus";
-                            }};
-                            configmanagement = new ConfigManagementMembershipSpec() {{
-                                binauthz = new ConfigManagementBinauthzConfig() {{
-                                    enabled = false;
-                                }};
-                                configSync = new ConfigManagementConfigSync() {{
-                                    allowVerticalScale = false;
-                                    enabled = false;
-                                    git = new ConfigManagementGitConfig() {{
-                                        gcpServiceAccountEmail = "possimus";
-                                        httpsProxy = "qui";
-                                        policyDir = "dolorem";
-                                        secretType = "ea";
-                                        syncBranch = "rerum";
-                                        syncRepo = "blanditiis";
-                                        syncRev = "libero";
-                                        syncWaitSecs = "aspernatur";
-                                    }};
-                                    oci = new ConfigManagementOciConfig() {{
-                                        gcpServiceAccountEmail = "illo";
-                                        policyDir = "et";
-                                        secretType = "qui";
-                                        syncRepo = "consequatur";
-                                        syncWaitSecs = "repudiandae";
-                                    }};
-                                    preventDrift = true;
-                                    sourceFormat = "vitae";
-                                }};
-                                hierarchyController = new ConfigManagementHierarchyControllerConfig() {{
-                                    enableHierarchicalResourceQuota = true;
-                                    enablePodTreeLabels = true;
-                                    enabled = false;
-                                }};
-                                policyController = new ConfigManagementPolicyController() {{
-                                    auditIntervalSeconds = "similique";
-                                    enabled = false;
-                                    exemptableNamespaces = new String[]() {{
-                                        add("voluptate"),
-                                        add("dolorem"),
-                                        add("nihil"),
-                                    }};
-                                    logDeniesEnabled = true;
-                                    monitoring = new ConfigManagementPolicyControllerMonitoring() {{
-                                        backends = new openapisdk.models.shared.ConfigManagementPolicyControllerMonitoringBackendsEnum[]() {{
-                                            add("MONITORING_BACKEND_UNSPECIFIED"),
-                                        }};
-                                    }};
-                                    mutationEnabled = false;
-                                    referentialRulesEnabled = true;
-                                    templateLibraryInstalled = false;
-                                }};
-                                version = "sed";
-                            }};
-                            fleetInherited = false;
-                            fleetobservability = new java.util.HashMap<String, Object>() {{
-                                put("accusamus", "sunt");
-                                put("cupiditate", "sit");
-                                put("quam", "voluptas");
-                            }};
-                            identityservice = new IdentityServiceMembershipSpecInput() {{
-                                authMethods = new openapisdk.models.shared.IdentityServiceAuthMethodInput[]() {{
-                                    add(new IdentityServiceAuthMethodInput() {{
-                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "in";
-                                            clientSecret = "qui";
-                                            kubectlRedirectUri = "expedita";
-                                            tenant = "dicta";
-                                        }};
-                                        googleConfig = new IdentityServiceGoogleConfig() {{
-                                            disable = false;
-                                        }};
-                                        name = "voluptatem";
-                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "et";
-                                            clientId = "quibusdam";
-                                            clientSecret = "blanditiis";
-                                            deployCloudConsoleProxy = true;
-                                            enableAccessToken = true;
-                                            extraParams = "voluptate";
-                                            groupPrefix = "minima";
-                                            groupsClaim = "libero";
-                                            issuerUri = "et";
-                                            kubectlRedirectUri = "ratione";
-                                            scopes = "veniam";
-                                            userClaim = "dolor";
-                                            userPrefix = "minima";
-                                        }};
-                                        proxy = "velit";
-                                    }}),
-                                    add(new IdentityServiceAuthMethodInput() {{
-                                        azureadConfig = new IdentityServiceAzureAdConfigInput() {{
-                                            clientId = "corporis";
-                                            clientSecret = "illum";
-                                            kubectlRedirectUri = "quia";
-                                            tenant = "tempore";
-                                        }};
-                                        googleConfig = new IdentityServiceGoogleConfig() {{
-                                            disable = true;
-                                        }};
-                                        name = "qui";
-                                        oidcConfig = new IdentityServiceOidcConfigInput() {{
-                                            certificateAuthorityData = "laborum";
-                                            clientId = "et";
-                                            clientSecret = "ex";
-                                            deployCloudConsoleProxy = false;
-                                            enableAccessToken = false;
-                                            extraParams = "dolores";
-                                            groupPrefix = "molestiae";
-                                            groupsClaim = "aperiam";
-                                            issuerUri = "maxime";
-                                            kubectlRedirectUri = "amet";
-                                            scopes = "sit";
-                                            userClaim = "quia";
-                                            userPrefix = "deserunt";
-                                        }};
-                                        proxy = "cupiditate";
-                                    }}),
-                                }};
-                            }};
-                            mesh = new ServiceMeshMembershipSpec() {{
-                                controlPlane = "CONTROL_PLANE_MANAGEMENT_UNSPECIFIED";
-                                defaultChannel = "RAPID";
-                                management = "MANAGEMENT_MANUAL";
-                            }};
-                            policycontroller = new PolicyControllerMembershipSpec() {{
-                                policyControllerHubConfig = new PolicyControllerHubConfig() {{
-                                    auditIntervalSeconds = "dolor";
-                                    exemptableNamespaces = new String[]() {{
-                                        add("excepturi"),
-                                        add("autem"),
-                                    }};
-                                    installSpec = "INSTALL_SPEC_SUSPENDED";
-                                    logDeniesEnabled = true;
-                                    monitoring = new PolicyControllerMonitoringConfig() {{
-                                        backends = new openapisdk.models.shared.PolicyControllerMonitoringConfigBackendsEnum[]() {{
                                             add("CLOUD_MONITORING"),
                                             add("PROMETHEUS"),
-                                            add("MONITORING_BACKEND_UNSPECIFIED"),
                                         }};
                                     }};
                                     mutationEnabled = true;
                                     referentialRulesEnabled = true;
                                     templateLibraryConfig = new PolicyControllerTemplateLibraryConfig() {{
-                                        included = false;
+                                        included = true;
                                     }};
                                 }};
-                                version = "nihil";
+                                version = "quo";
                             }};
                             workloadcertificate = new MembershipSpec() {{
                                 certificateManagement = "CERTIFICATE_MANAGEMENT_UNSPECIFIED";
@@ -551,13 +525,22 @@ public class Application {
                         }});
                     }};
                     resourceState = new FeatureResourceState() {{
-                        state = "DISABLING";
+                        state = "STATE_UNSPECIFIED";
                     }};
                     scopeSpecs = new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                        put("libero", new java.util.HashMap<String, Object>() {{
-                            put("qui", "quae");
-                            put("iste", "animi");
-                            put("nulla", "pariatur");
+                        put("commodi", new java.util.HashMap<String, Object>() {{
+                            put("facere", "in");
+                            put("et", "odit");
+                        }});
+                        put("est", new java.util.HashMap<String, Object>() {{
+                            put("ipsum", "aut");
+                            put("perspiciatis", "et");
+                            put("vero", "voluptatem");
+                        }});
+                        put("ex", new java.util.HashMap<String, Object>() {{
+                            put("vero", "distinctio");
+                            put("cumque", "ea");
+                            put("non", "non");
                         }});
                     }};
                     spec = new CommonFeatureSpec() {{
@@ -565,28 +548,27 @@ public class Application {
                             defaultMembershipSpec = new AnthosObservabilityMembershipSpec() {{
                                 doNotOptimizeMetrics = true;
                                 enableStackdriverOnApplications = true;
-                                version = "eligendi";
+                                version = "quae";
                             }};
                         }};
                         appdevexperience = new java.util.HashMap<String, Object>() {{
-                            put("unde", "et");
+                            put("magni", "minus");
                         }};
                         cloudauditlogging = new CloudAuditLoggingFeatureSpec() {{
                             allowlistedServiceAccounts = new String[]() {{
-                                add("neque"),
+                                add("aut"),
                             }};
                         }};
                         fleetobservability = new java.util.HashMap<String, Object>() {{
-                            put("tempora", "praesentium");
-                            put("itaque", "sed");
+                            put("iusto", "quia");
                         }};
                         multiclusteringress = new MultiClusterIngressFeatureSpec() {{
-                            billing = "BILLING_UNSPECIFIED";
-                            configMembership = "dolores";
+                            billing = "PAY_AS_YOU_GO";
+                            configMembership = "debitis";
                         }};
                         workloadcertificate = new FeatureSpec() {{
                             defaultConfig = new MembershipSpec() {{
-                                certificateManagement = "ENABLED";
+                                certificateManagement = "CERTIFICATE_MANAGEMENT_UNSPECIFIED";
                             }};
                             provisionGoogleCa = "DISABLED";
                         }};
@@ -594,19 +576,19 @@ public class Application {
                     state = new CommonFeatureState1() {{
                         appdevexperience = new AppDevExperienceFeatureState() {{
                             networkingInstallSucceeded = new Status() {{
-                                code = "CODE_UNSPECIFIED";
-                                description = "et";
+                                code = "OK";
+                                description = "ut";
                             }};
                         }};
                         fleetobservability = new java.util.HashMap<String, Object>() {{
-                            put("placeat", "atque");
-                            put("autem", "suscipit");
-                            put("quis", "esse");
+                            put("nihil", "laborum");
+                            put("recusandae", "nihil");
+                            put("exercitationem", "iste");
                         }};
                         state = new FeatureState() {{
-                            code = "WARNING";
-                            description = "saepe";
-                            updateTime = "voluptatum";
+                            code = "ERROR";
+                            description = "id";
+                            updateTime = "autem";
                         }};
                     }};
                 }};

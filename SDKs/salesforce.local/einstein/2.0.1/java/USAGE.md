@@ -14,11 +14,11 @@ public class Application {
 
             GenerateTokenV2Request req = new GenerateTokenV2Request() {{
                 request = new GenerateTokenV2RequestBody() {{
-                    assertion = "perferendis";
+                    assertion = "sit";
                     grantType = "urn:ietf:params:oauth:grant-type:jwt-bearer";
-                    refreshToken = "ratione";
-                    scope = "quisquam";
-                    validFor = 1681876124477381252;
+                    refreshToken = "culpa";
+                    scope = "expedita";
+                    validFor = 3390393562759376202;
                 }};
             }};
 

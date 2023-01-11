@@ -35,97 +35,147 @@ public class Application {
 
             CreateExperimentTemplateRequest req = new CreateExperimentTemplateRequest() {{
                 headers = new CreateExperimentTemplateHeaders() {{
-                    xAmzAlgorithm = "rem";
-                    xAmzContentSha256 = "perspiciatis";
-                    xAmzCredential = "molestias";
-                    xAmzDate = "repellendus";
-                    xAmzSecurityToken = "doloremque";
-                    xAmzSignature = "doloremque";
-                    xAmzSignedHeaders = "consectetur";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateExperimentTemplateRequestBody() {{
                     actions = new java.util.HashMap<String, openapisdk.models.shared.CreateExperimentTemplateActionInput>() {{
-                        put("et", new CreateExperimentTemplateActionInput() {{
-                            actionId = "ut";
-                            description = "eaque";
+                        put("fugit", new CreateExperimentTemplateActionInput() {{
+                            actionId = "et";
+                            description = "nihil";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("dolorem", "nulla");
-                                put("nam", "velit");
+                                put("dicta", "debitis");
+                                put("voluptatum", "et");
+                                put("ut", "dolorem");
                             }};
                             startAfter = new String[]() {{
-                                add("culpa"),
+                                add("voluptate"),
+                                add("iste"),
                             }};
                             targets = new java.util.HashMap<String, String>() {{
-                                put("qui", "impedit");
-                                put("culpa", "voluptatibus");
-                                put("consequuntur", "sapiente");
+                                put("totam", "dolores");
                             }};
                         }});
-                        put("sint", new CreateExperimentTemplateActionInput() {{
-                            actionId = "et";
-                            description = "fuga";
+                        put("illum", new CreateExperimentTemplateActionInput() {{
+                            actionId = "debitis";
+                            description = "vel";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("quidem", "reiciendis");
+                                put("dolore", "id");
                             }};
                             startAfter = new String[]() {{
-                                add("quas"),
-                                add("pariatur"),
-                                add("omnis"),
+                                add("accusantium"),
                             }};
                             targets = new java.util.HashMap<String, String>() {{
-                                put("soluta", "qui");
-                                put("aut", "et");
+                                put("commodi", "quis");
+                                put("est", "aut");
+                                put("odit", "non");
+                            }};
+                        }});
+                        put("voluptas", new CreateExperimentTemplateActionInput() {{
+                            actionId = "omnis";
+                            description = "aut";
+                            parameters = new java.util.HashMap<String, String>() {{
+                                put("sed", "officiis");
+                            }};
+                            startAfter = new String[]() {{
+                                add("consectetur"),
+                                add("nobis"),
+                            }};
+                            targets = new java.util.HashMap<String, String>() {{
+                                put("qui", "recusandae");
                             }};
                         }});
                     }};
-                    clientToken = "omnis";
-                    description = "et";
-                    roleArn = "architecto";
+                    clientToken = "at";
+                    description = "ipsum";
+                    roleArn = "eveniet";
                     stopConditions = new openapisdk.models.shared.CreateExperimentTemplateStopConditionInput[]() {{
                         add(new CreateExperimentTemplateStopConditionInput() {{
-                            source = "dolorem";
-                            value = "recusandae";
+                            source = "sint";
+                            value = "inventore";
+                        }}),
+                        add(new CreateExperimentTemplateStopConditionInput() {{
+                            source = "ut";
+                            value = "exercitationem";
                         }}),
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("ut", "ab");
+                        put("reprehenderit", "tempore");
+                        put("maiores", "incidunt");
+                        put("dolor", "beatae");
                     }};
                     targets = new java.util.HashMap<String, openapisdk.models.shared.CreateExperimentTemplateTargetInput>() {{
-                        put("ut", new CreateExperimentTemplateTargetInput() {{
+                        put("in", new CreateExperimentTemplateTargetInput() {{
                             filters = new openapisdk.models.shared.ExperimentTemplateTargetInputFilter[]() {{
                                 add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "molestiae";
+                                    path = "omnis";
                                     values = new String[]() {{
-                                        add("aut"),
-                                        add("sequi"),
-                                        add("eum"),
+                                        add("ex"),
                                     }};
                                 }}),
                                 add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "iusto";
+                                    path = "dolores";
                                     values = new String[]() {{
-                                        add("sunt"),
-                                        add("ea"),
-                                        add("et"),
+                                        add("vel"),
                                     }};
                                 }}),
                                 add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "officiis";
+                                    path = "rerum";
                                     values = new String[]() {{
-                                        add("delectus"),
+                                        add("voluptas"),
+                                        add("quam"),
                                     }};
                                 }}),
                             }};
                             resourceArns = new String[]() {{
-                                add("esse"),
-                                add("ut"),
+                                add("qui"),
                             }};
                             resourceTags = new java.util.HashMap<String, String>() {{
-                                put("deserunt", "ut");
-                                put("in", "maiores");
+                                put("unde", "in");
                             }};
-                            resourceType = "iure";
+                            resourceType = "autem";
                             selectionMode = "qui";
+                        }});
+                        put("ut", new CreateExperimentTemplateTargetInput() {{
+                            filters = new openapisdk.models.shared.ExperimentTemplateTargetInputFilter[]() {{
+                                add(new ExperimentTemplateTargetInputFilter() {{
+                                    path = "ab";
+                                    values = new String[]() {{
+                                        add("ullam"),
+                                    }};
+                                }}),
+                                add(new ExperimentTemplateTargetInputFilter() {{
+                                    path = "et";
+                                    values = new String[]() {{
+                                        add("esse"),
+                                        add("architecto"),
+                                        add("quam"),
+                                    }};
+                                }}),
+                                add(new ExperimentTemplateTargetInputFilter() {{
+                                    path = "velit";
+                                    values = new String[]() {{
+                                        add("soluta"),
+                                        add("sunt"),
+                                    }};
+                                }}),
+                            }};
+                            resourceArns = new String[]() {{
+                                add("magni"),
+                                add("et"),
+                            }};
+                            resourceTags = new java.util.HashMap<String, String>() {{
+                                put("qui", "earum");
+                                put("illo", "omnis");
+                                put("ut", "consequatur");
+                            }};
+                            resourceType = "dolor";
+                            selectionMode = "commodi";
                         }});
                     }};
                 }};

@@ -32,10 +32,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new BaggageTripAndContactPathParams() {{
-                    searchID = "vitae";
+                    searchID = "sit";
                 }};
                 headers = new BaggageTripAndContactHeaders() {{
-                    accept = "maxime";
+                    accept = "voluptas";
                 }};
             }};
 

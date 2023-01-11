@@ -35,23 +35,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new AccessapprovalProjectsApprovalRequestsApprovePathParams() {{
-                    name = "temporibus";
+                    name = "sit";
                 }};
                 queryParams = new AccessapprovalProjectsApprovalRequestsApproveQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "voluptas";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "atque";
-                    fields = "soluta";
-                    key = "tempora";
-                    oauthToken = "qui";
-                    prettyPrint = false;
-                    quotaUser = "quas";
-                    uploadType = "facere";
-                    uploadProtocol = "eveniet";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ApproveApprovalRequestMessage() {{
-                    expireTime = "dolores";
+                    expireTime = "dicta";
                 }};
             }};
 

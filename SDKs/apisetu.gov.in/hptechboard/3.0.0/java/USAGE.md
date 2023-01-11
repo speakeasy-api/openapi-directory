@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new DipcrRequestBody() {{
                     certificateParameters = new DipcrRequestBodyCertificateParameters() {{
-                        fullName = "consectetur";
-                        rollNo = "quis";
+                        fullName = "sit";
+                        rollNo = "voluptas";
                     }};
-                    consentArtifact = "unde";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "accusantium";
+                    txnId = "consequuntur";
                 }};
             }};
 

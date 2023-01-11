@@ -35,19 +35,19 @@ public class Application {
 
             AttachManagedPolicyToPermissionSetRequest req = new AttachManagedPolicyToPermissionSetRequest() {{
                 headers = new AttachManagedPolicyToPermissionSetHeaders() {{
-                    xAmzAlgorithm = "ea";
-                    xAmzContentSha256 = "pariatur";
-                    xAmzCredential = "eligendi";
-                    xAmzDate = "sit";
-                    xAmzSecurityToken = "libero";
-                    xAmzSignature = "quia";
-                    xAmzSignedHeaders = "ipsa";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "SWBExternalService.AttachManagedPolicyToPermissionSet";
                 }};
                 request = new AttachManagedPolicyToPermissionSetRequest() {{
-                    instanceArn = "quis";
-                    managedPolicyArn = "necessitatibus";
-                    permissionSetArn = "sint";
+                    instanceArn = "fugit";
+                    managedPolicyArn = "et";
+                    permissionSetArn = "nihil";
                 }};
             }};
 

@@ -36,17 +36,17 @@ public class Application {
             AcceptDomainTransferFromAnotherAwsAccountRequest req = new AcceptDomainTransferFromAnotherAwsAccountRequest() {{
                 headers = new AcceptDomainTransferFromAnotherAwsAccountHeaders() {{
                     xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "magni";
-                    xAmzCredential = "quis";
-                    xAmzDate = "sed";
-                    xAmzSecurityToken = "ratione";
-                    xAmzSignature = "sed";
-                    xAmzSignedHeaders = "quaerat";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount";
                 }};
                 request = new AcceptDomainTransferFromAnotherAwsAccountRequest() {{
-                    domainName = "vel";
-                    password = "fuga";
+                    domainName = "fugit";
+                    password = "et";
                 }};
             }};
 

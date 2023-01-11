@@ -35,109 +35,99 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams() {{
-                    parent = "porro";
+                    parent = "sit";
                 }};
                 queryParams = new RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "tempora";
-                    alt = "proto";
-                    callback = "consectetur";
-                    fields = "ipsam";
-                    key = "deserunt";
-                    oauthToken = "temporibus";
-                    prettyPrint = false;
-                    quotaUser = "deleniti";
-                    uploadType = "sit";
-                    uploadProtocol = "corporis";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudRecommendationengineV1beta1CatalogItem() {{
                     categoryHierarchies = new openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[]() {{
                         add(new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy() {{
                             categories = new String[]() {{
-                                add("vel"),
-                                add("eligendi"),
-                                add("blanditiis"),
+                                add("voluptatum"),
                             }};
                         }}),
                         add(new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy() {{
                             categories = new String[]() {{
-                                add("incidunt"),
-                                add("voluptatem"),
-                                add("eos"),
+                                add("ut"),
+                            }};
+                        }}),
+                        add(new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy() {{
+                            categories = new String[]() {{
+                                add("et"),
+                                add("voluptate"),
+                                add("iste"),
                             }};
                         }}),
                     }};
-                    description = "ratione";
-                    id = "qui";
+                    description = "vitae";
+                    id = "totam";
                     itemAttributes = new GoogleCloudRecommendationengineV1beta1FeatureMap() {{
                         categoricalFeatures = new java.util.HashMap<String, openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList>() {{
-                            put("ad", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
+                            put("illum", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
                                 value = new String[]() {{
-                                    add("deleniti"),
-                                    add("ex"),
-                                    add("molestiae"),
-                                }};
-                            }});
-                            put("excepturi", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
-                                value = new String[]() {{
-                                    add("nam"),
-                                    add("possimus"),
-                                }};
-                            }});
-                            put("nam", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
-                                value = new String[]() {{
-                                    add("eos"),
-                                    add("voluptas"),
-                                    add("magnam"),
+                                    add("vel"),
                                 }};
                             }});
                         }};
                         numericalFeatures = new java.util.HashMap<String, openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>() {{
-                            put("tempora", new GoogleCloudRecommendationengineV1beta1FeatureMapFloatList() {{
+                            put("dolore", new GoogleCloudRecommendationengineV1beta1FeatureMapFloatList() {{
                                 value = new Float[]() {{
-                                    add(88.099998),
-                                }};
-                            }});
-                            put("culpa", new GoogleCloudRecommendationengineV1beta1FeatureMapFloatList() {{
-                                value = new Float[]() {{
-                                    add(30.100000),
+                                    add(57.099998),
+                                    add(45.099998),
                                 }};
                             }});
                         }};
                     }};
-                    itemGroupId = "enim";
-                    languageCode = "sint";
+                    itemGroupId = "quis";
+                    languageCode = "est";
                     productMetadata = new GoogleCloudRecommendationengineV1beta1ProductCatalogItem() {{
-                        availableQuantity = "et";
-                        canonicalProductUri = "totam";
+                        availableQuantity = "aut";
+                        canonicalProductUri = "odit";
                         costs = new java.util.HashMap<String, Float>() {{
-                            put("sunt", 90.099998);
-                            put("et", 36.099998);
+                            put("voluptas", 87.099998);
+                            put("illo", 78.199997);
+                            put("autem", 68.099998);
                         }};
-                        currencyCode = "possimus";
+                        currencyCode = "odio";
                         exactPrice = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice() {{
-                            displayPrice = 40.099998;
-                            originalPrice = 39.099998;
+                            displayPrice = 77.099998;
+                            originalPrice = 88.099998;
                         }};
                         images = new openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1Image[]() {{
                             add(new GoogleCloudRecommendationengineV1beta1Image() {{
-                                height = 8972749919255705783;
-                                uri = "vel";
-                                width = 5664740894451141437;
+                                height = 303089054982227392;
+                                uri = "sint";
+                                width = 5392504858645185670;
+                            }}),
+                            add(new GoogleCloudRecommendationengineV1beta1Image() {{
+                                height = 7847956203786849690;
+                                uri = "exercitationem";
+                                width = 4756106358532488297;
                             }}),
                         }};
                         priceRange = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange() {{
-                            max = 92.099998;
-                            min = 51.099998;
+                            max = 30.200001;
+                            min = 97.099998;
                         }};
-                        stockState = "OUT_OF_STOCK";
+                        stockState = "BACKORDER";
                     }};
                     tags = new String[]() {{
-                        add("a"),
-                        add("distinctio"),
-                        add("cum"),
+                        add("veritatis"),
+                        add("in"),
+                        add("et"),
                     }};
-                    title = "exercitationem";
+                    title = "omnis";
                 }};
             }};
 

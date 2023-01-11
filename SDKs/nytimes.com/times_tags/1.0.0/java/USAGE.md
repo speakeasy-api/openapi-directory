@@ -22,9 +22,9 @@ public class Application {
 
             GetTimestagsRequest req = new GetTimestagsRequest() {{
                 queryParams = new GetTimestagsQueryParams() {{
-                    filter = "Per";
-                    max = 6612778252839372201;
-                    query = "quis";
+                    filter = "Org";
+                    max = 2259404117704393152;
+                    query = "culpa";
                 }};
             }};
 

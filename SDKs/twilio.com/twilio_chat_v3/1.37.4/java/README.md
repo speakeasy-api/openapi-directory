@@ -33,14 +33,14 @@ public class Application {
                     }};
                 }};
                 pathParams = new UpdateChannelPathParams() {{
-                    serviceSid = "illum";
-                    sid = "consequatur";
+                    serviceSid = "sit";
+                    sid = "voluptas";
                 }};
                 headers = new UpdateChannelHeaders() {{
                     xTwilioWebhookEnabled = "false";
                 }};
                 request = new UpdateChannelUpdateChannelRequest() {{
-                    messagingServiceSid = "hic";
+                    messagingServiceSid = "expedita";
                     type = "private";
                 }};
             }};

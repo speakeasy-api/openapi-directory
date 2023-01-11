@@ -13,7 +13,7 @@ public class Application {
             SDK sdk = builder.build();
 
             PostOriginKeysRequest req = new PostOriginKeysRequest() {{
-                request = "iste";
+                request = "sit";
             }};
 
             PostOriginKeysResponse res = sdk.postOriginKeys(req);

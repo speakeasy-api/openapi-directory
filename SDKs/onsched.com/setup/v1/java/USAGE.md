@@ -22,20 +22,20 @@ public class Application {
 
             GetSetupV1AppointmentsRequest req = new GetSetupV1AppointmentsRequest() {{
                 queryParams = new GetSetupV1AppointmentsQueryParams() {{
-                    bookedBy = "voluptatem";
-                    calendarId = "hic";
-                    customerId = "quia";
-                    email = "perferendis";
-                    endDate = "1987-03-13T06:39:44Z";
-                    lastname = "exercitationem";
-                    limit = 7158012375946119173;
-                    locationId = "modi";
-                    offset = 3543851051679539952;
-                    resourceId = "harum";
-                    serviceAllocationId = "autem";
-                    serviceId = "numquam";
-                    startDate = "2012-09-12T18:54:04Z";
-                    status = "optio";
+                    bookedBy = "sit";
+                    calendarId = "voluptas";
+                    customerId = "culpa";
+                    email = "expedita";
+                    endDate = "1997-12-26T13:41:25Z";
+                    lastname = "dolor";
+                    limit = 1774932891286980153;
+                    locationId = "voluptas";
+                    offset = 8274930044578894929;
+                    resourceId = "et";
+                    serviceAllocationId = "nihil";
+                    serviceId = "rerum";
+                    startDate = "2004-06-02T10:14:12Z";
+                    status = "voluptatum";
                 }};
             }};
 

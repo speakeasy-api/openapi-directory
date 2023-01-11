@@ -27,14 +27,14 @@ public class Application {
 
             GetVaccineStatusRequest req = new GetVaccineStatusRequest() {{
                 headers = new GetVaccineStatusHeaders() {{
-                    accept = "autem";
-                    authorization = "distinctio";
-                    contentType = "consequuntur";
-                    cowinApiKey = "autem";
+                    accept = "sit";
+                    authorization = "voluptas";
+                    contentType = "culpa";
+                    cowinApiKey = "expedita";
                 }};
                 request = new VaccineStatusRequest() {{
-                    beneficiaryId = "vitae";
-                    mobile = "fugit";
+                    beneficiaryId = "consequuntur";
+                    mobile = "dolor";
                 }};
             }};
 

@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetSearchQueryParams() {{
-                    q = "debitis";
+                    q = "sit";
                 }};
             }};
 

@@ -36,17 +36,17 @@ public class Application {
             GetDeleteListenerRequest req = new GetDeleteListenerRequest() {{
                 queryParams = new GetDeleteListenerQueryParams() {{
                     action = "DeleteListener";
-                    listenerArn = "voluptate";
+                    listenerArn = "voluptas";
                     version = "2015-12-01";
                 }};
                 headers = new GetDeleteListenerHeaders() {{
-                    xAmzAlgorithm = "autem";
-                    xAmzContentSha256 = "sed";
-                    xAmzCredential = "voluptas";
-                    xAmzDate = "adipisci";
-                    xAmzSecurityToken = "exercitationem";
-                    xAmzSignature = "deserunt";
-                    xAmzSignedHeaders = "ex";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
             }};
 

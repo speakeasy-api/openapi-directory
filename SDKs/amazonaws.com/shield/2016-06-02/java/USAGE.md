@@ -22,17 +22,17 @@ public class Application {
 
             AssociateDrtLogBucketRequest req = new AssociateDrtLogBucketRequest() {{
                 headers = new AssociateDrtLogBucketHeaders() {{
-                    xAmzAlgorithm = "tempora";
-                    xAmzContentSha256 = "quas";
-                    xAmzCredential = "exercitationem";
-                    xAmzDate = "tempore";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "qui";
-                    xAmzSignedHeaders = "magnam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSShield_20160616.AssociateDRTLogBucket";
                 }};
                 request = new AssociateDrtLogBucketRequest() {{
-                    logBucket = "sequi";
+                    logBucket = "fugit";
                 }};
             }};
 

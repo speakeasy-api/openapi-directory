@@ -14,45 +14,45 @@ public class Application {
 
             PostV05CareContextsDiscoverRequest req = new PostV05CareContextsDiscoverRequest() {{
                 headers = new PostV05CareContextsDiscoverHeaders() {{
-                    authorization = "consequatur";
-                    xHIPID = "itaque";
+                    authorization = "sit";
+                    xHIPID = "voluptas";
                 }};
                 request = new PostV05CareContextsDiscoverRequests() {{
-                    applicationXML = "repellat".getBytes();
+                    applicationXML = "culpa".getBytes();
                     patientDiscoveryRequest = new PatientDiscoveryRequest() {{
                         patient = new PatientDiscoveryRequestPatient() {{
-                            gender = "U";
-                            id = "autem";
-                            name = "dolores";
+                            gender = "O";
+                            id = "consequuntur";
+                            name = "dolor";
                             unverifiedIdentifiers = new openapisdk.models.shared.Identifier[]() {{
                                 add(new Identifier() {{
                                     type = "MR";
-                                    value = "qui";
-                                }}),
-                                add(new Identifier() {{
-                                    type = "HEALTH_ID";
-                                    value = "velit";
+                                    value = "fugit";
                                 }}),
                                 add(new Identifier() {{
                                     type = "MOBILE";
-                                    value = "blanditiis";
+                                    value = "nihil";
                                 }}),
                             }};
                             verifiedIdentifiers = new openapisdk.models.shared.Identifier[]() {{
                                 add(new Identifier() {{
-                                    type = "MR";
-                                    value = "id";
+                                    type = "HEALTH_ID";
+                                    value = "debitis";
                                 }}),
                                 add(new Identifier() {{
-                                    type = "NDHM_HEALTH_NUMBER";
-                                    value = "quaerat";
+                                    type = "MOBILE";
+                                    value = "et";
+                                }}),
+                                add(new Identifier() {{
+                                    type = "HEALTH_ID";
+                                    value = "dolorem";
                                 }}),
                             }};
-                            yearOfBirth = 7991929692006849534;
+                            yearOfBirth = 7259475919510918339;
                         }};
-                        requestId = "et";
-                        timestamp = "1978-06-02T13:05:46Z";
-                        transactionId = "libero";
+                        requestId = "voluptate";
+                        timestamp = "1998-09-30T11:01:25Z";
+                        transactionId = "vitae";
                     }};
                 }};
             }};

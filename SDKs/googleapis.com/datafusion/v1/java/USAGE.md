@@ -22,97 +22,88 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatafusionProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "quis";
+                    parent = "sit";
                 }};
                 queryParams = new DatafusionProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "debitis";
-                    alt = "json";
-                    callback = "veniam";
-                    fields = "quae";
-                    instanceId = "nisi";
-                    key = "voluptatem";
-                    oauthToken = "in";
-                    prettyPrint = true;
-                    quotaUser = "est";
-                    uploadType = "vero";
-                    uploadProtocol = "autem";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    instanceId = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new InstanceInput() {{
                     accelerators = new openapisdk.models.shared.Accelerator[]() {{
                         add(new Accelerator() {{
                             acceleratorType = "ACCELERATOR_TYPE_UNSPECIFIED";
-                            state = "UNKNOWN";
-                        }}),
-                        add(new Accelerator() {{
-                            acceleratorType = "CCAI_INSIGHTS";
-                            state = "ENABLED";
-                        }}),
-                        add(new Accelerator() {{
-                            acceleratorType = "CDC";
-                            state = "ENABLED";
+                            state = "DISABLED";
                         }}),
                     }};
                     availableVersion = new openapisdk.models.shared.Version[]() {{
                         add(new Version() {{
                             availableFeatures = new String[]() {{
-                                add("quam"),
-                                add("ipsa"),
-                                add("delectus"),
+                                add("et"),
+                                add("voluptate"),
+                                add("iste"),
                             }};
                             defaultVersion = true;
                             type = "TYPE_GENERAL_AVAILABILITY";
-                            versionNumber = "eum";
+                            versionNumber = "dolores";
                         }}),
                         add(new Version() {{
                             availableFeatures = new String[]() {{
-                                add("nihil"),
-                                add("est"),
+                                add("debitis"),
+                                add("vel"),
+                                add("odio"),
                             }};
                             defaultVersion = true;
-                            type = "TYPE_GENERAL_AVAILABILITY";
-                            versionNumber = "eaque";
+                            type = "TYPE_PREVIEW";
+                            versionNumber = "aspernatur";
                         }}),
                         add(new Version() {{
                             availableFeatures = new String[]() {{
-                                add("corporis"),
-                                add("exercitationem"),
+                                add("totam"),
+                                add("commodi"),
+                                add("quis"),
                             }};
                             defaultVersion = false;
-                            type = "TYPE_UNSPECIFIED";
-                            versionNumber = "ut";
+                            type = "TYPE_GENERAL_AVAILABILITY";
+                            versionNumber = "odit";
                         }}),
                     }};
                     cryptoKeyConfig = new CryptoKeyConfig() {{
-                        keyReference = "quisquam";
+                        keyReference = "non";
                     }};
-                    dataprocServiceAccount = "eaque";
-                    description = "nemo";
-                    displayName = "corrupti";
-                    enableRbac = false;
+                    dataprocServiceAccount = "voluptas";
+                    description = "omnis";
+                    displayName = "aut";
+                    enableRbac = true;
                     enableStackdriverLogging = false;
-                    enableStackdriverMonitoring = true;
+                    enableStackdriverMonitoring = false;
                     eventPublishConfig = new EventPublishConfig() {{
-                        enabled = false;
-                        topic = "assumenda";
+                        enabled = true;
+                        topic = "consectetur";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("et", "atque");
-                        put("vero", "molestiae");
-                        put("aliquam", "consequatur");
+                        put("odio", "qui");
                     }};
                     networkConfig = new NetworkConfig() {{
-                        ipAllocation = "dolor";
-                        network = "placeat";
+                        ipAllocation = "recusandae";
+                        network = "at";
                     }};
                     options = new java.util.HashMap<String, String>() {{
-                        put("temporibus", "odio");
-                        put("quo", "enim");
+                        put("eveniet", "modi");
                     }};
-                    privateInstance = false;
+                    privateInstance = true;
                     type = "BASIC";
-                    version = "atque";
-                    zone = "suscipit";
+                    version = "ut";
+                    zone = "exercitationem";
                 }};
             }};
 

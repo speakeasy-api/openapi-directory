@@ -14,7 +14,7 @@ public class Application {
 
             GetAccountInfoRequest req = new GetAccountInfoRequest() {{
                 headers = new GetAccountInfoHeaders() {{
-                    trainingKey = "autem";
+                    trainingKey = "sit";
                 }};
             }};
 

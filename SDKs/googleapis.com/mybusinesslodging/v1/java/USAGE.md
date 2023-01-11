@@ -14,21 +14,21 @@ public class Application {
 
             MybusinesslodgingLocationsGetLodgingRequest req = new MybusinesslodgingLocationsGetLodgingRequest() {{
                 pathParams = new MybusinesslodgingLocationsGetLodgingPathParams() {{
-                    name = "a";
+                    name = "sit";
                 }};
                 queryParams = new MybusinesslodgingLocationsGetLodgingQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "hic";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "minima";
-                    fields = "officia";
-                    key = "in";
-                    oauthToken = "sequi";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "ipsa";
-                    readMask = "iste";
-                    uploadType = "omnis";
-                    uploadProtocol = "debitis";
+                    quotaUser = "et";
+                    readMask = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

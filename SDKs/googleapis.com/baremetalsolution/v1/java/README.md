@@ -35,25 +35,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new BaremetalsolutionOperationsCancelPathParams() {{
-                    name = "dolores";
+                    name = "sit";
                 }};
                 queryParams = new BaremetalsolutionOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "aperiam";
-                    alt = "proto";
-                    callback = "rerum";
-                    fields = "animi";
-                    key = "nesciunt";
-                    oauthToken = "ut";
-                    prettyPrint = false;
-                    quotaUser = "ut";
-                    uploadType = "velit";
-                    uploadProtocol = "velit";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("doloribus", "praesentium");
-                    put("et", "voluptatem");
-                    put("quae", "soluta");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

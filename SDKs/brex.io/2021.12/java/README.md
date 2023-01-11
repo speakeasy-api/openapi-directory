@@ -32,15 +32,15 @@ public class Application {
                     }};
                 }};
                 pathParams = new CompanyAlternativeSearchPathParams() {{
-                    country = "quia";
+                    country = "sit";
                 }};
                 request = new CompanyAlternativeSearchRequestBody() {{
-                    address = "velit";
-                    name = "sed";
-                    number = "occaecati";
-                    phone = "quidem";
-                    url = "maxime";
-                    vat = "eos";
+                    address = "voluptas";
+                    name = "culpa";
+                    number = "expedita";
+                    phone = "consequuntur";
+                    url = "dolor";
+                    vat = "expedita";
                 }};
             }};
 

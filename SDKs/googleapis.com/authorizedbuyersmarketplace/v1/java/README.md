@@ -35,22 +35,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new AuthorizedbuyersmarketplaceBuyersAuctionPackagesListPathParams() {{
-                    parent = "corrupti";
+                    parent = "sit";
                 }};
                 queryParams = new AuthorizedbuyersmarketplaceBuyersAuctionPackagesListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "consectetur";
-                    alt = "json";
-                    callback = "impedit";
-                    fields = "modi";
-                    key = "doloribus";
-                    oauthToken = "dolorem";
-                    pageSize = 7227314679524352432;
-                    pageToken = "vel";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    pageSize = 8274930044578894929;
+                    pageToken = "et";
                     prettyPrint = true;
-                    quotaUser = "architecto";
-                    uploadType = "est";
-                    uploadProtocol = "consectetur";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

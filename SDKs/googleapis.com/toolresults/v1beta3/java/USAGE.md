@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new ToolresultsProjectsGetSettingsPathParams() {{
-                    projectId = "est";
+                    projectId = "sit";
                 }};
                 queryParams = new ToolresultsProjectsGetSettingsQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "et";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "reprehenderit";
-                    fields = "quis";
-                    key = "iure";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
                     oauthToken = "voluptas";
-                    prettyPrint = false;
-                    quotaUser = "nemo";
-                    uploadType = "quasi";
-                    uploadProtocol = "dolor";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

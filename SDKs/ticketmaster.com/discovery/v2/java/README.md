@@ -28,24 +28,22 @@ public class Application {
             FindRequest req = new FindRequest() {{
                 queryParams = new FindQueryParams() {{
                     classificationId = new Object[]() {{
-                        add("eos"),
-                        add("et"),
+                        add("voluptas"),
                     }};
                     classificationName = new Object[]() {{
-                        add("aspernatur"),
-                        add("praesentium"),
-                        add("porro"),
+                        add("expedita"),
+                        add("consequuntur"),
                     }};
-                    id = "nihil";
-                    includeLicensedContent = "yes";
+                    id = "dolor";
+                    includeLicensedContent = " no";
                     includeSpellcheck = " no";
-                    includeTest = " only";
-                    keyword = "accusantium";
-                    locale = "atque";
-                    page = "amet";
-                    size = "nisi";
-                    sort = "quidem";
-                    source = " universe";
+                    includeTest = "yes";
+                    keyword = "et";
+                    locale = "nihil";
+                    page = "rerum";
+                    size = "dicta";
+                    sort = "debitis";
+                    source = "ticketmaster";
                 }};
             }};
 

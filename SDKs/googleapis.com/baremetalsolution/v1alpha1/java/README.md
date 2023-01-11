@@ -35,204 +35,109 @@ public class Application {
                     }};
                 }};
                 pathParams = new BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams() {{
-                    location = "corporis";
-                    project = "at";
+                    location = "sit";
+                    project = "voluptas";
                 }};
                 queryParams = new BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "recusandae";
+                    dollarXgafv = "2";
+                    accessToken = "expedita";
                     alt = "proto";
-                    callback = "at";
-                    fields = "qui";
-                    key = "fugit";
-                    oauthToken = "repellat";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "blanditiis";
-                    uploadType = "omnis";
-                    uploadProtocol = "magni";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new SubmitProvisioningConfigRequest() {{
-                    email = "nemo";
+                    email = "debitis";
                     provisioningConfig = new ProvisioningConfig() {{
                         instances = new openapisdk.models.shared.InstanceConfig[]() {{
                             add(new InstanceConfig() {{
                                 clientNetwork = new NetworkAddress() {{
-                                    address = "cupiditate";
-                                    existingNetworkId = "soluta";
-                                    networkId = "voluptatibus";
+                                    address = "et";
+                                    existingNetworkId = "ut";
+                                    networkId = "dolorem";
                                 }};
                                 hyperthreading = false;
-                                id = "corrupti";
-                                instanceType = "expedita";
-                                location = "nisi";
-                                osImage = "quibusdam";
+                                id = "voluptate";
+                                instanceType = "iste";
+                                location = "vitae";
+                                osImage = "totam";
                                 privateNetwork = new NetworkAddress() {{
-                                    address = "magni";
-                                    existingNetworkId = "quia";
-                                    networkId = "earum";
+                                    address = "dolores";
+                                    existingNetworkId = "illum";
+                                    networkId = "debitis";
                                 }};
-                                userNote = "a";
+                                userNote = "vel";
                             }}),
                         }};
                         networks = new openapisdk.models.shared.NetworkConfig[]() {{
                             add(new NetworkConfig() {{
                                 bandwidth = "BW_1_GBPS";
-                                cidr = "rerum";
-                                id = "maxime";
-                                location = "qui";
-                                serviceCidr = "DISABLED";
-                                type = "PRIVATE";
-                                userNote = "iusto";
+                                cidr = "id";
+                                id = "aspernatur";
+                                location = "accusantium";
+                                serviceCidr = "SERVICE_CIDR_UNSPECIFIED";
+                                type = "CLIENT";
+                                userNote = "quis";
                                 vlanAttachments = new openapisdk.models.shared.VlanAttachment[]() {{
                                     add(new VlanAttachment() {{
-                                        id = "provident";
-                                        pairingKey = "voluptatem";
+                                        id = "aut";
+                                        pairingKey = "odit";
                                     }}),
                                     add(new VlanAttachment() {{
-                                        id = "veniam";
-                                        pairingKey = "aspernatur";
-                                    }}),
-                                    add(new VlanAttachment() {{
-                                        id = "sed";
-                                        pairingKey = "voluptatem";
+                                        id = "non";
+                                        pairingKey = "voluptas";
                                     }}),
                                 }};
                             }}),
                         }};
-                        ticketId = "numquam";
+                        ticketId = "omnis";
                         volumes = new openapisdk.models.shared.VolumeConfig[]() {{
                             add(new VolumeConfig() {{
-                                id = "et";
-                                location = "nulla";
+                                id = "illo";
+                                location = "sed";
                                 lunRanges = new openapisdk.models.shared.LunRange[]() {{
                                     add(new LunRange() {{
-                                        quantity = 8361513412454442989;
-                                        sizeGb = 177910529029143534;
+                                        quantity = 771642788862502430;
+                                        sizeGb = 8514850266767180993;
                                     }}),
                                     add(new LunRange() {{
-                                        quantity = 6895181443492226283;
-                                        sizeGb = 8137267475074113375;
+                                        quantity = 8683452355129068124;
+                                        sizeGb = 4345851588384648695;
                                     }}),
                                 }};
                                 machineIds = new String[]() {{
-                                    add("hic"),
-                                    add("perferendis"),
-                                    add("cupiditate"),
+                                    add("recusandae"),
                                 }};
                                 nfsExports = new openapisdk.models.shared.NfsExport[]() {{
                                     add(new NfsExport() {{
                                         allowDev = false;
                                         allowSuid = true;
-                                        cidr = "qui";
-                                        machineId = "qui";
-                                        networkId = "eius";
+                                        cidr = "modi";
+                                        machineId = "sint";
+                                        networkId = "inventore";
                                         noRootSquash = true;
-                                        permissions = "READ_WRITE";
-                                    }}),
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = true;
-                                        cidr = "aliquid";
-                                        machineId = "natus";
-                                        networkId = "voluptate";
-                                        noRootSquash = false;
                                         permissions = "READ_WRITE";
                                     }}),
                                     add(new NfsExport() {{
                                         allowDev = true;
                                         allowSuid = false;
-                                        cidr = "velit";
+                                        cidr = "tempore";
                                         machineId = "maiores";
-                                        networkId = "sunt";
-                                        noRootSquash = true;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                }};
-                                protocol = "PROTOCOL_UNSPECIFIED";
-                                sizeGb = 9089297782211299111;
-                                snapshotsEnabled = true;
-                                type = "TYPE_UNSPECIFIED";
-                                userNote = "illo";
-                            }}),
-                            add(new VolumeConfig() {{
-                                id = "consequatur";
-                                location = "veritatis";
-                                lunRanges = new openapisdk.models.shared.LunRange[]() {{
-                                    add(new LunRange() {{
-                                        quantity = 6545601966413333913;
-                                        sizeGb = 2617424492518683871;
-                                    }}),
-                                    add(new LunRange() {{
-                                        quantity = 8903029501216635624;
-                                        sizeGb = 3572128461528097481;
-                                    }}),
-                                    add(new LunRange() {{
-                                        quantity = 1955662514273187341;
-                                        sizeGb = 4990110785778232803;
-                                    }}),
-                                }};
-                                machineIds = new String[]() {{
-                                    add("quo"),
-                                    add("nulla"),
-                                }};
-                                nfsExports = new openapisdk.models.shared.NfsExport[]() {{
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "vel";
-                                        machineId = "qui";
-                                        networkId = "ut";
-                                        noRootSquash = true;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "qui";
-                                        machineId = "a";
-                                        networkId = "totam";
-                                        noRootSquash = true;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                }};
-                                protocol = "PROTOCOL_NFS";
-                                sizeGb = 6026832288918041536;
-                                snapshotsEnabled = false;
-                                type = "TYPE_UNSPECIFIED";
-                                userNote = "cumque";
-                            }}),
-                            add(new VolumeConfig() {{
-                                id = "fugit";
-                                location = "qui";
-                                lunRanges = new openapisdk.models.shared.LunRange[]() {{
-                                    add(new LunRange() {{
-                                        quantity = 158155743570349394;
-                                        sizeGb = 964892110588986553;
-                                    }}),
-                                    add(new LunRange() {{
-                                        quantity = 7644729130951826223;
-                                        sizeGb = 8176356009201989955;
-                                    }}),
-                                }};
-                                machineIds = new String[]() {{
-                                    add("tempore"),
-                                }};
-                                nfsExports = new openapisdk.models.shared.NfsExport[]() {{
-                                    add(new NfsExport() {{
-                                        allowDev = true;
-                                        allowSuid = true;
-                                        cidr = "reprehenderit";
-                                        machineId = "explicabo";
-                                        networkId = "aut";
+                                        networkId = "incidunt";
                                         noRootSquash = false;
                                         permissions = "READ_WRITE";
                                     }}),
                                 }};
-                                protocol = "PROTOCOL_UNSPECIFIED";
-                                sizeGb = 3889834450408349734;
-                                snapshotsEnabled = true;
-                                type = "DISK";
-                                userNote = "libero";
+                                protocol = "PROTOCOL_FC";
+                                sizeGb = 2671030200101705776;
+                                snapshotsEnabled = false;
+                                type = "FLASH";
+                                userNote = "ipsum";
                             }}),
                         }};
                     }};

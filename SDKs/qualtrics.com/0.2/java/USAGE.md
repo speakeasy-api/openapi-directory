@@ -14,14 +14,14 @@ public class Application {
 
             CreateContactInMailinglistRequest req = new CreateContactInMailinglistRequest() {{
                 pathParams = new CreateContactInMailinglistPathParams() {{
-                    directoryId = "et";
-                    mailingListId = "voluptate";
+                    directoryId = "sit";
+                    mailingListId = "voluptas";
                 }};
                 request = new CreateContactInMailingList() {{
-                    email = "iste";
-                    firstName = "vitae";
-                    lastName = "totam";
-                    unsubscribed = true;
+                    email = "culpa";
+                    firstName = "expedita";
+                    lastName = "consequuntur";
+                    unsubscribed = false;
                 }};
             }};
 

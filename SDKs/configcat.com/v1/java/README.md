@@ -36,18 +36,16 @@ public class Application {
 
             GetAuditlogsRequest req = new GetAuditlogsRequest() {{
                 pathParams = new GetAuditlogsPathParams() {{
-                    productId = "ea";
+                    productId = "sit";
                 }};
                 queryParams = new GetAuditlogsQueryParams() {{
                     auditLogType = new java.util.HashMap<String, Object>() {{
-                        put("dolor", "voluptatem");
-                        put("illo", "est");
-                        put("reprehenderit", "facilis");
+                        put("culpa", "expedita");
                     }};
-                    configId = "aliquid";
-                    environmentId = "iure";
-                    fromUtcDateTime = "2004-03-31T03:18:23Z";
-                    toUtcDateTime = "1997-12-15T16:24:08Z";
+                    configId = "consequuntur";
+                    environmentId = "dolor";
+                    fromUtcDateTime = "2009-11-26T21:53:53Z";
+                    toUtcDateTime = "1978-05-28T16:08:43Z";
                 }};
             }};
 

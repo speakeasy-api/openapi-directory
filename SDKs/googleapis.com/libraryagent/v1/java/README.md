@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new LibraryagentShelvesBooksBorrowPathParams() {{
-                    name = "non";
+                    name = "sit";
                 }};
                 queryParams = new LibraryagentShelvesBooksBorrowQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "eum";
-                    alt = "json";
-                    callback = "minus";
-                    fields = "saepe";
-                    key = "laboriosam";
-                    oauthToken = "ut";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "ad";
-                    uploadType = "architecto";
-                    uploadProtocol = "consequatur";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

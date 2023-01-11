@@ -22,7 +22,7 @@ public class Application {
 
             DeleteConsumerV1AppointmentsIdRequest req = new DeleteConsumerV1AppointmentsIdRequest() {{
                 pathParams = new DeleteConsumerV1AppointmentsIdPathParams() {{
-                    id = "omnis";
+                    id = "sit";
                 }};
             }};
 

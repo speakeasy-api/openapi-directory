@@ -27,8 +27,8 @@ public class Application {
 
             GetAtmsRequest req = new GetAtmsRequest() {{
                 headers = new GetAtmsHeaders() {{
-                    ifModifiedSince = "quia";
-                    ifNoneMatch = "qui";
+                    ifModifiedSince = "sit";
+                    ifNoneMatch = "voluptas";
                 }};
             }};
 

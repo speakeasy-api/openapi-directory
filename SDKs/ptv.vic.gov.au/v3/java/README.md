@@ -27,27 +27,27 @@ public class Application {
 
             DeparturesGetForStopRequest req = new DeparturesGetForStopRequest() {{
                 pathParams = new DeparturesGetForStopPathParams() {{
-                    routeType = 2259404117704393152;
-                    stopId = 6050128673802995827;
+                    routeType = 8717895732742165505;
+                    stopId = 2259404117704393152;
                 }};
                 queryParams = new DeparturesGetForStopQueryParams() {{
-                    dateUtc = "2019-04-21T07:38:14Z";
-                    devid = "consequuntur";
-                    directionId = 2669985732393126063;
+                    dateUtc = "1978-05-13T03:50:47Z";
+                    devid = "expedita";
+                    directionId = 3390393562759376202;
                     expand = new openapisdk.models.operations.DeparturesGetForStopExpandEnum[]() {{
+                        add("VehiclePosition"),
                         add("None"),
-                        add("All"),
                     }};
-                    gtfs = false;
-                    includeCancelled = true;
+                    gtfs = true;
+                    includeCancelled = false;
                     includeGeopath = true;
-                    lookBackwards = false;
-                    maxResults = 2518412263346885298;
+                    lookBackwards = true;
+                    maxResults = 7837839688282259259;
                     platformNumbers = new Integer[]() {{
-                        add(2339563716805116249),
+                        add(5617773211005988520),
                     }};
-                    signature = "ut";
-                    token = "dolorem";
+                    signature = "et";
+                    token = "ut";
                 }};
             }};
 

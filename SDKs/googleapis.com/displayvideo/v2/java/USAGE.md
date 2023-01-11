@@ -22,22 +22,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new DisplayvideoAdvertisersAssetsUploadPathParams() {{
-                    advertiserId = "qui";
+                    advertiserId = "sit";
                 }};
                 queryParams = new DisplayvideoAdvertisersAssetsUploadQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "est";
-                    alt = "json";
-                    callback = "iure";
-                    fields = "nemo";
-                    key = "labore";
-                    oauthToken = "quibusdam";
-                    prettyPrint = false;
-                    quotaUser = "modi";
-                    uploadType = "quia";
-                    uploadProtocol = "est";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
-                request = "et".getBytes();
+                request = "dicta".getBytes();
             }};
 
             DisplayvideoAdvertisersAssetsUploadResponse res = sdk.advertisers.displayvideoAdvertisersAssetsUpload(req);

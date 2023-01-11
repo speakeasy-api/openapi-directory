@@ -27,16 +27,16 @@ public class Application {
 
             GetAssociationBySubjectAndAssocTypeRequest req = new GetAssociationBySubjectAndAssocTypeRequest() {{
                 pathParams = new GetAssociationBySubjectAndAssocTypePathParams() {{
-                    associationType = "et";
+                    associationType = "sit";
                 }};
                 queryParams = new GetAssociationBySubjectAndAssocTypeQueryParams() {{
-                    evidence = "vero";
-                    excludeAutomaticAssertions = false;
-                    object = "doloribus";
-                    rows = 3512290042494767099;
-                    start = 4738051472549726492;
-                    subject = "quibusdam";
-                    unselectEvidence = false;
+                    evidence = "voluptas";
+                    excludeAutomaticAssertions = true;
+                    object = "expedita";
+                    rows = 3390393562759376202;
+                    start = 2669985732393126063;
+                    subject = "expedita";
+                    unselectEvidence = true;
                     useCompactAssociations = true;
                 }};
             }};

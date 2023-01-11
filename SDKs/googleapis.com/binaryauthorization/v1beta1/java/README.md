@@ -35,36 +35,54 @@ public class Application {
                     }};
                 }};
                 pathParams = new BinaryauthorizationProjectsAttestorsCreatePathParams() {{
-                    parent = "sunt";
+                    parent = "sit";
                 }};
                 queryParams = new BinaryauthorizationProjectsAttestorsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quis";
-                    alt = "proto";
-                    attestorId = "esse";
-                    callback = "rerum";
-                    fields = "tempora";
-                    key = "culpa";
-                    oauthToken = "deserunt";
-                    prettyPrint = true;
-                    quotaUser = "aut";
-                    uploadType = "et";
-                    uploadProtocol = "ad";
+                    accessToken = "culpa";
+                    alt = "media";
+                    attestorId = "consequuntur";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new AttestorInput() {{
-                    description = "ut";
-                    etag = "alias";
-                    name = "qui";
+                    description = "debitis";
+                    etag = "voluptatum";
+                    name = "et";
                     userOwnedDrydockNote = new UserOwnedDrydockNoteInput() {{
-                        noteReference = "in";
+                        noteReference = "ut";
                         publicKeys = new openapisdk.models.shared.AttestorPublicKey[]() {{
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "voluptate";
-                                comment = "et";
-                                id = "consequatur";
+                                asciiArmoredPgpPublicKey = "et";
+                                comment = "voluptate";
+                                id = "iste";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "aliquam";
-                                    signatureAlgorithm = "RSA_SIGN_PSS_4096_SHA512";
+                                    publicKeyPem = "vitae";
+                                    signatureAlgorithm = "ECDSA_P521_SHA512";
+                                }};
+                            }}),
+                            add(new AttestorPublicKey() {{
+                                asciiArmoredPgpPublicKey = "dolores";
+                                comment = "illum";
+                                id = "debitis";
+                                pkixPublicKey = new PkixPublicKey() {{
+                                    publicKeyPem = "vel";
+                                    signatureAlgorithm = "EC_SIGN_P256_SHA256";
+                                }};
+                            }}),
+                            add(new AttestorPublicKey() {{
+                                asciiArmoredPgpPublicKey = "dolore";
+                                comment = "id";
+                                id = "aspernatur";
+                                pkixPublicKey = new PkixPublicKey() {{
+                                    publicKeyPem = "accusantium";
+                                    signatureAlgorithm = "ECDSA_P256_SHA256";
                                 }};
                             }}),
                         }};

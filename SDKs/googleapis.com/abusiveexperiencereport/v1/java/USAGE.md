@@ -14,20 +14,20 @@ public class Application {
 
             AbusiveexperiencereportSitesGetRequest req = new AbusiveexperiencereportSitesGetRequest() {{
                 pathParams = new AbusiveexperiencereportSitesGetPathParams() {{
-                    name = "eos";
+                    name = "sit";
                 }};
                 queryParams = new AbusiveexperiencereportSitesGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "itaque";
-                    alt = "json";
-                    callback = "natus";
-                    fields = "quas";
-                    key = "nesciunt";
-                    oauthToken = "nostrum";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "repudiandae";
-                    uploadType = "eius";
-                    uploadProtocol = "totam";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

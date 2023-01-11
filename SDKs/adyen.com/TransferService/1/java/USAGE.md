@@ -18,7 +18,7 @@ public class Application {
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                request = "aut";
+                request = "sit";
             }};
 
             PostTransfersResponse res = sdk.general.postTransfers(req);

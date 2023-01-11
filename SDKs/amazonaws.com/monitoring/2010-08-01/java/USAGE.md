@@ -24,19 +24,18 @@ public class Application {
                 queryParams = new GetDeleteAlarmsQueryParams() {{
                     action = "DeleteAlarms";
                     alarmNames = new String[]() {{
-                        add("omnis"),
-                        add("illum"),
+                        add("culpa"),
                     }};
                     version = "2010-08-01";
                 }};
                 headers = new GetDeleteAlarmsHeaders() {{
-                    xAmzAlgorithm = "dolores";
-                    xAmzContentSha256 = "harum";
-                    xAmzCredential = "neque";
-                    xAmzDate = "eligendi";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "fugiat";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

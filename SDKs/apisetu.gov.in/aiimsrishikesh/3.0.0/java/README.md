@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new DgcerRequestBody() {{
                     certificateParameters = new DgcerRequestBodyCertificateParameters() {{
-                        fullName = "quam";
-                        rroll = "modi";
+                        fullName = "sit";
+                        rroll = "voluptas";
                     }};
-                    consentArtifact = "cupiditate";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "earum";
+                    txnId = "consequuntur";
                 }};
             }};
 

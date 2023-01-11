@@ -23,18 +23,18 @@ public class Application {
             GetAddClientIdToOpenIdConnectProviderRequest req = new GetAddClientIdToOpenIdConnectProviderRequest() {{
                 queryParams = new GetAddClientIdToOpenIdConnectProviderQueryParams() {{
                     action = "AddClientIDToOpenIDConnectProvider";
-                    clientID = "aperiam";
-                    openIDConnectProviderArn = "earum";
+                    clientID = "voluptas";
+                    openIDConnectProviderArn = "culpa";
                     version = "2010-05-08";
                 }};
                 headers = new GetAddClientIdToOpenIdConnectProviderHeaders() {{
-                    xAmzAlgorithm = "earum";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "error";
-                    xAmzDate = "ipsa";
-                    xAmzSecurityToken = "sint";
-                    xAmzSignature = "saepe";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

@@ -14,9 +14,9 @@ public class Application {
 
             ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest req = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest() {{
                 pathParams = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams() {{
-                    org = "quam";
-                    repositoryId = 9146511554899224825;
-                    runnerGroupId = 4180397911541166954;
+                    org = "sit";
+                    repositoryId = 2259404117704393152;
+                    runnerGroupId = 6050128673802995827;
                 }};
             }};
 

@@ -27,11 +27,11 @@ public class Application {
 
             GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest() {{
                 pathParams = new GetDomainsTldZoneIdDownloadPathParams() {{
-                    zoneId = "maxime";
+                    zoneId = "sit";
                 }};
                 queryParams = new GetDomainsTldZoneIdDownloadQueryParams() {{
-                    apiKey = "omnis";
-                    date = "voluptas";
+                    apiKey = "voluptas";
+                    date = "culpa";
                 }};
             }};
 

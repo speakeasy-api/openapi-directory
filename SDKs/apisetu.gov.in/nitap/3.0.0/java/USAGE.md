@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new DgcerRequestBody() {{
                     certificateParameters = new DgcerRequestBodyCertificateParameters() {{
-                        cname = "aut";
-                        regno = "numquam";
-                        rroll = "est";
-                        year = "molestias";
+                        cname = "sit";
+                        regno = "voluptas";
+                        rroll = "culpa";
+                        year = "expedita";
                     }};
-                    consentArtifact = "quis";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "officiis";
+                    txnId = "expedita";
                 }};
             }};
 

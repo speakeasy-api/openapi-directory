@@ -27,12 +27,12 @@ public class Application {
 
             RetrievePrefixPricingRequest req = new RetrievePrefixPricingRequest() {{
                 pathParams = new RetrievePrefixPricingPathParams() {{
-                    type = "id";
+                    type = "sit";
                 }};
                 queryParams = new RetrievePrefixPricingQueryParams() {{
-                    apiKey = "ex";
-                    apiSecret = "dignissimos";
-                    prefix = "laudantium";
+                    apiKey = "voluptas";
+                    apiSecret = "culpa";
+                    prefix = "expedita";
                 }};
             }};
 

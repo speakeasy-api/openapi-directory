@@ -27,8 +27,8 @@ public class Application {
 
             GetemailinfoRequest req = new GetemailinfoRequest() {{
                 queryParams = new GetemailinfoQueryParams() {{
-                    email = "officiis";
-                    license = "quam";
+                    email = "sit";
+                    license = "voluptas";
                 }};
             }};
 

@@ -24,20 +24,18 @@ public class Application {
                 queryParams = new GetGlobalwinescoresLatestQueryParams() {{
                     color = "red";
                     isPrimeurs = false;
-                    limit = 8086289725498386086;
-                    lwin = "architecto";
-                    lwin11 = "beatae";
-                    offset = 8436827725763183950;
-                    ordering = "date";
-                    vintage = "hic";
+                    limit = 6050128673802995827;
+                    lwin = "expedita";
+                    lwin11 = "consequuntur";
+                    offset = 2669985732393126063;
+                    ordering = "-score";
+                    vintage = "voluptas";
                     wineId = new Long[]() {{
-                        add(536448273514821351),
-                        add(2679765305844388554),
-                        add(130050936231533110),
+                        add(1543572285742637646),
                     }};
                 }};
                 headers = new GetGlobalwinescoresLatestHeaders() {{
-                    authorization = "voluptatibus";
+                    authorization = "nihil";
                 }};
             }};
 

@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new VideointelligenceOperationsProjectsLocationsOperationsCancelPathParams() {{
-                    name = "velit";
+                    name = "sit";
                 }};
                 queryParams = new VideointelligenceOperationsProjectsLocationsOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "necessitatibus";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "quaerat";
-                    fields = "sint";
-                    key = "aut";
-                    oauthToken = "deserunt";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "suscipit";
-                    uploadType = "eum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

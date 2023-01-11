@@ -14,7 +14,7 @@ public class Application {
 
             StatusCallApiV1StatusCallGetRequest req = new StatusCallApiV1StatusCallGetRequest() {{
                 queryParams = new StatusCallApiV1StatusCallGetQueryParams() {{
-                    query = "provident";
+                    query = "sit";
                 }};
             }};
 

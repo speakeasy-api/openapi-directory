@@ -35,33 +35,23 @@ public class Application {
 
             AddTagsToOnPremisesInstancesRequest req = new AddTagsToOnPremisesInstancesRequest() {{
                 headers = new AddTagsToOnPremisesInstancesHeaders() {{
-                    xAmzAlgorithm = "deserunt";
-                    xAmzContentSha256 = "sed";
-                    xAmzCredential = "sint";
-                    xAmzDate = "est";
-                    xAmzSecurityToken = "est";
-                    xAmzSignature = "omnis";
-                    xAmzSignedHeaders = "reiciendis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CodeDeploy_20141006.AddTagsToOnPremisesInstances";
                 }};
                 request = new AddTagsToOnPremisesInstancesInput() {{
                     instanceNames = new String[]() {{
                         add("et"),
-                        add("molestias"),
-                        add("minus"),
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "voluptatum";
-                            value = "tenetur";
-                        }}),
-                        add(new Tag() {{
-                            key = "rem";
-                            value = "autem";
-                        }}),
-                        add(new Tag() {{
-                            key = "enim";
-                            value = "quia";
+                            key = "rerum";
+                            value = "dicta";
                         }}),
                     }};
                 }};

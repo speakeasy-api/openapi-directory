@@ -22,22 +22,21 @@ public class Application {
 
             BatchCheckLayerAvailabilityRequest req = new BatchCheckLayerAvailabilityRequest() {{
                 headers = new BatchCheckLayerAvailabilityHeaders() {{
-                    xAmzAlgorithm = "debitis";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "tenetur";
-                    xAmzDate = "aspernatur";
-                    xAmzSecurityToken = "minus";
-                    xAmzSignature = "molestiae";
-                    xAmzSignedHeaders = "rerum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability";
                 }};
                 request = new BatchCheckLayerAvailabilityRequest() {{
                     layerDigests = new String[]() {{
-                        add("illo"),
-                        add("quas"),
+                        add("et"),
                     }};
-                    registryId = "in";
-                    repositoryName = "ipsum";
+                    registryId = "nihil";
+                    repositoryName = "rerum";
                 }};
             }};
 

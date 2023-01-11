@@ -35,24 +35,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new TpuProjectsLocationsAcceleratorTypesListPathParams() {{
-                    parent = "doloremque";
+                    parent = "sit";
                 }};
                 queryParams = new TpuProjectsLocationsAcceleratorTypesListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "et";
-                    alt = "json";
-                    callback = "vel";
-                    fields = "et";
-                    filter = "voluptas";
-                    key = "accusantium";
-                    oauthToken = "id";
-                    orderBy = "distinctio";
-                    pageSize = 1524269922956525695;
-                    pageToken = "tempora";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    orderBy = "et";
+                    pageSize = 2661732831099943416;
+                    pageToken = "rerum";
                     prettyPrint = false;
-                    quotaUser = "quisquam";
-                    uploadType = "ratione";
-                    uploadProtocol = "consequuntur";
+                    quotaUser = "debitis";
+                    uploadType = "voluptatum";
+                    uploadProtocol = "et";
                 }};
             }};
 

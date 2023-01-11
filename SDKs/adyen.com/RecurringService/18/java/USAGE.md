@@ -13,7 +13,7 @@ public class Application {
             SDK sdk = builder.build();
 
             PostDisableRequest req = new PostDisableRequest() {{
-                request = "commodi";
+                request = "sit";
             }};
 
             PostDisableResponse res = sdk.postDisable(req);

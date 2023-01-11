@@ -24,22 +24,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsloginUsersGetLoginProfilePathParams() {{
-                    name = "quis";
+                    name = "sit";
                 }};
                 queryParams = new OsloginUsersGetLoginProfileQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ipsa";
-                    alt = "proto";
-                    callback = "iste";
-                    fields = "distinctio";
-                    key = "autem";
-                    oauthToken = "eos";
-                    prettyPrint = false;
-                    projectId = "nobis";
-                    quotaUser = "consequatur";
-                    systemId = "minima";
-                    uploadType = "assumenda";
-                    uploadProtocol = "quo";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    projectId = "et";
+                    quotaUser = "nihil";
+                    systemId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

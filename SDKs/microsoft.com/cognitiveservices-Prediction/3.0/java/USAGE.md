@@ -22,16 +22,16 @@ public class Application {
 
             ClassifyImageRequest req = new ClassifyImageRequest() {{
                 pathParams = new ClassifyImagePathParams() {{
-                    projectId = "excepturi";
-                    publishedName = "facilis";
+                    projectId = "sit";
+                    publishedName = "voluptas";
                 }};
                 queryParams = new ClassifyImageQueryParams() {{
-                    application = "aspernatur";
+                    application = "culpa";
                 }};
                 request = new ClassifyImageRequestBody() {{
                     imageData = new ClassifyImageRequestBodyImageData() {{
-                        content = "nemo".getBytes();
-                        imageData = "enim";
+                        content = "expedita".getBytes();
+                        imageData = "consequuntur";
                     }};
                 }};
             }};

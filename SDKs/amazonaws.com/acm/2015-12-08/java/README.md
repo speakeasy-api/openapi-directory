@@ -35,29 +35,21 @@ public class Application {
 
             AddTagsToCertificateRequest req = new AddTagsToCertificateRequest() {{
                 headers = new AddTagsToCertificateHeaders() {{
-                    xAmzAlgorithm = "mollitia";
-                    xAmzContentSha256 = "inventore";
-                    xAmzCredential = "delectus";
-                    xAmzDate = "ipsa";
-                    xAmzSecurityToken = "animi";
-                    xAmzSignature = "animi";
-                    xAmzSignedHeaders = "ut";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CertificateManager.AddTagsToCertificate";
                 }};
                 request = new AddTagsToCertificateRequest() {{
-                    certificateArn = "fuga";
+                    certificateArn = "fugit";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "sed";
-                            value = "et";
-                        }}),
-                        add(new Tag() {{
-                            key = "consequuntur";
-                            value = "non";
-                        }}),
-                        add(new Tag() {{
-                            key = "cupiditate";
-                            value = "provident";
+                            key = "nihil";
+                            value = "rerum";
                         }}),
                     }};
                 }};

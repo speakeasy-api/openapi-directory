@@ -24,38 +24,38 @@ public class Application {
                     }};
                 }};
                 pathParams = new JobsProjectsClientEventsCreatePathParams() {{
-                    parent = "placeat";
+                    parent = "sit";
                 }};
                 queryParams = new JobsProjectsClientEventsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "in";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "in";
-                    fields = "officiis";
-                    key = "sit";
-                    oauthToken = "impedit";
-                    prettyPrint = false;
-                    quotaUser = "exercitationem";
-                    uploadType = "odio";
-                    uploadProtocol = "et";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new CreateClientEventRequest() {{
                     clientEvent = new ClientEvent() {{
-                        createTime = "adipisci";
-                        eventId = "earum";
+                        createTime = "dicta";
+                        eventId = "debitis";
                         extraInfo = new java.util.HashMap<String, String>() {{
-                            put("error", "id");
-                            put("minima", "perspiciatis");
+                            put("et", "ut");
                         }};
                         jobEvent = new JobEvent() {{
                             jobs = new String[]() {{
-                                add("dicta"),
-                                add("blanditiis"),
+                                add("et"),
+                                add("voluptate"),
+                                add("iste"),
                             }};
-                            type = "APPLICATION_START";
+                            type = "APPLICATION_COMPANY_SUBMIT";
                         }};
-                        parentEventId = "et";
-                        requestId = "rerum";
+                        parentEventId = "totam";
+                        requestId = "dolores";
                     }};
                 }};
             }};

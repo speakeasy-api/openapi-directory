@@ -27,7 +27,7 @@ public class Application {
 
             KeysApiCurrentRequest req = new KeysApiCurrentRequest() {{
                 pathParams = new KeysApiCurrentPathParams() {{
-                    serial = "iste";
+                    serial = "sit";
                 }};
             }};
 

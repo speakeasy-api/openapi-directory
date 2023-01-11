@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchTrunkingCountryPathParams() {{
-                    isoCountry = "nihil";
+                    isoCountry = "sit";
                 }};
             }};
 

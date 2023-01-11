@@ -23,10 +23,10 @@ public class Application {
 
             DeleteAppsAppIdRequest req = new DeleteAppsAppIdRequest() {{
                 pathParams = new DeleteAppsAppIdPathParams() {{
-                    appId = "voluptas";
+                    appId = "sit";
                 }};
                 queryParams = new DeleteAppsAppIdQueryParams() {{
-                    developerId = "voluptatem";
+                    developerId = "voluptas";
                 }};
             }};
 

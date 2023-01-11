@@ -20,16 +20,14 @@ public class Application {
                 }};
                 request = new CredentialOptions() {{
                     acl = new java.util.HashMap<String, Object>() {{
-                        put("commodi", "error");
-                        put("reprehenderit", "consectetur");
+                        put("voluptas", "culpa");
                     }};
-                    cidrs = "nostrum";
-                    global = false;
-                    name = "laboriosam";
+                    cidrs = "expedita";
+                    global = true;
+                    name = "dolor";
                     secret = new java.util.HashMap<String, Object>() {{
-                        put("a", "soluta");
-                        put("aut", "quas");
-                        put("consequuntur", "laudantium");
+                        put("voluptas", "fugit");
+                        put("et", "nihil");
                     }};
                     type = "aws_access_secret";
                 }};

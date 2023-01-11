@@ -35,63 +35,52 @@ public class Application {
                     }};
                 }};
                 pathParams = new GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams() {{
-                    parent = "et";
+                    parent = "sit";
                 }};
                 queryParams = new GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "aliquid";
-                    alt = "json";
-                    backupId = "voluptatem";
-                    callback = "sunt";
-                    fields = "ut";
-                    key = "dignissimos";
-                    oauthToken = "qui";
-                    prettyPrint = true;
-                    quotaUser = "quam";
-                    uploadType = "sint";
-                    uploadProtocol = "saepe";
+                    accessToken = "culpa";
+                    alt = "media";
+                    backupId = "consequuntur";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new BackupInput() {{
                     clusterMetadata = new ClusterMetadata() {{
-                        anthosVersion = "et";
+                        anthosVersion = "debitis";
                         backupCrdVersions = new java.util.HashMap<String, String>() {{
-                            put("qui", "commodi");
-                            put("autem", "enim");
-                            put("officia", "enim");
+                            put("et", "ut");
                         }};
-                        cluster = "aperiam";
-                        gkeVersion = "quasi";
-                        k8sVersion = "enim";
+                        cluster = "dolorem";
+                        gkeVersion = "et";
+                        k8sVersion = "voluptate";
                     }};
-                    deleteLockDays = 929418561123333178;
-                    description = "tenetur";
+                    deleteLockDays = 3287288577352441706;
+                    description = "vitae";
                     encryptionKey = new EncryptionKey() {{
-                        gcpKmsEncryptionKey = "cupiditate";
+                        gcpKmsEncryptionKey = "totam";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("nihil", "totam");
+                        put("illum", "debitis");
                     }};
-                    retainDays = 2179631856028217069;
+                    retainDays = 3706853784096366226;
                     selectedApplications = new NamespacedNames() {{
                         namespacedNames = new openapisdk.models.shared.NamespacedName[]() {{
                             add(new NamespacedName() {{
-                                name = "laudantium";
-                                namespace = "quo";
-                            }}),
-                            add(new NamespacedName() {{
-                                name = "qui";
-                                namespace = "quos";
-                            }}),
-                            add(new NamespacedName() {{
-                                name = "ut";
-                                namespace = "sit";
+                                name = "dolore";
+                                namespace = "id";
                             }}),
                         }};
                     }};
                     selectedNamespaces = new Namespaces() {{
                         namespaces = new String[]() {{
-                            add("ut"),
-                            add("iure"),
+                            add("accusantium"),
                         }};
                     }};
                 }};

@@ -32,13 +32,13 @@ public class Application {
                     }};
                 }};
                 pathParams = new EndpointGetAnAlbumPathParams() {{
-                    id = "enim";
+                    id = "sit";
                 }};
                 queryParams = new EndpointGetAnAlbumQueryParams() {{
-                    market = "blanditiis";
+                    market = "voluptas";
                 }};
                 headers = new EndpointGetAnAlbumHeaders() {{
-                    authorization = "distinctio";
+                    authorization = "culpa";
                 }};
             }};
 

@@ -14,7 +14,7 @@ public class Application {
 
             GetContentAspectIdRequest req = new GetContentAspectIdRequest() {{
                 pathParams = new GetContentAspectIdPathParams() {{
-                    aspectId = "psl";
+                    aspectId = "complete";
                 }};
             }};
 

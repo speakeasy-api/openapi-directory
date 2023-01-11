@@ -27,12 +27,12 @@ public class Application {
 
             GetEventsRequest req = new GetEventsRequest() {{
                 queryParams = new GetEventsQueryParams() {{
-                    company = "autem";
-                    deal = "consectetur";
-                    nexttoken = "nobis";
-                    queryexecutionid = "odio";
-                    site = "qui";
-                    type = "contacts";
+                    company = "sit";
+                    deal = "voluptas";
+                    nexttoken = "culpa";
+                    queryexecutionid = "expedita";
+                    site = "consequuntur";
+                    type = "clicks";
                 }};
             }};
 

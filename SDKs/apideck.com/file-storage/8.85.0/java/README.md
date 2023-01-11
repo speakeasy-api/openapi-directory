@@ -40,17 +40,17 @@ public class Application {
                     }};
                 }};
                 queryParams = new DriveGroupsAddQueryParams() {{
-                    raw = true;
+                    raw = false;
                 }};
                 headers = new DriveGroupsAddHeaders() {{
-                    xApideckAppId = "deleniti";
-                    xApideckConsumerId = "ut";
-                    xApideckServiceId = "corporis";
+                    xApideckAppId = "voluptas";
+                    xApideckConsumerId = "culpa";
+                    xApideckServiceId = "expedita";
                 }};
                 request = new DriveGroupInput() {{
-                    description = "enim";
-                    displayName = "quia";
-                    name = "autem";
+                    description = "consequuntur";
+                    displayName = "dolor";
+                    name = "expedita";
                 }};
             }};
 

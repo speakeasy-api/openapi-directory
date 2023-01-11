@@ -22,241 +22,89 @@ public class Application {
 
             CreateCallAnalyticsCategoryRequest req = new CreateCallAnalyticsCategoryRequest() {{
                 headers = new CreateCallAnalyticsCategoryHeaders() {{
-                    xAmzAlgorithm = "dolorem";
-                    xAmzContentSha256 = "quos";
-                    xAmzCredential = "deleniti";
-                    xAmzDate = "commodi";
-                    xAmzSecurityToken = "nobis";
-                    xAmzSignature = "ea";
-                    xAmzSignedHeaders = "aspernatur";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Transcribe.CreateCallAnalyticsCategory";
                 }};
                 request = new CreateCallAnalyticsCategoryRequest() {{
-                    categoryName = "et";
+                    categoryName = "fugit";
                     rules = new openapisdk.models.shared.Rule[]() {{
                         add(new Rule() {{
                             interruptionFilter = new InterruptionFilter() {{
                                 absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 6415833391072357588;
-                                    first = 3572998533988533354;
-                                    last = 186115592639377320;
-                                    startTime = 8371597839286912540;
+                                    endTime = 2661732831099943416;
+                                    first = 8325060299420976708;
+                                    last = 7837839688282259259;
+                                    startTime = 2518412263346885298;
                                 }};
                                 negate = true;
                                 participantRole = "AGENT";
                                 relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 1737084578504854227;
-                                    first = 4072567731903858704;
-                                    last = 4237085410032209086;
-                                    startPercentage = 3111927870552615307;
+                                    endPercentage = 7144924247938981575;
+                                    first = 161231572858529631;
+                                    last = 7259475919510918339;
+                                    startPercentage = 7373105480197164748;
                                 }};
-                                threshold = 5810679218075794205;
+                                threshold = 3287288577352441706;
                             }};
                             nonTalkTimeFilter = new NonTalkTimeFilter() {{
                                 absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 4375415044152406675;
-                                    first = 6065226614949015610;
-                                    last = 5255522860651016346;
-                                    startTime = 4904486519077315581;
-                                }};
-                                negate = false;
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 8950864482110226516;
-                                    first = 635778494545269976;
-                                    last = 732909964824197774;
-                                    startPercentage = 3574948044123775516;
-                                }};
-                                threshold = 8837983961987368305;
-                            }};
-                            sentimentFilter = new SentimentFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 5910514474348776200;
-                                    first = 6822908827298521697;
-                                    last = 6724775564262686261;
-                                    startTime = 448293307772452745;
-                                }};
-                                negate = false;
-                                participantRole = "AGENT";
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 5824651986652714030;
-                                    first = 6131616903038811778;
-                                    last = 4594817126626365342;
-                                    startPercentage = 5909463814165818777;
-                                }};
-                                sentiments = new openapisdk.models.shared.SentimentValueEnum[]() {{
-                                    add("MIXED"),
-                                }};
-                            }};
-                            transcriptFilter = new TranscriptFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 4757942231363494366;
-                                    first = 6398098165847865044;
-                                    last = 8555143277468378870;
-                                    startTime = 2953219465361743600;
-                                }};
-                                negate = true;
-                                participantRole = "AGENT";
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 9094254215425192755;
-                                    first = 8700678006278600136;
-                                    last = 4987874047483574799;
-                                    startPercentage = 1867551380647168719;
-                                }};
-                                targets = new String[]() {{
-                                    add("voluptas"),
-                                }};
-                                transcriptFilterType = "EXACT";
-                            }};
-                        }}),
-                        add(new Rule() {{
-                            interruptionFilter = new InterruptionFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 1354945883733857766;
-                                    first = 2429851522834465117;
-                                    last = 4014337987995578881;
-                                    startTime = 2407209082118264778;
-                                }};
-                                negate = false;
-                                participantRole = "CUSTOMER";
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 8059088005692139324;
-                                    first = 1616693811299928439;
-                                    last = 6166181411057100347;
-                                    startPercentage = 7028536834256048015;
-                                }};
-                                threshold = 1174564792239911455;
-                            }};
-                            nonTalkTimeFilter = new NonTalkTimeFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 2323166218679581466;
-                                    first = 7469748512072958204;
-                                    last = 7765873993746785792;
-                                    startTime = 7182270801018086339;
-                                }};
-                                negate = false;
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 3252394919724459204;
-                                    first = 4839093639110720179;
-                                    last = 6513358929122907454;
-                                    startPercentage = 7230693517838244503;
-                                }};
-                                threshold = 6854478643425791986;
-                            }};
-                            sentimentFilter = new SentimentFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 4432917687975454065;
-                                    first = 3838103805727716046;
-                                    last = 5088282042390589507;
-                                    startTime = 7067021397838106794;
-                                }};
-                                negate = false;
-                                participantRole = "AGENT";
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 6950814023290779017;
-                                    first = 2685439770505515950;
-                                    last = 301785877603363027;
-                                    startPercentage = 3728036883544637968;
-                                }};
-                                sentiments = new openapisdk.models.shared.SentimentValueEnum[]() {{
-                                    add("MIXED"),
-                                }};
-                            }};
-                            transcriptFilter = new TranscriptFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 1058936719184805791;
-                                    first = 9128763404757230253;
-                                    last = 8358558923616582182;
-                                    startTime = 6209843430664353487;
-                                }};
-                                negate = true;
-                                participantRole = "AGENT";
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 777632575137638028;
-                                    first = 1039248335667233226;
-                                    last = 1768953860407738737;
-                                    startPercentage = 2732151556483902484;
-                                }};
-                                targets = new String[]() {{
-                                    add("alias"),
-                                    add("id"),
-                                    add("in"),
-                                }};
-                                transcriptFilterType = "EXACT";
-                            }};
-                        }}),
-                        add(new Rule() {{
-                            interruptionFilter = new InterruptionFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 8981508418491254011;
-                                    first = 2670592554296272629;
-                                    last = 4609291726380021962;
-                                    startTime = 2838559931627351935;
-                                }};
-                                negate = false;
-                                participantRole = "CUSTOMER";
-                                relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 3011457315831140961;
-                                    first = 7813841376088152101;
-                                    last = 5646368466189309592;
-                                    startPercentage = 7279099440217309754;
-                                }};
-                                threshold = 8291728496659502847;
-                            }};
-                            nonTalkTimeFilter = new NonTalkTimeFilter() {{
-                                absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 3616220076055127616;
-                                    first = 1889402167586546675;
-                                    last = 6631662835676981989;
-                                    startTime = 2489959074308973683;
+                                    endTime = 3930927879439176946;
+                                    first = 4706154865122290029;
+                                    last = 2217592893536642650;
+                                    startTime = 1929546706668609706;
                                 }};
                                 negate = true;
                                 relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 3935710304177491303;
-                                    first = 3594503320079042333;
-                                    last = 5067957230603510300;
-                                    startPercentage = 4613481507084047686;
+                                    endPercentage = 3706853784096366226;
+                                    first = 2627038740284806767;
+                                    last = 6303220950515014660;
+                                    startPercentage = 4035568504096476779;
                                 }};
-                                threshold = 8645490517459002672;
+                                threshold = 959367522974354090;
                             }};
                             sentimentFilter = new SentimentFilter() {{
                                 absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 6183506943487606482;
-                                    first = 7653920585589605553;
-                                    last = 6151577229671946683;
-                                    startTime = 26606651514557410;
+                                    endTime = 2914295034816259174;
+                                    first = 1395437218309923052;
+                                    last = 6745438398739480977;
+                                    startTime = 2897681629866238117;
                                 }};
                                 negate = false;
                                 participantRole = "AGENT";
                                 relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 3166852158880406779;
-                                    first = 927782600915074395;
-                                    last = 2541103059884869503;
-                                    startPercentage = 9089901266438170756;
+                                    endPercentage = 3317123977833389635;
+                                    first = 5001958211167890979;
+                                    last = 167566062957544642;
+                                    startPercentage = 4778690082005258714;
                                 }};
                                 sentiments = new openapisdk.models.shared.SentimentValueEnum[]() {{
                                     add("POSITIVE"),
-                                    add("NEGATIVE"),
                                 }};
                             }};
                             transcriptFilter = new TranscriptFilter() {{
                                 absoluteTimeRange = new AbsoluteTimeRange() {{
-                                    endTime = 6741667782486366789;
-                                    first = 2142001216773853386;
-                                    last = 58572451421529771;
-                                    startTime = 8036607006448114164;
+                                    endTime = 5558237345453186302;
+                                    first = 7845762441295307478;
+                                    last = 771642788862502430;
+                                    startTime = 8514850266767180993;
                                 }};
-                                negate = true;
+                                negate = false;
                                 participantRole = "AGENT";
                                 relativeTimeRange = new RelativeTimeRange() {{
-                                    endPercentage = 3450701776215534863;
-                                    first = 5317553351886277283;
-                                    last = 3848007284071124204;
-                                    startPercentage = 8598532481109664405;
+                                    endPercentage = 7699391924090763411;
+                                    first = 388440063886460141;
+                                    last = 7561811714888168464;
+                                    startPercentage = 3959279844101328186;
                                 }};
                                 targets = new String[]() {{
-                                    add("non"),
-                                    add("rerum"),
-                                    add("repellat"),
+                                    add("modi"),
+                                    add("sint"),
                                 }};
                                 transcriptFilterType = "EXACT";
                             }};

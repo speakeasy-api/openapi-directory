@@ -27,40 +27,42 @@ public class Application {
 
             MirrorAccountsInsertRequest req = new MirrorAccountsInsertRequest() {{
                 pathParams = new MirrorAccountsInsertPathParams() {{
-                    accountName = "corrupti";
-                    accountType = "sunt";
-                    userToken = "aut";
+                    accountName = "sit";
+                    accountType = "voluptas";
+                    userToken = "culpa";
                 }};
                 queryParams = new MirrorAccountsInsertQueryParams() {{
                     alt = "json";
-                    fields = "et";
-                    key = "eos";
-                    oauthToken = "omnis";
-                    prettyPrint = false;
-                    quotaUser = "illo";
-                    userIp = "deserunt";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    userIp = "et";
                 }};
                 request = new Account() {{
                     authTokens = new openapisdk.models.shared.AuthToken[]() {{
                         add(new AuthToken() {{
-                            authToken = "aspernatur";
-                            type = "eos";
+                            authToken = "rerum";
+                            type = "dicta";
                         }}),
                     }};
                     features = new String[]() {{
-                        add("ad"),
-                        add("perferendis"),
-                        add("est"),
+                        add("voluptatum"),
                     }};
-                    password = "enim";
+                    password = "et";
                     userData = new openapisdk.models.shared.UserData[]() {{
                         add(new UserData() {{
-                            key = "voluptatem";
-                            value = "omnis";
+                            key = "dolorem";
+                            value = "et";
                         }}),
                         add(new UserData() {{
-                            key = "ut";
-                            value = "dolorem";
+                            key = "voluptate";
+                            value = "iste";
+                        }}),
+                        add(new UserData() {{
+                            key = "vitae";
+                            value = "totam";
                         }}),
                     }};
                 }};

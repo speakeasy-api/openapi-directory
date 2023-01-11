@@ -14,17 +14,17 @@ public class Application {
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
                 request = new CreateApplicationRequestBody() {{
-                    answerMethod = "consequatur";
-                    answerUrl = "odit";
-                    apiKey = "dolores";
-                    apiSecret = "et";
-                    eventMethod = "et";
-                    eventUrl = "provident";
-                    inboundMethod = "ut";
-                    inboundUrl = "quod";
-                    name = "nisi";
-                    statusMethod = "voluptatum";
-                    statusUrl = "id";
+                    answerMethod = "sit";
+                    answerUrl = "voluptas";
+                    apiKey = "culpa";
+                    apiSecret = "expedita";
+                    eventMethod = "consequuntur";
+                    eventUrl = "dolor";
+                    inboundMethod = "expedita";
+                    inboundUrl = "voluptas";
+                    name = "fugit";
+                    statusMethod = "et";
+                    statusUrl = "nihil";
                     type = "messages";
                 }};
             }};

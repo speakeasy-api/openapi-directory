@@ -35,7 +35,7 @@ public class Application {
 
             AreasCountriesRequest req = new AreasCountriesRequest() {{
                 pathParams = new AreasCountriesPathParams() {{
-                    format = "json";
+                    format = "xml";
                 }};
             }};
 

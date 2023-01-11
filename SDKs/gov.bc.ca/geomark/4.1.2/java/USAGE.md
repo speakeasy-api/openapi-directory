@@ -14,11 +14,11 @@ public class Application {
 
             GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest req = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest() {{
                 pathParams = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams() {{
-                    fileFormatExtension = "kmz";
-                    geomarkId = "dolorem";
+                    fileFormatExtension = "json";
+                    geomarkId = "voluptas";
                 }};
                 queryParams = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams() {{
-                    srid = 9006196357847792672;
+                    srid = 6050128673802995827;
                 }};
             }};
 

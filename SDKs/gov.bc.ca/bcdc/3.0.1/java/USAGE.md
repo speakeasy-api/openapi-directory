@@ -22,7 +22,7 @@ public class Application {
 
             GetActionOrganizationActivityListRequest req = new GetActionOrganizationActivityListRequest() {{
                 queryParams = new GetActionOrganizationActivityListQueryParams() {{
-                    id = "at";
+                    id = "sit";
                 }};
             }};
 

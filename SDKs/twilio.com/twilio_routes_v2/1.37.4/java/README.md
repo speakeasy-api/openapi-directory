@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchPhoneNumberPathParams() {{
-                    phoneNumber = "veritatis";
+                    phoneNumber = "sit";
                 }};
             }};
 

@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new CtcerRequestBody() {{
                     certificateParameters = new CtcerRequestBodyCertificateParameters() {{
-                        uid = "veritatis";
-                        refno = "dolorum";
+                        uid = "sit";
+                        refno = "voluptas";
                     }};
-                    consentArtifact = "voluptas";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "saepe";
+                    txnId = "consequuntur";
                 }};
             }};
 

@@ -35,39 +35,38 @@ public class Application {
 
             CreateBatchInferenceJobRequest req = new CreateBatchInferenceJobRequest() {{
                 headers = new CreateBatchInferenceJobHeaders() {{
-                    xAmzAlgorithm = "aut";
-                    xAmzContentSha256 = "laborum";
-                    xAmzCredential = "praesentium";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "ullam";
-                    xAmzSignature = "aspernatur";
-                    xAmzSignedHeaders = "laudantium";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonPersonalize.CreateBatchInferenceJob";
                 }};
                 request = new CreateBatchInferenceJobRequest() {{
                     batchInferenceJobConfig = new BatchInferenceJobConfig() {{
                         itemExplorationConfig = new java.util.HashMap<String, String>() {{
-                            put("doloribus", "rem");
-                            put("sit", "aut");
+                            put("et", "nihil");
                         }};
                     }};
-                    filterArn = "non";
+                    filterArn = "rerum";
                     jobInput = new BatchInferenceJobInput() {{
                         s3DataSource = new S3DataConfig() {{
-                            kmsKeyArn = "quod";
+                            kmsKeyArn = "dicta";
+                            path = "debitis";
+                        }};
+                    }};
+                    jobName = "voluptatum";
+                    jobOutput = new BatchInferenceJobOutput() {{
+                        s3DataDestination = new S3DataConfig() {{
+                            kmsKeyArn = "et";
                             path = "ut";
                         }};
                     }};
-                    jobName = "voluptas";
-                    jobOutput = new BatchInferenceJobOutput() {{
-                        s3DataDestination = new S3DataConfig() {{
-                            kmsKeyArn = "atque";
-                            path = "et";
-                        }};
-                    }};
-                    numResults = 7799152415069629267;
-                    roleArn = "ipsum";
-                    solutionVersionArn = "dolor";
+                    numResults = 161231572858529631;
+                    roleArn = "et";
+                    solutionVersionArn = "voluptate";
                 }};
             }};
 

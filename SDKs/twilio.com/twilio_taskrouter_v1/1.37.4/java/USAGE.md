@@ -20,11 +20,11 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateActivityPathParams() {{
-                    workspaceSid = "totam";
+                    workspaceSid = "sit";
                 }};
                 request = new CreateActivityCreateActivityRequest() {{
                     available = false;
-                    friendlyName = "blanditiis";
+                    friendlyName = "culpa";
                 }};
             }};
 

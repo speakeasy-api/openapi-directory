@@ -22,7 +22,7 @@ public class Application {
 
             GetNetworkSwitchAccessControlListsRequest req = new GetNetworkSwitchAccessControlListsRequest() {{
                 pathParams = new GetNetworkSwitchAccessControlListsPathParams() {{
-                    networkId = "molestiae";
+                    networkId = "sit";
                 }};
             }};
 

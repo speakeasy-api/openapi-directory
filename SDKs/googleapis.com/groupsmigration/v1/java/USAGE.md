@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new GroupsmigrationArchiveInsertPathParams() {{
-                    groupId = "debitis";
+                    groupId = "sit";
                 }};
                 queryParams = new GroupsmigrationArchiveInsertQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "odit";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "aut";
-                    fields = "amet";
-                    key = "minus";
-                    oauthToken = "consequatur";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "velit";
-                    uploadType = "libero";
-                    uploadProtocol = "nam";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

@@ -27,7 +27,7 @@ public class Application {
 
             GetAddressRequest req = new GetAddressRequest() {{
                 pathParams = new GetAddressPathParams() {{
-                    address = "suscipit";
+                    address = "sit";
                 }};
             }};
 

@@ -35,32 +35,24 @@ public class Application {
 
             ActivatePipelineRequest req = new ActivatePipelineRequest() {{
                 headers = new ActivatePipelineHeaders() {{
-                    xAmzAlgorithm = "molestias";
-                    xAmzContentSha256 = "asperiores";
-                    xAmzCredential = "suscipit";
-                    xAmzDate = "nam";
-                    xAmzSecurityToken = "ducimus";
-                    xAmzSignature = "ullam";
-                    xAmzSignedHeaders = "corrupti";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "DataPipeline.ActivatePipeline";
                 }};
                 request = new ActivatePipelineInput() {{
                     parameterValues = new openapisdk.models.shared.ParameterValue[]() {{
                         add(new ParameterValue() {{
-                            id = "suscipit";
-                            stringValue = "magnam";
-                        }}),
-                        add(new ParameterValue() {{
-                            id = "aspernatur";
-                            stringValue = "corporis";
-                        }}),
-                        add(new ParameterValue() {{
-                            id = "accusamus";
-                            stringValue = "fugit";
+                            id = "et";
+                            stringValue = "nihil";
                         }}),
                     }};
-                    pipelineId = "qui";
-                    startTimestamp = "1993-08-20T08:47:17Z";
+                    pipelineId = "rerum";
+                    startTimestamp = "2004-06-02T10:14:12Z";
                 }};
             }};
 

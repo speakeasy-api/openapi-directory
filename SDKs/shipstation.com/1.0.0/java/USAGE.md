@@ -15,10 +15,9 @@ public class Application {
             CreateANewQuestionRequest req = new CreateANewQuestionRequest() {{
                 request = new CreateANewQuestionRequestBody() {{
                     choices = new String[]() {{
-                        add("ad"),
-                        add("expedita"),
+                        add("voluptas"),
                     }};
-                    question = "vel";
+                    question = "culpa";
                 }};
             }};
 

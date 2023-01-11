@@ -22,19 +22,19 @@ public class Application {
 
             AssociateRoleToGroupRequest req = new AssociateRoleToGroupRequest() {{
                 pathParams = new AssociateRoleToGroupPathParams() {{
-                    groupId = "recusandae";
+                    groupId = "sit";
                 }};
                 headers = new AssociateRoleToGroupHeaders() {{
-                    xAmzAlgorithm = "iste";
-                    xAmzContentSha256 = "qui";
-                    xAmzCredential = "veritatis";
-                    xAmzDate = "alias";
-                    xAmzSecurityToken = "eum";
-                    xAmzSignature = "quia";
-                    xAmzSignedHeaders = "iste";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AssociateRoleToGroupRequestBody() {{
-                    roleArn = "deleniti";
+                    roleArn = "fugit";
                 }};
             }};
 

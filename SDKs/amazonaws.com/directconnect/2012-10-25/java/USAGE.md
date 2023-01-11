@@ -22,27 +22,24 @@ public class Application {
 
             AcceptDirectConnectGatewayAssociationProposalRequest req = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
                 headers = new AcceptDirectConnectGatewayAssociationProposalHeaders() {{
-                    xAmzAlgorithm = "eaque";
-                    xAmzContentSha256 = "nihil";
-                    xAmzCredential = "labore";
-                    xAmzDate = "minima";
-                    xAmzSecurityToken = "iure";
-                    xAmzSignature = "ipsam";
-                    xAmzSignedHeaders = "quia";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "OvertureService.AcceptDirectConnectGatewayAssociationProposal";
                 }};
                 request = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
-                    associatedGatewayOwnerAccount = "dolor";
-                    directConnectGatewayId = "nostrum";
+                    associatedGatewayOwnerAccount = "fugit";
+                    directConnectGatewayId = "et";
                     overrideAllowedPrefixesToDirectConnectGateway = new openapisdk.models.shared.RouteFilterPrefix[]() {{
                         add(new RouteFilterPrefix() {{
-                            cidr = "ut";
-                        }}),
-                        add(new RouteFilterPrefix() {{
-                            cidr = "neque";
+                            cidr = "rerum";
                         }}),
                     }};
-                    proposalId = "pariatur";
+                    proposalId = "dicta";
                 }};
             }};
 

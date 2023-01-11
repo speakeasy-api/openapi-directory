@@ -14,9 +14,9 @@ public class Application {
 
             GetResourcesCampaignsJsonRequest req = new GetResourcesCampaignsJsonRequest() {{
                 queryParams = new GetResourcesCampaignsJsonQueryParams() {{
-                    max = 5199076868301280758;
-                    offset = 5012710144942661761;
-                    sort = "exercitationem";
+                    max = 8717895732742165505;
+                    offset = 2259404117704393152;
+                    sort = "culpa";
                 }};
             }};
 

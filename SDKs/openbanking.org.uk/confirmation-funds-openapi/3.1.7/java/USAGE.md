@@ -19,21 +19,21 @@ public class Application {
                     }};
                 }};
                 headers = new CreateFundsConfirmationConsentsHeaders() {{
-                    authorization = "vitae";
-                    xCustomerUserAgent = "maiores";
-                    xFapiAuthDate = "sunt";
-                    xFapiCustomerIpAddress = "culpa";
-                    xFapiInteractionId = "sed";
+                    authorization = "sit";
+                    xCustomerUserAgent = "voluptas";
+                    xFapiAuthDate = "culpa";
+                    xFapiCustomerIpAddress = "expedita";
+                    xFapiInteractionId = "consequuntur";
                 }};
                 request = new ObFundsConfirmationConsent1() {{
                     data = new ObFundsConfirmationConsent1Data() {{
                         debtorAccount = new ObFundsConfirmationConsent1DataDebtorAccount() {{
-                            identification = "ullam";
-                            name = "a";
-                            schemeName = "corrupti";
-                            secondaryIdentification = "minus";
+                            identification = "dolor";
+                            name = "expedita";
+                            schemeName = "voluptas";
+                            secondaryIdentification = "fugit";
                         }};
-                        expirationDateTime = "1980-04-07T06:02:40Z";
+                        expirationDateTime = "2011-08-12T10:11:12Z";
                     }};
                 }};
             }};

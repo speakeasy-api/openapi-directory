@@ -14,26 +14,26 @@ public class Application {
 
             GetAssociationFilterRequest req = new GetAssociationFilterRequest() {{
                 queryParams = new GetAssociationFilterQueryParams() {{
-                    datasource = "exercitationem";
-                    datastructure = "qui";
-                    datatype = "optio";
+                    datasource = "sit";
+                    datastructure = "voluptas";
+                    datatype = "culpa";
                     direct = false;
-                    disease = "aut";
+                    disease = "consequuntur";
                     facets = false;
-                    fields = "corrupti";
-                    format = "laboriosam";
-                    from = 21.200001;
-                    pathway = "quibusdam";
-                    scorevalueMax = 79.199997;
-                    scorevalueMin = 59.200001;
-                    scorevalueTypes = "blanditiis";
-                    search = "mollitia";
-                    size = 14.200000;
-                    sort = "dolor";
-                    target = "tempore";
-                    targetClass = "recusandae";
-                    therapeuticArea = "non";
-                    uniprotkw = "ut";
+                    fields = "expedita";
+                    format = "voluptas";
+                    from = 88.099998;
+                    pathway = "nihil";
+                    scorevalueMax = 47.200001;
+                    scorevalueMin = 48.099998;
+                    scorevalueTypes = "et";
+                    search = "ut";
+                    size = 50.099998;
+                    sort = "voluptate";
+                    target = "iste";
+                    targetClass = "vitae";
+                    therapeuticArea = "totam";
+                    uniprotkw = "dolores";
                 }};
             }};
 

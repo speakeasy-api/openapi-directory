@@ -22,23 +22,23 @@ public class Application {
 
             GetMediaRequest req = new GetMediaRequest() {{
                 headers = new GetMediaHeaders() {{
-                    xAmzAlgorithm = "corporis";
-                    xAmzContentSha256 = "at";
-                    xAmzCredential = "nostrum";
-                    xAmzDate = "recusandae";
-                    xAmzSecurityToken = "iste";
-                    xAmzSignature = "at";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new GetMediaRequestBody() {{
                     startSelector = new GetMediaRequestBodyStartSelector() {{
-                        afterFragmentNumber = "fugit";
-                        continuationToken = "repellat";
-                        startSelectorType = "PRODUCER_TIMESTAMP";
-                        startTimestamp = "2002-04-24T14:41:47Z";
+                        afterFragmentNumber = "voluptas";
+                        continuationToken = "fugit";
+                        startSelectorType = "FRAGMENT_NUMBER";
+                        startTimestamp = "2003-05-13T04:57:12Z";
                     }};
-                    streamARN = "omnis";
-                    streamName = "magni";
+                    streamARN = "rerum";
+                    streamName = "dicta";
                 }};
             }};
 

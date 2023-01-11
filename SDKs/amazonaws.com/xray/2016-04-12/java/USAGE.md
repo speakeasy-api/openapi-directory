@@ -22,23 +22,21 @@ public class Application {
 
             BatchGetTracesRequest req = new BatchGetTracesRequest() {{
                 queryParams = new BatchGetTracesQueryParams() {{
-                    nextToken = "ut";
+                    nextToken = "sit";
                 }};
                 headers = new BatchGetTracesHeaders() {{
-                    xAmzAlgorithm = "possimus";
-                    xAmzContentSha256 = "iusto";
-                    xAmzCredential = "illum";
-                    xAmzDate = "ex";
-                    xAmzSecurityToken = "eos";
-                    xAmzSignature = "asperiores";
-                    xAmzSignedHeaders = "dicta";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new BatchGetTracesRequestBody() {{
-                    nextToken = "sunt";
+                    nextToken = "fugit";
                     traceIds = new String[]() {{
-                        add("omnis"),
-                        add("nobis"),
-                        add("et"),
+                        add("nihil"),
                     }};
                 }};
             }};

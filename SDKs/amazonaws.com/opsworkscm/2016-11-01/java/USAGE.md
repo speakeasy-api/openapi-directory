@@ -22,28 +22,24 @@ public class Application {
 
             AssociateNodeRequest req = new AssociateNodeRequest() {{
                 headers = new AssociateNodeHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "rem";
-                    xAmzCredential = "quas";
-                    xAmzDate = "animi";
-                    xAmzSecurityToken = "saepe";
-                    xAmzSignature = "harum";
-                    xAmzSignedHeaders = "animi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "OpsWorksCM_V2016_11_01.AssociateNode";
                 }};
                 request = new AssociateNodeRequest() {{
                     engineAttributes = new openapisdk.models.shared.EngineAttribute[]() {{
                         add(new EngineAttribute() {{
-                            name = "optio";
-                            value = "amet";
-                        }}),
-                        add(new EngineAttribute() {{
-                            name = "eaque";
-                            value = "qui";
+                            name = "et";
+                            value = "nihil";
                         }}),
                     }};
-                    nodeName = "et";
-                    serverName = "ex";
+                    nodeName = "rerum";
+                    serverName = "dicta";
                 }};
             }};
 

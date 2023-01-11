@@ -25,11 +25,11 @@ public class Application {
                     certificateParameters = new HscerRequestBodyCertificateParameters() {{
                         fullName = "sit";
                         rollno = "voluptas";
-                        year = "velit";
+                        year = "culpa";
                     }};
-                    consentArtifact = "possimus";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "qui";
+                    txnId = "dolor";
                 }};
             }};
 

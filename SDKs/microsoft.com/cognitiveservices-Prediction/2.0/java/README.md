@@ -27,19 +27,19 @@ public class Application {
 
             PredictImageRequest req = new PredictImageRequest() {{
                 pathParams = new PredictImagePathParams() {{
-                    projectId = "nobis";
+                    projectId = "sit";
                 }};
                 queryParams = new PredictImageQueryParams() {{
-                    application = "quo";
-                    iterationId = "enim";
+                    application = "voluptas";
+                    iterationId = "culpa";
                 }};
                 headers = new PredictImageHeaders() {{
-                    predictionKey = "et";
+                    predictionKey = "expedita";
                 }};
                 request = new PredictImageRequestBody() {{
                     imageData = new PredictImageRequestBodyImageData() {{
-                        content = "iusto".getBytes();
-                        imageData = "sed";
+                        content = "consequuntur".getBytes();
+                        imageData = "dolor";
                     }};
                 }};
             }};

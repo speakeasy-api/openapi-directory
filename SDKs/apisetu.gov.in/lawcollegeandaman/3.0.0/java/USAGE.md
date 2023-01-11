@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new TrcerRequestBody() {{
                     certificateParameters = new TrcerRequestBodyCertificateParameters() {{
-                        admnNO = "et";
-                        fullName = "nostrum";
+                        admnNO = "sit";
+                        fullName = "voluptas";
                     }};
-                    consentArtifact = "sed";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "molestias";
+                    txnId = "consequuntur";
                 }};
             }};
 

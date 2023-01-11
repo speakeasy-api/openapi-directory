@@ -35,30 +35,26 @@ public class Application {
 
             AddAttributesToFindingsRequest req = new AddAttributesToFindingsRequest() {{
                 headers = new AddAttributesToFindingsHeaders() {{
-                    xAmzAlgorithm = "quod";
-                    xAmzContentSha256 = "impedit";
-                    xAmzCredential = "nostrum";
-                    xAmzDate = "repudiandae";
-                    xAmzSecurityToken = "dicta";
-                    xAmzSignature = "vero";
-                    xAmzSignedHeaders = "ea";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "InspectorService.AddAttributesToFindings";
                 }};
                 request = new AddAttributesToFindingsRequest() {{
                     attributes = new openapisdk.models.shared.Attribute[]() {{
                         add(new Attribute() {{
-                            key = "deleniti";
-                            value = "omnis";
-                        }}),
-                        add(new Attribute() {{
-                            key = "eius";
-                            value = "consequuntur";
+                            key = "et";
+                            value = "nihil";
                         }}),
                     }};
                     findingArns = new String[]() {{
-                        add("laudantium"),
-                        add("similique"),
-                        add("ullam"),
+                        add("dicta"),
+                        add("debitis"),
+                        add("voluptatum"),
                     }};
                 }};
             }};

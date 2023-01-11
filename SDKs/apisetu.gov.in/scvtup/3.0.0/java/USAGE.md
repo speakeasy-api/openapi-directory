@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new SkcerRequestBody() {{
                     certificateParameters = new SkcerRequestBodyCertificateParameters() {{
-                        dob = "sapiente";
-                        fullName = "rerum";
-                        rollNumber = "esse";
-                        session = "beatae";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        rollNumber = "culpa";
+                        session = "expedita";
                     }};
-                    consentArtifact = "quibusdam";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "nulla";
+                    txnId = "expedita";
                 }};
             }};
 

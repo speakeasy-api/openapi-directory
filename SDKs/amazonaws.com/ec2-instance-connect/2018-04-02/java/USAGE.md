@@ -22,20 +22,20 @@ public class Application {
 
             SendSshPublicKeyRequest req = new SendSshPublicKeyRequest() {{
                 headers = new SendSshPublicKeyHeaders() {{
-                    xAmzAlgorithm = "doloribus";
-                    xAmzContentSha256 = "ratione";
-                    xAmzCredential = "voluptas";
-                    xAmzDate = "omnis";
-                    xAmzSecurityToken = "rerum";
-                    xAmzSignature = "possimus";
-                    xAmzSignedHeaders = "quo";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSEC2InstanceConnectService.SendSSHPublicKey";
                 }};
                 request = new SendSshPublicKeyRequest() {{
-                    availabilityZone = "eos";
-                    instanceId = "enim";
-                    instanceOSUser = "temporibus";
-                    sshPublicKey = "exercitationem";
+                    availabilityZone = "fugit";
+                    instanceId = "et";
+                    instanceOSUser = "nihil";
+                    sshPublicKey = "rerum";
                 }};
             }};
 

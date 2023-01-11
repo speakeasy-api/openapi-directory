@@ -35,24 +35,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new RealtimebiddingBiddersCreativesWatchPathParams() {{
-                    parent = "consequatur";
+                    parent = "sit";
                 }};
                 queryParams = new RealtimebiddingBiddersCreativesWatchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "consequatur";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "amet";
-                    fields = "quia";
-                    key = "sed";
-                    oauthToken = "ut";
-                    prettyPrint = false;
-                    quotaUser = "repudiandae";
-                    uploadType = "tempore";
-                    uploadProtocol = "et";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("iure", "voluptas");
-                    put("sint", "animi");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

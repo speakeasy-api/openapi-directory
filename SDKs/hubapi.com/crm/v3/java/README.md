@@ -32,8 +32,8 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams() {{
-                    appId = 5805871044506062094;
-                    cardId = "illo";
+                    appId = 8717895732742165505;
+                    cardId = "voluptas";
                 }};
             }};
 

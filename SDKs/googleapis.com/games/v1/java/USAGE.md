@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 queryParams = new GamesAchievementDefinitionsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "maxime";
-                    alt = "proto";
-                    callback = "doloremque";
-                    fields = "omnis";
-                    key = "velit";
-                    language = "asperiores";
-                    maxResults = 6627961597079699475;
-                    oauthToken = "necessitatibus";
-                    pageToken = "velit";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    language = "expedita";
+                    maxResults = 6044372234677422456;
+                    oauthToken = "fugit";
+                    pageToken = "et";
                     prettyPrint = true;
-                    quotaUser = "velit";
-                    uploadType = "et";
-                    uploadProtocol = "nam";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

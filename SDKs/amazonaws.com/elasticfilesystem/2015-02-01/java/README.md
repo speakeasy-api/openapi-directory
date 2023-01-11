@@ -35,37 +35,44 @@ public class Application {
 
             CreateAccessPointRequest req = new CreateAccessPointRequest() {{
                 headers = new CreateAccessPointHeaders() {{
-                    xAmzAlgorithm = "vero";
-                    xAmzContentSha256 = "debitis";
-                    xAmzCredential = "vitae";
-                    xAmzDate = "illo";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "corrupti";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateAccessPointRequestBody() {{
-                    clientToken = "iusto";
-                    fileSystemId = "necessitatibus";
+                    clientToken = "voluptas";
+                    fileSystemId = "fugit";
                     posixUser = new CreateAccessPointRequestBodyPosixUser() {{
-                        gid = 9099396917438780945;
+                        gid = 1543572285742637646;
                         secondaryGids = new Long[]() {{
-                            add(7393415062790344033),
-                            add(5573655011999427817),
+                            add(8325060299420976708),
                         }};
-                        uid = 3450856630666814463;
+                        uid = 7837839688282259259;
                     }};
                     rootDirectory = new CreateAccessPointRequestBodyRootDirectory() {{
                         creationInfo = new CreationInfo() {{
-                            ownerGid = 2817162217093611776;
-                            ownerUid = 2020632354827331984;
-                            permissions = "magni";
+                            ownerGid = 2518412263346885298;
+                            ownerUid = 5617773211005988520;
+                            permissions = "et";
                         }};
-                        path = "nostrum";
+                        path = "ut";
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "tenetur";
-                            value = "numquam";
+                            key = "et";
+                            value = "voluptate";
+                        }}),
+                        add(new Tag() {{
+                            key = "iste";
+                            value = "vitae";
+                        }}),
+                        add(new Tag() {{
+                            key = "totam";
+                            value = "dolores";
                         }}),
                     }};
                 }};

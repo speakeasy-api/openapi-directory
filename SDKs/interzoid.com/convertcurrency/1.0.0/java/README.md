@@ -27,10 +27,10 @@ public class Application {
 
             ConvertcurrencyRequest req = new ConvertcurrencyRequest() {{
                 queryParams = new ConvertcurrencyQueryParams() {{
-                    amount = "nesciunt";
-                    from = "non";
-                    license = "autem";
-                    to = "omnis";
+                    amount = "sit";
+                    from = "voluptas";
+                    license = "culpa";
+                    to = "expedita";
                 }};
             }};
 

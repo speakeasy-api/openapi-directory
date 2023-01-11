@@ -35,26 +35,26 @@ public class Application {
 
             CreateEventIntegrationRequest req = new CreateEventIntegrationRequest() {{
                 headers = new CreateEventIntegrationHeaders() {{
-                    xAmzAlgorithm = "asperiores";
-                    xAmzContentSha256 = "voluptatem";
-                    xAmzCredential = "hic";
-                    xAmzDate = "doloribus";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "nemo";
-                    xAmzSignedHeaders = "architecto";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateEventIntegrationRequestBody() {{
-                    clientToken = "neque";
-                    description = "autem";
-                    eventBridgeBus = "saepe";
+                    clientToken = "voluptas";
+                    description = "fugit";
+                    eventBridgeBus = "et";
                     eventFilter = new CreateEventIntegrationRequestBodyEventFilter() {{
-                        source = "voluptatem";
+                        source = "nihil";
                     }};
-                    name = "error";
+                    name = "rerum";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("in", "mollitia");
-                        put("autem", "distinctio");
-                        put("consequuntur", "autem");
+                        put("debitis", "voluptatum");
+                        put("et", "ut");
+                        put("dolorem", "et");
                     }};
                 }};
             }};

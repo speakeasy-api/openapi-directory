@@ -27,11 +27,11 @@ public class Application {
 
             PostV1OrderFeedbackRequest req = new PostV1OrderFeedbackRequest() {{
                 queryParams = new PostV1OrderFeedbackQueryParams() {{
-                    action = "REJECT_BLACKLIST";
+                    action = "APPROVE";
                     format = "json";
-                    id = "fugiat";
-                    key = "nesciunt";
-                    notes = "et";
+                    id = "culpa";
+                    key = "expedita";
+                    notes = "consequuntur";
                 }};
             }};
 

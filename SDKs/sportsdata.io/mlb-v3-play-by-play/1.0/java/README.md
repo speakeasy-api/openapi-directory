@@ -35,8 +35,8 @@ public class Application {
 
             PlayByPlayRequest req = new PlayByPlayRequest() {{
                 pathParams = new PlayByPlayPathParams() {{
-                    format = "JSON";
-                    gameid = "quae";
+                    format = "XML";
+                    gameid = "voluptas";
                 }};
             }};
 

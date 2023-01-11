@@ -35,11 +35,11 @@ public class Application {
 
             ChromeFromHtmlPostRequest req = new ChromeFromHtmlPostRequest() {{
                 request = new ChromeHtmlToPdfRequest() {{
-                    fileName = "in";
-                    html = "quia";
-                    inlinePdf = false;
+                    fileName = "sit";
+                    html = "voluptas";
+                    inlinePdf = true;
                     options = new ChromeAdvancedOptions() {{
-                        landscape = "quia";
+                        landscape = "expedita";
                         printBackground = true;
                     }};
                 }};

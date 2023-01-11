@@ -27,10 +27,10 @@ public class Application {
 
             KeyRevokeRequest req = new KeyRevokeRequest() {{
                 pathParams = new KeyRevokePathParams() {{
-                    pk = "expedita";
+                    pk = "sit";
                 }};
                 queryParams = new KeyRevokeQueryParams() {{
-                    secret = "consequuntur";
+                    secret = "voluptas";
                 }};
             }};
 

@@ -35,64 +35,62 @@ public class Application {
 
             CreateAppRequest req = new CreateAppRequest() {{
                 headers = new CreateAppHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "id";
-                    xAmzCredential = "ipsum";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "perspiciatis";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "vero";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateAppRequestBody() {{
-                    accessToken = "voluptatem";
+                    accessToken = "voluptas";
                     autoBranchCreationConfig = new CreateAppRequestBodyAutoBranchCreationConfig() {{
-                        basicAuthCredentials = "ex";
-                        buildSpec = "magni";
+                        basicAuthCredentials = "fugit";
+                        buildSpec = "et";
                         enableAutoBuild = true;
                         enableBasicAuth = true;
                         enablePerformanceMode = false;
-                        enablePullRequestPreview = false;
+                        enablePullRequestPreview = true;
                         environmentVariables = new java.util.HashMap<String, String>() {{
-                            put("non", "nam");
-                            put("beatae", "quae");
-                            put("qui", "magni");
+                            put("et", "ut");
                         }};
-                        framework = "minus";
-                        pullRequestEnvironmentName = "sit";
-                        stage = "BETA";
+                        framework = "dolorem";
+                        pullRequestEnvironmentName = "et";
+                        stage = "PULL_REQUEST";
                     }};
                     autoBranchCreationPatterns = new String[]() {{
-                        add("iusto"),
+                        add("vitae"),
+                        add("totam"),
+                        add("dolores"),
                     }};
-                    basicAuthCredentials = "quia";
-                    buildSpec = "repudiandae";
-                    customHeaders = "debitis";
+                    basicAuthCredentials = "illum";
+                    buildSpec = "debitis";
+                    customHeaders = "vel";
                     customRules = new openapisdk.models.shared.CustomRule[]() {{
                         add(new CustomRule() {{
-                            condition = "odit";
-                            source = "enim";
-                            status = "ut";
-                            target = "non";
+                            condition = "dolore";
+                            source = "id";
+                            status = "aspernatur";
+                            target = "accusantium";
                         }}),
                     }};
-                    description = "nihil";
+                    description = "totam";
                     enableAutoBranchCreation = false;
                     enableBasicAuth = true;
-                    enableBranchAutoBuild = true;
-                    enableBranchAutoDeletion = false;
+                    enableBranchAutoBuild = false;
+                    enableBranchAutoDeletion = true;
                     environmentVariables = new java.util.HashMap<String, String>() {{
-                        put("perferendis", "id");
-                        put("autem", "hic");
-                        put("voluptatem", "omnis");
+                        put("non", "voluptas");
+                        put("omnis", "aut");
                     }};
-                    iamServiceRoleArn = "libero";
-                    name = "qui";
-                    oauthToken = "omnis";
+                    iamServiceRoleArn = "illo";
+                    name = "sed";
+                    oauthToken = "officiis";
                     platform = "WEB";
-                    repository = "nostrum";
+                    repository = "consectetur";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("sit", "repellat");
-                        put("quo", "dolorum");
+                        put("odio", "qui");
                     }};
                 }};
             }};

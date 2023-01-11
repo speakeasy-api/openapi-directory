@@ -27,8 +27,8 @@ public class Application {
 
             AdultContentDetectionRequest req = new AdultContentDetectionRequest() {{
                 request = new AdultContentDetectionRequestBody() {{
-                    apiKey = "voluptatem";
-                    text = "laborum";
+                    apiKey = "sit";
+                    text = "voluptas";
                 }};
             }};
 

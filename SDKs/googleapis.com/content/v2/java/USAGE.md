@@ -23,16 +23,16 @@ public class Application {
                 }};
                 queryParams = new ContentAccountsAuthinfoQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "non";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "voluptatem";
-                    fields = "officiis";
-                    key = "in";
-                    oauthToken = "et";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "velit";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
             }};
 

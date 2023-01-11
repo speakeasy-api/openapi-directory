@@ -23,16 +23,16 @@ public class Application {
                 }};
                 request = new LpgsvRequestBody() {{
                     certificateParameters = new LpgsvRequestBodyCertificateParameters() {{
-                        dob = "vel";
-                        fullName = "et";
-                        gender = "incidunt";
-                        lpgId = "voluptas";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        gender = "culpa";
+                        lpgId = "expedita";
                         svNo = "consequuntur";
-                        uid = "quam";
+                        uid = "dolor";
                     }};
-                    consentArtifact = "harum";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "et";
+                    txnId = "fugit";
                 }};
             }};
 

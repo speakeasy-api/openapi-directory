@@ -27,7 +27,7 @@ public class Application {
 
             GetContentproSearchRequest req = new GetContentproSearchRequest() {{
                 queryParams = new GetContentproSearchQueryParams() {{
-                    terms = "nisi";
+                    terms = "sit";
                 }};
             }};
 

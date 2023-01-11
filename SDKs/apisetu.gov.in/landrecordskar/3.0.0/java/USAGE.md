@@ -23,11 +23,11 @@ public class Application {
                 }};
                 request = new CncerRequestBody() {{
                     certificateParameters = new CncerRequestBodyCertificateParameters() {{
-                        documentNumber = "qui";
+                        documentNumber = "sit";
                     }};
-                    consentArtifact = "quis";
-                    format = "xml";
-                    txnId = "et";
+                    consentArtifact = "voluptas";
+                    format = "pdf";
+                    txnId = "expedita";
                 }};
             }};
 

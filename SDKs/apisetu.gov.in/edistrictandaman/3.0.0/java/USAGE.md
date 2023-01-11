@@ -23,11 +23,11 @@ public class Application {
                 }};
                 request = new BrlcsRequestBody() {{
                     certificateParameters = new BrlcsRequestBodyCertificateParameters() {{
-                        certificateNumber = "incidunt";
+                        certificateNumber = "sit";
                     }};
-                    consentArtifact = "quos";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "omnis";
+                    txnId = "expedita";
                 }};
             }};
 

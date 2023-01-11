@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new HpcerRequestBody() {{
                     certificateParameters = new HpcerRequestBodyCertificateParameters() {{
-                        fullName = "ullam";
-                        rollcode = "ipsam";
-                        rollno = "mollitia";
-                        year = "sunt";
+                        fullName = "sit";
+                        rollcode = "voluptas";
+                        rollno = "culpa";
+                        year = "expedita";
                     }};
-                    consentArtifact = "quo";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "quo";
+                    txnId = "expedita";
                 }};
             }};
 

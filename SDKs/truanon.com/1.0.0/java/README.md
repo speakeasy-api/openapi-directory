@@ -27,8 +27,8 @@ public class Application {
 
             GetProfileRequest req = new GetProfileRequest() {{
                 queryParams = new GetProfileQueryParams() {{
-                    id = "ut";
-                    service = "non";
+                    id = "sit";
+                    service = "voluptas";
                 }};
             }};
 

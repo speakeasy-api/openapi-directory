@@ -35,23 +35,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams() {{
-                    group = "est";
+                    group = "sit";
                 }};
                 queryParams = new VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ad";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "aut";
-                    fields = "sequi";
-                    key = "praesentium";
-                    oauthToken = "non";
-                    prettyPrint = false;
-                    quotaUser = "totam";
-                    uploadType = "modi";
-                    uploadProtocol = "id";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new AddGroupMigrationRequest() {{
-                    migratingVm = "architecto";
+                    migratingVm = "dicta";
                 }};
             }};
 

@@ -27,10 +27,10 @@ public class Application {
 
             GetRequest req = new GetRequest() {{
                 queryParams = new GetQueryParams() {{
-                    format = "xml";
-                    ip = "non";
-                    key = "voluptates";
-                    package_ = "iusto";
+                    format = "json";
+                    ip = "voluptas";
+                    key = "culpa";
+                    package_ = "expedita";
                 }};
             }};
 

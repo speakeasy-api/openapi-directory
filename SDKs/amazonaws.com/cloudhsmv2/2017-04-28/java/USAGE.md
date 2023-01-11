@@ -22,26 +22,22 @@ public class Application {
 
             CopyBackupToRegionRequest req = new CopyBackupToRegionRequest() {{
                 headers = new CopyBackupToRegionHeaders() {{
-                    xAmzAlgorithm = "sunt";
-                    xAmzContentSha256 = "asperiores";
-                    xAmzCredential = "reprehenderit";
-                    xAmzDate = "consectetur";
-                    xAmzSecurityToken = "sequi";
-                    xAmzSignature = "reprehenderit";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "BaldrApiService.CopyBackupToRegion";
                 }};
                 request = new CopyBackupToRegionRequest() {{
-                    backupId = "enim";
-                    destinationRegion = "sint";
+                    backupId = "fugit";
+                    destinationRegion = "et";
                     tagList = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "rem";
-                            value = "aliquid";
-                        }}),
-                        add(new Tag() {{
-                            key = "quo";
-                            value = "quo";
+                            key = "rerum";
+                            value = "dicta";
                         }}),
                     }};
                 }};

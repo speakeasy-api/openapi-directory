@@ -35,38 +35,24 @@ public class Application {
 
             BatchGetAggregateResourceConfigRequest req = new BatchGetAggregateResourceConfigRequest() {{
                 headers = new BatchGetAggregateResourceConfigHeaders() {{
-                    xAmzAlgorithm = "dolor";
-                    xAmzContentSha256 = "nulla";
-                    xAmzCredential = "ipsa";
-                    xAmzDate = "ipsum";
-                    xAmzSecurityToken = "ab";
-                    xAmzSignature = "dolores";
-                    xAmzSignedHeaders = "sunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "StarlingDoveService.BatchGetAggregateResourceConfig";
                 }};
                 request = new BatchGetAggregateResourceConfigRequest() {{
-                    configurationAggregatorName = "quas";
+                    configurationAggregatorName = "fugit";
                     resourceIdentifiers = new openapisdk.models.shared.AggregateResourceIdentifier[]() {{
                         add(new AggregateResourceIdentifier() {{
-                            resourceId = "dicta";
-                            resourceName = "minima";
-                            resourceType = "AWS::ShieldRegional::Protection";
-                            sourceAccountId = "nesciunt";
-                            sourceRegion = "ducimus";
-                        }}),
-                        add(new AggregateResourceIdentifier() {{
-                            resourceId = "dolores";
-                            resourceName = "magni";
-                            resourceType = "AWS::RDS::DBCluster";
-                            sourceAccountId = "qui";
-                            sourceRegion = "ab";
-                        }}),
-                        add(new AggregateResourceIdentifier() {{
-                            resourceId = "accusantium";
-                            resourceName = "aliquam";
-                            resourceType = "AWS::RDS::DBClusterSnapshot";
-                            sourceAccountId = "et";
-                            sourceRegion = "ipsa";
+                            resourceId = "nihil";
+                            resourceName = "rerum";
+                            resourceType = "AWS::ApiGateway::Stage";
+                            sourceAccountId = "debitis";
+                            sourceRegion = "voluptatum";
                         }}),
                     }};
                 }};

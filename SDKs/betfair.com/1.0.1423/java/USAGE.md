@@ -13,7 +13,7 @@ public class Application {
             SDK sdk = builder.build();
 
             PostRequestRequest req = new PostRequestRequest() {{
-                request = "reprehenderit";
+                request = "sit";
             }};
 
             PostRequestResponse res = sdk.postRequest(req);

@@ -35,64 +35,34 @@ public class Application {
 
             AddCustomAttributesRequest req = new AddCustomAttributesRequest() {{
                 headers = new AddCustomAttributesHeaders() {{
-                    xAmzAlgorithm = "consectetur";
-                    xAmzContentSha256 = "voluptatibus";
-                    xAmzCredential = "doloremque";
-                    xAmzDate = "neque";
-                    xAmzSecurityToken = "sint";
-                    xAmzSignature = "iste";
-                    xAmzSignedHeaders = "temporibus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSCognitoIdentityProviderService.AddCustomAttributes";
                 }};
                 request = new AddCustomAttributesRequest() {{
                     customAttributes = new openapisdk.models.shared.SchemaAttributeType[]() {{
                         add(new SchemaAttributeType() {{
-                            attributeDataType = "Boolean";
-                            developerOnlyAttribute = false;
-                            mutable = true;
-                            name = "ducimus";
-                            numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "ut";
-                                minValue = "incidunt";
-                            }};
-                            required = false;
-                            stringAttributeConstraints = new StringAttributeConstraintsType() {{
-                                maxLength = "voluptatem";
-                                minLength = "voluptates";
-                            }};
-                        }}),
-                        add(new SchemaAttributeType() {{
-                            attributeDataType = "DateTime";
+                            attributeDataType = "String";
                             developerOnlyAttribute = true;
-                            mutable = false;
-                            name = "ut";
-                            numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "quaerat";
-                                minValue = "ut";
-                            }};
-                            required = true;
-                            stringAttributeConstraints = new StringAttributeConstraintsType() {{
-                                maxLength = "vel";
-                                minLength = "et";
-                            }};
-                        }}),
-                        add(new SchemaAttributeType() {{
-                            attributeDataType = "DateTime";
-                            developerOnlyAttribute = false;
                             mutable = true;
-                            name = "inventore";
+                            name = "dicta";
                             numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "impedit";
-                                minValue = "molestiae";
+                                maxValue = "debitis";
+                                minValue = "voluptatum";
                             }};
                             required = false;
                             stringAttributeConstraints = new StringAttributeConstraintsType() {{
-                                maxLength = "dignissimos";
-                                minLength = "consectetur";
+                                maxLength = "ut";
+                                minLength = "dolorem";
                             }};
                         }}),
                     }};
-                    userPoolId = "repellendus";
+                    userPoolId = "et";
                 }};
             }};
 

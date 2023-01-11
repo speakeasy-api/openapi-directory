@@ -23,15 +23,15 @@ public class Application {
 
             OptCapProgramInPriceRequest req = new OptCapProgramInPriceRequest() {{
                 headers = new OptCapProgramInPriceHeaders() {{
-                    authorization = "est";
-                    wmCONSUMERCHANNELTYPE = "est";
-                    wmQOSCORRELATIONID = "neque";
-                    wmSECACCESSTOKEN = "explicabo";
-                    wmSVCNAME = "quis";
+                    authorization = "sit";
+                    wmCONSUMERCHANNELTYPE = "voluptas";
+                    wmQOSCORRELATIONID = "culpa";
+                    wmSECACCESSTOKEN = "expedita";
+                    wmSVCNAME = "consequuntur";
                 }};
                 request = new OptCapProgramInPriceRequestBody() {{
-                    subsidyEnrolled = true;
-                    subsidyPreference = false;
+                    subsidyEnrolled = false;
+                    subsidyPreference = true;
                 }};
             }};
 

@@ -22,21 +22,21 @@ public class Application {
 
             AddTagsToResourceRequest req = new AddTagsToResourceRequest() {{
                 headers = new AddTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "nihil";
-                    xAmzContentSha256 = "magni";
-                    xAmzCredential = "vitae";
-                    xAmzDate = "excepturi";
-                    xAmzSecurityToken = "ut";
-                    xAmzSignature = "totam";
-                    xAmzSignedHeaders = "blanditiis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CloudHsmFrontendService.AddTagsToResource";
                 }};
                 request = new AddTagsToResourceRequest() {{
-                    resourceArn = "sint";
+                    resourceArn = "fugit";
                     tagList = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "fugiat";
-                            value = "adipisci";
+                            key = "nihil";
+                            value = "rerum";
                         }}),
                     }};
                 }};

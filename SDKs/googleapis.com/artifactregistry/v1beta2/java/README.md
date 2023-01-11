@@ -37,23 +37,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new ArtifactregistryProjectsLocationsListPathParams() {{
-                    name = "voluptatem";
+                    name = "sit";
                 }};
                 queryParams = new ArtifactregistryProjectsLocationsListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "qui";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "nulla";
-                    fields = "qui";
-                    filter = "velit";
-                    key = "explicabo";
-                    oauthToken = "qui";
-                    pageSize = 3126614124520816277;
-                    pageToken = "debitis";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
                     prettyPrint = true;
-                    quotaUser = "voluptas";
-                    uploadType = "officia";
-                    uploadProtocol = "cupiditate";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

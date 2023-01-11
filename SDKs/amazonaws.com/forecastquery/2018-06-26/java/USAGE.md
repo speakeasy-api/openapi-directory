@@ -22,23 +22,23 @@ public class Application {
 
             QueryForecastRequest req = new QueryForecastRequest() {{
                 headers = new QueryForecastHeaders() {{
-                    xAmzAlgorithm = "quo";
-                    xAmzContentSha256 = "vero";
-                    xAmzCredential = "incidunt";
-                    xAmzDate = "vel";
-                    xAmzSecurityToken = "exercitationem";
-                    xAmzSignature = "laudantium";
-                    xAmzSignedHeaders = "sed";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonForecastRuntime.QueryForecast";
                 }};
                 request = new QueryForecastRequest() {{
-                    endDate = "dolore";
+                    endDate = "fugit";
                     filters = new java.util.HashMap<String, String>() {{
-                        put("qui", "omnis");
+                        put("nihil", "rerum");
                     }};
-                    forecastArn = "modi";
-                    nextToken = "occaecati";
-                    startDate = "dolor";
+                    forecastArn = "dicta";
+                    nextToken = "debitis";
+                    startDate = "voluptatum";
                 }};
             }};
 

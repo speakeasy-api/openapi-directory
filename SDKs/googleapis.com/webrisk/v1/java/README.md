@@ -35,23 +35,21 @@ public class Application {
                     }};
                 }};
                 queryParams = new WebriskHashesSearchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "debitis";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "nobis";
-                    fields = "aut";
-                    hashPrefix = "velit";
-                    key = "similique";
-                    oauthToken = "est";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    hashPrefix = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "tempora";
+                    quotaUser = "et";
                     threatTypes = new openapisdk.models.operations.WebriskHashesSearchThreatTypesEnum[]() {{
-                        add("UNWANTED_SOFTWARE"),
-                        add("MALWARE"),
-                        add("UNWANTED_SOFTWARE"),
+                        add("SOCIAL_ENGINEERING"),
                     }};
-                    uploadType = "et";
-                    uploadProtocol = "saepe";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

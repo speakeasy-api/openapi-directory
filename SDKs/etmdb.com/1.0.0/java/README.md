@@ -27,7 +27,7 @@ public class Application {
 
             CinemaSearchReadRequest req = new CinemaSearchReadRequest() {{
                 pathParams = new CinemaSearchReadPathParams() {{
-                    id = "enim";
+                    id = "sit";
                 }};
             }};
 

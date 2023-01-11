@@ -27,41 +27,52 @@ public class Application {
 
             TravelimpactmodelFlightsComputeFlightEmissionsRequest req = new TravelimpactmodelFlightsComputeFlightEmissionsRequest() {{
                 queryParams = new TravelimpactmodelFlightsComputeFlightEmissionsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "repellendus";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "exercitationem";
-                    fields = "facere";
-                    key = "voluptate";
-                    oauthToken = "quia";
-                    prettyPrint = false;
-                    quotaUser = "aliquam";
-                    uploadType = "magni";
-                    uploadProtocol = "ducimus";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new ComputeFlightEmissionsRequest() {{
                     flights = new openapisdk.models.shared.Flight[]() {{
                         add(new Flight() {{
                             departureDate = new Date() {{
-                                day = 2724799249571066120;
-                                month = 1120866788222661821;
-                                year = 6761780401062793173;
+                                day = 7837839688282259259;
+                                month = 2518412263346885298;
+                                year = 5617773211005988520;
                             }};
-                            destination = "asperiores";
-                            flightNumber = 6516298809618562673;
-                            operatingCarrierCode = "maiores";
-                            origin = "quia";
+                            destination = "et";
+                            flightNumber = 7144924247938981575;
+                            operatingCarrierCode = "dolorem";
+                            origin = "et";
                         }}),
                         add(new Flight() {{
                             departureDate = new Date() {{
-                                day = 901874405537358488;
-                                month = 8324195147635486689;
-                                year = 7992565744974070129;
+                                day = 7373105480197164748;
+                                month = 3287288577352441706;
+                                year = 3930927879439176946;
                             }};
-                            destination = "ex";
-                            flightNumber = 435995984853509626;
-                            operatingCarrierCode = "velit";
-                            origin = "quos";
+                            destination = "totam";
+                            flightNumber = 2217592893536642650;
+                            operatingCarrierCode = "illum";
+                            origin = "debitis";
+                        }}),
+                        add(new Flight() {{
+                            departureDate = new Date() {{
+                                day = 3706853784096366226;
+                                month = 2627038740284806767;
+                                year = 6303220950515014660;
+                            }};
+                            destination = "id";
+                            flightNumber = 959367522974354090;
+                            operatingCarrierCode = "accusantium";
+                            origin = "totam";
                         }}),
                     }};
                 }};

@@ -27,13 +27,13 @@ public class Application {
 
             GetWaybackV1AvailableRequest req = new GetWaybackV1AvailableRequest() {{
                 queryParams = new GetWaybackV1AvailableQueryParams() {{
-                    callback = "eum";
-                    closest = "after";
-                    statusCode = 2100388220143852559;
-                    tag = "necessitatibus";
-                    timeout = 57.200001;
-                    timestamp = "error";
-                    url = "aliquam";
+                    callback = "sit";
+                    closest = "either";
+                    statusCode = 6050128673802995827;
+                    tag = "expedita";
+                    timeout = 15.100000;
+                    timestamp = "expedita";
+                    url = "voluptas";
                 }};
             }};
 

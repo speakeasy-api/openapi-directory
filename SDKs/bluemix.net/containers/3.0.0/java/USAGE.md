@@ -14,8 +14,8 @@ public class Application {
 
             GetContainersMessagesRequest req = new GetContainersMessagesRequest() {{
                 headers = new GetContainersMessagesHeaders() {{
-                    xAuthProjectId = "amet";
-                    xAuthToken = "eos";
+                    xAuthProjectId = "sit";
+                    xAuthToken = "voluptas";
                 }};
             }};
 

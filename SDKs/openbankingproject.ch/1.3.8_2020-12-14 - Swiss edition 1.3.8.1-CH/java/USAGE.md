@@ -27,99 +27,99 @@ public class Application {
                     }};
                 }};
                 headers = new CreateConsentHeaders() {{
-                    digest = "tempore";
-                    psuAccept = "rerum";
-                    psuAcceptCharset = "voluptatem";
-                    psuAcceptEncoding = "dolorem";
-                    psuAcceptLanguage = "est";
-                    psuCorporateID = "aut";
-                    psuCorporateIDType = "minus";
-                    psuDeviceID = "dolore";
-                    psuGeoLocation = "officia";
-                    psuHttpMethod = "GET";
-                    psuID = "rem";
-                    psuIDType = "et";
-                    psuIPAddress = "ea";
-                    psuIPPort = "repellendus";
-                    psuUserAgent = "quidem";
-                    signature = "repellat";
+                    digest = "sit";
+                    psuAccept = "voluptas";
+                    psuAcceptCharset = "culpa";
+                    psuAcceptEncoding = "expedita";
+                    psuAcceptLanguage = "consequuntur";
+                    psuCorporateID = "dolor";
+                    psuCorporateIDType = "expedita";
+                    psuDeviceID = "voluptas";
+                    psuGeoLocation = "fugit";
+                    psuHttpMethod = "PATCH";
+                    psuID = "nihil";
+                    psuIDType = "rerum";
+                    psuIPAddress = "dicta";
+                    psuIPPort = "debitis";
+                    psuUserAgent = "voluptatum";
+                    signature = "et";
                     tppBrandLoggingInformation = "ut";
-                    tppExplicitAuthorisationPreferred = false;
-                    tppNokRedirectURI = "ex";
-                    tppNotificationContentPreferred = "assumenda";
-                    tppNotificationURI = "dignissimos";
-                    tppRedirectPreferred = false;
-                    tppRedirectURI = "illum";
-                    tppSignatureCertificate = "enim";
-                    xRequestID = "fugit";
+                    tppExplicitAuthorisationPreferred = true;
+                    tppNokRedirectURI = "et";
+                    tppNotificationContentPreferred = "voluptate";
+                    tppNotificationURI = "iste";
+                    tppRedirectPreferred = true;
+                    tppRedirectURI = "totam";
+                    tppSignatureCertificate = "dolores";
+                    xRequestID = "illum";
                 }};
                 request = new Consents() {{
                     access = new AccountAccess() {{
                         accounts = new openapisdk.models.shared.AccountReference16Ch[]() {{
                             add(new AccountReference16Ch() {{
-                                cashAccountType = "aut";
-                                currency = "quia";
-                                iban = "rem";
-                                otherAccountIdentification = "quod";
-                            }}),
-                            add(new AccountReference16Ch() {{
-                                cashAccountType = "dolore";
-                                currency = "ipsa";
-                                iban = "at";
-                                otherAccountIdentification = "fugit";
-                            }}),
-                            add(new AccountReference16Ch() {{
-                                cashAccountType = "sapiente";
-                                currency = "est";
-                                iban = "odio";
-                                otherAccountIdentification = "sed";
+                                cashAccountType = "vel";
+                                currency = "odio";
+                                iban = "dolore";
+                                otherAccountIdentification = "id";
                             }}),
                         }};
                         additionalInformation = new AdditionalInformationAccess() {{
                             ownerName = new openapisdk.models.shared.AccountReference16Ch[]() {{
                                 add(new AccountReference16Ch() {{
-                                    cashAccountType = "fugit";
-                                    currency = "odio";
-                                    iban = "aperiam";
-                                    otherAccountIdentification = "assumenda";
+                                    cashAccountType = "accusantium";
+                                    currency = "totam";
+                                    iban = "commodi";
+                                    otherAccountIdentification = "quis";
                                 }}),
                             }};
                             trustedBeneficiaries = new openapisdk.models.shared.AccountReference16Ch[]() {{
                                 add(new AccountReference16Ch() {{
-                                    cashAccountType = "eos";
-                                    currency = "totam";
-                                    iban = "vero";
-                                    otherAccountIdentification = "asperiores";
+                                    cashAccountType = "aut";
+                                    currency = "odit";
+                                    iban = "non";
+                                    otherAccountIdentification = "voluptas";
+                                }}),
+                                add(new AccountReference16Ch() {{
+                                    cashAccountType = "omnis";
+                                    currency = "aut";
+                                    iban = "illo";
+                                    otherAccountIdentification = "sed";
                                 }}),
                             }};
                         }};
                         allPsd2 = "allAccountsWithOwnerName";
-                        availableAccounts = "allAccounts";
+                        availableAccounts = "allAccountsWithOwnerName";
                         availableAccountsWithBalance = "allAccounts";
                         balances = new openapisdk.models.shared.AccountReference16Ch[]() {{
                             add(new AccountReference16Ch() {{
-                                cashAccountType = "facilis";
-                                currency = "excepturi";
-                                iban = "illum";
-                                otherAccountIdentification = "sapiente";
+                                cashAccountType = "odio";
+                                currency = "qui";
+                                iban = "recusandae";
+                                otherAccountIdentification = "at";
                             }}),
                         }};
                         restrictedTo = new String[]() {{
-                            add("sint"),
+                            add("eveniet"),
                         }};
                         transactions = new openapisdk.models.shared.AccountReference16Ch[]() {{
                             add(new AccountReference16Ch() {{
-                                cashAccountType = "asperiores";
-                                currency = "assumenda";
-                                iban = "ipsum";
-                                otherAccountIdentification = "quasi";
+                                cashAccountType = "sint";
+                                currency = "inventore";
+                                iban = "ut";
+                                otherAccountIdentification = "exercitationem";
+                            }}),
+                            add(new AccountReference16Ch() {{
+                                cashAccountType = "aut";
+                                currency = "reprehenderit";
+                                iban = "tempore";
+                                otherAccountIdentification = "maiores";
                             }}),
                         }};
                     }};
-                    combinedServiceIndicator = true;
-                    frequencyPerDay = 17231110517011566;
-                    recurringIndicator = true;
-                    validUntil = "1976-06-24";
+                    combinedServiceIndicator = false;
+                    frequencyPerDay = 7242748068272024738;
+                    recurringIndicator = false;
+                    validUntil = "1992-08-27";
                 }};
             }};
 

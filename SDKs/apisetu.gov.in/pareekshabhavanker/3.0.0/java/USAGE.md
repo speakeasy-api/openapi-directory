@@ -23,15 +23,15 @@ public class Application {
                 }};
                 request = new SslcrRequestBody() {{
                     certificateParameters = new SslcrRequestBodyCertificateParameters() {{
-                        dob = "enim";
-                        fullName = "minima";
-                        uid = "incidunt";
-                        regno = "excepturi";
-                        year = "autem";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        uid = "culpa";
+                        regno = "expedita";
+                        year = "consequuntur";
                     }};
-                    consentArtifact = "similique";
+                    consentArtifact = "dolor";
                     format = "pdf";
-                    txnId = "soluta";
+                    txnId = "voluptas";
                 }};
             }};
 

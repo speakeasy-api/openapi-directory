@@ -27,9 +27,9 @@ public class Application {
 
             ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest req = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest() {{
                 pathParams = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams() {{
-                    org = "voluptate";
-                    repositoryId = 5132794701053150193;
-                    runnerGroupId = 9183065293705613090;
+                    org = "sit";
+                    repositoryId = 2259404117704393152;
+                    runnerGroupId = 6050128673802995827;
                 }};
             }};
 

@@ -23,8 +23,8 @@ public class Application {
 
             DeleteCustomersAccountAnnouncementsAnnouncementIdRequest req = new DeleteCustomersAccountAnnouncementsAnnouncementIdRequest() {{
                 pathParams = new DeleteCustomersAccountAnnouncementsAnnouncementIdPathParams() {{
-                    account = 29372123613087746;
-                    announcementId = "amet";
+                    account = 8717895732742165505;
+                    announcementId = "voluptas";
                 }};
             }};
 

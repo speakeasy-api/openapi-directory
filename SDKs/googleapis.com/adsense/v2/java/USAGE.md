@@ -22,28 +22,28 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdsenseAccountsAdclientsAdunitsCreatePathParams() {{
-                    parent = "labore";
+                    parent = "sit";
                 }};
                 queryParams = new AdsenseAccountsAdclientsAdunitsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "sint";
-                    alt = "proto";
-                    callback = "et";
-                    fields = "omnis";
-                    key = "ut";
-                    oauthToken = "cum";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "qui";
-                    uploadType = "cum";
-                    uploadProtocol = "facilis";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new AdUnitInput() {{
                     contentAdsSettings = new ContentAdsSettings() {{
-                        size = "consequatur";
-                        type = "MATCHED_CONTENT";
+                        size = "dicta";
+                        type = "TYPE_UNSPECIFIED";
                     }};
-                    displayName = "laudantium";
-                    state = "ARCHIVED";
+                    displayName = "voluptatum";
+                    state = "STATE_UNSPECIFIED";
                 }};
             }};
 

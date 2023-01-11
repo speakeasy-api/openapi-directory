@@ -27,12 +27,12 @@ public class Application {
 
             GetVaccineStatusRequest req = new GetVaccineStatusRequest() {{
                 headers = new GetVaccineStatusHeaders() {{
-                    accept = "error";
-                    authorization = "consequuntur";
-                    contentType = "in";
+                    accept = "sit";
+                    authorization = "voluptas";
+                    contentType = "culpa";
                 }};
                 request = new VaccineStatusRequest() {{
-                    patientId = "mollitia";
+                    patientId = "expedita";
                 }};
             }};
 

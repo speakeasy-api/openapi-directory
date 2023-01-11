@@ -27,8 +27,8 @@ public class Application {
 
             AnimateImageRequest req = new AnimateImageRequest() {{
                 queryParams = new AnimateImageQueryParams() {{
-                    type = "ut";
-                    url = "consequatur";
+                    type = "sit";
+                    url = "voluptas";
                 }};
             }};
 

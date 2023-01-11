@@ -27,13 +27,13 @@ public class Application {
                 queryParams = new GetDirectionsOutputFormatQueryParams() {{
                     correctSide = false;
                     criteria = "fastest";
-                    departure = "1970-09-22T13:56:41Z";
-                    disable = "rerum";
-                    distanceUnit = "mi";
-                    outputSRS = 2129308593024805318;
-                    points = "rem";
+                    departure = "2019-04-21T07:38:14Z";
+                    disable = "consequuntur";
+                    distanceUnit = "km";
+                    outputSRS = 1774932891286980153;
+                    points = "voluptas";
                     roundTrip = true;
-                    routeDescription = "sit";
+                    routeDescription = "et";
                 }};
             }};
 

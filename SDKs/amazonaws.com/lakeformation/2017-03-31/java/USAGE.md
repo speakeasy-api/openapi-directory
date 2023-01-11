@@ -22,82 +22,92 @@ public class Application {
 
             AddLfTagsToResourceRequest req = new AddLfTagsToResourceRequest() {{
                 headers = new AddLfTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "velit";
-                    xAmzContentSha256 = "maiores";
-                    xAmzCredential = "sunt";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "est";
-                    xAmzSignature = "reprehenderit";
-                    xAmzSignedHeaders = "totam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSLakeFormation.AddLFTagsToResource";
                 }};
                 request = new AddLfTagsToResourceRequest() {{
-                    catalogId = "voluptas";
+                    catalogId = "fugit";
                     lfTags = new openapisdk.models.shared.LfTagPair[]() {{
                         add(new LfTagPair() {{
-                            catalogId = "consequatur";
-                            tagKey = "veritatis";
+                            catalogId = "nihil";
+                            tagKey = "rerum";
                             tagValues = new String[]() {{
+                                add("debitis"),
+                                add("voluptatum"),
                                 add("et"),
-                                add("nisi"),
-                                add("cupiditate"),
                             }};
                         }}),
                     }};
                     resource = new Resource() {{
                         catalog = new java.util.HashMap<String, Object>() {{
-                            put("quos", "et");
+                            put("dolorem", "et");
+                            put("voluptate", "iste");
+                            put("vitae", "totam");
                         }};
                         dataLocation = new DataLocationResource() {{
-                            catalogId = "perspiciatis";
-                            resourceArn = "quo";
+                            catalogId = "dolores";
+                            resourceArn = "illum";
                         }};
                         database = new DatabaseResource() {{
-                            catalogId = "nulla";
-                            name = "modi";
+                            catalogId = "debitis";
+                            name = "vel";
                         }};
                         lfTag = new LfTagKeyResource() {{
-                            catalogId = "est";
-                            tagKey = "impedit";
+                            catalogId = "odio";
+                            tagKey = "dolore";
                             tagValues = new String[]() {{
-                                add("qui"),
-                                add("ut"),
+                                add("aspernatur"),
+                                add("accusantium"),
                             }};
                         }};
                         lfTagPolicy = new LfTagPolicyResource() {{
-                            catalogId = "possimus";
+                            catalogId = "totam";
                             expression = new openapisdk.models.shared.LfTag[]() {{
                                 add(new LfTag() {{
-                                    tagKey = "iusto";
+                                    tagKey = "quis";
                                     tagValues = new String[]() {{
-                                        add("qui"),
+                                        add("aut"),
+                                        add("odit"),
+                                    }};
+                                }}),
+                                add(new LfTag() {{
+                                    tagKey = "non";
+                                    tagValues = new String[]() {{
+                                        add("omnis"),
                                     }};
                                 }}),
                             }};
-                            resourceType = "TABLE";
+                            resourceType = "DATABASE";
                         }};
                         table = new TableResource() {{
-                            catalogId = "totam";
-                            databaseName = "at";
-                            name = "aliquam";
+                            catalogId = "illo";
+                            databaseName = "sed";
+                            name = "officiis";
                             tableWildcard = new java.util.HashMap<String, Object>() {{
-                                put("inventore", "esse");
-                                put("consectetur", "cumque");
-                                put("fugit", "qui");
+                                put("consectetur", "nobis");
+                                put("odio", "qui");
                             }};
                         }};
                         tableWithColumns = new TableWithColumnsResource() {{
-                            catalogId = "quia";
+                            catalogId = "recusandae";
                             columnNames = new String[]() {{
-                                add("incidunt"),
+                                add("ipsum"),
+                                add("eveniet"),
                             }};
                             columnWildcard = new ColumnWildcard() {{
                                 excludedColumnNames = new String[]() {{
-                                    add("neque"),
+                                    add("sint"),
+                                    add("inventore"),
                                 }};
                             }};
-                            databaseName = "alias";
-                            name = "tempore";
+                            databaseName = "ut";
+                            name = "exercitationem";
                         }};
                     }};
                 }};

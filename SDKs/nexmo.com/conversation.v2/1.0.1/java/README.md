@@ -27,9 +27,9 @@ public class Application {
 
             GetUsersRequest req = new GetUsersRequest() {{
                 queryParams = new GetUsersQueryParams() {{
-                    cursor = "ea";
-                    order = "desc";
-                    pageSize = 8421355990061025605;
+                    cursor = "sit";
+                    order = "asc";
+                    pageSize = 6050128673802995827;
                 }};
             }};
 

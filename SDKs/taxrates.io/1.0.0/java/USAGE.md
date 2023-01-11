@@ -14,13 +14,13 @@ public class Application {
 
             TaxRatesByCountryCodeRequest req = new TaxRatesByCountryCodeRequest() {{
                 queryParams = new TaxRatesByCountryCodeQueryParams() {{
-                    countryCode = "doloremque";
-                    date = "quae";
-                    domain = "nisi";
-                    filter = "recusandae";
-                    productCodes = "qui";
-                    province = "minus";
-                    zip = "et";
+                    countryCode = "sit";
+                    date = "voluptas";
+                    domain = "culpa";
+                    filter = "expedita";
+                    productCodes = "consequuntur";
+                    province = "dolor";
+                    zip = "expedita";
                 }};
             }};
 

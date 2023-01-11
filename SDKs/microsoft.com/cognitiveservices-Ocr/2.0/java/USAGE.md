@@ -22,7 +22,7 @@ public class Application {
 
             BatchReadFileRequest req = new BatchReadFileRequest() {{
                 request = new ImageUrl() {{
-                    url = "sed";
+                    url = "sit";
                 }};
             }};
 

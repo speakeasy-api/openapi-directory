@@ -22,19 +22,19 @@ public class Application {
 
             AssociateDomainRequest req = new AssociateDomainRequest() {{
                 headers = new AssociateDomainHeaders() {{
-                    xAmzAlgorithm = "nobis";
-                    xAmzContentSha256 = "possimus";
-                    xAmzCredential = "voluptate";
-                    xAmzDate = "illum";
-                    xAmzSecurityToken = "iusto";
-                    xAmzSignature = "sunt";
-                    xAmzSignedHeaders = "saepe";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AssociateDomainRequestBody() {{
-                    acmCertificateArn = "veniam";
-                    displayName = "quod";
-                    domainName = "ducimus";
-                    fleetArn = "esse";
+                    acmCertificateArn = "voluptas";
+                    displayName = "fugit";
+                    domainName = "et";
+                    fleetArn = "nihil";
                 }};
             }};
 

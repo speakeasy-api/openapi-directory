@@ -14,23 +14,23 @@ public class Application {
 
             PlaydeveloperreportingAnomaliesListRequest req = new PlaydeveloperreportingAnomaliesListRequest() {{
                 pathParams = new PlaydeveloperreportingAnomaliesListPathParams() {{
-                    parent = "aut";
+                    parent = "sit";
                 }};
                 queryParams = new PlaydeveloperreportingAnomaliesListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "repellat";
-                    alt = "proto";
-                    callback = "consectetur";
-                    fields = "est";
-                    filter = "pariatur";
-                    key = "sed";
-                    oauthToken = "non";
-                    pageSize = 941072917466028862;
-                    pageToken = "et";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
                     prettyPrint = true;
-                    quotaUser = "corrupti";
-                    uploadType = "est";
-                    uploadProtocol = "in";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

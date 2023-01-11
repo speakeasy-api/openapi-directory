@@ -23,17 +23,17 @@ public class Application {
                 }};
                 queryParams = new IndexingUrlNotificationsGetMetadataQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "id";
-                    alt = "proto";
-                    callback = "vel";
-                    fields = "ad";
-                    key = "vitae";
-                    oauthToken = "illum";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "itaque";
-                    uploadType = "minus";
-                    uploadProtocol = "temporibus";
-                    url = "sit";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
+                    url = "rerum";
                 }};
             }};
 

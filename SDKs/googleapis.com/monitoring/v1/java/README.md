@@ -38,17 +38,17 @@ public class Application {
                 }};
                 queryParams = new MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dolor";
-                    alt = "json";
-                    callback = "quia";
-                    fields = "voluptatem";
-                    key = "doloremque";
-                    monitoredResourceContainer = "culpa";
-                    oauthToken = "asperiores";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    monitoredResourceContainer = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "magni";
-                    uploadType = "sunt";
-                    uploadProtocol = "dolor";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

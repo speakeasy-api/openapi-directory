@@ -27,9 +27,9 @@ public class Application {
 
             ChangePasswordRequest req = new ChangePasswordRequest() {{
                 pathParams = new ChangePasswordPathParams() {{
-                    shopperId = "dolorem";
+                    shopperId = "sit";
                 }};
-                request = "aut";
+                request = "voluptas";
             }};
 
             ChangePasswordResponse res = sdk.v1.changePassword(req);

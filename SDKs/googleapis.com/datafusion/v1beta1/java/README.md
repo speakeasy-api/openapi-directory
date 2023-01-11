@@ -35,68 +35,69 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatafusionProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "enim";
+                    parent = "sit";
                 }};
                 queryParams = new DatafusionProjectsLocationsInstancesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "occaecati";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "praesentium";
-                    fields = "illo";
-                    instanceId = "ab";
-                    key = "distinctio";
-                    oauthToken = "minus";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    instanceId = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "excepturi";
-                    uploadType = "accusantium";
-                    uploadProtocol = "alias";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new InstanceInput() {{
                     accelerators = new openapisdk.models.shared.Accelerator[]() {{
                         add(new Accelerator() {{
-                            acceleratorType = "CDC";
+                            acceleratorType = "ACCELERATOR_TYPE_UNSPECIFIED";
                         }}),
                     }};
                     availableVersion = new openapisdk.models.shared.Version[]() {{
                         add(new Version() {{
                             availableFeatures = new String[]() {{
-                                add("voluptatibus"),
-                                add("soluta"),
+                                add("dolorem"),
+                                add("et"),
+                                add("voluptate"),
                             }};
                             defaultVersion = true;
                             type = "TYPE_UNSPECIFIED";
-                            versionNumber = "error";
+                            versionNumber = "totam";
                         }}),
                     }};
                     cryptoKeyConfig = new CryptoKeyConfig() {{
-                        keyReference = "aut";
+                        keyReference = "dolores";
                     }};
-                    dataprocServiceAccount = "aut";
-                    description = "consectetur";
-                    displayName = "autem";
-                    enableRbac = true;
+                    dataprocServiceAccount = "illum";
+                    description = "debitis";
+                    displayName = "vel";
+                    enableRbac = false;
                     enableStackdriverLogging = true;
-                    enableStackdriverMonitoring = true;
+                    enableStackdriverMonitoring = false;
                     eventPublishConfig = new EventPublishConfig() {{
-                        enabled = false;
-                        topic = "laudantium";
+                        enabled = true;
+                        topic = "accusantium";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("et", "beatae");
+                        put("commodi", "quis");
+                        put("est", "aut");
+                        put("odit", "non");
                     }};
                     networkConfig = new NetworkConfig() {{
-                        ipAllocation = "facere";
-                        network = "placeat";
+                        ipAllocation = "voluptas";
+                        network = "omnis";
                     }};
                     options = new java.util.HashMap<String, String>() {{
-                        put("aut", "et");
-                        put("voluptatem", "deleniti");
-                        put("enim", "saepe");
+                        put("illo", "sed");
                     }};
-                    privateInstance = true;
-                    type = "BASIC";
-                    version = "non";
-                    zone = "iusto";
+                    privateInstance = false;
+                    type = "DEVELOPER";
+                    version = "consectetur";
+                    zone = "nobis";
                 }};
             }};
 

@@ -22,21 +22,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new ManufacturersAccountsProductsDeletePathParams() {{
-                    name = "cumque";
-                    parent = "distinctio";
+                    name = "sit";
+                    parent = "voluptas";
                 }};
                 queryParams = new ManufacturersAccountsProductsDeleteQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "qui";
-                    alt = "json";
-                    callback = "aperiam";
-                    fields = "tenetur";
-                    key = "harum";
-                    oauthToken = "quia";
+                    accessToken = "expedita";
+                    alt = "proto";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "est";
-                    uploadType = "ea";
-                    uploadProtocol = "vitae";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

@@ -24,136 +24,130 @@ public class Application {
                     }};
                 }};
                 pathParams = new FcmProjectsMessagesSendPathParams() {{
-                    parent = "deserunt";
+                    parent = "sit";
                 }};
                 queryParams = new FcmProjectsMessagesSendQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "sunt";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "amet";
-                    fields = "omnis";
-                    key = "eos";
-                    oauthToken = "necessitatibus";
-                    prettyPrint = false;
-                    quotaUser = "voluptas";
-                    uploadType = "hic";
-                    uploadProtocol = "et";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new SendMessageRequest() {{
                     message = new Message() {{
                         android = new AndroidConfig() {{
-                            collapseKey = "rerum";
+                            collapseKey = "dicta";
                             data = new java.util.HashMap<String, String>() {{
-                                put("et", "omnis");
-                                put("quia", "maiores");
-                                put("veniam", "quia");
+                                put("voluptatum", "et");
                             }};
-                            directBootOk = true;
+                            directBootOk = false;
                             fcmOptions = new AndroidFcmOptions() {{
-                                analyticsLabel = "omnis";
+                                analyticsLabel = "dolorem";
                             }};
                             notification = new AndroidNotification() {{
-                                body = "iusto";
+                                body = "et";
                                 bodyLocArgs = new String[]() {{
-                                    add("ducimus"),
-                                    add("quia"),
-                                    add("est"),
+                                    add("iste"),
                                 }};
-                                bodyLocKey = "amet";
+                                bodyLocKey = "vitae";
                                 bypassProxyNotification = true;
-                                channelId = "ut";
-                                clickAction = "soluta";
-                                color = "tempora";
+                                channelId = "dolores";
+                                clickAction = "illum";
+                                color = "debitis";
                                 defaultLightSettings = false;
-                                defaultSound = true;
+                                defaultSound = false;
                                 defaultVibrateTimings = true;
-                                eventTime = "qui";
-                                icon = "exercitationem";
-                                image = "saepe";
+                                eventTime = "id";
+                                icon = "aspernatur";
+                                image = "accusantium";
                                 lightSettings = new LightSettings() {{
                                     color = new Color() {{
-                                        alpha = 60.200001;
-                                        blue = 67.099998;
-                                        green = 42.200001;
-                                        red = 57.200001;
+                                        alpha = 45.099998;
+                                        blue = 78.199997;
+                                        green = 0.100000;
+                                        red = 49.099998;
                                     }};
-                                    lightOffDuration = "maiores";
-                                    lightOnDuration = "quia";
+                                    lightOffDuration = "omnis";
+                                    lightOnDuration = "aut";
                                 }};
-                                localOnly = false;
-                                notificationCount = 6137466947054968535;
-                                notificationPriority = "PRIORITY_MAX";
-                                sound = "labore";
+                                localOnly = true;
+                                notificationCount = 5558237345453186302;
+                                notificationPriority = "PRIORITY_MIN";
+                                sound = "autem";
                                 sticky = true;
-                                tag = "optio";
-                                ticker = "ut";
-                                title = "fuga";
+                                tag = "nobis";
+                                ticker = "odio";
+                                title = "qui";
                                 titleLocArgs = new String[]() {{
-                                    add("ea"),
-                                    add("ut"),
+                                    add("at"),
+                                    add("ipsum"),
+                                    add("eveniet"),
                                 }};
-                                titleLocKey = "quia";
+                                titleLocKey = "modi";
                                 vibrateTimings = new String[]() {{
-                                    add("eum"),
+                                    add("inventore"),
                                 }};
-                                visibility = "PRIVATE";
+                                visibility = "PUBLIC";
                             }};
-                            priority = "HIGH";
-                            restrictedPackageName = "est";
-                            ttl = "quod";
+                            priority = "NORMAL";
+                            restrictedPackageName = "aut";
+                            ttl = "reprehenderit";
                         }};
                         apns = new ApnsConfig() {{
                             fcmOptions = new ApnsFcmOptions() {{
-                                analyticsLabel = "rerum";
-                                image = "dolorem";
+                                analyticsLabel = "tempore";
+                                image = "maiores";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("optio", "occaecati");
-                                put("aspernatur", "vel");
-                                put("et", "odit");
+                                put("dolor", "beatae");
+                                put("veritatis", "in");
+                                put("et", "omnis");
                             }};
                             payload = new java.util.HashMap<String, Object>() {{
-                                put("modi", "sed");
-                                put("earum", "aut");
+                                put("ex", "dolores");
                             }};
                         }};
-                        condition = "corrupti";
+                        condition = "placeat";
                         data = new java.util.HashMap<String, String>() {{
-                            put("soluta", "nam");
-                            put("corrupti", "minima");
+                            put("rerum", "mollitia");
+                            put("voluptas", "quam");
                         }};
                         fcmOptions = new FcmOptions() {{
-                            analyticsLabel = "et";
+                            analyticsLabel = "reprehenderit";
                         }};
-                        name = "aperiam";
+                        name = "qui";
                         notification = new Notification() {{
-                            body = "excepturi";
-                            image = "debitis";
-                            title = "omnis";
+                            body = "qui";
+                            image = "unde";
+                            title = "in";
                         }};
-                        token = "illum";
-                        topic = "minima";
+                        token = "autem";
+                        topic = "qui";
                         webpush = new WebpushConfig() {{
                             data = new java.util.HashMap<String, String>() {{
-                                put("laudantium", "ut");
-                                put("recusandae", "tempore");
+                                put("itaque", "ab");
+                                put("neque", "ullam");
+                                put("et", "accusantium");
                             }};
                             fcmOptions = new WebpushFcmOptions() {{
-                                analyticsLabel = "itaque";
-                                link = "fugit";
+                                analyticsLabel = "esse";
+                                link = "architecto";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("sint", "aut");
-                                put("temporibus", "ea");
-                                put("ducimus", "necessitatibus");
+                                put("velit", "cumque");
                             }};
                             notification = new java.util.HashMap<String, Object>() {{
-                                put("culpa", "ea");
-                                put("eos", "sint");
+                                put("sunt", "voluptates");
                             }};
                         }};
                     }};
-                    validateOnly = true;
+                    validateOnly = false;
                 }};
             }};
 

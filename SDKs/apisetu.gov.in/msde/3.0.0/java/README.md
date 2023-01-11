@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new IticrRequestBody() {{
                     certificateParameters = new IticrRequestBodyCertificateParameters() {{
-                        fullName = "impedit";
-                        certno = "magni";
+                        fullName = "sit";
+                        certno = "voluptas";
                     }};
-                    consentArtifact = "id";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "fugiat";
+                    txnId = "consequuntur";
                 }};
             }};
 

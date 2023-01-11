@@ -36,19 +36,19 @@ public class Application {
                 }};
                 queryParams = new CloudsupportCaseClassificationsSearchQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "et";
-                    alt = "json";
-                    callback = "dolores";
-                    fields = "voluptas";
-                    key = "ipsam";
-                    oauthToken = "ipsam";
-                    pageSize = 8654948856110994653;
-                    pageToken = "corrupti";
-                    prettyPrint = true;
-                    query = "eligendi";
-                    quotaUser = "consequatur";
-                    uploadType = "quaerat";
-                    uploadProtocol = "et";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    pageSize = 6044372234677422456;
+                    pageToken = "fugit";
+                    prettyPrint = false;
+                    query = "nihil";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

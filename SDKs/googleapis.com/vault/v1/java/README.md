@@ -35,25 +35,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new VaultMattersAddPermissionsPathParams() {{
-                    matterId = "recusandae";
+                    matterId = "sit";
                 }};
                 queryParams = new VaultMattersAddPermissionsQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "vitae";
-                    alt = "proto";
-                    callback = "rerum";
-                    fields = "sed";
-                    key = "eum";
-                    oauthToken = "voluptatum";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "distinctio";
-                    uploadType = "commodi";
-                    uploadProtocol = "sed";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new AddMatterPermissionsRequest() {{
                     ccMe = false;
                     matterPermission = new MatterPermission() {{
-                        accountId = "laudantium";
+                        accountId = "debitis";
                         role = "ROLE_UNSPECIFIED";
                     }};
                     sendEmails = false;

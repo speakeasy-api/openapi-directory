@@ -35,141 +35,144 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatamigrationProjectsLocationsConnectionProfilesCreatePathParams() {{
-                    parent = "animi";
+                    parent = "sit";
                 }};
                 queryParams = new DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "cumque";
-                    alt = "proto";
-                    callback = "id";
-                    connectionProfileId = "vitae";
-                    fields = "atque";
-                    key = "sit";
-                    oauthToken = "fugiat";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    connectionProfileId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "nesciunt";
-                    requestId = "eaque";
-                    uploadType = "suscipit";
-                    uploadProtocol = "labore";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new ConnectionProfileInput() {{
                     alloydb = new AlloyDbConnectionProfileInput() {{
                         clusterId = "voluptatum";
                         settings = new AlloyDbSettingsInput() {{
                             initialUser = new UserPasswordInput() {{
-                                password = "quisquam";
-                                user = "pariatur";
+                                password = "et";
+                                user = "ut";
                             }};
                             labels = new java.util.HashMap<String, String>() {{
-                                put("incidunt", "sit");
-                                put("voluptas", "velit");
+                                put("et", "voluptate");
+                                put("iste", "vitae");
+                                put("totam", "dolores");
                             }};
                             primaryInstanceSettings = new PrimaryInstanceSettingsInput() {{
                                 databaseFlags = new java.util.HashMap<String, String>() {{
-                                    put("et", "qui");
-                                    put("corporis", "voluptates");
-                                    put("quaerat", "aperiam");
+                                    put("debitis", "vel");
+                                    put("odio", "dolore");
+                                    put("id", "aspernatur");
                                 }};
-                                id = "et";
+                                id = "accusantium";
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("placeat", "quo");
-                                    put("et", "soluta");
+                                    put("commodi", "quis");
+                                    put("est", "aut");
+                                    put("odit", "non");
                                 }};
                                 machineConfig = new MachineConfig() {{
-                                    cpuCount = 894558792413837213;
+                                    cpuCount = 167566062957544642;
                                 }};
                             }};
-                            vpcNetwork = "vitae";
+                            vpcNetwork = "omnis";
                         }};
                     }};
                     cloudsql = new CloudSqlConnectionProfileInput() {{
                         settings = new CloudSqlSettingsInput() {{
-                            activationPolicy = "NEVER";
+                            activationPolicy = "SQL_ACTIVATION_POLICY_UNSPECIFIED";
                             autoStorageIncrease = true;
                             availabilityType = "REGIONAL";
-                            cmekKeyName = "quo";
-                            collation = "beatae";
-                            dataDiskSizeGb = "aut";
-                            dataDiskType = "PD_HDD";
+                            cmekKeyName = "officiis";
+                            collation = "autem";
+                            dataDiskSizeGb = "consectetur";
+                            dataDiskType = "SQL_DATA_DISK_TYPE_UNSPECIFIED";
                             databaseFlags = new java.util.HashMap<String, String>() {{
-                                put("et", "ea");
+                                put("qui", "recusandae");
                             }};
-                            databaseVersion = "MYSQL_8_0";
+                            databaseVersion = "POSTGRES_13";
                             ipConfig = new SqlIpConfig() {{
                                 authorizedNetworks = new openapisdk.models.shared.SqlAclEntry[]() {{
                                     add(new SqlAclEntry() {{
-                                        expireTime = "animi";
-                                        label = "unde";
-                                        ttl = "ullam";
-                                        value = "assumenda";
-                                    }}),
-                                    add(new SqlAclEntry() {{
-                                        expireTime = "amet";
-                                        label = "sequi";
-                                        ttl = "officia";
-                                        value = "eum";
+                                        expireTime = "eveniet";
+                                        label = "modi";
+                                        ttl = "sint";
+                                        value = "inventore";
                                     }}),
                                 }};
                                 enableIpv4 = true;
-                                privateNetwork = "consequatur";
-                                requireSsl = false;
+                                privateNetwork = "exercitationem";
+                                requireSsl = true;
                             }};
-                            rootPassword = "ea";
-                            secondaryZone = "eius";
-                            sourceId = "error";
-                            storageAutoResizeLimit = "aliquam";
-                            tier = "et";
+                            rootPassword = "reprehenderit";
+                            secondaryZone = "tempore";
+                            sourceId = "maiores";
+                            storageAutoResizeLimit = "incidunt";
+                            tier = "dolor";
                             userLabels = new java.util.HashMap<String, String>() {{
-                                put("laboriosam", "vero");
-                                put("et", "placeat");
-                                put("quibusdam", "quia");
+                                put("veritatis", "in");
+                                put("et", "omnis");
+                                put("ipsum", "ex");
                             }};
-                            zone = "voluptas";
+                            zone = "dolores";
                         }};
                     }};
-                    displayName = "et";
+                    displayName = "placeat";
                     error = new Status() {{
-                        code = 4500600018517716623;
+                        code = 2118716725206170867;
                         details = new java.util.HashMap<String, Object>[]() {{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("mollitia", "sit");
-                                put("est", "quia");
+                                put("voluptas", "quam");
+                                put("reprehenderit", "qui");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("unde", "in");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("qui", "ut");
+                                put("itaque", "ab");
                             }}),
                         }};
-                        message = "ipsa";
+                        message = "neque";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("id", "ipsa");
-                        put("ipsam", "ratione");
-                        put("consequatur", "praesentium");
+                        put("et", "accusantium");
+                        put("esse", "architecto");
+                        put("quam", "velit");
                     }};
                     mysql = new MySqlConnectionProfileInput() {{
-                        cloudSqlId = "enim";
-                        host = "aut";
-                        password = "velit";
-                        port = 8628636448964422193;
+                        cloudSqlId = "cumque";
+                        host = "soluta";
+                        password = "sunt";
+                        port = 2408550365227740434;
                         ssl = new SslConfigInput() {{
-                            caCertificate = "non";
-                            clientCertificate = "enim";
-                            clientKey = "reprehenderit";
-                        }};
-                        username = "vel";
-                    }};
-                    name = "voluptates";
-                    postgresql = new PostgreSqlConnectionProfileInput() {{
-                        cloudSqlId = "nesciunt";
-                        host = "vel";
-                        password = "quaerat";
-                        port = 7278960282919804440;
-                        ssl = new SslConfigInput() {{
-                            caCertificate = "sequi";
+                            caCertificate = "magni";
                             clientCertificate = "et";
-                            clientKey = "minus";
+                            clientKey = "optio";
                         }};
-                        username = "quibusdam";
+                        username = "qui";
                     }};
-                    provider = "RDS";
-                    state = "DRAFT";
+                    name = "earum";
+                    postgresql = new PostgreSqlConnectionProfileInput() {{
+                        cloudSqlId = "illo";
+                        host = "omnis";
+                        password = "ut";
+                        port = 7442289190031176026;
+                        ssl = new SslConfigInput() {{
+                            caCertificate = "dolor";
+                            clientCertificate = "commodi";
+                            clientKey = "error";
+                        }};
+                        username = "reprehenderit";
+                    }};
+                    provider = "AURORA";
+                    state = "READY";
                 }};
             }};
 

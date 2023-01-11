@@ -22,7 +22,7 @@ public class Application {
 
             GetAccountsRequest req = new GetAccountsRequest() {{
                 queryParams = new GetAccountsQueryParams() {{
-                    account = "delectus";
+                    account = "sit";
                 }};
             }};
 

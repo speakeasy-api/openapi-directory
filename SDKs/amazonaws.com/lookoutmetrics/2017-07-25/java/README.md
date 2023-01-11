@@ -35,16 +35,16 @@ public class Application {
 
             ActivateAnomalyDetectorRequest req = new ActivateAnomalyDetectorRequest() {{
                 headers = new ActivateAnomalyDetectorHeaders() {{
-                    xAmzAlgorithm = "aliquid";
-                    xAmzContentSha256 = "quasi";
-                    xAmzCredential = "impedit";
-                    xAmzDate = "tempora";
-                    xAmzSecurityToken = "consequatur";
-                    xAmzSignature = "eos";
-                    xAmzSignedHeaders = "non";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new ActivateAnomalyDetectorRequestBody() {{
-                    anomalyDetectorArn = "nesciunt";
+                    anomalyDetectorArn = "voluptas";
                 }};
             }};
 

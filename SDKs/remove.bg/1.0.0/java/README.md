@@ -36,66 +36,66 @@ public class Application {
             PostRemovebgRequest req = new PostRemovebgRequest() {{
                 request = new PostRemovebgRequests() {{
                     removeBgJson = new RemoveBgJson() {{
-                        addShadow = true;
-                        bgColor = "inventore";
-                        bgImageUrl = "ut";
+                        addShadow = false;
+                        bgColor = "voluptas";
+                        bgImageUrl = "culpa";
                         channels = "rgba";
                         crop = true;
-                        cropMargin = "reprehenderit";
+                        cropMargin = "dolor";
                         format = "zip";
-                        imageFileB64 = "maiores";
-                        imageUrl = "incidunt";
-                        position = "dolor";
-                        roi = "beatae";
-                        scale = "veritatis";
-                        semitransparency = true;
-                        size = "auto";
-                        type = "person";
-                        typeLevel = "latest";
-                    }};
-                    removeBgJson1 = new RemoveBgJson() {{
-                        addShadow = true;
-                        bgColor = "dolores";
-                        bgImageUrl = "placeat";
-                        channels = "rgba";
-                        crop = true;
-                        cropMargin = "mollitia";
-                        format = "auto";
-                        imageFileB64 = "quam";
-                        imageUrl = "reprehenderit";
-                        position = "qui";
-                        roi = "qui";
-                        scale = "unde";
+                        imageFileB64 = "voluptas";
+                        imageUrl = "fugit";
+                        position = "et";
+                        roi = "nihil";
+                        scale = "rerum";
                         semitransparency = false;
-                        size = "full";
-                        type = "person";
+                        size = "preview";
+                        type = "auto";
                         typeLevel = "2";
                     }};
-                    removeBgMultipart = new RemoveBgMultipart() {{
+                    removeBgJson1 = new RemoveBgJson() {{
                         addShadow = false;
-                        bgColor = "ab";
-                        bgImageFile = new RemoveBgMultipartBgImageFile() {{
-                            bgImageFile = "neque";
-                            content = "ullam".getBytes();
-                        }};
+                        bgColor = "dolorem";
                         bgImageUrl = "et";
                         channels = "rgba";
                         crop = true;
-                        cropMargin = "architecto";
+                        cropMargin = "vitae";
                         format = "jpg";
-                        imageFile = new RemoveBgMultipartImageFile() {{
-                            content = "velit".getBytes();
-                            imageFile = "cumque";
-                        }};
-                        imageFileB64 = "soluta";
-                        imageUrl = "sunt";
-                        position = "voluptates";
-                        roi = "magni";
-                        scale = "et";
+                        imageFileB64 = "dolores";
+                        imageUrl = "illum";
+                        position = "debitis";
+                        roi = "vel";
+                        scale = "odio";
                         semitransparency = true;
+                        size = "full";
+                        type = "person";
+                        typeLevel = "none";
+                    }};
+                    removeBgMultipart = new RemoveBgMultipart() {{
+                        addShadow = false;
+                        bgColor = "commodi";
+                        bgImageFile = new RemoveBgMultipartBgImageFile() {{
+                            bgImageFile = "quis";
+                            content = "est".getBytes();
+                        }};
+                        bgImageUrl = "aut";
+                        channels = "rgba";
+                        crop = true;
+                        cropMargin = "voluptas";
+                        format = "zip";
+                        imageFile = new RemoveBgMultipartImageFile() {{
+                            content = "aut".getBytes();
+                            imageFile = "illo";
+                        }};
+                        imageFileB64 = "sed";
+                        imageUrl = "officiis";
+                        position = "autem";
+                        roi = "consectetur";
+                        scale = "nobis";
+                        semitransparency = false;
                         size = "preview";
-                        type = "car";
-                        typeLevel = "latest";
+                        type = "product";
+                        typeLevel = "none";
                     }};
                 }};
             }};

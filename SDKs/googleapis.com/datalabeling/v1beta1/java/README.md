@@ -35,47 +35,48 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatalabelingProjectsAnnotationSpecSetsCreatePathParams() {{
-                    parent = "doloribus";
+                    parent = "sit";
                 }};
                 queryParams = new DatalabelingProjectsAnnotationSpecSetsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "expedita";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "eos";
-                    fields = "et";
-                    key = "eaque";
-                    oauthToken = "blanditiis";
-                    prettyPrint = false;
-                    quotaUser = "est";
-                    uploadType = "expedita";
-                    uploadProtocol = "aut";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest() {{
                     annotationSpecSet = new GoogleCloudDatalabelingV1beta1AnnotationSpecSet() {{
                         annotationSpecs = new openapisdk.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec[]() {{
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "necessitatibus";
-                                displayName = "reprehenderit";
-                                index = 5104645972237816757;
+                                description = "debitis";
+                                displayName = "voluptatum";
+                                index = 2339563716805116249;
                             }}),
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "suscipit";
-                                displayName = "dolores";
-                                index = 2030713232457923632;
+                                description = "ut";
+                                displayName = "dolorem";
+                                index = 7259475919510918339;
                             }}),
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "doloribus";
-                                displayName = "rerum";
-                                index = 446862703991005078;
+                                description = "voluptate";
+                                displayName = "iste";
+                                index = 3930927879439176946;
                             }}),
                         }};
                         blockingResources = new String[]() {{
-                            add("recusandae"),
-                            add("aliquid"),
+                            add("dolores"),
+                            add("illum"),
+                            add("debitis"),
                         }};
-                        description = "accusamus";
-                        displayName = "culpa";
-                        name = "consequatur";
+                        description = "vel";
+                        displayName = "odio";
+                        name = "dolore";
                     }};
                 }};
             }};

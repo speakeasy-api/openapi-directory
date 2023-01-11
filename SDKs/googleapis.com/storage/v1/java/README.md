@@ -37,19 +37,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new StorageBucketAccessControlsDeletePathParams() {{
-                    bucket = "facere";
-                    entity = "sunt";
+                    bucket = "sit";
+                    entity = "voluptas";
                 }};
                 queryParams = new StorageBucketAccessControlsDeleteQueryParams() {{
                     alt = "json";
-                    fields = "cum";
-                    key = "delectus";
-                    oauthToken = "assumenda";
-                    prettyPrint = false;
-                    quotaUser = "dolor";
-                    uploadType = "velit";
-                    userIp = "alias";
-                    userProject = "hic";
+                    fields = "expedita";
+                    key = "consequuntur";
+                    oauthToken = "dolor";
+                    prettyPrint = true;
+                    quotaUser = "voluptas";
+                    uploadType = "fugit";
+                    userIp = "et";
+                    userProject = "nihil";
                 }};
             }};
 

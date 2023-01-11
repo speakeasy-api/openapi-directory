@@ -19,7 +19,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "totam";
+                request = "sit";
             }};
 
             PostAccountHolderBalanceResponse res = sdk.general.postAccountHolderBalance(req);

@@ -35,16 +35,16 @@ public class Application {
 
             ClaimDevicesByClaimCodeRequest req = new ClaimDevicesByClaimCodeRequest() {{
                 pathParams = new ClaimDevicesByClaimCodePathParams() {{
-                    claimCode = "amet";
+                    claimCode = "sit";
                 }};
                 headers = new ClaimDevicesByClaimCodeHeaders() {{
-                    xAmzAlgorithm = "inventore";
-                    xAmzContentSha256 = "reprehenderit";
-                    xAmzCredential = "autem";
-                    xAmzDate = "tenetur";
-                    xAmzSecurityToken = "facilis";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "est";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

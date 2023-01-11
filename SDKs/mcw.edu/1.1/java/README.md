@@ -27,7 +27,7 @@ public class Application {
 
             GetAffectedGenomicModelsUsingGetRequest req = new GetAffectedGenomicModelsUsingGetRequest() {{
                 pathParams = new GetAffectedGenomicModelsUsingGetPathParams() {{
-                    taxonId = "ullam";
+                    taxonId = "sit";
                 }};
             }};
 

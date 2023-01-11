@@ -35,23 +35,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new ComposerProjectsLocationsEnvironmentsCheckUpgradePathParams() {{
-                    environment = "cumque";
+                    environment = "sit";
                 }};
                 queryParams = new ComposerProjectsLocationsEnvironmentsCheckUpgradeQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "nam";
-                    alt = "json";
-                    callback = "sed";
-                    fields = "sint";
-                    key = "quis";
-                    oauthToken = "impedit";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "minima";
-                    uploadType = "incidunt";
-                    uploadProtocol = "excepturi";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new CheckUpgradeRequest() {{
-                    imageVersion = "autem";
+                    imageVersion = "dicta";
                 }};
             }};
 

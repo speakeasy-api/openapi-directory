@@ -30,13 +30,13 @@ public class Application {
                     }};
                 }};
                 pathParams = new ConnectionSettingsAllPathParams() {{
-                    resource = "atque";
-                    serviceId = "maiores";
-                    unifiedApi = "beatae";
+                    resource = "sit";
+                    serviceId = "voluptas";
+                    unifiedApi = "culpa";
                 }};
                 headers = new ConnectionSettingsAllHeaders() {{
-                    xApideckAppId = "ab";
-                    xApideckConsumerId = "exercitationem";
+                    xApideckAppId = "expedita";
+                    xApideckConsumerId = "consequuntur";
                 }};
             }};
 

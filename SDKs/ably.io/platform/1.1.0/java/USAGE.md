@@ -23,15 +23,15 @@ public class Application {
 
             RequestAccessTokenRequest req = new RequestAccessTokenRequest() {{
                 pathParams = new RequestAccessTokenPathParams() {{
-                    keyName = "dolor";
+                    keyName = "sit";
                 }};
                 queryParams = new RequestAccessTokenQueryParams() {{
-                    format = "html";
+                    format = "msgpack";
                 }};
                 headers = new RequestAccessTokenHeaders() {{
-                    xAblyVersion = "voluptas";
+                    xAblyVersion = "culpa";
                 }};
-                request = "fugit";
+                request = "expedita";
             }};
 
             RequestAccessTokenResponse res = sdk.authentication.requestAccessToken(req);

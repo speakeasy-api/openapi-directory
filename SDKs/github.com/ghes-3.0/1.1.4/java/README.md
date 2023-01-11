@@ -27,9 +27,9 @@ public class Application {
 
             ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest req = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest() {{
                 pathParams = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams() {{
-                    org = "eum";
-                    repositoryId = 2428722718885598687;
-                    runnerGroupId = 8490340655146226453;
+                    org = "sit";
+                    repositoryId = 2259404117704393152;
+                    runnerGroupId = 6050128673802995827;
                 }};
             }};
 

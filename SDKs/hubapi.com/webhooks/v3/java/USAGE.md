@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteWebhooksV3AppIdSettingsClearPathParams() {{
-                    appId = 2987332281011486115;
+                    appId = 8717895732742165505;
                 }};
             }};
 

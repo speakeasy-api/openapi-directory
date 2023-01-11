@@ -35,12 +35,12 @@ public class Application {
 
             CreateBankAccountRequest req = new CreateBankAccountRequest() {{
                 request = new BankAccountInput() {{
-                    accountNumber = "temporibus";
-                    accountNumberIban = "aut";
-                    currency = "JPY";
-                    name = "odit";
-                    needQr = false;
-                    swift = "nihil";
+                    accountNumber = "sit";
+                    accountNumberIban = "voluptas";
+                    currency = "HRK";
+                    name = "expedita";
+                    needQr = true;
+                    swift = "dolor";
                 }};
             }};
 

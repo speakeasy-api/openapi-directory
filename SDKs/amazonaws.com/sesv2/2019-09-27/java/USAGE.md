@@ -22,49 +22,40 @@ public class Application {
 
             CreateConfigurationSetRequest req = new CreateConfigurationSetRequest() {{
                 headers = new CreateConfigurationSetHeaders() {{
-                    xAmzAlgorithm = "nam";
-                    xAmzContentSha256 = "non";
-                    xAmzCredential = "doloremque";
-                    xAmzDate = "qui";
-                    xAmzSecurityToken = "quaerat";
-                    xAmzSignature = "natus";
-                    xAmzSignedHeaders = "illo";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateConfigurationSetRequestBody() {{
-                    configurationSetName = "optio";
+                    configurationSetName = "voluptas";
                     deliveryOptions = new CreateConfigurationSetRequestBodyDeliveryOptions() {{
-                        sendingPoolName = "reprehenderit";
+                        sendingPoolName = "fugit";
                         tlsPolicy = "REQUIRE";
                     }};
                     reputationOptions = new CreateConfigurationSetRequestBodyReputationOptions() {{
-                        lastFreshStart = "2000-05-10T08:14:20Z";
-                        reputationMetricsEnabled = false;
+                        lastFreshStart = "2003-05-13T04:57:12Z";
+                        reputationMetricsEnabled = true;
                     }};
                     sendingOptions = new CreateConfigurationSetRequestBodySendingOptions() {{
-                        sendingEnabled = true;
+                        sendingEnabled = false;
                     }};
                     suppressionOptions = new CreateConfigurationSetRequestBodySuppressionOptions() {{
                         suppressedReasons = new openapisdk.models.shared.SuppressionListReasonEnum[]() {{
                             add("BOUNCE"),
-                            add("COMPLAINT"),
                         }};
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "iusto";
-                            value = "esse";
-                        }}),
-                        add(new Tag() {{
-                            key = "architecto";
-                            value = "est";
-                        }}),
-                        add(new Tag() {{
-                            key = "aliquam";
-                            value = "aut";
+                            key = "ut";
+                            value = "dolorem";
                         }}),
                     }};
                     trackingOptions = new CreateConfigurationSetRequestBodyTrackingOptions() {{
-                        customRedirectDomain = "corporis";
+                        customRedirectDomain = "et";
                     }};
                 }};
             }};

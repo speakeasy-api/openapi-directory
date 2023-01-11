@@ -35,18 +35,17 @@ public class Application {
 
             DescribeReportCreationRequest req = new DescribeReportCreationRequest() {{
                 headers = new DescribeReportCreationHeaders() {{
-                    xAmzAlgorithm = "placeat";
-                    xAmzContentSha256 = "doloribus";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "pariatur";
-                    xAmzSecurityToken = "sint";
-                    xAmzSignature = "ipsam";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("dolores", "aut");
-                    put("est", "nobis");
+                    put("et", "nihil");
                 }};
             }};
 

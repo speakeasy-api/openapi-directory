@@ -14,9 +14,9 @@ public class Application {
 
             GetRequest req = new GetRequest() {{
                 pathParams = new GetPathParams() {{
-                    address = "id";
-                    baudrate = 475814837564482238;
-                    device = "suscipit";
+                    address = "sit";
+                    baudrate = 2259404117704393152;
+                    device = "culpa";
                 }};
             }};
 

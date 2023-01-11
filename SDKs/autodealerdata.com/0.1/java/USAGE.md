@@ -14,9 +14,9 @@ public class Application {
 
             GetVehicleSeenVehicleSeenGetRequest req = new GetVehicleSeenVehicleSeenGetRequest() {{
                 queryParams = new GetVehicleSeenVehicleSeenGetQueryParams() {{
-                    afterDate = "1973-05-30";
-                    jwt = "praesentium";
-                    vin = "enim";
+                    afterDate = "2006-05-01";
+                    jwt = "culpa";
+                    vin = "expedita";
                 }};
             }};
 

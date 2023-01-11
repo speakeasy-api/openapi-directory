@@ -15,91 +15,116 @@ public class Application {
             DigitalassetlinksAssetlinksBulkCheckRequest req = new DigitalassetlinksAssetlinksBulkCheckRequest() {{
                 queryParams = new DigitalassetlinksAssetlinksBulkCheckQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "beatae";
-                    alt = "proto";
-                    callback = "magnam";
-                    fields = "et";
-                    key = "fuga";
-                    oauthToken = "tempore";
-                    prettyPrint = false;
-                    quotaUser = "sit";
-                    uploadType = "accusamus";
-                    uploadProtocol = "beatae";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new BulkCheckRequest() {{
-                    allowGoogleInternalDataSources = false;
-                    defaultRelation = "aspernatur";
+                    allowGoogleInternalDataSources = true;
+                    defaultRelation = "dicta";
                     defaultSource = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
-                                sha256Fingerprint = "maxime";
+                                sha256Fingerprint = "debitis";
                             }};
-                            packageName = "facilis";
+                            packageName = "voluptatum";
                         }};
                         web = new WebAsset() {{
-                            site = "iure";
+                            site = "et";
                         }};
                     }};
                     defaultTarget = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
-                                sha256Fingerprint = "quo";
+                                sha256Fingerprint = "ut";
                             }};
-                            packageName = "nulla";
+                            packageName = "dolorem";
                         }};
                         web = new WebAsset() {{
-                            site = "iste";
+                            site = "et";
                         }};
                     }};
-                    skipCacheLookup = true;
+                    skipCacheLookup = false;
                     statements = new openapisdk.models.shared.StatementTemplate[]() {{
                         add(new StatementTemplate() {{
-                            relation = "aut";
+                            relation = "vitae";
                             source = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "ea";
+                                        sha256Fingerprint = "totam";
                                     }};
-                                    packageName = "laborum";
+                                    packageName = "dolores";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "ipsum";
+                                    site = "illum";
                                 }};
                             }};
                             target = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "quae";
+                                        sha256Fingerprint = "debitis";
                                     }};
-                                    packageName = "minima";
+                                    packageName = "vel";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "eaque";
+                                    site = "odio";
                                 }};
                             }};
                         }}),
                         add(new StatementTemplate() {{
-                            relation = "consequatur";
+                            relation = "dolore";
                             source = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "veritatis";
+                                        sha256Fingerprint = "id";
                                     }};
-                                    packageName = "officia";
+                                    packageName = "aspernatur";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "nihil";
+                                    site = "accusantium";
                                 }};
                             }};
                             target = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "qui";
+                                        sha256Fingerprint = "totam";
                                     }};
-                                    packageName = "natus";
+                                    packageName = "commodi";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "et";
+                                    site = "quis";
+                                }};
+                            }};
+                        }}),
+                        add(new StatementTemplate() {{
+                            relation = "est";
+                            source = new Asset() {{
+                                androidApp = new AndroidAppAsset() {{
+                                    certificate = new CertificateInfo() {{
+                                        sha256Fingerprint = "aut";
+                                    }};
+                                    packageName = "odit";
+                                }};
+                                web = new WebAsset() {{
+                                    site = "non";
+                                }};
+                            }};
+                            target = new Asset() {{
+                                androidApp = new AndroidAppAsset() {{
+                                    certificate = new CertificateInfo() {{
+                                        sha256Fingerprint = "voluptas";
+                                    }};
+                                    packageName = "omnis";
+                                }};
+                                web = new WebAsset() {{
+                                    site = "aut";
                                 }};
                             }};
                         }}),

@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new TdcerRequestBody() {{
                     certificateParameters = new TdcerRequestBodyCertificateParameters() {{
-                        custID = "id";
-                        dob = "vitae";
-                        finYr = "atque";
+                        custID = "sit";
+                        dob = "voluptas";
+                        finYr = "culpa";
                     }};
-                    consentArtifact = "sit";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "sint";
+                    txnId = "dolor";
                 }};
             }};
 

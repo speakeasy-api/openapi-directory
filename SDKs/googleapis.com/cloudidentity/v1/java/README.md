@@ -27,24 +27,25 @@ public class Application {
 
             CloudidentityCustomersUserinvitationsCancelRequest req = new CloudidentityCustomersUserinvitationsCancelRequest() {{
                 pathParams = new CloudidentityCustomersUserinvitationsCancelPathParams() {{
-                    name = "error";
+                    name = "sit";
                 }};
                 queryParams = new CloudidentityCustomersUserinvitationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "itaque";
-                    alt = "json";
-                    callback = "vitae";
-                    fields = "et";
-                    key = "aut";
-                    oauthToken = "consequuntur";
-                    prettyPrint = false;
-                    quotaUser = "non";
-                    uploadType = "nulla";
-                    uploadProtocol = "error";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("est", "qui");
-                    put("eum", "ut");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

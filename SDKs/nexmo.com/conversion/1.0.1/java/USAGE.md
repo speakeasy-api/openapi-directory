@@ -27,9 +27,9 @@ public class Application {
 
             SmsConversionRequest req = new SmsConversionRequest() {{
                 queryParams = new SmsConversionQueryParams() {{
-                    delivered = "quaerat";
-                    messageId = "sint";
-                    timestamp = "nisi";
+                    delivered = "sit";
+                    messageId = "voluptas";
+                    timestamp = "culpa";
                 }};
             }};
 

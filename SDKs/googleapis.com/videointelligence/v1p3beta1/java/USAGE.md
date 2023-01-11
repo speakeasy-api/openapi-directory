@@ -23,55 +23,63 @@ public class Application {
                 }};
                 queryParams = new VideointelligenceVideosAnnotateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ipsum";
-                    alt = "json";
-                    callback = "aperiam";
-                    fields = "aliquam";
-                    key = "nam";
-                    oauthToken = "non";
-                    prettyPrint = false;
-                    quotaUser = "laborum";
-                    uploadType = "voluptatem";
-                    uploadProtocol = "doloremque";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest() {{
                     features = new openapisdk.models.shared.GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum[]() {{
-                        add("PERSON_DETECTION"),
+                        add("TEXT_DETECTION"),
                         add("LABEL_DETECTION"),
                         add("EXPLICIT_CONTENT_DETECTION"),
                     }};
-                    inputContent = "ipsa";
-                    inputUri = "dolor";
-                    locationId = "a";
-                    outputUri = "incidunt";
+                    inputContent = "et";
+                    inputUri = "ut";
+                    locationId = "dolorem";
+                    outputUri = "et";
                     videoContext = new GoogleCloudVideointelligenceV1p3beta1VideoContext() {{
                         explicitContentDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1ExplicitContentDetectionConfig() {{
-                            model = "at";
+                            model = "voluptate";
                         }};
                         faceDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig() {{
                             includeAttributes = true;
                             includeBoundingBoxes = true;
-                            model = "unde";
+                            model = "totam";
                         }};
                         labelDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig() {{
-                            frameConfidenceThreshold = 72.199997;
-                            labelDetectionMode = "SHOT_MODE";
-                            model = "possimus";
-                            stationaryCamera = true;
-                            videoConfidenceThreshold = 43.099998;
+                            frameConfidenceThreshold = 80.199997;
+                            labelDetectionMode = "FRAME_MODE";
+                            model = "vel";
+                            stationaryCamera = false;
+                            videoConfidenceThreshold = 91.099998;
                         }};
                         objectTrackingConfig = new GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig() {{
-                            model = "velit";
+                            model = "aspernatur";
                         }};
                         personDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig() {{
-                            includeAttributes = false;
-                            includeBoundingBoxes = true;
-                            includePoseLandmarks = true;
+                            includeAttributes = true;
+                            includeBoundingBoxes = false;
+                            includePoseLandmarks = false;
                         }};
                         segments = new openapisdk.models.shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment[]() {{
                             add(new GoogleCloudVideointelligenceV1p3beta1VideoSegment() {{
-                                endTimeOffset = "molestiae";
-                                startTimeOffset = "nisi";
+                                endTimeOffset = "est";
+                                startTimeOffset = "aut";
+                            }}),
+                            add(new GoogleCloudVideointelligenceV1p3beta1VideoSegment() {{
+                                endTimeOffset = "odit";
+                                startTimeOffset = "non";
+                            }}),
+                            add(new GoogleCloudVideointelligenceV1p3beta1VideoSegment() {{
+                                endTimeOffset = "voluptas";
+                                startTimeOffset = "omnis";
                             }}),
                         }};
                         shotChangeDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig() {{
@@ -79,35 +87,36 @@ public class Application {
                         }};
                         speechTranscriptionConfig = new GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig() {{
                             audioTracks = new Integer[]() {{
-                                add(8791347978884802184),
-                                add(3488383950655434238),
+                                add(5558237345453186302),
                             }};
-                            diarizationSpeakerCount = 5177149215427167172;
-                            enableAutomaticPunctuation = false;
-                            enableSpeakerDiarization = false;
+                            diarizationSpeakerCount = 7845762441295307478;
+                            enableAutomaticPunctuation = true;
+                            enableSpeakerDiarization = true;
                             enableWordConfidence = false;
                             filterProfanity = false;
-                            languageCode = "quibusdam";
-                            maxAlternatives = 641154090645080092;
+                            languageCode = "qui";
+                            maxAlternatives = 388440063886460141;
                             speechContexts = new openapisdk.models.shared.GoogleCloudVideointelligenceV1p3beta1SpeechContext[]() {{
                                 add(new GoogleCloudVideointelligenceV1p3beta1SpeechContext() {{
                                     phrases = new String[]() {{
-                                        add("fugiat"),
+                                        add("eveniet"),
                                     }};
                                 }}),
                                 add(new GoogleCloudVideointelligenceV1p3beta1SpeechContext() {{
                                     phrases = new String[]() {{
-                                        add("aliquam"),
-                                        add("harum"),
+                                        add("sint"),
+                                        add("inventore"),
                                     }};
                                 }}),
                             }};
                         }};
                         textDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig() {{
                             languageHints = new String[]() {{
-                                add("pariatur"),
+                                add("exercitationem"),
+                                add("aut"),
+                                add("reprehenderit"),
                             }};
-                            model = "cupiditate";
+                            model = "tempore";
                         }};
                     }};
                 }};

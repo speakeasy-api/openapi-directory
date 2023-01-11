@@ -14,7 +14,7 @@ public class Application {
 
             AppendBlockChildrenRequest req = new AppendBlockChildrenRequest() {{
                 pathParams = new AppendBlockChildrenPathParams() {{
-                    id = "perferendis";
+                    id = "sit";
                 }};
                 request = new AppendBlockChildrenRequestBody() {{
                     children = new openapisdk.models.operations.AppendBlockChildrenRequestBodyChildren[]() {{
@@ -23,26 +23,20 @@ public class Application {
                                 text = new openapisdk.models.operations.AppendBlockChildrenRequestBodyChildrenHeading2Text[]() {{
                                     add(new AppendBlockChildrenRequestBodyChildrenHeading2Text() {{
                                         text = new AppendBlockChildrenRequestBodyChildrenHeading2TextText() {{
-                                            content = "magnam";
+                                            content = "expedita";
                                         }};
-                                        type = "inventore";
+                                        type = "consequuntur";
                                     }}),
                                     add(new AppendBlockChildrenRequestBodyChildrenHeading2Text() {{
                                         text = new AppendBlockChildrenRequestBodyChildrenHeading2TextText() {{
-                                            content = "nihil";
+                                            content = "dolor";
                                         }};
-                                        type = "suscipit";
-                                    }}),
-                                    add(new AppendBlockChildrenRequestBodyChildrenHeading2Text() {{
-                                        text = new AppendBlockChildrenRequestBodyChildrenHeading2TextText() {{
-                                            content = "porro";
-                                        }};
-                                        type = "id";
+                                        type = "expedita";
                                     }}),
                                 }};
                             }};
-                            object = "nisi";
-                            type = "soluta";
+                            object = "voluptas";
+                            type = "fugit";
                         }}),
                     }};
                 }};

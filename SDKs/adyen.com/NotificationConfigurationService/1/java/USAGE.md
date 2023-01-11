@@ -19,7 +19,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "odio";
+                request = "sit";
             }};
 
             PostCreateNotificationConfigurationResponse res = sdk.general.postCreateNotificationConfiguration(req);

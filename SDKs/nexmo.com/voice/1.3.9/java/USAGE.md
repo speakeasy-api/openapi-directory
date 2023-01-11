@@ -18,7 +18,7 @@ public class Application {
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
                 }};
-                request = "non";
+                request = "sit";
             }};
 
             CreateCallResponse res = sdk.calls.createCall(req);

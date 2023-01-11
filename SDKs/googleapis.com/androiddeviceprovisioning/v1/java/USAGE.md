@@ -14,29 +14,29 @@ public class Application {
 
             AndroiddeviceprovisioningCustomersConfigurationsCreateRequest req = new AndroiddeviceprovisioningCustomersConfigurationsCreateRequest() {{
                 pathParams = new AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams() {{
-                    parent = "molestias";
+                    parent = "sit";
                 }};
                 queryParams = new AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "cumque";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "deserunt";
-                    fields = "voluptatem";
-                    key = "provident";
-                    oauthToken = "aut";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "placeat";
-                    uploadType = "reprehenderit";
-                    uploadProtocol = "aut";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ConfigurationInput() {{
-                    companyName = "possimus";
-                    configurationName = "voluptatibus";
-                    contactEmail = "magni";
-                    contactPhone = "reiciendis";
-                    customMessage = "amet";
-                    dpcExtras = "laboriosam";
-                    dpcResourcePath = "ut";
+                    companyName = "dicta";
+                    configurationName = "debitis";
+                    contactEmail = "voluptatum";
+                    contactPhone = "et";
+                    customMessage = "ut";
+                    dpcExtras = "dolorem";
+                    dpcResourcePath = "et";
                     isDefault = false;
                 }};
             }};

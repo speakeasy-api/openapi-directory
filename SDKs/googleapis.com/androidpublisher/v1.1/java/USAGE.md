@@ -22,18 +22,18 @@ public class Application {
                     }};
                 }};
                 pathParams = new AndroidpublisherInapppurchasesGetPathParams() {{
-                    packageName = "tempore";
-                    productId = "rem";
-                    token = "cum";
+                    packageName = "sit";
+                    productId = "voluptas";
+                    token = "culpa";
                 }};
                 queryParams = new AndroidpublisherInapppurchasesGetQueryParams() {{
                     alt = "json";
-                    fields = "inventore";
-                    key = "officiis";
-                    oauthToken = "aliquam";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "adipisci";
-                    userIp = "hic";
+                    quotaUser = "fugit";
+                    userIp = "et";
                 }};
             }};
 

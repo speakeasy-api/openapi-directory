@@ -22,22 +22,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecommenderProjectsLocationsInsightTypesInsightsListPathParams() {{
-                    parent = "dolorum";
+                    parent = "sit";
                 }};
                 queryParams = new RecommenderProjectsLocationsInsightTypesInsightsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "optio";
-                    alt = "proto";
-                    callback = "doloribus";
-                    fields = "voluptatem";
-                    filter = "fuga";
-                    key = "occaecati";
-                    oauthToken = "dolores";
-                    pageSize = 4471734478483745457;
-                    pageToken = "voluptatibus";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
                     prettyPrint = true;
-                    quotaUser = "labore";
-                    uploadType = "quo";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
                     uploadProtocol = "voluptatum";
                 }};
             }};

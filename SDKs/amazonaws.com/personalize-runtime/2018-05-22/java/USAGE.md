@@ -22,30 +22,29 @@ public class Application {
 
             GetPersonalizedRankingRequest req = new GetPersonalizedRankingRequest() {{
                 headers = new GetPersonalizedRankingHeaders() {{
-                    xAmzAlgorithm = "sapiente";
-                    xAmzContentSha256 = "molestiae";
-                    xAmzCredential = "aut";
-                    xAmzDate = "illo";
-                    xAmzSecurityToken = "sapiente";
-                    xAmzSignature = "quisquam";
-                    xAmzSignedHeaders = "ad";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new GetPersonalizedRankingRequestBody() {{
-                    campaignArn = "incidunt";
+                    campaignArn = "voluptas";
                     context = new java.util.HashMap<String, String>() {{
-                        put("suscipit", "officiis");
-                        put("cum", "totam");
+                        put("et", "nihil");
                     }};
-                    filterArn = "mollitia";
+                    filterArn = "rerum";
                     filterValues = new java.util.HashMap<String, String>() {{
-                        put("quos", "beatae");
+                        put("debitis", "voluptatum");
+                        put("et", "ut");
+                        put("dolorem", "et");
                     }};
                     inputList = new String[]() {{
-                        add("dolor"),
-                        add("veritatis"),
-                        add("dicta"),
+                        add("iste"),
                     }};
-                    userId = "consequatur";
+                    userId = "vitae";
                 }};
             }};
 

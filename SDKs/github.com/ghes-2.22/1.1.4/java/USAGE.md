@@ -14,9 +14,9 @@ public class Application {
 
             ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest req = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest() {{
                 pathParams = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams() {{
-                    org = "sequi";
-                    repositoryId = 8778273325382179566;
-                    runnerGroupId = 1618200316448249157;
+                    org = "sit";
+                    repositoryId = 2259404117704393152;
+                    runnerGroupId = 6050128673802995827;
                 }};
             }};
 

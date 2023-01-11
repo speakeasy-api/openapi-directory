@@ -22,58 +22,58 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "exercitationem";
+                    parent = "sit";
                 }};
                 queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "aliquid";
-                    alt = "json";
-                    callback = "aut";
-                    fields = "repellat";
-                    key = "dolorum";
-                    oauthToken = "explicabo";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "mollitia";
-                    uploadType = "consectetur";
-                    uploadProtocol = "deserunt";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "est";
-                            password = "facere";
-                            username = "laudantium";
+                            loginUrl = "dicta";
+                            password = "debitis";
+                            username = "voluptatum";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "voluptatem";
-                            username = "qui";
+                            password = "et";
+                            username = "ut";
                         }};
                         iapCredential = new IapCredential() {{
                             iapTestServiceAccountInfo = new IapTestServiceAccountInfo() {{
-                                targetAudienceClientId = "dolor";
+                                targetAudienceClientId = "dolorem";
                             }};
                         }};
                     }};
                     blacklistPatterns = new String[]() {{
-                        add("officiis"),
-                        add("laboriosam"),
+                        add("voluptate"),
+                        add("iste"),
                     }};
-                    displayName = "quidem";
-                    exportToSecurityCommandCenter = "ENABLED";
+                    displayName = "vitae";
+                    exportToSecurityCommandCenter = "DISABLED";
                     ignoreHttpStatusErrors = true;
-                    managedScan = true;
-                    maxQps = 8949695593592463926;
-                    name = "repudiandae";
-                    riskLevel = "LOW";
+                    managedScan = false;
+                    maxQps = 6392442863481646880;
+                    name = "vel";
+                    riskLevel = "RISK_LEVEL_UNSPECIFIED";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 5149194830450837313;
-                        scheduleTime = "ut";
+                        intervalDurationDays = 6303220950515014660;
+                        scheduleTime = "id";
                     }};
                     startingUrls = new String[]() {{
-                        add("deleniti"),
+                        add("accusantium"),
                     }};
-                    staticIpScan = true;
-                    userAgent = "SAFARI_IPHONE";
+                    staticIpScan = false;
+                    userAgent = "USER_AGENT_UNSPECIFIED";
                 }};
             }};
 

@@ -35,249 +35,103 @@ public class Application {
 
             BatchCreatePartitionRequest req = new BatchCreatePartitionRequest() {{
                 headers = new BatchCreatePartitionHeaders() {{
-                    xAmzAlgorithm = "molestias";
-                    xAmzContentSha256 = "dicta";
-                    xAmzCredential = "voluptatum";
-                    xAmzDate = "numquam";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "ducimus";
-                    xAmzSignedHeaders = "ducimus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSGlue.BatchCreatePartition";
                 }};
                 request = new BatchCreatePartitionRequest() {{
-                    catalogId = "et";
-                    databaseName = "nam";
+                    catalogId = "fugit";
+                    databaseName = "et";
                     partitionInputList = new openapisdk.models.shared.PartitionInput[]() {{
                         add(new PartitionInput() {{
-                            lastAccessTime = "1996-05-31T18:29:35Z";
-                            lastAnalyzedTime = "2014-05-31T19:07:57Z";
+                            lastAccessTime = "2004-06-02T10:14:12Z";
+                            lastAnalyzedTime = "1981-07-21T06:30:48Z";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("deserunt", "illo");
-                                put("tempore", "velit");
+                                put("ut", "dolorem");
                             }};
                             storageDescriptor = new StorageDescriptor() {{
                                 bucketColumns = new String[]() {{
-                                    add("quidem"),
+                                    add("voluptate"),
+                                    add("iste"),
                                 }};
                                 columns = new openapisdk.models.shared.Column[]() {{
                                     add(new Column() {{
-                                        comment = "officiis";
-                                        name = "veniam";
+                                        comment = "totam";
+                                        name = "dolores";
                                         parameters = new java.util.HashMap<String, String>() {{
-                                            put("eius", "nobis");
-                                            put("aliquam", "qui");
+                                            put("debitis", "vel");
+                                            put("odio", "dolore");
+                                            put("id", "aspernatur");
                                         }};
-                                        type = "debitis";
+                                        type = "accusantium";
                                     }}),
                                 }};
                                 compressed = false;
-                                inputFormat = "consequatur";
-                                location = "iusto";
-                                numberOfBuckets = 8955101836556220093;
-                                outputFormat = "iusto";
+                                inputFormat = "commodi";
+                                location = "quis";
+                                numberOfBuckets = 3398579248012586914;
+                                outputFormat = "aut";
                                 parameters = new java.util.HashMap<String, String>() {{
-                                    put("ut", "ut");
+                                    put("non", "voluptas");
+                                    put("omnis", "aut");
                                 }};
                                 schemaReference = new SchemaReference() {{
                                     schemaId = new SchemaId() {{
-                                        registryName = "expedita";
-                                        schemaArn = "repellendus";
-                                        schemaName = "commodi";
+                                        registryName = "illo";
+                                        schemaArn = "sed";
+                                        schemaName = "officiis";
                                     }};
-                                    schemaVersionId = "exercitationem";
-                                    schemaVersionNumber = 7459015832090057282;
+                                    schemaVersionId = "autem";
+                                    schemaVersionNumber = 8514850266767180993;
                                 }};
                                 serdeInfo = new SerDeInfo() {{
-                                    name = "perferendis";
+                                    name = "nobis";
                                     parameters = new java.util.HashMap<String, String>() {{
-                                        put("autem", "dolore");
-                                        put("aliquam", "soluta");
+                                        put("qui", "recusandae");
                                     }};
-                                    serializationLibrary = "accusantium";
+                                    serializationLibrary = "at";
                                 }};
                                 skewedInfo = new SkewedInfo() {{
                                     skewedColumnNames = new String[]() {{
-                                        add("aut"),
-                                        add("accusamus"),
+                                        add("eveniet"),
                                     }};
                                     skewedColumnValueLocationMaps = new java.util.HashMap<String, String>() {{
-                                        put("quisquam", "nihil");
+                                        put("sint", "inventore");
+                                        put("ut", "exercitationem");
                                     }};
                                     skewedColumnValues = new String[]() {{
-                                        add("deleniti"),
+                                        add("reprehenderit"),
+                                        add("tempore"),
+                                        add("maiores"),
                                     }};
                                 }};
                                 sortColumns = new openapisdk.models.shared.Order[]() {{
                                     add(new Order() {{
-                                        column = "rem";
-                                        sortOrder = 6277689859743485219;
+                                        column = "dolor";
+                                        sortOrder = 7719717197379695442;
                                     }}),
-                                }};
-                                storedAsSubDirectories = false;
-                            }};
-                            values = new String[]() {{
-                                add("magni"),
-                            }};
-                        }}),
-                        add(new PartitionInput() {{
-                            lastAccessTime = "2010-12-05T12:21:37Z";
-                            lastAnalyzedTime = "2011-08-12T07:40:33Z";
-                            parameters = new java.util.HashMap<String, String>() {{
-                                put("quod", "corporis");
-                                put("modi", "soluta");
-                                put("odio", "expedita");
-                            }};
-                            storageDescriptor = new StorageDescriptor() {{
-                                bucketColumns = new String[]() {{
-                                    add("ipsum"),
-                                    add("saepe"),
-                                    add("ad"),
-                                }};
-                                columns = new openapisdk.models.shared.Column[]() {{
-                                    add(new Column() {{
-                                        comment = "delectus";
-                                        name = "suscipit";
-                                        parameters = new java.util.HashMap<String, String>() {{
-                                            put("dolor", "ipsa");
-                                            put("quos", "voluptas");
-                                        }};
-                                        type = "laborum";
+                                    add(new Order() {{
+                                        column = "veritatis";
+                                        sortOrder = 2671030200101705776;
                                     }}),
-                                }};
-                                compressed = false;
-                                inputFormat = "iusto";
-                                location = "et";
-                                numberOfBuckets = 3667925934151297536;
-                                outputFormat = "voluptas";
-                                parameters = new java.util.HashMap<String, String>() {{
-                                    put("quia", "voluptas");
-                                    put("corporis", "omnis");
-                                }};
-                                schemaReference = new SchemaReference() {{
-                                    schemaId = new SchemaId() {{
-                                        registryName = "dolores";
-                                        schemaArn = "expedita";
-                                        schemaName = "enim";
-                                    }};
-                                    schemaVersionId = "quo";
-                                    schemaVersionNumber = 515727864347354415;
-                                }};
-                                serdeInfo = new SerDeInfo() {{
-                                    name = "sequi";
-                                    parameters = new java.util.HashMap<String, String>() {{
-                                        put("illo", "enim");
-                                        put("et", "praesentium");
-                                        put("iste", "omnis");
-                                    }};
-                                    serializationLibrary = "odio";
-                                }};
-                                skewedInfo = new SkewedInfo() {{
-                                    skewedColumnNames = new String[]() {{
-                                        add("adipisci"),
-                                        add("quo"),
-                                        add("rerum"),
-                                    }};
-                                    skewedColumnValueLocationMaps = new java.util.HashMap<String, String>() {{
-                                        put("suscipit", "fugit");
-                                    }};
-                                    skewedColumnValues = new String[]() {{
-                                        add("ullam"),
-                                        add("vero"),
-                                    }};
-                                }};
-                                sortColumns = new openapisdk.models.shared.Order[]() {{
                                     add(new Order() {{
                                         column = "et";
-                                        sortOrder = 4855648594445967323;
+                                        sortOrder = 8565714761387219319;
                                     }}),
                                 }};
                                 storedAsSubDirectories = false;
                             }};
                             values = new String[]() {{
-                                add("nobis"),
-                                add("sunt"),
-                            }};
-                        }}),
-                        add(new PartitionInput() {{
-                            lastAccessTime = "1971-09-16T06:53:03Z";
-                            lastAnalyzedTime = "1981-11-28T17:23:51Z";
-                            parameters = new java.util.HashMap<String, String>() {{
-                                put("repellendus", "error");
-                            }};
-                            storageDescriptor = new StorageDescriptor() {{
-                                bucketColumns = new String[]() {{
-                                    add("fugit"),
-                                }};
-                                columns = new openapisdk.models.shared.Column[]() {{
-                                    add(new Column() {{
-                                        comment = "dolores";
-                                        name = "aut";
-                                        parameters = new java.util.HashMap<String, String>() {{
-                                            put("nam", "molestias");
-                                            put("et", "cumque");
-                                        }};
-                                        type = "aut";
-                                    }}),
-                                }};
-                                compressed = false;
-                                inputFormat = "voluptatem";
-                                location = "provident";
-                                numberOfBuckets = 1615352566432714451;
-                                outputFormat = "ullam";
-                                parameters = new java.util.HashMap<String, String>() {{
-                                    put("reprehenderit", "aut");
-                                }};
-                                schemaReference = new SchemaReference() {{
-                                    schemaId = new SchemaId() {{
-                                        registryName = "possimus";
-                                        schemaArn = "voluptatibus";
-                                        schemaName = "magni";
-                                    }};
-                                    schemaVersionId = "reiciendis";
-                                    schemaVersionNumber = 2190221129833308991;
-                                }};
-                                serdeInfo = new SerDeInfo() {{
-                                    name = "laboriosam";
-                                    parameters = new java.util.HashMap<String, String>() {{
-                                        put("laudantium", "nam");
-                                        put("molestiae", "deserunt");
-                                        put("voluptates", "possimus");
-                                    }};
-                                    serializationLibrary = "et";
-                                }};
-                                skewedInfo = new SkewedInfo() {{
-                                    skewedColumnNames = new String[]() {{
-                                        add("placeat"),
-                                    }};
-                                    skewedColumnValueLocationMaps = new java.util.HashMap<String, String>() {{
-                                        put("vero", "tempore");
-                                        put("rem", "cum");
-                                        put("ut", "inventore");
-                                    }};
-                                    skewedColumnValues = new String[]() {{
-                                        add("aliquam"),
-                                        add("ratione"),
-                                    }};
-                                }};
-                                sortColumns = new openapisdk.models.shared.Order[]() {{
-                                    add(new Order() {{
-                                        column = "hic";
-                                        sortOrder = 8404441515746634618;
-                                    }}),
-                                    add(new Order() {{
-                                        column = "qui";
-                                        sortOrder = 4664529193248400784;
-                                    }}),
-                                }};
-                                storedAsSubDirectories = false;
-                            }};
-                            values = new String[]() {{
-                                add("officia"),
-                                add("dolore"),
+                                add("dolores"),
                             }};
                         }}),
                     }};
-                    tableName = "hic";
+                    tableName = "placeat";
                 }};
             }};
 

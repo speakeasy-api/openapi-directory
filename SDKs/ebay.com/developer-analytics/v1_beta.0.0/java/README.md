@@ -32,8 +32,8 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetRateLimitsQueryParams() {{
-                    apiContext = "totam";
-                    apiName = "dolores";
+                    apiContext = "sit";
+                    apiName = "voluptas";
                 }};
             }};
 

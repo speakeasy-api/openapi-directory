@@ -32,7 +32,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "vel";
+                request = "sit";
             }};
 
             PostGetOnboardingUrlResponse res = sdk.hostedOnboardingPage.postGetOnboardingUrl(req);

@@ -35,46 +35,32 @@ public class Application {
 
             BatchCreateTableRowsRequest req = new BatchCreateTableRowsRequest() {{
                 pathParams = new BatchCreateTableRowsPathParams() {{
-                    tableId = "praesentium";
-                    workbookId = "et";
+                    tableId = "sit";
+                    workbookId = "voluptas";
                 }};
                 headers = new BatchCreateTableRowsHeaders() {{
-                    xAmzAlgorithm = "ratione";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "in";
-                    xAmzDate = "corporis";
-                    xAmzSecurityToken = "dolores";
-                    xAmzSignature = "perferendis";
-                    xAmzSignedHeaders = "laboriosam";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
                 request = new BatchCreateTableRowsRequestBody() {{
-                    clientRequestToken = "numquam";
+                    clientRequestToken = "et";
                     rowsToCreate = new openapisdk.models.shared.CreateRowData[]() {{
                         add(new CreateRowData() {{
-                            batchItemId = "aperiam";
+                            batchItemId = "rerum";
                             cellsToCreate = new java.util.HashMap<String, openapisdk.models.shared.CellInput>() {{
-                                put("velit", new CellInput() {{
-                                    fact = "possimus";
+                                put("debitis", new CellInput() {{
+                                    fact = "voluptatum";
                                 }});
-                                put("hic", new CellInput() {{
-                                    fact = "quis";
+                                put("et", new CellInput() {{
+                                    fact = "ut";
                                 }});
-                                put("sunt", new CellInput() {{
-                                    fact = "quo";
-                                }});
-                            }};
-                        }}),
-                        add(new CreateRowData() {{
-                            batchItemId = "eveniet";
-                            cellsToCreate = new java.util.HashMap<String, openapisdk.models.shared.CellInput>() {{
-                                put("reiciendis", new CellInput() {{
-                                    fact = "non";
-                                }});
-                                put("dolor", new CellInput() {{
-                                    fact = "maiores";
-                                }});
-                                put("itaque", new CellInput() {{
-                                    fact = "pariatur";
+                                put("dolorem", new CellInput() {{
+                                    fact = "et";
                                 }});
                             }};
                         }}),

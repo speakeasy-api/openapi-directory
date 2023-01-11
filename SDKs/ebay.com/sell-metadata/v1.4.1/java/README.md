@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetSalesTaxJurisdictionsPathParams() {{
-                    countryCode = "ea";
+                    countryCode = "sit";
                 }};
             }};
 

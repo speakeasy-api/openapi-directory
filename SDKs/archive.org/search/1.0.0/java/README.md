@@ -27,7 +27,7 @@ public class Application {
 
             GetSearchV1FieldsRequest req = new GetSearchV1FieldsRequest() {{
                 queryParams = new GetSearchV1FieldsQueryParams() {{
-                    callback = "officia";
+                    callback = "sit";
                 }};
             }};
 

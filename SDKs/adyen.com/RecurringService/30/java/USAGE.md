@@ -19,7 +19,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "est";
+                request = "sit";
             }};
 
             PostDisableResponse res = sdk.general.postDisable(req);

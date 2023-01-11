@@ -22,101 +22,73 @@ public class Application {
                     }};
                 }};
                 pathParams = new ApigatewayProjectsLocationsApisConfigsCreatePathParams() {{
-                    parent = "inventore";
+                    parent = "sit";
                 }};
                 queryParams = new ApigatewayProjectsLocationsApisConfigsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "autem";
-                    alt = "proto";
-                    apiConfigId = "facilis";
-                    callback = "aut";
-                    fields = "est";
-                    key = "voluptatem";
-                    oauthToken = "magnam";
-                    prettyPrint = true;
-                    quotaUser = "quos";
-                    uploadType = "aspernatur";
-                    uploadProtocol = "veniam";
+                    accessToken = "culpa";
+                    alt = "media";
+                    apiConfigId = "consequuntur";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new ApigatewayApiConfigInput() {{
-                    displayName = "minima";
-                    gatewayServiceAccount = "harum";
+                    displayName = "debitis";
+                    gatewayServiceAccount = "voluptatum";
                     grpcServices = new openapisdk.models.shared.ApigatewayApiConfigGrpcServiceDefinition[]() {{
                         add(new ApigatewayApiConfigGrpcServiceDefinition() {{
                             fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "alias";
-                                path = "aliquam";
+                                contents = "ut";
+                                path = "dolorem";
                             }};
                             source = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
                                 add(new ApigatewayApiConfigFile() {{
-                                    contents = "cumque";
-                                    path = "ea";
+                                    contents = "voluptate";
+                                    path = "iste";
                                 }}),
                                 add(new ApigatewayApiConfigFile() {{
-                                    contents = "earum";
-                                    path = "quisquam";
-                                }}),
-                            }};
-                        }}),
-                        add(new ApigatewayApiConfigGrpcServiceDefinition() {{
-                            fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "explicabo";
-                                path = "id";
-                            }};
-                            source = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "esse";
-                                    path = "dolores";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "cum";
-                                    path = "consequuntur";
-                                }}),
-                            }};
-                        }}),
-                        add(new ApigatewayApiConfigGrpcServiceDefinition() {{
-                            fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "vero";
-                                path = "quia";
-                            }};
-                            source = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "sed";
-                                    path = "maxime";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "expedita";
-                                    path = "consequatur";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "excepturi";
-                                    path = "ut";
+                                    contents = "vitae";
+                                    path = "totam";
                                 }}),
                             }};
                         }}),
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("sit", "aliquid");
+                        put("illum", "debitis");
                     }};
                     managedServiceConfigs = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
                         add(new ApigatewayApiConfigFile() {{
-                            contents = "itaque";
-                            path = "fuga";
+                            contents = "odio";
+                            path = "dolore";
                         }}),
                         add(new ApigatewayApiConfigFile() {{
-                            contents = "soluta";
-                            path = "accusantium";
-                        }}),
-                        add(new ApigatewayApiConfigFile() {{
-                            contents = "vel";
-                            path = "iusto";
+                            contents = "id";
+                            path = "aspernatur";
                         }}),
                     }};
                     openapiDocuments = new openapisdk.models.shared.ApigatewayApiConfigOpenApiDocument[]() {{
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "illo";
-                                path = "exercitationem";
+                                contents = "totam";
+                                path = "commodi";
+                            }};
+                        }}),
+                        add(new ApigatewayApiConfigOpenApiDocument() {{
+                            document = new ApigatewayApiConfigFile() {{
+                                contents = "quis";
+                                path = "est";
+                            }};
+                        }}),
+                        add(new ApigatewayApiConfigOpenApiDocument() {{
+                            document = new ApigatewayApiConfigFile() {{
+                                contents = "aut";
+                                path = "odit";
                             }};
                         }}),
                     }};

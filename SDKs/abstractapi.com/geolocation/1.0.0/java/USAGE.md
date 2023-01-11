@@ -14,9 +14,9 @@ public class Application {
 
             GetV1Request req = new GetV1Request() {{
                 queryParams = new GetV1QueryParams() {{
-                    apiKey = "nihil";
-                    fields = "rerum";
-                    ipAddress = "dicta";
+                    apiKey = "sit";
+                    fields = "voluptas";
+                    ipAddress = "culpa";
                 }};
             }};
 

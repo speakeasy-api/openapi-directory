@@ -22,8 +22,8 @@ public class Application {
 
             AppendTextUsingGetRequest req = new AppendTextUsingGetRequest() {{
                 queryParams = new AppendTextUsingGetQueryParams() {{
-                    padID = "autem";
-                    text = "odit";
+                    padID = "sit";
+                    text = "voluptas";
                 }};
             }};
 

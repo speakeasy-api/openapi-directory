@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteAppPathParams() {{
-                    sid = "enim";
+                    sid = "sit";
                 }};
             }};
 

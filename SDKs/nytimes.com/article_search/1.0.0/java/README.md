@@ -35,15 +35,15 @@ public class Application {
 
             GetArticlesearchJsonRequest req = new GetArticlesearchJsonRequest() {{
                 queryParams = new GetArticlesearchJsonQueryParams() {{
-                    beginDate = "et";
-                    endDate = "harum";
-                    facetField = "minima";
-                    facetFilter = true;
-                    fl = "et";
-                    fq = "est";
-                    hl = false;
-                    page = 7894933729009416451;
-                    q = "magni";
+                    beginDate = "sit";
+                    endDate = "voluptas";
+                    facetField = "culpa";
+                    facetFilter = false;
+                    fl = "consequuntur";
+                    fq = "dolor";
+                    hl = true;
+                    page = 6044372234677422456;
+                    q = "fugit";
                     sort = "newest";
                 }};
             }};

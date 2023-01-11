@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetRenderPathParams() {{
-                    id = "soluta";
+                    id = "sit";
                 }};
             }};
 

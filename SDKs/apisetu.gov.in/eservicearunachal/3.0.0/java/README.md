@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new ChcerRequestBody() {{
                     certificateParameters = new ChcerRequestBodyCertificateParameters() {{
-                        fullName = "nam";
-                        refNo = "fugiat";
-                        tokenNo = "qui";
+                        fullName = "sit";
+                        refNo = "voluptas";
+                        tokenNo = "culpa";
                     }};
-                    consentArtifact = "nesciunt";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "in";
+                    txnId = "dolor";
                 }};
             }};
 

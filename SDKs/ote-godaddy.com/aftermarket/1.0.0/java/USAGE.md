@@ -15,12 +15,10 @@ public class Application {
             AddExpiryListingsRequest req = new AddExpiryListingsRequest() {{
                 request = new AddExpiryListingsRequests() {{
                     aftermarketListingExpiryCreates = new Object[]() {{
-                        add("ipsum"),
-                        add("repellat"),
-                        add("dolorem"),
+                        add("voluptas"),
                     }};
-                    applicationXML = "est".getBytes();
-                    textXML = "mollitia".getBytes();
+                    applicationXML = "culpa".getBytes();
+                    textXML = "expedita".getBytes();
                 }};
             }};
 

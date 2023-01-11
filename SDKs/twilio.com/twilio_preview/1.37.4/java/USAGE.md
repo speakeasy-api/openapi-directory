@@ -20,12 +20,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateDeployedDevicesCertificatePathParams() {{
-                    fleetSid = "sunt";
+                    fleetSid = "sit";
                 }};
                 request = new CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest() {{
-                    certificateData = "cupiditate";
-                    deviceSid = "quam";
-                    friendlyName = "repellendus";
+                    certificateData = "voluptas";
+                    deviceSid = "culpa";
+                    friendlyName = "expedita";
                 }};
             }};
 

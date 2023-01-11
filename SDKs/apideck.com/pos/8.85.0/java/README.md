@@ -44,50 +44,52 @@ public class Application {
                 }};
                 headers = new ItemsAddHeaders() {{
                     xApideckAppId = "voluptas";
-                    xApideckConsumerId = "dolorem";
-                    xApideckServiceId = "placeat";
+                    xApideckConsumerId = "culpa";
+                    xApideckServiceId = "expedita";
                 }};
                 request = new ItemInput() {{
-                    abbreviation = "aut";
+                    abbreviation = "consequuntur";
                     absentAtLocationIds = new String[]() {{
-                        add("saepe"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
                     available = true;
-                    availableForPickup = true;
+                    availableForPickup = false;
                     availableOnline = true;
                     categories = new Object[]() {{
-                        add("iusto"),
+                        add("dicta"),
+                        add("debitis"),
+                        add("voluptatum"),
                     }};
-                    code = "quo";
-                    cost = 96.199997;
+                    code = "et";
+                    cost = 11.100000;
                     deleted = false;
-                    description = "enim";
+                    description = "voluptate";
                     hidden = true;
-                    id = "nam";
-                    idempotencyKey = "placeat";
+                    id = "vitae";
+                    idempotencyKey = "totam";
                     modifierGroups = new Object[]() {{
-                        add("eum"),
-                        add("qui"),
+                        add("illum"),
                     }};
-                    name = "et";
+                    name = "debitis";
                     options = new Object[]() {{
-                        add("ab"),
-                        add("in"),
+                        add("odio"),
+                        add("dolore"),
                     }};
                     presentAtAllLocations = false;
-                    priceAmount = 70.099998;
-                    priceCurrency = "AZN";
-                    pricingType = "per_unit";
-                    productType = "other";
-                    sku = "aperiam";
+                    priceAmount = 57.099998;
+                    priceCurrency = "UGX";
+                    pricingType = "fixed";
+                    productType = "regular";
+                    sku = "est";
                     taxIds = new String[]() {{
+                        add("odit"),
                         add("non"),
-                        add("tenetur"),
-                        add("quia"),
+                        add("voluptas"),
                     }};
                     variations = new Object[]() {{
-                        add("iste"),
-                        add("fuga"),
+                        add("aut"),
+                        add("illo"),
                     }};
                 }};
             }};

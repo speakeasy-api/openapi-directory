@@ -22,17 +22,17 @@ public class Application {
 
             CancelChangeSetRequest req = new CancelChangeSetRequest() {{
                 queryParams = new CancelChangeSetQueryParams() {{
-                    catalog = "error";
-                    changeSetId = "voluptatem";
+                    catalog = "sit";
+                    changeSetId = "voluptas";
                 }};
                 headers = new CancelChangeSetHeaders() {{
-                    xAmzAlgorithm = "quia";
-                    xAmzContentSha256 = "enim";
-                    xAmzCredential = "aut";
-                    xAmzDate = "impedit";
-                    xAmzSecurityToken = "ratione";
-                    xAmzSignature = "adipisci";
-                    xAmzSignedHeaders = "eius";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
             }};
 

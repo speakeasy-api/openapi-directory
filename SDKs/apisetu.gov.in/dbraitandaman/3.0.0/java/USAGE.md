@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new TrcerRequestBody() {{
                     certificateParameters = new TrcerRequestBodyCertificateParameters() {{
-                        certNO = "nemo";
-                        dob = "voluptatum";
-                        fullName = "quibusdam";
-                        session = "eos";
+                        certNO = "sit";
+                        dob = "voluptas";
+                        fullName = "culpa";
+                        session = "expedita";
                     }};
-                    consentArtifact = "quae";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "libero";
+                    txnId = "expedita";
                 }};
             }};
 

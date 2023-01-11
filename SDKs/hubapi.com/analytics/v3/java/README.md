@@ -32,14 +32,16 @@ public class Application {
                     }};
                 }};
                 request = new BehavioralEventHttpCompletionRequest() {{
-                    email = "enim";
+                    email = "sit";
                     eventName = "voluptas";
-                    objectId = "voluptas";
-                    occurredAt = "2007-06-16T07:35:23Z";
+                    objectId = "culpa";
+                    occurredAt = "2019-04-21T07:38:14Z";
                     properties = new java.util.HashMap<String, String>() {{
-                        put("occaecati", "quia");
+                        put("dolor", "expedita");
+                        put("voluptas", "fugit");
+                        put("et", "nihil");
                     }};
-                    utk = "nihil";
+                    utk = "rerum";
                 }};
             }};
 

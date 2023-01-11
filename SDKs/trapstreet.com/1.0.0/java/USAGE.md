@@ -14,7 +14,7 @@ public class Application {
 
             GetAddressRequest req = new GetAddressRequest() {{
                 pathParams = new GetAddressPathParams() {{
-                    address = "enim";
+                    address = "sit";
                 }};
             }};
 

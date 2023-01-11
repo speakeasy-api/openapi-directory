@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new RatcrRequestBody() {{
                     certificateParameters = new RatcrRequestBodyCertificateParameters() {{
-                        dob = "enim";
-                        fullName = "eos";
-                        gender = "adipisci";
-                        uid = "eos";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        gender = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "est";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "ipsum";
+                    txnId = "expedita";
                 }};
             }};
 

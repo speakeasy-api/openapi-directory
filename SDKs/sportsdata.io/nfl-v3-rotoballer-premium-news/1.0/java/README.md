@@ -35,7 +35,7 @@ public class Application {
 
             PremiumNewsRequest req = new PremiumNewsRequest() {{
                 pathParams = new PremiumNewsPathParams() {{
-                    format = "json";
+                    format = "xml";
                 }};
             }};
 

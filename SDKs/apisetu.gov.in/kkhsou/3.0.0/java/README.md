@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new PvcerRequestBody() {{
                     certificateParameters = new PvcerRequestBodyCertificateParameters() {{
-                        enrolNO = "quis";
-                        fullName = "ratione";
-                        year = "ut";
+                        enrolNO = "sit";
+                        fullName = "voluptas";
+                        year = "culpa";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "placeat";
+                    txnId = "dolor";
                 }};
             }};
 

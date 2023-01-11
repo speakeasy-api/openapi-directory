@@ -32,22 +32,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new AddOrUpdateAdditionalRatesPathParams() {{
-                    companyId = "dolorum";
-                    employeeId = "possimus";
+                    companyId = "sit";
+                    employeeId = "voluptas";
                 }};
                 request = new AdditionalRate() {{
-                    changeReason = "non";
-                    costCenter1 = "occaecati";
-                    costCenter2 = "itaque";
-                    costCenter3 = "fugit";
-                    effectiveDate = "illo";
-                    endCheckDate = "consequatur";
-                    job = "eaque";
-                    rate = 42.200001;
-                    rateCode = "ut";
-                    rateNotes = "odio";
-                    ratePer = "rerum";
-                    shift = "non";
+                    changeReason = "culpa";
+                    costCenter1 = "expedita";
+                    costCenter2 = "consequuntur";
+                    costCenter3 = "dolor";
+                    effectiveDate = "expedita";
+                    endCheckDate = "voluptas";
+                    job = "fugit";
+                    rate = 28.100000;
+                    rateCode = "rerum";
+                    rateNotes = "dicta";
+                    ratePer = "debitis";
+                    shift = "voluptatum";
                 }};
             }};
 

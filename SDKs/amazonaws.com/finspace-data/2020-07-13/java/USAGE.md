@@ -22,35 +22,31 @@ public class Application {
 
             CreateChangesetRequest req = new CreateChangesetRequest() {{
                 pathParams = new CreateChangesetPathParams() {{
-                    datasetId = "voluptatem";
+                    datasetId = "sit";
                 }};
                 headers = new CreateChangesetHeaders() {{
-                    xAmzAlgorithm = "quidem";
-                    xAmzContentSha256 = "rerum";
-                    xAmzCredential = "id";
-                    xAmzDate = "facilis";
-                    xAmzSecurityToken = "cum";
-                    xAmzSignature = "occaecati";
-                    xAmzSignedHeaders = "quia";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new CreateChangesetRequestBody() {{
                     changeType = "REPLACE";
                     formatParams = new java.util.HashMap<String, String>() {{
-                        put("ducimus", "unde");
-                        put("nostrum", "illo");
-                        put("eos", "sit");
+                        put("nihil", "rerum");
                     }};
-                    formatType = "PARQUET";
+                    formatType = "XML";
                     sourceParams = new java.util.HashMap<String, String>() {{
-                        put("ut", "voluptatum");
-                        put("dolor", "sed");
-                        put("odio", "deserunt");
+                        put("voluptatum", "et");
                     }};
                     sourceType = "S3";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("sequi", "iure");
-                        put("provident", "eum");
-                        put("repellat", "quia");
+                        put("et", "voluptate");
+                        put("iste", "vitae");
+                        put("totam", "dolores");
                     }};
                 }};
             }};

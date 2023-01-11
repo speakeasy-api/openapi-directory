@@ -27,40 +27,40 @@ public class Application {
 
             VectortileTerraintilesGetRequest req = new VectortileTerraintilesGetRequest() {{
                 pathParams = new VectortileTerraintilesGetPathParams() {{
-                    name = "qui";
+                    name = "sit";
                 }};
                 queryParams = new VectortileTerraintilesGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "odit";
+                    accessToken = "culpa";
                     alt = "media";
-                    altitudePrecisionCentimeters = 9079494813988182808;
-                    callback = "earum";
-                    clientInfoApiClient = "debitis";
-                    clientInfoApplicationId = "sed";
-                    clientInfoApplicationVersion = "odio";
-                    clientInfoDeviceModel = "qui";
-                    clientInfoOperatingSystem = "aliquam";
-                    clientInfoPlatform = "ANDROID";
-                    clientInfoUserId = "aliquam";
+                    altitudePrecisionCentimeters = 3390393562759376202;
+                    callback = "dolor";
+                    clientInfoApiClient = "expedita";
+                    clientInfoApplicationId = "voluptas";
+                    clientInfoApplicationVersion = "fugit";
+                    clientInfoDeviceModel = "et";
+                    clientInfoOperatingSystem = "nihil";
+                    clientInfoPlatform = "WINDOWS";
+                    clientInfoUserId = "dicta";
                     enableModeledVolumes = true;
                     enablePoliticalFeatures = true;
                     enablePrivateRoads = false;
-                    enableUnclippedBuildings = true;
-                    fields = "suscipit";
-                    key = "dignissimos";
-                    languageCode = "nisi";
-                    maxElevationResolutionCells = 6590693654995013765;
-                    minElevationResolutionCells = 5829029072440070083;
-                    oauthToken = "provident";
-                    prettyPrint = false;
-                    quotaUser = "dolore";
-                    regionCode = "accusantium";
+                    enableUnclippedBuildings = false;
+                    fields = "dolorem";
+                    key = "et";
+                    languageCode = "voluptate";
+                    maxElevationResolutionCells = 3287288577352441706;
+                    minElevationResolutionCells = 3930927879439176946;
+                    oauthToken = "totam";
+                    prettyPrint = true;
+                    quotaUser = "illum";
+                    regionCode = "debitis";
                     terrainFormats = new openapisdk.models.operations.VectortileTerraintilesGetTerrainFormatsEnum[]() {{
-                        add("FIRST_DERIVATIVE"),
                         add("TERRAIN_FORMAT_UNKNOWN"),
+                        add("FIRST_DERIVATIVE"),
                     }};
-                    uploadType = "voluptate";
-                    uploadProtocol = "laudantium";
+                    uploadType = "id";
+                    uploadProtocol = "aspernatur";
                 }};
             }};
 

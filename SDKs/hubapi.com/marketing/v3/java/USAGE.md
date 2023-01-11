@@ -19,30 +19,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreatePathParams() {{
-                    externalEventId = "ducimus";
-                    subscriberState = "sed";
+                    externalEventId = "sit";
+                    subscriberState = "voluptas";
                 }};
                 queryParams = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateQueryParams() {{
-                    externalAccountId = "aut";
+                    externalAccountId = "culpa";
                 }};
                 request = new BatchInputMarketingEventSubscriber() {{
                     inputs = new openapisdk.models.shared.MarketingEventSubscriber[]() {{
                         add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 5793214711952816415;
+                            interactionDateTime = 3390393562759376202;
                             properties = new java.util.HashMap<String, String>() {{
-                                put("saepe", "itaque");
-                                put("non", "possimus");
+                                put("expedita", "voluptas");
+                                put("fugit", "et");
                             }};
-                            vid = 1049477164893788740;
+                            vid = 2661732831099943416;
                         }}),
                         add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 8843465368839867075;
+                            interactionDateTime = 8325060299420976708;
                             properties = new java.util.HashMap<String, String>() {{
-                                put("ratione", "voluptas");
-                                put("impedit", "deserunt");
-                                put("vel", "omnis");
+                                put("debitis", "voluptatum");
+                                put("et", "ut");
+                                put("dolorem", "et");
                             }};
-                            vid = 314412379615829377;
+                            vid = 7373105480197164748;
                         }}),
                     }};
                 }};

@@ -35,55 +35,51 @@ public class Application {
                     }};
                 }};
                 pathParams = new TranslateProjectsLocationsBatchTranslateDocumentPathParams() {{
-                    parent = "et";
+                    parent = "sit";
                 }};
                 queryParams = new TranslateProjectsLocationsBatchTranslateDocumentQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "necessitatibus";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "corrupti";
-                    fields = "ipsum";
-                    key = "qui";
-                    oauthToken = "optio";
-                    prettyPrint = false;
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
                     quotaUser = "et";
-                    uploadType = "dicta";
-                    uploadProtocol = "quia";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new BatchTranslateDocumentRequest() {{
                     formatConversions = new java.util.HashMap<String, String>() {{
-                        put("sequi", "ea");
-                        put("doloribus", "incidunt");
+                        put("debitis", "voluptatum");
+                        put("et", "ut");
+                        put("dolorem", "et");
                     }};
                     glossaries = new java.util.HashMap<String, openapisdk.models.shared.TranslateTextGlossaryConfig>() {{
-                        put("esse", new TranslateTextGlossaryConfig() {{
-                            glossary = "omnis";
-                            ignoreCase = true;
-                        }});
-                        put("impedit", new TranslateTextGlossaryConfig() {{
-                            glossary = "deserunt";
+                        put("iste", new TranslateTextGlossaryConfig() {{
+                            glossary = "vitae";
                             ignoreCase = true;
                         }});
                     }};
                     inputConfigs = new openapisdk.models.shared.BatchDocumentInputConfig[]() {{
                         add(new BatchDocumentInputConfig() {{
                             gcsSource = new GcsSource() {{
-                                inputUri = "aliquam";
+                                inputUri = "illum";
                             }};
                         }}),
                     }};
                     models = new java.util.HashMap<String, String>() {{
-                        put("pariatur", "hic");
-                        put("id", "est");
+                        put("vel", "odio");
                     }};
                     outputConfig = new BatchDocumentOutputConfig() {{
                         gcsDestination = new GcsDestination() {{
-                            outputUriPrefix = "a";
+                            outputUriPrefix = "dolore";
                         }};
                     }};
-                    sourceLanguageCode = "sint";
+                    sourceLanguageCode = "id";
                     targetLanguageCodes = new String[]() {{
-                        add("rerum"),
+                        add("accusantium"),
                     }};
                 }};
             }};

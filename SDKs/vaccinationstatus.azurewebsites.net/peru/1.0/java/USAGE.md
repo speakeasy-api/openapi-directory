@@ -14,12 +14,12 @@ public class Application {
 
             GetVaccineStatusRequest req = new GetVaccineStatusRequest() {{
                 headers = new GetVaccineStatusHeaders() {{
-                    accept = "aperiam";
-                    authorization = "maiores";
+                    accept = "sit";
+                    authorization = "voluptas";
                     contentType = "culpa";
                 }};
                 request = new VaccineStatusRequest() {{
-                    uuid = "quaerat";
+                    uuid = "expedita";
                 }};
             }};
 

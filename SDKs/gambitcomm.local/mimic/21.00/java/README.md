@@ -36,9 +36,9 @@ public class Application {
 
             AccessAddRequest req = new AccessAddRequest() {{
                 pathParams = new AccessAddPathParams() {{
-                    agents = "sunt";
-                    mask = "quae";
-                    user = "placeat";
+                    agents = "sit";
+                    mask = "voluptas";
+                    user = "culpa";
                 }};
             }};
 

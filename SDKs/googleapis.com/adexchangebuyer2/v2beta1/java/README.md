@@ -35,30 +35,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new Adexchangebuyer2AccountsClientsCreatePathParams() {{
-                    accountId = "facilis";
+                    accountId = "sit";
                 }};
                 queryParams = new Adexchangebuyer2AccountsClientsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "vel";
-                    alt = "proto";
-                    callback = "saepe";
-                    fields = "ut";
-                    key = "ut";
-                    oauthToken = "distinctio";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "nemo";
-                    uploadType = "aut";
-                    uploadProtocol = "reiciendis";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new Client() {{
-                    clientAccountId = "in";
-                    clientName = "voluptatem";
-                    entityId = "velit";
-                    entityName = "consequuntur";
-                    entityType = "AGENCY";
-                    partnerClientId = "dignissimos";
-                    role = "CLIENT_DEAL_APPROVER";
-                    status = "ACTIVE";
+                    clientAccountId = "dicta";
+                    clientName = "debitis";
+                    entityId = "voluptatum";
+                    entityName = "et";
+                    entityType = "ADVERTISER";
+                    partnerClientId = "dolorem";
+                    role = "CLIENT_DEAL_NEGOTIATOR";
+                    status = "CLIENT_STATUS_UNSPECIFIED";
                     visibleToSeller = true;
                 }};
             }};

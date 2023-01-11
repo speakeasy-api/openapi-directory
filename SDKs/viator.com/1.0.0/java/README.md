@@ -35,23 +35,19 @@ public class Application {
 
             BookingAvailabilityRequest req = new BookingAvailabilityRequest() {{
                 headers = new BookingAvailabilityHeaders() {{
-                    acceptLanguage = "possimus";
+                    acceptLanguage = "sit";
                 }};
                 request = new BookingAvailabilityRequestBody() {{
                     ageBands = new openapisdk.models.operations.BookingAvailabilityRequestBodyAgeBands[]() {{
                         add(new BookingAvailabilityRequestBodyAgeBands() {{
-                            bandId = 3335198230263325045;
-                            count = 5635747801292324080;
-                        }}),
-                        add(new BookingAvailabilityRequestBodyAgeBands() {{
-                            bandId = 2849534501507876885;
-                            count = 205860177557125077;
+                            bandId = 6050128673802995827;
+                            count = 501233450539197794;
                         }}),
                     }};
-                    currencyCode = "inventore";
-                    month = "omnis";
-                    productCode = "veritatis";
-                    year = "minus";
+                    currencyCode = "consequuntur";
+                    month = "dolor";
+                    productCode = "expedita";
+                    year = "voluptas";
                 }};
             }};
 

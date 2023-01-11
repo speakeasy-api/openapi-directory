@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new LabrpRequestBody() {{
                     certificateParameters = new LabrpRequestBodyCertificateParameters() {{
-                        fullName = "ipsum";
-                        reportdate = "rem";
-                        uhid = "consequuntur";
+                        fullName = "sit";
+                        reportdate = "voluptas";
+                        uhid = "culpa";
                     }};
-                    consentArtifact = "aliquam";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "fuga";
+                    txnId = "dolor";
                 }};
             }};
 

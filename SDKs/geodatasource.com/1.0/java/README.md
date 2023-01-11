@@ -27,10 +27,10 @@ public class Application {
 
             GetCityRequest req = new GetCityRequest() {{
                 queryParams = new GetCityQueryParams() {{
-                    format = "xml";
-                    key = "rerum";
-                    lat = 61.099998;
-                    lng = 16.100000;
+                    format = "json";
+                    key = "voluptas";
+                    lat = 53.099998;
+                    lng = 15.100000;
                 }};
             }};
 

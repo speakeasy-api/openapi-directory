@@ -23,18 +23,18 @@ public class Application {
             GetAcceptReservedNodeExchangeRequest req = new GetAcceptReservedNodeExchangeRequest() {{
                 queryParams = new GetAcceptReservedNodeExchangeQueryParams() {{
                     action = "AcceptReservedNodeExchange";
-                    reservedNodeId = "maxime";
-                    targetReservedNodeOfferingId = "ipsa";
+                    reservedNodeId = "voluptas";
+                    targetReservedNodeOfferingId = "culpa";
                     version = "2012-12-01";
                 }};
                 headers = new GetAcceptReservedNodeExchangeHeaders() {{
-                    xAmzAlgorithm = "autem";
-                    xAmzContentSha256 = "magni";
-                    xAmzCredential = "recusandae";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "dolorem";
-                    xAmzSignature = "saepe";
-                    xAmzSignedHeaders = "minus";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

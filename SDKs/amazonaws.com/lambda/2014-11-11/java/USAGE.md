@@ -22,23 +22,22 @@ public class Application {
 
             AddEventSourceRequest req = new AddEventSourceRequest() {{
                 headers = new AddEventSourceHeaders() {{
-                    xAmzAlgorithm = "ipsum";
-                    xAmzContentSha256 = "omnis";
-                    xAmzCredential = "error";
-                    xAmzDate = "reprehenderit";
-                    xAmzSecurityToken = "explicabo";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "eum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AddEventSourceRequestBody() {{
-                    batchSize = 6380244943489637684;
-                    eventSource = "ratione";
-                    functionName = "labore";
+                    batchSize = 6044372234677422456;
+                    eventSource = "fugit";
+                    functionName = "et";
                     parameters = new java.util.HashMap<String, String>() {{
-                        put("saepe", "libero");
-                        put("nobis", "ut");
+                        put("rerum", "dicta");
                     }};
-                    role = "accusamus";
+                    role = "debitis";
                 }};
             }};
 

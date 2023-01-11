@@ -27,16 +27,16 @@ public class Application {
 
             ApplicationGetRequest req = new ApplicationGetRequest() {{
                 pathParams = new ApplicationGetPathParams() {{
-                    applicationId = "facilis";
+                    applicationId = "sit";
                 }};
                 queryParams = new ApplicationGetQueryParams() {{
-                    apiVersion = "officia";
-                    timeout = 4670964478827353330;
+                    apiVersion = "voluptas";
+                    timeout = 6050128673802995827;
                 }};
                 headers = new ApplicationGetHeaders() {{
-                    clientRequestId = "magni";
-                    ocpDate = "saepe";
-                    returnClientRequestId = true;
+                    clientRequestId = "expedita";
+                    ocpDate = "consequuntur";
+                    returnClientRequestId = false;
                 }};
             }};
 

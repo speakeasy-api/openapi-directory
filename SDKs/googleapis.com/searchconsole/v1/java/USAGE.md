@@ -24,86 +24,47 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebmastersSearchanalyticsQueryPathParams() {{
-                    siteUrl = "eum";
+                    siteUrl = "sit";
                 }};
                 queryParams = new WebmastersSearchanalyticsQueryQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dicta";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "omnis";
-                    fields = "non";
-                    key = "quasi";
-                    oauthToken = "at";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "tempore";
-                    uploadType = "corporis";
-                    uploadProtocol = "minima";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new SearchAnalyticsQueryRequest() {{
-                    aggregationType = "BY_PROPERTY";
-                    dataState = "ALL";
+                    aggregationType = "BY_PAGE";
+                    dataState = "DATA_STATE_UNSPECIFIED";
                     dimensionFilterGroups = new openapisdk.models.shared.ApiDimensionFilterGroup[]() {{
                         add(new ApiDimensionFilterGroup() {{
                             filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "DEVICE";
-                                    expression = "distinctio";
-                                    operator = "CONTAINS";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "aut";
-                                    operator = "EXCLUDING_REGEX";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "QUERY";
-                                    expression = "eos";
-                                    operator = "EQUALS";
-                                }}),
-                            }};
-                            groupType = "AND";
-                        }}),
-                        add(new ApiDimensionFilterGroup() {{
-                            filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "DEVICE";
-                                    expression = "voluptatem";
-                                    operator = "NOT_CONTAINS";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "ea";
-                                    operator = "NOT_EQUALS";
-                                }}),
-                            }};
-                            groupType = "AND";
-                        }}),
-                        add(new ApiDimensionFilterGroup() {{
-                            filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "COUNTRY";
-                                    expression = "occaecati";
+                                    dimension = "PAGE";
+                                    expression = "dolorem";
                                     operator = "INCLUDING_REGEX";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "QUERY";
-                                    expression = "earum";
-                                    operator = "NOT_CONTAINS";
                                 }}),
                             }};
                             groupType = "AND";
                         }}),
                     }};
                     dimensions = new openapisdk.models.shared.SearchAnalyticsQueryRequestDimensionsEnum[]() {{
-                        add("SEARCH_APPEARANCE"),
-                        add("COUNTRY"),
+                        add("DATE"),
+                        add("PAGE"),
+                        add("DATE"),
                     }};
-                    endDate = "sint";
-                    rowLimit = 1156090135587436031;
-                    searchType = "VIDEO";
-                    startDate = "doloribus";
-                    startRow = 8555304527772983074;
-                    type = "NEWS";
+                    endDate = "illum";
+                    rowLimit = 6392442863481646880;
+                    searchType = "DISCOVER";
+                    startDate = "odio";
+                    startRow = 6303220950515014660;
+                    type = "DISCOVER";
                 }};
             }};
 

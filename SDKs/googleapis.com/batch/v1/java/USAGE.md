@@ -22,186 +22,149 @@ public class Application {
                     }};
                 }};
                 pathParams = new BatchProjectsLocationsJobsCreatePathParams() {{
-                    parent = "nisi";
+                    parent = "sit";
                 }};
                 queryParams = new BatchProjectsLocationsJobsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "unde";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "ut";
-                    fields = "vel";
-                    jobId = "rerum";
-                    key = "minus";
-                    oauthToken = "asperiores";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    jobId = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "voluptate";
-                    requestId = "aut";
-                    uploadType = "sit";
-                    uploadProtocol = "ipsa";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new JobInput() {{
                     allocationPolicy = new AllocationPolicy() {{
                         instances = new openapisdk.models.shared.InstancePolicyOrTemplate[]() {{
                             add(new InstancePolicyOrTemplate() {{
                                 installGpuDrivers = false;
-                                instanceTemplate = "dolore";
+                                instanceTemplate = "ut";
                                 policy = new InstancePolicy() {{
                                     accelerators = new openapisdk.models.shared.Accelerator[]() {{
                                         add(new Accelerator() {{
-                                            count = "voluptas";
-                                            installGpuDrivers = true;
-                                            type = "dolor";
-                                        }}),
-                                        add(new Accelerator() {{
-                                            count = "esse";
-                                            installGpuDrivers = false;
-                                            type = "omnis";
-                                        }}),
-                                        add(new Accelerator() {{
                                             count = "et";
                                             installGpuDrivers = false;
-                                            type = "voluptatem";
+                                            type = "iste";
+                                        }}),
+                                        add(new Accelerator() {{
+                                            count = "vitae";
+                                            installGpuDrivers = true;
+                                            type = "dolores";
+                                        }}),
+                                        add(new Accelerator() {{
+                                            count = "illum";
+                                            installGpuDrivers = true;
+                                            type = "vel";
                                         }}),
                                     }};
                                     disks = new openapisdk.models.shared.AttachedDisk[]() {{
                                         add(new AttachedDisk() {{
-                                            deviceName = "est";
-                                            existingDisk = "ducimus";
+                                            deviceName = "dolore";
+                                            existingDisk = "id";
                                             newDisk = new Disk() {{
-                                                diskInterface = "adipisci";
-                                                image = "ut";
-                                                sizeGb = "et";
-                                                snapshot = "vel";
-                                                type = "dolores";
+                                                diskInterface = "aspernatur";
+                                                image = "accusantium";
+                                                sizeGb = "totam";
+                                                snapshot = "commodi";
+                                                type = "quis";
                                             }};
                                         }}),
                                     }};
-                                    machineType = "iste";
-                                    minCpuPlatform = "ut";
-                                    provisioningModel = "STANDARD";
+                                    machineType = "est";
+                                    minCpuPlatform = "aut";
+                                    provisioningModel = "SPOT";
                                 }};
                             }}),
                         }};
                         labels = new java.util.HashMap<String, String>() {{
-                            put("incidunt", "ducimus");
+                            put("voluptas", "omnis");
+                            put("aut", "illo");
+                            put("sed", "officiis");
                         }};
                         location = new LocationPolicy() {{
                             allowedLocations = new String[]() {{
-                                add("voluptas"),
+                                add("consectetur"),
+                                add("nobis"),
                             }};
                         }};
                         network = new NetworkPolicy() {{
                             networkInterfaces = new openapisdk.models.shared.NetworkInterface[]() {{
                                 add(new NetworkInterface() {{
-                                    network = "voluptates";
-                                    noExternalIpAddress = false;
-                                    subnetwork = "eligendi";
+                                    network = "qui";
+                                    noExternalIpAddress = true;
+                                    subnetwork = "at";
                                 }}),
                             }};
                         }};
                         serviceAccount = new ServiceAccount() {{
-                            email = "adipisci";
+                            email = "ipsum";
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("optio", "atque");
+                        put("modi", "sint");
+                        put("inventore", "ut");
                     }};
                     logsPolicy = new LogsPolicy() {{
-                        destination = "DESTINATION_UNSPECIFIED";
-                        logsPath = "quam";
+                        destination = "PATH";
+                        logsPath = "aut";
                     }};
                     notifications = new openapisdk.models.shared.JobNotification[]() {{
                         add(new JobNotification() {{
                             message = new Message() {{
-                                newJobState = "SCHEDULED";
-                                newTaskState = "FAILED";
+                                newJobState = "FAILED";
+                                newTaskState = "RUNNING";
                                 type = "TASK_STATE_CHANGED";
                             }};
-                            pubsubTopic = "aliquid";
-                        }}),
-                        add(new JobNotification() {{
-                            message = new Message() {{
-                                newJobState = "QUEUED";
-                                newTaskState = "FAILED";
-                                type = "TASK_STATE_CHANGED";
-                            }};
-                            pubsubTopic = "consequatur";
+                            pubsubTopic = "dolor";
                         }}),
                     }};
-                    priority = "eos";
+                    priority = "beatae";
                     status = new JobStatus() {{
-                        runDuration = "non";
-                        state = "RUNNING";
+                        runDuration = "veritatis";
+                        state = "FAILED";
                         statusEvents = new openapisdk.models.shared.StatusEvent[]() {{
                             add(new StatusEvent() {{
-                                description = "facere";
-                                eventTime = "magnam";
+                                description = "omnis";
+                                eventTime = "ipsum";
                                 taskExecution = new TaskExecution() {{
-                                    exitCode = 2243994930834819635;
+                                    exitCode = 1198006251912892506;
                                 }};
-                                type = "eum";
+                                type = "dolores";
                             }}),
                             add(new StatusEvent() {{
-                                description = "facilis";
-                                eventTime = "perferendis";
+                                description = "placeat";
+                                eventTime = "vel";
                                 taskExecution = new TaskExecution() {{
-                                    exitCode = 670118985590453658;
+                                    exitCode = 2587000937929698613;
                                 }};
-                                type = "ut";
+                                type = "mollitia";
+                            }}),
+                            add(new StatusEvent() {{
+                                description = "voluptas";
+                                eventTime = "quam";
+                                taskExecution = new TaskExecution() {{
+                                    exitCode = 7481608503761597087;
+                                }};
+                                type = "qui";
                             }}),
                         }};
                         taskGroups = new java.util.HashMap<String, openapisdk.models.shared.TaskGroupStatus>() {{
-                            put("qui", new TaskGroupStatus() {{
+                            put("unde", new TaskGroupStatus() {{
                                 counts = new java.util.HashMap<String, String>() {{
-                                    put("ut", "qui");
-                                    put("harum", "fuga");
-                                    put("facilis", "blanditiis");
+                                    put("autem", "qui");
+                                    put("ut", "itaque");
                                 }};
                                 instances = new openapisdk.models.shared.InstanceStatus[]() {{
                                     add(new InstanceStatus() {{
-                                        machineType = "ea";
+                                        machineType = "neque";
                                         provisioningModel = "PROVISIONING_MODEL_UNSPECIFIED";
-                                        taskPack = "non";
-                                    }}),
-                                    add(new InstanceStatus() {{
-                                        machineType = "veritatis";
-                                        provisioningModel = "SPOT";
-                                        taskPack = "facere";
-                                    }}),
-                                    add(new InstanceStatus() {{
-                                        machineType = "aut";
-                                        provisioningModel = "STANDARD";
-                                        taskPack = "adipisci";
-                                    }}),
-                                }};
-                            }});
-                            put("consequatur", new TaskGroupStatus() {{
-                                counts = new java.util.HashMap<String, String>() {{
-                                    put("temporibus", "alias");
-                                }};
-                                instances = new openapisdk.models.shared.InstanceStatus[]() {{
-                                    add(new InstanceStatus() {{
-                                        machineType = "voluptatem";
-                                        provisioningModel = "SPOT";
-                                        taskPack = "enim";
-                                    }}),
-                                }};
-                            }});
-                            put("aut", new TaskGroupStatus() {{
-                                counts = new java.util.HashMap<String, String>() {{
-                                    put("ratione", "adipisci");
-                                    put("eius", "quisquam");
-                                }};
-                                instances = new openapisdk.models.shared.InstanceStatus[]() {{
-                                    add(new InstanceStatus() {{
-                                        machineType = "quia";
-                                        provisioningModel = "STANDARD";
-                                        taskPack = "voluptatem";
-                                    }}),
-                                    add(new InstanceStatus() {{
-                                        machineType = "voluptate";
-                                        provisioningModel = "STANDARD";
-                                        taskPack = "quo";
+                                        taskPack = "et";
                                     }}),
                                 }};
                             }});
@@ -209,371 +172,496 @@ public class Application {
                     }};
                     taskGroups = new openapisdk.models.shared.TaskGroupInput[]() {{
                         add(new TaskGroupInput() {{
-                            parallelism = "ipsum";
+                            parallelism = "esse";
                             permissiveSsh = true;
                             requireHostsFile = false;
-                            taskCount = "quis";
-                            taskCountPerNode = "et";
+                            taskCount = "velit";
+                            taskCountPerNode = "cumque";
                             taskEnvironments = new openapisdk.models.shared.Environment[]() {{
                                 add(new Environment() {{
                                     variables = new java.util.HashMap<String, String>() {{
-                                        put("laborum", "quibusdam");
-                                        put("eum", "magnam");
+                                        put("voluptates", "magni");
+                                        put("et", "optio");
                                     }};
                                 }}),
                             }};
                             taskSpec = new TaskSpec() {{
                                 computeResource = new ComputeResource() {{
-                                    bootDiskMib = "veniam";
-                                    cpuMilli = "dolores";
-                                    memoryMib = "rerum";
+                                    bootDiskMib = "qui";
+                                    cpuMilli = "earum";
+                                    memoryMib = "illo";
                                 }};
                                 environment = new Environment() {{
                                     variables = new java.util.HashMap<String, String>() {{
-                                        put("voluptatem", "voluptatem");
-                                        put("qui", "est");
+                                        put("ut", "consequatur");
+                                        put("dolor", "commodi");
                                     }};
                                 }};
                                 environments = new java.util.HashMap<String, String>() {{
-                                    put("et", "ea");
-                                    put("voluptas", "velit");
-                                    put("ipsa", "in");
+                                    put("reprehenderit", "consectetur");
                                 }};
                                 lifecyclePolicies = new openapisdk.models.shared.LifecyclePolicy[]() {{
                                     add(new LifecyclePolicy() {{
                                         action = "ACTION_UNSPECIFIED";
                                         actionCondition = new ActionCondition() {{
                                             exitCodes = new Integer[]() {{
-                                                add(6631302707605664415),
-                                                add(1394201994945011949),
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new LifecyclePolicy() {{
-                                        action = "FAIL_TASK";
-                                        actionCondition = new ActionCondition() {{
-                                            exitCodes = new Integer[]() {{
-                                                add(6305227779196293352),
-                                                add(2660334108604812451),
+                                                add(1937101031588528881),
+                                                add(6604365855503062775),
+                                                add(1836598054518427835),
                                             }};
                                         }};
                                     }}),
                                 }};
-                                maxRetryCount = 3513038634322267310;
-                                maxRunDuration = "perspiciatis";
+                                maxRetryCount = 7540276489530073149;
+                                maxRunDuration = "quas";
                                 runnables = new openapisdk.models.shared.Runnable[]() {{
                                     add(new Runnable() {{
-                                        alwaysRun = true;
-                                        background = false;
+                                        alwaysRun = false;
+                                        background = true;
                                         barrier = new Barrier() {{
-                                            name = "commodi";
+                                            name = "ipsa";
                                         }};
                                         container = new Container() {{
                                             blockExternalNetwork = false;
                                             commands = new String[]() {{
-                                                add("asperiores"),
-                                                add("amet"),
-                                                add("cupiditate"),
+                                                add("perferendis"),
                                             }};
-                                            entrypoint = "nisi";
-                                            imageUri = "nihil";
-                                            options = "dolorem";
-                                            password = "impedit";
-                                            username = "laboriosam";
+                                            entrypoint = "atque";
+                                            imageUri = "ratione";
+                                            options = "quisquam";
+                                            password = "explicabo";
+                                            username = "ea";
                                             volumes = new String[]() {{
-                                                add("soluta"),
-                                                add("ut"),
-                                                add("est"),
+                                                add("eum"),
                                             }};
                                         }};
                                         environment = new Environment() {{
                                             variables = new java.util.HashMap<String, String>() {{
-                                                put("sunt", "soluta");
-                                                put("alias", "aut");
+                                                put("et", "rerum");
+                                                put("reiciendis", "quis");
                                             }};
                                         }};
                                         ignoreExitStatus = true;
                                         script = new Script() {{
-                                            path = "dolorum";
-                                            text = "nostrum";
+                                            path = "minima";
+                                            text = "necessitatibus";
                                         }};
-                                        timeout = "laboriosam";
+                                        timeout = "est";
                                     }}),
                                     add(new Runnable() {{
                                         alwaysRun = true;
                                         background = true;
                                         barrier = new Barrier() {{
-                                            name = "doloribus";
+                                            name = "labore";
                                         }};
                                         container = new Container() {{
-                                            blockExternalNetwork = true;
+                                            blockExternalNetwork = false;
                                             commands = new String[]() {{
-                                                add("et"),
-                                                add("natus"),
+                                                add("ad"),
+                                                add("expedita"),
                                             }};
-                                            entrypoint = "corrupti";
-                                            imageUri = "quis";
-                                            options = "consequatur";
-                                            password = "tenetur";
-                                            username = "alias";
+                                            entrypoint = "vel";
+                                            imageUri = "qui";
+                                            options = "modi";
+                                            password = "nihil";
+                                            username = "tempora";
                                             volumes = new String[]() {{
-                                                add("iure"),
+                                                add("eaque"),
                                             }};
                                         }};
                                         environment = new Environment() {{
                                             variables = new java.util.HashMap<String, String>() {{
-                                                put("et", "deleniti");
+                                                put("sit", "autem");
+                                                put("quis", "vel");
+                                            }};
+                                        }};
+                                        ignoreExitStatus = false;
+                                        script = new Script() {{
+                                            path = "placeat";
+                                            text = "qui";
+                                        }};
+                                        timeout = "nisi";
+                                    }}),
+                                    add(new Runnable() {{
+                                        alwaysRun = true;
+                                        background = false;
+                                        barrier = new Barrier() {{
+                                            name = "porro";
+                                        }};
+                                        container = new Container() {{
+                                            blockExternalNetwork = true;
+                                            commands = new String[]() {{
+                                                add("accusamus"),
+                                            }};
+                                            entrypoint = "numquam";
+                                            imageUri = "laborum";
+                                            options = "rerum";
+                                            password = "ut";
+                                            username = "laborum";
+                                            volumes = new String[]() {{
+                                                add("quis"),
+                                            }};
+                                        }};
+                                        environment = new Environment() {{
+                                            variables = new java.util.HashMap<String, String>() {{
+                                                put("soluta", "aperiam");
+                                                put("consequuntur", "excepturi");
                                             }};
                                         }};
                                         ignoreExitStatus = true;
                                         script = new Script() {{
-                                            path = "fuga";
-                                            text = "doloribus";
+                                            path = "inventore";
+                                            text = "delectus";
                                         }};
-                                        timeout = "quasi";
+                                        timeout = "ipsa";
                                     }}),
                                 }};
                                 volumes = new openapisdk.models.shared.Volume[]() {{
                                     add(new Volume() {{
-                                        deviceName = "laboriosam";
+                                        deviceName = "animi";
                                         gcs = new Gcs() {{
-                                            remotePath = "debitis";
+                                            remotePath = "ut";
                                         }};
                                         mountOptions = new String[]() {{
-                                            add("minus"),
+                                            add("fuga"),
                                         }};
                                         mountPath = "sed";
                                         nfs = new Nfs() {{
-                                            remotePath = "magnam";
-                                            server = "similique";
+                                            remotePath = "sed";
+                                            server = "et";
                                         }};
                                     }}),
                                     add(new Volume() {{
-                                        deviceName = "fuga";
+                                        deviceName = "consequuntur";
                                         gcs = new Gcs() {{
-                                            remotePath = "voluptatem";
+                                            remotePath = "non";
                                         }};
                                         mountOptions = new String[]() {{
-                                            add("iure"),
-                                            add("at"),
-                                            add("consequatur"),
+                                            add("provident"),
+                                            add("molestiae"),
+                                            add("pariatur"),
                                         }};
-                                        mountPath = "aut";
+                                        mountPath = "quasi";
                                         nfs = new Nfs() {{
-                                            remotePath = "nobis";
-                                            server = "vero";
+                                            remotePath = "corrupti";
+                                            server = "enim";
                                         }};
                                     }}),
                                 }};
                             }};
                         }}),
                         add(new TaskGroupInput() {{
-                            parallelism = "aperiam";
-                            permissiveSsh = false;
-                            requireHostsFile = true;
-                            taskCount = "laborum";
-                            taskCountPerNode = "voluptas";
+                            parallelism = "qui";
+                            permissiveSsh = true;
+                            requireHostsFile = false;
+                            taskCount = "modi";
+                            taskCountPerNode = "neque";
                             taskEnvironments = new openapisdk.models.shared.Environment[]() {{
                                 add(new Environment() {{
                                     variables = new java.util.HashMap<String, String>() {{
-                                        put("velit", "modi");
+                                        put("et", "est");
                                     }};
                                 }}),
                                 add(new Environment() {{
                                     variables = new java.util.HashMap<String, String>() {{
-                                        put("optio", "doloremque");
-                                        put("cum", "necessitatibus");
+                                        put("ex", "voluptatem");
                                     }};
                                 }}),
                                 add(new Environment() {{
                                     variables = new java.util.HashMap<String, String>() {{
-                                        put("enim", "aspernatur");
-                                        put("ratione", "quasi");
-                                        put("omnis", "sapiente");
+                                        put("temporibus", "velit");
+                                        put("quae", "est");
+                                        put("ut", "necessitatibus");
                                     }};
                                 }}),
                             }};
                             taskSpec = new TaskSpec() {{
                                 computeResource = new ComputeResource() {{
-                                    bootDiskMib = "et";
-                                    cpuMilli = "omnis";
-                                    memoryMib = "accusamus";
+                                    bootDiskMib = "in";
+                                    cpuMilli = "possimus";
+                                    memoryMib = "voluptatem";
                                 }};
                                 environment = new Environment() {{
                                     variables = new java.util.HashMap<String, String>() {{
-                                        put("accusamus", "voluptatibus");
+                                        put("doloribus", "saepe");
                                     }};
                                 }};
                                 environments = new java.util.HashMap<String, String>() {{
-                                    put("in", "reiciendis");
-                                    put("rerum", "in");
-                                    put("perspiciatis", "fugit");
+                                    put("earum", "et");
+                                    put("ut", "asperiores");
                                 }};
                                 lifecyclePolicies = new openapisdk.models.shared.LifecyclePolicy[]() {{
                                     add(new LifecyclePolicy() {{
                                         action = "ACTION_UNSPECIFIED";
                                         actionCondition = new ActionCondition() {{
                                             exitCodes = new Integer[]() {{
-                                                add(5742301973518926107),
-                                                add(4126061186846913615),
+                                                add(6787227741588449494),
                                             }};
                                         }};
                                     }}),
                                 }};
-                                maxRetryCount = 6089070892117498567;
-                                maxRunDuration = "nulla";
+                                maxRetryCount = 4883506937319508494;
+                                maxRunDuration = "nihil";
                                 runnables = new openapisdk.models.shared.Runnable[]() {{
                                     add(new Runnable() {{
-                                        alwaysRun = true;
+                                        alwaysRun = false;
                                         background = true;
                                         barrier = new Barrier() {{
-                                            name = "iure";
+                                            name = "non";
                                         }};
                                         container = new Container() {{
                                             blockExternalNetwork = false;
                                             commands = new String[]() {{
-                                                add("fugit"),
+                                                add("possimus"),
+                                                add("illo"),
+                                                add("qui"),
                                             }};
-                                            entrypoint = "qui";
-                                            imageUri = "natus";
-                                            options = "molestiae";
-                                            password = "odit";
-                                            username = "dolor";
+                                            entrypoint = "quia";
+                                            imageUri = "ipsam";
+                                            options = "ducimus";
+                                            password = "enim";
+                                            username = "blanditiis";
                                             volumes = new String[]() {{
-                                                add("aut"),
+                                                add("delectus"),
                                             }};
                                         }};
                                         environment = new Environment() {{
                                             variables = new java.util.HashMap<String, String>() {{
-                                                put("et", "sunt");
+                                                put("dolore", "repellat");
+                                                put("velit", "officia");
                                             }};
                                         }};
                                         ignoreExitStatus = true;
                                         script = new Script() {{
-                                            path = "voluptatem";
-                                            text = "natus";
+                                            path = "sunt";
+                                            text = "voluptas";
                                         }};
-                                        timeout = "ea";
-                                    }}),
-                                    add(new Runnable() {{
-                                        alwaysRun = true;
-                                        background = true;
-                                        barrier = new Barrier() {{
-                                            name = "omnis";
-                                        }};
-                                        container = new Container() {{
-                                            blockExternalNetwork = true;
-                                            commands = new String[]() {{
-                                                add("dolores"),
-                                                add("harum"),
-                                            }};
-                                            entrypoint = "neque";
-                                            imageUri = "eligendi";
-                                            options = "et";
-                                            password = "aut";
-                                            username = "fugiat";
-                                            volumes = new String[]() {{
-                                                add("sit"),
-                                            }};
-                                        }};
-                                        environment = new Environment() {{
-                                            variables = new java.util.HashMap<String, String>() {{
-                                                put("iste", "tempora");
-                                                put("officia", "ducimus");
-                                            }};
-                                        }};
-                                        ignoreExitStatus = false;
-                                        script = new Script() {{
-                                            path = "eos";
-                                            text = "perferendis";
-                                        }};
-                                        timeout = "nostrum";
-                                    }}),
-                                    add(new Runnable() {{
-                                        alwaysRun = true;
-                                        background = false;
-                                        barrier = new Barrier() {{
-                                            name = "enim";
-                                        }};
-                                        container = new Container() {{
-                                            blockExternalNetwork = true;
-                                            commands = new String[]() {{
-                                                add("quos"),
-                                                add("quibusdam"),
-                                                add("est"),
-                                            }};
-                                            entrypoint = "qui";
-                                            imageUri = "consequatur";
-                                            options = "laborum";
-                                            password = "quis";
-                                            username = "laboriosam";
-                                            volumes = new String[]() {{
-                                                add("et"),
-                                                add("nesciunt"),
-                                            }};
-                                        }};
-                                        environment = new Environment() {{
-                                            variables = new java.util.HashMap<String, String>() {{
-                                                put("libero", "modi");
-                                                put("est", "et");
-                                                put("et", "a");
-                                            }};
-                                        }};
-                                        ignoreExitStatus = false;
-                                        script = new Script() {{
-                                            path = "est";
-                                            text = "dolorum";
-                                        }};
-                                        timeout = "ut";
+                                        timeout = "amet";
                                     }}),
                                 }};
                                 volumes = new openapisdk.models.shared.Volume[]() {{
                                     add(new Volume() {{
-                                        deviceName = "est";
+                                        deviceName = "a";
                                         gcs = new Gcs() {{
-                                            remotePath = "blanditiis";
+                                            remotePath = "qui";
                                         }};
                                         mountOptions = new String[]() {{
-                                            add("asperiores"),
-                                            add("tempore"),
-                                            add("tempore"),
+                                            add("autem"),
                                         }};
-                                        mountPath = "assumenda";
+                                        mountPath = "corporis";
                                         nfs = new Nfs() {{
-                                            remotePath = "deleniti";
-                                            server = "ea";
+                                            remotePath = "dicta";
+                                            server = "rem";
                                         }};
                                     }}),
                                     add(new Volume() {{
-                                        deviceName = "aut";
+                                        deviceName = "doloremque";
                                         gcs = new Gcs() {{
-                                            remotePath = "dignissimos";
+                                            remotePath = "quae";
                                         }};
                                         mountOptions = new String[]() {{
-                                            add("voluptatem"),
-                                            add("quo"),
-                                            add("atque"),
+                                            add("recusandae"),
+                                            add("qui"),
                                         }};
-                                        mountPath = "vel";
+                                        mountPath = "minus";
                                         nfs = new Nfs() {{
-                                            remotePath = "itaque";
-                                            server = "ut";
+                                            remotePath = "et";
+                                            server = "rerum";
                                         }};
                                     }}),
                                     add(new Volume() {{
                                         deviceName = "ut";
                                         gcs = new Gcs() {{
-                                            remotePath = "unde";
+                                            remotePath = "rem";
                                         }};
                                         mountOptions = new String[]() {{
-                                            add("fuga"),
-                                            add("maiores"),
-                                            add("repellendus"),
+                                            add("et"),
+                                            add("reiciendis"),
+                                            add("aspernatur"),
                                         }};
-                                        mountPath = "ducimus";
+                                        mountPath = "praesentium";
                                         nfs = new Nfs() {{
-                                            remotePath = "repudiandae";
-                                            server = "voluptates";
+                                            remotePath = "porro";
+                                            server = "nihil";
+                                        }};
+                                    }}),
+                                }};
+                            }};
+                        }}),
+                        add(new TaskGroupInput() {{
+                            parallelism = "adipisci";
+                            permissiveSsh = false;
+                            requireHostsFile = false;
+                            taskCount = "accusantium";
+                            taskCountPerNode = "atque";
+                            taskEnvironments = new openapisdk.models.shared.Environment[]() {{
+                                add(new Environment() {{
+                                    variables = new java.util.HashMap<String, String>() {{
+                                        put("quidem", "est");
+                                        put("quo", "vero");
+                                    }};
+                                }}),
+                                add(new Environment() {{
+                                    variables = new java.util.HashMap<String, String>() {{
+                                        put("totam", "deserunt");
+                                    }};
+                                }}),
+                                add(new Environment() {{
+                                    variables = new java.util.HashMap<String, String>() {{
+                                        put("repellat", "beatae");
+                                        put("omnis", "totam");
+                                    }};
+                                }}),
+                            }};
+                            taskSpec = new TaskSpec() {{
+                                computeResource = new ComputeResource() {{
+                                    bootDiskMib = "aut";
+                                    cpuMilli = "et";
+                                    memoryMib = "magni";
+                                }};
+                                environment = new Environment() {{
+                                    variables = new java.util.HashMap<String, String>() {{
+                                        put("et", "culpa");
+                                        put("repellendus", "voluptas");
+                                    }};
+                                }};
+                                environments = new java.util.HashMap<String, String>() {{
+                                    put("veniam", "architecto");
+                                    put("molestias", "rerum");
+                                }};
+                                lifecyclePolicies = new openapisdk.models.shared.LifecyclePolicy[]() {{
+                                    add(new LifecyclePolicy() {{
+                                        action = "ACTION_UNSPECIFIED";
+                                        actionCondition = new ActionCondition() {{
+                                            exitCodes = new Integer[]() {{
+                                                add(1215184329252422444),
+                                                add(4178331056796501958),
+                                                add(8590975497400104807),
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new LifecyclePolicy() {{
+                                        action = "ACTION_UNSPECIFIED";
+                                        actionCondition = new ActionCondition() {{
+                                            exitCodes = new Integer[]() {{
+                                                add(5127216006209335150),
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new LifecyclePolicy() {{
+                                        action = "ACTION_UNSPECIFIED";
+                                        actionCondition = new ActionCondition() {{
+                                            exitCodes = new Integer[]() {{
+                                                add(5850174490929081658),
+                                                add(434570727381690637),
+                                                add(2506834319279501248),
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                maxRetryCount = 8019821597217977465;
+                                maxRunDuration = "et";
+                                runnables = new openapisdk.models.shared.Runnable[]() {{
+                                    add(new Runnable() {{
+                                        alwaysRun = true;
+                                        background = true;
+                                        barrier = new Barrier() {{
+                                            name = "ipsum";
+                                        }};
+                                        container = new Container() {{
+                                            blockExternalNetwork = false;
+                                            commands = new String[]() {{
+                                                add("et"),
+                                                add("vero"),
+                                            }};
+                                            entrypoint = "voluptatem";
+                                            imageUri = "ex";
+                                            options = "magni";
+                                            password = "vero";
+                                            username = "distinctio";
+                                            volumes = new String[]() {{
+                                                add("ea"),
+                                                add("non"),
+                                            }};
+                                        }};
+                                        environment = new Environment() {{
+                                            variables = new java.util.HashMap<String, String>() {{
+                                                put("nam", "beatae");
+                                                put("quae", "qui");
+                                                put("magni", "minus");
+                                            }};
+                                        }};
+                                        ignoreExitStatus = true;
+                                        script = new Script() {{
+                                            path = "aut";
+                                            text = "neque";
+                                        }};
+                                        timeout = "iusto";
+                                    }}),
+                                    add(new Runnable() {{
+                                        alwaysRun = false;
+                                        background = false;
+                                        barrier = new Barrier() {{
+                                            name = "debitis";
+                                        }};
+                                        container = new Container() {{
+                                            blockExternalNetwork = true;
+                                            commands = new String[]() {{
+                                                add("enim"),
+                                                add("ut"),
+                                            }};
+                                            entrypoint = "non";
+                                            imageUri = "nihil";
+                                            options = "laborum";
+                                            password = "recusandae";
+                                            username = "nihil";
+                                            volumes = new String[]() {{
+                                                add("iste"),
+                                                add("perferendis"),
+                                                add("id"),
+                                            }};
+                                        }};
+                                        environment = new Environment() {{
+                                            variables = new java.util.HashMap<String, String>() {{
+                                                put("hic", "voluptatem");
+                                            }};
+                                        }};
+                                        ignoreExitStatus = false;
+                                        script = new Script() {{
+                                            path = "libero";
+                                            text = "qui";
+                                        }};
+                                        timeout = "omnis";
+                                    }}),
+                                }};
+                                volumes = new openapisdk.models.shared.Volume[]() {{
+                                    add(new Volume() {{
+                                        deviceName = "nostrum";
+                                        gcs = new Gcs() {{
+                                            remotePath = "non";
+                                        }};
+                                        mountOptions = new String[]() {{
+                                            add("repellat"),
+                                            add("quo"),
+                                        }};
+                                        mountPath = "dolorum";
+                                        nfs = new Nfs() {{
+                                            remotePath = "laboriosam";
+                                            server = "velit";
+                                        }};
+                                    }}),
+                                    add(new Volume() {{
+                                        deviceName = "ea";
+                                        gcs = new Gcs() {{
+                                            remotePath = "tempore";
+                                        }};
+                                        mountOptions = new String[]() {{
+                                            add("aut"),
+                                        }};
+                                        mountPath = "tempora";
+                                        nfs = new Nfs() {{
+                                            remotePath = "aliquid";
+                                            server = "mollitia";
                                         }};
                                     }}),
                                 }};

@@ -22,27 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new MemcacheProjectsLocationsInstancesApplyParametersPathParams() {{
-                    name = "consequuntur";
+                    name = "sit";
                 }};
                 queryParams = new MemcacheProjectsLocationsInstancesApplyParametersQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "et";
-                    alt = "proto";
-                    callback = "fugiat";
-                    fields = "adipisci";
-                    key = "quis";
-                    oauthToken = "expedita";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "eum";
-                    uploadType = "ut";
-                    uploadProtocol = "facilis";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ApplyParametersRequest() {{
-                    applyAll = true;
+                    applyAll = false;
                     nodeIds = new String[]() {{
-                        add("dolor"),
-                        add("ratione"),
-                        add("est"),
+                        add("voluptatum"),
                     }};
                 }};
             }};

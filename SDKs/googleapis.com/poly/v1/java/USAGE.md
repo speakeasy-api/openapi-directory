@@ -14,20 +14,20 @@ public class Application {
 
             PolyAssetsGetRequest req = new PolyAssetsGetRequest() {{
                 pathParams = new PolyAssetsGetPathParams() {{
-                    name = "ut";
+                    name = "sit";
                 }};
                 queryParams = new PolyAssetsGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "qui";
-                    alt = "json";
-                    callback = "voluptas";
-                    fields = "cumque";
-                    key = "velit";
-                    oauthToken = "voluptatem";
-                    prettyPrint = false;
-                    quotaUser = "cum";
-                    uploadType = "ratione";
-                    uploadProtocol = "ab";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

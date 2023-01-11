@@ -35,18 +35,18 @@ public class Application {
 
             AssociateConnectionAliasRequest req = new AssociateConnectionAliasRequest() {{
                 headers = new AssociateConnectionAliasHeaders() {{
-                    xAmzAlgorithm = "hic";
-                    xAmzContentSha256 = "quisquam";
-                    xAmzCredential = "sit";
-                    xAmzDate = "autem";
-                    xAmzSecurityToken = "sed";
-                    xAmzSignature = "itaque";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "WorkspacesService.AssociateConnectionAlias";
                 }};
                 request = new AssociateConnectionAliasRequest() {{
-                    aliasId = "et";
-                    resourceId = "sequi";
+                    aliasId = "fugit";
+                    resourceId = "et";
                 }};
             }};
 

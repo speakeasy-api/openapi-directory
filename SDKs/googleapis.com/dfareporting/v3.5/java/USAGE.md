@@ -22,21 +22,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new DfareportingAccountActiveAdSummariesGetPathParams() {{
-                    profileId = "eum";
-                    summaryAccountId = "voluptates";
+                    profileId = "sit";
+                    summaryAccountId = "voluptas";
                 }};
                 queryParams = new DfareportingAccountActiveAdSummariesGetQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "aliquid";
-                    alt = "json";
-                    callback = "ut";
-                    fields = "dolor";
-                    key = "tempora";
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "est";
-                    uploadType = "quibusdam";
-                    uploadProtocol = "minima";
+                    accessToken = "expedita";
+                    alt = "proto";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

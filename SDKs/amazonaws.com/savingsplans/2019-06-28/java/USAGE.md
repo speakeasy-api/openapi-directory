@@ -22,25 +22,25 @@ public class Application {
 
             CreateSavingsPlanRequest req = new CreateSavingsPlanRequest() {{
                 headers = new CreateSavingsPlanHeaders() {{
-                    xAmzAlgorithm = "dolores";
-                    xAmzContentSha256 = "fuga";
-                    xAmzCredential = "et";
-                    xAmzDate = "qui";
-                    xAmzSecurityToken = "voluptatum";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "distinctio";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateSavingsPlanRequestBody() {{
-                    clientToken = "dicta";
-                    commitment = "tenetur";
-                    purchaseTime = "2000-01-09T02:09:05Z";
-                    savingsPlanOfferingId = "cupiditate";
+                    clientToken = "voluptas";
+                    commitment = "fugit";
+                    purchaseTime = "2011-08-12T10:11:12Z";
+                    savingsPlanOfferingId = "nihil";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("facere", "sequi");
-                        put("rerum", "enim");
-                        put("qui", "unde");
+                        put("dicta", "debitis");
+                        put("voluptatum", "et");
+                        put("ut", "dolorem");
                     }};
-                    upfrontPaymentAmount = "assumenda";
+                    upfrontPaymentAmount = "et";
                 }};
             }};
 

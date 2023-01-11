@@ -27,8 +27,8 @@ public class Application {
 
             GetFindInteractionsRequest req = new GetFindInteractionsRequest() {{
                 queryParams = new GetFindInteractionsQueryParams() {{
-                    format = "xml";
-                    query = "facilis";
+                    format = "json";
+                    query = "voluptas";
                 }};
             }};
 

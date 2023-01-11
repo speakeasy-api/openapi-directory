@@ -22,7 +22,7 @@ public class Application {
 
             CheckDomainRequest req = new CheckDomainRequest() {{
                 pathParams = new CheckDomainPathParams() {{
-                    domain = "porro";
+                    domain = "sit";
                 }};
             }};
 

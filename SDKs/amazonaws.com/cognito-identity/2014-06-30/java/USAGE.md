@@ -22,51 +22,40 @@ public class Application {
 
             CreateIdentityPoolRequest req = new CreateIdentityPoolRequest() {{
                 headers = new CreateIdentityPoolHeaders() {{
-                    xAmzAlgorithm = "vitae";
-                    xAmzContentSha256 = "vel";
-                    xAmzCredential = "assumenda";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "ad";
-                    xAmzSignature = "eum";
-                    xAmzSignedHeaders = "voluptatem";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSCognitoIdentityService.CreateIdentityPool";
                 }};
                 request = new CreateIdentityPoolInput() {{
-                    allowClassicFlow = false;
-                    allowUnauthenticatedIdentities = true;
+                    allowClassicFlow = true;
+                    allowUnauthenticatedIdentities = false;
                     cognitoIdentityProviders = new openapisdk.models.shared.CognitoIdentityProvider[]() {{
                         add(new CognitoIdentityProvider() {{
-                            clientId = "consequatur";
-                            providerName = "non";
-                            serverSideTokenCheck = true;
-                        }}),
-                        add(new CognitoIdentityProvider() {{
-                            clientId = "cum";
-                            providerName = "eius";
-                            serverSideTokenCheck = false;
-                        }}),
-                        add(new CognitoIdentityProvider() {{
-                            clientId = "nisi";
-                            providerName = "sit";
+                            clientId = "rerum";
+                            providerName = "dicta";
                             serverSideTokenCheck = true;
                         }}),
                     }};
-                    developerProviderName = "rerum";
-                    identityPoolName = "quisquam";
+                    developerProviderName = "voluptatum";
+                    identityPoolName = "et";
                     identityPoolTags = new java.util.HashMap<String, String>() {{
-                        put("itaque", "reiciendis");
-                        put("expedita", "itaque");
+                        put("dolorem", "et");
+                        put("voluptate", "iste");
+                        put("vitae", "totam");
                     }};
                     openIdConnectProviderARNs = new String[]() {{
-                        add("voluptatum"),
+                        add("illum"),
                     }};
                     samlProviderARNs = new String[]() {{
-                        add("modi"),
-                        add("adipisci"),
+                        add("vel"),
                     }};
                     supportedLoginProviders = new java.util.HashMap<String, String>() {{
-                        put("tempora", "illum");
-                        put("quae", "aut");
+                        put("dolore", "id");
                     }};
                 }};
             }};

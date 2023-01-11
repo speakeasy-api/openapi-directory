@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams() {{
-                    parent = "dolores";
+                    parent = "sit";
                 }};
                 queryParams = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "maiores";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "quaerat";
-                    fields = "possimus";
-                    key = "harum";
-                    oauthToken = "laudantium";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "deserunt";
-                    uploadType = "qui";
-                    uploadProtocol = "inventore";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new AccessLevel() {{
                     basic = new BasicLevel() {{
@@ -57,71 +57,27 @@ public class Application {
                             add(new Condition() {{
                                 devicePolicy = new DevicePolicy() {{
                                     allowedDeviceManagementLevels = new openapisdk.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]() {{
-                                        add("COMPLETE"),
-                                        add("MANAGEMENT_UNSPECIFIED"),
-                                    }};
-                                    allowedEncryptionStatuses = new openapisdk.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]() {{
-                                        add("ENCRYPTED"),
-                                    }};
-                                    osConstraints = new openapisdk.models.shared.OsConstraint[]() {{
-                                        add(new OsConstraint() {{
-                                            minimumVersion = "adipisci";
-                                            osType = "IOS";
-                                            requireVerifiedChromeOs = true;
-                                        }}),
-                                        add(new OsConstraint() {{
-                                            minimumVersion = "omnis";
-                                            osType = "DESKTOP_CHROME_OS";
-                                            requireVerifiedChromeOs = false;
-                                        }}),
-                                    }};
-                                    requireAdminApproval = false;
-                                    requireCorpOwned = true;
-                                    requireScreenlock = true;
-                                }};
-                                ipSubnetworks = new String[]() {{
-                                    add("ex"),
-                                }};
-                                members = new String[]() {{
-                                    add("nihil"),
-                                    add("quam"),
-                                    add("et"),
-                                }};
-                                negate = false;
-                                regions = new String[]() {{
-                                    add("provident"),
-                                    add("voluptatem"),
-                                    add("qui"),
-                                }};
-                                requiredAccessLevels = new String[]() {{
-                                    add("omnis"),
-                                    add("corporis"),
-                                }};
-                            }}),
-                            add(new Condition() {{
-                                devicePolicy = new DevicePolicy() {{
-                                    allowedDeviceManagementLevels = new openapisdk.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]() {{
-                                        add("MANAGEMENT_UNSPECIFIED"),
                                         add("BASIC"),
                                     }};
                                     allowedEncryptionStatuses = new openapisdk.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]() {{
                                         add("UNENCRYPTED"),
                                         add("UNENCRYPTED"),
+                                        add("UNENCRYPTED"),
                                     }};
                                     osConstraints = new openapisdk.models.shared.OsConstraint[]() {{
                                         add(new OsConstraint() {{
-                                            minimumVersion = "iure";
-                                            osType = "DESKTOP_LINUX";
-                                            requireVerifiedChromeOs = true;
-                                        }}),
-                                        add(new OsConstraint() {{
-                                            minimumVersion = "aut";
-                                            osType = "OS_UNSPECIFIED";
-                                            requireVerifiedChromeOs = true;
-                                        }}),
-                                        add(new OsConstraint() {{
-                                            minimumVersion = "eligendi";
+                                            minimumVersion = "vitae";
                                             osType = "DESKTOP_CHROME_OS";
+                                            requireVerifiedChromeOs = true;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "illum";
+                                            osType = "DESKTOP_LINUX";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "odio";
+                                            osType = "OS_UNSPECIFIED";
                                             requireVerifiedChromeOs = false;
                                         }}),
                                     }};
@@ -130,34 +86,37 @@ public class Application {
                                     requireScreenlock = false;
                                 }};
                                 ipSubnetworks = new String[]() {{
-                                    add("molestiae"),
-                                    add("numquam"),
+                                    add("quis"),
+                                    add("est"),
                                 }};
                                 members = new String[]() {{
-                                    add("consequatur"),
+                                    add("odit"),
+                                    add("non"),
+                                    add("voluptas"),
                                 }};
-                                negate = false;
+                                negate = true;
                                 regions = new String[]() {{
-                                    add("quos"),
+                                    add("illo"),
                                 }};
                                 requiredAccessLevels = new String[]() {{
-                                    add("est"),
-                                    add("neque"),
+                                    add("officiis"),
+                                    add("autem"),
+                                    add("consectetur"),
                                 }};
                             }}),
                         }};
                     }};
                     custom = new CustomLevel() {{
                         expr = new Expr() {{
-                            description = "explicabo";
-                            expression = "quis";
-                            location = "eius";
-                            title = "voluptatum";
+                            description = "nobis";
+                            expression = "odio";
+                            location = "qui";
+                            title = "recusandae";
                         }};
                     }};
-                    description = "rerum";
-                    name = "voluptas";
-                    title = "aut";
+                    description = "at";
+                    name = "ipsum";
+                    title = "eveniet";
                 }};
             }};
 

@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new DgmstRequestBody() {{
                     certificateParameters = new DgmstRequestBodyCertificateParameters() {{
-                        fullName = "architecto";
-                        rroll = "eum";
-                        sem = "modi";
+                        fullName = "sit";
+                        rroll = "voluptas";
+                        sem = "culpa";
                     }};
-                    consentArtifact = "voluptatem";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "illum";
+                    txnId = "dolor";
                 }};
             }};
 

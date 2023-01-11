@@ -36,16 +36,16 @@ public class Application {
                 }};
                 request = new CripcRequestBody() {{
                     certificateParameters = new CripcRequestBodyCertificateParameters() {{
-                        dob = "nesciunt";
-                        fullName = "eaque";
-                        udf1 = "suscipit";
-                        udf2 = "labore";
-                        udf3 = "voluptatum";
-                        uid = "quisquam";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        udf1 = "culpa";
+                        udf2 = "expedita";
+                        udf3 = "consequuntur";
+                        uid = "dolor";
                     }};
-                    consentArtifact = "pariatur";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "incidunt";
+                    txnId = "fugit";
                 }};
             }};
 

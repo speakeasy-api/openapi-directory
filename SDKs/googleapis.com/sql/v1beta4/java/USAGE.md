@@ -24,22 +24,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new SqlBackupRunsDeletePathParams() {{
-                    id = "reprehenderit";
-                    instance = "quo";
-                    project = "sit";
+                    id = "sit";
+                    instance = "voluptas";
+                    project = "culpa";
                 }};
                 queryParams = new SqlBackupRunsDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "dolores";
-                    alt = "json";
-                    callback = "quas";
-                    fields = "in";
-                    key = "natus";
-                    oauthToken = "dolor";
-                    prettyPrint = false;
-                    quotaUser = "accusamus";
-                    uploadType = "id";
-                    uploadProtocol = "quaerat";
+                    dollarXgafv = "1";
+                    accessToken = "consequuntur";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "voluptas";
+                    key = "fugit";
+                    oauthToken = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

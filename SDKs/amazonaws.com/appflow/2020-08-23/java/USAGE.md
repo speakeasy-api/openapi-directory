@@ -22,212 +22,215 @@ public class Application {
 
             CreateConnectorProfileRequest req = new CreateConnectorProfileRequest() {{
                 headers = new CreateConnectorProfileHeaders() {{
-                    xAmzAlgorithm = "fuga";
-                    xAmzContentSha256 = "aliquid";
-                    xAmzCredential = "vero";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "voluptatem";
-                    xAmzSignedHeaders = "sunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateConnectorProfileRequestBody() {{
                     connectionMode = "Private";
                     connectorProfileConfig = new CreateConnectorProfileRequestBodyConnectorProfileConfig() {{
                         connectorProfileCredentials = new ConnectorProfileCredentials() {{
                             amplitude = new AmplitudeConnectorProfileCredentials() {{
-                                apiKey = "placeat";
-                                secretKey = "vitae";
+                                apiKey = "fugit";
+                                secretKey = "et";
                             }};
                             datadog = new DatadogConnectorProfileCredentials() {{
-                                apiKey = "rerum";
-                                applicationKey = "officiis";
+                                apiKey = "nihil";
+                                applicationKey = "rerum";
                             }};
                             dynatrace = new DynatraceConnectorProfileCredentials() {{
-                                apiToken = "commodi";
+                                apiToken = "dicta";
                             }};
                             googleAnalytics = new GoogleAnalyticsConnectorProfileCredentials() {{
-                                accessToken = "sed";
-                                clientId = "voluptates";
-                                clientSecret = "enim";
+                                accessToken = "debitis";
+                                clientId = "voluptatum";
+                                clientSecret = "et";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "eos";
-                                    redirectUri = "ipsa";
+                                    authCode = "ut";
+                                    redirectUri = "dolorem";
                                 }};
-                                refreshToken = "cum";
+                                refreshToken = "et";
                             }};
                             honeycode = new HoneycodeConnectorProfileCredentials() {{
-                                accessToken = "sint";
+                                accessToken = "voluptate";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "aut";
-                                    redirectUri = "eaque";
+                                    authCode = "iste";
+                                    redirectUri = "vitae";
                                 }};
-                                refreshToken = "facilis";
+                                refreshToken = "totam";
                             }};
                             inforNexus = new InforNexusConnectorProfileCredentials() {{
-                                accessKeyId = "et";
-                                datakey = "ut";
-                                secretAccessKey = "et";
-                                userId = "quam";
+                                accessKeyId = "dolores";
+                                datakey = "illum";
+                                secretAccessKey = "debitis";
+                                userId = "vel";
                             }};
                             marketo = new MarketoConnectorProfileCredentials() {{
-                                accessToken = "sit";
-                                clientId = "voluptate";
-                                clientSecret = "eaque";
+                                accessToken = "odio";
+                                clientId = "dolore";
+                                clientSecret = "id";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "consequuntur";
-                                    redirectUri = "et";
+                                    authCode = "aspernatur";
+                                    redirectUri = "accusantium";
                                 }};
                             }};
                             redshift = new RedshiftConnectorProfileCredentials() {{
-                                password = "amet";
-                                username = "distinctio";
+                                password = "totam";
+                                username = "commodi";
                             }};
                             sapoData = new SapoDataConnectorProfileCredentials() {{
                                 basicAuthCredentials = new BasicAuthCredentials() {{
-                                    password = "in";
-                                    username = "consectetur";
+                                    password = "quis";
+                                    username = "est";
                                 }};
                                 oAuthCredentials = new OAuthCredentials() {{
-                                    accessToken = "minima";
-                                    clientId = "sequi";
-                                    clientSecret = "et";
+                                    accessToken = "aut";
+                                    clientId = "odit";
+                                    clientSecret = "non";
                                     oAuthRequest = new ConnectorOAuthRequest() {{
-                                        authCode = "consequatur";
-                                        redirectUri = "eum";
+                                        authCode = "voluptas";
+                                        redirectUri = "omnis";
                                     }};
-                                    refreshToken = "sunt";
+                                    refreshToken = "aut";
                                 }};
                             }};
                             salesforce = new SalesforceConnectorProfileCredentials() {{
-                                accessToken = "cupiditate";
-                                clientCredentialsArn = "quam";
+                                accessToken = "illo";
+                                clientCredentialsArn = "sed";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "repellendus";
-                                    redirectUri = "dolores";
+                                    authCode = "officiis";
+                                    redirectUri = "autem";
                                 }};
-                                refreshToken = "nihil";
+                                refreshToken = "consectetur";
                             }};
                             serviceNow = new ServiceNowConnectorProfileCredentials() {{
-                                password = "ullam";
-                                username = "architecto";
+                                password = "nobis";
+                                username = "odio";
                             }};
                             singular = new SingularConnectorProfileCredentials() {{
-                                apiKey = "architecto";
+                                apiKey = "qui";
                             }};
                             slack = new SlackConnectorProfileCredentials() {{
-                                accessToken = "beatae";
-                                clientId = "consequatur";
-                                clientSecret = "veniam";
+                                accessToken = "recusandae";
+                                clientId = "at";
+                                clientSecret = "ipsum";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "hic";
-                                    redirectUri = "beatae";
+                                    authCode = "eveniet";
+                                    redirectUri = "modi";
                                 }};
                             }};
                             snowflake = new SnowflakeConnectorProfileCredentials() {{
-                                password = "veritatis";
-                                username = "architecto";
+                                password = "sint";
+                                username = "inventore";
                             }};
                             trendmicro = new TrendmicroConnectorProfileCredentials() {{
-                                apiSecretKey = "voluptas";
+                                apiSecretKey = "ut";
                             }};
                             veeva = new VeevaConnectorProfileCredentials() {{
-                                password = "voluptatibus";
-                                username = "maiores";
+                                password = "exercitationem";
+                                username = "aut";
                             }};
                             zendesk = new ZendeskConnectorProfileCredentials() {{
-                                accessToken = "consectetur";
-                                clientId = "modi";
-                                clientSecret = "eos";
+                                accessToken = "reprehenderit";
+                                clientId = "tempore";
+                                clientSecret = "maiores";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "praesentium";
-                                    redirectUri = "itaque";
+                                    authCode = "incidunt";
+                                    redirectUri = "dolor";
                                 }};
                             }};
                         }};
                         connectorProfileProperties = new ConnectorProfileProperties() {{
                             amplitude = new java.util.HashMap<String, Object>() {{
-                                put("natus", "quas");
+                                put("veritatis", "in");
+                                put("et", "omnis");
+                                put("ipsum", "ex");
                             }};
                             datadog = new DatadogConnectorProfileProperties() {{
-                                instanceUrl = "nesciunt";
+                                instanceUrl = "dolores";
                             }};
                             dynatrace = new DynatraceConnectorProfileProperties() {{
-                                instanceUrl = "nostrum";
+                                instanceUrl = "placeat";
                             }};
                             googleAnalytics = new java.util.HashMap<String, Object>() {{
-                                put("repudiandae", "eius");
-                                put("totam", "amet");
+                                put("rerum", "mollitia");
+                                put("voluptas", "quam");
                             }};
                             honeycode = new java.util.HashMap<String, Object>() {{
-                                put("unde", "nihil");
-                                put("asperiores", "quaerat");
+                                put("qui", "qui");
                             }};
                             inforNexus = new InforNexusConnectorProfileProperties() {{
-                                instanceUrl = "hic";
+                                instanceUrl = "unde";
                             }};
                             marketo = new MarketoConnectorProfileProperties() {{
-                                instanceUrl = "quo";
+                                instanceUrl = "in";
                             }};
                             redshift = new RedshiftConnectorProfileProperties() {{
-                                bucketName = "est";
-                                bucketPrefix = "nostrum";
-                                databaseUrl = "pariatur";
-                                roleArn = "enim";
+                                bucketName = "autem";
+                                bucketPrefix = "qui";
+                                databaseUrl = "ut";
+                                roleArn = "itaque";
                             }};
                             sapoData = new SapoDataConnectorProfileProperties() {{
-                                applicationHostUrl = "occaecati";
-                                applicationServicePath = "possimus";
-                                clientNumber = "temporibus";
-                                logonLanguage = "laborum";
+                                applicationHostUrl = "ab";
+                                applicationServicePath = "neque";
+                                clientNumber = "ullam";
+                                logonLanguage = "et";
                                 oAuthProperties = new OAuthProperties() {{
-                                    authCodeUrl = "voluptas";
+                                    authCodeUrl = "accusantium";
                                     oAuthScopes = new String[]() {{
-                                        add("atque"),
-                                        add("soluta"),
+                                        add("architecto"),
+                                        add("quam"),
                                     }};
-                                    tokenUrl = "tempora";
+                                    tokenUrl = "velit";
                                 }};
-                                portNumber = 4542131346235756591;
-                                privateLinkServiceName = "nihil";
+                                portNumber = 2066195468801476818;
+                                privateLinkServiceName = "soluta";
                             }};
                             salesforce = new SalesforceConnectorProfileProperties() {{
-                                instanceUrl = "quas";
-                                isSandboxEnvironment = true;
+                                instanceUrl = "sunt";
+                                isSandboxEnvironment = false;
                             }};
                             serviceNow = new ServiceNowConnectorProfileProperties() {{
-                                instanceUrl = "eveniet";
+                                instanceUrl = "magni";
                             }};
                             singular = new java.util.HashMap<String, Object>() {{
-                                put("fuga", "error");
-                                put("autem", "eaque");
-                                put("omnis", "esse");
+                                put("optio", "qui");
+                                put("earum", "illo");
+                                put("omnis", "ut");
                             }};
                             slack = new SlackConnectorProfileProperties() {{
-                                instanceUrl = "veritatis";
+                                instanceUrl = "consequatur";
                             }};
                             snowflake = new SnowflakeConnectorProfileProperties() {{
-                                accountName = "voluptas";
-                                bucketName = "incidunt";
-                                bucketPrefix = "sit";
-                                privateLinkServiceName = "saepe";
-                                region = "est";
-                                stage = "odio";
-                                warehouse = "delectus";
+                                accountName = "dolor";
+                                bucketName = "commodi";
+                                bucketPrefix = "error";
+                                privateLinkServiceName = "reprehenderit";
+                                region = "consectetur";
+                                stage = "nostrum";
+                                warehouse = "ut";
                             }};
                             trendmicro = new java.util.HashMap<String, Object>() {{
-                                put("voluptatem", "et");
+                                put("sed", "a");
+                                put("soluta", "aut");
+                                put("quas", "consequuntur");
                             }};
                             veeva = new VeevaConnectorProfileProperties() {{
-                                instanceUrl = "et";
+                                instanceUrl = "laudantium";
                             }};
                             zendesk = new ZendeskConnectorProfileProperties() {{
-                                instanceUrl = "in";
+                                instanceUrl = "autem";
                             }};
                         }};
                     }};
                     connectorProfileName = "ipsa";
-                    connectorType = "Salesforce";
-                    kmsArn = "deleniti";
+                    connectorType = "Honeycode";
+                    kmsArn = "doloremque";
                 }};
             }};
 

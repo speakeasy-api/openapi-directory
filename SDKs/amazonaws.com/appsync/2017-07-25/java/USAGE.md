@@ -22,23 +22,23 @@ public class Application {
 
             CreateApiCacheRequest req = new CreateApiCacheRequest() {{
                 pathParams = new CreateApiCachePathParams() {{
-                    apiId = "aut";
+                    apiId = "sit";
                 }};
                 headers = new CreateApiCacheHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "qui";
-                    xAmzCredential = "atque";
-                    xAmzDate = "praesentium";
-                    xAmzSecurityToken = "perferendis";
-                    xAmzSignature = "ab";
-                    xAmzSignedHeaders = "cumque";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new CreateApiCacheRequestBody() {{
                     apiCachingBehavior = "FULL_REQUEST_CACHING";
                     atRestEncryptionEnabled = false;
                     transitEncryptionEnabled = true;
-                    ttl = 1541276666071085218;
-                    type = "SMALL";
+                    ttl = 8325060299420976708;
+                    type = "LARGE_12X";
                 }};
             }};
 

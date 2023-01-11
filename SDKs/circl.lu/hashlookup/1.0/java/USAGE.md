@@ -14,7 +14,7 @@ public class Application {
 
             GetLookupSha1Sha1Request req = new GetLookupSha1Sha1Request() {{
                 pathParams = new GetLookupSha1Sha1PathParams() {{
-                    sha1 = "nisi";
+                    sha1 = "sit";
                 }};
             }};
 

@@ -35,90 +35,89 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams() {{
-                    parent = "ea";
+                    parent = "sit";
                 }};
                 queryParams = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "minima";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "ut";
-                    fields = "eaque";
-                    key = "voluptatem";
-                    oauthToken = "quis";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
                     quotaUser = "et";
-                    uploadType = "saepe";
-                    uploadProtocol = "esse";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudChannelV1ChannelPartnerRepricingConfigInput() {{
                     repricingConfig = new GoogleCloudChannelV1RepricingConfig() {{
                         adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                             percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                 percentage = new GoogleTypeDecimal() {{
-                                    value = "facere";
+                                    value = "dicta";
                                 }};
                             }};
                         }};
                         channelPartnerGranularity = new java.util.HashMap<String, Object>() {{
-                            put("accusamus", "placeat");
-                            put("qui", "natus");
+                            put("voluptatum", "et");
                         }};
                         conditionalOverrides = new openapisdk.models.shared.GoogleCloudChannelV1ConditionalOverride[]() {{
                             add(new GoogleCloudChannelV1ConditionalOverride() {{
                                 adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                                     percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                         percentage = new GoogleTypeDecimal() {{
-                                            value = "iure";
+                                            value = "dolorem";
+                                        }};
+                                    }};
+                                }};
+                                rebillingBasis = "COST_AT_LIST";
+                                repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
+                                    skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
+                                        skuGroup = "voluptate";
+                                    }};
+                                }};
+                            }}),
+                            add(new GoogleCloudChannelV1ConditionalOverride() {{
+                                adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
+                                    percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
+                                        percentage = new GoogleTypeDecimal() {{
+                                            value = "iste";
+                                        }};
+                                    }};
+                                }};
+                                rebillingBasis = "REBILLING_BASIS_UNSPECIFIED";
+                                repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
+                                    skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
+                                        skuGroup = "totam";
+                                    }};
+                                }};
+                            }}),
+                            add(new GoogleCloudChannelV1ConditionalOverride() {{
+                                adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
+                                    percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
+                                        percentage = new GoogleTypeDecimal() {{
+                                            value = "dolores";
                                         }};
                                     }};
                                 }};
                                 rebillingBasis = "DIRECT_CUSTOMER_COST";
                                 repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
                                     skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "delectus";
-                                    }};
-                                }};
-                            }}),
-                            add(new GoogleCloudChannelV1ConditionalOverride() {{
-                                adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
-                                    percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
-                                        percentage = new GoogleTypeDecimal() {{
-                                            value = "voluptatibus";
-                                        }};
-                                    }};
-                                }};
-                                rebillingBasis = "COST_AT_LIST";
-                                repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
-                                    skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "laboriosam";
-                                    }};
-                                }};
-                            }}),
-                            add(new GoogleCloudChannelV1ConditionalOverride() {{
-                                adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
-                                    percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
-                                        percentage = new GoogleTypeDecimal() {{
-                                            value = "possimus";
-                                        }};
-                                    }};
-                                }};
-                                rebillingBasis = "COST_AT_LIST";
-                                repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
-                                    skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "placeat";
+                                        skuGroup = "debitis";
                                     }};
                                 }};
                             }}),
                         }};
                         effectiveInvoiceMonth = new GoogleTypeDate() {{
-                            day = 7251310948847862279;
-                            month = 1058936719184805791;
-                            year = 9128763404757230253;
+                            day = 3706853784096366226;
+                            month = 2627038740284806767;
+                            year = 6303220950515014660;
                         }};
                         entitlementGranularity = new GoogleCloudChannelV1RepricingConfigEntitlementGranularity() {{
-                            entitlement = "adipisci";
+                            entitlement = "id";
                         }};
-                        rebillingBasis = "DIRECT_CUSTOMER_COST";
+                        rebillingBasis = "REBILLING_BASIS_UNSPECIFIED";
                     }};
                 }};
             }};

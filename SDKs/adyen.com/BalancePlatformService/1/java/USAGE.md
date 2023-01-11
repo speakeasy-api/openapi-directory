@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetAccountHoldersIdPathParams() {{
-                    id = "dolorem";
+                    id = "sit";
                 }};
             }};
 

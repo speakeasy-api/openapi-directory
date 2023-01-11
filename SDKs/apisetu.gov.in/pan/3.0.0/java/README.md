@@ -36,16 +36,16 @@ public class Application {
                 }};
                 request = new PancrRequestBody() {{
                     certificateParameters = new PancrRequestBodyCertificateParameters() {{
-                        dob = "sint";
-                        fullName = "cumque";
-                        gender = "ut";
-                        panFullName = "nam";
-                        uid = "a";
-                        panno = "sed";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        gender = "culpa";
+                        panFullName = "expedita";
+                        uid = "consequuntur";
+                        panno = "dolor";
                     }};
-                    consentArtifact = "sint";
-                    format = "xml";
-                    txnId = "impedit";
+                    consentArtifact = "expedita";
+                    format = "pdf";
+                    txnId = "fugit";
                 }};
             }};
 

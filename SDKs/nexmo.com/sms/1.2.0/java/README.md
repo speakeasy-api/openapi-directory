@@ -27,9 +27,9 @@ public class Application {
 
             SendAnSmsRequest req = new SendAnSmsRequest() {{
                 pathParams = new SendAnSmsPathParams() {{
-                    format = "xml";
+                    format = "json";
                 }};
-                request = "fugiat";
+                request = "voluptas";
             }};
 
             SendAnSmsResponse res = sdk.sendAnSms(req);

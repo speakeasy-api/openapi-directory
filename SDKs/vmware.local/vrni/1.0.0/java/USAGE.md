@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 request = new ApplicationRequest() {{
-                    name = "qui";
+                    name = "sit";
                 }};
             }};
 

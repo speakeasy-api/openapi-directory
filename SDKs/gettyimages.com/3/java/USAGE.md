@@ -22,11 +22,11 @@ public class Application {
 
             GetV3AffiliatesSearchImagesRequest req = new GetV3AffiliatesSearchImagesRequest() {{
                 queryParams = new GetV3AffiliatesSearchImagesQueryParams() {{
-                    phrase = "ut";
-                    style = "vector";
+                    phrase = "sit";
+                    style = "photography";
                 }};
                 headers = new GetV3AffiliatesSearchImagesHeaders() {{
-                    acceptLanguage = "quam";
+                    acceptLanguage = "culpa";
                 }};
             }};
 

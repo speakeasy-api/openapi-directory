@@ -24,17 +24,17 @@ public class Application {
                 queryParams = new GetAcceptTransitGatewayPeeringAttachmentQueryParams() {{
                     action = "AcceptTransitGatewayPeeringAttachment";
                     dryRun = false;
-                    transitGatewayAttachmentId = "ut";
+                    transitGatewayAttachmentId = "culpa";
                     version = "2016-11-15";
                 }};
                 headers = new GetAcceptTransitGatewayPeeringAttachmentHeaders() {{
-                    xAmzAlgorithm = "assumenda";
-                    xAmzContentSha256 = "autem";
-                    xAmzCredential = "ut";
-                    xAmzDate = "labore";
-                    xAmzSecurityToken = "amet";
-                    xAmzSignature = "in";
-                    xAmzSignedHeaders = "provident";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

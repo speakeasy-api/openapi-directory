@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new CmcerRequestBody() {{
                     certificateParameters = new CmcerRequestBodyCertificateParameters() {{
-                        aplno = "architecto";
-                        certno = "ea";
-                        sccd = "et";
+                        aplno = "sit";
+                        certno = "voluptas";
+                        sccd = "culpa";
                     }};
-                    consentArtifact = "soluta";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "ea";
+                    txnId = "dolor";
                 }};
             }};
 

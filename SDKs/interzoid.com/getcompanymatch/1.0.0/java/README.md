@@ -27,8 +27,8 @@ public class Application {
 
             GetcompanymatchRequest req = new GetcompanymatchRequest() {{
                 queryParams = new GetcompanymatchQueryParams() {{
-                    company = "eveniet";
-                    license = "vero";
+                    company = "sit";
+                    license = "voluptas";
                 }};
             }};
 

@@ -22,19 +22,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new BloggerBlogsGetPathParams() {{
-                    blogId = "repellat";
+                    blogId = "sit";
                 }};
                 queryParams = new BloggerBlogsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "necessitatibus";
-                    alt = "json";
-                    callback = "in";
-                    fields = "veritatis";
-                    key = "sed";
-                    oauthToken = "praesentium";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "ea";
-                    uploadType = "iure";
+                    quotaUser = "et";
+                    uploadType = "nihil";
                     uploadProtocol = "rerum";
                 }};
             }};

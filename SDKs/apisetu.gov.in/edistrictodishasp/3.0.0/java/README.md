@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new EgcerRequestBody() {{
                     certificateParameters = new EgcerRequestBodyCertificateParameters() {{
-                        fullName = "qui";
-                        refNo = "voluptatibus";
-                        tokenNo = "nulla";
-                        uid = "quia";
+                        fullName = "sit";
+                        refNo = "voluptas";
+                        tokenNo = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "dolorem";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "quis";
+                    txnId = "expedita";
                 }};
             }};
 

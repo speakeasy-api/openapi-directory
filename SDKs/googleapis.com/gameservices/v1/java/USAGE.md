@@ -22,21 +22,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyPathParams() {{
-                    resource = "exercitationem";
+                    resource = "sit";
                 }};
                 queryParams = new GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "incidunt";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "maxime";
-                    fields = "ut";
-                    key = "quod";
-                    oauthToken = "velit";
-                    optionsRequestedPolicyVersion = 3881251624959471437;
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    optionsRequestedPolicyVersion = 8274930044578894929;
                     prettyPrint = false;
-                    quotaUser = "omnis";
-                    uploadType = "est";
-                    uploadProtocol = "sunt";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

@@ -24,32 +24,32 @@ public class Application {
                     }};
                 }};
                 pathParams = new JobsProjectsTenantsClientEventsCreatePathParams() {{
-                    parent = "sapiente";
+                    parent = "sit";
                 }};
                 queryParams = new JobsProjectsTenantsClientEventsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "iusto";
-                    alt = "json";
-                    callback = "expedita";
-                    fields = "vel";
-                    key = "delectus";
-                    oauthToken = "ipsa";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "aut";
-                    uploadType = "beatae";
-                    uploadProtocol = "iste";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ClientEvent() {{
-                    createTime = "vel";
-                    eventId = "est";
-                    eventNotes = "aut";
+                    createTime = "dicta";
+                    eventId = "debitis";
+                    eventNotes = "voluptatum";
                     jobEvent = new JobEvent() {{
                         jobs = new String[]() {{
-                            add("et"),
+                            add("ut"),
                         }};
-                        type = "VIEW_REDIRECT";
+                        type = "VIEW";
                     }};
-                    requestId = "est";
+                    requestId = "et";
                 }};
             }};
 

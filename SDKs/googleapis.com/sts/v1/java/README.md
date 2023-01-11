@@ -27,21 +27,21 @@ public class Application {
 
             StsIntrospectRequest req = new StsIntrospectRequest() {{
                 queryParams = new StsIntrospectQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ut";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "soluta";
-                    fields = "eum";
-                    key = "consequatur";
-                    oauthToken = "consequatur";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "possimus";
-                    uploadType = "aliquam";
-                    uploadProtocol = "officia";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new GoogleIdentityStsV1IntrospectTokenRequest() {{
-                    token = "quae";
-                    tokenTypeHint = "eveniet";
+                    token = "rerum";
+                    tokenTypeHint = "dicta";
                 }};
             }};
 

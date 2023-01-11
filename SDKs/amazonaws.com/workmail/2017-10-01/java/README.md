@@ -35,19 +35,19 @@ public class Application {
 
             AssociateDelegateToResourceRequest req = new AssociateDelegateToResourceRequest() {{
                 headers = new AssociateDelegateToResourceHeaders() {{
-                    xAmzAlgorithm = "voluptates";
-                    xAmzContentSha256 = "non";
-                    xAmzCredential = "nam";
-                    xAmzDate = "enim";
-                    xAmzSecurityToken = "enim";
-                    xAmzSignature = "assumenda";
-                    xAmzSignedHeaders = "quo";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "WorkMailService.AssociateDelegateToResource";
                 }};
                 request = new AssociateDelegateToResourceRequest() {{
-                    entityId = "quis";
-                    organizationId = "esse";
-                    resourceId = "voluptate";
+                    entityId = "fugit";
+                    organizationId = "et";
+                    resourceId = "nihil";
                 }};
             }};
 

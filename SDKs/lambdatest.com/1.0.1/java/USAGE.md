@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new DevicesQueryParams() {{
-                    os = "harum";
+                    os = "sit";
                 }};
             }};
 

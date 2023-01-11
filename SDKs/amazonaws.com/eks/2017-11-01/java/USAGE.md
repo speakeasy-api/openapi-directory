@@ -22,38 +22,28 @@ public class Application {
 
             AssociateEncryptionConfigRequest req = new AssociateEncryptionConfigRequest() {{
                 pathParams = new AssociateEncryptionConfigPathParams() {{
-                    name = "sint";
+                    name = "sit";
                 }};
                 headers = new AssociateEncryptionConfigHeaders() {{
-                    xAmzAlgorithm = "ratione";
-                    xAmzContentSha256 = "sed";
-                    xAmzCredential = "placeat";
-                    xAmzDate = "ut";
-                    xAmzSecurityToken = "ipsam";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "cum";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AssociateEncryptionConfigRequestBody() {{
-                    clientRequestToken = "aut";
+                    clientRequestToken = "fugit";
                     encryptionConfig = new openapisdk.models.shared.EncryptionConfig[]() {{
                         add(new EncryptionConfig() {{
                             provider = new Provider() {{
-                                keyArn = "dolore";
+                                keyArn = "nihil";
                             }};
                             resources = new String[]() {{
-                                add("quis"),
-                                add("in"),
-                                add("velit"),
-                            }};
-                        }}),
-                        add(new EncryptionConfig() {{
-                            provider = new Provider() {{
-                                keyArn = "eligendi";
-                            }};
-                            resources = new String[]() {{
-                                add("quaerat"),
-                                add("dolorem"),
-                                add("deserunt"),
+                                add("dicta"),
+                                add("debitis"),
+                                add("voluptatum"),
                             }};
                         }}),
                     }};

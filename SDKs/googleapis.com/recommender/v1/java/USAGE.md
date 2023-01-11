@@ -22,23 +22,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecommenderProjectsLocationsInsightTypesInsightsListPathParams() {{
-                    parent = "non";
+                    parent = "sit";
                 }};
                 queryParams = new RecommenderProjectsLocationsInsightTypesInsightsListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "rem";
-                    alt = "json";
-                    callback = "et";
-                    fields = "adipisci";
-                    filter = "velit";
-                    key = "minima";
-                    oauthToken = "voluptatem";
-                    pageSize = 2716786617242449872;
-                    pageToken = "ipsum";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
                     prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "quo";
-                    uploadProtocol = "fugit";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

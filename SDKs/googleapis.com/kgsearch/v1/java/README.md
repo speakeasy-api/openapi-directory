@@ -27,31 +27,32 @@ public class Application {
 
             KgsearchEntitiesSearchRequest req = new KgsearchEntitiesSearchRequest() {{
                 queryParams = new KgsearchEntitiesSearchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "nesciunt";
-                    alt = "json";
-                    callback = "sunt";
-                    fields = "eius";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
                     ids = new String[]() {{
-                        add("ullam"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
-                    indent = false;
-                    key = "vel";
+                    indent = true;
+                    key = "et";
                     languages = new String[]() {{
                         add("rerum"),
-                        add("nemo"),
                     }};
-                    limit = 7737765622308491628;
-                    oauthToken = "rerum";
+                    limit = 7837839688282259259;
+                    oauthToken = "debitis";
                     prefix = true;
-                    prettyPrint = true;
-                    query = "provident";
-                    quotaUser = "eos";
+                    prettyPrint = false;
+                    query = "ut";
+                    quotaUser = "dolorem";
                     types = new String[]() {{
-                        add("ipsa"),
+                        add("voluptate"),
+                        add("iste"),
                     }};
-                    uploadType = "dignissimos";
-                    uploadProtocol = "animi";
+                    uploadType = "vitae";
+                    uploadProtocol = "totam";
                 }};
             }};
 

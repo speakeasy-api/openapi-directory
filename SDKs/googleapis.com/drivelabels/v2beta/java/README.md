@@ -28,230 +28,71 @@ public class Application {
             DrivelabelsLabelsCreateRequest req = new DrivelabelsLabelsCreateRequest() {{
                 queryParams = new DrivelabelsLabelsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "repellendus";
-                    alt = "proto";
-                    callback = "quidem";
-                    fields = "consequatur";
-                    key = "corrupti";
-                    languageCode = "qui";
-                    oauthToken = "illo";
-                    prettyPrint = false;
-                    quotaUser = "earum";
-                    uploadType = "sunt";
-                    uploadProtocol = "laborum";
-                    useAdminAccess = true;
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    languageCode = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
+                    useAdminAccess = false;
                 }};
                 request = new GoogleAppsDriveLabelsV2betaLabelInput() {{
                     appliedCapabilities = new GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities() {{
-                        canApply = false;
-                        canRead = false;
-                        canRemove = true;
+                        canApply = true;
+                        canRead = true;
+                        canRemove = false;
                     }};
                     appliedLabelPolicy = new GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy() {{
-                        copyMode = "COPY_MODE_UNSPECIFIED";
+                        copyMode = "COPY_APPLIABLE";
                     }};
                     creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                        person = "corrupti";
+                        person = "dolorem";
                     }};
                     disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                        person = "est";
+                        person = "et";
                     }};
                     displayHints = new GoogleAppsDriveLabelsV2betaLabelDisplayHints() {{
-                        disabled = true;
-                        hiddenInSearch = false;
-                        priority = "quod";
+                        disabled = false;
+                        hiddenInSearch = true;
+                        priority = "vitae";
                         shownInApply = true;
                     }};
                     fields = new openapisdk.models.shared.GoogleAppsDriveLabelsV2betaFieldInput[]() {{
                         add(new GoogleAppsDriveLabelsV2betaFieldInput() {{
                             appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities() {{
-                                canRead = true;
-                                canSearch = false;
+                                canRead = false;
+                                canSearch = true;
                                 canWrite = false;
                             }};
                             creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "labore";
-                            }};
-                            dateOptions = new GoogleAppsDriveLabelsV2betaFieldDateOptionsInput() {{
-                                dateFormatType = "DATE_FORMAT_UNSPECIFIED";
-                                maxValue = new GoogleTypeDate() {{
-                                    day = 5534192716385542712;
-                                    month = 7766255117569119462;
-                                    year = 4272172474385962946;
-                                }};
-                                minValue = new GoogleTypeDate() {{
-                                    day = 2417643266795297980;
-                                    month = 7424544533425613880;
-                                    year = 3104234473811014069;
-                                }};
-                            }};
-                            disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "a";
-                            }};
-                            displayHints = new GoogleAppsDriveLabelsV2betaFieldDisplayHints() {{
-                                disabled = false;
-                                hiddenInSearch = true;
-                                required = false;
-                                shownInApply = true;
-                            }};
-                            lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
-                                disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                    hideInSearch = true;
-                                    showInApply = false;
-                                }};
-                            }};
-                            properties = new GoogleAppsDriveLabelsV2betaFieldProperties() {{
-                                displayName = "enim";
-                                insertBeforeField = "accusantium";
-                                required = true;
-                            }};
-                            publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "dolores";
-                            }};
-                            schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities() {{
-                                canDelete = true;
-                                canDisable = true;
-                                canEnable = true;
-                                canUpdate = true;
-                            }};
-                            selectionOptions = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput() {{
-                                choices = new openapisdk.models.shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput[]() {{
-                                    add(new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput() {{
-                                        appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities() {{
-                                            canRead = true;
-                                            canSearch = false;
-                                            canSelect = false;
-                                        }};
-                                        creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "natus";
-                                        }};
-                                        disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "fugiat";
-                                        }};
-                                        displayHints = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints() {{
-                                            badgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
-                                                backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 42.200001;
-                                                    blue = 69.099998;
-                                                    green = 95.199997;
-                                                    red = 13.100000;
-                                                }};
-                                                foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 7.100000;
-                                                    blue = 20.200001;
-                                                    green = 38.200001;
-                                                    red = 46.200001;
-                                                }};
-                                                soloColor = new GoogleTypeColor() {{
-                                                    alpha = 51.200001;
-                                                    blue = 51.099998;
-                                                    green = 35.099998;
-                                                    red = 80.199997;
-                                                }};
-                                            }};
-                                            badgePriority = "est";
-                                            darkBadgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
-                                                backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 64.199997;
-                                                    blue = 47.200001;
-                                                    green = 1.200000;
-                                                    red = 27.200001;
-                                                }};
-                                                foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 92.099998;
-                                                    blue = 21.100000;
-                                                    green = 96.099998;
-                                                    red = 61.099998;
-                                                }};
-                                                soloColor = new GoogleTypeColor() {{
-                                                    alpha = 35.099998;
-                                                    blue = 73.099998;
-                                                    green = 84.099998;
-                                                    red = 1.200000;
-                                                }};
-                                            }};
-                                            disabled = false;
-                                            hiddenInSearch = false;
-                                            shownInApply = true;
-                                        }};
-                                        id = "sapiente";
-                                        lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
-                                            disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                                hideInSearch = false;
-                                                showInApply = true;
-                                            }};
-                                        }};
-                                        properties = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties() {{
-                                            badgeConfig = new GoogleAppsDriveLabelsV2betaBadgeConfig() {{
-                                                color = new GoogleTypeColor() {{
-                                                    alpha = 32.200001;
-                                                    blue = 7.200000;
-                                                    green = 96.099998;
-                                                    red = 89.099998;
-                                                }};
-                                                priorityOverride = "enim";
-                                            }};
-                                            description = "asperiores";
-                                            displayName = "molestias";
-                                            insertBeforeChoice = "accusantium";
-                                        }};
-                                        publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "quia";
-                                        }};
-                                        schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities() {{
-                                            canDelete = true;
-                                            canDisable = false;
-                                            canEnable = false;
-                                            canUpdate = false;
-                                        }};
-                                        updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "eum";
-                                        }};
-                                    }}),
-                                }};
-                                listOptions = new GoogleAppsDriveLabelsV2betaFieldListOptions() {{
-                                    maxEntries = 4652360340631601864;
-                                }};
-                            }};
-                            updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "assumenda";
-                            }};
-                            userOptions = new GoogleAppsDriveLabelsV2betaFieldUserOptions() {{
-                                listOptions = new GoogleAppsDriveLabelsV2betaFieldListOptions() {{
-                                    maxEntries = 263804207177945892;
-                                }};
-                            }};
-                        }}),
-                        add(new GoogleAppsDriveLabelsV2betaFieldInput() {{
-                            appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities() {{
-                                canRead = true;
-                                canSearch = false;
-                                canWrite = false;
-                            }};
-                            creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "culpa";
+                                person = "odio";
                             }};
                             dateOptions = new GoogleAppsDriveLabelsV2betaFieldDateOptionsInput() {{
                                 dateFormatType = "LONG_DATE";
                                 maxValue = new GoogleTypeDate() {{
-                                    day = 7278689172350406277;
-                                    month = 1770261655771269438;
-                                    year = 3663847910555717574;
+                                    day = 4035568504096476779;
+                                    month = 959367522974354090;
+                                    year = 2914295034816259174;
                                 }};
                                 minValue = new GoogleTypeDate() {{
-                                    day = 3834780785666994060;
-                                    month = 2481309397277863472;
-                                    year = 7669970830275219153;
+                                    day = 1395437218309923052;
+                                    month = 6745438398739480977;
+                                    year = 2897681629866238117;
                                 }};
                             }};
                             disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "earum";
+                                person = "est";
                             }};
                             displayHints = new GoogleAppsDriveLabelsV2betaFieldDisplayHints() {{
-                                disabled = false;
+                                disabled = true;
                                 hiddenInSearch = true;
                                 required = true;
-                                shownInApply = true;
+                                shownInApply = false;
                             }};
                             lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
                                 disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
@@ -260,15 +101,15 @@ public class Application {
                                 }};
                             }};
                             properties = new GoogleAppsDriveLabelsV2betaFieldProperties() {{
-                                displayName = "pariatur";
-                                insertBeforeField = "qui";
+                                displayName = "illo";
+                                insertBeforeField = "sed";
                                 required = false;
                             }};
                             publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "voluptatem";
+                                person = "autem";
                             }};
                             schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities() {{
-                                canDelete = false;
+                                canDelete = true;
                                 canDisable = false;
                                 canEnable = false;
                                 canUpdate = false;
@@ -279,175 +120,175 @@ public class Application {
                                         appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities() {{
                                             canRead = true;
                                             canSearch = false;
-                                            canSelect = false;
+                                            canSelect = true;
                                         }};
                                         creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "qui";
+                                            person = "modi";
                                         }};
                                         disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "deserunt";
+                                            person = "sint";
                                         }};
                                         displayHints = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints() {{
                                             badgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
                                                 backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 62.200001;
-                                                    blue = 27.200001;
-                                                    green = 30.100000;
-                                                    red = 54.200001;
+                                                    alpha = 77.099998;
+                                                    blue = 56.099998;
+                                                    green = 30.200001;
+                                                    red = 97.099998;
                                                 }};
                                                 foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 66.199997;
-                                                    blue = 19.200001;
-                                                    green = 88.199997;
-                                                    red = 38.099998;
+                                                    alpha = 94.199997;
+                                                    blue = 19.100000;
+                                                    green = 69.199997;
+                                                    red = 3.100000;
                                                 }};
                                                 soloColor = new GoogleTypeColor() {{
-                                                    alpha = 95.099998;
-                                                    blue = 34.099998;
-                                                    green = 79.099998;
-                                                    red = 13.200000;
+                                                    alpha = 64.199997;
+                                                    blue = 78.199997;
+                                                    green = 89.099998;
+                                                    red = 63.200001;
                                                 }};
                                             }};
-                                            badgePriority = "assumenda";
+                                            badgePriority = "qui";
                                             darkBadgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
                                                 backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 52.099998;
-                                                    blue = 56.200001;
-                                                    green = 62.200001;
-                                                    red = 69.099998;
+                                                    alpha = 78.099998;
+                                                    blue = 31.100000;
+                                                    green = 13.100000;
+                                                    red = 26.100000;
                                                 }};
                                                 foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 54.099998;
-                                                    blue = 91.199997;
-                                                    green = 93.099998;
-                                                    red = 91.099998;
+                                                    alpha = 90.099998;
+                                                    blue = 92.099998;
+                                                    green = 68.099998;
+                                                    red = 38.200001;
                                                 }};
                                                 soloColor = new GoogleTypeColor() {{
-                                                    alpha = 84.199997;
-                                                    blue = 24.200001;
-                                                    green = 32.200001;
-                                                    red = 92.199997;
+                                                    alpha = 20.100000;
+                                                    blue = 41.200001;
+                                                    green = 89.199997;
+                                                    red = 41.099998;
                                                 }};
                                             }};
-                                            disabled = false;
+                                            disabled = true;
                                             hiddenInSearch = true;
-                                            shownInApply = false;
+                                            shownInApply = true;
                                         }};
-                                        id = "earum";
+                                        id = "ut";
                                         lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
                                             disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                                hideInSearch = true;
-                                                showInApply = false;
+                                                hideInSearch = false;
+                                                showInApply = true;
                                             }};
                                         }};
                                         properties = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties() {{
                                             badgeConfig = new GoogleAppsDriveLabelsV2betaBadgeConfig() {{
                                                 color = new GoogleTypeColor() {{
-                                                    alpha = 26.200001;
-                                                    blue = 64.099998;
-                                                    green = 5.100000;
-                                                    red = 5.200000;
+                                                    alpha = 26.100000;
+                                                    blue = 19.200001;
+                                                    green = 59.200001;
+                                                    red = 64.099998;
                                                 }};
-                                                priorityOverride = "voluptate";
+                                                priorityOverride = "a";
                                             }};
-                                            description = "accusantium";
+                                            description = "soluta";
                                             displayName = "aut";
-                                            insertBeforeChoice = "at";
+                                            insertBeforeChoice = "quas";
                                         }};
                                         publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "vel";
+                                            person = "consequuntur";
                                         }};
                                         schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities() {{
                                             canDelete = false;
-                                            canDisable = false;
-                                            canEnable = false;
+                                            canDisable = true;
+                                            canEnable = true;
                                             canUpdate = false;
                                         }};
                                         updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "cum";
+                                            person = "doloremque";
                                         }};
                                     }}),
                                     add(new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput() {{
                                         appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities() {{
-                                            canRead = false;
+                                            canRead = true;
                                             canSearch = false;
                                             canSelect = true;
                                         }};
                                         creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "ipsa";
+                                            person = "quisquam";
                                         }};
                                         disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "numquam";
+                                            person = "explicabo";
                                         }};
                                         displayHints = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints() {{
                                             badgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
                                                 backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 92.199997;
-                                                    blue = 55.099998;
-                                                    green = 14.100000;
-                                                    red = 76.199997;
+                                                    alpha = 42.099998;
+                                                    blue = 15.200000;
+                                                    green = 66.099998;
+                                                    red = 94.199997;
                                                 }};
                                                 foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 9.100000;
-                                                    blue = 6.200000;
-                                                    green = 64.099998;
-                                                    red = 98.199997;
+                                                    alpha = 97.199997;
+                                                    blue = 1.200000;
+                                                    green = 40.200001;
+                                                    red = 94.199997;
                                                 }};
                                                 soloColor = new GoogleTypeColor() {{
-                                                    alpha = 18.100000;
-                                                    blue = 30.100000;
-                                                    green = 55.099998;
-                                                    red = 78.199997;
+                                                    alpha = 31.100000;
+                                                    blue = 70.099998;
+                                                    green = 87.099998;
+                                                    red = 50.200001;
                                                 }};
                                             }};
-                                            badgePriority = "alias";
+                                            badgePriority = "deserunt";
                                             darkBadgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
                                                 backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 58.099998;
-                                                    blue = 1.100000;
-                                                    green = 85.199997;
-                                                    red = 17.100000;
+                                                    alpha = 59.099998;
+                                                    blue = 68.099998;
+                                                    green = 66.099998;
+                                                    red = 91.099998;
                                                 }};
                                                 foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 29.200001;
-                                                    blue = 9.200000;
-                                                    green = 4.100000;
-                                                    red = 16.200001;
+                                                    alpha = 13.200000;
+                                                    blue = 96.099998;
+                                                    green = 5.100000;
+                                                    red = 54.099998;
                                                 }};
                                                 soloColor = new GoogleTypeColor() {{
-                                                    alpha = 61.200001;
-                                                    blue = 31.200001;
-                                                    green = 19.200001;
-                                                    red = 49.200001;
+                                                    alpha = 2.100000;
+                                                    blue = 37.200001;
+                                                    green = 63.099998;
+                                                    red = 27.200001;
                                                 }};
                                             }};
-                                            disabled = true;
+                                            disabled = false;
                                             hiddenInSearch = false;
-                                            shownInApply = false;
+                                            shownInApply = true;
                                         }};
-                                        id = "magnam";
+                                        id = "excepturi";
                                         lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
                                             disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                                hideInSearch = false;
-                                                showInApply = false;
+                                                hideInSearch = true;
+                                                showInApply = true;
                                             }};
                                         }};
                                         properties = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties() {{
                                             badgeConfig = new GoogleAppsDriveLabelsV2betaBadgeConfig() {{
                                                 color = new GoogleTypeColor() {{
-                                                    alpha = 25.200001;
-                                                    blue = 9.200000;
-                                                    green = 92.199997;
-                                                    red = 89.099998;
+                                                    alpha = 29.200001;
+                                                    blue = 20.100000;
+                                                    green = 28.100000;
+                                                    red = 95.099998;
                                                 }};
-                                                priorityOverride = "vel";
+                                                priorityOverride = "sed";
                                             }};
-                                            description = "aut";
-                                            displayName = "et";
-                                            insertBeforeChoice = "dignissimos";
+                                            description = "et";
+                                            displayName = "consequuntur";
+                                            insertBeforeChoice = "non";
                                         }};
                                         publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "aut";
+                                            person = "cupiditate";
                                         }};
                                         schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities() {{
                                             canDelete = false;
@@ -456,319 +297,68 @@ public class Application {
                                             canUpdate = false;
                                         }};
                                         updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "soluta";
+                                            person = "corrupti";
                                         }};
                                     }}),
                                     add(new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput() {{
                                         appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities() {{
-                                            canRead = true;
+                                            canRead = false;
                                             canSearch = true;
                                             canSelect = true;
                                         }};
                                         creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "ut";
+                                            person = "possimus";
                                         }};
                                         disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "magni";
+                                            person = "modi";
                                         }};
                                         displayHints = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints() {{
                                             badgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
                                                 backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 35.200001;
-                                                    blue = 71.199997;
-                                                    green = 40.200001;
-                                                    red = 88.099998;
+                                                    alpha = 18.200001;
+                                                    blue = 33.099998;
+                                                    green = 28.100000;
+                                                    red = 93.099998;
                                                 }};
                                                 foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 81.099998;
-                                                    blue = 41.099998;
-                                                    green = 94.199997;
-                                                    red = 27.100000;
+                                                    alpha = 20.200001;
+                                                    blue = 73.099998;
+                                                    green = 45.099998;
+                                                    red = 56.099998;
                                                 }};
                                                 soloColor = new GoogleTypeColor() {{
-                                                    alpha = 71.099998;
-                                                    blue = 85.199997;
-                                                    green = 82.099998;
-                                                    red = 32.200001;
+                                                    alpha = 18.100000;
+                                                    blue = 57.099998;
+                                                    green = 47.200001;
+                                                    red = 59.099998;
                                                 }};
                                             }};
-                                            badgePriority = "quae";
+                                            badgePriority = "ut";
                                             darkBadgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
                                                 backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 18.100000;
-                                                    blue = 70.099998;
-                                                    green = 84.199997;
-                                                    red = 30.100000;
+                                                    alpha = 80.099998;
+                                                    blue = 47.099998;
+                                                    green = 3.200000;
+                                                    red = 58.200001;
                                                 }};
                                                 foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 56.099998;
-                                                    blue = 80.199997;
-                                                    green = 17.200001;
-                                                    red = 89.099998;
+                                                    alpha = 69.199997;
+                                                    blue = 66.199997;
+                                                    green = 25.200001;
+                                                    red = 16.200001;
                                                 }};
                                                 soloColor = new GoogleTypeColor() {{
-                                                    alpha = 16.200001;
-                                                    blue = 56.200001;
-                                                    green = 41.099998;
-                                                    red = 37.099998;
+                                                    alpha = 14.100000;
+                                                    blue = 78.199997;
+                                                    green = 46.099998;
+                                                    red = 84.099998;
                                                 }};
                                             }};
                                             disabled = false;
                                             hiddenInSearch = true;
                                             shownInApply = true;
                                         }};
-                                        id = "totam";
-                                        lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
-                                            disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                                hideInSearch = true;
-                                                showInApply = true;
-                                            }};
-                                        }};
-                                        properties = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties() {{
-                                            badgeConfig = new GoogleAppsDriveLabelsV2betaBadgeConfig() {{
-                                                color = new GoogleTypeColor() {{
-                                                    alpha = 30.100000;
-                                                    blue = 23.200001;
-                                                    green = 7.200000;
-                                                    red = 22.100000;
-                                                }};
-                                                priorityOverride = "non";
-                                            }};
-                                            description = "iusto";
-                                            displayName = "et";
-                                            insertBeforeChoice = "et";
-                                        }};
-                                        publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "quod";
-                                        }};
-                                        schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities() {{
-                                            canDelete = false;
-                                            canDisable = true;
-                                            canEnable = true;
-                                            canUpdate = false;
-                                        }};
-                                        updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "quia";
-                                        }};
-                                    }}),
-                                }};
-                                listOptions = new GoogleAppsDriveLabelsV2betaFieldListOptions() {{
-                                    maxEntries = 5451247501904893617;
-                                }};
-                            }};
-                            updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "provident";
-                            }};
-                            userOptions = new GoogleAppsDriveLabelsV2betaFieldUserOptions() {{
-                                listOptions = new GoogleAppsDriveLabelsV2betaFieldListOptions() {{
-                                    maxEntries = 8384809910953804387;
-                                }};
-                            }};
-                        }}),
-                        add(new GoogleAppsDriveLabelsV2betaFieldInput() {{
-                            appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities() {{
-                                canRead = true;
-                                canSearch = true;
-                                canWrite = true;
-                            }};
-                            creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "qui";
-                            }};
-                            dateOptions = new GoogleAppsDriveLabelsV2betaFieldDateOptionsInput() {{
-                                dateFormatType = "DATE_FORMAT_UNSPECIFIED";
-                                maxValue = new GoogleTypeDate() {{
-                                    day = 5512550995837990606;
-                                    month = 2446343920521465149;
-                                    year = 2433634541100086189;
-                                }};
-                                minValue = new GoogleTypeDate() {{
-                                    day = 3807359813755995270;
-                                    month = 2414431317002566233;
-                                    year = 5687243959435260900;
-                                }};
-                            }};
-                            disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "blanditiis";
-                            }};
-                            displayHints = new GoogleAppsDriveLabelsV2betaFieldDisplayHints() {{
-                                disabled = false;
-                                hiddenInSearch = false;
-                                required = true;
-                                shownInApply = true;
-                            }};
-                            lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
-                                disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                    hideInSearch = false;
-                                    showInApply = true;
-                                }};
-                            }};
-                            properties = new GoogleAppsDriveLabelsV2betaFieldProperties() {{
-                                displayName = "aut";
-                                insertBeforeField = "et";
-                                required = false;
-                            }};
-                            publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "cum";
-                            }};
-                            schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities() {{
-                                canDelete = true;
-                                canDisable = false;
-                                canEnable = false;
-                                canUpdate = true;
-                            }};
-                            selectionOptions = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput() {{
-                                choices = new openapisdk.models.shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput[]() {{
-                                    add(new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput() {{
-                                        appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities() {{
-                                            canRead = true;
-                                            canSearch = false;
-                                            canSelect = false;
-                                        }};
-                                        creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "quam";
-                                        }};
-                                        disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "dolorem";
-                                        }};
-                                        displayHints = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints() {{
-                                            badgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
-                                                backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 46.099998;
-                                                    blue = 52.099998;
-                                                    green = 19.200001;
-                                                    red = 41.099998;
-                                                }};
-                                                foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 52.099998;
-                                                    blue = 53.200001;
-                                                    green = 57.200001;
-                                                    red = 17.100000;
-                                                }};
-                                                soloColor = new GoogleTypeColor() {{
-                                                    alpha = 51.200001;
-                                                    blue = 57.099998;
-                                                    green = 27.100000;
-                                                    red = 13.200000;
-                                                }};
-                                            }};
-                                            badgePriority = "eveniet";
-                                            darkBadgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
-                                                backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 92.199997;
-                                                    blue = 92.099998;
-                                                    green = 77.099998;
-                                                    red = 3.200000;
-                                                }};
-                                                foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 17.200001;
-                                                    blue = 17.200001;
-                                                    green = 70.099998;
-                                                    red = 41.200001;
-                                                }};
-                                                soloColor = new GoogleTypeColor() {{
-                                                    alpha = 75.199997;
-                                                    blue = 62.200001;
-                                                    green = 78.199997;
-                                                    red = 97.099998;
-                                                }};
-                                            }};
-                                            disabled = true;
-                                            hiddenInSearch = true;
-                                            shownInApply = false;
-                                        }};
-                                        id = "ut";
-                                        lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
-                                            disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
-                                                hideInSearch = true;
-                                                showInApply = true;
-                                            }};
-                                        }};
-                                        properties = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties() {{
-                                            badgeConfig = new GoogleAppsDriveLabelsV2betaBadgeConfig() {{
-                                                color = new GoogleTypeColor() {{
-                                                    alpha = 82.099998;
-                                                    blue = 73.099998;
-                                                    green = 2.100000;
-                                                    red = 42.099998;
-                                                }};
-                                                priorityOverride = "velit";
-                                            }};
-                                            description = "et";
-                                            displayName = "deserunt";
-                                            insertBeforeChoice = "velit";
-                                        }};
-                                        publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "sequi";
-                                        }};
-                                        schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities() {{
-                                            canDelete = false;
-                                            canDisable = true;
-                                            canEnable = true;
-                                            canUpdate = false;
-                                        }};
-                                        updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "illum";
-                                        }};
-                                    }}),
-                                    add(new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput() {{
-                                        appliedCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities() {{
-                                            canRead = false;
-                                            canSearch = false;
-                                            canSelect = false;
-                                        }};
-                                        creator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "iusto";
-                                        }};
-                                        disabler = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "ut";
-                                        }};
-                                        displayHints = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints() {{
-                                            badgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
-                                                backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 5.100000;
-                                                    blue = 95.199997;
-                                                    green = 9.100000;
-                                                    red = 89.199997;
-                                                }};
-                                                foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 20.100000;
-                                                    blue = 94.099998;
-                                                    green = 21.100000;
-                                                    red = 27.100000;
-                                                }};
-                                                soloColor = new GoogleTypeColor() {{
-                                                    alpha = 61.099998;
-                                                    blue = 52.200001;
-                                                    green = 85.099998;
-                                                    red = 92.099998;
-                                                }};
-                                            }};
-                                            badgePriority = "laboriosam";
-                                            darkBadgeColors = new GoogleAppsDriveLabelsV2betaBadgeColors() {{
-                                                backgroundColor = new GoogleTypeColor() {{
-                                                    alpha = 90.199997;
-                                                    blue = 59.099998;
-                                                    green = 13.100000;
-                                                    red = 77.099998;
-                                                }};
-                                                foregroundColor = new GoogleTypeColor() {{
-                                                    alpha = 71.099998;
-                                                    blue = 12.200000;
-                                                    green = 32.099998;
-                                                    red = 9.100000;
-                                                }};
-                                                soloColor = new GoogleTypeColor() {{
-                                                    alpha = 30.200001;
-                                                    blue = 11.200000;
-                                                    green = 1.200000;
-                                                    red = 59.099998;
-                                                }};
-                                            }};
-                                            disabled = false;
-                                            hiddenInSearch = true;
-                                            shownInApply = false;
-                                        }};
-                                        id = "tempora";
+                                        id = "officia";
                                         lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
                                             disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
                                                 hideInSearch = true;
@@ -778,47 +368,47 @@ public class Application {
                                         properties = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties() {{
                                             badgeConfig = new GoogleAppsDriveLabelsV2betaBadgeConfig() {{
                                                 color = new GoogleTypeColor() {{
-                                                    alpha = 55.200001;
-                                                    blue = 42.200001;
-                                                    green = 56.200001;
-                                                    red = 90.199997;
+                                                    alpha = 30.100000;
+                                                    blue = 43.099998;
+                                                    green = 80.099998;
+                                                    red = 55.200001;
                                                 }};
-                                                priorityOverride = "quisquam";
+                                                priorityOverride = "dicta";
                                             }};
-                                            description = "ducimus";
-                                            displayName = "omnis";
-                                            insertBeforeChoice = "quidem";
+                                            description = "rem";
+                                            displayName = "doloremque";
+                                            insertBeforeChoice = "quae";
                                         }};
                                         publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "fugit";
+                                            person = "nisi";
                                         }};
                                         schemaCapabilities = new GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities() {{
                                             canDelete = false;
                                             canDisable = false;
-                                            canEnable = true;
+                                            canEnable = false;
                                             canUpdate = true;
                                         }};
                                         updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                            person = "et";
+                                            person = "rerum";
                                         }};
                                     }}),
                                 }};
                                 listOptions = new GoogleAppsDriveLabelsV2betaFieldListOptions() {{
-                                    maxEntries = 5132854660169586529;
+                                    maxEntries = 7434067341455688771;
                                 }};
                             }};
                             updater = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                                person = "enim";
+                                person = "rem";
                             }};
                             userOptions = new GoogleAppsDriveLabelsV2betaFieldUserOptions() {{
                                 listOptions = new GoogleAppsDriveLabelsV2betaFieldListOptions() {{
-                                    maxEntries = 356164997723776192;
+                                    maxEntries = 2386043087176739176;
                                 }};
                             }};
                         }}),
                     }};
-                    labelType = "ADMIN";
-                    learnMoreUri = "quis";
+                    labelType = "LABEL_TYPE_UNSPECIFIED";
+                    learnMoreUri = "reiciendis";
                     lifecycle = new GoogleAppsDriveLabelsV2betaLifecycleInput() {{
                         disabledPolicy = new GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy() {{
                             hideInSearch = true;
@@ -826,20 +416,20 @@ public class Application {
                         }};
                     }};
                     properties = new GoogleAppsDriveLabelsV2betaLabelProperties() {{
-                        description = "et";
-                        title = "eius";
+                        description = "porro";
+                        title = "nihil";
                     }};
                     publisher = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                        person = "atque";
+                        person = "adipisci";
                     }};
                     revisionCreator = new GoogleAppsDriveLabelsV2betaUserInfo() {{
-                        person = "ipsa";
+                        person = "consequatur";
                     }};
                     schemaCapabilities = new GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities() {{
                         canDelete = false;
-                        canDisable = true;
-                        canEnable = false;
-                        canUpdate = false;
+                        canDisable = false;
+                        canEnable = true;
+                        canUpdate = true;
                     }};
                 }};
             }};

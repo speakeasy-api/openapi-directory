@@ -35,24 +35,20 @@ public class Application {
 
             BatchPutMessageRequest req = new BatchPutMessageRequest() {{
                 headers = new BatchPutMessageHeaders() {{
-                    xAmzAlgorithm = "vel";
-                    xAmzContentSha256 = "cumque";
-                    xAmzCredential = "ea";
-                    xAmzDate = "earum";
-                    xAmzSecurityToken = "quisquam";
-                    xAmzSignature = "explicabo";
-                    xAmzSignedHeaders = "id";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new BatchPutMessageRequestBody() {{
-                    channelName = "aperiam";
+                    channelName = "voluptas";
                     messages = new openapisdk.models.shared.Message[]() {{
                         add(new Message() {{
-                            messageId = "dolores";
-                            payload = "cum";
-                        }}),
-                        add(new Message() {{
-                            messageId = "consequuntur";
-                            payload = "vero";
+                            messageId = "et";
+                            payload = "nihil";
                         }}),
                     }};
                 }};

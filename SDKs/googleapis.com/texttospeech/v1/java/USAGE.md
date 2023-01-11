@@ -22,24 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new TexttospeechOperationsCancelPathParams() {{
-                    name = "aut";
+                    name = "sit";
                 }};
                 queryParams = new TexttospeechOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "eos";
-                    alt = "json";
-                    callback = "sunt";
-                    fields = "natus";
-                    key = "illum";
-                    oauthToken = "qui";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "veritatis";
-                    uploadType = "quisquam";
-                    uploadProtocol = "quis";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("repudiandae", "voluptatibus");
-                    put("animi", "aut");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

@@ -35,22 +35,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new PlaycustomappAccountsCustomAppsCreatePathParams() {{
-                    account = "eum";
+                    account = "sit";
                 }};
                 queryParams = new PlaycustomappAccountsCustomAppsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "praesentium";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "blanditiis";
-                    fields = "blanditiis";
-                    key = "inventore";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
                     oauthToken = "voluptas";
-                    prettyPrint = false;
-                    quotaUser = "quibusdam";
-                    uploadType = "et";
-                    uploadProtocol = "perspiciatis";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
-                request = "ut".getBytes();
+                request = "dicta".getBytes();
             }};
 
             PlaycustomappAccountsCustomAppsCreateResponse res = sdk.accounts.playcustomappAccountsCustomAppsCreate(req);

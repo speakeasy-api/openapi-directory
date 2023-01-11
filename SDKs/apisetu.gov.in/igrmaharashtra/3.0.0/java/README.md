@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new LlcerRequestBody() {{
                     certificateParameters = new LlcerRequestBodyCertificateParameters() {{
-                        udf1 = "ex";
-                        udf2 = "ad";
-                        udf3 = "dolorum";
+                        udf1 = "sit";
+                        udf2 = "voluptas";
+                        udf3 = "culpa";
                     }};
-                    consentArtifact = "voluptatem";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "laborum";
+                    txnId = "dolor";
                 }};
             }};
 

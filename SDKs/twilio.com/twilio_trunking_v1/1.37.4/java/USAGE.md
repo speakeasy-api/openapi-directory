@@ -20,10 +20,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateCredentialListPathParams() {{
-                    trunkSid = "unde";
+                    trunkSid = "sit";
                 }};
                 request = new CreateCredentialListCreateCredentialListRequest() {{
-                    credentialListSid = "nihil";
+                    credentialListSid = "voluptas";
                 }};
             }};
 

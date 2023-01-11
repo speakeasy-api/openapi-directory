@@ -36,18 +36,18 @@ public class Application {
             GetAddSourceIdentifierToSubscriptionRequest req = new GetAddSourceIdentifierToSubscriptionRequest() {{
                 queryParams = new GetAddSourceIdentifierToSubscriptionQueryParams() {{
                     action = "AddSourceIdentifierToSubscription";
-                    sourceIdentifier = "ad";
-                    subscriptionName = "ut";
+                    sourceIdentifier = "voluptas";
+                    subscriptionName = "culpa";
                     version = "2013-01-10";
                 }};
                 headers = new GetAddSourceIdentifierToSubscriptionHeaders() {{
-                    xAmzAlgorithm = "qui";
-                    xAmzContentSha256 = "in";
-                    xAmzCredential = "ea";
-                    xAmzDate = "voluptate";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "consequatur";
-                    xAmzSignedHeaders = "aliquam";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

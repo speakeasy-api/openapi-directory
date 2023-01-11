@@ -32,25 +32,23 @@ public class Application {
                     }};
                 }};
                 headers = new CreateCustomerServiceMetricTaskHeaders() {{
-                    acceptLanguage = "deserunt";
+                    acceptLanguage = "sit";
                 }};
                 request = new CreateServiceMetricsTaskRequest() {{
-                    feedType = "eius";
+                    feedType = "voluptas";
                     filterCriteria = new CustomerServiceMetricsFilterCriteria() {{
-                        customerServiceMetricType = "repellat";
-                        evaluationMarketplaceId = "beatae";
+                        customerServiceMetricType = "culpa";
+                        evaluationMarketplaceId = "expedita";
                         listingCategories = new String[]() {{
-                            add("totam"),
-                            add("aut"),
-                            add("et"),
+                            add("dolor"),
+                            add("expedita"),
+                            add("voluptas"),
                         }};
                         shippingRegions = new String[]() {{
-                            add("necessitatibus"),
                             add("et"),
-                            add("culpa"),
                         }};
                     }};
-                    schemaVersion = "repellendus";
+                    schemaVersion = "nihil";
                 }};
             }};
 

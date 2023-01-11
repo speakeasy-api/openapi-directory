@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 headers = new GetAllFacilitiesHeaders() {{
-                    accept = "application/vnd.geo+json";
+                    accept = "application/geo+json";
                 }};
             }};
 

@@ -22,21 +22,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new ResourcesettingsProjectsSettingsGetPathParams() {{
-                    name = "molestias";
+                    name = "sit";
                 }};
                 queryParams = new ResourcesettingsProjectsSettingsGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "quia";
-                    alt = "json";
-                    callback = "cum";
-                    fields = "et";
-                    key = "delectus";
-                    oauthToken = "voluptatem";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "consequuntur";
-                    uploadType = "harum";
-                    uploadProtocol = "quia";
-                    view = "SETTING_VIEW_EFFECTIVE_VALUE";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
+                    view = "SETTING_VIEW_LOCAL_VALUE";
                 }};
             }};
 

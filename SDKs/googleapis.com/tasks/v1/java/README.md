@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new TasksTasklistsDeletePathParams() {{
-                    tasklist = "praesentium";
+                    tasklist = "sit";
                 }};
                 queryParams = new TasksTasklistsDeleteQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "aut";
-                    alt = "proto";
-                    callback = "veniam";
-                    fields = "inventore";
-                    key = "aut";
-                    oauthToken = "nostrum";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "adipisci";
-                    uploadType = "dicta";
-                    uploadProtocol = "quisquam";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

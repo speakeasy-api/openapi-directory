@@ -27,9 +27,9 @@ public class Application {
 
             GetActionsRequest req = new GetActionsRequest() {{
                 queryParams = new GetActionsQueryParams() {{
-                    id = 371370274143225203;
-                    sort = "command:asc";
-                    status = "error";
+                    id = 8717895732742165505;
+                    sort = "id";
+                    status = "success";
                 }};
             }};
 

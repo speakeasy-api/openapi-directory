@@ -35,24 +35,24 @@ public class Application {
 
             GetClipRequest req = new GetClipRequest() {{
                 headers = new GetClipHeaders() {{
-                    xAmzAlgorithm = "ut";
-                    xAmzContentSha256 = "optio";
-                    xAmzCredential = "ut";
-                    xAmzDate = "velit";
-                    xAmzSecurityToken = "velit";
-                    xAmzSignature = "totam";
-                    xAmzSignedHeaders = "doloribus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new GetClipRequestBody() {{
                     clipFragmentSelector = new GetClipRequestBodyClipFragmentSelector() {{
-                        fragmentSelectorType = "PRODUCER_TIMESTAMP";
+                        fragmentSelectorType = "SERVER_TIMESTAMP";
                         timestampRange = new ClipTimestampRange() {{
-                            endTimestamp = "1995-01-21T20:44:43Z";
-                            startTimestamp = "1979-10-28T05:11:44Z";
+                            endTimestamp = "2011-08-12T10:11:12Z";
+                            startTimestamp = "2003-05-13T04:57:12Z";
                         }};
                     }};
-                    streamARN = "quae";
-                    streamName = "soluta";
+                    streamARN = "rerum";
+                    streamName = "dicta";
                 }};
             }};
 

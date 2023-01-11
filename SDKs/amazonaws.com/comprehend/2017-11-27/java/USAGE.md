@@ -22,18 +22,18 @@ public class Application {
 
             BatchDetectDominantLanguageRequest req = new BatchDetectDominantLanguageRequest() {{
                 headers = new BatchDetectDominantLanguageHeaders() {{
-                    xAmzAlgorithm = "id";
-                    xAmzContentSha256 = "reprehenderit";
-                    xAmzCredential = "sit";
-                    xAmzDate = "at";
-                    xAmzSecurityToken = "ex";
-                    xAmzSignature = "doloribus";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Comprehend_20171127.BatchDetectDominantLanguage";
                 }};
                 request = new BatchDetectDominantLanguageRequest() {{
                     textList = new String[]() {{
-                        add("ea"),
+                        add("et"),
                     }};
                 }};
             }};

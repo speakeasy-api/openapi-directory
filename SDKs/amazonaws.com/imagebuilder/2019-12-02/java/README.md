@@ -35,17 +35,17 @@ public class Application {
 
             CancelImageCreationRequest req = new CancelImageCreationRequest() {{
                 headers = new CancelImageCreationHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "occaecati";
-                    xAmzDate = "eum";
-                    xAmzSecurityToken = "ut";
-                    xAmzSignature = "assumenda";
-                    xAmzSignedHeaders = "fuga";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CancelImageCreationRequestBody() {{
-                    clientToken = "aut";
-                    imageBuildVersionArn = "corrupti";
+                    clientToken = "voluptas";
+                    imageBuildVersionArn = "fugit";
                 }};
             }};
 

@@ -35,19 +35,19 @@ public class Application {
 
             DeleteThingShadowRequest req = new DeleteThingShadowRequest() {{
                 pathParams = new DeleteThingShadowPathParams() {{
-                    thingName = "aliquam";
+                    thingName = "sit";
                 }};
                 queryParams = new DeleteThingShadowQueryParams() {{
-                    name = "quos";
+                    name = "voluptas";
                 }};
                 headers = new DeleteThingShadowHeaders() {{
-                    xAmzAlgorithm = "omnis";
-                    xAmzContentSha256 = "illum";
-                    xAmzCredential = "repellat";
-                    xAmzDate = "id";
-                    xAmzSecurityToken = "blanditiis";
-                    xAmzSignature = "possimus";
-                    xAmzSignedHeaders = "eius";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
             }};
 

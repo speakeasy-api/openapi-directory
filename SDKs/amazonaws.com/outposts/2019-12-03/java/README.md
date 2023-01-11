@@ -35,31 +35,31 @@ public class Application {
 
             CreateOrderRequest req = new CreateOrderRequest() {{
                 headers = new CreateOrderHeaders() {{
-                    xAmzAlgorithm = "adipisci";
-                    xAmzContentSha256 = "ipsum";
-                    xAmzCredential = "placeat";
-                    xAmzDate = "ut";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "sed";
-                    xAmzSignedHeaders = "reprehenderit";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateOrderRequestBody() {{
                     lineItems = new openapisdk.models.shared.LineItemRequest[]() {{
                         add(new LineItemRequest() {{
-                            catalogItemId = "atque";
-                            quantity = 8567863616121245583;
+                            catalogItemId = "fugit";
+                            quantity = 1543572285742637646;
                         }}),
                         add(new LineItemRequest() {{
-                            catalogItemId = "quo";
-                            quantity = 6900483483283279297;
+                            catalogItemId = "nihil";
+                            quantity = 8325060299420976708;
                         }}),
                         add(new LineItemRequest() {{
-                            catalogItemId = "perferendis";
-                            quantity = 4098291302621142390;
+                            catalogItemId = "dicta";
+                            quantity = 2518412263346885298;
                         }}),
                     }};
-                    outpostIdentifier = "assumenda";
-                    paymentOption = "NO_UPFRONT";
+                    outpostIdentifier = "voluptatum";
+                    paymentOption = "ALL_UPFRONT";
                     paymentTerm = "THREE_YEARS";
                 }};
             }};

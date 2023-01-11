@@ -27,18 +27,18 @@ public class Application {
 
             AirtravelCoordinatesRequest req = new AirtravelCoordinatesRequest() {{
                 headers = new AirtravelCoordinatesHeaders() {{
-                    contentType = "et";
+                    contentType = "sit";
                 }};
                 request = new AirtravelCoordinatesRequestBody() {{
-                    apiKeyL1 = "laudantium";
-                    apiKeyL2 = "voluptatibus";
-                    destinationAirportLatitude = 16.200001;
-                    destinationAirportLongitude = 65.199997;
-                    numberOfPassengers = 5496595919472461343;
-                    originAirportLatitude = 88.199997;
-                    originAirportLongitude = 31.200001;
-                    travelClass = "necessitatibus";
-                    travelMode = "aspernatur";
+                    apiKeyL1 = "voluptas";
+                    apiKeyL2 = "culpa";
+                    destinationAirportLatitude = 6.200000;
+                    destinationAirportLongitude = 96.199997;
+                    numberOfPassengers = 6044372234677422456;
+                    originAirportLatitude = 88.099998;
+                    originAirportLongitude = 68.199997;
+                    travelClass = "dicta";
+                    travelMode = "debitis";
                 }};
             }};
 

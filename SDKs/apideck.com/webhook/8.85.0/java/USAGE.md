@@ -27,18 +27,17 @@ public class Application {
                     }};
                 }};
                 headers = new WebhooksAddHeaders() {{
-                    xApideckAppId = "rerum";
+                    xApideckAppId = "sit";
                 }};
                 request = new CreateWebhookRequest() {{
-                    deliveryUrl = "placeat";
-                    description = "doloremque";
+                    deliveryUrl = "voluptas";
+                    description = "culpa";
                     events = new openapisdk.models.shared.WebhookEventTypeEnum[]() {{
-                        add("accounting.customer.updated"),
-                        add("lead.lead.updated"),
-                        add("pos.item.deleted"),
+                        add("crm.contact.created"),
+                        add("crm.contact.updated"),
                     }};
                     status = "disabled";
-                    unifiedApi = "file-storage";
+                    unifiedApi = "crm";
                 }};
             }};
 

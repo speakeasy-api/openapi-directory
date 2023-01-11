@@ -22,21 +22,21 @@ public class Application {
 
             AssociateAssetsRequest req = new AssociateAssetsRequest() {{
                 pathParams = new AssociateAssetsPathParams() {{
-                    assetId = "labore";
+                    assetId = "sit";
                 }};
                 headers = new AssociateAssetsHeaders() {{
-                    xAmzAlgorithm = "cupiditate";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "cupiditate";
-                    xAmzDate = "odio";
-                    xAmzSecurityToken = "rerum";
-                    xAmzSignature = "placeat";
-                    xAmzSignedHeaders = "nostrum";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AssociateAssetsRequestBody() {{
-                    childAssetId = "repellat";
-                    clientToken = "earum";
-                    hierarchyId = "eum";
+                    childAssetId = "fugit";
+                    clientToken = "et";
+                    hierarchyId = "nihil";
                 }};
             }};
 

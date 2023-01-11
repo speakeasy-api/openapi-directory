@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams() {{
-                    parent = "fuga";
+                    parent = "sit";
                 }};
                 queryParams = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "autem";
-                    alt = "proto";
-                    callback = "omnis";
-                    fields = "esse";
-                    key = "veritatis";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
                     oauthToken = "voluptas";
-                    prettyPrint = false;
-                    quotaUser = "sit";
-                    uploadType = "saepe";
-                    uploadProtocol = "est";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new AccessLevel() {{
                     basic = new BasicLevel() {{
@@ -44,54 +44,66 @@ public class Application {
                             add(new Condition() {{
                                 devicePolicy = new DevicePolicy() {{
                                     allowedDeviceManagementLevels = new openapisdk.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]() {{
-                                        add("MANAGEMENT_UNSPECIFIED"),
+                                        add("BASIC"),
                                     }};
                                     allowedEncryptionStatuses = new openapisdk.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]() {{
-                                        add("ENCRYPTION_UNSUPPORTED"),
-                                        add("ENCRYPTION_UNSUPPORTED"),
+                                        add("UNENCRYPTED"),
+                                        add("UNENCRYPTED"),
+                                        add("UNENCRYPTED"),
                                     }};
                                     osConstraints = new openapisdk.models.shared.OsConstraint[]() {{
                                         add(new OsConstraint() {{
-                                            minimumVersion = "repellat";
-                                            osType = "DESKTOP_LINUX";
+                                            minimumVersion = "vitae";
+                                            osType = "DESKTOP_CHROME_OS";
                                             requireVerifiedChromeOs = true;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "illum";
+                                            osType = "DESKTOP_LINUX";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "odio";
+                                            osType = "OS_UNSPECIFIED";
+                                            requireVerifiedChromeOs = false;
                                         }}),
                                     }};
                                     requireAdminApproval = true;
                                     requireCorpOwned = true;
-                                    requireScreenlock = true;
+                                    requireScreenlock = false;
                                 }};
                                 ipSubnetworks = new String[]() {{
-                                    add("nemo"),
-                                    add("architecto"),
-                                    add("neque"),
+                                    add("quis"),
+                                    add("est"),
                                 }};
                                 members = new String[]() {{
-                                    add("saepe"),
+                                    add("odit"),
+                                    add("non"),
+                                    add("voluptas"),
                                 }};
-                                negate = false;
+                                negate = true;
                                 regions = new String[]() {{
-                                    add("consequuntur"),
+                                    add("illo"),
                                 }};
                                 requiredAccessLevels = new String[]() {{
-                                    add("mollitia"),
+                                    add("officiis"),
                                     add("autem"),
-                                    add("distinctio"),
+                                    add("consectetur"),
                                 }};
                             }}),
                         }};
                     }};
                     custom = new CustomLevel() {{
                         expr = new Expr() {{
-                            description = "consequuntur";
-                            expression = "autem";
-                            location = "vitae";
-                            title = "fugit";
+                            description = "nobis";
+                            expression = "odio";
+                            location = "qui";
+                            title = "recusandae";
                         }};
                     }};
-                    description = "non";
-                    name = "aut";
-                    title = "autem";
+                    description = "at";
+                    name = "ipsum";
+                    title = "eveniet";
                 }};
             }};
 

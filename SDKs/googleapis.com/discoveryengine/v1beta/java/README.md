@@ -35,31 +35,31 @@ public class Application {
                     }};
                 }};
                 pathParams = new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams() {{
-                    parent = "corrupti";
+                    parent = "sit";
                 }};
                 queryParams = new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "quaerat";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "quibusdam";
-                    documentId = "sit";
-                    fields = "molestiae";
-                    key = "officia";
-                    oauthToken = "nobis";
+                    callback = "consequuntur";
+                    documentId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "aut";
-                    uploadType = "quos";
-                    uploadProtocol = "et";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new GoogleCloudDiscoveryengineV1betaDocument() {{
-                    id = "repellat";
-                    jsonData = "alias";
-                    name = "rem";
-                    parentDocumentId = "ducimus";
-                    schemaId = "sit";
+                    id = "debitis";
+                    jsonData = "voluptatum";
+                    name = "et";
+                    parentDocumentId = "ut";
+                    schemaId = "dolorem";
                     structData = new java.util.HashMap<String, Object>() {{
-                        put("voluptatem", "dolores");
-                        put("perferendis", "ad");
+                        put("voluptate", "iste");
+                        put("vitae", "totam");
                     }};
                 }};
             }};

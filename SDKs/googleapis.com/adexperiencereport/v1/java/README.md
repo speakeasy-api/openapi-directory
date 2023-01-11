@@ -27,20 +27,20 @@ public class Application {
 
             AdexperiencereportSitesGetRequest req = new AdexperiencereportSitesGetRequest() {{
                 pathParams = new AdexperiencereportSitesGetPathParams() {{
-                    name = "et";
+                    name = "sit";
                 }};
                 queryParams = new AdexperiencereportSitesGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "qui";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "sint";
-                    fields = "aperiam";
-                    key = "nulla";
-                    oauthToken = "odit";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "ea";
-                    uploadType = "mollitia";
-                    uploadProtocol = "eveniet";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

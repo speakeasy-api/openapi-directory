@@ -34,518 +34,302 @@ public class Application {
                 request = new FulfillmentPolicyRequest() {{
                     categoryTypes = new openapisdk.models.shared.CategoryType[]() {{
                         add(new CategoryType() {{
-                            default_ = true;
-                            name = "vel";
-                        }}),
-                        add(new CategoryType() {{
                             default_ = false;
-                            name = "dolore";
-                        }}),
-                        add(new CategoryType() {{
-                            default_ = false;
-                            name = "aspernatur";
+                            name = "culpa";
                         }}),
                     }};
-                    description = "accusantium";
-                    freightShipping = false;
+                    description = "expedita";
+                    freightShipping = true;
                     globalShipping = false;
                     handlingTime = new TimeDuration() {{
-                        unit = "quis";
-                        value = 3398579248012586914;
+                        unit = "expedita";
+                        value = 6044372234677422456;
                     }};
                     localPickup = true;
-                    marketplaceId = "odit";
-                    name = "non";
-                    pickupDropOff = false;
+                    marketplaceId = "et";
+                    name = "nihil";
+                    pickupDropOff = true;
                     shipToLocations = new RegionSet() {{
                         regionExcluded = new openapisdk.models.shared.Region[]() {{
                             add(new Region() {{
-                                regionName = "aut";
-                                regionType = "illo";
+                                regionName = "debitis";
+                                regionType = "voluptatum";
                             }}),
                             add(new Region() {{
-                                regionName = "sed";
-                                regionType = "officiis";
+                                regionName = "et";
+                                regionType = "ut";
+                            }}),
+                            add(new Region() {{
+                                regionName = "dolorem";
+                                regionType = "et";
                             }}),
                         }};
                         regionIncluded = new openapisdk.models.shared.Region[]() {{
                             add(new Region() {{
-                                regionName = "consectetur";
-                                regionType = "nobis";
-                            }}),
-                            add(new Region() {{
-                                regionName = "odio";
-                                regionType = "qui";
+                                regionName = "iste";
+                                regionType = "vitae";
                             }}),
                         }};
                     }};
                     shippingOptions = new openapisdk.models.shared.ShippingOption[]() {{
                         add(new ShippingOption() {{
-                            costType = "at";
+                            costType = "dolores";
                             insuranceFee = new Amount() {{
-                                currency = "ipsum";
-                                value = "eveniet";
+                                currency = "illum";
+                                value = "debitis";
                             }};
                             insuranceOffered = false;
-                            optionType = "sint";
+                            optionType = "odio";
                             packageHandlingCost = new Amount() {{
-                                currency = "inventore";
-                                value = "ut";
+                                currency = "dolore";
+                                value = "id";
                             }};
-                            rateTableId = "exercitationem";
+                            rateTableId = "aspernatur";
                             shippingServices = new openapisdk.models.shared.ShippingService[]() {{
                                 add(new ShippingService() {{
                                     additionalShippingCost = new Amount() {{
-                                        currency = "reprehenderit";
-                                        value = "tempore";
+                                        currency = "totam";
+                                        value = "commodi";
                                     }};
-                                    buyerResponsibleForPickup = false;
+                                    buyerResponsibleForPickup = true;
                                     buyerResponsibleForShipping = false;
                                     cashOnDeliveryFee = new Amount() {{
-                                        currency = "dolor";
-                                        value = "beatae";
+                                        currency = "aut";
+                                        value = "odit";
                                     }};
                                     freeShipping = true;
                                     shipToLocations = new RegionSet() {{
                                         regionExcluded = new openapisdk.models.shared.Region[]() {{
                                             add(new Region() {{
-                                                regionName = "et";
-                                                regionType = "omnis";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "ipsum";
-                                                regionType = "ex";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "dolores";
-                                                regionType = "placeat";
+                                                regionName = "omnis";
+                                                regionType = "aut";
                                             }}),
                                         }};
                                         regionIncluded = new openapisdk.models.shared.Region[]() {{
                                             add(new Region() {{
-                                                regionName = "rerum";
-                                                regionType = "mollitia";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "voluptas";
-                                                regionType = "quam";
-                                            }}),
-                                        }};
-                                    }};
-                                    shippingCarrierCode = "reprehenderit";
-                                    shippingCost = new Amount() {{
-                                        currency = "qui";
-                                        value = "qui";
-                                    }};
-                                    shippingServiceCode = "unde";
-                                    sortOrder = 7663837986485606015;
-                                    surcharge = new Amount() {{
-                                        currency = "autem";
-                                        value = "qui";
-                                    }};
-                                }}),
-                                add(new ShippingService() {{
-                                    additionalShippingCost = new Amount() {{
-                                        currency = "ut";
-                                        value = "itaque";
-                                    }};
-                                    buyerResponsibleForPickup = false;
-                                    buyerResponsibleForShipping = false;
-                                    cashOnDeliveryFee = new Amount() {{
-                                        currency = "ullam";
-                                        value = "et";
-                                    }};
-                                    freeShipping = false;
-                                    shipToLocations = new RegionSet() {{
-                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "architecto";
-                                                regionType = "quam";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "velit";
-                                                regionType = "cumque";
-                                            }}),
-                                        }};
-                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "sunt";
-                                                regionType = "voluptates";
-                                            }}),
-                                        }};
-                                    }};
-                                    shippingCarrierCode = "magni";
-                                    shippingCost = new Amount() {{
-                                        currency = "et";
-                                        value = "optio";
-                                    }};
-                                    shippingServiceCode = "qui";
-                                    sortOrder = 7862762095958642309;
-                                    surcharge = new Amount() {{
-                                        currency = "illo";
-                                        value = "omnis";
-                                    }};
-                                }}),
-                                add(new ShippingService() {{
-                                    additionalShippingCost = new Amount() {{
-                                        currency = "ut";
-                                        value = "consequatur";
-                                    }};
-                                    buyerResponsibleForPickup = true;
-                                    buyerResponsibleForShipping = true;
-                                    cashOnDeliveryFee = new Amount() {{
-                                        currency = "error";
-                                        value = "reprehenderit";
-                                    }};
-                                    freeShipping = false;
-                                    shipToLocations = new RegionSet() {{
-                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "ut";
-                                                regionType = "laboriosam";
-                                            }}),
-                                        }};
-                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "a";
-                                                regionType = "soluta";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "aut";
-                                                regionType = "quas";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "consequuntur";
-                                                regionType = "laudantium";
+                                                regionName = "sed";
+                                                regionType = "officiis";
                                             }}),
                                         }};
                                     }};
                                     shippingCarrierCode = "autem";
                                     shippingCost = new Amount() {{
-                                        currency = "ipsa";
-                                        value = "expedita";
+                                        currency = "consectetur";
+                                        value = "nobis";
                                     }};
-                                    shippingServiceCode = "doloremque";
-                                    sortOrder = 4234137922270959652;
+                                    shippingServiceCode = "odio";
+                                    sortOrder = 7699391924090763411;
                                     surcharge = new Amount() {{
-                                        currency = "atque";
-                                        value = "ratione";
-                                    }};
-                                }}),
-                            }};
-                        }}),
-                        add(new ShippingOption() {{
-                            costType = "quisquam";
-                            insuranceFee = new Amount() {{
-                                currency = "explicabo";
-                                value = "ea";
-                            }};
-                            insuranceOffered = true;
-                            optionType = "eum";
-                            packageHandlingCost = new Amount() {{
-                                currency = "perferendis";
-                                value = "et";
-                            }};
-                            rateTableId = "rerum";
-                            shippingServices = new openapisdk.models.shared.ShippingService[]() {{
-                                add(new ShippingService() {{
-                                    additionalShippingCost = new Amount() {{
-                                        currency = "quis";
-                                        value = "cumque";
-                                    }};
-                                    buyerResponsibleForPickup = true;
-                                    buyerResponsibleForShipping = false;
-                                    cashOnDeliveryFee = new Amount() {{
-                                        currency = "est";
-                                        value = "quis";
-                                    }};
-                                    freeShipping = true;
-                                    shipToLocations = new RegionSet() {{
-                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "et";
-                                                regionType = "impedit";
-                                            }}),
-                                        }};
-                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "expedita";
-                                                regionType = "vel";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "qui";
-                                                regionType = "modi";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "nihil";
-                                                regionType = "tempora";
-                                            }}),
-                                        }};
-                                    }};
-                                    shippingCarrierCode = "deserunt";
-                                    shippingCost = new Amount() {{
-                                        currency = "eaque";
-                                        value = "sunt";
-                                    }};
-                                    shippingServiceCode = "sit";
-                                    sortOrder = 2867593906384393455;
-                                    surcharge = new Amount() {{
-                                        currency = "quis";
-                                        value = "vel";
+                                        currency = "recusandae";
+                                        value = "at";
                                     }};
                                 }}),
                                 add(new ShippingService() {{
                                     additionalShippingCost = new Amount() {{
-                                        currency = "vel";
-                                        value = "placeat";
+                                        currency = "ipsum";
+                                        value = "eveniet";
                                     }};
-                                    buyerResponsibleForPickup = true;
-                                    buyerResponsibleForShipping = false;
+                                    buyerResponsibleForPickup = false;
+                                    buyerResponsibleForShipping = true;
                                     cashOnDeliveryFee = new Amount() {{
-                                        currency = "quis";
-                                        value = "adipisci";
+                                        currency = "inventore";
+                                        value = "ut";
                                     }};
                                     freeShipping = false;
                                     shipToLocations = new RegionSet() {{
                                         regionExcluded = new openapisdk.models.shared.Region[]() {{
                                             add(new Region() {{
-                                                regionName = "et";
-                                                regionType = "accusamus";
+                                                regionName = "reprehenderit";
+                                                regionType = "tempore";
                                             }}),
                                             add(new Region() {{
-                                                regionName = "numquam";
-                                                regionType = "laborum";
+                                                regionName = "maiores";
+                                                regionType = "incidunt";
                                             }}),
                                             add(new Region() {{
-                                                regionName = "rerum";
+                                                regionName = "dolor";
+                                                regionType = "beatae";
+                                            }}),
+                                        }};
+                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
+                                            add(new Region() {{
+                                                regionName = "in";
+                                                regionType = "et";
+                                            }}),
+                                            add(new Region() {{
+                                                regionName = "omnis";
+                                                regionType = "ipsum";
+                                            }}),
+                                        }};
+                                    }};
+                                    shippingCarrierCode = "ex";
+                                    shippingCost = new Amount() {{
+                                        currency = "dolores";
+                                        value = "placeat";
+                                    }};
+                                    shippingServiceCode = "vel";
+                                    sortOrder = 2587000937929698613;
+                                    surcharge = new Amount() {{
+                                        currency = "mollitia";
+                                        value = "voluptas";
+                                    }};
+                                }}),
+                                add(new ShippingService() {{
+                                    additionalShippingCost = new Amount() {{
+                                        currency = "quam";
+                                        value = "reprehenderit";
+                                    }};
+                                    buyerResponsibleForPickup = true;
+                                    buyerResponsibleForShipping = false;
+                                    cashOnDeliveryFee = new Amount() {{
+                                        currency = "unde";
+                                        value = "in";
+                                    }};
+                                    freeShipping = false;
+                                    shipToLocations = new RegionSet() {{
+                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
+                                            add(new Region() {{
+                                                regionName = "ut";
+                                                regionType = "itaque";
+                                            }}),
+                                        }};
+                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
+                                            add(new Region() {{
+                                                regionName = "neque";
+                                                regionType = "ullam";
+                                            }}),
+                                        }};
+                                    }};
+                                    shippingCarrierCode = "et";
+                                    shippingCost = new Amount() {{
+                                        currency = "accusantium";
+                                        value = "esse";
+                                    }};
+                                    shippingServiceCode = "architecto";
+                                    sortOrder = 9021104375654741729;
+                                    surcharge = new Amount() {{
+                                        currency = "velit";
+                                        value = "cumque";
+                                    }};
+                                }}),
+                            }};
+                        }}),
+                        add(new ShippingOption() {{
+                            costType = "soluta";
+                            insuranceFee = new Amount() {{
+                                currency = "sunt";
+                                value = "voluptates";
+                            }};
+                            insuranceOffered = false;
+                            optionType = "et";
+                            packageHandlingCost = new Amount() {{
+                                currency = "optio";
+                                value = "qui";
+                            }};
+                            rateTableId = "earum";
+                            shippingServices = new openapisdk.models.shared.ShippingService[]() {{
+                                add(new ShippingService() {{
+                                    additionalShippingCost = new Amount() {{
+                                        currency = "omnis";
+                                        value = "ut";
+                                    }};
+                                    buyerResponsibleForPickup = false;
+                                    buyerResponsibleForShipping = true;
+                                    cashOnDeliveryFee = new Amount() {{
+                                        currency = "commodi";
+                                        value = "error";
+                                    }};
+                                    freeShipping = false;
+                                    shipToLocations = new RegionSet() {{
+                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
+                                            add(new Region() {{
+                                                regionName = "nostrum";
                                                 regionType = "ut";
                                             }}),
                                         }};
                                         regionIncluded = new openapisdk.models.shared.Region[]() {{
                                             add(new Region() {{
-                                                regionName = "fugit";
-                                                regionType = "quis";
+                                                regionName = "sed";
+                                                regionType = "a";
                                             }}),
                                             add(new Region() {{
-                                                regionName = "minus";
-                                                regionType = "soluta";
+                                                regionName = "soluta";
+                                                regionType = "aut";
                                             }}),
                                             add(new Region() {{
-                                                regionName = "aperiam";
+                                                regionName = "quas";
                                                 regionType = "consequuntur";
                                             }}),
                                         }};
                                     }};
-                                    shippingCarrierCode = "excepturi";
+                                    shippingCarrierCode = "laudantium";
                                     shippingCost = new Amount() {{
-                                        currency = "mollitia";
-                                        value = "inventore";
+                                        currency = "autem";
+                                        value = "ipsa";
                                     }};
-                                    shippingServiceCode = "delectus";
-                                    sortOrder = 4283016341703943597;
+                                    shippingServiceCode = "expedita";
+                                    sortOrder = 8204648627352676445;
                                     surcharge = new Amount() {{
-                                        currency = "animi";
-                                        value = "animi";
-                                    }};
-                                }}),
-                                add(new ShippingService() {{
-                                    additionalShippingCost = new Amount() {{
-                                        currency = "ut";
-                                        value = "aliquam";
-                                    }};
-                                    buyerResponsibleForPickup = false;
-                                    buyerResponsibleForShipping = false;
-                                    cashOnDeliveryFee = new Amount() {{
-                                        currency = "sed";
-                                        value = "et";
-                                    }};
-                                    freeShipping = true;
-                                    shipToLocations = new RegionSet() {{
-                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "cupiditate";
-                                                regionType = "provident";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "molestiae";
-                                                regionType = "pariatur";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "quasi";
-                                                regionType = "corrupti";
-                                            }}),
-                                        }};
-                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "qui";
-                                                regionType = "sit";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "possimus";
-                                                regionType = "modi";
-                                            }}),
-                                        }};
-                                    }};
-                                    shippingCarrierCode = "neque";
-                                    shippingCost = new Amount() {{
-                                        currency = "consequuntur";
-                                        value = "quia";
-                                    }};
-                                    shippingServiceCode = "et";
-                                    sortOrder = 1613338873740606132;
-                                    surcharge = new Amount() {{
-                                        currency = "occaecati";
-                                        value = "ex";
+                                        currency = "perferendis";
+                                        value = "atque";
                                     }};
                                 }}),
                             }};
                         }}),
                         add(new ShippingOption() {{
-                            costType = "voluptatem";
+                            costType = "ratione";
                             insuranceFee = new Amount() {{
-                                currency = "quia";
-                                value = "temporibus";
+                                currency = "quisquam";
+                                value = "explicabo";
                             }};
-                            insuranceOffered = false;
-                            optionType = "quae";
+                            insuranceOffered = true;
+                            optionType = "maxime";
                             packageHandlingCost = new Amount() {{
-                                currency = "est";
-                                value = "ut";
+                                currency = "eum";
+                                value = "perferendis";
                             }};
-                            rateTableId = "necessitatibus";
+                            rateTableId = "et";
                             shippingServices = new openapisdk.models.shared.ShippingService[]() {{
                                 add(new ShippingService() {{
                                     additionalShippingCost = new Amount() {{
-                                        currency = "possimus";
-                                        value = "voluptatem";
+                                        currency = "reiciendis";
+                                        value = "quis";
                                     }};
                                     buyerResponsibleForPickup = true;
                                     buyerResponsibleForShipping = true;
                                     cashOnDeliveryFee = new Amount() {{
-                                        currency = "saepe";
-                                        value = "sunt";
+                                        currency = "necessitatibus";
+                                        value = "est";
                                     }};
                                     freeShipping = true;
                                     shipToLocations = new RegionSet() {{
                                         regionExcluded = new openapisdk.models.shared.Region[]() {{
                                             add(new Region() {{
-                                                regionName = "ut";
-                                                regionType = "asperiores";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "et";
-                                                regionType = "est";
+                                                regionName = "labore";
+                                                regionType = "et";
                                             }}),
                                         }};
                                         regionIncluded = new openapisdk.models.shared.Region[]() {{
                                             add(new Region() {{
-                                                regionName = "quam";
-                                                regionType = "voluptas";
-                                            }}),
-                                        }};
-                                    }};
-                                    shippingCarrierCode = "nihil";
-                                    shippingCost = new Amount() {{
-                                        currency = "dolores";
-                                        value = "suscipit";
-                                    }};
-                                    shippingServiceCode = "impedit";
-                                    sortOrder = 3752781218885968701;
-                                    surcharge = new Amount() {{
-                                        currency = "magnam";
-                                        value = "ut";
-                                    }};
-                                }}),
-                                add(new ShippingService() {{
-                                    additionalShippingCost = new Amount() {{
-                                        currency = "possimus";
-                                        value = "illo";
-                                    }};
-                                    buyerResponsibleForPickup = true;
-                                    buyerResponsibleForShipping = false;
-                                    cashOnDeliveryFee = new Amount() {{
-                                        currency = "ipsam";
-                                        value = "ducimus";
-                                    }};
-                                    freeShipping = false;
-                                    shipToLocations = new RegionSet() {{
-                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "distinctio";
-                                                regionType = "delectus";
+                                                regionName = "ad";
+                                                regionType = "expedita";
                                             }}),
                                             add(new Region() {{
-                                                regionName = "rerum";
-                                                regionType = "dolore";
-                                            }}),
-                                        }};
-                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "velit";
-                                                regionType = "officia";
+                                                regionName = "vel";
+                                                regionType = "qui";
                                             }}),
                                         }};
                                     }};
                                     shippingCarrierCode = "modi";
                                     shippingCost = new Amount() {{
+                                        currency = "nihil";
+                                        value = "tempora";
+                                    }};
+                                    shippingServiceCode = "deserunt";
+                                    sortOrder = 4745905187492708501;
+                                    surcharge = new Amount() {{
                                         currency = "sunt";
-                                        value = "voluptas";
-                                    }};
-                                    shippingServiceCode = "amet";
-                                    sortOrder = 8268186752735240934;
-                                    surcharge = new Amount() {{
-                                        currency = "a";
-                                        value = "qui";
-                                    }};
-                                }}),
-                                add(new ShippingService() {{
-                                    additionalShippingCost = new Amount() {{
-                                        currency = "excepturi";
-                                        value = "autem";
-                                    }};
-                                    buyerResponsibleForPickup = false;
-                                    buyerResponsibleForShipping = false;
-                                    cashOnDeliveryFee = new Amount() {{
-                                        currency = "rem";
-                                        value = "doloremque";
-                                    }};
-                                    freeShipping = false;
-                                    shipToLocations = new RegionSet() {{
-                                        regionExcluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "recusandae";
-                                                regionType = "qui";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "minus";
-                                                regionType = "et";
-                                            }}),
-                                        }};
-                                        regionIncluded = new openapisdk.models.shared.Region[]() {{
-                                            add(new Region() {{
-                                                regionName = "ut";
-                                                regionType = "rem";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "eos";
-                                                regionType = "et";
-                                            }}),
-                                            add(new Region() {{
-                                                regionName = "reiciendis";
-                                                regionType = "aspernatur";
-                                            }}),
-                                        }};
-                                    }};
-                                    shippingCarrierCode = "praesentium";
-                                    shippingCost = new Amount() {{
-                                        currency = "porro";
-                                        value = "nihil";
-                                    }};
-                                    shippingServiceCode = "adipisci";
-                                    sortOrder = 3753392688546409181;
-                                    surcharge = new Amount() {{
-                                        currency = "illum";
-                                        value = "accusantium";
+                                        value = "sit";
                                     }};
                                 }}),
                             }};

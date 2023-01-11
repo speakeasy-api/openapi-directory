@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new DpicrRequestBody() {{
                     certificateParameters = new DpicrRequestBodyCertificateParameters() {{
-                        udf1 = "enim";
-                        uid = "voluptates";
+                        udf1 = "sit";
+                        uid = "voluptas";
                     }};
-                    consentArtifact = "dolore";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "aut";
+                    txnId = "consequuntur";
                 }};
             }};
 

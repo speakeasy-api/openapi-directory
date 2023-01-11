@@ -24,63 +24,50 @@ public class Application {
                     }};
                 }};
                 queryParams = new YoutubeAbuseReportsInsertQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "pariatur";
-                    alt = "json";
-                    callback = "dolorem";
-                    fields = "debitis";
-                    key = "necessitatibus";
-                    oauthToken = "doloribus";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     part = new String[]() {{
-                        add("est"),
-                        add("rerum"),
-                        add("laborum"),
+                        add("fugit"),
+                        add("et"),
+                        add("nihil"),
                     }};
                     prettyPrint = true;
-                    quotaUser = "non";
-                    uploadType = "molestias";
-                    uploadProtocol = "eum";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
                 request = new AbuseReport() {{
                     abuseTypes = new openapisdk.models.shared.AbuseType[]() {{
                         add(new AbuseType() {{
-                            id = "quae";
-                        }}),
-                        add(new AbuseType() {{
-                            id = "vel";
-                        }}),
-                        add(new AbuseType() {{
                             id = "ut";
                         }}),
                     }};
-                    description = "ea";
+                    description = "dolorem";
                     relatedEntities = new openapisdk.models.shared.RelatedEntity[]() {{
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "quod";
-                                typeId = "et";
-                                url = "aut";
+                                id = "voluptate";
+                                typeId = "iste";
+                                url = "vitae";
                             }};
                         }}),
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "error";
-                                typeId = "nulla";
-                                url = "quia";
-                            }};
-                        }}),
-                        add(new RelatedEntity() {{
-                            entity = new Entity() {{
-                                id = "vel";
-                                typeId = "quis";
-                                url = "qui";
+                                id = "totam";
+                                typeId = "dolores";
+                                url = "illum";
                             }};
                         }}),
                     }};
                     subject = new Entity() {{
-                        id = "sint";
-                        typeId = "et";
-                        url = "et";
+                        id = "debitis";
+                        typeId = "vel";
+                        url = "odio";
                     }};
                 }};
             }};

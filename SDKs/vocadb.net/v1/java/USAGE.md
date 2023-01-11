@@ -14,17 +14,17 @@ public class Application {
 
             ActivityEntryApiGetListRequest req = new ActivityEntryApiGetListRequest() {{
                 queryParams = new ActivityEntryApiGetListQueryParams() {{
-                    before = "1992-11-18T12:57:30Z";
-                    editEvent = "Restored";
-                    entryFields = "AdditionalNames";
-                    entryType = "Undefined";
-                    fields = "Entry";
-                    getTotalCount = false;
+                    before = "2006-05-01T09:38:06Z";
+                    editEvent = "Updated";
+                    entryFields = "Description";
+                    entryType = "Venue";
+                    fields = "ArchivedVersion";
+                    getTotalCount = true;
                     lang = "Japanese";
-                    maxResults = 1332344506397849579;
-                    since = "1972-06-08T12:39:38Z";
+                    maxResults = 8274930044578894929;
+                    since = "2011-08-12T10:11:12Z";
                     sortRule = "CreateDateDescending";
-                    userId = 3388353400684496262;
+                    userId = 8325060299420976708;
                 }};
             }};
 

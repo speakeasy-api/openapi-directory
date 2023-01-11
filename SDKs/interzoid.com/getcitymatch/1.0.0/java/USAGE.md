@@ -14,8 +14,8 @@ public class Application {
 
             GetcitymatchRequest req = new GetcitymatchRequest() {{
                 queryParams = new GetcitymatchQueryParams() {{
-                    city = "consectetur";
-                    license = "officiis";
+                    city = "sit";
+                    license = "voluptas";
                 }};
             }};
 

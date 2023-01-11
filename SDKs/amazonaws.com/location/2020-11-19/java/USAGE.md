@@ -22,19 +22,19 @@ public class Application {
 
             AssociateTrackerConsumerRequest req = new AssociateTrackerConsumerRequest() {{
                 pathParams = new AssociateTrackerConsumerPathParams() {{
-                    trackerName = "omnis";
+                    trackerName = "sit";
                 }};
                 headers = new AssociateTrackerConsumerHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "dolores";
-                    xAmzCredential = "voluptatem";
-                    xAmzDate = "consectetur";
-                    xAmzSecurityToken = "est";
-                    xAmzSignature = "ducimus";
-                    xAmzSignedHeaders = "adipisci";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AssociateTrackerConsumerRequestBody() {{
-                    consumerArn = "ut";
+                    consumerArn = "fugit";
                 }};
             }};
 

@@ -20,12 +20,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateExecutionPathParams() {{
-                    flowSid = "eos";
+                    flowSid = "sit";
                 }};
                 request = new CreateExecutionCreateExecutionRequest() {{
-                    from = "praesentium";
-                    parameters = "itaque";
-                    to = "ipsum";
+                    from = "voluptas";
+                    parameters = "culpa";
+                    to = "expedita";
                 }};
             }};
 

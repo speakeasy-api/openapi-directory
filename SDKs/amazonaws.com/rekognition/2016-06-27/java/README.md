@@ -35,32 +35,32 @@ public class Application {
 
             CompareFacesRequest req = new CompareFacesRequest() {{
                 headers = new CompareFacesHeaders() {{
-                    xAmzAlgorithm = "dolorum";
-                    xAmzContentSha256 = "blanditiis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
                     xAmzCredential = "culpa";
-                    xAmzDate = "est";
-                    xAmzSecurityToken = "soluta";
-                    xAmzSignature = "omnis";
-                    xAmzSignedHeaders = "sint";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "RekognitionService.CompareFaces";
                 }};
                 request = new CompareFacesRequest() {{
-                    qualityFilter = "NONE";
-                    similarityThreshold = 87.099998;
+                    qualityFilter = "MEDIUM";
+                    similarityThreshold = 28.100000;
                     sourceImage = new Image() {{
-                        bytes = "labore";
+                        bytes = "rerum";
                         s3Object = new S3Object() {{
-                            bucket = "maxime";
-                            name = "eaque";
-                            version = "sed";
+                            bucket = "dicta";
+                            name = "debitis";
+                            version = "voluptatum";
                         }};
                     }};
                     targetImage = new Image() {{
-                        bytes = "ut";
+                        bytes = "et";
                         s3Object = new S3Object() {{
-                            bucket = "expedita";
-                            name = "modi";
-                            version = "aliquam";
+                            bucket = "ut";
+                            name = "dolorem";
+                            version = "et";
                         }};
                     }};
                 }};

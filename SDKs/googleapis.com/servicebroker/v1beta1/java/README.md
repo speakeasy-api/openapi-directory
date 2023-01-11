@@ -35,26 +35,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new ServicebrokerProjectsBrokersCreatePathParams() {{
-                    parent = "nihil";
+                    parent = "sit";
                 }};
                 queryParams = new ServicebrokerProjectsBrokersCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "enim";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "qui";
-                    key = "omnis";
-                    oauthToken = "quae";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "nesciunt";
-                    uploadType = "dolorem";
-                    uploadProtocol = "fugit";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudServicebrokerV1beta1Broker() {{
-                    createTime = "qui";
-                    name = "dolores";
-                    title = "fugiat";
-                    url = "quod";
+                    createTime = "dicta";
+                    name = "debitis";
+                    title = "voluptatum";
+                    url = "et";
                 }};
             }};
 

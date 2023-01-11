@@ -35,14 +35,14 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteAccountAccessConsentsConsentIdPathParams() {{
-                    consentId = "possimus";
+                    consentId = "sit";
                 }};
                 headers = new DeleteAccountAccessConsentsConsentIdHeaders() {{
-                    sandboxId = "quia";
-                    xCustomerUserAgent = "voluptas";
-                    xFapiAuthDate = "voluptatum";
-                    xFapiCustomerIpAddress = "repellat";
-                    xFapiInteractionId = "nihil";
+                    sandboxId = "voluptas";
+                    xCustomerUserAgent = "culpa";
+                    xFapiAuthDate = "expedita";
+                    xFapiCustomerIpAddress = "consequuntur";
+                    xFapiInteractionId = "dolor";
                 }};
             }};
 

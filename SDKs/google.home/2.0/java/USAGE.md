@@ -23,7 +23,7 @@ public class Application {
             AccessibilityRequest req = new AccessibilityRequest() {{
                 request = new AccessibilityRequest() {{
                     endpointEnabled = false;
-                    hotwordEnabled = true;
+                    hotwordEnabled = false;
                 }};
             }};
 

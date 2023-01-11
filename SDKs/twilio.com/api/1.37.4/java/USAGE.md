@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 request = new CreateAccountCreateAccountRequest() {{
-                    friendlyName = "recusandae";
+                    friendlyName = "sit";
                 }};
             }};
 

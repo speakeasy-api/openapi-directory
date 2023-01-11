@@ -41,57 +41,51 @@ public class Application {
 
             GetAuditCaseRequest req = new GetAuditCaseRequest() {{
                 queryParams = new GetAuditCaseQueryParams() {{
-                    apiKey = "repellat";
+                    apiKey = "sit";
                     auditCaseId = new String[]() {{
-                        add("dolorum"),
+                        add("culpa"),
                     }};
                     auditId = new Integer[]() {{
-                        add(8645970321281326832),
-                        add(7136207181802684899),
-                        add(1736299023908858105),
+                        add(3390393562759376202),
+                        add(2669985732393126063),
                     }};
                     candidateId = new String[]() {{
-                        add("aut"),
+                        add("voluptas"),
+                        add("fugit"),
                     }};
-                    committeeDesignation = "tempora";
+                    committeeDesignation = "et";
                     committeeId = new String[]() {{
-                        add("mollitia"),
-                        add("non"),
-                        add("magni"),
+                        add("rerum"),
                     }};
                     committeeType = new String[]() {{
-                        add("illum"),
-                        add("consequatur"),
-                        add("dolores"),
+                        add("debitis"),
+                        add("voluptatum"),
+                        add("et"),
                     }};
                     cycle = new Integer[]() {{
-                        add(2762871534793283085),
-                        add(1595294774483826936),
-                        add(1547351759706903978),
+                        add(161231572858529631),
+                        add(7259475919510918339),
+                        add(7373105480197164748),
                     }};
-                    maxElectionCycle = 5235109611096705579;
-                    minElectionCycle = 1717316735216544452;
-                    page = 7338161805244208148;
-                    perPage = 6531361177861028646;
-                    primaryCategoryId = "explicabo";
+                    maxElectionCycle = 3287288577352441706;
+                    minElectionCycle = 3930927879439176946;
+                    page = 4706154865122290029;
+                    perPage = 2217592893536642650;
+                    primaryCategoryId = "illum";
                     q = new String[]() {{
-                        add("veniam"),
-                        add("qui"),
+                        add("vel"),
                     }};
                     qq = new String[]() {{
-                        add("odit"),
-                        add("molestias"),
-                        add("corporis"),
+                        add("dolore"),
                     }};
                     sort = new String[]() {{
-                        add("esse"),
-                        add("similique"),
-                        add("mollitia"),
+                        add("aspernatur"),
+                        add("accusantium"),
                     }};
                     sortHideNull = false;
-                    sortNullOnly = true;
+                    sortNullOnly = false;
                     sortNullsLast = true;
-                    subCategoryId = "maiores";
+                    subCategoryId = "est";
                 }};
             }};
 

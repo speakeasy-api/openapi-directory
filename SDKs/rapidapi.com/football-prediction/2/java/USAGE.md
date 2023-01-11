@@ -14,7 +14,7 @@ public class Application {
 
             GetApiV2ListFederationsRequest req = new GetApiV2ListFederationsRequest() {{
                 headers = new GetApiV2ListFederationsHeaders() {{
-                    xRapidApiKey = "aut";
+                    xRapidApiKey = "sit";
                 }};
             }};
 

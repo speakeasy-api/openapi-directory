@@ -27,7 +27,7 @@ public class Application {
 
             GetOauthV1AccessTokensTokenGetAccessTokenRequest req = new GetOauthV1AccessTokensTokenGetAccessTokenRequest() {{
                 pathParams = new GetOauthV1AccessTokensTokenGetAccessTokenPathParams() {{
-                    token = "et";
+                    token = "sit";
                 }};
             }};
 

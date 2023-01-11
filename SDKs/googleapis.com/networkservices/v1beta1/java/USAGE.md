@@ -22,51 +22,59 @@ public class Application {
                     }};
                 }};
                 pathParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams() {{
-                    parent = "officia";
+                    parent = "sit";
                 }};
                 queryParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "aut";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "itaque";
-                    endpointPolicyId = "molestiae";
-                    fields = "recusandae";
-                    key = "optio";
-                    oauthToken = "odit";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "ut";
-                    uploadProtocol = "id";
+                    callback = "consequuntur";
+                    endpointPolicyId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new EndpointPolicyInput() {{
-                    authorizationPolicy = "necessitatibus";
-                    clientTlsPolicy = "eveniet";
-                    description = "harum";
+                    authorizationPolicy = "debitis";
+                    clientTlsPolicy = "voluptatum";
+                    description = "et";
                     endpointMatcher = new EndpointMatcher() {{
                         metadataLabelMatcher = new MetadataLabelMatcher() {{
                             metadataLabelMatchCriteria = "MATCH_ALL";
                             metadataLabels = new openapisdk.models.shared.MetadataLabels[]() {{
                                 add(new MetadataLabels() {{
-                                    labelName = "rerum";
-                                    labelValue = "eveniet";
+                                    labelName = "et";
+                                    labelValue = "voluptate";
+                                }}),
+                                add(new MetadataLabels() {{
+                                    labelName = "iste";
+                                    labelValue = "vitae";
+                                }}),
+                                add(new MetadataLabels() {{
+                                    labelName = "totam";
+                                    labelValue = "dolores";
                                 }}),
                             }};
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("doloribus", "illo");
-                        put("assumenda", "dolor");
+                        put("debitis", "vel");
+                        put("odio", "dolore");
+                        put("id", "aspernatur");
                     }};
-                    name = "libero";
-                    serverTlsPolicy = "ad";
+                    name = "accusantium";
+                    serverTlsPolicy = "totam";
                     trafficPortSelector = new TrafficPortSelector() {{
                         ports = new String[]() {{
-                            add("ea"),
-                            add("voluptatum"),
-                            add("doloribus"),
+                            add("quis"),
+                            add("est"),
                         }};
                     }};
-                    type = "ENDPOINT_POLICY_TYPE_UNSPECIFIED";
+                    type = "GRPC_SERVER";
                 }};
             }};
 

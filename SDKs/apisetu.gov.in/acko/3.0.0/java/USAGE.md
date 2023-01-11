@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new CripcRequestBody() {{
                     certificateParameters = new CripcRequestBodyCertificateParameters() {{
-                        phoneno = "magni";
-                        policyno = "exercitationem";
+                        phoneno = "sit";
+                        policyno = "voluptas";
                     }};
-                    consentArtifact = "voluptatem";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "non";
+                    txnId = "consequuntur";
                 }};
             }};
 

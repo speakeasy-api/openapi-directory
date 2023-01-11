@@ -35,13 +35,13 @@ public class Application {
 
             GetCreateDomainRequest req = new GetCreateDomainRequest() {{
                 queryParams = new GetCreateDomainQueryParams() {{
-                    awsAccessKeyId = "dolorem";
+                    awsAccessKeyId = "sit";
                     action = "CreateDomain";
-                    domainName = "repellendus";
-                    signature = "magni";
-                    signatureMethod = "necessitatibus";
-                    signatureVersion = "provident";
-                    timestamp = "placeat";
+                    domainName = "culpa";
+                    signature = "expedita";
+                    signatureMethod = "consequuntur";
+                    signatureVersion = "dolor";
+                    timestamp = "expedita";
                     version = "2009-04-15";
                 }};
             }};

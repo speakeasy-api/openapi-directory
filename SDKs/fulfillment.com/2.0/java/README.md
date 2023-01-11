@@ -26,7 +26,7 @@ public class Application {
             SDK sdk = builder.build();
 
             PostOauthAccessTokenRequest req = new PostOauthAccessTokenRequest() {{
-                request = "fuga";
+                request = "sit";
             }};
 
             PostOauthAccessTokenResponse res = sdk.auth.postOauthAccessToken(req);

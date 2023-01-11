@@ -35,7 +35,7 @@ public class Application {
 
             BatchReadFileRequest req = new BatchReadFileRequest() {{
                 request = new ImageUrl() {{
-                    url = "consequatur";
+                    url = "sit";
                 }};
             }};
 

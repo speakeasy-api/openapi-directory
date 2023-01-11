@@ -32,19 +32,14 @@ public class Application {
                     }};
                 }};
                 pathParams = new BulkCreateAdsByInventoryReferencePathParams() {{
-                    campaignId = "et";
+                    campaignId = "sit";
                 }};
                 request = new BulkCreateAdsByInventoryReferenceRequest() {{
                     requests = new openapisdk.models.shared.CreateAdsByInventoryReferenceRequest[]() {{
                         add(new CreateAdsByInventoryReferenceRequest() {{
-                            bidPercentage = "voluptatem";
-                            inventoryReferenceId = "ex";
-                            inventoryReferenceType = "magni";
-                        }}),
-                        add(new CreateAdsByInventoryReferenceRequest() {{
-                            bidPercentage = "vero";
-                            inventoryReferenceId = "distinctio";
-                            inventoryReferenceType = "cumque";
+                            bidPercentage = "culpa";
+                            inventoryReferenceId = "expedita";
+                            inventoryReferenceType = "consequuntur";
                         }}),
                     }};
                 }};

@@ -22,21 +22,21 @@ public class Application {
 
             AssociateTeamMemberRequest req = new AssociateTeamMemberRequest() {{
                 headers = new AssociateTeamMemberHeaders() {{
-                    xAmzAlgorithm = "quod";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "ut";
-                    xAmzDate = "sed";
-                    xAmzSecurityToken = "quibusdam";
-                    xAmzSignature = "harum";
-                    xAmzSignedHeaders = "repudiandae";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CodeStar_20170419.AssociateTeamMember";
                 }};
                 request = new AssociateTeamMemberRequest() {{
-                    clientRequestToken = "molestiae";
-                    projectId = "rerum";
-                    projectRole = "occaecati";
+                    clientRequestToken = "fugit";
+                    projectId = "et";
+                    projectRole = "nihil";
                     remoteAccessAllowed = true;
-                    userArn = "rerum";
+                    userArn = "dicta";
                 }};
             }};
 

@@ -35,21 +35,21 @@ public class Application {
 
             CreateProjectRequest req = new CreateProjectRequest() {{
                 queryParams = new CreateProjectQueryParams() {{
-                    name = "magnam";
-                    region = "similique";
-                    snapshotId = "fuga";
+                    name = "sit";
+                    region = "voluptas";
+                    snapshotId = "culpa";
                 }};
                 headers = new CreateProjectHeaders() {{
-                    xAmzAlgorithm = "voluptatem";
-                    xAmzContentSha256 = "officia";
-                    xAmzCredential = "iure";
-                    xAmzDate = "at";
-                    xAmzSecurityToken = "consequatur";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "nobis";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
                 request = new CreateProjectRequestBody() {{
-                    contents = "vero";
+                    contents = "nihil";
                 }};
             }};
 

@@ -33,11 +33,11 @@ public class Application {
                     }};
                 }};
                 request = new CreateMediaProcessorCreateMediaProcessorRequest() {{
-                    extension = "quae";
-                    extensionContext = "placeat";
-                    extensionEnvironment = "vitae";
-                    maxDuration = 7134140320308255526;
-                    statusCallback = "officiis";
+                    extension = "sit";
+                    extensionContext = "voluptas";
+                    extensionEnvironment = "culpa";
+                    maxDuration = 501233450539197794;
+                    statusCallback = "consequuntur";
                     statusCallbackMethod = "PUT";
                 }};
             }};

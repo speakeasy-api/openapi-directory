@@ -32,7 +32,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "voluptate";
+                request = "sit";
             }};
 
             PostGet3dsAvailabilityResponse res = sdk.general.postGet3dsAvailability(req);

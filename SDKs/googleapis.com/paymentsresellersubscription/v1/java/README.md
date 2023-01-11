@@ -27,23 +27,23 @@ public class Application {
 
             PaymentsresellersubscriptionPartnersProductsListRequest req = new PaymentsresellersubscriptionPartnersProductsListRequest() {{
                 pathParams = new PaymentsresellersubscriptionPartnersProductsListPathParams() {{
-                    parent = "qui";
+                    parent = "sit";
                 }};
                 queryParams = new PaymentsresellersubscriptionPartnersProductsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "inventore";
-                    alt = "json";
-                    callback = "dicta";
-                    fields = "neque";
-                    filter = "temporibus";
-                    key = "dolorem";
-                    oauthToken = "nihil";
-                    pageSize = 2354657580295386910;
-                    pageToken = "dolore";
-                    prettyPrint = false;
-                    quotaUser = "aut";
-                    uploadType = "placeat";
-                    uploadProtocol = "qui";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
+                    prettyPrint = true;
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

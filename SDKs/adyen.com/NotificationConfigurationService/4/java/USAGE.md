@@ -19,7 +19,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "aspernatur";
+                request = "sit";
             }};
 
             PostCreateNotificationConfigurationResponse res = sdk.general.postCreateNotificationConfiguration(req);

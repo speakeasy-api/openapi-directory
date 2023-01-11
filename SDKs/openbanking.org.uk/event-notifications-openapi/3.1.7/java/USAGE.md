@@ -14,10 +14,10 @@ public class Application {
 
             CreateEventNotificationRequest req = new CreateEventNotificationRequest() {{
                 headers = new CreateEventNotificationHeaders() {{
-                    xFapiFinancialId = "pariatur";
-                    xFapiInteractionId = "praesentium";
+                    xFapiFinancialId = "sit";
+                    xFapiInteractionId = "voluptas";
                 }};
-                request = "maxime";
+                request = "culpa";
             }};
 
             CreateEventNotificationResponse res = sdk.eventNotification.createEventNotification(req);

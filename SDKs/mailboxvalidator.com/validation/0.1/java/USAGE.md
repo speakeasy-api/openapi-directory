@@ -14,9 +14,9 @@ public class Application {
 
             GetV1ValidationSingleRequest req = new GetV1ValidationSingleRequest() {{
                 queryParams = new GetV1ValidationSingleQueryParams() {{
-                    email = "aut";
+                    email = "sit";
                     format = "json";
-                    key = "qui";
+                    key = "culpa";
                 }};
             }};
 

@@ -22,7 +22,7 @@ public class Application {
 
             DriverDetailsRequest req = new DriverDetailsRequest() {{
                 pathParams = new DriverDetailsPathParams() {{
-                    driverid = "dolorum";
+                    driverid = "sit";
                     format = "xml";
                 }};
             }};

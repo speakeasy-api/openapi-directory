@@ -32,17 +32,18 @@ public class Application {
                     }};
                 }};
                 queryParams = new FindListingRecommendationsQueryParams() {{
-                    filter = "beatae";
-                    limit = "quae";
-                    offset = "qui";
+                    filter = "sit";
+                    limit = "voluptas";
+                    offset = "culpa";
                 }};
                 headers = new FindListingRecommendationsHeaders() {{
-                    xEBAYCMARKETPLACEID = "magni";
+                    xEBAYCMARKETPLACEID = "expedita";
                 }};
                 request = new FindListingRecommendationRequest() {{
                     listingIds = new String[]() {{
-                        add("sit"),
-                        add("aut"),
+                        add("dolor"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
                 }};
             }};

@@ -22,25 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudbuildProjectsLocationsOperationsCancelPathParams() {{
-                    name = "et";
+                    name = "sit";
                 }};
                 queryParams = new CloudbuildProjectsLocationsOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "officia";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "molestiae";
-                    fields = "ad";
-                    key = "aut";
-                    oauthToken = "esse";
-                    prettyPrint = false;
-                    quotaUser = "facilis";
-                    uploadType = "rerum";
-                    uploadProtocol = "commodi";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("rerum", "at");
-                    put("debitis", "blanditiis");
-                    put("dolorum", "saepe");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

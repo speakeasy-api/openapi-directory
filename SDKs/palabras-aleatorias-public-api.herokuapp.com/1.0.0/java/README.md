@@ -27,10 +27,10 @@ public class Application {
 
             GetAddWordRequest req = new GetAddWordRequest() {{
                 queryParams = new GetAddWordQueryParams() {{
-                    author = "ut";
-                    definition = "itaque";
-                    related = "quasi";
-                    word = "ex";
+                    author = "sit";
+                    definition = "voluptas";
+                    related = "culpa";
+                    word = "expedita";
                 }};
             }};
 

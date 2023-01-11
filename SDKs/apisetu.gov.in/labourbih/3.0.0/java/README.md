@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new AlimwRequestBody() {{
                     certificateParameters = new AlimwRequestBodyCertificateParameters() {{
-                        refNo = "maxime";
-                        tokenNo = "rerum";
+                        refNo = "sit";
+                        tokenNo = "voluptas";
                     }};
-                    consentArtifact = "quisquam";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "nemo";
+                    txnId = "consequuntur";
                 }};
             }};
 

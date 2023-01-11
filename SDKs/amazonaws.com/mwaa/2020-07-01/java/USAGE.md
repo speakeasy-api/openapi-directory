@@ -22,16 +22,16 @@ public class Application {
 
             CreateCliTokenRequest req = new CreateCliTokenRequest() {{
                 pathParams = new CreateCliTokenPathParams() {{
-                    name = "nostrum";
+                    name = "sit";
                 }};
                 headers = new CreateCliTokenHeaders() {{
-                    xAmzAlgorithm = "sed";
-                    xAmzContentSha256 = "qui";
-                    xAmzCredential = "enim";
-                    xAmzDate = "corporis";
-                    xAmzSecurityToken = "dolorem";
-                    xAmzSignature = "quos";
-                    xAmzSignedHeaders = "quibusdam";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

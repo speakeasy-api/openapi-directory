@@ -14,22 +14,22 @@ public class Application {
 
             AdmobAccountsAdSourcesListRequest req = new AdmobAccountsAdSourcesListRequest() {{
                 pathParams = new AdmobAccountsAdSourcesListPathParams() {{
-                    parent = "praesentium";
+                    parent = "sit";
                 }};
                 queryParams = new AdmobAccountsAdSourcesListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ab";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "minus";
-                    fields = "quo";
-                    key = "enim";
-                    oauthToken = "eaque";
-                    pageSize = 2653267917996046848;
-                    pageToken = "maxime";
-                    prettyPrint = false;
-                    quotaUser = "qui";
-                    uploadType = "ea";
-                    uploadProtocol = "porro";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    pageSize = 8274930044578894929;
+                    pageToken = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

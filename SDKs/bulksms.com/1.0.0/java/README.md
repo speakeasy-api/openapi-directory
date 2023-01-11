@@ -42,8 +42,8 @@ public class Application {
                     }};
                 }};
                 request = new PreSignRequest() {{
-                    fileExtension = "dignissimos";
-                    mediaType = "ullam";
+                    fileExtension = "sit";
+                    mediaType = "voluptas";
                 }};
             }};
 

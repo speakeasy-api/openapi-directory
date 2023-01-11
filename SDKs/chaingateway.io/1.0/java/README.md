@@ -27,11 +27,11 @@ public class Application {
 
             DeleteAddressRequest req = new DeleteAddressRequest() {{
                 headers = new DeleteAddressHeaders() {{
-                    authorization = "dolores";
+                    authorization = "sit";
                 }};
                 request = new DeleteAddressRequest() {{
-                    ethereumaddress = "sit";
-                    password = "id";
+                    ethereumaddress = "voluptas";
+                    password = "culpa";
                 }};
             }};
 

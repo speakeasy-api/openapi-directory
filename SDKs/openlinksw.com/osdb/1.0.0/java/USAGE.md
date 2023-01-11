@@ -14,8 +14,8 @@ public class Application {
 
             ActionHelpRequest req = new ActionHelpRequest() {{
                 pathParams = new ActionHelpPathParams() {{
-                    actionId = "magni";
-                    serviceId = "optio";
+                    actionId = "sit";
+                    serviceId = "voluptas";
                 }};
             }};
 

@@ -35,17 +35,17 @@ public class Application {
 
             DescribeEntitiesDetectionV2JobRequest req = new DescribeEntitiesDetectionV2JobRequest() {{
                 headers = new DescribeEntitiesDetectionV2JobHeaders() {{
-                    xAmzAlgorithm = "enim";
-                    xAmzContentSha256 = "sunt";
-                    xAmzCredential = "quos";
-                    xAmzDate = "at";
-                    xAmzSecurityToken = "iusto";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "praesentium";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job";
                 }};
                 request = new DescribeEntitiesDetectionV2JobRequest() {{
-                    jobId = "aut";
+                    jobId = "fugit";
                 }};
             }};
 

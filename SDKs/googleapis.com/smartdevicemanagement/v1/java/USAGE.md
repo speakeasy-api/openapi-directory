@@ -22,27 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams() {{
-                    name = "excepturi";
+                    name = "sit";
                 }};
                 queryParams = new SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "placeat";
-                    alt = "json";
-                    callback = "autem";
-                    fields = "voluptas";
-                    key = "aut";
-                    oauthToken = "sunt";
-                    prettyPrint = false;
-                    quotaUser = "molestiae";
-                    uploadType = "aut";
-                    uploadProtocol = "nesciunt";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest() {{
-                    command = "reiciendis";
+                    command = "dicta";
                     params = new java.util.HashMap<String, Object>() {{
-                        put("tenetur", "eum");
-                        put("quo", "minus");
-                        put("sint", "est");
+                        put("voluptatum", "et");
                     }};
                 }};
             }};

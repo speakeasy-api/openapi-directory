@@ -22,7 +22,7 @@ public class Application {
 
             DeleteCacheRequest req = new DeleteCacheRequest() {{
                 pathParams = new DeleteCachePathParams() {{
-                    key = "fuga";
+                    key = "sit";
                 }};
             }};
 

@@ -14,11 +14,11 @@ public class Application {
 
             CrmCheckRequest req = new CrmCheckRequest() {{
                 pathParams = new CrmCheckPathParams() {{
-                    vin = "qui";
+                    vin = "sit";
                 }};
                 queryParams = new CrmCheckQueryParams() {{
-                    apiKey = "aut";
-                    saleDate = "voluptatum";
+                    apiKey = "voluptas";
+                    saleDate = "culpa";
                 }};
             }};
 

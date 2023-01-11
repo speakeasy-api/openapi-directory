@@ -27,13 +27,13 @@ public class Application {
 
             DeleteAeAssessmentRequest req = new DeleteAeAssessmentRequest() {{
                 pathParams = new DeleteAeAssessmentPathParams() {{
-                    aeAssessmentId = "optio";
-                    employeeId = "eos";
-                    employerId = "magnam";
+                    aeAssessmentId = "sit";
+                    employeeId = "voluptas";
+                    employerId = "culpa";
                 }};
                 headers = new DeleteAeAssessmentHeaders() {{
-                    apiVersion = "et";
-                    authorization = "earum";
+                    apiVersion = "expedita";
+                    authorization = "consequuntur";
                 }};
             }};
 

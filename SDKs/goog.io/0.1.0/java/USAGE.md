@@ -22,7 +22,7 @@ public class Application {
 
             CrawlRequest req = new CrawlRequest() {{
                 pathParams = new CrawlPathParams() {{
-                    query = "maiores";
+                    query = "sit";
                 }};
             }};
 

@@ -22,27 +22,31 @@ public class Application {
 
             CreateConnectionRequest req = new CreateConnectionRequest() {{
                 headers = new CreateConnectionHeaders() {{
-                    xAmzAlgorithm = "nobis";
-                    xAmzContentSha256 = "libero";
-                    xAmzCredential = "cumque";
-                    xAmzDate = "accusamus";
-                    xAmzSecurityToken = "voluptates";
-                    xAmzSignature = "est";
-                    xAmzSignedHeaders = "inventore";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection";
                 }};
                 request = new CreateConnectionInput() {{
-                    connectionName = "minima";
-                    hostArn = "iusto";
-                    providerType = "GitHub";
+                    connectionName = "fugit";
+                    hostArn = "et";
+                    providerType = "Bitbucket";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "sed";
-                            value = "quo";
+                            key = "dicta";
+                            value = "debitis";
                         }}),
                         add(new Tag() {{
-                            key = "animi";
+                            key = "voluptatum";
                             value = "et";
+                        }}),
+                        add(new Tag() {{
+                            key = "ut";
+                            value = "dolorem";
                         }}),
                     }};
                 }};

@@ -35,28 +35,28 @@ public class Application {
                     }};
                 }};
                 pathParams = new SecuritycenterOrganizationsAssetsGroupPathParams() {{
-                    parent = "ab";
+                    parent = "sit";
                 }};
                 queryParams = new SecuritycenterOrganizationsAssetsGroupQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "iure";
-                    alt = "proto";
-                    callback = "et";
-                    fields = "quis";
-                    key = "et";
-                    oauthToken = "quia";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "perferendis";
-                    uploadType = "fugit";
-                    uploadProtocol = "earum";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GroupAssetsRequest() {{
-                    compareDuration = "et";
-                    filter = "magni";
-                    groupBy = "voluptatem";
-                    pageSize = 7178277312729210;
-                    pageToken = "repudiandae";
-                    readTime = "nisi";
+                    compareDuration = "dicta";
+                    filter = "debitis";
+                    groupBy = "voluptatum";
+                    pageSize = 2339563716805116249;
+                    pageToken = "ut";
+                    readTime = "dolorem";
                 }};
             }};
 

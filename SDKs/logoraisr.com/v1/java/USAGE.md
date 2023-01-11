@@ -22,7 +22,7 @@ public class Application {
 
             PreviewsReadRequest req = new PreviewsReadRequest() {{
                 pathParams = new PreviewsReadPathParams() {{
-                    fileId = "eos";
+                    fileId = "sit";
                 }};
             }};
 

@@ -35,25 +35,21 @@ public class Application {
 
             AddTagsRequest req = new AddTagsRequest() {{
                 headers = new AddTagsHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "aut";
-                    xAmzCredential = "dignissimos";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "alias";
-                    xAmzSignature = "vitae";
-                    xAmzSignedHeaders = "ipsum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags";
                 }};
                 request = new AddTagsRequest() {{
-                    resourceId = "magni";
+                    resourceId = "fugit";
                     tagsList = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "ea";
-                            value = "dolor";
-                        }}),
-                        add(new Tag() {{
-                            key = "consequatur";
-                            value = "assumenda";
+                            key = "nihil";
+                            value = "rerum";
                         }}),
                     }};
                 }};

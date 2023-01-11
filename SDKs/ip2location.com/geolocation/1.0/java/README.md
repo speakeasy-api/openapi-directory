@@ -29,13 +29,12 @@ public class Application {
                 queryParams = new GetQueryParams() {{
                     addon = new openapisdk.models.operations.GetAddonEnum[]() {{
                         add("region"),
-                        add("city"),
                     }};
-                    format = "json";
-                    ip = "vero";
-                    key = "sequi";
-                    lang = "ga";
-                    package_ = "WS12";
+                    format = "xml";
+                    ip = "expedita";
+                    key = "consequuntur";
+                    lang = "ko";
+                    package_ = "WS18";
                 }};
             }};
 

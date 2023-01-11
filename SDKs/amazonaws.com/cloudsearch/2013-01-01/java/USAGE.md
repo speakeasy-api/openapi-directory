@@ -23,17 +23,17 @@ public class Application {
             GetBuildSuggestersRequest req = new GetBuildSuggestersRequest() {{
                 queryParams = new GetBuildSuggestersQueryParams() {{
                     action = "BuildSuggesters";
-                    domainName = "quaerat";
+                    domainName = "voluptas";
                     version = "2013-01-01";
                 }};
                 headers = new GetBuildSuggestersHeaders() {{
-                    xAmzAlgorithm = "omnis";
-                    xAmzContentSha256 = "consectetur";
-                    xAmzCredential = "ducimus";
-                    xAmzDate = "consequatur";
-                    xAmzSecurityToken = "non";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "at";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
             }};
 

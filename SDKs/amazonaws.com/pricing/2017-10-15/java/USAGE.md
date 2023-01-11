@@ -22,24 +22,24 @@ public class Application {
 
             DescribeServicesRequest req = new DescribeServicesRequest() {{
                 queryParams = new DescribeServicesQueryParams() {{
-                    maxResults = "maiores";
-                    nextToken = "nobis";
+                    maxResults = "sit";
+                    nextToken = "voluptas";
                 }};
                 headers = new DescribeServicesHeaders() {{
-                    xAmzAlgorithm = "quos";
-                    xAmzContentSha256 = "facilis";
-                    xAmzCredential = "qui";
-                    xAmzDate = "quis";
-                    xAmzSecurityToken = "aut";
-                    xAmzSignature = "est";
-                    xAmzSignedHeaders = "ipsa";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                     xAmzTarget = "AWSPriceListService.DescribeServices";
                 }};
                 request = new DescribeServicesRequest() {{
-                    formatVersion = "eveniet";
-                    maxResults = 1787359646289181114;
-                    nextToken = "vitae";
-                    serviceCode = "quos";
+                    formatVersion = "nihil";
+                    maxResults = 8325060299420976708;
+                    nextToken = "dicta";
+                    serviceCode = "debitis";
                 }};
             }};
 

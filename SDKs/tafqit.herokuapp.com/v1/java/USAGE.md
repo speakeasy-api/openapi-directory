@@ -14,9 +14,9 @@ public class Application {
 
             ConvertRequest req = new ConvertRequest() {{
                 request = new ConvertRequestBody() {{
-                    hundredsForm = "corporis";
-                    theNumber = "dicta";
-                    unit = "rem";
+                    hundredsForm = "sit";
+                    theNumber = "voluptas";
+                    unit = "culpa";
                 }};
             }};
 

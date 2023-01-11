@@ -37,24 +37,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new RuntimeconfigOperationsCancelPathParams() {{
-                    name = "iste";
+                    name = "sit";
                 }};
                 queryParams = new RuntimeconfigOperationsCancelQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "eos";
-                    alt = "proto";
-                    callback = "ipsam";
-                    fields = "atque";
-                    key = "dolorem";
-                    oauthToken = "dolorem";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "sit";
-                    uploadType = "est";
-                    uploadProtocol = "alias";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("quidem", "est");
-                    put("et", "esse");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

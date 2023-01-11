@@ -14,8 +14,8 @@ public class Application {
 
             PostAuthRequest req = new PostAuthRequest() {{
                 queryParams = new PostAuthQueryParams() {{
-                    clientId = "velit";
-                    clientSecret = "qui";
+                    clientId = "sit";
+                    clientSecret = "voluptas";
                 }};
             }};
 

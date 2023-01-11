@@ -35,17 +35,17 @@ public class Application {
 
             CreateClusterRequest req = new CreateClusterRequest() {{
                 headers = new CreateClusterHeaders() {{
-                    xAmzAlgorithm = "omnis";
-                    xAmzContentSha256 = "velit";
-                    xAmzCredential = "commodi";
-                    xAmzDate = "ut";
-                    xAmzSecurityToken = "aut";
-                    xAmzSignature = "explicabo";
-                    xAmzSignedHeaders = "sit";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateClusterRequestBody() {{
-                    clientToken = "sed";
-                    clusterName = "est";
+                    clientToken = "voluptas";
+                    clusterName = "fugit";
                 }};
             }};
 

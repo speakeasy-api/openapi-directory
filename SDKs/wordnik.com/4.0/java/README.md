@@ -35,10 +35,10 @@ public class Application {
 
             AuthenticateRequest req = new AuthenticateRequest() {{
                 pathParams = new AuthenticatePathParams() {{
-                    username = "aliquid";
+                    username = "sit";
                 }};
                 queryParams = new AuthenticateQueryParams() {{
-                    password = "molestiae";
+                    password = "voluptas";
                 }};
             }};
 

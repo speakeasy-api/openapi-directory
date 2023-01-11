@@ -22,11 +22,11 @@ public class Application {
 
             AnalyticsRequest req = new AnalyticsRequest() {{
                 queryParams = new AnalyticsQueryParams() {{
-                    end = "sed";
-                    groupBy = "country";
-                    label = "et";
-                    start = "consequuntur";
-                    subaccounts = "non";
+                    end = "sit";
+                    groupBy = "subaccount";
+                    label = "culpa";
+                    start = "expedita";
+                    subaccounts = "consequuntur";
                 }};
             }};
 

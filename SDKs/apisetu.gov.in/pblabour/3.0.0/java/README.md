@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new AlsfcRequestBody() {{
                     certificateParameters = new AlsfcRequestBodyCertificateParameters() {{
-                        uid = "et";
+                        uid = "sit";
                         lino = "voluptas";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "consequatur";
+                    txnId = "consequuntur";
                 }};
             }};
 

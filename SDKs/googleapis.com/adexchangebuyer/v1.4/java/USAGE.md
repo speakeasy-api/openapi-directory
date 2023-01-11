@@ -22,16 +22,16 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdexchangebuyerAccountsGetPathParams() {{
-                    id = 7051896623926270928;
+                    id = 8717895732742165505;
                 }};
                 queryParams = new AdexchangebuyerAccountsGetQueryParams() {{
                     alt = "json";
-                    fields = "nostrum";
-                    key = "illum";
-                    oauthToken = "aut";
+                    fields = "culpa";
+                    key = "expedita";
+                    oauthToken = "consequuntur";
                     prettyPrint = false;
-                    quotaUser = "minus";
-                    userIp = "facilis";
+                    quotaUser = "expedita";
+                    userIp = "voluptas";
                 }};
             }};
 

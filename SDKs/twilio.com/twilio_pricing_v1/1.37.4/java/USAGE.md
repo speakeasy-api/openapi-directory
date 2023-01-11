@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchMessagingCountryPathParams() {{
-                    isoCountry = "dolores";
+                    isoCountry = "sit";
                 }};
             }};
 

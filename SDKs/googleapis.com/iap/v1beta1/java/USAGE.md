@@ -22,24 +22,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new IapGetIamPolicyPathParams() {{
-                    resource = "est";
+                    resource = "sit";
                 }};
                 queryParams = new IapGetIamPolicyQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "laudantium";
-                    alt = "json";
-                    callback = "enim";
-                    fields = "et";
-                    key = "quidem";
-                    oauthToken = "est";
-                    prettyPrint = false;
-                    quotaUser = "velit";
-                    uploadType = "quod";
-                    uploadProtocol = "enim";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GetIamPolicyRequest() {{
                     options = new GetPolicyOptions() {{
-                        requestedPolicyVersion = 7600579672508501363;
+                        requestedPolicyVersion = 7837839688282259259;
                     }};
                 }};
             }};

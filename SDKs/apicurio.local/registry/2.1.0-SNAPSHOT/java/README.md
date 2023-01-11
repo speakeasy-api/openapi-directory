@@ -27,7 +27,7 @@ public class Application {
 
             CreateGlobalRuleRequest req = new CreateGlobalRuleRequest() {{
                 request = new Rule() {{
-                    config = "magnam";
+                    config = "sit";
                     type = "VALIDITY";
                 }};
             }};

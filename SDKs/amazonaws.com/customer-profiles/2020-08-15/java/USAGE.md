@@ -22,24 +22,22 @@ public class Application {
 
             AddProfileKeyRequest req = new AddProfileKeyRequest() {{
                 pathParams = new AddProfileKeyPathParams() {{
-                    domainName = "rem";
+                    domainName = "sit";
                 }};
                 headers = new AddProfileKeyHeaders() {{
-                    xAmzAlgorithm = "laudantium";
-                    xAmzContentSha256 = "corporis";
-                    xAmzCredential = "qui";
-                    xAmzDate = "adipisci";
-                    xAmzSecurityToken = "qui";
-                    xAmzSignature = "iste";
-                    xAmzSignedHeaders = "minima";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AddProfileKeyRequestBody() {{
-                    keyName = "blanditiis";
-                    profileId = "sit";
+                    keyName = "fugit";
+                    profileId = "et";
                     values = new String[]() {{
-                        add("earum"),
-                        add("fugiat"),
-                        add("dolores"),
+                        add("rerum"),
                     }};
                 }};
             }};

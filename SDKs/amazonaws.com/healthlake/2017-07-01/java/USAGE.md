@@ -22,18 +22,18 @@ public class Application {
 
             CreateFhirDatastoreRequest req = new CreateFhirDatastoreRequest() {{
                 headers = new CreateFhirDatastoreHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "eos";
-                    xAmzDate = "quas";
-                    xAmzSecurityToken = "commodi";
-                    xAmzSignature = "eum";
-                    xAmzSignedHeaders = "ex";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "HealthLake.CreateFHIRDatastore";
                 }};
                 request = new CreateFhirDatastoreRequest() {{
-                    clientToken = "deleniti";
-                    datastoreName = "quam";
+                    clientToken = "fugit";
+                    datastoreName = "et";
                     datastoreTypeVersion = "R4";
                     preloadDataConfig = new PreloadDataConfig() {{
                         preloadDataType = "SYNTHEA";
@@ -41,21 +41,13 @@ public class Application {
                     sseConfiguration = new SseConfiguration() {{
                         kmsEncryptionConfig = new KmsEncryptionConfig() {{
                             cmkType = "AWS_OWNED_KMS_KEY";
-                            kmsKeyId = "molestiae";
+                            kmsKeyId = "debitis";
                         }};
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "voluptatem";
-                        }}),
-                        add(new Tag() {{
-                            key = "nihil";
-                            value = "et";
-                        }}),
-                        add(new Tag() {{
-                            key = "recusandae";
-                            value = "error";
+                            key = "et";
+                            value = "ut";
                         }}),
                     }};
                 }};

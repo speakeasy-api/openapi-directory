@@ -14,8 +14,8 @@ public class Application {
 
             GetweatherzipcodeRequest req = new GetweatherzipcodeRequest() {{
                 queryParams = new GetweatherzipcodeQueryParams() {{
-                    license = "vitae";
-                    zip = "quasi";
+                    license = "sit";
+                    zip = "voluptas";
                 }};
             }};
 

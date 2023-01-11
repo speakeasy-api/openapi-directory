@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new CancelShipmentPathParams() {{
-                    shipmentId = "perspiciatis";
+                    shipmentId = "sit";
                 }};
             }};
 

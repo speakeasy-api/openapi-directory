@@ -35,25 +35,24 @@ public class Application {
 
             GetEntitlementsRequest req = new GetEntitlementsRequest() {{
                 headers = new GetEntitlementsHeaders() {{
-                    xAmzAlgorithm = "fugit";
-                    xAmzContentSha256 = "cumque";
-                    xAmzCredential = "corporis";
-                    xAmzDate = "adipisci";
-                    xAmzSecurityToken = "aliquid";
-                    xAmzSignature = "accusantium";
-                    xAmzSignedHeaders = "exercitationem";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSMPEntitlementService.GetEntitlements";
                 }};
                 request = new GetEntitlementsRequest() {{
                     filter = new java.util.HashMap<String, String[]>() {{
-                        put("perspiciatis", new String[]() {{
-                            add("inventore"),
-                            add("voluptatem"),
+                        put("et", new String[]() {{
+                            add("rerum"),
                         }});
                     }};
-                    maxResults = 2441923158078746440;
-                    nextToken = "ut";
-                    productCode = "ullam";
+                    maxResults = 7837839688282259259;
+                    nextToken = "debitis";
+                    productCode = "voluptatum";
                 }};
             }};
 

@@ -32,8 +32,8 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetApodQueryParams() {{
-                    date = "voluptatem";
-                    hd = true;
+                    date = "sit";
+                    hd = false;
                 }};
             }};
 

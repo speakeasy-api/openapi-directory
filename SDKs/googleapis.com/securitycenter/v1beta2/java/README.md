@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsPathParams() {{
-                    name = "placeat";
+                    name = "sit";
                 }};
                 queryParams = new SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "error";
-                    alt = "json";
-                    callback = "est";
-                    fields = "reprehenderit";
-                    key = "pariatur";
-                    oauthToken = "hic";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "aut";
-                    uploadType = "est";
-                    uploadProtocol = "cupiditate";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

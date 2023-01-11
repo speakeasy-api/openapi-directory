@@ -22,26 +22,26 @@ public class Application {
 
             AddLayerVersionPermissionRequest req = new AddLayerVersionPermissionRequest() {{
                 pathParams = new AddLayerVersionPermissionPathParams() {{
-                    layerName = "qui";
-                    versionNumber = 1890455036426927167;
+                    layerName = "sit";
+                    versionNumber = 2259404117704393152;
                 }};
                 queryParams = new AddLayerVersionPermissionQueryParams() {{
-                    revisionId = "sed";
+                    revisionId = "culpa";
                 }};
                 headers = new AddLayerVersionPermissionHeaders() {{
-                    xAmzAlgorithm = "enim";
-                    xAmzContentSha256 = "eum";
-                    xAmzCredential = "et";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
                     xAmzDate = "expedita";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "quasi";
-                    xAmzSignedHeaders = "nisi";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
                 request = new AddLayerVersionPermissionRequestBody() {{
-                    action = "et";
-                    organizationId = "unde";
-                    principal = "in";
-                    statementId = "ut";
+                    action = "nihil";
+                    organizationId = "rerum";
+                    principal = "dicta";
+                    statementId = "debitis";
                 }};
             }};
 

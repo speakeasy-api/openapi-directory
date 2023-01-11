@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateAssetPathParams() {{
-                    serviceSid = "architecto";
+                    serviceSid = "sit";
                 }};
                 request = new CreateAssetCreateAssetRequest() {{
                     friendlyName = "voluptas";

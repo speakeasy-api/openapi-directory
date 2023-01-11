@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new AgcerRequestBody() {{
                     certificateParameters = new AgcerRequestBodyCertificateParameters() {{
-                        name = "ullam";
-                        refNo = "est";
+                        name = "sit";
+                        refNo = "voluptas";
                     }};
-                    consentArtifact = "eos";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "minus";
+                    txnId = "consequuntur";
                 }};
             }};
 

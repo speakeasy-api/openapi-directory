@@ -24,25 +24,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudtraceProjectsTraceSinksCreatePathParams() {{
-                    parent = "vel";
+                    parent = "sit";
                 }};
                 queryParams = new CloudtraceProjectsTraceSinksCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "rerum";
-                    alt = "proto";
-                    callback = "molestiae";
-                    fields = "nemo";
-                    key = "qui";
-                    oauthToken = "quis";
-                    prettyPrint = false;
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
                     quotaUser = "et";
-                    uploadType = "et";
-                    uploadProtocol = "nostrum";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new TraceSinkInput() {{
-                    name = "sed";
+                    name = "dicta";
                     outputConfig = new OutputConfig() {{
-                        destination = "quia";
+                        destination = "debitis";
                     }};
                 }};
             }};

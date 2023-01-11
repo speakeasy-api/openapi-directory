@@ -14,15 +14,15 @@ public class Application {
 
             Oauth2TokeninfoRequest req = new Oauth2TokeninfoRequest() {{
                 queryParams = new Oauth2TokeninfoQueryParams() {{
-                    accessToken = "dolorem";
+                    accessToken = "sit";
                     alt = "json";
-                    fields = "et";
-                    idToken = "dolorem";
-                    key = "molestias";
-                    oauthToken = "adipisci";
-                    prettyPrint = false;
-                    quotaUser = "inventore";
-                    userIp = "velit";
+                    fields = "culpa";
+                    idToken = "expedita";
+                    key = "consequuntur";
+                    oauthToken = "dolor";
+                    prettyPrint = true;
+                    quotaUser = "voluptas";
+                    userIp = "fugit";
                 }};
             }};
 

@@ -22,21 +22,21 @@ public class Application {
 
             CreateActivityRequest req = new CreateActivityRequest() {{
                 headers = new CreateActivityHeaders() {{
-                    xAmzAlgorithm = "laboriosam";
-                    xAmzContentSha256 = "totam";
-                    xAmzCredential = "atque";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "quibusdam";
-                    xAmzSignature = "dolorum";
-                    xAmzSignedHeaders = "placeat";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSStepFunctions.CreateActivity";
                 }};
                 request = new CreateActivityInput() {{
-                    name = "laborum";
+                    name = "fugit";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "numquam";
-                            value = "et";
+                            key = "nihil";
+                            value = "rerum";
                         }}),
                     }};
                 }};

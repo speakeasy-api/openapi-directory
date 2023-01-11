@@ -22,16 +22,16 @@ public class Application {
 
             DeleteObjectRequest req = new DeleteObjectRequest() {{
                 pathParams = new DeleteObjectPathParams() {{
-                    path = "quibusdam";
+                    path = "sit";
                 }};
                 headers = new DeleteObjectHeaders() {{
-                    xAmzAlgorithm = "nihil";
-                    xAmzContentSha256 = "sint";
-                    xAmzCredential = "dolorem";
-                    xAmzDate = "porro";
-                    xAmzSecurityToken = "nemo";
-                    xAmzSignature = "ut";
-                    xAmzSignedHeaders = "ut";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

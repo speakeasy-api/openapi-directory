@@ -20,15 +20,15 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateExportCustomJobPathParams() {{
-                    resourceType = "qui";
+                    resourceType = "sit";
                 }};
                 request = new CreateExportCustomJobCreateExportCustomJobRequest() {{
-                    email = "omnis";
-                    endDay = "minus";
-                    friendlyName = "nostrum";
-                    startDay = "non";
-                    webhookMethod = "sit";
-                    webhookUrl = "repellat";
+                    email = "voluptas";
+                    endDay = "culpa";
+                    friendlyName = "expedita";
+                    startDay = "consequuntur";
+                    webhookMethod = "dolor";
+                    webhookUrl = "expedita";
                 }};
             }};
 

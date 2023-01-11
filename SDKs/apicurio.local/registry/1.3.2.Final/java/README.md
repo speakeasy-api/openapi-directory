@@ -27,11 +27,11 @@ public class Application {
 
             CreateArtifactRuleRequest req = new CreateArtifactRuleRequest() {{
                 pathParams = new CreateArtifactRulePathParams() {{
-                    artifactId = "et";
+                    artifactId = "sit";
                 }};
                 request = new Rule() {{
-                    config = "explicabo";
-                    type = "VALIDITY";
+                    config = "voluptas";
+                    type = "COMPATIBILITY";
                 }};
             }};
 

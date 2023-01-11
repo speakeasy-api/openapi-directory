@@ -24,23 +24,23 @@ public class Application {
                     }};
                 }};
                 queryParams = new LanguageDetectionsDetectQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "dolore";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    bearerToken = "eos";
-                    callback = "similique";
-                    fields = "vel";
-                    key = "est";
-                    oauthToken = "autem";
+                    bearerToken = "expedita";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     pp = true;
-                    prettyPrint = true;
-                    quotaUser = "hic";
-                    uploadType = "nulla";
-                    uploadProtocol = "itaque";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new DetectLanguageRequest() {{
                     q = new String[]() {{
-                        add("autem"),
+                        add("voluptatum"),
                     }};
                 }};
             }};

@@ -35,23 +35,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new PlayintegrityDecodeIntegrityTokenPathParams() {{
-                    packageName = "quisquam";
+                    packageName = "sit";
                 }};
                 queryParams = new PlayintegrityDecodeIntegrityTokenQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "reprehenderit";
-                    alt = "proto";
-                    callback = "sed";
-                    fields = "voluptatem";
-                    key = "sit";
-                    oauthToken = "distinctio";
-                    prettyPrint = false;
-                    quotaUser = "animi";
-                    uploadType = "aut";
-                    uploadProtocol = "ex";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new DecodeIntegrityTokenRequest() {{
-                    integrityToken = "et";
+                    integrityToken = "dicta";
                 }};
             }};
 

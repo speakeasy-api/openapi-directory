@@ -27,10 +27,10 @@ public class Application {
 
             CancelRequest req = new CancelRequest() {{
                 pathParams = new CancelPathParams() {{
-                    subscriptionId = "porro";
+                    subscriptionId = "sit";
                 }};
                 headers = new CancelHeaders() {{
-                    xShopperId = "qui";
+                    xShopperId = "voluptas";
                 }};
             }};
 

@@ -35,13 +35,13 @@ public class Application {
 
             CountClosedWorkflowExecutionsRequest req = new CountClosedWorkflowExecutionsRequest() {{
                 headers = new CountClosedWorkflowExecutionsHeaders() {{
-                    xAmzAlgorithm = "illo";
-                    xAmzContentSha256 = "aut";
-                    xAmzCredential = "omnis";
-                    xAmzDate = "eos";
-                    xAmzSecurityToken = "dolore";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "dolor";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "SimpleWorkflowService.CountClosedWorkflowExecutions";
                 }};
                 request = new CountClosedWorkflowExecutionsInput() {{
@@ -49,23 +49,23 @@ public class Application {
                         status = "COMPLETED";
                     }};
                     closeTimeFilter = new ExecutionTimeFilter() {{
-                        latestDate = "1983-08-05T17:33:17Z";
-                        oldestDate = "1997-05-27T09:53:03Z";
+                        latestDate = "2011-08-12T10:11:12Z";
+                        oldestDate = "2003-05-13T04:57:12Z";
                     }};
-                    domain = "iste";
+                    domain = "rerum";
                     executionFilter = new WorkflowExecutionFilter() {{
-                        workflowId = "voluptatibus";
+                        workflowId = "dicta";
                     }};
                     startTimeFilter = new ExecutionTimeFilter() {{
-                        latestDate = "1980-03-26T04:47:11Z";
-                        oldestDate = "1983-07-03T09:45:43Z";
+                        latestDate = "2004-06-02T10:14:12Z";
+                        oldestDate = "1981-07-21T06:30:48Z";
                     }};
                     tagFilter = new TagFilter() {{
-                        tag = "debitis";
+                        tag = "et";
                     }};
                     typeFilter = new WorkflowTypeFilter() {{
-                        name = "quam";
-                        version = "excepturi";
+                        name = "ut";
+                        version = "dolorem";
                     }};
                 }};
             }};

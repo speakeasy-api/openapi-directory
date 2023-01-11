@@ -24,35 +24,35 @@ public class Application {
                     }};
                 }};
                 pathParams = new BigqueryconnectionProjectsLocationsConnectionsCreatePathParams() {{
-                    parent = "et";
+                    parent = "sit";
                 }};
                 queryParams = new BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quas";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "saepe";
-                    connectionId = "harum";
-                    fields = "animi";
-                    key = "eius";
-                    oauthToken = "necessitatibus";
-                    prettyPrint = true;
-                    quotaUser = "amet";
-                    uploadType = "eaque";
-                    uploadProtocol = "qui";
+                    callback = "consequuntur";
+                    connectionId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new ConnectionInput() {{
                     cloudSql = new CloudSqlPropertiesInput() {{
                         credential = new CloudSqlCredential() {{
-                            password = "et";
-                            username = "ex";
+                            password = "debitis";
+                            username = "voluptatum";
                         }};
-                        database = "adipisci";
-                        instanceId = "ipsum";
-                        type = "DATABASE_TYPE_UNSPECIFIED";
+                        database = "et";
+                        instanceId = "ut";
+                        type = "MYSQL";
                     }};
-                    description = "ut";
-                    friendlyName = "voluptas";
-                    name = "sed";
+                    description = "et";
+                    friendlyName = "voluptate";
+                    name = "iste";
                 }};
             }};
 

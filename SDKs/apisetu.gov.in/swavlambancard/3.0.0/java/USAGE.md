@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new DpicrRequestBody() {{
                     certificateParameters = new DpicrRequestBodyCertificateParameters() {{
-                        certNO = "facere";
-                        fullName = "facere";
+                        certNO = "sit";
+                        fullName = "voluptas";
                     }};
-                    consentArtifact = "ut";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "assumenda";
+                    txnId = "consequuntur";
                 }};
             }};
 

@@ -15,21 +15,23 @@ public class Application {
             AcceleratedmobilepageurlAmpUrlsBatchGetRequest req = new AcceleratedmobilepageurlAmpUrlsBatchGetRequest() {{
                 queryParams = new AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "blanditiis";
-                    alt = "proto";
-                    callback = "nihil";
-                    fields = "asperiores";
-                    key = "quaerat";
-                    oauthToken = "hic";
-                    prettyPrint = false;
-                    quotaUser = "est";
-                    uploadType = "nostrum";
-                    uploadProtocol = "pariatur";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new BatchGetAmpUrlsRequest() {{
-                    lookupStrategy = "FETCH_LIVE_DOC";
+                    lookupStrategy = "IN_INDEX_DOC";
                     urls = new String[]() {{
-                        add("possimus"),
+                        add("debitis"),
+                        add("voluptatum"),
+                        add("et"),
                     }};
                 }};
             }};

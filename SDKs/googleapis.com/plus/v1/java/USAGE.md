@@ -24,16 +24,16 @@ public class Application {
                     }};
                 }};
                 pathParams = new PlusActivitiesGetPathParams() {{
-                    activityId = "est";
+                    activityId = "sit";
                 }};
                 queryParams = new PlusActivitiesGetQueryParams() {{
                     alt = "json";
-                    fields = "consequatur";
-                    key = "cumque";
-                    oauthToken = "autem";
+                    fields = "culpa";
+                    key = "expedita";
+                    oauthToken = "consequuntur";
                     prettyPrint = false;
-                    quotaUser = "deserunt";
-                    userIp = "iure";
+                    quotaUser = "expedita";
+                    userIp = "voluptas";
                 }};
             }};
 

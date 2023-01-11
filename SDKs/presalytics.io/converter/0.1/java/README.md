@@ -28,8 +28,8 @@ public class Application {
             SvgconvertRequest req = new SvgconvertRequest() {{
                 request = new SvgconvertFileToConvert() {{
                     file = new SvgconvertFileToConvertFile() {{
-                        content = "error".getBytes();
-                        file = "quia";
+                        content = "sit".getBytes();
+                        file = "voluptas";
                     }};
                 }};
             }};

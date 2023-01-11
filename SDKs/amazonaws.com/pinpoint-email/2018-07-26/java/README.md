@@ -35,43 +35,35 @@ public class Application {
 
             CreateConfigurationSetRequest req = new CreateConfigurationSetRequest() {{
                 headers = new CreateConfigurationSetHeaders() {{
-                    xAmzAlgorithm = "dolor";
-                    xAmzContentSha256 = "sit";
-                    xAmzCredential = "non";
-                    xAmzDate = "sed";
-                    xAmzSecurityToken = "cumque";
-                    xAmzSignature = "architecto";
-                    xAmzSignedHeaders = "accusantium";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateConfigurationSetRequestBody() {{
-                    configurationSetName = "non";
+                    configurationSetName = "voluptas";
                     deliveryOptions = new CreateConfigurationSetRequestBodyDeliveryOptions() {{
-                        sendingPoolName = "et";
+                        sendingPoolName = "fugit";
                         tlsPolicy = "REQUIRE";
                     }};
                     reputationOptions = new CreateConfigurationSetRequestBodyReputationOptions() {{
-                        lastFreshStart = "2018-09-28T20:49:02Z";
+                        lastFreshStart = "2003-05-13T04:57:12Z";
                         reputationMetricsEnabled = true;
                     }};
                     sendingOptions = new CreateConfigurationSetRequestBodySendingOptions() {{
-                        sendingEnabled = true;
+                        sendingEnabled = false;
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "reiciendis";
+                            key = "voluptatum";
                             value = "et";
-                        }}),
-                        add(new Tag() {{
-                            key = "dolorem";
-                            value = "minus";
-                        }}),
-                        add(new Tag() {{
-                            key = "ea";
-                            value = "quaerat";
                         }}),
                     }};
                     trackingOptions = new CreateConfigurationSetRequestBodyTrackingOptions() {{
-                        customRedirectDomain = "dolorem";
+                        customRedirectDomain = "ut";
                     }};
                 }};
             }};

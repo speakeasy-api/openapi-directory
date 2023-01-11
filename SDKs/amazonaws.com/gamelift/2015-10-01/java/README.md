@@ -35,21 +35,21 @@ public class Application {
 
             AcceptMatchRequest req = new AcceptMatchRequest() {{
                 headers = new AcceptMatchHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "ea";
-                    xAmzCredential = "quia";
-                    xAmzDate = "sed";
-                    xAmzSecurityToken = "dolorem";
-                    xAmzSignature = "accusamus";
-                    xAmzSignedHeaders = "ut";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "GameLift.AcceptMatch";
                 }};
                 request = new AcceptMatchInput() {{
-                    acceptanceType = "REJECT";
+                    acceptanceType = "ACCEPT";
                     playerIds = new String[]() {{
-                        add("accusamus"),
+                        add("nihil"),
                     }};
-                    ticketId = "quisquam";
+                    ticketId = "rerum";
                 }};
             }};
 

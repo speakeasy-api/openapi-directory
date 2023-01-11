@@ -14,9 +14,9 @@ public class Application {
 
             CampaignAnalyticsRequest req = new CampaignAnalyticsRequest() {{
                 queryParams = new CampaignAnalyticsQueryParams() {{
-                    campaignId = "cumque";
-                    endingAt = "tenetur";
-                    length = "non";
+                    campaignId = "sit";
+                    endingAt = "voluptas";
+                    length = "culpa";
                 }};
             }};
 

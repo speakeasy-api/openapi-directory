@@ -22,23 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new MetastoreOperationsCancelPathParams() {{
-                    name = "earum";
+                    name = "sit";
                 }};
                 queryParams = new MetastoreOperationsCancelQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dolor";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "modi";
-                    fields = "voluptas";
-                    key = "quam";
-                    oauthToken = "commodi";
-                    prettyPrint = false;
-                    quotaUser = "ratione";
-                    uploadType = "repudiandae";
-                    uploadProtocol = "velit";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("enim", "dignissimos");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

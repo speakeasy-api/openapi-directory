@@ -32,11 +32,11 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetCustomerServiceMetricPathParams() {{
-                    customerServiceMetricType = "atque";
-                    evaluationType = "amet";
+                    customerServiceMetricType = "sit";
+                    evaluationType = "voluptas";
                 }};
                 queryParams = new GetCustomerServiceMetricQueryParams() {{
-                    evaluationMarketplaceId = "nisi";
+                    evaluationMarketplaceId = "culpa";
                 }};
             }};
 

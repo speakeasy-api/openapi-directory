@@ -36,9 +36,9 @@ public class Application {
             InstallKubernetesRequest req = new InstallKubernetesRequest() {{
                 request = new InstallKubernetesRequestBody() {{
                     addonSlugs = new String[]() {{
-                        add("est"),
+                        add("voluptas"),
                     }};
-                    clusterUuid = "laudantium";
+                    clusterUuid = "culpa";
                 }};
             }};
 

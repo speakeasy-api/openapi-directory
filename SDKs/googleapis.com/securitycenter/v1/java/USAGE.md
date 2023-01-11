@@ -22,24 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new SecuritycenterOrganizationsAssetsRunDiscoveryPathParams() {{
-                    parent = "mollitia";
+                    parent = "sit";
                 }};
                 queryParams = new SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "animi";
-                    alt = "json";
-                    callback = "nihil";
-                    fields = "magni";
-                    key = "tempore";
-                    oauthToken = "veniam";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
                     quotaUser = "et";
-                    uploadType = "est";
-                    uploadProtocol = "modi";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("corrupti", "ipsam");
-                    put("velit", "doloribus");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

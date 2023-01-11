@@ -35,29 +35,29 @@ public class Application {
 
             CreateSuiteDefinitionRequest req = new CreateSuiteDefinitionRequest() {{
                 headers = new CreateSuiteDefinitionHeaders() {{
-                    xAmzAlgorithm = "quia";
-                    xAmzContentSha256 = "cupiditate";
-                    xAmzCredential = "sed";
-                    xAmzDate = "maxime";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "consequatur";
-                    xAmzSignedHeaders = "excepturi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateSuiteDefinitionRequestBody() {{
                     suiteDefinitionConfiguration = new CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration() {{
-                        devicePermissionRoleArn = "ut";
+                        devicePermissionRoleArn = "voluptas";
                         devices = new openapisdk.models.shared.DeviceUnderTest[]() {{
                             add(new DeviceUnderTest() {{
-                                certificateArn = "sit";
-                                thingArn = "aliquid";
+                                certificateArn = "et";
+                                thingArn = "nihil";
                             }}),
                         }};
-                        intendedForQualification = false;
-                        rootGroup = "itaque";
-                        suiteDefinitionName = "fuga";
+                        intendedForQualification = true;
+                        rootGroup = "dicta";
+                        suiteDefinitionName = "debitis";
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("accusantium", "vel");
+                        put("et", "ut");
                     }};
                 }};
             }};

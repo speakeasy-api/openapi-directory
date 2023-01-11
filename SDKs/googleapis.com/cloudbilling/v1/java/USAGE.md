@@ -24,21 +24,21 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudbillingBillingAccountsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "rerum";
-                    alt = "proto";
-                    callback = "qui";
-                    fields = "unde";
-                    key = "assumenda";
-                    oauthToken = "dolorem";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "repellendus";
-                    uploadType = "magni";
-                    uploadProtocol = "necessitatibus";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new BillingAccountInput() {{
-                    displayName = "provident";
-                    masterBillingAccount = "placeat";
+                    displayName = "rerum";
+                    masterBillingAccount = "dicta";
                 }};
             }};
 

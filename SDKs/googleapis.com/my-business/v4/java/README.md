@@ -27,52 +27,52 @@ public class Application {
 
             MybusinessAccountsCreateRequest req = new MybusinessAccountsCreateRequest() {{
                 queryParams = new MybusinessAccountsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "odio";
-                    alt = "proto";
-                    callback = "optio";
-                    fields = "nam";
-                    key = "voluptates";
-                    oauthToken = "et";
-                    prettyPrint = false;
-                    primaryOwner = "vel";
-                    quotaUser = "facilis";
-                    uploadType = "id";
-                    uploadProtocol = "est";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    primaryOwner = "fugit";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new Account() {{
-                    accountName = "ipsa";
-                    accountNumber = "error";
-                    name = "suscipit";
+                    accountName = "dicta";
+                    accountNumber = "debitis";
+                    name = "voluptatum";
                     organizationInfo = new OrganizationInfo() {{
-                        phoneNumber = "minus";
+                        phoneNumber = "et";
                         postalAddress = new PostalAddress() {{
                             addressLines = new String[]() {{
-                                add("laudantium"),
-                                add("est"),
-                                add("aspernatur"),
+                                add("dolorem"),
+                                add("et"),
+                                add("voluptate"),
                             }};
-                            administrativeArea = "sit";
-                            languageCode = "placeat";
-                            locality = "ad";
-                            organization = "ea";
-                            postalCode = "temporibus";
+                            administrativeArea = "iste";
+                            languageCode = "vitae";
+                            locality = "totam";
+                            organization = "dolores";
+                            postalCode = "illum";
                             recipients = new String[]() {{
-                                add("libero"),
+                                add("vel"),
                             }};
-                            regionCode = "reiciendis";
-                            revision = 1979199379981713557;
-                            sortingCode = "et";
-                            sublocality = "aut";
+                            regionCode = "odio";
+                            revision = 6303220950515014660;
+                            sortingCode = "id";
+                            sublocality = "aspernatur";
                         }};
-                        registeredDomain = "voluptatem";
+                        registeredDomain = "accusantium";
                     }};
                     permissionLevel = "MEMBER_LEVEL";
-                    role = "OWNER";
+                    role = "COMMUNITY_MANAGER";
                     state = new AccountState() {{
-                        status = "ACCOUNT_STATUS_UNSPECIFIED";
+                        status = "UNVERIFIED";
                     }};
-                    type = "ORGANIZATION";
+                    type = "USER_GROUP";
                 }};
             }};
 

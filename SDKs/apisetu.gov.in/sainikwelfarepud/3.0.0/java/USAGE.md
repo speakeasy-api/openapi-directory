@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new DpcerRequestBody() {{
                     certificateParameters = new DpcerRequestBodyCertificateParameters() {{
-                        fullName = "qui";
-                        uid = "maiores";
-                        certNo = "ipsam";
+                        fullName = "sit";
+                        uid = "voluptas";
+                        certNo = "culpa";
                     }};
-                    consentArtifact = "non";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "veritatis";
+                    txnId = "dolor";
                 }};
             }};
 

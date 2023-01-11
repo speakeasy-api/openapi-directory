@@ -22,35 +22,35 @@ public class Application {
 
             CreateDevicePoolRequest req = new CreateDevicePoolRequest() {{
                 headers = new CreateDevicePoolHeaders() {{
-                    xAmzAlgorithm = "aperiam";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "ab";
-                    xAmzDate = "molestias";
-                    xAmzSecurityToken = "molestias";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "animi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "DeviceFarm_20150623.CreateDevicePool";
                 }};
                 request = new CreateDevicePoolRequest() {{
-                    description = "nihil";
-                    maxDevices = 5987901294680041728;
-                    name = "hic";
-                    projectArn = "vitae";
+                    description = "fugit";
+                    maxDevices = 1543572285742637646;
+                    name = "nihil";
+                    projectArn = "rerum";
                     rules = new openapisdk.models.shared.Rule[]() {{
                         add(new Rule() {{
-                            attribute = "FLEET_TYPE";
+                            attribute = "REMOTE_ACCESS_ENABLED";
                             operator = "EQUALS";
-                            value = "pariatur";
+                            value = "et";
                         }}),
                         add(new Rule() {{
-                            attribute = "INSTANCE_ARN";
-                            operator = "GREATER_THAN_OR_EQUALS";
-                            value = "architecto";
+                            attribute = "ARN";
+                            operator = "LESS_THAN_OR_EQUALS";
+                            value = "et";
                         }}),
                         add(new Rule() {{
-                            attribute = "INSTANCE_LABELS";
-                            operator = "LESS_THAN";
-                            value = "rem";
+                            attribute = "FORM_FACTOR";
+                            operator = "GREATER_THAN";
+                            value = "vitae";
                         }}),
                     }};
                 }};

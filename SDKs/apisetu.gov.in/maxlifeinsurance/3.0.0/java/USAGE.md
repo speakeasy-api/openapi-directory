@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new LicerRequestBody() {{
                     certificateParameters = new LicerRequestBodyCertificateParameters() {{
-                        dob = "tempore";
-                        fullName = "et";
-                        polid = "odio";
-                        uid = "at";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        polid = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "earum";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "et";
+                    txnId = "expedita";
                 }};
             }};
 

@@ -36,21 +36,21 @@ public class Application {
                 }};
                 queryParams = new CloudresourcemanagerFoldersCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quisquam";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "aut";
-                    fields = "nobis";
-                    key = "laudantium";
-                    oauthToken = "nostrum";
-                    parent = "sed";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    parent = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "sint";
-                    uploadType = "modi";
-                    uploadProtocol = "consequuntur";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new FolderInput() {{
-                    displayName = "quae";
-                    parent = "asperiores";
+                    displayName = "dicta";
+                    parent = "debitis";
                 }};
             }};
 

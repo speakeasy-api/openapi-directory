@@ -14,7 +14,7 @@ public class Application {
 
             DeleteCompanyAttendancesIdRequest req = new DeleteCompanyAttendancesIdRequest() {{
                 pathParams = new DeleteCompanyAttendancesIdPathParams() {{
-                    id = 683457993526203910;
+                    id = 8717895732742165505;
                 }};
             }};
 

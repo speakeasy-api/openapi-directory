@@ -27,7 +27,7 @@ public class Application {
 
             CertificateActionRetrieveRequest req = new CertificateActionRetrieveRequest() {{
                 pathParams = new CertificateActionRetrievePathParams() {{
-                    certificateId = "modi";
+                    certificateId = "sit";
                 }};
             }};
 

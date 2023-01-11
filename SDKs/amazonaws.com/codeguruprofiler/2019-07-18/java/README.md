@@ -35,26 +35,25 @@ public class Application {
 
             AddNotificationChannelsRequest req = new AddNotificationChannelsRequest() {{
                 pathParams = new AddNotificationChannelsPathParams() {{
-                    profilingGroupName = "deleniti";
+                    profilingGroupName = "sit";
                 }};
                 headers = new AddNotificationChannelsHeaders() {{
-                    xAmzAlgorithm = "corporis";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "architecto";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "eum";
-                    xAmzSignature = "vero";
-                    xAmzSignedHeaders = "totam";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AddNotificationChannelsRequestBody() {{
                     channels = new openapisdk.models.shared.Channel[]() {{
                         add(new Channel() {{
                             eventPublishers = new openapisdk.models.shared.EventPublisherEnum[]() {{
                                 add("AnomalyDetection"),
-                                add("AnomalyDetection"),
                             }};
-                            id = "explicabo";
-                            uri = "consequatur";
+                            id = "rerum";
+                            uri = "dicta";
                         }}),
                     }};
                 }};

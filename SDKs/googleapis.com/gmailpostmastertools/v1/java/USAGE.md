@@ -22,19 +22,19 @@ public class Application {
                     }};
                 }};
                 queryParams = new GmailpostmastertoolsDomainsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "sunt";
-                    alt = "json";
-                    callback = "quas";
-                    fields = "ea";
-                    key = "quia";
-                    oauthToken = "placeat";
-                    pageSize = 777152332639024857;
-                    pageToken = "suscipit";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    pageSize = 6044372234677422456;
+                    pageToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "voluptas";
-                    uploadType = "est";
-                    uploadProtocol = "repellendus";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

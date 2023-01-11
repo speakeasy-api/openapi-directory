@@ -22,17 +22,17 @@ public class Application {
 
             AllocateStaticIpRequest req = new AllocateStaticIpRequest() {{
                 headers = new AllocateStaticIpHeaders() {{
-                    xAmzAlgorithm = "excepturi";
-                    xAmzContentSha256 = "quia";
-                    xAmzCredential = "dolore";
-                    xAmzDate = "sapiente";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "quis";
-                    xAmzSignedHeaders = "dolor";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Lightsail_20161128.AllocateStaticIp";
                 }};
                 request = new AllocateStaticIpRequest() {{
-                    staticIpName = "doloremque";
+                    staticIpName = "fugit";
                 }};
             }};
 

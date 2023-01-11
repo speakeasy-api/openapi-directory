@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new SkcerRequestBody() {{
                     certificateParameters = new SkcerRequestBodyCertificateParameters() {{
-                        coursename = "et";
-                        personalno = "reprehenderit";
-                        unit = "incidunt";
+                        coursename = "sit";
+                        personalno = "voluptas";
+                        unit = "culpa";
                     }};
-                    consentArtifact = "odio";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "quo";
+                    txnId = "dolor";
                 }};
             }};
 

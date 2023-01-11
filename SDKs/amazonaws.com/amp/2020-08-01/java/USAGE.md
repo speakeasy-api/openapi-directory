@@ -22,20 +22,19 @@ public class Application {
 
             CreateWorkspaceRequest req = new CreateWorkspaceRequest() {{
                 headers = new CreateWorkspaceHeaders() {{
-                    xAmzAlgorithm = "commodi";
-                    xAmzContentSha256 = "in";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "asperiores";
-                    xAmzSecurityToken = "quo";
-                    xAmzSignature = "ea";
-                    xAmzSignedHeaders = "soluta";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateWorkspaceRequestBody() {{
-                    alias = "tempora";
-                    clientToken = "commodi";
+                    alias = "voluptas";
+                    clientToken = "fugit";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("facere", "in");
-                        put("et", "odit");
+                        put("nihil", "rerum");
                     }};
                 }};
             }};

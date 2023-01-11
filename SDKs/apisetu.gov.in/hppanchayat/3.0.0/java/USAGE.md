@@ -23,11 +23,11 @@ public class Application {
                 }};
                 request = new FmcerRequestBody() {{
                     certificateParameters = new FmcerRequestBodyCertificateParameters() {{
-                        uid = "consectetur";
+                        uid = "sit";
                     }};
-                    consentArtifact = "consequuntur";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "saepe";
+                    txnId = "expedita";
                 }};
             }};
 

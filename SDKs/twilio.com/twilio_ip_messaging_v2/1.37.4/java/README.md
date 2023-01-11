@@ -33,19 +33,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateChannelPathParams() {{
-                    serviceSid = "repellendus";
+                    serviceSid = "sit";
                 }};
                 headers = new CreateChannelHeaders() {{
-                    xTwilioWebhookEnabled = "false";
+                    xTwilioWebhookEnabled = "true";
                 }};
                 request = new CreateChannelCreateChannelRequest() {{
-                    attributes = "eum";
-                    createdBy = "earum";
-                    dateCreated = "1973-08-29T09:00:45Z";
-                    dateUpdated = "1994-01-26T05:40:31Z";
-                    friendlyName = "aut";
-                    type = "public";
-                    uniqueName = "quia";
+                    attributes = "culpa";
+                    createdBy = "expedita";
+                    dateCreated = "1997-12-26T13:41:25Z";
+                    dateUpdated = "2003-04-20T23:11:44Z";
+                    friendlyName = "expedita";
+                    type = "private";
+                    uniqueName = "fugit";
                 }};
             }};
 

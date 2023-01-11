@@ -37,23 +37,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new ArtifactregistryProjectsLocationsListPathParams() {{
-                    name = "rerum";
+                    name = "sit";
                 }};
                 queryParams = new ArtifactregistryProjectsLocationsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "nostrum";
-                    alt = "json";
-                    callback = "earum";
-                    fields = "eum";
-                    filter = "impedit";
-                    key = "est";
-                    oauthToken = "dolor";
-                    pageSize = 8966615302516847732;
-                    pageToken = "ut";
-                    prettyPrint = false;
-                    quotaUser = "voluptatibus";
-                    uploadType = "at";
-                    uploadProtocol = "cupiditate";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
+                    prettyPrint = true;
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

@@ -35,7 +35,7 @@ public class Application {
             SDK sdk = builder.build();
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
-                request = "officiis";
+                request = "sit";
             }};
 
             CreateApplicationResponse res = sdk.createApplication(req);

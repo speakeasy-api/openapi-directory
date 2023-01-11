@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new PmjayRequestBody() {{
                     certificateParameters = new PmjayRequestBodyCertificateParameters() {{
-                        dob = "enim";
-                        fullName = "aliquid";
-                        udf1 = "et";
-                        udf2 = "et";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        udf1 = "culpa";
+                        udf2 = "expedita";
                     }};
-                    consentArtifact = "quia";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "maiores";
+                    txnId = "expedita";
                 }};
             }};
 

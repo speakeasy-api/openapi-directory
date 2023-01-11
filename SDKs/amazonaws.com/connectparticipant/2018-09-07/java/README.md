@@ -35,22 +35,20 @@ public class Application {
 
             CompleteAttachmentUploadRequest req = new CompleteAttachmentUploadRequest() {{
                 headers = new CompleteAttachmentUploadHeaders() {{
-                    xAmzAlgorithm = "earum";
-                    xAmzBearer = "quas";
-                    xAmzContentSha256 = "repellendus";
-                    xAmzCredential = "ut";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "quisquam";
-                    xAmzSignature = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzBearer = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
                     xAmzSignedHeaders = "voluptas";
                 }};
                 request = new CompleteAttachmentUploadRequestBody() {{
                     attachmentIds = new String[]() {{
-                        add("deleniti"),
-                        add("totam"),
-                        add("nemo"),
+                        add("et"),
                     }};
-                    clientToken = "eligendi";
+                    clientToken = "nihil";
                 }};
             }};
 

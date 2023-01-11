@@ -35,18 +35,18 @@ public class Application {
 
             DeleteSessionRequest req = new DeleteSessionRequest() {{
                 pathParams = new DeleteSessionPathParams() {{
-                    botAlias = "ex";
-                    botName = "magnam";
-                    userId = "a";
+                    botAlias = "sit";
+                    botName = "voluptas";
+                    userId = "culpa";
                 }};
                 headers = new DeleteSessionHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "omnis";
-                    xAmzCredential = "dicta";
-                    xAmzDate = "in";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "enim";
-                    xAmzSignedHeaders = "saepe";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
             }};
 

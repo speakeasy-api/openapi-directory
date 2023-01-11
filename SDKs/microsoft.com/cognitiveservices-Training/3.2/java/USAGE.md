@@ -22,7 +22,7 @@ public class Application {
 
             GetDomainRequest req = new GetDomainRequest() {{
                 pathParams = new GetDomainPathParams() {{
-                    domainId = "ducimus";
+                    domainId = "sit";
                 }};
             }};
 

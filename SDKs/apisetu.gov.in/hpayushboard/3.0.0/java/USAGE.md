@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new PhcerRequestBody() {{
                     certificateParameters = new PhcerRequestBodyCertificateParameters() {{
-                        fullName = "ut";
-                        registrationNo = "ut";
+                        fullName = "sit";
+                        registrationNo = "voluptas";
                     }};
-                    consentArtifact = "deleniti";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "quam";
+                    txnId = "consequuntur";
                 }};
             }};
 

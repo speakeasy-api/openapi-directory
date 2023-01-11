@@ -38,15 +38,15 @@ public class Application {
                 }};
                 queryParams = new DriveAboutGetQueryParams() {{
                     alt = "json";
-                    fields = "iure";
-                    includeSubscribed = false;
-                    key = "sed";
-                    maxChangeIdCount = "consequatur";
-                    oauthToken = "nulla";
+                    fields = "voluptas";
+                    includeSubscribed = true;
+                    key = "expedita";
+                    maxChangeIdCount = "consequuntur";
+                    oauthToken = "dolor";
                     prettyPrint = true;
-                    quotaUser = "sunt";
-                    startChangeId = "accusamus";
-                    userIp = "explicabo";
+                    quotaUser = "voluptas";
+                    startChangeId = "fugit";
+                    userIp = "et";
                 }};
             }};
 

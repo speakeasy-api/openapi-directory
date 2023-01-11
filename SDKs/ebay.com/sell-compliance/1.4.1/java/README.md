@@ -32,14 +32,14 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetListingViolationsQueryParams() {{
-                    complianceType = "quidem";
-                    filter = "est";
-                    limit = "quo";
-                    listingId = "vero";
-                    offset = "alias";
+                    complianceType = "sit";
+                    filter = "voluptas";
+                    limit = "culpa";
+                    listingId = "expedita";
+                    offset = "consequuntur";
                 }};
                 headers = new GetListingViolationsHeaders() {{
-                    xEBAYCMARKETPLACEID = "totam";
+                    xEBAYCMARKETPLACEID = "dolor";
                 }};
             }};
 

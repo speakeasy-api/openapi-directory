@@ -24,69 +24,52 @@ public class Application {
                 queryParams = new CommentanalyzerCommentsAnalyzeQueryParams() {{
                     dollarXgafv = "1";
                     accessToken = "voluptas";
-                    alt = "proto";
-                    callback = "recusandae";
+                    alt = "media";
+                    callback = "expedita";
                     fields = "consequuntur";
-                    key = "sit";
-                    oauthToken = "aut";
-                    prettyPrint = false;
-                    quotaUser = "inventore";
-                    uploadType = "est";
-                    uploadProtocol = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new AnalyzeCommentRequest() {{
-                    clientToken = "maiores";
+                    clientToken = "rerum";
                     comment = new TextEntry() {{
-                        text = "dolor";
-                        type = "HTML";
+                        text = "dicta";
+                        type = "TEXT_TYPE_UNSPECIFIED";
                     }};
-                    communityId = "et";
+                    communityId = "voluptatum";
                     context = new Context() {{
                         articleAndParentComment = new ArticleAndParentComment() {{
                             article = new TextEntry() {{
-                                text = "odio";
-                                type = "PLAIN_TEXT";
+                                text = "et";
+                                type = "HTML";
                             }};
                             parentComment = new TextEntry() {{
-                                text = "earum";
-                                type = "TEXT_TYPE_UNSPECIFIED";
+                                text = "dolorem";
+                                type = "PLAIN_TEXT";
                             }};
                         }};
                         entries = new openapisdk.models.shared.TextEntry[]() {{
                             add(new TextEntry() {{
-                                text = "magnam";
-                                type = "PLAIN_TEXT";
-                            }}),
-                            add(new TextEntry() {{
-                                text = "explicabo";
-                                type = "HTML";
-                            }}),
-                            add(new TextEntry() {{
-                                text = "modi";
+                                text = "iste";
                                 type = "TEXT_TYPE_UNSPECIFIED";
                             }}),
                         }};
                     }};
                     doNotStore = true;
                     languages = new String[]() {{
-                        add("ut"),
-                        add("eos"),
+                        add("illum"),
                     }};
                     requestedAttributes = new java.util.HashMap<String, openapisdk.models.shared.AttributeParameters>() {{
-                        put("porro", new AttributeParameters() {{
-                            scoreThreshold = 97.099998;
-                            scoreType = "PROBABILITY";
-                        }});
-                        put("similique", new AttributeParameters() {{
-                            scoreThreshold = 36.099998;
-                            scoreType = "SCORE_TYPE_UNSPECIFIED";
-                        }});
-                        put("explicabo", new AttributeParameters() {{
-                            scoreThreshold = 33.200001;
-                            scoreType = "RAW";
+                        put("vel", new AttributeParameters() {{
+                            scoreThreshold = 20.200001;
+                            scoreType = "STD_DEV_SCORE";
                         }});
                     }};
-                    sessionId = "deleniti";
+                    sessionId = "aspernatur";
                     spanAnnotations = true;
                 }};
             }};

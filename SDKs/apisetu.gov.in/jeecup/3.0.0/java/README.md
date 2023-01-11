@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new AdcrdRequestBody() {{
                     certificateParameters = new AdcrdRequestBodyCertificateParameters() {{
-                        applicationNo = "natus";
-                        dob = "autem";
-                        examYear = "incidunt";
-                        fullName = "neque";
+                        applicationNo = "sit";
+                        dob = "voluptas";
+                        examYear = "culpa";
+                        fullName = "expedita";
                     }};
-                    consentArtifact = "itaque";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "saepe";
+                    txnId = "expedita";
                 }};
             }};
 

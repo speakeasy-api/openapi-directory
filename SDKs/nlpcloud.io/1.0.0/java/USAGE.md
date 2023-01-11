@@ -22,7 +22,7 @@ public class Application {
 
             ReadDependenciesV1EnCoreWebSmDependenciesPostRequest req = new ReadDependenciesV1EnCoreWebSmDependenciesPostRequest() {{
                 request = new UserRequestIn() {{
-                    text = "aut";
+                    text = "sit";
                 }};
             }};
 

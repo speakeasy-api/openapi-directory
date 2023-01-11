@@ -27,9 +27,9 @@ public class Application {
 
             GetV1EmailFreeRequest req = new GetV1EmailFreeRequest() {{
                 queryParams = new GetV1EmailFreeQueryParams() {{
-                    email = "autem";
+                    email = "sit";
                     format = "json";
-                    key = "odit";
+                    key = "culpa";
                 }};
             }};
 

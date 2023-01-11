@@ -15,39 +15,39 @@ public class Application {
             CreateManualAccountRequest req = new CreateManualAccountRequest() {{
                 request = new CreateAccountRequest() {{
                     account = new CreateAccountInfo() {{
-                        accountName = "itaque";
-                        accountNumber = "corrupti";
-                        accountType = "voluptatem";
+                        accountName = "sit";
+                        accountNumber = "voluptas";
+                        accountType = "culpa";
                         address = new AccountAddress() {{
-                            address1 = "quasi";
-                            address2 = "repellat";
-                            address3 = "rem";
-                            city = "nisi";
-                            country = "nulla";
-                            sourceType = "et";
-                            state = "autem";
-                            street = "est";
-                            type = "PAYMENT";
-                            zip = "laudantium";
+                            address1 = "expedita";
+                            address2 = "consequuntur";
+                            address3 = "dolor";
+                            city = "expedita";
+                            country = "voluptas";
+                            sourceType = "fugit";
+                            state = "et";
+                            street = "nihil";
+                            type = "UNKNOWN";
+                            zip = "dicta";
                         }};
                         amountDue = new Money() {{
-                            amount = 12.100000;
-                            currency = "JPY";
+                            amount = 48.099998;
+                            currency = "AUD";
                         }};
                         balance = new Money() {{
-                            amount = 57.200001;
+                            amount = 11.100000;
                             currency = "CHF";
                         }};
-                        dueDate = "dolor";
-                        frequency = "DAILY";
+                        dueDate = "voluptate";
+                        frequency = "FIRST_DAY_MONTHLY";
                         homeValue = new Money() {{
-                            amount = 66.199997;
-                            currency = "SGD";
+                            amount = 68.099998;
+                            currency = "HKD";
                         }};
-                        includeInNetWorth = "dolores";
-                        memo = "sunt";
-                        nickname = "perferendis";
-                        valuationType = "MANUAL";
+                        includeInNetWorth = "illum";
+                        memo = "debitis";
+                        nickname = "vel";
+                        valuationType = "SYSTEM";
                     }};
                 }};
             }};

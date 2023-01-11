@@ -35,67 +35,91 @@ public class Application {
                     }};
                 }};
                 pathParams = new ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams() {{
-                    parent = "ab";
+                    parent = "sit";
                 }};
                 queryParams = new ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "enim";
-                    alt = "json";
-                    callback = "necessitatibus";
-                    deliveryPipelineId = "vero";
-                    fields = "hic";
-                    key = "alias";
-                    oauthToken = "id";
-                    prettyPrint = true;
-                    quotaUser = "doloribus";
-                    requestId = "facilis";
-                    uploadType = "occaecati";
-                    uploadProtocol = "iste";
-                    validateOnly = false;
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    deliveryPipelineId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
+                    validateOnly = true;
                 }};
                 request = new DeliveryPipelineInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("tenetur", "mollitia");
-                        put("veniam", "eum");
+                        put("ut", "dolorem");
                     }};
                     condition = new PipelineCondition() {{
                         pipelineReadyCondition = new PipelineReadyCondition() {{
                             status = false;
-                            updateTime = "et";
+                            updateTime = "voluptate";
                         }};
                         targetsPresentCondition = new TargetsPresentCondition() {{
                             missingTargets = new String[]() {{
-                                add("adipisci"),
-                                add("quod"),
-                                add("sed"),
+                                add("vitae"),
+                                add("totam"),
+                                add("dolores"),
                             }};
-                            status = true;
-                            updateTime = "ipsum";
+                            status = false;
+                            updateTime = "debitis";
                         }};
                     }};
-                    description = "saepe";
-                    etag = "velit";
+                    description = "vel";
+                    etag = "odio";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("corrupti", "dolor");
-                        put("itaque", "rem");
+                        put("id", "aspernatur");
+                        put("accusantium", "totam");
                     }};
-                    name = "temporibus";
+                    name = "commodi";
                     serialPipeline = new SerialPipeline() {{
                         stages = new openapisdk.models.shared.Stage[]() {{
                             add(new Stage() {{
                                 profiles = new String[]() {{
-                                    add("adipisci"),
+                                    add("aut"),
+                                    add("odit"),
+                                }};
+                                strategy = new Strategy() {{
+                                    standard = new Standard() {{
+                                        verify = true;
+                                    }};
+                                }};
+                                targetId = "voluptas";
+                            }}),
+                            add(new Stage() {{
+                                profiles = new String[]() {{
+                                    add("aut"),
+                                    add("illo"),
                                 }};
                                 strategy = new Strategy() {{
                                     standard = new Standard() {{
                                         verify = false;
                                     }};
                                 }};
-                                targetId = "et";
+                                targetId = "officiis";
+                            }}),
+                            add(new Stage() {{
+                                profiles = new String[]() {{
+                                    add("consectetur"),
+                                    add("nobis"),
+                                }};
+                                strategy = new Strategy() {{
+                                    standard = new Standard() {{
+                                        verify = false;
+                                    }};
+                                }};
+                                targetId = "qui";
                             }}),
                         }};
                     }};
-                    suspended = false;
+                    suspended = true;
                 }};
             }};
 

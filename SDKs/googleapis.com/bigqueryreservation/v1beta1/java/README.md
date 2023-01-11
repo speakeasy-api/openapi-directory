@@ -37,38 +37,39 @@ public class Application {
                     }};
                 }};
                 pathParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams() {{
-                    parent = "voluptatem";
+                    parent = "sit";
                 }};
                 queryParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "aperiam";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "eum";
-                    capacityCommitmentId = "atque";
-                    enforceSingleAdminProjectPerOrg = false;
-                    fields = "nostrum";
-                    key = "occaecati";
-                    oauthToken = "iste";
+                    callback = "consequuntur";
+                    capacityCommitmentId = "dolor";
+                    enforceSingleAdminProjectPerOrg = true;
+                    fields = "voluptas";
+                    key = "fugit";
+                    oauthToken = "et";
                     prettyPrint = true;
-                    quotaUser = "iure";
-                    uploadType = "qui";
-                    uploadProtocol = "voluptas";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new CapacityCommitmentInput() {{
                     failureStatus = new Status() {{
-                        code = 1903799700764338020;
+                        code = 5617773211005988520;
                         details = new java.util.HashMap<String, Object>[]() {{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("excepturi", "vel");
-                                put("beatae", "enim");
+                                put("dolorem", "et");
+                                put("voluptate", "iste");
+                                put("vitae", "totam");
                             }}),
                         }};
-                        message = "illo";
+                        message = "dolores";
                     }};
                     multiRegionAuxiliary = false;
                     plan = "FLEX";
-                    renewalPlan = "ANNUAL";
-                    slotCount = "voluptatibus";
+                    renewalPlan = "TRIAL";
+                    slotCount = "odio";
                 }};
             }};
 

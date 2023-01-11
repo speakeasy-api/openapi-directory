@@ -35,51 +35,54 @@ public class Application {
 
             CreateCanaryRequest req = new CreateCanaryRequest() {{
                 headers = new CreateCanaryHeaders() {{
-                    xAmzAlgorithm = "dolore";
-                    xAmzContentSha256 = "animi";
-                    xAmzCredential = "odio";
-                    xAmzDate = "officia";
-                    xAmzSecurityToken = "odio";
-                    xAmzSignature = "est";
-                    xAmzSignedHeaders = "sunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateCanaryRequestBody() {{
-                    artifactS3Location = "corrupti";
+                    artifactS3Location = "voluptas";
                     code = new CreateCanaryRequestBodyCode() {{
-                        handler = "perspiciatis";
-                        s3Bucket = "accusamus";
-                        s3Key = "iusto";
-                        s3Version = "aut";
-                        zipFile = "illo";
+                        handler = "fugit";
+                        s3Bucket = "et";
+                        s3Key = "nihil";
+                        s3Version = "rerum";
+                        zipFile = "dicta";
                     }};
-                    executionRoleArn = "molestiae";
-                    failureRetentionPeriodInDays = 8359892027431733351;
-                    name = "aliquid";
+                    executionRoleArn = "debitis";
+                    failureRetentionPeriodInDays = 5617773211005988520;
+                    name = "et";
                     runConfig = new CreateCanaryRequestBodyRunConfig() {{
-                        activeTracing = true;
+                        activeTracing = false;
                         environmentVariables = new java.util.HashMap<String, String>() {{
-                            put("non", "dicta");
+                            put("et", "voluptate");
+                            put("iste", "vitae");
+                            put("totam", "dolores");
                         }};
-                        memoryInMB = 2347781137780074665;
-                        timeoutInSeconds = 5418904646391934224;
+                        memoryInMB = 1929546706668609706;
+                        timeoutInSeconds = 6392442863481646880;
                     }};
-                    runtimeVersion = "inventore";
+                    runtimeVersion = "vel";
                     schedule = new CreateCanaryRequestBodySchedule() {{
-                        durationInSeconds = 6457110019065774024;
-                        expression = "voluptatibus";
+                        durationInSeconds = 2627038740284806767;
+                        expression = "dolore";
                     }};
-                    successRetentionPeriodInDays = 6642582187036167272;
+                    successRetentionPeriodInDays = 4035568504096476779;
                     tags = new java.util.HashMap<String, String>() {{
-                        put("perferendis", "impedit");
+                        put("accusantium", "totam");
                     }};
                     vpcConfig = new CreateCanaryRequestBodyVpcConfig() {{
                         securityGroupIds = new String[]() {{
-                            add("sunt"),
-                            add("in"),
+                            add("quis"),
+                            add("est"),
                         }};
                         subnetIds = new String[]() {{
-                            add("laudantium"),
-                            add("reiciendis"),
+                            add("odit"),
+                            add("non"),
+                            add("voluptas"),
                         }};
                     }};
                 }};

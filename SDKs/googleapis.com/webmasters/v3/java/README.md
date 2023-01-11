@@ -37,55 +37,52 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebmastersSearchanalyticsQueryPathParams() {{
-                    siteUrl = "aut";
+                    siteUrl = "sit";
                 }};
                 queryParams = new WebmastersSearchanalyticsQueryQueryParams() {{
                     alt = "json";
-                    fields = "accusamus";
-                    key = "quae";
-                    oauthToken = "ullam";
+                    fields = "culpa";
+                    key = "expedita";
+                    oauthToken = "consequuntur";
                     prettyPrint = false;
-                    quotaUser = "corrupti";
-                    userIp = "non";
+                    quotaUser = "expedita";
+                    userIp = "voluptas";
                 }};
                 request = new SearchAnalyticsQueryRequest() {{
-                    aggregationType = "beatae";
-                    dataState = "laboriosam";
+                    aggregationType = "fugit";
+                    dataState = "et";
                     dimensionFilterGroups = new openapisdk.models.shared.ApiDimensionFilterGroup[]() {{
                         add(new ApiDimensionFilterGroup() {{
                             filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "nostrum";
-                                    expression = "maxime";
-                                    operator = "vitae";
+                                    dimension = "dicta";
+                                    expression = "debitis";
+                                    operator = "voluptatum";
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "reprehenderit";
-                                    expression = "et";
-                                    operator = "deserunt";
+                                    dimension = "et";
+                                    expression = "ut";
+                                    operator = "dolorem";
                                 }}),
-                            }};
-                            groupType = "pariatur";
-                        }}),
-                        add(new ApiDimensionFilterGroup() {{
-                            filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "tempore";
-                                    expression = "et";
-                                    operator = "aut";
+                                    dimension = "et";
+                                    expression = "voluptate";
+                                    operator = "iste";
                                 }}),
                             }};
-                            groupType = "perferendis";
+                            groupType = "vitae";
                         }}),
                     }};
                     dimensions = new String[]() {{
-                        add("perferendis"),
+                        add("dolores"),
+                        add("illum"),
+                        add("debitis"),
                     }};
-                    endDate = "est";
-                    rowLimit = 2796827738156649858;
-                    searchType = "tempora";
-                    startDate = "nobis";
-                    startRow = 2245268790520191191;
+                    endDate = "vel";
+                    rowLimit = 2627038740284806767;
+                    searchType = "dolore";
+                    startDate = "id";
+                    startRow = 959367522974354090;
                 }};
             }};
 

@@ -37,26 +37,44 @@ public class Application {
                 request = new ClusterRequest() {{
                     configuration = new ClusterConfiguration() {{
                         clustering = new ClusterConfigurationClustering() {{
-                            maxQuantity = 75.099998;
-                            minQuantity = 6.100000;
-                            numClusters = 20.100000;
+                            maxQuantity = 74.099998;
+                            minQuantity = 53.099998;
+                            numClusters = 15.100000;
                         }};
-                        responseType = "sed";
+                        responseType = "expedita";
                         routing = new ClusterConfigurationRouting() {{
-                            costPerMeter = 41.200001;
-                            costPerSecond = 46.099998;
-                            profile = "beatae";
+                            costPerMeter = 77.099998;
+                            costPerSecond = 28.100000;
+                            profile = "rerum";
                         }};
                     }};
                     customers = new openapisdk.models.shared.ClusterCustomer[]() {{
                         add(new ClusterCustomer() {{
                             address = new ClusterCustomerAddress() {{
-                                lat = 92.099998;
-                                lon = 2.200000;
-                                streetHint = "harum";
+                                lat = 48.099998;
+                                lon = 26.200001;
+                                streetHint = "dolorem";
                             }};
-                            id = "repudiandae";
+                            id = "et";
+                            quantity = 94.199997;
+                        }}),
+                        add(new ClusterCustomer() {{
+                            address = new ClusterCustomerAddress() {{
+                                lat = 68.099998;
+                                lon = 80.199997;
+                                streetHint = "debitis";
+                            }};
+                            id = "vel";
                             quantity = 20.200001;
+                        }}),
+                        add(new ClusterCustomer() {{
+                            address = new ClusterCustomerAddress() {{
+                                lat = 12.200000;
+                                lon = 88.199997;
+                                streetHint = "commodi";
+                            }};
+                            id = "quis";
+                            quantity = 93.099998;
                         }}),
                     }};
                 }};

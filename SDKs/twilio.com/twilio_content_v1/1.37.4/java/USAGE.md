@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteContentPathParams() {{
-                    sid = "explicabo";
+                    sid = "sit";
                 }};
             }};
 

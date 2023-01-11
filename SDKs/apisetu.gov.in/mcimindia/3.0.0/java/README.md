@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new GovidRequestBody() {{
                     certificateParameters = new GovidRequestBodyCertificateParameters() {{
-                        dob = "quia";
-                        fullName = "sint";
-                        regnNO = "autem";
-                        uid = "similique";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        regnNO = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "cum";
+                    txnId = "expedita";
                 }};
             }};
 

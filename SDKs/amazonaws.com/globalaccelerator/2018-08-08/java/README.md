@@ -35,28 +35,22 @@ public class Application {
 
             AddCustomRoutingEndpointsRequest req = new AddCustomRoutingEndpointsRequest() {{
                 headers = new AddCustomRoutingEndpointsHeaders() {{
-                    xAmzAlgorithm = "modi";
-                    xAmzContentSha256 = "cum";
-                    xAmzCredential = "similique";
-                    xAmzDate = "voluptatibus";
-                    xAmzSecurityToken = "quisquam";
-                    xAmzSignature = "quis";
-                    xAmzSignedHeaders = "autem";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints";
                 }};
                 request = new AddCustomRoutingEndpointsRequest() {{
                     endpointConfigurations = new openapisdk.models.shared.CustomRoutingEndpointConfiguration[]() {{
                         add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "ducimus";
-                        }}),
-                        add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "provident";
-                        }}),
-                        add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "commodi";
+                            endpointId = "et";
                         }}),
                     }};
-                    endpointGroupArn = "ut";
+                    endpointGroupArn = "nihil";
                 }};
             }};
 

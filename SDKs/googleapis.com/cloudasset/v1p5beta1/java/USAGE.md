@@ -22,27 +22,29 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetAssetsListPathParams() {{
-                    parent = "quo";
+                    parent = "sit";
                 }};
                 queryParams = new CloudassetAssetsListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "reprehenderit";
+                    accessToken = "culpa";
                     alt = "media";
                     assetTypes = new String[]() {{
-                        add("sed"),
+                        add("dolor"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
-                    callback = "consequatur";
-                    contentType = "CONTENT_TYPE_UNSPECIFIED";
-                    fields = "maiores";
-                    key = "aliquid";
-                    oauthToken = "itaque";
-                    pageSize = 3056127560860615106;
-                    pageToken = "ducimus";
+                    callback = "fugit";
+                    contentType = "ORG_POLICY";
+                    fields = "nihil";
+                    key = "rerum";
+                    oauthToken = "dicta";
+                    pageSize = 2518412263346885298;
+                    pageToken = "voluptatum";
                     prettyPrint = false;
-                    quotaUser = "dolor";
-                    readTime = "quidem";
-                    uploadType = "nulla";
-                    uploadProtocol = "dolores";
+                    quotaUser = "ut";
+                    readTime = "dolorem";
+                    uploadType = "et";
+                    uploadProtocol = "voluptate";
                 }};
             }};
 

@@ -14,7 +14,7 @@ public class Application {
 
             AreasGetRequest req = new AreasGetRequest() {{
                 pathParams = new AreasGetPathParams() {{
-                    version = "reiciendis";
+                    version = "sit";
                 }};
             }};
 

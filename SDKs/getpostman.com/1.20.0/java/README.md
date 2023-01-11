@@ -27,13 +27,13 @@ public class Application {
 
             CreateApiRequest req = new CreateApiRequest() {{
                 queryParams = new CreateApiQueryParams() {{
-                    workspace = "cum";
+                    workspace = "sit";
                 }};
                 request = new CreateApiRequestBody() {{
                     api = new CreateApiRequestBodyApi() {{
-                        description = "sint";
-                        name = "aut";
-                        summary = "eaque";
+                        description = "voluptas";
+                        name = "culpa";
+                        summary = "expedita";
                     }};
                 }};
             }};

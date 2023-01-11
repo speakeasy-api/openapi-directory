@@ -24,23 +24,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsloginUsersGetLoginProfilePathParams() {{
-                    name = "nisi";
+                    name = "sit";
                 }};
                 queryParams = new OsloginUsersGetLoginProfileQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quae";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "culpa";
-                    fields = "voluptas";
-                    key = "dolorem";
-                    oauthToken = "minus";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     operatingSystemType = "OPERATING_SYSTEM_TYPE_UNSPECIFIED";
                     prettyPrint = false;
-                    projectId = "quis";
-                    quotaUser = "nobis";
-                    systemId = "exercitationem";
-                    uploadType = "non";
-                    uploadProtocol = "quo";
+                    projectId = "nihil";
+                    quotaUser = "rerum";
+                    systemId = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                     view = "LOGIN_PROFILE_VIEW_UNSPECIFIED";
                 }};
             }};

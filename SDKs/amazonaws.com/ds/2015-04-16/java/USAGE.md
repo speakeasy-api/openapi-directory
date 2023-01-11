@@ -22,17 +22,17 @@ public class Application {
 
             AcceptSharedDirectoryRequest req = new AcceptSharedDirectoryRequest() {{
                 headers = new AcceptSharedDirectoryHeaders() {{
-                    xAmzAlgorithm = "quis";
-                    xAmzContentSha256 = "saepe";
-                    xAmzCredential = "illo";
-                    xAmzDate = "aliquam";
-                    xAmzSecurityToken = "qui";
-                    xAmzSignature = "quia";
-                    xAmzSignedHeaders = "aperiam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "DirectoryService_20150416.AcceptSharedDirectory";
                 }};
                 request = new AcceptSharedDirectoryRequest() {{
-                    sharedDirectoryId = "voluptatem";
+                    sharedDirectoryId = "fugit";
                 }};
             }};
 

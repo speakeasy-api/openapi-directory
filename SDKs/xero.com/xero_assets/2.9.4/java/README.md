@@ -32,25 +32,25 @@ public class Application {
                     }};
                 }};
                 headers = new CreateAssetHeaders() {{
-                    xeroTenantId = "quisquam";
+                    xeroTenantId = "sit";
                 }};
                 request = new Asset() {{
-                    accountingBookValue = 51.200001;
-                    assetId = "ut";
-                    assetName = "quaerat";
-                    assetNumber = "ut";
+                    accountingBookValue = 14.200000;
+                    assetId = "expedita";
+                    assetName = "consequuntur";
+                    assetNumber = "dolor";
                     assetStatus = "Registered";
-                    assetTypeId = "vel";
-                    bookDepreciationDetail = "et";
-                    bookDepreciationSetting = "ipsam";
-                    canRollback = false;
-                    disposalDate = "2011-03-19";
-                    disposalPrice = 91.199997;
-                    isDeleteEnabledForDate = true;
-                    purchaseDate = "2022-02-09";
-                    purchasePrice = 4.200000;
-                    serialNumber = "molestias";
-                    warrantyExpiryDate = "et";
+                    assetTypeId = "voluptas";
+                    bookDepreciationDetail = "fugit";
+                    bookDepreciationSetting = "et";
+                    canRollback = true;
+                    disposalDate = "2004-06-02";
+                    disposalPrice = 52.099998;
+                    isDeleteEnabledForDate = false;
+                    purchaseDate = "2021-10-23";
+                    purchasePrice = 50.099998;
+                    serialNumber = "iste";
+                    warrantyExpiryDate = "vitae";
                 }};
             }};
 

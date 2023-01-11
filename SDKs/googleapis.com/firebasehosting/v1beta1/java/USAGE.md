@@ -24,28 +24,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasehostingProjectsSitesCreatePathParams() {{
-                    parent = "est";
+                    parent = "sit";
                 }};
                 queryParams = new FirebasehostingProjectsSitesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "rerum";
-                    alt = "proto";
-                    callback = "corrupti";
-                    fields = "architecto";
-                    key = "nihil";
-                    oauthToken = "aut";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "natus";
-                    siteId = "vero";
-                    uploadType = "qui";
-                    uploadProtocol = "commodi";
+                    quotaUser = "et";
+                    siteId = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new SiteInput() {{
-                    appId = "hic";
+                    appId = "debitis";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("in", "enim");
-                        put("voluptates", "tempore");
-                        put("corporis", "labore");
+                        put("et", "ut");
                     }};
                 }};
             }};

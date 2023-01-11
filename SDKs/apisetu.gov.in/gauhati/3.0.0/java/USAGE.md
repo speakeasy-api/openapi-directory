@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new SocerRequestBody() {{
                     certificateParameters = new SocerRequestBodyCertificateParameters() {{
-                        applNO = "tempore";
-                        dob = "dignissimos";
-                        fullName = "nihil";
-                        session = "enim";
+                        applNO = "sit";
+                        dob = "voluptas";
+                        fullName = "culpa";
+                        session = "expedita";
                     }};
-                    consentArtifact = "excepturi";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "voluptate";
+                    txnId = "expedita";
                 }};
             }};
 

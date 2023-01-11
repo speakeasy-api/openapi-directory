@@ -20,14 +20,14 @@ public class Application {
                     }};
                 }};
                 request = new CreateTokenCreateTokenRequest() {{
-                    clientSecret = "distinctio";
-                    clientSid = "in";
-                    code = "consectetur";
-                    codeVerifier = "minima";
-                    deviceCode = "sequi";
-                    deviceId = "et";
-                    grantType = "consequatur";
-                    refreshToken = "eum";
+                    clientSecret = "sit";
+                    clientSid = "voluptas";
+                    code = "culpa";
+                    codeVerifier = "expedita";
+                    deviceCode = "consequuntur";
+                    deviceId = "dolor";
+                    grantType = "expedita";
+                    refreshToken = "voluptas";
                 }};
             }};
 

@@ -35,36 +35,39 @@ public class Application {
 
             AnalyzeDocumentRequest req = new AnalyzeDocumentRequest() {{
                 headers = new AnalyzeDocumentHeaders() {{
-                    xAmzAlgorithm = "repellendus";
-                    xAmzContentSha256 = "corrupti";
-                    xAmzCredential = "ex";
-                    xAmzDate = "voluptatum";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "doloribus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Textract.AnalyzeDocument";
                 }};
                 request = new AnalyzeDocumentRequest() {{
                     document = new Document() {{
-                        bytes = "sunt";
+                        bytes = "fugit";
                         s3Object = new S3Object() {{
                             bucket = "et";
-                            name = "ea";
-                            version = "deserunt";
+                            name = "nihil";
+                            version = "rerum";
                         }};
                     }};
                     featureTypes = new openapisdk.models.shared.FeatureTypeEnum[]() {{
                         add("TABLES"),
-                        add("FORMS"),
+                        add("TABLES"),
+                        add("TABLES"),
                     }};
                     humanLoopConfig = new HumanLoopConfig() {{
                         dataAttributes = new HumanLoopDataAttributes() {{
                             contentClassifiers = new openapisdk.models.shared.ContentClassifierEnum[]() {{
-                                add("FreeOfAdultContent"),
+                                add("FreeOfPersonallyIdentifiableInformation"),
+                                add("FreeOfPersonallyIdentifiableInformation"),
+                                add("FreeOfPersonallyIdentifiableInformation"),
                             }};
                         }};
-                        flowDefinitionArn = "magnam";
-                        humanLoopName = "dicta";
+                        flowDefinitionArn = "iste";
+                        humanLoopName = "vitae";
                     }};
                 }};
             }};

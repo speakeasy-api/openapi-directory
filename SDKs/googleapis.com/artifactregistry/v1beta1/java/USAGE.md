@@ -24,23 +24,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new ArtifactregistryProjectsLocationsListPathParams() {{
-                    name = "minus";
+                    name = "sit";
                 }};
                 queryParams = new ArtifactregistryProjectsLocationsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "debitis";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "animi";
-                    fields = "distinctio";
-                    filter = "hic";
-                    key = "mollitia";
-                    oauthToken = "qui";
-                    pageSize = 8967734870416752339;
-                    pageToken = "labore";
-                    prettyPrint = false;
-                    quotaUser = "eum";
-                    uploadType = "laborum";
-                    uploadProtocol = "maxime";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
+                    prettyPrint = true;
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

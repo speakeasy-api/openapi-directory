@@ -37,53 +37,40 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudkmsProjectsLocationsEkmConnectionsCreatePathParams() {{
-                    parent = "dolor";
+                    parent = "sit";
                 }};
                 queryParams = new CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "rem";
-                    alt = "proto";
-                    callback = "quaerat";
-                    ekmConnectionId = "quia";
-                    fields = "aut";
-                    key = "hic";
-                    oauthToken = "sunt";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    ekmConnectionId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "odio";
-                    uploadType = "fuga";
-                    uploadProtocol = "reprehenderit";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new EkmConnectionInput() {{
-                    etag = "dicta";
+                    etag = "debitis";
                     serviceResolvers = new openapisdk.models.shared.ServiceResolverInput[]() {{
                         add(new ServiceResolverInput() {{
-                            endpointFilter = "ab";
-                            hostname = "accusantium";
+                            endpointFilter = "et";
+                            hostname = "ut";
                             serverCertificates = new openapisdk.models.shared.CertificateInput[]() {{
-                                add(new CertificateInput() {{
-                                    rawDer = "quis";
-                                }}),
                                 add(new CertificateInput() {{
                                     rawDer = "et";
                                 }}),
                                 add(new CertificateInput() {{
-                                    rawDer = "tempora";
-                                }}),
-                            }};
-                            serviceDirectoryService = "quaerat";
-                        }}),
-                        add(new ServiceResolverInput() {{
-                            endpointFilter = "vel";
-                            hostname = "dolor";
-                            serverCertificates = new openapisdk.models.shared.CertificateInput[]() {{
-                                add(new CertificateInput() {{
-                                    rawDer = "unde";
+                                    rawDer = "voluptate";
                                 }}),
                                 add(new CertificateInput() {{
-                                    rawDer = "ut";
+                                    rawDer = "iste";
                                 }}),
                             }};
-                            serviceDirectoryService = "quas";
+                            serviceDirectoryService = "vitae";
                         }}),
                     }};
                 }};

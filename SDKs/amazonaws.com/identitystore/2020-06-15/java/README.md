@@ -35,18 +35,18 @@ public class Application {
 
             DescribeGroupRequest req = new DescribeGroupRequest() {{
                 headers = new DescribeGroupHeaders() {{
-                    xAmzAlgorithm = "mollitia";
-                    xAmzContentSha256 = "neque";
-                    xAmzCredential = "autem";
-                    xAmzDate = "ab";
-                    xAmzSecurityToken = "dolore";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "saepe";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSIdentityStore.DescribeGroup";
                 }};
                 request = new DescribeGroupRequest() {{
-                    groupId = "dignissimos";
-                    identityStoreId = "rerum";
+                    groupId = "fugit";
+                    identityStoreId = "et";
                 }};
             }};
 

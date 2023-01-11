@@ -27,9 +27,9 @@ public class Application {
 
             GetweatherRequest req = new GetweatherRequest() {{
                 queryParams = new GetweatherQueryParams() {{
-                    city = "enim";
-                    license = "id";
-                    state = "officia";
+                    city = "sit";
+                    license = "voluptas";
+                    state = "culpa";
                 }};
             }};
 

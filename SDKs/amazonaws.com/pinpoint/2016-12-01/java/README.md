@@ -35,21 +35,19 @@ public class Application {
 
             CreateAppRequest req = new CreateAppRequest() {{
                 headers = new CreateAppHeaders() {{
-                    xAmzAlgorithm = "dolorum";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "voluptatum";
-                    xAmzDate = "alias";
-                    xAmzSecurityToken = "consequatur";
-                    xAmzSignature = "eum";
-                    xAmzSignedHeaders = "nemo";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateAppRequestBody() {{
                     createApplicationRequest = new CreateAppRequestBodyCreateApplicationRequest() {{
-                        name = "omnis";
+                        name = "voluptas";
                         tags = new java.util.HashMap<String, String>() {{
-                            put("reprehenderit", "omnis");
-                            put("velit", "molestiae");
-                            put("id", "quia");
+                            put("et", "nihil");
                         }};
                     }};
                 }};

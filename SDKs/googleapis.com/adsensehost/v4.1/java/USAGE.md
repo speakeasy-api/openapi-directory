@@ -22,17 +22,17 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdsensehostAccountsAdclientsGetPathParams() {{
-                    accountId = "est";
-                    adClientId = "eum";
+                    accountId = "sit";
+                    adClientId = "voluptas";
                 }};
                 queryParams = new AdsensehostAccountsAdclientsGetQueryParams() {{
                     alt = "json";
-                    fields = "ut";
-                    key = "similique";
-                    oauthToken = "porro";
-                    prettyPrint = false;
-                    quotaUser = "ipsa";
-                    userIp = "ipsa";
+                    fields = "expedita";
+                    key = "consequuntur";
+                    oauthToken = "dolor";
+                    prettyPrint = true;
+                    quotaUser = "voluptas";
+                    userIp = "fugit";
                 }};
             }};
 

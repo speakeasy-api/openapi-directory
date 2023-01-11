@@ -35,123 +35,131 @@ public class Application {
                     }};
                 }};
                 pathParams = new DataprocProjectsLocationsBatchesCreatePathParams() {{
-                    parent = "eum";
+                    parent = "sit";
                 }};
                 queryParams = new DataprocProjectsLocationsBatchesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "laborum";
-                    alt = "json";
-                    batchId = "illum";
-                    callback = "nam";
-                    fields = "necessitatibus";
-                    key = "aspernatur";
-                    oauthToken = "quasi";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    batchId = "consequuntur";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "consequatur";
-                    requestId = "quos";
-                    uploadType = "voluptas";
-                    uploadProtocol = "quam";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new BatchInput() {{
                     environmentConfig = new EnvironmentConfig() {{
                         executionConfig = new ExecutionConfig() {{
-                            idleTtl = "vero";
-                            kmsKey = "nam";
+                            idleTtl = "voluptatum";
+                            kmsKey = "et";
                             networkTags = new String[]() {{
-                                add("quia"),
-                                add("blanditiis"),
-                                add("vel"),
+                                add("dolorem"),
+                                add("et"),
+                                add("voluptate"),
                             }};
-                            networkUri = "expedita";
-                            serviceAccount = "quo";
-                            subnetworkUri = "id";
+                            networkUri = "iste";
+                            serviceAccount = "vitae";
+                            subnetworkUri = "totam";
                         }};
                         peripheralsConfig = new PeripheralsConfig() {{
-                            metastoreService = "perferendis";
+                            metastoreService = "dolores";
                             sparkHistoryServerConfig = new SparkHistoryServerConfig() {{
-                                dataprocCluster = "impedit";
+                                dataprocCluster = "illum";
                             }};
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("dignissimos", "dolor");
+                        put("vel", "odio");
                     }};
                     pysparkBatch = new PySparkBatch() {{
                         archiveUris = new String[]() {{
-                            add("illo"),
-                            add("est"),
+                            add("id"),
+                            add("aspernatur"),
                         }};
                         args = new String[]() {{
-                            add("facilis"),
+                            add("totam"),
+                            add("commodi"),
+                            add("quis"),
                         }};
                         fileUris = new String[]() {{
-                            add("iure"),
-                            add("est"),
-                            add("sequi"),
+                            add("aut"),
+                            add("odit"),
                         }};
                         jarFileUris = new String[]() {{
-                            add("ipsam"),
-                            add("nihil"),
+                            add("voluptas"),
+                            add("omnis"),
+                            add("aut"),
                         }};
-                        mainPythonFileUri = "sunt";
+                        mainPythonFileUri = "illo";
                         pythonFileUris = new String[]() {{
-                            add("vitae"),
+                            add("officiis"),
+                            add("autem"),
+                            add("consectetur"),
                         }};
                     }};
                     runtimeConfig = new RuntimeConfig() {{
-                        containerImage = "provident";
+                        containerImage = "nobis";
                         properties = new java.util.HashMap<String, String>() {{
-                            put("laborum", "voluptas");
-                            put("veniam", "dolorum");
+                            put("qui", "recusandae");
                         }};
-                        version = "id";
+                        version = "at";
                     }};
                     runtimeInfo = new RuntimeInfoInput() {{
                         approximateUsage = new UsageMetrics() {{
-                            milliDcuSeconds = "velit";
-                            shuffleStorageGbSeconds = "neque";
+                            milliDcuSeconds = "ipsum";
+                            shuffleStorageGbSeconds = "eveniet";
                         }};
                     }};
                     sparkBatch = new SparkBatch() {{
                         archiveUris = new String[]() {{
-                            add("consequatur"),
-                        }};
-                        args = new String[]() {{
-                            add("sit"),
-                        }};
-                        fileUris = new String[]() {{
-                            add("praesentium"),
                             add("sint"),
-                        }};
-                        jarFileUris = new String[]() {{
-                            add("atque"),
-                        }};
-                        mainClass = "iusto";
-                        mainJarFileUri = "rem";
-                    }};
-                    sparkRBatch = new SparkRBatch() {{
-                        archiveUris = new String[]() {{
-                            add("ut"),
+                            add("inventore"),
                         }};
                         args = new String[]() {{
-                            add("nulla"),
+                            add("exercitationem"),
+                            add("aut"),
+                            add("reprehenderit"),
                         }};
                         fileUris = new String[]() {{
                             add("maiores"),
-                            add("ab"),
-                            add("amet"),
+                            add("incidunt"),
+                            add("dolor"),
                         }};
-                        mainRFileUri = "fugiat";
+                        jarFileUris = new String[]() {{
+                            add("veritatis"),
+                            add("in"),
+                            add("et"),
+                        }};
+                        mainClass = "omnis";
+                        mainJarFileUri = "ipsum";
+                    }};
+                    sparkRBatch = new SparkRBatch() {{
+                        archiveUris = new String[]() {{
+                            add("dolores"),
+                        }};
+                        args = new String[]() {{
+                            add("vel"),
+                        }};
+                        fileUris = new String[]() {{
+                            add("mollitia"),
+                            add("voluptas"),
+                            add("quam"),
+                        }};
+                        mainRFileUri = "reprehenderit";
                     }};
                     sparkSqlBatch = new SparkSqlBatch() {{
                         jarFileUris = new String[]() {{
-                            add("eveniet"),
-                            add("consequatur"),
+                            add("qui"),
                         }};
-                        queryFileUri = "quia";
+                        queryFileUri = "unde";
                         queryVariables = new java.util.HashMap<String, String>() {{
-                            put("nesciunt", "necessitatibus");
-                            put("ipsa", "id");
+                            put("autem", "qui");
+                            put("ut", "itaque");
                         }};
                     }};
                 }};

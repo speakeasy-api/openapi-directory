@@ -22,20 +22,19 @@ public class Application {
 
             AssociateConfigurationItemsToApplicationRequest req = new AssociateConfigurationItemsToApplicationRequest() {{
                 headers = new AssociateConfigurationItemsToApplicationHeaders() {{
-                    xAmzAlgorithm = "enim";
-                    xAmzContentSha256 = "sed";
-                    xAmzCredential = "aut";
-                    xAmzDate = "ea";
-                    xAmzSecurityToken = "magnam";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication";
                 }};
                 request = new AssociateConfigurationItemsToApplicationRequest() {{
-                    applicationConfigurationId = "eum";
+                    applicationConfigurationId = "fugit";
                     configurationIds = new String[]() {{
-                        add("modi"),
-                        add("officiis"),
+                        add("nihil"),
                     }};
                 }};
             }};

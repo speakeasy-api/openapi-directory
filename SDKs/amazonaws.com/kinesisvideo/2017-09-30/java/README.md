@@ -35,27 +35,23 @@ public class Application {
 
             CreateSignalingChannelRequest req = new CreateSignalingChannelRequest() {{
                 headers = new CreateSignalingChannelHeaders() {{
-                    xAmzAlgorithm = "error";
-                    xAmzContentSha256 = "voluptate";
-                    xAmzCredential = "odit";
-                    xAmzDate = "exercitationem";
-                    xAmzSecurityToken = "hic";
-                    xAmzSignature = "perferendis";
-                    xAmzSignedHeaders = "cupiditate";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateSignalingChannelRequestBody() {{
-                    channelName = "sed";
+                    channelName = "voluptas";
                     channelType = "SINGLE_MASTER";
                     singleMasterConfiguration = new CreateSignalingChannelRequestBodySingleMasterConfiguration() {{
-                        messageTtlSeconds = 7341080715805291804;
+                        messageTtlSeconds = 1543572285742637646;
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "qui";
-                            value = "eius";
-                        }}),
-                        add(new Tag() {{
-                            key = "voluptas";
+                            key = "rerum";
                             value = "dicta";
                         }}),
                     }};

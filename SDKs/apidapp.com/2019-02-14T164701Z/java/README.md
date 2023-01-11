@@ -27,7 +27,7 @@ public class Application {
 
             DeleteKeyKeyRequest req = new DeleteKeyKeyRequest() {{
                 pathParams = new DeleteKeyKeyPathParams() {{
-                    key = "nulla";
+                    key = "sit";
                 }};
             }};
 

@@ -22,22 +22,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudresourcemanagerFoldersCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ullam";
-                    alt = "proto";
-                    callback = "distinctio";
-                    fields = "vitae";
-                    key = "quo";
-                    oauthToken = "aperiam";
-                    parent = "ut";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    parent = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "tenetur";
-                    uploadType = "labore";
-                    uploadProtocol = "eaque";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new FolderInput() {{
-                    displayName = "quidem";
-                    parent = "neque";
+                    displayName = "dicta";
+                    parent = "debitis";
                 }};
             }};
 

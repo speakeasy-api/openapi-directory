@@ -32,16 +32,16 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateFileAssociationPathParams() {{
-                    fileId = "at";
+                    fileId = "sit";
                 }};
                 headers = new CreateFileAssociationHeaders() {{
-                    xeroTenantId = "iusto";
+                    xeroTenantId = "voluptas";
                 }};
                 request = new Association() {{
-                    fileId = "et";
-                    objectGroup = "Overpayment";
-                    objectId = "consectetur";
-                    objectType = "ExpPayment";
+                    fileId = "culpa";
+                    objectGroup = "Payment";
+                    objectId = "consequuntur";
+                    objectType = "Accpay";
                 }};
             }};
 

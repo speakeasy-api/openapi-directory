@@ -14,13 +14,13 @@ public class Application {
 
             ExtensionConfigurationRequest req = new ExtensionConfigurationRequest() {{
                 headers = new ExtensionConfigurationHeaders() {{
-                    acceptLanguage = "beatae";
-                    cacheControl = "aut";
-                    ifNoneMatch = "quia";
-                    requestTimeout = 22.200001;
-                    userAgent = "ea";
-                    xApplecloudextensionRetryCount = 66.099998;
-                    xApplecloudextensionSessionId = "animi";
+                    acceptLanguage = "sit";
+                    cacheControl = "voluptas";
+                    ifNoneMatch = "culpa";
+                    requestTimeout = 6.200000;
+                    userAgent = "dolor";
+                    xApplecloudextensionRetryCount = 67.199997;
+                    xApplecloudextensionSessionId = "fugit";
                 }};
             }};
 

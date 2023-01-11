@@ -38,9 +38,9 @@ public class Application {
 
             BadWordFilterRequest req = new BadWordFilterRequest() {{
                 request = new BadWordFilterRequestBody() {{
-                    catalog = "minima";
-                    censorCharacter = "non";
-                    content = "voluptatum";
+                    catalog = "sit";
+                    censorCharacter = "voluptas";
+                    content = "culpa";
                     outputCase = "camel";
                 }};
             }};

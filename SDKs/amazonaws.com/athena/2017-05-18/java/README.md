@@ -35,20 +35,18 @@ public class Application {
 
             BatchGetNamedQueryRequest req = new BatchGetNamedQueryRequest() {{
                 headers = new BatchGetNamedQueryHeaders() {{
-                    xAmzAlgorithm = "maxime";
-                    xAmzContentSha256 = "libero";
-                    xAmzCredential = "qui";
-                    xAmzDate = "ea";
-                    xAmzSecurityToken = "porro";
-                    xAmzSignature = "labore";
-                    xAmzSignedHeaders = "dolore";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonAthena.BatchGetNamedQuery";
                 }};
                 request = new BatchGetNamedQueryInput() {{
                     namedQueryIds = new String[]() {{
                         add("et"),
-                        add("omnis"),
-                        add("ut"),
                     }};
                 }};
             }};

@@ -27,11 +27,11 @@ public class Application {
 
             DeleteAccountingCodeRequest req = new DeleteAccountingCodeRequest() {{
                 pathParams = new DeleteAccountingCodePathParams() {{
-                    acId = "ducimus";
+                    acId = "sit";
                 }};
                 headers = new DeleteAccountingCodeHeaders() {{
-                    zuoraEntityIds = "dolores";
-                    zuoraTrackId = "magni";
+                    zuoraEntityIds = "voluptas";
+                    zuoraTrackId = "culpa";
                 }};
             }};
 

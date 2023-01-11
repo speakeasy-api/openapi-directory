@@ -27,8 +27,8 @@ public class Application {
 
             AddShortlinkRequest req = new AddShortlinkRequest() {{
                 request = new ShortlinkRequest() {{
-                    keyid = "odio";
-                    shortlink = "dolores";
+                    keyid = "sit";
+                    shortlink = "voluptas";
                 }};
             }};
 

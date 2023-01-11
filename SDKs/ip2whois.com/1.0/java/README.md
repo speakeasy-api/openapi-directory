@@ -27,9 +27,9 @@ public class Application {
 
             GetRequest req = new GetRequest() {{
                 queryParams = new GetQueryParams() {{
-                    domain = "dolorem";
-                    format = "necessitatibus";
-                    key = "dolorum";
+                    domain = "sit";
+                    format = "voluptas";
+                    key = "culpa";
                 }};
             }};
 

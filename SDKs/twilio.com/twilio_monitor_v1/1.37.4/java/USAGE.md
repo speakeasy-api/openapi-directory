@@ -20,7 +20,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchAlertPathParams() {{
-                    sid = "eos";
+                    sid = "sit";
                 }};
             }};
 

@@ -22,16 +22,16 @@ public class Application {
 
             BulkPublishRequest req = new BulkPublishRequest() {{
                 pathParams = new BulkPublishPathParams() {{
-                    identityPoolId = "molestias";
+                    identityPoolId = "sit";
                 }};
                 headers = new BulkPublishHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "quia";
-                    xAmzCredential = "ipsa";
-                    xAmzDate = "sit";
-                    xAmzSecurityToken = "repellat";
-                    xAmzSignature = "non";
-                    xAmzSignedHeaders = "facilis";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

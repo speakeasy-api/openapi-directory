@@ -27,18 +27,20 @@ public class Application {
 
             BillDetailBillsJurisdictionSessionBillIdGetRequest req = new BillDetailBillsJurisdictionSessionBillIdGetRequest() {{
                 pathParams = new BillDetailBillsJurisdictionSessionBillIdGetPathParams() {{
-                    billId = "beatae";
-                    jurisdiction = "deleniti";
-                    session = "expedita";
+                    billId = "sit";
+                    jurisdiction = "voluptas";
+                    session = "culpa";
                 }};
                 queryParams = new BillDetailBillsJurisdictionSessionBillIdGetQueryParams() {{
-                    apikey = "saepe";
+                    apikey = "expedita";
                     include = new openapisdk.models.shared.BillIncludeEnum[]() {{
-                        add("sponsorships"),
+                        add("versions"),
+                        add("versions"),
+                        add("votes"),
                     }};
                 }};
                 headers = new BillDetailBillsJurisdictionSessionBillIdGetHeaders() {{
-                    xApiKey = "quidem";
+                    xApiKey = "fugit";
                 }};
             }};
 

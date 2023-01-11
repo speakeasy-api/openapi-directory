@@ -24,46 +24,39 @@ public class Application {
                     }};
                 }};
                 pathParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams() {{
-                    parent = "reprehenderit";
+                    parent = "sit";
                 }};
                 queryParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "atque";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "quo";
-                    capacityCommitmentId = "facere";
-                    enforceSingleAdminProjectPerOrg = false;
-                    fields = "voluptate";
-                    key = "assumenda";
-                    oauthToken = "fugiat";
+                    callback = "consequuntur";
+                    capacityCommitmentId = "dolor";
+                    enforceSingleAdminProjectPerOrg = true;
+                    fields = "voluptas";
+                    key = "fugit";
+                    oauthToken = "et";
                     prettyPrint = true;
-                    quotaUser = "aut";
-                    uploadType = "laborum";
-                    uploadProtocol = "praesentium";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new CapacityCommitmentInput() {{
                     failureStatus = new Status() {{
-                        code = 406521603865612147;
+                        code = 5617773211005988520;
                         details = new java.util.HashMap<String, Object>[]() {{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("laudantium", "iure");
-                            }}),
-                            add(new java.util.HashMap<String, Object>() {{
-                                put("doloribus", "rem");
-                                put("sit", "aut");
-                            }}),
-                            add(new java.util.HashMap<String, Object>() {{
-                                put("quod", "ut");
-                                put("voluptas", "atque");
-                                put("et", "nobis");
+                                put("dolorem", "et");
+                                put("voluptate", "iste");
+                                put("vitae", "totam");
                             }}),
                         }};
-                        message = "ipsum";
+                        message = "dolores";
                     }};
-                    multiRegionAuxiliary = true;
+                    multiRegionAuxiliary = false;
                     plan = "FLEX";
-                    renewalPlan = "COMMITMENT_PLAN_UNSPECIFIED";
-                    slotCount = "id";
+                    renewalPlan = "TRIAL";
+                    slotCount = "odio";
                 }};
             }};
 

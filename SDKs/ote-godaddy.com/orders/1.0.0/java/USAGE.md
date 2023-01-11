@@ -14,11 +14,11 @@ public class Application {
 
             GetRequest req = new GetRequest() {{
                 pathParams = new GetPathParams() {{
-                    orderId = "in";
+                    orderId = "sit";
                 }};
                 headers = new GetHeaders() {{
-                    xMarketId = "esse";
-                    xShopperId = "officia";
+                    xMarketId = "voluptas";
+                    xShopperId = "culpa";
                 }};
             }};
 

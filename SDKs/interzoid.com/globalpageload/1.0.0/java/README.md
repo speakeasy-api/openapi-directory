@@ -27,9 +27,9 @@ public class Application {
 
             GlobalpageloadRequest req = new GlobalpageloadRequest() {{
                 queryParams = new GlobalpageloadQueryParams() {{
-                    license = "quos";
-                    origin = "repudiandae";
-                    url = "quas";
+                    license = "sit";
+                    origin = "voluptas";
+                    url = "culpa";
                 }};
             }};
 

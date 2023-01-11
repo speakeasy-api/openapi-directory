@@ -28,23 +28,23 @@ public class Application {
             PagespeedonlinePagespeedapiRunpagespeedRequest req = new PagespeedonlinePagespeedapiRunpagespeedRequest() {{
                 queryParams = new PagespeedonlinePagespeedapiRunpagespeedQueryParams() {{
                     alt = "json";
-                    fields = "cupiditate";
+                    fields = "voluptas";
                     filterThirdPartyResources = true;
-                    key = "repudiandae";
-                    locale = "eveniet";
-                    oauthToken = "odit";
+                    key = "expedita";
+                    locale = "consequuntur";
+                    oauthToken = "dolor";
                     prettyPrint = true;
-                    quotaUser = "laborum";
+                    quotaUser = "voluptas";
                     rule = new String[]() {{
-                        add("voluptas"),
+                        add("et"),
                     }};
-                    screenshot = false;
-                    snapshots = false;
-                    strategy = "desktop";
-                    url = "recusandae";
-                    userIp = "minima";
-                    utmCampaign = "est";
-                    utmSource = "aut";
+                    screenshot = true;
+                    snapshots = true;
+                    strategy = "mobile";
+                    url = "debitis";
+                    userIp = "voluptatum";
+                    utmCampaign = "et";
+                    utmSource = "ut";
                 }};
             }};
 

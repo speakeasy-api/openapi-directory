@@ -31,7 +31,7 @@ public class Application {
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
                 }};
-                request = "quo";
+                request = "sit";
             }};
 
             SendMessageResponse res = sdk.sendMessage(req);

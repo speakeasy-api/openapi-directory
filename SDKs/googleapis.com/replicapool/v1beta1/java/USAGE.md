@@ -24,23 +24,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new ReplicapoolPoolsDeletePathParams() {{
-                    poolName = "corrupti";
-                    projectName = "ut";
-                    zone = "quia";
+                    poolName = "sit";
+                    projectName = "voluptas";
+                    zone = "culpa";
                 }};
                 queryParams = new ReplicapoolPoolsDeleteQueryParams() {{
                     alt = "json";
-                    fields = "aliquam";
-                    key = "omnis";
-                    oauthToken = "inventore";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "provident";
-                    userIp = "omnis";
+                    quotaUser = "fugit";
+                    userIp = "et";
                 }};
                 request = new PoolsDeleteRequest() {{
                     abandonInstances = new String[]() {{
-                        add("aperiam"),
-                        add("sint"),
+                        add("rerum"),
                     }};
                 }};
             }};

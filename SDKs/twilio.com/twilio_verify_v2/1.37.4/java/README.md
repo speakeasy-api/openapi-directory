@@ -33,13 +33,13 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateAccessTokenPathParams() {{
-                    serviceSid = "est";
+                    serviceSid = "sit";
                 }};
                 request = new CreateAccessTokenCreateAccessTokenRequest() {{
-                    factorFriendlyName = "nostrum";
+                    factorFriendlyName = "voluptas";
                     factorType = "push";
-                    identity = "enim";
-                    ttl = 1319314366977851377;
+                    identity = "expedita";
+                    ttl = 3390393562759376202;
                 }};
             }};
 

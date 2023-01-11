@@ -32,163 +32,163 @@ public class Application {
                     }};
                 }};
                 headers = new CreateDomesticPaymentConsentsHeaders() {{
-                    authorization = "delectus";
-                    xCustomerUserAgent = "illo";
-                    xFapiAuthDate = "nihil";
-                    xFapiCustomerIpAddress = "explicabo";
-                    xFapiInteractionId = "perspiciatis";
-                    xIdempotencyKey = "quia";
-                    xJwsSignature = "aliquam";
+                    authorization = "sit";
+                    xCustomerUserAgent = "voluptas";
+                    xFapiAuthDate = "culpa";
+                    xFapiCustomerIpAddress = "expedita";
+                    xFapiInteractionId = "consequuntur";
+                    xIdempotencyKey = "dolor";
+                    xJwsSignature = "expedita";
                 }};
                 request = new CreateDomesticPaymentConsentsRequests() {{
-                    applicationJosePlusJwe = "repellendus".getBytes();
+                    applicationJosePlusJwe = "voluptas".getBytes();
                     obWriteDomesticConsent4 = new ObWriteDomesticConsent4() {{
                         data = new ObWriteDomesticConsent4Data() {{
                             authorisation = new ObWriteDomesticConsent4DataAuthorisation() {{
                                 authorisationType = "Any";
-                                completionDateTime = "2012-10-01T08:27:26Z";
+                                completionDateTime = "2011-08-12T10:11:12Z";
                             }};
                             initiation = new ObWriteDomesticConsent4DataInitiation() {{
                                 creditorAccount = new ObWriteDomesticConsent4DataInitiationCreditorAccount() {{
-                                    identification = "assumenda";
-                                    name = "dolor";
-                                    schemeName = "labore";
-                                    secondaryIdentification = "ipsam";
+                                    identification = "nihil";
+                                    name = "rerum";
+                                    schemeName = "dicta";
+                                    secondaryIdentification = "debitis";
                                 }};
                                 creditorPostalAddress = new ObPostalAddress6() {{
                                     addressLine = new String[]() {{
-                                        add("maxime"),
-                                        add("modi"),
-                                        add("expedita"),
+                                        add("et"),
                                     }};
-                                    addressType = "Correspondence";
-                                    buildingNumber = "reprehenderit";
-                                    country = "velit";
-                                    countrySubDivision = "magni";
-                                    department = "dolores";
-                                    postCode = "porro";
-                                    streetName = "qui";
-                                    subDepartment = "consequatur";
-                                    townName = "mollitia";
+                                    addressType = "Statement";
+                                    buildingNumber = "dolorem";
+                                    country = "et";
+                                    countrySubDivision = "voluptate";
+                                    department = "iste";
+                                    postCode = "vitae";
+                                    streetName = "totam";
+                                    subDepartment = "dolores";
+                                    townName = "illum";
                                 }};
                                 debtorAccount = new ObWriteDomesticConsent4DataInitiationDebtorAccount() {{
-                                    identification = "aut";
-                                    name = "ab";
-                                    schemeName = "ad";
-                                    secondaryIdentification = "hic";
+                                    identification = "debitis";
+                                    name = "vel";
+                                    schemeName = "odio";
+                                    secondaryIdentification = "dolore";
                                 }};
-                                endToEndIdentification = "non";
+                                endToEndIdentification = "id";
                                 instructedAmount = new ObWriteDomesticConsent4DataInitiationInstructedAmount() {{
-                                    amount = "aliquid";
-                                    currency = "reprehenderit";
+                                    amount = "aspernatur";
+                                    currency = "accusantium";
                                 }};
-                                instructionIdentification = "aut";
-                                localInstrument = "blanditiis";
+                                instructionIdentification = "totam";
+                                localInstrument = "commodi";
                                 remittanceInformation = new ObWriteDomesticConsent4DataInitiationRemittanceInformation() {{
-                                    reference = "voluptate";
-                                    unstructured = "et";
+                                    reference = "quis";
+                                    unstructured = "est";
                                 }};
                                 supplementaryData = new java.util.HashMap<String, Object>() {{
-                                    put("officia", "aut");
-                                    put("sit", "quas");
+                                    put("odit", "non");
+                                    put("voluptas", "omnis");
+                                    put("aut", "illo");
                                 }};
                             }};
                             readRefundAccount = "No";
                             scaSupportData = new ObscaSupportData1() {{
                                 appliedAuthenticationApproach = "SCA";
-                                referencePaymentOrderId = "ut";
-                                requestedSCAExemptionType = "EcommerceServices";
+                                referencePaymentOrderId = "autem";
+                                requestedSCAExemptionType = "PartyToParty";
                             }};
                         }};
                         risk = new ObRisk1() {{
                             deliveryAddress = new ObRisk1DeliveryAddress() {{
                                 addressLine = new String[]() {{
-                                    add("dolores"),
+                                    add("odio"),
                                 }};
-                                buildingNumber = "quo";
-                                country = "voluptatibus";
-                                countrySubDivision = "expedita";
-                                postCode = "ut";
-                                streetName = "aperiam";
-                                townName = "fugiat";
+                                buildingNumber = "qui";
+                                country = "recusandae";
+                                countrySubDivision = "at";
+                                postCode = "ipsum";
+                                streetName = "eveniet";
+                                townName = "modi";
                             }};
-                            merchantCategoryCode = "qui";
-                            merchantCustomerIdentification = "aliquid";
+                            merchantCategoryCode = "sint";
+                            merchantCustomerIdentification = "inventore";
                             paymentContextCode = "PartyToParty";
                         }};
                     }};
                     obWriteDomesticConsent5 = new ObWriteDomesticConsent4() {{
                         data = new ObWriteDomesticConsent4Data() {{
                             authorisation = new ObWriteDomesticConsent4DataAuthorisation() {{
-                                authorisationType = "Single";
-                                completionDateTime = "1999-06-14T00:59:50Z";
+                                authorisationType = "Any";
+                                completionDateTime = "1987-11-29T05:58:16Z";
                             }};
                             initiation = new ObWriteDomesticConsent4DataInitiation() {{
                                 creditorAccount = new ObWriteDomesticConsent4DataInitiationCreditorAccount() {{
-                                    identification = "dolore";
-                                    name = "aliquam";
-                                    schemeName = "debitis";
-                                    secondaryIdentification = "qui";
+                                    identification = "reprehenderit";
+                                    name = "tempore";
+                                    schemeName = "maiores";
+                                    secondaryIdentification = "incidunt";
                                 }};
                                 creditorPostalAddress = new ObPostalAddress6() {{
                                     addressLine = new String[]() {{
-                                        add("incidunt"),
-                                        add("quis"),
-                                        add("ut"),
+                                        add("beatae"),
+                                        add("veritatis"),
                                     }};
-                                    addressType = "Correspondence";
-                                    buildingNumber = "modi";
-                                    country = "numquam";
-                                    countrySubDivision = "eveniet";
-                                    department = "earum";
-                                    postCode = "neque";
-                                    streetName = "similique";
-                                    subDepartment = "unde";
-                                    townName = "sint";
+                                    addressType = "Business";
+                                    buildingNumber = "et";
+                                    country = "omnis";
+                                    countrySubDivision = "ipsum";
+                                    department = "ex";
+                                    postCode = "dolores";
+                                    streetName = "placeat";
+                                    subDepartment = "vel";
+                                    townName = "rerum";
                                 }};
                                 debtorAccount = new ObWriteDomesticConsent4DataInitiationDebtorAccount() {{
-                                    identification = "sed";
-                                    name = "quia";
-                                    schemeName = "enim";
-                                    secondaryIdentification = "in";
+                                    identification = "mollitia";
+                                    name = "voluptas";
+                                    schemeName = "quam";
+                                    secondaryIdentification = "reprehenderit";
                                 }};
-                                endToEndIdentification = "dignissimos";
+                                endToEndIdentification = "qui";
                                 instructedAmount = new ObWriteDomesticConsent4DataInitiationInstructedAmount() {{
-                                    amount = "sit";
-                                    currency = "deleniti";
+                                    amount = "qui";
+                                    currency = "unde";
                                 }};
-                                instructionIdentification = "laudantium";
-                                localInstrument = "natus";
+                                instructionIdentification = "in";
+                                localInstrument = "autem";
                                 remittanceInformation = new ObWriteDomesticConsent4DataInitiationRemittanceInformation() {{
-                                    reference = "est";
-                                    unstructured = "et";
+                                    reference = "qui";
+                                    unstructured = "ut";
                                 }};
                                 supplementaryData = new java.util.HashMap<String, Object>() {{
-                                    put("quidem", "sed");
+                                    put("ab", "neque");
+                                    put("ullam", "et");
+                                    put("accusantium", "esse");
                                 }};
                             }};
                             readRefundAccount = "No";
                             scaSupportData = new ObscaSupportData1() {{
                                 appliedAuthenticationApproach = "CA";
-                                referencePaymentOrderId = "dolor";
-                                requestedSCAExemptionType = "EcommerceGoods";
+                                referencePaymentOrderId = "velit";
+                                requestedSCAExemptionType = "PartyToParty";
                             }};
                         }};
                         risk = new ObRisk1() {{
                             deliveryAddress = new ObRisk1DeliveryAddress() {{
                                 addressLine = new String[]() {{
-                                    add("quaerat"),
+                                    add("sunt"),
                                 }};
-                                buildingNumber = "soluta";
-                                country = "sit";
-                                countrySubDivision = "harum";
-                                postCode = "placeat";
-                                streetName = "beatae";
-                                townName = "quis";
+                                buildingNumber = "voluptates";
+                                country = "magni";
+                                countrySubDivision = "et";
+                                postCode = "optio";
+                                streetName = "qui";
+                                townName = "earum";
                             }};
-                            merchantCategoryCode = "tempore";
-                            merchantCustomerIdentification = "provident";
-                            paymentContextCode = "EcommerceGoods";
+                            merchantCategoryCode = "illo";
+                            merchantCustomerIdentification = "omnis";
+                            paymentContextCode = "PartyToParty";
                         }};
                     }};
                 }};

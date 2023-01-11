@@ -36,11 +36,11 @@ public class Application {
             GetSearchVersionNumberAdditionalDataExtRequest req = new GetSearchVersionNumberAdditionalDataExtRequest() {{
                 pathParams = new GetSearchVersionNumberAdditionalDataExtPathParams() {{
                     ext = "json";
-                    versionNumber = 6910103553472090033;
+                    versionNumber = 2259404117704393152;
                 }};
                 queryParams = new GetSearchVersionNumberAdditionalDataExtQueryParams() {{
-                    geometries = "debitis";
-                    geometriesZoom = 3507238623703885833;
+                    geometries = "culpa";
+                    geometriesZoom = 501233450539197794;
                 }};
             }};
 

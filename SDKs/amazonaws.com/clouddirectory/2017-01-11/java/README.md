@@ -35,52 +35,38 @@ public class Application {
 
             AddFacetToObjectRequest req = new AddFacetToObjectRequest() {{
                 headers = new AddFacetToObjectHeaders() {{
-                    xAmzAlgorithm = "facilis";
-                    xAmzContentSha256 = "omnis";
-                    xAmzCredential = "mollitia";
-                    xAmzDate = "velit";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "eum";
-                    xAmzSignedHeaders = "quo";
-                    xAmzDataPartition = "et";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
+                    xAmzDataPartition = "voluptas";
                 }};
                 request = new AddFacetToObjectRequestBody() {{
                     objectAttributeList = new openapisdk.models.shared.AttributeKeyAndValue[]() {{
                         add(new AttributeKeyAndValue() {{
                             key = new AttributeKey() {{
-                                facetName = "omnis";
-                                name = "tempora";
-                                schemaArn = "aliquid";
+                                facetName = "et";
+                                name = "nihil";
+                                schemaArn = "rerum";
                             }};
                             value = new TypedAttributeValue() {{
-                                binaryValue = "molestiae";
-                                booleanValue = false;
-                                datetimeValue = "2009-08-18T16:12:12Z";
-                                numberValue = "cum";
-                                stringValue = "a";
-                            }};
-                        }}),
-                        add(new AttributeKeyAndValue() {{
-                            key = new AttributeKey() {{
-                                facetName = "quo";
-                                name = "delectus";
-                                schemaArn = "et";
-                            }};
-                            value = new TypedAttributeValue() {{
-                                binaryValue = "ipsum";
-                                booleanValue = false;
-                                datetimeValue = "1971-08-07T18:15:28Z";
+                                binaryValue = "dicta";
+                                booleanValue = true;
+                                datetimeValue = "1981-07-21T06:30:48Z";
                                 numberValue = "et";
-                                stringValue = "cupiditate";
+                                stringValue = "ut";
                             }};
                         }}),
                     }};
                     objectReference = new AddFacetToObjectRequestBodyObjectReference() {{
-                        selector = "sed";
+                        selector = "dolorem";
                     }};
                     schemaFacet = new AddFacetToObjectRequestBodySchemaFacet() {{
-                        facetName = "praesentium";
-                        schemaArn = "excepturi";
+                        facetName = "et";
+                        schemaArn = "voluptate";
                     }};
                 }};
             }};

@@ -35,24 +35,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasemlOperationsCancelPathParams() {{
-                    name = "magnam";
+                    name = "sit";
                 }};
                 queryParams = new FirebasemlOperationsCancelQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "voluptatem";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "non";
-                    fields = "mollitia";
-                    key = "qui";
-                    oauthToken = "est";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "officiis";
-                    uploadType = "molestiae";
-                    uploadProtocol = "soluta";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("aut", "autem");
-                    put("sed", "quas");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

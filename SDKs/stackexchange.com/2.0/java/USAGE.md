@@ -14,13 +14,13 @@ public class Application {
 
             GetAccessTokensAccessTokensRequest req = new GetAccessTokensAccessTokensRequest() {{
                 pathParams = new GetAccessTokensAccessTokensPathParams() {{
-                    accessTokens = "delectus";
+                    accessTokens = "sit";
                 }};
                 queryParams = new GetAccessTokensAccessTokensQueryParams() {{
-                    callback = "rerum";
-                    filter = "dolore";
-                    page = 7274936573655343394;
-                    pagesize = 7796777083842162182;
+                    callback = "voluptas";
+                    filter = "culpa";
+                    page = 501233450539197794;
+                    pagesize = 3390393562759376202;
                 }};
             }};
 

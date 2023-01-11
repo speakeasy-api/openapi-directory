@@ -22,17 +22,17 @@ public class Application {
 
             AcceptGrantRequest req = new AcceptGrantRequest() {{
                 headers = new AcceptGrantHeaders() {{
-                    xAmzAlgorithm = "vel";
-                    xAmzContentSha256 = "rerum";
-                    xAmzCredential = "minus";
-                    xAmzDate = "asperiores";
-                    xAmzSecurityToken = "laboriosam";
-                    xAmzSignature = "voluptate";
-                    xAmzSignedHeaders = "aut";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSLicenseManager.AcceptGrant";
                 }};
                 request = new AcceptGrantRequest() {{
-                    grantArn = "ipsa";
+                    grantArn = "fugit";
                 }};
             }};
 

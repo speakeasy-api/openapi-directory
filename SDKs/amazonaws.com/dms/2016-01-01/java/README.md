@@ -35,32 +35,22 @@ public class Application {
 
             AddTagsToResourceRequest req = new AddTagsToResourceRequest() {{
                 headers = new AddTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "laborum";
-                    xAmzContentSha256 = "ex";
-                    xAmzCredential = "ad";
-                    xAmzDate = "voluptatem";
-                    xAmzSecurityToken = "accusantium";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "sunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonDMSv20160101.AddTagsToResource";
                 }};
                 request = new AddTagsToResourceMessage() {{
-                    resourceArn = "quidem";
+                    resourceArn = "fugit";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "iure";
-                            resourceArn = "incidunt";
-                            value = "iusto";
-                        }}),
-                        add(new Tag() {{
-                            key = "voluptatibus";
-                            resourceArn = "voluptates";
-                            value = "quia";
-                        }}),
-                        add(new Tag() {{
-                            key = "tenetur";
-                            resourceArn = "et";
-                            value = "rerum";
+                            key = "nihil";
+                            resourceArn = "rerum";
+                            value = "dicta";
                         }}),
                     }};
                 }};

@@ -22,25 +22,27 @@ public class Application {
 
             BatchExecuteStatementRequest req = new BatchExecuteStatementRequest() {{
                 headers = new BatchExecuteStatementHeaders() {{
-                    xAmzAlgorithm = "inventore";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "animi";
-                    xAmzSecurityToken = "rerum";
-                    xAmzSignature = "sit";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "RedshiftData.BatchExecuteStatement";
                 }};
                 request = new BatchExecuteStatementInput() {{
-                    clusterIdentifier = "eos";
-                    database = "accusantium";
-                    dbUser = "minima";
-                    secretArn = "qui";
+                    clusterIdentifier = "fugit";
+                    database = "et";
+                    dbUser = "nihil";
+                    secretArn = "rerum";
                     sqls = new String[]() {{
-                        add("est"),
+                        add("debitis"),
+                        add("voluptatum"),
+                        add("et"),
                     }};
-                    statementName = "tempora";
-                    withEvent = false;
+                    statementName = "ut";
+                    withEvent = true;
                 }};
             }};
 

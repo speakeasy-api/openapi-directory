@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new FindFormByFormNamePathParams() {{
-                    formName = "corrupti";
+                    formName = "sit";
                 }};
             }};
 

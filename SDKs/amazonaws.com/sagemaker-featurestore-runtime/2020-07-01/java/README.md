@@ -35,26 +35,47 @@ public class Application {
 
             BatchGetRecordRequest req = new BatchGetRecordRequest() {{
                 headers = new BatchGetRecordHeaders() {{
-                    xAmzAlgorithm = "alias";
-                    xAmzContentSha256 = "reprehenderit";
-                    xAmzCredential = "non";
-                    xAmzDate = "quia";
-                    xAmzSecurityToken = "sed";
-                    xAmzSignature = "consequatur";
-                    xAmzSignedHeaders = "fuga";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new BatchGetRecordRequestBody() {{
                     identifiers = new openapisdk.models.shared.BatchGetRecordIdentifier[]() {{
                         add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "aliquid";
+                            featureGroupName = "fugit";
                             featureNames = new String[]() {{
-                                add("unde"),
-                                add("ducimus"),
-                                add("ut"),
+                                add("nihil"),
                             }};
                             recordIdentifiersValueAsString = new String[]() {{
-                                add("quidem"),
-                                add("nulla"),
+                                add("dicta"),
+                                add("debitis"),
+                                add("voluptatum"),
+                            }};
+                        }}),
+                        add(new BatchGetRecordIdentifier() {{
+                            featureGroupName = "et";
+                            featureNames = new String[]() {{
+                                add("dolorem"),
+                                add("et"),
+                                add("voluptate"),
+                            }};
+                            recordIdentifiersValueAsString = new String[]() {{
+                                add("vitae"),
+                                add("totam"),
+                                add("dolores"),
+                            }};
+                        }}),
+                        add(new BatchGetRecordIdentifier() {{
+                            featureGroupName = "illum";
+                            featureNames = new String[]() {{
+                                add("vel"),
+                            }};
+                            recordIdentifiersValueAsString = new String[]() {{
+                                add("dolore"),
                             }};
                         }}),
                     }};

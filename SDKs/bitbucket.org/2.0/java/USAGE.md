@@ -14,11 +14,11 @@ public class Application {
 
             GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidRequest req = new GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidRequest() {{
                 pathParams = new GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidPathParams() {{
-                    logUuid = "recusandae";
-                    pipelineUuid = "et";
-                    repoSlug = "molestias";
-                    stepUuid = "possimus";
-                    workspace = "earum";
+                    logUuid = "sit";
+                    pipelineUuid = "voluptas";
+                    repoSlug = "culpa";
+                    stepUuid = "expedita";
+                    workspace = "consequuntur";
                 }};
             }};
 

@@ -36,19 +36,19 @@ public class Application {
             GetAddRoleToDbClusterRequest req = new GetAddRoleToDbClusterRequest() {{
                 queryParams = new GetAddRoleToDbClusterQueryParams() {{
                     action = "AddRoleToDBCluster";
-                    dbClusterIdentifier = "aut";
-                    featureName = "corrupti";
-                    roleArn = "molestiae";
+                    dbClusterIdentifier = "voluptas";
+                    featureName = "culpa";
+                    roleArn = "expedita";
                     version = "2014-10-31";
                 }};
                 headers = new GetAddRoleToDbClusterHeaders() {{
-                    xAmzAlgorithm = "nemo";
-                    xAmzContentSha256 = "beatae";
-                    xAmzCredential = "iste";
-                    xAmzDate = "fuga";
-                    xAmzSecurityToken = "suscipit";
-                    xAmzSignature = "voluptatem";
-                    xAmzSignedHeaders = "veniam";
+                    xAmzAlgorithm = "dolor";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "voluptas";
+                    xAmzDate = "fugit";
+                    xAmzSecurityToken = "et";
+                    xAmzSignature = "nihil";
+                    xAmzSignedHeaders = "rerum";
                 }};
             }};
 

@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new DeleteQuoteQueryParams() {{
-                    id = "illum";
+                    id = "sit";
                 }};
             }};
 

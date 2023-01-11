@@ -14,21 +14,21 @@ public class Application {
 
             DrivelabelsLabelsGetRequest req = new DrivelabelsLabelsGetRequest() {{
                 pathParams = new DrivelabelsLabelsGetPathParams() {{
-                    name = "et";
+                    name = "sit";
                 }};
                 queryParams = new DrivelabelsLabelsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ea";
-                    alt = "proto";
-                    callback = "cumque";
-                    fields = "id";
-                    key = "sint";
-                    languageCode = "libero";
-                    oauthToken = "eum";
-                    prettyPrint = true;
-                    quotaUser = "earum";
-                    uploadType = "aut";
-                    uploadProtocol = "nihil";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    languageCode = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                     useAdminAccess = true;
                     view = "LABEL_VIEW_BASIC";
                 }};

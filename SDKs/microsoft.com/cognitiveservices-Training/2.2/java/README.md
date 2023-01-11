@@ -27,10 +27,10 @@ public class Application {
 
             GetDomainRequest req = new GetDomainRequest() {{
                 pathParams = new GetDomainPathParams() {{
-                    domainId = "et";
+                    domainId = "sit";
                 }};
                 headers = new GetDomainHeaders() {{
-                    trainingKey = "autem";
+                    trainingKey = "voluptas";
                 }};
             }};
 

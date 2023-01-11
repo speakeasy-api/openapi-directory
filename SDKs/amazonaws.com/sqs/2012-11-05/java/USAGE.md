@@ -22,23 +22,23 @@ public class Application {
 
             GetChangeMessageVisibilityRequest req = new GetChangeMessageVisibilityRequest() {{
                 pathParams = new GetChangeMessageVisibilityPathParams() {{
-                    accountNumber = 4772934432398856168;
-                    queueName = "velit";
+                    accountNumber = 8717895732742165505;
+                    queueName = "voluptas";
                 }};
                 queryParams = new GetChangeMessageVisibilityQueryParams() {{
                     action = "ChangeMessageVisibility";
-                    receiptHandle = "nulla";
+                    receiptHandle = "expedita";
                     version = "2012-11-05";
-                    visibilityTimeout = 1092410701567644413;
+                    visibilityTimeout = 2669985732393126063;
                 }};
                 headers = new GetChangeMessageVisibilityHeaders() {{
-                    xAmzAlgorithm = "qui";
-                    xAmzContentSha256 = "odit";
-                    xAmzCredential = "tempora";
-                    xAmzDate = "voluptatem";
-                    xAmzSecurityToken = "dignissimos";
-                    xAmzSignature = "velit";
-                    xAmzSignedHeaders = "magnam";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "fugit";
+                    xAmzDate = "et";
+                    xAmzSecurityToken = "nihil";
+                    xAmzSignature = "rerum";
+                    xAmzSignedHeaders = "dicta";
                 }};
             }};
 

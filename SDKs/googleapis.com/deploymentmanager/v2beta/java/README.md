@@ -37,21 +37,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeploymentmanagerCompositeTypesDeletePathParams() {{
-                    compositeType = "sapiente";
-                    project = "qui";
+                    compositeType = "sit";
+                    project = "voluptas";
                 }};
                 queryParams = new DeploymentmanagerCompositeTypesDeleteQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "odio";
-                    alt = "json";
-                    callback = "et";
-                    fields = "culpa";
-                    key = "odio";
-                    oauthToken = "qui";
-                    prettyPrint = true;
-                    quotaUser = "vitae";
-                    uploadType = "corrupti";
-                    uploadProtocol = "qui";
+                    dollarXgafv = "2";
+                    accessToken = "expedita";
+                    alt = "proto";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

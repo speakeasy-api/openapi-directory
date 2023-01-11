@@ -22,17 +22,17 @@ public class Application {
 
             CancelKeyDeletionRequest req = new CancelKeyDeletionRequest() {{
                 headers = new CancelKeyDeletionHeaders() {{
-                    xAmzAlgorithm = "aut";
-                    xAmzContentSha256 = "officiis";
-                    xAmzCredential = "aliquid";
-                    xAmzDate = "natus";
-                    xAmzSecurityToken = "voluptate";
-                    xAmzSignature = "consectetur";
-                    xAmzSignedHeaders = "tempore";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "TrentService.CancelKeyDeletion";
                 }};
                 request = new CancelKeyDeletionRequest() {{
-                    keyId = "voluptatibus";
+                    keyId = "fugit";
                 }};
             }};
 

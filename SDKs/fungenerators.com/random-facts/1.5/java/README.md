@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetFactFodQueryParams() {{
-                    category = "vero";
+                    category = "sit";
                 }};
             }};
 

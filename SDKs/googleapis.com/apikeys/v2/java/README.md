@@ -38,17 +38,17 @@ public class Application {
                 }};
                 queryParams = new ApikeysKeysLookupKeyQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "doloribus";
-                    alt = "proto";
-                    callback = "ut";
-                    fields = "praesentium";
-                    key = "minus";
-                    keyString = "accusantium";
-                    oauthToken = "reiciendis";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    keyString = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "id";
-                    uploadType = "non";
-                    uploadProtocol = "temporibus";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

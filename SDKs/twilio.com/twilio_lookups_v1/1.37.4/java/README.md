@@ -33,23 +33,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchPhoneNumberPathParams() {{
-                    phoneNumber = "quaerat";
+                    phoneNumber = "sit";
                 }};
                 queryParams = new FetchPhoneNumberQueryParams() {{
                     addOns = new String[]() {{
-                        add("et"),
-                        add("expedita"),
+                        add("culpa"),
                     }};
                     addOnsData = new java.util.HashMap<String, Object>() {{
-                        put("qui", "qui");
-                        put("aut", "explicabo");
-                        put("cupiditate", "temporibus");
+                        put("consequuntur", "dolor");
+                        put("expedita", "voluptas");
                     }};
-                    countryCode = "saepe";
+                    countryCode = "fugit";
                     type = new String[]() {{
-                        add("voluptatem"),
-                        add("vel"),
-                        add("fugiat"),
+                        add("nihil"),
                     }};
                 }};
             }};

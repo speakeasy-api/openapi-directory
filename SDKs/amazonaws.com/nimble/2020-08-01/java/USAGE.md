@@ -22,22 +22,21 @@ public class Application {
 
             AcceptEulasRequest req = new AcceptEulasRequest() {{
                 pathParams = new AcceptEulasPathParams() {{
-                    studioId = "asperiores";
+                    studioId = "sit";
                 }};
                 headers = new AcceptEulasHeaders() {{
-                    xAmzAlgorithm = "tempore";
-                    xAmzClientToken = "tempore";
-                    xAmzContentSha256 = "assumenda";
-                    xAmzCredential = "deleniti";
-                    xAmzDate = "ea";
-                    xAmzSecurityToken = "aut";
-                    xAmzSignature = "dignissimos";
-                    xAmzSignedHeaders = "voluptatem";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzClientToken = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
                 request = new AcceptEulasRequestBody() {{
                     eulaIds = new String[]() {{
-                        add("quo"),
-                        add("atque"),
+                        add("nihil"),
                     }};
                 }};
             }};

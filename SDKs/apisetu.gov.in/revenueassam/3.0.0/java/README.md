@@ -36,11 +36,11 @@ public class Application {
                 }};
                 request = new NncerRequestBody() {{
                     certificateParameters = new NncerRequestBodyCertificateParameters() {{
-                        refNo = "consequatur";
+                        refNo = "sit";
                     }};
-                    consentArtifact = "sit";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "quaerat";
+                    txnId = "expedita";
                 }};
             }};
 

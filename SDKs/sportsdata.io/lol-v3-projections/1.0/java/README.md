@@ -35,7 +35,7 @@ public class Application {
 
             DfsSlatesByDateRequest req = new DfsSlatesByDateRequest() {{
                 pathParams = new DfsSlatesByDatePathParams() {{
-                    date = "ex";
+                    date = "sit";
                     format = "json";
                 }};
             }};

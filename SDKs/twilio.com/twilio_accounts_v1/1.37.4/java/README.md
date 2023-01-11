@@ -33,9 +33,9 @@ public class Application {
                     }};
                 }};
                 request = new CreateCredentialAwsCreateCredentialAwsRequest() {{
-                    accountSid = "nihil";
-                    credentials = "exercitationem";
-                    friendlyName = "iste";
+                    accountSid = "sit";
+                    credentials = "voluptas";
+                    friendlyName = "culpa";
                 }};
             }};
 

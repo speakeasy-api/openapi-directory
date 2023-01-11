@@ -14,8 +14,8 @@ public class Application {
 
             GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest() {{
                 queryParams = new GetglobalnumberinfoQueryParams() {{
-                    intlnumber = "quas";
-                    license = "voluptatum";
+                    intlnumber = "sit";
+                    license = "voluptas";
                 }};
             }};
 

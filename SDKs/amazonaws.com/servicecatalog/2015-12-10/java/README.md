@@ -35,19 +35,19 @@ public class Application {
 
             AcceptPortfolioShareRequest req = new AcceptPortfolioShareRequest() {{
                 headers = new AcceptPortfolioShareHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "optio";
-                    xAmzCredential = "iste";
-                    xAmzDate = "nisi";
-                    xAmzSecurityToken = "repudiandae";
-                    xAmzSignature = "amet";
-                    xAmzSignedHeaders = "impedit";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWS242ServiceCatalogService.AcceptPortfolioShare";
                 }};
                 request = new AcceptPortfolioShareInput() {{
-                    acceptLanguage = "eum";
+                    acceptLanguage = "fugit";
                     portfolioId = "et";
-                    portfolioShareType = "AWS_SERVICECATALOG";
+                    portfolioShareType = "IMPORTED";
                 }};
             }};
 

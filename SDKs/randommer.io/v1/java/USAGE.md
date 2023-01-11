@@ -14,10 +14,10 @@ public class Application {
 
             GetApiCardRequest req = new GetApiCardRequest() {{
                 queryParams = new GetApiCardQueryParams() {{
-                    type = "debitis";
+                    type = "sit";
                 }};
                 headers = new GetApiCardHeaders() {{
-                    xApiKey = "vel";
+                    xApiKey = "voluptas";
                 }};
             }};
 

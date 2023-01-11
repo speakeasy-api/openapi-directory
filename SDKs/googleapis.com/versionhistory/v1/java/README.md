@@ -27,22 +27,22 @@ public class Application {
 
             VersionhistoryPlatformsChannelsListRequest req = new VersionhistoryPlatformsChannelsListRequest() {{
                 pathParams = new VersionhistoryPlatformsChannelsListPathParams() {{
-                    parent = "sed";
+                    parent = "sit";
                 }};
                 queryParams = new VersionhistoryPlatformsChannelsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "minima";
-                    alt = "json";
-                    callback = "ut";
-                    fields = "neque";
-                    key = "id";
-                    oauthToken = "accusantium";
-                    pageSize = 6614320624716883971;
-                    pageToken = "dolores";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    pageSize = 8274930044578894929;
+                    pageToken = "et";
                     prettyPrint = true;
-                    quotaUser = "aut";
-                    uploadType = "similique";
-                    uploadProtocol = "rerum";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

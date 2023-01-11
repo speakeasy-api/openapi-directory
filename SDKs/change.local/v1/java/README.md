@@ -33,11 +33,11 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetApiV1DonationsCarbonCalculateQueryParams() {{
-                    destinationAddress = 90.199997;
-                    distanceMi = 69.199997;
-                    originAddress = 7.100000;
-                    transportationMethod = "air";
-                    weightLb = 88.199997;
+                    destinationAddress = 74.099998;
+                    distanceMi = 53.099998;
+                    originAddress = 15.100000;
+                    transportationMethod = "sea";
+                    weightLb = 77.099998;
                 }};
             }};
 

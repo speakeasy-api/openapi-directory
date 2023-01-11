@@ -36,16 +36,16 @@ public class Application {
                 }};
                 request = new HscerRequestBody() {{
                     certificateParameters = new HscerRequestBodyCertificateParameters() {{
-                        certificateType = "et";
-                        dob = "eaque";
-                        fullName = "veritatis";
-                        rroll = "id";
-                        month = "optio";
-                        year = "inventore";
+                        certificateType = "sit";
+                        dob = "voluptas";
+                        fullName = "culpa";
+                        rroll = "expedita";
+                        month = "consequuntur";
+                        year = "dolor";
                     }};
-                    consentArtifact = "illo";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "culpa";
+                    txnId = "fugit";
                 }};
             }};
 

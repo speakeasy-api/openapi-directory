@@ -35,26 +35,25 @@ public class Application {
 
             GenerateDataSetRequest req = new GenerateDataSetRequest() {{
                 headers = new GenerateDataSetHeaders() {{
-                    xAmzAlgorithm = "quisquam";
-                    xAmzContentSha256 = "sequi";
-                    xAmzCredential = "quia";
-                    xAmzDate = "est";
-                    xAmzSecurityToken = "voluptatem";
-                    xAmzSignature = "voluptate";
-                    xAmzSignedHeaders = "facilis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "MarketplaceCommerceAnalytics20150701.GenerateDataSet";
                 }};
                 request = new GenerateDataSetRequest() {{
                     customerDefinedValues = new java.util.HashMap<String, String>() {{
-                        put("ipsum", "repudiandae");
-                        put("iusto", "quis");
+                        put("et", "nihil");
                     }};
-                    dataSetPublicationDate = "2013-05-15T08:13:46Z";
-                    dataSetType = "monthly_revenue_billing_and_revenue_data";
-                    destinationS3BucketName = "sunt";
-                    destinationS3Prefix = "laborum";
-                    roleNameArn = "quibusdam";
-                    snsTopicArn = "eum";
+                    dataSetPublicationDate = "2004-06-02T10:14:12Z";
+                    dataSetType = "daily_business_usage_by_instance_type";
+                    destinationS3BucketName = "et";
+                    destinationS3Prefix = "ut";
+                    roleNameArn = "dolorem";
+                    snsTopicArn = "et";
                 }};
             }};
 

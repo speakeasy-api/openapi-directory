@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new DeleteRiddleQueryParams() {{
-                    id = "aut";
+                    id = "sit";
                 }};
             }};
 

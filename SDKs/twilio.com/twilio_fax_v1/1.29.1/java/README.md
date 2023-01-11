@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteFaxPathParams() {{
-                    sid = "mollitia";
+                    sid = "sit";
                 }};
             }};
 

@@ -35,7 +35,7 @@ public class Application {
 
             DeleteChargeStationRequest req = new DeleteChargeStationRequest() {{
                 pathParams = new DeleteChargeStationPathParams() {{
-                    id = "neque";
+                    id = "sit";
                 }};
             }};
 

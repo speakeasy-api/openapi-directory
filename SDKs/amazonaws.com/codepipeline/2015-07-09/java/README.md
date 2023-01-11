@@ -35,18 +35,18 @@ public class Application {
 
             AcknowledgeJobRequest req = new AcknowledgeJobRequest() {{
                 headers = new AcknowledgeJobHeaders() {{
-                    xAmzAlgorithm = "qui";
-                    xAmzContentSha256 = "numquam";
-                    xAmzCredential = "et";
-                    xAmzDate = "ut";
-                    xAmzSecurityToken = "soluta";
-                    xAmzSignature = "minima";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CodePipeline_20150709.AcknowledgeJob";
                 }};
                 request = new AcknowledgeJobInput() {{
-                    jobId = "et";
-                    nonce = "autem";
+                    jobId = "fugit";
+                    nonce = "et";
                 }};
             }};
 

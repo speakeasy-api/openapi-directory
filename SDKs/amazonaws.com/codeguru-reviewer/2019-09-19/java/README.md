@@ -35,41 +35,41 @@ public class Application {
 
             AssociateRepositoryRequest req = new AssociateRepositoryRequest() {{
                 headers = new AssociateRepositoryHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "nulla";
-                    xAmzCredential = "numquam";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "officiis";
-                    xAmzSignature = "sequi";
-                    xAmzSignedHeaders = "vel";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AssociateRepositoryRequestBody() {{
-                    clientRequestToken = "et";
+                    clientRequestToken = "voluptas";
                     kmsKeyDetails = new AssociateRepositoryRequestBodyKmsKeyDetails() {{
                         encryptionOption = "AWS_OWNED_CMK";
-                        kmsKeyId = "aliquid";
+                        kmsKeyId = "et";
                     }};
                     repository = new AssociateRepositoryRequestBodyRepository() {{
                         bitbucket = new ThirdPartySourceRepository() {{
-                            connectionArn = "autem";
-                            name = "asperiores";
-                            owner = "tempora";
+                            connectionArn = "nihil";
+                            name = "rerum";
+                            owner = "dicta";
                         }};
                         codeCommit = new CodeCommitRepository() {{
-                            name = "voluptate";
+                            name = "debitis";
                         }};
                         gitHubEnterpriseServer = new ThirdPartySourceRepository() {{
-                            connectionArn = "est";
-                            name = "nostrum";
-                            owner = "mollitia";
+                            connectionArn = "voluptatum";
+                            name = "et";
+                            owner = "ut";
                         }};
                         s3Bucket = new S3Repository() {{
-                            bucketName = "aut";
-                            name = "recusandae";
+                            bucketName = "dolorem";
+                            name = "et";
                         }};
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("quas", "repellendus");
+                        put("iste", "vitae");
                     }};
                 }};
             }};

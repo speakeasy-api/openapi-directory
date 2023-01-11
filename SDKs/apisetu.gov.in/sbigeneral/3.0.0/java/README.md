@@ -37,11 +37,11 @@ public class Application {
                 request = new CripcRequestBody() {{
                     certificateParameters = new CripcRequestBodyCertificateParameters() {{
                         udf1 = "sit";
-                        udf2 = "aut";
+                        udf2 = "voluptas";
                     }};
-                    consentArtifact = "temporibus";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "doloribus";
+                    txnId = "consequuntur";
                 }};
             }};
 

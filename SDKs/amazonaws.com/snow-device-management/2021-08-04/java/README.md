@@ -35,16 +35,16 @@ public class Application {
 
             CancelTaskRequest req = new CancelTaskRequest() {{
                 pathParams = new CancelTaskPathParams() {{
-                    taskId = "itaque";
+                    taskId = "sit";
                 }};
                 headers = new CancelTaskHeaders() {{
-                    xAmzAlgorithm = "nobis";
-                    xAmzContentSha256 = "sequi";
-                    xAmzCredential = "esse";
-                    xAmzDate = "nobis";
-                    xAmzSecurityToken = "sint";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "sequi";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

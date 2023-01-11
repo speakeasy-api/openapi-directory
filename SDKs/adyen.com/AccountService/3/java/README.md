@@ -32,7 +32,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "debitis";
+                request = "sit";
             }};
 
             PostCloseAccountHolderResponse res = sdk.accountHolders.postCloseAccountHolder(req);

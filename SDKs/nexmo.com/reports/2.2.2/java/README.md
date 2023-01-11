@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new CancelReportPathParams() {{
-                    reportId = "vel";
+                    reportId = "sit";
                 }};
             }};
 

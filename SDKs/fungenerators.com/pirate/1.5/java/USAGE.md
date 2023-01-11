@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetPirateGenerateInsultQueryParams() {{
-                    limit = 2305290727230306544;
+                    limit = 8717895732742165505;
                 }};
             }};
 

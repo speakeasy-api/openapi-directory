@@ -22,40 +22,38 @@ public class Application {
 
             CreateNotificationRuleRequest req = new CreateNotificationRuleRequest() {{
                 headers = new CreateNotificationRuleHeaders() {{
-                    xAmzAlgorithm = "labore";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "quod";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "sit";
-                    xAmzSignature = "quo";
-                    xAmzSignedHeaders = "omnis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateNotificationRuleRequestBody() {{
-                    clientRequestToken = "reprehenderit";
+                    clientRequestToken = "voluptas";
                     detailType = "BASIC";
                     eventTypeIds = new String[]() {{
-                        add("veniam"),
+                        add("nihil"),
                     }};
-                    name = "impedit";
-                    resource = "ex";
-                    status = "DISABLED";
+                    name = "rerum";
+                    resource = "dicta";
+                    status = "ENABLED";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("sunt", "incidunt");
-                        put("sed", "repellendus");
-                        put("error", "nostrum");
+                        put("et", "ut");
                     }};
                     targets = new openapisdk.models.shared.Target[]() {{
                         add(new Target() {{
-                            targetAddress = "nihil";
-                            targetType = "ipsa";
+                            targetAddress = "et";
+                            targetType = "voluptate";
                         }}),
                         add(new Target() {{
-                            targetAddress = "nihil";
-                            targetType = "sed";
+                            targetAddress = "iste";
+                            targetType = "vitae";
                         }}),
                         add(new Target() {{
-                            targetAddress = "autem";
-                            targetType = "consequatur";
+                            targetAddress = "totam";
+                            targetType = "dolores";
                         }}),
                     }};
                 }};

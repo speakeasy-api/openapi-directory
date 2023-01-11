@@ -23,19 +23,19 @@ public class Application {
                 }};
                 queryParams = new TestingApplicationDetailServiceGetApkDetailsQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "eos";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "minus";
-                    fields = "at";
-                    key = "velit";
-                    oauthToken = "nisi";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "voluptatibus";
-                    uploadType = "nemo";
-                    uploadProtocol = "quaerat";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new FileReference() {{
-                    gcsPath = "fugit";
+                    gcsPath = "rerum";
                 }};
             }};
 

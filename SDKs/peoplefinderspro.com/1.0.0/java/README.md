@@ -27,22 +27,22 @@ public class Application {
 
             SearchRequest req = new SearchRequest() {{
                 headers = new SearchHeaders() {{
-                    galaxyApName = "aliquam";
-                    galaxyApPassword = "architecto";
-                    galaxySearchType = "dignissimos";
+                    galaxyApName = "sit";
+                    galaxyApPassword = "voluptas";
+                    galaxySearchType = "culpa";
                 }};
                 request = new SearchRequestBody() {{
                     address = new SearchRequestBodyAddress() {{
-                        addressLine1 = "consectetur";
-                        addressLine2 = "in";
+                        addressLine1 = "expedita";
+                        addressLine2 = "consequuntur";
                     }};
-                    age = 71.099998;
-                    dob = "praesentium";
-                    email = "eum";
-                    firstName = "error";
-                    lastName = "rerum";
-                    middleName = "iusto";
-                    phoneNumber = "repellendus";
+                    age = 96.199997;
+                    dob = "voluptas";
+                    email = "fugit";
+                    firstName = "et";
+                    lastName = "nihil";
+                    middleName = "rerum";
+                    phoneNumber = "dicta";
                 }};
             }};
 

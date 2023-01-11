@@ -33,16 +33,16 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateMessageInteractionPathParams() {{
-                    participantSid = "ullam";
-                    serviceSid = "architecto";
-                    sessionSid = "architecto";
+                    participantSid = "sit";
+                    serviceSid = "voluptas";
+                    sessionSid = "culpa";
                 }};
                 request = new CreateMessageInteractionCreateMessageInteractionRequest() {{
-                    body = "beatae";
+                    body = "expedita";
                     mediaUrl = new String[]() {{
-                        add("veniam"),
-                        add("hic"),
-                        add("beatae"),
+                        add("dolor"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
                 }};
             }};

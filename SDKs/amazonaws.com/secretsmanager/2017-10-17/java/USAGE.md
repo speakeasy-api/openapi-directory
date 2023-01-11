@@ -22,17 +22,17 @@ public class Application {
 
             CancelRotateSecretRequest req = new CancelRotateSecretRequest() {{
                 headers = new CancelRotateSecretHeaders() {{
-                    xAmzAlgorithm = "dolorem";
-                    xAmzContentSha256 = "magni";
-                    xAmzCredential = "sequi";
-                    xAmzDate = "non";
-                    xAmzSecurityToken = "a";
-                    xAmzSignature = "recusandae";
-                    xAmzSignedHeaders = "molestias";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "secretsmanager.CancelRotateSecret";
                 }};
                 request = new CancelRotateSecretRequest() {{
-                    secretId = "dolores";
+                    secretId = "fugit";
                 }};
             }};
 

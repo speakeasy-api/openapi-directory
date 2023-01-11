@@ -33,13 +33,13 @@ public class Application {
                     }};
                 }};
                 request = new CreateBundleCreateBundleRequest() {{
-                    email = "quam";
+                    email = "sit";
                     endUserType = "individual";
-                    friendlyName = "voluptate";
-                    isoCountry = "eaque";
+                    friendlyName = "culpa";
+                    isoCountry = "expedita";
                     numberType = "consequuntur";
-                    regulationSid = "et";
-                    statusCallback = "amet";
+                    regulationSid = "dolor";
+                    statusCallback = "expedita";
                 }};
             }};
 

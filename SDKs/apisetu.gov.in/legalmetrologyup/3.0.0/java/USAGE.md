@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new DelcsRequestBody() {{
                     certificateParameters = new DelcsRequestBodyCertificateParameters() {{
-                        applicationNo = "voluptas";
-                        licenseNo = "corrupti";
+                        applicationNo = "sit";
+                        licenseNo = "voluptas";
                     }};
-                    consentArtifact = "recusandae";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "sit";
+                    txnId = "consequuntur";
                 }};
             }};
 

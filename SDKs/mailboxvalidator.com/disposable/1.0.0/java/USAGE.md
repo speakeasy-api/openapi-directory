@@ -14,9 +14,9 @@ public class Application {
 
             GetV1EmailDisposableRequest req = new GetV1EmailDisposableRequest() {{
                 queryParams = new GetV1EmailDisposableQueryParams() {{
-                    email = "beatae";
+                    email = "sit";
                     format = "json";
-                    key = "adipisci";
+                    key = "culpa";
                 }};
             }};
 

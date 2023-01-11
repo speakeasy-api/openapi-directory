@@ -21,9 +21,7 @@ public class Application {
                 request = new CreateWorkflow() {{
                     template = "failover";
                     workflow = new Object[]() {{
-                        add("quasi"),
-                        add("officia"),
-                        add("doloremque"),
+                        add("culpa"),
                     }};
                 }};
             }};

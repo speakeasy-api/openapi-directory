@@ -22,15 +22,15 @@ public class Application {
 
             GetCancelJobRequest req = new GetCancelJobRequest() {{
                 queryParams = new GetCancelJobQueryParams() {{
-                    apiVersion = "amet";
-                    awsAccessKeyId = "et";
+                    apiVersion = "sit";
+                    awsAccessKeyId = "voluptas";
                     action = "CancelJob";
-                    jobId = "voluptatem";
+                    jobId = "expedita";
                     operation = "CancelJob";
-                    signature = "natus";
-                    signatureMethod = "quasi";
-                    signatureVersion = "et";
-                    timestamp = "quod";
+                    signature = "dolor";
+                    signatureMethod = "expedita";
+                    signatureVersion = "voluptas";
+                    timestamp = "fugit";
                     version = "2010-06-01";
                 }};
             }};

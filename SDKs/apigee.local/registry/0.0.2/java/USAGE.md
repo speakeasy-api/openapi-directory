@@ -14,12 +14,12 @@ public class Application {
 
             RegistryCreateApiRequest req = new RegistryCreateApiRequest() {{
                 pathParams = new RegistryCreateApiPathParams() {{
-                    project = "rerum";
+                    project = "sit";
                 }};
                 queryParams = new RegistryCreateApiQueryParams() {{
-                    apiId = "nobis";
+                    apiId = "voluptas";
                 }};
-                request = "nemo";
+                request = "culpa";
             }};
 
             RegistryCreateApiResponse res = sdk.registryCreateApi(req);

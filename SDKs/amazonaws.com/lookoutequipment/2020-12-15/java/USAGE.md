@@ -22,26 +22,34 @@ public class Application {
 
             CreateDatasetRequest req = new CreateDatasetRequest() {{
                 headers = new CreateDatasetHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "voluptates";
-                    xAmzDate = "repellat";
-                    xAmzSecurityToken = "eligendi";
-                    xAmzSignature = "adipisci";
-                    xAmzSignedHeaders = "sit";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSLookoutEquipmentFrontendService.CreateDataset";
                 }};
                 request = new CreateDatasetRequest() {{
-                    clientToken = "atque";
-                    datasetName = "odio";
+                    clientToken = "fugit";
+                    datasetName = "et";
                     datasetSchema = new DatasetSchema() {{
-                        inlineDataSchema = "quam";
+                        inlineDataSchema = "nihil";
                     }};
-                    serverSideKmsKeyId = "ut";
+                    serverSideKmsKeyId = "rerum";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "voluptas";
-                            value = "in";
+                            key = "debitis";
+                            value = "voluptatum";
+                        }}),
+                        add(new Tag() {{
+                            key = "et";
+                            value = "ut";
+                        }}),
+                        add(new Tag() {{
+                            key = "dolorem";
+                            value = "et";
                         }}),
                     }};
                 }};

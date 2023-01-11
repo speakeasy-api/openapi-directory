@@ -24,20 +24,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatatransferApplicationsGetPathParams() {{
-                    applicationId = "reiciendis";
+                    applicationId = "sit";
                 }};
                 queryParams = new DatatransferApplicationsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "qui";
-                    alt = "json";
-                    callback = "sequi";
-                    fields = "ut";
-                    key = "aperiam";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "nesciunt";
-                    uploadType = "tenetur";
-                    uploadProtocol = "fugiat";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

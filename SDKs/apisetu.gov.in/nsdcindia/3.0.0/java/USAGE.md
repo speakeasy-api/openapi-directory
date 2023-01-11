@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new EscerRequestBody() {{
                     certificateParameters = new EscerRequestBodyCertificateParameters() {{
-                        dob = "impedit";
-                        docid = "molestiae";
-                        fullName = "dolorem";
+                        dob = "sit";
+                        docid = "voluptas";
+                        fullName = "culpa";
                     }};
-                    consentArtifact = "eligendi";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "minus";
+                    txnId = "dolor";
                 }};
             }};
 

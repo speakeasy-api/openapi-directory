@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchPathParams() {{
-                    location = "nobis";
+                    location = "sit";
                 }};
                 queryParams = new BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "accusamus";
-                    alt = "json";
-                    callback = "hic";
-                    fields = "sed";
-                    key = "enim";
-                    oauthToken = "eum";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "expedita";
-                    uploadType = "et";
-                    uploadProtocol = "quasi";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

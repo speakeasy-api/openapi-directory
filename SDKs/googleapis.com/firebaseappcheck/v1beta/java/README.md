@@ -37,25 +37,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams() {{
-                    parent = "molestiae";
+                    parent = "sit";
                 }};
                 queryParams = new FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ad";
-                    alt = "proto";
-                    callback = "dicta";
-                    fields = "ratione";
-                    key = "ipsam";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
                     names = new String[]() {{
-                        add("quibusdam"),
-                        add("voluptatem"),
-                        add("aut"),
+                        add("fugit"),
+                        add("et"),
+                        add("nihil"),
                     }};
-                    oauthToken = "est";
-                    prettyPrint = true;
-                    quotaUser = "ab";
-                    uploadType = "eos";
-                    uploadProtocol = "quam";
+                    oauthToken = "rerum";
+                    prettyPrint = false;
+                    quotaUser = "debitis";
+                    uploadType = "voluptatum";
+                    uploadProtocol = "et";
                 }};
             }};
 

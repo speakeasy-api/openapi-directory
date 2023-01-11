@@ -23,14 +23,14 @@ public class Application {
                 }};
                 request = new CocerRequestBody() {{
                     certificateParameters = new CocerRequestBodyCertificateParameters() {{
-                        certType = "expedita";
-                        companyName = "eveniet";
-                        regNo = "et";
-                        sector = "nemo";
+                        certType = "sit";
+                        companyName = "voluptas";
+                        regNo = "culpa";
+                        sector = "expedita";
                     }};
-                    consentArtifact = "sed";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "vel";
+                    txnId = "expedita";
                 }};
             }};
 

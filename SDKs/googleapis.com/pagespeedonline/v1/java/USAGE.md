@@ -15,20 +15,20 @@ public class Application {
             PagespeedonlinePagespeedapiRunpagespeedRequest req = new PagespeedonlinePagespeedapiRunpagespeedRequest() {{
                 queryParams = new PagespeedonlinePagespeedapiRunpagespeedQueryParams() {{
                     alt = "json";
-                    fields = "rerum";
+                    fields = "voluptas";
                     filterThirdPartyResources = true;
-                    key = "libero";
-                    locale = "eligendi";
-                    oauthToken = "officiis";
-                    prettyPrint = false;
-                    quotaUser = "perferendis";
+                    key = "expedita";
+                    locale = "consequuntur";
+                    oauthToken = "dolor";
+                    prettyPrint = true;
+                    quotaUser = "voluptas";
                     rule = new String[]() {{
-                        add("possimus"),
+                        add("et"),
                     }};
-                    screenshot = false;
+                    screenshot = true;
                     strategy = "mobile";
-                    url = "non";
-                    userIp = "ut";
+                    url = "dicta";
+                    userIp = "debitis";
                 }};
             }};
 

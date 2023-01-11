@@ -22,24 +22,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new TpuProjectsLocationsAcceleratorTypesListPathParams() {{
-                    parent = "nam";
+                    parent = "sit";
                 }};
                 queryParams = new TpuProjectsLocationsAcceleratorTypesListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "est";
-                    alt = "json";
-                    callback = "nam";
-                    fields = "cupiditate";
-                    filter = "consequatur";
-                    key = "nemo";
-                    oauthToken = "dicta";
-                    orderBy = "sapiente";
-                    pageSize = 434617758678349098;
-                    pageToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "asperiores";
-                    uploadType = "officiis";
-                    uploadProtocol = "ut";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    orderBy = "et";
+                    pageSize = 2661732831099943416;
+                    pageToken = "rerum";
+                    prettyPrint = false;
+                    quotaUser = "debitis";
+                    uploadType = "voluptatum";
+                    uploadProtocol = "et";
                 }};
             }};
 

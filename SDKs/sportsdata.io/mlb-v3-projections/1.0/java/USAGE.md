@@ -22,7 +22,7 @@ public class Application {
 
             DfsSlatesByDateRequest req = new DfsSlatesByDateRequest() {{
                 pathParams = new DfsSlatesByDatePathParams() {{
-                    date = "est";
+                    date = "sit";
                     format = "XML";
                 }};
             }};

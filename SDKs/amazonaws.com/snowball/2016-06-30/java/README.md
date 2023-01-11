@@ -35,17 +35,17 @@ public class Application {
 
             CancelClusterRequest req = new CancelClusterRequest() {{
                 headers = new CancelClusterHeaders() {{
-                    xAmzAlgorithm = "perferendis";
-                    xAmzContentSha256 = "consequatur";
-                    xAmzCredential = "ut";
-                    xAmzDate = "soluta";
-                    xAmzSecurityToken = "voluptatem";
-                    xAmzSignature = "adipisci";
-                    xAmzSignedHeaders = "nobis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSIESnowballJobManagementService.CancelCluster";
                 }};
                 request = new CancelClusterRequest() {{
-                    clusterId = "necessitatibus";
+                    clusterId = "fugit";
                 }};
             }};
 

@@ -15,42 +15,43 @@ public class Application {
             MybusinessaccountmanagementAccountsCreateRequest req = new MybusinessaccountmanagementAccountsCreateRequest() {{
                 queryParams = new MybusinessaccountmanagementAccountsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "porro";
-                    alt = "proto";
-                    callback = "laudantium";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
                     fields = "consequuntur";
-                    key = "maiores";
-                    oauthToken = "amet";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "placeat";
-                    uploadType = "debitis";
-                    uploadProtocol = "quasi";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new AccountInput() {{
-                    accountName = "aut";
-                    name = "maxime";
+                    accountName = "rerum";
+                    name = "dicta";
                     organizationInfo = new OrganizationInfoInput() {{
                         address = new PostalAddress() {{
                             addressLines = new String[]() {{
-                                add("facere"),
-                                add("nihil"),
+                                add("voluptatum"),
                             }};
-                            administrativeArea = "aliquam";
-                            languageCode = "aut";
-                            locality = "ut";
-                            organization = "rerum";
-                            postalCode = "soluta";
+                            administrativeArea = "et";
+                            languageCode = "ut";
+                            locality = "dolorem";
+                            organization = "et";
+                            postalCode = "voluptate";
                             recipients = new String[]() {{
-                                add("sint"),
+                                add("vitae"),
+                                add("totam"),
+                                add("dolores"),
                             }};
-                            regionCode = "nisi";
-                            revision = 2233892370966126871;
-                            sortingCode = "itaque";
-                            sublocality = "sed";
+                            regionCode = "illum";
+                            revision = 6392442863481646880;
+                            sortingCode = "vel";
+                            sublocality = "odio";
                         }};
                     }};
-                    primaryOwner = "quia";
-                    type = "PERSONAL";
+                    primaryOwner = "dolore";
+                    type = "LOCATION_GROUP";
                 }};
             }};
 

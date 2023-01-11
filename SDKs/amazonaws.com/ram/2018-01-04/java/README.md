@@ -35,17 +35,17 @@ public class Application {
 
             AcceptResourceShareInvitationRequest req = new AcceptResourceShareInvitationRequest() {{
                 headers = new AcceptResourceShareInvitationHeaders() {{
-                    xAmzAlgorithm = "quis";
-                    xAmzContentSha256 = "tempora";
-                    xAmzCredential = "esse";
-                    xAmzDate = "rerum";
-                    xAmzSecurityToken = "tempora";
-                    xAmzSignature = "culpa";
-                    xAmzSignedHeaders = "deserunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AcceptResourceShareInvitationRequestBody() {{
-                    clientToken = "nihil";
-                    resourceShareInvitationArn = "aut";
+                    clientToken = "voluptas";
+                    resourceShareInvitationArn = "fugit";
                 }};
             }};
 

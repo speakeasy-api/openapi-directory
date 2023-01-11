@@ -14,7 +14,7 @@ public class Application {
 
             GetFamilyDetailsRequest req = new GetFamilyDetailsRequest() {{
                 queryParams = new GetFamilyDetailsQueryParams() {{
-                    id = "culpa";
+                    id = "sit";
                 }};
             }};
 

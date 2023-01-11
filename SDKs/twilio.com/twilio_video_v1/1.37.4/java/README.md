@@ -34,21 +34,19 @@ public class Application {
                 }};
                 request = new CreateCompositionCreateCompositionRequest() {{
                     audioSources = new String[]() {{
-                        add("temporibus"),
-                        add("laborum"),
                         add("voluptas"),
                     }};
                     audioSourcesExcluded = new String[]() {{
-                        add("atque"),
-                        add("soluta"),
+                        add("expedita"),
+                        add("consequuntur"),
                     }};
                     format = "mp4";
-                    resolution = "qui";
-                    roomSid = "nihil";
-                    statusCallback = "quas";
-                    statusCallbackMethod = "GET";
-                    trim = false;
-                    videoLayout = "dolores";
+                    resolution = "expedita";
+                    roomSid = "voluptas";
+                    statusCallback = "fugit";
+                    statusCallbackMethod = "HEAD";
+                    trim = true;
+                    videoLayout = "rerum";
                 }};
             }};
 

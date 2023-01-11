@@ -36,20 +36,20 @@ public class Application {
                 }};
                 queryParams = new DlpInfoTypesListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "modi";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "quis";
-                    fields = "vitae";
-                    filter = "quasi";
-                    key = "dolorum";
-                    languageCode = "consectetur";
-                    locationId = "quas";
-                    oauthToken = "magni";
-                    parent = "repellat";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    filter = "dolor";
+                    key = "expedita";
+                    languageCode = "voluptas";
+                    locationId = "fugit";
+                    oauthToken = "et";
+                    parent = "nihil";
                     prettyPrint = true;
-                    quotaUser = "atque";
-                    uploadType = "laboriosam";
-                    uploadProtocol = "unde";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

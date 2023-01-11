@@ -22,30 +22,22 @@ public class Application {
 
             CreateDatabaseRequest req = new CreateDatabaseRequest() {{
                 headers = new CreateDatabaseHeaders() {{
-                    xAmzAlgorithm = "omnis";
-                    xAmzContentSha256 = "accusantium";
-                    xAmzCredential = "architecto";
-                    xAmzDate = "omnis";
-                    xAmzSecurityToken = "porro";
-                    xAmzSignature = "ut";
-                    xAmzSignedHeaders = "eius";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Timestream_20181101.CreateDatabase";
                 }};
                 request = new CreateDatabaseRequest() {{
-                    databaseName = "beatae";
-                    kmsKeyId = "quia";
+                    databaseName = "fugit";
+                    kmsKeyId = "et";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "id";
-                            value = "dolorem";
-                        }}),
-                        add(new Tag() {{
-                            key = "et";
-                            value = "quibusdam";
-                        }}),
-                        add(new Tag() {{
-                            key = "cupiditate";
-                            value = "eaque";
+                            key = "rerum";
+                            value = "dicta";
                         }}),
                     }};
                 }};

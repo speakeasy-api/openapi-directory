@@ -23,17 +23,17 @@ public class Application {
             GetCreateDomainRequest req = new GetCreateDomainRequest() {{
                 queryParams = new GetCreateDomainQueryParams() {{
                     action = "CreateDomain";
-                    domainName = "illo";
+                    domainName = "voluptas";
                     version = "2011-02-01";
                 }};
                 headers = new GetCreateDomainHeaders() {{
-                    xAmzAlgorithm = "est";
-                    xAmzContentSha256 = "aut";
-                    xAmzCredential = "eum";
-                    xAmzDate = "mollitia";
-                    xAmzSecurityToken = "praesentium";
-                    xAmzSignature = "inventore";
-                    xAmzSignedHeaders = "adipisci";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
             }};
 

@@ -15,36 +15,36 @@ public class Application {
             PlayablelocationsLogImpressionsRequest req = new PlayablelocationsLogImpressionsRequest() {{
                 queryParams = new PlayablelocationsLogImpressionsQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "assumenda";
-                    alt = "json";
-                    callback = "quia";
-                    fields = "sint";
-                    key = "porro";
-                    oauthToken = "fuga";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "voluptatibus";
+                    quotaUser = "fugit";
                     uploadType = "et";
-                    uploadProtocol = "voluptatum";
+                    uploadProtocol = "nihil";
                 }};
                 request = new GoogleMapsPlayablelocationsV3LogImpressionsRequest() {{
                     clientInfo = new GoogleMapsUnityClientInfo() {{
-                        apiClient = "dignissimos";
-                        applicationId = "est";
-                        applicationVersion = "vel";
-                        deviceModel = "ut";
-                        languageCode = "quo";
-                        operatingSystem = "nulla";
-                        operatingSystemBuild = "in";
-                        platform = "ANDROID";
+                        apiClient = "rerum";
+                        applicationId = "dicta";
+                        applicationVersion = "debitis";
+                        deviceModel = "voluptatum";
+                        languageCode = "et";
+                        operatingSystem = "ut";
+                        operatingSystemBuild = "dolorem";
+                        platform = "MAC_OS";
                     }};
                     impressions = new openapisdk.models.shared.GoogleMapsPlayablelocationsV3Impression[]() {{
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
-                            gameObjectType = 9090477704237377771;
-                            impressionType = "PRESENTED";
-                            locationName = "delectus";
+                            gameObjectType = 3287288577352441706;
+                            impressionType = "IMPRESSION_TYPE_UNSPECIFIED";
+                            locationName = "totam";
                         }}),
                     }};
-                    requestId = "impedit";
+                    requestId = "dolores";
                 }};
             }};
 

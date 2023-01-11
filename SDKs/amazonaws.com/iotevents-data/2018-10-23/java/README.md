@@ -35,33 +35,33 @@ public class Application {
 
             BatchAcknowledgeAlarmRequest req = new BatchAcknowledgeAlarmRequest() {{
                 headers = new BatchAcknowledgeAlarmHeaders() {{
-                    xAmzAlgorithm = "maxime";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "asperiores";
-                    xAmzDate = "provident";
-                    xAmzSecurityToken = "doloribus";
-                    xAmzSignature = "architecto";
-                    xAmzSignedHeaders = "est";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new BatchAcknowledgeAlarmRequestBody() {{
                     acknowledgeActionRequests = new openapisdk.models.shared.AcknowledgeAlarmActionRequest[]() {{
                         add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "odio";
-                            keyValue = "blanditiis";
-                            note = "voluptatem";
-                            requestId = "ea";
+                            alarmModelName = "fugit";
+                            keyValue = "et";
+                            note = "nihil";
+                            requestId = "rerum";
                         }}),
                         add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "eum";
-                            keyValue = "at";
-                            note = "fugit";
-                            requestId = "dolore";
+                            alarmModelName = "dicta";
+                            keyValue = "debitis";
+                            note = "voluptatum";
+                            requestId = "et";
                         }}),
                         add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "voluptatem";
-                            keyValue = "recusandae";
-                            note = "impedit";
-                            requestId = "odio";
+                            alarmModelName = "ut";
+                            keyValue = "dolorem";
+                            note = "et";
+                            requestId = "voluptate";
                         }}),
                     }};
                 }};

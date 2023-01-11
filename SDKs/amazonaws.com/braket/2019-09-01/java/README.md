@@ -35,19 +35,19 @@ public class Application {
 
             CancelQuantumTaskRequest req = new CancelQuantumTaskRequest() {{
                 pathParams = new CancelQuantumTaskPathParams() {{
-                    quantumTaskArn = "quia";
+                    quantumTaskArn = "sit";
                 }};
                 headers = new CancelQuantumTaskHeaders() {{
-                    xAmzAlgorithm = "ab";
-                    xAmzContentSha256 = "nemo";
-                    xAmzCredential = "eveniet";
-                    xAmzDate = "id";
-                    xAmzSecurityToken = "placeat";
-                    xAmzSignature = "error";
-                    xAmzSignedHeaders = "odio";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new CancelQuantumTaskRequestBody() {{
-                    clientToken = "qui";
+                    clientToken = "fugit";
                 }};
             }};
 

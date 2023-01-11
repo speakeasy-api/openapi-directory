@@ -14,7 +14,7 @@ public class Application {
 
             GetEntryInfoInfoEntryGetRequest req = new GetEntryInfoInfoEntryGetRequest() {{
                 pathParams = new GetEntryInfoInfoEntryGetPathParams() {{
-                    entry = "eveniet";
+                    entry = "sit";
                 }};
             }};
 

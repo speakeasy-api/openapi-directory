@@ -36,25 +36,24 @@ public class Application {
                 }};
                 queryParams = new CloudtasksApiQueueUpdateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quo";
-                    alt = "proto";
-                    appId = "id";
-                    callback = "deleniti";
-                    fields = "enim";
-                    key = "eum";
-                    oauthToken = "nam";
-                    prettyPrint = false;
-                    quotaUser = "quia";
-                    uploadType = "eum";
-                    uploadProtocol = "qui";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    appId = "expedita";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new HttpBody() {{
-                    contentType = "et";
-                    data = "velit";
+                    contentType = "dicta";
+                    data = "debitis";
                     extensions = new java.util.HashMap<String, Object>[]() {{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("qui", "quia");
-                            put("voluptatum", "dolorum");
+                            put("ut", "dolorem");
                         }}),
                     }};
                 }};

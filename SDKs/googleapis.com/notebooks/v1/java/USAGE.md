@@ -22,34 +22,34 @@ public class Application {
                     }};
                 }};
                 pathParams = new NotebooksProjectsLocationsEnvironmentsCreatePathParams() {{
-                    parent = "qui";
+                    parent = "sit";
                 }};
                 queryParams = new NotebooksProjectsLocationsEnvironmentsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "omnis";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "sapiente";
-                    environmentId = "occaecati";
-                    fields = "necessitatibus";
-                    key = "perspiciatis";
-                    oauthToken = "voluptatem";
+                    callback = "consequuntur";
+                    environmentId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "laborum";
-                    uploadType = "modi";
-                    uploadProtocol = "sed";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new EnvironmentInput() {{
                     containerImage = new ContainerImage() {{
-                        repository = "a";
-                        tag = "eum";
+                        repository = "debitis";
+                        tag = "voluptatum";
                     }};
-                    description = "debitis";
-                    displayName = "est";
-                    postStartupScript = "quia";
+                    description = "et";
+                    displayName = "ut";
+                    postStartupScript = "dolorem";
                     vmImage = new VmImage() {{
-                        imageFamily = "quia";
-                        imageName = "et";
-                        project = "fugiat";
+                        imageFamily = "et";
+                        imageName = "voluptate";
+                        project = "iste";
                     }};
                 }};
             }};

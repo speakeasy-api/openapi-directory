@@ -25,24 +25,24 @@ public class Application {
                 }};
                 queryParams = new YoutubereportingJobsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "facilis";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "repellendus";
-                    fields = "ut";
-                    key = "et";
-                    oauthToken = "at";
-                    onBehalfOfContentOwner = "omnis";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    onBehalfOfContentOwner = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "unde";
-                    uploadType = "nobis";
-                    uploadProtocol = "ea";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new Job() {{
-                    createTime = "voluptatum";
-                    expireTime = "aut";
-                    id = "maxime";
-                    name = "delectus";
-                    reportTypeId = "et";
+                    createTime = "dicta";
+                    expireTime = "debitis";
+                    id = "voluptatum";
+                    name = "et";
+                    reportTypeId = "ut";
                     systemManaged = true;
                 }};
             }};

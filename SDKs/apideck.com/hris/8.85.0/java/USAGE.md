@@ -30,109 +30,126 @@ public class Application {
                     raw = false;
                 }};
                 headers = new CompaniesAddHeaders() {{
-                    xApideckAppId = "beatae";
-                    xApideckConsumerId = "atque";
-                    xApideckServiceId = "enim";
+                    xApideckAppId = "voluptas";
+                    xApideckConsumerId = "culpa";
+                    xApideckServiceId = "expedita";
                 }};
                 request = new HrisCompanyInput() {{
                     addresses = new openapisdk.models.shared.Address[]() {{
                         add(new Address() {{
-                            city = "est";
-                            contactName = "quod";
-                            country = "tempore";
-                            county = "placeat";
-                            email = "ullam";
-                            fax = "consequuntur";
-                            id = "distinctio";
-                            latitude = "vitae";
-                            line1 = "quo";
-                            line2 = "aperiam";
-                            line3 = "ut";
-                            line4 = "qui";
-                            longitude = "tenetur";
-                            name = "labore";
-                            phoneNumber = "eaque";
-                            postalCode = "quidem";
-                            rowVersion = "neque";
-                            salutation = "qui";
-                            state = "quisquam";
-                            streetNumber = "nisi";
-                            string = "aut";
-                            type = "shipping";
-                            website = "laudantium";
+                            city = "dolor";
+                            contactName = "expedita";
+                            country = "voluptas";
+                            county = "fugit";
+                            email = "et";
+                            fax = "nihil";
+                            id = "rerum";
+                            latitude = "dicta";
+                            line1 = "debitis";
+                            line2 = "voluptatum";
+                            line3 = "et";
+                            line4 = "ut";
+                            longitude = "dolorem";
+                            name = "et";
+                            phoneNumber = "voluptate";
+                            postalCode = "iste";
+                            rowVersion = "vitae";
+                            salutation = "totam";
+                            state = "dolores";
+                            streetNumber = "illum";
+                            string = "debitis";
+                            type = "secondary";
+                            website = "odio";
                         }}),
                         add(new Address() {{
-                            city = "nostrum";
-                            contactName = "sed";
-                            country = "maxime";
-                            county = "sint";
-                            email = "modi";
-                            fax = "consequuntur";
-                            id = "quae";
-                            latitude = "asperiores";
-                            line1 = "illo";
-                            line2 = "qui";
-                            line3 = "molestias";
-                            line4 = "eius";
-                            longitude = "totam";
-                            name = "voluptas";
-                            phoneNumber = "omnis";
-                            postalCode = "vel";
-                            rowVersion = "nemo";
-                            salutation = "est";
-                            state = "aut";
-                            streetNumber = "in";
-                            string = "velit";
-                            type = "other";
-                            website = "reiciendis";
+                            city = "dolore";
+                            contactName = "id";
+                            country = "aspernatur";
+                            county = "accusantium";
+                            email = "totam";
+                            fax = "commodi";
+                            id = "quis";
+                            latitude = "est";
+                            line1 = "aut";
+                            line2 = "odit";
+                            line3 = "non";
+                            line4 = "voluptas";
+                            longitude = "omnis";
+                            name = "aut";
+                            phoneNumber = "illo";
+                            postalCode = "sed";
+                            rowVersion = "officiis";
+                            salutation = "autem";
+                            state = "consectetur";
+                            streetNumber = "nobis";
+                            string = "odio";
+                            type = "office";
+                            website = "recusandae";
+                        }}),
+                        add(new Address() {{
+                            city = "at";
+                            contactName = "ipsum";
+                            country = "eveniet";
+                            county = "modi";
+                            email = "sint";
+                            fax = "inventore";
+                            id = "ut";
+                            latitude = "exercitationem";
+                            line1 = "aut";
+                            line2 = "reprehenderit";
+                            line3 = "tempore";
+                            line4 = "maiores";
+                            longitude = "incidunt";
+                            name = "dolor";
+                            phoneNumber = "beatae";
+                            postalCode = "veritatis";
+                            rowVersion = "in";
+                            salutation = "et";
+                            state = "omnis";
+                            streetNumber = "ipsum";
+                            string = "ex";
+                            type = "shipping";
+                            website = "placeat";
                         }}),
                     }};
-                    companyNumber = "molestiae";
-                    debtorId = "praesentium";
-                    displayName = "quis";
+                    companyNumber = "vel";
+                    debtorId = "rerum";
+                    displayName = "mollitia";
                     emails = new openapisdk.models.shared.Email[]() {{
                         add(new Email() {{
-                            email = "praesentium";
-                            id = "illo";
-                            type = "other";
+                            email = "quam";
+                            id = "reprehenderit";
+                            type = "primary";
                         }}),
                         add(new Email() {{
-                            email = "iure";
-                            id = "est";
-                            type = "work";
+                            email = "qui";
+                            id = "unde";
+                            type = "secondary";
                         }}),
                     }};
-                    legalName = "quas";
+                    legalName = "autem";
                     phoneNumbers = new openapisdk.models.shared.PhoneNumber[]() {{
                         add(new PhoneNumber() {{
-                            areaCode = "et";
-                            countryCode = "maxime";
-                            extension = "officiis";
-                            id = "iste";
-                            number = "ut";
-                            type = "personal";
-                        }}),
-                        add(new PhoneNumber() {{
-                            areaCode = "nulla";
-                            countryCode = "id";
-                            extension = "et";
-                            id = "voluptatem";
-                            number = "officia";
-                            type = "other";
+                            areaCode = "ut";
+                            countryCode = "itaque";
+                            extension = "ab";
+                            id = "neque";
+                            number = "ullam";
+                            type = "mobile";
                         }}),
                     }};
-                    status = "other";
-                    subdomain = "corrupti";
+                    status = "active";
+                    subdomain = "esse";
                     websites = new openapisdk.models.shared.Website[]() {{
                         add(new Website() {{
-                            id = "magni";
-                            type = "primary";
-                            url = "reprehenderit";
+                            id = "quam";
+                            type = "other";
+                            url = "cumque";
                         }}),
                         add(new Website() {{
-                            id = "atque";
-                            type = "other";
-                            url = "suscipit";
+                            id = "soluta";
+                            type = "secondary";
+                            url = "voluptates";
                         }}),
                     }};
                 }};

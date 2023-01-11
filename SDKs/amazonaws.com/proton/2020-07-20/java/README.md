@@ -35,17 +35,17 @@ public class Application {
 
             AcceptEnvironmentAccountConnectionRequest req = new AcceptEnvironmentAccountConnectionRequest() {{
                 headers = new AcceptEnvironmentAccountConnectionHeaders() {{
-                    xAmzAlgorithm = "possimus";
-                    xAmzContentSha256 = "ullam";
-                    xAmzCredential = "eveniet";
-                    xAmzDate = "alias";
-                    xAmzSecurityToken = "tenetur";
-                    xAmzSignature = "dolorem";
-                    xAmzSignedHeaders = "porro";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AwsProton20200720.AcceptEnvironmentAccountConnection";
                 }};
                 request = new AcceptEnvironmentAccountConnectionInput() {{
-                    id = "sed";
+                    id = "fugit";
                 }};
             }};
 

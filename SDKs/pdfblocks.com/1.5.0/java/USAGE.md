@@ -23,15 +23,15 @@ public class Application {
             AddImageWatermarkV1Request req = new AddImageWatermarkV1Request() {{
                 request = new AddImageWatermarkV1RequestBody() {{
                     file = new AddImageWatermarkV1RequestBodyFile() {{
-                        content = "vero".getBytes();
-                        file = "error";
+                        content = "sit".getBytes();
+                        file = "voluptas";
                     }};
                     image = new AddImageWatermarkV1RequestBodyImage() {{
-                        content = "qui".getBytes();
-                        image = "quaerat";
+                        content = "culpa".getBytes();
+                        image = "expedita";
                     }};
-                    margin = 87.099998;
-                    transparency = 1718823363649989956;
+                    margin = 15.100000;
+                    transparency = 1774932891286980153;
                 }};
             }};
 

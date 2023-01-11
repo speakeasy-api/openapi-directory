@@ -23,11 +23,11 @@ public class Application {
                 }};
                 request = new NdcerRequestBody() {{
                     certificateParameters = new NdcerRequestBodyCertificateParameters() {{
-                        appid = "earum";
+                        appid = "sit";
                     }};
-                    consentArtifact = "dolores";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "exercitationem";
+                    txnId = "expedita";
                 }};
             }};
 

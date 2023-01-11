@@ -22,7 +22,7 @@ public class Application {
 
             GetContentJsonRequest req = new GetContentJsonRequest() {{
                 queryParams = new GetContentJsonQueryParams() {{
-                    url = "deleniti";
+                    url = "sit";
                 }};
             }};
 

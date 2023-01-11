@@ -35,24 +35,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new ConnectorsProjectsLocationsConnectionsActionsExecutePathParams() {{
-                    name = "totam";
+                    name = "sit";
                 }};
                 queryParams = new ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quod";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "qui";
-                    fields = "maiores";
-                    key = "ipsam";
-                    oauthToken = "non";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "veritatis";
-                    uploadType = "aut";
-                    uploadProtocol = "eveniet";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ExecuteActionRequest() {{
                     parameters = new java.util.HashMap<String, Object>() {{
-                        put("ipsa", "rem");
+                        put("debitis", "voluptatum");
+                        put("et", "ut");
+                        put("dolorem", "et");
                     }};
                 }};
             }};

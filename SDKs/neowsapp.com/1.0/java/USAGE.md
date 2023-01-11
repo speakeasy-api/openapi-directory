@@ -14,7 +14,7 @@ public class Application {
 
             RetrieveNeoFeedTodayRequest req = new RetrieveNeoFeedTodayRequest() {{
                 queryParams = new RetrieveNeoFeedTodayQueryParams() {{
-                    detailed = true;
+                    detailed = false;
                 }};
             }};
 

@@ -36,15 +36,15 @@ public class Application {
 
             GetInventoryRequest req = new GetInventoryRequest() {{
                 queryParams = new GetInventoryQueryParams() {{
-                    shipNode = "molestiae";
-                    sku = "numquam";
+                    shipNode = "sit";
+                    sku = "voluptas";
                 }};
                 headers = new GetInventoryHeaders() {{
-                    authorization = "aut";
-                    wmCONSUMERCHANNELTYPE = "consequatur";
-                    wmQOSCORRELATIONID = "dolores";
-                    wmSECACCESSTOKEN = "et";
-                    wmSVCNAME = "quos";
+                    authorization = "culpa";
+                    wmCONSUMERCHANNELTYPE = "expedita";
+                    wmQOSCORRELATIONID = "consequuntur";
+                    wmSECACCESSTOKEN = "dolor";
+                    wmSVCNAME = "expedita";
                 }};
             }};
 

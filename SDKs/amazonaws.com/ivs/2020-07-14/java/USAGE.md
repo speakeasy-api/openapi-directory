@@ -22,17 +22,19 @@ public class Application {
 
             BatchGetChannelRequest req = new BatchGetChannelRequest() {{
                 headers = new BatchGetChannelHeaders() {{
-                    xAmzAlgorithm = "debitis";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "animi";
-                    xAmzDate = "distinctio";
-                    xAmzSecurityToken = "hic";
-                    xAmzSignature = "mollitia";
-                    xAmzSignedHeaders = "qui";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new BatchGetChannelRequestBody() {{
                     arns = new String[]() {{
-                        add("labore"),
+                        add("fugit"),
+                        add("et"),
+                        add("nihil"),
                     }};
                 }};
             }};

@@ -35,17 +35,17 @@ public class Application {
 
             CancelJobRequest req = new CancelJobRequest() {{
                 headers = new CancelJobHeaders() {{
-                    xAmzAlgorithm = "beatae";
-                    xAmzContentSha256 = "tempore";
-                    xAmzCredential = "reprehenderit";
-                    xAmzDate = "nostrum";
-                    xAmzSecurityToken = "velit";
-                    xAmzSignature = "necessitatibus";
-                    xAmzSignedHeaders = "illo";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CancelJobRequestBody() {{
-                    jobId = "aut";
-                    reason = "quis";
+                    jobId = "voluptas";
+                    reason = "fugit";
                 }};
             }};
 

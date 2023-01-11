@@ -22,44 +22,43 @@ public class Application {
 
             GetRecordsFormatRequest req = new GetRecordsFormatRequest() {{
                 pathParams = new GetRecordsFormatPathParams() {{
-                    format = "xml";
+                    format = "json";
                 }};
                 queryParams = new GetRecordsFormatQueryParams() {{
-                    andCategory = "Audio";
-                    andCentury = "praesentium";
-                    andCollection = "sint";
-                    andContentPartner = "qui";
-                    andCreator = "atque";
-                    andDate = "iusto";
-                    andDcType = "rem";
-                    andDecade = "dolorum";
-                    andFormat = "ut";
+                    andCategory = "Manuscripts";
+                    andCentury = "culpa";
+                    andCollection = "expedita";
+                    andContentPartner = "consequuntur";
+                    andCreator = "dolor";
+                    andDate = "expedita";
+                    andDcType = "voluptas";
+                    andDecade = "fugit";
+                    andFormat = "et";
                     andHasLargeThumbnailUrl = "Y";
-                    andHasLatLng = false;
-                    andIsCommercialUse = true;
-                    andOrFilterField = "maiores";
-                    andPlacename = "ab";
-                    andPrimaryCollection = "amet";
-                    andSubject = "fugiat";
-                    andTitle = "est";
+                    andHasLatLng = true;
+                    andIsCommercialUse = false;
+                    andOrFilterField = "debitis";
+                    andPlacename = "voluptatum";
+                    andPrimaryCollection = "et";
+                    andSubject = "ut";
+                    andTitle = "dolorem";
                     andUsage = "Share";
-                    andYear = "consequatur";
-                    apiKey = "quia";
+                    andYear = "voluptate";
+                    apiKey = "iste";
                     direction = "asc";
-                    excludeFiltersFromFacets = false;
+                    excludeFiltersFromFacets = true;
                     facets = new openapisdk.models.shared.FieldsEnum2[]() {{
-                        add("creator"),
-                        add("century"),
+                        add("usage"),
                     }};
-                    facetsPage = 7749255547755295069;
-                    facetsPerPage = 2063540456602819;
-                    fields = "corporis";
-                    geoBbox = "quaerat";
-                    page = 693839712308138010;
-                    perPage = 5270800729784320551;
+                    facetsPage = 6392442863481646880;
+                    facetsPerPage = 3706853784096366226;
+                    fields = "odio";
+                    geoBbox = "dolore";
+                    page = 4035568504096476779;
+                    perPage = 959367522974354090;
                     sort = "syndication_date";
-                    text = "quam";
-                    withoutFilterField = "autem";
+                    text = "totam";
+                    withoutFilterField = "commodi";
                 }};
             }};
 

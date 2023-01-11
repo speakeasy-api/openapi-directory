@@ -14,7 +14,7 @@ public class Application {
 
             GetReisezentrenRequest req = new GetReisezentrenRequest() {{
                 queryParams = new GetReisezentrenQueryParams() {{
-                    name = "nihil";
+                    name = "sit";
                 }};
             }};
 

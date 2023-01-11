@@ -27,10 +27,10 @@ public class Application {
 
             AppApiWmmEndpointsWmmMagneticFieldRequest req = new AppApiWmmEndpointsWmmMagneticFieldRequest() {{
                 queryParams = new AppApiWmmEndpointsWmmMagneticFieldQueryParams() {{
-                    altitude = 59.099998;
-                    latitude = 93.099998;
-                    longitude = 75.099998;
-                    year = 54.200001;
+                    altitude = 74.099998;
+                    latitude = 53.099998;
+                    longitude = 15.100000;
+                    year = 67.199997;
                 }};
             }};
 

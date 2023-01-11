@@ -25,34 +25,33 @@ public class Application {
                 }};
                 queryParams = new DriveactivityActivityQueryQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "sed";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "veniam";
-                    fields = "qui";
-                    key = "facere";
-                    oauthToken = "doloremque";
-                    prettyPrint = false;
-                    quotaUser = "distinctio";
-                    uploadType = "eos";
-                    uploadProtocol = "officia";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new QueryDriveActivityRequest() {{
-                    ancestorName = "consectetur";
+                    ancestorName = "rerum";
                     consolidationStrategy = new ConsolidationStrategy() {{
                         legacy = new java.util.HashMap<String, Object>() {{
-                            put("voluptatem", "corporis");
-                            put("nihil", "est");
-                            put("at", "ut");
+                            put("debitis", "voluptatum");
+                            put("et", "ut");
+                            put("dolorem", "et");
                         }};
                         none = new java.util.HashMap<String, Object>() {{
-                            put("sit", "ut");
-                            put("impedit", "ea");
+                            put("iste", "vitae");
                         }};
                     }};
-                    filter = "officiis";
-                    itemName = "exercitationem";
-                    pageSize = 4582410470001921774;
-                    pageToken = "molestias";
+                    filter = "totam";
+                    itemName = "dolores";
+                    pageSize = 1929546706668609706;
+                    pageToken = "debitis";
                 }};
             }};
 

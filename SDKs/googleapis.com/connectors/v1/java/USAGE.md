@@ -22,147 +22,165 @@ public class Application {
                     }};
                 }};
                 pathParams = new ConnectorsProjectsLocationsConnectionsCreatePathParams() {{
-                    parent = "similique";
+                    parent = "sit";
                 }};
                 queryParams = new ConnectorsProjectsLocationsConnectionsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "soluta";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "voluptas";
-                    connectionId = "et";
-                    fields = "ipsum";
-                    key = "consequatur";
-                    oauthToken = "facilis";
-                    prettyPrint = true;
-                    quotaUser = "quas";
-                    uploadType = "autem";
-                    uploadProtocol = "natus";
+                    callback = "consequuntur";
+                    connectionId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new ConnectionInput() {{
                     authConfig = new AuthConfig() {{
                         additionalVariables = new openapisdk.models.shared.ConfigVariable[]() {{
                             add(new ConfigVariable() {{
                                 boolValue = true;
-                                intValue = "incidunt";
-                                key = "qui";
+                                intValue = "et";
+                                key = "ut";
                                 secretValue = new Secret() {{
-                                    secretVersion = "nobis";
+                                    secretVersion = "dolorem";
                                 }};
-                                stringValue = "reprehenderit";
-                            }}),
-                            add(new ConfigVariable() {{
-                                boolValue = false;
-                                intValue = "aliquid";
-                                key = "et";
-                                secretValue = new Secret() {{
-                                    secretVersion = "et";
-                                }};
-                                stringValue = "quia";
-                            }}),
-                            add(new ConfigVariable() {{
-                                boolValue = true;
-                                intValue = "maiores";
-                                key = "qui";
-                                secretValue = new Secret() {{
-                                    secretVersion = "velit";
-                                }};
-                                stringValue = "in";
+                                stringValue = "et";
                             }}),
                         }};
-                        authType = "OAUTH2_AUTH_CODE_FLOW";
+                        authType = "AUTH_TYPE_UNSPECIFIED";
                         oauth2ClientCredentials = new Oauth2ClientCredentials() {{
-                            clientId = "in";
+                            clientId = "iste";
                             clientSecret = new Secret() {{
-                                secretVersion = "accusamus";
+                                secretVersion = "vitae";
                             }};
                         }};
                         oauth2JwtBearer = new Oauth2JwtBearer() {{
                             clientKey = new Secret() {{
-                                secretVersion = "atque";
+                                secretVersion = "totam";
                             }};
                             jwtClaims = new JwtClaims() {{
-                                audience = "quo";
-                                issuer = "esse";
-                                subject = "consequatur";
+                                audience = "dolores";
+                                issuer = "illum";
+                                subject = "debitis";
                             }};
                         }};
                         sshPublicKey = new SshPublicKey() {{
-                            certType = "nostrum";
+                            certType = "vel";
                             sshClientCert = new Secret() {{
-                                secretVersion = "laboriosam";
+                                secretVersion = "odio";
                             }};
                             sshClientCertPass = new Secret() {{
-                                secretVersion = "debitis";
+                                secretVersion = "dolore";
                             }};
-                            username = "facere";
+                            username = "id";
                         }};
                         userPassword = new UserPassword() {{
                             password = new Secret() {{
-                                secretVersion = "nihil";
+                                secretVersion = "aspernatur";
                             }};
-                            username = "repellendus";
+                            username = "accusantium";
                         }};
                     }};
                     configVariables = new openapisdk.models.shared.ConfigVariable[]() {{
                         add(new ConfigVariable() {{
                             boolValue = false;
-                            intValue = "rerum";
-                            key = "qui";
+                            intValue = "quis";
+                            key = "est";
                             secretValue = new Secret() {{
-                                secretVersion = "recusandae";
+                                secretVersion = "aut";
                             }};
-                            stringValue = "quibusdam";
+                            stringValue = "odit";
+                        }}),
+                        add(new ConfigVariable() {{
+                            boolValue = true;
+                            intValue = "voluptas";
+                            key = "omnis";
+                            secretValue = new Secret() {{
+                                secretVersion = "aut";
+                            }};
+                            stringValue = "illo";
                         }}),
                         add(new ConfigVariable() {{
                             boolValue = false;
-                            intValue = "aperiam";
-                            key = "numquam";
+                            intValue = "officiis";
+                            key = "autem";
                             secretValue = new Secret() {{
-                                secretVersion = "enim";
+                                secretVersion = "consectetur";
                             }};
-                            stringValue = "enim";
+                            stringValue = "nobis";
                         }}),
                     }};
-                    connectorVersion = "voluptates";
-                    description = "dolore";
+                    connectorVersion = "odio";
+                    description = "qui";
                     destinationConfigs = new openapisdk.models.shared.DestinationConfig[]() {{
                         add(new DestinationConfig() {{
                             destinations = new openapisdk.models.shared.Destination[]() {{
                                 add(new Destination() {{
-                                    host = "sequi";
-                                    port = 6630950261055481298;
-                                    serviceAttachment = "nemo";
+                                    host = "ipsum";
+                                    port = 8902041070398994519;
+                                    serviceAttachment = "modi";
+                                }}),
+                                add(new Destination() {{
+                                    host = "sint";
+                                    port = 5392504858645185670;
+                                    serviceAttachment = "ut";
                                 }}),
                             }};
-                            key = "nisi";
+                            key = "exercitationem";
                         }}),
                         add(new DestinationConfig() {{
                             destinations = new openapisdk.models.shared.Destination[]() {{
                                 add(new Destination() {{
-                                    host = "ratione";
-                                    port = 6232683837770868619;
-                                    serviceAttachment = "dolorem";
+                                    host = "reprehenderit";
+                                    port = 4736217237333769909;
+                                    serviceAttachment = "maiores";
+                                }}),
+                                add(new Destination() {{
+                                    host = "incidunt";
+                                    port = 7242748068272024738;
+                                    serviceAttachment = "beatae";
+                                }}),
+                                add(new Destination() {{
+                                    host = "veritatis";
+                                    port = 2671030200101705776;
+                                    serviceAttachment = "et";
                                 }}),
                             }};
-                            key = "facilis";
+                            key = "omnis";
+                        }}),
+                        add(new DestinationConfig() {{
+                            destinations = new openapisdk.models.shared.Destination[]() {{
+                                add(new Destination() {{
+                                    host = "ex";
+                                    port = 7014402135919778893;
+                                    serviceAttachment = "placeat";
+                                }}),
+                            }};
+                            key = "vel";
                         }}),
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("similique", "ut");
+                        put("mollitia", "voluptas");
+                        put("quam", "reprehenderit");
+                        put("qui", "qui");
                     }};
                     lockConfig = new LockConfig() {{
-                        locked = true;
-                        reason = "eum";
+                        locked = false;
+                        reason = "in";
                     }};
                     nodeConfig = new NodeConfig() {{
-                        maxNodeCount = 5473733748643851380;
-                        minNodeCount = 4544853136902690256;
+                        maxNodeCount = 7132033595893905170;
+                        minNodeCount = 8086159467323165929;
                     }};
-                    serviceAccount = "voluptatum";
+                    serviceAccount = "ut";
                     status = new ConnectionStatus() {{
-                        description = "quaerat";
-                        state = "ERROR";
-                        status = "molestiae";
+                        description = "itaque";
+                        state = "DELETING";
+                        status = "neque";
                     }};
                     suspended = true;
                 }};

@@ -23,9 +23,9 @@ public class Application {
             PlayByPlayRequest req = new PlayByPlayRequest() {{
                 pathParams = new PlayByPlayPathParams() {{
                     format = "XML";
-                    hometeam = "est";
-                    season = "ipsum";
-                    week = "quam";
+                    hometeam = "voluptas";
+                    season = "culpa";
+                    week = "expedita";
                 }};
             }};
 

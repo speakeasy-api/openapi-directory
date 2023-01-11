@@ -35,21 +35,21 @@ public class Application {
 
             AssociateDeviceWithPlacementRequest req = new AssociateDeviceWithPlacementRequest() {{
                 pathParams = new AssociateDeviceWithPlacementPathParams() {{
-                    deviceTemplateName = "voluptatem";
-                    placementName = "magnam";
-                    projectName = "recusandae";
+                    deviceTemplateName = "sit";
+                    placementName = "voluptas";
+                    projectName = "culpa";
                 }};
                 headers = new AssociateDeviceWithPlacementHeaders() {{
-                    xAmzAlgorithm = "quos";
-                    xAmzContentSha256 = "aspernatur";
-                    xAmzCredential = "veniam";
-                    xAmzDate = "minima";
-                    xAmzSecurityToken = "harum";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "alias";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
                 request = new AssociateDeviceWithPlacementRequestBody() {{
-                    deviceId = "aliquam";
+                    deviceId = "nihil";
                 }};
             }};
 

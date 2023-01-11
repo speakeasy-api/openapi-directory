@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new ImporterExporterCodeVerificationApiPathParams() {{
-                    iec = "accusamus";
+                    iec = "sit";
                 }};
             }};
 

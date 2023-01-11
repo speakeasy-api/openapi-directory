@@ -14,7 +14,7 @@ public class Application {
 
             ConnectRequest req = new ConnectRequest() {{
                 request = new ConnectRequestBody() {{
-                    endpoint = "repudiandae";
+                    endpoint = "sit";
                 }};
             }};
 

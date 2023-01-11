@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new NbcerRequestBody() {{
                     certificateParameters = new NbcerRequestBodyCertificateParameters() {{
-                        refNo = "aut";
-                        tokenNo = "eveniet";
+                        refNo = "sit";
+                        tokenNo = "voluptas";
                     }};
-                    consentArtifact = "aut";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "rem";
+                    txnId = "consequuntur";
                 }};
             }};
 

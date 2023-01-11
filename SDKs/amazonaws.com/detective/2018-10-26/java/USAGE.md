@@ -22,16 +22,16 @@ public class Application {
 
             AcceptInvitationRequest req = new AcceptInvitationRequest() {{
                 headers = new AcceptInvitationHeaders() {{
-                    xAmzAlgorithm = "temporibus";
-                    xAmzContentSha256 = "consequatur";
-                    xAmzCredential = "non";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "inventore";
-                    xAmzSignature = "reprehenderit";
-                    xAmzSignedHeaders = "quos";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AcceptInvitationRequestBody() {{
-                    graphArn = "saepe";
+                    graphArn = "voluptas";
                 }};
             }};
 

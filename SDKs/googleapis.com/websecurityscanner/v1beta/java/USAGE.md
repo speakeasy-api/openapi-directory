@@ -22,88 +22,88 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "repudiandae";
+                    parent = "sit";
                 }};
                 queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "id";
-                    alt = "proto";
-                    callback = "quod";
-                    fields = "laudantium";
-                    key = "et";
-                    oauthToken = "quidem";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "quod";
-                    uploadType = "asperiores";
-                    uploadProtocol = "quis";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "aut";
-                            password = "cupiditate";
-                            username = "exercitationem";
+                            loginUrl = "dicta";
+                            password = "debitis";
+                            username = "voluptatum";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "odit";
-                            username = "excepturi";
+                            password = "et";
+                            username = "ut";
                         }};
                         iapCredential = new IapCredential() {{
                             iapTestServiceAccountInfo = new IapTestServiceAccountInfo() {{
-                                targetAudienceClientId = "sequi";
+                                targetAudienceClientId = "dolorem";
                             }};
                         }};
                     }};
                     blacklistPatterns = new String[]() {{
-                        add("doloribus"),
+                        add("voluptate"),
+                        add("iste"),
                     }};
-                    displayName = "libero";
-                    exportToSecurityCommandCenter = "EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED";
+                    displayName = "vitae";
+                    exportToSecurityCommandCenter = "DISABLED";
                     ignoreHttpStatusErrors = true;
                     latestRun = new ScanRun() {{
-                        endTime = "qui";
+                        endTime = "illum";
                         errorTrace = new ScanRunErrorTrace() {{
-                            code = "TOO_MANY_HTTP_ERRORS";
-                            mostCommonHttpErrorCode = 5388339456545111320;
+                            code = "AUTHENTICATION_CONFIG_ISSUE";
+                            mostCommonHttpErrorCode = 3706853784096366226;
                             scanConfigError = new ScanConfigError() {{
-                                code = "SCAN_NOT_RUNNING";
-                                fieldName = "aperiam";
+                                code = "CANNOT_USE_GOOGLE_COM_ACCOUNT";
+                                fieldName = "dolore";
                             }};
                         }};
                         executionState = "EXECUTION_STATE_UNSPECIFIED";
-                        hasVulnerabilities = false;
-                        name = "aut";
-                        progressPercent = 5893662065655002509;
-                        resultState = "KILLED";
-                        startTime = "ut";
-                        urlsCrawledCount = "iure";
-                        urlsTestedCount = "perspiciatis";
+                        hasVulnerabilities = true;
+                        name = "accusantium";
+                        progressPercent = 1395437218309923052;
+                        resultState = "RESULT_STATE_UNSPECIFIED";
+                        startTime = "quis";
+                        urlsCrawledCount = "est";
+                        urlsTestedCount = "aut";
                         warningTraces = new openapisdk.models.shared.ScanRunWarningTrace[]() {{
                             add(new ScanRunWarningTrace() {{
-                                code = "TOO_MANY_CRAWL_RESULTS";
+                                code = "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN";
                             }}),
                             add(new ScanRunWarningTrace() {{
-                                code = "INSUFFICIENT_CRAWL_RESULTS";
+                                code = "CODE_UNSPECIFIED";
                             }}),
                         }};
                     }};
-                    managedScan = false;
-                    maxQps = 244299528148468969;
-                    name = "sint";
-                    riskLevel = "NORMAL";
+                    managedScan = true;
+                    maxQps = 1059542851699319360;
+                    name = "illo";
+                    riskLevel = "LOW";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 144954692658273286;
-                        scheduleTime = "neque";
+                        intervalDurationDays = 7845762441295307478;
+                        scheduleTime = "autem";
                     }};
                     startingUrls = new String[]() {{
-                        add("et"),
+                        add("nobis"),
                     }};
                     staticIpScan = false;
                     targetPlatforms = new openapisdk.models.shared.ScanConfigTargetPlatformsEnum[]() {{
-                        add("APP_ENGINE"),
-                        add("CLOUD_RUN"),
+                        add("TARGET_PLATFORM_UNSPECIFIED"),
                     }};
-                    userAgent = "CHROME_ANDROID";
+                    userAgent = "USER_AGENT_UNSPECIFIED";
                 }};
             }};
 

@@ -35,37 +35,36 @@ public class Application {
                     }};
                 }};
                 pathParams = new MetastoreProjectsLocationsFederationsCreatePathParams() {{
-                    parent = "omnis";
+                    parent = "sit";
                 }};
                 queryParams = new MetastoreProjectsLocationsFederationsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "nihil";
-                    alt = "json";
-                    callback = "qui";
-                    federationId = "mollitia";
-                    fields = "et";
-                    key = "impedit";
-                    oauthToken = "cupiditate";
-                    prettyPrint = true;
-                    quotaUser = "earum";
-                    requestId = "totam";
-                    uploadType = "atque";
-                    uploadProtocol = "quis";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    federationId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new FederationInput() {{
                     backendMetastores = new java.util.HashMap<String, openapisdk.models.shared.BackendMetastore>() {{
-                        put("itaque", new BackendMetastore() {{
-                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
-                            name = "laboriosam";
+                        put("et", new BackendMetastore() {{
+                            metastoreType = "DATAPROC_METASTORE";
+                            name = "dolorem";
                         }});
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("pariatur", "ex");
-                        put("quam", "similique");
-                        put("natus", "omnis");
+                        put("voluptate", "iste");
+                        put("vitae", "totam");
                     }};
-                    name = "quas";
-                    version = "voluptas";
+                    name = "dolores";
+                    version = "illum";
                 }};
             }};
 

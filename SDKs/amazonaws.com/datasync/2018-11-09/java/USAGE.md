@@ -22,17 +22,17 @@ public class Application {
 
             CancelTaskExecutionRequest req = new CancelTaskExecutionRequest() {{
                 headers = new CancelTaskExecutionHeaders() {{
-                    xAmzAlgorithm = "veniam";
-                    xAmzContentSha256 = "quidem";
-                    xAmzCredential = "et";
-                    xAmzDate = "nemo";
-                    xAmzSecurityToken = "cumque";
-                    xAmzSignature = "ipsam";
-                    xAmzSignedHeaders = "consequatur";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "FmrsService.CancelTaskExecution";
                 }};
                 request = new CancelTaskExecutionRequest() {{
-                    taskExecutionArn = "ullam";
+                    taskExecutionArn = "fugit";
                 }};
             }};
 

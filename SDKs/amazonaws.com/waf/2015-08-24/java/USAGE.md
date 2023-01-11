@@ -22,18 +22,18 @@ public class Application {
 
             CreateByteMatchSetRequest req = new CreateByteMatchSetRequest() {{
                 headers = new CreateByteMatchSetHeaders() {{
-                    xAmzAlgorithm = "nesciunt";
-                    xAmzContentSha256 = "velit";
-                    xAmzCredential = "at";
-                    xAmzDate = "repellat";
-                    xAmzSecurityToken = "placeat";
-                    xAmzSignature = "accusantium";
-                    xAmzSignedHeaders = "sunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSWAF_20150824.CreateByteMatchSet";
                 }};
                 request = new CreateByteMatchSetRequest() {{
-                    changeToken = "et";
-                    name = "id";
+                    changeToken = "fugit";
+                    name = "et";
                 }};
             }};
 

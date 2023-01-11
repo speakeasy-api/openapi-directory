@@ -20,12 +20,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateSubAccountPathParams() {{
-                    apiKey = "ullam";
+                    apiKey = "sit";
                 }};
                 request = new NewSubaccountRequest() {{
-                    name = "accusantium";
-                    secret = "libero";
-                    usePrimaryAccountBalance = true;
+                    name = "voluptas";
+                    secret = "culpa";
+                    usePrimaryAccountBalance = false;
                 }};
             }};
 

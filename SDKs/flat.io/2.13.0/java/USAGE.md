@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetAuthenticatedUserQueryParams() {{
-                    onlyId = true;
+                    onlyId = false;
                 }};
             }};
 

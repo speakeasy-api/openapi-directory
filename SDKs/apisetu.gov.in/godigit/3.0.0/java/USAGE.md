@@ -23,16 +23,16 @@ public class Application {
                 }};
                 request = new CripcRequestBody() {{
                     certificateParameters = new CripcRequestBodyCertificateParameters() {{
-                        dob = "voluptatibus";
-                        documentNumber = "quia";
-                        fullName = "similique";
-                        gender = "perspiciatis";
-                        policyNumber = "ipsa";
-                        searchDocument = "tenetur";
+                        dob = "sit";
+                        documentNumber = "voluptas";
+                        fullName = "culpa";
+                        gender = "expedita";
+                        policyNumber = "consequuntur";
+                        searchDocument = "dolor";
                     }};
-                    consentArtifact = "voluptas";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "inventore";
+                    txnId = "fugit";
                 }};
             }};
 

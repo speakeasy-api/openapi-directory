@@ -22,22 +22,22 @@ public class Application {
 
             AcceptPageRequest req = new AcceptPageRequest() {{
                 headers = new AcceptPageHeaders() {{
-                    xAmzAlgorithm = "vitae";
-                    xAmzContentSha256 = "quasi";
-                    xAmzCredential = "ipsum";
-                    xAmzDate = "incidunt";
-                    xAmzSecurityToken = "vitae";
-                    xAmzSignature = "animi";
-                    xAmzSignedHeaders = "eos";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "SSMContacts.AcceptPage";
                 }};
                 request = new AcceptPageRequest() {{
-                    acceptCode = "aperiam";
-                    acceptCodeValidation = "ENFORCE";
+                    acceptCode = "fugit";
+                    acceptCodeValidation = "IGNORE";
                     acceptType = "DELIVERED";
-                    contactChannelId = "in";
-                    note = "eum";
-                    pageId = "quibusdam";
+                    contactChannelId = "rerum";
+                    note = "dicta";
+                    pageId = "debitis";
                 }};
             }};
 

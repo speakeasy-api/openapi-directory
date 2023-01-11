@@ -22,19 +22,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new AndroidpublisherEditsApklistingsDeletePathParams() {{
-                    apkVersionCode = 8404441515746634618;
-                    editId = "qui";
-                    language = "molestiae";
-                    packageName = "dignissimos";
+                    apkVersionCode = 8717895732742165505;
+                    editId = "voluptas";
+                    language = "culpa";
+                    packageName = "expedita";
                 }};
                 queryParams = new AndroidpublisherEditsApklistingsDeleteQueryParams() {{
                     alt = "json";
-                    fields = "officia";
-                    key = "dolore";
-                    oauthToken = "hic";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "iste";
-                    userIp = "qui";
+                    quotaUser = "et";
+                    userIp = "nihil";
                 }};
             }};
 

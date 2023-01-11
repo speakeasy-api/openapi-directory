@@ -32,33 +32,33 @@ public class Application {
                     }};
                 }};
                 headers = new CreateFeedConnectionsHeaders() {{
-                    xeroTenantId = "quia";
+                    xeroTenantId = "sit";
                 }};
                 request = new FeedConnections() {{
                     items = new openapisdk.models.shared.FeedConnection[]() {{
                         add(new FeedConnection() {{
-                            accountId = "sit";
-                            accountName = "repellat";
-                            accountNumber = "non";
-                            accountToken = "facilis";
-                            accountType = "id";
-                            country = "EH";
-                            currency = "MZN";
+                            accountId = "culpa";
+                            accountName = "expedita";
+                            accountNumber = "consequuntur";
+                            accountToken = "dolor";
+                            accountType = "expedita";
+                            country = "SO";
+                            currency = "GGP";
                             error = new Error() {{
-                                detail = "at";
-                                status = 128128406467790285;
-                                title = "doloribus";
-                                type = "invalid-user-role";
+                                detail = "et";
+                                status = 2661732831099943416;
+                                title = "rerum";
+                                type = "account-not-valid";
                             }};
-                            id = "eius";
-                            status = "REJECTED";
+                            id = "debitis";
+                            status = "PENDING";
                         }}),
                     }};
                     pagination = new Pagination() {{
-                        itemCount = 3176699975339092757;
-                        page = 8003821886561498988;
-                        pageCount = 351141413603251213;
-                        pageSize = 6866269448178866334;
+                        itemCount = 2339563716805116249;
+                        page = 7144924247938981575;
+                        pageCount = 161231572858529631;
+                        pageSize = 7259475919510918339;
                     }};
                 }};
             }};

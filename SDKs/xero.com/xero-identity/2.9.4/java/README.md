@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteConnectionPathParams() {{
-                    id = "quam";
+                    id = "sit";
                 }};
             }};
 

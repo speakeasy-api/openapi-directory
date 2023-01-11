@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 queryParams = new AccountArticleReportQueryParams() {{
-                    groupId = 2918724165271580478;
+                    groupId = 8717895732742165505;
                 }};
             }};
 

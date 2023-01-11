@@ -35,24 +35,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new IapProjectsBrandsCreatePathParams() {{
-                    parent = "voluptatem";
+                    parent = "sit";
                 }};
                 queryParams = new IapProjectsBrandsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "ut";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "ut";
-                    fields = "debitis";
-                    key = "laudantium";
-                    oauthToken = "eaque";
-                    prettyPrint = false;
-                    quotaUser = "ipsam";
-                    uploadType = "in";
-                    uploadProtocol = "ab";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new BrandInput() {{
-                    applicationTitle = "eum";
-                    supportEmail = "magnam";
+                    applicationTitle = "dicta";
+                    supportEmail = "debitis";
                 }};
             }};
 

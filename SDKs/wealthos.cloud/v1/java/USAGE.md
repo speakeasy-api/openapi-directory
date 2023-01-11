@@ -19,12 +19,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new UpdateBankAccountPathParams() {{
-                    bankAccountId = "rerum";
+                    bankAccountId = "sit";
                 }};
                 headers = new UpdateBankAccountHeaders() {{
                     xApiKey = "voluptas";
                 }};
-                request = "aut";
+                request = "culpa";
             }};
 
             UpdateBankAccountResponse res = sdk.bankAccounts.updateBankAccount(req);

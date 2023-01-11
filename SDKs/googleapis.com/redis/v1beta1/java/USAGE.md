@@ -22,77 +22,86 @@ public class Application {
                     }};
                 }};
                 pathParams = new RedisProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "rerum";
+                    parent = "sit";
                 }};
                 queryParams = new RedisProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "nobis";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "itaque";
-                    fields = "magni";
-                    instanceId = "aut";
-                    key = "voluptatem";
-                    oauthToken = "numquam";
-                    prettyPrint = true;
-                    quotaUser = "modi";
-                    uploadType = "quo";
-                    uploadProtocol = "qui";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    instanceId = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new InstanceInput() {{
-                    alternativeLocationId = "earum";
-                    authEnabled = false;
-                    authorizedNetwork = "dicta";
+                    alternativeLocationId = "debitis";
+                    authEnabled = true;
+                    authorizedNetwork = "et";
                     availableMaintenanceVersions = new String[]() {{
-                        add("autem"),
-                        add("nesciunt"),
+                        add("dolorem"),
+                        add("et"),
+                        add("voluptate"),
                     }};
-                    connectMode = "CONNECT_MODE_UNSPECIFIED";
-                    customerManagedKey = "cum";
-                    displayName = "dolor";
+                    connectMode = "PRIVATE_SERVICE_ACCESS";
+                    customerManagedKey = "vitae";
+                    displayName = "totam";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("odit", "eaque");
-                        put("dolorem", "dolor");
-                        put("pariatur", "harum");
+                        put("illum", "debitis");
                     }};
-                    locationId = "occaecati";
+                    locationId = "vel";
                     maintenancePolicy = new MaintenancePolicyInput() {{
-                        description = "delectus";
+                        description = "odio";
                         weeklyMaintenanceWindow = new openapisdk.models.shared.WeeklyMaintenanceWindowInput[]() {{
                             add(new WeeklyMaintenanceWindowInput() {{
-                                day = "MONDAY";
+                                day = "THURSDAY";
                                 startTime = new TimeOfDay() {{
-                                    hours = 8433984482815583947;
-                                    minutes = 162448567943149512;
-                                    nanos = 625033401366000321;
-                                    seconds = 3061790687917347231;
+                                    hours = 959367522974354090;
+                                    minutes = 2914295034816259174;
+                                    nanos = 1395437218309923052;
+                                    seconds = 6745438398739480977;
+                                }};
+                            }}),
+                            add(new WeeklyMaintenanceWindowInput() {{
+                                day = "SATURDAY";
+                                startTime = new TimeOfDay() {{
+                                    hours = 3398579248012586914;
+                                    minutes = 5974317550424871033;
+                                    nanos = 3317123977833389635;
+                                    seconds = 5001958211167890979;
                                 }};
                             }}),
                         }};
                     }};
                     maintenanceSchedule = new MaintenanceScheduleInput() {{
-                        canReschedule = true;
+                        canReschedule = false;
                     }};
-                    maintenanceVersion = "laborum";
-                    memorySizeGb = 2493316080611463997;
-                    name = "similique";
+                    maintenanceVersion = "omnis";
+                    memorySizeGb = 1059542851699319360;
+                    name = "illo";
                     persistenceConfig = new PersistenceConfigInput() {{
                         persistenceMode = "RDB";
-                        rdbSnapshotPeriod = "ONE_HOUR";
-                        rdbSnapshotStartTime = "iusto";
+                        rdbSnapshotPeriod = "TWENTY_FOUR_HOURS";
+                        rdbSnapshotStartTime = "autem";
                     }};
-                    readReplicasMode = "READ_REPLICAS_ENABLED";
+                    readReplicasMode = "READ_REPLICAS_MODE_UNSPECIFIED";
                     redisConfigs = new java.util.HashMap<String, String>() {{
-                        put("inventore", "quam");
+                        put("odio", "qui");
                     }};
-                    redisVersion = "sit";
-                    replicaCount = 7425103542181944246;
-                    reservedIpRange = "est";
-                    secondaryIpRange = "possimus";
+                    redisVersion = "recusandae";
+                    replicaCount = 7561811714888168464;
+                    reservedIpRange = "ipsum";
+                    secondaryIpRange = "eveniet";
                     suspensionReasons = new openapisdk.models.shared.InstanceSuspensionReasonsEnum[]() {{
                         add("SUSPENSION_REASON_UNSPECIFIED"),
+                        add("CUSTOMER_MANAGED_KEY_ISSUE"),
                     }};
                     tier = "STANDARD_HA";
-                    transitEncryptionMode = "TRANSIT_ENCRYPTION_MODE_UNSPECIFIED";
+                    transitEncryptionMode = "DISABLED";
                 }};
             }};
 

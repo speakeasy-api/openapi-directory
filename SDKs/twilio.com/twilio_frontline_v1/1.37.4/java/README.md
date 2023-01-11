@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchUserPathParams() {{
-                    sid = "id";
+                    sid = "sit";
                 }};
             }};
 

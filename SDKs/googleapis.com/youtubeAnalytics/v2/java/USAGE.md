@@ -24,19 +24,19 @@ public class Application {
                     }};
                 }};
                 queryParams = new YoutubeAnalyticsGroupItemsDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "ut";
-                    fields = "enim";
-                    id = "unde";
-                    key = "possimus";
-                    oauthToken = "natus";
-                    onBehalfOfContentOwner = "sapiente";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    id = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    onBehalfOfContentOwner = "fugit";
                     prettyPrint = false;
-                    quotaUser = "ipsum";
-                    uploadType = "sapiente";
-                    uploadProtocol = "tempora";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

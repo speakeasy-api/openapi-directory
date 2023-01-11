@@ -35,17 +35,17 @@ public class Application {
 
             GetDeviceRegistrationRequest req = new GetDeviceRegistrationRequest() {{
                 headers = new GetDeviceRegistrationHeaders() {{
-                    xAmzAlgorithm = "quos";
-                    xAmzContentSha256 = "quam";
-                    xAmzCredential = "quam";
-                    xAmzDate = "totam";
-                    xAmzSecurityToken = "omnis";
-                    xAmzSignature = "qui";
-                    xAmzSignedHeaders = "neque";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new GetDeviceRegistrationRequestBody() {{
-                    deviceFleetName = "officia";
-                    deviceName = "quo";
+                    deviceFleetName = "voluptas";
+                    deviceName = "fugit";
                 }};
             }};
 

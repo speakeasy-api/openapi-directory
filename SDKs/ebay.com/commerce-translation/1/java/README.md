@@ -32,14 +32,12 @@ public class Application {
                     }};
                 }};
                 request = new TranslateRequest() {{
-                    from = "et";
+                    from = "sit";
                     text = new String[]() {{
-                        add("dolorem"),
-                        add("et"),
-                        add("voluptate"),
+                        add("culpa"),
                     }};
-                    to = "iste";
-                    translationContext = "vitae";
+                    to = "expedita";
+                    translationContext = "consequuntur";
                 }};
             }};
 

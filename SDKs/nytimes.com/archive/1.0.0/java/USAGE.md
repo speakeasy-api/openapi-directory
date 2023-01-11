@@ -22,8 +22,8 @@ public class Application {
 
             GetYearMonthJsonRequest req = new GetYearMonthJsonRequest() {{
                 pathParams = new GetYearMonthJsonPathParams() {{
-                    month = 3750467686941260453;
-                    year = 6927431613354863328;
+                    month = 8717895732742165505;
+                    year = 2259404117704393152;
                 }};
             }};
 

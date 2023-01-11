@@ -32,20 +32,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetCallLogsPathParams() {{
-                    accountId = "minus";
+                    accountId = "sit";
                 }};
                 queryParams = new GetCallLogsQueryParams() {{
-                    destinationUser = "sequi";
-                    direction = "Inbound";
-                    endGte = "quidem";
-                    endLte = "iure";
-                    from = "consequatur";
-                    page = 48.200001;
-                    pageSize = 6.100000;
-                    sourceUser = "eligendi";
-                    startGte = "veniam";
-                    startLte = "dolorem";
-                    to = "similique";
+                    destinationUser = "voluptas";
+                    direction = "Outbound";
+                    endGte = "expedita";
+                    endLte = "consequuntur";
+                    from = "dolor";
+                    page = 67.199997;
+                    pageSize = 88.099998;
+                    sourceUser = "nihil";
+                    startGte = "rerum";
+                    startLte = "dicta";
+                    to = "debitis";
                 }};
             }};
 

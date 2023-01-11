@@ -19,13 +19,13 @@ public class Application {
                     }};
                 }};
                 headers = new ImageOcrImageLinesWithLocationHeaders() {{
-                    language = "quasi";
-                    preprocessing = "tempore";
+                    language = "sit";
+                    preprocessing = "voluptas";
                 }};
                 request = new ImageOcrImageLinesWithLocationRequestBody() {{
                     imageFile = new ImageOcrImageLinesWithLocationRequestBodyImageFile() {{
-                        content = "consequatur".getBytes();
-                        imageFile = "quos";
+                        content = "culpa".getBytes();
+                        imageFile = "expedita";
                     }};
                 }};
             }};

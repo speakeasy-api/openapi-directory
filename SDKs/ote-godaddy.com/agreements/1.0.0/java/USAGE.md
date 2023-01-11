@@ -15,12 +15,12 @@ public class Application {
             GetRequest req = new GetRequest() {{
                 queryParams = new GetQueryParams() {{
                     keys = new String[]() {{
-                        add("et"),
+                        add("voluptas"),
                     }};
                 }};
                 headers = new GetHeaders() {{
-                    xMarketId = "non";
-                    xPrivateLabelId = 618446600806163976;
+                    xMarketId = "culpa";
+                    xPrivateLabelId = 501233450539197794;
                 }};
             }};
 

@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new OtcerRequestBody() {{
                     certificateParameters = new OtcerRequestBodyCertificateParameters() {{
-                        dob = "voluptates";
-                        fullName = "sit";
-                        uid = "aut";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        uid = "culpa";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "fuga";
+                    txnId = "dolor";
                 }};
             }};
 

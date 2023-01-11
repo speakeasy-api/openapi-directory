@@ -22,31 +22,29 @@ public class Application {
                     }};
                 }};
                 pathParams = new PrivatecaProjectsLocationsCertificateAuthoritiesActivatePathParams() {{
-                    name = "animi";
+                    name = "sit";
                 }};
                 queryParams = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "laudantium";
-                    alt = "json";
-                    callback = "ea";
-                    fields = "facilis";
-                    key = "vitae";
-                    oauthToken = "consequatur";
-                    prettyPrint = false;
-                    quotaUser = "pariatur";
-                    uploadType = "beatae";
-                    uploadProtocol = "et";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new ActivateCertificateAuthorityRequest() {{
-                    pemCaCertificate = "cum";
-                    requestId = "occaecati";
+                    pemCaCertificate = "dicta";
+                    requestId = "debitis";
                     subordinateConfig = new SubordinateConfig() {{
-                        certificateAuthority = "quo";
+                        certificateAuthority = "voluptatum";
                         pemIssuerChain = new SubordinateConfigChain() {{
                             pemCertificates = new String[]() {{
-                                add("in"),
-                                add("et"),
-                                add("eos"),
+                                add("ut"),
                             }};
                         }};
                     }};

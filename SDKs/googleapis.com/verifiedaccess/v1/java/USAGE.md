@@ -22,22 +22,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new VerifiedaccessChallengeCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "omnis";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "veritatis";
-                    fields = "illo";
-                    key = "consequatur";
-                    oauthToken = "qui";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "beatae";
-                    uploadType = "vel";
-                    uploadProtocol = "quo";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("quaerat", "perspiciatis");
-                    put("aliquam", "dolores");
-                    put("sed", "distinctio");
+                    put("dicta", "debitis");
+                    put("voluptatum", "et");
+                    put("ut", "dolorem");
                 }};
             }};
 

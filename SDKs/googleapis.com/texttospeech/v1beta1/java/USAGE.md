@@ -22,47 +22,45 @@ public class Application {
                     }};
                 }};
                 pathParams = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioPathParams() {{
-                    parent = "dolore";
+                    parent = "sit";
                 }};
                 queryParams = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "debitis";
-                    alt = "json";
-                    callback = "dolores";
-                    fields = "impedit";
-                    key = "doloribus";
-                    oauthToken = "recusandae";
-                    prettyPrint = false;
-                    quotaUser = "minima";
-                    uploadType = "cupiditate";
-                    uploadProtocol = "pariatur";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new SynthesizeLongAudioRequest() {{
                     audioConfig = new AudioConfig() {{
-                        audioEncoding = "LINEAR16";
+                        audioEncoding = "OGG_OPUS";
                         effectsProfileId = new String[]() {{
-                            add("ex"),
-                            add("cumque"),
-                            add("aperiam"),
+                            add("voluptatum"),
                         }};
-                        pitch = 60.200001;
-                        sampleRateHertz = 7117043420569300192;
-                        speakingRate = 73.199997;
-                        volumeGainDb = 36.200001;
+                        pitch = 26.200001;
+                        sampleRateHertz = 161231572858529631;
+                        speakingRate = 50.099998;
+                        volumeGainDb = 15.100000;
                     }};
                     input = new SynthesisInput() {{
-                        ssml = "officiis";
-                        text = "pariatur";
+                        ssml = "totam";
+                        text = "dolores";
                     }};
-                    outputGcsUri = "natus";
+                    outputGcsUri = "illum";
                     voice = new VoiceSelectionParams() {{
                         customVoice = new CustomVoiceParams() {{
-                            model = "pariatur";
+                            model = "debitis";
                             reportedUsage = "REALTIME";
                         }};
-                        languageCode = "ea";
-                        name = "non";
-                        ssmlGender = "FEMALE";
+                        languageCode = "odio";
+                        name = "dolore";
+                        ssmlGender = "SSML_VOICE_GENDER_UNSPECIFIED";
                     }};
                 }};
             }};

@@ -28,9 +28,9 @@ public class Application {
             CreateANewQuestionRequest req = new CreateANewQuestionRequest() {{
                 request = new CreateANewQuestionRequestBody() {{
                     choices = new String[]() {{
-                        add("eveniet"),
+                        add("voluptas"),
                     }};
-                    question = "modi";
+                    question = "culpa";
                 }};
             }};
 

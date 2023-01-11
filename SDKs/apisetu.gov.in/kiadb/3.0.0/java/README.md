@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new AlltrRequestBody() {{
                     certificateParameters = new AlltrRequestBodyCertificateParameters() {{
-                        dob = "et";
-                        fullName = "tempore";
-                        regNum = "quis";
-                        uid = "vitae";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        regNum = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "sunt";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "sit";
+                    txnId = "expedita";
                 }};
             }};
 

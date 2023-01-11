@@ -35,22 +35,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdmobAccountsAdUnitsListPathParams() {{
-                    parent = "sapiente";
+                    parent = "sit";
                 }};
                 queryParams = new AdmobAccountsAdUnitsListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "autem";
-                    alt = "json";
-                    callback = "velit";
-                    fields = "minus";
-                    key = "praesentium";
-                    oauthToken = "minus";
-                    pageSize = 2071104450853766658;
-                    pageToken = "consequatur";
-                    prettyPrint = false;
-                    quotaUser = "et";
-                    uploadType = "qui";
-                    uploadProtocol = "atque";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    pageSize = 8274930044578894929;
+                    pageToken = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

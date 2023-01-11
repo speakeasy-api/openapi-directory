@@ -35,7 +35,7 @@ public class Application {
 
             GetApplicationsStatusRequest req = new GetApplicationsStatusRequest() {{
                 queryParams = new GetApplicationsStatusQueryParams() {{
-                    key = "officia";
+                    key = "sit";
                 }};
             }};
 

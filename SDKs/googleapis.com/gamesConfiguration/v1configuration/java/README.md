@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new GamesConfigurationAchievementConfigurationsDeletePathParams() {{
-                    achievementId = "voluptas";
+                    achievementId = "sit";
                 }};
                 queryParams = new GamesConfigurationAchievementConfigurationsDeleteQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "sed";
-                    alt = "json";
-                    callback = "ut";
-                    fields = "ad";
-                    key = "aut";
-                    oauthToken = "id";
-                    prettyPrint = false;
-                    quotaUser = "corporis";
-                    uploadType = "quas";
-                    uploadProtocol = "velit";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

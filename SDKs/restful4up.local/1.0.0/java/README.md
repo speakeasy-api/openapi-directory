@@ -26,7 +26,7 @@ public class Application {
             SDK sdk = builder.build();
 
             ApplyYaraRulesRequest req = new ApplyYaraRulesRequest() {{
-                request = "omnis";
+                request = "sit";
             }};
 
             ApplyYaraRulesResponse res = sdk.applyYaraRules(req);

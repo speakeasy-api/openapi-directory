@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new BtcerRequestBody() {{
                     certificateParameters = new BtcerRequestBodyCertificateParameters() {{
-                        dateofbirth = "pariatur";
-                        regno = "vel";
+                        dateofbirth = "sit";
+                        regno = "voluptas";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "animi";
+                    txnId = "consequuntur";
                 }};
             }};
 

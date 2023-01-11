@@ -37,24 +37,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudiotProjectsLocationsRegistriesBindDeviceToGatewayPathParams() {{
-                    parent = "reprehenderit";
+                    parent = "sit";
                 }};
                 queryParams = new CloudiotProjectsLocationsRegistriesBindDeviceToGatewayQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "sit";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "iure";
-                    fields = "ad";
-                    key = "nam";
-                    oauthToken = "dolores";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "corrupti";
-                    uploadType = "quod";
-                    uploadProtocol = "voluptas";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new BindDeviceToGatewayRequest() {{
-                    deviceId = "dolorem";
-                    gatewayId = "molestias";
+                    deviceId = "dicta";
+                    gatewayId = "debitis";
                 }};
             }};
 

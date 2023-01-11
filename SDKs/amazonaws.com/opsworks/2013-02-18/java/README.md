@@ -35,20 +35,19 @@ public class Application {
 
             AssignInstanceRequest req = new AssignInstanceRequest() {{
                 headers = new AssignInstanceHeaders() {{
-                    xAmzAlgorithm = "vel";
-                    xAmzContentSha256 = "itaque";
-                    xAmzCredential = "ut";
-                    xAmzDate = "ut";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "aut";
-                    xAmzSignedHeaders = "fuga";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "OpsWorks_20130218.AssignInstance";
                 }};
                 request = new AssignInstanceRequest() {{
-                    instanceId = "repellendus";
+                    instanceId = "fugit";
                     layerIds = new String[]() {{
-                        add("repudiandae"),
-                        add("voluptates"),
+                        add("nihil"),
                     }};
                 }};
             }};

@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetBenefitsDocumentUploadDownloadPathParams() {{
-                    id = "in";
+                    id = "sit";
                 }};
             }};
 

@@ -35,18 +35,18 @@ public class Application {
 
             ApplyArchiveRuleRequest req = new ApplyArchiveRuleRequest() {{
                 headers = new ApplyArchiveRuleHeaders() {{
-                    xAmzAlgorithm = "rerum";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "laborum";
-                    xAmzDate = "fugit";
-                    xAmzSecurityToken = "quis";
-                    xAmzSignature = "minus";
-                    xAmzSignedHeaders = "soluta";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new ApplyArchiveRuleRequestBody() {{
-                    analyzerArn = "aperiam";
-                    clientToken = "consequuntur";
-                    ruleName = "excepturi";
+                    analyzerArn = "voluptas";
+                    clientToken = "fugit";
+                    ruleName = "et";
                 }};
             }};
 

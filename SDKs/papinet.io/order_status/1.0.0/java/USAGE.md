@@ -14,9 +14,9 @@ public class Application {
 
             GetOrdersRequest req = new GetOrdersRequest() {{
                 queryParams = new GetOrdersQueryParams() {{
-                    limit = "qui";
-                    offset = "laudantium";
-                    orderStatus = "Active";
+                    limit = "sit";
+                    offset = "voluptas";
+                    orderStatus = "Cancelled";
                 }};
             }};
 

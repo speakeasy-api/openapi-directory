@@ -35,18 +35,18 @@ public class Application {
 
             BatchDeleteBuildsRequest req = new BatchDeleteBuildsRequest() {{
                 headers = new BatchDeleteBuildsHeaders() {{
-                    xAmzAlgorithm = "occaecati";
-                    xAmzContentSha256 = "veniam";
-                    xAmzCredential = "sed";
-                    xAmzDate = "sint";
-                    xAmzSecurityToken = "laudantium";
-                    xAmzSignature = "explicabo";
-                    xAmzSignedHeaders = "maiores";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CodeBuild_20161006.BatchDeleteBuilds";
                 }};
                 request = new BatchDeleteBuildsInput() {{
                     ids = new String[]() {{
-                        add("explicabo"),
+                        add("et"),
                     }};
                 }};
             }};

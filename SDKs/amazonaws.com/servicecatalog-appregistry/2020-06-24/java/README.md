@@ -35,17 +35,17 @@ public class Application {
 
             AssociateAttributeGroupRequest req = new AssociateAttributeGroupRequest() {{
                 pathParams = new AssociateAttributeGroupPathParams() {{
-                    application = "quasi";
-                    attributeGroup = "eos";
+                    application = "sit";
+                    attributeGroup = "voluptas";
                 }};
                 headers = new AssociateAttributeGroupHeaders() {{
-                    xAmzAlgorithm = "nesciunt";
-                    xAmzContentSha256 = "neque";
-                    xAmzCredential = "quos";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "magni";
-                    xAmzSignature = "nemo";
-                    xAmzSignedHeaders = "ad";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
             }};
 

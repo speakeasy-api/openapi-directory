@@ -37,97 +37,104 @@ public class Application {
                     }};
                 }};
                 pathParams = new BillingbudgetsBillingAccountsBudgetsCreatePathParams() {{
-                    parent = "velit";
+                    parent = "sit";
                 }};
                 queryParams = new BillingbudgetsBillingAccountsBudgetsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "id";
-                    alt = "proto";
-                    callback = "dolor";
-                    fields = "sit";
-                    key = "non";
-                    oauthToken = "sed";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "architecto";
-                    uploadType = "accusantium";
-                    uploadProtocol = "non";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput() {{
                     budget = new GoogleCloudBillingBudgetsV1beta1BudgetInput() {{
                         allUpdatesRule = new GoogleCloudBillingBudgetsV1beta1AllUpdatesRule() {{
                             disableDefaultIamRecipients = false;
                             monitoringNotificationChannels = new String[]() {{
-                                add("voluptas"),
-                                add("deserunt"),
-                                add("amet"),
+                                add("voluptatum"),
                             }};
-                            pubsubTopic = "optio";
-                            schemaVersion = "reiciendis";
+                            pubsubTopic = "et";
+                            schemaVersion = "ut";
                         }};
                         amount = new GoogleCloudBillingBudgetsV1beta1BudgetAmount() {{
                             lastPeriodAmount = new java.util.HashMap<String, Object>() {{
-                                put("dolorem", "minus");
+                                put("et", "voluptate");
+                                put("iste", "vitae");
+                                put("totam", "dolores");
                             }};
                             specifiedAmount = new GoogleTypeMoney() {{
-                                currencyCode = "ea";
-                                nanos = 8052198656549024570;
-                                units = "dolorem";
+                                currencyCode = "illum";
+                                nanos = 6392442863481646880;
+                                units = "vel";
                             }};
                         }};
                         budgetFilter = new GoogleCloudBillingBudgetsV1beta1Filter() {{
-                            calendarPeriod = "MONTH";
+                            calendarPeriod = "CALENDAR_PERIOD_UNSPECIFIED";
                             creditTypes = new String[]() {{
-                                add("provident"),
-                                add("sint"),
-                                add("distinctio"),
+                                add("id"),
+                                add("aspernatur"),
                             }};
                             creditTypesTreatment = "CREDIT_TYPES_TREATMENT_UNSPECIFIED";
                             customPeriod = new GoogleCloudBillingBudgetsV1beta1CustomPeriod() {{
                                 endDate = new GoogleTypeDate() {{
-                                    day = 6222451410304687022;
-                                    month = 5267464546262533560;
-                                    year = 357893216372422809;
+                                    day = 1395437218309923052;
+                                    month = 6745438398739480977;
+                                    year = 2897681629866238117;
                                 }};
                                 startDate = new GoogleTypeDate() {{
-                                    day = 2163213464577242930;
-                                    month = 6809300015302446064;
-                                    year = 1367961179176800403;
+                                    day = 3398579248012586914;
+                                    month = 5974317550424871033;
+                                    year = 3317123977833389635;
                                 }};
                             }};
                             labels = new java.util.HashMap<String, Object[]>() {{
-                                put("quis", new Object[]() {{
-                                    add("est"),
+                                put("voluptas", new Object[]() {{
+                                    add("aut"),
+                                    add("illo"),
                                 }});
-                                put("ipsa", new Object[]() {{
-                                    add("eveniet"),
-                                    add("sequi"),
-                                    add("vitae"),
+                                put("sed", new Object[]() {{
+                                    add("autem"),
+                                    add("consectetur"),
+                                }});
+                                put("nobis", new Object[]() {{
+                                    add("qui"),
                                 }});
                             }};
                             projects = new String[]() {{
-                                add("possimus"),
+                                add("at"),
+                                add("ipsum"),
+                                add("eveniet"),
                             }};
                             services = new String[]() {{
-                                add("eveniet"),
-                                add("alias"),
-                                add("tenetur"),
+                                add("sint"),
+                                add("inventore"),
                             }};
                             subaccounts = new String[]() {{
-                                add("porro"),
-                                add("eveniet"),
-                                add("sed"),
+                                add("exercitationem"),
+                                add("aut"),
+                                add("reprehenderit"),
                             }};
                         }};
-                        displayName = "cum";
-                        etag = "repellat";
+                        displayName = "tempore";
+                        etag = "maiores";
                         thresholdRules = new openapisdk.models.shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule[]() {{
                             add(new GoogleCloudBillingBudgetsV1beta1ThresholdRule() {{
                                 spendBasis = "CURRENT_SPEND";
-                                thresholdPercent = 5.100000;
+                                thresholdPercent = 23.200001;
                             }}),
                             add(new GoogleCloudBillingBudgetsV1beta1ThresholdRule() {{
-                                spendBasis = "CURRENT_SPEND";
-                                thresholdPercent = 23.100000;
+                                spendBasis = "FORECASTED_SPEND";
+                                thresholdPercent = 69.199997;
+                            }}),
+                            add(new GoogleCloudBillingBudgetsV1beta1ThresholdRule() {{
+                                spendBasis = "BASIS_UNSPECIFIED";
+                                thresholdPercent = 66.099998;
                             }}),
                         }};
                     }};

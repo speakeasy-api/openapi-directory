@@ -22,23 +22,23 @@ public class Application {
 
             ListRealtimeContactAnalysisSegmentsRequest req = new ListRealtimeContactAnalysisSegmentsRequest() {{
                 queryParams = new ListRealtimeContactAnalysisSegmentsQueryParams() {{
-                    maxResults = "error";
-                    nextToken = "odit";
+                    maxResults = "sit";
+                    nextToken = "voluptas";
                 }};
                 headers = new ListRealtimeContactAnalysisSegmentsHeaders() {{
-                    xAmzAlgorithm = "repudiandae";
-                    xAmzContentSha256 = "pariatur";
-                    xAmzCredential = "est";
-                    xAmzDate = "at";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "libero";
-                    xAmzSignedHeaders = "aperiam";
+                    xAmzAlgorithm = "culpa";
+                    xAmzContentSha256 = "expedita";
+                    xAmzCredential = "consequuntur";
+                    xAmzDate = "dolor";
+                    xAmzSecurityToken = "expedita";
+                    xAmzSignature = "voluptas";
+                    xAmzSignedHeaders = "fugit";
                 }};
                 request = new ListRealtimeContactAnalysisSegmentsRequestBody() {{
-                    contactId = "voluptatem";
-                    instanceId = "sunt";
-                    maxResults = 5474918243671586608;
-                    nextToken = "quaerat";
+                    contactId = "et";
+                    instanceId = "nihil";
+                    maxResults = 8325060299420976708;
+                    nextToken = "dicta";
                 }};
             }};
 

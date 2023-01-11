@@ -22,57 +22,55 @@ public class Application {
 
             CreateApiRequest req = new CreateApiRequest() {{
                 headers = new CreateApiHeaders() {{
-                    xAmzAlgorithm = "ex";
-                    xAmzContentSha256 = "iure";
-                    xAmzCredential = "et";
-                    xAmzDate = "quos";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "explicabo";
-                    xAmzSignedHeaders = "necessitatibus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateApiRequestBody() {{
-                    apiKeySelectionExpression = "veniam";
+                    apiKeySelectionExpression = "voluptas";
                     corsConfiguration = new CreateApiRequestBodyCorsConfiguration() {{
                         allowCredentials = new java.util.HashMap<String, Object>() {{
-                            put("in", "odit");
+                            put("et", "nihil");
                         }};
                         allowHeaders = new java.util.HashMap<String, Object>() {{
-                            put("corporis", "tenetur");
-                            put("esse", "similique");
-                            put("mollitia", "id");
+                            put("dicta", "debitis");
+                            put("voluptatum", "et");
+                            put("ut", "dolorem");
                         }};
                         allowMethods = new java.util.HashMap<String, Object>() {{
-                            put("quam", "maiores");
-                            put("totam", "iusto");
-                            put("aperiam", "repellendus");
+                            put("voluptate", "iste");
+                            put("vitae", "totam");
                         }};
                         allowOrigins = new java.util.HashMap<String, Object>() {{
-                            put("eum", "earum");
-                            put("et", "officia");
+                            put("illum", "debitis");
                         }};
                         exposeHeaders = new java.util.HashMap<String, Object>() {{
-                            put("dolor", "quia");
+                            put("odio", "dolore");
+                            put("id", "aspernatur");
                         }};
                         maxAge = new java.util.HashMap<String, Object>() {{
-                            put("ea", "et");
-                            put("expedita", "recusandae");
+                            put("totam", "commodi");
+                            put("quis", "est");
+                            put("aut", "odit");
                         }};
                     }};
-                    credentialsArn = "qui";
-                    description = "qui";
-                    disableExecuteApiEndpoint = false;
-                    disableSchemaValidation = true;
-                    name = "cupiditate";
+                    credentialsArn = "non";
+                    description = "voluptas";
+                    disableExecuteApiEndpoint = true;
+                    disableSchemaValidation = false;
+                    name = "illo";
                     protocolType = "WEBSOCKET";
-                    routeKey = "saepe";
-                    routeSelectionExpression = "sed";
+                    routeKey = "officiis";
+                    routeSelectionExpression = "autem";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("vel", "fugiat");
-                        put("nesciunt", "et");
-                        put("qui", "quis");
+                        put("nobis", "odio");
                     }};
-                    target = "eligendi";
-                    version = "velit";
+                    target = "qui";
+                    version = "recusandae";
                 }};
             }};
 

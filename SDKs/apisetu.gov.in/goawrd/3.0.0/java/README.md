@@ -36,12 +36,12 @@ public class Application {
                 }};
                 request = new ErcerRequestBody() {{
                     certificateParameters = new ErcerRequestBodyCertificateParameters() {{
-                        fullName = "vero";
-                        registration = "eius";
+                        fullName = "sit";
+                        registration = "voluptas";
                     }};
-                    consentArtifact = "veniam";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "et";
+                    txnId = "consequuntur";
                 }};
             }};
 

@@ -22,25 +22,21 @@ public class Application {
 
             AddAttachmentsToSetRequest req = new AddAttachmentsToSetRequest() {{
                 headers = new AddAttachmentsToSetHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "qui";
-                    xAmzCredential = "deleniti";
-                    xAmzDate = "eos";
-                    xAmzSecurityToken = "error";
-                    xAmzSignature = "illo";
-                    xAmzSignedHeaders = "veniam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSSupport_20130415.AddAttachmentsToSet";
                 }};
                 request = new AddAttachmentsToSetRequest() {{
                     attachmentSetId = "fugit";
                     attachments = new openapisdk.models.shared.Attachment[]() {{
                         add(new Attachment() {{
-                            data = "aut";
-                            fileName = "modi";
-                        }}),
-                        add(new Attachment() {{
-                            data = "ex";
-                            fileName = "voluptatibus";
+                            data = "nihil";
+                            fileName = "rerum";
                         }}),
                     }};
                 }};

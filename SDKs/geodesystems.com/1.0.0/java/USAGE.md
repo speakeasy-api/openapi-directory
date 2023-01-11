@@ -14,9 +14,9 @@ public class Application {
 
             MediaTabularExtractsheetRequest req = new MediaTabularExtractsheetRequest() {{
                 queryParams = new MediaTabularExtractsheetQueryParams() {{
-                    arg1 = "enim";
-                    entryid = "eos";
-                    output = "ipsa";
+                    arg1 = "sit";
+                    entryid = "voluptas";
+                    output = "culpa";
                 }};
             }};
 

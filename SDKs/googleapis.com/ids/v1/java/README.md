@@ -35,32 +35,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new IdsProjectsLocationsEndpointsCreatePathParams() {{
-                    parent = "odio";
+                    parent = "sit";
                 }};
                 queryParams = new IdsProjectsLocationsEndpointsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "quas";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "amet";
-                    endpointId = "excepturi";
-                    fields = "maxime";
-                    key = "perspiciatis";
-                    oauthToken = "ad";
+                    callback = "consequuntur";
+                    endpointId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "provident";
-                    requestId = "voluptatem";
-                    uploadType = "ipsam";
-                    uploadProtocol = "est";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new EndpointInput() {{
-                    description = "incidunt";
+                    description = "voluptatum";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("et", "possimus");
-                        put("quasi", "dolorum");
-                        put("quasi", "nostrum");
+                        put("ut", "dolorem");
                     }};
-                    network = "quia";
-                    severity = "INFORMATIONAL";
+                    network = "et";
+                    severity = "SEVERITY_UNSPECIFIED";
                     trafficLogs = true;
                 }};
             }};

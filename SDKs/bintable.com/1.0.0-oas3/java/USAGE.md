@@ -14,7 +14,7 @@ public class Application {
 
             BalanceLookupRequest req = new BalanceLookupRequest() {{
                 queryParams = new BalanceLookupQueryParams() {{
-                    apiKey = "asperiores";
+                    apiKey = "sit";
                 }};
             }};
 

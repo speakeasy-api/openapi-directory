@@ -14,14 +14,14 @@ public class Application {
 
             GetForecastRequest req = new GetForecastRequest() {{
                 queryParams = new GetForecastQueryParams() {{
-                    alt = 60.099998;
-                    dt = "2011-05-07T17:54:56Z";
-                    lat = 6.100000;
-                    lng = 35.099998;
-                    ozone = 21.200001;
+                    alt = 74.099998;
+                    dt = "1978-05-13T03:50:47Z";
+                    lat = 6.200000;
+                    lng = 96.199997;
+                    ozone = 77.099998;
                 }};
                 headers = new GetForecastHeaders() {{
-                    xAccessToken = "qui";
+                    xAccessToken = "et";
                 }};
             }};
 

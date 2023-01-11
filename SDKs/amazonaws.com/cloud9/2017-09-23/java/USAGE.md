@@ -22,34 +22,34 @@ public class Application {
 
             CreateEnvironmentEc2Request req = new CreateEnvironmentEc2Request() {{
                 headers = new CreateEnvironmentEc2Headers() {{
-                    xAmzAlgorithm = "cupiditate";
-                    xAmzContentSha256 = "omnis";
-                    xAmzCredential = "iste";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "adipisci";
-                    xAmzSignature = "impedit";
-                    xAmzSignedHeaders = "tempora";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2";
                 }};
                 request = new CreateEnvironmentEc2Request() {{
-                    automaticStopTimeMinutes = 3876518618080918046;
-                    clientRequestToken = "corrupti";
-                    connectionType = "CONNECT_SSM";
-                    description = "cum";
+                    automaticStopTimeMinutes = 8274930044578894929;
+                    clientRequestToken = "et";
+                    connectionType = "CONNECT_SSH";
+                    description = "rerum";
                     dryRun = false;
-                    imageId = "ea";
-                    instanceType = "architecto";
-                    name = "esse";
-                    ownerArn = "explicabo";
-                    subnetId = "distinctio";
+                    imageId = "debitis";
+                    instanceType = "voluptatum";
+                    name = "et";
+                    ownerArn = "ut";
+                    subnetId = "dolorem";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "non";
-                            value = "accusantium";
+                            key = "voluptate";
+                            value = "iste";
                         }}),
                         add(new Tag() {{
-                            key = "ut";
-                            value = "consequatur";
+                            key = "vitae";
+                            value = "totam";
                         }}),
                     }};
                 }};

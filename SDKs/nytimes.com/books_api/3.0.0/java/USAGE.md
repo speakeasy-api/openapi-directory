@@ -19,13 +19,13 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetListsBestSellersHistoryJsonQueryParams() {{
-                    ageGroup = "unde";
-                    author = "corporis";
-                    contributor = "pariatur";
-                    isbn = "excepturi";
-                    price = "possimus";
-                    publisher = "totam";
-                    title = "nihil";
+                    ageGroup = "sit";
+                    author = "voluptas";
+                    contributor = "culpa";
+                    isbn = "expedita";
+                    price = "consequuntur";
+                    publisher = "dolor";
+                    title = "expedita";
                 }};
             }};
 

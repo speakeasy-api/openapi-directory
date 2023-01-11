@@ -35,18 +35,18 @@ public class Application {
 
             AssociateKmsKeyRequest req = new AssociateKmsKeyRequest() {{
                 headers = new AssociateKmsKeyHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "vel";
-                    xAmzCredential = "dolores";
-                    xAmzDate = "iste";
-                    xAmzSecurityToken = "ut";
-                    xAmzSignature = "quia";
-                    xAmzSignedHeaders = "dolorum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "Logs_20140328.AssociateKmsKey";
                 }};
                 request = new AssociateKmsKeyRequest() {{
-                    kmsKeyId = "ducimus";
-                    logGroupName = "ipsum";
+                    kmsKeyId = "fugit";
+                    logGroupName = "et";
                 }};
             }};
 

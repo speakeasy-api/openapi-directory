@@ -36,13 +36,13 @@ public class Application {
                 }};
                 request = new SkmstRequestBody() {{
                     certificateParameters = new SkmstRequestBodyCertificateParameters() {{
-                        txt10thRollNo = "nostrum";
-                        txtCandidateAppSeq = "porro";
-                        txtExamDate = "et";
+                        txt10thRollNo = "sit";
+                        txtCandidateAppSeq = "voluptas";
+                        txtExamDate = "culpa";
                     }};
-                    consentArtifact = "maxime";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "est";
+                    txnId = "dolor";
                 }};
             }};
 

@@ -22,34 +22,31 @@ public class Application {
 
             CreateEnvironmentRequest req = new CreateEnvironmentRequest() {{
                 headers = new CreateEnvironmentHeaders() {{
-                    xAmzAlgorithm = "vitae";
-                    xAmzContentSha256 = "nulla";
-                    xAmzCredential = "voluptatem";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "ea";
-                    xAmzSignedHeaders = "iure";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateEnvironmentRequestBody() {{
-                    description = "ratione";
+                    description = "voluptas";
                     federationMode = "FEDERATED";
                     federationParameters = new CreateEnvironmentRequestBodyFederationParameters() {{
-                        applicationCallBackURL = "sed";
+                        applicationCallBackURL = "et";
                         attributeMap = new java.util.HashMap<String, String>() {{
-                            put("quae", "officia");
-                            put("aperiam", "molestiae");
+                            put("rerum", "dicta");
                         }};
-                        federationProviderName = "voluptatem";
-                        federationURN = "impedit";
-                        samlMetadataDocument = "debitis";
-                        samlMetadataURL = "quae";
+                        federationProviderName = "debitis";
+                        federationURN = "voluptatum";
+                        samlMetadataDocument = "et";
+                        samlMetadataURL = "ut";
                     }};
-                    kmsKeyId = "rerum";
-                    name = "ut";
+                    kmsKeyId = "dolorem";
+                    name = "et";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("excepturi", "et");
-                        put("asperiores", "fugit");
-                        put("perspiciatis", "ratione");
+                        put("iste", "vitae");
                     }};
                 }};
             }};

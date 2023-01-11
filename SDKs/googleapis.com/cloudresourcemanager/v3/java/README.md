@@ -37,20 +37,20 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudresourcemanagerEffectiveTagsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "qui";
-                    alt = "proto";
-                    callback = "eius";
-                    fields = "totam";
-                    key = "voluptas";
-                    oauthToken = "omnis";
-                    pageSize = 1290762731677787192;
-                    pageToken = "nemo";
-                    parent = "est";
-                    prettyPrint = false;
-                    quotaUser = "in";
-                    uploadType = "velit";
-                    uploadProtocol = "ex";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    pageSize = 6044372234677422456;
+                    pageToken = "fugit";
+                    parent = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

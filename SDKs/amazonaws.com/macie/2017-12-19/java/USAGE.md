@@ -22,17 +22,17 @@ public class Application {
 
             AssociateMemberAccountRequest req = new AssociateMemberAccountRequest() {{
                 headers = new AssociateMemberAccountHeaders() {{
-                    xAmzAlgorithm = "qui";
-                    xAmzContentSha256 = "harum";
-                    xAmzCredential = "fuga";
-                    xAmzDate = "facilis";
-                    xAmzSecurityToken = "blanditiis";
-                    xAmzSignature = "dicta";
-                    xAmzSignedHeaders = "ea";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "MacieService.AssociateMemberAccount";
                 }};
                 request = new AssociateMemberAccountRequest() {{
-                    memberAccountId = "non";
+                    memberAccountId = "fugit";
                 }};
             }};
 

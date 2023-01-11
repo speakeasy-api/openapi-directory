@@ -36,20 +36,20 @@ public class Application {
             ParseAddressRequest req = new ParseAddressRequest() {{
                 request = new ParseAddressRequestBody() {{
                     address = new PartialAddress() {{
-                        addressLine1 = "ea";
-                        addressLine2 = "maxime";
-                        addressLine3 = "eum";
+                        addressLine1 = "sit";
+                        addressLine2 = "voluptas";
+                        addressLine3 = "culpa";
                         addressResidentialIndicator = new java.util.HashMap<String, Object>() {{
-                            put("et", "rerum");
-                            put("reiciendis", "quis");
+                            put("consequuntur", "dolor");
+                            put("expedita", "voluptas");
                         }};
-                        cityLocality = "cumque";
-                        companyName = "minima";
-                        countryCode = "necessitatibus";
-                        name = "est";
-                        phone = "quis";
-                        postalCode = "eum";
-                        stateProvince = "labore";
+                        cityLocality = "fugit";
+                        companyName = "et";
+                        countryCode = "nihil";
+                        name = "rerum";
+                        phone = "dicta";
+                        postalCode = "debitis";
+                        stateProvince = "voluptatum";
                     }};
                     text = "et";
                 }};

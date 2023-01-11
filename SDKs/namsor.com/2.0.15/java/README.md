@@ -36,7 +36,7 @@ public class Application {
             AnonymizeRequest req = new AnonymizeRequest() {{
                 pathParams = new AnonymizePathParams() {{
                     anonymized = false;
-                    source = "nobis";
+                    source = "voluptas";
                 }};
             }};
 

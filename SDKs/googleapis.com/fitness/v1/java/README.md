@@ -37,63 +37,64 @@ public class Application {
                     }};
                 }};
                 pathParams = new FitnessUsersDataSourcesCreatePathParams() {{
-                    userId = "id";
+                    userId = "sit";
                 }};
                 queryParams = new FitnessUsersDataSourcesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "odio";
-                    alt = "json";
-                    callback = "aspernatur";
-                    fields = "ducimus";
-                    key = "ut";
-                    oauthToken = "expedita";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "enim";
-                    uploadType = "explicabo";
-                    uploadProtocol = "cupiditate";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new DataSource() {{
                     application = new Application() {{
-                        detailsUrl = "deleniti";
-                        name = "consequatur";
-                        packageName = "facere";
-                        version = "animi";
+                        detailsUrl = "dicta";
+                        name = "debitis";
+                        packageName = "voluptatum";
+                        version = "et";
                     }};
                     dataQualityStandard = new openapisdk.models.shared.DataSourceDataQualityStandardEnum[]() {{
+                        add("dataQualityUnknown"),
+                        add("dataQualityUnknown"),
                         add("dataQualityBloodPressureBhsAA"),
-                        add("dataQualityBloodGlucoseIso151972003"),
                     }};
-                    dataStreamId = "atque";
-                    dataStreamName = "nisi";
+                    dataStreamId = "iste";
+                    dataStreamName = "vitae";
                     dataType = new DataType() {{
                         field = new openapisdk.models.shared.DataTypeField[]() {{
                             add(new DataTypeField() {{
-                                format = "string";
-                                name = "ipsam";
-                                optional = false;
+                                format = "map";
+                                name = "illum";
+                                optional = true;
+                            }}),
+                            add(new DataTypeField() {{
+                                format = "floatPoint";
+                                name = "odio";
+                                optional = true;
                             }}),
                             add(new DataTypeField() {{
                                 format = "integerList";
-                                name = "velit";
-                                optional = false;
-                            }}),
-                            add(new DataTypeField() {{
-                                format = "integerList";
-                                name = "impedit";
+                                name = "aspernatur";
                                 optional = true;
                             }}),
                         }};
-                        name = "est";
+                        name = "totam";
                     }};
                     device = new Device() {{
-                        manufacturer = "repellendus";
-                        model = "asperiores";
-                        type = "smartDisplay";
-                        uid = "necessitatibus";
-                        version = "et";
+                        manufacturer = "commodi";
+                        model = "quis";
+                        type = "phone";
+                        uid = "aut";
+                        version = "odit";
                     }};
-                    name = "perspiciatis";
-                    type = "derived";
+                    name = "non";
+                    type = "raw";
                 }};
             }};
 

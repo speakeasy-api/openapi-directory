@@ -35,18 +35,18 @@ public class Application {
 
             AssociateApprovalRuleTemplateWithRepositoryRequest req = new AssociateApprovalRuleTemplateWithRepositoryRequest() {{
                 headers = new AssociateApprovalRuleTemplateWithRepositoryHeaders() {{
-                    xAmzAlgorithm = "omnis";
-                    xAmzContentSha256 = "ut";
-                    xAmzCredential = "libero";
-                    xAmzDate = "consequatur";
-                    xAmzSecurityToken = "qui";
-                    xAmzSignature = "sit";
-                    xAmzSignedHeaders = "quasi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository";
                 }};
                 request = new AssociateApprovalRuleTemplateWithRepositoryInput() {{
-                    approvalRuleTemplateName = "voluptate";
-                    repositoryName = "ut";
+                    approvalRuleTemplateName = "fugit";
+                    repositoryName = "et";
                 }};
             }};
 

@@ -14,8 +14,8 @@ public class Application {
 
             GetAccountBalanceRequest req = new GetAccountBalanceRequest() {{
                 queryParams = new GetAccountBalanceQueryParams() {{
-                    apiKey = "ipsum";
-                    apiSecret = "amet";
+                    apiKey = "sit";
+                    apiSecret = "voluptas";
                 }};
             }};
 

@@ -24,22 +24,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new BloggerBlogUserInfosGetPathParams() {{
-                    blogId = "voluptates";
-                    userId = "et";
+                    blogId = "sit";
+                    userId = "voluptas";
                 }};
                 queryParams = new BloggerBlogUserInfosGetQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "eum";
-                    alt = "media";
-                    callback = "qui";
-                    fields = "eum";
-                    key = "corporis";
-                    maxPosts = 9063924056762439300;
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "omnis";
-                    uploadType = "sed";
-                    uploadProtocol = "qui";
+                    accessToken = "expedita";
+                    alt = "proto";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    maxPosts = 8274930044578894929;
+                    oauthToken = "et";
+                    prettyPrint = true;
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

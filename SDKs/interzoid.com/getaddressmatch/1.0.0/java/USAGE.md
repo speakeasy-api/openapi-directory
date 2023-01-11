@@ -14,8 +14,8 @@ public class Application {
 
             GetaddressmatchRequest req = new GetaddressmatchRequest() {{
                 queryParams = new GetaddressmatchQueryParams() {{
-                    address = "aut";
-                    license = "dolor";
+                    address = "sit";
+                    license = "voluptas";
                 }};
             }};
 

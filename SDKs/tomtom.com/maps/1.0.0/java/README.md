@@ -36,10 +36,10 @@ public class Application {
             GetMapVersionNumberCopyrightsFormatRequest req = new GetMapVersionNumberCopyrightsFormatRequest() {{
                 pathParams = new GetMapVersionNumberCopyrightsFormatPathParams() {{
                     format = "json";
-                    versionNumber = 4761677689824345557;
+                    versionNumber = 2259404117704393152;
                 }};
                 queryParams = new GetMapVersionNumberCopyrightsFormatQueryParams() {{
-                    callback = "ut";
+                    callback = "culpa";
                 }};
             }};
 

@@ -14,10 +14,10 @@ public class Application {
 
             GetDomainRequest req = new GetDomainRequest() {{
                 pathParams = new GetDomainPathParams() {{
-                    domainId = "nam";
+                    domainId = "sit";
                 }};
                 headers = new GetDomainHeaders() {{
-                    trainingKey = "modi";
+                    trainingKey = "voluptas";
                 }};
             }};
 

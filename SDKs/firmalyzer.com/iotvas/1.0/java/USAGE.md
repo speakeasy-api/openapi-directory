@@ -19,15 +19,15 @@ public class Application {
                     }};
                 }};
                 request = new DeviceFeatures() {{
-                    ftpBanner = "expedita";
-                    hostname = "recusandae";
-                    httpResponse = "qui";
-                    httpsResponse = "qui";
-                    nicMac = "aut";
-                    snmpSysdescr = "explicabo";
-                    snmpSysoid = "cupiditate";
-                    telnetBanner = "temporibus";
-                    upnpResponse = "saepe";
+                    ftpBanner = "sit";
+                    hostname = "voluptas";
+                    httpResponse = "culpa";
+                    httpsResponse = "expedita";
+                    nicMac = "consequuntur";
+                    snmpSysdescr = "dolor";
+                    snmpSysoid = "expedita";
+                    telnetBanner = "voluptas";
+                    upnpResponse = "fugit";
                 }};
             }};
 

@@ -22,18 +22,18 @@ public class Application {
 
             GetQueryJsonRequest req = new GetQueryJsonRequest() {{
                 queryParams = new GetQueryJsonQueryParams() {{
-                    dateRange = "sequi";
-                    elevation = 1865645916773384272;
-                    facets = 1813154553896103662;
-                    filter = "molestias";
-                    latitude = "quia";
-                    limit = 2910837391177076705;
-                    longitude = "eos";
-                    name = "sunt";
-                    offset = 810870458806702692;
-                    query = "consequatur";
-                    sort = "modi";
-                    sw = "ex";
+                    dateRange = "sit";
+                    elevation = 2259404117704393152;
+                    facets = 6050128673802995827;
+                    filter = "expedita";
+                    latitude = "consequuntur";
+                    limit = 2669985732393126063;
+                    longitude = "expedita";
+                    name = "voluptas";
+                    offset = 8274930044578894929;
+                    query = "et";
+                    sort = "nihil";
+                    sw = "rerum";
                 }};
             }};
 

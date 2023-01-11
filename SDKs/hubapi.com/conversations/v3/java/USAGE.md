@@ -19,9 +19,9 @@ public class Application {
                     }};
                 }};
                 request = new IdentificationTokenGenerationRequest() {{
-                    email = "quia";
-                    firstName = "est";
-                    lastName = "aut";
+                    email = "sit";
+                    firstName = "voluptas";
+                    lastName = "culpa";
                 }};
             }};
 

@@ -35,28 +35,35 @@ public class Application {
 
             CreateUrlsExportRequest req = new CreateUrlsExportRequest() {{
                 pathParams = new CreateUrlsExportPathParams() {{
-                    analysisSlug = "error";
-                    projectSlug = "minus";
-                    username = "animi";
+                    analysisSlug = "sit";
+                    projectSlug = "voluptas";
+                    username = "culpa";
                 }};
                 queryParams = new CreateUrlsExportQueryParams() {{
-                    area = "disappeared";
+                    area = "new";
                 }};
                 request = new UrlsQuery() {{
                     fields = new String[]() {{
-                        add("vitae"),
+                        add("dolor"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
                     filters = new java.util.HashMap<String, Object>() {{
-                        put("non", "reiciendis");
-                        put("id", "aut");
+                        put("et", "nihil");
                     }};
                     sort = new java.util.HashMap<String, Object>[]() {{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("quaerat", "exercitationem");
+                            put("debitis", "voluptatum");
+                            put("et", "ut");
+                            put("dolorem", "et");
                         }}),
                         add(new java.util.HashMap<String, Object>() {{
-                            put("ipsum", "rerum");
-                            put("assumenda", "porro");
+                            put("iste", "vitae");
+                        }}),
+                        add(new java.util.HashMap<String, Object>() {{
+                            put("dolores", "illum");
+                            put("debitis", "vel");
+                            put("odio", "dolore");
                         }}),
                     }};
                 }};

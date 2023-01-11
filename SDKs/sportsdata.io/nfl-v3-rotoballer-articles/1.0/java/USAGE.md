@@ -22,7 +22,7 @@ public class Application {
 
             RotoballerArticlesRequest req = new RotoballerArticlesRequest() {{
                 pathParams = new RotoballerArticlesPathParams() {{
-                    format = "json";
+                    format = "xml";
                 }};
             }};
 

@@ -27,8 +27,8 @@ public class Application {
 
             GetcitystandardRequest req = new GetcitystandardRequest() {{
                 queryParams = new GetcitystandardQueryParams() {{
-                    city = "occaecati";
-                    license = "fuga";
+                    city = "sit";
+                    license = "voluptas";
                 }};
             }};
 

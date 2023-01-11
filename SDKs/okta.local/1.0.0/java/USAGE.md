@@ -14,9 +14,9 @@ public class Application {
 
             ClearUserSessionsRequest req = new ClearUserSessionsRequest() {{
                 pathParams = new ClearUserSessionsPathParams() {{
-                    userId = "est";
+                    userId = "sit";
                 }};
-                request = "laborum".getBytes();
+                request = "voluptas".getBytes();
             }};
 
             ClearUserSessionsResponse res = sdk.clearUserSessions(req);

@@ -35,22 +35,22 @@ public class Application {
 
             AddApplicationCloudWatchLoggingOptionRequest req = new AddApplicationCloudWatchLoggingOptionRequest() {{
                 headers = new AddApplicationCloudWatchLoggingOptionHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "voluptatem";
-                    xAmzCredential = "veniam";
-                    xAmzDate = "aspernatur";
-                    xAmzSecurityToken = "sed";
-                    xAmzSignature = "voluptatem";
-                    xAmzSignedHeaders = "numquam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption";
                 }};
                 request = new AddApplicationCloudWatchLoggingOptionRequest() {{
-                    applicationName = "et";
+                    applicationName = "fugit";
                     cloudWatchLoggingOption = new CloudWatchLoggingOption() {{
-                        logStreamARN = "nulla";
+                        logStreamARN = "et";
                     }};
-                    conditionalToken = "nulla";
-                    currentApplicationVersionId = 8361513412454442989;
+                    conditionalToken = "nihil";
+                    currentApplicationVersionId = 8325060299420976708;
                 }};
             }};
 

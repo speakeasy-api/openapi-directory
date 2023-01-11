@@ -14,42 +14,44 @@ public class Application {
 
             MybusinessverificationsLocationsFetchVerificationOptionsRequest req = new MybusinessverificationsLocationsFetchVerificationOptionsRequest() {{
                 pathParams = new MybusinessverificationsLocationsFetchVerificationOptionsPathParams() {{
-                    location = "et";
+                    location = "sit";
                 }};
                 queryParams = new MybusinessverificationsLocationsFetchVerificationOptionsQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "minima";
-                    alt = "json";
-                    callback = "qui";
-                    fields = "et";
-                    key = "quod";
-                    oauthToken = "qui";
-                    prettyPrint = false;
-                    quotaUser = "autem";
-                    uploadType = "ab";
-                    uploadProtocol = "ab";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new FetchVerificationOptionsRequest() {{
                     context = new ServiceBusinessContext() {{
                         address = new PostalAddress() {{
                             addressLines = new String[]() {{
-                                add("omnis"),
+                                add("debitis"),
+                                add("voluptatum"),
+                                add("et"),
                             }};
-                            administrativeArea = "at";
-                            languageCode = "facere";
-                            locality = "non";
-                            organization = "dolorem";
-                            postalCode = "voluptas";
+                            administrativeArea = "ut";
+                            languageCode = "dolorem";
+                            locality = "et";
+                            organization = "voluptate";
+                            postalCode = "iste";
                             recipients = new String[]() {{
-                                add("reiciendis"),
+                                add("totam"),
                             }};
-                            regionCode = "corrupti";
-                            revision = 5668328931256624736;
-                            sortingCode = "atque";
-                            sublocality = "totam";
+                            regionCode = "dolores";
+                            revision = 1929546706668609706;
+                            sortingCode = "debitis";
+                            sublocality = "vel";
                         }};
                     }};
-                    languageCode = "animi";
+                    languageCode = "odio";
                 }};
             }};
 

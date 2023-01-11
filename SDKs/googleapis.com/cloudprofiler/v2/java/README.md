@@ -37,34 +37,33 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudprofilerProjectsProfilesCreatePathParams() {{
-                    parent = "maiores";
+                    parent = "sit";
                 }};
                 queryParams = new CloudprofilerProjectsProfilesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "atque";
-                    alt = "json";
-                    callback = "vero";
-                    fields = "sit";
-                    key = "rem";
-                    oauthToken = "suscipit";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "in";
-                    uploadType = "dicta";
-                    uploadProtocol = "dolorem";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new CreateProfileRequest() {{
                     deployment = new Deployment() {{
                         labels = new java.util.HashMap<String, String>() {{
-                            put("reiciendis", "qui");
-                            put("fuga", "sed");
+                            put("debitis", "voluptatum");
+                            put("et", "ut");
+                            put("dolorem", "et");
                         }};
-                        projectId = "sed";
-                        target = "velit";
+                        projectId = "voluptate";
+                        target = "iste";
                     }};
                     profileType = new openapisdk.models.shared.CreateProfileRequestProfileTypeEnum[]() {{
                         add("WALL"),
-                        add("CONTENTION"),
-                        add("HEAP"),
                     }};
                 }};
             }};

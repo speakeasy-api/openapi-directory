@@ -27,8 +27,8 @@ public class Application {
 
             GetcurrencyrateRequest req = new GetcurrencyrateRequest() {{
                 queryParams = new GetcurrencyrateQueryParams() {{
-                    license = "adipisci";
-                    symbol = "vel";
+                    license = "sit";
+                    symbol = "voluptas";
                 }};
             }};
 

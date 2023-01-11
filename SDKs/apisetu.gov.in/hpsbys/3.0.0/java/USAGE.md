@@ -23,11 +23,11 @@ public class Application {
                 }};
                 request = new RsbycRequestBody() {{
                     certificateParameters = new RsbycRequestBodyCertificateParameters() {{
-                        uid = "facere";
+                        uid = "sit";
                     }};
-                    consentArtifact = "sunt";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "nulla";
+                    txnId = "expedita";
                 }};
             }};
 

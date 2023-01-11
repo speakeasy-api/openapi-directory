@@ -35,26 +35,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new EventarcProjectsLocationsChannelConnectionsCreatePathParams() {{
-                    parent = "ratione";
+                    parent = "sit";
                 }};
                 queryParams = new EventarcProjectsLocationsChannelConnectionsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ut";
-                    alt = "json";
-                    callback = "ut";
-                    channelConnectionId = "corrupti";
-                    fields = "ducimus";
-                    key = "delectus";
-                    oauthToken = "non";
-                    prettyPrint = true;
-                    quotaUser = "eum";
-                    uploadType = "sed";
-                    uploadProtocol = "placeat";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    channelConnectionId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new ChannelConnectionInput() {{
-                    activationToken = "quis";
-                    channel = "rerum";
-                    name = "repellat";
+                    activationToken = "debitis";
+                    channel = "voluptatum";
+                    name = "et";
                 }};
             }};
 

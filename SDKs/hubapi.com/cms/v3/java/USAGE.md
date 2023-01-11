@@ -19,18 +19,19 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetCmsV3DomainsGetPageQueryParams() {{
-                    after = "et";
-                    archived = true;
-                    createdAfter = "1992-01-04T07:26:48Z";
-                    createdAt = "2002-02-04T23:29:43Z";
-                    createdBefore = "1995-06-28T16:10:30Z";
-                    limit = 8746540360787621978;
+                    after = "sit";
+                    archived = false;
+                    createdAfter = "1978-05-13T03:50:47Z";
+                    createdAt = "2019-04-21T07:38:14Z";
+                    createdBefore = "1997-12-26T13:41:25Z";
+                    limit = 2669985732393126063;
                     sort = new String[]() {{
-                        add("alias"),
+                        add("voluptas"),
+                        add("fugit"),
                     }};
-                    updatedAfter = "1970-11-13T08:30:12Z";
-                    updatedAt = "1989-07-19T02:41:41Z";
-                    updatedBefore = "1973-04-04T12:13:31Z";
+                    updatedAfter = "2011-08-12T10:11:12Z";
+                    updatedAt = "2003-05-13T04:57:12Z";
+                    updatedBefore = "2004-06-02T10:14:12Z";
                 }};
             }};
 

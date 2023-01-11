@@ -20,21 +20,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new FetchPhoneNumberPathParams() {{
-                    phoneNumber = "nesciunt";
+                    phoneNumber = "sit";
                 }};
                 queryParams = new FetchPhoneNumberQueryParams() {{
-                    addressCountryCode = "et";
-                    addressLine1 = "qui";
-                    addressLine2 = "quis";
-                    city = "eligendi";
-                    countryCode = "velit";
-                    dateOfBirth = "fuga";
-                    fields = "aliquid";
-                    firstName = "vero";
-                    lastName = "aut";
-                    nationalId = "et";
-                    postalCode = "voluptatem";
-                    state = "sunt";
+                    addressCountryCode = "voluptas";
+                    addressLine1 = "culpa";
+                    addressLine2 = "expedita";
+                    city = "consequuntur";
+                    countryCode = "dolor";
+                    dateOfBirth = "expedita";
+                    fields = "voluptas";
+                    firstName = "fugit";
+                    lastName = "et";
+                    nationalId = "nihil";
+                    postalCode = "rerum";
+                    state = "dicta";
                 }};
             }};
 

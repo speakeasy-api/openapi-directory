@@ -30,11 +30,11 @@ public class Application {
                     }};
                 }};
                 headers = new DeleteProxyHeaders() {{
-                    xApideckAppId = "ullam";
-                    xApideckConsumerId = "id";
-                    xApideckDownstreamAuthorization = "temporibus";
-                    xApideckDownstreamUrl = "ipsam";
-                    xApideckServiceId = "eum";
+                    xApideckAppId = "sit";
+                    xApideckConsumerId = "voluptas";
+                    xApideckDownstreamAuthorization = "culpa";
+                    xApideckDownstreamUrl = "expedita";
+                    xApideckServiceId = "consequuntur";
                 }};
             }};
 

@@ -22,27 +22,21 @@ public class Application {
 
             BatchAssociateClientDeviceWithCoreDeviceRequest req = new BatchAssociateClientDeviceWithCoreDeviceRequest() {{
                 pathParams = new BatchAssociateClientDeviceWithCoreDevicePathParams() {{
-                    coreDeviceThingName = "libero";
+                    coreDeviceThingName = "sit";
                 }};
                 headers = new BatchAssociateClientDeviceWithCoreDeviceHeaders() {{
-                    xAmzAlgorithm = "saepe";
-                    xAmzContentSha256 = "et";
-                    xAmzCredential = "corporis";
-                    xAmzDate = "a";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "numquam";
-                    xAmzSignedHeaders = "dolores";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new BatchAssociateClientDeviceWithCoreDeviceRequestBody() {{
                     entries = new openapisdk.models.shared.AssociateClientDeviceWithCoreDeviceEntry[]() {{
                         add(new AssociateClientDeviceWithCoreDeviceEntry() {{
-                            thingName = "voluptatibus";
-                        }}),
-                        add(new AssociateClientDeviceWithCoreDeviceEntry() {{
-                            thingName = "sint";
-                        }}),
-                        add(new AssociateClientDeviceWithCoreDeviceEntry() {{
-                            thingName = "expedita";
+                            thingName = "et";
                         }}),
                     }};
                 }};

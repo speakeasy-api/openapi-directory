@@ -32,7 +32,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "id";
+                request = "sit";
             }};
 
             PostCreateNotificationConfigurationResponse res = sdk.general.postCreateNotificationConfiguration(req);

@@ -27,8 +27,8 @@ public class Application {
 
             DistrictsInARegionRequest req = new DistrictsInARegionRequest() {{
                 pathParams = new DistrictsInARegionPathParams() {{
-                    country = "quasi";
-                    region = "doloremque";
+                    country = "sit";
+                    region = "voluptas";
                 }};
             }};
 

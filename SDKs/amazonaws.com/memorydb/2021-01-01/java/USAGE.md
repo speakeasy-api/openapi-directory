@@ -22,23 +22,21 @@ public class Application {
 
             BatchUpdateClusterRequest req = new BatchUpdateClusterRequest() {{
                 headers = new BatchUpdateClusterHeaders() {{
-                    xAmzAlgorithm = "dicta";
-                    xAmzContentSha256 = "inventore";
-                    xAmzCredential = "perspiciatis";
-                    xAmzDate = "ut";
-                    xAmzSecurityToken = "esse";
-                    xAmzSignature = "facere";
-                    xAmzSignedHeaders = "commodi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonMemoryDB.BatchUpdateCluster";
                 }};
                 request = new BatchUpdateClusterRequest() {{
                     clusterNames = new String[]() {{
-                        add("asperiores"),
-                        add("amet"),
-                        add("cupiditate"),
+                        add("et"),
                     }};
                     serviceUpdate = new ServiceUpdateRequest() {{
-                        serviceUpdateNameToApply = "nisi";
+                        serviceUpdateNameToApply = "nihil";
                     }};
                 }};
             }};

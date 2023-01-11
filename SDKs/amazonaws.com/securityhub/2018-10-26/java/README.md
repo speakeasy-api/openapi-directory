@@ -35,17 +35,17 @@ public class Application {
 
             AcceptAdministratorInvitationRequest req = new AcceptAdministratorInvitationRequest() {{
                 headers = new AcceptAdministratorInvitationHeaders() {{
-                    xAmzAlgorithm = "sint";
-                    xAmzContentSha256 = "et";
-                    xAmzCredential = "deleniti";
-                    xAmzDate = "ratione";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "quas";
-                    xAmzSignedHeaders = "quae";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new AcceptAdministratorInvitationRequestBody() {{
-                    administratorId = "incidunt";
-                    invitationId = "sapiente";
+                    administratorId = "voluptas";
+                    invitationId = "fugit";
                 }};
             }};
 

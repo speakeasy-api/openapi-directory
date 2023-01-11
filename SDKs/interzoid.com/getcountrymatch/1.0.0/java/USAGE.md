@@ -14,8 +14,8 @@ public class Application {
 
             GetcountrymatchRequest req = new GetcountrymatchRequest() {{
                 queryParams = new GetcountrymatchQueryParams() {{
-                    country = "a";
-                    license = "quaerat";
+                    country = "sit";
+                    license = "voluptas";
                 }};
             }};
 

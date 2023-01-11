@@ -19,49 +19,49 @@ public class Application {
                     }};
                 }};
                 headers = new CreateItemDraftHeaders() {{
-                    contentLanguage = "veniam";
-                    xEBAYCMARKETPLACEID = "architecto";
+                    contentLanguage = "sit";
+                    xEBAYCMARKETPLACEID = "voluptas";
                 }};
                 request = new ItemDraft() {{
-                    categoryId = "molestias";
+                    categoryId = "culpa";
                     charity = new Charity() {{
-                        charityId = "rerum";
-                        donationPercentage = "quo";
+                        charityId = "expedita";
+                        donationPercentage = "consequuntur";
                     }};
-                    condition = "et";
-                    format = "saepe";
+                    condition = "dolor";
+                    format = "expedita";
                     pricingSummary = new PricingSummary() {{
                         auctionReservePrice = new Amount() {{
-                            currency = "commodi";
-                            value = "in";
+                            currency = "voluptas";
+                            value = "fugit";
                         }};
                         auctionStartPrice = new Amount() {{
-                            currency = "quibusdam";
-                            value = "asperiores";
+                            currency = "et";
+                            value = "nihil";
                         }};
                         price = new Amount() {{
-                            currency = "quo";
-                            value = "ea";
+                            currency = "rerum";
+                            value = "dicta";
                         }};
                     }};
                     product = new Product() {{
                         aspects = new openapisdk.models.shared.Aspect[]() {{
                             add(new Aspect() {{
-                                name = "tempora";
+                                name = "voluptatum";
                                 values = new String[]() {{
-                                    add("blanditiis"),
-                                    add("facere"),
+                                    add("ut"),
                                 }};
                             }}),
                         }};
-                        brand = "in";
+                        brand = "dolorem";
                         description = "et";
-                        epid = "odit";
+                        epid = "voluptate";
                         imageUrls = new String[]() {{
-                            add("id"),
-                            add("ipsum"),
+                            add("vitae"),
+                            add("totam"),
+                            add("dolores"),
                         }};
-                        title = "aut";
+                        title = "illum";
                     }};
                 }};
             }};

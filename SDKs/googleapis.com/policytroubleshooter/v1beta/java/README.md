@@ -36,22 +36,22 @@ public class Application {
                 }};
                 queryParams = new PolicytroubleshooterIamTroubleshootQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ipsa";
-                    alt = "json";
-                    callback = "soluta";
-                    fields = "laboriosam";
-                    key = "voluptas";
-                    oauthToken = "officiis";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
                     quotaUser = "fugit";
-                    uploadType = "id";
-                    uploadProtocol = "rerum";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest() {{
                     accessTuple = new GoogleCloudPolicytroubleshooterV1betaAccessTuple() {{
-                        fullResourceName = "alias";
-                        permission = "enim";
-                        principal = "cupiditate";
+                        fullResourceName = "rerum";
+                        permission = "dicta";
+                        principal = "debitis";
                     }};
                 }};
             }};

@@ -35,37 +35,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetAnalyzeIamPolicyPathParams() {{
-                    parent = "occaecati";
+                    parent = "sit";
                 }};
                 queryParams = new CloudassetAnalyzeIamPolicyQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "est";
-                    alt = "json";
+                    accessToken = "culpa";
+                    alt = "media";
                     analysisQueryAccessSelectorPermissions = new String[]() {{
-                        add("et"),
+                        add("dolor"),
+                        add("expedita"),
+                        add("voluptas"),
                     }};
                     analysisQueryAccessSelectorRoles = new String[]() {{
-                        add("molestias"),
-                        add("aut"),
-                        add("qui"),
+                        add("et"),
                     }};
-                    analysisQueryIdentitySelectorIdentity = "consequuntur";
-                    analysisQueryResourceSelectorFullResourceName = "exercitationem";
-                    callback = "hic";
-                    fields = "doloribus";
-                    key = "porro";
-                    oauthToken = "est";
-                    optionsAnalyzeServiceAccountImpersonation = true;
-                    optionsExecutionTimeout = "eum";
-                    optionsExpandGroups = true;
-                    optionsExpandResources = true;
+                    analysisQueryIdentitySelectorIdentity = "nihil";
+                    analysisQueryResourceSelectorFullResourceName = "rerum";
+                    callback = "dicta";
+                    fields = "debitis";
+                    key = "voluptatum";
+                    oauthToken = "et";
+                    optionsAnalyzeServiceAccountImpersonation = false;
+                    optionsExecutionTimeout = "dolorem";
+                    optionsExpandGroups = false;
+                    optionsExpandResources = false;
                     optionsExpandRoles = true;
-                    optionsOutputGroupEdges = false;
-                    optionsOutputResourceEdges = false;
+                    optionsOutputGroupEdges = true;
+                    optionsOutputResourceEdges = true;
                     prettyPrint = true;
-                    quotaUser = "qui";
-                    uploadType = "neque";
-                    uploadProtocol = "officia";
+                    quotaUser = "illum";
+                    uploadType = "debitis";
+                    uploadProtocol = "vel";
                 }};
             }};
 

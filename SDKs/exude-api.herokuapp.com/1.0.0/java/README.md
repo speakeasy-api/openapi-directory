@@ -27,12 +27,12 @@ public class Application {
 
             FilterFileDataStoppingsRequest req = new FilterFileDataStoppingsRequest() {{
                 pathParams = new FilterFileDataStoppingsPathParams() {{
-                    type = "nostrum";
+                    type = "sit";
                 }};
                 request = new FilterFileDataStoppingsRequestBody() {{
                     file = new FilterFileDataStoppingsRequestBodyFile() {{
-                        content = "non".getBytes();
-                        file = "sit";
+                        content = "voluptas".getBytes();
+                        file = "culpa";
                     }};
                 }};
             }};

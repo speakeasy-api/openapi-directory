@@ -33,17 +33,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateBindingPathParams() {{
-                    serviceSid = "ipsa";
+                    serviceSid = "sit";
                 }};
                 request = new CreateBindingCreateBindingRequest() {{
-                    address = "cum";
-                    bindingType = "apn";
-                    credentialSid = "aut";
-                    endpoint = "eaque";
-                    identity = "facilis";
-                    notificationProtocolVersion = "et";
+                    address = "voluptas";
+                    bindingType = "gcm";
+                    credentialSid = "expedita";
+                    endpoint = "consequuntur";
+                    identity = "dolor";
+                    notificationProtocolVersion = "expedita";
                     tag = new String[]() {{
+                        add("fugit"),
                         add("et"),
+                        add("nihil"),
                     }};
                 }};
             }};

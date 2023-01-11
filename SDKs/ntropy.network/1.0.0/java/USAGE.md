@@ -14,7 +14,7 @@ public class Application {
 
             GetABatchOfConsumerTransactionClassificationResultsRequest req = new GetABatchOfConsumerTransactionClassificationResultsRequest() {{
                 pathParams = new GetABatchOfConsumerTransactionClassificationResultsPathParams() {{
-                    id = "et";
+                    id = "sit";
                 }};
             }};
 

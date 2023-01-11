@@ -35,38 +35,35 @@ public class Application {
                     }};
                 }};
                 pathParams = new ApigeeregistryProjectsLocationsApisCreatePathParams() {{
-                    parent = "velit";
+                    parent = "sit";
                 }};
                 queryParams = new ApigeeregistryProjectsLocationsApisCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dolor";
-                    alt = "proto";
-                    apiId = "velit";
-                    callback = "aut";
-                    fields = "aut";
-                    key = "nobis";
-                    oauthToken = "iste";
+                    accessToken = "culpa";
+                    alt = "media";
+                    apiId = "consequuntur";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "expedita";
-                    uploadType = "impedit";
-                    uploadProtocol = "rerum";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new ApiInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("in", "assumenda");
-                        put("modi", "quos");
-                        put("vel", "aut");
+                        put("voluptatum", "et");
                     }};
-                    availability = "beatae";
-                    description = "consectetur";
+                    availability = "ut";
+                    description = "dolorem";
                     displayName = "et";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("provident", "inventore");
-                        put("quas", "dolorum");
+                        put("iste", "vitae");
                     }};
-                    name = "dolores";
-                    recommendedDeployment = "aut";
-                    recommendedVersion = "sit";
+                    name = "totam";
+                    recommendedDeployment = "dolores";
+                    recommendedVersion = "illum";
                 }};
             }};
 

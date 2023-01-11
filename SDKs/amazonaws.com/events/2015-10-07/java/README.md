@@ -35,17 +35,17 @@ public class Application {
 
             ActivateEventSourceRequest req = new ActivateEventSourceRequest() {{
                 headers = new ActivateEventSourceHeaders() {{
-                    xAmzAlgorithm = "harum";
-                    xAmzContentSha256 = "quisquam";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "voluptate";
-                    xAmzSignature = "omnis";
-                    xAmzSignedHeaders = "dolores";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSEvents.ActivateEventSource";
                 }};
                 request = new ActivateEventSourceRequest() {{
-                    name = "vel";
+                    name = "fugit";
                 }};
             }};
 

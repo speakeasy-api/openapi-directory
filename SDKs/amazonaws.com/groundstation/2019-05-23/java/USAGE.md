@@ -22,16 +22,16 @@ public class Application {
 
             CancelContactRequest req = new CancelContactRequest() {{
                 pathParams = new CancelContactPathParams() {{
-                    contactId = "repudiandae";
+                    contactId = "sit";
                 }};
                 headers = new CancelContactHeaders() {{
-                    xAmzAlgorithm = "quo";
-                    xAmzContentSha256 = "omnis";
-                    xAmzCredential = "adipisci";
-                    xAmzDate = "praesentium";
-                    xAmzSecurityToken = "qui";
-                    xAmzSignature = "ipsam";
-                    xAmzSignedHeaders = "in";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

@@ -38,21 +38,23 @@ public class Application {
                 }};
                 queryParams = new PeopleContactGroupsBatchGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "ut";
-                    alt = "json";
-                    callback = "odit";
-                    fields = "saepe";
-                    groupFields = "sit";
-                    key = "maxime";
-                    maxMembers = 7997996156776222842;
-                    oauthToken = "aut";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    groupFields = "dolor";
+                    key = "expedita";
+                    maxMembers = 6044372234677422456;
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "fugit";
+                    quotaUser = "nihil";
                     resourceNames = new String[]() {{
-                        add("quia"),
+                        add("dicta"),
+                        add("debitis"),
+                        add("voluptatum"),
                     }};
-                    uploadType = "numquam";
-                    uploadProtocol = "quia";
+                    uploadType = "et";
+                    uploadProtocol = "ut";
                 }};
             }};
 

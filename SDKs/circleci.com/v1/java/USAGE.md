@@ -22,8 +22,8 @@ public class Application {
 
             DeleteProjectUsernameProjectBuildCacheRequest req = new DeleteProjectUsernameProjectBuildCacheRequest() {{
                 pathParams = new DeleteProjectUsernameProjectBuildCachePathParams() {{
-                    project = "necessitatibus";
-                    username = "quam";
+                    project = "sit";
+                    username = "voluptas";
                 }};
             }};
 

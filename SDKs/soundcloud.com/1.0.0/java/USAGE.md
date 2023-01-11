@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteLikesPlaylistsPlaylistIdPathParams() {{
-                    playlistId = 5366472482114725502;
+                    playlistId = 8717895732742165505;
                 }};
             }};
 

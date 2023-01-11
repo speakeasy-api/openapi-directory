@@ -35,31 +35,33 @@ public class Application {
                     }};
                 }};
                 pathParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams() {{
-                    parent = "sed";
+                    parent = "sit";
                 }};
                 queryParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "atque";
-                    alt = "json";
-                    callback = "omnis";
-                    fields = "nemo";
-                    hubId = "illo";
-                    key = "est";
-                    oauthToken = "ut";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    hubId = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "est";
-                    requestId = "expedita";
-                    uploadType = "autem";
-                    uploadProtocol = "aut";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new HubInput() {{
-                    createTime = "aut";
-                    description = "optio";
+                    createTime = "voluptatum";
+                    description = "et";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("sed", "libero");
+                        put("dolorem", "et");
+                        put("voluptate", "iste");
+                        put("vitae", "totam");
                     }};
-                    name = "deserunt";
-                    updateTime = "quis";
+                    name = "dolores";
+                    updateTime = "illum";
                 }};
             }};
 

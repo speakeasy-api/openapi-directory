@@ -14,7 +14,7 @@ public class Application {
 
             CleanScanPageRequest req = new CleanScanPageRequest() {{
                 pathParams = new CleanScanPagePathParams() {{
-                    scanId = 2631280116938319904;
+                    scanId = 8717895732742165505;
                 }};
             }};
 

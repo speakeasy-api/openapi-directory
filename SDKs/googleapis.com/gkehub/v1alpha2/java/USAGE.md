@@ -22,25 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new GkehubProjectsLocationsGlobalMembershipsInitializeHubPathParams() {{
-                    project = "officia";
+                    project = "sit";
                 }};
                 queryParams = new GkehubProjectsLocationsGlobalMembershipsInitializeHubQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "incidunt";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "et";
-                    fields = "dolorem";
-                    key = "nesciunt";
-                    oauthToken = "laborum";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "voluptatum";
-                    uploadProtocol = "nisi";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("rerum", "porro");
-                    put("et", "necessitatibus");
-                    put("architecto", "sed");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

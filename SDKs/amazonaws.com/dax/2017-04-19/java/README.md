@@ -35,41 +35,41 @@ public class Application {
 
             CreateClusterRequest req = new CreateClusterRequest() {{
                 headers = new CreateClusterHeaders() {{
-                    xAmzAlgorithm = "dolor";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "ducimus";
-                    xAmzDate = "in";
-                    xAmzSecurityToken = "enim";
-                    xAmzSignature = "iusto";
-                    xAmzSignedHeaders = "dolor";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonDAXV3.CreateCluster";
                 }};
                 request = new CreateClusterRequest() {{
                     availabilityZones = new String[]() {{
-                        add("dolores"),
+                        add("et"),
                     }};
-                    clusterEndpointEncryptionType = "TLS";
-                    clusterName = "voluptatem";
-                    description = "rerum";
-                    iamRoleArn = "reiciendis";
-                    nodeType = "aut";
-                    notificationTopicArn = "unde";
-                    parameterGroupName = "saepe";
-                    preferredMaintenanceWindow = "ratione";
-                    replicationFactor = 2367153732642039729;
+                    clusterEndpointEncryptionType = "NONE";
+                    clusterName = "rerum";
+                    description = "dicta";
+                    iamRoleArn = "debitis";
+                    nodeType = "voluptatum";
+                    notificationTopicArn = "et";
+                    parameterGroupName = "ut";
+                    preferredMaintenanceWindow = "dolorem";
+                    replicationFactor = 7259475919510918339;
                     sseSpecification = new SseSpecification() {{
                         enabled = false;
                     }};
                     securityGroupIds = new String[]() {{
-                        add("veniam"),
-                        add("consequatur"),
-                        add("corporis"),
+                        add("vitae"),
+                        add("totam"),
+                        add("dolores"),
                     }};
-                    subnetGroupName = "est";
+                    subnetGroupName = "illum";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "adipisci";
-                            value = "est";
+                            key = "vel";
+                            value = "odio";
                         }}),
                     }};
                 }};

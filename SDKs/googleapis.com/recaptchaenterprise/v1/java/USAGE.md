@@ -22,24 +22,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams() {{
-                    name = "quis";
+                    name = "sit";
                 }};
                 queryParams = new RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "quasi";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "suscipit";
-                    fields = "voluptates";
-                    key = "ad";
-                    oauthToken = "laborum";
-                    prettyPrint = false;
-                    quotaUser = "odio";
-                    uploadType = "saepe";
-                    uploadProtocol = "saepe";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest() {{
-                    annotation = "PASSWORD_CORRECT";
-                    hashedAccountId = "voluptate";
+                    annotation = "PASSWORD_INCORRECT";
+                    hashedAccountId = "debitis";
                     reasons = new openapisdk.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum[]() {{
                         add("TRANSACTION_ACCEPTED"),
                     }};

@@ -35,49 +35,59 @@ public class Application {
                     }};
                 }};
                 pathParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams() {{
-                    parent = "a";
+                    parent = "sit";
                 }};
                 queryParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "vero";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "repellendus";
-                    endpointPolicyId = "placeat";
-                    fields = "hic";
-                    key = "et";
-                    oauthToken = "qui";
-                    prettyPrint = true;
-                    quotaUser = "est";
-                    uploadType = "dolorem";
-                    uploadProtocol = "soluta";
+                    callback = "consequuntur";
+                    endpointPolicyId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new EndpointPolicyInput() {{
-                    authorizationPolicy = "at";
-                    clientTlsPolicy = "et";
-                    description = "vitae";
+                    authorizationPolicy = "debitis";
+                    clientTlsPolicy = "voluptatum";
+                    description = "et";
                     endpointMatcher = new EndpointMatcher() {{
                         metadataLabelMatcher = new EndpointMatcherMetadataLabelMatcher() {{
                             metadataLabelMatchCriteria = "MATCH_ALL";
                             metadataLabels = new openapisdk.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabels[]() {{
                                 add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "cupiditate";
-                                    labelValue = "sit";
+                                    labelName = "et";
+                                    labelValue = "voluptate";
+                                }}),
+                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
+                                    labelName = "iste";
+                                    labelValue = "vitae";
+                                }}),
+                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
+                                    labelName = "totam";
+                                    labelValue = "dolores";
                                 }}),
                             }};
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("non", "rerum");
+                        put("debitis", "vel");
+                        put("odio", "dolore");
+                        put("id", "aspernatur");
                     }};
-                    name = "quasi";
-                    serverTlsPolicy = "sed";
+                    name = "accusantium";
+                    serverTlsPolicy = "totam";
                     trafficPortSelector = new TrafficPortSelector() {{
                         ports = new String[]() {{
-                            add("sed"),
-                            add("officia"),
+                            add("quis"),
+                            add("est"),
                         }};
                     }};
-                    type = "SIDECAR_PROXY";
+                    type = "GRPC_SERVER";
                 }};
             }};
 

@@ -14,15 +14,15 @@ public class Application {
 
             FacetsRequest req = new FacetsRequest() {{
                 queryParams = new FacetsQueryParams() {{
-                    count = 8894217164370440668;
-                    endDate = "1978-07-12";
-                    facetFilters = "eaque";
-                    searchTerms = "quod";
-                    sortKeys = "temporal_duration,,desc";
+                    count = 8717895732742165505;
+                    endDate = "2006-05-01";
+                    facetFilters = "culpa";
+                    searchTerms = "expedita";
+                    sortKeys = "updated,,desc";
                     source = "NSIDC";
-                    spatial = "reprehenderit";
-                    startDate = "2004-02-13";
-                    startIndex = 3339648146578572936;
+                    spatial = "expedita";
+                    startDate = "1978-05-28";
+                    startIndex = 8274930044578894929;
                 }};
             }};
 

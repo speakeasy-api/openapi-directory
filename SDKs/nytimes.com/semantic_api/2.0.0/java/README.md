@@ -35,12 +35,12 @@ public class Application {
 
             GetNameConceptTypeSpecificConceptJsonRequest req = new GetNameConceptTypeSpecificConceptJsonRequest() {{
                 pathParams = new GetNameConceptTypeSpecificConceptJsonPathParams() {{
-                    conceptType = "nytd_per";
-                    specificConcept = "accusantium";
+                    conceptType = "nytd_org";
+                    specificConcept = "voluptas";
                 }};
                 queryParams = new GetNameConceptTypeSpecificConceptJsonQueryParams() {{
-                    fields = "combinations";
-                    query = "commodi";
+                    fields = "links";
+                    query = "expedita";
                 }};
             }};
 

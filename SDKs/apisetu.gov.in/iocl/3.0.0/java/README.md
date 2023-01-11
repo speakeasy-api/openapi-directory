@@ -36,11 +36,11 @@ public class Application {
                 }};
                 request = new LpgsvRequestBody() {{
                     certificateParameters = new LpgsvRequestBodyCertificateParameters() {{
-                        uid = "ut";
+                        uid = "sit";
                     }};
-                    consentArtifact = "vel";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "eligendi";
+                    txnId = "expedita";
                 }};
             }};
 

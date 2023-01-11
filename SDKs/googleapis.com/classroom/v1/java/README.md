@@ -39,19 +39,19 @@ public class Application {
                 }};
                 queryParams = new ClassroomCoursesAliasesCreateQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "est";
-                    alt = "json";
-                    callback = "magni";
-                    fields = "quis";
-                    key = "sed";
-                    oauthToken = "ratione";
-                    prettyPrint = false;
-                    quotaUser = "quaerat";
-                    uploadType = "soluta";
-                    uploadProtocol = "vel";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new CourseAlias() {{
-                    alias = "fuga";
+                    alias = "dicta";
                 }};
             }};
 

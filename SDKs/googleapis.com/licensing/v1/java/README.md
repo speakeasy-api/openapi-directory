@@ -35,22 +35,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new LicensingLicenseAssignmentsDeletePathParams() {{
-                    productId = "eius";
-                    skuId = "debitis";
+                    productId = "sit";
+                    skuId = "voluptas";
                     userId = "culpa";
                 }};
                 queryParams = new LicensingLicenseAssignmentsDeleteQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "vitae";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "facilis";
-                    key = "eaque";
-                    oauthToken = "reprehenderit";
+                    accessToken = "consequuntur";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "voluptas";
+                    key = "fugit";
+                    oauthToken = "et";
                     prettyPrint = true;
-                    quotaUser = "molestiae";
-                    uploadType = "aut";
-                    uploadProtocol = "exercitationem";
+                    quotaUser = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
             }};
 

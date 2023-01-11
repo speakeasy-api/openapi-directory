@@ -23,22 +23,21 @@ public class Application {
             GetApplySecurityGroupsToLoadBalancerRequest req = new GetApplySecurityGroupsToLoadBalancerRequest() {{
                 queryParams = new GetApplySecurityGroupsToLoadBalancerQueryParams() {{
                     action = "ApplySecurityGroupsToLoadBalancer";
-                    loadBalancerName = "molestias";
+                    loadBalancerName = "voluptas";
                     securityGroups = new String[]() {{
-                        add("fugiat"),
-                        add("cumque"),
-                        add("ad"),
+                        add("expedita"),
+                        add("consequuntur"),
                     }};
                     version = "2012-06-01";
                 }};
                 headers = new GetApplySecurityGroupsToLoadBalancerHeaders() {{
-                    xAmzAlgorithm = "officiis";
-                    xAmzContentSha256 = "sit";
-                    xAmzCredential = "atque";
-                    xAmzDate = "ad";
-                    xAmzSecurityToken = "ab";
-                    xAmzSignature = "dolores";
-                    xAmzSignedHeaders = "delectus";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "fugit";
+                    xAmzDate = "et";
+                    xAmzSecurityToken = "nihil";
+                    xAmzSignature = "rerum";
+                    xAmzSignedHeaders = "dicta";
                 }};
             }};
 

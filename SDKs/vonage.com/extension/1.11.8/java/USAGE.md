@@ -19,8 +19,8 @@ public class Application {
                     }};
                 }};
                 pathParams = new ExtensionCtrlGetAccountExtensionByIdPathParams() {{
-                    accountId = "quasi";
-                    extensionNumber = 32.099998;
+                    accountId = "sit";
+                    extensionNumber = 14.200000;
                 }};
             }};
 

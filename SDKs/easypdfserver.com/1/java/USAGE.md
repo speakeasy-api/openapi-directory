@@ -14,9 +14,9 @@ public class Application {
 
             PostMakePdfRequest req = new PostMakePdfRequest() {{
                 request = new PostMakePdfRequestBody() {{
-                    html = "expedita";
-                    key = "consequuntur";
-                    url = "dolor";
+                    html = "sit";
+                    key = "voluptas";
+                    url = "culpa";
                 }};
             }};
 

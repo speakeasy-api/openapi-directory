@@ -19,8 +19,8 @@ public class Application {
                     }};
                 }};
                 request = new CertificateRequest() {{
-                    beneficiaryId = "et";
-                    mobile = "vitae";
+                    beneficiaryId = "sit";
+                    mobile = "voluptas";
                 }};
             }};
 

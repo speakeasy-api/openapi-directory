@@ -35,17 +35,17 @@ public class Application {
 
             CreateMeshRequest req = new CreateMeshRequest() {{
                 headers = new CreateMeshHeaders() {{
-                    xAmzAlgorithm = "nihil";
-                    xAmzContentSha256 = "quam";
-                    xAmzCredential = "et";
-                    xAmzDate = "vel";
-                    xAmzSecurityToken = "itaque";
-                    xAmzSignature = "provident";
-                    xAmzSignedHeaders = "voluptatem";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new CreateMeshRequestBody() {{
-                    clientToken = "qui";
-                    meshName = "modi";
+                    clientToken = "voluptas";
+                    meshName = "fugit";
                 }};
             }};
 

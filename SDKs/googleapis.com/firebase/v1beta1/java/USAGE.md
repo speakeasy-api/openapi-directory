@@ -24,19 +24,19 @@ public class Application {
                     }};
                 }};
                 queryParams = new FirebaseAvailableProjectsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "repudiandae";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "deserunt";
-                    fields = "velit";
-                    key = "ullam";
-                    oauthToken = "officia";
-                    pageSize = 75330080133732026;
-                    pageToken = "est";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    pageSize = 6044372234677422456;
+                    pageToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "et";
-                    uploadType = "ea";
-                    uploadProtocol = "illum";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

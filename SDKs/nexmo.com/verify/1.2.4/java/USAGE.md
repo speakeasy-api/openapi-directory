@@ -14,14 +14,14 @@ public class Application {
 
             VerifyCheckRequest req = new VerifyCheckRequest() {{
                 pathParams = new VerifyCheckPathParams() {{
-                    format = "xml";
+                    format = "json";
                 }};
                 request = new CheckRequest() {{
-                    apiKey = "doloribus";
-                    apiSecret = "et";
-                    code = "eligendi";
-                    ipAddress = "dolorem";
-                    requestId = "dicta";
+                    apiKey = "voluptas";
+                    apiSecret = "culpa";
+                    code = "expedita";
+                    ipAddress = "consequuntur";
+                    requestId = "dolor";
                 }};
             }};
 

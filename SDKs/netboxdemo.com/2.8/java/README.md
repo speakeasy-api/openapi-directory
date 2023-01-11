@@ -38,15 +38,15 @@ public class Application {
                     cable = new NestedCableInput() {{
                         label = "sit";
                     }};
-                    circuit = 6319784459607830719;
+                    circuit = 2259404117704393152;
                     connectionStatus = true;
-                    description = "est";
-                    portSpeed = 6895190030986400396;
-                    ppInfo = "vel";
-                    site = 761917384339733708;
+                    description = "expedita";
+                    portSpeed = 3390393562759376202;
+                    ppInfo = "dolor";
+                    site = 1774932891286980153;
                     termSide = "Z";
-                    upstreamSpeed = 4485499790585475891;
-                    xconnectId = "commodi";
+                    upstreamSpeed = 8274930044578894929;
+                    xconnectId = "et";
                 }};
             }};
 

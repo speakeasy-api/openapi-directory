@@ -22,43 +22,37 @@ public class Application {
 
             CreateAccessRequest req = new CreateAccessRequest() {{
                 headers = new CreateAccessHeaders() {{
-                    xAmzAlgorithm = "eos";
-                    xAmzContentSha256 = "modi";
-                    xAmzCredential = "et";
-                    xAmzDate = "culpa";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "quae";
-                    xAmzSignedHeaders = "incidunt";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "TransferService.CreateAccess";
                 }};
                 request = new CreateAccessRequest() {{
-                    externalId = "nam";
-                    homeDirectory = "optio";
+                    externalId = "fugit";
+                    homeDirectory = "et";
                     homeDirectoryMappings = new openapisdk.models.shared.HomeDirectoryMapEntry[]() {{
                         add(new HomeDirectoryMapEntry() {{
-                            entry = "ratione";
-                            target = "quaerat";
-                        }}),
-                        add(new HomeDirectoryMapEntry() {{
-                            entry = "qui";
-                            target = "modi";
-                        }}),
-                        add(new HomeDirectoryMapEntry() {{
-                            entry = "cum";
-                            target = "rem";
+                            entry = "rerum";
+                            target = "dicta";
                         }}),
                     }};
-                    homeDirectoryType = "LOGICAL";
-                    policy = "cum";
+                    homeDirectoryType = "PATH";
+                    policy = "voluptatum";
                     posixProfile = new PosixProfile() {{
-                        gid = 5917608095681824334;
+                        gid = 2339563716805116249;
                         secondaryGids = new Long[]() {{
-                            add(7738685661617987022),
+                            add(161231572858529631),
+                            add(7259475919510918339),
+                            add(7373105480197164748),
                         }};
-                        uid = 3301601712436159733;
+                        uid = 3287288577352441706;
                     }};
-                    role = "dolore";
-                    serverId = "placeat";
+                    role = "vitae";
+                    serverId = "totam";
                 }};
             }};
 

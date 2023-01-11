@@ -36,65 +36,58 @@ public class Application {
                 }};
                 queryParams = new DoubleclickbidmanagerQueriesCreatequeryQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "dolores";
-                    alt = "proto";
-                    asynchronous = true;
-                    callback = "et";
-                    fields = "nisi";
-                    key = "ducimus";
-                    oauthToken = "totam";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    asynchronous = false;
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "ea";
-                    uploadType = "ipsa";
-                    uploadProtocol = "sed";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new Query() {{
-                    kind = "voluptatem";
+                    kind = "dicta";
                     metadata = new QueryMetadata() {{
-                        dataRange = "TYPE_NOT_SUPPORTED";
-                        format = "XLSX";
-                        googleCloudStoragePathForLatestReport = "cumque";
-                        googleDrivePathForLatestReport = "pariatur";
-                        latestReportRunTimeMs = "possimus";
-                        locale = "aperiam";
-                        reportCount = 5929769420080958335;
-                        running = false;
-                        sendNotification = false;
+                        dataRange = "PREVIOUS_HALF_MONTH";
+                        format = "CSV";
+                        googleCloudStoragePathForLatestReport = "et";
+                        googleDrivePathForLatestReport = "ut";
+                        latestReportRunTimeMs = "dolorem";
+                        locale = "et";
+                        reportCount = 7373105480197164748;
+                        running = true;
+                        sendNotification = true;
                         shareEmailAddress = new String[]() {{
-                            add("nisi"),
+                            add("dolores"),
+                            add("illum"),
+                            add("debitis"),
                         }};
-                        title = "pariatur";
+                        title = "vel";
                     }};
                     params = new Parameters() {{
                         filters = new openapisdk.models.shared.FilterPair[]() {{
                             add(new FilterPair() {{
-                                type = "FILTER_INVENTORY_RATE_TYPE";
-                                value = "earum";
-                            }}),
-                            add(new FilterPair() {{
-                                type = "FILTER_TRUEVIEW_IAR_TIME_OF_DAY";
-                                value = "ab";
-                            }}),
-                            add(new FilterPair() {{
-                                type = "FILTER_TRUEVIEW_IAR_ZIPCODE";
-                                value = "earum";
+                                type = "FILTER_DATE";
+                                value = "id";
                             }}),
                         }};
                         groupBys = new openapisdk.models.shared.ParametersGroupBysEnum[]() {{
-                            add("FILTER_LINE_ITEM_START_DATE"),
-                            add("FILTER_VENDOR_MEASUREMENT_MODE"),
+                            add("FILTER_PARTNER_STATUS"),
                         }};
-                        includeInviteData = true;
+                        includeInviteData = false;
                         metrics = new openapisdk.models.shared.ParametersMetricsEnum[]() {{
-                            add("METRIC_TOTAL_EXPOSURES"),
-                            add("METRIC_PROFIT_VIEWABLE_ECPM_PARTNER"),
+                            add("METRIC_NIELSEN_POPULATION_REACH"),
+                            add("METRIC_RICH_MEDIA_ENGAGEMENTS"),
                         }};
                         options = new Options() {{
-                            includeOnlyTargetedUserLists = false;
+                            includeOnlyTargetedUserLists = true;
                             pathQueryOptions = new PathQueryOptions() {{
                                 channelGrouping = new ChannelGrouping() {{
-                                    fallbackName = "voluptatibus";
-                                    name = "omnis";
+                                    fallbackName = "odit";
+                                    name = "non";
                                     rules = new openapisdk.models.shared.Rule[]() {{
                                         add(new Rule() {{
                                             disjunctiveMatchStatements = new openapisdk.models.shared.DisjunctiveMatchStatement[]() {{
@@ -102,33 +95,11 @@ public class Application {
                                                     eventFilters = new openapisdk.models.shared.EventFilter[]() {{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_TRUEVIEW_IAR_TIME_OF_DAY";
-                                                                match = "UNKNOWN";
-                                                                values = new String[]() {{
-                                                                    add("qui"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new openapisdk.models.shared.EventFilter[]() {{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_TRUEVIEW_REMARKETING_LIST";
-                                                                match = "UNKNOWN";
-                                                                values = new String[]() {{
-                                                                    add("minus"),
-                                                                    add("laborum"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_DFP_ORDER_ID";
+                                                                filter = "FILTER_QUARTER";
                                                                 match = "BEGINS_WITH";
                                                                 values = new String[]() {{
-                                                                    add("debitis"),
+                                                                    add("autem"),
+                                                                    add("consectetur"),
                                                                 }};
                                                             }};
                                                         }}),
@@ -138,28 +109,19 @@ public class Application {
                                                     eventFilters = new openapisdk.models.shared.EventFilter[]() {{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_CHANNEL_TYPE";
+                                                                filter = "FILTER_AD_POSITION";
                                                                 match = "PARTIAL";
                                                                 values = new String[]() {{
-                                                                    add("ad"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "FILTER_CREATIVE_SIZE";
-                                                                match = "UNKNOWN";
-                                                                values = new String[]() {{
-                                                                    add("neque"),
-                                                                    add("ea"),
-                                                                    add("libero"),
+                                                                    add("at"),
+                                                                    add("ipsum"),
+                                                                    add("eveniet"),
                                                                 }};
                                                             }};
                                                         }}),
                                                     }};
                                                 }}),
                                             }};
-                                            name = "error";
+                                            name = "modi";
                                         }}),
                                     }};
                                 }};
@@ -168,47 +130,34 @@ public class Application {
                                         eventFilters = new openapisdk.models.shared.EventFilter[]() {{
                                             add(new EventFilter() {{
                                                 dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "FILTER_TRUEVIEW_IAR_ZIPCODE";
-                                                    match = "BEGINS_WITH";
+                                                    filter = "FILTER_REMARKETING_LIST";
+                                                    match = "EXACT";
                                                     values = new String[]() {{
-                                                        add("voluptas"),
-                                                        add("sapiente"),
+                                                        add("reprehenderit"),
+                                                        add("tempore"),
+                                                        add("maiores"),
                                                     }};
                                                 }};
                                             }}),
                                         }};
-                                        pathMatchPosition = "ANY";
-                                    }}),
-                                    add(new PathFilter() {{
-                                        eventFilters = new openapisdk.models.shared.EventFilter[]() {{
-                                            add(new EventFilter() {{
-                                                dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "FILTER_ZIP_CODE";
-                                                    match = "BEGINS_WITH";
-                                                    values = new String[]() {{
-                                                        add("eum"),
-                                                    }};
-                                                }};
-                                            }}),
-                                        }};
-                                        pathMatchPosition = "FIRST";
+                                        pathMatchPosition = "LAST";
                                     }}),
                                 }};
                             }};
                         }};
-                        type = "TYPE_NIELSEN_DAILY_REACH_BUILD";
+                        type = "TYPE_PETRA_NIELSEN_ONLINE_GLOBAL_MARKET";
                     }};
-                    queryId = "nisi";
-                    reportDataEndTimeMs = "id";
-                    reportDataStartTimeMs = "omnis";
+                    queryId = "beatae";
+                    reportDataEndTimeMs = "veritatis";
+                    reportDataStartTimeMs = "in";
                     schedule = new QuerySchedule() {{
-                        endTimeMs = "debitis";
-                        frequency = "SEMI_MONTHLY";
-                        nextRunMinuteOfDay = 1264816207080619033;
-                        nextRunTimezoneCode = "voluptatem";
-                        startTimeMs = "quia";
+                        endTimeMs = "et";
+                        frequency = "WEEKLY";
+                        nextRunMinuteOfDay = 4564823113789767141;
+                        nextRunTimezoneCode = "ex";
+                        startTimeMs = "dolores";
                     }};
-                    timezoneCode = "laboriosam";
+                    timezoneCode = "placeat";
                 }};
             }};
 

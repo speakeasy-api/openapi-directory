@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new LabrpRequestBody() {{
                     certificateParameters = new LabrpRequestBodyCertificateParameters() {{
-                        dob = "facilis";
-                        fullName = "cupiditate";
-                        gender = "quas";
-                        mobileNoRQ = "autem";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        gender = "culpa";
+                        mobileNoRQ = "expedita";
                     }};
-                    consentArtifact = "natus";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "et";
+                    txnId = "expedita";
                 }};
             }};
 

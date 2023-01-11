@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteSettingsOrganizationsOrganizationNamePathParams() {{
-                    organizationName = "voluptas";
+                    organizationName = "sit";
                 }};
             }};
 

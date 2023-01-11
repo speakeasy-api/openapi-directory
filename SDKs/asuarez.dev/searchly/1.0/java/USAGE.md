@@ -14,7 +14,7 @@ public class Application {
 
             SrcSearchlyApiV1ControllersSimilarityByContentRequest req = new SrcSearchlyApiV1ControllersSimilarityByContentRequest() {{
                 request = new SrcSearchlyApiV1ControllersSimilarityByContentRequestBody() {{
-                    content = "ratione";
+                    content = "sit";
                 }};
             }};
 

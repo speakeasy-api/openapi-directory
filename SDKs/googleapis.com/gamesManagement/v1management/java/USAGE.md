@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new GamesManagementAchievementsResetPathParams() {{
-                    achievementId = "facilis";
+                    achievementId = "sit";
                 }};
                 queryParams = new GamesManagementAchievementsResetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "nihil";
-                    alt = "proto";
-                    callback = "nostrum";
-                    fields = "illo";
-                    key = "sed";
-                    oauthToken = "omnis";
-                    prettyPrint = false;
-                    quotaUser = "incidunt";
-                    uploadType = "qui";
-                    uploadProtocol = "occaecati";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

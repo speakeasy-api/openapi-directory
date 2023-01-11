@@ -35,72 +35,74 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatastreamProjectsLocationsConnectionProfilesCreatePathParams() {{
-                    parent = "dolor";
+                    parent = "sit";
                 }};
                 queryParams = new DatastreamProjectsLocationsConnectionProfilesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "aliquam";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "enim";
-                    connectionProfileId = "nemo";
-                    fields = "impedit";
-                    key = "est";
-                    oauthToken = "quo";
-                    prettyPrint = true;
-                    quotaUser = "natus";
-                    requestId = "corporis";
-                    uploadType = "accusamus";
-                    uploadProtocol = "vitae";
+                    callback = "consequuntur";
+                    connectionProfileId = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new ConnectionProfileInput() {{
-                    displayName = "enim";
+                    displayName = "voluptatum";
                     forwardSshConnectivity = new ForwardSshTunnelConnectivity() {{
-                        hostname = "ut";
-                        password = "voluptates";
-                        port = 4556031978488940954;
-                        privateKey = "culpa";
-                        username = "omnis";
+                        hostname = "et";
+                        password = "ut";
+                        port = 161231572858529631;
+                        privateKey = "et";
+                        username = "voluptate";
                     }};
                     gcsProfile = new GcsProfile() {{
-                        bucketName = "ut";
-                        rootPath = "nobis";
+                        bucketName = "iste";
+                        rootPath = "vitae";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("quis", "aut");
-                        put("cupiditate", "et");
-                        put("ut", "distinctio");
+                        put("dolores", "illum");
+                        put("debitis", "vel");
+                        put("odio", "dolore");
                     }};
                     mysqlProfile = new MysqlProfileInput() {{
-                        hostname = "exercitationem";
-                        password = "consequatur";
-                        port = 429309384571615090;
+                        hostname = "id";
+                        password = "aspernatur";
+                        port = 2914295034816259174;
                         sslConfig = new MysqlSslConfigInput() {{
-                            caCertificate = "nam";
-                            clientCertificate = "et";
-                            clientKey = "error";
+                            caCertificate = "totam";
+                            clientCertificate = "commodi";
+                            clientKey = "quis";
                         }};
-                        username = "nostrum";
+                        username = "est";
                     }};
                     noConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("aut", "aut");
-                        put("voluptatem", "quisquam");
-                        put("architecto", "architecto");
+                        put("odit", "non");
+                        put("voluptas", "omnis");
+                        put("aut", "illo");
                     }};
                     oracleProfile = new OracleProfile() {{
                         connectionAttributes = new java.util.HashMap<String, String>() {{
-                            put("reiciendis", "laudantium");
+                            put("officiis", "autem");
+                            put("consectetur", "nobis");
+                            put("odio", "qui");
                         }};
-                        databaseService = "in";
-                        hostname = "quam";
-                        password = "animi";
-                        port = 8508841424682115153;
-                        username = "inventore";
+                        databaseService = "recusandae";
+                        hostname = "at";
+                        password = "ipsum";
+                        port = 8902041070398994519;
+                        username = "modi";
                     }};
                     privateConnectivity = new PrivateConnectivity() {{
-                        privateConnectionName = "non";
+                        privateConnectionName = "sint";
                     }};
                     staticServiceIpConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("laborum", "mollitia");
+                        put("ut", "exercitationem");
                     }};
                 }};
             }};

@@ -19,10 +19,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetCharityOrgPathParams() {{
-                    charityOrgId = "debitis";
+                    charityOrgId = "sit";
                 }};
                 headers = new GetCharityOrgHeaders() {{
-                    xEBAYCMARKETPLACEID = "voluptatum";
+                    xEBAYCMARKETPLACEID = "voluptas";
                 }};
             }};
 

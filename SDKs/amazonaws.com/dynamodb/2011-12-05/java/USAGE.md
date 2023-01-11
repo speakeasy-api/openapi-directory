@@ -22,58 +22,130 @@ public class Application {
 
             BatchGetItemRequest req = new BatchGetItemRequest() {{
                 queryParams = new BatchGetItemQueryParams() {{
-                    requestItems = "occaecati";
+                    requestItems = "sit";
                 }};
                 headers = new BatchGetItemHeaders() {{
-                    xAmzAlgorithm = "error";
-                    xAmzContentSha256 = "aliquam";
-                    xAmzCredential = "eaque";
-                    xAmzDate = "non";
-                    xAmzSecurityToken = "earum";
-                    xAmzSignature = "voluptatem";
-                    xAmzSignedHeaders = "impedit";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                     xAmzTarget = "DynamoDB_20111205.BatchGetItem";
                 }};
                 request = new BatchGetItemInput() {{
                     requestItems = new java.util.HashMap<String, openapisdk.models.shared.KeysAndAttributes>() {{
-                        put("ut", new KeysAndAttributes() {{
+                        put("nihil", new KeysAndAttributes() {{
                             attributesToGet = new String[]() {{
-                                add("ab"),
-                                add("consequatur"),
+                                add("dicta"),
+                                add("debitis"),
+                                add("voluptatum"),
                             }};
-                            consistentRead = true;
+                            consistentRead = false;
                             keys = new openapisdk.models.shared.Key[]() {{
                                 add(new Key() {{
                                     hashKeyElement = new AttributeValue() {{
-                                        b = "fuga";
+                                        b = "dolorem";
                                         bs = new String[]() {{
-                                            add("neque"),
+                                            add("voluptate"),
+                                            add("iste"),
                                         }};
-                                        n = "necessitatibus";
+                                        n = "vitae";
                                         ns = new String[]() {{
-                                            add("non"),
-                                            add("sit"),
+                                            add("dolores"),
+                                            add("illum"),
+                                            add("debitis"),
                                         }};
-                                        s = "est";
+                                        s = "vel";
                                         ss = new String[]() {{
-                                            add("in"),
+                                            add("dolore"),
                                         }};
                                     }};
                                     rangeKeyElement = new AttributeValue() {{
-                                        b = "mollitia";
+                                        b = "id";
                                         bs = new String[]() {{
-                                            add("et"),
+                                            add("accusantium"),
                                         }};
-                                        n = "consequuntur";
+                                        n = "totam";
                                         ns = new String[]() {{
-                                            add("officia"),
-                                            add("quidem"),
-                                            add("quasi"),
+                                            add("quis"),
+                                            add("est"),
                                         }};
-                                        s = "odit";
+                                        s = "aut";
                                         ss = new String[]() {{
-                                            add("aperiam"),
+                                            add("non"),
+                                            add("voluptas"),
+                                        }};
+                                    }};
+                                }}),
+                                add(new Key() {{
+                                    hashKeyElement = new AttributeValue() {{
+                                        b = "omnis";
+                                        bs = new String[]() {{
+                                            add("illo"),
+                                        }};
+                                        n = "sed";
+                                        ns = new String[]() {{
+                                            add("autem"),
+                                            add("consectetur"),
+                                        }};
+                                        s = "nobis";
+                                        ss = new String[]() {{
+                                            add("qui"),
+                                        }};
+                                    }};
+                                    rangeKeyElement = new AttributeValue() {{
+                                        b = "recusandae";
+                                        bs = new String[]() {{
+                                            add("ipsum"),
+                                            add("eveniet"),
+                                        }};
+                                        n = "modi";
+                                        ns = new String[]() {{
+                                            add("inventore"),
+                                        }};
+                                        s = "ut";
+                                        ss = new String[]() {{
+                                            add("aut"),
+                                            add("reprehenderit"),
+                                            add("tempore"),
+                                        }};
+                                    }};
+                                }}),
+                                add(new Key() {{
+                                    hashKeyElement = new AttributeValue() {{
+                                        b = "maiores";
+                                        bs = new String[]() {{
+                                            add("dolor"),
+                                            add("beatae"),
+                                            add("veritatis"),
+                                        }};
+                                        n = "in";
+                                        ns = new String[]() {{
                                             add("omnis"),
+                                            add("ipsum"),
+                                            add("ex"),
+                                        }};
+                                        s = "dolores";
+                                        ss = new String[]() {{
+                                            add("vel"),
+                                        }};
+                                    }};
+                                    rangeKeyElement = new AttributeValue() {{
+                                        b = "rerum";
+                                        bs = new String[]() {{
+                                            add("voluptas"),
+                                            add("quam"),
+                                        }};
+                                        n = "reprehenderit";
+                                        ns = new String[]() {{
+                                            add("qui"),
+                                        }};
+                                        s = "unde";
+                                        ss = new String[]() {{
+                                            add("autem"),
+                                            add("qui"),
                                         }};
                                     }};
                                 }}),

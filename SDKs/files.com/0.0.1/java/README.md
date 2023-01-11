@@ -27,10 +27,10 @@ public class Application {
 
             GetActionNotificationExportResultsRequest req = new GetActionNotificationExportResultsRequest() {{
                 queryParams = new GetActionNotificationExportResultsQueryParams() {{
-                    actionNotificationExportId = 3424131883437816551;
-                    cursor = "aperiam";
-                    perPage = 7640526115896074433;
-                    userId = 6810414345605660316;
+                    actionNotificationExportId = 8717895732742165505;
+                    cursor = "voluptas";
+                    perPage = 6050128673802995827;
+                    userId = 501233450539197794;
                 }};
             }};
 

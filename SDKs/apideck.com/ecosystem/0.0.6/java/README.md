@@ -27,11 +27,11 @@ public class Application {
 
             CategoriesAllRequest req = new CategoriesAllRequest() {{
                 pathParams = new CategoriesAllPathParams() {{
-                    ecosystemId = "itaque";
+                    ecosystemId = "sit";
                 }};
                 queryParams = new CategoriesAllQueryParams() {{
-                    cursor = "optio";
-                    limit = 7998526504416170211;
+                    cursor = "voluptas";
+                    limit = 6050128673802995827;
                 }};
             }};
 

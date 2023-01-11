@@ -35,17 +35,17 @@ public class Application {
                     }};
                 }};
                 queryParams = new ContentAccountsAuthinfoQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "dolores";
-                    alt = "json";
-                    callback = "voluptas";
-                    fields = "dolor";
-                    key = "vel";
-                    oauthToken = "in";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
                     prettyPrint = true;
-                    quotaUser = "eum";
-                    uploadType = "aliquam";
-                    uploadProtocol = "et";
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
             }};
 

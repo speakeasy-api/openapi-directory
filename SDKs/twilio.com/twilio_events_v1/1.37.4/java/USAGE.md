@@ -20,9 +20,9 @@ public class Application {
                     }};
                 }};
                 request = new CreateSinkCreateSinkRequest() {{
-                    description = "tenetur";
-                    sinkConfiguration = "esse";
-                    sinkType = "kinesis";
+                    description = "sit";
+                    sinkConfiguration = "voluptas";
+                    sinkType = "webhook";
                 }};
             }};
 

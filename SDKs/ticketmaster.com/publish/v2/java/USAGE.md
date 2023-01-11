@@ -14,27 +14,36 @@ public class Application {
 
             PatchAttractionRequest req = new PatchAttractionRequest() {{
                 pathParams = new PatchAttractionPathParams() {{
-                    id = "quo";
+                    id = "sit";
                 }};
                 headers = new PatchAttractionHeaders() {{
-                    tmpsCorrelationId = "vero";
+                    tmpsCorrelationId = "voluptas";
                 }};
                 request = new AugmentationData() {{
                     changes = new openapisdk.models.shared.Change[]() {{
                         add(new Change() {{
-                            from = "totam";
-                            op = "add";
-                            path = "eius";
+                            from = "expedita";
+                            op = "test";
+                            path = "dolor";
                             value = new java.util.HashMap<String, Object>() {{
-                                put("beatae", "omnis");
+                                put("voluptas", "fugit");
+                                put("et", "nihil");
+                            }};
+                        }}),
+                        add(new Change() {{
+                            from = "rerum";
+                            op = "test";
+                            path = "debitis";
+                            value = new java.util.HashMap<String, Object>() {{
+                                put("et", "ut");
                             }};
                         }}),
                     }};
-                    relatedEntityId = "totam";
+                    relatedEntityId = "dolorem";
                     relatedEntityType = "attraction";
-                    score = 8.100000;
-                    source = "necessitatibus";
-                    versionNumber = 4525004039791920848;
+                    score = 94.199997;
+                    source = "vitae";
+                    versionNumber = 4706154865122290029;
                 }};
             }};
 

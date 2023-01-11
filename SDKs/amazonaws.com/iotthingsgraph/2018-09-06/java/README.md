@@ -35,19 +35,19 @@ public class Application {
 
             AssociateEntityToThingRequest req = new AssociateEntityToThingRequest() {{
                 headers = new AssociateEntityToThingHeaders() {{
-                    xAmzAlgorithm = "impedit";
-                    xAmzContentSha256 = "est";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "facilis";
-                    xAmzSecurityToken = "ut";
-                    xAmzSignature = "tenetur";
-                    xAmzSignedHeaders = "voluptatibus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "IotThingsGraphFrontEndService.AssociateEntityToThing";
                 }};
                 request = new AssociateEntityToThingRequest() {{
-                    entityId = "cupiditate";
-                    namespaceVersion = 6514906014667812376;
-                    thingName = "in";
+                    entityId = "fugit";
+                    namespaceVersion = 1543572285742637646;
+                    thingName = "nihil";
                 }};
             }};
 

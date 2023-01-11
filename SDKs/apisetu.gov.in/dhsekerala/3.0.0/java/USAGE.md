@@ -23,15 +23,15 @@ public class Application {
                 }};
                 request = new HpcerRequestBody() {{
                     certificateParameters = new HpcerRequestBodyCertificateParameters() {{
-                        dob = "illo";
-                        fullName = "id";
-                        regno = "est";
-                        type = "architecto";
-                        year = "officiis";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        regno = "culpa";
+                        type = "expedita";
+                        year = "consequuntur";
                     }};
-                    consentArtifact = "deserunt";
+                    consentArtifact = "dolor";
                     format = "pdf";
-                    txnId = "est";
+                    txnId = "voluptas";
                 }};
             }};
 

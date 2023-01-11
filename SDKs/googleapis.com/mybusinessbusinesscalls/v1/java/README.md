@@ -27,23 +27,23 @@ public class Application {
 
             MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest req = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest() {{
                 pathParams = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams() {{
-                    parent = "numquam";
+                    parent = "sit";
                 }};
                 queryParams = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "magnam";
-                    alt = "json";
-                    callback = "aspernatur";
-                    fields = "alias";
-                    filter = "beatae";
-                    key = "eveniet";
-                    oauthToken = "ab";
-                    pageSize = 6524872019109703649;
-                    pageToken = "deleniti";
-                    prettyPrint = false;
-                    quotaUser = "nam";
-                    uploadType = "sunt";
-                    uploadProtocol = "aut";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    filter = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
+                    pageSize = 1543572285742637646;
+                    pageToken = "nihil";
+                    prettyPrint = true;
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

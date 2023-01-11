@@ -37,24 +37,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeploymentmanagerDeploymentsCancelPreviewPathParams() {{
-                    deployment = "eos";
-                    project = "quasi";
+                    deployment = "sit";
+                    project = "voluptas";
                 }};
                 queryParams = new DeploymentmanagerDeploymentsCancelPreviewQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "suscipit";
-                    alt = "json";
-                    callback = "ab";
-                    fields = "quod";
-                    key = "rem";
-                    oauthToken = "recusandae";
+                    accessToken = "expedita";
+                    alt = "proto";
+                    callback = "dolor";
+                    fields = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "sunt";
-                    uploadType = "quo";
-                    uploadProtocol = "corporis";
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
                 request = new DeploymentsCancelPreviewRequest() {{
-                    fingerprint = "dicta";
+                    fingerprint = "debitis";
                 }};
             }};
 

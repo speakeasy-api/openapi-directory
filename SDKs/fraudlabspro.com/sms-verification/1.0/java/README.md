@@ -27,10 +27,10 @@ public class Application {
 
             GetV1VerificationResultRequest req = new GetV1VerificationResultRequest() {{
                 queryParams = new GetV1VerificationResultQueryParams() {{
-                    format = "xml";
-                    key = "quis";
-                    otp = "eligendi";
-                    tranId = "velit";
+                    format = "json";
+                    key = "voluptas";
+                    otp = "culpa";
+                    tranId = "expedita";
                 }};
             }};
 

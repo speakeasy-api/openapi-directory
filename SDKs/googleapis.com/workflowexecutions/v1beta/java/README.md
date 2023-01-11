@@ -35,24 +35,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelPathParams() {{
-                    name = "harum";
+                    name = "sit";
                 }};
                 queryParams = new WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "consequuntur";
-                    alt = "json";
-                    callback = "omnis";
-                    fields = "repudiandae";
-                    key = "placeat";
-                    oauthToken = "veritatis";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "provident";
-                    uploadType = "cumque";
-                    uploadProtocol = "deleniti";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("qui", "quae");
-                    put("consequatur", "reprehenderit");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

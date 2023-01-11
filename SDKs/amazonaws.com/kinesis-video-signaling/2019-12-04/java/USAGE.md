@@ -22,19 +22,19 @@ public class Application {
 
             GetIceServerConfigRequest req = new GetIceServerConfigRequest() {{
                 headers = new GetIceServerConfigHeaders() {{
-                    xAmzAlgorithm = "nemo";
-                    xAmzContentSha256 = "corporis";
-                    xAmzCredential = "cupiditate";
-                    xAmzDate = "soluta";
-                    xAmzSecurityToken = "voluptatibus";
-                    xAmzSignature = "maiores";
-                    xAmzSignedHeaders = "corrupti";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new GetIceServerConfigRequestBody() {{
-                    channelARN = "expedita";
-                    clientId = "nisi";
+                    channelARN = "voluptas";
+                    clientId = "fugit";
                     service = "TURN";
-                    username = "magni";
+                    username = "nihil";
                 }};
             }};
 

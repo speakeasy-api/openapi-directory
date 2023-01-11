@@ -35,9 +35,9 @@ public class Application {
 
             CreateAdministrationRequest req = new CreateAdministrationRequest() {{
                 pathParams = new CreateAdministrationPathParams() {{
-                    legalEntityId = 8230160685758639177;
+                    legalEntityId = 8717895732742165505;
                 }};
-                request = "sunt";
+                request = "voluptas";
             }};
 
             CreateAdministrationResponse res = sdk.administrations.createAdministration(req);

@@ -22,21 +22,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new ApigatewayProjectsLocationsGatewaysGetIamPolicyPathParams() {{
-                    resource = "aut";
+                    resource = "sit";
                 }};
                 queryParams = new ApigatewayProjectsLocationsGatewaysGetIamPolicyQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "voluptate";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "in";
-                    fields = "doloribus";
-                    key = "ut";
-                    oauthToken = "fugit";
-                    optionsRequestedPolicyVersion = 6776362035236595236;
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "dolores";
-                    uploadProtocol = "cum";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    optionsRequestedPolicyVersion = 8274930044578894929;
+                    prettyPrint = false;
+                    quotaUser = "nihil";
+                    uploadType = "rerum";
+                    uploadProtocol = "dicta";
                 }};
             }};
 

@@ -22,32 +22,32 @@ public class Application {
                     }};
                 }};
                 pathParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams() {{
-                    parent = "et";
+                    parent = "sit";
                 }};
                 queryParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "voluptatum";
-                    alt = "json";
-                    callback = "et";
-                    fields = "iste";
-                    hubId = "iure";
-                    key = "ad";
-                    oauthToken = "tenetur";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    hubId = "expedita";
+                    key = "voluptas";
+                    oauthToken = "fugit";
                     prettyPrint = false;
-                    quotaUser = "recusandae";
-                    requestId = "cupiditate";
-                    uploadType = "ab";
-                    uploadProtocol = "iste";
+                    quotaUser = "nihil";
+                    requestId = "rerum";
+                    uploadType = "dicta";
+                    uploadProtocol = "debitis";
                 }};
                 request = new HubInput() {{
-                    description = "occaecati";
+                    description = "voluptatum";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("qui", "est");
+                        put("ut", "dolorem");
                     }};
-                    name = "laboriosam";
+                    name = "et";
                     routingVpcs = new openapisdk.models.shared.RoutingVpcInput[]() {{
                         add(new RoutingVpcInput() {{
-                            uri = "sed";
+                            uri = "iste";
                         }}),
                     }};
                 }};

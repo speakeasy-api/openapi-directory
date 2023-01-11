@@ -35,32 +35,31 @@ public class Application {
 
             DescribeRecommendationExportJobsRequest req = new DescribeRecommendationExportJobsRequest() {{
                 headers = new DescribeRecommendationExportJobsHeaders() {{
-                    xAmzAlgorithm = "itaque";
-                    xAmzContentSha256 = "corrupti";
-                    xAmzCredential = "voluptatem";
-                    xAmzDate = "quasi";
-                    xAmzSecurityToken = "repellat";
-                    xAmzSignature = "rem";
-                    xAmzSignedHeaders = "nisi";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "ComputeOptimizerService.DescribeRecommendationExportJobs";
                 }};
                 request = new DescribeRecommendationExportJobsRequest() {{
                     filters = new openapisdk.models.shared.JobFilter[]() {{
                         add(new JobFilter() {{
-                            name = "JobStatus";
+                            name = "ResourceType";
                             values = new String[]() {{
-                                add("soluta"),
-                                add("laudantium"),
+                                add("rerum"),
                             }};
                         }}),
                     }};
                     jobIds = new String[]() {{
-                        add("eaque"),
-                        add("ex"),
-                        add("cum"),
+                        add("debitis"),
+                        add("voluptatum"),
+                        add("et"),
                     }};
-                    maxResults = 7436471626629558277;
-                    nextToken = "sunt";
+                    maxResults = 7144924247938981575;
+                    nextToken = "dolorem";
                 }};
             }};
 

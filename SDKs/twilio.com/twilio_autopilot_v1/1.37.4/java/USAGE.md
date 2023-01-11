@@ -20,13 +20,13 @@ public class Application {
                     }};
                 }};
                 request = new CreateAssistantCreateAssistantRequest() {{
-                    callbackEvents = "perferendis";
-                    callbackUrl = "id";
-                    defaults = "autem";
-                    friendlyName = "hic";
-                    logQueries = false;
-                    styleSheet = "omnis";
-                    uniqueName = "libero";
+                    callbackEvents = "sit";
+                    callbackUrl = "voluptas";
+                    defaults = "culpa";
+                    friendlyName = "expedita";
+                    logQueries = true;
+                    styleSheet = "dolor";
+                    uniqueName = "expedita";
                 }};
             }};
 

@@ -40,23 +40,23 @@ public class Application {
                     }};
                 }};
                 queryParams = new MessagesAddQueryParams() {{
-                    raw = true;
+                    raw = false;
                 }};
                 headers = new MessagesAddHeaders() {{
-                    xApideckAppId = "et";
-                    xApideckConsumerId = "error";
-                    xApideckServiceId = "vero";
+                    xApideckAppId = "voluptas";
+                    xApideckConsumerId = "culpa";
+                    xApideckServiceId = "expedita";
                 }};
                 request = new MessageInput() {{
-                    body = "sit";
-                    from = "maxime";
-                    messagingServiceId = "est";
-                    reference = "natus";
-                    scheduledAt = "1979-01-06T21:57:55Z";
-                    subject = "saepe";
-                    to = "dolorem";
+                    body = "consequuntur";
+                    from = "dolor";
+                    messagingServiceId = "expedita";
+                    reference = "voluptas";
+                    scheduledAt = "2011-08-12T10:11:12Z";
+                    subject = "nihil";
+                    to = "rerum";
                     type = "mms";
-                    webhookUrl = "recusandae";
+                    webhookUrl = "debitis";
                 }};
             }};
 

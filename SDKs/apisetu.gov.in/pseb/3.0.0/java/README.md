@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new CemstRequestBody() {{
                     certificateParameters = new CemstRequestBodyCertificateParameters() {{
-                        fullName = "atque";
-                        uid = "quo";
-                        rollno = "esse";
-                        year = "consequatur";
+                        fullName = "sit";
+                        uid = "voluptas";
+                        rollno = "culpa";
+                        year = "expedita";
                     }};
-                    consentArtifact = "nostrum";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "debitis";
+                    txnId = "expedita";
                 }};
             }};
 

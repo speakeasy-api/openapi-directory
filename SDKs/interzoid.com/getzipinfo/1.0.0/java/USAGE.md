@@ -14,8 +14,8 @@ public class Application {
 
             GetzipcodeinfoRequest req = new GetzipcodeinfoRequest() {{
                 queryParams = new GetzipcodeinfoQueryParams() {{
-                    license = "iure";
-                    zip = "et";
+                    license = "sit";
+                    zip = "voluptas";
                 }};
             }};
 

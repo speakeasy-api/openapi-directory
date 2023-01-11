@@ -19,7 +19,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                request = "omnis";
+                request = "sit";
             }};
 
             PostCreateTestCardRangesResponse res = sdk.general.postCreateTestCardRanges(req);

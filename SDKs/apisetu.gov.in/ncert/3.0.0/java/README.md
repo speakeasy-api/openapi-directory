@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new MrcerRequestBody() {{
                     certificateParameters = new MrcerRequestBodyCertificateParameters() {{
-                        dob = "nihil";
-                        fullName = "dicta";
-                        rroll = "impedit";
-                        year = "illum";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        rroll = "culpa";
+                        year = "expedita";
                     }};
-                    consentArtifact = "quibusdam";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "id";
+                    txnId = "expedita";
                 }};
             }};
 

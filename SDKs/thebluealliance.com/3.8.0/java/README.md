@@ -32,7 +32,7 @@ public class Application {
                     }};
                 }};
                 headers = new GetStatusHeaders() {{
-                    ifModifiedSince = "ut";
+                    ifModifiedSince = "sit";
                 }};
             }};
 

@@ -19,9 +19,9 @@ public class Application {
                     }};
                 }};
                 request = new AccountCreateRequestBody() {{
-                    email = "unde";
-                    name = "ullam";
-                    password = "assumenda";
+                    email = "sit";
+                    name = "voluptas";
+                    password = "culpa";
                 }};
             }};
 

@@ -35,23 +35,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudprivatecatalogOrganizationsCatalogsSearchPathParams() {{
-                    resource = "eum";
+                    resource = "sit";
                 }};
                 queryParams = new CloudprivatecatalogOrganizationsCatalogsSearchQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "distinctio";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "sed";
-                    fields = "sed";
-                    key = "autem";
-                    oauthToken = "ipsa";
-                    pageSize = 3100161270969178692;
-                    pageToken = "inventore";
-                    prettyPrint = false;
-                    query = "ad";
-                    quotaUser = "eligendi";
-                    uploadType = "quia";
-                    uploadProtocol = "eum";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    pageSize = 8274930044578894929;
+                    pageToken = "et";
+                    prettyPrint = true;
+                    query = "rerum";
+                    quotaUser = "dicta";
+                    uploadType = "debitis";
+                    uploadProtocol = "voluptatum";
                 }};
             }};
 

@@ -35,16 +35,16 @@ public class Application {
 
             CancelJobRequest req = new CancelJobRequest() {{
                 pathParams = new CancelJobPathParams() {{
-                    id = "est";
+                    id = "sit";
                 }};
                 headers = new CancelJobHeaders() {{
-                    xAmzAlgorithm = "at";
-                    xAmzContentSha256 = "harum";
-                    xAmzCredential = "magnam";
-                    xAmzDate = "earum";
-                    xAmzSecurityToken = "qui";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "odio";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

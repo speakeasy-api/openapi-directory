@@ -19,41 +19,48 @@ public class Application {
                     }};
                 }};
                 queryParams = new CreateAliasQueryParams() {{
-                    aliasName = "deserunt";
-                    domainName = "eaque";
+                    aliasName = "sit";
+                    domainName = "voluptas";
                 }};
                 request = new CreateAliasModel() {{
                     destinations = new openapisdk.models.shared.DestinationModel[]() {{
                         add(new DestinationModel() {{
-                            country = "sit";
-                            os = "autem";
-                            url = "quis";
+                            country = "expedita";
+                            os = "consequuntur";
+                            url = "dolor";
                         }}),
                         add(new DestinationModel() {{
-                            country = "vel";
-                            os = "vel";
-                            url = "placeat";
+                            country = "expedita";
+                            os = "voluptas";
+                            url = "fugit";
                         }}),
                     }};
                     metatags = new openapisdk.models.shared.MetaTagModel[]() {{
                         add(new MetaTagModel() {{
-                            content = "nisi";
-                            name = "quis";
+                            content = "nihil";
+                            name = "rerum";
                         }}),
                     }};
                     snippets = new openapisdk.models.shared.SnippetModel[]() {{
                         add(new SnippetModel() {{
-                            id = "porro";
+                            id = "debitis";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("et", "accusamus");
-                                put("numquam", "laborum");
-                                put("rerum", "ut");
+                                put("et", "ut");
                             }};
                         }}),
                         add(new SnippetModel() {{
-                            id = "laborum";
+                            id = "dolorem";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("quis", "minus");
+                                put("voluptate", "iste");
+                                put("vitae", "totam");
+                            }};
+                        }}),
+                        add(new SnippetModel() {{
+                            id = "dolores";
+                            parameters = new java.util.HashMap<String, String>() {{
+                                put("debitis", "vel");
+                                put("odio", "dolore");
+                                put("id", "aspernatur");
                             }};
                         }}),
                     }};

@@ -32,8 +32,8 @@ public class Application {
                     }};
                 }};
                 pathParams = new UserCtrlGetUserByIdPathParams() {{
-                    accountId = "ad";
-                    userId = 15.100000;
+                    accountId = "sit";
+                    userId = 14.200000;
                 }};
             }};
 

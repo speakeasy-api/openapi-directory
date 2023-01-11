@@ -35,19 +35,19 @@ public class Application {
 
             AssociateAssessmentReportEvidenceFolderRequest req = new AssociateAssessmentReportEvidenceFolderRequest() {{
                 pathParams = new AssociateAssessmentReportEvidenceFolderPathParams() {{
-                    assessmentId = "cum";
+                    assessmentId = "sit";
                 }};
                 headers = new AssociateAssessmentReportEvidenceFolderHeaders() {{
-                    xAmzAlgorithm = "hic";
-                    xAmzContentSha256 = "qui";
-                    xAmzCredential = "cum";
-                    xAmzDate = "facilis";
-                    xAmzSecurityToken = "consequatur";
-                    xAmzSignature = "molestiae";
-                    xAmzSignedHeaders = "laudantium";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
                 request = new AssociateAssessmentReportEvidenceFolderRequestBody() {{
-                    evidenceFolderId = "tempore";
+                    evidenceFolderId = "fugit";
                 }};
             }};
 

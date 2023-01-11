@@ -14,8 +14,8 @@ public class Application {
 
             GetareacodefromnumberRequest req = new GetareacodefromnumberRequest() {{
                 queryParams = new GetareacodefromnumberQueryParams() {{
-                    license = "est";
-                    number = "sint";
+                    license = "sit";
+                    number = "voluptas";
                 }};
             }};
 

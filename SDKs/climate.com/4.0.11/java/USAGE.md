@@ -20,8 +20,7 @@ public class Application {
                 }};
                 request = new BoundariesQuery() {{
                     ids = new String[]() {{
-                        add("illo"),
-                        add("minus"),
+                        add("voluptas"),
                     }};
                 }};
             }};

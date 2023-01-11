@@ -14,11 +14,11 @@ public class Application {
 
             GetAccountRequest req = new GetAccountRequest() {{
                 queryParams = new GetAccountQueryParams() {{
-                    include = "exercitationem";
+                    include = "sit";
                 }};
                 headers = new GetAccountHeaders() {{
-                    evAccessToken = "iste";
-                    evApiKey = "perferendis";
+                    evAccessToken = "voluptas";
+                    evApiKey = "culpa";
                 }};
             }};
 

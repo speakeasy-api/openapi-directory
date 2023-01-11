@@ -35,18 +35,18 @@ public class Application {
 
             BuildBotLocaleRequest req = new BuildBotLocaleRequest() {{
                 pathParams = new BuildBotLocalePathParams() {{
-                    botId = "dolor";
-                    botVersion = "voluptatibus";
-                    localeId = "aut";
+                    botId = "sit";
+                    botVersion = "voluptas";
+                    localeId = "culpa";
                 }};
                 headers = new BuildBotLocaleHeaders() {{
-                    xAmzAlgorithm = "repellendus";
-                    xAmzContentSha256 = "et";
-                    xAmzCredential = "sunt";
-                    xAmzDate = "exercitationem";
-                    xAmzSecurityToken = "voluptatem";
-                    xAmzSignature = "natus";
-                    xAmzSignedHeaders = "ea";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
+                    xAmzSignedHeaders = "et";
                 }};
             }};
 

@@ -35,14 +35,14 @@ public class Application {
 
             GetLinesRequest req = new GetLinesRequest() {{
                 queryParams = new GetLinesQueryParams() {{
-                    away = "quia";
-                    conference = "blanditiis";
-                    gameId = 501002963790601971;
+                    away = "sit";
+                    conference = "voluptas";
+                    gameId = 6050128673802995827;
                     home = "expedita";
-                    seasonType = "quo";
-                    team = "id";
-                    week = 319022383954109970;
-                    year = 3325329196161324374;
+                    seasonType = "consequuntur";
+                    team = "dolor";
+                    week = 1774932891286980153;
+                    year = 6044372234677422456;
                 }};
             }};
 

@@ -35,7 +35,7 @@ public class Application {
 
             GetMappingValuesKeyRequest req = new GetMappingValuesKeyRequest() {{
                 pathParams = new GetMappingValuesKeyPathParams() {{
-                    key = "marketSecDes";
+                    key = "securityType";
                 }};
             }};
 

@@ -27,16 +27,16 @@ public class Application {
 
             GetArrivalsAndDeparturesByCrsRequest req = new GetArrivalsAndDeparturesByCrsRequest() {{
                 pathParams = new GetArrivalsAndDeparturesByCrsPathParams() {{
-                    crs = "voluptas";
+                    crs = "sit";
                 }};
                 queryParams = new GetArrivalsAndDeparturesByCrsQueryParams() {{
-                    apiKey = "veniam";
-                    filterStation = "dolorum";
-                    filterType = "id";
-                    numServices = 5235212334792799739;
+                    apiKey = "voluptas";
+                    filterStation = "culpa";
+                    filterType = "expedita";
+                    numServices = 3390393562759376202;
                     serviceDetails = false;
-                    timeOffset = 5575187088826678383;
-                    timeWindow = 6278711762470794999;
+                    timeOffset = 1774932891286980153;
+                    timeWindow = 6044372234677422456;
                 }};
             }};
 

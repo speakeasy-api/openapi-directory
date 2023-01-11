@@ -22,87 +22,124 @@ public class Application {
 
             CreateBudgetRequest req = new CreateBudgetRequest() {{
                 headers = new CreateBudgetHeaders() {{
-                    xAmzAlgorithm = "ea";
-                    xAmzContentSha256 = "ad";
-                    xAmzCredential = "et";
-                    xAmzDate = "nemo";
-                    xAmzSecurityToken = "illo";
-                    xAmzSignature = "animi";
-                    xAmzSignedHeaders = "earum";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSBudgetServiceGateway.CreateBudget";
                 }};
                 request = new CreateBudgetRequest() {{
-                    accountId = "vero";
+                    accountId = "fugit";
                     budget = new Budget() {{
                         budgetLimit = new Spend() {{
                             amount = "et";
-                            unit = "quam";
+                            unit = "nihil";
                         }};
-                        budgetName = "iste";
-                        budgetType = "SAVINGS_PLANS_UTILIZATION";
+                        budgetName = "rerum";
+                        budgetType = "SAVINGS_PLANS_COVERAGE";
                         calculatedSpend = new CalculatedSpend() {{
                             actualSpend = new Spend() {{
-                                amount = "eos";
-                                unit = "aut";
+                                amount = "debitis";
+                                unit = "voluptatum";
                             }};
                             forecastedSpend = new Spend() {{
-                                amount = "ut";
-                                unit = "enim";
+                                amount = "et";
+                                unit = "ut";
                             }};
                         }};
                         costFilters = new java.util.HashMap<String, String[]>() {{
-                            put("cupiditate", new String[]() {{
-                                add("id"),
-                                add("molestiae"),
+                            put("et", new String[]() {{
+                                add("iste"),
+                            }});
+                            put("vitae", new String[]() {{
+                                add("dolores"),
+                                add("illum"),
+                                add("debitis"),
+                            }});
+                            put("vel", new String[]() {{
+                                add("dolore"),
                             }});
                         }};
                         costTypes = new CostTypes() {{
-                            includeCredit = true;
+                            includeCredit = false;
                             includeDiscount = true;
-                            includeOtherSubscription = false;
+                            includeOtherSubscription = true;
                             includeRecurring = false;
                             includeRefund = false;
                             includeSubscription = true;
-                            includeSupport = true;
-                            includeTax = false;
+                            includeSupport = false;
+                            includeTax = true;
                             includeUpfront = true;
                             useAmortized = true;
-                            useBlended = true;
+                            useBlended = false;
                         }};
-                        lastUpdatedTime = "2020-04-04T17:02:02Z";
+                        lastUpdatedTime = "1987-09-29T10:21:53Z";
                         plannedBudgetLimits = new java.util.HashMap<String, openapisdk.models.shared.Spend>() {{
-                            put("modi", new Spend() {{
-                                amount = "dolor";
-                                unit = "omnis";
-                            }});
-                            put("explicabo", new Spend() {{
-                                amount = "voluptatum";
-                                unit = "quia";
-                            }});
-                            put("perferendis", new Spend() {{
-                                amount = "temporibus";
-                                unit = "incidunt";
+                            put("illo", new Spend() {{
+                                amount = "sed";
+                                unit = "officiis";
                             }});
                         }};
                         timePeriod = new TimePeriod() {{
-                            end = "1983-11-22T04:40:57Z";
-                            start = "2006-01-09T19:38:06Z";
+                            end = "2017-04-22T14:51:53Z";
+                            start = "1990-12-08T19:16:18Z";
                         }};
-                        timeUnit = "QUARTERLY";
+                        timeUnit = "MONTHLY";
                     }};
                     notificationsWithSubscribers = new openapisdk.models.shared.NotificationWithSubscribers[]() {{
                         add(new NotificationWithSubscribers() {{
                             notification = new Notification() {{
-                                comparisonOperator = "EQUAL_TO";
+                                comparisonOperator = "LESS_THAN";
                                 notificationState = "OK";
-                                notificationType = "FORECASTED";
-                                threshold = 7.100000;
+                                notificationType = "ACTUAL";
+                                threshold = 19.100000;
                                 thresholdType = "ABSOLUTE_VALUE";
                             }};
                             subscribers = new openapisdk.models.shared.Subscriber[]() {{
                                 add(new Subscriber() {{
-                                    address = "iste";
+                                    address = "exercitationem";
+                                    subscriptionType = "SNS";
+                                }}),
+                                add(new Subscriber() {{
+                                    address = "reprehenderit";
                                     subscriptionType = "EMAIL";
+                                }}),
+                                add(new Subscriber() {{
+                                    address = "maiores";
+                                    subscriptionType = "SNS";
+                                }}),
+                            }};
+                        }}),
+                        add(new NotificationWithSubscribers() {{
+                            notification = new Notification() {{
+                                comparisonOperator = "LESS_THAN";
+                                notificationState = "ALARM";
+                                notificationType = "FORECASTED";
+                                threshold = 80.199997;
+                                thresholdType = "ABSOLUTE_VALUE";
+                            }};
+                            subscribers = new openapisdk.models.shared.Subscriber[]() {{
+                                add(new Subscriber() {{
+                                    address = "ex";
+                                    subscriptionType = "SNS";
+                                }}),
+                            }};
+                        }}),
+                        add(new NotificationWithSubscribers() {{
+                            notification = new Notification() {{
+                                comparisonOperator = "GREATER_THAN";
+                                notificationState = "OK";
+                                notificationType = "FORECASTED";
+                                threshold = 89.099998;
+                                thresholdType = "ABSOLUTE_VALUE";
+                            }};
+                            subscribers = new openapisdk.models.shared.Subscriber[]() {{
+                                add(new Subscriber() {{
+                                    address = "qui";
+                                    subscriptionType = "SNS";
                                 }}),
                             }};
                         }}),

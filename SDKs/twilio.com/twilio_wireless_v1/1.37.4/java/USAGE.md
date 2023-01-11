@@ -20,13 +20,13 @@ public class Application {
                     }};
                 }};
                 request = new CreateCommandCreateCommandRequest() {{
-                    callbackMethod = "DELETE";
-                    callbackUrl = "est";
-                    command = "odio";
-                    commandMode = "binary";
+                    callbackMethod = "HEAD";
+                    callbackUrl = "voluptas";
+                    command = "culpa";
+                    commandMode = "text";
                     deliveryReceiptRequested = true;
-                    includeSid = "voluptatem";
-                    sim = "et";
+                    includeSid = "dolor";
+                    sim = "expedita";
                 }};
             }};
 

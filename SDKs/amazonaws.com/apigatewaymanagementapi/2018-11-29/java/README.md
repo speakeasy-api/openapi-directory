@@ -35,16 +35,16 @@ public class Application {
 
             DeleteConnectionRequest req = new DeleteConnectionRequest() {{
                 pathParams = new DeleteConnectionPathParams() {{
-                    connectionId = "magni";
+                    connectionId = "sit";
                 }};
                 headers = new DeleteConnectionHeaders() {{
-                    xAmzAlgorithm = "recusandae";
-                    xAmzContentSha256 = "illum";
-                    xAmzCredential = "consequatur";
-                    xAmzDate = "dolores";
-                    xAmzSecurityToken = "hic";
-                    xAmzSignature = "nihil";
-                    xAmzSignedHeaders = "explicabo";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

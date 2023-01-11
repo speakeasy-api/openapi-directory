@@ -35,48 +35,44 @@ public class Application {
 
             CreateDatasetRequest req = new CreateDatasetRequest() {{
                 headers = new CreateDatasetHeaders() {{
-                    xAmzAlgorithm = "voluptatem";
-                    xAmzContentSha256 = "quia";
-                    xAmzCredential = "voluptas";
-                    xAmzDate = "maxime";
-                    xAmzSecurityToken = "error";
-                    xAmzSignature = "exercitationem";
-                    xAmzSignedHeaders = "quisquam";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonForecast.CreateDataset";
                 }};
                 request = new CreateDatasetRequest() {{
-                    dataFrequency = "quaerat";
-                    datasetName = "earum";
+                    dataFrequency = "fugit";
+                    datasetName = "et";
                     datasetType = "TARGET_TIME_SERIES";
-                    domain = "CUSTOM";
+                    domain = "METRICS";
                     encryptionConfig = new EncryptionConfig() {{
-                        kmsKeyArn = "ut";
-                        roleArn = "ut";
+                        kmsKeyArn = "dicta";
+                        roleArn = "debitis";
                     }};
                     schema = new Schema() {{
                         attributes = new openapisdk.models.shared.SchemaAttribute[]() {{
                             add(new SchemaAttribute() {{
-                                attributeName = "magni";
-                                attributeType = "timestamp";
-                            }}),
-                            add(new SchemaAttribute() {{
-                                attributeName = "quaerat";
-                                attributeType = "timestamp";
-                            }}),
-                            add(new SchemaAttribute() {{
-                                attributeName = "voluptas";
-                                attributeType = "float";
+                                attributeName = "et";
+                                attributeType = "integer";
                             }}),
                         }};
                     }};
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "sed";
-                            value = "accusantium";
+                            key = "et";
+                            value = "voluptate";
                         }}),
                         add(new Tag() {{
-                            key = "repellat";
-                            value = "quam";
+                            key = "iste";
+                            value = "vitae";
+                        }}),
+                        add(new Tag() {{
+                            key = "totam";
+                            value = "dolores";
                         }}),
                     }};
                 }};

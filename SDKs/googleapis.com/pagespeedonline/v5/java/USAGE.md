@@ -22,27 +22,27 @@ public class Application {
                     }};
                 }};
                 queryParams = new PagespeedonlinePagespeedapiRunpagespeedQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "accusamus";
-                    alt = "proto";
-                    callback = "laboriosam";
-                    captchaToken = "deserunt";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    captchaToken = "consequuntur";
                     category = new openapisdk.models.operations.PagespeedonlinePagespeedapiRunpagespeedCategoryEnum[]() {{
-                        add("PERFORMANCE"),
-                        add("PWA"),
+                        add("ACCESSIBILITY"),
+                        add("SEO"),
                     }};
-                    fields = "eos";
-                    key = "nobis";
-                    locale = "ex";
-                    oauthToken = "dolor";
+                    fields = "fugit";
+                    key = "et";
+                    locale = "nihil";
+                    oauthToken = "rerum";
                     prettyPrint = false;
-                    quotaUser = "vel";
-                    strategy = "DESKTOP";
-                    uploadType = "adipisci";
-                    uploadProtocol = "deserunt";
-                    url = "iure";
-                    utmCampaign = "aut";
-                    utmSource = "omnis";
+                    quotaUser = "debitis";
+                    strategy = "STRATEGY_UNSPECIFIED";
+                    uploadType = "et";
+                    uploadProtocol = "ut";
+                    url = "dolorem";
+                    utmCampaign = "et";
+                    utmSource = "voluptate";
                 }};
             }};
 

@@ -33,7 +33,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetEventPathParams() {{
-                    id = "mollitia";
+                    id = "sit";
                 }};
             }};
 

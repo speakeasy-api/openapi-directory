@@ -22,13 +22,13 @@ public class Application {
 
             CommunicationRequest req = new CommunicationRequest() {{
                 queryParams = new CommunicationQueryParams() {{
-                    all = true;
+                    all = false;
                 }};
                 request = new openapisdk.models.shared.Post[]() {{
                     add(new Post() {{
-                        id = "qui";
-                        language = "excepturi";
-                        text = "autem";
+                        id = "culpa";
+                        language = "expedita";
+                        text = "consequuntur";
                     }}),
                 }};
             }};

@@ -27,20 +27,20 @@ public class Application {
 
             MybusinessnotificationsAccountsGetNotificationSettingRequest req = new MybusinessnotificationsAccountsGetNotificationSettingRequest() {{
                 pathParams = new MybusinessnotificationsAccountsGetNotificationSettingPathParams() {{
-                    name = "itaque";
+                    name = "sit";
                 }};
                 queryParams = new MybusinessnotificationsAccountsGetNotificationSettingQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "molestiae";
+                    accessToken = "culpa";
                     alt = "media";
-                    callback = "cumque";
-                    fields = "ea";
-                    key = "sit";
-                    oauthToken = "reiciendis";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "reprehenderit";
-                    uploadType = "iusto";
-                    uploadProtocol = "at";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

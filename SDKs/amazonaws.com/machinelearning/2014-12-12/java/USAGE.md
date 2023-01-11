@@ -22,22 +22,22 @@ public class Application {
 
             AddTagsRequest req = new AddTagsRequest() {{
                 headers = new AddTagsHeaders() {{
-                    xAmzAlgorithm = "dolorem";
-                    xAmzContentSha256 = "facere";
-                    xAmzCredential = "magnam";
-                    xAmzDate = "aut";
-                    xAmzSecurityToken = "eum";
-                    xAmzSignature = "facilis";
-                    xAmzSignedHeaders = "perferendis";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AmazonML_20141212.AddTags";
                 }};
                 request = new AddTagsInput() {{
-                    resourceId = "ut";
-                    resourceType = "MLModel";
+                    resourceId = "fugit";
+                    resourceType = "BatchPrediction";
                     tags = new openapisdk.models.shared.Tag[]() {{
                         add(new Tag() {{
-                            key = "ut";
-                            value = "ut";
+                            key = "rerum";
+                            value = "dicta";
                         }}),
                     }};
                 }};

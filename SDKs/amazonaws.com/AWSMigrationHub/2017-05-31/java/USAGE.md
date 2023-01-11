@@ -22,23 +22,23 @@ public class Application {
 
             AssociateCreatedArtifactRequest req = new AssociateCreatedArtifactRequest() {{
                 headers = new AssociateCreatedArtifactHeaders() {{
-                    xAmzAlgorithm = "vel";
-                    xAmzContentSha256 = "vel";
-                    xAmzCredential = "placeat";
-                    xAmzDate = "qui";
-                    xAmzSecurityToken = "nisi";
-                    xAmzSignature = "quis";
-                    xAmzSignedHeaders = "adipisci";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSMigrationHub.AssociateCreatedArtifact";
                 }};
                 request = new AssociateCreatedArtifactRequest() {{
                     createdArtifact = new CreatedArtifact() {{
-                        description = "rerum";
+                        description = "fugit";
                         name = "et";
                     }};
                     dryRun = true;
-                    migrationTaskName = "numquam";
-                    progressUpdateStream = "laborum";
+                    migrationTaskName = "rerum";
+                    progressUpdateStream = "dicta";
                 }};
             }};
 

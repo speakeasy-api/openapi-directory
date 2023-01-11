@@ -23,15 +23,15 @@ public class Application {
                 }};
                 request = new SscerRequestBody() {{
                     certificateParameters = new SscerRequestBodyCertificateParameters() {{
-                        cent = "autem";
-                        mName = "quas";
-                        name = "recusandae";
-                        rroll = "odit";
-                        year = "dolor";
+                        cent = "sit";
+                        mName = "voluptas";
+                        name = "culpa";
+                        rroll = "expedita";
+                        year = "consequuntur";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "dolor";
                     format = "pdf";
-                    txnId = "et";
+                    txnId = "voluptas";
                 }};
             }};
 

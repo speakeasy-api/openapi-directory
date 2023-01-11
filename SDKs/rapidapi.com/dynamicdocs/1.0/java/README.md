@@ -35,22 +35,22 @@ public class Application {
 
             CompileRequest req = new CompileRequest() {{
                 pathParams = new CompilePathParams() {{
-                    templateToken = "odio";
+                    templateToken = "sit";
                 }};
                 queryParams = new CompileQueryParams() {{
-                    docFileName = "dolore";
-                    docUrlExpiresIn = 4035568504096476779;
-                    latexCompiler = "lualatex";
-                    latexRuns = 2914295034816259174;
-                    mainFileName = "totam";
+                    docFileName = "voluptas";
+                    docUrlExpiresIn = 6050128673802995827;
+                    latexCompiler = "pdflatex";
+                    latexRuns = 3390393562759376202;
+                    mainFileName = "dolor";
                 }};
                 headers = new CompileHeaders() {{
-                    contentType = "commodi";
+                    contentType = "expedita";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("est", "aut");
-                    put("odit", "non");
-                    put("voluptas", "omnis");
+                    put("fugit", "et");
+                    put("nihil", "rerum");
+                    put("dicta", "debitis");
                 }};
             }};
 

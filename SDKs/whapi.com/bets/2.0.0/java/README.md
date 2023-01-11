@@ -27,16 +27,16 @@ public class Application {
 
             CashinRequest req = new CashinRequest() {{
                 pathParams = new CashinPathParams() {{
-                    betId = "tempore";
+                    betId = "sit";
                 }};
                 queryParams = new CashinQueryParams() {{
-                    cashInValue = 75.099998;
-                    cashinBetDelayId = "mollitia";
+                    cashInValue = 14.200000;
+                    cashinBetDelayId = "expedita";
                 }};
                 headers = new CashinHeaders() {{
-                    apiKey = "officiis";
-                    apiSecret = "repellendus";
-                    apiTicket = "quae";
+                    apiKey = "consequuntur";
+                    apiSecret = "dolor";
+                    apiTicket = "expedita";
                 }};
             }};
 

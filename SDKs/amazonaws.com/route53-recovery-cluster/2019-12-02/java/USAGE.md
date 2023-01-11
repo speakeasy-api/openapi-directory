@@ -22,17 +22,17 @@ public class Application {
 
             GetRoutingControlStateRequest req = new GetRoutingControlStateRequest() {{
                 headers = new GetRoutingControlStateHeaders() {{
-                    xAmzAlgorithm = "sed";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "maxime";
-                    xAmzDate = "eos";
-                    xAmzSecurityToken = "aut";
-                    xAmzSignature = "autem";
-                    xAmzSignedHeaders = "deleniti";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "ToggleCustomerAPI.GetRoutingControlState";
                 }};
                 request = new GetRoutingControlStateRequest() {{
-                    routingControlArn = "asperiores";
+                    routingControlArn = "fugit";
                 }};
             }};
 

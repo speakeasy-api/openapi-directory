@@ -14,10 +14,10 @@ public class Application {
 
             AddUserToAccountRequest req = new AddUserToAccountRequest() {{
                 pathParams = new AddUserToAccountPathParams() {{
-                    accountId = "reprehenderit";
+                    accountId = "sit";
                 }};
                 request = new AddUserToAccountRequestBody() {{
-                    userId = "et";
+                    userId = "voluptas";
                 }};
             }};
 

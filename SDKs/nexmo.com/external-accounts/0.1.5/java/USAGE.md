@@ -19,9 +19,9 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetAllAccountsQueryParams() {{
-                    pageNumber = 2936429507888505905;
-                    pageSize = 7852850693617059290;
-                    provider = "messenger";
+                    pageNumber = 8717895732742165505;
+                    pageSize = 2259404117704393152;
+                    provider = "viber_service_msg";
                 }};
             }};
 

@@ -22,16 +22,16 @@ public class Application {
 
             GetRawMessageContentRequest req = new GetRawMessageContentRequest() {{
                 pathParams = new GetRawMessageContentPathParams() {{
-                    messageId = "quibusdam";
+                    messageId = "sit";
                 }};
                 headers = new GetRawMessageContentHeaders() {{
-                    xAmzAlgorithm = "vero";
-                    xAmzContentSha256 = "ea";
-                    xAmzCredential = "doloremque";
-                    xAmzDate = "maxime";
-                    xAmzSecurityToken = "aperiam";
-                    xAmzSignature = "ut";
-                    xAmzSignedHeaders = "illum";
+                    xAmzAlgorithm = "voluptas";
+                    xAmzContentSha256 = "culpa";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "consequuntur";
+                    xAmzSecurityToken = "dolor";
+                    xAmzSignature = "expedita";
+                    xAmzSignedHeaders = "voluptas";
                 }};
             }};
 

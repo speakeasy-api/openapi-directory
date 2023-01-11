@@ -13,7 +13,7 @@ public class Application {
             SDK sdk = builder.build();
 
             CreateTicketRequest req = new CreateTicketRequest() {{
-                request = "modi";
+                request = "sit";
             }};
 
             CreateTicketResponse res = sdk.v1.createTicket(req);

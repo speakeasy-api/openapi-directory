@@ -22,17 +22,17 @@ public class Application {
 
             DeleteReportDefinitionRequest req = new DeleteReportDefinitionRequest() {{
                 headers = new DeleteReportDefinitionHeaders() {{
-                    xAmzAlgorithm = "quo";
-                    xAmzContentSha256 = "et";
-                    xAmzCredential = "eligendi";
-                    xAmzDate = "soluta";
-                    xAmzSecurityToken = "enim";
-                    xAmzSignature = "commodi";
-                    xAmzSignedHeaders = "quia";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "AWSOrigamiServiceGatewayService.DeleteReportDefinition";
                 }};
                 request = new DeleteReportDefinitionRequest() {{
-                    reportName = "placeat";
+                    reportName = "fugit";
                 }};
             }};
 

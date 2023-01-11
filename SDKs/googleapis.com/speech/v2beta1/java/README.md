@@ -35,20 +35,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new SpeechProjectsLocationsOperationsGetPathParams() {{
-                    name = "eum";
+                    name = "sit";
                 }};
                 queryParams = new SpeechProjectsLocationsOperationsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "aut";
-                    alt = "proto";
-                    callback = "amet";
-                    fields = "ut";
-                    key = "ut";
-                    oauthToken = "ullam";
-                    prettyPrint = false;
-                    quotaUser = "aut";
-                    uploadType = "quo";
-                    uploadProtocol = "animi";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

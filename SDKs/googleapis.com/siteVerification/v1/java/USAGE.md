@@ -22,16 +22,16 @@ public class Application {
                     }};
                 }};
                 pathParams = new SiteVerificationWebResourceDeletePathParams() {{
-                    id = "corrupti";
+                    id = "sit";
                 }};
                 queryParams = new SiteVerificationWebResourceDeleteQueryParams() {{
                     alt = "json";
-                    fields = "dolorum";
-                    key = "voluptatem";
-                    oauthToken = "enim";
+                    fields = "culpa";
+                    key = "expedita";
+                    oauthToken = "consequuntur";
                     prettyPrint = false;
-                    quotaUser = "corporis";
-                    userIp = "et";
+                    quotaUser = "expedita";
+                    userIp = "voluptas";
                 }};
             }};
 

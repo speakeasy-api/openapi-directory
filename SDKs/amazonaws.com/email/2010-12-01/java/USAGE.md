@@ -23,18 +23,18 @@ public class Application {
             GetCloneReceiptRuleSetRequest req = new GetCloneReceiptRuleSetRequest() {{
                 queryParams = new GetCloneReceiptRuleSetQueryParams() {{
                     action = "CloneReceiptRuleSet";
-                    originalRuleSetName = "in";
-                    ruleSetName = "dolorem";
+                    originalRuleSetName = "voluptas";
+                    ruleSetName = "culpa";
                     version = "2010-12-01";
                 }};
                 headers = new GetCloneReceiptRuleSetHeaders() {{
-                    xAmzAlgorithm = "sint";
-                    xAmzContentSha256 = "non";
-                    xAmzCredential = "qui";
-                    xAmzDate = "debitis";
-                    xAmzSecurityToken = "in";
-                    xAmzSignature = "dolore";
-                    xAmzSignedHeaders = "quas";
+                    xAmzAlgorithm = "consequuntur";
+                    xAmzContentSha256 = "dolor";
+                    xAmzCredential = "expedita";
+                    xAmzDate = "voluptas";
+                    xAmzSecurityToken = "fugit";
+                    xAmzSignature = "et";
+                    xAmzSignedHeaders = "nihil";
                 }};
             }};
 

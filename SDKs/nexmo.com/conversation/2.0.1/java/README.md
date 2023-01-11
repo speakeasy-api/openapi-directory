@@ -35,11 +35,11 @@ public class Application {
 
             CreateConversationRequest req = new CreateConversationRequest() {{
                 request = new CreateConversationRequestBody() {{
-                    displayName = "non";
-                    imageUrl = "debitis";
-                    name = "deleniti";
+                    displayName = "sit";
+                    imageUrl = "voluptas";
+                    name = "culpa";
                     properties = new ConversationProperties() {{
-                        ttl = 6.100000;
+                        ttl = 6.200000;
                     }};
                 }};
             }};

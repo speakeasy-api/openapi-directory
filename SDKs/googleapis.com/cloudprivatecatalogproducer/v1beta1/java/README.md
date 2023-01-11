@@ -35,26 +35,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams() {{
-                    parent = "nihil";
+                    parent = "sit";
                 }};
                 queryParams = new CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "eos";
-                    alt = "proto";
-                    callback = "et";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
                     fields = "dolor";
-                    key = "omnis";
-                    oauthToken = "itaque";
-                    prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "quae";
-                    uploadProtocol = "cupiditate";
+                    key = "expedita";
+                    oauthToken = "voluptas";
+                    prettyPrint = true;
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest() {{
                     association = new GoogleCloudPrivatecatalogproducerV1beta1Association() {{
-                        createTime = "sapiente";
-                        name = "et";
-                        resource = "perferendis";
+                        createTime = "dicta";
+                        name = "debitis";
+                        resource = "voluptatum";
                     }};
                 }};
             }};

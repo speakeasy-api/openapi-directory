@@ -35,17 +35,17 @@ public class Application {
 
             ChangeServerLifeCycleStateRequest req = new ChangeServerLifeCycleStateRequest() {{
                 headers = new ChangeServerLifeCycleStateHeaders() {{
-                    xAmzAlgorithm = "natus";
-                    xAmzContentSha256 = "corrupti";
-                    xAmzCredential = "quis";
-                    xAmzDate = "consequatur";
-                    xAmzSecurityToken = "tenetur";
-                    xAmzSignature = "alias";
-                    xAmzSignedHeaders = "similique";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
                 request = new ChangeServerLifeCycleStateRequestBody() {{
                     lifeCycle = new ChangeServerLifeCycleStateRequestBodyLifeCycle() {{
-                        state = "READY_FOR_TEST";
+                        state = "CUTOVER";
                     }};
                     sourceServerID = "fugit";
                 }};

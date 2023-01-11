@@ -43,95 +43,132 @@ public class Application {
                     raw = false;
                 }};
                 headers = new CustomersAddHeaders() {{
-                    xApideckAppId = "ut";
-                    xApideckConsumerId = "quas";
-                    xApideckServiceId = "eum";
+                    xApideckAppId = "voluptas";
+                    xApideckConsumerId = "culpa";
+                    xApideckServiceId = "expedita";
                 }};
                 request = new CustomerSupportCustomerInput() {{
                     addresses = new openapisdk.models.shared.Address[]() {{
                         add(new Address() {{
-                            city = "distinctio";
-                            contactName = "molestiae";
-                            country = "sed";
-                            county = "sed";
-                            email = "autem";
-                            fax = "ipsa";
-                            id = "sequi";
-                            latitude = "inventore";
-                            line1 = "earum";
-                            line2 = "ad";
-                            line3 = "eligendi";
-                            line4 = "quia";
-                            longitude = "eum";
-                            name = "nihil";
-                            phoneNumber = "dolorum";
-                            postalCode = "eos";
-                            rowVersion = "est";
-                            salutation = "et";
-                            state = "dolor";
-                            streetNumber = "omnis";
-                            string = "itaque";
+                            city = "dolor";
+                            contactName = "expedita";
+                            country = "voluptas";
+                            county = "fugit";
+                            email = "et";
+                            fax = "nihil";
+                            id = "rerum";
+                            latitude = "dicta";
+                            line1 = "debitis";
+                            line2 = "voluptatum";
+                            line3 = "et";
+                            line4 = "ut";
+                            longitude = "dolorem";
+                            name = "et";
+                            phoneNumber = "voluptate";
+                            postalCode = "iste";
+                            rowVersion = "vitae";
+                            salutation = "totam";
+                            state = "dolores";
+                            streetNumber = "illum";
+                            string = "debitis";
                             type = "secondary";
-                            website = "nihil";
+                            website = "odio";
+                        }}),
+                        add(new Address() {{
+                            city = "dolore";
+                            contactName = "id";
+                            country = "aspernatur";
+                            county = "accusantium";
+                            email = "totam";
+                            fax = "commodi";
+                            id = "quis";
+                            latitude = "est";
+                            line1 = "aut";
+                            line2 = "odit";
+                            line3 = "non";
+                            line4 = "voluptas";
+                            longitude = "omnis";
+                            name = "aut";
+                            phoneNumber = "illo";
+                            postalCode = "sed";
+                            rowVersion = "officiis";
+                            salutation = "autem";
+                            state = "consectetur";
+                            streetNumber = "nobis";
+                            string = "odio";
+                            type = "office";
+                            website = "recusandae";
+                        }}),
+                        add(new Address() {{
+                            city = "at";
+                            contactName = "ipsum";
+                            country = "eveniet";
+                            county = "modi";
+                            email = "sint";
+                            fax = "inventore";
+                            id = "ut";
+                            latitude = "exercitationem";
+                            line1 = "aut";
+                            line2 = "reprehenderit";
+                            line3 = "tempore";
+                            line4 = "maiores";
+                            longitude = "incidunt";
+                            name = "dolor";
+                            phoneNumber = "beatae";
+                            postalCode = "veritatis";
+                            rowVersion = "in";
+                            salutation = "et";
+                            state = "omnis";
+                            streetNumber = "ipsum";
+                            string = "ex";
+                            type = "shipping";
+                            website = "placeat";
                         }}),
                     }};
                     bankAccounts = new BankAccount() {{
-                        accountName = "quae";
-                        accountNumber = "cupiditate";
-                        accountType = "other";
-                        bankCode = "et";
-                        bic = "perferendis";
-                        branchIdentifier = "maiores";
-                        bsbNumber = "est";
-                        currency = "LAK";
-                        iban = "sint";
+                        accountName = "vel";
+                        accountNumber = "rerum";
+                        accountType = "credit_card";
+                        bankCode = "voluptas";
+                        bic = "quam";
+                        branchIdentifier = "reprehenderit";
+                        bsbNumber = "qui";
+                        currency = "CVE";
+                        iban = "unde";
                     }};
-                    companyName = "vero";
-                    currency = "YER";
+                    companyName = "in";
+                    currency = "XBB";
                     emails = new openapisdk.models.shared.Email[]() {{
                         add(new Email() {{
-                            email = "suscipit";
-                            id = "laudantium";
-                            type = "work";
-                        }}),
-                        add(new Email() {{
-                            email = "dicta";
-                            id = "dolorem";
-                            type = "billing";
+                            email = "ut";
+                            id = "itaque";
+                            type = "primary";
                         }}),
                     }};
-                    firstName = "reiciendis";
+                    firstName = "neque";
                     individual = true;
-                    lastName = "fuga";
-                    notes = "sed";
+                    lastName = "et";
+                    notes = "accusantium";
                     phoneNumbers = new openapisdk.models.shared.PhoneNumber[]() {{
                         add(new PhoneNumber() {{
-                            areaCode = "velit";
-                            countryCode = "consequatur";
-                            extension = "reiciendis";
-                            id = "perspiciatis";
-                            number = "labore";
+                            areaCode = "architecto";
+                            countryCode = "quam";
+                            extension = "velit";
+                            id = "cumque";
+                            number = "soluta";
                             type = "secondary";
                         }}),
                         add(new PhoneNumber() {{
-                            areaCode = "perferendis";
-                            countryCode = "ea";
-                            extension = "adipisci";
-                            id = "quos";
-                            number = "odit";
-                            type = "secondary";
-                        }}),
-                        add(new PhoneNumber() {{
-                            areaCode = "non";
-                            countryCode = "expedita";
-                            extension = "veniam";
-                            id = "quos";
-                            number = "natus";
-                            type = "personal";
+                            areaCode = "voluptates";
+                            countryCode = "magni";
+                            extension = "et";
+                            id = "optio";
+                            number = "qui";
+                            type = "direct-dial-in";
                         }}),
                     }};
                     status = "unknown";
-                    taxNumber = "earum";
+                    taxNumber = "omnis";
                 }};
             }};
 

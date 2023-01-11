@@ -19,15 +19,15 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateUsageChargePathParams() {{
-                    recurringApplicationChargeId = "qui";
+                    recurringApplicationChargeId = "sit";
                 }};
                 headers = new CreateUsageChargeHeaders() {{
-                    xAppstoreUsageChargeToken = "modi";
+                    xAppstoreUsageChargeToken = "voluptas";
                 }};
                 request = new CreateUsageChargeRequestBody() {{
                     usageCharge = new CreateUsageChargeRequestBodyUsageCharge() {{
-                        description = "nihil";
-                        point = 1011676084465510524;
+                        description = "culpa";
+                        point = 501233450539197794;
                     }};
                 }};
             }};

@@ -36,11 +36,11 @@ public class Application {
                 }};
                 request = new KecerRequestBody() {{
                     certificateParameters = new KecerRequestBodyCertificateParameters() {{
-                        documentNumber = "ut";
+                        documentNumber = "sit";
                     }};
-                    consentArtifact = "praesentium";
+                    consentArtifact = "voluptas";
                     format = "pdf";
-                    txnId = "vel";
+                    txnId = "expedita";
                 }};
             }};
 

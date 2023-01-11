@@ -23,13 +23,13 @@ public class Application {
                 }};
                 request = new LicerRequestBody() {{
                     certificateParameters = new LicerRequestBodyCertificateParameters() {{
-                        fullName = "ullam";
-                        udf1 = "velit";
-                        udf2 = "eos";
+                        fullName = "sit";
+                        udf1 = "voluptas";
+                        udf2 = "culpa";
                     }};
-                    consentArtifact = "officiis";
+                    consentArtifact = "expedita";
                     format = "pdf";
-                    txnId = "nam";
+                    txnId = "dolor";
                 }};
             }};
 

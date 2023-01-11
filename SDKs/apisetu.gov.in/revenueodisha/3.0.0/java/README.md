@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new RdcerRequestBody() {{
                     certificateParameters = new RdcerRequestBodyCertificateParameters() {{
-                        dob = "ut";
-                        fullName = "molestiae";
-                        regdno = "rem";
-                        uid = "totam";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        regdno = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "culpa";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "eos";
+                    txnId = "expedita";
                 }};
             }};
 

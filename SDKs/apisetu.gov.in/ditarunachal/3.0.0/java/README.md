@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new IlpmtRequestBody() {{
                     certificateParameters = new IlpmtRequestBodyCertificateParameters() {{
-                        fullName = "saepe";
-                        uid = "eius";
-                        eILPAppId = "delectus";
-                        eILPContactNumber = "sint";
+                        fullName = "sit";
+                        uid = "voluptas";
+                        eILPAppId = "culpa";
+                        eILPContactNumber = "expedita";
                     }};
-                    consentArtifact = "dolor";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "molestiae";
+                    txnId = "expedita";
                 }};
             }};
 

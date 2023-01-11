@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new PecerRequestBody() {{
                     certificateParameters = new PecerRequestBodyCertificateParameters() {{
-                        acNO = "aut";
-                        dob = "dicta";
+                        acNO = "sit";
+                        dob = "voluptas";
                     }};
-                    consentArtifact = "qui";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "dolore";
+                    txnId = "consequuntur";
                 }};
             }};
 

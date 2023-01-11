@@ -35,72 +35,72 @@ public class Application {
                     }};
                 }};
                 queryParams = new FirebasedynamiclinksManagedShortLinksCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "quibusdam";
-                    alt = "json";
-                    callback = "quidem";
-                    fields = "eum";
-                    key = "natus";
-                    oauthToken = "ipsa";
-                    prettyPrint = false;
-                    quotaUser = "vero";
-                    uploadType = "voluptatibus";
-                    uploadProtocol = "sapiente";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
+                    alt = "media";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new CreateManagedShortLinkRequest() {{
                     dynamicLinkInfo = new DynamicLinkInfo() {{
                         analyticsInfo = new AnalyticsInfo() {{
                             googlePlayAnalytics = new GooglePlayAnalytics() {{
-                                gclid = "iure";
-                                utmCampaign = "qui";
-                                utmContent = "omnis";
-                                utmMedium = "atque";
-                                utmSource = "fugit";
-                                utmTerm = "soluta";
+                                gclid = "rerum";
+                                utmCampaign = "dicta";
+                                utmContent = "debitis";
+                                utmMedium = "voluptatum";
+                                utmSource = "et";
+                                utmTerm = "ut";
                             }};
                             itunesConnectAnalytics = new ITunesConnectAnalytics() {{
-                                at = "inventore";
-                                ct = "a";
-                                mt = "laboriosam";
-                                pt = "quasi";
+                                at = "dolorem";
+                                ct = "et";
+                                mt = "voluptate";
+                                pt = "iste";
                             }};
                         }};
                         androidInfo = new AndroidInfo() {{
-                            androidFallbackLink = "voluptates";
-                            androidLink = "laborum";
-                            androidMinPackageVersionCode = "eligendi";
-                            androidPackageName = "est";
+                            androidFallbackLink = "vitae";
+                            androidLink = "totam";
+                            androidMinPackageVersionCode = "dolores";
+                            androidPackageName = "illum";
                         }};
                         desktopInfo = new DesktopInfo() {{
-                            desktopFallbackLink = "inventore";
+                            desktopFallbackLink = "debitis";
                         }};
-                        domainUriPrefix = "consequatur";
-                        dynamicLinkDomain = "voluptate";
+                        domainUriPrefix = "vel";
+                        dynamicLinkDomain = "odio";
                         iosInfo = new IosInfo() {{
-                            iosAppStoreId = "sapiente";
-                            iosBundleId = "ut";
-                            iosCustomScheme = "aliquam";
-                            iosFallbackLink = "ad";
-                            iosIpadBundleId = "dolores";
-                            iosIpadFallbackLink = "vel";
-                            iosMinimumVersion = "cumque";
+                            iosAppStoreId = "dolore";
+                            iosBundleId = "id";
+                            iosCustomScheme = "aspernatur";
+                            iosFallbackLink = "accusantium";
+                            iosIpadBundleId = "totam";
+                            iosIpadFallbackLink = "commodi";
+                            iosMinimumVersion = "quis";
                         }};
-                        link = "eos";
+                        link = "est";
                         navigationInfo = new NavigationInfo() {{
-                            enableForcedRedirect = false;
+                            enableForcedRedirect = true;
                         }};
                         socialMetaTagInfo = new SocialMetaTagInfo() {{
-                            socialDescription = "corrupti";
-                            socialImageLink = "iure";
-                            socialTitle = "nisi";
+                            socialDescription = "odit";
+                            socialImageLink = "non";
+                            socialTitle = "voluptas";
                         }};
                     }};
-                    longDynamicLink = "facilis";
-                    name = "perferendis";
-                    sdkVersion = "perferendis";
+                    longDynamicLink = "omnis";
+                    name = "aut";
+                    sdkVersion = "illo";
                     suffix = new Suffix() {{
-                        customSuffix = "et";
-                        option = "OPTION_UNSPECIFIED";
+                        customSuffix = "sed";
+                        option = "CUSTOM";
                     }};
                 }};
             }};

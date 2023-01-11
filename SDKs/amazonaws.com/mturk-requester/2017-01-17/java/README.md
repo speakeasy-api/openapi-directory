@@ -35,18 +35,18 @@ public class Application {
 
             AcceptQualificationRequestRequest req = new AcceptQualificationRequestRequest() {{
                 headers = new AcceptQualificationRequestHeaders() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "sit";
-                    xAmzCredential = "minus";
-                    xAmzDate = "iste";
-                    xAmzSecurityToken = "tempora";
-                    xAmzSignature = "officia";
-                    xAmzSignedHeaders = "ducimus";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                     xAmzTarget = "MTurkRequesterServiceV20170117.AcceptQualificationRequest";
                 }};
                 request = new AcceptQualificationRequestRequest() {{
-                    integerValue = 8893427221521046744;
-                    qualificationRequestId = "perferendis";
+                    integerValue = 8274930044578894929;
+                    qualificationRequestId = "et";
                 }};
             }};
 

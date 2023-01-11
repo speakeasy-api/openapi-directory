@@ -14,13 +14,13 @@ public class Application {
 
             CreateAMapRequest req = new CreateAMapRequest() {{
                 queryParams = new CreateAMapQueryParams() {{
-                    appToken = "eum";
-                    constraint = "exercitationem";
-                    entityId = "corrupti";
-                    variable = "dolorem";
+                    appToken = "sit";
+                    constraint = "voluptas";
+                    entityId = "culpa";
+                    variable = "expedita";
                 }};
                 headers = new CreateAMapHeaders() {{
-                    xAppToken = "ea";
+                    xAppToken = "consequuntur";
                 }};
             }};
 

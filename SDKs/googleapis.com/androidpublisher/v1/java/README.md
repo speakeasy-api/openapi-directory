@@ -35,18 +35,18 @@ public class Application {
                     }};
                 }};
                 pathParams = new AndroidpublisherPurchasesCancelPathParams() {{
-                    packageName = "nam";
-                    subscriptionId = "molestiae";
-                    token = "deserunt";
+                    packageName = "sit";
+                    subscriptionId = "voluptas";
+                    token = "culpa";
                 }};
                 queryParams = new AndroidpublisherPurchasesCancelQueryParams() {{
                     alt = "json";
-                    fields = "possimus";
-                    key = "et";
-                    oauthToken = "deserunt";
-                    prettyPrint = false;
-                    quotaUser = "et";
-                    userIp = "vero";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    userIp = "et";
                 }};
             }};
 

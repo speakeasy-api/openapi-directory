@@ -14,8 +14,8 @@ public class Application {
 
             GetglobaltimeRequest req = new GetglobaltimeRequest() {{
                 queryParams = new GetglobaltimeQueryParams() {{
-                    license = "aut";
-                    locale = "illum";
+                    license = "sit";
+                    locale = "voluptas";
                 }};
             }};
 

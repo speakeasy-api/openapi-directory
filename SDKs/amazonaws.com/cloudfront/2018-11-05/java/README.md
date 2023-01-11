@@ -35,15 +35,15 @@ public class Application {
 
             CreateCloudFrontOriginAccessIdentity20181105Request req = new CreateCloudFrontOriginAccessIdentity20181105Request() {{
                 headers = new CreateCloudFrontOriginAccessIdentity20181105Headers() {{
-                    xAmzAlgorithm = "et";
-                    xAmzContentSha256 = "odio";
-                    xAmzCredential = "voluptate";
-                    xAmzDate = "velit";
-                    xAmzSecurityToken = "commodi";
-                    xAmzSignature = "iste";
-                    xAmzSignedHeaders = "vero";
+                    xAmzAlgorithm = "sit";
+                    xAmzContentSha256 = "voluptas";
+                    xAmzCredential = "culpa";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "consequuntur";
+                    xAmzSignature = "dolor";
+                    xAmzSignedHeaders = "expedita";
                 }};
-                request = "blanditiis".getBytes();
+                request = "voluptas".getBytes();
             }};
 
             CreateCloudFrontOriginAccessIdentity20181105Response res = sdk.createCloudFrontOriginAccessIdentity20181105(req);

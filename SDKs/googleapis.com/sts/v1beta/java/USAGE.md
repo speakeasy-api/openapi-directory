@@ -14,26 +14,26 @@ public class Application {
 
             StsTokenRequest req = new StsTokenRequest() {{
                 queryParams = new StsTokenQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "sit";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "perferendis";
-                    fields = "non";
-                    key = "aut";
-                    oauthToken = "minus";
-                    prettyPrint = false;
-                    quotaUser = "non";
-                    uploadType = "a";
-                    uploadProtocol = "distinctio";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new GoogleIdentityStsV1betaExchangeTokenRequest() {{
-                    audience = "sit";
-                    grantType = "nemo";
-                    options = "rerum";
-                    requestedTokenType = "ut";
-                    scope = "quia";
-                    subjectToken = "hic";
-                    subjectTokenType = "ducimus";
+                    audience = "rerum";
+                    grantType = "dicta";
+                    options = "debitis";
+                    requestedTokenType = "voluptatum";
+                    scope = "et";
+                    subjectToken = "ut";
+                    subjectTokenType = "dolorem";
                 }};
             }};
 

@@ -33,16 +33,16 @@ public class Application {
                     }};
                 }};
                 request = new CreateByocTrunkCreateByocTrunkRequest() {{
-                    cnamLookupEnabled = true;
-                    connectionPolicySid = "error";
-                    friendlyName = "autem";
-                    fromDomainSid = "eaque";
+                    cnamLookupEnabled = false;
+                    connectionPolicySid = "voluptas";
+                    friendlyName = "culpa";
+                    fromDomainSid = "expedita";
                     statusCallbackMethod = "DELETE";
-                    statusCallbackUrl = "esse";
+                    statusCallbackUrl = "dolor";
                     voiceFallbackMethod = "GET";
                     voiceFallbackUrl = "voluptas";
-                    voiceMethod = "DELETE";
-                    voiceUrl = "sit";
+                    voiceMethod = "HEAD";
+                    voiceUrl = "et";
                 }};
             }};
 

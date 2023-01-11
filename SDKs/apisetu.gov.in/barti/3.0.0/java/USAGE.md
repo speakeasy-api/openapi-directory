@@ -23,12 +23,12 @@ public class Application {
                 }};
                 request = new CvcerRequestBody() {{
                     certificateParameters = new CvcerRequestBodyCertificateParameters() {{
-                        dob = "consequatur";
-                        vcNo = "quo";
+                        dob = "sit";
+                        vcNo = "voluptas";
                     }};
-                    consentArtifact = "deleniti";
+                    consentArtifact = "culpa";
                     format = "pdf";
-                    txnId = "nemo";
+                    txnId = "consequuntur";
                 }};
             }};
 

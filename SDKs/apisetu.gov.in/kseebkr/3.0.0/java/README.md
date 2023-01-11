@@ -36,14 +36,14 @@ public class Application {
                 }};
                 request = new SscerRequestBody() {{
                     certificateParameters = new SscerRequestBodyCertificateParameters() {{
-                        dob = "id";
-                        fullName = "minima";
-                        regno = "aut";
-                        uid = "ea";
+                        dob = "sit";
+                        fullName = "voluptas";
+                        regno = "culpa";
+                        uid = "expedita";
                     }};
-                    consentArtifact = "et";
+                    consentArtifact = "consequuntur";
                     format = "pdf";
-                    txnId = "enim";
+                    txnId = "expedita";
                 }};
             }};
 

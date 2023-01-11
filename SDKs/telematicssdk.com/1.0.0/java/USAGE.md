@@ -14,7 +14,7 @@ public class Application {
 
             TripsTripDetailsRequest req = new TripsTripDetailsRequest() {{
                 queryParams = new TripsTripDetailsQueryParams() {{
-                    trackToken = "rerum";
+                    trackToken = "sit";
                 }};
             }};
 

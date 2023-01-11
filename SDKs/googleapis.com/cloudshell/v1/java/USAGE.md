@@ -22,25 +22,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudshellOperationsCancelPathParams() {{
-                    name = "similique";
+                    name = "sit";
                 }};
                 queryParams = new CloudshellOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "alias";
-                    alt = "proto";
-                    callback = "fugiat";
-                    fields = "nihil";
-                    key = "nulla";
-                    oauthToken = "consequatur";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "voluptatibus";
-                    uploadType = "provident";
-                    uploadProtocol = "nostrum";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("laudantium", "et");
-                    put("omnis", "et");
-                    put("eius", "earum");
+                    put("debitis", "voluptatum");
+                    put("et", "ut");
+                    put("dolorem", "et");
                 }};
             }};
 

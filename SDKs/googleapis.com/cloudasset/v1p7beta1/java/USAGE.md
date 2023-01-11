@@ -22,20 +22,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetOperationsGetPathParams() {{
-                    name = "fuga";
+                    name = "sit";
                 }};
                 queryParams = new CloudassetOperationsGetQueryParams() {{
                     dollarXgafv = "1";
-                    accessToken = "qui";
-                    alt = "json";
-                    callback = "aut";
-                    fields = "distinctio";
-                    key = "dicta";
-                    oauthToken = "tenetur";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "cupiditate";
-                    uploadType = "quia";
-                    uploadProtocol = "facere";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

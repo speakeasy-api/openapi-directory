@@ -27,20 +27,20 @@ public class Application {
 
             DomainsrdapAutnumGetRequest req = new DomainsrdapAutnumGetRequest() {{
                 pathParams = new DomainsrdapAutnumGetPathParams() {{
-                    autnumId = "molestiae";
+                    autnumId = "sit";
                 }};
                 queryParams = new DomainsrdapAutnumGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "pariatur";
-                    alt = "proto";
-                    callback = "sed";
-                    fields = "dolores";
-                    key = "quae";
-                    oauthToken = "aut";
+                    dollarXgafv = "1";
+                    accessToken = "culpa";
+                    alt = "media";
+                    callback = "consequuntur";
+                    fields = "dolor";
+                    key = "expedita";
+                    oauthToken = "voluptas";
                     prettyPrint = true;
-                    quotaUser = "reprehenderit";
-                    uploadType = "eaque";
-                    uploadProtocol = "nesciunt";
+                    quotaUser = "et";
+                    uploadType = "nihil";
+                    uploadProtocol = "rerum";
                 }};
             }};
 

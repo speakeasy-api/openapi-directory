@@ -35,7 +35,7 @@ public class Application {
 
             GetContactRequest req = new GetContactRequest() {{
                 pathParams = new GetContactPathParams() {{
-                    id = "similique";
+                    id = "sit";
                 }};
             }};
 

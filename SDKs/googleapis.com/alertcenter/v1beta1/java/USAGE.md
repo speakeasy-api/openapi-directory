@@ -22,23 +22,25 @@ public class Application {
                     }};
                 }};
                 queryParams = new AlertcenterAlertsBatchDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "iure";
+                    dollarXgafv = "1";
+                    accessToken = "voluptas";
                     alt = "media";
-                    callback = "dolore";
-                    fields = "doloribus";
-                    key = "necessitatibus";
-                    oauthToken = "aliquam";
-                    prettyPrint = false;
-                    quotaUser = "sint";
-                    uploadType = "eos";
-                    uploadProtocol = "officia";
+                    callback = "expedita";
+                    fields = "consequuntur";
+                    key = "dolor";
+                    oauthToken = "expedita";
+                    prettyPrint = true;
+                    quotaUser = "fugit";
+                    uploadType = "et";
+                    uploadProtocol = "nihil";
                 }};
                 request = new BatchDeleteAlertsRequest() {{
                     alertId = new String[]() {{
-                        add("sit"),
+                        add("dicta"),
+                        add("debitis"),
+                        add("voluptatum"),
                     }};
-                    customerId = "asperiores";
+                    customerId = "et";
                 }};
             }};
 

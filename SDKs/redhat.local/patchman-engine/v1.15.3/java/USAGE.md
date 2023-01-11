@@ -19,7 +19,7 @@ public class Application {
                     }};
                 }};
                 pathParams = new LatestPackagePathParams() {{
-                    packageName = "at";
+                    packageName = "sit";
                 }};
             }};
 

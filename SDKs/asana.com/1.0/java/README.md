@@ -35,25 +35,25 @@ public class Application {
 
             CreateAttachmentForTaskRequest req = new CreateAttachmentForTaskRequest() {{
                 pathParams = new CreateAttachmentForTaskPathParams() {{
-                    taskGid = "delectus";
+                    taskGid = "sit";
                 }};
                 queryParams = new CreateAttachmentForTaskQueryParams() {{
-                    limit = 4628205130743140522;
-                    offset = "eveniet";
+                    limit = 2259404117704393152;
+                    offset = "culpa";
                     optFields = new String[]() {{
-                        add("sit"),
-                        add("est"),
+                        add("consequuntur"),
+                        add("dolor"),
                     }};
                     optPretty = true;
                 }};
                 request = new AttachmentRequest() {{
                     file = new AttachmentRequestFile() {{
-                        content = "ipsa".getBytes();
-                        file = "assumenda";
+                        content = "voluptas".getBytes();
+                        file = "fugit";
                     }};
-                    name = "id";
+                    name = "et";
                     resourceSubtype = "asana_file_attachments";
-                    url = "ipsam";
+                    url = "rerum";
                 }};
             }};
 

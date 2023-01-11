@@ -23,16 +23,16 @@ public class Application {
             GetDecodeAuthorizationMessageRequest req = new GetDecodeAuthorizationMessageRequest() {{
                 queryParams = new GetDecodeAuthorizationMessageQueryParams() {{
                     action = "DecodeAuthorizationMessage";
-                    encodedMessage = "autem";
+                    encodedMessage = "voluptas";
                     version = "2011-06-15";
                 }};
                 headers = new GetDecodeAuthorizationMessageHeaders() {{
-                    xAmzAlgorithm = "consequatur";
-                    xAmzContentSha256 = "delectus";
-                    xAmzCredential = "qui";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "quaerat";
-                    xAmzSignature = "voluptatem";
+                    xAmzAlgorithm = "expedita";
+                    xAmzContentSha256 = "consequuntur";
+                    xAmzCredential = "dolor";
+                    xAmzDate = "expedita";
+                    xAmzSecurityToken = "voluptas";
+                    xAmzSignature = "fugit";
                     xAmzSignedHeaders = "et";
                 }};
             }};

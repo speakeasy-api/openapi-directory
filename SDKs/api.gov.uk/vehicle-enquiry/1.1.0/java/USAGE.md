@@ -14,11 +14,11 @@ public class Application {
 
             GetVehicleDetailsByRegistrationNumberRequest req = new GetVehicleDetailsByRegistrationNumberRequest() {{
                 headers = new GetVehicleDetailsByRegistrationNumberHeaders() {{
-                    xCorrelationId = "ducimus";
-                    xApiKey = "repellendus";
+                    xCorrelationId = "sit";
+                    xApiKey = "voluptas";
                 }};
                 request = new VehicleRequest() {{
-                    registrationNumber = "officia";
+                    registrationNumber = "culpa";
                 }};
             }};
 

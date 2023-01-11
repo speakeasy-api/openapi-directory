@@ -14,8 +14,8 @@ public class Application {
 
             GetcountrystandardRequest req = new GetcountrystandardRequest() {{
                 queryParams = new GetcountrystandardQueryParams() {{
-                    country = "vel";
-                    license = "id";
+                    country = "sit";
+                    license = "voluptas";
                 }};
             }};
 

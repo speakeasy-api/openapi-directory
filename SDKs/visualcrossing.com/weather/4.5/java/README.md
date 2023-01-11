@@ -27,19 +27,19 @@ public class Application {
 
             GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest req = new GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest() {{
                 queryParams = new GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams() {{
-                    aggregateHours = "expedita";
-                    allowAsynch = true;
-                    collectStationContributions = false;
-                    contentType = "doloribus";
-                    endDateTime = "adipisci";
-                    includeNormals = true;
-                    key = "similique";
-                    locations = "omnis";
-                    maxDistance = "voluptatem";
+                    aggregateHours = "sit";
+                    allowAsynch = false;
+                    collectStationContributions = true;
+                    contentType = "expedita";
+                    endDateTime = "consequuntur";
+                    includeNormals = false;
+                    key = "expedita";
+                    locations = "voluptas";
+                    maxDistance = "fugit";
                     maxStations = "et";
-                    shortColumnNames = false;
-                    startDateTime = "est";
-                    unitGroup = "expedita";
+                    shortColumnNames = true;
+                    startDateTime = "rerum";
+                    unitGroup = "dicta";
                 }};
             }};
 
